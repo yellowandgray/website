@@ -11,9 +11,16 @@
                 <div id="main-slider" class="flexslider">
                     <ul class="slides">
                         <li>
-                            <img src="img/slides/1.jpg" alt="" />
+                            <img src="img/slides/01.jpg" alt="" />
                             <div class="flex-caption">
-                                <h3 class="banner-content">VIRTUAL IT SERVICES</h3>  
+                                <h3 class="banner-content">VIRTUAL IT MANAGER AT A FRACTION OF THE COST</h3>  
+
+                            </div>
+                        </li>
+                         <li>
+                            <img src="img/slides/02.jpg" alt="" />
+                            <div class="flex-caption">
+                                <h3 class="banner-content">AMC</h3>  
 
                             </div>
                         </li>
@@ -44,7 +51,14 @@
                                 <h3>DISASTER RECOVERY & STORAGE SOLUTIONS</h3>  
 
                             </div>
+                        </li><li>
+                            <img src="img/slides/04.jpg" alt="" />
+                            <div class="flex-caption">
+                                <h3>CYBER SECURITY AWARENESS WORKSHOP</h3>  
+
+                            </div>
                         </li>
+                        
                     </ul>
                     <ul class="flex-direction-nav">
                         <li>
