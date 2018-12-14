@@ -524,7 +524,7 @@ blockquote p {color: #fff;}
     position: fixed;
     bottom: 0;
     left: 15px;
-    border: 3px solid #f1f1f1;
+    border: 3px solid #565656;
     z-index: 9;
 }
 
@@ -532,7 +532,7 @@ blockquote p {color: #fff;}
 .form-container {
     max-width: 300px;
     padding: 10px;
-    background-color: black;
+    background-color: #6d6d6d;
 }
 
 /* Full-width textarea */
@@ -602,3 +602,5 @@ blockquote p {color: #fff;}
     color: transparent;
     text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
+
+.white {color: white}
