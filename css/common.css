@@ -588,12 +588,17 @@ blockquote p {color: #fff;}
 
 .background-border p {color: #fff;}
 .tables {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
 }
 .tables  {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.blurry-text {
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
