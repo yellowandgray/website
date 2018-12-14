@@ -32,10 +32,22 @@ $(document).ready(function () {
 });
 
 // When the DOM is ready, run this function
-$(document).ready(function() {
-  //Set the carousel options
-  $('#quote-carousel').carousel({
-    pause: true,
-    interval: 4000,
-  });
+$(document).ready(function () {
+    //Set the carousel options
+    $('#quote-carousel').carousel({
+        pause: true,
+        interval: 4000,
+    });
+});
+
+$(window).load(function () {
+    $(".trigger_popup_fricc").click(function () {
+        $('.hover_bkgr_fricc').show();
+    });
+    $('.hover_bkgr_fricc').click(function () {
+        $('.hover_bkgr_fricc').hide();
+    });
+    $('.popupCloseButton').click(function () {
+        $('.hover_bkgr_fricc').hide();
+    });
 });
