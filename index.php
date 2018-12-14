@@ -13,14 +13,14 @@
                         <li>
                             <img src="img/slides/01.jpg" alt="" />
                             <div class="flex-caption">
-                                <h3 class="banner-content">VIRTUAL IT MANAGER AT A FRACTION OF THE COST</h3>  
+                                <h3 class="banner-content">VIRTUAL IT MANAGER</br>AT A FRACTION OF THE COST</h3>  
 
                             </div>
                         </li>
                         <li>
                             <img src="img/slides/02.jpg" alt="" />
                             <div class="flex-caption">
-                                <h3 class="banner-content">AMC</h3>  
+                                <h3 class="banner-content">ANNUAL MAINTENANCE CONTRACT </h3>  
 
                             </div>
                         </li>

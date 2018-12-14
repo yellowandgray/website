@@ -40,7 +40,8 @@
                             <li><a href="#">NETWORK HEALTH CHECKS</a></li>
                             <li><a href="#">BUSINESS CONTINUITY</a></li> 
                             <li><a href="#">IT SECURITY</a></li>
-                             <li><a href="#"></a></li>
+                             <li><a href="#">CONSULTING SERVICES</a></li>
+                             <li><a href="#">CLOUD MIGRATION</a></li>
                             <li><a href="#"></a></li>
                         </ul>
                     </li>
