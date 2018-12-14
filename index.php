@@ -595,7 +595,7 @@
         <?php include 'footer.php'; ?>
         <div class="side-widget open">
             <div class="inner">
-                <a class="btn btn-blue productCheckout" id="get-started"><i class="fa fa-play-circle video"></i>&nbsp;&nbsp; IT&nbsp;&nbsp; PROCUREMENT&nbsp;&nbsp; QUITE</a>
+                <a class="btn btn-blue productCheckout" id="get-started"><i class="fa fa-play-circle video"></i>&nbsp;&nbsp; IT&nbsp;&nbsp; PROCUREMENT&nbsp;&nbsp; QUIDE</a>
             </div>
         </div>
         <div id="popup-container">
@@ -658,17 +658,17 @@
         <button class="open-button" onclick="openForm()">DoYouKnow</button>
         <div class="chat-popup" id="myQus">
             <div  class="form-container">
-                <p>Computers with AV disabled?</p>
-                <p>Are your systems fully patched?</p>
-                <p>What systems have outdated hardware?</p>
-                <p>What changed in your network?</p>
+                <p class="white">Computers with AV disabled?</p>
+                <p class="white">Are your systems fully patched?</p>
+                <p class="white">What systems have outdated hardware?</p>
+                <p class="white">What changed in your network?</p>
                 <p class="blurry-text">Complete network security overview</p>
                 <p class="blurry-text">What new devices are added to the network?</p>
                 <p class="blurry-text">What ports are opened in the network?</p>
                 <p class="blurry-text">Unauthorized applications?</p>
                 <p class="blurry-text">What USB devices connect to your network?</p>
                 <p class="blurry-text">How vulnerable is your network?</p>
-                <button href="#" class="btn">Enquiry Now</button>
+                <button href="#" class="btn" onclick="myFunction()">Enquiry Now</button><p id="demo"></p>
                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
             </div>
         </div>

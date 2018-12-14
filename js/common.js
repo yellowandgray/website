@@ -61,3 +61,7 @@ function openForm() {
 function closeForm() {
   document.getElementById("myQus").style.display = "none";
 }
+
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World";
+}
