@@ -592,80 +592,85 @@
 
 
 
-    <?php include 'footer.php'; ?>
-    <div class="side-widget open">
-        <div class="inner">
-            <a class="btn btn-blue productCheckout" id="get-started"><i class="fa fa-play-circle video"></i>&nbsp;&nbsp; IT&nbsp;&nbsp; PROCUREMENT&nbsp;&nbsp; QUITE</a>
+        <?php include 'footer.php'; ?>
+        <div class="side-widget open">
+            <div class="inner">
+                <a class="btn btn-blue productCheckout" id="get-started"><i class="fa fa-play-circle video"></i>&nbsp;&nbsp; IT&nbsp;&nbsp; PROCUREMENT&nbsp;&nbsp; QUITE</a>
+            </div>
         </div>
-    </div>
-    <div id="popup-container">
-        <div id="popup-window">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>  
-                <a href="#" class="your-class"></a>
-                <div>
-                    <!--                <div class="row text-center margin-bottom-0">
-                                        <h1>CYBER SECURITY AWARENESS WORKSHOP</h1>
-                                    </div>
-                                    <br>-->
+        <div id="popup-container">
+            <div id="popup-window">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>  
+                    <a href="#" class="your-class"></a>
+                    <div>
+                        <!--                <div class="row text-center margin-bottom-0">
+                                            <h1>CYBER SECURITY AWARENESS WORKSHOP</h1>
+                                        </div>
+                                        <br>-->
 
-                    <div class="row margin-bottom-0 text-center">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0p3787JiFgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <!--                    <div class="col-md-4">
-                                                <img src="img/golden-avenue-cyber-workshop.jpg" class="img-responsive" />
-                                            </div>
-                                            <div class="col-md-4">
-                                                <p class="text-justify">Protect your business and make employees part of your active defense from cyber threats <br/><br/> Make security awareness fun and meaningful for employees <br/><br/>Topics Include:</p>
-                                                <ul class="italic">
-                                                    <li>Understanding security threats</li>
-                                                    <li>Social media threats</li>
-                                                    <li>Identifying and detecting malware</li>
-                                                    <li>Best-practice password guidelines</li>
-                                                    <li>Phishing detection and awareness</li>
-                                                    <li>Data classification</li>
-                                                    <li>Data storage and retention guidelines</li>
-                                                    <li>Cloud computing and storage</li>
-                                                    <li>Physical security</li>
-                                                    <li>Mobile device protection and smartphone security</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <form action="" method="post" id="footer-form">
-                                                    <h3 class="text-center bold">Enquiry</h3>
-                                                    <input class="form-control" name="first_name" id="first_name" placeholder="Company Name *" required>
-                                                    <br>
-                                                    <input class="form-control" name="last_name" id="contact_person" placeholder="Contact Person *" required>
-                                                    <br>
-                                                    <input class="form-control" name="last_name" id="number_of_persons" placeholder="Number of Persons *" required>
-                                                    <br>
-                                                    <input class="form-control" name="phone" placeholder="Phone *" id="phone">
-                                                    <br>
-                                                    <input class="form-control" name="email" id="email" placeholder="Your Email *">
-                        
-                                                    <br>
-                                                    <center>
-                                                        <input type="submit" class="btn btn-blue" value="Submit">
-                                                    </center>
-                                                </form>
-                                            </div>-->
+                        <div class="row margin-bottom-0 text-center">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/0p3787JiFgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!--                    <div class="col-md-4">
+                                                    <img src="img/golden-avenue-cyber-workshop.jpg" class="img-responsive" />
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <p class="text-justify">Protect your business and make employees part of your active defense from cyber threats <br/><br/> Make security awareness fun and meaningful for employees <br/><br/>Topics Include:</p>
+                                                    <ul class="italic">
+                                                        <li>Understanding security threats</li>
+                                                        <li>Social media threats</li>
+                                                        <li>Identifying and detecting malware</li>
+                                                        <li>Best-practice password guidelines</li>
+                                                        <li>Phishing detection and awareness</li>
+                                                        <li>Data classification</li>
+                                                        <li>Data storage and retention guidelines</li>
+                                                        <li>Cloud computing and storage</li>
+                                                        <li>Physical security</li>
+                                                        <li>Mobile device protection and smartphone security</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <form action="" method="post" id="footer-form">
+                                                        <h3 class="text-center bold">Enquiry</h3>
+                                                        <input class="form-control" name="first_name" id="first_name" placeholder="Company Name *" required>
+                                                        <br>
+                                                        <input class="form-control" name="last_name" id="contact_person" placeholder="Contact Person *" required>
+                                                        <br>
+                                                        <input class="form-control" name="last_name" id="number_of_persons" placeholder="Number of Persons *" required>
+                                                        <br>
+                                                        <input class="form-control" name="phone" placeholder="Phone *" id="phone">
+                                                        <br>
+                                                        <input class="form-control" name="email" id="email" placeholder="Your Email *">
+                            
+                                                        <br>
+                                                        <center>
+                                                            <input type="submit" class="btn btn-blue" value="Submit">
+                                                        </center>
+                                                    </form>
+                                                </div>-->
+                        </div>
+
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
 
-    <button class="open-button" onclick="openForm()">Chat</button>
-    <div class="chat-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
-            <h1>Chat</h1>
-
-            <label for="msg"><b>Message</b></label>
-            <textarea placeholder="Type message.." name="msg" required></textarea>
-
-            <button type="submit" class="btn">Send</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-        </form>
-    </div>
-</body>
+        <button class="open-button" onclick="openForm()">DoYouKnow</button>
+        <div class="chat-popup" id="myQus">
+            <div  class="form-container">
+                <p>Computers with AV disabled?</p>
+                <p>Are your systems fully patched?</p>
+                <p>What systems have outdated hardware?</p>
+                <p>What changed in your network?</p>
+                <p class="blurry-text">Complete network security overview</p>
+                <p class="blurry-text">What new devices are added to the network?</p>
+                <p class="blurry-text">What ports are opened in the network?</p>
+                <p class="blurry-text">Unauthorized applications?</p>
+                <p class="blurry-text">What USB devices connect to your network?</p>
+                <p class="blurry-text">How vulnerable is your network?</p>
+                <button href="#" class="btn">Enquiry Now</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </div>
+        </div>
+    </body>
 </html>
