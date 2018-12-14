@@ -569,7 +569,7 @@
 </div>
 <div class="side-widget open">
     <div class="inner">
-        <a class="btn btn-blue productCheckout" id="get-started">CYBER&nbsp;&nbsp;SECURITY&nbsp;&nbsp;AWARENESS&nbsp;&nbsp;WORKSHOP</a>
+        <a class="btn btn-blue productCheckout" id="get-started"><i class="fa fa-play-circle video"></i>&nbsp;&nbsp;IT&nbsp;&nbsp; PROCUREMENT&nbsp;&nbsp; QUITE</a>
     </div>
 </div>
 <div id="popup-container">
