@@ -595,7 +595,7 @@
         <?php include 'footer.php'; ?>
         <div class="side-widget open">
             <div class="inner">
-                <a class="btn btn-blue productCheckout" id="get-started"><i class="fa fa-play-circle video"></i>&nbsp;&nbsp; IT&nbsp;&nbsp; PROCUREMENT&nbsp;&nbsp; QUIDE</a>
+                <a class="btn btn-blue productCheckout" id="get-started"><i class="fa fa-play-circle video"></i>&nbsp;&nbsp; IT&nbsp;&nbsp; PROCUREMENT&nbsp;&nbsp; GUIDE</a>
             </div>
         </div>
         <div id="popup-container">
@@ -668,7 +668,8 @@
                 <p class="blurry-text">Unauthorized applications?</p>
                 <p class="blurry-text">What USB devices connect to your network?</p>
                 <p class="blurry-text">How vulnerable is your network?</p>
-                <button href="#" class="btn" onclick="myFunction()">Enquiry Now</button><p id="demo"></p>
+                <button href="#" class="btn" onclick="myFunction()">Enquiry Now</button>
+                <p id="demo"></p>
                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
             </div>
         </div>
