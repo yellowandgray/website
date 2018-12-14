@@ -17,7 +17,7 @@
 
                             </div>
                         </li>
-                         <li>
+                        <li>
                             <img src="img/slides/02.jpg" alt="" />
                             <div class="flex-caption">
                                 <h3 class="banner-content">AMC</h3>  
@@ -58,7 +58,7 @@
 
                             </div>
                         </li>
-                        
+
                     </ul>
                     <ul class="flex-direction-nav">
                         <li>
@@ -191,7 +191,27 @@
                                 <span class="helper"></span>
                                 <div>
                                     <div class="popupCloseButton">X</div>
-                                    <p>Add any HTML content<br />inside the popup box!</p>
+                                    <form action="" method="post" id="footer-form">
+                                        <h3 class="text-center bold">Enquiry</h3>
+                                        <input class="form-control" name="name" id="first_name" placeholder="Name *" required>
+                                        <br>
+                                        <input class="form-control" name="contact_name" id="contact_person" placeholder="Contact Person *" required>
+                                        <br>
+                                        <input class="form-control" name="number_employe" id="number_of_persons" placeholder="Number of Employes *" required>
+                                        <br>
+                                        <input class="form-control" name="email" id="email" placeholder="Your Email *">
+                                        <br>
+                                        <input class="form-control" name="phone" placeholder="Phone *" id="phone">
+                                        <br>
+                                        <input class="form-control" name="subject" placeholder="Subject" id="subject">
+                                        <br>
+                                        <textarea class="form-control" name="subject" rows="4" placeholder="Comments" id="comments"></textarea>
+                                        
+                                        <br>
+                                        <center>
+                                            <input type="submit" class="btn btn-blue" value="Submit">
+                                        </center>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -573,7 +593,6 @@
 
 
     <?php include 'footer.php'; ?>
-</div>
 <div class="side-widget open">
     <div class="inner">
         <a class="btn btn-blue productCheckout" id="get-started"><i class="fa fa-play-circle video"></i>&nbsp;&nbsp; IT&nbsp;&nbsp; PROCUREMENT&nbsp;&nbsp; QUITE</a>
@@ -635,5 +654,7 @@
         </div>
     </div>
 </div>
+
+<button class="open-button" onclick="openForm()">Chat</button>
 </body>
 </html>
