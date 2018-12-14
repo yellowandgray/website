@@ -130,100 +130,8 @@
                                             </h4>
                                         </div>
                                         <div id="collapseTwo-alt3" class="panel-collapse collapse">
-                                           
-                                                <div class="panel-body">
-                                                    <table class="tables ">
-                                                        <tr>
-                                                            <th>Company</th>
-                                                            <th>Contact</th>
-                                                            <th>Country</th>
-                                                            <th>Country</th>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Alfreds Futterkiste</td>
-                                                            <td>Maria Anders</td>
-                                                            <td>Germany</td>
-                                                            <td>Germany</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Centro comercial Moctezuma</td>
-                                                            <td>Francisco Chang</td>
-                                                            <td>Mexico</td>
-                                                            <td>Mexico</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Ernst Handel</td>
-                                                            <td>Roland Mendel</td>
-                                                            <td>Austria</td>
-                                                            <td>Austria</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Island Trading</td>
-                                                            <td>Helen Bennett</td>
-                                                            <td>UK</td>
-                                                            <td>UK</td>
-                                                    </table>
-                                                </div>
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="panel">
-                                        <div class="panel-heading">
-                                            <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
-                                                    <i class="fa fa-angle-right"></i> Accordion Heading Text Item # 3
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="collapseThree-alt3" class="panel-collapse collapse">
-                                           
-                                                <div class="panel-body">
-                                                    <table class="tables ">
-                                                        <tr>
-                                                            <th>Company</th>
-                                                            <th>Contact</th>
-                                                            <th>Country</th>
-                                                            <th>Country</th>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Alfreds Futterkiste</td>
-                                                            <td>Maria Anders</td>
-                                                            <td>Germany</td>
-                                                            <td>Germany</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Centro comercial Moctezuma</td>
-                                                            <td>Francisco Chang</td>
-                                                            <td>Mexico</td>
-                                                            <td>Mexico</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Ernst Handel</td>
-                                                            <td>Roland Mendel</td>
-                                                            <td>Austria</td>
-                                                            <td>Austria</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Island Trading</td>
-                                                            <td>Helen Bennett</td>
-                                                            <td>UK</td>
-                                                            <td>UK</td>
-                                                    </table>
-                                                </div>
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="panel">
-                                        <div class="panel-heading">
-                                            <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
-                                                    <i class="fa fa-angle-right"></i> Accordion Heading Text Item # 4
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="collapseFour-alt3" class="panel-collapse collapse">
+
                                             <div class="panel-body">
-                                                <div class="panel-body">
                                                 <table class="tables ">
                                                     <tr>
                                                         <th>Company</th>
@@ -256,6 +164,98 @@
                                                         <td>UK</td>
                                                 </table>
                                             </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
+                                                    <i class="fa fa-angle-right"></i> Accordion Heading Text Item # 3
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree-alt3" class="panel-collapse collapse">
+
+                                            <div class="panel-body">
+                                                <table class="tables ">
+                                                    <tr>
+                                                        <th>Company</th>
+                                                        <th>Contact</th>
+                                                        <th>Country</th>
+                                                        <th>Country</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Alfreds Futterkiste</td>
+                                                        <td>Maria Anders</td>
+                                                        <td>Germany</td>
+                                                        <td>Germany</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Centro comercial Moctezuma</td>
+                                                        <td>Francisco Chang</td>
+                                                        <td>Mexico</td>
+                                                        <td>Mexico</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Ernst Handel</td>
+                                                        <td>Roland Mendel</td>
+                                                        <td>Austria</td>
+                                                        <td>Austria</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Island Trading</td>
+                                                        <td>Helen Bennett</td>
+                                                        <td>UK</td>
+                                                        <td>UK</td>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
+                                                    <i class="fa fa-angle-right"></i> Accordion Heading Text Item # 4
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFour-alt3" class="panel-collapse collapse">
+                                            <div class="panel-body">
+
+                                                <table class="tables ">
+                                                    <tr>
+                                                        <th>Company</th>
+                                                        <th>Contact</th>
+                                                        <th>Country</th>
+                                                        <th>Country</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Alfreds Futterkiste</td>
+                                                        <td>Maria Anders</td>
+                                                        <td>Germany</td>
+                                                        <td>Germany</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Centro comercial Moctezuma</td>
+                                                        <td>Francisco Chang</td>
+                                                        <td>Mexico</td>
+                                                        <td>Mexico</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Ernst Handel</td>
+                                                        <td>Roland Mendel</td>
+                                                        <td>Austria</td>
+                                                        <td>Austria</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Island Trading</td>
+                                                        <td>Helen Bennett</td>
+                                                        <td>UK</td>
+                                                        <td>UK</td>
+                                                </table>
+
                                             </div>
                                         </div>
                                     </div>
