@@ -574,4 +574,26 @@ blockquote p {color: #fff;}
     opacity: 1;
 }
 
+.background-border {
+    background: #007e93;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
 
+.background-border h3 {
+    color: #d2ac68;
+    font-size: 29px !important;
+    font-weight: bold;
+}
+
+.background-border p {color: #fff;}
+.tables {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.tables  {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
