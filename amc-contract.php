@@ -130,7 +130,6 @@
                                             </h4>
                                         </div>
                                         <div id="collapseTwo-alt3" class="panel-collapse collapse">
-
                                             <div class="panel-body">
                                                 <table class="tables ">
                                                     <tr>
@@ -175,7 +174,6 @@
                                             </h4>
                                         </div>
                                         <div id="collapseThree-alt3" class="panel-collapse collapse">
-
                                             <div class="panel-body">
                                                 <table class="tables ">
                                                     <tr>
