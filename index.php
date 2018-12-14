@@ -13,7 +13,7 @@
                         <li>
                             <img src="img/slides/01.jpg" alt="" />
                             <div class="flex-caption">
-                                <h3 class="banner-content">VIRTUAL IT MANAGER</h3>  
+                                <h3 class="banner-content">VIRTUAL IT MANAGER AT A FRACTION OF THE COST</h3>  
 
                             </div>
                         </li>
@@ -52,7 +52,7 @@
 
                             </div>
                         </li><li>
-                            <img src="img/slides/03.jpg" alt="" />
+                            <img src="img/slides/04.jpg" alt="" />
                             <div class="flex-caption">
                                 <h3>CYBER SECURITY AWARENESS WORKSHOP</h3>  
 
