@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    $(".hover_bkgr_fricc").fadeIn("slow")
     $('#get-started').on('click', function () {
         var $sidenav, $this;
         $this = $(this);
@@ -42,7 +41,7 @@ $(document).ready(function () {
 });
 
 $(window).load(function () {
-    $(".popup-container").fadeIn("slow");
+    $(".popup-container").fadeIn(3500);
     $(".trigger_popup_fricc").click(function () {
         $('.hover_bkgr_fricc').show();
     });
@@ -55,10 +54,10 @@ $(window).load(function () {
 });
 
 function openForm() {
-    $(".chat-popup").fadeIn("slow");
-  document.getElementById("myForm").style.display = "block";
+    $(".chat-popup").fadeIn(3500);
+  document.getElementById("myQus").style.display = "block";
 }
 
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+  document.getElementById("myQus").style.display = "none";
 }
