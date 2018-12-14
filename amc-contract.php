@@ -164,7 +164,6 @@
                                                         <td>UK</td>
                                                 </table>
                                             </div>
-
                                         </div>
                                     </div>
                                     <div class="panel">
@@ -223,7 +222,6 @@
                                         </div>
                                         <div id="collapseFour-alt3" class="panel-collapse collapse">
                                             <div class="panel-body">
-
                                                 <table class="tables ">
                                                     <tr>
                                                         <th>Company</th>
@@ -255,7 +253,6 @@
                                                         <td>UK</td>
                                                         <td>UK</td>
                                                 </table>
-
                                             </div>
                                         </div>
                                     </div>
