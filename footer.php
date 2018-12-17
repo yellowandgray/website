@@ -122,3 +122,4 @@
 <script src="js/isotope.min.js"></script> 
 <script src="js/custom.js"></script>
 <script src="js/common.js" type="text/javascript"></script>
+<script src="js/custom-popup.js" type="text/javascript"></script>
