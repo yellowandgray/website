@@ -28,15 +28,15 @@ if ($_POST['name']) {
 
     $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
 
-    $mail->Host = " box975.bluehost.com";      // sets GMAIL as the SMTP server
+    $mail->Host = "box975.bluehost.com";      // sets GMAIL as the SMTP server
 
     $mail->Port = 465;                   // set the SMTP port for the GMAIL server
 
-    $mail->Username = "info@enpeekkl.com";  // GMAIL username
+    $mail->Username = "noreply@enpeekkl.com";  // GMAIL username
 
     $mail->Password = "Admin@EnPE3Kkl";            // GMAIL password
     $mail->IsHTML(true);
-    $mail->SetFrom('info@enpeekkl.com', 'ENPEEKKL');
+    $mail->SetFrom('noreply@enpeekkl.com', 'ENPEEKKL');
     $mail->Subject = "Contact form submited" . date('d-m-y H:i:s');
     $message = "
     <table style='background:#004976;color:#fff'>
@@ -64,7 +64,7 @@ if ($_POST['name']) {
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $mail->Body = $message;
     // More headers
-    $address = "info@enpeekkl.com";
+    $address = "noreply@enpeekkl.com";
 
     $mail->AddAddress($address, "ENPEEKKL");
 
@@ -72,7 +72,7 @@ if ($_POST['name']) {
         echo "error";
 //        echo "<script> window.location = 'http://lemonandshadow.com/stocklink/startup-corner.html'; </script>";
     } else {
-
+        echo "<script> window.location = 'http://enpeekkl.com'; </script>";
         echo "Thank you for applying";
         //print_r(error_get_last());
     }
