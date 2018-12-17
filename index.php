@@ -1,10 +1,14 @@
 <!doctype html>
 <html lang="en">
-    <?php include 'head.php'; ?>
+    <?php
+    $page = 'home';
+    include 'head.php';
+    ?>
+    
     <body>
         <div class="wrapper home1">
             <!--Header Start-->
-            <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
             <!--Header End-->
             <div id="search">
                 <button type="button" class="close">×</button>
@@ -26,7 +30,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-01.jpg" alt=""/>
+                    <img src="images/banner/home-banner-01.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -39,7 +43,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-02.jpg" alt=""/>
+                    <img src="images/banner/banner-french-style.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -52,7 +56,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-03.jpg" alt=""/>
+                    <img src="images/banner/banner003.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -65,7 +69,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-04.jpg" alt=""/>
+                    <img src="images/banner/banner004.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -78,7 +82,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-05.jpg" alt=""/>
+                    <img src="images/banner/banner005.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -91,7 +95,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-06.jpg" alt=""/>
+                    <img src="images/banner/banner-discipline.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -104,7 +108,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-07.jpg" alt=""/>
+                    <img src="images/banner/banner-emphasis.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -117,7 +121,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-08.jpg" alt=""/>
+                    <img src="images/banner/banner-sports.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -130,7 +134,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-09.jpg" alt=""/>
+                    <img src="images/banner/banner-football.jpg" alt=""/>
                 </div>
 
             </section>
@@ -475,7 +479,7 @@
                                         <div class="multiselect">
                                             <div class="selectBox" onclick="showCheckboxes()">
                                                 <select>
-                                                    <option>Class</option>
+                                                    <option>Choose Programs</option>
                                                 </select>
                                                 <div class="overSelect"></div>
                                             </div>
@@ -539,7 +543,7 @@
                                 <li class="col-md-3 col-sm-6 f-cat f-cat3 f-cat1"><span> <a href="images/facilities/pic-music.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a> <img src="images/facilities/pic-music.jpg" alt=""></span> </li>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat4 f-cat2"><span> <a href="images/facilities/pic-sports.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-sports.jpg" alt=""></span> </li>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat1"><span> <a href="images/facilities/pic-yoga.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-yoga.jpg" alt=""></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat2"><span> <a href="images/facilities/pic-theatre.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-theatre.jpg" alt=""></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat2"><span> <a href="images/facilities/theatre.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/theatre.jpg" alt=""></span> </li>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat3 f-cat2"><span> <a href="images/facilities/pic-swimming.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-swimming.jpg" alt=""></span> </li>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat4"><span> <a href="images/facilities/pic-touring.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-touring.jpg" alt=""></span> </li>
                             </ul>
@@ -568,6 +572,6 @@
             </div>
             <!--Partner Logos Section End--> 
             <!--Footer Start-->
-            <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
     </body>
 </html>

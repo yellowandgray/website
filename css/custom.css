@@ -5856,6 +5856,7 @@ About Us Page
     position: relative;
     padding: 88px 67px;
 }
+
 .story-title-bg strong {
     color: #fff;
     display: block;
@@ -5878,7 +5879,40 @@ About Us Page
     font-weight: 700;
     line-height: 72px;
 }
-.story-title-bg:after {
+
+.story-title-bg-01 {
+    background: url(../images/about-sub-02.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    float: left;
+    position: relative;
+    padding: 88px 67px;
+}
+
+
+.story-title-bg-01 strong {
+    color: #fff;
+    display: block;
+    position: relative;
+    z-index: 999;
+    font-family: 'Poppins', sans-serif;
+}
+.story-title-bg-01 strong.t1 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 72px;
+}
+.story-title-bg-01 strong.t2 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 72px;
+}
+.story-title-bg-01 strong.t3 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 72px;
+}
+/*.story-title-bg:after {
     position: absolute;
     width: 82%;
     height: 83%;
@@ -5889,7 +5923,7 @@ About Us Page
     right: 0;
     background: rgba(102,187,106,.70);
     content: "";
-}
+}*/
 .timeline {
     text-align: left;
 }

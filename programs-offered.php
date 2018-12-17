@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-    <?php include 'head.php'; ?>
+    <?php $page = 'programs-offered'; include 'head.php'; ?>
     <body>
         <div class="wrapper">
             <!--Header Start-->
@@ -14,9 +14,9 @@
             </div>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header">
+            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-04.jpg) no-repeat;">
                 <div class="container">
-                    <h1>About Us</h1>
+                    <h1>Programs Offered</h1>
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Programs Offered</a></li>
