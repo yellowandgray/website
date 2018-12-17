@@ -22,8 +22,8 @@
             </div>
             <div class="navbar-collapse collapse ">
                 <ul class="nav navbar-nav">
-                    <!--                    <li class="active"><a href="index.html">Home</a></li> -->
-                    <!--                    <li class="dropdown">
+                    <!--                    <li class="active"><a href="index.html">Home</a></li> 
+                                       <li class="dropdown">
                                             <a href="#" data-toggle="dropdown" class="dropdown-toggle">About Us <b class="caret"></b></a>
                                             <ul class="dropdown-menu">
                                                 <li><a href="about.html">Company</a></li>
@@ -31,8 +31,8 @@
                                                 <li><a href="#">News</a></li> 
                                                 <li><a href="#">Investors</a></li>
                                             </ul>
-                                        </li> -->
-                    <!--                    <li><a href="#"></a></li>-->
+                                        </li> 
+                                   <li><a href="#"></a></li>-->
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
                         <ul class="dropdown-menu">
