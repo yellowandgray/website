@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
     <?php $page = 'contact';
-    include 'head.php'; ?>
+    include 'head.php';
+    ?>
 
     <body>
         <div class="wrapper">
@@ -58,14 +59,16 @@
                                         <li class="half pr-15">
                                             <div class="multiselect">
                                                 <div class="selectBox" onclick="showCheckboxes()">
-                                                    <select name="preffred_classes">
+                                                    <select name="preffred_classes[]">
                                                         <option>Choose Programs</option>
                                                     </select>
                                                     <div class="overSelect"></div>
                                                 </div>
                                                 <div id="checkboxes">
+                                                    <option value="Pre-KG">
                                                     <label for="one">
                                                         <input type="checkbox" id="one" /> Pre-KG</label>
+                                                    </option>
                                                     <label for="two">
                                                         <input type="checkbox" id="two" /> L-KG</label>
                                                     <label for="three">
@@ -139,8 +142,8 @@
                 </div>
             </section>
             <!--Contact End--> 
-            <?php             include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
         </div>
-       
+
     </body>
 </html>
