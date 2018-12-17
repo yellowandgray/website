@@ -559,7 +559,7 @@ blockquote p {color: #fff;}
     /* padding: 16px 20px; */
     border: none;
     cursor: pointer;
-/*    width: 100%;*/
+    /*    width: 100%;*/
     margin-bottom: 10px; 
     opacity: 0.8;
 }
@@ -605,3 +605,9 @@ blockquote p {color: #fff;}
 }
 
 .white {color: white}
+
+marquee {
+    background: #424242;
+    color: #fff;
+    font-size: 18px;
+}

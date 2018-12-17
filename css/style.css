@@ -399,6 +399,7 @@ select.selectmenu {
     background: #fff; 
     position: relative; 
     zoom: 1;
+    margin-top: -6px;
 }
 .flex-direction-nav .flex-prev{
     left:0px; 
