@@ -86,39 +86,45 @@
                                         </div>
                                         <div id="collapseOne-alt3" class="panel-collapse collapse">
                                             <!-- Panel body -->
-                                            <div class="panel-body">
-                                                <table class="tables ">
+                                           <table class="tables ">
+                                                    
                                                     <tr>
-                                                        <th>Company</th>
-                                                        <th>Contact</th>
-                                                        <th>Country</th>
-                                                        <th>Country</th>
+                                                        <td>Remote Support of Computers</td>
+                                                        <td>Up to 10 requests per month</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Alfreds Futterkiste</td>
-                                                        <td>Maria Anders</td>
-                                                        <td>Germany</td>
-                                                        <td>Germany</td>
+                                                        <td>Remote Support of Server infrastructure</td>
+                                                        <td>-</td>
+                                                        <td>Up to 1 server support	</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Centro comercial Moctezuma</td>
-                                                        <td>Francisco Chang</td>
-                                                        <td>Mexico</td>
-                                                        <td>Mexico</td>
+                                                        <td>Remote Support of PBX, CCTV</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Ernst Handel</td>
-                                                        <td>Roland Mendel</td>
-                                                        <td>Austria</td>
-                                                        <td>Austria</td>
+                                                        <td>Remote 24x7</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>Up to 2 requests (outside working hours) per month</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Island Trading</td>
-                                                        <td>Helen Bennett</td>
-                                                        <td>UK</td>
-                                                        <td>UK</td>
+                                                        <td>Remote Consulting and Trainings</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                    
                                                 </table>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="panel">
@@ -130,39 +136,29 @@
                                             </h4>
                                         </div>
                                         <div id="collapseTwo-alt3" class="panel-collapse collapse">
-                                            <div class="panel-body">
-                                                <table class="tables ">
+                                              <table class="tables ">
                                                     <tr>
-                                                        <th>Company</th>
-                                                        <th>Contact</th>
-                                                        <th>Country</th>
-                                                        <th>Country</th>
+                                                        <td>IT Emergency visit if issue can’t be fixed remotely</td>
+                                                        <td>-</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Alfreds Futterkiste</td>
-                                                        <td>Maria Anders</td>
-                                                        <td>Germany</td>
-                                                        <td>Germany</td>
+                                                        <td>Unlimited IT visits by client requests</td>
+                                                        <td>-</td>
+                                                        <td>1 visit per month</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Centro comercial Moctezuma</td>
-                                                        <td>Francisco Chang</td>
-                                                        <td>Mexico</td>
-                                                        <td>Mexico</td>
+                                                        <td>Unlimited IT Consultant visits</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>1 visit per month</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>Ernst Handel</td>
-                                                        <td>Roland Mendel</td>
-                                                        <td>Austria</td>
-                                                        <td>Austria</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Island Trading</td>
-                                                        <td>Helen Bennett</td>
-                                                        <td>UK</td>
-                                                        <td>UK</td>
                                                 </table>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="panel">
@@ -176,35 +172,21 @@
                                         <div id="collapseThree-alt3" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                 <table class="tables ">
+                                                    
                                                     <tr>
-                                                        <th>Company</th>
-                                                        <th>Contact</th>
-                                                        <th>Country</th>
-                                                        <th>Country</th>
+                                                        <td>Monthly</td>
+                                                        <td>-</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Alfreds Futterkiste</td>
-                                                        <td>Maria Anders</td>
-                                                        <td>Germany</td>
-                                                        <td>Germany</td>
+                                                        <td>Weekly</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>Centro comercial Moctezuma</td>
-                                                        <td>Francisco Chang</td>
-                                                        <td>Mexico</td>
-                                                        <td>Mexico</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Ernst Handel</td>
-                                                        <td>Roland Mendel</td>
-                                                        <td>Austria</td>
-                                                        <td>Austria</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Island Trading</td>
-                                                        <td>Helen Bennett</td>
-                                                        <td>UK</td>
-                                                        <td>UK</td>
                                                 </table>
                                             </div>
 
@@ -221,35 +203,43 @@
                                         <div id="collapseFour-alt3" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                 <table class="tables ">
+                                                    
                                                     <tr>
-                                                        <th>Company</th>
-                                                        <th>Contact</th>
-                                                        <th>Country</th>
-                                                        <th>Country</th>
+                                                        <td>Response time on clients request during working hours</td>
+                                                        <td>30 min</td>
+                                                        <td>30 min</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Alfreds Futterkiste</td>
-                                                        <td>Maria Anders</td>
-                                                        <td>Germany</td>
-                                                        <td>Germany</td>
+                                                        <td>Remote Support of Server infrastructure</td>
+                                                        <td>-</td>
+                                                        <td>Up to 1 server support	</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Centro comercial Moctezuma</td>
-                                                        <td>Francisco Chang</td>
-                                                        <td>Mexico</td>
-                                                        <td>Mexico</td>
+                                                        <td>Remote Support of PBX, CCTV</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Ernst Handel</td>
-                                                        <td>Roland Mendel</td>
-                                                        <td>Austria</td>
-                                                        <td>Austria</td>
+                                                        <td>Remote 24x7</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>Up to 2 requests (outside working hours) per month</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Island Trading</td>
-                                                        <td>Helen Bennett</td>
-                                                        <td>UK</td>
-                                                        <td>UK</td>
+                                                        <td>Remote Consulting and Trainings</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                    
                                                 </table>
                                             </div>
                                         </div>
