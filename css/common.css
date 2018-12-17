@@ -604,12 +604,15 @@ marquee {
 }
 
 .table{
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  !important}
-.table td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 10px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%!important;
 }
+.table td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+}
+
+.table-center-align td {text-align: center;}
+.table-center-align th {font-weight: normal;}

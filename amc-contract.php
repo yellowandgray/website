@@ -254,44 +254,82 @@
                                                             </div>
                                                         </div>-->
 
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="text-center padding-20 background-border">
-                                        <h3>Basic</h3>
-                                        <p>Remote Support</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="text-center padding-20 background-border">
-                                        <h3>Standart</h3>
-                                        <p>Onsite Support</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="text-center padding-20 background-border">
-                                        <h3>Enterprise</h3>
-                                        <p>Integrated IT Onsite Support</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="text-center padding-20 background-border">
-                                        <h3>Enterprise Plus</h3>
-                                        <p>Fully Managed IT Support</p>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
-                        <section>
-                            <div class="container">
+                        <section class="section-padding"> 
+                            <div class="container"> 
                                 <div class="row">
+                                    <div class="col-md-3">
+                                        <!--                                        <div class="text-center padding-20 background-border">
+                                                                                    <h3>Basic</h3>
+                                                                                    <p>Remote Support</p>
+                                                                                </div>-->
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="text-center padding-20 background-border">
+                                            <h3>Standart</h3>
+                                            <p>Onsite Support</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="text-center padding-20 background-border">
+                                            <h3>Enterprise</h3>
+                                            <p>Integrated IT Onsite Support</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="text-center padding-20 background-border">
+                                            <h3>Enterprise Plus</h3>
+                                            <p>Fully Managed IT Support</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row table-center-align">
+                                    <h3>Remote Support by Email & Telephone</h3>
                                     <table class="table">
                                         <tr>
+                                            <th>Remote Support of Computerse</td>
+                                            <td>Up to 10 requests per month</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>Remote Support of Server infrastructure</td>
+                                            <td>Francisco Chang</td>
+                                            <td>Mexico</td>
+                                            <td>Germany</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Remote Support of PBX, CCTV</td>
+                                            <td>Roland Mendel</td>
+                                            <td>Austria</td>
+                                            <td>Germany</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Remote 24x7</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>Up to 2 requests (outside working hours) per month</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Remote Consulting and Trainings</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                                <div class="row">
+                                    <h3>Remote Support by Email & Telephone</h3>
+                                    <table class="table">
+<!--                                        <tr>
                                             <th>Basic</th>
                                             <th>Basic</th>
                                             <th>standard</th>
                                             <th>Enterprise</th>
-                                        </tr>
+                                        </tr>-->
                                         <tr>
                                             <td>Remote Support of Computerse</td>
                                             <td>Maria Anders</td>
