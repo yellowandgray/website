@@ -50,8 +50,8 @@
                                 <li><a href="#">Teaching & Learning Methodology</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Programs offered</a></li>
-                        <li><a href="#">What makes us different</a></li>
+                        <li><a href="programs-offered.php">Programs offered</a></li>
+                        <li><a href="what-makes-different.php">What makes us different</a></li>
                         <li><a href="#">Contact</a></li>
 <!--                        <li class="btn-cta"><a href="#"><span>Free Trial</span></a></li>-->
                     </ul>
