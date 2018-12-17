@@ -212,7 +212,7 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <P>He is the Managing Trustee of the MARAICAYAR TRUST.</p> 
+                    <P>He is the Managing Trustee of the MARAICAYAR TRUST. </p> 
                     <P>He is the PROFESSOR and HEAD, Dept. of Community Medicine in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL , since 2007.</p>
                     <P>He is also the Managing Director of  NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.</P>
                     <p>As the Professor and Head of Community Medicine at V M Medical College, Karaikal, he brings with him decades of teaching experience in medical education, and has undertaken many research projects. His rich experience through national and international educational and cultural programmes, is a source of strength to the Trust in its mission of setting up modern Institutes of Education that deliver quality with innovation. He is a multi-faceted personality with abundant experience in managing corporate hospitals and business ventures, apart from being a committed medical professional.</p>
@@ -227,7 +227,7 @@
                     <p>He is a Managing Trustee of the MARAICAYAR TRUST.</p>
                     <p>He is also the PROFESSOR – Dept.Of COMMUNITY MEDICINE in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007.</p>
                     <p>He is also the DIRECTOR of NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.</p>
-                    <p>As the Professor and Head of Community Medicine at V M Medical College, Karaikal, he brings with him decades of teaching experience in medical education, and has undertaken many research projects. His rich experience through national and international educational and cultural programmes, is a source of strength to the Trust in its mission of setting up modern Institutes of Education that deliver quality with innovation. He is a multi-faceted personality with abundant experience in managing corporate hospitals and business ventures, apart from being a committed medical professional.</p>
+                    <p>His administrative, professional and technical skills are a great inspiration to meet the objectives of the Trust. His presentation of research papers at National and International forums have been widely applauded and won him awards in India and abroad. His exemplary helping hand during the floods in 2016, was recognised by the Collector of Thanjavur district and was duly honoured. Highly passionate about education and perfection, he has commendable skills of management which comes handy in  for administration of the hospital as well as  for developing schools with  unique infrastructure facilities.</p>
                 </div>
 
             </div>
@@ -236,10 +236,13 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p>He is a Managing Trustee of the MARAICAYAR TRUST.</p>
-                    <p>He is also the PROFESSOR – Dept.Of COMMUNITY MEDICINE in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007.</p>
-                    <p>He is the DIRECTOR of NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012. </p>
-                    <p>His administrative, professional and technical skills are a great inspiration to meet the objectives of the Trust. His presentation of research papers at National and International forums have been widely applauded and won him awards in India and abroad. His exemplary helping hand during the floods in 2016, was recognised by the Collector of Thanjavur district and was duly honoured. Highly passionate about education and perfection, he has commendable skills of management which comes handy in  for administration of the hospital as well as  for developing schools with  unique infrastructure facilities. </p>
+                    <p>He is a Member of the Board of Management  of the School. </p>
+                    <p>He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service. </p>
+                    <p>He has held the position of Arbitrator in the National Stock Exchange of India, Bangalore. </p>
+                    <p>A visionary, he is experienced in leading teams and skilled in organisation building.</p>
+                    <p>His Core strength lies in in translating Corporate Goals into realities through effective formulation and implementation of Strategies.</p>
+                    <p>Undergone prestigious Global Leadership training programme at The Kellog School of Management, Chicago, U.S.A . </p>
+                    <p>Attended top level management programme on" Value Creation and Risk Management" at the International Banking Summer School , Switzerland.</p>
                 </div>
 
             </div>
@@ -248,13 +251,11 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p>He is a Member of the Board of Management  of the School.</p> 
-                    <p>He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service.</p>  
-                    <p>He has held the position of Arbitrator in the National Stock Exchange of India, Bangalore.</p>
-                    <p>A visionary, he is experienced in leading teams and skilled in organisation building.</p>  
-                    <p>His Core strength lies in in translating Corporate Goals into realities through effective formulation and implementation of Strategies.</p> 
-                    <p>Undergone prestigious Global Leadership training programme at The Kellog School of Management, Chicago, U.S.A .</p> 
-                    <p>Attended top level management programme on" Value Creation and Risk Management" at the International Banking Summer School , Switzerland.</p>
+                    <p>He is a former Government Pleader and now a Senior Advocate,  practicing in the Madras High Court for the last 38 years.</p> 
+                    <p>He represents the third generation in the legal profession.</p>  
+                    <p>He has been standing counsel and legal adviser to several Statutory Bodies, Corporations and Banks.</p>
+                    <p>With the Motto "Work is Worship", he is totally dedicated to his Profession.</p>  
+                    <p>In recognition of his sincerity and hard work, the Government of Tamilnadu appointed him as the Government Pleader for the High Court of Judicature at Madras, both for the Principal Bench at Chennai and the Additional Bench at Madurai, in May 2006, which post he held till May 2011. In April 2013 , he was designated as Senior Counsel by Full Court of the Madras High Court.</p>
 
                 </div>
 
@@ -264,12 +265,13 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <P>He is a former Government Pleader and now a Senior Advocate,  practicing in the Madras High Court for the last 38 years.</P>
-                    <P>He represents the third generation in the legal profession. </P>
-                    <P>He has been standing counsel and legal adviser to several Statutory Bodies, Corporations and Banks.</P>
-                    <P>With the Motto "Work is Worship", he is totally dedicated to his Profession.</P>
-                    <p>In recognition of his sincerity and hard work, the Government of Tamilnadu appointed him as the Government Pleader for the High Court of Judicature at Madras, both for the Principal Bench at Chennai and the Additional Bench at Madurai, in May 2006, which post he held till May 2011.
-                        In April 2013 , he was designated as Senior Counsel by Full Court of the Madras High Court</p>
+                    <P>Currently resident of  Albany, New York, U.S.A.</P>
+                    <P>Born in Chennai, India,  in 1966 , Mr.Muthuvappa at the age of 17, after completing his high school in Chennai migrated to the United States to pursue higher studies.</P>
+                    <P>He obtained his Associates Degree in Biology at The Sage College of Albany, New York.</P>
+                    <P>Upon completion of his Associate Degree, Mr.Muthuvappa obtained his Pharmacy qualification at The Albany College of Pharmacy in 1991.</P>
+                    <p>Since then he has been a well-renowned Pharmacist for Rite Aid in Troy, NY for the past 28 Years.</p>
+                    <p>He is known for taking the utmost care for his patients who always prefer to fill their prescriptions with him.</p>
+                    <p>Mr.Muthuvappa takes pride in providing the best care for his patients.</p>
                 </div>
 
             </div>
