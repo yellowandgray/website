@@ -131,7 +131,8 @@
             <!--Contact End--> 
             <?php include 'footer.php'; ?>
             <script>
-                $('#contactform').multiSelect();
+                $('#contactform').multiSelect({
+            noneText: 'Programs Preffered'});
             </script>
         </div>
 
