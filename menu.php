@@ -16,7 +16,7 @@
                             <li><a href="#"><i class="fa fa-youtube-square"></i></a></li>&nbsp;
                         </ul>
                         </p>
-                        <p class="btn-apply"><a href="#enquiry">Enroll Now</a></p>
+                        <p class="btn-apply"><a href="index.php#enquiry">Enroll Now</a></p>
                     </div>
                 </div>
             </div>
