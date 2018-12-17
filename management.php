@@ -25,275 +25,212 @@
                 </div>
             </section>
             <!--Inner Header End--> 
-            <!--About Start-->
-            <section class="wf100 about">
-                <!--About Txt Video Start-->
-                <div class="about-video-section wf100">
+            <section class="wf100 p80 team">
+                <div class="team-details">
                     <div class="container">
                         <div class="row">
+                            <div class="col-md-3">
+                                <div class="team-large-img"> 
+                                    <img src="images/chairman.jpg" alt=""/>
+<!--                                    <section class="customer-logos slider">
+                                        <div class="slide"><img src="images/awards/enpee-awards-001.png"></div>
+                                        <div class="slide"><img src="images/awards/enpee-awards-002.png"></div>
+                                        <div class="slide"><img src="images/awards/enpee-awards-003.png"></div>
+                                        <div class="slide"><img src="images/awards/enpee-awards-010.png"></div>
+                                        <div class="slide"><img src="images/awards/enpee-awards-012.png"></div>
+                                        <div class="slide"><img src="images/awards/enpee-awards-013.png"></div>
+                                        <div class="slide"><img src="images/awards/enpee-awards-014.png"></div>
+                                        <div class="slide"><img src="images/awards/enpee-awards-018.png"></div>
+                                        <div class="slide"><img src="images/awards/enpee-awards-027.png"></div>
+                                        <div class="slide"><img src="images/awards/enpee-awards-028.png"></div>
+                                        <div class="slide"><img src="images/awards/enpee-awards-03.png"></div>
+                                    </section>-->
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="team-details-txt">
+                                    <h2>Rtn. PHF. Hajee Mr. L. KAMAL  BATCHA</h2>
+                                    <p>He is a multi-faceted personality, with a pleasing disposition and a philanthropic bent of mind, but basically wedded to the pharma community, by creating new products at affordable rates for the community health care.</p>
+                                    <strong class="trank">Founder and CHAIRMAN:  MARAICAYAR TRUST (1992)</strong>
+                                    <p>It is philanthropy that the Trust is dealing with. The Trust has the  objective of developing projects for the benefit of society in the fields of Education and Health.</p>
+                                    <p>With traditional type of assistance for education which is ongoing, the Trust stood in the front in helping victims of the floods and cyclones in Tamilnadu in the recent years.</p>
+                                    <!--                                    <div class="share-post wf100"> 
+                                                                            <strong>Connect with Mr. L. KAMAL  BATCHA:</strong> 
+                                                                            <a href="#" class="fb">
+                                                                                <i class="fab fa-facebook-f"></i>
+                                                                            </a> 
+                                                                            <a href="#" class="tw">
+                                                                                <i class="fab fa-twitter"></i>
+                                                                            </a> 
+                                                                            <a href="#" class="gp">
+                                                                                <i class="fab fa-google-plus-g"></i>
+                                                                            </a> 
+                                                                            <a href="#" class="link">
+                                                                                <i class="fab fa-linkedin-in"></i>
+                                                                            </a> 
+                                                                            <a href="#" class="insta">
+                                                                                <i class="fab fa-instagram"></i>
+                                                                            </a> 
+                                                                        </div>-->
+                                    <a href="#" class="contact-team" id="myBtn">Read More</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-grid wf100 p80-40">
+                    <div class="container">
+                        <div class="row">
+                            <!--                            <div class="col-md-12">
+                                                            <h2>Contact with Elven</h2>
+                                                        </div>-->
                             <div class="col-md-4">
-                                <img src="images/charman.jpg" alt=""/>
-                            </div>
-                            <div class="col-md-8">
-                                <h3>Rtn. PHF. Hajee Mr. L. KAMAL  BATCHA</h3>
-                                <p>He is a multi-faceted personality, with a pleasing disposition and a philanthropic bent of mind, but basically wedded to the pharma community, by creating new products at affordable rates for the community health care.</p>
-                                <p><strong>Founder and CHAIRMAN:  MARAICAYAR TRUST (1992)</strong></p>
-                                <p>It is philanthropy that the Trust is dealing with. The Trust has the  objective of developing projects for the benefit of society in the fields of Education and Health.</p>
-                                <p>With traditional type of assistance for education which is ongoing, the Trust stood in the front in helping victims of the floods and cyclones in Tamilnadu in the recent years.</p>
-                                <p>In the wake of the overwhelming loss suffered by the victims of cyclone GAJA,  several truckloads of relief materials were quickly despatched to the affected areas, notwithstanding the fact that the promoter’s family too had suffered  extensive loss of assets.</p>
-                                <p>He desires to establish International Schools of a high standard to bring the best in our children and contribute immensely in the field of Education  and Nation-building activities.</p>
-                                <p>Associated with various  educational and social activities aimed at human welfare, he proud to be a senior Rotarian, and a Paul Harris Fellow  of the  Rotary Club of Thanjavur South.</p>
-                            </div>
-<!--                            <div class="col-lg-6">
-                                <div class="about-text">
-                                                                        <h5>We are highly passionate about our MOTTO / Core Values</h5>
-                                    <h2>PROMOTERS</h2>
-                                    <h3>NATIONAL PHARMA</h3>
-                                    <p>ENPEE International is an initiative of The National Pharma  Group,started as a pharmaceutical manufacturing unit in Thanjavur  in 1967, with a single allopathic formulation “MALVIRONE” in a syrup base, containing Malt, Iron, Vitamins A and D3 as a haematinic tonic, meant for children and adults. It earned a good name in the market immediately. </p>
-                                    <p>Currently the company has around 40 products in its manufacturing line, patronized by the medical community and consumers not only in India, but also in South East Asian Countries.</p>
-                                    <p>It has established a manufacturing unit in Malacca, Malaysia, for manufacturing herbal products. It is a first of its kind association for a unit in Tamilnadu.</p>
+                                <!--campaign box start-->
+                                <div class="ser-box">
+                                    <div class="ser-txt">
+                                        <a href="#"> <h5> Dr. K. MUJIBUR RAHMAN, M.D. </h5>
+                                            <span class="aicon"><i class="fas fa-arrow-right"></i></span> </a>
+                                    </div>
+                                    <div class="ser-thumb">
+                                        <div class="bg-padding-line">He is the Managing Trustee of the MARAICAYAR TRUST. He is the PROFESSOR and HEAD, Dept. of Community Medicine in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL , since 2007. He is also the Managing Director of  NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.</div>
+                                    </div>
 
                                 </div>
+                                <!--campaign box end--> 
                             </div>
-                            <div class="col-lg-6">
-                                <div class="about-video-img"> 
-                                                                        <a href="#">
-                                                                            <i class="fas fa-play"></i>
-                                                                        </a> 
-                                    <img src="images/aboutimg.jpg" alt=""> 
-                                </div>
-                            </div>-->
-                        </div>
-                        <div class="row">
                             <div class="col-md-4">
-                                <h3 class="text-center">Dr. K. MUJIBUR RAHMAN, M.D.</h3>
-                            </div>
-                        </div>
-<!--                        <div class="row margin-top-30">
-                            <div class="col-md-2">
-                                <img src="images/charman.jpg" alt="" class="img-responsive"/>
-                            </div>
-                            <div class="col-md-10">
-                                <br/>
-                                <br/>
-                                <p>  Founded by <strong>Mr. L. Kamal Batcha,</strong> National Pharma has won several prestigious National and International Awards, including the Jamnalal Bajaj Merit Certificate. </p>
-                                <p>   the International Asia Award at Singapore  and  2 times Jamnalal Bajaj Award Merit Certificate for achievement of Excellence in exports , CHEMEXCIL Export - Promotion Award / Merit Certificate from Ministry of Commerce , Government of India</p>
-                            </div>
-                        </div>-->
-                    </div>
-                </div>
-                <!--About Txt Video End--> 
-                <!--Our Success Story Start-->
-                <div class="our-success-story wf100">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="story-title-bg"> 
-<!--                                    <strong class="t1">International</strong> <strong class="t2">Standard</strong> <strong class="t3">Education</strong> -->
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="col-md-12 timeline-box">
-                                    <div class="section-title-2">
-                                        <!--                                        <h5>About our History</h5>-->
-                                        <h5>The NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE</h5>
-                                        <p>This Multi-Speciality Hospital, with umbilical connection to the <strong>NATIONAL PHARMA,</strong> the manufacturing unit, came into being in a modern green campus on the  Vallam Road, Thanjavur in 2010. Medical services were started from January, 2011.</p>
-                                        <!--                                        <ul style="list-style: none;">
-                                                                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To emerge as the most preferred institution offering Quality Education , matching international standards.</li>
-                                                                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To enable, energise and enhance young minds through new learning to conquer excellence.</li>
-                                                                                </ul>-->
+                                <!--campaign box start-->
+                                <div class="ser-box">
+<!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg2.jpg" alt=""></div>-->
+                                    <div class="ser-txt">
+                                        <a href="#"><h5> Dr. K.MOHAMED  ALI, M.D.  </h5></a>
+                                        <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                    </div>
+                                    <div class="ser-thumb">
+                                        <div class="bg-padding-line">He is a Managing Trustee of the MARAICAYAR TRUST. He is also the PROFESSOR – Dept.Of COMMUNITY MEDICINE in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007. He is the DIRECTOR of NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.<br/><br/></div>
                                     </div>
                                 </div>
-                                <div class="col-md-12 timeline-box" style="margin-top: 10px;">
-                                    <div class="section-title-2">
-                                        <p>Functioning under the experienced eyes of its illustrious Founder, <strong>Rtn. PHF. Hajee L. Kamal Batcha,</strong> the Hospital provides tertiary care with facilities on par with any Corporate Hospital in the country. It is the fulfilment of his long cherished vision  to offer affordable care through 24 hours to the community.</p>
-                                        <p>The Hospital is managed by a team of professionals with Prof.  <strong>Dr. K.Mujibur Rahman, M.D.,</strong> as the Managing Director and Prof. <strong>Dr.K. Mohamed Ali, M.D.,</strong>  as the Director. They are both experienced medical consultants having handled challenging cases, as well as enthusiastic teachers of medicine.</p>
-                                        <p>A separate <strong>Nursing and Paramedical Institute</strong> recognized by the Indian Medical Association is functioning from the same complex. Nursing, Lab Technician, OT Technician, FNA/MNA courses etc., are made available to prospective candidates to cater to the needs of the health care industry.</p>
-                                        <p>The Hospital is accredited with <strong>ISO 9001: 2008</strong> in compliance of Quality Management System for providing Health Care Services by <strong>Joint Accreditation  System, Australia and New Zealand.</strong> This is a unique achievement and step forward in establishing quality health care services in accordance with its slogan of providing <strong>QUALITY HEALTH CARE AT ALL LEVELS.</strong></p>
-                                        <!--                                        <h5>About our History</h5>-->
-                                        <!-- <h5>MISSION</h5>
-                                        <ul style="list-style: none;">
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To become role model in setting standards of Quality Education.</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To build ably qualified, skilful & dedicated Teaching Fraternity .</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To impart education of highest standards to all socio-economic sections of society in fulfilment of Corporate Social Responsibility.</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To provide a safe, secure and Children-friendly Environment.</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To design and roll over robust and ultra-modern Infrastructure Facilities .</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To expand the foot-print to nearby districts by establishing similar schools to serve local community.</li>
-                                        </ul>-->
+                                <!--campaign box end--> 
+                            </div>
+                            <div class="col-md-4">
+                                <!--campaign box start-->
+                                <div class="ser-box">
+<!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
+                                    <div class="ser-txt">
+                                        <h5> <a href="#">Mr. H. M. A. Khan, M. Sc.</a> 
+                                        </h5>
+                                        <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                    </div>
+                                    <div class="ser-thumb">
+                                        <div class="bg-padding-line">He is a Member of the Board of Management  of the School. He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service.<br/></div>
                                     </div>
                                 </div>
-                                <!--                                <div class="section-title-2">
-                                                                    <h5>About our History</h5>
-                                                                    <h2>Our Success Story</h2>
-                                                                </div>-->
-                                <!--eco History Start-->
-                                <!--                                <div class="eco-history">
-                                                                    <div class="timeline-slider">
-                                                                        <div class="timeline-nav">
-                                                                            <div><span><strong>2000 - 2002</strong></span></div>
-                                                                            <div><span><strong>2002 - 2006</strong></span></div>
-                                                                            <div><span><strong>2006 - 2009</strong></span></div>
-                                                                            <div><span><strong>2009 - 2012</strong></span></div>
-                                                                            <div><span><strong>2012 - 2015</strong></span></div>
-                                                                            <div><span><strong>2015 - 2018</strong></span></div>
-                                                                        </div>
-                                                                        <div class="timeline">
-                                                                            Timeline Text Start
-                                                                            <div>
-                                                                                <div class="row">
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>We Started</h6>
-                                                                                            <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>Results of Hardwork</h6>
-                                                                                            <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>Project </h6>
-                                                                                            <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            Timeline Text End 
-                                                                            Timeline Text Start
-                                                                            <div>
-                                                                                <div class="row">
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>Results of Hardwork</h6>
-                                                                                            <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>Project </h6>
-                                                                                            <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>We Started</h6>
-                                                                                            <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            Timeline Text End 
-                                                                            Timeline Text Start
-                                                                            <div>
-                                                                                <div class="row">
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>We Started</h6>
-                                                                                            <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>Results of Hardwork</h6>
-                                                                                            <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>Project </h6>
-                                                                                            <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            Timeline Text End 
-                                                                            Timeline Text Start
-                                                                            <div>
-                                                                                <div class="row">
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>Results of Hardwork</h6>
-                                                                                            <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>Project </h6>
-                                                                                            <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>We Started</h6>
-                                                                                            <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            Timeline Text End 
-                                                                            Timeline Text Start
-                                                                            <div>
-                                                                                <div class="row">
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>We Started</h6>
-                                                                                            <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>Results of Hardwork</h6>
-                                                                                            <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>Project </h6>
-                                                                                            <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            Timeline Text End 
-                                                                            Timeline Text Start
-                                                                            <div>
-                                                                                <div class="row">
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>Results of Hardwork</h6>
-                                                                                            <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>Project </h6>
-                                                                                            <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class=" col-4">
-                                                                                        <div class="timeline-box">
-                                                                                            <h6>We Started</h6>
-                                                                                            <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            Timeline Text End 
-                                                                        </div>
-                                                                    </div>
-                                                                </div>-->
-                                <!--Political History End--> 
+                                <!--campaign box end--> 
                             </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <!--campaign box start-->
+                                <div class="ser-box">
+<!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
+                                    <div class="ser-txt">
+                                        <h5> <a href="#">Mr. J. RAJA KALIFULLA., B.Sc., B.L.</a> 
+                                        </h5>
+                                        <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                    </div>
+                                    <div class="ser-thumb">
+                                        <div class="bg-padding-line">He is a former Government Pleader and now a Senior Advocate,  practicing in the Madras High Court for the last 38 years. He represents the third generation in the legal profession. He has been standing counsel and legal adviser to several Statutory Bodies, Corporations and Banks. With the Motto "Work is Worship", he is totally dedicated to his Profession.<br/></div>
+                                    </div>
+                                </div>
+                                <!--campaign box end--> 
+                            </div>
+                            <div class="col-md-5">
+                                <!--campaign box start-->
+                                <div class="ser-box">
+<!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
+                                    <div class="ser-txt">
+                                        <h5> <a href="#">Mr. JAFER SADIQUE MUTHUVAPPA</a> 
+                                        </h5>
+                                        <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                    </div>
+                                    <div class="ser-thumb">
+                                        <div class="bg-padding-line">Currently resident of  Albany, New York, U.S.A. Born in Chennai, India,  in 1966 , Mr.Muthuvappa at the age of 17, after completing his high school in Chennai migrated to the United States to pursue higher studies. He obtained his Associates Degree in Biology at The Sage College of Albany, New York.<br/><br/></div>
+                                    </div>
+                                </div>
+                                <!--campaign box end--> 
+                            </div>
+                            <div class="col-md-1"></div>
                         </div>
                     </div>
                 </div>
-                <!--Our Success Story End--> 
+                <!--                <div class="wf100 comment-form">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h2>Contact with Elven</h2>
+                                                <ul>
+                                                    <li class="w3">
+                                                        <input type="text" class="form-control" placeholder="Full Name">
+                                                    </li>
+                                                    <li class="w3">
+                                                        <input type="text" class="form-control" placeholder="Email">
+                                                    </li>
+                                                    <li class="w3 np">
+                                                        <input type="text" class="form-control" placeholder="Subject">
+                                                    </li>
+                                                    <li class="full">
+                                                        <textarea class="form-control" placeholder="Write Comments"></textarea>
+                                                    </li>
+                                                    <li class="full">
+                                                        <button class="post-btn">Post Your Comment</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
             </section>
-            <!--About End--> 
             <!--Footer Start-->
             <?php include 'footer.php'; ?>
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Some text in the Modal..</p>
+                </div>
+
+            </div>
+            <script>
+// Get the modal
+                var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+                var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                }
+
+// When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+
+// When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+
+                }
+                $(".close").click(function () {
+                     modal.style.display = "none";
+                });
+            </script>
+
     </body>
 </html>

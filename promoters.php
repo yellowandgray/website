@@ -53,7 +53,7 @@
                         </div>
                         <div class="row margin-top-30">
                             <div class="col-md-2">
-                                <img src="images/charman.jpg" alt="" class="img-responsive"/>
+                                <img src="images/chairman.jpg" alt="" class="img-responsive"/>
                             </div>
                             <div class="col-md-10">
                                 <br/>
