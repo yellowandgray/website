@@ -64,38 +64,41 @@
                         </div>
                         <div class="row showcase-section">
                             <div class="col-md-7">
-                                <img src="img/blog/biggest-data-breaches-2018.jpg" alt="" class="img-responsive"/>
+                                <img src="img/blog/biggest-data-breaches-2018.jpg" alt="" class="img-responsive img-width"/>
                                 <h2 class="font-family-Georgia">The 10 Biggest Data Breaches of 2018... So Far</h2>
                                 <h3>We're only halfway through 2018, but the scale of some of the data breaches that have already been reported is staggering. Think Facebook was the biggest one? Guess again.</h3>
                                 <p>Six months is a long time in infosec, so it's no surprise that numerous data breaches have emerged in the first half of 2018. Below is a countdown of 10 of the biggest incidents reported thus far in 2018 in terms of total number of records compromised. <a href="https://blog.barkly.com/biggest-data-breaches-2018-so-far" target="blank" class="bold readmore-hover">Read More</a></p>
                             </div>
-                            <div class="col-md-5">
-                                
-                                
-                            </div>
+                            <div class="col-md-5"></div>
                         </div>
                         <div class="row showcase-section">
                             <div class="col-md-7">
-                                <img src="img/blog/PowerGrid-Security-961452604.jpg" alt="" class="img-responsive"/>
-                                <h2 class="font-family-Georgia">The 10 Biggest Data Breaches of 2018... So Far</h2>
-                                <h3>We're only halfway through 2018, but the scale of some of the data breaches that have already been reported is staggering. Think Facebook was the biggest one? Guess again.</h3>
-                                <p>Six months is a long time in infosec, so it's no surprise that numerous data breaches have emerged in the first half of 2018. Below is a countdown of 10 of the biggest incidents reported thus far in 2018 in terms of total number of records compromised. <a href="https://blog.barkly.com/biggest-data-breaches-2018-so-far" target="blank" class="bold readmore-hover">Read More</a></p>
+                                <img src="img/blog/PowerGrid-Security-961452604.jpg" alt="" class="img-responsive img-width"/>
+                                <h2 class="font-family-Georgia">THE WORST CYBERSECURITY BREACHES OF 2018 SO FAR</h2>
+                                <p>LOOKING BACK AT the first six months of 2018, there haven't been as many government leaks and global ransomware attacks as there were by this time last year, but that's pretty much where the good news ends. Corporate security isn't getting better fast enough, critical infrastructure security hangs in the balance, and state-backed hackers from around the world are getting bolder and more sophisticated.</p>
+
+                                <p>Here are the big digital security dramas that have played out so far this year—and it's only half over. <a href="https://www.wired.com/story/2018-worst-hacks-so-far/" target="blank" class="bold readmore-hover">Read More</a></p>
                             </div>
-                            <div class="col-md-5">
-                                
-                                
+                            <div class="col-md-5"></div>
+                        </div>
+                        <div class="row showcase-section">
+                            <div class="col-md-7">
+                                <img src="img/blog/blog-04.jpg" alt="" class="img-responsive img-width"/>
+                                <h2 class="font-family-Georgia">60 Cybersecurity Predictions For 2019</h2>
+                                <p>I’ve always been a loner, avoiding crowds as much as possible, but last Friday I found myself in the company of 500 million people. The breach of the personal accounts of Marriott and Starwood customers forced us to join the 34% of U.S. consumers who experienced a compromise of their personal information over the last year. Viewed another way, there were 2,216 data breaches and more than 53,000 cybersecurity incidents reported in 65 countries in the 12 months ending in March 2018. <a href="https://www.forbes.com/sites/gilpress/2018/12/03/60-cybersecurity-predictions-for-2019/#6b5233d44352" target="blank" class="bold readmore-hover">Read More</a></p>
                             </div>
+                            <div class="col-md-5"></div>
                         </div>
                     </div>
                 </section>
-                <div class="container">
+<!--                <div class="container">
 
                     <div class="about">
 
 
                         <div class="row">
                             <div class="col-md-4">
-                                <!-- Heading and para -->
+                                 Heading and para 
                                 <div class="block-heading-two">
                                     <h3><span>Why Choose Us?</span></h3>
                                 </div>
@@ -105,11 +108,11 @@
                                 <div class="block-heading-two">
                                     <h3><span>Our Solution</span></h3>
                                 </div>		
-                                <!-- Accordion starts -->
+                                 Accordion starts 
                                 <div class="panel-group" id="accordion-alt3">
-                                    <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
+                                     Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. 
                                     <div class="panel">	
-                                        <!-- Panel heading -->
+                                         Panel heading 
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
                                                 <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
@@ -118,7 +121,7 @@
                                             </h4>
                                         </div>
                                         <div id="collapseOne-alt3" class="panel-collapse collapse">
-                                            <!-- Panel body -->
+                                             Panel body 
                                             <div class="panel-body">
                                                 Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
                                             </div>
@@ -167,7 +170,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Accordion ends -->
+                                 Accordion ends 
 
                             </div>
 
@@ -177,7 +180,7 @@
                                 </div>								
                                 <h6>Web Development</h6>
                                 <div class="progress pb-sm">
-                                    <!-- White color (progress-bar-white) -->
+                                     White color (progress-bar-white) 
                                     <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                                         <span class="sr-only">40% Complete (success)</span>
                                     </div>
@@ -232,46 +235,46 @@
                         </section>					
 
                         <br>
-                        <!-- Our Team starts -->
+                         Our Team starts 
 
                         <div class="team-six">
                             <div class="row">
                                 <div class="col-md-3 col-sm-6">
-                                    <!-- Team Member -->
+                                     Team Member 
                                     <div class="team-member">
-                                        <!-- Image -->
+                                         Image 
                                         <img class="img-responsive" src="img/team1.jpg" alt="">
-                                        <!-- Name -->
+                                         Name 
                                         <h4>Johne Doe</h4>
                                         <span class="deg">Creative</span> 
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
-                                    <!-- Team Member -->
+                                     Team Member 
                                     <div class="team-member">
-                                        <!-- Image -->
+                                         Image 
                                         <img class="img-responsive" src="img/team2.jpg" alt="">
-                                        <!-- Name -->
+                                         Name 
                                         <h4>Jennifer</h4>
                                         <span class="deg">Programmer</span> 
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
-                                    <!-- Team Member -->
+                                     Team Member 
                                     <div class="team-member">
-                                        <!-- Image -->
+                                         Image 
                                         <img class="img-responsive" src="img/team3.jpg" alt="">
-                                        <!-- Name -->
+                                         Name 
                                         <h4>Christean</h4>
                                         <span class="deg">CEO</span> 
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
-                                    <!-- Team Member -->
+                                     Team Member 
                                     <div class="team-member">
-                                        <!-- Image -->
+                                         Image 
                                         <img class="img-responsive" src="img/team4.jpg" alt="">
-                                        <!-- Name -->
+                                         Name 
                                         <h4>Kerinele rase</h4>
                                         <span class="deg">Manager</span> 
                                     </div>
@@ -279,103 +282,15 @@
                             </div>
                         </div>
 
-                        <!-- Our team ends -->
+                         Our team ends 
 
 
                     </div>
 
-                </div>
+                </div>-->
             </section>
-            <footer>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <div class="widget">
-                                <h5 class="widgetheading">Our Contact</h5>
-                                <address>
-                                    <strong>MyHome Inc</strong><br>
-                                    JC Main Road, Near Silnile tower<br>
-                                    Pin-21542 NewYork US.</address>
-                                <p>
-                                    <i class="icon-phone"></i> (123) 456-789 - 1255-12584 <br>
-                                    <i class="icon-envelope-alt"></i> email@domainname.com
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="widget">
-                                <h5 class="widgetheading">Quick Links</h5>
-                                <ul class="link-list">
-                                    <li><a href="#">Latest Events</a></li>
-                                    <li><a href="#">Terms and conditions</a></li>
-                                    <li><a href="#">Privacy policy</a></li>
-                                    <li><a href="#">Career</a></li>
-                                    <li><a href="#">Contact us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="widget">
-                                <h5 class="widgetheading">Latest posts</h5>
-                                <ul class="link-list">
-                                    <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                                    <li><a href="#">Pellentesque et pulvinar enim. Quisque at tempor ligula</a></li>
-                                    <li><a href="#">Natus error sit voluptatem accusantium doloremque</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="widget">
-                                <h5 class="widgetheading">Recent News</h5>
-                                <ul class="link-list">
-                                    <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                                    <li><a href="#">Pellentesque et pulvinar enim. Quisque at tempor ligula</a></li>
-                                    <li><a href="#">Natus error sit voluptatem accusantium doloremque</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="sub-footer">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="copyright">
-                                    <p>
-                                        <span>&copy; Bootstrap Template 2018 All right reserved. Template By </span><a href="http://webthemez.com/free-bootstrap-templates/" target="_blank">WebThemez</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="social-network">
-                                    <li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-                                    <li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <?php include 'footer.php'; ?>
         </div>
-        <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-        <!-- javascript
-            ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="js/jquery.js"></script>
-        <script src="js/jquery.easing.1.3.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.fancybox.pack.js"></script>
-        <script src="js/jquery.fancybox-media.js"></script> 
-        <script src="js/jquery.flexslider.js"></script>
-        <script src="js/animate.js"></script>
-        <!-- Vendor Scripts -->
-        <script src="js/modernizr.custom.js"></script>
-        <script src="js/jquery.isotope.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/animate.js"></script>
-        <script src="js/custom.js"></script>
+
     </body>
 </html>
