@@ -642,7 +642,7 @@ section.hero-text h1{
 /* page headline
 ==================================== */
 
-#inner-headline{margin: 0;padding: 0;position:relative;background: url("../img/slides/1.jpg") 0 -417px;}
+#inner-headline{margin: 0;padding: 0;position:relative;background: url("../img/slides/1.jpg") 0 -417px; Height: 400px;}
 section#inner-headline:after {
     content: '';
     background: rgba(0, 0, 0, 0.47);
@@ -654,8 +654,8 @@ section#inner-headline:after {
 }
 
 #inner-headline h2.pageTitle{
-    color: #46bd55;
-    padding: 25px 0;
+    color: #fff;
+    padding: 140px 0;
     display:block;
     text-align: center;
     position: relative;
