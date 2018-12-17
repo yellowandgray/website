@@ -58,7 +58,7 @@
                                         <li class="half pr-15">
                                             <div class="multiselect">
                                                 <div class="selectBox" onclick="showCheckboxes()">
-                                                    <select>
+                                                    <select name="preffred_classes">
                                                         <option>Choose Programs</option>
                                                     </select>
                                                     <div class="overSelect"></div>
