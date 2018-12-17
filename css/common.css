@@ -404,3 +404,14 @@ fieldset {
     font-size: 12px;
     margin-right: 3px;
 }
+
+.francais {
+    background-size: cover;
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.height-145 {
+    height: 145px;
+}

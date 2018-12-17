@@ -16,7 +16,7 @@
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header">
                 <div class="container">
-                    <h1>About Us</h1>
+                    <h1>What Makes Us Different</h1>
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">What Makes Us Different</a></li>

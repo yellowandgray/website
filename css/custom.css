@@ -5878,7 +5878,7 @@ About Us Page
     font-weight: 700;
     line-height: 72px;
 }
-.story-title-bg:after {
+/*.story-title-bg:after {
     position: absolute;
     width: 82%;
     height: 83%;
@@ -5889,7 +5889,7 @@ About Us Page
     right: 0;
     background: rgba(102,187,106,.70);
     content: "";
-}
+}*/
 .timeline {
     text-align: left;
 }

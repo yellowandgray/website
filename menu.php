@@ -38,12 +38,12 @@
                             </ul>
                         </li>
                         <li class="has-dropdown">
-                            <a href="about.php">Chateau Francais</a>
+                            <a href="chateau-francais.php">Chateau Francais</a>
                             <ul class="dropdown">
                                 <li><a href="#">Architectural Drawings</a></li>
                             </ul>
                         </li>
-                        <li class="has-dropdown"><a href="#">The way we work</a>
+                        <li class="has-dropdown"><a href="way-we-work.php">The way we work</a>
                             <ul class="dropdown">
                                 <li><a href="#">Curriculum</a></li>
                                 <li><a href="#">Mariner's Star</a></li>
@@ -52,7 +52,7 @@
                         </li>
                         <li><a href="programs-offered.php">Programs offered</a></li>
                         <li><a href="what-makes-different.php">What makes us different</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="contact.php">Contact</a></li>
 <!--                        <li class="btn-cta"><a href="#"><span>Free Trial</span></a></li>-->
                     </ul>
                 </div>

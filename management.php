@@ -16,11 +16,11 @@
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header">
                 <div class="container">
-                    <h1>About Us</h1>
+                    <h1>Management</h1>
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Promoters</a></li>
+                        <li><a href="#">Management</a></li>
                     </ul>
                 </div>
             </section>
