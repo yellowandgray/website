@@ -1,6 +1,7 @@
 <?php
 
 if ($_POST['name']) {
+
     $name = $_REQUEST['name'];
     $email = $_REQUEST['email'];
     $mobile = $_REQUEST['mobile'];
@@ -53,6 +54,14 @@ if ($_POST['name']) {
         <td style='background:#004976;color:#fff;'>Subject</td>
         <td style='background:#004976;color:#fff;'>" . $subject . "</td>
     </tr>
+    <tr>
+        <td style='background:#004976;color:#fff;'>Programs Preffred</td>";
+    foreach ($_POST['preffred_classes'] as $names) {
+        $message .= "<td style='background:#004976;color:#fff;'>$names</td>";
+    }
+
+
+    $message .="</td></tr>
     <tr>
         <td style='background:#004976;color:#fff;'>Message</td>";
     $message .= "<td style='background:#004976;color:#fff;'>$message</td>";
