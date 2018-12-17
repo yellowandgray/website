@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
     <?php $page = 'about';
-    include 'head.php'; ?>
+    include 'head.php';
+    ?>
     <body>
         <div class="wrapper">
             <!--Header Start-->
@@ -60,388 +61,384 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-4">
-                                <<<<<<< HEAD
+
                                 <div class="story-title-bg-01"> <strong class="t1">International</strong> <strong class="t2">Standard</strong> <strong class="t3">Education</strong> 
-                                    =======
-                                    <div class="story-title-bg"> <strong class="t1">International</strong> <strong class="t2">Standard</strong> <strong class="t3">Education</strong> 
-                                        >>>>>>> origin/enpeekl
-                                    </div>
-                                </div>
-                                <div class="col-lg-8">
-                                    <div class="col-md-12 timeline-box">
-                                        <div class="section-title-2">
-                                            <!--                                        <h5>About our History</h5>-->
-                                            <h5>We are committed to our VISION</h5>
-                                            <ul style="list-style: none;">
-                                                <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To emerge as the most preferred institution offering Quality Education , matching international standards.</li>
-                                                <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To enable, energise and enhance young minds through new learning to conquer excellence.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <<<<<<< HEAD
-                                    <div class="col-md-12 timeline-box" style="margin-top: 10px;">
-                                        <div class="section-title-2">
-                                            <!--                                        <h5>About our History</h5>-->
-                                            <h5>MISSION</h5>
-                                            <ul style="list-style: none;">
-                                                <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To become role model in setting standards of Quality Education.</li>
-                                                <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To build ably qualified, skilful & dedicated Teaching Fraternity .</li>
-                                                <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To impart education of highest standards to all socio-economic sections of society in fulfilment of Corporate Social Responsibility.</li>
-                                                <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To provide a safe, secure and Children-friendly Environment.</li>
-                                                <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To design and roll over robust and ultra-modern Infrastructure Facilities .</li>
-                                                <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To expand the foot-print to nearby districts by establishing similar schools to serve local community.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--                                <div class="section-title-2">
-                                                                        <h5>About our History</h5>
-                                                                        <h2>Our Success Story</h2>
-                                                                    </div>-->
-                                    <!--eco History Start-->
-                                    <!--                                <div class="eco-history">
-                                                                        <div class="timeline-slider">
-                                                                            <div class="timeline-nav">
-                                                                                <div><span><strong>2000 - 2002</strong></span></div>
-                                                                                <div><span><strong>2002 - 2006</strong></span></div>
-                                                                                <div><span><strong>2006 - 2009</strong></span></div>
-                                                                                <div><span><strong>2009 - 2012</strong></span></div>
-                                                                                <div><span><strong>2012 - 2015</strong></span></div>
-                                                                                <div><span><strong>2015 - 2018</strong></span></div>
-                                                                            </div>
-                                                                            <div class="timeline">
-                                                                                Timeline Text Start
-                                                                                <div>
-                                                                                    <div class="row">
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>We Started</h6>
-                                                                                                <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>Results of Hardwork</h6>
-                                                                                                <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>Project </h6>
-                                                                                                <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                Timeline Text End 
-                                                                                Timeline Text Start
-                                                                                <div>
-                                                                                    <div class="row">
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>Results of Hardwork</h6>
-                                                                                                <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>Project </h6>
-                                                                                                <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>We Started</h6>
-                                                                                                <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                Timeline Text End 
-                                                                                Timeline Text Start
-                                                                                <div>
-                                                                                    <div class="row">
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>We Started</h6>
-                                                                                                <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>Results of Hardwork</h6>
-                                                                                                <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>Project </h6>
-                                                                                                <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                Timeline Text End 
-                                                                                Timeline Text Start
-                                                                                <div>
-                                                                                    <div class="row">
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>Results of Hardwork</h6>
-                                                                                                <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>Project </h6>
-                                                                                                <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>We Started</h6>
-                                                                                                <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                Timeline Text End 
-                                                                                Timeline Text Start
-                                                                                <div>
-                                                                                    <div class="row">
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>We Started</h6>
-                                                                                                <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>Results of Hardwork</h6>
-                                                                                                <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>Project </h6>
-                                                                                                <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                Timeline Text End 
-                                                                                Timeline Text Start
-                                                                                <div>
-                                                                                    <div class="row">
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>Results of Hardwork</h6>
-                                                                                                <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>Project </h6>
-                                                                                                <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class=" col-4">
-                                                                                            <div class="timeline-box">
-                                                                                                <h6>We Started</h6>
-                                                                                                <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                Timeline Text End 
-                                                                            </div>
-=======
-                                <div class="col-md-12 timeline-box" style="margin-top: 10px;">
-                                    <div class="section-title-2">
-                                    <!--                                        <h5>About our History</h5>-->
-                                    <h5>MISSION</h5>
-                                    <ul style="list-style: none;">
-                                        <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To become role model in setting standards of Quality Education.</li>
-                                        <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To build ably qualified, skilful & dedicated Teaching Fraternity .</li>
-                                        <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To impart education of highest standards to all socio-economic sections of society in fulfilment of Corporate Social Responsibility.</li>
-                                        <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To provide a safe, secure and Children-friendly Environment.</li>
-                                        <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To design and roll over robust and ultra-modern Infrastructure Facilities .</li>
-                                        <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To expand the foot-print to nearby districts by establishing similar schools to serve local community.</li>
-                                    </ul>
                                 </div>
                             </div>
-                            <!--                                <div class="section-title-2">
-                                                                <h5>About our History</h5>
-                                                                <h2>Our Success Story</h2>
-                                                            </div>-->
-                            <!--eco History Start-->
-                            <!--                                <div class="eco-history">
-                                                                <div class="timeline-slider">
-                                                                    <div class="timeline-nav">
-                                                                        <div><span><strong>2000 - 2002</strong></span></div>
-                                                                        <div><span><strong>2002 - 2006</strong></span></div>
-                                                                        <div><span><strong>2006 - 2009</strong></span></div>
-                                                                        <div><span><strong>2009 - 2012</strong></span></div>
-                                                                        <div><span><strong>2012 - 2015</strong></span></div>
-                                                                        <div><span><strong>2015 - 2018</strong></span></div>
->>>>>>> origin/enpeekl
-                                                                    </div>
-                                                                    <div class="timeline">
-                                                                        Timeline Text Start
-                                                                        <div>
-                                                                            <div class="row">
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>We Started</h6>
-                                                                                        <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                            <div class="col-lg-8">
+                                <div class="col-md-12 timeline-box">
+                                    <div class="section-title-2">
+                                        <!--                                        <h5>About our History</h5>-->
+                                        <h5>We are committed to our VISION</h5>
+                                        <ul style="list-style: none;">
+                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To emerge as the most preferred institution offering Quality Education , matching international standards.</li>
+                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To enable, energise and enhance young minds through new learning to conquer excellence.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 timeline-box" style="margin-top: 10px;">
+                                    <div class="section-title-2">
+                                        <!--                                        <h5>About our History</h5>-->
+                                        <h5>MISSION</h5>
+                                        <ul style="list-style: none;">
+                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To become role model in setting standards of Quality Education.</li>
+                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To build ably qualified, skilful & dedicated Teaching Fraternity .</li>
+                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To impart education of highest standards to all socio-economic sections of society in fulfilment of Corporate Social Responsibility.</li>
+                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To provide a safe, secure and Children-friendly Environment.</li>
+                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To design and roll over robust and ultra-modern Infrastructure Facilities .</li>
+                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To expand the foot-print to nearby districts by establishing similar schools to serve local community.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--                                <div class="section-title-2">
+                                                                    <h5>About our History</h5>
+                                                                    <h2>Our Success Story</h2>
+                                                                </div>-->
+                                <!--eco History Start-->
+                                <!--                                <div class="eco-history">
+                                                                    <div class="timeline-slider">
+                                                                        <div class="timeline-nav">
+                                                                            <div><span><strong>2000 - 2002</strong></span></div>
+                                                                            <div><span><strong>2002 - 2006</strong></span></div>
+                                                                            <div><span><strong>2006 - 2009</strong></span></div>
+                                                                            <div><span><strong>2009 - 2012</strong></span></div>
+                                                                            <div><span><strong>2012 - 2015</strong></span></div>
+                                                                            <div><span><strong>2015 - 2018</strong></span></div>
+                                                                        </div>
+                                                                        <div class="timeline">
+                                                                            Timeline Text Start
+                                                                            <div>
+                                                                                <div class="row">
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>We Started</h6>
+                                                                                            <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>Results of Hardwork</h6>
-                                                                                        <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>Results of Hardwork</h6>
+                                                                                            <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>Project </h6>
-                                                                                        <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>Project </h6>
+                                                                                            <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-                                                                        Timeline Text End 
-                                                                        Timeline Text Start
-                                                                        <div>
-                                                                            <div class="row">
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>Results of Hardwork</h6>
-                                                                                        <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                            Timeline Text End 
+                                                                            Timeline Text Start
+                                                                            <div>
+                                                                                <div class="row">
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>Results of Hardwork</h6>
+                                                                                            <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>Project </h6>
-                                                                                        <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>Project </h6>
+                                                                                            <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>We Started</h6>
-                                                                                        <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        Timeline Text End 
-                                                                        Timeline Text Start
-                                                                        <div>
-                                                                            <div class="row">
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>We Started</h6>
-                                                                                        <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>Results of Hardwork</h6>
-                                                                                        <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>Project </h6>
-                                                                                        <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>We Started</h6>
+                                                                                            <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-                                                                        Timeline Text End 
-                                                                        Timeline Text Start
-                                                                        <div>
-                                                                            <div class="row">
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>Results of Hardwork</h6>
-                                                                                        <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                            Timeline Text End 
+                                                                            Timeline Text Start
+                                                                            <div>
+                                                                                <div class="row">
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>We Started</h6>
+                                                                                            <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>Project </h6>
-                                                                                        <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>Results of Hardwork</h6>
+                                                                                            <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>We Started</h6>
-                                                                                        <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        Timeline Text End 
-                                                                        Timeline Text Start
-                                                                        <div>
-                                                                            <div class="row">
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>We Started</h6>
-                                                                                        <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>Results of Hardwork</h6>
-                                                                                        <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>Project </h6>
-                                                                                        <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>Project </h6>
+                                                                                            <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-                                                                        Timeline Text End 
-                                                                        Timeline Text Start
-                                                                        <div>
-                                                                            <div class="row">
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>Results of Hardwork</h6>
-                                                                                        <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                            Timeline Text End 
+                                                                            Timeline Text Start
+                                                                            <div>
+                                                                                <div class="row">
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>Results of Hardwork</h6>
+                                                                                            <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>Project </h6>
-                                                                                        <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>Project </h6>
+                                                                                            <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
-                                                                                <div class=" col-4">
-                                                                                    <div class="timeline-box">
-                                                                                        <h6>We Started</h6>
-                                                                                        <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>We Started</h6>
+                                                                                            <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
+                                                                            Timeline Text End 
+                                                                            Timeline Text Start
+                                                                            <div>
+                                                                                <div class="row">
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>We Started</h6>
+                                                                                            <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>Results of Hardwork</h6>
+                                                                                            <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>Project </h6>
+                                                                                            <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            Timeline Text End 
+                                                                            Timeline Text Start
+                                                                            <div>
+                                                                                <div class="row">
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>Results of Hardwork</h6>
+                                                                                            <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>Project </h6>
+                                                                                            <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class=" col-4">
+                                                                                        <div class="timeline-box">
+                                                                                            <h6>We Started</h6>
+                                                                                            <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            Timeline Text End 
                                                                         </div>
-                                                                        Timeline Text End 
-                                                                    </div>
-                                                                </div>
-                                                            </div>-->
-                            <!--Political History End--> 
+=======
+                            <div class="col-md-12 timeline-box" style="margin-top: 10px;">
+                                <div class="section-title-2">
+                                <!--                                        <h5>About our History</h5>-->
+                                <h5>MISSION</h5>
+                                <ul style="list-style: none;">
+                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To become role model in setting standards of Quality Education.</li>
+                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To build ably qualified, skilful & dedicated Teaching Fraternity .</li>
+                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To impart education of highest standards to all socio-economic sections of society in fulfilment of Corporate Social Responsibility.</li>
+                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To provide a safe, secure and Children-friendly Environment.</li>
+                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To design and roll over robust and ultra-modern Infrastructure Facilities .</li>
+                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To expand the foot-print to nearby districts by establishing similar schools to serve local community.</li>
+                                </ul>
+                            </div>
                         </div>
+                        <!--                                <div class="section-title-2">
+                                                            <h5>About our History</h5>
+                                                            <h2>Our Success Story</h2>
+                                                        </div>-->
+                        <!--eco History Start-->
+                        <!--                                <div class="eco-history">
+                                                            <div class="timeline-slider">
+                                                                <div class="timeline-nav">
+                                                                    <div><span><strong>2000 - 2002</strong></span></div>
+                                                                    <div><span><strong>2002 - 2006</strong></span></div>
+                                                                    <div><span><strong>2006 - 2009</strong></span></div>
+                                                                    <div><span><strong>2009 - 2012</strong></span></div>
+                                                                    <div><span><strong>2012 - 2015</strong></span></div>
+                                                                    <div><span><strong>2015 - 2018</strong></span></div>
+>>>>>>> origin/enpeekl
+                                                                </div>
+                                                                <div class="timeline">
+                                                                    Timeline Text Start
+                                                                    <div>
+                                                                        <div class="row">
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>We Started</h6>
+                                                                                    <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>Results of Hardwork</h6>
+                                                                                    <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>Project </h6>
+                                                                                    <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    Timeline Text End 
+                                                                    Timeline Text Start
+                                                                    <div>
+                                                                        <div class="row">
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>Results of Hardwork</h6>
+                                                                                    <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>Project </h6>
+                                                                                    <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>We Started</h6>
+                                                                                    <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    Timeline Text End 
+                                                                    Timeline Text Start
+                                                                    <div>
+                                                                        <div class="row">
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>We Started</h6>
+                                                                                    <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>Results of Hardwork</h6>
+                                                                                    <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>Project </h6>
+                                                                                    <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    Timeline Text End 
+                                                                    Timeline Text Start
+                                                                    <div>
+                                                                        <div class="row">
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>Results of Hardwork</h6>
+                                                                                    <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>Project </h6>
+                                                                                    <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>We Started</h6>
+                                                                                    <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    Timeline Text End 
+                                                                    Timeline Text Start
+                                                                    <div>
+                                                                        <div class="row">
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>We Started</h6>
+                                                                                    <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>Results of Hardwork</h6>
+                                                                                    <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>Project </h6>
+                                                                                    <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    Timeline Text End 
+                                                                    Timeline Text Start
+                                                                    <div>
+                                                                        <div class="row">
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>Results of Hardwork</h6>
+                                                                                    <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>Project </h6>
+                                                                                    <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class=" col-4">
+                                                                                <div class="timeline-box">
+                                                                                    <h6>We Started</h6>
+                                                                                    <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    Timeline Text End 
+                                                                </div>
+                                                            </div>
+                                                        </div>-->
+                        <!--Political History End--> 
                     </div>
                 </div>
         </div>
-        <!--Our Success Story End--> 
-    </section>
-    <!--About End--> 
-    <!--Footer Start-->
+    </div>
+    <!--Our Success Story End--> 
+</section>
+<!--About End--> 
+<!--Footer Start-->
 <?php include 'footer.php'; ?>
 </body>
 </html>
