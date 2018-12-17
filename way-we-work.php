@@ -63,7 +63,7 @@
                             <div class="col-lg-6">
                                 <div class="about-video-img"> 
 <!--                                    <a href="#"><i class="fas fa-play"></i></a>-->
-                                    <img src="images/aboutimg.jpg" alt=""> </div>
+                                    <img src="images/curriculum-sub.jpg" alt=""> </div>
                             </div>
                             <div class="col-md-12 margin-top-30">
                                 <p>We have carefully handpicked our collection of books for the effective learning of our children, from chosen authors. As we are to be affiliated to the CBSE, we have also included NCERT books to aid in their learning.</p>
@@ -79,7 +79,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="story-title-bg">
-                                    <img src="../images/storybg.jpg" alt="" />
+                                    <img src="../images/mariners-star.jpg" alt="" />
                                 </div>
                             </div>
                             <div class="col-lg-8">

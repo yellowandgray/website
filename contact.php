@@ -24,7 +24,7 @@
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#"> Contact </a></li>
-                        <li><a href="#"> Contact One</a></li>
+
                     </ul>
                 </div>
             </section>
@@ -60,7 +60,6 @@
                                         <li class="half pr-15">
                                             <div class="multiselect">
                                                 <select id="contactform" class="form-control" name="preffred_classes[]" multiple>
-                                                    <option value="0">Programs Preffred</option>
                                                     <option value="L.K.G">L.K.G</option>
                                                     <option value="I STD">I STD</option>
                                                     <option value="II STD">II STD</option>
@@ -101,7 +100,10 @@
                         <div class="col-md-4">
                             <div class="c-info">
                                 <h6>Address:</h6>
-                                <p> 4700 Millenia Blvd # 175, Orlando, FL 32839, USA </p>
+                                <p> 241/2, Puthakudy Village, 
+                                    Vadamattam Main Road,
+                                    Nedunkadu Panchayat,
+                                    Karaikal – 609603, U.T of Pondicherry. </p>
                             </div>
                         </div>
                         <!--Contact Info End--> 
@@ -109,8 +111,8 @@
                         <div class="col-md-4">
                             <div class="c-info">
                                 <h6>Contact:</h6>
-                                <p><strong>Phone:</strong> +1 321 2345 678-9</p>
-                                <p><strong>Fax:</strong> +1 321 2345 876-7</p>
+                                <p><strong>Phone:</strong> +91 93840 10241</p>
+                                <p> +91 93840 10242</p>
                             </div>
                         </div>
                         <!--Contact Info End--> 
@@ -118,8 +120,8 @@
                         <div class="col-md-4">
                             <div class="c-info">
                                 <h6>For More Information:</h6>
-                                <p><strong>Email:</strong> info@ecova.com</p>
-                                <p>contact@ecova.com</p>
+                                <p><strong>Email:</strong><a href="mailto:info@enpeekl.com"> info@enpeekkl.com</a></p>
+                                <p><a href="mailto:admin@enpeekl.com">admin@enpeekkl.com</a></p>
                             </div>
                         </div>
                         <!--Contact Info End--> 

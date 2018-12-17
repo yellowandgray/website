@@ -5849,12 +5849,12 @@ About Us Page
     padding: 40px 0 80px;
 }
 .story-title-bg {
-    background: url(../images/storybg.jpg) no-repeat;
+    background: url(../images/mariners-star.jpg) no-repeat;
     background-size: cover;
     width: 100%;
     float: left;
     position: relative;
-    padding: 88px 67px;
+    padding: 163px 0;
 }
 
 .story-title-bg strong {

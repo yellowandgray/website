@@ -4,11 +4,11 @@
     $page = 'home';
     include 'head.php';
     ?>
-    
+
     <body>
         <div class="wrapper home1">
             <!--Header Start-->
-<?php include 'menu.php'; ?>
+            <?php include 'menu.php'; ?>
             <!--Header End-->
             <div id="search">
                 <button type="button" class="close">×</button>
@@ -356,7 +356,7 @@
                             <!--title start-->
                             <div class="section-title">
                                 <strong>Our</strong>
-                                <h2>Board Of Directors</h2>
+                                <h2>Founder and Chairman</h2>
                             </div>
                             <!--title end--> 
                         </div>
@@ -432,7 +432,7 @@
             </section>
             <!--Fundraising Campaigns Section End--> 
             <!--Current Promises Section Start-->
-            <section class="promises wf100 p80">
+            <section class="promises wf100 p80" id="enquiry">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-7">
@@ -463,49 +463,45 @@
                                     <h2>Enquiry Form</h2>
                                 </div>
                                 <ul>
-                                    <li>
-                                        <input type="text" class="form-control" placeholder="Your Name" aria-label="Your Name">
-                                    </li>
-                                    <li>
-                                        <input type="text" class="form-control" placeholder="Phone" aria-label="Phone">
-                                    </li>
-                                    <li>
-                                        <input type="text" class="form-control" placeholder="Email Address" aria-label="Email Address">
-                                    </li>
-                                    <li>
-                                        <input type="text" class="form-control" placeholder="Number Of Children" aria-label="Number Of Children">
-                                    </li>
-                                    <li>
-                                        <div class="multiselect">
-                                            <div class="selectBox" onclick="showCheckboxes()">
-                                                <select>
-                                                    <option>Choose Programs</option>
+                                    <form action="enquiry-form.php" method="post" role="form" class="contact">                                    
+                                        <li>
+                                            <input type="text" class="form-control" name="name" placeholder="Your Name" aria-label="Your Name">
+                                        </li>
+                                        <li>
+                                            <input type="text" class="form-control" name="mobile" placeholder="Phone" aria-label="Phone">
+                                        </li>
+                                        <li>
+                                            <input type="text" class="form-control" name="email" placeholder="Email Address" aria-label="Email Address">
+                                        </li>
+                                        <li>
+                                            <select name="no_children" class="form-control">
+                                                <option value="0">No. of Children</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <div class="multiselect">
+                                                <select id="contactform" class="form-control" name="preffred_classes[]" multiple>
+                                                    <option value="Pre-KG">Pre-KG</option>
+                                                    <option value="L.K.G">L.K.G</option>
+                                                    <option value="U.K.G">U.K.G</option>
+                                                    <option value="I STD">I STD</option>
+                                                    <option value="II STD">II STD</option>
+                                                    <option value="III STD ">III STD </option>
+                                                    <option value="IV STD">IV STD</option>
+                                                    <option value="V STD">V STD</option>
                                                 </select>
-                                                <div class="overSelect"></div>
+
                                             </div>
-                                            <div id="checkboxes">
-                                                <label for="one">
-                                                    <input type="checkbox" id="one" /> Pre-KG</label>
-                                                <label for="two">
-                                                    <input type="checkbox" id="two" /> L-KG</label>
-                                                <label for="three">
-                                                    <input type="checkbox" id="three" /> U-KG</label>
-                                                <label for="four">
-                                                    <input type="checkbox" id="four" /> I</label>
-                                                <label for="five">
-                                                    <input type="checkbox" id="five" /> II</label>
-                                                <label for="six">
-                                                    <input type="checkbox" id="six" /> III</label>
-                                                <label for="seven">
-                                                    <input type="checkbox" id="seven" /> IV</label>
-                                                <label for="eight">
-                                                    <input type="checkbox" id="eight" /> V</label>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <input type="submit" class="fsubmit" value="Join us Now">
-                                    </li>
+                                        </li>
+                                        <li>
+                                            <input type="submit" class="fsubmit" value="Join us Now">
+                                        </li>
+                                    </form>
+
                                 </ul>
                             </div>
                         </div>
@@ -572,6 +568,9 @@
             </div>
             <!--Partner Logos Section End--> 
             <!--Footer Start-->
-<?php include 'footer.php'; ?>
+            <?php include 'footer.php'; ?>
+            <script>
+                $('#contactform').multiSelect();
+            </script>
     </body>
 </html>
