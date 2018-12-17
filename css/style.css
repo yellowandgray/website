@@ -1528,6 +1528,9 @@ article img.pull-right, article .align-right{
 }
 /*  Media queries 
 ============================= */
+@media (min-width: 1220px) and (max-width: 1900px) {
+    iframe {width: 560px; height: 315px}
+}
 
 @media (min-width: 768px) and (max-width: 979px) {
 
@@ -1561,6 +1564,7 @@ article img.pull-right, article .align-right{
         width:156px;
         margin:0 20px 0 0;
     }	
+   
 }
 
 @media (max-width: 767px) {

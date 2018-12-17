@@ -616,3 +616,16 @@ marquee {
 
 .table-center-align td {text-align: center;}
 .table-center-align th {font-weight: normal;}
+
+.font-family-Georgia {font-family: Georgia,Times,Times New Roman,serif; }
+
+.readmore-hover:hover {color: #d2ad6a}
+
+.img-width {width: 100%}
+
+@media (min-width: 320px) and (max-width: 976px) {
+    iframe {
+        width: 100%; height: 315px;
+    }
+    #popup-container  {width: 100%}
+}

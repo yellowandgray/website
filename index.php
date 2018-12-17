@@ -147,7 +147,7 @@
                                 <div class="row margin-bottom-0">
                                     <h4 class="text-center bold">1 DIRHAM CYBER SECURITY AWARENESS WORKSHOP</h4>
                                     <div class="col-md-6">
-                                        <img src="img/golden-cyber.jpg" class="img-responsive" />
+                                        <img src="img/golden-cyber.jpg" class="img-responsive img-width" />
                                     </div>
                                     <div class="col-md-6">
                                         <p>Protect your business <br/>Make employees your active defense against cyber threats </p>
@@ -222,7 +222,7 @@
                                     <h4 class="text-center bold">CURRENT NEWS POST</h4>
                                     <div class="col-md-6">
                                         <a href="https://www.arabianbusiness.com/technology/403750-274-cyber-attacks-target-the-uae-so-far-in-2018-down-39" target="blank">
-                                            <img src="img/news/golden-news.jpg" class="img-responsive" />
+                                            <img src="img/news/golden-news.jpg" class="img-responsive img-width" />
                                         </a>
                                     </div>
                                     <div class="col-md-6">
@@ -238,7 +238,7 @@
                                 <div class="row margin-bottom-0">
                                     <div class="col-md-6">
                                         <a href="https://blog.barkly.com/biggest-data-breaches-2018-so-far" target="blank">
-                                            <img src="img/news/golden-news-01.jpg" class="img-responsive" />
+                                            <img src="img/news/golden-news-01.jpg" class="img-responsive img-width" />
                                         </a>
                                     </div>
                                     <div class="col-md-6">
@@ -253,7 +253,7 @@
                                 <div class="row margin-bottom-0">
                                     <div class="col-md-6">
                                         <a href="https://www.wired.com/story/2018-worst-hacks-so-far/" target="blank">
-                                            <img src="img/news/golden-news-02.jpg" class="img-responsive" />
+                                            <img src="img/news/golden-news-02.jpg" class="img-responsive img-width" />
                                         </a>
                                     </div>
                                     <div class="col-md-6">
@@ -268,7 +268,7 @@
                                 <div class="row margin-bottom-0">
                                     <div class="col-md-6">
                                         <a href="https://www.forbes.com/sites/gilpress/2018/12/03/60-cybersecurity-predictions-for-2019/#16c6ad584352" target="blank">
-                                            <img src="img/news/golden-news-03.jpg" class="img-responsive" />
+                                            <img src="img/news/golden-news-03.jpg" class="img-responsive img-width" />
                                         </a>
                                     </div>
                                     <div class="col-md-6">
@@ -611,7 +611,7 @@
                                         <br>-->
 
                         <div class="row margin-bottom-0 text-center">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/0p3787JiFgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/0p3787JiFgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <!--                    <div class="col-md-4">
                                                     <img src="img/golden-avenue-cyber-workshop.jpg" class="img-responsive" />
                                                 </div>
