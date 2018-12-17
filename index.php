@@ -30,7 +30,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-01.jpg" alt=""/>
+                    <img src="images/banner/home-banner-01.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -43,7 +43,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-02.jpg" alt=""/>
+                    <img src="images/banner/banner-french-style.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -56,7 +56,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-03.jpg" alt=""/>
+                    <img src="images/banner/banner003.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -69,7 +69,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-04.jpg" alt=""/>
+                    <img src="images/banner/banner004.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -82,7 +82,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-05.jpg" alt=""/>
+                    <img src="images/banner/banner005.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -95,7 +95,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-06.jpg" alt=""/>
+                    <img src="images/banner/banner-discipline.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -108,7 +108,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-07.jpg" alt=""/>
+                    <img src="images/banner/banner-emphasis.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -121,7 +121,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-08.jpg" alt=""/>
+                    <img src="images/banner/banner-sports.jpg" alt=""/>
                 </div>
 
                 <div class="item">
@@ -134,7 +134,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-09.jpg" alt=""/>
+                    <img src="images/banner/banner-football.jpg" alt=""/>
                 </div>
 
             </section>
@@ -479,7 +479,7 @@
                                         <div class="multiselect">
                                             <div class="selectBox" onclick="showCheckboxes()">
                                                 <select>
-                                                    <option>Class</option>
+                                                    <option>Choose Programs</option>
                                                 </select>
                                                 <div class="overSelect"></div>
                                             </div>
