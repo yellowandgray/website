@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="en">
-    <?php $page = 'contact';
+    <?php
+    $page = 'contact';
     include 'head.php';
     ?>
 
     <body>
         <div class="wrapper">
             <!--Header Start-->
-<?php include 'menu.php'; ?>
+            <?php include 'menu.php'; ?>
             <div id="search">
                 <button type="button" class="close">×</button>
                 <form class="search-overlay-form">
@@ -58,32 +59,16 @@
                                         </li>
                                         <li class="half pr-15">
                                             <div class="multiselect">
-                                                <div class="selectBox" onclick="showCheckboxes()">
-                                                    <select name="preffred_classes[]">
-                                                        <option>Choose Programs</option>
-                                                    </select>
-                                                    <div class="overSelect"></div>
-                                                </div>
-                                                <div id="checkboxes">
-                                                    <option value="Pre-KG">
-                                                    <label for="one">
-                                                        <input type="checkbox" id="one" /> Pre-KG</label>
-                                                    </option>
-                                                    <label for="two">
-                                                        <input type="checkbox" id="two" /> L-KG</label>
-                                                    <label for="three">
-                                                        <input type="checkbox" id="three" /> U-KG</label>
-                                                    <label for="four">
-                                                        <input type="checkbox" id="four" /> I</label>
-                                                    <label for="five">
-                                                        <input type="checkbox" id="five" /> II</label>
-                                                    <label for="six">
-                                                        <input type="checkbox" id="six" /> III</label>
-                                                    <label for="seven">
-                                                        <input type="checkbox" id="seven" /> IV</label>
-                                                    <label for="eight">
-                                                        <input type="checkbox" id="eight" /> V</label>
-                                                </div>
+                                                <select id="contactform" class="form-control" name="preffred_classes[]" multiple>
+                                                    <option value="0">Programs Preffred</option>
+                                                    <option value="L.K.G">L.K.G</option>
+                                                    <option value="I STD">I STD</option>
+                                                    <option value="II STD">II STD</option>
+                                                    <option value="III STD ">III STD </option>
+                                                    <option value="IV STD">IV STD</option>
+                                                    <option value="V STD">V STD</option>
+                                                </select>
+
                                             </div>
                                         </li>
                                         <li class="half pl-15">
@@ -142,7 +127,10 @@
                 </div>
             </section>
             <!--Contact End--> 
-<?php include 'footer.php'; ?>
+            <?php include 'footer.php'; ?>
+            <script>
+                $('#contactform').multiSelect();
+            </script>
         </div>
 
     </body>
