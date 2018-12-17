@@ -54,14 +54,39 @@ $(window).load(function () {
 });
 
 function openForm() {
-    $(".chat-popup").fadeIn(3500);
-  document.getElementById("myQus").style.display = "block";
+    $(".chat-popup").fadeIn(2500);
+    document.getElementById("myQus").style.display = "block";
 }
 
 function closeForm() {
-  document.getElementById("myQus").style.display = "none";
+    document.getElementById("myQus").style.display = "none";
 }
 
-function myFunction() {
-    document.getElementById("demo").innerHTML = "Hello World";
+window.onload = function () {
+    document.getElementById('noteButton').onclick = showNote;
+};
+
+
+
+function showNote(e) {
+    var x = 0, y = 0;
+    if (!e)
+        e = window.event;
+    if (e.pageX || e.pageY) {
+        x = e.pageX;
+        y = e.pageY;
+    } else if (e.clientX || e.clientY) {
+        x = e.clientX + document.body.scrollLeft
+                + document.documentElement.scrollLeft;
+        y = e.clientY + document.body.scrollTop
+                + document.documentElement.scrollTop;
+    }
+    var noteDiv = document.getElementById("noteDiv");
+    noteDiv.style.display = "block";
+    noteDiv.style.left = (x + 20) + "px";
+    noteDiv.style.top = (y) + "px";
+}
+
+function hideNote() {
+    document.getElementById("noteDiv").style.display = "none";
 }

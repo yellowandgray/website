@@ -658,19 +658,35 @@
         <button class="open-button" onclick="openForm()">DoYouKnow</button>
         <div class="chat-popup" id="myQus">
             <div  class="form-container">
-                <p class="white">Computers with AV disabled?</p>
-                <p class="white">Are your systems fully patched?</p>
-                <p class="white">What systems have outdated hardware?</p>
-                <p class="white">What changed in your network?</p>
-                <p class="blurry-text">Complete network security overview</p>
-                <p class="blurry-text">What new devices are added to the network?</p>
-                <p class="blurry-text">What ports are opened in the network?</p>
-                <p class="blurry-text">Unauthorized applications?</p>
-                <p class="blurry-text">What USB devices connect to your network?</p>
-                <p class="blurry-text">How vulnerable is your network?</p>
-                <button href="#" class="btn" onclick="myFunction()">Enquiry Now</button>
-                <p id="demo"></p>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="white">Computers with AV disabled?</p>
+                        <p class="white">Are your systems fully patched?</p>
+                        <p class="white">What systems have outdated hardware?</p>
+                        <p class="white">What changed in your network?</p>
+                        <p class="blurry-text">Complete network security overview</p>
+                        <p class="blurry-text">What new devices are added to the network?</p>
+                        <p class="blurry-text">What ports are opened in the network?</p>
+                        <p class="blurry-text">Unauthorized applications?</p>
+                        <p class="blurry-text">What USB devices connect to your network?</p>
+                        <p class="blurry-text">How vulnerable is your network?</p>
+                    </div>
+                    <div class="col-md-6">
+                        <from name="sentMessage" id="contactForm"  novalidate>
+                            <h3>Contact me</h3>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <input type="text" class="form-control" 
+                                           placeholder="Full Name" id="name" required
+                                           data-validation-required-message="Please enter your name" />
+                                    <p class="help-block"></p>
+                                </div>
+                            </div> 	
+                        </from>
+                    </div>
+                </div>
+
+                <div class="text-center"><button type="button" class="btn cancel" onclick="closeForm()">Close</button></div>
             </div>
         </div>
     </body>
