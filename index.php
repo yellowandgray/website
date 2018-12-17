@@ -153,7 +153,7 @@
                                     <li><i class="fas fa-check"></i> International Standard</li>
                                     <li><i class="fas fa-check"></i> World Class Facilities </li>
                                 </ul>
-<!--                                <a class="lm" href="#">Read More</a> -->
+                                <!--                                <a class="lm" href="#">Read More</a> -->
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -244,7 +244,7 @@
                     </div>
                     <!--Services Box End--> 
                 </div>
-<!--                <div class="load-more text-center w-100"> <a href="#" class="lm">View More Work</a> </div>-->
+                <!--                <div class="load-more text-center w-100"> <a href="#" class="lm">View More Work</a> </div>-->
             </section>
             <!--Services Slider End--> 
             <!--News Post Section Start-->
@@ -384,35 +384,44 @@
                                                                             <li><strong>$9750.00</strong> Required</li>
                                                                         </ul>-->
                                 </div>
-                                <a href="#" class="dbutton">Read More</a> 
+                                <a href="management.php" class="dbutton">Read More</a> 
                             </div>
                             <!--campaign box end--> 
                         </div>
-                        <div class="col-md-4">
-                            <!--campaign box start-->
-                            <div class="campaign-box">
-                                <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/founder-02.jpg" alt=""> </div>
-                                <div class="campaign-txt">
-                                    <h5><a href="#">Dr. K. MUJIBUR RAHMAN, M.D.</a></h5>
-                                    <p class="text-justify">He is the Managing Trustee of the MARAICAYAR TRUST.</p>
-                                    <p class="text-justify">He is the PROFESSOR and HEAD, Dept. of Community Medicine in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL , since 2007. He is also the Managing Director of  NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.</p>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="images/awards/award-01.jpg"/>
                                 </div>
-                                <a href="#" class="dbutton">Read More</a> 
-                            </div>
-                            <!--campaign box end--> 
-                        </div>
-                        <div class="col-md-4">
-                            <!--campaign box start-->
-                            <div class="campaign-box">
-                                <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/founder-02.jpg" alt=""> </div>
-                                <div class="campaign-txt">
-                                    <h5><a href="#">Dr. K.MOHAMED  ALI, M.D.</a></h5>
-                                    <p class="text-justify">He is a Managing Trustee of the MARAICAYAR TRUST. He is also the PROFESSOR – Dept.Of COMMUNITY MEDICINE in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007.</p>
-                                    <p class="text-justify">He is the DIRECTOR of NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.</p>
+                                <div class="col-md-4">
+                                    <img src="images/awards/award-02.jpg"/>
                                 </div>
-                                <a href="#" class="dbutton">Read More</a> 
+                                <div class="col-md-4">
+                                    <img src="images/awards/award-03.jpg"/>
+                                </div>
                             </div>
-                            <!--campaign box end--> 
+                            <div class="row" style="margin-top:5px">
+                                <div class="col-md-4">
+                                    <img src="images/awards/award-04.jpg"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="images/awards/award-05.jpg"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="images/awards/award-06.jpg"/>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top:5px">
+                                <div class="col-md-4">
+                                    <img src="images/awards/award-07.jpg"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="images/awards/award-08.jpg"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="images/awards/award-09.jpg"/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
