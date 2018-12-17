@@ -88,7 +88,7 @@
                                 <!--campaign box start-->
                                 <div class="ser-box">
                                     <div class="ser-txt">
-                                        <a href="#"> <h5> Dr. K. MUJIBUR RAHMAN, M.D. </h5>
+                                        <a href="#" id="myBtn1"> <h5> Dr. K. MUJIBUR RAHMAN, M.D. </h5>
                                             <span class="aicon"><i class="fas fa-arrow-right"></i></span> </a>
                                     </div>
                                     <div class="ser-thumb">
@@ -103,8 +103,9 @@
                                 <div class="ser-box">
 <!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg2.jpg" alt=""></div>-->
                                     <div class="ser-txt">
-                                        <a href="#"><h5> Dr. K.MOHAMED  ALI, M.D.  </h5></a>
-                                        <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                        <a href="#" id="myBtn2"><h5> Dr. K.MOHAMED  ALI, M.D.  </h5>
+                                            <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                        </a>
                                     </div>
                                     <div class="ser-thumb">
                                         <div class="bg-padding-line">He is a Managing Trustee of the MARAICAYAR TRUST. He is also the PROFESSOR – Dept.Of COMMUNITY MEDICINE in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007. He is the DIRECTOR of NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.<br/><br/></div>
@@ -117,9 +118,9 @@
                                 <div class="ser-box">
 <!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
                                     <div class="ser-txt">
-                                        <h5> <a href="#">Mr. H. M. A. Khan, M. Sc.</a> 
-                                        </h5>
-                                        <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                        <a href="#" id="myBtn3"> <h5> Mr. H. M. A. Khan, M. Sc.</h5>
+                                            <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                        </a> 
                                     </div>
                                     <div class="ser-thumb">
                                         <div class="bg-padding-line">He is a Member of the Board of Management  of the School. He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service.<br/></div>
@@ -133,9 +134,9 @@
                                 <div class="ser-box">
 <!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
                                     <div class="ser-txt">
-                                        <h5> <a href="#">Mr. J. RAJA KALIFULLA., B.Sc., B.L.</a> 
-                                        </h5>
-                                        <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                        <a href="#" id="myBtn4"><h5> Mr. J. RAJA KALIFULLA., B.Sc., B.L. </h5>
+                                            <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                        </a> 
                                     </div>
                                     <div class="ser-thumb">
                                         <div class="bg-padding-line">He is a former Government Pleader and now a Senior Advocate,  practicing in the Madras High Court for the last 38 years. He represents the third generation in the legal profession. He has been standing counsel and legal adviser to several Statutory Bodies, Corporations and Banks. With the Motto "Work is Worship", he is totally dedicated to his Profession.<br/></div>
@@ -148,9 +149,9 @@
                                 <div class="ser-box">
 <!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
                                     <div class="ser-txt">
-                                        <h5> <a href="#">Mr. JAFER SADIQUE MUTHUVAPPA</a> 
-                                        </h5>
-                                        <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                        <a href="#" id="myBtn5"> <h5>Mr. JAFER SADIQUE MUTHUVAPPA</h5>
+                                            <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                        </a> 
                                     </div>
                                     <div class="ser-thumb">
                                         <div class="bg-padding-line">Currently resident of  Albany, New York, U.S.A. Born in Chennai, India,  in 1966 , Mr.Muthuvappa at the age of 17, after completing his high school in Chennai migrated to the United States to pursue higher studies. He obtained his Associates Degree in Biology at The Sage College of Albany, New York.<br/><br/></div>
@@ -196,31 +197,78 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p>Some text in the Modal..</p>
+                    <p>In the wake of the overwhelming loss suffered by the victims of cyclone GAJA,  several truckloads of relief materials were quickly despatched to the affected areas, notwithstanding the fact that the promoter’s family too had suffered  extensive loss of assets.   </p>
+                    <p>He desires to establish International Schools of a high standard to bring the best in our children and contribute immensely in the field of Education  and Nation-building activities.  </p>
+                    <p>Associated with various  educational and social activities aimed at human welfare, he proud to be a senior Rotarian, and a Paul Harris Fellow  of the  Rotary Club of Thanjavur South.  </p>
+                </div>
+
+            </div>
+            <div id="myModal1" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>As the Professor and Head of Community Medicine at V M Medical College, Karaikal, he brings with him decades of teaching experience in medical education, and has undertaken many research projects. His rich experience through national and international educational and cultural programmes, is a source of strength to the Trust in its mission of setting up modern Institutes of Education that deliver quality with innovation. He is a multi-faceted personality with abundant experience in managing corporate hospitals and business ventures, apart from being a committed medical professional.</p>
+                </div>
+
+            </div>
+            <div id="myModal2" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>His administrative, professional and technical skills are a great inspiration to meet the objectives of the Trust. His presentation of research papers at National and International forums have been widely applauded and won him awards in India and abroad. His exemplary helping hand during the floods in 2016, was recognised by the Collector of Thanjavur district and was duly honoured. Highly passionate about education and perfection, he has commendable skills of management which comes handy in  for administration of the hospital as well as  for developing schools with  unique infrastructure facilities. </p>
+                </div>
+
+            </div>
+            <div id="myModal3" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>His administrative, professional and technical skills are a great inspiration to meet the objectives of the Trust. His presentation of research papers at National and International forums have been widely applauded and won him awards in India and abroad. His exemplary helping hand during the floods in 2016, was recognised by the Collector of Thanjavur district and was duly honoured. Highly passionate about education and perfection, he has commendable skills of management which comes handy in  for administration of the hospital as well as  for developing schools with  unique infrastructure facilities. </p>
+                </div>
+
+            </div>
+            <div id="myModal4" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>His administrative, professional and technical skills are a great inspiration to meet the objectives of the Trust. His presentation of research papers at National and International forums have been widely applauded and won him awards in India and abroad. His exemplary helping hand during the floods in 2016, was recognised by the Collector of Thanjavur district and was duly honoured. Highly passionate about education and perfection, he has commendable skills of management which comes handy in  for administration of the hospital as well as  for developing schools with  unique infrastructure facilities. </p>
+                </div>
+
+            </div>
+            <div id="myModal5" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>His administrative, professional and technical skills are a great inspiration to meet the objectives of the Trust. His presentation of research papers at National and International forums have been widely applauded and won him awards in India and abroad. His exemplary helping hand during the floods in 2016, was recognised by the Collector of Thanjavur district and was duly honoured. Highly passionate about education and perfection, he has commendable skills of management which comes handy in  for administration of the hospital as well as  for developing schools with  unique infrastructure facilities. </p>
                 </div>
 
             </div>
             <script>
-// Get the modal
+                // Get the modal
                 var modal = document.getElementById('myModal');
 
-// Get the button that opens the modal
+                // Get the button that opens the modal
                 var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
+                // Get the <span> element that closes the modal
                 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
+                // When the user clicks the button, open the modal 
                 btn.onclick = function () {
                     modal.style.display = "block";
                 }
 
-// When the user clicks on <span> (x), close the modal
+                // When the user clicks on <span> (x), close the modal
                 span.onclick = function () {
                     modal.style.display = "none";
                 }
 
-// When the user clicks anywhere outside of the modal, close it
+                // When the user clicks anywhere outside of the modal, close it
                 window.onclick = function (event) {
                     if (event.target == modal) {
                         modal.style.display = "none";
@@ -228,9 +276,169 @@
 
                 }
                 $(".close").click(function () {
-                     modal.style.display = "none";
+                    modal.style.display = "none";
+                });
+
+
+
+                // Get the modal
+                var modal1 = document.getElementById('myModal1');
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn1");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+
+                }
+                $(".close").click(function () {
+                    modal.style.display = "none";
+                });
+
+
+
+                // Get the modal
+                var modal2 = document.getElementById('myModal2');
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn2");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+
+                }
+                $(".close").click(function () {
+                    modal.style.display = "none";
+                });
+
+
+
+
+                // Get the modal
+                var modal3 = document.getElementById('myModal3');
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn3");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+
+                }
+                $(".close").click(function () {
+                    modal.style.display = "none";
+                });
+
+
+
+                // Get the modal
+                var modal4 = document.getElementById('myModal4');
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn4");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+
+                }
+                $(".close").click(function () {
+                    modal.style.display = "none";
+                });
+
+
+
+                // Get the modal
+                var modal5 = document.getElementById('myModal5');
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn5");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+
+                }
+                $(".close").click(function () {
+                    modal.style.display = "none";
                 });
             </script>
-
     </body>
 </html>
