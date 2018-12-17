@@ -1,28 +1,7 @@
 <!doctype html>
 <html lang="en">
     <?php $page = 'contact'; include 'head.php'; ?>
-   <body>
-      <div class="wrapper">
-         <!--Header Start-->
-          <?php include 'menu.php'; ?>
-         <div id="search">
-            <button type="button" class="close">×</button>
-            <form class="search-overlay-form">
-               <input type="search" value="" placeholder="type keyword(s) here" />
-               <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
-            </form>
-         </div>
-         <!--Header End-->
-         <!--Inner Header Start-->
-         <section class="wf100 p100 inner-header">
-            <div class="container">
-               <h1>Contact Us</h1>
-               <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#"> Contact </a></li>
-                  <li><a href="#"> Contact One</a></li>
-               </ul>
-    <?php include 'head.php'; ?>
+
     <body>
         <div class="wrapper">
             <!--Header Start-->
