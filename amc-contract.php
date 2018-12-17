@@ -288,32 +288,32 @@
                                     <h3>Remote Support by Email & Telephone</h3>
                                     <table class="table">
                                         <tr>
-                                            <th>Remote Support of Computerse</td>
+                                            <th>Remote Support of Computerse</th>
                                             <td>Up to 10 requests per month</td>
                                             <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                             <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
 
                                         </tr>
                                         <tr>
-                                            <th>Remote Support of Server infrastructure</td>
-                                            <td>Francisco Chang</td>
-                                            <td>Mexico</td>
-                                            <td>Germany</td>
+                                            <th>Remote Support of Server infrastructure</th>
+                                            <td>-</td>
+                                            <td>Up to 1 server support</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></td>
                                         </tr>
                                         <tr>
-                                            <th>Remote Support of PBX, CCTV</td>
-                                            <td>Roland Mendel</td>
-                                            <td>Austria</td>
-                                            <td>Germany</td>
+                                            <th>Remote Support of PBX, CCTV</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></td>
                                         </tr>
                                         <tr>
-                                            <th>Remote 24x7</td>
+                                            <th>Remote 24x7</th>
                                             <td>-</td>
                                             <td>-</td>
                                             <td>Up to 2 requests (outside working hours) per month</td>
                                         </tr>
                                         <tr>
-                                            <th>Remote Consulting and Trainings</td>
+                                            <th>Remote Consulting and Trainings</th>
                                             <td>-</td>
                                             <td>-</td>
                                             <td>-</td>
@@ -321,8 +321,8 @@
                                     </table>
 
                                 </div>
-                                <div class="row">
-                                    <h3>Remote Support by Email & Telephone</h3>
+                                <div class="row table-center-align">
+                                    <h3>Free On-site Engineer Visits</h3>
                                     <table class="table">
 <!--                                        <tr>
                                             <th>Basic</th>
@@ -331,40 +331,223 @@
                                             <th>Enterprise</th>
                                         </tr>-->
                                         <tr>
-                                            <td>Remote Support of Computerse</td>
-                                            <td>Maria Anders</td>
-                                            <td>Germany</td>
-                                            <td>Germany</td>
+                                            <th>IT Emergency visit if issue can’t be fixed remotely</td>
+                                            <td>-</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Unlimited IT visits by client requests</th>
+                                            <td>-</td>
+                                            <td>1 visit per month</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></td>
 
                                         </tr>
                                         <tr>
-                                            <td>Remote Support of Server infrastructure</td>
-                                            <td>Francisco Chang</td>
-                                            <td>Mexico</td>
-                                            <td>Germany</td>
+                                            <th>Unlimited IT Consultant visits</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>1 visit per month</td>
                                         </tr>
-                                        <tr>
-                                            <td>Remote Support of PBX, CCTV</td>
-                                            <td>Roland Mendel</td>
-                                            <td>Austria</td>
-                                            <td>Germany</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Remote 24x7</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>Up to 2 requests (outside working hours) per month</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Remote Consulting and Trainings</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                        </tr>
+
                                     </table>
 
                                 </div>
-                            </div>
+                                <div class="row table-center-align">
+                                    <h3>Regular Maintenance Visits to Check Health of PC, Servers & Network Infrastructure</h3>
+                                    <table class="table">
+                                        <tr>
+                                            <th>Monthly</th>
+                                            <td>-</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>Weekly</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-></td>
+                                        </tr>
+
+                                    </table>
+
+                                </div>
+                                <div class="row table-center-align">
+                                    <h3>SLA</h3>
+                                    <table class="table">
+<!--                                        <tr>
+                                            <th>Basic</th>
+                                            <th>Basic</th>
+                                            <th>standard</th>
+                                            <th>Enterprise</th>
+                                        </tr>-->
+                                        <tr>
+                                            <th>Response time on clients request during working hours</td>
+                                            <td>30 min</td>
+                                            <td>30 min</td>
+                                            <td>30 min</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Resolution time (to solve the issue or provide complete information about ticket stages)</th>
+                                            <td>4h</td>
+                                            <td>4h</td>
+                                            <td>3h</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>On-site visit (if issue can’t be fixed remotely for Dubai and Sharjah)</th>
+                                            <td>-</td>
+                                            <td>8h</td>
+                                            <td>6h</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Support time</th>
+                                            <td>Sun-Thu 9am-6pm GST, excl. Public Holidays.</td>
+                                            <td>Sun-Thu 9am-6pm GST, excl. Public Holidays.</td>
+                                            <td>Sun-Thu 9am-6pm GST, excl. Public Holidays.</td>
+                                        </tr>
+
+                                    </table>
+
+                                </div>
+                                <div class="row table-center-align">
+                                    <h3>IT Systems Support</h3>
+                                    <table class="table">
+<!--                                        <tr>
+                                            <th>Basic</th>
+                                            <th>Basic</th>
+                                            <th>standard</th>
+                                            <th>Enterprise</th>
+                                        </tr>-->
+                                        <tr>
+                                            <th>Desktops support (Windows/MAC)</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Health mgmt (disk cleanup, systems defragmentation)</th>
+                                            <td>-</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>Anti-virus</th>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Emails mgmt (create, manage and remove mailboxes)</th>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Email Security & Archiving</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Peripheral Devices support (printers, scanners, faxes, MFP and UPS)</th>
+                                            <td>-</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>Servers & Network Attached Storage</th>
+                                            <td>-</td>
+                                            <td>Up to 1 server support</td>
+                                            <td>Up to 3 server support</td>
+                                        </tr>
+                                         <tr>
+                                            <th>SAN Storage</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>Up to 1 server support</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Router & Switch mgmt</th>
+                                            <td>-</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+
+                                        </tr>
+                                         <tr>
+                                            <th>VPN & Firewall administration</th>
+                                            <td>-</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+
+                                        </tr>
+                                         <tr>
+                                            <th>Wireless equipment. Wireless Network optimization for Enterprise plants only</th>
+                                            <td>-</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>Mobile Devices mgmt</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+
+                                        </tr>
+
+
+                                    </table>
+
+                                </div>
+
+                                <div class="row table-center-align">
+                                    <h3>Additional Services</h3>
+                                    <table class="table">
+<!--                                        <tr>
+                                            <th>Basic</th>
+                                            <th>Basic</th>
+                                            <th>standard</th>
+                                            <th>Enterprise</th>
+                                        </tr>-->
+                                        <tr>
+                                            <th>Free Full Site IT Audit (regular IT audit with providing full report with update/upgrade recommendations)</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>1 visit per quarter</td>
+                                        </tr>
+                                        <tr>
+                                            <th>24/7 Server and Network monitoring (capacity and performance)</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>DR & Continuity planning</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Dedicated On-site Engineer</th>
+                                            <td>-</i></td>
+                                            <td>-</i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Dedicated Account Manager</th>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                        </tr>
+
+                                    </table>
+
+                                </div>
                         </section>
 
                         <section class="section-padding">
