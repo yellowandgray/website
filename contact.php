@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-    <?php include 'head.php'; ?>
+    <?php $page = 'contact'; include 'head.php'; ?>
    <body>
       <div class="wrapper">
          <!--Header Start-->

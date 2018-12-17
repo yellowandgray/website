@@ -1,10 +1,14 @@
 <!doctype html>
 <html lang="en">
-    <?php include 'head.php'; ?>
+    <?php
+    $page = 'home';
+    include 'head.php';
+    ?>
+    
     <body>
         <div class="wrapper home1">
             <!--Header Start-->
-            <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
             <!--Header End-->
             <div id="search">
                 <button type="button" class="close">×</button>
@@ -568,6 +572,6 @@
             </div>
             <!--Partner Logos Section End--> 
             <!--Footer Start-->
-            <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
     </body>
 </html>
