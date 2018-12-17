@@ -588,16 +588,7 @@ blockquote p {color: #fff;}
 }
 
 .background-border p {color: #fff;}
-.tables {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-.tables  {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
+
 
 .blurry-text {
     color: transparent;
@@ -611,10 +602,9 @@ blockquote p {color: #fff;}
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
-}
+  !important}
 .table td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 10px;
-    line-height: 2.5;
 }

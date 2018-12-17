@@ -36,7 +36,7 @@
 
                     <div class="about">
 
-                       <div class="row">
+                        <div class="row">
                             <!--                            <div class="col-md-4">
                                                              Heading and para 
                                                             <div class="block-heading-two">
@@ -254,78 +254,78 @@
                                                             </div>
                                                         </div>-->
 
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="text-center padding-20 background-border">
-                                    <h3>Basic</h3>
-                                    <p>Remote Support</p>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="text-center padding-20 background-border">
+                                        <h3>Basic</h3>
+                                        <p>Remote Support</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center padding-20 background-border">
+                                        <h3>Standart</h3>
+                                        <p>Onsite Support</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center padding-20 background-border">
+                                        <h3>Enterprise</h3>
+                                        <p>Integrated IT Onsite Support</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center padding-20 background-border">
+                                        <h3>Enterprise Plus</h3>
+                                        <p>Fully Managed IT Support</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="text-center padding-20 background-border">
-                                    <h3>Standart</h3>
-                                    <p>Onsite Support</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="text-center padding-20 background-border">
-                                    <h3>Enterprise</h3>
-                                    <p>Integrated IT Onsite Support</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="text-center padding-20 background-border">
-                                    <h3>Enterprise Plus</h3>
-                                    <p>Fully Managed IT Support</p>
-                                </div>
-                            </div>
-                        </div>
 
-                       </div>
+                        </div>
                         <section>
                             <div class="container">
-                                <table class="table">
-                                    <tr>
-                                        <th>Basic</th>
-                                        <th>Basic</th>
-                                        <th>standard</th>
-                                        <th>Enterprise</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Alfreds Futterkiste</td>
-                                        <td>Maria Anders</td>
-                                        <td>Germany</td>
-                                         <td>Germany</td>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>Centro comercial Moctezuma</td>
-                                        <td>Francisco Chang</td>
-                                        <td>Mexico</td>
-                                         <td>Germany</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ernst Handel</td>
-                                        <td>Roland Mendel</td>
-                                        <td>Austria</td>
-                                         <td>Germany</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Island Trading</td>
-                                        <td>Helen Bennett</td>
-                                        <td>UK</td>
-                                         <td>Germany</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Laughing Bacchus Winecellars</td>
-                                        <td>Yoshi Tannamuri</td>
-                                        <td>Canada</td>
-                                         <td>Germany</td>
-                                    </tr>
-                                   
-                                    
-                                </table>
+                                <div class="row">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Basic</th>
+                                            <th>Basic</th>
+                                            <th>standard</th>
+                                            <th>Enterprise</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Remote Support of Computerse</td>
+                                            <td>Maria Anders</td>
+                                            <td>Germany</td>
+                                            <td>Germany</td>
 
+                                        </tr>
+                                        <tr>
+                                            <td>Remote Support of Server infrastructure</td>
+                                            <td>Francisco Chang</td>
+                                            <td>Mexico</td>
+                                            <td>Germany</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Remote Support of PBX, CCTV</td>
+                                            <td>Roland Mendel</td>
+                                            <td>Austria</td>
+                                            <td>Germany</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Remote 24x7</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>Up to 2 requests (outside working hours) per month</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Remote Consulting and Trainings</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                    </table>
+
+                                </div>
                             </div>
                         </section>
 
