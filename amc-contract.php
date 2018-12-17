@@ -464,7 +464,7 @@
                                             <td>Up to 1 server support</td>
                                             <td>Up to 3 server support</td>
                                         </tr>
-                                         <tr>
+                                        <tr>
                                             <th>SAN Storage</th>
                                             <td>-</td>
                                             <td>-</td>
@@ -477,14 +477,14 @@
                                             <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
 
                                         </tr>
-                                         <tr>
+                                        <tr>
                                             <th>VPN & Firewall administration</th>
                                             <td>-</td>
                                             <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
                                             <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
 
                                         </tr>
-                                         <tr>
+                                        <tr>
                                             <th>Wireless equipment. Wireless Network optimization for Enterprise plants only</th>
                                             <td>-</td>
                                             <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
@@ -498,8 +498,55 @@
                                             <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
 
                                         </tr>
+                                        <tr>
+                                            <th>Cloud Solutions</th>
+                                            <td>-</td>
+                                            <td>only Office365 support & Exchange Online</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
 
-
+                                        </tr>
+                                        <tr>
+                                            <th>Phone System (PBX)</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th>CCTV & Biometric</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>only CCTV support</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Microsoft Exchange Server</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>only user management and backup</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Virtual Environment (support of VMWare & Hyper-V infrastructure)</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>Up to 1 server</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Server Backup System mgmt, incl. Tape Drive mgmt</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>excl. Tape Drive support and backup verification</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Server Backup & Restore</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Hosting services (Biz Application Hosting & Maintenance)</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
                                     </table>
 
                                 </div>
