@@ -36,13 +36,12 @@
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">IT HEALTH CHECKS</a></li>
-                            <li><a href="#">NETWORK HEALTH CHECKS</a></li>
-                            <li><a href="#">BUSINESS CONTINUITY</a></li> 
-                            <li><a href="#">IT SECURITY</a></li>
-                             <li><a href="#">CONSULTING SERVICES</a></li>
-                             <li><a href="#">CLOUD MIGRATION</a></li>
-                            <li><a href="#"></a></li>
+                            <li><a href="it-health-check.php">IT HEALTH CHECKS</a></li>
+                            <li><a href="network-health-check.php">NETWORK HEALTH CHECKS</a></li>
+                            <li><a href="business-continuity.php">BUSINESS CONTINUITY</a></li> 
+                            <li><a href="it-security.php">IT SECURITY</a></li>
+                            <li><a href="consulting-service.php">CONSULTING SERVICES</a></li>
+                            <li><a href="cloud-migration.php">CLOUD MIGRATION</a></li>
                         </ul>
                     </li>
                     <li><a href="amc-contract.php">AMC Contracts</a></li>
