@@ -36,7 +36,7 @@
                                 <h3>Feel Free to Contact us</h3>
 
                                 <ul class="cform">
-                                    <form role="form" class="contact">
+                                    <form action="contact-form.php" method="post" role="form" class="contact">
                                         <li class="half pr-15">
                                             <input type="text" class="form-control" name="name" placeholder="Full Name">
                                         </li>
@@ -58,7 +58,7 @@
                                         <li class="half pr-15">
                                             <div class="multiselect">
                                                 <div class="selectBox" onclick="showCheckboxes()">
-                                                    <select>
+                                                    <select name="preffred_classes">
                                                         <option>Choose Programs</option>
                                                     </select>
                                                     <div class="overSelect"></div>
