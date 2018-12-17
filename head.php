@@ -16,6 +16,7 @@
     <link href="css/all.min.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet" type="text/css"/>
     <link href="css/style_menu.css" rel="stylesheet" type="text/css"/>
+    <link href="css/example-styles.css" rel="stylesheet" type="text/css"/>
     <!-- CSS FILES End -->
     
     <!-- Font CSS -->

@@ -1,11 +1,15 @@
 <?php
 
 if ($_POST['name']) {
+    foreach ($_POST['preffred_classes'] as $names) {
+        print "You are selected $names<br/>";
+    }
     $name = $_REQUEST['name'];
     $email = $_REQUEST['email'];
     $mobile = $_REQUEST['mobile'];
     $no_children = $_REQUEST['no_children'];
     $preffred_classes = $_REQUEST['preffred_classes'];
+    echo $preffred_classes;
     $subject = $_REQUEST['subject'];
     $message = $_REQUEST['message'];
     error_reporting(E_STRICT);
@@ -72,7 +76,7 @@ if ($_POST['name']) {
         echo "error";
 //        echo "<script> window.location = 'http://lemonandshadow.com/stocklink/startup-corner.html'; </script>";
     } else {
-        echo "<script> window.location = 'http://enpeekkl.com'; </script>";
+        //echo "<script> window.location = 'http://enpeekkl.com'; </script>";
         echo "Thank you for applying";
         //print_r(error_get_last());
     }

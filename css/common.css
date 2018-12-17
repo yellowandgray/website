@@ -415,3 +415,6 @@ fieldset {
 .height-145 {
     height: 145px;
 }
+.mfp-hide {
+    display: none!important;
+}

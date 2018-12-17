@@ -123,4 +123,4 @@
 <script src="js/custom.js"></script>
 <script src="js/common.js" type="text/javascript"></script>
 <script src="js/custom-popup.js" type="text/javascript"></script>
-<script src="js/contactform.js" type="text/javascript"></script>
+<script src="js/jquery.multi-select.js" type="text/javascript"></script>
