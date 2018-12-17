@@ -39,13 +39,13 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="eco-box">
-                                                <span class="econ-icon"><i class="far fa-handshake"></i></span>
+                                                <span class="econ-icon"><i class="fa fa-lightbulb-o"></i></span>
                                                 <h5>Knowing about Child development & learning</h5>
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="eco-box">
-                                                <span class="econ-icon"><i class="far fa-money-bill-alt"></i></span>
+                                                <span class="econ-icon"><i class="fa fa-lightbulb-o"></i></span>
                                                 <h5>Knowing what is individually Appropriate </h5>
                                                 <p>&nbsp;</p>
                                             </div>
@@ -53,7 +53,7 @@
 
                                         <div class="col-6">
                                             <div class="eco-box">
-                                                <span class="econ-icon"><i class="fas fa-heart"></i></span>
+                                                <span class="econ-icon"><i class="fa fa-lightbulb-o"></i></span>
                                                 <h5>Knowing what is culturally Appropriate </h5>
                                             </div>
                                         </div>
