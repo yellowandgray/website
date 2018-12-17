@@ -1,19 +1,20 @@
 <!doctype html>
 <html lang="en">
-    <?php $page = 'about';
+    <?php
+    $page = 'about';
     include 'head.php';
     ?>
     <body>
         <div class="wrapper">
             <!--Header Start-->
-<?php include 'menu.php'; ?>
-            <div id="search">
+            <?php include 'menu.php'; ?>
+<!--            <div id="search">
                 <button type="button" class="close">×</button>
                 <form class="search-overlay-form">
                     <input type="search" value="" placeholder="type keyword(s) here" />
                     <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
                 </form>
-            </div>
+            </div>-->
             <!--Header End-->
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-02.jpg) no-repeat;">

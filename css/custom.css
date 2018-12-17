@@ -5880,6 +5880,38 @@ About Us Page
     line-height: 72px;
 }
 
+.story-title-bg-2 {
+    background: url(../images/national-pharma-02.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    float: left;
+    position: relative;
+    padding: 163px 0;
+}
+
+.story-title-bg-2 strong {
+    color: #fff;
+    display: block;
+    position: relative;
+    z-index: 999;
+    font-family: 'Poppins', sans-serif;
+}
+.story-title-bg-2 strong.t1 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 72px;
+}
+.story-title-bg-2 strong.t2 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 72px;
+}
+.story-title-bg-2 strong.t3 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 72px;
+}
+
 .story-title-bg-01 {
     background: url(../images/about-sub-02.jpg) no-repeat;
     background-size: cover;

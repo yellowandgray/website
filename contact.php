@@ -18,7 +18,7 @@
             </div>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header">
+            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-06.jpg) no-repeat;">
                 <div class="container">
                     <h1>Contact Us</h1>
                     <ul>
@@ -86,7 +86,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="google-map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11418.310112375979!2d-74.00986187433132!3d40.710981182716246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY!5e0!3m2!1sen!2s!4v1540972202179"></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.871315986748!2d79.77198353863045!3d10.973084525992892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a551790bea57877%3A0x3e4682164fb32296!2sNedungadu+Commune+Panchayat+Office!5e0!3m2!1sen!2sin!4v1545066553240"></iframe>
                             </div>
                         </div>
                     </div>
