@@ -605,8 +605,3 @@ blockquote p {color: #fff;}
 }
 
 .white {color: white}
-
-#noteDiv {
-    display:none;
-    position: absolute;
-}

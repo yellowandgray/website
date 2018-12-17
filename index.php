@@ -657,9 +657,11 @@
 
         <button class="open-button" onclick="openForm()">DoYouKnow</button>
         <div class="chat-popup" id="myQus">
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeForm()"><span aria-hidden="true">×</span></button>  
             <div  class="form-container">
                 <div class="row">
                     <div class="col-md-6">
+                        <h3 class="text-center bold white">DoYouKnow</h3>
                         <p class="white">Computers with AV disabled?</p>
                         <p class="white">Are your systems fully patched?</p>
                         <p class="white">What systems have outdated hardware?</p>
@@ -671,22 +673,28 @@
                         <p class="blurry-text">What USB devices connect to your network?</p>
                         <p class="blurry-text">How vulnerable is your network?</p>
                     </div>
-                    <div class="col-md-6">
-                        <from name="sentMessage" id="contactForm"  novalidate>
-                            <h3>Contact me</h3>
-                            <div class="control-group">
-                                <div class="controls">
-                                    <input type="text" class="form-control" 
-                                           placeholder="Full Name" id="name" required
-                                           data-validation-required-message="Please enter your name" />
-                                    <p class="help-block"></p>
-                                </div>
-                            </div> 	
-                        </from>
+                    <div class="col-md-6 text-center">
+                        <form action="" method="post" id="footer-form">
+                            <h3 class="text-center bold white">Enquiry</h3>
+                            <input class="form-control" name="name" id="first_name" placeholder="Name *" required>
+                            <br>
+                            <input class="form-control" name="email" id="email" placeholder="Your Email *">
+                            <br>
+                            <input class="form-control" name="phone" placeholder="Phone *" id="phone">
+                            <br>
+                            <input class="form-control" name="subject" placeholder="Subject" id="subject">
+                            <br>
+                            <textarea class="form-control" name="subject" placeholder="Comments" id="comments" style="min-height: 70px;"></textarea>
+
+                            <br>
+                            <center>
+                                <input type="submit" class="btn btn-blue" value="Submit">
+                            </center>
+                        </form>
                     </div>
                 </div>
 
-                <div class="text-center"><button type="button" class="btn cancel" onclick="closeForm()">Close</button></div>
+                
             </div>
         </div>
     </body>
