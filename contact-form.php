@@ -1,9 +1,6 @@
 <?php
 
 if ($_POST['name']) {
-    foreach ($_POST['preffred_classes'] as $names) {
-        print "You are selected $names<br/>";
-    }
     $name = $_REQUEST['name'];
     $email = $_REQUEST['email'];
     $mobile = $_REQUEST['mobile'];
