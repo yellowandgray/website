@@ -14,7 +14,7 @@
             </div>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-02.jpg) no-repeat;">
+            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-01.jpg) no-repeat;">
                 <div class="container">
                     <h1>About Us</h1>
                     <ul>
@@ -41,7 +41,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="about-video-img"> <a href="#"><i class="fas fa-play"></i></a> <img src="images/aboutimg.jpg" alt=""> </div>
+                                <div class="about-video-img"> <a href="#"><i class="fas fa-play"></i></a> <img src="images/about-sub.jpg" alt=""> </div>
                             </div>
                             <div class="col-md-12">
                                 <p>  Our Early Childhood classrooms are, of course open and flexible with lot of places to explore & learn. We have dance, music, theatre incorporated in learning and sports given its due space in learning. Our outdoor spaces teach health, wellbeing & physical education not only to our students, but also to our faculty members. All our classrooms are provided with personal lockers for children to store their belongings, which inculcates self-discipline and responsibility in a child. Our learning spaces are also used outside the school hours for extracurricular activities, coffee mornings for the parental community and other activities. </p>
@@ -57,7 +57,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-4">
-                                <div class="story-title-bg"> <strong class="t1">International</strong> <strong class="t2">Standard</strong> <strong class="t3">Education</strong> 
+                                <div class="story-title-bg-01"> <strong class="t1">International</strong> <strong class="t2">Standard</strong> <strong class="t3">Education</strong> 
                                 </div>
                             </div>
                             <div class="col-lg-8">
