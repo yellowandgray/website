@@ -392,38 +392,38 @@
                             </div>
                             <!--campaign box end--> 
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-8 award-img">
                             <div class="row">
                                 <div class="col-md-4 col-sm-6">
-                                    <img src="images/awards/award-01.jpg"/>
+                                    <img src="images/awards/award-01.jpg" class="img-width"/>
                                 </div>
                                 <div class="col-md-4 col-sm-6">
-                                    <img src="images/awards/award-02.jpg"/>
+                                    <img src="images/awards/award-02.jpg" class="img-width"/>
                                 </div>
                                 <div class="col-md-4 col-sm-6">
-                                    <img src="images/awards/award-03.jpg"/>
-                                </div>
-                            </div>
-                            <div class="row" style="margin-top:5px">
-                                <div class="col-md-4 col-sm-6">
-                                    <img src="images/awards/award-04.jpg"/>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <img src="images/awards/award-05.jpg"/>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <img src="images/awards/award-06.jpg"/>
+                                    <img src="images/awards/award-03.jpg" class="img-width"/>
                                 </div>
                             </div>
                             <div class="row" style="margin-top:5px">
                                 <div class="col-md-4 col-sm-6">
-                                    <img src="images/awards/award-07.jpg"/>
+                                    <img src="images/awards/award-04.jpg" class="img-width"/>
                                 </div>
                                 <div class="col-md-4 col-sm-6">
-                                    <img src="images/awards/award-08.jpg"/>
+                                    <img src="images/awards/award-05.jpg" class="img-width"/>
                                 </div>
                                 <div class="col-md-4 col-sm-6">
-                                    <img src="images/awards/award-09.jpg"/>
+                                    <img src="images/awards/award-06.jpg" class="img-width"/>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top:5px">
+                                <div class="col-md-4 col-sm-6">
+                                    <img src="images/awards/award-07.jpg" class="img-width"/>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <img src="images/awards/award-08.jpg" class="img-width"/>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <img src="images/awards/award-09.jpg" class="img-width"/>
                                 </div>
                             </div>
                         </div>

@@ -18,11 +18,12 @@
 
                         <ul class="quick-links">
                             <li> <a href="index.php">Home</a> </li>
-                            <li> <a href="#">About</a> </li>
-                            <li> <a href="#">Chateau Francais</a> </li>
-                            <li> <a href="#">The Way we Work</a> </li>
-                            <li> <a href="#">What Makes us Different</a> </li>
-                            <li> <a href="#">Contact Us</a> </li>
+                            <li> <a href="about.php">About</a> </li>
+                            <li> <a href="chateau-francais.php">Chateau Francais</a> </li>
+                            <li> <a href="way-we-work.php">The Way we Work</a> </li>
+                            <li> <a href="programs-offered.php">Program Offered</a> </li>
+                            <li> <a href="what-makes-different.php">What Makes us Different</a> </li>
+                            <li> <a href="contact.php">Contact Us</a> </li>
                         </ul>
                     </div>
                     <!--Footer Widget End--> 

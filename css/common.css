@@ -421,12 +421,29 @@ fieldset {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    //min-width: 160px;
+    background-color: #f9f9f9;
+    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
     z-index: 1;
     margin-left:150px !important;
+    margin-top: 10px !important;
+    /*    display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    */
 }
+
+@media (min-width: 350px) and (max-width:767px) {
+    .dropdown-content {
+        margin-left: 0px !important;
+    }
+}
+
+.dropdown-content a {padding: 20px 50px 20px 0px !important; }
 .dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
@@ -434,7 +451,7 @@ fieldset {
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 .dropdown-content a {
     color: black;
-    //padding: 12px 16px;
+    /*padding: 12px 16px;*/
     text-decoration: none;
     display: block;
 }
@@ -446,9 +463,9 @@ fieldset {
     max-width: 480px;
     margin: auto;
     background-color: #555;
-    //height: 500px;
+    /*    height: 500px;*/
     color: white;
-    //border-radius: 10px;
+    /*    border-radius: 10px;*/
 }
 
 .topnav {
@@ -471,7 +488,7 @@ fieldset {
 }
 
 .topnav a.icon {
-    background: black;
+    background: #dedede;
     display: block;
     position: absolute;
     right: 0;
@@ -494,7 +511,7 @@ fieldset {
 @media only  screen and (max-width:767px){
     .colorlib-nav ul li a{
         padding: 14px 16px !important;
-        color: #fff !important;
+        color: #78a842 !important;
     }
     .topnav{
         display: block;
@@ -504,5 +521,10 @@ fieldset {
     }
     .mobile-logo{
         display: block;
+        margin-left: 75px;
     }
+    section#home-slider img {height: 250px !important;}
+    .award-img img {padding: 10px 0;}
 }
+
+.img-width {width: 100%;}

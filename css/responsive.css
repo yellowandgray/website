@@ -863,7 +863,7 @@ section.page404.wf100.p80 img {
 }
 section#home-slider img {
 	width: 100%;
-	height: auto;
+	height: 250px;
 }
 ul.topnav-right, .topside-menu {
 	display: none;

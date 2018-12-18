@@ -79,7 +79,7 @@
     <div class="mobile-container">
 
         <!-- Top Navigation Menu -->
-        <div class="topnav">
+        <div class="topnav" style="background: #fff">
             <div id="colorlib-logo"><a href="index.php"><img style="width: 200px;height: 130px; padding-bottom: 10px;" class="mobile-logo" src="images/logo-np.png" alt=""/></a></div>
             <div id="myLinks">
                 <ul>
@@ -93,7 +93,7 @@
                         echo 'active';
                     }
                     ?>">
-                        <a href="about.php">About Us</a>
+                        <a href="about.php">About Us <i class="fas fa-sort-down"></i></a>
                         <ul class="dropdown-content">
                             <li><a href="promoters.php">Promoters</a></li>
                             <li><a href="management.php">Management</a></li>
