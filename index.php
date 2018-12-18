@@ -388,41 +388,41 @@
                                                                             <li><strong>$9750.00</strong> Required</li>
                                                                         </ul>-->
                                 </div>
-                                <a href="management.php" class="dbutton">Read More</a> 
+                                <a href="management.php" target="blank" class="dbutton">Read More</a> 
                             </div>
                             <!--campaign box end--> 
                         </div>
                         <div class="col-md-8">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-6">
                                     <img src="images/awards/award-01.jpg"/>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-6">
                                     <img src="images/awards/award-02.jpg"/>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-6">
                                     <img src="images/awards/award-03.jpg"/>
                                 </div>
                             </div>
                             <div class="row" style="margin-top:5px">
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-6">
                                     <img src="images/awards/award-04.jpg"/>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-6">
                                     <img src="images/awards/award-05.jpg"/>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-6">
                                     <img src="images/awards/award-06.jpg"/>
                                 </div>
                             </div>
                             <div class="row" style="margin-top:5px">
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-6">
                                     <img src="images/awards/award-07.jpg"/>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-6">
                                     <img src="images/awards/award-08.jpg"/>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-6">
                                     <img src="images/awards/award-09.jpg"/>
                                 </div>
                             </div>
