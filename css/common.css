@@ -487,7 +487,7 @@ fieldset {
 }
 
 .topnav a.icon {
-    background: #dedede;
+    background: #fff;
     display: block;
     position: absolute;
     right: 0;
@@ -527,3 +527,4 @@ fieldset {
 }
 
 .img-width {width: 100%;}
+.green-color {color:#97C923 !important;}
