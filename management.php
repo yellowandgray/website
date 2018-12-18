@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en">
-    <?php $page = 'about';
-    include 'head.php'; ?>
+    <?php
+    $page = 'about';
+    include 'head.php';
+    ?>
     <body>
         <div class="wrapper">
             <!--Header Start-->
-<?php include 'menu.php'; ?>
+            <?php include 'menu.php'; ?>
             <div id="search">
                 <button type="button" class="close">×</button>
                 <form class="search-overlay-form">
@@ -55,24 +57,26 @@
                                     <strong class="trank">Founder and CHAIRMAN:  MARAICAYAR TRUST (1992)</strong>
                                     <p>It is philanthropy that the Trust is dealing with. The Trust has the  objective of developing projects for the benefit of society in the fields of Education and Health.</p>
                                     <p>With traditional type of assistance for education which is ongoing, the Trust stood in the front in helping victims of the floods and cyclones in Tamilnadu in the recent years.</p>
-                                    <!--                                    <div class="share-post wf100"> 
-                                                                            <strong>Connect with Mr. L. KAMAL  BATCHA:</strong> 
-                                                                            <a href="#" class="fb">
-                                                                                <i class="fab fa-facebook-f"></i>
-                                                                            </a> 
-                                                                            <a href="#" class="tw">
-                                                                                <i class="fab fa-twitter"></i>
-                                                                            </a> 
-                                                                            <a href="#" class="gp">
-                                                                                <i class="fab fa-google-plus-g"></i>
-                                                                            </a> 
-                                                                            <a href="#" class="link">
-                                                                                <i class="fab fa-linkedin-in"></i>
-                                                                            </a> 
-                                                                            <a href="#" class="insta">
-                                                                                <i class="fab fa-instagram"></i>
-                                                                            </a> 
-                                                                        </div>-->
+                                    <!--Partner Logos Section Start-->
+                                </div>
+                            </div>
+                            <div class="partner-logos wf100 mb80">
+                                <div class="container">
+                                    <h4 class="text-center">Awards</h4>
+                                    <div id="partner-logos" class="owl-carousel owl-theme">
+                                        <div class="item"><img src="images/awards/enpee-awards-001.png"></div>
+                                        <div class="item"><img src="images/awards/enpee-awards-002.png"></div>
+                                        <div class="item"><img src="images/awards/enpee-awards-003.png"></div>
+                                        <div class="item"><img src="images/awards/enpee-awards-010.png"></div>
+                                        <div class="item"><img src="images/awards/enpee-awards-012.png"></div>
+                                        <div class="item"><img src="images/awards/enpee-awards-013.png"></div>
+                                        <div class="item"><img src="images/awards/enpee-awards-014.png"></div>
+                                        <div class="item"><img src="images/awards/enpee-awards-018.png"></div>
+                                        <div class="item"><img src="images/awards/enpee-awards-027.png"></div>
+                                        <div class="item"><img src="images/awards/enpee-awards-028.png"></div>
+                                        <div class="item"><img src="images/awards/enpee-awards-03.png"></div>
+                                    </div><br/>
+                                    <!--Partner Logos Section End--> 
                                     <a href="#" class="contact-team" id="myBtn">Read More</a> 
                                 </div>
                             </div>
@@ -206,7 +210,7 @@
                                 </div>-->
             </section>
             <!--Footer Start-->
-<?php include 'footer.php'; ?>
+            <?php include 'footer.php'; ?>
             <div id="myModal" class="modal">
 
                 <!-- Modal content -->
