@@ -45,7 +45,7 @@
                             </div>
                             <div class="col-lg-6">
 
-                                <div class="about-video-img"> <a href="#"><i class="fas fa-play"></i></a> <img src="images/about-sub.jpg" alt=""> </div>
+                                <div class="about-video-img"> <a href="FM-Ad-Enpee.mp4" data-toggle="lightbox" data-width="1280"><i class="fas fa-play"></i></a> <img src="images/about-sub.jpg" alt=""> </div>
 
                             </div>
                             <div class="col-md-12">

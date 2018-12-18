@@ -124,3 +124,14 @@
 <script src="js/common.js" type="text/javascript"></script>
 <script src="js/custom-popup.js" type="text/javascript"></script>
 <script src="js/jquery.multi-select.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
