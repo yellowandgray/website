@@ -19,9 +19,11 @@
                         <ul class="quick-links">
                             <li> <a href="index.php">Home</a> </li>
                             <li> <a href="about.php">About</a> </li>
+                            <li> <a href="promoters.php">Promoters</a> </li>
+                            <li> <a href="management.php">Management</a> </li>
                             <li> <a href="chateau-francais.php">Chateau Francais</a> </li>
                             <li> <a href="way-we-work.php">The Way we Work</a> </li>
-                            <li> <a href="programs-offered.php">Program Offered</a> </li>
+                            <li> <a href="programs-offered.php">The Way we Work</a> </li>
                             <li> <a href="what-makes-different.php">What Makes us Different</a> </li>
                             <li> <a href="contact.php">Contact Us</a> </li>
                         </ul>
