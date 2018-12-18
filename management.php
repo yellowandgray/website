@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
-    <?php $page = 'about'; include 'head.php'; ?>
+    <?php $page = 'about';
+    include 'head.php'; ?>
     <body>
         <div class="wrapper">
             <!--Header Start-->
-            <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
             <div id="search">
                 <button type="button" class="close">×</button>
                 <form class="search-overlay-form">
@@ -128,8 +129,8 @@
                                 </div>
                                 <!--campaign box end--> 
                             </div>
-                            <div class="col-md-1"></div>
-                            <div class="col-md-5">
+
+                            <div class="col-md-4">
                                 <!--campaign box start-->
                                 <div class="ser-box">
 <!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
@@ -144,12 +145,12 @@
                                 </div>
                                 <!--campaign box end--> 
                             </div>
-                            <div class="col-md-5">
+                            <div class="col-md-4">
                                 <!--campaign box start-->
                                 <div class="ser-box">
 <!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
                                     <div class="ser-txt">
-                                        <a href="#" id="myBtn5"> <h5>Mr. JAFER SADIQUE MUTHUVAPPA</h5>
+                                        <a href="#" id="myBtn5"> <h5>Mr. JAFER SADIQUE MUTHUVAPPA <br/><br/></h5>
                                             <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
                                         </a> 
                                     </div>
@@ -159,7 +160,21 @@
                                 </div>
                                 <!--campaign box end--> 
                             </div>
-                            <div class="col-md-1"></div>
+                            <div class="col-md-4">
+                                <!--campaign box start-->
+                                <div class="ser-box">
+<!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
+                                    <div class="ser-txt">
+                                        <a href="#" id="myBtn6"> <h5>ARRCHANA CHELLAPPA <br/><br/></h5>
+                                            <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                        </a> 
+                                    </div>
+                                    <div class="ser-thumb">
+                                        <div class="bg-padding-line"><strong>Vice President -  Academics & Operations</strong><br/> Hailing from Chennai, this Software Engineer possessing a Masters in Educational Management turned to the Hardware of School-making  purely out of passion for children’s education.  The motivating factor came while she was in UK  for varying periods during 2005-2012, catering to the needs of the primary school  and Childrens’ centers in York </div>
+                                    </div>
+                                </div>
+                                <!--campaign box end--> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -191,7 +206,7 @@
                                 </div>-->
             </section>
             <!--Footer Start-->
-            <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
             <div id="myModal" class="modal">
 
                 <!-- Modal content -->
@@ -272,6 +287,21 @@
                     <p>Since then he has been a well-renowned Pharmacist for Rite Aid in Troy, NY for the past 28 Years.</p>
                     <p>He is known for taking the utmost care for his patients who always prefer to fill their prescriptions with him.</p>
                     <p>Mr.Muthuvappa takes pride in providing the best care for his patients.</p>
+                </div>
+
+            </div>
+            <div id="myModal6" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <P><strong>Vice President -  Academics & Operations</strong><br/> Hailing from Chennai, this Software Engineer possessing a Masters in Educational Management turned to the Hardware of School-making  purely out of passion for children’s education.  The motivating factor came while she was in UK  for varying periods during 2005-2012, catering to the needs of the primary school  and Childrens’ centers in York </P>
+                    <P>Certified in Guidance & Counselling from St.Johns University,UK, and possessing an Advanced Diploma in Montessori Education from India, in addition to several certifications from Australia, her career of 16 years encompassed challenging assignments in Business Development, Profit Center Management, Teacher Training and  Operations & Academics.</P>
+                    <P>Arrchana is a highly decorated Academician well versed in the recruitment of talented resources for the Schools and in training them suitably in the appropriate curriculum. Her achievements  include setting up Pre-Schools, CBSE schools in India and contributing willfully in every aspect of education aiding the development of future generations. </P>
+                    <P>She was the Director of LULLABY KIDS Pre-school in Bangalore  (2007-2012). Returning to Chennai, she was with the Hindu Senior Secondary School, Adyar, Chennai  (May 2012 – May 2013) as a  Teacher Trainer/ABL Trainer cum educator. She had a stint in the Gateway International School(CBSE & American), Padur, Chennai (2013 to 2015) as the Co-ordinator/Teacher/Parent Counselor/Teacher Trainer. </P>
+                    <p>She successfully set up 6 schools for the brand: ALACRIS in Chennai  (2015-2017). She was the  Operations cum Academics Head there, modelling the schools after DAL (Developmentally Appropriateness in Learning) principle.</p>
+                    <p>As Manager – CSR at UCAL Polymers Ltd (Nov 2017- Nov 2018), she was responsible for starting the Rajam Krishnamurthy Public School(CBSE) Trichy, and setting up of the complete Pre-primary CBSE school system.</p>
+                    <p>Arrchana is a highly decorated Academician well versed in the recruitment of talented resources for the Schools and in training them suitably in the appropriate curriculum and getting them trained. Her achievements include setting up Pre-Schools, CBSE schools Profit Planning and Management.</p>
                 </div>
 
             </div>
@@ -465,6 +495,37 @@
                 }
                 $(".close").click(function () {
                     modal5.style.display = "none";
+                });
+
+
+                // Get the modal
+                var modal6 = document.getElementById('myModal6');
+
+                // Get the button that opens the modal
+                var btn6 = document.getElementById("myBtn6");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn6.onclick = function () {
+                    modal6.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal6.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal5) {
+                        modal6.style.display = "none";
+                    }
+
+                }
+                $(".close").click(function () {
+                    modal6.style.display = "none";
                 });
             </script>
     </body>

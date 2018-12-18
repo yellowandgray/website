@@ -137,4 +137,12 @@
             x.style.display = "block";
         }
     }
+    $(document).ready(function () {
+//        $("#hide").click(function () {
+//            $("p").hide();
+//        });
+        $("#show").click(function () {
+            $(".dropdown-content").show();
+        });
+    });
 </script>

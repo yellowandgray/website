@@ -93,7 +93,7 @@
                         echo 'active';
                     }
                     ?>">
-                        <a href="about.php">About Us <i class="fas fa-sort-down"></i></a>
+                        <a href="about.php">About Us <i class="fas fa-sort-down" id="show"></i></a>
                         <ul class="dropdown-content">
                             <li><a href="promoters.php">Promoters</a></li>
                             <li><a href="management.php">Management</a></li>

@@ -5884,7 +5884,7 @@ About Us Page
     background: url(../images/national-pharma-02.jpg) no-repeat;
     background-size: cover;
     width: 100%;
-    float: left;
+/*    float: left;*/
     position: relative;
     padding: 180px 0;
 }
