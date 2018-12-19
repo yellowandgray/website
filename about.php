@@ -52,7 +52,7 @@
                                             <td>Château Français, ENPEE Enclave, 241/2, Puthakudy Village, Vadamattam Main Road, Nedunkadu Panchayat, Karaikal – 609603, U.T of Puducherry.</td>
                                         </tr>
                                         <tr>
-                                            <td>CONTACT TELEPHONE NOS. EMAIL</td>
+                                            <td>EMAIL</td>
                                             <td><a href="mailto:info@enpeekkl.com">info@enpeekkl.com</a></td>
                                         </tr>
                                         <tr>
