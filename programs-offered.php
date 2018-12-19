@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
-    <?php $page = 'programs-offered'; include 'head.php'; ?>
+    <?php $page = 'programs-offered';
+    include 'head.php'; ?>
     <body>
         <div class="wrapper">
             <!--Header Start-->
-            <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
             <div id="search">
                 <button type="button" class="close">×</button>
                 <form class="search-overlay-form">
@@ -48,7 +49,7 @@
                                         <h5><a href="#">Pre-KG</a></h5>
                                         <p class="text-justify">Early Childhood education is the child’s first step towards social engagement. This prepares toddlers through Experiential learning activities, making real life connections. Our program is based largely on the developmentally appropriate practice thereby delivering the right curriculum at the right age</p>
                                     </div>
-<!--                                    <a href="management.php" class="dbutton">Read More</a> -->
+                                    <!--                                    <a href="management.php" class="dbutton">Read More</a> -->
                                 </div>
                                 <!--campaign box end--> 
                             </div>
@@ -59,9 +60,9 @@
                                     <div class="campaign-txt">
                                         <h5><a href="#">LKG-UKG</a></h5>
                                         <p class="text-justify">The Kindergarten programs provided the child with Academic and overall readiness to step into the world of Primary education, from Early years.<br/><br/><br/></p>
-                                        
+
                                     </div>
-<!--                                    <a href="management.php" class="dbutton">Read More</a> -->
+                                    <!--                                    <a href="management.php" class="dbutton">Read More</a> -->
                                 </div>
                                 <!--campaign box end--> 
                             </div>
@@ -72,12 +73,15 @@
                                     <div class="campaign-txt">
                                         <h5><a href="#">Class I to V</a></h5>
                                         <p class="text-justify">Primary class program, to be affiliated to the CBSE method of education, is available from the Academic year 2019. Our friendly & welcoming classrooms offer children the space to learn the right way.</p>
-                                      
+
                                     </div>
-<!--                                    <a href="management.php" class="dbutton">Read More</a> -->
+                                    <!--                                    <a href="management.php" class="dbutton">Read More</a> -->
                                 </div>
                                 <!--campaign box end--> 
                             </div>
+                        </div>
+                        <div class="padding-tb-30">
+                            <p>ENPEE also offers Dance, Music, Art, Theater, Exclusive Sport, Yoga, Brain Gym, Mid-brain activation, Language Lab as part of curriculum as well as extra-curricular activities for students of others schools to learn and enjoy!</p>
                         </div>
                     </div>
                 </section>
@@ -85,6 +89,6 @@
             </section>
             <!--About End--> 
             <!--Footer Start-->
-            <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
     </body>
 </html>

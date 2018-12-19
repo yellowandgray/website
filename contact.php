@@ -97,18 +97,20 @@
                             <h3>Contact Information</h3>
                         </div>
                         <!--Contact Info Start-->
-                        <div class="col-md-4">
+                        <div class="col-md-4 text-right">
                             <div class="c-info">
                                 <h6>Address:</h6>
-                                <p> 241/2, Puthakudy Village, 
-                                    Vadamattam Main Road,
-                                    Nedunkadu Panchayat,
-                                    Karaikal – 609603, U.T of Pondicherry. </p>
+                                <p> Château Français,<br/>
+                                    ENPEE Enclave, <br/> 
+                                    241/2, Puthakudy Village, 
+                                    <br/> Vadamattam Main Road, Nedunkadu Panchayat, <br/>
+                                    Karaikal – 609603, U.T of Puducherry
+                                </p>
                             </div>
                         </div>
                         <!--Contact Info End--> 
                         <!--Contact Info Start-->
-                        <div class="col-md-4">
+                        <div class="col-md-4 text-right">
                             <div class="c-info">
                                 <h6>Contact:</h6>
                                 <p><strong>Phone:</strong> +91 93840 10241</p>
@@ -117,7 +119,7 @@
                         </div>
                         <!--Contact Info End--> 
                         <!--Contact Info Start-->
-                        <div class="col-md-4">
+                        <div class="col-md-4 text-right">
                             <div class="c-info">
                                 <h6>For More Information:</h6>
                                 <p><strong>Email:</strong><a href="mailto:info@enpeekl.com"> info@enpeekkl.com</a></p>
@@ -132,7 +134,7 @@
             <?php include 'footer.php'; ?>
             <script>
                 $('#contactform').multiSelect({
-            noneText: 'Programs Preffered'});
+                    noneText: 'Choose Your Program'});
             </script>
         </div>
 

@@ -32,6 +32,8 @@
             <!--                                <h2> <span>ecova.</span> Welcome to ENPEE INTERNATIONAL SCHOOL</h2>-->
                                 <h2>What Makes Us Different</h2>
                                 <ul>
+                                    <li><i class="fas fa-check"></i> Highly qualified & committed educators</li>
+                                    <li><i class="fas fa-check"></i> Life skills, cultural & spiritual values, personality development sessions as part of learning spaces</li>
                                     <li><i class="fas fa-check"></i> Interactive Classrooms – Magnetic board, Document camera / smart classrooms</li>
                                     <li><i class="fas fa-check"></i> Mixed Age group activity studio </li>
                                     <li><i class="fas fa-check"></i> Parental logins in the website as well as Apps enabling parents to know the happenings of the classrooms. GPS enabled transport linked to apps </li>

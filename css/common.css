@@ -528,3 +528,8 @@ fieldset {
 
 .img-width {width: 100%;}
 .green-color {color:#97C923 !important;}
+.table-border {margin: 20px 0px;}
+.table-border th, td {
+    border: 2px solid #eee;
+    padding: 10px;
+}

@@ -8,15 +8,6 @@
         <div class="wrapper">
             <!--Header Start-->
             <?php include 'menu.php'; ?>
-<!--            <div id="search">
-                <button type="button" class="close">×</button>
-                <form class="search-overlay-form">
-                    <input type="search" value="" placeholder="type keyword(s) here" />
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
-                </form>
-            </div>-->
-            <!--Header End-->
-            <!--Inner Header Start-->
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-02.jpg) no-repeat;">
                 <div class="container">
                     <h1>About Us</h1>
@@ -35,11 +26,12 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="about-text">
-                                    <h5>We are highly passionate about our MOTTO / Core Values</h5>
+                                    <strong>Our Motto</strong>
+                                    <h5>We are highly passionate about our Core Values</h5>
                                     <h2>KNOWLEDGE  INNOVATION  EXCELLENCE</h2>
                                     <p><strong>Our Campus</strong></p>
-                                    <p>The ENPEE campus covers over 5 acres surrounded by lush greenery and a serene atmosphere suitable for learning. At the heart of our campus, ENPEE International school is home to 22 Classrooms spanning over an incredible area of over 44,000/- sq.ft in its Phase – I, starting from Academic year – 2019-2020. </p>
-                                    <p>  Our second and Third phases will resume from the successive academic year of 2020-21 and 2021-22 respectively. Our campus will have a football ground, unique sports complex aiding in overall growth & development of an individual, Spacious and learner oriented laboratories, mixed age group activity studio, digitized classrooms.</p>
+                                    <p>The ENPEE campus covers over 5 acres surrounded by lush greenery and a serene atmosphere suitable for learning. At the heart of our campus, ENPEE International school spans an incredible area of over 40,000/- sq.ft in its Phase – I, starting from Academic year – 2019-2020. </p>
+                                    <p>Our second and Third phases will resume from the successive academic year of 2020-21 and 2021-22 respectively. Our campus will have a spacious Track & field, unique sports complex including but not limited to an aquatic pool, Skating rink, Archery, Basketball, Badminton, Table Tennis aiding in overall growth & development of an individual, Spacious and learner oriented laboratories, mixed age group activity studio, digitized classrooms.</p>
 
                                 </div>
                             </div>
@@ -49,8 +41,42 @@
 
                             </div>
                             <div class="col-md-12">
-                                <p>  Our Early Childhood classrooms are, of course open and flexible with lot of places to explore & learn. We have dance, music, theatre incorporated in learning and sports given its due space in learning. Our outdoor spaces teach health, wellbeing & physical education not only to our students, but also to our faculty members. All our classrooms are provided with personal lockers for children to store their belongings, which inculcates self-discipline and responsibility in a child. Our learning spaces are also used outside the school hours for extracurricular activities, coffee mornings for the parental community and other activities. </p>
-                                <p>   As our motto goes, <strong>Knowledge – Innovation and Excellence</strong>, so is our learning space provided by our campus, more than just a school, ENPEE is a haven for our children, faculty and the whole community.
+                                <table class="table-border">
+                                    <thead>
+                                        <tr>
+                                            <th>NAME OF THE SCHOOL</th>
+                                            <th>ENPEE International School</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>COMMUNICATION ADDRESS</td>
+                                            <td>Château Français, ENPEE Enclave, 241/2, Puthakudy Village, Vadamattam Main Road, Nedunkadu Panchayat, Karaikal – 609603, U.T of Puducherry.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CONTACT TELEPHONE NOS. EMAIL</td>
+                                            <td><a href="mailto:info@enpeekkl.com">info@enpeekkl.com</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>WEBSITE</td>
+                                            <td>www.enpeekkl.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>YEAR OF ESTABLISHMENT</td>
+                                            <td>2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>BOARD OF STUDY</td>
+                                            <td>TO BE AFFILIATED TO CBSE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WHETHER CO-EDUCATIONAL</td>
+                                            <td>Yes</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+<!--                                <p>  Our Early Childhood classrooms are, of course open and flexible with lot of places to explore & learn. We have dance, music, theatre incorporated in learning and sports given its due space in learning. Our outdoor spaces teach health, wellbeing & physical education not only to our students, but also to our faculty members. All our classrooms are provided with personal lockers for children to store their belongings, which inculcates self-discipline and responsibility in a child. Our learning spaces are also used outside the school hours for extracurricular activities, coffee mornings for the parental community and other activities. </p>
+                                <p>   As our motto goes, <strong>Knowledge – Innovation and Excellence</strong>, so is our learning space provided by our campus, more than just a school, ENPEE is a haven for our children, faculty and the whole community.-->
                                 </p>
                             </div>
                         </div>

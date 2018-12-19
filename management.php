@@ -54,7 +54,7 @@
                                 <div class="team-details-txt">
                                     <h2>Rtn. PHF. Hajee Mr. L. KAMAL  BATCHA</h2>
                                     <p>He is a multi-faceted personality, with a pleasing disposition and a philanthropic bent of mind, but basically wedded to the pharma community, by creating new products at affordable rates for the community health care.</p>
-                                    <strong class="trank">Founder and CHAIRMAN:  MARAICAYAR TRUST (1992)</strong>
+                                    <strong class="trank">Founder and CHAIRMAN:  ENPEE INTERNATIONAL SCHOOL (1992)</strong>
                                     <p>It is philanthropy that the Trust is dealing with. The Trust has the  objective of developing projects for the benefit of society in the fields of Education and Health.</p>
                                     <p>With traditional type of assistance for education which is ongoing, the Trust stood in the front in helping victims of the floods and cyclones in Tamilnadu in the recent years.</p>
                                     <!--Partner Logos Section Start-->
@@ -118,21 +118,6 @@
                                 </div>
                                 <!--campaign box end--> 
                             </div>
-                            <div class="col-md-4">
-                                <!--campaign box start-->
-                                <div class="ser-box">
-<!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
-                                    <div class="ser-txt">
-                                        <a href="#" id="myBtn3"> <h5> Mr. H. M. A. Khan, M. Sc.</h5>
-                                            <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
-                                        </a> 
-                                    </div>
-                                    <div class="ser-thumb">
-                                        <div class="bg-padding-line">He is a Member of the Board of Management  of the School. He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service.<br/></div>
-                                    </div>
-                                </div>
-                                <!--campaign box end--> 
-                            </div>
 
                             <div class="col-md-4">
                                 <!--campaign box start-->
@@ -144,7 +129,7 @@
                                         </a> 
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line">He is a former Government Pleader and now a Senior Advocate,  practicing in the Madras High Court for the last 38 years. He represents the third generation in the legal profession. He has been standing counsel and legal adviser to several Statutory Bodies, Corporations and Banks. With the Motto "Work is Worship", he is totally dedicated to his Profession.<br/></div>
+                                        <div class="bg-padding-line">He is a former Government Pleader and now a Senior Advocate,  practicing in the Madras High Court for the last 38 years. He represents the third generation in the legal profession. He has been standing counsel and legal adviser to several Statutory Bodies, Corporations and Banks. With the Motto "Work is Worship", he is totally dedicated to his Profession.</div>
                                     </div>
                                 </div>
                                 <!--campaign box end--> 
@@ -164,6 +149,24 @@
                                 </div>
                                 <!--campaign box end--> 
                             </div>
+
+                            <div class="col-md-4">
+                                <!--campaign box start-->
+                                <div class="ser-box">
+<!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
+                                    <div class="ser-txt">
+                                        <a href="#" id="myBtn3"> <h5> Mr. H. M. A. Khan, M. Sc.</h5>
+                                            <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                            <br/>
+                                        </a> 
+                                    </div>
+                                    <div class="ser-thumb">
+                                        <div class="bg-padding-line">He is a Member of the Board of Management  of the School. He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service.<br/></div>
+                                    </div>
+                                </div>
+                                <!--campaign box end--> 
+                            </div>
+
                             <div class="col-md-4">
                                 <!--campaign box start-->
                                 <div class="ser-box">
@@ -217,7 +220,7 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <p>He is a multi-faceted personality, with a pleasing disposition and a philanthropic bent of mind, but basically wedded to the pharma community, by creating new products at affordable rates for the community health care.</p>
-                    <p> Founder and CHAIRMAN:  MARAICAYAR TRUST (1992)</p>
+                    <p> Founder and CHAIRMAN:  ENPEE INTERNATIONAL SCHOOL (1992)</p>
                     <p>It is philanthropy that the Trust is dealing with. The Trust has the  objective of developing projects for the benefit of society in the fields of Education and Health.</p>
                     <p> With traditional type of assistance for education which is ongoing, the Trust stood in the front in helping victims of the floods and cyclones in Tamilnadu in the recent years.</p>
                     <p>In the wake of the overwhelming loss suffered by the victims of cyclone GAJA,  several truckloads of relief materials were quickly despatched to the affected areas, notwithstanding the fact that the promoter’s family too had suffered  extensive loss of assets.</p>

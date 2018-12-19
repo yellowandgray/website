@@ -150,11 +150,11 @@
                                 <p class="text-justify">The ENPEE campus covers over 5 acres surrounded by lush greenery and a serene atmosphere suitable for learning. At the heart of our campus, ENPEE International school is home to 22 Classrooms spanning over an incredible area of over 44,000/- sq.ft in its Phase – I, starting from Academic year – 2019-2020.</p>
                                 <p class="text-justify">Our second and Third phases will resume from the successive academic year of 2020-21 and 2021-22 respectively. Our campus will have a football ground, unique sports complex aiding in overall growth & development of an individual, Spacious and learner oriented laboratories, mixed age group activity studio, digitized classrooms. <a href="#">Read More</a></p>
                                 <ul>
-                                    <li><i class="fas fa-check"></i> Disciplined Education Structure</li>
+                                    <li><i class="fas fa-check"></i> Inclusive Curriculum</li>
                                     <li><i class="fas fa-check"></i> Interactive Learning </li>
                                     <li><i class="fas fa-check"></i> Project Based Curriculum </li>
                                     <li><i class="fas fa-check"></i> Experienced & Well Trained Staff</li>
-                                    <li><i class="fas fa-check"></i> International Standard</li>
+                                    <li><i class="fas fa-check"></i> Holistic Development</li>
                                     <li><i class="fas fa-check"></i> World Class Facilities </li>
                                 </ul>
                                 <!--                                <a class="lm" href="#">Read More</a> -->
@@ -258,8 +258,9 @@
                         <div class="col-md-8">
                             <!--title start-->
                             <div class="section-title">
-                                <strong>Our Current</strong>
-                                <h2>Programs Offered</h2>
+                                <strong>Programs Offered</strong>
+                                <h2>ENPEE International School offers the following programs for the Academic Year 2019-2020</h2>
+                                <p>At ENPEE international school, we believe in leading a child to the highest broad-based development – mentally, physically, spiritually, socially and emotionally. Such holistic development aids a lofty learner to achieve their rightful goals in all spheres of life. ENPEE follows the CBSE method of education, offering various languages such as Tamil, French, Arabic and Hindi to its learners.</p>
                             </div>
                             <!--title end-->
                             <div class="blog-list wf100">
@@ -285,7 +286,7 @@
                                                                                     <li><span>By:</span> Danial John</li>
                                                                                     <li><span>Posted:</span> 29 September, 2018</li>
                                                                                 </ul>-->
-                                        <p class="text-justify"> The Kindergarten programs provided the child with Academic and overall readiness to step into the world of Primary education, from Early years.</p>
+                                        <p class="text-justify"> The role of Early Childhood & Primary education is to ensure overall development in a child, which means attention must be paid to both cognitive & intellectual aspects as well as social & emotional development of a child. At ENPEE, Our Kindergarten programs provide the child with Academic and overall readiness to step into the world of Primary education, from Early years.</p>
                                     </div>
                                 </div>
                                 <!--Blog Post End--> 
@@ -298,7 +299,7 @@
                                                                                     <li><span>By:</span> Danial John</li>
                                                                                     <li><span>Posted:</span> 29 September, 2018</li>
                                                                                 </ul>-->
-                                        <p class="text-justify"> Primary class program, to be affiliated to the CBSE method of education, is available from the Academic year 2019. Our friendly & welcoming classrooms offer children the space to learn the right way. </p>
+                                        <p class="text-justify"> Our CBSE method of education through Continuous Comprehensive Evaluation(CCE) is a curricular initiative shifting emphasis from assessment to holistic learning. We follow the NCERT books, which supplements the learning process at ENPEE. Our friendly & welcoming classrooms offer children the space to learn the right way. </p>
                                     </div>
                                 </div>
                                 <!--Blog Post End--> 
@@ -438,7 +439,7 @@
                         <div class="col-md-7">
                             <div class="pro-title">
                                 <h2>PARENTS CORNER</h2>
-                                <p>Dear Parents, <br/> Thank you for visiting our website. We look forward to meeting with you in person to discuss the bright future and quality education provided by our prestigious school. We will be happy to show our campus and the world class facilities that are available for the benefit of students. We have organized an event specially for you and your children. Kindly fill out the enquiry form for further details. </p>
+                                <p>Dear Parents, <br/> Thank you for visiting our website. We look forward to meeting you and your little one in person to discuss quality education provided by our prestigious school. We will be happy to walk you around our campus. Kindly fill out the enquiry form for further details. </p>
                                 <p>With Best regards,<br/> School Management</p>
                             </div>
                             <!--                            <ul class="counter">
@@ -571,7 +572,7 @@
             <?php include 'footer.php'; ?>
             <script>
                 $('#contactform').multiSelect({
-                    noneText: 'Programs Preffered'});
+                    noneText: 'Choose Your Program'});
             </script>
     </body>
 </html>

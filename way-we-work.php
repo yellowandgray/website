@@ -35,7 +35,7 @@
                                     <!--                                    <h5>We are highly passionate about our MOTTO / Core Values</h5>-->
                                     <h2>Our Curriculum</h2>
 <!--                                    <p><strong>Our Campus</strong></p>-->
-                                    <p>At ENPEE, we believe in providing ‘Effective Early Education’, through Developmentally Appropriate practice , with three core considerations as given by the NAEYC</p>
+                                    <p>At ENPEE, we offer CBSE method of education.  We believe in providing ‘Effective Early Education’, through Developmentally Appropriate practice , with three core considerations as given by the NAEYC</p>
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="eco-box">
@@ -66,7 +66,7 @@
                                     <img src="images/curriculum-sub.jpg" alt=""> </div>
                             </div>
                             <div class="col-md-12 margin-top-30">
-                                <p>We have carefully handpicked our collection of books for the effective learning of our children, from chosen authors. As we are to be affiliated to the CBSE, we have also included NCERT books to aid in their learning.</p>
+                                <p>We have carefully handpicked our collection of books for the effective learning of our children, from chosen authors. As we are to be affiliated to the CBSE, we have included NCERT books to aid in their learning. We ensure an effective balance between linguistic, arithmetic & scientific learning and also offer various linguistic platforms ranging from Tamil, Arabic French & Hindi.</p>
 
                             </div>
                         </div>
@@ -88,7 +88,7 @@
 
                                         <!--                                        <h5>About our History</h5>-->
                                         <h2>OUR MARINER’S STAR</h2>
-                                        <p>We strongly believe that an effective teacher will be dedicated towards:</p>
+                                        <p>At ENPEE, our well-trained educator  will be dedicated towards :</p>
                                         <ul>
                                             <li class="vission"><i class="fas fa-check"></i> Creating a caring community of learners</li>
                                             <li class="vission"><i class="fas fa-check"></i> Planning curriculum to achieve important goals</li>
@@ -96,7 +96,7 @@
                                             <li class="vission"><i class="fas fa-check"></i> Assessing Children’s development and learning</li>
                                             <li class="vission"><i class="fas fa-check"></i> Establishing reciprocal relationships with families</li>
                                         </ul>
-                                        <p>These five guidelines act as ‘Mariner’s Star’ to guide children in their journey to learn the best.</p>
+                                        <p>These five guidelines helps a teacher to act as a ‘Mariner’s Star’ to guide children in their journey to learn the best.</p>
 
                                     </div>
                                 </div>
@@ -117,7 +117,7 @@
                                         <div class="eco-box height-145">
                                             <span class="econ-icon"><i class="far fa-thumbs-up"></i></span>
                                             <!--                                            <h5>Developmentally Appropriate </h5>-->
-                                            <p><strong>Developmentally Appropriate</strong> learning methodologies spanning Multiple Intelligences, firmly acknowledging the belief that every child is unique and every child can learn</p>
+                                            <p><strong>Developmentally Appropriate</strong> learning methodologies spanning  Multiple Intelligences, firmly acknowledging the belief that every child is unique and every child can learn</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">

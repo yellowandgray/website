@@ -10,11 +10,11 @@
                 </div>
                 <div class="col-xs-6 col-md-push-2 text-right">
                     <p>
-                    <ul class="colorlib-social-icons">
+<!--                    <ul class="colorlib-social-icons">
                         <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>&nbsp;
                         <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>&nbsp;
                         <li><a href="#"><i class="fa fa-youtube-square"></i></a></li>&nbsp;
-                    </ul>
+                    </ul>-->
                     </p>
                     <p class="btn-apply"><a href="index.php#enquiry">Enroll Now</a></p>
                 </div>
@@ -49,7 +49,7 @@
                         if ($page == 'chateau') {
                             echo 'active';
                         }
-                        ?>"><a href="chateau-francais.php">Chateau Francais</a></li>
+                        ?>"><a href="chateau-francais.php">Château Français</a></li>
                         <li class="<?php
                         if ($page == 'way-work') {
                             echo 'active';
@@ -103,7 +103,7 @@
                     if ($page == 'chateau') {
                         echo 'active';
                     }
-                    ?>"><a href="chateau-francais.php">Chateau Francais</a></li>
+                    ?>"><a href="chateau-francais.php">Château Français</a></li>
                     <li class="<?php
                     if ($page == 'way-work') {
                         echo 'active';
