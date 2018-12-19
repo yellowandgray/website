@@ -34,7 +34,7 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="team-large-img"> 
-                                    <img src="images/chairman.jpg" alt=""/>
+                                    <img src="images/chairman.jpg" alt="" style="width: 200px"/>
 <!--                                    <section class="customer-logos slider">
                                         <div class="slide"><img src="images/awards/enpee-awards-001.png"></div>
                                         <div class="slide"><img src="images/awards/enpee-awards-002.png"></div>
