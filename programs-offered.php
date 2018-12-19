@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
     <?php $page = 'programs-offered';
-    include 'head.php'; ?>
+    include 'head.php';
+    ?>
     <body>
         <div class="wrapper">
             <!--Header Start-->
@@ -34,8 +35,9 @@
                             <div class="col-md-12">
                                 <!--title start-->
                                 <div class="section-title">
-<!--                                    <strong>Our</strong>-->
-                                    <h2>During Phase – I, ENPEE offers the following programs for the Academic Year 2019-2020:</h2>
+                                    <strong>Programs offered</strong>
+                                    <h2>ENPEE International School offers the following programs for the Academic Year 2019-2020</h2>
+                                    <p>At ENPEE international school, we believe in leading a child to the highest broad-based development – mentally, physically, spiritually, socially and emotionally. Such holistic development aids a lofty learner to achieve their rightful goals in all spheres of life. ENPEE follows the CBSE method of education, offering various languages such as Tamil, French, Arabic and Hindi to its learners.</p>
                                 </div>
                                 <!--title end--> 
                             </div>
@@ -59,7 +61,7 @@
                                     <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-lkg-ukg.jpg" alt=""> </div>
                                     <div class="campaign-txt">
                                         <h5><a href="#">LKG-UKG</a></h5>
-                                        <p class="text-justify">The Kindergarten programs provided the child with Academic and overall readiness to step into the world of Primary education, from Early years.<br/><br/><br/></p>
+                                        <p class="text-justify">The role of Early Childhood & Primary education is to ensure overall development in a child, which means attention must be paid to both cognitive & intellectual aspects as well as social & emotional development of a child. At ENPEE, Our Kindergarten programs provide the child with Academic and overall readiness to step into the world of Primary education, from Early years.</p>
 
                                     </div>
                                     <!--                                    <a href="management.php" class="dbutton">Read More</a> -->
@@ -72,16 +74,13 @@
                                     <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-class-one-five.jpg" alt=""> </div>
                                     <div class="campaign-txt">
                                         <h5><a href="#">Class I to V</a></h5>
-                                        <p class="text-justify">Primary class program, to be affiliated to the CBSE method of education, is available from the Academic year 2019. Our friendly & welcoming classrooms offer children the space to learn the right way.</p>
+                                        <p class="text-justify">Our CBSE method of education through Continuous Comprehensive Evaluation(CCE) is a curricular initiative shifting emphasis from assessment to holistic learning. We follow the NCERT books, which supplements the learning process at ENPEE. Our friendly & welcoming classrooms offer children the space to learn the right way.</p>
 
                                     </div>
                                     <!--                                    <a href="management.php" class="dbutton">Read More</a> -->
                                 </div>
                                 <!--campaign box end--> 
                             </div>
-                        </div>
-                        <div class="padding-tb-30">
-                            <p>ENPEE also offers Dance, Music, Art, Theater, Exclusive Sport, Yoga, Brain Gym, Mid-brain activation, Language Lab as part of curriculum as well as extra-curricular activities for students of others schools to learn and enjoy!</p>
                         </div>
                     </div>
                 </section>
