@@ -60,7 +60,7 @@
                                     <!--Partner Logos Section Start-->
                                 </div>
                             </div>
-                            <div class="partner-logos wf100 mb80">
+<!--                            <div class="partner-logos wf100 mb80">-->
                                 <div class="container">
                                     <h4 class="text-center">Awards</h4>
                                     <div id="partner-logos" class="owl-carousel owl-theme">
@@ -79,7 +79,7 @@
                                     <!--Partner Logos Section End--> 
                                     <a href="#" class="contact-team" id="myBtn">Read More</a> 
                                 </div>
-                            </div>
+<!--                            </div>-->
                         </div>
                     </div>
                 </div>

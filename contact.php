@@ -102,8 +102,9 @@
                                 <h6>Address:</h6>
                                 <p> Château Français,<br/>
                                     ENPEE Enclave, <br/> 
-                                    241/2, Puthakudy Village, 
-                                    <br/> Vadamattam Main Road, Nedunkadu Panchayat, <br/>
+                                    241/2, Puthakudy Village, <br/>
+                                    Vadamattam Main Road, <br/>
+                                    Nedunkadu Panchayat, <br/>
                                     Karaikal – 609603, U.T of Puducherry
                                 </p>
                             </div>
