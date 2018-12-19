@@ -16,10 +16,10 @@
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-02.jpg) no-repeat;">
                 <div class="container">
-                    <h1>Chateau Francais</h1>
+                    <h1>Château Français</h1>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Chateau Francais</a></li>
+                        <li><a href="#">Château Français</a></li>
                     </ul>
                 </div>
             </section>
