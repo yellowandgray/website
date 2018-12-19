@@ -54,7 +54,7 @@
                                 <div class="team-details-txt">
                                     <h2>Rtn. PHF. Hajee Mr. L. KAMAL  BATCHA</h2>
                                     <p>He is a multi-faceted personality, with a pleasing disposition and a philanthropic bent of mind, but basically wedded to the pharma community, by creating new products at affordable rates for the community health care.</p>
-                                    <strong class="trank">Founder and CHAIRMAN:  ENPEE INTERNATIONAL SCHOOL (1992)</strong>
+                                    <strong class="trank">Founder and CHAIRMAN:  ENPEE INTERNATIONAL SCHOOL</strong>
                                     <p>It is philanthropy that the Trust is dealing with. The Trust has the  objective of developing projects for the benefit of society in the fields of Education and Health.</p>
                                     <p>With traditional type of assistance for education which is ongoing, the Trust stood in the front in helping victims of the floods and cyclones in Tamilnadu in the recent years.</p>
                                     <!--Partner Logos Section Start-->
