@@ -26,9 +26,6 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="about-text">
-                                    <strong>Our Motto</strong>
-                                    <h5>We are highly passionate about our Core Values</h5>
-                                    <h2>KNOWLEDGE  INNOVATION  EXCELLENCE</h2>
                                     <p><strong>Our Campus</strong></p>
                                     <p>The ENPEE campus covers over 5 acres surrounded by lush greenery and a serene atmosphere suitable for learning. At the heart of our campus, ENPEE International school spans an incredible area of over 40,000/- sq.ft in its Phase – I, starting from Academic year – 2019-2020. </p>
                                     <p>Our second and Third phases will resume from the successive academic year of 2020-21 and 2021-22 respectively. Our campus will have a spacious Track & field, unique sports complex including but not limited to an aquatic pool, Skating rink, Archery, Basketball, Badminton, Table Tennis aiding in overall growth & development of an individual, Spacious and learner oriented laboratories, mixed age group activity studio, digitized classrooms.</p>
@@ -41,6 +38,7 @@
 
                             </div>
                             <div class="col-md-12">
+                                <h5>Affiliated Status</h5>
                                 <table class="table-border">
                                     <thead>
                                         <tr>
@@ -94,6 +92,19 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="col-md-12 timeline-box">
+                                <div class="section-title-2">
+                                        <!--                                        <h5>About our History</h5>-->
+                                        <h5>OUR MOTTO</h5>
+                                        <ul>
+                                            <li><h2>KNOWLEDGE</h2></li>
+                                            <li><h2>INNOVATION</h2></li>
+                                            <li><h2>EXCELLENCE</h2></li>
+                                        </ul>
+                                        
+                                        <h5>We are highly passionate about our Core Values</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 timeline-box" style="margin-top: 10px;">
                                     <div class="section-title-2">
                                         <!--                                        <h5>About our History</h5>-->
                                         <h5>We are committed to our VISION</h5>
@@ -282,15 +293,15 @@
                             <div class="col-md-12 timeline-box" style="margin-top: 10px;">
                                 <div class="section-title-2">
                                 <!--                                        <h5>About our History</h5>-->
-<!--                                <h5>MISSION</h5>
-                                <ul style="list-style: none;">
-                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To become role model in setting standards of Quality Education.</li>
-                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To build ably qualified, skilful & dedicated Teaching Fraternity .</li>
-                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To impart education of highest standards to all socio-economic sections of society in fulfilment of Corporate Social Responsibility.</li>
-                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To provide a safe, secure and Children-friendly Environment.</li>
-                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To design and roll over robust and ultra-modern Infrastructure Facilities .</li>
-                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To expand the foot-print to nearby districts by establishing similar schools to serve local community.</li>
-                                </ul>-->
+                                <!--                                <h5>MISSION</h5>
+                                                                <ul style="list-style: none;">
+                                                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To become role model in setting standards of Quality Education.</li>
+                                                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To build ably qualified, skilful & dedicated Teaching Fraternity .</li>
+                                                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To impart education of highest standards to all socio-economic sections of society in fulfilment of Corporate Social Responsibility.</li>
+                                                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To provide a safe, secure and Children-friendly Environment.</li>
+                                                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To design and roll over robust and ultra-modern Infrastructure Facilities .</li>
+                                                                    <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To expand the foot-print to nearby districts by establishing similar schools to serve local community.</li>
+                                                                </ul>-->
                             </div>
                         </div>
                         <!--                                <div class="section-title-2">
