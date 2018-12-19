@@ -388,7 +388,7 @@
                                                                             <li><strong>$9750.00</strong> Required</li>
                                                                         </ul>-->
                                 </div>
-                                <a href="management.php" target="blank" class="dbutton">Read More</a> 
+                                <a href="management.php" class="dbutton">Read More</a> 
                             </div>
                             <!--campaign box end--> 
                         </div>
