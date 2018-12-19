@@ -87,7 +87,7 @@
                         <div class="row">
                             <div class="col-lg-4">
 
-                                <div class="story-title-bg-01"> <strong class="t1">International</strong> <strong class="t2">Standard</strong> <strong class="t3">Education</strong> 
+                                <div class="story-title-bg-01"> <strong class="t1">International</strong> <strong class="t2">Standards</strong> <strong class="t3"></strong> 
                                 </div>
                             </div>
                             <div class="col-lg-8">
