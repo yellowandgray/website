@@ -161,7 +161,7 @@
                                         </a> 
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line">He is a Member of the Board of Management  of the School. He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service.<br/></div>
+                                        <div class="bg-padding-line">Chief Executive Officer. He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service.<br/></div>
                                     </div>
                                 </div>
                                 <!--campaign box end--> 

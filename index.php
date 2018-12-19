@@ -85,18 +85,18 @@
                     <img src="images/banner/banner005.jpg" alt=""/>
                 </div>
 
-                <div class="item">
+<!--                <div class="item">
                     <div class="slider-caption text-center">
                         <div class="container">
                             <strong>A Well-Disciplined & Friendly Environment</strong>
-                            <!--                     <h1>Stop Air Pollution</h1>
-                                                 <p> Air Pollution is another main environmental pollution faced by our world today. Air pollution takes place when damaging stuff including particulates.</p>-->
-                            <!--                            <a href="#" class="active">Join us Now</a> 
-                                                        <a href="#">More About Us</a> -->
+                                                 <h1>Stop Air Pollution</h1>
+                                                 <p> Air Pollution is another main environmental pollution faced by our world today. Air pollution takes place when damaging stuff including particulates.</p>
+                                                        <a href="#" class="active">Join us Now</a> 
+                                                        <a href="#">More About Us</a> 
                         </div>
                     </div>
                     <img src="images/banner/banner-discipline.jpg" alt=""/>
-                </div>
+                </div>-->
 
                 <div class="item">
                     <div class="slider-caption text-center">
@@ -165,7 +165,7 @@
                                 <div class="pic1">
                                     <div id="pic-slider" class="owl-carousel owl-theme">
                                         <div class="item"><img src="images/carosel/pic-Staff.jpg" alt=""></div>
-                                        <div class="item"><img src="images/carosel/pic-doscipline.jpg" alt=""></div>
+<!--                                        <div class="item"><img src="images/carosel/pic-doscipline.jpg" alt=""></div>-->
                                         <div class="item"><img src="images/carosel/pic-frenchstyle.jpg" alt=""></div>
                                         <div class="item"><img src="images/carosel/pic-interactive-learning.jpg" alt=""></div>
                                         <div class="item"><img src="images/carosel/pic-project-based-curriculum.jpg" alt=""></div>
@@ -370,7 +370,7 @@
                                 <div class="campaign-txt">
                                     <h5><a href="#">Rtn. PHF. Hajee Mr. L. KAMAL  BATCHA</a></h5>
                                     <p class="text-justify">He is a multi-faceted personality, with a pleasing disposition and a philanthropic bent of mind, but basically wedded to the pharma community, by creating new products at affordable rates for the community health care.</p>
-                                    <p class="bold">Founder and CHAIRMAN:  MARAICAYAR TRUST (1992)</p>
+                                    <p class="bold">Founder and CHAIRMAN:  MARAICAYAR TRUST </p>
                                     <!--                                    <ul class="participants">
                                                                             <li><img src="images/u1.jpg" alt=""></li>
                                                                             <li><img src="images/u2.jpg" alt=""></li>
