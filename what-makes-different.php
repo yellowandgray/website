@@ -34,14 +34,15 @@
                                 <ul>
                                     <li><i class="fas fa-check"></i> Highly qualified & committed educators</li>
                                     <li><i class="fas fa-check"></i> Life skills, cultural & spiritual values, personality development sessions as part of learning spaces</li>
-                                    <li><i class="fas fa-check"></i> Interactive Classrooms – Magnetic board, Document camera / smart classrooms</li>
-                                    <li><i class="fas fa-check"></i> Mixed Age group activity studio </li>
-                                    <li><i class="fas fa-check"></i> Parental logins in the website as well as Apps enabling parents to know the happenings of the classrooms. GPS enabled transport linked to apps </li>
-                                    <li><i class="fas fa-check"></i> Outdoors to have a variety of learning methodologies incorporated</li>
-                                    <li><i class="fas fa-check"></i> CCTV across the school and in classrooms</li>
-                                    <li><i class="fas fa-check"></i> Books & Notes to be stored in students’ personal closet and taken home only during Homework days. </li>
-                                    <li><i class="fas fa-check"></i> Fully Air-conditioned classrooms </li>
-                                    <li><i class="fas fa-check"></i> air-conditioned school transport with dedicated care-takers </li>
+                                    <li><i class="fas fa-check"></i> Interactive  and fully air-conditioned Classrooms </li>
+                                    <li><i class="fas fa-check"></i> Mixed Age group activity studio</li>
+                                    <li><i class="fas fa-check"></i> Mobile App enabling parents, students and staff to stay connected at all times</li>
+                                    <li><i class="fas fa-check"></i> Indoors and Outdoors have variety of learning methodologies incorporated</li>
+                                    <li><i class="fas fa-check"></i> Air-conditioned and GPS enabled school transport with dedicated caretakers</li>
+                                    <li><i class="fas fa-check"></i> CCTV across the campus  </li>
+                                    <li><i class="fas fa-check"></i> community days, Parent Engagement Programs and coffee mornings to involve parents </li>
+                                    <li><i class="fas fa-check"></i> dance, music, theater, Athletics, Brain Gym, Mid-brain activation as part of  curriculum </li>
+                                    <li><i class="fas fa-check"></i> Regular Professional development  and other educational as well as recreational  Programs for our passionate educators. </li>
                                 </ul>
                                 <!--                                <a class="lm" href="#">Read More</a> -->
                             </div>
