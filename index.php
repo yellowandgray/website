@@ -114,7 +114,7 @@
                 <div class="item">
                     <div class="slider-caption text-center">
                         <div class="container">
-                            <strong>Unique Sports Complex</strong>
+                            <strong>Multi-Purpose Sports Complex</strong>
                             <!--                     <h1>Stop Air Pollution</h1>
                                                  <p> Air Pollution is another main environmental pollution faced by our world today. Air pollution takes place when damaging stuff including particulates.</p>-->
                             <!--                            <a href="#" class="active">Join us Now</a> 

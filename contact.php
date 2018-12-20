@@ -31,7 +31,7 @@
             <!--Inner Header End--> 
             <!--Contact Start-->
             <section class="contact-page wf100 p80">
-                <div class="container">
+                <div class="container contact-dropdown-from">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="contact-form">
@@ -60,7 +60,9 @@
                                         <li class="half pr-15">
                                             <div class="multiselect">
                                                 <select id="contactform" class="form-control" name="preffred_classes[]" multiple>
-                                                    <option value="L.K.G">L.K.G</option>
+                                                    <option value="L.K.G">Pre-KG</option>
+                                                    <option value="L.K.G">LKG</option>
+                                                    <option value="L.K.G">UKG</option>
                                                     <option value="I STD">I STD</option>
                                                     <option value="II STD">II STD</option>
                                                     <option value="III STD ">III STD </option>

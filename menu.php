@@ -41,9 +41,9 @@
                         ?>">
                             <a href="about.php">About Us</a>
                             <ul class="dropdown-content">
-                                <li><a href="promoters.php">Promoters</a></li>
-                                <li><a href="management.php">Management</a></li>
-                                <li><a href="advisory-board.php">Advisory Board</a></li>
+                                <li class="text-left"><a href="promoters.php" class="margin-left-10">Promoters</a></li>
+                                <li class="text-left"><a href="management.php" class="margin-left-10">Management</a></li>
+                                <li class="text-left"><a href="advisory-board.php" class="margin-left-10">Advisory Board</a></li>
                             </ul>
                         </li>
                         <li class="<?php
@@ -96,8 +96,9 @@
                     ?>">
                         <a href="about.php">About Us <i class="fas fa-sort-down" id="show"></i></a>
                         <ul class="dropdown-content">
-                            <li><a href="promoters.php">Promoters</a></li>
-                            <li><a href="management.php">Management</a></li>
+                            <li class="text-left"><a href="promoters.php">Promoters</a></li>
+                            <li class="text-left"><a href="management.php">Management</a></li>
+                            <li class="text-left"><a href="advisory-board.php">Management</a></li>
                         </ul>
                     </li>
                     <li class="<?php

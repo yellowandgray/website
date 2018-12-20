@@ -82,7 +82,7 @@
 /*.mr-auto li {border-right: 1px solid #000;}*/
 
 .top-menu .menu-1 { margin-top: 50px; }
-.top-menu .menu-1 a { font-size: 12px; }
+.top-menu .menu-1 a { font-size: 13px; }
 .blue-color {
     color: #429ffc;
 }
@@ -422,12 +422,11 @@ fieldset {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 170px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 999;
-    margin-left:150px !important;
+    margin-left:95px !important;
     margin-top: 10px !important;
-    text-align: center;
     /*    display: none;
         position: absolute;
         background-color: #f1f1f1;
@@ -541,12 +540,60 @@ fieldset {
 
 .ul-padding-color ul {
     padding: 20px 30px;
+    line-height: 35px;
 }
 
 .ul-padding-color ul li {
     color: #fff;
     font-weight: 600;
 }
-
+.margin-left-10 {margin-left: 10px;}
 .font-size-20 {font-size: 20px;}
 .height-440 {height: 440px !important;}
+
+.footer-social a:hover {
+    background-color: #186fb8 !important;
+    color: #fff !important; 
+    border-color: #186fb8 !important;
+}
+
+.volunteer-form .multi-select-button {
+    display: inline-block;
+    /* font-size: 0.875em; */
+    /* padding: 0.2em 0.6em; */
+    max-width: 164%; 
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    vertical-align: -0.5em;
+    /* background-color: #fff; */
+    border: 1px solid #aaa;
+    border-radius: 29px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    width: 164%;
+    padding: 7px 35px;
+    /* margin-left: 69px; */
+    /*    text-align: center;*/
+}
+
+.contact-dropdown-from .multi-select-button {
+    display: inline-block;
+    /* font-size: 0.875em; */
+    /* padding: 0.2em 0.6em; */
+    max-width: 118%;
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    vertical-align: -0.5em;
+    /* background-color: #fff; */
+    border: 1px solid #aaa;
+    /* border-radius: 29px; */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    width: 164%;
+    padding: 11px 35px;
+    margin-top: -6px;
+    /* text-align: center; */
+    height: 48px;
+}

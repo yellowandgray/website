@@ -123,7 +123,7 @@
                                 <div class="ser-box">
 <!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
                                     <div class="ser-txt">
-                                        <a href="#" id="myBtn4"><h5> Mr. J. RAJA KALIFULLA, B.Sc, B.L. </h5>
+                                        <a href="#" id="myBtn3"><h5> Mr. J. RAJA KALIFULLA, B.Sc, B.L. </h5>
                                             <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
                                         </a> 
                                     </div>
@@ -138,7 +138,7 @@
                                 <div class="ser-box">
 <!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
                                     <div class="ser-txt">
-                                        <a href="#" id="myBtn5"> <h5>Mr. JAFER SADIQUE MUTHUVAPPA <br/><br/></h5>
+                                        <a href="#" id="myBtn4"> <h5>Mr. JAFER SADIQUE MUTHUVAPPA <br/><br/></h5>
                                             <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
                                         </a> 
                                     </div>
@@ -154,7 +154,7 @@
                                 <div class="ser-box">
 <!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
                                     <div class="ser-txt">
-                                        <a href="#" id="myBtn3"> <h5> Mr. H M A Khan,<br/> M. Sc.</h5>
+                                        <a href="#" id="myBtn5"> <h5> Mr. H M A Khan,<br/> M. Sc.</h5>
                                             <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
                                             <br/>
                                         </a> 
@@ -234,7 +234,8 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <P>He is the Managing Trustee of ENPEE International.<br/> He is the PROFESSOR and HEAD, Dept. of Community Medicine in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL , since 2007.</p>
+                    <P><strong>He is the Managing Trustee of ENPEE International School.</strong></p>
+                    <p>He is the PROFESSOR and HEAD, Dept. of Community Medicine in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL , since 2007.</p>
                     <P>He is also the Managing Director of NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.</P>
                     <p>As the Professor and Head of Community Medicine at V M Medical College, Karaikal, he brings with him decades of teaching experience in medical education, and has undertaken many research projects. His rich experience through national and international educational and cultural programmes, is a source of strength to the Trust in its mission of setting up modern Institutes of Education that deliver quality with innovation. He is a multi-faceted personality with abundant experience in managing corporate hospitals and business ventures, apart from being a committed medical professional.</p>
                 </div>
@@ -245,7 +246,7 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p>He is a Managing Trustee of ENPEE International.</p>
+                    <p><strong>He is a Managing Trustee of ENPEE International School.</strong></p>
                     <p>He is  the PROFESSOR – Dept.of COMMUNITY MEDICINE in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007.</p>
                     <p>He is also the DIRECTOR of NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.</p>
                     <p>His administrative, professional and technical skills are a great inspiration to meet the objectives of the Trust. His presentation of research papers at National and International forums have been widely applauded and won him awards in India and abroad. His exemplary helping hand during the floods in 2016, was recognised by the Collector of Thanjavur district and was duly honoured. Highly passionate about education and perfection, he has commendable skills of management which comes handy in for administration of the hospital as well as for developing schools with unique infrastructure facilities</p>
@@ -257,7 +258,7 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p>Member of the Board of Management of ENPEE International.</p>
+                    <p><strong>Member of the Board of Management of ENPEE International School.</strong></p>
                     <p>A former Government Pleader and now a Senior Advocate, practicing in the Madras High Court for the last 38 years.</p>
                     <p>He represents the third generation in the legal profession.</p>
                     <p>He has been standing counsel and legal adviser to several Statutory Bodies, Corporations and Banks.</p>
@@ -271,7 +272,8 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p>Member of the Board of Management of ENPEE International.<br/> Currently resident of Albany, New York, U.S.A.<br/> Born in Chennai, India, in 1966 , Mr.Muthuvappa at the age of 17, after completing his high school in Chennai migrated to the United States to pursue higher studies.</p> 
+                    <p><strong>Member of the Board of Management of ENPEE International School.</strong></p>
+                    <p>Currently resident of Albany, New York, U.S.A.<br/> Born in Chennai, India, in 1966 , Mr.Muthuvappa at the age of 17, after completing his high school in Chennai migrated to the United States to pursue higher studies.</p> 
                     <p>He obtained his Associates Degree in Biology at The Sage College of Albany, New York.</p>  
                     <p>Upon completion of his Associate Degree, Mr.Muthuvappa obtained his Pharmacy qualification at The Albany College of Pharmacy in 1991.</p>
                     <p>Since then he has been a well-renowned Pharmacist for Rite Aid in Troy, NY for the past 28 Years.</p>  
@@ -285,7 +287,7 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <P>Chief Executive Officer</P>
+                    <P><strong>Chief Executive Officer - ENPEE International School.</strong></P>
                     <P>He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service.</P>
                     <P>He has held the position of Arbitrator in the National Stock Exchange of India, Bangalore.</P>
                     <P>A visionary, he is experienced in leading teams and skilled in organisation building.</P>
@@ -300,7 +302,8 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <P><strong>Vice President - Academics & Operations</strong><br/> Hailing from Chennai, this Software Engineer possessing a Masters in Educational Management turned to the Hardware of School-making purely out of passion for children’s education. The motivating factor came while she was in UK for varying periods during 2005-2012, catering to the needs of the primary school and Childrens’ centers in York</P>
+                    <P><strong>Vice President - Academics & Operations</strong></p>
+                    <p> Hailing from Chennai, this Software Engineer possessing a Masters in Educational Management turned to the Hardware of School-making purely out of passion for children’s education. The motivating factor came while she was in UK for varying periods during 2005-2012, catering to the needs of the primary school and Childrens’ centers in York</P>
                     <P>Certified in Guidance & Counselling from St.Johns University,UK, and possessing an Advanced Diploma in Montessori Education from India, in addition to several certifications from Australia, her career of 16 years encompassed challenging assignments in Business Development, Profit Center Management, Teacher Training and Operations & Academics.</P>
                     <P>Arrchana is a highly decorated Academician well versed in the recruitment of talented resources for the Schools and in training them suitably in the appropriate curriculum. Her achievements include setting up Pre-Schools, CBSE schools, Profit planning & Management  and contributing willfully in every aspect of education aiding the development of future generations. </P>
                 </div>
