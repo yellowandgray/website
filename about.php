@@ -37,7 +37,7 @@
                                         <tbody>
                                             <tr>
                                                 <td>COMMUNICATION ADDRESS</td>
-                                                <td>Château Français, ENPEE Enclave, 241/2, Puthakudy Village, Vadamattam Main Road, Nedunkadu Panchayat, Karaikal – 609603, U.T of Puducherry.</td>
+                                                <td>ENPEE International School<br/> Château Français<br/> ENPEE Enclave, 241/2, Puthakudy Village, Vadamattam Main Road, Nedunkadu Panchayat, Karaikal – 609603, U.T of Puducherry.</td>
                                             </tr>
                                             <tr>
                                                 <td>EMAIL</td>
@@ -80,7 +80,7 @@
                         <div class="row">
                             <div class="col-lg-4">
 
-                                <div class="story-title-bg-01"> <strong class="t1">International</strong> <strong class="t2">Standard</strong> <strong class="t3"> of Education</strong> 
+                                <div class="story-title-bg-01"> <strong class="t1">CBSCE</strong> <strong class="t2">Method</strong> <strong class="t3"> of Education</strong> 
                                 </div>
                             </div>
                             <div class="col-lg-8">

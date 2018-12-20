@@ -127,7 +127,7 @@
                 <div class="item">
                     <div class="slider-caption text-center">
                         <div class="container">
-                            <strong>FootBall Ground</strong>
+                            <strong>Multi-Purpose Play Ground</strong>
                             <!--                     <h1>Stop Air Pollution</h1>
                                                  <p> Air Pollution is another main environmental pollution faced by our world today. Air pollution takes place when damaging stuff including particulates.</p>-->
                             <!--                            <a href="#" class="active">Join us Now</a>
@@ -325,7 +325,7 @@
                                     </div>
                                     <div class="event-txt">
                                         <h6><a href="#">Grand Gala Meet</a></h6>
-                                        <p><i class="fas fa-map-marker-alt"></i> Sri Mahal, Karaikal, Puducherry </p>
+                                        <p><i class="fas fa-map-marker-alt"></i> AVS Impriaa, (Star hotel in Karaikal) </p>
                                     </div>
                                 </div>
                                 <!--Blog Post End--> 

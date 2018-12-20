@@ -66,7 +66,7 @@
                                     <img src="images/curriculum-sub.jpg" alt=""> </div>
                             </div>
                             <div class="col-md-12 margin-top-30">
-                                <p>We have carefully handpicked our collection of books for the effective learning of our children, from chosen authors. As we are to be affiliated to the CBSE, we have included NCERT books to aid in their learning. We ensure an effective balance between linguistic, arithmetic & scientific learning and also offer various linguistic platforms ranging from Tamil, Arabic French & Hindi.</p>
+                                <p>We have carefully handpicked our collection of books for the effective learning of our children, from chosen authors. As we are to be affiliated to the CBSE, we have included NCERT books to aid in their learning. We ensure an effective balance between linguistic, arithmetic & scientific learning and also offer various linguistic platforms ranging from Tamil, Arabic, French & Hindi.</p>
 
                             </div>
                         </div>
