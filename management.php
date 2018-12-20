@@ -123,7 +123,7 @@
                                 <div class="ser-box">
 <!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
                                     <div class="ser-txt">
-                                        <a href="#" id="myBtn4"><h5> Mr. J. RAJA KALIFULLA., B.Sc., B.L. </h5>
+                                        <a href="#" id="myBtn4"><h5> Mr. J. RAJA KALIFULLA, B.Sc, B.L. </h5>
                                             <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
                                         </a> 
                                     </div>
@@ -154,7 +154,7 @@
                                 <div class="ser-box">
 <!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
                                     <div class="ser-txt">
-                                        <a href="#" id="myBtn3"> <h5> Mr. H. M. A. Khan,<br/> M. Sc.</h5>
+                                        <a href="#" id="myBtn3"> <h5> Mr. H M A Khan,<br/> M. Sc.</h5>
                                             <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
                                             <br/>
                                         </a> 
