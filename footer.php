@@ -75,7 +75,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
-                    <div class="newsletter">
+<!--                    <div class="newsletter">
                         <strong>Join our Newsletter</strong>
                         <ul>
                             <li>
@@ -88,7 +88,7 @@
                                 <input  type="submit" value="Subscribe">
                             </li>
                         </ul>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="col-lg-5">
                     <div class="footer-social"> 

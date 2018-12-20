@@ -815,14 +815,14 @@ section#home-slider img {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2000000', endColorstr='#e6000000', GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .blog-small-post:hover .post-thumb:after, .blog-list .blog-post:hover .blog-thumb:after {
-    opacity: 1;
+/*    opacity: 1;*/
 }
 .blog-list .blog-post:hover .blog-txt h5 a {
     color: #689f38;
 }
 .blog-small-post:hover .post-thumb a, .blog-list .blog-post:hover .blog-thumb a {
-    opacity: 1;
-    top: 0px;
+/*    opacity: 1;
+    top: 0px;*/
 }
 .campaign-thumb img {
     width: 100%;
@@ -1266,16 +1266,16 @@ ul.flinks li a:hover, ul.flinks li.active a {
     right: -100%;
 }
 .f-cat:hover span a {
-    opacity: 1;
-    top: 0;
+/*    opacity: 1;
+    top: 0;*/
 }
 .f-cat:hover span:after {
-    opacity: 1;
-    left: 0;
+/*    opacity: 1;
+    left: 0;*/
 }
 .f-cat:hover span:before {
-    opacity: 1;
-    right: 0;
+/*    opacity: 1;
+    right: 0;*/
 }
 /***************  Filter Gallery End  *****************/
 
@@ -2454,7 +2454,7 @@ ul.ftags a:hover {
 }
 .footer-style-2 ul.quick-links li a {
     color: #c8e6c9;
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
@@ -3877,11 +3877,11 @@ Projects Pages Start
     box-shadow: 0 10px 40px rgba(0,0,0,.20);
 }
 .ser-box:hover .ser-thumb:after {
-    opacity: 1;
+/*    opacity: 1;*/
 }
 .ser-box:hover .ser-thumb a {
-    opacity: 1;
-    top: 0;
+/*    opacity: 1;
+    top: 0;*/
 }
 .custom-gap .col-md-3 {
     padding: 0 4px;

@@ -80,7 +80,7 @@
                         <div class="row">
                             <div class="col-lg-4">
 
-                                <div class="story-title-bg-01"> <strong class="t1">CBSCE</strong> <strong class="t2">Method</strong> <strong class="t3"> of Education</strong> 
+                                <div class="story-title-bg-01"> <strong class="t1">CBSE</strong> <strong class="t2">Method</strong> <strong class="t3"> of Education</strong> 
                                 </div>
                             </div>
                             <div class="col-lg-8">

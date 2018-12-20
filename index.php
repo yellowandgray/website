@@ -75,7 +75,7 @@
                 <div class="item">
                     <div class="slider-caption text-center">
                         <div class="container">
-                            <strong>International Education Standards</strong>
+                            <strong>CBSE Method of Education</strong>
                             <!--                     <h1>Stop Air Pollution</h1>
                                                  <p> Air Pollution is another main environmental pollution faced by our world today. Air pollution takes place when damaging stuff including particulates.</p>-->
                             <!--                            <a href="#" class="active">Join us Now</a> 
@@ -340,7 +340,7 @@
                                     </div>
                                     <div class="event-txt">
                                         <h6><a href="#">Admissions are Open Now</a></h6>
-                                        <p><i class="fas fa-map-marker-alt"></i> ENPEE International School, Karaikal, Puducherry </p>
+                                        <p><i class="fas fa-map-marker-alt"></i> ENPEE International School, Karaikal, U.T of Puducherry </p>
                                     </div>
                                 </div>
                                 <!--Blog Post End--> 

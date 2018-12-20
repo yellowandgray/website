@@ -41,21 +41,21 @@ if ($_POST['name']) {
     $mail->SetFrom('noreply@enpeekkl.com', 'ENPEEKKL');
     $mail->Subject = "Contact form submited" . date('d-m-y H:i:s');
     $message = "
-    <table style='background:#004976;color:#fff'>
+    <table style='color:#000'>
     <tr>
-        <td style='background:#004976;color:#fff;'>Name</td>
-        <td style='background:#004976;color:#fff;'>" . $name . "</td>
+        <td style='color:#000;'>Name</td>
+        <td style='color:#000;'>" . $name . "</td>
     </tr>
     <tr>
-        <td style='background:#004976;color:#fff;'>Email</td>";
-    $message .= "<td style='background:#004976;color:#fff;'>$email</td>";
+        <td style='color:#000;'>Email</td>";
+    $message .= "<td style='color:#000;'>$email</td>";
     $message .= "</tr>
     <tr>
-        <td style='background:#004976;color:#fff;'>Subject</td>
-        <td style='background:#004976;color:#fff;'>" . $subject . "</td>
+        <td style='color:#000;'>Subject</td>
+        <td style='color:#000;'>" . $subject . "</td>
     </tr>
     <tr>
-        <td style='background:#004976;color:#fff;'>Programs Preffred</td>";
+        <td style='background:color:#000;'>Programs Preffred</td>";
     foreach ($_POST['preffred_classes'] as $names) {
         $message .= "<td style='background:#004976;color:#fff;'>$names</td>";
     }
@@ -63,8 +63,8 @@ if ($_POST['name']) {
 
     $message .="</td></tr>
     <tr>
-        <td style='background:#004976;color:#fff;'>Message</td>";
-    $message .= "<td style='background:#004976;color:#fff;'>$message</td>";
+        <td style='color:#000;'>Message</td>";
+    $message .= "<td style='color:#000;'>$message</td>";
 
     $message .="</td></tr>
     </table>
