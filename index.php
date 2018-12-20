@@ -318,14 +318,14 @@
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/event-01.jpg" alt="">
-                                        <!--                                        <ul class="post-meta">
-                                                                                    <li>10 Febuary, 2019 </li>
-                                                                                    <li> 02:00 pm - 07:00 pm</li>
-                                                                                </ul>-->
+                                        <ul class="post-meta">
+                                            <li>10 Febuary, 2019 </li>
+                                            <li> 02:00 pm - 07:00 pm</li>
+                                        </ul>
                                     </div>
                                     <div class="event-txt">
                                         <h6><a href="#">Grand Gala Meet</a></h6>
-                                        <p><i class="fas fa-map-marker-alt"></i> AVS Impriaa, (Star hotel in Karaikal) </p>
+                                        <p><i class="fas fa-map-marker-alt"></i> AVS Imperiaa, (Star hotel in Karaikal) </p>
                                     </div>
                                 </div>
                                 <!--Blog Post End--> 
@@ -554,26 +554,26 @@
             <div class="partner-logos wf100 mb80">
                 <div class="container">
                     <h2 class="text-center padding-tb-30">Technology Partners</h2>
-<!--                    <div id="partner-logos" class="owl-carousel owl-theme">-->
-                        <div class="row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-3"><img src="images/partners/001.png" alt=""></div>
-                            <div class="col-md-3"><img src="images/partners/002.png" alt=""></div>
-                            <div class="col-md-3"></div>
-                        </div>
+                    <!--                    <div id="partner-logos" class="owl-carousel owl-theme">-->
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-3"><img src="images/partners/001.png" alt=""></div>
+                        <div class="col-md-3"><img src="images/partners/002.png" alt=""></div>
+                        <div class="col-md-3"></div>
+                    </div>
 <!--                        <div class="item"><img src="images/partners/001.png" alt=""></div>
-                        <div class="item"><img src="images/partners/002.png" alt=""></div>
-                        <div class="item"><img src="images/plogo1.png" alt=""></div>
-                        <div class="item"><img src="images/plogo2.png" alt=""></div>
-                        <div class="item"><img src="images/plogo3.png" alt=""></div>
-                        <div class="item"><img src="images/plogo4.png" alt=""></div>
-                        <div class="item"><img src="images/plogo5.png" alt=""></div>
-                        <div class="item"><img src="images/plogo1.png" alt=""></div>
-                        <div class="item"><img src="images/plogo2.png" alt=""></div>
-                        <div class="item"><img src="images/plogo3.png" alt=""></div>
-                        <div class="item"><img src="images/plogo4.png" alt=""></div>
-                        <div class="item"><img src="images/plogo5.png" alt=""></div>-->
-<!--                    </div>-->
+                    <div class="item"><img src="images/partners/002.png" alt=""></div>
+                    <div class="item"><img src="images/plogo1.png" alt=""></div>
+                    <div class="item"><img src="images/plogo2.png" alt=""></div>
+                    <div class="item"><img src="images/plogo3.png" alt=""></div>
+                    <div class="item"><img src="images/plogo4.png" alt=""></div>
+                    <div class="item"><img src="images/plogo5.png" alt=""></div>
+                    <div class="item"><img src="images/plogo1.png" alt=""></div>
+                    <div class="item"><img src="images/plogo2.png" alt=""></div>
+                    <div class="item"><img src="images/plogo3.png" alt=""></div>
+                    <div class="item"><img src="images/plogo4.png" alt=""></div>
+                    <div class="item"><img src="images/plogo5.png" alt=""></div>-->
+                    <!--                    </div>-->
                 </div>
             </div>
             <!--Partner Logos Section End--> 

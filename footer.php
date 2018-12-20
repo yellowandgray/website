@@ -44,7 +44,7 @@
                         <ul class="lastest-products">
                             <li> <img src="images/event-01.jpg" alt="" style="width: 68px; height: 68px"> 
                                 <strong><a href="#">Grand Gala Meet</a></strong> 
-<!--                                <span class="pdate"><i>Date:</i> 10 Feb 2019</span> -->
+                                <span class="pdate"><i>Date:</i> 10 Feb 2019</span>
                             </li>
                             <li> 
                                 <img src="images/pic-admission-open.jpg" alt="" style="width: 68px; height: 68px"> 
@@ -93,7 +93,7 @@
                 <div class="col-lg-5">
                     <div class="footer-social"> 
                         <strong>Get Connect</strong> 
-                        <a href="#" class="icon-button facebook"><i class="fab fa-facebook-f"></i><span></span></a> 
+                        <a href="https://www.facebook.com/ENPEE-International-School-1943441245950809/?modal=admin_todo_tour" target="blank"><i class="fab fa-facebook-f"></i><span></span></a> 
                         <a href="#"><i class="fab fa-twitter"></i></a> 
                         <a href="#"><i class="fab fa-linkedin-in"></i></a> 
 <!--                        <a href="#"><i class="fab fa-google-plus-g"></i></a> 
@@ -108,7 +108,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <p> All Rights Reserved of ENPEE International School © 2018, Developed By: YGSTUDIO </p>
+                    <p> All Rights Reserved of ENPEE International School © 2018, Developed By:<a href="http://yellowandgray.com" target="blank" > YGSTUDIO </a></p>
                 </div>
             </div>
         </div>

@@ -911,11 +911,11 @@ ul.post-meta li span {
     margin: 0px;
 }
 .event-post:hover .event-thumb:after {
-    opacity: 1;
+/*    opacity: 1;*/
 }
 #h3-events .event-box:hover .event-thumb a, .event-post:hover .event-thumb a {
-    opacity: 1;
-    top: 0;
+/*    opacity: 1;
+    top: 0;*/
 }
 .event-thumb .post-meta {
     position: absolute;

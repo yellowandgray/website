@@ -88,7 +88,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="google-map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.871315986748!2d79.77198353863045!3d10.973084525992892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a551790bea57877%3A0x3e4682164fb32296!2sNedungadu+Commune+Panchayat+Office!5e0!3m2!1sen!2sin!4v1545066553240"></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.8763041920433!2d79.77225501469684!3d10.972708192188481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5517ec11543567%3A0x128f69355cf8a645!2sENPEE+International+School!5e0!3m2!1sen!2sin!4v1545316033083"></iframe>
                             </div>
                         </div>
                     </div>

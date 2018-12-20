@@ -40,8 +40,8 @@
                                     <li><i class="fas fa-check"></i> Indoors and Outdoors have variety of learning methodologies incorporated</li>
                                     <li><i class="fas fa-check"></i> Air-conditioned and GPS enabled school transport with dedicated caretakers</li>
                                     <li><i class="fas fa-check"></i> CCTV across the Campus  </li>
-                                    <li><i class="fas fa-check"></i> community days, Parent Engagement Programs and Coffee Mornings to involve Parents </li>
-                                    <li><i class="fas fa-check"></i> dance, music, theater, Athletics, Brain Gym, Mid-brain activation as part of  curriculum </li>
+                                    <li><i class="fas fa-check"></i> Community days, Parent Engagement Programs and Coffee Mornings to involve Parents </li>
+                                    <li><i class="fas fa-check"></i> Dance, music, theater, Athletics, Brain Gym, Mid-brain activation as part of  curriculum </li>
                                     <li><i class="fas fa-check"></i> Regular Professional development  and other educational as well as Recreational  Programs for our passionate Educators. </li>
                                 </ul>
                                 <!--                                <a class="lm" href="#">Read More</a> -->
