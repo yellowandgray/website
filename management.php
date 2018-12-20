@@ -8,13 +8,13 @@
         <div class="wrapper">
             <!--Header Start-->
             <?php include 'menu.php'; ?>
-            <div id="search">
+<!--            <div id="search">
                 <button type="button" class="close">×</button>
                 <form class="search-overlay-form">
                     <input type="search" value="" placeholder="type keyword(s) here" />
                     <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
                 </form>
-            </div>
+            </div>-->
             <!--Header End-->
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-01.jpg) no-repeat;">
@@ -52,34 +52,33 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="team-details-txt">
-                                    <h2>Rtn. PHF. Hajee Mr. L. KAMAL  BATCHA</h2>
-                                    <p>He is a multi-faceted personality, with a pleasing disposition and a philanthropic bent of mind, but basically wedded to the pharma community, by creating new products at affordable rates for the community health care.</p>
+                                    <h2>Rtn. PHF. Hajee. L. KAMAL BATCHA</h2>
                                     <strong class="trank">Founder and CHAIRMAN:  ENPEE INTERNATIONAL SCHOOL</strong>
-                                    <p>It is philanthropy that the Trust is dealing with. The Trust has the  objective of developing projects for the benefit of society in the fields of Education and Health.</p>
-                                    <p>With traditional type of assistance for education which is ongoing, the Trust stood in the front in helping victims of the floods and cyclones in Tamilnadu in the recent years.</p>
+                                    <p>He is a multi-faceted personality, with a pleasing disposition and a philanthropic bent of mind, but basically wedded to the pharma community, by creating new products at affordable rates for the community health care.</p>
+                                    <p>It is philanthropy that the Trust is dealing with. The Trust has the objective of developing projects for the benefit of society in the fields of Education and Health.</p>
                                     <!--Partner Logos Section Start-->
                                 </div>
                             </div>
-<!--                            <div class="partner-logos wf100 mb80">-->
-                                <div class="container">
-                                    <h4 class="text-center">Awards</h4>
-                                    <div id="partner-logos" class="owl-carousel owl-theme">
-                                        <div class="item"><img src="images/awards/enpee-awards-001.png"></div>
-                                        <div class="item"><img src="images/awards/enpee-awards-002.png"></div>
-                                        <div class="item"><img src="images/awards/enpee-awards-003.png"></div>
-                                        <div class="item"><img src="images/awards/enpee-awards-010.png"></div>
-                                        <div class="item"><img src="images/awards/enpee-awards-012.png"></div>
-                                        <div class="item"><img src="images/awards/enpee-awards-013.png"></div>
-                                        <div class="item"><img src="images/awards/enpee-awards-014.png"></div>
-                                        <div class="item"><img src="images/awards/enpee-awards-018.png"></div>
-                                        <div class="item"><img src="images/awards/enpee-awards-027.png"></div>
-                                        <div class="item"><img src="images/awards/enpee-awards-028.png"></div>
-                                        <div class="item"><img src="images/awards/enpee-awards-03.png"></div>
-                                    </div><br/>
-                                    <!--Partner Logos Section End--> 
-                                    <a href="#" class="contact-team" id="myBtn">Read More</a> 
-                                </div>
-<!--                            </div>-->
+                            <!--                            <div class="partner-logos wf100 mb80">-->
+                            <div class="container">
+                                <h4 class="text-center">Awards</h4>
+                                <div id="partner-logos" class="owl-carousel owl-theme">
+                                    <div class="item"><img src="images/awards/enpee-awards-001.png"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-002.png"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-003.png"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-010.png"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-012.png"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-013.png"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-014.png"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-018.png"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-027.png"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-028.png"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-03.png"></div>
+                                </div><br/>
+                                <!--Partner Logos Section End--> 
+                                <a href="#" class="contact-team" id="myBtn">Read More</a> 
+                            </div>
+                            <!--                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -97,7 +96,7 @@
                                             <span class="aicon"><i class="fas fa-arrow-right"></i></span> </a>
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line">He is the Managing Trustee of the MARAICAYAR TRUST. He is the PROFESSOR and HEAD, Dept. of Community Medicine in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL , since 2007. He is also the Managing Director of  NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.</div>
+                                        <div class="bg-padding-line">He is the Managing Trustee - ENPEE International School.<br/> He is the PROFESSOR and HEAD, Dept. of Community Medicine in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007.<br/></div>
                                     </div>
 
                                 </div>
@@ -113,7 +112,7 @@
                                         </a>
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line">He is a Managing Trustee of the MARAICAYAR TRUST. He is also the PROFESSOR – Dept.Of COMMUNITY MEDICINE in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007. He is the DIRECTOR of NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.<br/><br/></div>
+                                        <div class="bg-padding-line">He is a Managing Trustee - ENPEE International School.<br/> He is  the PROFESSOR – Dept.of COMMUNITY MEDICINE in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007.<br/></div>
                                     </div>
                                 </div>
                                 <!--campaign box end--> 
@@ -129,7 +128,7 @@
                                         </a> 
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line">He is a former Government Pleader and now a Senior Advocate,  practicing in the Madras High Court for the last 38 years. He represents the third generation in the legal profession. He has been standing counsel and legal adviser to several Statutory Bodies, Corporations and Banks. With the Motto "Work is Worship", he is totally dedicated to his Profession.</div>
+                                        <div class="bg-padding-line">Member of the Board of Management - ENPEE International School.<br/> A former Government Pleader and now a Senior Advocate, practicing in the Madras High Court for the last 38 years.<br/><br/></div>
                                     </div>
                                 </div>
                                 <!--campaign box end--> 
@@ -144,7 +143,7 @@
                                         </a> 
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line">Currently resident of  Albany, New York, U.S.A. Born in Chennai, India,  in 1966 , Mr.Muthuvappa at the age of 17, after completing his high school in Chennai migrated to the United States to pursue higher studies. He obtained his Associates Degree in Biology at The Sage College of Albany, New York.<br/><br/></div>
+                                        <div class="bg-padding-line">Member of the Board of Management- ENPEE International School.<br/> Currently resident of Albany, New York, U.S.A. Born in Chennai, India, in 1966 , Mr.Muthuvappa at the age of 17, after completing his high school in Chennai migrated to the United States to pursue higher studies.<br/><br/><br/></div>
                                     </div>
                                 </div>
                                 <!--campaign box end--> 
@@ -155,13 +154,13 @@
                                 <div class="ser-box">
 <!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
                                     <div class="ser-txt">
-                                        <a href="#" id="myBtn3"> <h5> Mr. H. M. A. Khan, M. Sc.</h5>
+                                        <a href="#" id="myBtn3"> <h5> Mr. H. M. A. Khan,<br/> M. Sc.</h5>
                                             <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
                                             <br/>
                                         </a> 
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line">Chief Executive Officer. He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service.<br/></div>
+                                        <div class="bg-padding-line">Chief Executive Officer<br/> He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service.<br/><br/></div>
                                     </div>
                                 </div>
                                 <!--campaign box end--> 
@@ -172,12 +171,12 @@
                                 <div class="ser-box">
 <!--                                    <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/serimg3.jpg" alt=""></div>-->
                                     <div class="ser-txt">
-                                        <a href="#" id="myBtn6"> <h5>ARRCHANA CHELLAPPA <br/><br/></h5>
+                                        <a href="#" id="myBtn6"> <h5>ARRCHANA CHELLAPPA <br/><br/><br/></h5>
                                             <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
                                         </a> 
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line"><strong>Vice President -  Academics & Operations</strong><br/> Hailing from Chennai, this Software Engineer possessing a Masters in Educational Management turned to the Hardware of School-making  purely out of passion for children’s education.  The motivating factor came while she was in UK  for varying periods during 2005-2012, catering to the needs of the primary school  and Childrens’ centers in York </div>
+                                        <div class="bg-padding-line"><strong>Vice President - Academics & Operations</strong><br/> Hailing from Chennai, this Software Engineer possessing a Masters in Educational Management turned to the Hardware of School-making purely out of passion for children’s education. The motivating factor came while she was in UK for varying periods during 2005-2012, catering to the needs of the primary school and Childrens’ centers in York </div>
                                     </div>
                                 </div>
                                 <!--campaign box end--> 
@@ -219,13 +218,14 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
+                    <h2>Rtn. PHF. Hajee. L. KAMAL BATCHA</h2>
+                    <strong class="trank">Founder and CHAIRMAN:  ENPEE INTERNATIONAL SCHOOL</strong>
                     <p>He is a multi-faceted personality, with a pleasing disposition and a philanthropic bent of mind, but basically wedded to the pharma community, by creating new products at affordable rates for the community health care.</p>
-                    <p> Founder and CHAIRMAN:  ENPEE INTERNATIONAL SCHOOL (1992)</p>
-                    <p>It is philanthropy that the Trust is dealing with. The Trust has the  objective of developing projects for the benefit of society in the fields of Education and Health.</p>
-                    <p> With traditional type of assistance for education which is ongoing, the Trust stood in the front in helping victims of the floods and cyclones in Tamilnadu in the recent years.</p>
-                    <p>In the wake of the overwhelming loss suffered by the victims of cyclone GAJA,  several truckloads of relief materials were quickly despatched to the affected areas, notwithstanding the fact that the promoter’s family too had suffered  extensive loss of assets.</p>
-                    <p>He desires to establish International Schools of a high standard to bring the best in our children and contribute immensely in the field of Education  and Nation-building activities.</p>
-                    <p>Associated with various  educational and social activities aimed at human welfare, he proud to be a senior Rotarian, and a Paul Harris Fellow  of the  Rotary Club of Thanjavur South.</p>
+                    <p>It is philanthropy that the Trust is dealing with. The Trust has the objective of developing projects for the benefit of society in the fields of Education and Health.</p>
+                    <p>With traditional type of assistance for education which is ongoing, the Trust stood in the front in helping victims of the floods and cyclones in Tamilnadu in the recent years.</p>
+                    <p>In the wake of the overwhelming loss suffered by the victims of cyclone GAJA, several truckloads of relief materials were quickly despatched to the affected areas, notwithstanding the fact that the promoter’s family too had suffered extensive loss of assets.</p>
+                    <p>He desires to establish International Schools of a high standard to bring the best in our children and contribute immensely in the field of Education and Nation-building activities.</p>
+                    <p>Associated with various educational and social activities aimed at human welfare, he proud to be a senior Rotarian, and a Paul Harris Fellow of the Rotary Club of Thanjavur South.</p>
                 </div>
 
             </div>
@@ -234,9 +234,8 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <P>He is the Managing Trustee of the MARAICAYAR TRUST. </p> 
-                    <P>He is the PROFESSOR and HEAD, Dept. of Community Medicine in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL , since 2007.</p>
-                    <P>He is also the Managing Director of  NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.</P>
+                    <P>He is the Managing Trustee of ENPEE International.<br/> He is the PROFESSOR and HEAD, Dept. of Community Medicine in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL , since 2007.</p>
+                    <P>He is also the Managing Director of NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.</P>
                     <p>As the Professor and Head of Community Medicine at V M Medical College, Karaikal, he brings with him decades of teaching experience in medical education, and has undertaken many research projects. His rich experience through national and international educational and cultural programmes, is a source of strength to the Trust in its mission of setting up modern Institutes of Education that deliver quality with innovation. He is a multi-faceted personality with abundant experience in managing corporate hospitals and business ventures, apart from being a committed medical professional.</p>
                 </div>
 
@@ -246,10 +245,10 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p>He is a Managing Trustee of the MARAICAYAR TRUST.</p>
-                    <p>He is also the PROFESSOR – Dept.Of COMMUNITY MEDICINE in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007.</p>
+                    <p>He is a Managing Trustee of ENPEE International.</p>
+                    <p>He is  the PROFESSOR – Dept.of COMMUNITY MEDICINE in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007.</p>
                     <p>He is also the DIRECTOR of NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.</p>
-                    <p>His administrative, professional and technical skills are a great inspiration to meet the objectives of the Trust. His presentation of research papers at National and International forums have been widely applauded and won him awards in India and abroad. His exemplary helping hand during the floods in 2016, was recognised by the Collector of Thanjavur district and was duly honoured. Highly passionate about education and perfection, he has commendable skills of management which comes handy in  for administration of the hospital as well as  for developing schools with  unique infrastructure facilities.</p>
+                    <p>His administrative, professional and technical skills are a great inspiration to meet the objectives of the Trust. His presentation of research papers at National and International forums have been widely applauded and won him awards in India and abroad. His exemplary helping hand during the floods in 2016, was recognised by the Collector of Thanjavur district and was duly honoured. Highly passionate about education and perfection, he has commendable skills of management which comes handy in for administration of the hospital as well as for developing schools with unique infrastructure facilities</p>
                 </div>
 
             </div>
@@ -258,13 +257,12 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p>He is a Member of the Board of Management  of the School. </p>
-                    <p>He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service. </p>
-                    <p>He has held the position of Arbitrator in the National Stock Exchange of India, Bangalore. </p>
-                    <p>A visionary, he is experienced in leading teams and skilled in organisation building.</p>
-                    <p>His Core strength lies in in translating Corporate Goals into realities through effective formulation and implementation of Strategies.</p>
-                    <p>Undergone prestigious Global Leadership training programme at The Kellog School of Management, Chicago, U.S.A . </p>
-                    <p>Attended top level management programme on" Value Creation and Risk Management" at the International Banking Summer School , Switzerland.</p>
+                    <p>Member of the Board of Management of ENPEE International.</p>
+                    <p>A former Government Pleader and now a Senior Advocate, practicing in the Madras High Court for the last 38 years.</p>
+                    <p>He represents the third generation in the legal profession.</p>
+                    <p>He has been standing counsel and legal adviser to several Statutory Bodies, Corporations and Banks.</p>
+                    <p>With the Motto "Work is Worship", he is totally dedicated to his Profession.</p>
+                    <p>In recognition of his sincerity and hard work, the Government of Tamilnadu appointed him as the Government Pleader for the High Court of Judicature at Madras, both for the Principal Bench at Chennai and the Additional Bench at Madurai, in May 2006, which post he held till May 2011. In April 2013 , he was designated as Senior Counsel by Full Court of the Madras High Court.</p>
                 </div>
 
             </div>
@@ -273,11 +271,11 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p>He is a former Government Pleader and now a Senior Advocate,  practicing in the Madras High Court for the last 38 years.</p> 
-                    <p>He represents the third generation in the legal profession.</p>  
-                    <p>He has been standing counsel and legal adviser to several Statutory Bodies, Corporations and Banks.</p>
-                    <p>With the Motto "Work is Worship", he is totally dedicated to his Profession.</p>  
-                    <p>In recognition of his sincerity and hard work, the Government of Tamilnadu appointed him as the Government Pleader for the High Court of Judicature at Madras, both for the Principal Bench at Chennai and the Additional Bench at Madurai, in May 2006, which post he held till May 2011. In April 2013 , he was designated as Senior Counsel by Full Court of the Madras High Court.</p>
+                    <p>Member of the Board of Management of ENPEE International.<br/> Currently resident of Albany, New York, U.S.A.<br/> Born in Chennai, India, in 1966 , Mr.Muthuvappa at the age of 17, after completing his high school in Chennai migrated to the United States to pursue higher studies.</p> 
+                    <p>He obtained his Associates Degree in Biology at The Sage College of Albany, New York.</p>  
+                    <p>Upon completion of his Associate Degree, Mr.Muthuvappa obtained his Pharmacy qualification at The Albany College of Pharmacy in 1991.</p>
+                    <p>Since then he has been a well-renowned Pharmacist for Rite Aid in Troy, NY for the past 28 Years.</p>  
+                    <p>He is known for taking the utmost care for his patients who always prefer to fill their prescriptions with him. Mr.Muthuvappa takes pride in providing the best care for his patients.</p>
 
                 </div>
 
@@ -287,13 +285,13 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <P>Currently resident of  Albany, New York, U.S.A.</P>
-                    <P>Born in Chennai, India,  in 1966 , Mr.Muthuvappa at the age of 17, after completing his high school in Chennai migrated to the United States to pursue higher studies.</P>
-                    <P>He obtained his Associates Degree in Biology at The Sage College of Albany, New York.</P>
-                    <P>Upon completion of his Associate Degree, Mr.Muthuvappa obtained his Pharmacy qualification at The Albany College of Pharmacy in 1991.</P>
-                    <p>Since then he has been a well-renowned Pharmacist for Rite Aid in Troy, NY for the past 28 Years.</p>
-                    <p>He is known for taking the utmost care for his patients who always prefer to fill their prescriptions with him.</p>
-                    <p>Mr.Muthuvappa takes pride in providing the best care for his patients.</p>
+                    <P>Chief Executive Officer</P>
+                    <P>He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service.</P>
+                    <P>He has held the position of Arbitrator in the National Stock Exchange of India, Bangalore.</P>
+                    <P>A visionary, he is experienced in leading teams and skilled in organisation building.</P>
+                    <p>His Core strength lies in in translating Corporate Goals into realities through effective formulation and implementation of Strategies.</p>
+                    <p>Undergone prestigious Global Leadership training programme at The Kellog School of Management, Chicago, U.S.A .</p>
+                    <p>Attended top level management programme on" Value Creation and Risk Management" at the International Banking Summer School , Switzerland.</p>
                 </div>
 
             </div>
@@ -302,13 +300,9 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <P><strong>Vice President -  Academics & Operations</strong><br/> Hailing from Chennai, this Software Engineer possessing a Masters in Educational Management turned to the Hardware of School-making  purely out of passion for children’s education.  The motivating factor came while she was in UK  for varying periods during 2005-2012, catering to the needs of the primary school  and Childrens’ centers in York </P>
-                    <P>Certified in Guidance & Counselling from St.Johns University,UK, and possessing an Advanced Diploma in Montessori Education from India, in addition to several certifications from Australia, her career of 16 years encompassed challenging assignments in Business Development, Profit Center Management, Teacher Training and  Operations & Academics.</P>
-                    <P>Arrchana is a highly decorated Academician well versed in the recruitment of talented resources for the Schools and in training them suitably in the appropriate curriculum. Her achievements  include setting up Pre-Schools, CBSE schools in India and contributing willfully in every aspect of education aiding the development of future generations. </P>
-                    <P>She was the Director of LULLABY KIDS Pre-school in Bangalore  (2007-2012). Returning to Chennai, she was with the Hindu Senior Secondary School, Adyar, Chennai  (May 2012 – May 2013) as a  Teacher Trainer/ABL Trainer cum educator. She had a stint in the Gateway International School(CBSE & American), Padur, Chennai (2013 to 2015) as the Co-ordinator/Teacher/Parent Counselor/Teacher Trainer. </P>
-                    <p>She successfully set up 6 schools for the brand: ALACRIS in Chennai  (2015-2017). She was the  Operations cum Academics Head there, modelling the schools after DAL (Developmentally Appropriateness in Learning) principle.</p>
-                    <p>As Manager – CSR at UCAL Polymers Ltd (Nov 2017- Nov 2018), she was responsible for starting the Rajam Krishnamurthy Public School(CBSE) Trichy, and setting up of the complete Pre-primary CBSE school system.</p>
-                    <p>Arrchana is a highly decorated Academician well versed in the recruitment of talented resources for the Schools and in training them suitably in the appropriate curriculum and getting them trained. Her achievements include setting up Pre-Schools, CBSE schools Profit Planning and Management.</p>
+                    <P><strong>Vice President - Academics & Operations</strong><br/> Hailing from Chennai, this Software Engineer possessing a Masters in Educational Management turned to the Hardware of School-making purely out of passion for children’s education. The motivating factor came while she was in UK for varying periods during 2005-2012, catering to the needs of the primary school and Childrens’ centers in York</P>
+                    <P>Certified in Guidance & Counselling from St.Johns University,UK, and possessing an Advanced Diploma in Montessori Education from India, in addition to several certifications from Australia, her career of 16 years encompassed challenging assignments in Business Development, Profit Center Management, Teacher Training and Operations & Academics.</P>
+                    <P>Arrchana is a highly decorated Academician well versed in the recruitment of talented resources for the Schools and in training them suitably in the appropriate curriculum. Her achievements include setting up Pre-Schools, CBSE schools, Profit planning & Management  and contributing willfully in every aspect of education aiding the development of future generations. </P>
                 </div>
 
             </div>
@@ -535,5 +529,6 @@
                     modal6.style.display = "none";
                 });
             </script>
+        </div>
     </body>
 </html>

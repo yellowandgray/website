@@ -2454,7 +2454,7 @@ ul.ftags a:hover {
 }
 .footer-style-2 ul.quick-links li a {
     color: #c8e6c9;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
@@ -3856,6 +3856,7 @@ Projects Pages Start
     font-weight: 700;
     width: 80%;
     margin: 0px;
+    font-size: 20px;
 }
 .projects-grid .ser-txt h5 a {
     color: #222;

@@ -427,6 +427,7 @@ fieldset {
     z-index: 999;
     margin-left:150px !important;
     margin-top: 10px !important;
+    text-align: center;
     /*    display: none;
         position: absolute;
         background-color: #f1f1f1;
@@ -536,4 +537,13 @@ fieldset {
 
 .color-blue li h2{
     color: #0e93d5 !important;
+}
+
+.ul-padding-color ul {
+    padding: 20px 30px;
+}
+
+.ul-padding-color ul li {
+    color: #fff;
+    font-weight: 600;
 }

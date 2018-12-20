@@ -36,7 +36,7 @@
                 <div class="item">
                     <div class="slider-caption text-center">
                         <div class="container">
-                            <strong>French Style Architecture with All Modern Facilities</strong>
+                            <strong>French Style Architecture with Modern Facilities</strong>
                             <!--                     <h1>Recycling & Waste</h1>
                                                  <p> Environmental awareness is not a trend that comes into style a few months and stops. Individuals working towards making a small impact on Earth.</p>-->
                             <!--                            <a href="#" class="active">Join us Now</a>
@@ -85,18 +85,18 @@
                     <img src="images/banner/banner005.jpg" alt=""/>
                 </div>
 
-<!--                <div class="item">
-                    <div class="slider-caption text-center">
-                        <div class="container">
-                            <strong>A Well-Disciplined & Friendly Environment</strong>
-                                                 <h1>Stop Air Pollution</h1>
-                                                 <p> Air Pollution is another main environmental pollution faced by our world today. Air pollution takes place when damaging stuff including particulates.</p>
-                                                        <a href="#" class="active">Join us Now</a> 
-                                                        <a href="#">More About Us</a> 
-                        </div>
-                    </div>
-                    <img src="images/banner/banner-discipline.jpg" alt=""/>
-                </div>-->
+                <!--                <div class="item">
+                                    <div class="slider-caption text-center">
+                                        <div class="container">
+                                            <strong>A Well-Disciplined & Friendly Environment</strong>
+                                                                 <h1>Stop Air Pollution</h1>
+                                                                 <p> Air Pollution is another main environmental pollution faced by our world today. Air pollution takes place when damaging stuff including particulates.</p>
+                                                                        <a href="#" class="active">Join us Now</a> 
+                                                                        <a href="#">More About Us</a> 
+                                        </div>
+                                    </div>
+                                    <img src="images/banner/banner-discipline.jpg" alt=""/>
+                                </div>-->
 
                 <div class="item">
                     <div class="slider-caption text-center">
@@ -151,12 +151,12 @@
                                 <p class="text-justify">The ENPEE campus covers over 5 acres surrounded by lush greenery and a serene atmosphere suitable for learning. At the heart of our campus, ENPEE International school spans an incredible area of over 40,000/- sq.ft in its Phase – I, starting from Academic year – 2019-2020. </p>
                                 <p class="text-justify">Our second and Third phases will resume from the successive academic year of 2020-21 and 2021-22 respectively. Our campus will have a spacious Track & field, unique sports complex including but not limited to an aquatic pool, Skating rink, Archery, Basketball, Badminton, Table Tennis aiding in overall growth & development of an individual, Spacious and learner oriented laboratories, mixed age group activity studio, digitized classrooms.</p>
                                 <ul>
-                                    <li><i class="fas fa-check"></i> Inclusive Curriculum</li>
-                                    <li><i class="fas fa-check"></i> Interactive Learning </li>
-                                    <li><i class="fas fa-check"></i> Project Based Curriculum </li>
-                                    <li><i class="fas fa-check"></i> Experienced & Well Trained Staff</li>
+                                    <li><i class="fas fa-check"></i> Team Building</li>
+                                    <li><i class="fas fa-check"></i> Interactive Learning</li>
+                                    <li><i class="fas fa-check"></i> Project Based Curriculum</li>
+                                    <li><i class="fas fa-check"></i> Skilled Educators</li>
                                     <li><i class="fas fa-check"></i> Holistic Development</li>
-                                    <li><i class="fas fa-check"></i> World Class Facilities </li>
+                                    <li><i class="fas fa-check"></i> World Class Facilities</li>
                                 </ul>
                                 <!--                                <a class="lm" href="#">Read More</a> -->
                             </div>
@@ -318,14 +318,14 @@
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/event-01.jpg" alt="">
-                                        <ul class="post-meta">
-                                            <li>10 Febuary, 2019 </li>
-                                            <li> 02:00 pm - 07:00 pm</li>
-                                        </ul>
+                                        <!--                                        <ul class="post-meta">
+                                                                                    <li>10 Febuary, 2019 </li>
+                                                                                    <li> 02:00 pm - 07:00 pm</li>
+                                                                                </ul>-->
                                     </div>
                                     <div class="event-txt">
                                         <h6><a href="#">Grand Gala Meet</a></h6>
-                                        <p><i class="fas fa-map-marker-alt"></i> Sri Mahal, Karaikal, Pondicherry </p>
+                                        <p><i class="fas fa-map-marker-alt"></i> Sri Mahal, Karaikal, Puducherry </p>
                                     </div>
                                 </div>
                                 <!--Blog Post End--> 
@@ -333,14 +333,14 @@
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-admission-open.jpg" alt="">
-                                        <ul class="post-meta">
-                                            <li>20 February, 2019 </li>
-                                            <li> 10:00 am - 05:00 pm</li>
-                                        </ul>
+                                        <!--                                        <ul class="post-meta">
+                                                                                    <li>20 February, 2019 </li>
+                                                                                    <li> 10:00 am - 05:00 pm</li>
+                                                                                </ul>-->
                                     </div>
                                     <div class="event-txt">
-                                        <h6><a href="#">Admissions Open are Now</a></h6>
-                                        <p><i class="fas fa-map-marker-alt"></i> ENPEE International School, Karaikal, Pondicherry </p>
+                                        <h6><a href="#">Admissions are Open Now</a></h6>
+                                        <p><i class="fas fa-map-marker-alt"></i> ENPEE International School, Karaikal, Puducherry </p>
                                     </div>
                                 </div>
                                 <!--Blog Post End--> 
@@ -555,7 +555,9 @@
                 <div class="container">
                     <h2 class="text-center padding-tb-30">Technology Partners</h2>
                     <div id="partner-logos" class="owl-carousel owl-theme">
-                        <div class="item"><img src="images/plogo1.png" alt=""></div>
+                        <div class="item"><img src="images/partners/001.png" alt=""></div>
+                        <div class="item"><img src="images/partners/002.png" alt=""></div>
+<!--                        <div class="item"><img src="images/plogo1.png" alt=""></div>
                         <div class="item"><img src="images/plogo2.png" alt=""></div>
                         <div class="item"><img src="images/plogo3.png" alt=""></div>
                         <div class="item"><img src="images/plogo4.png" alt=""></div>
@@ -564,7 +566,7 @@
                         <div class="item"><img src="images/plogo2.png" alt=""></div>
                         <div class="item"><img src="images/plogo3.png" alt=""></div>
                         <div class="item"><img src="images/plogo4.png" alt=""></div>
-                        <div class="item"><img src="images/plogo5.png" alt=""></div>
+                        <div class="item"><img src="images/plogo5.png" alt=""></div>-->
                     </div>
                 </div>
             </div>

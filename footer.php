@@ -4,9 +4,16 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <!--Footer Widget Start-->
-                    <div class="footer-widget about-ecova">
+                    <div class="footer-widget about-ecova ul-padding-color">
                         <div class="f2logo"> <img src="images/logo-np.png" alt="" style="width: 200px"> </div>
-                        <p>The ENPEE campus covers over 5 acres surrounded by lush greenery and a serene atmosphere suitable for learning. Our school delivers world class education with all the modern facilities to ensure that your child get the BEST Education in Karaikal.</p>
+                        <ul>
+                            <li>Team Building</li>
+                            <li>Interactive Learning</li>
+                            <li>Project Based Curriculum</li>
+                            <li>Skilled Educators</li>
+                            <li>Holistic Development</li>
+                            <li>World Class Facilities</li>
+                        </ul>
                         <!--                        <a href="#" class="more">More About<br ENPEE International School</a> -->
                     </div>
                     <!--Footer Widget End--> 
@@ -35,8 +42,15 @@
                     <div class="footer-widget">
                         <h5>Upcoming Events</h5>
                         <ul class="lastest-products">
-                            <li> <img src="images/event-01.jpg" alt="" style="width: 68px; height: 68px"> <strong><a href="#">Grand Gala Meet</a></strong> <span class="pdate"><i>Date:</i> 10 Feb 2019</span> </li>
-                            <li> <img src="images/pic-admission-open.jpg" alt="" style="width: 68px; height: 68px"> <strong><a href="#">Admissions Opening Now</a></strong> <span class="pdate"><i>Date:</i> 14 May 2019</span> </li>
+                            <li> <img src="images/event-01.jpg" alt="" style="width: 68px; height: 68px"> 
+                                <strong><a href="#">Grand Gala Meet</a></strong> 
+<!--                                <span class="pdate"><i>Date:</i> 10 Feb 2019</span> -->
+                            </li>
+                            <li> 
+                                <img src="images/pic-admission-open.jpg" alt="" style="width: 68px; height: 68px"> 
+                                <strong><a href="#">Admissions Open Now</a></strong>
+<!--                                <span class="pdate"><i>Date:</i> 14 May 2019</span> -->
+                            </li>
                         </ul>
                     </div>
                     <!--Footer Widget End--> 
@@ -49,8 +63,8 @@
                                                    
                                                 </ul>-->
                         <p>Château Français<br/>
-                        <strong>ENPEE International School</strong></p>
-                        <p>241/2, Puthakudy Village, <br/>Vadamattam Main Road,<br/>Nedunkadu Panchayat,<br/>Karaikal – 609603, U.T of Puducherry.</p>
+                            <strong>ENPEE International School</strong></p>
+                        <p>ENPEE Enclave,<br/> 241/2, Puthakudy Village, <br/>Vadamattam Main Road,<br/>Nedunkadu Panchayat,<br/>Karaikal – 609603, <br/>U.T of Puducherry.</p>
 <!--                        <p><i class="fa fa-phone" aria-hidden="true"></i> +91 93840 10241</p>-->
                         <p><i class="fa fa-envelope" aria-hidden="true"></i> info@enpeekkl.com</p>
                     </div>

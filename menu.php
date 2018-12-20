@@ -43,6 +43,7 @@
                             <ul class="dropdown-content">
                                 <li><a href="promoters.php">Promoters</a></li>
                                 <li><a href="management.php">Management</a></li>
+                                <li><a href="advisory-board.php">Advisory Board</a></li>
                             </ul>
                         </li>
                         <li class="<?php

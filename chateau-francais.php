@@ -43,7 +43,7 @@
                                     <h2>DESIGN CODE</h2>
 <!--                                    <p><strong>Our Campus</strong></p>-->
                                     <ul>
-                                        <li><i class="fas fa-check"></i> To make effective use of land by maintaining all existing elements of the site, importantly, the overflowing canal that bisects the land (site ?)</li>
+                                        <li><i class="fas fa-check"></i> To make effective use of land by maintaining all existing elements of the site, importantly, the overflowing canal that bisects the land</li>
                                         <li><i class="fas fa-check"></i> Linear form of the land offers scope for better utility and greater aesthetic display</li>
                                         <li><i class="fas fa-check"></i> Buildings are segregated accordingly by their functions and scope.</li>
                                     </ul>
