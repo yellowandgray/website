@@ -5853,7 +5853,7 @@ About Us Page
     background: url(../images/mariners-star.jpg) no-repeat;
     background-size: cover;
     width: 100%;
-    float: left;
+/*    float: left;*/
     position: relative;
     padding: 163px 0;
 }
