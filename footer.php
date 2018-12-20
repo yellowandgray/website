@@ -49,7 +49,7 @@
                                                    
                                                 </ul>-->
                         <p>241/2, Puthakudy Village, <br/>Vadamattam Main Road,<br/>Nedunkadu Panchayat,<br/>Karaikal – 609603, U.T of Pondicherry.</p>
-                        <p><i class="fa fa-phone" aria-hidden="true"></i> +91 93840 10241</p>
+<!--                        <p><i class="fa fa-phone" aria-hidden="true"></i> +91 93840 10241</p>-->
                         <p><i class="fa fa-envelope" aria-hidden="true"></i> info@enpeekkl.com</p>
                     </div>
                     <!--Footer Widget End--> 

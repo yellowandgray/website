@@ -111,13 +111,13 @@
                         </div>
                         <!--Contact Info End--> 
                         <!--Contact Info Start-->
-                        <div class="col-md-4 text-right">
+<!--                        <div class="col-md-4 text-right">
                             <div class="c-info">
                                 <h6>Contact:</h6>
                                 <p><strong>Phone:</strong> +91 93840 10241</p>
                                 <p> +91 93840 10242</p>
                             </div>
-                        </div>
+                        </div>-->
                         <!--Contact Info End--> 
                         <!--Contact Info Start-->
                         <div class="col-md-4 text-right">
