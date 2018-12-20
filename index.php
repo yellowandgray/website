@@ -184,7 +184,7 @@
                 <div class="row">
                     <!--Services Box Start-->
                     <div class="ser-col">
-                        <div class="ser-box">
+                        <div class="ser-box height-440">
                             <div class="ser-thumb">
                                 <a href="#"><i class="fas fa-link"></i></a>
                                 <img src="images/5-acre-campus-secured.jpg" alt="">
@@ -198,7 +198,7 @@
                     <!--Services Box End--> 
                     <!--Services Box Start-->
                     <div class="ser-col">
-                        <div class="ser-box">
+                        <div class="ser-box height-440">
                             <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> 
                                 <img src="images/interactive-digitized.jpg" alt=""></div>
                             <div class="ser-txt">
@@ -211,7 +211,7 @@
                     <!--Services Box End--> 
                     <!--Services Box Start-->
                     <div class="ser-col">
-                        <div class="ser-box">
+                        <div class="ser-box height-440">
                             <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> 
                                 <img src="images/sports-complex.jpg" alt=""></div>
                             <div class="ser-txt">
@@ -224,7 +224,7 @@
                     <!--Services Box End--> 
                     <!--Services Box Start-->
                     <div class="ser-col">
-                        <div class="ser-box">
+                        <div class="ser-box height-440">
                             <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> 
                                 <img src="images/community-football.jpg" alt=""></div>
                             <div class="ser-txt">
@@ -237,7 +237,7 @@
                     <!--Services Box End--> 
                     <!--Services Box Start-->
                     <div class="ser-col">
-                        <div class="ser-box">
+                        <div class="ser-box height-440">
                             <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> 
                                 <img src="images/air-buses.jpg" alt=""></div>
                             <div class="ser-txt">
@@ -340,7 +340,7 @@
                                     </div>
                                     <div class="event-txt">
                                         <h6><a href="#">Admissions are Open Now</a></h6>
-                                        <p><i class="fas fa-map-marker-alt"></i> ENPEE International School, Karaikal, U.T of Puducherry </p>
+                                        <p><i class="fas fa-map-marker-alt"></i> ENPEE International School, Karaikal, <br/>U.T of Puducherry </p>
                                     </div>
                                 </div>
                                 <!--Blog Post End--> 

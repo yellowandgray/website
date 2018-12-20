@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
-    <?php $page = 'about'; include 'head.php'; ?>
+    <?php $page = 'about';
+    include 'head.php'; ?>
     <body>
         <div class="wrapper">
             <!--Header Start-->
-            <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
             <div id="search">
                 <button type="button" class="close">×</button>
                 <form class="search-overlay-form">
@@ -44,18 +45,18 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="about-video-img"> 
-<!--                                    <a href="#">
-                                        <i class="fas fa-play"></i>
-                                    </a> -->
+                                    <!--                                    <a href="#">
+                                                                            <i class="fas fa-play"></i>
+                                                                        </a> -->
                                     <img src="images/national-pharma.jpg" alt=""> 
                                 </div>
                             </div>
                         </div>
                         <div class="row margin-top-30">
-                            <div class="col-md-2">
-                                <img src="images/chairman.jpg" alt="" class="img-responsive"/>
-                            </div>
-                            <div class="col-md-10">
+                            <!--                            <div class="col-md-2">
+                                                            <img src="images/chairman.jpg" alt="" class="img-responsive"/>
+                                                        </div>-->
+                            <div class="col-md-12">
                                 <br/>
                                 <br/>
                                 <p>  Founded by <strong>Mr. L. Kamal Batcha,</strong> National Pharma has won several prestigious National and International Awards, including the Jamnalal Bajaj Merit Certificate. </p>
@@ -80,20 +81,21 @@
                                         <!--                                        <h5>About our History</h5>-->
                                         <h5>The NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE</h5>
                                         <p>This Multi-Speciality Hospital, with umbilical connection to the <strong>NATIONAL PHARMA,</strong> the manufacturing unit, came into being in a modern green campus on the  Vallam Road, Thanjavur in 2010. Medical services were started from January, 2011.</p>
+                                        <p>Functioning under the experienced eyes of its illustrious Founder, <strong>Rtn. PHF. Hajee L. Kamal Batcha,</strong> the Hospital provides tertiary care with facilities on par with any Corporate Hospital in the country. It is the fulfilment of his long cherished vision  to offer affordable care through 24 hours to the community.</p>
+                                        <p>The Hospital is managed by a team of professionals with Prof.  <strong>Dr. K.Mujibur Rahman, M.D.,</strong> as the Managing Director and Prof. <strong>Dr.K. Mohamed Ali, M.D.,</strong>  as the Director. They are both experienced medical consultants having handled challenging cases, as well as enthusiastic teachers of medicine.</p>
+                                        <p>A separate <strong>Nursing and Paramedical Institute</strong> recognized by the Indian Medical Association is functioning from the same complex. Nursing, Lab Technician, OT Technician, FNA/MNA courses etc., are made available to prospective candidates to cater to the needs of the health care industry.</p>
+                                        <p>The hospital provides super speciality services with a wide spectrum of services providing  Tertiary Health Care covering most Medical and Surgical  departments . It also  recognised by Tamil Nadu Government to provide health care services to the needy patients through CMCHIS, Government Employees and Retired employees schemes  and it is also a recognised RENAL TRANSPLANT CENTER.</p>
                                         <!--                                        <ul style="list-style: none;">
                                                                                     <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To emerge as the most preferred institution offering Quality Education , matching international standards.</li>
                                                                                     <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To enable, energise and enhance young minds through new learning to conquer excellence.</li>
                                                                                 </ul>-->
                                     </div>
                                 </div>
-                                <div class="col-md-12 timeline-box" style="margin-top: 10px;">
+<!--                                <div class="col-md-12 timeline-box" style="margin-top: 10px;">
                                     <div class="section-title-2">
-                                        <p>Functioning under the experienced eyes of its illustrious Founder, <strong>Rtn. PHF. Hajee L. Kamal Batcha,</strong> the Hospital provides tertiary care with facilities on par with any Corporate Hospital in the country. It is the fulfilment of his long cherished vision  to offer affordable care through 24 hours to the community.</p>
-                                        <p>The Hospital is managed by a team of professionals with Prof.  <strong>Dr. K.Mujibur Rahman, M.D.,</strong> as the Managing Director and Prof. <strong>Dr.K. Mohamed Ali, M.D.,</strong>  as the Director. They are both experienced medical consultants having handled challenging cases, as well as enthusiastic teachers of medicine.</p>
-                                        <p>A separate <strong>Nursing and Paramedical Institute</strong> recognized by the Indian Medical Association is functioning from the same complex. Nursing, Lab Technician, OT Technician, FNA/MNA courses etc., are made available to prospective candidates to cater to the needs of the health care industry.</p>
-                                        <p>The hospital provides super speciality services with a wide spectrum of services providing  Tertiary Health Care covering most Medical and Surgical  departments . It also  recognised by Tamil Nadu Government to provide health care services to the needy patients through CMCHIS, Government Employees and Retired employees schemes  and it is also a recognised RENAL TRANSPLANT CENTER.</p>
-                                        <!--                                        <h5>About our History</h5>-->
-                                        <!-- <h5>MISSION</h5>
+
+                                                                                <h5>About our History</h5>
+                                         <h5>MISSION</h5>
                                         <ul style="list-style: none;">
                                             <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To become role model in setting standards of Quality Education.</li>
                                             <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To build ably qualified, skilful & dedicated Teaching Fraternity .</li>
@@ -101,9 +103,9 @@
                                             <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To provide a safe, secure and Children-friendly Environment.</li>
                                             <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To design and roll over robust and ultra-modern Infrastructure Facilities .</li>
                                             <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To expand the foot-print to nearby districts by establishing similar schools to serve local community.</li>
-                                        </ul>-->
+                                        </ul>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!--                                <div class="section-title-2">
                                                                     <h5>About our History</h5>
                                                                     <h2>Our Success Story</h2>
@@ -276,6 +278,6 @@
             </section>
             <!--About End--> 
             <!--Footer Start-->
-            <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
     </body>
 </html>

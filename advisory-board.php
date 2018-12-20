@@ -34,7 +34,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="team-details-txt">
-                                    <h2>Dr.Sakthivel M.D</h2>
+                                    <h2 class="font-size-20">Dr.Sakthivel M.D</h2>
                                     <p>Advisory Board member of ENPEE International</p>
                                     <p>HOD of General Medicine, Vinayaka Mission’s Medical College, Karaikal.</p>
                                     <!--Partner Logos Section Start-->

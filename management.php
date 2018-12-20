@@ -52,7 +52,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="team-details-txt">
-                                    <h2>Rtn. PHF. Hajee. L. KAMAL BATCHA</h2>
+                                    <h2 class="font-size-20">Rtn. PHF. Hajee. L. KAMAL BATCHA</h2>
                                     <strong class="trank">Founder and CHAIRMAN:  ENPEE INTERNATIONAL SCHOOL</strong>
                                     <p>He is a multi-faceted personality, with a pleasing disposition and a philanthropic bent of mind, but basically wedded to the pharma community, by creating new products at affordable rates for the community health care.</p>
                                     <p>It is philanthropy that the Trust is dealing with. The Trust has the objective of developing projects for the benefit of society in the fields of Education and Health.</p>
@@ -96,7 +96,7 @@
                                             <span class="aicon"><i class="fas fa-arrow-right"></i></span> </a>
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line">He is the Managing Trustee - ENPEE International School.<br/> He is the PROFESSOR and HEAD, Dept. of Community Medicine in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007.<br/></div>
+                                        <div class="bg-padding-line"><strong>Member - Board of Management</strong><br/> ENPEE International School.<br/> He is the PROFESSOR and HEAD, Dept. of Community Medicine in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007.<br/></div>
                                     </div>
 
                                 </div>
@@ -112,7 +112,7 @@
                                         </a>
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line">He is a Managing Trustee - ENPEE International School.<br/> He is  the PROFESSOR – Dept.of COMMUNITY MEDICINE in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007.<br/></div>
+                                        <div class="bg-padding-line"><strong>Member - Board of Management</strong><br/> ENPEE International School.<br/> He is  the PROFESSOR – Dept.of COMMUNITY MEDICINE in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007.<br/></div>
                                     </div>
                                 </div>
                                 <!--campaign box end--> 
@@ -128,7 +128,7 @@
                                         </a> 
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line">Member of the Board of Management - ENPEE International School.<br/> A former Government Pleader and now a Senior Advocate, practicing in the Madras High Court for the last 38 years.<br/><br/></div>
+                                        <div class="bg-padding-line"><strong>Member - Board of Management </strong><br/> ENPEE International School.<br/> A former Government Pleader and now a Senior Advocate, practicing in the Madras High Court for the last 38 years.<br/><br/></div>
                                     </div>
                                 </div>
                                 <!--campaign box end--> 
@@ -143,7 +143,7 @@
                                         </a> 
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line">Member of the Board of Management- ENPEE International School.<br/> Currently resident of Albany, New York, U.S.A. Born in Chennai, India, in 1966 , Mr.Muthuvappa at the age of 17, after completing his high school in Chennai migrated to the United States to pursue higher studies.<br/><br/><br/></div>
+                                        <div class="bg-padding-line"><strong>Member - Board of Management </strong><br/> ENPEE International School.<br/> Currently resident of Albany, New York, U.S.A. Born in Chennai, India, in 1966 , Mr.Muthuvappa at the age of 17, migrated to USA</div>
                                     </div>
                                 </div>
                                 <!--campaign box end--> 
@@ -160,7 +160,7 @@
                                         </a> 
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line">Chief Executive Officer<br/> He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service.<br/><br/></div>
+                                        <div class="bg-padding-line"><strong>Chief Executive Officer</strong><br/> He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India.</div>
                                     </div>
                                 </div>
                                 <!--campaign box end--> 
@@ -176,7 +176,7 @@
                                         </a> 
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line"><strong>Vice President - Academics & Operations</strong><br/> Hailing from Chennai, this Software Engineer possessing a Masters in Educational Management turned to the Hardware of School-making purely out of passion for children’s education. The motivating factor came while she was in UK for varying periods during 2005-2012, catering to the needs of the primary school and Childrens’ centers in York </div>
+                                        <div class="bg-padding-line"><strong>Vice President - Academics & Operations</strong><br/> Hailing from Chennai, this Software Engineer possessing a Masters in Educational Management turned to the Hardware of School-making purely out of passion for children’s education.</div>
                                     </div>
                                 </div>
                                 <!--campaign box end--> 
