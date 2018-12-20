@@ -25,57 +25,50 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="about-text">
-                                    <p><strong>Our Campus</strong></p>
-                                    <p>The ENPEE campus covers over 5 acres surrounded by lush greenery and a serene atmosphere suitable for learning. At the heart of our campus, ENPEE International school spans an incredible area of over 40,000/- sq.ft in its Phase – I, starting from Academic year – 2019-2020. </p>
-                                    <p>Our second and Third phases will resume from the successive academic year of 2020-21 and 2021-22 respectively. Our campus will have a spacious Track & field, unique sports complex including but not limited to an aquatic pool, Skating rink, Archery, Basketball, Badminton, Table Tennis aiding in overall growth & development of an individual, Spacious and learner oriented laboratories, mixed age group activity studio, digitized classrooms.</p>
-
+                                <div class="">
+                                    <h5>Affiliation Status</h5>
+                                    <table class="table-border">
+                                        <thead>
+                                            <tr>
+                                                <th>NAME OF THE SCHOOL</th>
+                                                <th>ENPEE International School</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>COMMUNICATION ADDRESS</td>
+                                                <td>Château Français, ENPEE Enclave, 241/2, Puthakudy Village, Vadamattam Main Road, Nedunkadu Panchayat, Karaikal – 609603, U.T of Puducherry.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>EMAIL</td>
+                                                <td><a href="mailto:info@enpeekkl.com">info@enpeekkl.com</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>WEBSITE</td>
+                                                <td>www.enpeekkl.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>YEAR OF ESTABLISHMENT</td>
+                                                <td>2019</td>
+                                            </tr>
+                                            <tr>
+                                                <td>BOARD OF STUDY</td>
+                                                <td>TO BE AFFILIATED TO CBSE</td>
+                                            </tr>
+                                            <tr>
+                                                <td>WHETHER CO-EDUCATIONAL</td>
+                                                <td>Yes</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+    <!--                                <p>  Our Early Childhood classrooms are, of course open and flexible with lot of places to explore & learn. We have dance, music, theatre incorporated in learning and sports given its due space in learning. Our outdoor spaces teach health, wellbeing & physical education not only to our students, but also to our faculty members. All our classrooms are provided with personal lockers for children to store their belongings, which inculcates self-discipline and responsibility in a child. Our learning spaces are also used outside the school hours for extracurricular activities, coffee mornings for the parental community and other activities. </p>
+                                    <p>   As our motto goes, <strong>Knowledge – Innovation and Excellence</strong>, so is our learning space provided by our campus, more than just a school, ENPEE is a haven for our children, faculty and the whole community.</p>-->
                                 </div>
                             </div>
                             <div class="col-lg-6">
 
                                 <div class="about-video-img"> <a href="FM-Ad-Enpee.mp4" data-toggle="lightbox" data-width="1280"><i class="fas fa-play"></i></a> <img src="images/about-sub.jpg" alt=""> </div>
 
-                            </div>
-                            <div class="col-md-12">
-                                <h5>Affiliated Status</h5>
-                                <table class="table-border">
-                                    <thead>
-                                        <tr>
-                                            <th>NAME OF THE SCHOOL</th>
-                                            <th>ENPEE International School</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>COMMUNICATION ADDRESS</td>
-                                            <td>Château Français, ENPEE Enclave, 241/2, Puthakudy Village, Vadamattam Main Road, Nedunkadu Panchayat, Karaikal – 609603, U.T of Puducherry.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>EMAIL</td>
-                                            <td><a href="mailto:info@enpeekkl.com">info@enpeekkl.com</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>WEBSITE</td>
-                                            <td>www.enpeekkl.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>YEAR OF ESTABLISHMENT</td>
-                                            <td>2019</td>
-                                        </tr>
-                                        <tr>
-                                            <td>BOARD OF STUDY</td>
-                                            <td>TO BE AFFILIATED TO CBSE</td>
-                                        </tr>
-                                        <tr>
-                                            <td>WHETHER CO-EDUCATIONAL</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-<!--                                <p>  Our Early Childhood classrooms are, of course open and flexible with lot of places to explore & learn. We have dance, music, theatre incorporated in learning and sports given its due space in learning. Our outdoor spaces teach health, wellbeing & physical education not only to our students, but also to our faculty members. All our classrooms are provided with personal lockers for children to store their belongings, which inculcates self-discipline and responsibility in a child. Our learning spaces are also used outside the school hours for extracurricular activities, coffee mornings for the parental community and other activities. </p>
-                                <p>   As our motto goes, <strong>Knowledge – Innovation and Excellence</strong>, so is our learning space provided by our campus, more than just a school, ENPEE is a haven for our children, faculty and the whole community.-->
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -87,21 +80,20 @@
                         <div class="row">
                             <div class="col-lg-4">
 
-                                <div class="story-title-bg-01"> <strong class="t1">International</strong> <strong class="t2">Standards</strong> <strong class="t3"></strong> 
+                                <div class="story-title-bg-01"> <strong class="t1">International</strong> <strong class="t2">Standard</strong> <strong class="t3"> of Education</strong> 
                                 </div>
                             </div>
                             <div class="col-lg-8">
                                 <div class="col-md-12 timeline-box">
-                                <div class="section-title-2">
+                                    <div class="section-title-2">
                                         <!--                                        <h5>About our History</h5>-->
                                         <h5>OUR MOTTO</h5>
-                                        <ul>
+                                        <h5>We are highly passionate about our Core Values</h5>
+                                        <ul class="color-blue">
                                             <li><h2>KNOWLEDGE</h2></li>
                                             <li><h2>INNOVATION</h2></li>
                                             <li><h2>EXCELLENCE</h2></li>
                                         </ul>
-                                        
-                                        <h5>We are highly passionate about our Core Values</h5>
                                     </div>
                                 </div>
                                 <div class="col-md-12 timeline-box" style="margin-top: 10px;">

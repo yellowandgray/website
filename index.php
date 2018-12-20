@@ -147,8 +147,9 @@
                             <div class="about-txt">
 <!--                                <h2> <span>ecova.</span> Welcome to ENPEE INTERNATIONAL SCHOOL</h2>-->
                                 <h2>Welcome to ENPEE INTERNATIONAL SCHOOL</h2>
-                                <p class="text-justify">The ENPEE campus covers over 5 acres surrounded by lush greenery and a serene atmosphere suitable for learning. At the heart of our campus, ENPEE International school is home to 22 Classrooms spanning over an incredible area of over 44,000/- sq.ft in its Phase – I, starting from Academic year – 2019-2020.</p>
-                                <p class="text-justify">Our second and Third phases will resume from the successive academic year of 2020-21 and 2021-22 respectively. Our campus will have a football ground, unique sports complex aiding in overall growth & development of an individual, Spacious and learner oriented laboratories, mixed age group activity studio, digitized classrooms. <a href="#">Read More</a></p>
+                                <p><strong>Our Campus</strong></p>
+                                <p class="text-justify">The ENPEE campus covers over 5 acres surrounded by lush greenery and a serene atmosphere suitable for learning. At the heart of our campus, ENPEE International school spans an incredible area of over 40,000/- sq.ft in its Phase – I, starting from Academic year – 2019-2020. </p>
+                                <p class="text-justify">Our second and Third phases will resume from the successive academic year of 2020-21 and 2021-22 respectively. Our campus will have a spacious Track & field, unique sports complex including but not limited to an aquatic pool, Skating rink, Archery, Basketball, Badminton, Table Tennis aiding in overall growth & development of an individual, Spacious and learner oriented laboratories, mixed age group activity studio, digitized classrooms.</p>
                                 <ul>
                                     <li><i class="fas fa-check"></i> Inclusive Curriculum</li>
                                     <li><i class="fas fa-check"></i> Interactive Learning </li>
@@ -323,7 +324,7 @@
                                         </ul>
                                     </div>
                                     <div class="event-txt">
-                                        <h6><a href="#">Grand i5 Meet</a></h6>
+                                        <h6><a href="#">Grand Gala Meet</a></h6>
                                         <p><i class="fas fa-map-marker-alt"></i> Sri Mahal, Karaikal, Pondicherry </p>
                                     </div>
                                 </div>
@@ -338,7 +339,7 @@
                                         </ul>
                                     </div>
                                     <div class="event-txt">
-                                        <h6><a href="#">Admissions for Pre-KG, LKG & UKG opens from 20th February</a></h6>
+                                        <h6><a href="#">Admissions Open are Now</a></h6>
                                         <p><i class="fas fa-map-marker-alt"></i> ENPEE International School, Karaikal, Pondicherry </p>
                                     </div>
                                 </div>
@@ -350,28 +351,28 @@
             </section>
             <!--News Post Section End--> 
             <!--Fundraising Campaigns Section Start-->
-            <section class="wf100 p80 fcampaigns">
+<!--            <section class="wf100 p80 fcampaigns">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <!--title start-->
+                            title start
                             <div class="section-title">
                                 <strong>Our</strong>
                                 <h2>Founder and Chairman</h2>
                             </div>
-                            <!--title end--> 
+                            title end 
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <!--campaign box start-->
+                            campaign box start
                             <div class="campaign-box">
                                 <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/founder-01.jpg" alt=""> </div>
                                 <div class="campaign-txt">
                                     <h5><a href="#">Rtn. PHF. Hajee Mr. L. KAMAL  BATCHA</a></h5>
                                     <p class="text-justify">He is a multi-faceted personality, with a pleasing disposition and a philanthropic bent of mind, but basically wedded to the pharma community, by creating new products at affordable rates for the community health care.</p>
                                     <p class="bold">Founder and CHAIRMAN:  MARAICAYAR TRUST </p>
-                                    <!--                                    <ul class="participants">
+                                                                        <ul class="participants">
                                                                             <li><img src="images/u1.jpg" alt=""></li>
                                                                             <li><img src="images/u2.jpg" alt=""></li>
                                                                             <li><img src="images/u3.jpg" alt=""></li>
@@ -387,11 +388,11 @@
                                                                             <li><strong>47%</strong> Funded</li>
                                                                             <li><strong>$638.00</strong> Raised</li>
                                                                             <li><strong>$9750.00</strong> Required</li>
-                                                                        </ul>-->
+                                                                        </ul>
                                 </div>
                                 <a href="management.php" class="dbutton">Read More</a> 
                             </div>
-                            <!--campaign box end--> 
+                            campaign box end 
                         </div>
                         <div class="col-md-8 award-img">
                             <div class="row">
@@ -430,7 +431,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>-->
             <!--Fundraising Campaigns Section End--> 
             <!--Current Promises Section Start-->
             <section class="promises wf100 p80" id="enquiry">

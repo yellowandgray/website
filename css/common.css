@@ -533,3 +533,7 @@ fieldset {
     border: 2px solid #eee;
     padding: 10px;
 }
+
+.color-blue li h2{
+    color: #0e93d5 !important;
+}

@@ -5916,7 +5916,7 @@ About Us Page
     background: url(../images/about-sub-02.jpg) no-repeat;
     background-size: cover;
     width: 100%;
-    float: left;
+/*    float: left;*/
     position: relative;
     padding: 168px 67px;
 }

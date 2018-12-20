@@ -36,7 +36,7 @@
                         <h5>Upcoming Events</h5>
                         <ul class="lastest-products">
                             <li> <img src="images/event-01.jpg" alt="" style="width: 68px; height: 68px"> <strong><a href="#">Grand Gala Meet</a></strong> <span class="pdate"><i>Date:</i> 10 Feb 2019</span> </li>
-                            <li> <img src="images/pic-admission-open.jpg" alt="" style="width: 68px; height: 68px"> <strong><a href="#">School Opening</a></strong> <span class="pdate"><i>Date:</i> 14 May 2019</span> </li>
+                            <li> <img src="images/pic-admission-open.jpg" alt="" style="width: 68px; height: 68px"> <strong><a href="#">Admissions Opening Now</a></strong> <span class="pdate"><i>Date:</i> 14 May 2019</span> </li>
                         </ul>
                     </div>
                     <!--Footer Widget End--> 
@@ -48,7 +48,9 @@
                         <!--                        <ul class="lastest-products">
                                                    
                                                 </ul>-->
-                        <p>241/2, Puthakudy Village, <br/>Vadamattam Main Road,<br/>Nedunkadu Panchayat,<br/>Karaikal – 609603, U.T of Pondicherry.</p>
+                        <p>Château Français<br/>
+                        <strong>ENPEE International School</strong></p>
+                        <p>241/2, Puthakudy Village, <br/>Vadamattam Main Road,<br/>Nedunkadu Panchayat,<br/>Karaikal – 609603, U.T of Puducherry.</p>
 <!--                        <p><i class="fa fa-phone" aria-hidden="true"></i> +91 93840 10241</p>-->
                         <p><i class="fa fa-envelope" aria-hidden="true"></i> info@enpeekkl.com</p>
                     </div>
