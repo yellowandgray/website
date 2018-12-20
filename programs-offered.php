@@ -19,10 +19,10 @@
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-04.jpg) no-repeat;">
                 <div class="container">
                     <h1>Programs Offered</h1>
-                    <ul>
+<!--                    <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Programs Offered</a></li>
-                    </ul>
+                    </ul>-->
                 </div>
             </section>
             <!--Inner Header End--> 

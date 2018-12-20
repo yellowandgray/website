@@ -11,10 +11,10 @@
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-02.jpg) no-repeat;">
                 <div class="container">
                     <h1>About Us</h1>
-                    <ul>
+<!--                    <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
-                    </ul>
+                    </ul>-->
                 </div>
             </section>
             <!--Inner Header End--> 

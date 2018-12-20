@@ -17,10 +17,10 @@
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-05.jpg) no-repeat;">
                 <div class="container">
                     <h1>What Makes Us Different</h1>
-                    <ul>
+<!--                    <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">What Makes Us Different</a></li>
-                    </ul>
+                    </ul>-->
                 </div>
             </section>
             <!--Inner Header End--> 

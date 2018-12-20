@@ -21,11 +21,11 @@
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-06.jpg) no-repeat;">
                 <div class="container">
                     <h1>Contact Us</h1>
-                    <ul>
+<!--                    <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#"> Contact </a></li>
 
-                    </ul>
+                    </ul>-->
                 </div>
             </section>
             <!--Inner Header End--> 
