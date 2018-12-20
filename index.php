@@ -554,10 +554,16 @@
             <div class="partner-logos wf100 mb80">
                 <div class="container">
                     <h2 class="text-center padding-tb-30">Technology Partners</h2>
-                    <div id="partner-logos" class="owl-carousel owl-theme">
-                        <div class="item"><img src="images/partners/001.png" alt=""></div>
+<!--                    <div id="partner-logos" class="owl-carousel owl-theme">-->
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3"><img src="images/partners/001.png" alt=""></div>
+                            <div class="col-md-3"><img src="images/partners/002.png" alt=""></div>
+                            <div class="col-md-3"></div>
+                        </div>
+<!--                        <div class="item"><img src="images/partners/001.png" alt=""></div>
                         <div class="item"><img src="images/partners/002.png" alt=""></div>
-<!--                        <div class="item"><img src="images/plogo1.png" alt=""></div>
+                        <div class="item"><img src="images/plogo1.png" alt=""></div>
                         <div class="item"><img src="images/plogo2.png" alt=""></div>
                         <div class="item"><img src="images/plogo3.png" alt=""></div>
                         <div class="item"><img src="images/plogo4.png" alt=""></div>
@@ -567,7 +573,7 @@
                         <div class="item"><img src="images/plogo3.png" alt=""></div>
                         <div class="item"><img src="images/plogo4.png" alt=""></div>
                         <div class="item"><img src="images/plogo5.png" alt=""></div>-->
-                    </div>
+<!--                    </div>-->
                 </div>
             </div>
             <!--Partner Logos Section End--> 
