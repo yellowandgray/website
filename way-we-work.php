@@ -79,7 +79,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="story-title-bg">
-                                    <img src="../images/mariners-star.jpg" alt="" />
+<!--                                    <img src="../images/mariners-star.jpg" alt="" />-->
                                 </div>
                             </div>
                             <div class="col-lg-8">
