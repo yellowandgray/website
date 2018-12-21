@@ -549,7 +549,7 @@ fieldset {
 }
 .margin-left-10 {margin-left: 10px;}
 .font-size-20 {font-size: 20px;}
-.height-440 {height: 440px !important;}
+.height-440 {height: auto !important;}
 
 .footer-social a:hover {
     background-color: #186fb8 !important;
