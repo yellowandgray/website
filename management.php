@@ -39,13 +39,11 @@
                                         <div class="slide"><img src="images/awards/enpee-awards-001.png"></div>
                                         <div class="slide"><img src="images/awards/enpee-awards-002.png"></div>
                                         <div class="slide"><img src="images/awards/enpee-awards-003.png"></div>
-                                        <div class="slide"><img src="images/awards/enpee-awards-010.png"></div>
-                                        <div class="slide"><img src="images/awards/enpee-awards-012.png"></div>
                                         <div class="slide"><img src="images/awards/enpee-awards-013.png"></div>
                                         <div class="slide"><img src="images/awards/enpee-awards-014.png"></div>
-                                        <div class="slide"><img src="images/awards/enpee-awards-018.png"></div>
                                         <div class="slide"><img src="images/awards/enpee-awards-027.png"></div>
-                                        <div class="slide"><img src="images/awards/enpee-awards-028.png"></div>
+                                        <div class="slide"><img src="images/awards/award-05.jpg"></div>
+                                        <div class="slide"><img src="images/awards/award-06.jpg"></div>
                                         <div class="slide"><img src="images/awards/enpee-awards-03.png"></div>
                                     </section>-->
                                 </div>
@@ -66,14 +64,11 @@
                                     <div class="item"><img src="images/awards/enpee-awards-001.png"></div>
                                     <div class="item"><img src="images/awards/enpee-awards-002.png"></div>
                                     <div class="item"><img src="images/awards/enpee-awards-003.png"></div>
-                                    <div class="item"><img src="images/awards/enpee-awards-010.png"></div>
-                                    <div class="item"><img src="images/awards/enpee-awards-012.png"></div>
                                     <div class="item"><img src="images/awards/enpee-awards-013.png"></div>
                                     <div class="item"><img src="images/awards/enpee-awards-014.png"></div>
-                                    <div class="item"><img src="images/awards/enpee-awards-018.png"></div>
                                     <div class="item"><img src="images/awards/enpee-awards-027.png"></div>
-                                    <div class="item"><img src="images/awards/enpee-awards-028.png"></div>
-                                    <div class="item"><img src="images/awards/enpee-awards-03.png"></div>
+                                    <div class="item"><img src="images/awards/award-05.jpg"></div>
+                                    <div class="item"><img src="images/awards/award-06.jpg"></div>
                                 </div><br/>
                                 <!--Partner Logos Section End--> 
                                 <a href="#" class="contact-team" id="myBtn">Read More</a> 

@@ -90,9 +90,9 @@
                                         <h5>OUR MOTTO</h5>
                                         <h5>We are highly passionate about our Core Values</h5>
                                         <ul class="color-blue">
-                                            <li><h2>KNOWLEDGE</h2></li>
-                                            <li><h2>INNOVATION</h2></li>
-                                            <li><h2>EXCELLENCE</h2></li>
+                                            <li style="list-style-type:none;"><h2>KNOWLEDGE</h2></li>
+                                            <li style="list-style-type:none;"><h2>INNOVATION</h2></li>
+                                            <li style="list-style-type:none;"><h2>EXCELLENCE</h2></li>
                                         </ul>
                                     </div>
                                 </div>

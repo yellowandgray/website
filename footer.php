@@ -5,7 +5,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <!--Footer Widget Start-->
                     <div class="footer-widget about-ecova ul-padding-color">
-                        <div class="f2logo"> <img src="images/logo-np.png" alt="" style="width: 200px"> </div>
+                        <div class="f2logo"> <img src="images/logo-enpee-international-school.png" alt="" style="height: 115px"> </div>
                         <ul>
                             <li>Team Building</li>
                             <li>Interactive Learning</li>
@@ -14,7 +14,6 @@
                             <li>Holistic Development</li>
                             <li>World Class Facilities</li>
                         </ul>
-                        <!--                        <a href="#" class="more">More About<br ENPEE International School</a> -->
                     </div>
                     <!--Footer Widget End--> 
                 </div>
@@ -42,13 +41,13 @@
                     <div class="footer-widget">
                         <h5>Upcoming Events</h5>
                         <ul class="lastest-products">
-                            <li> <img src="images/event-01.jpg" alt="" style="width: 68px; height: 68px"> 
-                                <strong><a href="#">Grand Gala Meet</a></strong> 
+                            <li> <img src="images/event-knowledge-innovation-excellence.jpg" alt="" style="width: 68px; height: 68px"> 
+                                <strong><a href="#">Knowledge Innovation Excellence</a></strong> 
                                 <span class="pdate"><i>Date:</i> 10 Feb 2019</span>
                             </li>
                             <li> 
                                 <img src="images/pic-admission-open.jpg" alt="" style="width: 68px; height: 68px"> 
-                                <strong><a href="#">Admissions Open Now</a></strong>
+                                <strong><a href="contact.php" style="font-size:20px">Admissions <br /> Open Now</a></strong>
 <!--                                <span class="pdate"><i>Date:</i> 14 May 2019</span> -->
                             </li>
                         </ul>

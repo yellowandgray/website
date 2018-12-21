@@ -317,14 +317,14 @@
                                 <!--Blog Post Start-->
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/event-01.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/event-knowledge-innovation-excellence.jpg" alt="">
                                         <ul class="post-meta">
                                             <li>10 Febuary, 2019 </li>
-                                            <li> 02:00 pm - 07:00 pm</li>
+                                            <li> 01:00 pm - 07:00 pm</li>
                                         </ul>
                                     </div>
                                     <div class="event-txt">
-                                        <h6><a href="#">Grand Gala Meet</a></h6>
+                                        <h6><a href="#">Knowledge Innovation Excellence</a></h6>
                                         <p><i class="fas fa-map-marker-alt"></i> AVS Imperiaa, (Star hotel in Karaikal) </p>
                                     </div>
                                 </div>
@@ -332,14 +332,14 @@
                                 <!--Blog Post Start-->
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-admission-open.jpg" alt="">
+                                        <a href="#enquiry"><i class="fas fa-link"></i></a> <img src="images/pic-admission-open.jpg" alt="">
                                         <!--                                        <ul class="post-meta">
                                                                                     <li>20 February, 2019 </li>
                                                                                     <li> 10:00 am - 05:00 pm</li>
                                                                                 </ul>-->
                                     </div>
                                     <div class="event-txt">
-                                        <h6><a href="#">Admissions are Open Now</a></h6>
+                                        <h6><a href="#enquiry">Admissions are Open Now</a></h6>
                                         <p><i class="fas fa-map-marker-alt"></i> ENPEE International School, Karaikal, <br/>U.T of Puducherry </p>
                                     </div>
                                 </div>
@@ -557,8 +557,8 @@
                     <!--                    <div id="partner-logos" class="owl-carousel owl-theme">-->
                     <div class="row">
                         <div class="col-md-3"></div>
-                        <div class="col-md-3"><img src="images/partners/001.png" alt=""></div>
-                        <div class="col-md-3"><img src="images/partners/002.png" alt=""></div>
+                        <div class="col-md-3"><a href="http://www.yellowandgray.com" target="_blank"><img src="images/partners/logo-YGSTUDIO.png" alt=""></a></div>
+                        <div class="col-md-3"><a href="http://morfosis.co.in/" target="_blank"><img src="images/partners/002.png" alt=""></a></div>
                         <div class="col-md-3"></div>
                     </div>
 <!--                        <div class="item"><img src="images/partners/001.png" alt=""></div>

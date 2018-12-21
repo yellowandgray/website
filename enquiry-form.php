@@ -6,7 +6,6 @@ if ($_POST['name']) {
     $mobile = $_REQUEST['mobile'];
     $no_children = $_REQUEST['no_children'];
     $preffred_classes = $_REQUEST['preffred_classes'];
-    echo $preffred_classes;
     $subject = $_REQUEST['subject'];
     $message = $_REQUEST['message'];
     error_reporting(E_STRICT);
@@ -38,34 +37,93 @@ if ($_POST['name']) {
     $mail->Password = "Admin@EnPE3Kkl";            // GMAIL password
     $mail->IsHTML(true);
     $mail->SetFrom('noreply@enpeekkl.com', 'ENPEEKKL');
-    $mail->Subject = "Contact form submited" . date('d-m-y H:i:s');
-    $message = "
-    <table style='color:#000'>
-    <tr>
-        <td style='color:#000;'>Name</td>
-        <td style='color:#000;'>" . $name . "</td>
-    </tr>
-    <tr>
-        <td style='color:#000;'>Email</td>";
-    $message .= "<td style='background:#004976;color:#fff;'>$email</td>";
-    $message .= "</tr>
-    <tr>
-        <td style='color:#000;'>Subject</td>
-        <td style='color:#000;'>" . $subject . "</td>
-    </tr>
-    <tr>
-        <td style='color:#000;'>Message</td>";
-    $message .= "<td style='background:#004976;color:#fff;'>$message</td>";
+    $mail->Subject = $subject;
+    $message = '<table border = "0" cellpadding = "0" cellspacing = "0" height = "100%" width = "100%">
+            <tbody>
+            <tr>
+            <td align = "center" valign = "top">
+            <span>
+            <font color = "#888888">
+            </font>
+            </span>
+            <span>
+            <font color = "#888888">
+            </font>
+            </span>
+            <table border = "0" cellpadding = "0" cellspacing = "0" width = "600" style = "background-color:#fdfdfd;border:1px solid #dcdcdc;border-radius:3px!important;">
+            <tbody>
+            <tr>
+            <td align = "center" valign = "top">
+            <table border = "0" cellpadding = "0" cellspacing = "0" width = "600" style = "background-color:#cccccc;border-radius:3px 3px 0 0!important;color:#ffffff;border-bottom:0;font-weight:bold;line-height:100%;vertical-align:middle;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif">
+            <tbody>
+            <tr>
+            <td style = "padding:36px 48px;display:block">
+            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:left"><img src = "http://enpeekkl.com/images/logo-enpee-international-school.png" alt = "ENPEEKKL" style = "width:130px" /></h1>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            </td>
+            </tr>
+            <tr>
+            <td align = "center" valign = "top">
+            <table border = "0" cellpadding = "0" cellspacing = "0" width = "600">
+            <tbody>
+            <tr>
+            <td valign = "top" style = "background-color:#fdfdfd">
+            <table border = "0" cellpadding = "20" cellspacing = "0" width = "100%">
+            <tbody>
+            <tr>
+            <td valign = "top" style = "padding:48px">
+            <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
+            <h3 style = "margin:0 0 16px; text-align:center;">Enquiry form details.</h3>
+            <p style = "margin:0 0 16px">Name :' . $name . '</p>
+            <p style = "margin:0 0 16px">Email :' . $email . '</p>
+            <p style = "margin:0 0 16px">Phone Number :' . $mobile . '</p>
+            <p style = "margin:0 0 16px">Number of Children :' . $no_children . '</p>
+            <p style = "margin:0 0 16px">Preffred Programs :'
+?><?php
 
-    $message .="</td></tr>
-    </table>
-    ";
+    foreach ($_POST['preffred_classes'] as $names) {
+        $names;
+    }
+    '<p style = "margin:0 0 16px">Message :' . $message . '</p>
+            </div>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            </td>
+            </tr>
+            <tr>
+            <td align = "center" valign = "top">
+            <table border = "0" cellpadding = "0" cellspacing = "0" width = "600" style = "background-color:#cccccc;border-radius:3px 3px 0 0!important;color:#ffffff;border-bottom:0;font-weight:bold;width: 100%;line-height:100%;vertical-align:middle;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif">
+            <tbody>
+            </tbody>
+            </table>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            </td>
+            </tr>
+
+            </tbody>
+            </table>
+            <span>
+            <font color = "#888888">
+            </font>
+            </span>
+            </td>
+            </tr>
+            </tbody>
+            </table>';
     // Always set content-type when sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $mail->Body = $message;
     // More headers
-    $address = "noreply@enpeekkl.com";
+    $address = "ashok@4blocksinc.com";
 
     $mail->AddAddress($address, "ENPEEKKL");
 
@@ -75,6 +133,9 @@ if ($_POST['name']) {
     } else {
         echo "<script> window.location = 'http://enpeekkl.com'; </script>";
         echo "Thank you for applying";
+        echo '<script type="text/javascript">';
+        echo 'setTimeout(function () { swal("Sucess","Thnak You for Contacting Us, Our Executive will contact you soon!","success");';
+        echo '}, 1500);</script>';
         //print_r(error_get_last());
     }
 }

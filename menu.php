@@ -25,7 +25,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2">
-                    <div id="colorlib-logo"><a href="index.php"><img style="width: 200px;height: 130px; padding-bottom: 10px;" class="logo" src="images/logo-np.png" alt=""/></a></div>
+                    <div id="colorlib-logo"><a href="index.php"><img style="height: 130px; padding-bottom: 10px;" class="logo" src="images/logo-enpee-international-school.png" alt="Enpee-International-School"/></a></div>
                 </div>
                 <div class="col-md-10 text-right menu-1">
                     <ul>
