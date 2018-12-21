@@ -408,7 +408,7 @@ fieldset {
 .francais {
     background-size: cover;
     width: 100%;
-    float: left;
+/*    float: left;*/
     position: relative;
 }
 
