@@ -46,7 +46,7 @@
                                 <span class="pdate"><i>Date:</i> 10 Feb 2019</span>
                             </li>
                             <li> 
-                                <img src="images/pic-admission-open.jpg" alt="" style="width: 68px; height: 68px"> 
+                                <a href="contact.php"><img src="images/pic-admission-open.jpg" alt="" style="width: 68px; height: 68px"> </a>
                                 <strong><a href="contact.php" style="font-size:20px">Admissions <br /> Open Now</a></strong>
 <!--                                <span class="pdate"><i>Date:</i> 14 May 2019</span> -->
                             </li>

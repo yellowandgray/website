@@ -10,11 +10,11 @@
                 </div>
                 <div class="col-xs-6 col-md-push-2 text-right">
                     <p>
-<!--                    <ul class="colorlib-social-icons">
-                        <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>&nbsp;
-                        <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>&nbsp;
-                        <li><a href="#"><i class="fa fa-youtube-square"></i></a></li>&nbsp;
-                    </ul>-->
+                    <ul class="colorlib-social-icons">
+                        <li><a href="https://www.facebook.com/ENPEE-International-School-1943441245950809/?modal=admin_todo_tour" target="blank"><i class="fa fa-facebook-official" style="color:#1c61ab"></i></a></li>&nbsp;
+<!--                        <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>&nbsp;
+                        <li><a href="#"><i class="fa fa-youtube-square"></i></a></li>&nbsp;-->
+                    </ul>
                     </p>
                     <p class="btn-apply"><a href="index.php#enquiry">Enquire Now</a></p>
                 </div>
@@ -41,6 +41,7 @@
                         ?>">
                             <a href="about.php">About Us</a>
                             <ul class="dropdown-content">
+                                <li class="text-left"><a href="about.php" class="margin-left-10">About the School</a></li>
                                 <li class="text-left"><a href="promoters.php" class="margin-left-10">Promoters</a></li>
                                 <li class="text-left"><a href="management.php" class="margin-left-10">Management</a></li>
                                 <li class="text-left"><a href="advisory-board.php" class="margin-left-10">Advisory Board</a></li>
@@ -96,6 +97,7 @@
                     ?>">
                         <a href="about.php">About Us <i class="fas fa-sort-down" id="show"></i></a>
                         <ul class="dropdown-content">
+                            <li class="text-left"><a href="about.php" class="margin-left-10">About the School</a></li>
                             <li class="text-left"><a href="promoters.php">Promoters</a></li>
                             <li class="text-left"><a href="management.php">Management</a></li>
                             <li class="text-left"><a href="advisory-board.php">Management</a></li>

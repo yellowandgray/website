@@ -149,7 +149,7 @@
                                 <h2>Welcome to ENPEE INTERNATIONAL SCHOOL</h2>
                                 <p><strong>Our Campus</strong></p>
                                 <p class="text-justify">The ENPEE campus covers over 5 acres surrounded by lush greenery and a serene atmosphere suitable for learning. At the heart of our campus, ENPEE International school spans an incredible area of over 40,000/- sq.ft in its Phase – I, starting from Academic year – 2019-2020. </p>
-                                <p class="text-justify">Our second and Third phases will resume from the successive academic year of 2020-21 and 2021-22 respectively. Our campus will have a spacious Track & field, unique sports complex including but not limited to an aquatic pool, Skating rink, Archery, Basketball, Badminton, Table Tennis aiding in overall growth & development of an individual, Spacious and learner oriented laboratories, mixed age group activity studio, digitized classrooms.</p>
+                                <p class="text-justify">Our second and Third phases will resume from the successive academic year of 2020-21 and 2021-22 respectively. Our campus will have a spacious Track & field, unique sports complex including but not limited to an aquatic pool, Skating rink, Archery, Basketball, Badminton, Table Tennis aiding in overall growth & development of an individual, Spacious and learner oriented laboratories, mixed age group activity studio, digitized classrooms. <a href="about.php" style="font-style: italic">Read More</a></p>
                                 <ul>
                                     <li><i class="fas fa-check"></i> Team Building</li>
                                     <li><i class="fas fa-check"></i> Interactive Learning</li>
@@ -331,8 +331,9 @@
                                 <!--Blog Post End--> 
                                 <!--Blog Post Start-->
                                 <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#enquiry"><i class="fas fa-link"></i></a> <img src="images/pic-admission-open.jpg" alt="">
+                                    <div class="pic-link">
+<!--                                        <i class="fas fa-link"></i> -->
+                                        <a href="#enquiry"><img src="images/pic-admission-open.jpg" alt=""></a>
                                         <!--                                        <ul class="post-meta">
                                                                                     <li>20 February, 2019 </li>
                                                                                     <li> 10:00 am - 05:00 pm</li>
