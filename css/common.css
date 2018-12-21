@@ -448,6 +448,9 @@ fieldset {
         max-width: 320px !important;
         width: 320px !important;
     }
+    .story-title-bg {
+        padding: 155px !important;
+    }
 }
 
 .dropdown-content a {padding: 20px 50px 20px 0px !important; }
