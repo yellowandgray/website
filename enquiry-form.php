@@ -89,7 +89,8 @@ if ($_POST['name']) {
                    $message.= $names.',';
     }
     '</p>
-        <p style = "margin:0 0 16px">Regards,<br/>ENPEE Web Team.</p></div>
+        <p style="margin:0 0 16px">Regards,</p>
+        <p style="margin:0 0 16px">ENPEE Web Team</p></div>
             </td>
             </tr>
             </tbody>
