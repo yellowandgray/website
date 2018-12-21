@@ -37,7 +37,7 @@ if ($_POST['name']) {
     $mail->Password = "Admin@EnPE3Kkl";            // GMAIL password
     $mail->IsHTML(true);
     $mail->SetFrom('noreply@enpeekkl.com', 'ENPEEKKL');
-    $mail->Subject = $subject;
+    $mail->Subject = "Enquiry Form Submited" . date('d-m-y H:i:s');
     $message = '<table border = "0" cellpadding = "0" cellspacing = "0" height = "100%" width = "100%">
             <tbody>
             <tr>
@@ -54,11 +54,11 @@ if ($_POST['name']) {
             <tbody>
             <tr>
             <td align = "center" valign = "top">
-            <table border = "0" cellpadding = "0" cellspacing = "0" width = "600" style = "background-color:#cccccc;border-radius:3px 3px 0 0!important;color:#ffffff;border-bottom:0;font-weight:bold;line-height:100%;vertical-align:middle;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif">
+            <table border = "0" cellpadding = "0" cellspacing = "0" width = "600" style = "background-color:#eee;border-radius:3px 3px 0 0!important;color:#ffffff;border-bottom:0;font-weight:bold;line-height:100%;vertical-align:middle;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif">
             <tbody>
             <tr>
             <td style = "padding:36px 48px;display:block">
-            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:left"><img src = "http://enpeekkl.com/images/logo-enpee-international-school.png" alt = "ENPEEKKL" style = "width:130px" /></h1>
+            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://enpeekkl.com/images/logo-enpee-international-school.png" alt = "ENPEEKKL" style = "width:50%" /></h1>
             </td>
             </tr>
             </tbody>
@@ -77,18 +77,19 @@ if ($_POST['name']) {
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
             <h3 style = "margin:0 0 16px; text-align:center;">Enquiry form details.</h3>
-            <p style = "margin:0 0 16px">Name :' . $name . '</p>
-            <p style = "margin:0 0 16px">Email :' . $email . '</p>
-            <p style = "margin:0 0 16px">Phone Number :' . $mobile . '</p>
-            <p style = "margin:0 0 16px">Number of Children :' . $no_children . '</p>
-            <p style = "margin:0 0 16px">Preffred Programs :'
-?><?php
+            <p style = "margin:0 0 16px">Name: ' . $name . '</p>
+            <p style = "margin:0 0 16px">Email: ' . $email . '</p>
+            <p style = "margin:0 0 16px">Phone Number:' . $mobile . '</p>
+            <p style = "margin:0 0 16px">Number of Children: ' . $no_children . '</p>
+            <p style = "margin:0 0 16px">Preffred Programs: ' ?>
+           
+            <?php
 
-    foreach ($_POST['preffred_classes'] as $names) {
-        $names;
+                foreach ($_POST['preffred_classes'] as $names) {
+                   $message.= $names.',';
     }
-    '<p style = "margin:0 0 16px">Message :' . $message . '</p>
-            </div>
+    '</p>
+        <p>Regards,<br/>ENPEE Web Team.</p></div>
             </td>
             </tr>
             </tbody>
@@ -123,7 +124,7 @@ if ($_POST['name']) {
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $mail->Body = $message;
     // More headers
-    $address = "ashok@4blocksinc.com";
+    $address = "info@enpeekkl.com";
 
     $mail->AddAddress($address, "ENPEEKKL");
 
@@ -131,11 +132,7 @@ if ($_POST['name']) {
         echo "error";
 //        echo "<script> window.location = 'http://lemonandshadow.com/stocklink/startup-corner.html'; </script>";
     } else {
-        echo "<script> window.location = 'http://enpeekkl.com'; </script>";
-        echo "Thank you for applying";
-        echo '<script type="text/javascript">';
-        echo 'setTimeout(function () { swal("Sucess","Thnak You for Contacting Us, Our Executive will contact you soon!","success");';
-        echo '}, 1500);</script>';
+        echo json_encode('Thank You, Our Executive will contact you soon!');
         //print_r(error_get_last());
     }
 }

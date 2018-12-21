@@ -40,13 +40,13 @@
                                 <ul class="cform">
                                     <form action="contact-form.php" method="post" role="form" class="contact">
                                         <li class="half pr-15">
-                                            <input type="text" class="form-control" name="name" placeholder="Full Name">
+                                            <input type="text" class="form-control" name="name" placeholder="Full Name" required>
                                         </li>
                                         <li class="half pl-15">
-                                            <input type="text" class="form-control" name="email" placeholder="Email">
+                                            <input type="text" class="form-control" name="email" placeholder="Email" required>
                                         </li>
                                         <li class="half pr-15">
-                                            <input type="text" class="form-control" name="mobile" placeholder="Contact">
+                                            <input type="text" class="form-control" name="mobile" placeholder="Contact" required>
                                         </li>
                                         <li class="half pl-15">
                                             <select name="no_children" class="form-control">
@@ -59,7 +59,7 @@
                                         </li>
                                         <li class="half pr-15">
                                             <div class="multiselect">
-                                                <select id="contactform" class="form-control" name="preffred_classes[]" multiple>
+                                                <select id="contactform" class="form-control" name="preffred_classes[]" multiple required>
                                                     <option value="L.K.G">Pre-KG</option>
                                                     <option value="L.K.G">LKG</option>
                                                     <option value="L.K.G">UKG</option>
@@ -73,10 +73,10 @@
                                             </div>
                                         </li>
                                         <li class="half pl-15">
-                                            <input type="text" class="form-control" name="subject" placeholder="Subject">
+                                            <input type="text" class="form-control" name="subject" placeholder="Subject" required>
                                         </li>
                                         <li class="full">
-                                            <textarea class="textarea-control" name="message" placeholder="Message"></textarea>
+                                            <textarea class="textarea-control" name="message" placeholder="Message" required></textarea>
                                         </li>
                                         <li class="full">
                                             <input type="submit" value="Contact us" class="fsubmit">

@@ -18,7 +18,7 @@ if ($_POST['name']) {
 
     $subject = $_REQUEST['subject'];
 
-    $message = $_REQUEST['message'];
+    $message1 = $_REQUEST['message'];
 
     error_reporting(E_STRICT);
 
@@ -78,66 +78,91 @@ if ($_POST['name']) {
 
     $mail->SetFrom('noreply@enpeekkl.com', 'ENPEEKKL');
 
-    $mail->Subject = "Contact form submited" . date('d-m-y H:i:s');
+    $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
 
-    $message = "
+    $message = '<table border = "0" cellpadding = "0" cellspacing = "0" height = "100%" width = "100%">
+            <tbody>
+            <tr>
+            <td align = "center" valign = "top">
+            <span>
+            <font color = "#888888">
+            </font>
+            </span>
+            <span>
+            <font color = "#888888">
+            </font>
+            </span>
+            <table border = "0" cellpadding = "0" cellspacing = "0" width = "600" style = "background-color:#fdfdfd;border:1px solid #dcdcdc;border-radius:3px!important;">
+            <tbody>
+            <tr>
+            <td align = "center" valign = "top">
+            <table border = "0" cellpadding = "0" cellspacing = "0" width = "600" style = "background-color:#eee;border-radius:3px 3px 0 0!important;color:#ffffff;border-bottom:0;font-weight:bold;line-height:100%;vertical-align:middle;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif">
+            <tbody>
+            <tr>
+            <td style = "padding:36px 48px;display:block">
+            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://enpeekkl.com/images/logo-enpee-international-school.png" alt = "ENPEEKKL" style = "width:50%" /></h1>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            </td>
+            </tr>
+            <tr>
+            <td align = "center" valign = "top">
+            <table border = "0" cellpadding = "0" cellspacing = "0" width = "600">
+            <tbody>
+            <tr>
+            <td valign = "top" style = "background-color:#fdfdfd">
+            <table border = "0" cellpadding = "20" cellspacing = "0" width = "100%">
+            <tbody>
+            <tr>
+            <td valign = "top" style = "padding:48px">
+            <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
+            <h3 style = "margin:0 0 16px; text-align:center;">Enquiry form details.</h3>
+            <p style = "margin:0 0 16px">Name :' . $name . '</p>
+            <p style = "margin:0 0 16px">Email :' . $email . '</p>
+            <p style = "margin:0 0 16px">Phone Number :' . $mobile . '</p>
+            <p style = "margin:0 0 16px">Number of Children :' . $no_children . '</p>
+            <p style = "margin:0 0 16px">Preffred Programs :' ?>
+           
+            <?php
 
-    <table style='color:#000'>
-
-    <tr>
-
-        <td style='color:#000;'>Name</td>
-
-        <td style='color:#000;'>" . $name . "</td>
-
-    </tr>
-
-    <tr>
-
-        <td style='color:#000;'>Email</td>";
-
-    $message .= "<td style='color:#000;'>$email</td>";
-
-    $message .= "</tr>
-
-    <tr>
-
-        <td style='color:#000;'>Subject</td>
-
-        <td style='color:#000;'>" . $subject . "</td>
-
-    </tr>
-
-    <tr>
-
-        <td style='background:color:#000;'>Programs Preffred</td>";
-
-    foreach ($_POST['preffred_classes'] as $names) {
-
-        $message .= "<td style='background:#004976;color:#fff;'>$names</td>";
-
+                foreach ($_POST['preffred_classes'] as $names) {
+                   $message.= $names.',';
     }
+     $message.= '</p>
+        <p style = "margin:0 0 16px">Subject : ' . $subject . '</p>
+        <p style = "margin:0 0 16px">Message :' . $message1 . '</p>
+            <p>Regards,<br/>ENPEE Web Team.</p></div>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            </td>
+            </tr>
+            <tr>
+            <td align = "center" valign = "top">
+            <table border = "0" cellpadding = "0" cellspacing = "0" width = "600" style = "background-color:#cccccc;border-radius:3px 3px 0 0!important;color:#ffffff;border-bottom:0;font-weight:bold;width: 100%;line-height:100%;vertical-align:middle;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif">
+            <tbody>
+            </tbody>
+            </table>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            </td>
+            </tr>
 
-
-
-
-
-    $message .="</td></tr>
-
-    <tr>
-
-        <td style='color:#000;'>Message</td>";
-
-    $message .= "<td style='color:#000;'>$message</td>";
-
-
-
-    $message .="</td></tr>
-
-    </table>
-
-    ";
-
+            </tbody>
+            </table>
+            <span>
+            <font color = "#888888">
+            </font>
+            </span>
+            </td>
+            </tr>
+            </tbody>
+            </table>';
     // Always set content-type when sending HTML email
 
     $headers = "MIME-Version: 1.0" . "\r\n";
