@@ -74,20 +74,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
-<!--                    <div class="newsletter">
-                        <strong>Join our Newsletter</strong>
-                        <ul>
-                            <li>
-                                <input  type="text" placeholder="Your Name">
-                            </li>
-                            <li>
-                                <input  type="text" placeholder="Your Email">
-                            </li>
-                            <li>
-                                <input  type="submit" value="Subscribe">
-                            </li>
-                        </ul>
-                    </div>-->
+                    <!--                    <div class="newsletter">
+                                            <strong>Join our Newsletter</strong>
+                                            <ul>
+                                                <li>
+                                                    <input  type="text" placeholder="Your Name">
+                                                </li>
+                                                <li>
+                                                    <input  type="text" placeholder="Your Email">
+                                                </li>
+                                                <li>
+                                                    <input  type="submit" value="Subscribe">
+                                                </li>
+                                            </ul>
+                                        </div>-->
                 </div>
                 <div class="col-lg-5">
                     <div class="footer-social"> 
@@ -137,6 +137,8 @@
 <script src="js/jquery.prettyPhoto.js"></script> 
 <script src="js/isotope.min.js"></script> 
 <script src="js/custom.js"></script>
+<script src="js/sweetalert.min.js" type="text/javascript"></script>
+<script src="js/contactform.js" type="text/javascript"></script>
 <script src="js/common.js" type="text/javascript"></script>
 <script src="js/custom-popup.js" type="text/javascript"></script>
 <script src="js/jquery.multi-select.js" type="text/javascript"></script>

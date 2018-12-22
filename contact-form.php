@@ -1,7 +1,5 @@
 <?php
 
-
-
 if ($_POST['name']) {
 
 
@@ -45,9 +43,7 @@ if ($_POST['name']) {
 
 
     $mail->SMTPDebug = 1;                     // enables SMTP debug information (for testing)
-
     // 1 = errors and messages
-
     // 2 = messages only
 
 
@@ -123,14 +119,15 @@ if ($_POST['name']) {
             <p style = "margin:0 0 16px">Email :' . $email . '</p>
             <p style = "margin:0 0 16px">Phone Number :' . $mobile . '</p>
             <p style = "margin:0 0 16px">Number of Children :' . $no_children . '</p>
-            <p style = "margin:0 0 16px">Preffred Programs :' ?>
-           
-            <?php
+            <p style = "margin:0 0 16px">Preffred Programs :'
+    ?>
 
-                foreach ($_POST['preffred_classes'] as $names) {
-                   $message.= $names.',';
+    <?php
+
+    foreach ($_POST['preffred_classes'] as $names) {
+        $message.= $names . ',';
     }
-     $message.= '</p>
+    $message.= '</p>
         <p style = "margin:0 0 16px">Subject : ' . $subject . '</p>
         <p style = "margin:0 0 16px">Message :' . $message1 . '</p>
             <p style = "margin:0 0 16px">Regards,<br/>ENPEE Web Team.</p></div>
@@ -186,18 +183,13 @@ if ($_POST['name']) {
         echo "error";
 
 //        echo "<script> window.location = 'http://lemonandshadow.com/stocklink/startup-corner.html'; </script>";
-
     } else {
 
-        echo "<script> window.location = 'http://enpeekkl.com'; </script>";
-
-        echo "Thank you for applying";
+        $return = "OK";
+        echo json_encode($return);
 
         //print_r(error_get_last());
-
     }
-
 }
-
 ?>
 
