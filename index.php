@@ -466,43 +466,55 @@
                                     <h2>Enquiry Form</h2>
                                 </div>
                                 <ul>
-                                    <form action="enquiry-form.php" method="post" role="form" class="contact">                                    
-                                        <li>
-                                            <input type="text" class="form-control" name="name" placeholder="Your Name" aria-label="Your Name">
-                                        </li>
-                                        <li>
-                                            <input type="text" class="form-control" name="mobile" placeholder="Phone" aria-label="Phone">
-                                        </li>
-                                        <li>
-                                            <input type="text" class="form-control" name="email" placeholder="Email Address" aria-label="Email Address">
-                                        </li>
-                                        <li>
-                                            <select name="no_children" class="form-control">
-                                                <option value="0">No. of Children</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                            </select>
-                                        </li>
-                                        <li>
-                                            <div class="multiselect">
-                                                <select id="contactform" class="form-control" name="preffred_classes[]" multiple>
-                                                    <option value="Pre-KG">Pre-KG</option>
-                                                    <option value="L.K.G">L.K.G</option>
-                                                    <option value="U.K.G">U.K.G</option>
-                                                    <option value="I STD">I STD</option>
-                                                    <option value="II STD">II STD</option>
-                                                    <option value="III STD ">III STD </option>
-                                                    <option value="IV STD">IV STD</option>
-                                                    <option value="V STD">V STD</option>
+                                    <form role="form" class="enquiry">  
+                                        <div class="form-group">
+                                            <li>
+                                                <input type="text" class="form-control" name="name" placeholder="Your Name" required aria-label="Your Name">
+                                            </li>
+                                        </div>
+                                        <div class="form-group">
+                                            <li>
+                                                <input type="text" class="form-control" name="mobile" placeholder="Phone" required aria-label="Phone">
+                                            </li>
+                                        </div>
+                                        <div class="form-group">
+                                            <li>
+                                                <input type="text" class="form-control" name="email" placeholder="Email Address" required aria-label="Email Address">
+                                            </li>
+                                        </div>
+                                        <div class="form-group">
+                                            <li>
+                                                <select name="no_children" class="form-control">
+                                                    <option value="0">No. of Children</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
                                                 </select>
+                                            </li>
+                                        </div>
+                                        <div class="form-group">
+                                            <li>
+                                                <div class="multiselect">
+                                                    <select id="contactform" class="form-control" name="preffred_classes[]" multiple>
+                                                        <option value="Pre-KG">Pre-KG</option>
+                                                        <option value="L.K.G">L.K.G</option>
+                                                        <option value="U.K.G">U.K.G</option>
+                                                        <option value="I STD">I STD</option>
+                                                        <option value="II STD">II STD</option>
+                                                        <option value="III STD ">III STD </option>
+                                                        <option value="IV STD">IV STD</option>
+                                                        <option value="V STD">V STD</option>
+                                                    </select>
 
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <input type="submit" class="fsubmit" value="Join us Now">
-                                        </li>
+                                                </div>
+                                            </li>
+                                        </div>
+                                        <div class="form-group">
+                                            <li>
+                                                <input type="submit" class="fsubmit" value="Join us Now">
+                                            </li>
+                                        </div>
                                     </form>
 
                                 </ul>

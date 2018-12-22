@@ -17,7 +17,6 @@
     <link href="css/common.css" rel="stylesheet" type="text/css"/>
     <link href="css/style_menu.css" rel="stylesheet" type="text/css"/>
     <link href="css/example-styles.css" rel="stylesheet" type="text/css"/>
-    <link href="css/sweetalert.min.js" rel="stylesheet" type="text/css"/>
     <link href="css/sweetalert.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
     <!-- CSS FILES End -->

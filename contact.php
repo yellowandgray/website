@@ -21,11 +21,11 @@
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-06.jpg) no-repeat;">
                 <div class="container">
                     <h1>Contact Us</h1>
-<!--                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#"> Contact </a></li>
-
-                    </ul>-->
+                    <!--                    <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#"> Contact </a></li>
+                    
+                                        </ul>-->
                 </div>
             </section>
             <!--Inner Header End--> 
@@ -38,49 +38,63 @@
                                 <h3>Feel Free to Contact us</h3>
 
                                 <ul class="cform">
-                                    <form action="contact-form.php" method="post" role="form" class="contact">
-                                        <li class="half pr-15">
-                                            <input type="text" class="form-control" name="name" placeholder="Full Name" required>
-                                        </li>
-                                        <li class="half pl-15">
-                                            <input type="text" class="form-control" name="email" placeholder="Email" required>
-                                        </li>
-                                        <li class="half pr-15">
-                                            <input type="text" class="form-control" name="mobile" placeholder="Contact" required>
-                                        </li>
-                                        <li class="half pl-15">
-                                            <select name="no_children" class="form-control">
-                                                <option value="0">No. of Children</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                            </select>
-                                        </li>
-                                        <li class="half pr-15">
-                                            <div class="multiselect">
-                                                <select id="contactform" class="form-control" name="preffred_classes[]" multiple required>
-                                                    <option value="L.K.G">Pre-KG</option>
-                                                    <option value="L.K.G">LKG</option>
-                                                    <option value="L.K.G">UKG</option>
-                                                    <option value="I STD">I STD</option>
-                                                    <option value="II STD">II STD</option>
-                                                    <option value="III STD ">III STD </option>
-                                                    <option value="IV STD">IV STD</option>
-                                                    <option value="V STD">V STD</option>
-                                                </select>
-
+                                    <form role="form" class="contact">
+                                        <div class="form-group">
+                                            <li class="half pr-15">
+                                                <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+                                            </li>
+                                        </div>
+                                        <div class="form-group">
+                                            <li class="half pl-15">
+                                                <input type="text" class="form-control" name="email" placeholder="Email" required>
+                                            </li>
                                             </div>
-                                        </li>
-                                        <li class="half pl-15">
-                                            <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                                        </li>
-                                        <li class="full">
-                                            <textarea class="textarea-control" name="message" placeholder="Message" required></textarea>
-                                        </li>
-                                        <li class="full">
-                                            <input type="submit" value="Contact us" class="fsubmit">
-                                        </li>
+                                        <div class="form-group">
+                                            <li class="half pr-15">
+                                                <input type="text" class="form-control" name="mobile" placeholder="Contact" required>
+                                            </li>
+                                            </div>
+                                        <div class="form-group">
+                                            <li class="half pl-15">
+                                                <select name="no_children" class="form-control">
+                                                    <option value="0">No. of Children</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </li>
+                                            </div>
+                                        <div class="form-group">
+                                            <li class="half pr-15">
+                                                <div class="multiselect">
+                                                    <select id="contactform" class="form-control" name="preffred_classes[]" multiple required>
+                                                        <option value="L.K.G">Pre-KG</option>
+                                                        <option value="L.K.G">LKG</option>
+                                                        <option value="L.K.G">UKG</option>
+                                                        <option value="I STD">I STD</option>
+                                                        <option value="II STD">II STD</option>
+                                                        <option value="III STD ">III STD </option>
+                                                        <option value="IV STD">IV STD</option>
+                                                        <option value="V STD">V STD</option>
+                                                    </select>
+
+                                                </div>
+                                            </li>
+                                            </div>
+                                        <div class="form-group">
+                                            <li class="half pl-15">
+                                                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                                            </li>
+                                            </div>
+                                        <div class="form-group">
+                                            <li class="full">
+                                                <textarea class="textarea-control" name="message" placeholder="Message" required></textarea>
+                                            </li>
+                                        </div>
+                                            <li class="full">
+                                                <input type="submit" value="Contact us" class="fsubmit">
+                                            </li>
                                     </form>
                                 </ul>
 
@@ -111,13 +125,13 @@
                         </div>
                         <!--Contact Info End--> 
                         <!--Contact Info Start-->
-<!--                        <div class="col-md-4 text-right">
-                            <div class="c-info">
-                                <h6>Contact:</h6>
-                                <p><strong>Phone:</strong> +91 93840 10241</p>
-                                <p> +91 93840 10242</p>
-                            </div>
-                        </div>-->
+                        <!--                        <div class="col-md-4 text-right">
+                                                    <div class="c-info">
+                                                        <h6>Contact:</h6>
+                                                        <p><strong>Phone:</strong> +91 93840 10241</p>
+                                                        <p> +91 93840 10242</p>
+                                                    </div>
+                                                </div>-->
                         <!--Contact Info End--> 
                         <!--Contact Info Start-->
                         <div class="col-md-4 text-right">
