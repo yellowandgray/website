@@ -178,7 +178,8 @@ section {
     height: 390px;
 }
 #services {
-    background: url(../images/services-background.jpg);
+/*    background: url(../images/services-background.jpg);*/
+    background: #eee;
     background-size: cover;
 }
 
