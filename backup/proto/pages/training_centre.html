@@ -1,0 +1,32 @@
+<md-content layout="row" layout-align="end center" class="md-padding">
+    <md-button class="md-raised md-accent" ng-click="openAddedTrainingCentre($event);">Add Center</md-button>
+</md-content>
+<md-content layout="row" class="md-padding" ng-if="list.length > 0">
+    <md-list flex>
+        <md-list-item class="md-3-line" ng-repeat="data in record">
+            <img ng-src="{{data.image}}" class="md-avatar" alt="image" />
+            <div class="md-list-item-text" layout="column">
+                <h3>{{data.name}}</h3>
+                <h4>{{data.address}}</h4>
+                <p>{{data.seats}} Seats</p>
+            </div>
+            <md-button class="md-secondary md-icon-button" ng-click="detailView(data.ID);">
+                <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_remove_red_eye_48px.svg"></md-icon>
+                <md-tooltip>View</md-tooltip>
+            </md-button>
+            <md-button class="md-secondary md-icon-button" ng-click="openAddedTrainingCentre($event);">
+                <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_mode_edit_48px.svg"></md-icon>
+                <md-tooltip>Edit</md-tooltip>
+            </md-button>
+            <md-button class="md-secondary md-icon-button" ng-click="block(data.ID);">
+                <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_block_48px.svg"></md-icon>
+                <md-tooltip>Block</md-tooltip>
+            </md-button>
+            <md-divider ng-if="!$last"></md-divider>
+        </md-list-item>
+    </md-list>
+    <md-collection-pagination collection="list" paginated-collection="record" per-page="5"></md-collection-pagination>
+</md-content>
+<md-content layout="row" class="md-padding" ng-if="list.length === 0">
+    No centers found
+</md-content>

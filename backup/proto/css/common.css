@@ -1,0 +1,23 @@
+.pointer {
+    cursor: pointer;
+}
+
+*, html, body {
+    outline: 0;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+md-menu-content {
+    max-height: 100%;
+}

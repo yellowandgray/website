@@ -1,0 +1,16 @@
+<div flex="100" class="md-padding">
+    <form name="replyForm" ng-submit="submitForm();">
+        <md-contant layout="column">
+            <md-input-container>
+                <label>Message</label>
+                <textarea name="address" ng-model="form.address" rows="3" required></textarea>
+                <div ng-messages="replyForm.address.$error">
+                    <div ng-message="required">Please enter address.</div>
+                </div>
+            </md-input-container>
+            <center>
+                <md-button type="submit" class="md-primary md-raised" ng-disabled="replyForm.$invalid || loading === true">Reply</md-button>
+            </center>
+        </md-contant>
+    </form>
+</div>

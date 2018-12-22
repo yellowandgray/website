@@ -1,0 +1,40 @@
+<md-dialog aria-label="Employee" flex="60">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>{{employee.firstname}}'s Injection Certificate</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon md-svg-src="img/icons/ic_close_48px.svg" aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+        <div class="md-dialog-content" layout="column">
+            <div flex="100" ng-if="employee.injection_certificate && employee.injection_certificate !== ''">
+                <img class="full-width" ng-src="{{employee.injection_certificate}}" alt="certificate" />
+            </div>
+            <div layout="row" layout-align="start center" ng-if="$root.login.role === 'admin' && (!employee.verified || employee.verified === '' || employee.verified == 0)">
+                <md-input-container class="md-block">
+                    <lf-ng-md-file-input lf-files="injection.image" name="image" accept="image/*" preview lf-placeholder="Upload injection certificate"></lf-ng-md-file-input>
+                </md-input-container>
+                <md-button class="md-accent md-raised" ng-disabled="!injection || loading === true" ng-click="saveInjectionCertificate(employee.ID);">{{employee.injection_certificate|injectionCertificateBtnLabel}}</md-button>
+            </div>
+            <div layout="row" layout-align="start center" ng-if="employee.verified && employee.verified !== '' && employee.verified == 1">
+                Verified by Super Admin
+            </div>
+            <div layout="row" layout-align="start center" ng-if="employee.rejected && employee.rejected !== '' && employee.rejected == 1">
+                Rejected by Super Admin for {{employee.rejected_reason}}
+            </div>
+        </div>
+        <div layout="row" layout-sm="column" layout-align="start center" layout-wrap md-theme="forms" ng-if="$root.login.role === 'superadmin' && (!employee.verified || employee.verified === '' || employee.verified == 0)">
+            <md-button class="md-raised" ng-click="verifyInjectionCertificate(employee.ID);">Verify</md-button>
+            <md-button class="md-raised" ng-click="rejectInjectionCertificate(employee.ID);">Reject</md-button>
+            <div ng-if="reject_certificate == 1">
+                <md-input-container flex="50" class="no-margin no-error-msg" md-no-float>
+                    <input placeholder="Reject reason" ng-model="rejected_reason" />
+                </md-input-container>
+                <md-button type="submit" class="md-primary md-raised" ng-click="confirmReject();">Submit</md-button>
+            </div>
+        </div>
+    </md-dialog-content>
+</md-dialog>

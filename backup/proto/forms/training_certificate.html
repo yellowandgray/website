@@ -1,0 +1,18 @@
+<md-dialog aria-label="Employee" flex="33">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>{{employee.firstname}}'s Training Certificate</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon md-svg-src="img/icons/ic_close_48px.svg" aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+        <div class="md-dialog-content" layout="row">
+            <div flex="100" ng-if="employee.training_certificate && employee.training_certificate !== ''">
+                <img class="full-width" ng-src="{{employee.training_certificate}}" alt="certificate" />
+            </div>
+        </div>
+    </md-dialog-content>
+</md-dialog>

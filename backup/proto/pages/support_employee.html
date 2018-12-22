@@ -1,0 +1,60 @@
+<div layout="row">
+    <div flex="50" md-theme="forms">
+        <form name="supportemployeeForm" ng-submit="submitForm();" class="full-width md-padding" md-theme="forms">
+            <md-contant layout="column">
+                <md-input-container>
+                    <label>Title</label>
+                    <input name="title" ng-model="user.Title" required>
+                    <div ng-messages="supportemployeeForm.title.$error">
+                        <div ng-message="required">Please enter title.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container>
+                    <label>Subject</label>
+                    <input name="subject" ng-model="user.subject" required>
+                    <div ng-messages="supportemployeeForm.subject.$error">
+                        <div ng-message="required">Please enter subject.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container>
+                    <label>Message</label>
+                    <textarea name="address" ng-model="form.address" rows="3" required></textarea>
+                    <div ng-messages="supportemployeeForm.address.$error">
+                        <div ng-message="required">Please enter address.</div>
+                    </div>
+                </md-input-container>
+                <center><md-button type="submit" class="md-primary md-raised" ng-disabled="supportemployeeForm.$invalid || loading === true">Submit</md-button></center>
+            </md-contant>
+        </form>
+    </div>
+    <div flex="50" md-theme="forms">
+        <md-content layout="column" class="md-padding">
+            <md-input-container class="md-block">
+                <label>Search Location</label>
+                <md-icon md-svg-icon="img/icons/ic_search_48px.svg" aria-label="label"></md-icon>
+                <input ng-model="" ng-change="" />
+            </md-input-container>
+            <table class="schedule_view">
+                <tbody>
+                    <tr>
+                        <th>Date</th>
+                        <th>Support</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                <md-button class="md-secondary md-icon-button" ng-click="openSupportEmployeeEdit($event);">
+                    <md-icon aria-label="Chat" md-svg-icon="img/icons/note-interface-symbol.svg"></md-icon>
+                    <md-tooltip></md-tooltip>
+                </md-button>
+                </td>
+                </tr>
+                </tbody>
+            </table>
+        </md-content>
+    </div>
+</div>

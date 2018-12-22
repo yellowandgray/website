@@ -1,0 +1,116 @@
+<div layout="row" md-theme="forms">
+    <md-tabs md-dynamic-height flex>
+        <md-tab label="New">
+            <md-content layout="row" class="md-padding" ng-if="list.new.length > 0">
+                <md-list flex>
+                    <md-list-item class="md-3-line" ng-repeat="data in newcom">
+                        <div class="md-list-item-text" layout="column">
+                            <h3>{{data.name}} - {{data.training_staffs}} staffs</h3>
+                            <h4>{{data.address}}</h4>
+                            <p>{{data.sector| uppercase}}</p>
+                        </div>
+                        <md-button class="md-secondary md-icon-button" ng-click="activate(data.ID);">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_check_circle_48px.svg"></md-icon>
+                            <md-tooltip>Activate</md-tooltip>
+                        </md-button>
+                        <md-button class="md-secondary md-icon-button" ng-click="reject(data.ID);">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_cancel_48px.svg"></md-icon>
+                            <md-tooltip>Reject</md-tooltip>
+                        </md-button>
+                        <md-button class="md-secondary md-icon-button" ng-click="detailView(data.ID);">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_remove_red_eye_48px.svg"></md-icon>
+                            <md-tooltip>View</md-tooltip>
+                        </md-button>
+                        <md-button class="md-secondary md-icon-button" ng-click="block(data.ID);">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_block_48px.svg"></md-icon>
+                            <md-tooltip>Block</md-tooltip>
+                        </md-button>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-list>
+                <md-collection-pagination collection="list.new" paginated-collection="newcom" per-page="5"></md-collection-pagination>
+            </md-content>
+            <md-content layout="row" class="md-padding" ng-if="list.new.length === 0">
+                No new list found
+            </md-content>
+        </md-tab>
+        <md-tab label="Active">
+            <md-content layout="row" class="md-padding" ng-if="list.active.length > 0">
+                <md-list flex>
+                    <md-list-item class="md-3-line" ng-repeat="data in active">
+                        <div class="md-list-item-text" layout="column">
+                            <h3>{{data.name}} - {{data.training_staffs}} staffs</h3>
+                            <h4>{{data.address}}</h4>
+                            <p>{{data.sector| uppercase}}</p>
+                        </div>
+                        <md-button class="md-secondary md-icon-button" ng-click="detailView(data.ID);">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_remove_red_eye_48px.svg"></md-icon>
+                            <md-tooltip>View</md-tooltip>
+                        </md-button>
+                        <md-button class="md-secondary md-icon-button" ng-click="block(data.ID);">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_block_48px.svg"></md-icon>
+                            <md-tooltip>Block</md-tooltip>
+                        </md-button>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-list>
+                <md-collection-pagination collection="list.active" paginated-collection="active" per-page="5"></md-collection-pagination>
+            </md-content>
+            <md-content layout="row" class="md-padding" ng-if="list.active.length === 0">
+                No active list found
+            </md-content>
+        </md-tab>
+        <md-tab label="Rejected">
+            <md-content layout="row" class="md-padding" ng-if="list.rejected.length > 0">
+                <md-list flex>
+                    <md-list-item class="md-3-line" ng-repeat="data in rejected">
+                        <div class="md-list-item-text" layout="column">
+                            <h3>{{data.name}} rejected for {{data.reject_reason}}</h3>
+                            <h4>{{data.address}}</h4>
+                            <p>{{data.sector| uppercase}}</p>
+                        </div>
+                        <md-button class="md-secondary md-icon-button" ng-click="activate(data.ID);">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_check_circle_48px.svg"></md-icon>
+                            <md-tooltip>Activate</md-tooltip>
+                        </md-button>
+                        <md-button class="md-secondary md-icon-button" ng-click="detailView(data.ID);">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_remove_red_eye_48px.svg"></md-icon>
+                            <md-tooltip>View</md-tooltip>
+                        </md-button>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-list>
+                <md-collection-pagination collection="list.rejected" paginated-collection="rejected" per-page="5"></md-collection-pagination>
+            </md-content>
+            <md-content layout="row" class="md-padding" ng-if="list.rejected.length === 0">
+                No rejected list found
+            </md-content>
+        </md-tab>
+        <md-tab label="Blocked">
+            <md-content layout="row" class="md-padding" ng-if="list.blocked.length > 0">
+                <md-list flex>
+                    <md-list-item class="md-3-line" ng-repeat="data in blocked">
+                        <div class="md-list-item-text" layout="column">
+                            <h3>{{data.name}} blocked for {{data.block_reason}}</h3>
+                            <h4>{{data.address}}</h4>
+                            <p>{{data.sector| uppercase}}</p>
+                        </div>
+                        <md-button class="md-secondary md-icon-button" ng-click="activate(data.ID);">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_check_circle_48px.svg"></md-icon>
+                            <md-tooltip>Activate</md-tooltip>
+                        </md-button>
+                        <md-button class="md-secondary md-icon-button" ng-click="detailView(data.ID);">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_remove_red_eye_48px.svg"></md-icon>
+                            <md-tooltip>View</md-tooltip>
+                        </md-button>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-list>
+                <md-collection-pagination collection="list.blocked" paginated-collection="blocked" per-page="5"></md-collection-pagination>
+            </md-content>
+            <md-content layout="row" class="md-padding" ng-if="list.blocked.length === 0">
+                No blocked list found
+            </md-content>
+        </md-tab>
+    </md-tabs>
+</div>

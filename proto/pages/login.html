@@ -1,0 +1,34 @@
+<md-content class="background-register height-vh">
+    <div layout="column" layout-align="center center">
+        <h1 class="blue-color">WELCOME TO MAHIS WEB PORTAL</h1>
+    </div>
+    <div layout="row" layout-align="center center" class="md-padding m-t-40-px">
+        <div flex="30" layout="column" layout-align="start center" class="md-whiteframe-12dp form-background" flex-xs="100" flex-sm="100">
+            <form name="loginForm" ng-submit="submitForm();" class="full-width md-padding" md-theme="forms">
+                <md-input-container class="md-block">
+                    <label>User Id</label>
+                    <input required name="user" type="text" ng-model="form.username" md-autofocus />
+                    <div ng-messages="loginForm.user.$error">
+                        <div ng-message="required">Please enter user id.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Password</label>
+                    <input required name="password" type="password" ng-model="form.password" />
+                    <div ng-messages="loginForm.password.$error">
+                        <div ng-message="required">Please enter Password.</div>
+                    </div>
+                </md-input-container>
+                <center><md-button layout-align="center center" type="submit" class="md-primary md-raised" ng-disabled="loginForm.$invalid || loading === true">Login</md-button>
+                    <div ><a class="color-gold" ng-href="#">Forgot Password?</a></div><br/>
+                    <div ><a class="color-gold" ng-href="#">Create New Account</a></div></center>
+            </form>
+            <md-progress-linear ng-if="loading === true" md-mode="indeterminate" class="md-accent"></md-progress-linear>
+        </div>
+    </div>
+    <div layout="row" layout-align="center center" class="full-width">
+        <md-button ng-click="$root.changePage('home');" class="md-primary md-raised">
+            <md-icon md-svg-src="img/icons/ic_home_48px.svg" aria-label="home"></md-icon> Back to Home
+        </md-button>
+    </div>
+</md-content>

@@ -1,0 +1,64 @@
+<md-content class="md-padding" layout="row" layout-sm="column" layout-xs="column">
+    <div flex="100">
+        <h2>Employee Full Details</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Full Name</th>
+                    <th>: </th>
+                    <td>{{form.title}} {{form.firstname}} {{form.middlename}} {{form.lastname}}</td>
+                </tr>
+                <tr>
+                    <th>Date of Birth</th>
+                    <th>: </th>
+                    <td>{{form.dob}}</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <th>: </th>
+                    <td>{{form.address1}} {{form.address2}}</td>
+                </tr>
+                <tr>
+                    <th>Mobile Number</th>
+                    <th>: </th>
+                    <td>{{form.phone}}</td>
+                </tr>
+                <tr>
+                    <th>Telephone No</th>
+                    <th>: </th>
+                    <td>{{form.telephone}}</td>
+                </tr>
+                <tr>
+                    <th>Country of Residence</th>
+                    <th>: </th>
+                    <td>{{form.residence| uppercase}}</td>
+                </tr>
+                <tr>
+                    <th>Nationality</th>
+                    <th>: </th>
+                    <td>{{form.nationality| uppercase}}</td>
+                </tr>
+                <tr>
+                    <th>Passport No.</th>
+                    <th>: </th>
+                    <td>{{form.passportnumber}}</td>
+                </tr>
+                <tr>
+                    <th>Passport Expiry Date</th>
+                    <th>: </th>
+                    <td>{{form.passportexpire}}</td>
+                </tr>
+                <tr>
+                    <th>Upload Passport</th>
+                    <th>: </th>
+                    <td><img ng-src="{{form.passport}}" class="preview-register" alt="image"/></td>
+                </tr>
+                <tr>
+                    <th>Upload Profile</th>
+                    <th>: </th>
+                    <td><img ng-src="{{form.image}}" class="preview-register" alt="image"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</md-content> 

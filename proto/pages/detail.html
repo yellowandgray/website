@@ -1,0 +1,122 @@
+<div layout="row" layout-align="start center" class="md-padding">
+    <div flex="50">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Name of the Company</th>
+                    <th>: </th>
+                    <td>{{data.name}}</td>
+                </tr>
+                <tr>
+                    <th>Registration Number</th>
+                    <th>: </th>
+                    <td>{{data.reg_number}}</td>
+                </tr>
+                <tr>
+                    <th>Sector</th>
+                    <th>: </th>
+                    <td>{{data.sector| uppercase}}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <th>: </th>
+                    <td>{{data.email}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div flex="50">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Phone</th>
+                    <th>: </th>
+                    <td>{{data.phone}}</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <th>: </th>
+                    <td>{{data.address}}</td>
+                </tr>
+                <tr>
+                    <th>Number of Staffs for Training</th>
+                    <th>: </th>
+                    <td>{{data.training_staffs}}</td>
+                </tr>
+                <tr>
+                    <th>Employer Name</th>
+                    <th>: </th>
+                    <td>{{data.employer}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div layout="column" md-theme="forms" ng-if="data.employees && data.employees.length > 0">
+    <div class="md-padding" layout="start center">
+        <h3>Employee Details</h3>
+    </div>
+    <md-tabs md-dynamic-height flex>
+        <md-tab label="Verified">
+            <md-list flex>
+                <md-content layout="column" ng-cloak class="md-padding">
+                    <md-list-item class="md-3-line" ng-repeat="emp in employees" ng-if="emp.verified && emp.verified == 1">
+                        <img ng-src="{{emp.image}}" class="md-avatar" alt="image" md-badge="{{emp.paid|paidtext}}" md-badge-fill="{{emp.paid|paidbackground}}" />
+                        <div class="md-list-item-text" layout="column">
+                            <h3>{{emp.firstname}} born on {{emp.dob}}</h3>
+                            <h4>{{emp.address1}} {{emp.address2}}</h4>
+                            <p>{{emp.phone}} - {{emp.email}}</p>
+                        </div>
+                        <md-button class="md-secondary md-icon-button" ng-click="openDetails($event);">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_info_outline_48px.svg"></md-icon>
+                            <md-tooltip>More Information</md-tooltip>
+                        </md-button>
+                        <md-button class="md-secondary md-icon-button" ng-click="openInjectionCertificate($event, data.ID, emp.ID);" ng-if="emp.injection_certificate && emp.injection_certificate !== ''">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/document.svg"></md-icon>
+                            <md-tooltip>Injection</md-tooltip>
+                        </md-button>
+                        <md-button class="md-secondary md-icon-button" ng-click="openTrainingCertificate($event);" ng-if="emp.training_certificate && emp.training_certificate !== ''">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/diploma.svg"></md-icon>
+                            <md-tooltip>Training Certificate</md-tooltip>
+                        </md-button>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-collection-pagination collection="data.employees" paginated-collection="employees" per-page="5"></md-collection-pagination>
+                </md-content>
+            </md-list>
+        </md-tab>
+        <md-tab label="Unverified">
+            <md-list flex>
+                <md-content layout="column" ng-cloak class="md-padding">
+                    <md-list-item class="md-3-line" ng-repeat="emp in employees" ng-if="!emp.verified || emp.verified == 0">
+                        <img ng-src="{{emp.image}}" class="md-avatar" alt="image" md-badge="{{emp.paid|paidtext}}" md-badge-fill="{{emp.paid|paidbackground}}" />
+                        <div class="md-list-item-text" layout="column">
+                            <h3>{{emp.firstname}} born on {{emp.dob}}</h3>
+                            <h4>{{emp.address1}} {{emp.address2}}</h4>
+                            <p>{{emp.phone}} - {{emp.email}}</p>
+                        </div>
+                        <md-button class="md-secondary md-icon-button" ng-click="openEmployeeDetails($event);">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_info_outline_48px.svg"></md-icon>
+                            <md-tooltip>More Information</md-tooltip>
+                        </md-button>
+                        <md-button class="md-secondary md-icon-button" ng-click="openInjectionCertificate($event, data.ID, emp.ID);" ng-if="emp.injection_certificate && emp.injection_certificate !== ''">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/document.svg"></md-icon>
+                            <md-tooltip>Injection</md-tooltip>
+                        </md-button>
+                        <md-button class="md-secondary md-icon-button" ng-click="openTrainingCertificate($event);" ng-if="emp.training_certificate && emp.training_certificate !== ''">
+                            <md-icon aria-label="Chat" md-svg-icon="img/icons/diploma.svg"></md-icon>
+                            <md-tooltip>Training Certificate</md-tooltip>
+                        </md-button>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-collection-pagination collection="data.employees" paginated-collection="employees" per-page="5"></md-collection-pagination>
+                </md-content>
+            </md-list>
+        </md-tab>
+    </md-tabs>
+</div>
+<div layout="column" ng-if="!data.employees || data.employees.length === 0">
+    <div class="md-padding" layout="start center">
+        <h3>No employees registered yet</h3>
+    </div>
+</div>

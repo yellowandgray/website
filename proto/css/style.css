@@ -1,0 +1,161 @@
+.selectHeader .select-header-searchbox {
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    padding: 0; 
+}
+
+.selectHeader .select-select-header {
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12);
+    padding-left: 10.667px;
+    height: 48px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: auto; 
+}
+
+.selectHeader md-content._md {
+    max-height: 240px; 
+}
+
+th{
+    text-align:left;
+}
+
+.custom-toolbar{
+    height: 100px !important;
+    max-height: 100px !important;
+    border-bottom: 2px solid #e4cd86;
+    box-shadow: 0 0px 0px -4px rgba(0,0,0,.2), 0 0px 8px 3px rgba(0,0,0,.14), 0 5px 5px 0px rgba(0,0,0,.12);
+}
+
+.no-shadow{
+    box-shadow: none;
+}
+
+.about_image{
+    width: 165px;
+}
+
+.color-gold{
+    color:#cc9009 !important;
+}
+
+.color-gold:hover{
+    color:#cc9009 !important;
+}
+.color-gold:active{
+    color:#cc9009 !important;
+}
+.color-gold:visited{
+    color:#cc9009 !important;
+}
+.background-register{
+    background: url(../img/mahis-background1.png);
+    background-repeat: no-repeat;
+    background-size: 100%; 
+}
+.height-vh{
+    height: 100vh;
+}
+.form-background{
+    background: #fff;
+    border-radius: 3px;
+    margin-top: 60px;
+}
+.m-t-20-px{
+    margin-top: 20px;
+}
+.m-t-40-px{
+    margin-top: 40px;
+}
+.inputdemoErrors .inputErrorsApp {
+    min-height: 48px; }
+
+.inputdemoErrors md-input-container > p {
+    font-size: 0.8em;
+    text-align: left;
+    width: 100%;
+}
+
+ng-map {
+    width: 100%;
+    height: 35vh;
+}
+.passport-date{
+    margin-top:12px;
+}
+.vision-icon{
+    height: 100px;
+    width: 100%;
+    color: #ae8e3e;
+}
+.mission-icon{
+    height: 100px;
+    width: 100%;
+    color: #ae8e3e;
+    padding:50px;
+}
+.about_center{
+    text-align:center;
+}
+.md-datepicker-input-container{
+    width:50%;
+}
+.payment_button{
+    margin-top:20%;
+}
+
+.md-badge {
+    z-index: 9;
+    left: 30px!important;
+    top: 50px!important;
+}
+
+.preview-register{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.right-download{
+    float: right;
+}
+
+.no-error-msg .md-errors-spacer {
+    height: 0;
+    min-height: 0;
+}.blue-color{
+    color: #008bb7;
+}
+
+.schedule_view {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.schedule_view td {
+    border: 1px solid #0897be;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+.schedule_view th {
+    border: 1px solid #0897be;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+
+.logo-size {
+    margin-top: 30px;
+    width: 90px;
+}
+
+.person-size {
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,376 @@
+<div ng-cloak class="md-padding">
+    <md-content md-theme="forms">
+        <md-tabs md-selected="tabindex" md-dynamic-height md-border-bottom>
+            <md-tab label="step-1">
+                <md-content class="md-padding">
+                    <form name="employeeForm" ng-submit="submitExployeeStepOne();">
+                        <md-content layout-gt-sm="row" layout-padding>
+                            <md-input-container flex="15">
+                                <label>Title</label>
+                                <md-select ng-model="form.title">
+                                    <md-option value="mr"><em>Mr.</em></md-option>
+                                    <md-option value="ms"><em>Mrs.</em></md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container flex="25">
+                                <label>First Name</label>
+                                <input ng-model="form.firstname" name="fistname" type="text" required/>
+                                <div ng-messages="centerForm.fistname.$error">
+                                    <div ng-message="required">Please enter fist name.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container flex="20">
+                                <label>Middle Name</label>
+                                <input ng-model="form.middlename" name="middlename" type="text" required/>
+                                <div ng-messages="centerForm.middlename.$error">
+                                    <div ng-message="required">Please enter middle name.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container flex="25">
+                                <label>Last Name</label>
+                                <input ng-model="form.lastname" name="lastname" type="text" required/>
+                                <div ng-messages="centerForm.lastname.$error">
+                                    <div ng-message="required">Please enter last name.</div>
+                                </div>
+                            </md-input-container>
+                        </md-content>
+                        <md-content layout-gt-sm="row" layout-padding>
+                            <md-input-container flex="50">
+                                <label>Gender</label>
+                                <md-select ng-model="form.genter" required>
+                                    <md-option value="male"><em>Male</em></md-option>
+                                    <md-option value="female"><em>Female</em></md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container flex="50">
+                                <md-datepicker ng-model="form.dob" name="dob" md-placeholder="Date of birth" md-open-on-focus required></md-datepicker>
+                                <div ng-messages="centerForm.dob.$error">
+                                    <div ng-message="required">Please enter passport valid date.</div>
+                                </div>
+                            </md-input-container>
+                        </md-content>
+                        <md-content layout="row" layout-padding>
+                            <md-input-container class="md-block" flex="50">
+                                <label>Address 1</label>
+                                <input ng-model="form.address1" name="address1" type="text" required/>
+                                <div ng-messages="centerForm.address1.$error">
+                                    <div ng-message="required">Please enter address 1.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex="50">
+                                <label>Address 2</label>
+                                <input ng-model="form.address2" name="address2" type="text" required/>
+                                <div ng-messages="centerForm.address2.$error">
+                                    <div ng-message="required">Please enter address 2.</div>
+                                </div>
+                            </md-input-container>
+                        </md-content>
+                        <md-content layout-gt-sm="row" layout-padding>
+                            <md-input-container flex="25">
+                                <label>Country</label>
+                                <md-select ng-model="form.country" name="" md-on-close="clearSearchTerm()" data-md-container-class="selectHeader" required>
+                                    <md-select-header class="select-select-header">
+                                        <input ng-model="searchTerm" type="search" name="country" onkeydown="mdSelectOnKeyDownOverride(event)" placeholder="Search for a country" class="select-header-searchbox md-text" />
+                                    </md-select-header>
+                                    <md-optgroup label="country">
+                                        <md-option ng-repeat="data in country| filter: searchTerm" ng-value="data.value">{{data.name}}</md-option>
+                                    </md-optgroup>
+                                </md-select>
+                                <div ng-messages="centerForm.country.$error">
+                                    <div ng-message="required">Please enter country.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container flex="25">
+                                <label>State</label>
+                                <md-select ng-model="form.state" name="" md-on-close="clearSearchTerm()" data-md-container-class="selectHeader" required>
+                                    <md-select-header class="select-select-header">
+                                        <input ng-model="searchTerm" name="state" type="search" onkeydown="mdSelectOnKeyDownOverride(event)" placeholder="Search for a state" class="select-header-searchbox md-text" />
+                                    </md-select-header>
+                                    <md-optgroup label="state">
+                                        <md-option ng-repeat="data in state| filter: searchTerm" ng-value="data.value">{{data.name}}</md-option>
+                                    </md-optgroup>
+                                </md-select>
+                                <div ng-messages="centerForm.state.$error">
+                                    <div ng-message="required">Please enter state.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container flex="25">
+                                <label>City</label>
+                                <md-select ng-model="form.city" name="" md-on-close="clearSearchTerm()" data-md-container-class="selectHeader" required>
+                                    <md-select-header class="select-select-header">
+                                        <input ng-model="searchTerm" name="city" type="search" onkeydown="mdSelectOnKeyDownOverride(event)" placeholder="Search for a city" class="select-header-searchbox md-text" />
+                                    </md-select-header>
+                                    <md-optgroup label="city">
+                                        <md-option ng-repeat="data in city| filter: searchTerm" ng-value="data.value">{{data.name}}</md-option>
+                                    </md-optgroup>
+                                </md-select>
+                                <div ng-messages="centerForm.city.$error">
+                                    <div ng-message="required">Please enter city.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container flex="25">
+                                <label>Zip Code</label>
+                                <input ng-model="form.zipcode" name="zipcode" type="text/number" required/>
+                                <div ng-messages="centerForm.zipcode.$error">
+                                    <div ng-message="required">Please enter zip code.</div>
+                                </div>
+                            </md-input-container>
+                        </md-content>
+                        <md-content layout="row" layout-padding>
+                            <md-input-container class="md-block" flex="33">
+                                <label>Phone Number</label>
+                                <input name="phone" ng-model="form.phone" required/>
+                                <div ng-messages="centerForm.phone.$error">
+                                    <div ng-message="required">Please enter valid phone number.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container flex="33">
+                                <label>Telephone Number</label>
+                                <input name="telephone" ng-model="form.telephone" required/>
+                                <div ng-messages="centerForm.telephone.$error">
+                                    <div ng-message="required">Please enter valid telephone number.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container flex="33">
+                                <label>Email</label>
+                                <input ng-model="form.email" name="email" type="email" required/>
+                                <div ng-messages="centerForm.email.$error">
+                                    <div ng-message="required">Please enter valid email.</div>
+                                </div>
+                            </md-input-container>
+                        </md-content>
+                        <md-content layout="row" layout-padding>
+                            <md-input-container flex="50">
+                                <label>Country of Residence</label>
+                                <md-select ng-model="form.residence" name="" md-on-close="clearSearchTerm()" data-md-container-class="selectHeader" required>
+                                    <md-select-header class="select-select-header">
+                                        <input ng-model="searchTerm" name="countryresidence" type="search" onkeydown="mdSelectOnKeyDownOverride(event)" placeholder="Search for a residence" class="select-header-searchbox md-text" />
+                                    </md-select-header>
+                                    <md-optgroup label="country of residence">
+                                        <md-option ng-repeat="data in countryresidence| filter: searchTerm" ng-value="data.value">{{data.name}}</md-option>
+                                    </md-optgroup>
+                                </md-select>
+                                <div ng-messages="centerForm.countryresidence.$error">
+                                    <div ng-message="required">Please enter valid country of residence.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container flex="50">
+                                <label>Nationality</label>
+                                <md-select ng-model="form.nationality" name="" md-on-close="clearSearchTerm()" data-md-container-class="selectHeader" required>
+                                    <md-select-header class="select-select-header">
+                                        <input ng-model="searchTerm" name="nationality" type="search" onkeydown="mdSelectOnKeyDownOverride(event)" placeholder="Search for a residence" class="select-header-searchbox md-text" />
+                                    </md-select-header>
+                                    <md-optgroup label="Nationality">
+                                        <md-option ng-repeat="data in nationality| filter: searchTerm" ng-value="data.value">{{data.name}}</md-option>
+                                    </md-optgroup>
+                                </md-select>
+                                <div ng-messages="centerForm.nationality.$error">
+                                    <div ng-message="required">Please enter valid country of nationality.</div>
+                                </div>
+                            </md-input-container>
+                        </md-content>
+                        <md-content layout="row" layout-padding>
+                            <md-input-container flex="50">
+                                <label>Passport Number</label>
+                                <input ng-model="form.passportnumber" name="passportnumber" type="text/number" required>
+                                <div ng-messages="centerForm.passportnumber.$error">
+                                    <div ng-message="required">Please enter valid passport number.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container flex="50">
+                                <md-datepicker required name="exdate" class="passport_valid" ng-model="form.passportexpire" md-open-on-focus md-placeholder="Passport Valid Date"></md-datepicker>
+                                <div ng-messages="centerForm.exdate.$error">
+                                    <div ng-message="required">Please enter passport valid date.</div>
+                                </div>
+                            </md-input-container>
+                        </md-content>
+                        <md-content layout="row" flex="100" layout-padding>
+                            <div layout="column" flex="33">
+                                <lable>Have you ever had a Typhoid Vaccine?</lable>
+                                <md-radio-group layout="row" ng-model="form.typhoidvaccine">
+                                    <md-radio-button value="yes">Yes</md-radio-button>
+                                    <md-radio-button value="no">No</md-radio-button>
+                                </md-radio-group>
+                            </div>
+                            <md-input-container flex="33">
+                                <label>Year</label>
+                                <input ng-model="form.year" name="year" type="text/number" required>
+                                <div ng-messages="centerForm.year.$error">
+                                    <div ng-message="required">Please enter valid year.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container flex="33">
+                                <label>Typhoid Number</label>
+                                <input ng-model="form.typhoidnumber" name="year" type="text/number" required>
+                                <div ng-messages="centerForm.typhoidnumber.$error">
+                                    <div ng-message="required">Please enter valid Typhoid Number.</div>
+                                </div>
+                            </md-input-container>
+                        </md-content>
+                        <md-content layout="row" layout-padding>
+                            <md-input-container flex="50">
+                                <lf-ng-md-file-input lf-files="passport" name="image" accept="image/*" preview lf-placeholder="Upload a copy of Passport"></lf-ng-md-file-input>
+                            </md-input-container>
+                            <md-input-container flex="50">
+                                <lf-ng-md-file-input lf-files="avatar" name="image" accept="image/*" preview lf-placeholder="Upload a profile photoṣ"></lf-ng-md-file-input>
+                            </md-input-container>
+                        </md-content>
+                        <md-button type="submit" class="md-primary md-raised" ng-disabled="employeeForm.$invalid || loading === true">Next</md-button>
+                    </form>
+                    <md-progress-linear ng-if="loading === true" md-mode="indeterminate" class="md-accent"></md-progress-linear>
+                </md-content>
+            </md-tab>
+            <md-tab selected label="step-2" ng-disabled="!steponedone">
+                <md-content class="md-padding" layout="row" layout-sm="column" layout-xs="column">
+                    <div flex="50">
+                        <div>
+                            <h2>Confirm your Information</h2>
+                            <p>Please verify the information you have entered. Shall you wish to edit, Please press 'Back'.</p>
+                            <p>You can register more than one employee out at the same time by pressing 'Submit and Add new'.</p>
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Full Name</th>
+                                    <th>: </th>
+                                    <td>{{form.title}} {{form.firstname}} {{form.middlename}} {{form.lastname}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Date of Birth</th>
+                                    <th>: </th>
+                                    <td>{{form.dob}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Address</th>
+                                    <th>: </th>
+                                    <td>{{form.address1}} {{form.address2}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Mobile Number</th>
+                                    <th>: </th>
+                                    <td>{{form.phone}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Telephone No</th>
+                                    <th>: </th>
+                                    <td>{{form.telephone}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Country of Residence</th>
+                                    <th>: </th>
+                                    <td>{{form.residence| uppercase}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Nationality</th>
+                                    <th>: </th>
+                                    <td>{{form.nationality| uppercase}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Passport No.</th>
+                                    <th>: </th>
+                                    <td>{{form.passportnumber}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Passport Expiry Date</th>
+                                    <th>: </th>
+                                    <td>{{form.passportexpire}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Upload Passport</th>
+                                    <th>: </th>
+                                    <td><img ng-src="{{form.passport}}" class="preview-register" alt="image"/></td>
+                                </tr>
+                                <tr>
+                                    <th>Upload Profile</th>
+                                    <th>: </th>
+                                    <td><img ng-src="{{form.image}}" class="preview-register" alt="image"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div flex="50" lsyout="column">
+                        <div layout="row" layout-align="start center">
+                            <md-datepicker ng-model="form.training_date" md-placeholder="Enter date" md-open-on-focus></md-datepicker>
+                            <md-time-picker ng-model="form.training_time" class="no-margin"></md-time-picker>
+                        </div>
+                        <div map-lazy-load="https://maps.google.com/maps/api/js">
+                            <ng-map center="[{{map.center[0]}}, {{map.center[1]}}]" disable-default-u-i="true" zoom="6">
+                                <marker ng-repeat="marker in $root.training_centers" position="[{{marker.lat}}, {{marker.lng}}]"></marker>
+                            </ng-map>
+                        </div>
+                        <div layout="column">
+                            <md-radio-group ng-model="form.training_center">
+                                <md-radio-button ng-repeat="center in $root.training_centers"
+                                                 ng-value="center.ID"
+                                                 aria-label="{{center.name}}"
+                                                 class="md-primary">
+                                    <md-card>
+                                        <img ng-src="{{center.image}}" class="md-card-image" alt="Washed Out">
+                                        <md-card-title>
+                                            <md-card-title-text>
+                                                <span class="md-headline">{{center.name}}</span>
+                                            </md-card-title-text>
+                                        </md-card-title>
+                                        <md-card-content>
+                                            <h2>Available seats: {{center.seats}}</h2>
+                                        </md-card-content>
+                                    </md-card>
+                                </md-radio-button>
+                            </md-radio-group>
+                        </div>
+                    </div>
+                </md-content>
+                <div layout="row" laout-align="center center">
+                    <md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>
+                    <p>I do confirm that all of the information above are correct and true</p>
+                </div>
+                <div layout="row">
+                    <span flex><md-button type="" class="md-primary md-raised" ng-disabled="">Back</md-button></span>
+                    <span><md-button class="md-primary" layout-align="end end" ng-click="registerEmployee();">Register</md-button></span>
+                    <md-button type="submit" layout-align="end end" class="md-primary md-raised" ng-disabled="employeeForm.$invalid || loading === true">Submit and Add New</md-button>
+                </div>
+            </md-tab>
+            <md-tab selected label="step-3" ng-disabled="">
+                <md-content class="md-padding" layout-sm="column" layout-xs="column">
+                    <h2>Select Your Training Location</h2>
+                    <p>Please select your preferred date and search the nearest location at your place</p>
+                    <div lsyout="column">
+                        <div layout="row" layout-align="center center">
+                            <md-datepicker ng-model="form.training_date" md-placeholder="Enter date" md-open-on-focus></md-datepicker>
+                            <md-time-picker ng-model="form.training_time" class="no-margin"></md-time-picker>
+                        </div>
+                        <div layout="row">
+                            <md-radio-group ng-model="form.training_center">
+                                <md-radio-button ng-repeat="center in $root.training_centers"
+                                                 ng-value="center.ID"
+                                                 aria-label="{{center.name}}"
+                                                 class="md-primary">
+                                    <md-card>
+                                        <img ng-src="{{center.image}}" class="md-card-image" alt="Washed Out">
+                                        <md-card-title>
+                                            <md-card-title-text>
+                                                <span class="md-headline">{{center.name}}</span>
+                                            </md-card-title-text>
+                                        </md-card-title>
+                                        <md-card-content>
+                                            <h2>Available seats: {{center.seats}}</h2>
+                                        </md-card-content>
+                                    </md-card>
+                                </md-radio-button>
+                            </md-radio-group>
+                            <div map-lazy-load="https://maps.google.com/maps/api/js">
+                                <ng-map center="[{{map.center[0]}}, {{map.center[1]}}]" disable-default-u-i="true" zoom="6">
+                                    <marker ng-repeat="marker in $root.training_centers" position="[{{marker.lat}}, {{marker.lng}}]"></marker>
+                                </ng-map>
+                            </div>
+                        </div>
+                    </div>
+                </md-content>
+                <div layout="row">
+                    <md-button type="" class="md-primary md-raised" ng-disabled="">Back</md-button>
+                    <span flex><md-button class="md-primary" layout-align="end end" ng-click="registerEmployee();">Make Payment</md-button></span>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</div>

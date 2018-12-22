@@ -1,0 +1,16 @@
+<md-content layout="column" class="md-padding">
+    <md-list flex>
+        <md-list-item class="md-3-line" ng-repeat="conf in configs">
+            <div class="md-list-item-text" layout="column">
+                <h3>{{conf.name}}</h3>
+                <h4>{{conf.value}}</h4>
+            </div>
+            <md-button class="md-secondary md-icon-button" ng-click="openConfigs($event);">
+                <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_mode_edit_48px.svg"></md-icon>
+                <md-tooltip>Edit</md-tooltip>
+            </md-button>
+            <md-divider ng-if="!$last"></md-divider>
+        </md-list-item>
+    </md-list>
+    <md-collection-pagination collection="$root.configs" paginated-collection="configs" per-page="5"></md-collection-pagination>
+</md-content>

@@ -1,0 +1,62 @@
+<div ng-cloak class="md-padding">
+    <md-content md-theme="forms">
+        <md-tabs md-selected="tabIndex" md-dynamic-height md-border-bottom>
+            <md-tab label="Upcoming">
+                <table class="schedule_view">
+                    <tbody>
+                        <tr>
+                            <th>Booking No.</th>
+                            <th>Training Location</th>
+                            <th>Training Date</th>
+                            <th>NO. Of. Employee</th>
+                            <th>Employee List</th>
+                        </tr>
+                        <tr>
+                            <td>AX34572340</td>
+                            <td>4blocksinc, Second floor, Madipakkam chennai</td>
+                            <td>14/08/2018</td>
+                            <td>20</td>
+                            <td><md-button class="md-secondary md-icon-button" ng-click="openScheduleEmployeeDetails($event);">
+                        <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_info_outline_48px.svg"></md-icon>
+                        <md-tooltip>Info</md-tooltip>
+                    </md-button>
+                    </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </md-tab>
+            <md-tab selected label="Completed">
+                <table class="schedule_view">
+                    <tbody>
+                        <tr>
+                            <th>Serial No</th>
+                            <th>Training Name & Location</th>
+                            <th>No. Of Employees</th>
+                            <th>Expiration of Certification</th>
+                            <th>View</th>
+                            <th>Certificate</th>
+                        </tr>
+                        <tr>
+                            <td>AX34572340</td>
+                            <td>4blocksinc, Second floor, Madipakkam chennai</td>
+                            <td>14/08/2018</td>
+                            <td>20</td>
+                            <td>
+                    <md-button class="md-secondary md-icon-button" ng-click="openScheduleEmployeeCertificate($event);">
+                        <md-icon aria-label="Chat" md-svg-icon="img/icons/ic_remove_red_eye_48px.svg"></md-icon>
+                        <md-tooltip>View</md-tooltip>
+                    </md-button>
+                    </td>
+                    <td>
+                    <md-button class="md-secondary md-icon-button" ng-click="openCertificate($event);">
+                        <md-icon aria-label="Chat" md-svg-icon="img/icons/diploma.svg"></md-icon>
+                        <md-tooltip>Certificate</md-tooltip>
+                    </md-button>
+                    </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</div>

@@ -1,0 +1,78 @@
+<md-content class="md-padding background-register">
+    <div layout="row" layout-align="center center" class="md-padding">
+        <div flex="40" layout="column" layout-align="start center" class="md-whiteframe-12dp form-background" flex-xs="100" flex-sm="100">
+            <img ng-click="$root.changePage('home');" ng-src="img/logo.png" alt="image" />
+            <form name="registerForm" ng-submit="submitForm();" class="full-width md-padding" md-theme="forms">
+                <md-input-container class="md-block">
+                    <label>Name of Company</label>
+                    <input required name="name" type="text" ng-model="form.name" md-autofocus />
+                    <div ng-messages="registerForm.name.$error">
+                        <div ng-message="required">Please enter company name.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Registration Number</label>
+                    <input required name="reg_number" type="text" ng-model="form.reg_number" />
+                    <div ng-messages="registerForm.reg_number.$error">
+                        <div ng-message="required">Please enter registration number.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Sector</label>
+                    <md-select ng-model="form.sector" name="sector" md-on-close="clearSearchTerm()" data-md-container-class="selectHeader" required>
+                        <md-select-header class="select-select-header">
+                            <input ng-model="searchTerm" type="search" onkeydown="mdSelectOnKeyDownOverride(event)" placeholder="Search for a sector" class="select-header-searchbox md-text" />
+                        </md-select-header>
+                        <md-optgroup label="sectors">
+                            <md-option ng-repeat="data in sectors| filter: searchTerm" ng-value="data.value">{{data.name}}</md-option>
+                        </md-optgroup>
+                    </md-select>
+                    <div ng-messages="registerForm.sector.$error">
+                        <div ng-message="required">Please select sector.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Email</label>
+                    <input required name="email" type="email" ng-model="form.email" />
+                    <div ng-messages="registerForm.email.$error">
+                        <div ng-message="required">Please enter company name.</div>
+                        <div ng-message="email">Please enter valid email.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Phone</label>
+                    <input required name="phone" type="text" ng-model="form.phone" />
+                    <div ng-messages="registerForm.phone.$error">
+                        <div ng-message="required">Please enter phone number.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Address</label>
+                    <textarea name="address" ng-model="form.address" rows="3" required></textarea>
+                    <div ng-messages="registerForm.address.$error">
+                        <div ng-message="required">Please enter address.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Number of Staffs for Training</label>
+                    <input required name="training_staffs" type="text" ng-model="form.training_staffs" />
+                    <div ng-messages="registerForm.training_staffs.$error">
+                        <div ng-message="required">Please enter staffs count.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Employer Name</label>
+                    <input required name="employer" type="text" ng-model="form.employer" />
+                    <div ng-messages="registerForm.employer.$error">
+                        <div ng-message="required">Please enter employer name.</div>
+                    </div>
+                </md-input-container>
+                <center><md-button type="submit" class="md-primary md-raised" ng-disabled="registerForm.$invalid || loading === true">Register</md-button></center>
+            </form>
+            <md-progress-linear ng-if="loading === true" md-mode="indeterminate" class="md-accent"></md-progress-linear>
+        </div>
+    </div>
+    <div layout="row" layout-align="center center" class="full-width">
+        <md-button ng-click="$root.changePage('home');" class="md-primary md-raised"><md-icon md-svg-src="img/icons/ic_home_48px.svg" aria-label="home"></md-icon> Back to Home</md-button>
+    </div>
+</md-content>
