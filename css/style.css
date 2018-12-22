@@ -696,6 +696,10 @@ section {
 
 #contact {
     background: #b7b7b7;
+    background: url(../images/contact-background.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #contact h2 {
