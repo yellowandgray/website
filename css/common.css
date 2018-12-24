@@ -408,7 +408,7 @@ fieldset {
 .francais {
     background-size: cover;
     width: 100%;
-/*    float: left;*/
+    /*    float: left;*/
     position: relative;
 }
 
@@ -520,7 +520,7 @@ fieldset {
 }
 @media only  screen and (max-width:767px){
     .colorlib-nav ul li a{
-        padding: 14px 16px !important;
+        /*        padding: 14px 16px !important;*/
         color: #78a842 !important;
     }
     .topnav{
@@ -562,11 +562,11 @@ fieldset {
 .font-size-20 {font-size: 20px;}
 .height-440 {height: auto !important;}
 
-.footer-social a:hover {
+/*.footer-social a:hover {
     background-color: #186fb8 !important;
     color: #fff !important; 
     border-color: #186fb8 !important;
-}
+}*/
 
 .volunteer-form .multi-select-button {
     display: inline-block;
@@ -608,3 +608,52 @@ fieldset {
     /* text-align: center; */
     height: 48px;
 }
+
+.facebook-color {
+    color: #3b5999 !important;
+    border: 1px solid #3b5999 !important;
+}
+.facebook-color:hover {
+    background-color: #3b5999 !important;
+    color: #fff !important;
+    border: 1px solid #3b5999 !important;
+}
+
+.twitter-color {
+    color: #55acee !important;
+    border: 1px solid #55acee !important;
+}
+.twitter-color:hover {
+    background-color: #55acee !important;
+    color: #fff !important;
+    border: 1px solid #55acee !important;
+}
+.linkedin-color {
+    color: #0077B5 !important;
+    border: 1px solid #0077B5 !important;
+}
+.linkedin-color:hover {
+    background-color: #0077B5 !important;
+    color: #fff !important;
+    border: 1px solid #0077B5 !important;
+}
+.instagram-color {
+    color: #125688 !important;
+    border: 1px solid #125688 !important;
+}
+.instagram-color:hover {
+    background-color: #125688 !important;
+    color: #fff !important;
+    border: 1px solid #125688 !important;
+}
+.youtube-color {
+    color: #bb0000 !important;
+    border: 1px solid #bb0000 !important;
+}
+.youtube-color:hover {
+    background-color: #bb0000 !important;
+    color: #fff !important;
+    border: 1px solid #bb0000 !important;
+}
+
+.fab {line-height: 2.6 !important;}

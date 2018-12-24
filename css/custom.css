@@ -2462,9 +2462,9 @@ ul.ftags a:hover {
 }
 .footer-social a {
     display: inline-block;
-    border: 1px solid #66bb6a;
+/*    border: 1px solid #66bb6a;*/
     border-radius: 100%;
-    color: #66bb6a;
+/*    color: #66bb6a;*/
     width: 50px;
     height: 50px;
     line-height: 45px;
@@ -2472,10 +2472,10 @@ ul.ftags a:hover {
     display: inline-block;
     font-size: 18px;
 }
-.footer-social a:hover {
+/*.footer-social a:hover {
     background: #66bb6a;
     color: #fff;
-}
+}*/
 .newsletter strong, .footer-social strong {
     display: block;
     color: #c8e6c9;

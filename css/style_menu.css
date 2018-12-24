@@ -118,7 +118,8 @@ h1, h2, h3, h4, h5, h6, figure {
     font-weight: bold;}
 .colorlib-nav .upper-menu .colorlib-social-icons {
     display: inline-block;
-    margin-right: 10px; }
+/*    margin-right: 10px; */
+}
 .colorlib-nav .upper-menu .colorlib-social-icons li {
     padding: 0;
     margin: 0; }
