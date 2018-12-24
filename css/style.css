@@ -352,6 +352,7 @@ section {
 
 #home h1 {
     color: #ffffff;
+    margin-top: -15px;
 }
 
 #home h3 {
@@ -1277,4 +1278,7 @@ footer .social-icon {
 
 .orange i {
     color: #ca6c22;
+}
+.width-100 {
+    width: 100%;
 }
