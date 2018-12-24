@@ -2,7 +2,7 @@
     <div class="upper-menu">
         <div class="container">
             <div class="row">
-                <div class="col-xs-4">
+                <div class="col-xs-6">
                     <p>
 <!--                        <i class="fa fa-phone"></i>&nbsp;<a href="tel:+91 93840 10241">+91 93840 10241</a>&nbsp;&nbsp;-->
                         <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:info@enpeekkl.com">info@enpeekkl.com</a>
