@@ -104,7 +104,12 @@ h1, h2, h3, h4, h5, h6, figure {
     padding: 10px 0; }
 @media screen and (max-width: 768px) {
     .colorlib-nav .upper-menu {
-        display: block; } }
+        display: block; }
+    .colorlib-nav .upper-menu .colorlib-social-icons {
+        margin-top: 0 !important;
+    }
+
+}
 .colorlib-nav .upper-menu p {
     margin-bottom: 0;
     display: inline-block;

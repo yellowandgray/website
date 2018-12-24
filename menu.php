@@ -9,13 +9,11 @@
                     </p>
                 </div>
                 <div class="col-xs-6 col-md-push-2 text-right">
-                    <p>
                     <ul class="colorlib-social-icons">
                         <li><a href="https://www.facebook.com/ENPEE-International-School-1943441245950809/?modal=admin_todo_tour" target="blank"><i class="fa fa-facebook-official" style="color:#1c61ab"></i></a></li>&nbsp;
 <!--                        <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>&nbsp;
                         <li><a href="#"><i class="fa fa-youtube-square"></i></a></li>&nbsp;-->
                     </ul>
-                    </p>
                     <p class="btn-apply"><a href="index.php#enquiry">Enquire Now</a></p>
                 </div>
             </div>
