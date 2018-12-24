@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-xs-6">
                     <p>
-<!--                        <i class="fa fa-phone"></i>&nbsp;<a href="tel:+91 93840 10241">+91 93840 10241</a>&nbsp;&nbsp;-->
+                        <i class="fa fa-phone"></i>&nbsp;<a href="tel:+04368 265 265"> 04368 265 265</a>&nbsp;&nbsp;
                         <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:info@enpeekkl.com">info@enpeekkl.com</a>
                     </p>
                 </div>
@@ -14,7 +14,7 @@
                         <li><a href="https://twitter.com/SchoolEnpee" target="blank"><i class="fa fa-twitter-square" style="color:#429cd6"></i></a></li>&nbsp;
                         <li><a href="https://www.linkedin.com/in/enpee-international-school/" target="blank"><i class="fa fa-linkedin-square" style="color:#0077B5"></i></a></li>&nbsp;
                         <li><a href="https://www.instagram.com/enpeeschool/" target="blank"><i class="fa fa-instagram" style="color:#125688"></i></a></li>&nbsp;
-                        <li><a href="#"><i class="fa fa-youtube-square" style="color:#cd201f"></i></a></li>&nbsp;
+                        <li><a href="https://www.youtube.com/channel/UCcYOtTSP__ZyX8EY5TiHY9g" target="blank"><i class="fa fa-youtube-square" style="color:#cd201f"></i></a></li>&nbsp;
                     </ul>
                     <p class="btn-apply"><a href="index.php#enquiry">Enquire Now</a></p>
                 </div>

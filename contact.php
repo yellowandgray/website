@@ -48,12 +48,12 @@
                                             <li class="half pl-15">
                                                 <input type="text" class="form-control" name="email" placeholder="Email" required>
                                             </li>
-                                            </div>
+                                        </div>
                                         <div class="form-group">
                                             <li class="half pr-15">
                                                 <input type="text" class="form-control" name="mobile" placeholder="Contact" required>
                                             </li>
-                                            </div>
+                                        </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
                                                 <select name="no_children" class="form-control">
@@ -64,7 +64,7 @@
                                                     <option value="4">4</option>
                                                 </select>
                                             </li>
-                                            </div>
+                                        </div>
                                         <div class="form-group">
                                             <li class="half pr-15">
                                                 <div class="multiselect">
@@ -81,20 +81,20 @@
 
                                                 </div>
                                             </li>
-                                            </div>
+                                        </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
                                                 <input type="text" class="form-control" name="subject" placeholder="Subject" required>
                                             </li>
-                                            </div>
+                                        </div>
                                         <div class="form-group">
                                             <li class="full">
                                                 <textarea class="textarea-control" name="message" placeholder="Message" required></textarea>
                                             </li>
                                         </div>
-                                            <li class="full">
-                                                <input type="submit" value="Contact us" class="fsubmit">
-                                            </li>
+                                        <li class="full">
+                                            <input type="submit" value="Contact us" class="fsubmit">
+                                        </li>
                                     </form>
                                 </ul>
 
@@ -113,7 +113,7 @@
                             <h3>Contact Information</h3>
                         </div>
                         <!--Contact Info Start-->
-                        <div class="col-md-5 text-right">
+                        <div class="col-md-4 text-right">
                             <div class="c-info">
                                 <h6>Address:</h6>
                                 <p><strong>ENPEE International School</strong><br/> <i>Château Français</i><br/>
@@ -125,13 +125,13 @@
                         </div>
                         <!--Contact Info End--> 
                         <!--Contact Info Start-->
-                        <!--                        <div class="col-md-4 text-right">
-                                                    <div class="c-info">
-                                                        <h6>Contact:</h6>
-                                                        <p><strong>Phone:</strong> +91 93840 10241</p>
-                                                        <p> +91 93840 10242</p>
-                                                    </div>
-                                                </div>-->
+                        <div class="col-md-4 text-right">
+                            <div class="c-info">
+                                <h6>Contact:</h6>
+                                <p><strong>Telephone:</strong><a href="tel:04368 265 265"> 04368 265 265</a></p>
+                                <p><strong>Phone:</strong><a href="tel:+91 8300111265"> +91 8300 111 265</a></p>
+                            </div>
+                        </div>
                         <!--Contact Info End--> 
                         <!--Contact Info Start-->
                         <div class="col-md-4 text-right">
