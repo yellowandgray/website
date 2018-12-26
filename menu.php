@@ -39,7 +39,7 @@
                             echo 'active';
                         }
                         ?>">
-                            <input id="check01" type="checkbox" name="menu"/>
+                            <input id="check01" type="checkbox" name="menu" style="display: none"/>
                             <label for="check01">About Us</label>
 <!--                            <a href="#">About Us</a>-->
                             <ul class="submenu">

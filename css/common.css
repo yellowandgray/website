@@ -736,8 +736,8 @@ input:checked ~ label:after{
     transition:border-top .1s, border-bottom .1s .1s;
 }
 
-/*hide the inputs*/
-input{display:none}
+/*hide the inputs
+input{display:none}*/
 
 /*show the second levele menu of the selected voice*/
 input:checked ~ ul.submenu{

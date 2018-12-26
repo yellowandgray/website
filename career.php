@@ -98,7 +98,7 @@
                                             </li>
                                         </div>
                                         <li class="full">
-                                            <button type="submit" value="Contact us" class="fsubmit btn-primary" style="width: 140px">Submit</button>
+                                            <input type="submit" value="Contact us" class="fsubmit btn-primary" style="width: 200px;">
                                         </li>
                                     </form>
                                 </ul>

@@ -93,7 +93,7 @@
                                             </li>
                                         </div>
                                         <li class="full">
-                                            <button type="submit" value="Contact us" class="fsubmit">Submit</button>
+                                            <input type="submit" value="Contact us" class="fsubmit">
                                         </li>
                                     </form>
                                 </ul>
