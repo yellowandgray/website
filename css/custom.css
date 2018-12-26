@@ -686,7 +686,7 @@ section#home-slider img {
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(156,204,101,.20);
     margin-bottom: 50px;
-/*    height: 440px;*/
+    /*    height: 440px;*/
 }
 .ser-box .ser-thumb {
     width: 100%;
@@ -911,11 +911,11 @@ ul.post-meta li span {
     margin: 0px;
 }
 .event-post:hover .event-thumb:after {
-/*    opacity: 1;*/
+    /*    opacity: 1;*/
 }
 #h3-events .event-box:hover .event-thumb a, .event-post:hover .event-thumb a {
-/*    opacity: 1;
-    top: 0;*/
+    /*    opacity: 1;
+        top: 0;*/
 }
 .event-thumb .post-meta {
     position: absolute;
@@ -1088,11 +1088,11 @@ ul.participants, .campaign-txt h5 {
     opacity: 0;
 }
 .campaign-box:hover .campaign-thumb:after {
-/*    opacity: 1;*/
+    /*    opacity: 1;*/
 }
 .campaign-box:hover .campaign-thumb a {
-/*    opacity: 1;
-    top: 0;*/
+    /*    opacity: 1;
+        top: 0;*/
 }
 .campaign-box:hover h6 a, .campaign-box:hover h5 a {
     color: #8bc34a;
@@ -2462,9 +2462,9 @@ ul.ftags a:hover {
 }
 .footer-social a {
     display: inline-block;
-/*    border: 1px solid #66bb6a;*/
+    /*    border: 1px solid #66bb6a;*/
     border-radius: 100%;
-/*    color: #66bb6a;*/
+    /*    color: #66bb6a;*/
     width: 50px;
     height: 50px;
     line-height: 45px;
@@ -4321,7 +4321,7 @@ ul.cform li {
     margin-bottom: 30px;
 }
 ul.cform li:last-child {
-    margin: 0px;
+    margin: 0px 0 10px 0px;
 }
 ul.cform li.half {
     width: 50%;
