@@ -17,7 +17,7 @@ if ($_POST['name']) {
     $address_2 = $_REQUEST['address_2'];
 
     $message1 = $_REQUEST['message'];
-    
+
     $mail->AddAttachment('images/phpmailer_mini.gif');
 
     error_reporting(E_STRICT);
@@ -76,7 +76,7 @@ if ($_POST['name']) {
 
     $mail->SetFrom('noreply@enpeekkl.com', 'ENPEEKKL');
 
-    $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
+    $mail->Subject = "Career Form Submited" . date('d-m-y H:i:s');
 
     $message = '<table border = "0" cellpadding = "0" cellspacing = "0" height = "100%" width = "100%">
             <tbody>
@@ -120,18 +120,10 @@ if ($_POST['name']) {
             <p style = "margin:0 0 16px">Name :' . $name . '</p>
             <p style = "margin:0 0 16px">Email :' . $email . '</p>
             <p style = "margin:0 0 16px">Phone Number :' . $mobile . '</p>
-            <p style = "margin:0 0 16px">Number of Children :' . $no_children . '</p>
-            <p style = "margin:0 0 16px">Preffred Programs :'
-    ?>
-
-    <?php
-
-    foreach ($_POST['preffred_classes'] as $names) {
-        $message.= $names . ',';
-    }
-    $message.= '</p>
-        <p style = "margin:0 0 16px">Subject : ' . $subject . '</p>
-        <p style = "margin:0 0 16px">Message :' . $message1 . '</p>
+            <p style = "margin:0 0 16px">Number of Children :' . $select_role . '</p>
+            <p style = "margin:0 0 16px">Address-1 :' . $address_1 . '</p>
+            <p style = "margin:0 0 16px">Address-2 :' . $address_2 . '</p>
+            <p style = "margin:0 0 16px">Message :' . $message1 . '</p>
             <p style = "margin:0 0 16px">Regards,<br/>ENPEE Web Team.</p></div>
             </td>
             </tr>
