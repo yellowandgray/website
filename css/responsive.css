@@ -1745,13 +1745,14 @@
 
     .slider-caption {
 
-        top: 110px;
+        top: 152px;
 
     }
 
     .slider-caption strong {
 
         font-size: 16px;
+        line-height: 20px !important;
 
     }
 

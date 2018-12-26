@@ -28,7 +28,7 @@
                     <div id="colorlib-logo"><a href="index.php"><img style="height: 130px; padding-bottom: 10px;" class="logo" src="images/logo-enpee-international-school.png" alt="Enpee-International-School"/></a></div>
                 </div>
                 <div class="col-md-10 text-right menu-1">
-                    <ul>
+                    <ul id="menu">
                         <li class="<?php
                         if ($page == 'home') {
                             echo 'active';
@@ -39,8 +39,10 @@
                             echo 'active';
                         }
                         ?>">
-                            <a href="about.php">About Us</a>
-                            <ul class="dropdown-content">
+                            <input id="check01" type="checkbox" name="menu"/>
+                            <label for="check01">About Us</label>
+<!--                            <a href="#">About Us</a>-->
+                            <ul class="submenu">
                                 <li class="text-left"><a href="about.php" class="margin-left-10">About the School</a></li>
                                 <li class="text-left"><a href="promoters.php" class="margin-left-10">Promoters</a></li>
                                 <li class="text-left"><a href="management.php" class="margin-left-10">Management</a></li>
@@ -72,6 +74,11 @@
                             echo 'active';
                         }
                         ?>"><a href="contact.php">Contact</a></li>
+                        <li class="<?php
+                        if ($page == 'contact') {
+                            echo 'active';
+                        }
+                        ?>"><a href="contact.php">Career</a></li>
 <!--                        <li class="btn-cta"><a href="#"><span>Free Trial</span></a></li>-->
                     </ul>
                 </div>
@@ -128,6 +135,11 @@
                         echo 'active';
                     }
                     ?>"><a href="contact.php">Contact</a></li>
+                    <li class="<?php
+                    if ($page == 'contact') {
+                        echo 'active';
+                    }
+                    ?>"><a href="contact.php">Career</a></li>
 <!--                        <li class="btn-cta"><a href="#"><span>Free Trial</span></a></li>-->
                 </ul>
             </div>
