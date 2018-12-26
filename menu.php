@@ -82,7 +82,7 @@
 
         <!-- Top Navigation Menu -->
         <div class="topnav" style="background: #fff">
-            <div id="colorlib-logo"><a href="index.php"><img style="width: 200px;height: 130px; padding-bottom: 10px;" class="mobile-logo" src="images/logo-np.png" alt=""/></a></div>
+            <div id="colorlib-logo"><a href="index.php"><img style="width: 200px;height: 130px; padding-bottom: 10px;" class="mobile-logo" src="images/logo-enpee-international-school.png" alt=""/></a></div>
             <div id="myLinks">
                 <ul>
                     <li class="<?php
@@ -95,12 +95,12 @@
                         echo 'active';
                     }
                     ?>">
-                        <a href="about.php">About Us <i class="fas fa-sort-down" id="show"></i></a>
+                        <a href="#">About Us <i class="fas fa-sort-down" id="show"></i></a>
                         <ul class="dropdown-content">
                             <li class="text-left"><a href="about.php" class="margin-left-10">About the School</a></li>
-                            <li class="text-left"><a href="promoters.php">Promoters</a></li>
-                            <li class="text-left"><a href="management.php">Management</a></li>
-                            <li class="text-left"><a href="advisory-board.php">Management</a></li>
+                            <li class="text-left"><a href="promoters.php" class="margin-left-10">Promoters</a></li>
+                            <li class="text-left"><a href="management.php" class="margin-left-10">Management</a></li>
+                            <li class="text-left"><a href="advisory-board.php" class="margin-left-10">Advisory Board</a></li>
                         </ul>
                     </li>
                     <li class="<?php

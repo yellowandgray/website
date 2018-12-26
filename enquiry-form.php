@@ -127,8 +127,8 @@ if ($_POST['name']) {
     $mail->Body = $message;
     // More headers
     $address = "info@enpeekkl.com";
-
     $mail->AddAddress($address, "ENPEEKKL");
+    $mail->AddCC('npschoolkkl@gmail.com', 'ENPEEKKL');
 
     if (!$mail->Send()) {
         echo "error";

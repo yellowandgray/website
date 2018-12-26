@@ -163,15 +163,15 @@ h1, h2, h3, h4, h5, h6, figure {
     text-transform: uppercase; }
 .colorlib-nav ul li a {
     position: relative;
-    font-size: 12px;
-    padding: 30px 12px;
+    font-size: 14px;
+    padding: 12px 12px;
     font-weight: 700;
     color: rgba(0, 0, 0, 0.4);
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s; }
 .colorlib-nav ul li a:hover {
-    color: #07a8e6; }
+    color: #1f5ca8; }
 .colorlib-nav ul li.has-dropdown {
     position: relative; }
 .colorlib-nav ul li.has-dropdown .dropdown {
@@ -246,7 +246,7 @@ h1, h2, h3, h4, h5, h6, figure {
     -moz-box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75); }
 .colorlib-nav ul li.active > a {
-    color: #07a8e6 !important;
+    color: #1f5ca8 !important;
     position: relative; }
 .colorlib-nav ul li.active > a:after {
     opacity: 1;

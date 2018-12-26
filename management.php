@@ -287,7 +287,7 @@
                     <P>He has held the position of Arbitrator in the National Stock Exchange of India, Bangalore.</P>
                     <P>A visionary, he is experienced in leading teams and skilled in organisation building.</P>
                     <p>His Core strength lies in in translating Corporate Goals into realities through effective formulation and implementation of Strategies.</p>
-                    <p>Undergone prestigious Global Leadership training programme at The Kellog School of Management, Chicago, U.S.A .</p>
+                    <p>He has undergone top level leadership and management development training programs at International Business School, London and Kellog School of Management, Chicago, U.S.A .</p>
                     <p>Attended top level management programme on" Value Creation and Risk Management" at the International Banking Summer School , Switzerland.</p>
                 </div>
 
@@ -518,7 +518,7 @@
 
                 // When the user clicks anywhere outside of the modal, close it
                 window.onclick = function (event) {
-                    if (event.target == modal6) {
+                    if (event.target == modal5) {
                         modal6.style.display = "none";
                     }
 
