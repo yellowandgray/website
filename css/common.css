@@ -441,8 +441,8 @@ fieldset {
         margin-left: 0px !important;
     }
     .volunteer-form .multi-select-button {
-        max-width: 278px !important;
-        width: 278px !important;
+        max-width: 100% !important;
+        width: 100% !important;
     }
     .contact-dropdown-from .multi-select-button {
         max-width: 320px !important;
@@ -450,6 +450,14 @@ fieldset {
     }
     .story-title-bg {
         padding: 155px !important;
+    }
+}
+
+@media (min-width: 351px) and (max-width:991px) {
+
+    .volunteer-form .multi-select-button {
+        max-width: 100% !important;
+        width: 100% !important;
     }
 }
 
@@ -659,7 +667,12 @@ fieldset {
 .fab {line-height: 2.6 !important;}
 
 
-@media (max-width: 575px) and (min-width: 280px)
-.slider-caption {
-    display: block !important;
+@media (max-width: 575px) and (min-width: 280px){
+    .slider-caption {
+        display: block !important;
+    }
+}
+
+@media (max-width: 914px) and (min-width: 768px) {
+    .height-440 {height: 340px !important;}
 }
