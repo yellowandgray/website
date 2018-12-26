@@ -107,12 +107,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="container contact-info">
+<!--                <div class="container contact-info">
                     <div class="row">
                         <div class="col-md-12">
                             <h3>Contact Information</h3>
                         </div>
-                        <!--Contact Info Start-->
+                        Contact Info Start
                         <div class="col-md-4 text-right">
                             <div class="c-info">
                                 <h6>Address:</h6>
@@ -123,8 +123,8 @@
                                 </p>
                             </div>
                         </div>
-                        <!--Contact Info End--> 
-                        <!--Contact Info Start-->
+                        Contact Info End 
+                        Contact Info Start
                         <div class="col-md-4 text-right">
                             <div class="c-info">
                                 <h6>Contact:</h6>
@@ -132,18 +132,18 @@
                                 <p><strong>Phone:</strong><a href="tel:+91 8300111265"> +91 8300 111 265</a></p>
                             </div>
                         </div>
-                        <!--Contact Info End--> 
-                        <!--Contact Info Start-->
+                        Contact Info End 
+                        Contact Info Start
                         <div class="col-md-4 text-right">
                             <div class="c-info">
                                 <h6>For More Information:</h6>
                                 <p><strong>Email:</strong><a href="mailto:info@enpeekl.com"> info@enpeekkl.com</a></p>
-<!--                                <p><a href="mailto:admin@enpeekl.com">admin@enpeekkl.com</a></p>-->
+                                <p><a href="mailto:admin@enpeekl.com">admin@enpeekkl.com</a></p>
                             </div>
                         </div>
-                        <!--Contact Info End--> 
+                        Contact Info End 
                     </div>
-                </div>
+                </div>-->
             </section>
             <!--Contact End--> 
             <?php include 'footer.php'; ?>
