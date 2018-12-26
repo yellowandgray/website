@@ -75,10 +75,10 @@
                         }
                         ?>"><a href="contact.php">Contact</a></li>
                         <li class="<?php
-                        if ($page == 'contact') {
+                        if ($page == 'career') {
                             echo 'active';
                         }
-                        ?>"><a href="contact.php">Career</a></li>
+                        ?>"><a href="career.php">Career</a></li>
 <!--                        <li class="btn-cta"><a href="#"><span>Free Trial</span></a></li>-->
                     </ul>
                 </div>
@@ -139,7 +139,7 @@
                     if ($page == 'contact') {
                         echo 'active';
                     }
-                    ?>"><a href="contact.php">Career</a></li>
+                    ?>"><a href="career.php">Career</a></li>
 <!--                        <li class="btn-cta"><a href="#"><span>Free Trial</span></a></li>-->
                 </ul>
             </div>
