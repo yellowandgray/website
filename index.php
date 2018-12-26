@@ -551,12 +551,12 @@
                             <ul>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat1 f-cat4"><span><a href="images/facilities/pic-art.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a> <img src="images/facilities/pic-art.jpg" alt=""></span> </li>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat2 f-cat3"><span> <a href="images/facilities/pic-dance.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-dance.jpg" alt=""></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat3 f-cat1"><span> <a href="images/facilities/pic-music.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a> <img src="images/facilities/pic-music.jpg" alt=""></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat3 f-cat1"><span> <a href="images/facilities/music-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a> <img src="images/facilities/music-01.jpg" alt=""></span> </li>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat4 f-cat2"><span> <a href="images/facilities/pic-sports.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-sports.jpg" alt=""></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat1"><span> <a href="images/facilities/pic-yoga.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-yoga.jpg" alt=""></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat2"><span> <a href="images/facilities/theatre.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/theatre.jpg" alt=""></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat3 f-cat2"><span> <a href="images/facilities/pic-swimming.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-swimming.jpg" alt=""></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat4"><span> <a href="images/facilities/pic-touring.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-touring.jpg" alt=""></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat1"><span> <a href="images/facilities/pic-yoga-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-yoga-01.jpg" alt=""></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat2"><span> <a href="images/facilities/theatre-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/theatre-1.jpg" alt=""></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat3 f-cat2"><span> <a href="images/facilities/swim-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/swim-1.jpg" alt=""></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat4"><span> <a href="images/facilities/tour-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/tour-01.jpg" alt=""></span> </li>
                             </ul>
                         </div>
                     </div>
