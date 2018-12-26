@@ -38,7 +38,7 @@
                                 <h3>WE ARE HIRING</h3>
                                 <p>(Join us and get immerse yourself in a care taking and professional environment. Enpee International School hiring now for Admin Staff, Front Office Staff and Teachers. Interested candidates can fill the below form and attach resume and apply.)</p>
                                 <ul class="cform">
-                                    <form role="form" class="contact">
+                                    <form role="form" class="career">
                                         <div class="form-group">
                                             <li class="half pr-15">
                                                 <input type="text" class="form-control" name="name" placeholder="Full Name" required>
@@ -56,7 +56,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
-                                                <select name="no_children" class="form-control">
+                                                <select name="select_role" class="form-control">
                                                     <option value="0">Select Role</option>
                                                     <option value="admin_manager">Admin Manager</option>
                                                     <option value="front_office staff">Front Office staff</option>
