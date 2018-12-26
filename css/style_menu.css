@@ -1570,8 +1570,8 @@ h1, h2, h3, h4, h5, h6, figure {
     color: #fff;
     border: 2px solid #07a8e6; }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background: #5bacfd !important;
-    border-color: #5bacfd !important; }
+    background: #2f68ae !important;
+    border-color: #2f68ae !important; }
 .btn-primary.btn-outline {
     background: transparent;
     color: #429FFD;
