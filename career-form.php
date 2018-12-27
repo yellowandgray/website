@@ -172,7 +172,7 @@ if ($_POST['name']) {
 
     // More headers
 
-    $address = "noreply@enpeekkl.com";
+    $address = "info@enpeekkl.com";
     //$attach = $_FILES['pic'];
 
 
