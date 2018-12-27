@@ -18,7 +18,12 @@ if ($_POST['name']) {
 
     $message1 = $_REQUEST['message'];
 
-    $mail->AddAttachment('images/phpmailer_mini.gif');
+    //$filename = $_FILES['pic']['name'];
+    $temp_name =  $_FILES['resume']['tmp_name'];
+    //$extension = strtolower($this->getExtension($filename));
+    $temp_file_name = $_FILES['resume']['name'];
+    $temp_file_path = 'uploads/' . $temp_file_name;
+    move_uploaded_file($temp_name, $temp_file_path);
 
     error_reporting(E_STRICT);
 
@@ -158,18 +163,23 @@ if ($_POST['name']) {
 
     $headers = "MIME-Version: 1.0" . "\r\n";
 
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
+
+    // headers for attachment 
+    $headers .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
 
     $mail->Body = $message;
 
     // More headers
 
-    $address = "info@enpeekkl.com";
-
+    $address = "noreply@enpeekkl.com";
+    //$attach = $_FILES['pic'];
 
 
     $mail->AddAddress($address, "ENPEEKKL");
     $mail->AddCC('npschoolkkl@gmail.com', 'ENPEEKKL');
+    $mail->AddAttachment($temp_file_path);
+
 
 
 
