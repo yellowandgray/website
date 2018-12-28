@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-xs-6 text-right">
                     <ul class="colorlib-social-icons">
-                        <li><a href="https://www.facebook.com/ENPEE-International-School-1943441245950809/" target="blank"><i class="fa fa-facebook-official" style="color:#1c61ab"></i></a></li>&nbsp;
+                        <li><a href="https://www.facebook.com/ENPEESchool" target="blank"><i class="fa fa-facebook-official" style="color:#1c61ab"></i></a></li>&nbsp;
                         <li><a href="https://twitter.com/SchoolEnpee" target="blank"><i class="fa fa-twitter-square" style="color:#429cd6"></i></a></li>&nbsp;
                         <li><a href="https://www.linkedin.com/in/enpee-international-school/" target="blank"><i class="fa fa-linkedin-square" style="color:#0077B5"></i></a></li>&nbsp;
                         <li><a href="https://www.instagram.com/enpeeschool/" target="blank"><i class="fa fa-instagram" style="color:#125688"></i></a></li>&nbsp;
