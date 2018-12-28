@@ -172,7 +172,7 @@
                                         <div class="item"><img src="images/carosel/pic-project-based-curriculum.jpg" alt=""></div>
                                     </div>
                                 </div>
-                                <div class="pic2"><img src="images/aboutpic2.jpg" alt=""></div>
+                               <div class="pic2"><div class="about-video-img-1"><a href="Enpee-slide-video.mp4" data-toggle="lightbox" data-width="1280"><i class="fas fa-play"></i></a><img src="images/aboutpic2.jpg" alt=""></div></div>
                             </div>
                         </div>
                     </div>
