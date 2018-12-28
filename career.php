@@ -56,7 +56,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
-                                                <select name="select_role" class="form-control">
+                                                <select name="select_role" class="form-control" required>
                                                     <option value="Select Job Role">Select Job Role</option>
                                                     <option value="Admin Manager">Admin Manager</option>
                                                     <option value="Front Office Staff">Front Office staff</option>

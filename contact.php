@@ -46,17 +46,17 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
-                                                <input type="text" class="form-control" name="email" placeholder="Email" required>
+                                                <input type="email" class="form-control" name="email" placeholder="Email" required>
                                             </li>
                                         </div>
                                         <div class="form-group">
                                             <li class="half pr-15">
-                                                <input type="text" class="form-control" name="mobile" placeholder="Contact" required>
+                                                <input type="text" pattern="^\d{10}$" class="form-control" name="mobile" placeholder="Contact" required>
                                             </li>
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
-                                                <select name="no_children" class="form-control">
+                                                <select name="no_children" class="form-control" required>
                                                     <option value="0">No. of Children</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
@@ -78,7 +78,6 @@
                                                         <option value="IV STD">IV STD</option>
                                                         <option value="V STD">V STD</option>
                                                     </select>
-
                                                 </div>
                                             </li>
                                         </div>

@@ -474,17 +474,17 @@
                                         </div>
                                         <div class="form-group">
                                             <li>
-                                                <input type="text" class="form-control" name="mobile" placeholder="Phone" required aria-label="Phone">
+                                                <input type="text" pattern="^\d{10}$" class="form-control" name="mobile" placeholder="Phone" required aria-label="Phone">
                                             </li>
                                         </div>
                                         <div class="form-group">
                                             <li>
-                                                <input type="text" class="form-control" name="email" placeholder="Email Address" required aria-label="Email Address">
+                                                <input type="email" class="form-control" name="email" placeholder="Email Address" required aria-label="Email Address">
                                             </li>
                                         </div>
                                         <div class="form-group">
                                             <li>
-                                                <select name="no_children" class="form-control">
+                                                <select name="no_children" class="form-control" required>
                                                     <option value="0">No. of Children</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
@@ -495,7 +495,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li>
-                                                <div class="multiselect">
+                                                <div class="multiselect" required>
                                                     <select id="contactform" class="form-control" name="preffred_classes[]" multiple>
                                                         <option value="Pre-KG">Pre-KG</option>
                                                         <option value="L.K.G">L.K.G</option>
