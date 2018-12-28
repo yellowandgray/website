@@ -328,12 +328,16 @@ jQuery(document).ready(function ($) {
         if (ferror)
             return false;
         else
-            var str = $(this).serialize();
+            var form = $('#resume').attr('files');
+        var formData = new FormData(this);
         $.ajax({
             type: "POST",
             dataType: 'json',
             url: "career-form.php",
-            data: str,
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
             success: function (msg) {
                 // alert(msg);
                 if (msg == 'OK') {

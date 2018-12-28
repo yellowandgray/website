@@ -38,7 +38,7 @@
                                 <h3>WE ARE HIRING</h3>
                                 <p>(Join us and get immerse yourself in a care taking and professional environment. Enpee International School hiring now for Admin Staff, Front Office Staff and Teachers. Interested candidates can fill the below form and attach resume and apply.)</p>
                                 <ul class="cform">
-                                    <form role="form" class="career">
+                                    <form role="form" class="career" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <li class="half pr-15">
                                                 <input type="text" class="form-control" name="name" placeholder="Full Name" required>
@@ -58,9 +58,9 @@
                                             <li class="half pl-15">
                                                 <select name="select_role" class="form-control">
                                                     <option value="0">Select Role</option>
-                                                    <option value="admin_manager">Admin Manager</option>
-                                                    <option value="front_office staff">Front Office staff</option>
-                                                    <option value="teacher">Teacher</option>
+                                                    <option value="Admin Manager">Admin Manager</option>
+                                                    <option value="Front Office Staff">Front Office staff</option>
+                                                    <option value="Teacher">Teacher</option>
                                                 </select>
                                             </li>
                                         </div>
@@ -94,7 +94,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="full">
-                                                Submit Your CV / Resume: <input type="file" name="pic" accept="image/*">
+                                                Submit Your CV / Resume: <input type="file" name="resume" id="resume">
                                             </li>
                                         </div>
                                         <li class="full">
@@ -107,43 +107,43 @@
                         </div>
                     </div>
                 </div>
-<!--                <div class="container contact-info">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h3>Contact Information</h3>
-                        </div>
-                        Contact Info Start
-                        <div class="col-md-4 text-right">
-                            <div class="c-info">
-                                <h6>Address:</h6>
-                                <p><strong>ENPEE International School</strong><br/> <i>Château Français</i><br/>
-                                    ENPEE Enclave, 241/2, Puthakudy Village,  <br/> 
-                                    Vadamattam Main Road, Nedunkadu Panchayat, <br/>
-                                    Karaikal – 609603, U.T of Puducherry
-                                </p>
-                            </div>
-                        </div>
-                        Contact Info End 
-                        Contact Info Start
-                        <div class="col-md-4 text-right">
-                            <div class="c-info">
-                                <h6>Contact:</h6>
-                                <p><strong>Telephone:</strong><a href="tel:04368 265 265"> 04368 265 265</a></p>
-                                <p><strong>Phone:</strong><a href="tel:+91 8300111265"> +91 8300 111 265</a></p>
-                            </div>
-                        </div>
-                        Contact Info End 
-                        Contact Info Start
-                        <div class="col-md-4 text-right">
-                            <div class="c-info">
-                                <h6>For More Information:</h6>
-                                <p><strong>Email:</strong><a href="mailto:info@enpeekl.com"> info@enpeekkl.com</a></p>
-                                <p><a href="mailto:admin@enpeekl.com">admin@enpeekkl.com</a></p>
-                            </div>
-                        </div>
-                        Contact Info End 
-                    </div>
-                </div>-->
+                <!--                <div class="container contact-info">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h3>Contact Information</h3>
+                                        </div>
+                                        Contact Info Start
+                                        <div class="col-md-4 text-right">
+                                            <div class="c-info">
+                                                <h6>Address:</h6>
+                                                <p><strong>ENPEE International School</strong><br/> <i>Château Français</i><br/>
+                                                    ENPEE Enclave, 241/2, Puthakudy Village,  <br/> 
+                                                    Vadamattam Main Road, Nedunkadu Panchayat, <br/>
+                                                    Karaikal – 609603, U.T of Puducherry
+                                                </p>
+                                            </div>
+                                        </div>
+                                        Contact Info End 
+                                        Contact Info Start
+                                        <div class="col-md-4 text-right">
+                                            <div class="c-info">
+                                                <h6>Contact:</h6>
+                                                <p><strong>Telephone:</strong><a href="tel:04368 265 265"> 04368 265 265</a></p>
+                                                <p><strong>Phone:</strong><a href="tel:+91 8300111265"> +91 8300 111 265</a></p>
+                                            </div>
+                                        </div>
+                                        Contact Info End 
+                                        Contact Info Start
+                                        <div class="col-md-4 text-right">
+                                            <div class="c-info">
+                                                <h6>For More Information:</h6>
+                                                <p><strong>Email:</strong><a href="mailto:info@enpeekl.com"> info@enpeekkl.com</a></p>
+                                                <p><a href="mailto:admin@enpeekl.com">admin@enpeekkl.com</a></p>
+                                            </div>
+                                        </div>
+                                        Contact Info End 
+                                    </div>
+                                </div>-->
             </section>
             <!--Contact End--> 
             <?php include 'footer.php'; ?>
