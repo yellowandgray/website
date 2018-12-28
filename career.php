@@ -46,18 +46,18 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
-                                                <input type="text" class="form-control" name="email" placeholder="Email" required>
+                                                <input type="email" class="form-control" name="email" placeholder="Email" required>
                                             </li>
                                         </div>
                                         <div class="form-group">
                                             <li class="half pr-15">
-                                                <input type="text" pattern="[0-9]{5}[-][0-9]{7}[-][0-9]{1}" class="form-control" name="mobile" placeholder="Contact" required>
+                                                <input type="text" pattern="^\d{10}$" class="form-control" name="mobile" placeholder="Contact (format: xxxx-xxx-xxxx)" required>
                                             </li>
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
                                                 <select name="select_role" class="form-control">
-                                                    <option value="0">Select Role</option>
+                                                    <option value="Select Job Role">Select Job Role</option>
                                                     <option value="Admin Manager">Admin Manager</option>
                                                     <option value="Front Office Staff">Front Office staff</option>
                                                     <option value="Teacher">Teacher</option>
