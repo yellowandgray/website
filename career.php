@@ -51,7 +51,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="half pr-15">
-                                                <input type="text" class="form-control" name="mobile" placeholder="Contact" required>
+                                                <input type="text" pattern="[0-9]{5}[-][0-9]{7}[-][0-9]{1}" class="form-control" name="mobile" placeholder="Contact" required>
                                             </li>
                                         </div>
                                         <div class="form-group">

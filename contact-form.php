@@ -115,11 +115,11 @@ if ($_POST['name']) {
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
             <h3 style = "margin:0 0 16px; text-align:center;">Enquiry Form Details.</h3>
-            <p style = "margin:0 0 16px">Name :' . $name . '</p>
-            <p style = "margin:0 0 16px">Email :' . $email . '</p>
-            <p style = "margin:0 0 16px">Phone Number :' . $mobile . '</p>
-            <p style = "margin:0 0 16px">Number of Children :' . $no_children . '</p>
-            <p style = "margin:0 0 16px">Preffred Programs :'
+            <p style = "margin:0 0 16px">Name: ' . $name . '</p>
+            <p style = "margin:0 0 16px">Email: ' . $email . '</p>
+            <p style = "margin:0 0 16px">Phone Number: ' . $mobile . '</p>
+            <p style = "margin:0 0 16px">Number of Children: ' . $no_children . '</p>
+            <p style = "margin:0 0 16px">Preffred Programs: '
     ?>
 
     <?php
@@ -128,8 +128,8 @@ if ($_POST['name']) {
         $message.= $names . ',';
     }
     $message.= '</p>
-        <p style = "margin:0 0 16px">Subject : ' . $subject . '</p>
-        <p style = "margin:0 0 16px">Message :' . $message1 . '</p>
+        <p style = "margin:0 0 16px">Subject: ' . $subject . '</p>
+        <p style = "margin:0 0 16px">Message: ' . $message1 . '</p>
             <p style = "margin:0 0 16px">Regards,<br/>ENPEE Web Team.</p></div>
             </td>
             </tr>
