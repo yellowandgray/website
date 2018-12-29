@@ -132,7 +132,7 @@ img.img-polaroid {
 /*  Header
 ==================================== */
 .topbar{
-    background-color: #007e93;
+    background-color: #e6d82d;
     padding: 5px 0;
     color:#fff;
 }
@@ -151,7 +151,7 @@ img.img-polaroid {
 }
 .topbar p > i{
     margin-right:5px;
-    color: #ffffff;
+    color: #000000;
 }
 .topbar p:last-child{
     text-align:right;
@@ -184,7 +184,7 @@ header .navbar-collapse  ul.navbar-nav {
 }
 header .navbar {min-height: 80px;padding: 18px 0;}
 .home-page header .navbar-default{
-    background: #ffffff;
+    background: #000000;
     /* position: absolute; */
     width: 100%;
 }
@@ -318,7 +318,7 @@ header ul.nav li ul li a {
 
 
 .navbar .nav > li > a {
-    color: #212121;
+    color: #ffffff;
     text-shadow: none;
     border: 1px solid rgba(255, 255, 255, 0) !important;
 }
@@ -1403,7 +1403,7 @@ blockquote cite a:visited { color:#555; }
 }
 
 /* --- button --- */
-.btn{text-align: center;color: #FFFFFF;padding: 12px 44px;border-radius: 0;background: #007e93;border-color: transparent; margin-top: 12px;}
+.btn{text-align: center;color: #FFFFFF;padding: 12px 44px;border-radius: 0;background: #a9a9a9;border-color: transparent; margin-top: 12px;}
 .btn-theme {
     color: #fff;
     background: transparent;
@@ -1634,7 +1634,7 @@ ul.team-detail li ul.social-network li i {
 .pricing-box-item {border: 2px solid #adadad;background:#f7f7f7;position:relative;margin:0 0 20px 0;padding:0;-webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.03);-moz-box-shadow: 0 2px 0 rgba(0,0,0,0.03);box-shadow: 0 2px 0 rgba(0,0,0,0.03);-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;overflow: hidden;}
 
 .pricing-box-item .pricing-heading {
-    background: #f7f7f7;
+    background: #d6d6d6;
     text-align: center;
     padding: 10px 0;
     display:block;
@@ -1831,7 +1831,7 @@ ul.social-network li {
     height:32px;
     bottom:0px;
     right:20px;
-    background: #d2ae6c;
+    background: #e6d82d;
 }
 
 a.scrollup {

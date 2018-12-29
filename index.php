@@ -141,7 +141,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-7">
-                            <h3 class="blue-color bold">Professionally Managed IT Solutions for All Businesses</h3>
+                            <h3 class="bold">Professionally Managed IT Solutions for All Businesses</h3>
                             <p class="text-justify">With over 20+ years of experience, GOLDEN AVENUE has earned the rock-solid reputation of delivering reliable IT solutions and support in Dubai with extremely focused and flexible on satisfying all or client requirements. If your business requires unparalleled Technical Support, GOLDEN AVENUE offers a powerful set of services that operates like an in-house IT department - with the same response speed, accuracy and unmatched quality. GOLDEN AVENUE features more flexible and reasonable rates that helps reduce business overheads.</p>
                         </div>
                         <div class="col-md-5">
@@ -348,7 +348,7 @@
                                         <li>&nbsp;&nbsp;<i class="fa fa-check"></i> Onsite Support</li>
                                         <li>&nbsp;&nbsp;<i class="fa fa-check"></i> Once in a month preventive maintenance</li>
                                         <li>&nbsp;&nbsp;<i class="fa fa-check"></i> Monitoring</li>
-                                        <li>&nbsp;&nbsp;<i class="fa fa-check"></i> Cyber security Awareness Workshop <br/>(Every 6 months)</li>
+                                        <li>&nbsp;&nbsp;<i class="fa fa-check"></i> Cyber security Awareness Workshop (6 Mths)</li>
                                         <li>&nbsp;&nbsp;<i class="fa fa-check"></i> 1 hour response</li>
                                     </ul>
                                 </div>

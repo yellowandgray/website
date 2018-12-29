@@ -154,10 +154,12 @@ button .glyphicon-menu-right, input[type="button"] .glyphicon-menu-right, input[
     background-color: #0082ca;
 }
 .btn.btn-blue {
-    background-color: #007e93;
-    color: #fff;
+    background-color: #e6d82d;
+    color: #000;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 a:hover, a:focus, a:active {
     text-decoration: none;
@@ -257,11 +259,11 @@ b, strong {
 
 /* //////////    */
 
-.gray-bg {background: #f7f7f7; }
+.gray-bg {background: #e6d82d; box-shadow: 0px 9px 10px 1px #cacaca; }
 .padding-20 {padding: 20px; }
 
 .blue-color {color: #007c93 !important; }
-.yellow-color {color: #d2ae6c !important; }
+.yellow-color {color: #030104 !important; }
 .bold {font-weight: bold; }
 .hr1 {border-top: 2px solid #eee; margin-bottom: 5px; margin-top: 2px; }
 .box-shadow-1 {box-shadow: 0px 0px 14px 4px #eee; padding: 20px; }
@@ -429,7 +431,7 @@ blockquote p {color: #fff;}
 
 /*.img-responsive {width: 100% }*/
 
-.topbar a { color: #d2d2d2; margin: 0 10px; }
+.topbar a { color: #000000; margin: 0 10px; }
 .topbar a:hover { color: #fff; border: 1px solid #eee; padding: 5px 10px; transition: 0.3s;}
 .banner-content { margin-bottom: 68px !important; }
 .banner-content-1 { margin-bottom: 68px !important; width:120%}
@@ -440,7 +442,7 @@ blockquote p {color: #fff;}
 
 .img-border img {border: 2px solid #adadad;}
 
-.custome-gray-bg {background: #000000 !important; padding: 60px;}
+.custome-gray-bg {background: #afafaf !important; padding: 60px;}
 .custome-gray-bg h3 {color: #ffffff;}
 .box-shadow-1 p {margin: 0px !important;}
 .box-shadow-2 p {font-family: 'Noto Sans TC', sans-serif;}
@@ -526,6 +528,8 @@ blockquote p {color: #fff;}
     font-size: 24px;
     transform: rotate(-90deg);
     z-index: 999;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
 }
 
 /* The popup chat - hidden by default */
@@ -612,8 +616,8 @@ blockquote p {color: #fff;}
 .white {color: white !important}
 
 marquee {
-    background: #424242;
-    color: #fff;
+    background: #ffffff;
+    color: #000;
     font-size: 18px;
     padding: 10px 0px;
     margin-bottom: -10px;
@@ -662,9 +666,9 @@ marquee {
 
 .table-center-align td {width: 262px;}
 .font-size-20 {font-size: 20px;}
-.gray {background: #8a8989 !important; color: #fff;}
+/*.gray {background: #d6d6d6 !important; color: #fff;}
 .blue {background: #41a9b9 !important; color: #fff;}
-.orange {background: #dab576 !important; color: #fff;}
+.orange {background: #dab576 !important; color: #fff;}*/
 
 .margin-top-45 {margin-top: 45px;}
 .why-us-content {
@@ -737,7 +741,7 @@ p {color: #000000 !important; font-size: 15px !important; line-height: 2em;}
 ul {color: #000000 !important; font-size: 16px !important;}
 table {color: #000000 !important; font-size: 15px !important;}
 .topbar span{
-    color: #ffffff !important;
+    color: #000 !important;
     font-size: 13px !important;
 }
 .topbar p{
@@ -788,8 +792,8 @@ blockquote p { color: #ffffff !important; }
 
 
 .chat-popup-button {
-    background-color: #007e93;
-    color: white;
+    background-color: #e6d82d;
+    color: #000000;
     padding: 8px 10px;
     border: none;
     cursor: pointer;
