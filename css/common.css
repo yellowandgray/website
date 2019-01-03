@@ -528,11 +528,11 @@ fieldset {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 710px) {
-    .mobile-logo {margin-left: 240px !important;}
+    .mobile-logo {margin-left: 250px !important;}
 }
 
 
-@media only  screen and (max-width:767px){
+@media only  screen and (max-width:769px){
     .colorlib-nav ul li a{
         /*        padding: 14px 16px !important;*/
         color: #78a842 !important;
