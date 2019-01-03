@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6, figure {
     font-weight: bold;}
 .colorlib-nav .upper-menu .colorlib-social-icons {
     display: inline-block;
-/*    margin-right: 10px; */
+    /*    margin-right: 10px; */
 }
 .colorlib-nav .upper-menu .colorlib-social-icons li {
     padding: 0;
@@ -145,7 +145,8 @@ h1, h2, h3, h4, h5, h6, figure {
     font-weight: 800; }
 .colorlib-nav #colorlib-logo a {
     position: relative;
-    color: #000; }
+    color: #000;
+    text-align: -webkit-center;}
 .colorlib-nav #colorlib-logo a i {
     color: #429FFD; }
 @media screen and (max-width: 768px) {

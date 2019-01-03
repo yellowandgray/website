@@ -527,9 +527,9 @@ fieldset {
     display: none;
 }
 
-@media only screen and (max-width: 768px) and (min-width: 710px) {
-    .mobile-logo {margin-left: 250px !important;}
-}
+/*@media only screen and (max-width: 1024px) {
+    .slider-caption strong {display: block !important;}
+}*/
 
 
 @media only  screen and (max-width:769px){
@@ -545,7 +545,7 @@ fieldset {
     }
     .mobile-logo{
         display: block;
-        margin-left: 75px;
+/*        margin-left: 75px;*/
     }
 /*    section#home-slider img {height: 190px !important;}*/
     .award-img img {padding: 10px 0;}

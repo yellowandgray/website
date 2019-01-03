@@ -1,10 +1,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="ENPEE International School is the first premium school in Karaikal, providing quality education with world class facilities. We are highly passionate about our Core Values KNOWLEDGE INNOVATION EXCELLENCE. Admissions are open for the year 2019-2020.">
     <meta name="author" content="">
     <link rel="icon" href="images/favicon.png">
-    <title>ENPEE International School</title>
+    <title>ENPEE International School | CBSE School in Karaikal | International School in Karaikal</title>
     <!-- CSS FILES START -->
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/color.css" rel="stylesheet">
