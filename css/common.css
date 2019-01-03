@@ -526,6 +526,12 @@ fieldset {
 .mobile-logo{
     display: none;
 }
+
+@media only screen and (max-width: 768px) and (min-width: 710px) {
+    .mobile-logo {margin-left: 240px !important;}
+}
+
+
 @media only  screen and (max-width:767px){
     .colorlib-nav ul li a{
         /*        padding: 14px 16px !important;*/
@@ -541,7 +547,7 @@ fieldset {
         display: block;
         margin-left: 75px;
     }
-    section#home-slider img {height: 190px !important;}
+/*    section#home-slider img {height: 190px !important;}*/
     .award-img img {padding: 10px 0;}
 }
 
@@ -676,7 +682,11 @@ fieldset {
 @media (max-width: 914px) and (min-width: 768px) {
     .height-440 {height: 340px !important;}
 }
-
+@media (max-width: 768px) {
+    .mobile-container {
+        max-width: 768px !important;
+    }
+}
 
 /*Style for the first level menu bar*/
 /*ul#menu{
