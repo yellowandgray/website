@@ -201,9 +201,9 @@ $categories = $db->selectAllWithoutWhere('categories');
                                     </div>
                                     <div class="who_we_content">
                                         <h3>Who We Are</h3>
-                                        <p>Since our inception, the Macworld Group has exported products and services to over 65 countries and we are continuously penetrating new markets, opening and accessing new opportunities.<br>
-                                            We believe that due to our strong Management and Technical Team support and backed by our culture and DNA, we are able to deliver Globally Reliable and World Class products and sevices consistently. We are always looking at the future and how we can break new boundaries and one of the ingredients that has helped us and our brand to be successfully commercialized and accessible to our customers, lies in our Mission, Vision and Core Values. </p>
-                                        <p></p>                                </div>
+                                        <p>The Mac World Group is an entrepreneurial driven entity delivering Globally Reliable and World Class products and services consistently for almost 20 years. This ambitious spirit has permeated throughout the Eco System and Value chain of the organization, contributing towards a holistic and dynamic workplace environment and leading the group and its associated companies to successfully enter new markets and secure long term customers.</p>
+                                        <p>Mac World’s Management Team has a cumulated experience of more than 100 years in multiple touch points, ranging from sourcing, branding, marketing, production and manufacturing right to customization, trade and International sales. The Management Team is supported by highly qualified and experienced technical and Research and Development personnel who are able to provide the best of breed solutions and advice to the group.</p>                                
+                                    </div>
                                 </div>
                             </div>
 
@@ -261,10 +261,18 @@ $categories = $db->selectAllWithoutWhere('categories');
                         <div class="container">
 
                             <div class="text-center our_partner_heading heading_text">
+                                <h3>What We Do</h3>
+                                <p>The Mac World Group is an ISO 9001:2015 certified company which exports products and services to over 65 countries. The company has been continuously penetrating new markets, opening and accessing new opportunities. Since its inception in 2001, Mac World is in the business of manufacturing and trading Palm Oil; Palm Derivatives; its by-products and agro commodities.</p>
+                                <p>Being pioneers of Palm Oil export in Malaysia, in the recent years, Mac World has further diversified into major suppliers of consumer packs; soft/ lauric oils; cattle and poultry feeds; confectionary and bakery applications; agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide. The group has transformed into an established brand with GOLDSTAR, GOLDFRY, GOLDFAT and MR.MAC- its range of vegetable cooking oil, vegetable ghee, tomato paste and‘ GOLDENFARM’ for evaporated milk and become the one stop shop in Malaysia for  Palm Oil Derivatives, Oleo Chemicals, Confectionery fats and Agro commodities for manufacturers worldwide.</p>
+                                <p>Driven by the commitment to ensure that high quality products are being offered at competitive pricing and using the expertise and experience to serve the dynamic needs of customers,  Mac World ensures that its values and principles are upheld at all times.</p>
+<!--                                <div class="team-images-set"><img src="img/team.jpg" alt=""></div>-->
+                                <p></p><p></p>
+                            </div>
+                            <div class="text-center our_partner_heading heading_text">
                                 <h3>Our Team</h3>
                                 <p></p><p>The Macworld Group is a largely entrepreneurial driven entity and this characteristic has permeated throughout the Eco System and Value chain of our organization. These attributes inevitably contribute towards a holistic and dynamic workplace environment and this also helps the group and our associated companies to successfully enter new markets and secure long term customers.<br>
                                     Our Management Team has a collective industry experience of more than 100 years in multiple touch points of our industry, ranging from sourcing, branding, marketing, production, manufacturing right up to customization, trade and International sales. The Management Team is ably supported by highly qualified and experienced technical and Research and Development personnel who are able to provide the best of breed solutions and advice to the group. All this collectively, leads to the Macworld Brand being recognized as a Globally reknowned company and a brand that delivers globally reliable products and services. Our Management and Technical Team’s efforts have also let us to achieve the highly acclaimed 9001:2015 ISO certification and accreditation.</p>
-                                <div class="team-images-set"><img src="img/team.jpg" alt=""></div>
+                                <div class="team-images-set"><img src="img/team-1.jpg" alt=""></div>
                                 <p></p><p></p>
                             </div>
                             <div class="products-container">
@@ -378,9 +386,9 @@ $categories = $db->selectAllWithoutWhere('categories');
                                             <img width="736" height="552" src="img/services01.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="img/services01.jpg 736w, img/services01-300x225.jpg 300w" sizes="100vw">
                                         </div>
                                         <div class="containt-wrap">
-                                            <h3>Services 03</h3>
-                                            <p>RBD palm stearin is obtained from fractionating refined palm oil to separate olein from stearin. It is a white solid at room temperature, melting to a clear yellow liquid on heating.</p>
-                                            <p>RBD palm stearin is used in margarine and shortening industries. It is also used in soap, candles and oleochemical industries.</p>
+                                            <h3>Integrated Financial Service</h3>
+                                            <p>The ability to access and secure finance is critical for business survival and growth and at Mac World, we truly understand this need. By leveraging strategic networking alliances and the distribution network to move products between regions, Mac World obtains competitive prices for customers on a regular basis, thus enabling buyers to procure more products at higher volumes. Sustainable finance facilitation with traders in the commodity origination sources averts operational inefficiencies and prevents wastage. Mac World’ customer centric philosophy lays emphasis on providing personalised end-to-end supply chain management solutions for buyers and suppliers to draw maximum advantage, by providing cash flow, extended credit, risk mitigation etc.</p>
+                                            <p>Mac World’s commitment to go beyond customer expectation, along with its association with financial institutions and the ability to raise finance support for critical transactions, further strengthens its partnerships with customers and suppliers and helps match supply and demand for commodities and products more effectively and efficiently.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -502,7 +510,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                         <div class="container">
                             <div class="our_partner_heading our_partner_text text-center">
                                 <h3>Our Partners</h3>
-                                <p></p><p>The Macworld group and our Management believes in establishing strong strategic alliances with parties and organizations that will be of mutually benefit, to achieve the goals and vision of our brand positioning. Todate, we have established various strategic partnerships and collaborations with some iconic entities. </p><p></p>
+                                <p></p><p>With the expansive portfolio that Mac World handles – sourcing, manufacturing, trading and distributing raw materials, Mac World group and its Management believe in establishing mutually beneficial, strong strategic alliances with parties and organizations at every level of the business, across commodities, geographies and functions, to achieve its mission and vision.</p><p></p>
                                 <ul class="clearfix">
                                     <li class="active"><a data-toggle="tab" href="#menu1">Banking</a></li>
                                     <li class=""><a data-toggle="tab" href="#menu2">Insurance</a></li>
@@ -694,11 +702,11 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 <div class="map_pointer_content">
                                     <ul>
                                         <li><a href="#">Malaysia</a></li>
+                                        <li><a href="#">Egypt</a></li>
                                         <li><a href="#">Indonesia</a></li>
                                         <li><a href="#">India</a></li>
                                         <li><a href="#">Ivory Coast</a></li>
                                         <li><a href="#">UAE</a></li>
-                                        <li><a href="#">Egypt</a></li>
                                         <li><a href="#">Nigeria</a></li>
                                         <li><a href="#">Tanzania</a></li>
                                         <li><a href="#">Benin</a></li>
@@ -719,6 +727,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                             <div class="footer_content">
                                 <h3>Contact Us</h3>
                                 <div class="footer_box">
+                                    <img src="img/master-1g.jpg" alt="" title="" style="width: 100%"/>
                                     <div class="poretal">
                                         <h4>Mac World Industries SDN BHD (548445-V)</h4>
                                         <p>3-11, Block B,<br>
@@ -728,17 +737,17 @@ $categories = $db->selectAllWithoutWhere('categories');
                                             <br>Selangor Darul Ehsan, Malaysia.</p>
                                         <ul>
                                             <li>
-                                                <span><img src="img/call_icon.png" alt="" title=""></span><p></p>
+                                                <span><img src="img/call_icon.png" alt="" title=""></span>
                                                 <div class="footer_mobile">
-                                                    <a href="tel:+603-7954 7059">+603 7954 7059</a><br>
+                                                    <a href="tel:+603-7954 7059">+603 7954 7059</a>
                                                     <a href="tel:+603-7931 0352">+603-7931 0352</a>
                                                 </div>
                                             </li>
                                             <li>
-                                                <a href="#"> <span><img src="img/fax.png" alt="" title=""></span><p></p>
+                                                <a href="#"> <span><img src="img/fax.png" alt="" title=""></span>
                                                     <p>+603-7954 0059</p>
-                                                </a><p><a href="#">                                        </a>
-                                                </p></li>
+                                                </a>
+                                                <p><a href="#"></a></p></li>
                                             <li>
                                                 <a href="#"> <span><img src="img/mail.png" alt="" title=""></span><p></p>
                                                     <p>products@macworldinc.com</p>
