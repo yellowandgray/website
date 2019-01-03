@@ -47,7 +47,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 <div class="col-md-5 col-sm-3 col-xs-4">
                                     <div class="logo-wrap">
                                         <h1>
-                                            <a href="index.html" title="">
+                                            <a href="#main-banner" title="">
                                                 <img class="img-responsive" src="img/logo-top.png" alt="" title="MAC WORLD">
                                             </a>
                                         </h1>
