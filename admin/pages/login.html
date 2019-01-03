@@ -1,0 +1,60 @@
+<section class="login-background height-100vh">
+    <div class="login-logo">
+        <img ng-src="images/logo.png" alt="image" />
+    </div>
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="proect-title">
+                    Product Management System                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="login">
+                    <form ng-submit="loginForm();">
+                        <div class="form-group">
+                            <input class="text-center form-control input-width" ng-model="formFields.email" type="text" name="username" placeholder="User Name" autofocus />
+                        </div>
+                        <div class="form-group">
+                            <input class="text-center form-control input-width" ng-model="formFields.password" type="password" name="pass" placeholder="Password" />
+                        </div>
+                        <button class="btn-primary btn login-btn" type="submit">LOGIN</button>
+                        <br/>
+                        <br/>
+                        <div class="text-center">
+                            <a class="underline color-white pointer" ng-click="forgotPassword();">Forgot Password</a>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copy-right">
+                    &COPY; 2018 Mac World Industries Sdn. Bhd.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/ng-template" id="forgot_password.html">
+    <div class="modal-header">
+    <h3 class="modal-title" id="modal-title">
+    Forgot Password
+    <a class="pointer pull-right" ng-click="cancel();">
+    <i class="fa fa-times"></i>
+    </a>
+    </h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <div>Enter you registered email id</div>
+    <form ng-submit="forgotPassword();">
+    <div class="form-group">
+    <input class="form-control" ng-model="email" type="text" name="email" placeholder="Email ID" autofocus />
+    </div>
+    <button class="btn-primary btn login-btn" type="submit">SEND PASSWORD</button>
+    </form>
+    </div>
+</script>

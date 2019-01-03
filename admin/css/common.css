@@ -1,0 +1,56 @@
+.underline {
+    text-decoration: underline;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.navbar ul{
+    list-style: none;
+}
+
+.height-100vh{
+    height: 100vh;
+}
+
+.height-84vh{
+    height: 84vh;
+}
+
+.no-padding{
+    padding: 0px;
+}
+
+.color-white {
+    color: #ffffff;
+}
+
+.color-blue {
+    color: #1d99d5;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.padding-t-b-15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.padding-b-10 {
+    padding-bottom: 10px;
+}
