@@ -178,9 +178,13 @@ $categories = $db->selectAllWithoutWhere('categories');
                                         <figure> <img src="img/mac_wolrd.png" alt="" title=""> </figure>
                                         <p></p>
                                         <h3>Futurizing Manufacturing and Commodities Commerce Globally</h3>
-                                        <p>Macworld  is a diversified and integrated manufacturing and commodities group that operates from its regional headquarters centered in Kuala Lumpur, Malaysia. Established by a group of entrepreneurs from two different countries, who shared a common objective and vision, Macworld has grown both in revenue and profitability on an exponential basis Year on Year. The group has successfully designed, developed and commercially exported a wide range of products and services to nearly all the continents of the world and has secured many bluechip customers. </p>
-                                        <p>As a group, we have grown organically, while applying our philosophy and approach that balances both financial Return of Investment (FROI) and Social Return of Investment ( SROI).  </p>                                </div>
-                                </div> <a href="#our_journey" class="about_us_btn">Our Journey</a> </div>
+                                        <p>Mac World is a diversified, yet integrated toll manufacturing group in Malaysia, who are also key players in the global commodity market. The company has grown exponentially under the forward-thinking leadership of a group of entrepreneurs who shared a common objective and vision.</p>
+                                        <p>Headquartered in Malaysia; which is abundant in natural resources, Mac World manufactures and supplies raw materials to some of the biggest food and beverage brands across the globe. With worldwide connectivity and by seamlessly integrating operations and services, the group has successfully designed, developed and commercially exported a wide range of products and services to most parts of the world.</p>
+                                        <p>Having grown organically, by applying modern and rational philosophy and approach; balancing financial Return of Investment (FROI) and Social Return of Investment (SROI), Mac World transforms raw materials into bespoke ingredients to help customers meet the ever changing demand of consumers.</p>                               
+                                    </div>
+                                </div> 
+                                <a href="#our_journey" class="about_us_btn">Our Journey</a> 
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -208,26 +212,27 @@ $categories = $db->selectAllWithoutWhere('categories');
                                     <div class="who_we_content about_right_content mCustomScrollbar _mCS_2" style="height: 600px;"><div id="mCSB_2" class="mCustomScrollBox mCS-dark-3 mCSB_vertical mCSB_inside" tabindex="0" style="max-height: none;"><div id="mCSB_2_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
                                                 <div class="global_ralby">
                                                     <h4>Mission </h4>
-                                                    <p>To be the benchmark in industry we serve</p>
+                                                    <p>To be the benchmark in the industry we serve.</p>
                                                 </div>
                                                 <div class="global_ralby">
                                                     <h4>Vission</h4>
-                                                    <p>To provide reliable products with sustainable supply chain, through bilateral trade</p>
+                                                    <p>To provide reliable products, with sustainable supply chain, through bilateral trade</p>
                                                 </div>
                                                 <div class="global_ralby value_content">
                                                     <h4>Value</h4>
+                                                    <p>From the founders to the most recent employee, our values guide our conduct:</p>
                                                     <ul>
                                                         <li><span>C </span>
                                                             <p>Caring and Communicative</p>
                                                         </li>
                                                         <li><span>A </span>
-                                                            <p> Attention to detail and <br> Attentive to customers’ needs</p>
+                                                            <p>Attention & Attentiveness to customers’ needs.</p>
                                                         </li>
                                                         <li><span>R </span>
                                                             <p>Responsive to change and Reliability</p>
                                                         </li>
                                                         <li><span>E </span>
-                                                            <p>Engagement with stakeholders, Energetic and Enthusiastic</p>
+                                                            <p>Engagement with stakeholders, Energetic and Enthusiastic Team</p>
                                                         </li>
                                                     </ul>
                                                 </div>
