@@ -46,7 +46,7 @@
                             <div class="col-md-4">
                                 <!--campaign box start-->
                                 <div class="campaign-box">
-                                    <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-pre-kg.jpg" alt=""> </div>
+                                    <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-pre-kg.jpg" alt="Pre-KG - ENPEE International School" title="Pre-KG - ENPEE International School"> </div>
                                     <div class="campaign-txt">
                                         <h5><a href="#">Pre-KG</a></h5>
                                         <p class="text-justify">Early Childhood education is the child’s first step towards social engagement. This prepares toddlers through Experiential learning activities, making real life connections. Our program is based largely on the developmentally appropriate practice thereby delivering the right curriculum at the right age</p>
@@ -58,7 +58,7 @@
                             <div class="col-md-4">
                                 <!--campaign box start-->
                                 <div class="campaign-box">
-                                    <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-lkg-ukg.jpg" alt=""> </div>
+                                    <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-lkg-ukg.jpg" alt="LKG-UKG - ENPEE International School" title="LKG-UKG - ENPEE International School"> </div>
                                     <div class="campaign-txt">
                                         <h5><a href="#">LKG-UKG</a></h5>
                                         <p class="text-justify">The role of Early Childhood & Primary education is to ensure overall development in a child, which means attention must be paid to both cognitive & intellectual aspects as well as social & emotional development of a child. At ENPEE, Our Kindergarten programs provide the child with Academic and overall readiness to step into the world of Primary education, from Early years.</p>
@@ -71,7 +71,7 @@
                             <div class="col-md-4">
                                 <!--campaign box start-->
                                 <div class="campaign-box">
-                                    <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-class-one-five.jpg" alt=""> </div>
+                                    <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-class-one-five.jpg" alt="Class I to V - ENPEE International School" title="Class I to V - ENPEE International School"> </div>
                                     <div class="campaign-txt">
                                         <h5><a href="#">Class I to V</a></h5>
                                         <p class="text-justify">Our CBSE method of education through Continuous Comprehensive Evaluation (CCE) is a curricular initiative shifting emphasis from assessment to holistic learning. We follow the NCERT books, which supplements the learning process at ENPEE. Our friendly & welcoming classrooms offer children the space to learn the right way.</p>

@@ -5,7 +5,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <!--Footer Widget Start-->
                     <div class="footer-widget about-ecova ul-padding-color">
-                        <div class="f2logo"> <img src="images/logo-enpee-international-school.png" alt="" style="height: 115px"> </div>
+                        <div class="f2logo"> <img src="images/logo-enpee-international-school.png" alt="Morfosis" title="Morfosis" style="height: 115px"> </div>
                         <ul>
                             <li>Team Building</li>
                             <li>Interactive Learning</li>
@@ -41,12 +41,12 @@
                     <div class="footer-widget">
                         <h5>Upcoming Events</h5>
                         <ul class="lastest-products">
-                            <li> <img src="images/event-knowledge-innovation-excellence.jpg" alt="" style="width: 68px; height: 68px"> 
+                            <li> <img src="images/event-knowledge-innovation-excellence.jpg"  alt="Knowledge Innovation Excellence - ENPEE International School" title="Knowledge Innovation Excellence - ENPEE International School" style="width: 68px; height: 68px"> 
                                 <strong><a href="#">Knowledge Innovation Excellence</a></strong> 
                                 <span class="pdate"><i>Date:</i> 10 Feb 2019</span>
                             </li>
                             <li> 
-                                <a href="contact.php"><img src="images/pic-admission-open.jpg" alt="" style="width: 68px; height: 68px"> </a>
+                                <a href="contact.php"><img src="images/pic-admission-open.jpg" alt="Admisstion open 2019-2020 - ENPEE International School" title="Admisstion open 2019-2020 - ENPEE International School" style="width: 68px; height: 68px"> </a>
                                 <strong><a href="contact.php" style="font-size:20px">Admissions <br /> Open Now</a></strong>
 <!--                                <span class="pdate"><i>Date:</i> 14 May 2019</span> -->
                             </li>

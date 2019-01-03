@@ -48,7 +48,7 @@
                                     <!--                                    <a href="#">
                                                                             <i class="fas fa-play"></i>
                                                                         </a> -->
-                                    <img src="images/national-pharma.jpg" alt=""> 
+                                    <img src="images/national-pharma.jpg" alt="National Pharma Hospital & Research Institute - ENPEE International School" title="National Pharma Hospital & Research Institute - ENPEE International School"> 
                                 </div>
                             </div>
                         </div>

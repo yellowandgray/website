@@ -30,7 +30,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/home-banner-01.jpg" alt=""/>
+                    <img src="images/banner/home-banner-01.jpg" alt="Karaikal's 1st Premium School - ENPEE International School" title="Karaikal's 1st Premium School - ENPEE International School"/>
                 </div>
 
                 <div class="item">
@@ -43,7 +43,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-french-style.jpg" alt=""/>
+                    <img src="images/banner/banner-french-style.jpg" alt="French Style Architecture with Modern Facilities - ENPEE International School" title="French Style Architecture with Modern Facilities - ENPEE International School"/>
                 </div>
 
                 <div class="item">
@@ -56,7 +56,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner003.jpg" alt=""/>
+                    <img src="images/banner/banner003.jpg" alt="World Class Digitized Classrooms - ENPEE International School" title="World Class Digitized Classrooms - ENPEE International School"/>
                 </div>
 
                 <div class="item">
@@ -69,7 +69,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner004.jpg" alt=""/>
+                    <img src="images/banner/banner004.jpg" alt="Modern Learning Methodologies - ENPEE International School" title="Modern Learning Methodologies - ENPEE International School"/>
                 </div>
 
                 <div class="item">
@@ -82,7 +82,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner005.jpg" alt=""/>
+                    <img src="images/banner/banner005.jpg" alt="CBSE Method of Education - ENPEE International School" title="CBSE Method of Education - ENPEE International School"/>
                 </div>
 
                 <!--                <div class="item">
@@ -108,7 +108,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-emphasis.jpg" alt=""/>
+                    <img src="images/banner/banner-emphasis.jpg" alt="Emphasis on Mental & Physical activities - ENPEE International School" title="Emphasis on Mental & Physical activities - ENPEE International School"/>
                 </div>
 
                 <div class="item">
@@ -121,7 +121,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-sports.jpg" alt=""/>
+                    <img src="images/banner/banner-sports.jpg" alt="Unique Sports Complex - ENPEE International School" title="Unique Sports Complex - ENPEE International School"/>
                 </div>
 
                 <div class="item">
@@ -134,7 +134,7 @@
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
-                    <img src="images/banner/banner-football.jpg" alt=""/>
+                    <img src="images/banner/banner-football.jpg" alt="Multi-Purpose Play Ground - ENPEE International School" title="Multi-Purpose Play Ground - ENPEE International School"/>
                 </div>
 
             </section>
@@ -165,14 +165,14 @@
                             <div class="about-pic">
                                 <div class="pic1">
                                     <div id="pic-slider" class="owl-carousel owl-theme">
-                                        <div class="item"><img src="images/carosel/pic-Staff.jpg" alt=""></div>
+                                        <div class="item"><img src="images/carosel/pic-Staff.jpg" alt="Experienced Skilled Staff - ENPEE International School" title="Experienced Skilled Staff - ENPEE International School"></div>
 <!--                                        <div class="item"><img src="images/carosel/pic-doscipline.jpg" alt=""></div>-->
-                                        <div class="item"><img src="images/carosel/pic-frenchstyle.jpg" alt=""></div>
-                                        <div class="item"><img src="images/carosel/pic-interactive-learning.jpg" alt=""></div>
-                                        <div class="item"><img src="images/carosel/pic-project-based-curriculum.jpg" alt=""></div>
+                                        <div class="item"><img src="images/carosel/pic-frenchstyle.jpg" alt="French Style Architechture - ENPEE International School" title="French Style Architechture - ENPEE International School"></div>
+                                        <div class="item"><img src="images/carosel/pic-interactive-learning.jpg" alt="Interactive Learning - ENPEE International School" title="Interactive Learning - ENPEE International School"></div>
+                                        <div class="item"><img src="images/carosel/pic-project-based-curriculum.jpg" alt="Project Based Curriculum - ENPEE International School" title="Project Based Curriculum - ENPEE International School"></div>
                                     </div>
                                 </div>
-                               <div class="pic2"><div class="about-video-img-1"><a href="Enpee-slide-video.mp4" data-toggle="lightbox" data-width="1280"><i class="fas fa-play"></i></a><img src="images/aboutpic2.jpg" alt=""></div></div>
+                                <div class="pic2"><div class="about-video-img-1"><a href="Enpee-slide-video.mp4" data-toggle="lightbox" data-width="1280"><i class="fas fa-play"></i></a><img src="images/aboutpic2.jpg" alt="Modern Infrastructure-ENPEE International School" title="Modern Infrastructure-ENPEE International School"></div></div>
                             </div>
                         </div>
                     </div>
@@ -187,7 +187,7 @@
                         <div class="ser-box height-440">
                             <div class="ser-thumb">
                                 <a href="#"><i class="fas fa-link"></i></a>
-                                <img src="images/5-acre-campus-secured.jpg" alt="">
+                                <img src="images/5-acre-campus-secured.jpg" alt="Fully Secured 5 Acre Campus - ENPEE International School" title="Fully Secured 5 Acre Campus - ENPEE International School">
                             </div>
                             <div class="ser-txt">
                                 <h4> <a href="#">Fully Secured 5 Acre Campus </a> </h4>
@@ -200,7 +200,7 @@
                     <div class="ser-col">
                         <div class="ser-box height-440">
                             <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> 
-                                <img src="images/interactive-digitized.jpg" alt=""></div>
+                                <img src="images/interactive-digitized.jpg" alt="Interactive/ Digitized Classrooms - ENPEE International School" title="Interactive/ Digitized Classrooms - ENPEE International School"></div>
                             <div class="ser-txt">
                                 <h4> <a href="#">Interactive/ Digitized Classrooms</a>
                                 </h4>
@@ -213,7 +213,7 @@
                     <div class="ser-col">
                         <div class="ser-box height-440">
                             <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> 
-                                <img src="images/sports-complex.jpg" alt=""></div>
+                                <img src="images/sports-complex.jpg" alt="Unique Sports Complex - ENPEE International School" title="Unique Sports Complex - ENPEE International School"></div>
                             <div class="ser-txt">
                                 <h4> <a href="#">Unique Sports Complex</a> 
                                 </h4>
@@ -226,7 +226,7 @@
                     <div class="ser-col">
                         <div class="ser-box height-440">
                             <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> 
-                                <img src="images/community-football.jpg" alt=""></div>
+                                <img src="images/community-football.jpg" alt="Community Football Ground - ENPEE International School" title="Community Football Ground - ENPEE International School"></div>
                             <div class="ser-txt">
                                 <h4> <a href="#">Community Football Ground</a> 
                                 </h4>
@@ -239,7 +239,7 @@
                     <div class="ser-col">
                         <div class="ser-box height-440">
                             <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> 
-                                <img src="images/air-buses.jpg" alt=""></div>
+                                <img src="images/air-buses.jpg" alt="Air-Conditioned School Buses - ENPEE International School" title="Air-Conditioned School Buses - ENPEE International School"></div>
                             <div class="ser-txt">
                                 <h4> <a href="#">Air-Conditioned School Buses</a> 
                                 </h4>
@@ -267,7 +267,7 @@
                             <div class="blog-list wf100">
                                 <!--Blog Post Start-->
                                 <div class="blog-post wf100">
-                                    <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-pre-kg.jpg" alt=""></div>
+                                    <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-pre-kg.jpg" alt="Pre-KG - ENPEE International School" title="Pre-KG - ENPEE International School"></div>
                                     <div class="blog-txt">
                                         <h5><a href="#">Pre-KG</a></h5>
                                         <!--                                        <ul class="post-meta">
@@ -280,7 +280,7 @@
                                 <!--Blog Post End--> 
                                 <!--Blog Post Start-->
                                 <div class="blog-post wf100">
-                                    <div class="blog-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-lkg-ukg.jpg" alt=""></div>
+                                    <div class="blog-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-lkg-ukg.jpg" alt="LKG-UKG - ENPEE International School" title="LKG-UKG - ENPEE International School"></div>
                                     <div class="blog-txt">
                                         <h5><a href="#">LKG-UKG</a></h5>
                                         <!--                                        <ul class="post-meta">
@@ -293,7 +293,7 @@
                                 <!--Blog Post End--> 
                                 <!--Blog Post Start-->
                                 <div class="blog-post wf100">
-                                    <div class="blog-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-class-one-five.jpg" alt=""></div>
+                                    <div class="blog-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-class-one-five.jpg" alt="Class I to V - ENPEE International School" title="Class I to V - ENPEE International School"></div>
                                     <div class="blog-txt">
                                         <h5><a href="#">Class I to V</a></h5>
                                         <!--                                        <ul class="post-meta">
@@ -317,7 +317,7 @@
                                 <!--Blog Post Start-->
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/event-knowledge-innovation-excellence.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/event-knowledge-innovation-excellence.jpg" alt="Knowledge Innovation Excellence - ENPEE International School" title="Knowledge Innovation Excellence - ENPEE International School">
                                         <ul class="post-meta">
                                             <li>10 Febuary, 2019 </li>
                                             <li> 01:00 pm - 07:00 pm</li>
@@ -333,7 +333,7 @@
                                 <div class="event-post">
                                     <div class="pic-link">
 <!--                                        <i class="fas fa-link"></i> -->
-                                        <a href="#enquiry"><img src="images/pic-admission-open.jpg" alt=""></a>
+                                        <a href="#enquiry"><img src="images/pic-admission-open.jpg" alt="Admisstion open 2019-2020 - ENPEE International School" title="Admisstion open 2019-2020 - ENPEE International School"></a>
                                         <!--                                        <ul class="post-meta">
                                                                                     <li>20 February, 2019 </li>
                                                                                     <li> 10:00 am - 05:00 pm</li>
@@ -549,14 +549,14 @@
                     <div class="gallery-inner masonry">
                         <div class="row">
                             <ul>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat1 f-cat4"><span><a href="images/facilities/art-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a> <img src="images/facilities/art-01.jpg" alt=""></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat2 f-cat3"><span> <a href="images/facilities/dance-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/dance-01.jpg" alt=""></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat3 f-cat1"><span> <a href="images/facilities/music-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a> <img src="images/facilities/music-01.jpg" alt=""></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat4 f-cat2"><span> <a href="images/facilities/sports-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/sports-1.jpg" alt=""></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat1 f-cat4"><span> <a href="images/facilities/pic-yoga-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-yoga-01.jpg" alt=""></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat2 f-cat3"><span> <a href="images/facilities/theatre-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/theatre-1.jpg" alt=""></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat3 f-cat2"><span> <a href="images/facilities/swim-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/swim-1.jpg" alt=""></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat4 f-cat1"><span> <a href="images/facilities/tour-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/tour-01.jpg" alt=""></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat1 f-cat4"><span><a href="images/facilities/art-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a> <img src="images/facilities/art-01.jpg" alt="Art - ENPEE International School" title="Art - ENPEE International School"></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat2 f-cat3"><span> <a href="images/facilities/dance-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/dance-01.jpg" alt="Dance - ENPEE International School" title="Dance - ENPEE International School"></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat3 f-cat1"><span> <a href="images/facilities/music-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a> <img src="images/facilities/music-01.jpg" alt="Music - ENPEE International School" title="Music - ENPEE International School"></span> </lre-Ki>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat4 f-cat2"><span> <a href="images/facilities/sports-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/sports-1.jpg" alt="Sports - ENPEE International School" title="Sports - ENPEE International School"></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat1 f-cat4"><span> <a href="images/facilities/pic-yoga-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-yoga-01.jpg" alt="Yoga - ENPEE International School" title="Yoga - ENPEE International School"></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat2 f-cat3"><span> <a href="images/facilities/theatre-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/theatre-1.jpg" alt="Theatre - ENPEE International School" title="Theatre - ENPEE International School"></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat3 f-cat2"><span> <a href="images/facilities/swim-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/swim-1.jpg" alt="Swimming - ENPEE International School" title="Swimming - ENPEE International School"></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat4 f-cat1"><span> <a href="images/facilities/tour-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/tour-01.jpg" alt="Tourism - ENPEE International School" title="Tourism - ENPEE International School"></span> </li>
                             </ul>
                         </div>
                     </div>
@@ -570,8 +570,8 @@
                     <!--                    <div id="partner-logos" class="owl-carousel owl-theme">-->
                     <div class="row">
                         <div class="col-md-3"></div>
-                        <div class="col-md-3"><a href="http://www.yellowandgray.com" target="_blank"><img src="images/partners/logo-YGSTUDIO.png" alt=""></a></div>
-                        <div class="col-md-3"><a href="http://morfosis.co.in/" target="_blank"><img src="images/partners/002.png" alt=""></a></div>
+                        <div class="col-md-3"><a href="http://www.yellowandgray.com" target="_blank"><img src="images/partners/logo-YGSTUDIO.png" alt="Yellowandgray" title="Yellowandgray"></a></div>
+                        <div class="col-md-3"><a href="http://morfosis.co.in/" target="_blank"><img src="images/partners/002.png" alt="Morfosis" title="Morfosis"></a></div>
                         <div class="col-md-3"></div>
                     </div>
 <!--                        <div class="item"><img src="images/partners/001.png" alt=""></div>

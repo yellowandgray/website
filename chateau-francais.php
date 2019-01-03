@@ -52,7 +52,7 @@
                             <div class="col-lg-6">
                                 <div class="about-video-img"> 
 <!--                                    <a href="#"><i class="fas fa-play"></i></a> -->
-                                    <img src="images/school-img.jpg" alt=""> 
+                                    <img src="images/school-img.jpg" alt="Château Français Design Philosophy - ENPEE International School" title="Château Français Design Philosophy - ENPEE International School"> 
                                 </div>
                             </div>
 
@@ -65,7 +65,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-4">
-                                <div class="francais"><img src="images/school-img-2.jpg" alt="" class="img-responsive"> </div>
+                                <div class="francais"><img src="images/school-img-2.jpg" alt="Full View Design Philosophy - ENPEE International School" title="Full View Design Philosophy - ENPEE International School" class="img-responsive"> </div>
 <!--                                <div class="story-title-bg"> <strong class="t1">International</strong> <strong class="t2">Standard</strong> <strong class="t3">Education</strong> 
                                 </div>-->
                             </div>
@@ -109,7 +109,7 @@
 
                             </div>
                             <div class="col-lg-4">
-                                <div class="francais"><img src="images/school-img-3.jpg" alt="" class="img-responsive"> </div>
+                                <div class="francais"><img src="images/school-img-3.jpg" alt="Château Français Design Philosophy - ENPEE International School" title="Château Français Design Philosophy - ENPEE International School" class="img-responsive"> </div>
 <!--                                <div class="story-title-bg"> <strong class="t1">International</strong> <strong class="t2">Standard</strong> <strong class="t3">Education</strong> 
                                 </div>-->
                             </div>

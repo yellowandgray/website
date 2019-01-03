@@ -34,7 +34,7 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="team-large-img"> 
-                                    <img src="images/chairman.jpg" alt="" style="width: 200px"/>
+                                    <img src="images/chairman.jpg" alt="Rtn. PHF. Hajee. L. KAMAL BATCHA - ENPEE International School" title="Rtn. PHF. Hajee. L. KAMAL BATCHA - ENPEE International School" style="width: 200px"/>
 <!--                                    <section class="customer-logos slider">
                                         <div class="slide"><img src="images/awards/enpee-awards-001.png"></div>
                                         <div class="slide"><img src="images/awards/enpee-awards-002.png"></div>
@@ -61,14 +61,14 @@
                             <div class="container">
                                 <h4 class="text-center">Awards</h4>
                                 <div id="partner-logos" class="owl-carousel owl-theme">
-                                    <div class="item"><img src="images/awards/enpee-awards-001.png"></div>
-                                    <div class="item"><img src="images/awards/enpee-awards-002.png"></div>
-                                    <div class="item"><img src="images/awards/enpee-awards-003.png"></div>
-                                    <div class="item"><img src="images/awards/enpee-awards-013.png"></div>
-                                    <div class="item"><img src="images/awards/enpee-awards-014.png"></div>
-                                    <div class="item"><img src="images/awards/enpee-awards-027.png"></div>
-                                    <div class="item"><img src="images/awards/award-05.jpg"></div>
-                                    <div class="item"><img src="images/awards/award-06.jpg"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-001.png" alt="L. KAMAL BATCHA - Award-1 - ENPEE International School" title="L. KAMAL BATCHA - Award-1 - ENPEE International School"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-002.png" alt="L. KAMAL BATCHA - Award-2 - ENPEE International School" title="L. KAMAL BATCHA - Award-2 - ENPEE International School"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-003.png" alt="L. KAMAL BATCHA - Award-3 - ENPEE International School" title="L. KAMAL BATCHA - Award-3 - ENPEE International School"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-013.png" alt="L. KAMAL BATCHA - Award-4 - ENPEE International School" title="L. KAMAL BATCHA - Award-4 - ENPEE International School"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-014.png" alt="L. KAMAL BATCHA - Award-5 - ENPEE International School" title="L. KAMAL BATCHA - Award-5 - ENPEE International School"></div>
+                                    <div class="item"><img src="images/awards/enpee-awards-027.png" alt="L. KAMAL BATCHA - Award-6 - ENPEE International School" title="L. KAMAL BATCHA - Award-6 - ENPEE International School"></div>
+                                    <div class="item"><img src="images/awards/award-05.jpg" alt="L. KAMAL BATCHA - Award-7 - ENPEE International School" title="L. KAMAL BATCHA - Award-7 - ENPEE International School"></div>
+                                    <div class="item"><img src="images/awards/award-06.jpg" alt="L. KAMAL BATCHA - Award-8 - ENPEE International School" title="L. KAMAL BATCHA - Award-8 - ENPEE International School"></div>
                                 </div><br/>
                                 <!--Partner Logos Section End--> 
                                 <a href="#" class="contact-team" id="myBtn">Read More</a> 

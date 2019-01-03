@@ -51,14 +51,14 @@
                             <div class="about-pic">
                                 <div class="pic1">
                                     <div id="pic-slider" class="owl-carousel owl-theme">
-                                        <div class="item"><img src="images/carosel/pic-Staff.jpg" alt=""></div>
+                                        <div class="item"><img src="images/carosel/pic-Staff.jpg" alt="Experienced Skilled Staff - ENPEE International School" title="Experienced Skilled Staff - ENPEE International School"></div>
 <!--                                        <div class="item"><img src="images/carosel/pic-doscipline.jpg" alt=""></div>-->
-                                        <div class="item"><img src="images/carosel/pic-frenchstyle.jpg" alt=""></div>
-                                        <div class="item"><img src="images/carosel/pic-interactive-learning.jpg" alt=""></div>
-                                        <div class="item"><img src="images/carosel/pic-project-based-curriculum.jpg" alt=""></div>
+                                        <div class="item"><img src="images/carosel/pic-frenchstyle.jpg" alt="French Style Architechture - ENPEE International School" title="French Style Architechture - ENPEE International School"></div>
+                                        <div class="item"><img src="images/carosel/pic-interactive-learning.jpg" alt="Interactive Learning - ENPEE International School" title="Interactive Learning - ENPEE International School"></div>
+                                        <div class="item"><img src="images/carosel/pic-project-based-curriculum.jpg" alt="Project Based Curriculum - ENPEE International School" title="Project Based Curriculum - ENPEE International School"></div>
                                     </div>
                                 </div>
-                                <div class="pic2"><img src="images/aboutpic2.jpg" alt=""></div>
+                                <div class="pic2"><img src="images/aboutpic2.jpg" alt="Modern Infrastructure-ENPEE International School" title="Modern Infrastructure-ENPEE International School"></div>
                             </div>
                         </div>
                     </div>

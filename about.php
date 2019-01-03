@@ -67,7 +67,7 @@
                             </div>
                             <div class="col-lg-6">
 
-                                <div class="about-video-img"> <a href="Enpee-slide-video.mp4" data-toggle="lightbox" data-width="1280"><i class="fas fa-play"></i></a> <img src="images/about-sub.jpg" alt=""> </div>
+                                <div class="about-video-img"> <a href="Enpee-slide-video.mp4" data-toggle="lightbox" data-width="1280"><i class="fas fa-play"></i></a> <img src="images/about-sub.jpg" alt="Affiliation Status - ENPEE International School" title="Affiliation Status - ENPEE International School"> </div>
 
                             </div>
                         </div>
