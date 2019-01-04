@@ -690,6 +690,16 @@ li.breadcrumb-item a {
     }
 }
 
+@media (min-width: 280px) and (max-width: 500px) {
+    #facts .counters span {
+        font-size: 30px !important;
+    }
+    #featured-services .box {
+        padding: 29px 20px 0 20px;
+        visibility: visible !important;
+    }
+}
+
 
 .search_top h3 {
     color: #fff;
