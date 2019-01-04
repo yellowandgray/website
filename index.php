@@ -137,7 +137,7 @@
                             </header>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <img src="img/widget.jpg" alt="" />
+                                    <img class="saro-group-img" src="img/widget.jpg" alt="" />
                                 </div>
                                 <div class="col-md-8">
                                     <p class="wel-saro-group">SARO Group Of Companies is one of the largest multi-disciplined business enterprise in India operating from its perrmanent base in Chennai,India. The Chairman of the Group, Mr.P. Marimuthu established the company Arun Enterprises in 1984, manufacturing Plastic Ancillary Equipments. SARO Group then diversified its operations to cater to the various needs of its customers.<br> Arun Plasto Moulders (India) Pvt Ltd has almost 20 years of custom plastic Injection Moulding experience being expert in thin wall plastic packaging. Saro Enterprises manufactures Thermoformed Products such as disposable cups, spoons, food trays and containers offering solutions to Food, Telecom, Automobile and Industrial packaging.</p>

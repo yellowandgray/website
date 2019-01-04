@@ -700,6 +700,12 @@ li.breadcrumb-item a {
     }
 }
 
+@media (min-width: 1024px) and (max-width: 1220px) {
+    .wel-saro-group {
+        height: 245px;
+    }
+    .saro-group-img {width: 230px; font-size: 14px;}
+}
 
 .search_top h3 {
     color: #fff;
