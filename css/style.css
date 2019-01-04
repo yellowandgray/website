@@ -369,6 +369,12 @@ section {
     }
 }
 
+@media (max-width: 350px) {
+    .fa-phone {
+        margin-left: 0px !important;
+    }
+}
+
 .home-slider .caption {
     display: flex;
     justify-content: center;
@@ -894,6 +900,15 @@ footer .social-icon {
     .custom-navbar .navbar-nav.navbar-nav-first {
         margin-left: inherit;
     }
+/*    .fa-phone {
+        margin-left: 0 !important;
+    }*/
+}
+
+@media (max-width: 1920px) and (min-width: 1171px) {
+    .fa-phone {
+        margin-left: 0 !important;
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -989,6 +1004,12 @@ footer .social-icon {
     }
 
     #team img{width:100%}
+}
+
+@media (max-width: 593px) and (min-width: 351px) {
+    .fa-phone {
+        margin-left: 0px !important;
+    }
 }
 
 
@@ -1284,3 +1305,5 @@ footer .social-icon {
 }
 
 .fa-envelope {float: left;background: #ca6c22;border-radius: 50px;color: #ffffff;font-size: 25px;width: 50px;height: 50px;line-height: 50px;text-align: center;margin-bottom: 50px;margin-top: 12px; margin-left: -50px;}
+.fa-map-marker {float: left;background: #ca6c22;border-radius: 50px;color: #ffffff;font-size: 25px;width: 50px;height: 50px;line-height: 50px;text-align: center;margin-bottom: 50px;}
+.fa-phone {float: left;background: #ca6c22;border-radius: 50px;color: #ffffff;font-size: 25px;width: 50px;height: 50px;line-height: 50px;text-align: center;margin-bottom: 50px;margin-top: 12px; margin-left: -50px;}
