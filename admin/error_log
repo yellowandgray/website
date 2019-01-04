@@ -1,0 +1,59 @@
+[04-Dec-2018 10:57:43 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/a2dot37r/public_html/yellowandgray/arunpla/include/DbConnect.php on line 25
+[04-Dec-2018 10:57:43 Etc/GMT] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/a2dot37r/public_html/yellowandgray/arunpla/include/DbConnect.php on line 25
+[04-Dec-2018 10:57:43 Etc/GMT] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/a2dot37r/public_html/yellowandgray/arunpla/include/common.php on line 18
+[04-Dec-2018 10:57:43 Etc/GMT] PHP Notice:  Trying to get property of non-object in /home/a2dot37r/public_html/yellowandgray/arunpla/include/common.php on line 19
+[04-Dec-2018 11:09:05 Etc/GMT] PHP Parse error:  syntax error, unexpected '*' in /home/a2dot37r/public_html/yellowandgray/arunpla/include/Config.php on line 22
+[04-Dec-2018 11:09:09 Etc/GMT] PHP Parse error:  syntax error, unexpected '*' in /home/a2dot37r/public_html/yellowandgray/arunpla/include/Config.php on line 22
+[04-Dec-2018 11:09:24 Etc/GMT] PHP Parse error:  syntax error, unexpected '*' in /home/a2dot37r/public_html/yellowandgray/arunpla/include/Config.php on line 22
+[04-Dec-2018 11:10:26 Etc/GMT] PHP Parse error:  syntax error, unexpected '*' in /home/a2dot37r/public_html/yellowandgray/arunpla/include/Config.php on line 22
+[04-Dec-2018 11:10:30 Etc/GMT] PHP Parse error:  syntax error, unexpected '*' in /home/a2dot37r/public_html/yellowandgray/arunpla/include/Config.php on line 22
+[04-Dec-2018 11:11:14 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:12:45 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:19 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:19 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:19 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:19 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:19 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:19 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:19 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:29 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:29 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:29 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:29 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:29 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:29 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:29 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:43 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:43 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:43 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:43 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:43 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:43 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:24:43 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:25:55 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:25:55 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:25:55 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:25:55 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:25:55 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:25:55 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:25:55 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:25:57 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:25:57 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:25:57 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:25:57 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:25:57 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:25:57 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:25:57 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:26:10 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:26:10 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:26:10 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:26:10 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:26:10 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:26:10 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:26:10 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:42:40 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[04-Dec-2018 11:44:42 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[05-Dec-2018 05:07:20 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[05-Dec-2018 05:10:49 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[05-Dec-2018 05:11:04 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
+[05-Dec-2018 05:11:16 Etc/GMT] PHP Notice:  Undefined index: title in /home/a2dot37r/public_html/yellowandgray/arunpla/admin/events-upload.php on line 109
