@@ -33,10 +33,10 @@
         <!--==========================
               Services Section
             ============================-->
-        <section id="services">
+        <section id="services" class="fmcg-background">
             <div class="container">
                 <header class="section-header wow fadeInUp">
-                    <h3>INJECTION MOULDING</h3>
+                    <h3 class="white-color">INJECTION MOULDING</h3>
                     <h4 class="brown bold text-center">Around <span class="number">150+</span> Injection Moulding Machines</h4>
                 </header>
 
@@ -52,8 +52,8 @@
 
                     <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="about-col">
-                            <p class="text-justify">With almost 35 years of experience in plastic injection moulding, Arun Plasto Moulders has grown to be recognized as a global leader in custom plastic injection moulding. Partnering with OEMs worldwide, we mould customized plastic parts that enhance end products reducing product cost by streamlining assembly and manufacturing processes.</p>
-                            <p class="text-justify">Arun Plasto Moulders is a pioneer in using injection moulding process for thin wall plastic moulding and thin wall packaging. High speed plastic injection moulding machines, robotic systems, special thin wall plastic injection moulds, custom part design and material selection are the key parameters which keeps us successful in thin wall plastic injection moulding.</p>
+                            <p class="text-justify white-color">With almost 35 years of experience in plastic injection moulding, Arun Plasto Moulders has grown to be recognized as a global leader in custom plastic injection moulding. Partnering with OEMs worldwide, we mould customized plastic parts that enhance end products reducing product cost by streamlining assembly and manufacturing processes.</p>
+                            <p class="text-justify white-color">Arun Plasto Moulders is a pioneer in using injection moulding process for thin wall plastic moulding and thin wall packaging. High speed plastic injection moulding machines, robotic systems, special thin wall plastic injection moulds, custom part design and material selection are the key parameters which keeps us successful in thin wall plastic injection moulding.</p>
                         </div>
                     </div>
 
@@ -61,7 +61,7 @@
                 <br/>
                 <br/>
                 <header class="section-header wow fadeInUp">
-                    <h3>THERMOFORMING</h3>
+                    <h3 class="white-color">THERMOFORMING</h3>
                 </header>
 
                 <!--                <h4 class="h4-fonts-align wow fadeInUp">Arun Enterprises</h4>
@@ -77,19 +77,19 @@
                     <br/>
                     <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="about-col">
-                            <p class="text-justify">Saro Enterprises is one of the leading thermoforming companies that provides innovative packaging solutions from retail to general consumer packaging with finest quality, most responsive services and maximum cost efficiency. Experience over the years has enabled us to provide our customers with truly refined Thermoforming and Extrusion manufacturing process producing highest quality and more precise components. We provide best packaging solutions to food, health care, telecom, automobile and industrial packaging requirements. Some of our products are disposable cups, trays, containers and bowls.</p>
-                            <p class="text-justify">Saro Enterprises also produces the best in-class Thermoforming sheets supplying to customers across the globe needed for various Thermoforming applications.</p>
+                            <p class="text-justify white-color">Saro Enterprises is one of the leading thermoforming companies that provides innovative packaging solutions from retail to general consumer packaging with finest quality, most responsive services and maximum cost efficiency. Experience over the years has enabled us to provide our customers with truly refined Thermoforming and Extrusion manufacturing process producing highest quality and more precise components. We provide best packaging solutions to food, health care, telecom, automobile and industrial packaging requirements. Some of our products are disposable cups, trays, containers and bowls.</p>
+                            <p class="text-justify white-color">Saro Enterprises also produces the best in-class Thermoforming sheets supplying to customers across the globe needed for various Thermoforming applications.</p>
 
                         </div>
                     </div>
                     <br/>
                     <br/>
-                    <p class="text-justify">As market opportunities grew, we have expanded our manufacturing process to making PolyPropylene products and sheets which are used by global enterprises to pack FMCG products. The strength of Saro Enterprises is its sophisticated and latest technology machinery and equipment combined with team of technical experts.</p>
+                    <p class="text-justify white-color">As market opportunities grew, we have expanded our manufacturing process to making PolyPropylene products and sheets which are used by global enterprises to pack FMCG products. The strength of Saro Enterprises is its sophisticated and latest technology machinery and equipment combined with team of technical experts.</p>
                 </div>
                 <br/>
                 <br/>
                 <header class="section-header wow fadeInUp">
-                    <h3>EXTRUSION</h3>
+                    <h3 class="white-color white-color">EXTRUSION</h3>
                 </header>
 
                 <!--                <h4 class="h4-fonts-align wow fadeInUp">Arun Enterprises</h4>
@@ -104,7 +104,7 @@
 
                     <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="about-col">
-                            <p class="text-justify">As market opportunities grew, we have expanded our manufacturing process to making PolyPropylene products and sheets which are used by global enterprises to pack FMCG products. The strength of Saro Enterprises is its sophisticated and latest technology machinery and equipment combined with team of technical experts.</p>
+                            <p class="text-justify white-color">As market opportunities grew, we have expanded our manufacturing process to making PolyPropylene products and sheets which are used by global enterprises to pack FMCG products. The strength of Saro Enterprises is its sophisticated and latest technology machinery and equipment combined with team of technical experts.</p>
                         </div>
                     </div>
 

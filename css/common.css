@@ -934,7 +934,7 @@ li.breadcrumb-item a {
 .tablink1:hover {
     background-color: #777;
 }
-.brown {color: #812b2c;}
+.brown {color: #812b2c !important;}
 .yellow {
     color: #ffc107;
 }
@@ -1074,4 +1074,8 @@ li.breadcrumb-item a {
     background: rgba(255, 255, 255, 0.5);
     background-size: cover;
     padding: 60px 0 40px 0;
+}
+
+.fmcg-background {
+    background: url(../img/fmcg-background.jpg) !important; background-position: center; background-size: cover;height: 1654px;
 }
