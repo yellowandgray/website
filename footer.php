@@ -61,7 +61,7 @@
                         <!--                        <ul class="lastest-products">
                                                    
                                                 </ul>-->
-                        <p><strong>ENPEE International School</strong><br/> Château Français<br/>ENPEE Enclave,<br/> 241/2, Puthakudy Village, <br/>Vadamattam Main Road,<br/>Nedunkadu Panchayat,<br/>Karaikal – 609603, <br/>U.T of Puducherry.</p>
+                        <p><strong>ENPEE International School</strong><br/><span class="light-green">Château Français</span><br/>ENPEE Enclave,<br/> 241/2, Puthakudy Village, <br/>Vadamattam Main Road,<br/>Nedungadu Panchayat,<br/>Karaikal – 609603. <br/>U.T of Puducherry.</p>
                         <p><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:04368 265 265"> 04368 265 265</a></p>
                         <p><i class="fa fa-mobile" aria-hidden="true"></i><a href="tel:+91 8300111265"> +91 8300 111 265</a></p>
                         <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@enpeekkl"> info@enpeekkl.com</a></p>
