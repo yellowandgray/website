@@ -1797,3 +1797,9 @@ input#clear_product {
         height: auto!important;
     }
 }
+
+@media (max-width: 1220px) and (min-width: 1020px) {
+    .who_we_content_section {
+        height: 995px !important;
+    }
+}
