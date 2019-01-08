@@ -1088,7 +1088,7 @@ footer {
     color: #fff;
     font-size: 18px;
     font-weight: 400;
-/*    line-height: 35px;*/
+    /*    line-height: 35px;*/
 }
 
 .footer_box ul li {
@@ -1319,12 +1319,13 @@ footer {
 }
 
 .who_we_content {
-    padding-left: 120px;
+    padding-left: 85px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    width: 80%;
+    -webkit-transform: translateY(-48%);
+    width: 98%;
+
 }
 
 .who_we_content h3 {

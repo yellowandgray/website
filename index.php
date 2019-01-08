@@ -201,8 +201,10 @@ $categories = $db->selectAllWithoutWhere('categories');
                                     </div>
                                     <div class="who_we_content">
                                         <h3>Who We Are</h3>
+                                        <p><strong>Expertise, Reliability and Entrepreneurial Spirit</strong></p><br/>
                                         <p>The Mac World Group is an entrepreneurial driven entity delivering Globally Reliable and World Class products and services consistently for almost 20 years. This ambitious spirit has permeated throughout the Eco System and Value chain of the organization, contributing towards a holistic and dynamic workplace environment and leading the group and its associated companies to successfully enter new markets and secure long term customers.</p>
                                         <p>Mac World’s Management Team has a cumulated experience of more than 100 years in multiple touch points, ranging from sourcing, branding, marketing, production and manufacturing right to customization, trade and International sales. The Management Team is supported by highly qualified and experienced technical and Research and Development personnel who are able to provide the best of breed solutions and advice to the group.</p>                                
+                                        <div class="text-center"><img src="img/team-02.jpg" alt=""></div>
                                     </div>
                                 </div>
                             </div>
@@ -272,7 +274,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 <h3>Our Team</h3>
                                 <p></p><p>The Macworld Group is a largely entrepreneurial driven entity and this characteristic has permeated throughout the Eco System and Value chain of our organization. These attributes inevitably contribute towards a holistic and dynamic workplace environment and this also helps the group and our associated companies to successfully enter new markets and secure long term customers.<br>
                                     Our Management Team has a collective industry experience of more than 100 years in multiple touch points of our industry, ranging from sourcing, branding, marketing, production, manufacturing right up to customization, trade and International sales. The Management Team is ably supported by highly qualified and experienced technical and Research and Development personnel who are able to provide the best of breed solutions and advice to the group. All this collectively, leads to the Macworld Brand being recognized as a Globally reknowned company and a brand that delivers globally reliable products and services. Our Management and Technical Team’s efforts have also let us to achieve the highly acclaimed 9001:2015 ISO certification and accreditation.</p>
-                                <div class="team-images-set"><img src="img/team-1.jpg" alt=""></div>
+                                <div class="team-images-set"><img src="img/master-01.jpg" alt=""></div>
                                 <p></p><p></p>
                             </div>
                             <div class="products-container">
@@ -727,7 +729,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                             <div class="footer_content">
                                 <h3>Contact Us</h3>
                                 <div class="footer_box">
-                                    <img src="img/master-1g.jpg" alt="" title="" style="width: 100%"/>
+                                    <!--<img src="img/master-1g.jpg" alt="" title="" style="width: 100%"/>-->
                                     <div class="poretal">
                                         <h4>Mac World Industries SDN BHD (548445-V)</h4>
                                         <p>3-11, Block B,<br>
