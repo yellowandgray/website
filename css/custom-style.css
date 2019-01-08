@@ -1316,6 +1316,7 @@ footer {
 .who_we_content_section {
     position: relative;
     background-size: cover;
+    height: 900px !important;
 }
 
 .who_we_content {
