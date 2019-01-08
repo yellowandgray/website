@@ -204,7 +204,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                         <p><strong>Expertise, Reliability and Entrepreneurial Spirit</strong></p><br/>
                                         <p>The Mac World Group is an entrepreneurial driven entity delivering Globally Reliable and World Class products and services consistently for almost 20 years. This ambitious spirit has permeated throughout the Eco System and Value chain of the organization, contributing towards a holistic and dynamic workplace environment and leading the group and its associated companies to successfully enter new markets and secure long term customers.</p>
                                         <p>Mac World’s Management Team has a cumulated experience of more than 100 years in multiple touch points, ranging from sourcing, branding, marketing, production and manufacturing right to customization, trade and International sales. The Management Team is supported by highly qualified and experienced technical and Research and Development personnel who are able to provide the best of breed solutions and advice to the group.</p>                                
-                                        <div class="text-center"><img src="img/team-02.jpg" alt=""></div>
+                                        <div class="text-center"><img src="img/team-02.jpg" alt="" style="width: 100%;"></div>
                                     </div>
                                 </div>
                             </div>
