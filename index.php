@@ -274,7 +274,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 <h3>Our Team</h3>
                                 <p></p><p>The Macworld Group is a largely entrepreneurial driven entity and this characteristic has permeated throughout the Eco System and Value chain of our organization. These attributes inevitably contribute towards a holistic and dynamic workplace environment and this also helps the group and our associated companies to successfully enter new markets and secure long term customers.<br>
                                     Our Management Team has a collective industry experience of more than 100 years in multiple touch points of our industry, ranging from sourcing, branding, marketing, production, manufacturing right up to customization, trade and International sales. The Management Team is ably supported by highly qualified and experienced technical and Research and Development personnel who are able to provide the best of breed solutions and advice to the group. All this collectively, leads to the Macworld Brand being recognized as a Globally reknowned company and a brand that delivers globally reliable products and services. Our Management and Technical Team’s efforts have also let us to achieve the highly acclaimed 9001:2015 ISO certification and accreditation.</p>
-                                <div class="team-images-set"><img src="img/master-01.jpg" alt=""></div>
+                                <div class="team-images-set text-center"><img src="img/master-01.jpg" alt=""></div>
                                 <p></p><p></p>
                             </div>
                             <div class="products-container">
