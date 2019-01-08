@@ -92,7 +92,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="footer-social"> 
-                        <strong>Get Connect</strong> 
+                        <strong>Get Connected</strong> 
                         <a href="https://www.facebook.com/ENPEESchool" target="blank" class="facebook-color"><i class="fab fa-facebook-f"></i><span></span></a> 
                         <a href="https://twitter.com/SchoolEnpee" target="blank" class="twitter-color"><i class="fab fa-twitter"></i></a> 
                         <a href="https://www.linkedin.com/in/enpee-international-school/" target="blank" class="linkedin-color"><i class="fab fa-linkedin-in"></i></a> 
