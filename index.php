@@ -501,7 +501,7 @@
         <!-- Contact Form JavaScript File -->
         <script src="contactform/contactform.js"></script>
         <script src="js/captcha.js" type="text/javascript"></script>
-        <script src="js/fullpage.js" type="text/javascript"></script>
+<!--        <script src="js/fullpage.js" type="text/javascript"></script>-->
 
 
         <!-- JavaScript Libraries -->
@@ -527,7 +527,7 @@
                 });
             });
         </script>
-        <script type="text/javascript">
+<!--        <script type="text/javascript">
             var myFullpage = new fullpage('#fullpage', {
                 anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thpage'],
                 sectionsColor: ['#C63D0F', '#fff', '#7E8F7C', '#fff', '#fff', '#111111'],
@@ -559,6 +559,6 @@
                 }
                 return val;
             }
-        </script>
+        </script>-->
     </body>
 </html>
