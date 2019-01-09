@@ -115,10 +115,10 @@
                         <div class="col-md-4 text-right">
                             <div class="c-info">
                                 <h6>Address:</h6>
-                                <p><strong>ENPEE International School</strong><br/> <i>Château Français</i><br/>
+                                <p><strong>ENPEE International School</strong><br/> <i class="light-green">Château Français</i><br/>
                                     ENPEE Enclave, 241/2, Puthakudy Village,  <br/> 
-                                    Vadamattam Main Road, Nedunkadu Panchayat, <br/>
-                                    Karaikal – 609603, U.T of Puducherry
+                                    Vadamattam Main Road, Nedungadu Panchayat, <br/>
+                                    Karaikal – 609603. U.T of Puducherry
                                 </p>
                             </div>
                         </div>
