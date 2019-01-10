@@ -14,7 +14,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="container-fluid">
                     <?php include 'menu.php'; ?>
                     <div class="sub-banner-contant">
-                        <h3>ABOUT US</h3>
+                        <h3>OUR CLIENTS</h3>
                     </div>
                 </div>
             </div>
