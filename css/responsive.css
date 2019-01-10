@@ -3,3 +3,12 @@
         width: 50% !important;
     }
 }
+
+@media (min-width:768px) and (max-width: 1023px) {
+    navbar-brand img {
+        margin: 0 0 0 -30px !important;
+    }
+    .navbar-nav {
+        margin: 0 -30px 0 0 !important;
+    }
+}
