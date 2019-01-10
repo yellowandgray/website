@@ -15,16 +15,16 @@
             </div>
             <div class="contact-btm">
                 <span class="fa fa-file" aria-hidden="true"></span>
-                <p>+145-6-123-7890</p>
+                <p>+603-2011-9877</p>
             </div>
             <div class="contact-btm">
                 <span class="fa fa-envelope-o" aria-hidden="true"></span>
-                <p><a href="mailto:example@email.com">info@example.com</a></p>
+                <p><a href="mailto:info@icontent.com">info@icontent.com</a></p>
             </div>
-            <div class="contact-btm">
+<!--            <div class="contact-btm">
                 <span class="fa fa-globe" aria-hidden="true"></span>
                 <p><a href="#">www.website.com</a></p>
-            </div>
+            </div>-->
             <div class="clearfix"></div>
 
         </div>
