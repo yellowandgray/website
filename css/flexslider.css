@@ -223,7 +223,7 @@ html[xmlns] .slides {display: block;}
 		left: -6.2%;
 	}
 }
-}
+
 @media screen and (max-width: 414px){
 	.flex-direction-nav .flex-next {
 		right: 101.5%;
