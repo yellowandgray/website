@@ -1,8 +1,19 @@
-<?php
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <?php include 'head.php'; ?>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+    <body>
+        <?php include 'menu.php'; ?>
+     	
 
+       
+
+        <?php include 'footer.php'; ?>
+    </body>
+</html>
