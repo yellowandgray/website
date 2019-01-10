@@ -16,7 +16,7 @@
         <nav class="link-effect-8" id="link-effect-8">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="#about" class="scroll">About Us</a></li>
+                <li><a href="about-us.php">About Us</a></li>
                 <li><a href="#services" class="scroll">Our Services</a></li>
                 <li><a href="#testimonials" class="scroll">Our Clients</a></li>
                 <li><a href="#team" class="scroll">Our Team</a></li>
