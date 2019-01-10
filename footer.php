@@ -3,11 +3,11 @@
     <div class="container">
         <div class="col-md-3 foot-left">
             <h3>Get In Touch</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting dummy Ipsum text.</p>
+<!--            <p>Lorem Ipsum is simply dummy text of the printing and typesetting dummy Ipsum text.</p>-->
 
             <div class="contact-btm">
                 <span class="fa fa-map-marker" aria-hidden="true"></span>
-                <p>90 Street, City, State 34789.</p>
+                <p style="margin-left: 23px;margin-top: -23px;">Penthouse, 16-1, Level 16 Mz5, Wisma UOA Damansara II, No. 6, Changkat Semantan, Damansara Heights, 50490 Kuala Lumpur, Malaysia</p>
             </div>
             <div class="contact-btm">
                 <span class="fa fa-phone" aria-hidden="true"></span>
@@ -91,7 +91,7 @@
 <div class="copy-right">
     <div class="container">
         <div class="col-md-8">
-            <p>&copy; 2017 Technical Solutions. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+            <p>&copy; 2019 Alias Innovation SDN BHD. All rights reserved | Design by <a href="http://www.yellowandgray.com/">YG Studio.</a></p>
         </div>
         <div class="col-md-4">
             <ul class="footericons">

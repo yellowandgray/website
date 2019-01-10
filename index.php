@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head.php'; ?>
+    <?php include 'head.php'; $page = 'home' ?>
 
     <body>
 
@@ -67,12 +67,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
 
                     <div class="bannergrids">
-                        <ul class="banneraddress">
+<!--                        <ul class="banneraddress">
                             <li><span class="fa fa-envelope" aria-hidden="true"></span><a href="mailto:example@email.com">info@example.com</a></li>
                             <li><span class="fa fa-phone" aria-hidden="true"></span>+017 544 673 2277</li>
                             <li><a href="#contact" class="scroll"><span class="fa fa-long-arrow-right" aria-hidden="true"></span> Contact Us</a></li>
                             <li><span class="fa fa-map-marker" aria-hidden="true"></span>123 london street maquis servilon, london</li>
-                        </ul>
+                        </ul>-->
                         <div class="clearfix"></div>
                         <div class="bannerbottom">
                             <div class="col-md-4 bannerbott1">

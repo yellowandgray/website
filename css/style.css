@@ -70,7 +70,7 @@ a:focus{
     margin-right: 0;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    color: #f0b50a;
+    color: #bc3c82;
     background:none;
 }
 .navbar-default .navbar-nav > .active > a:before{
@@ -85,7 +85,7 @@ a:focus{
     text-transform: uppercase;
 }
 .navbar-default .navbar-nav > li > a:hover{
-    color: #f0b50a;
+    color: #914194;
 }
 nav ul.footericons {
     float: left;
