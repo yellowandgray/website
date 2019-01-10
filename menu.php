@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <h1><a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Alias Logo" title="Alias" style="width: 100%" />
+        <h1><a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="Alias Logo" title="Alias" />
 <!--                Technical <span>SOlutions</span>-->
             </a>
         </h1>
@@ -16,10 +16,11 @@
         <nav class="link-effect-8" id="link-effect-8">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="#about" class="scroll">About</a></li>
-                <li><a href="#services" class="scroll">Services</a></li>
-                <li><a href="#team" class="scroll">Team</a></li>
-                <li><a href="#testimonials" class="scroll">Testimonials</a></li>
+                <li><a href="#about" class="scroll">About Us</a></li>
+                <li><a href="#services" class="scroll">Our Services</a></li>
+                <li><a href="#testimonials" class="scroll">Our Clients</a></li>
+                <li><a href="#team" class="scroll">Our Team</a></li>
+<!--                <li><a href="" class="scroll">Testimonials</a></li>-->
                 <li><a href="#contact" class="scroll">Contact</a></li>
             </ul>
             <ul class="footericons">
