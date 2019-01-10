@@ -1,3 +1,23 @@
 .navbar-brand img {
-        width: 100%;
-    }
+    width: 100%;
+}
+.sub-banner {
+    height: auto;
+    background-size: cover !important;
+    max-width: none;
+    width: 100%;
+}
+
+.sub-banner-contant {
+    padding: 25px;
+}
+
+.sub-banner h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    padding: 47px;
+}

@@ -1,7 +1,7 @@
 @media (min-width: 280px) and (max-width: 767px) {
-    .navbar-brand img {
+/*    .navbar-brand img {
         width: 50% !important;
-    }
+    }*/
 }
 
 @media (min-width:768px) and (max-width: 1023px) {

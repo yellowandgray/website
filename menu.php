@@ -1,27 +1,27 @@
 <nav class="navbar navbar-default">
     <div class="navbar-header navbar-left">
+        <h1><a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="Alias Logo" title="Alias" />
+<!--                Technical <span>SOlutions</span>-->
+            </a>
+        </h1>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <h1><a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="Alias Logo" title="Alias" />
-<!--                Technical <span>SOlutions</span>-->
-            </a>
-        </h1>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
         <nav class="link-effect-8" id="link-effect-8">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about-us.php">About Us</a></li>
-                <li><a href="#services" class="scroll">Our Services</a></li>
-                <li><a href="#testimonials" class="scroll">Our Clients</a></li>
-                <li><a href="#team" class="scroll">Our Team</a></li>
-<!--                <li><a href="" class="scroll">Testimonials</a></li>-->
-                <li><a href="#contact" class="scroll">Contact</a></li>
+                <li class="<?php if ($page == 'home') {echo 'active';}?>"><a href="index.php">Home</a></li>
+                <li class="<?php if ($page == 'about') {echo 'active';}?>"><a href="about-us.php">About Us</a></li>
+                <li class="<?php if ($page == 'services') {echo 'active';}?>"><a href="#services">Our Services</a></li>
+                <li class="<?php if ($page == 'client') {echo 'active';}?>"><a href="#testimonials">Our Clients</a></li>
+                <li class="<?php if ($page == 'team') {echo 'active';}?>"><a href="#team">Our Team</a></li>
+                <!--                <li><a href="" class="scroll">Testimonials</a></li>-->
+                <li class="<?php if ($page == 'contact') {echo 'active';}?>"><a href="#contact">Contact</a></li>
             </ul>
             <ul class="footericons">
                 <li><a href="#"><span class="fa fa-twitter" aria-hidden="true"></span></a></li>
