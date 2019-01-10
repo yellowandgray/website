@@ -9,8 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <?php include 'head.php'; ?>
 
     <body>
-
-        <!-- banner -->
+<!-- banner -->
         <div class="position">
             <div class="banner">
                 <div class="agileinfo-dot">
