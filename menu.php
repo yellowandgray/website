@@ -17,11 +17,11 @@
             <ul class="nav navbar-nav">
                 <li class="<?php if ($page == 'home') {echo 'active';}?>"><a href="index.php">Home</a></li>
                 <li class="<?php if ($page == 'about') {echo 'active';}?>"><a href="about-us.php">About Us</a></li>
-                <li class="<?php if ($page == 'services') {echo 'active';}?>"><a href="#services">Our Services</a></li>
-                <li class="<?php if ($page == 'client') {echo 'active';}?>"><a href="#testimonials">Our Clients</a></li>
-                <li class="<?php if ($page == 'team') {echo 'active';}?>"><a href="#team">Our Team</a></li>
+                <li class="<?php if ($page == 'services') {echo 'active';}?>"><a href="our-services.php">Our Services</a></li>
+                <li class="<?php if ($page == 'client') {echo 'active';}?>"><a href="our-clients.php">Our Clients</a></li>
+                <li class="<?php if ($page == 'team') {echo 'active';}?>"><a href="our-team.php">Our Team</a></li>
                 <!--                <li><a href="" class="scroll">Testimonials</a></li>-->
-                <li class="<?php if ($page == 'contact') {echo 'active';}?>"><a href="#contact">Contact</a></li>
+                <li class="<?php if ($page == 'contact') {echo 'active';}?>"><a href="contact-us.php">Contact</a></li>
             </ul>
             <ul class="footericons">
                 <li><a href="#"><span class="fa fa-twitter" aria-hidden="true"></span></a></li>
