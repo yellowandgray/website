@@ -274,7 +274,7 @@
                                                                                     <li><span>By:</span> Danial John</li>
                                                                                     <li><span>Posted:</span> 29 September, 2018</li>
                                                                                 </ul>-->
-                                        <p class="text-justify"> Early Childhood education is the child’s first step towards social engagement. This prepares toddlers through Experiential learning activities, making real life connections. Our program is based largely on the developmentally appropriate practice thereby delivering the right curriculum at the right age </p>
+                                        <p class="text-justify">Early Childhood education is the child’s first step towards social engagement. This prepares toddlers through Experiential learning activities, making real life connections. Our program is based largely on the developmentally appropriate practice thereby delivering the right curriculum at the right age.</p>
                                     </div>
                                 </div>
                                 <!--Blog Post End--> 

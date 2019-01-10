@@ -37,7 +37,7 @@
                                 <div class="section-title">
                                     <strong>Programs offered</strong>
                                     <h2>ENPEE International School offers the following programs for the Academic Year 2019-2020</h2>
-                                    <p>At ENPEE international school, we believe in leading a child to the highest broad-based development – mentally, physically, spiritually, socially and emotionally. Such holistic development aids a lofty learner to achieve their rightful goals in all spheres of life. ENPEE follows the CBSE method of education, offering various languages such as Tamil, French, Arabic and Hindi to its learners.</p>
+                                    <p class="text-justify">At ENPEE international school, we believe in leading a child to the highest broad-based development – mentally, physically, spiritually, socially and emotionally. Such holistic development aids a lofty learner to achieve their rightful goals in all spheres of life. ENPEE follows the CBSE method of education, offering various languages such as Tamil, French, Arabic and Hindi to its learners.</p>
                                 </div>
                                 <!--title end--> 
                             </div>
@@ -49,7 +49,7 @@
                                     <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-pre-kg.jpg" alt="Pre-KG - ENPEE International School" title="Pre-KG - ENPEE International School"> </div>
                                     <div class="campaign-txt">
                                         <h5><a href="#">Pre-KG</a></h5>
-                                        <p class="text-justify">Early Childhood education is the child’s first step towards social engagement. This prepares toddlers through Experiential learning activities, making real life connections. Our program is based largely on the developmentally appropriate practice thereby delivering the right curriculum at the right age</p>
+                                        <p class="text-justify">Early Childhood education is the child’s first step towards social engagement. This prepares toddlers through Experiential learning activities, making real life connections. Our program is based largely on the developmentally appropriate practice thereby delivering the right curriculum at the right age.</p>
                                     </div>
                                     <!--                                    <a href="management.php" class="dbutton">Read More</a> -->
                                 </div>

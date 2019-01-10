@@ -32,17 +32,17 @@
             <!--                                <h2> <span>ecova.</span> Welcome to ENPEE INTERNATIONAL SCHOOL</h2>-->
                                 <h2>What Makes Us Different</h2>
                                 <ul>
-                                    <li><i class="fas fa-check"></i> Highly Qualified & committed Educators</li>
-                                    <li><i class="fas fa-check"></i> Life skills, cultural & spiritual values, personality development sessions as part of learning spaces</li>
-                                    <li><i class="fas fa-check"></i> Interactive  and fully Air-Conditioned Classrooms </li>
-                                    <li><i class="fas fa-check"></i> Mixed Age group Activity Studio</li>
-                                    <li><i class="fas fa-check"></i> Mobile App enabling parents, students and staff to stay connected at all times</li>
-                                    <li><i class="fas fa-check"></i> Indoors and Outdoors have variety of learning methodologies incorporated</li>
-                                    <li><i class="fas fa-check"></i> Air-conditioned and GPS enabled school transport with dedicated caretakers</li>
-                                    <li><i class="fas fa-check"></i> CCTV across the Campus  </li>
-                                    <li><i class="fas fa-check"></i> Community days, Parent Engagement Programs and Coffee Mornings to involve Parents </li>
-                                    <li><i class="fas fa-check"></i> Dance, music, theater, Athletics, Brain Gym, Mid-brain activation as part of  curriculum </li>
-                                    <li><i class="fas fa-check"></i> Regular Professional development  and other educational as well as Recreational  Programs for our passionate Educators. </li>
+                                    <li><i class="fas fa-check"></i> Highly Qualified & committed Educators.</li>
+                                    <li><i class="fas fa-check"></i> Life skills, cultural & spiritual values, personality development sessions as part of learning spaces.</li>
+                                    <li><i class="fas fa-check"></i> Interactive  and fully Air-Conditioned Classrooms.</li>
+                                    <li><i class="fas fa-check"></i> Mixed Age group Activity Studio.</li>
+                                    <li><i class="fas fa-check"></i> Mobile App enabling parents, students and staff to stay connected at all times.</li>
+                                    <li><i class="fas fa-check"></i> Indoors and Outdoors have variety of learning methodologies incorporated.</li>
+                                    <li><i class="fas fa-check"></i> Air-conditioned and GPS enabled school transport with dedicated caretakers.</li>
+                                    <li><i class="fas fa-check"></i> CCTV across the Campus.</li>
+                                    <li><i class="fas fa-check"></i> Community days, Parent Engagement Programs and Coffee Mornings to involve Parents.</li>
+                                    <li><i class="fas fa-check"></i> Dance, music, theater, Athletics, Brain Gym, Mid-brain activation as part of  curriculum.</li>
+                                    <li><i class="fas fa-check"></i> Regular Professional development  and other educational as well as Recreational  Programs for our passionate Educators.</li>
                                 </ul>
                                 <!--                                <a class="lm" href="#">Read More</a> -->
                             </div>

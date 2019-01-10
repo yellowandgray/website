@@ -138,7 +138,7 @@
                                         </a> 
                                     </div>
                                     <div class="ser-thumb">
-                                        <div class="bg-padding-line"><strong>Member - Board of Management </strong><br/> ENPEE International School.<br/> Currently resident of Albany, New York, U.S.A. Born in Chennai, India, in 1966 , Mr.Muthuvappa at the age of 17, migrated to USA</div>
+                                        <div class="bg-padding-line"><strong>Member - Board of Management </strong><br/> ENPEE International School.<br/> Currently resident of Albany, New York, U.S.A. Born in Chennai, India, in 1966 , Mr.Muthuvappa at the age of 17, migrated to USA.</div>
                                     </div>
                                 </div>
                                 <!--campaign box end--> 

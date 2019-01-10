@@ -43,8 +43,8 @@
                                     <h2>DESIGN CODE</h2>
 <!--                                    <p><strong>Our Campus</strong></p>-->
                                     <ul>
-                                        <li><i class="fas fa-check"></i> To make effective use of land by maintaining all existing elements of the site, importantly, the overflowing canal that bisects the land</li>
-                                        <li><i class="fas fa-check"></i> Linear form of the land offers scope for better utility and greater aesthetic display</li>
+                                        <li><i class="fas fa-check"></i> To make effective use of land by maintaining all existing elements of the site, importantly, the overflowing canal that bisects the land.</li>
+                                        <li><i class="fas fa-check"></i> Linear form of the land offers scope for better utility and greater aesthetic display.</li>
                                         <li><i class="fas fa-check"></i> Buildings are segregated accordingly by their functions and scope.</li>
                                     </ul>
                                 </div>
@@ -75,9 +75,9 @@
                                         <!--                                        <h5>About our History</h5>-->
                                         <h5>“FORM AND FUNCTION ARE ONE”</h5>
                                         <ul style="list-style: none;">
-                                            <li class="vission"><i class="fas fa-check"></i> Form of the building is derived in such a way that it satisfies the functions and services in and around the building in the same flow</li>
+                                            <li class="vission"><i class="fas fa-check"></i> Form of the building is derived in such a way that it satisfies the functions and services in and around the building in the same flow.</li>
                                             <li class="vission"><i class="fas fa-check"></i> Shape and the angle by which the building is oriented, brings natural lighting and ventilation into the building.</li>
-                                            <li class="vission"><i class="fas fa-check"></i> Form of the building adds to the advantage of free air flow to create optimum breathing spaces</li>
+                                            <li class="vission"><i class="fas fa-check"></i> Form of the building adds to the advantage of free air flow to create optimum breathing spaces.</li>
                                             <li class="vission"><i class="fas fa-check"></i> As there are no other buildings existing on the site, the risk of noise pollution and restricted air flow do not arise.</li>
                                             <li class="vission"><i class="fas fa-check"></i> The fertility of the existing landscape is maintained to enhance sustainability and aesthetics.</li>
                                         </ul>
