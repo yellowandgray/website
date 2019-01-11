@@ -29,6 +29,7 @@
                 </div>
             </section>
             <!--Inner Header End--> 
+            <?php include 'admission-content.php'; ?>
             <!--Contact Start-->
             <section class="contact-page wf100 p80">
                 <div class="container contact-dropdown-from">

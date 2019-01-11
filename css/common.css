@@ -835,3 +835,38 @@ ul.submenu li a{
 .light-green{
     color: #aee66f;
 }
+
+.addmission-section {
+    padding: 30px 0px;
+    text-align: center;
+    background: #eee;
+}
+
+.addmission-section p {
+    font-family: 'Roboto Slab', serif;
+    font-size: 26px;
+    margin: 0px;
+    color: #1c61ab;
+    font-weight: 600;
+}
+
+.open-button {
+    background-color: #1c61ab;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    position: fixed;
+    bottom: 570px;
+    right: 0;
+    width: 280px;
+    font-size: 19px;
+    /* transform: rotate(-90deg); */
+    z-index: 999;
+    border-bottom-left-radius: 10px !important;
+    border-top-left-radius: 10px !important;
+}
+/*.open-button:hover {
+    opacity: 1;
+}*/

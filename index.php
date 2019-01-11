@@ -138,7 +138,8 @@
                 </div>
 
             </section>
-            <!--Slider End--> 
+            <!--Slider End-->
+            <?php include 'admission-content.php'; ?>
             <!--About Section Start-->
             <section class="home-about wf100 p80">
                 <div class="container">

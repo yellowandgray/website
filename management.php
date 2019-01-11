@@ -28,6 +28,7 @@
                 </div>
             </section>
             <!--Inner Header End--> 
+            <?php include 'admission-content.php'; ?>
             <section class="wf100 p80 team">
                 <div class="team-details">
                     <div class="container">

@@ -26,6 +26,7 @@
                 </div>
             </section>
             <!--Inner Header End--> 
+            <?php include 'admission-content.php'; ?>
             <!--About Start-->
             <section class="wf100 about">
                 <!--About Txt Video Start-->

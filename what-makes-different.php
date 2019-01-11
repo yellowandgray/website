@@ -24,6 +24,7 @@
                 </div>
             </section>
             <!--Inner Header End--> 
+            <?php include 'admission-content.php'; ?>
             <section class="home-about wf100 p80">
                 <div class="container">
                     <div class="row">

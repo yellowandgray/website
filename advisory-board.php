@@ -20,14 +20,15 @@
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-01.jpg) no-repeat;">
                 <div class="container">
                     <h1>Advisory Board</h1>
-<!--                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Advisory Board</a></li>
-                    </ul>-->
+                    <!--                    <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">About Us</a></li>
+                                            <li><a href="#">Advisory Board</a></li>
+                                        </ul>-->
                 </div>
             </section>
             <!--Inner Header End--> 
+            <?php include 'admission-content.php'; ?>
             <section class="wf100 p80 team">
                 <div class="team-details">
                     <div class="container">
@@ -46,7 +47,7 @@
             </section>
             <!--Footer Start-->
             <?php include 'footer.php'; ?>
-           
+
         </div>
     </body>
 </html>
