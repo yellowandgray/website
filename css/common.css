@@ -844,7 +844,7 @@ ul.submenu li a{
 
 .addmission-section p {
     font-family: 'Roboto Slab', serif;
-    font-size: 26px;
+    font-size: 25px;
     margin: 0px;
     color: #1c61ab;
     font-weight: 600;
@@ -858,7 +858,7 @@ ul.submenu li a{
     cursor: pointer;
     opacity: 1;
     position: fixed;
-    bottom: 570px;
+    bottom: 440px;
     right: 0;
     width: 280px;
     font-size: 19px;
@@ -870,3 +870,68 @@ ul.submenu li a{
 /*.open-button:hover {
     opacity: 1;
 }*/
+
+@media (min-width: 280px) and (max-width: 425px) {
+    .open-button {
+        bottom: 162px !important;
+        width: 175px !important;
+    }
+    .addmission-section p {
+        font-size: 14px !important;
+        line-height: 2.5em;
+    }
+    .open-button img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+    .open-button {
+        bottom: 75px !important;
+    }
+    .addmission-section p {
+        font-size: 18px !important;
+    }
+    .open-button img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1500px) {
+    .open-button {
+        bottom: 350px !important;
+    }
+    .addmission-section p {
+        font-size: 24px !important;
+    }
+    .open-button img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (min-width: 1501px) and (max-width: 1900px) {
+    .open-button {
+        bottom: 390px !important;
+    }
+    .open-button img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+.btn-custom {
+    background: #73bf45;
+    color: #fff;
+    border: 2px solid #73bf45;
+    border-radius: 100px;
+    padding: 11px 25px;
+    line-height: 45px;
+}
+
+.btn-custom:hover {
+    background: #2f68ae !important;
+    border-color: #2f68ae !important;
+    color: white !important;
+}
