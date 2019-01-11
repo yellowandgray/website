@@ -16,10 +16,10 @@
         <nav class="link-effect-8" id="link-effect-8">
             <ul class="nav navbar-nav">
                 <li class="<?php if ($page == 'home') {echo 'active';}?>"><a href="index.php">Home</a></li>
-                <li class="<?php if ($page == 'about') {echo 'active';}?>"><a href=#>About Us</a></li>
-                <li class="<?php if ($page == 'services') {echo 'active';}?>"><a href=#>Our Services</a></li>
-                <li class="<?php if ($page == 'client') {echo 'active';}?>"><a href=#>Our Clients</a></li>
-                <li class="<?php if ($page == 'team') {echo 'active';}?>"><a href=#>Our Team</a></li>
+                <li class="<?php if ($id == 'about') {echo 'active';}?>"><a id="about">About Us</a></li>
+                <li class="<?php if ($id=='services') {echo 'active';}?>"><a id="services">Our Services</a></li>
+                <li class="<?php if ($id == 'client') {echo 'active';}?>"><a id="client">Our Clients</a></li>
+                <li class="<?php if ($id == 'team') {echo 'active';}?>"><a id="team">Our Team</a></li>
                 <!--                <li><a href="" class="scroll">Testimonials</a></li>-->
                 <li class="<?php if ($page == 'contact') {echo 'active';}?>"><a href=#>Contact</a></li>
             </ul>
