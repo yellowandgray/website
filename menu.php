@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default">
     <div class="navbar-header navbar-left">
-        <h1><a class="navbar-brand" href="index.php"><img src="images/logo-website.png" alt="Alias Logo" title="Alias" />
+        <h1><a class="navbar-brand" href="index.php"><img class="common-img-size" src="images/logo-website.png" alt="Alias Logo" title="Alias" />
 <!--                Technical <span>SOlutions</span>-->
             </a>
         </h1>
