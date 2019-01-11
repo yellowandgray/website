@@ -6,23 +6,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html lang="en">
-    <?php include "head.php"; $page='home' ?>
+    <?php include "head.php";
+    $page = 'home' ?>
 
     <body>
-
         <!-- banner -->
         <div class="position">
             <div class="banner">
                 <div class="agileinfo-dot">
                     <div class="container-fluid">
-                        <?php include "menu.php"; ?>
+<?php include "menu.php"; ?>
                         <div class="w3_agile_banner_info">
                             <section class="slider">
                                 <div class="flexslider">
                                     <ul class="slides">
                                         <li>
                                             <div class="agileits_w3layouts_banner_info">
-                                                <h2>Technical…</h2>
+                                                <h2>Technical Excellence</h2>
                                                 <p>See our recent works projects! Sed bibendum, purus ac posuere tristique arcu augue pharetra augue,</p>
                                                 <div class="w3ls-button">
                                                     <a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
@@ -31,7 +31,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </li>
                                         <li>
                                             <div class="agileits_w3layouts_banner_info">
-                                                <h3>Challenges…</h3>
+                                                <h3>Client Focused</h3>
                                                 <p>Sed bibendum, purus ac posuere tristique See our recent works projects! arcu augue pharetra augue,</p>
                                                 <div class="w3ls-button">
                                                     <a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
@@ -40,7 +40,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </li>
                                         <li>
                                             <div class="agileits_w3layouts_banner_info">
-                                                <h3>Additional…</h3>
+                                                <h3>IT Architecture Team</h3>
+                                                <p>See our recent works projects! Sed bibendum, purus ac posuere tristique arcu augue pharetra augue,</p>
+                                                <div class="w3ls-button">
+                                                    <a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="agileits_w3layouts_banner_info">
+                                                <h2>Disciplined Processes and leading edge Methodologies</h2>
                                                 <p>See our recent works projects! Sed bibendum, purus ac posuere tristique arcu augue pharetra augue,</p>
                                                 <div class="w3ls-button">
                                                     <a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
@@ -67,26 +76,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
 
                     <div class="bannergrids">
-                        <ul class="banneraddress">
+<!--                        <ul class="banneraddress">
                             <li><span class="fa fa-envelope" aria-hidden="true"></span><a href="mailto:example@email.com">info@example.com</a></li>
                             <li><span class="fa fa-phone" aria-hidden="true"></span>+017 544 673 2277</li>
                             <li><a href="#contact" class="scroll"><span class="fa fa-long-arrow-right" aria-hidden="true"></span> Contact Us</a></li>
                             <li><span class="fa fa-map-marker" aria-hidden="true"></span>123 london street maquis servilon, london</li>
-                        </ul>
+                        </ul>-->
                         <div class="clearfix"></div>
                         <div class="bannerbottom">
-                            <div class="col-md-4 bannerbott1">
-                                <h3><span class="fa fa-laptop" aria-hidden="true"></span>  venenatis libero</h3>
+                            <div class="col-md-3 bannerbott1">
+                                <h3><span class="fa fa-laptop" aria-hidden="true"></span>SOFTWARE DEVELOPMENT</h3>
                                 <p>Donec et venenatis libero. Fusce dapibus pulvinar tincidunt. Proin maximus ipsum 
                                     ut scelerisque dictum.</p>
                             </div>
-                            <div class="col-md-4 bannerbott1">
-                                <h3><span class="fa fa-diamond" aria-hidden="true"></span> venenatis libero</h3>
+                            <div class="col-md-3 bannerbott1">
+                                <h3><span class="fa fa-diamond" aria-hidden="true"></span> QA & TESTING</h3>
                                 <p>Donec et venenatis libero. Fusce dapibus pulvinar tincidunt. Proin maximus ipsum 
                                     ut scelerisque dictum.</p>
                             </div>
-                            <div class="col-md-4 bannerbott1">
-                                <h3><span class="fa fa-cube" aria-hidden="true"></span> venenatis libero</h3>
+                            <div class="col-md-3 bannerbott1">
+                                <h3><span class="fa fa-cube" aria-hidden="true"></span>UX DESIGN</h3>
+                                <p>Donec et venenatis libero. Fusce dapibus pulvinar tincidunt. Proin maximus ipsum 
+                                    ut scelerisque dictum.</p>
+                            </div>
+                             <div class="col-md-3 bannerbott1">
+                                <h3><span class="fa fa-cube" aria-hidden="true"></span>CONSULTING</h3>
                                 <p>Donec et venenatis libero. Fusce dapibus pulvinar tincidunt. Proin maximus ipsum 
                                     ut scelerisque dictum.</p>
                             </div>
@@ -108,15 +122,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <h4>Professional learning academy will make us develop high in the quality</h4>
                     </div>
                     <div class="col-md-4 aboutgrid2">
-                        <p>Donec et venenatis libero. Fusce dapibus pulvinar tincidunt. Proin maximus ipsum 
-                            ut scelerisque dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
-                            posuere cubilia Curae; Nunc non risus in justo convallis feugiat.</p>
+                        <p class="text-justify">Alias Innovations is a Software Solutions Provider and Business Consulting company with collective industry experience of more than 50 years.</p>
+                        <p class="text-justify">We cater to clients from multiple industry verticals on an international level and provide our services for demand leading edge software development skills.</p>
                     </div>
                     <div class="col-md-4 aboutgrid3">
                         <p>
-                        <p>Donec et venenatis libero. Fusce dapibus pulvinar tincidunt. Proin maximus ipsum 
-                            ut scelerisque dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
-                            posuere cubilia Curae; Nunc non risus in justo convallis feugiat.</p>
+                        <p class="text-justify">We are 100+ people, distributed in our three development centers in Malaysia(Kuala Lumpur, Selangor), India(Chennai) and Philippines(Manila).</p>
+                        <p>We also provide outsourced offshore services.</p>
+                        <p class="text-justify">Around 40% of our revenues are generated by offshoring projects, a fact that underscores our commitment and abilities to work with clients outside Malaysia.</p>
                     </div>
                     <div class="clearfix"> </div>
                     <!-- Aboutslider -->
@@ -413,46 +426,46 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>	
         </div>	
         <!-- //contact -->
-        <?php include "footer.php"; ?>
+<?php include "footer.php"; ?>
         <!-- Responsive slides -->
         <script src="js/responsiveslides.min.js"></script>
         <script>
-                            $(function () {
-                                $("#slider").responsiveSlides({
-                                    auto: true,
-                                    pager: true,
-                                    nav: true,
-                                    speed: 1000,
-                                    namespace: "callbacks",
-                                    before: function () {
-                                        $('.events').append("<li>before event fired.</li>");
-                                    },
-                                    after: function () {
-                                        $('.events').append("<li>after event fired.</li>");
-                                    }
+                                $(function () {
+                                    $("#slider").responsiveSlides({
+                                        auto: true,
+                                        pager: true,
+                                        nav: true,
+                                        speed: 1000,
+                                        namespace: "callbacks",
+                                        before: function () {
+                                            $('.events').append("<li>before event fired.</li>");
+                                        },
+                                        after: function () {
+                                            $('.events').append("<li>after event fired.</li>");
+                                        }
+                                    });
                                 });
-                            });
         </script>
         <!-- //Responsive slides -->
 
         <!-- carousel -->
         <script src="js/owl.carousel.js"></script>
         <script>
-                                    $(document).ready(function () {
-                                        $("#owl-demo").owlCarousel({
-                                            items: 1,
-                                            itemsDesktop: [768, 1],
-                                            itemsDesktopSmall: [414, 1],
-                                            lazyLoad: true,
-                                            autoPlay: true,
-                                            navigation: true,
+                                $(document).ready(function () {
+                                    $("#owl-demo").owlCarousel({
+                                        items: 1,
+                                        itemsDesktop: [768, 1],
+                                        itemsDesktopSmall: [414, 1],
+                                        lazyLoad: true,
+                                        autoPlay: true,
+                                        navigation: true,
 
-                                            navigationText: false,
-                                            pagination: true,
-
-                                        });
+                                        navigationText: false,
+                                        pagination: true,
 
                                     });
+
+                                });
         </script>
         <!-- //carousel -->
 
@@ -484,14 +497,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script type="text/javascript" src="js/move-top.js"></script>
         <script type="text/javascript" src="js/easing.js"></script>
         <script type="text/javascript">
-                                    jQuery(document).ready(function ($) {
-                                        $(".scroll").click(function (event) {
-                                            event.preventDefault();
-                                            $('html,body').animate({
-                                                scrollTop: $(this.hash).offset().top
-                                            }, 1000);
-                                        });
+                                jQuery(document).ready(function ($) {
+                                    $(".scroll").click(function (event) {
+                                        event.preventDefault();
+                                        $('html,body').animate({
+                                            scrollTop: $(this.hash).offset().top
+                                        }, 1000);
                                     });
+                                });
         </script>
 
         <!-- here stars scrolling icon -->
