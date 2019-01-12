@@ -21,10 +21,10 @@
                 <span class="fa fa-envelope-o" aria-hidden="true"></span>
                 <p><a href="mailto:info@icontent.com">info@icontent.com</a></p>
             </div>
-<!--            <div class="contact-btm">
-                <span class="fa fa-globe" aria-hidden="true"></span>
-                <p><a href="#">www.website.com</a></p>
-            </div>-->
+            <!--            <div class="contact-btm">
+                            <span class="fa fa-globe" aria-hidden="true"></span>
+                            <p><a href="#">www.website.com</a></p>
+                        </div>-->
             <div class="clearfix"></div>
 
         </div>
@@ -145,6 +145,12 @@
 
         });
 
+    });
+
+
+    $(".nav-item").on("click", function (e) {
+        $("li.nav-item").removeClass("active");
+        $(this).addClass("active");
     });
 </script>
 <!-- //carousel -->

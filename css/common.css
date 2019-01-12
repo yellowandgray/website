@@ -2,6 +2,10 @@
     width: 100%;
     height: auto;
 }
+.link-effect-8 {
+    padding-top: 35px;
+}
+
 .morgin-top-35 {
     margin-top: 35px;
 }
@@ -9,3 +13,11 @@
 .nav li {
     font-size: 16px
 }
+
+/*#nav {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}*/

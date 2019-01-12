@@ -6,16 +6,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html lang="en">
-    <?php include "head.php";
-    $page = 'home' ?>
+    <?php
+    include "head.php";
+    $page = 'home'
+    ?>
 
     <body>
         <!-- banner -->
-        <div class="position">
+        <div class="position" id="top">
             <div class="banner">
                 <div class="agileinfo-dot">
+                    <div class="container-fluid" style="padding-left: 0px">
+                        <?php include "menu.php"; ?>
+                    </div>
                     <div class="container-fluid">
-<?php include "menu.php"; ?>
                         <div class="w3_agile_banner_info">
                             <section class="slider">
                                 <div class="flexslider">
@@ -76,12 +80,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
 
                     <div class="bannergrids">
-<!--                        <ul class="banneraddress">
-                            <li><span class="fa fa-envelope" aria-hidden="true"></span><a href="mailto:example@email.com">info@example.com</a></li>
-                            <li><span class="fa fa-phone" aria-hidden="true"></span>+017 544 673 2277</li>
-                            <li><a href="#contact" class="scroll"><span class="fa fa-long-arrow-right" aria-hidden="true"></span> Contact Us</a></li>
-                            <li><span class="fa fa-map-marker" aria-hidden="true"></span>123 london street maquis servilon, london</li>
-                        </ul>-->
+                        <!--                        <ul class="banneraddress">
+                                                    <li><span class="fa fa-envelope" aria-hidden="true"></span><a href="mailto:example@email.com">info@example.com</a></li>
+                                                    <li><span class="fa fa-phone" aria-hidden="true"></span>+017 544 673 2277</li>
+                                                    <li><a href="#contact" class="scroll"><span class="fa fa-long-arrow-right" aria-hidden="true"></span> Contact Us</a></li>
+                                                    <li><span class="fa fa-map-marker" aria-hidden="true"></span>123 london street maquis servilon, london</li>
+                                                </ul>-->
                         <div class="clearfix"></div>
                         <div class="bannerbottom">
                             <div class="col-md-3 bannerbott1">
@@ -99,7 +103,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <p>Donec et venenatis libero. Fusce dapibus pulvinar tincidunt. Proin maximus ipsum 
                                     ut scelerisque dictum.</p>
                             </div>
-                             <div class="col-md-3 bannerbott1">
+                            <div class="col-md-3 bannerbott1">
                                 <h3><span class="fa fa-cube" aria-hidden="true"></span>CONSULTING</h3>
                                 <p>Donec et venenatis libero. Fusce dapibus pulvinar tincidunt. Proin maximus ipsum 
                                     ut scelerisque dictum.</p>
@@ -426,7 +430,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>	
         </div>	
         <!-- //contact -->
-<?php include "footer.php"; ?>
+        <?php include "footer.php"; ?>
         <!-- Responsive slides -->
         <script src="js/responsiveslides.min.js"></script>
         <script>
