@@ -13,11 +13,25 @@
 .nav li {
     font-size: 16px
 }
+.aboutbottom li {
+    text-align: left;
+    color: #b7b7b7;
+    font-size: 14px;
+    line-height: 28px;
+}
 
-/*#nav {
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-}*/
+.our-infra h2 {
+    font-size: 26px;
+    color: #ccc;
+    margin: 1em 0 .8em;
+}
+
+.our-infra span {
+    color: #ccc;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.margin-top-3em {
+    margin-top: 3em;
+}

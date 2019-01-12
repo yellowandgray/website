@@ -332,8 +332,8 @@ a.w3_agile_vimeo:hover{
     margin: 1em 0 .8em;
 }
 .bottomgrids span.fa {
-    position: absolute;
-    top: 22%;
+    position: inherit;
+    top: -12px;
     color: #00acee;
 }
 .aboutbottom {
@@ -347,10 +347,10 @@ a.w3_agile_vimeo:hover{
 
 /*-- team --*/
 .team,.map,.contact-form,.about,.services{
-    padding: 5em 0;
+    padding: 7em 0;
 }
 .about{
-    padding: 5em 0 0;
+    padding: 7em 0 0;
 }
 div#team {
     background: #171616;
@@ -1336,13 +1336,13 @@ ul.banneraddress {
 .bannerbott1{
     padding: 2em;
     background:  rgba(0, 0, 0, 0.32);
-    border-bottom: 2px solid #f0b50a;
+    border-bottom: 2px solid #bc3c82;
 }
 .bannerbott1:hover {
     border-bottom: 2px solid transparent;
 }
 .bannerbottom h3 {
-    font-size: 11px;
+    font-size: 15px;
     margin-bottom: 10px;
     color: #fff;
     text-transform: capitalize;
@@ -1463,10 +1463,10 @@ button.close {
         left: 9%;
     }
     .team, .map, .contact-form, .about, .services, .footer-top {
-        padding: 3.5em 0;
+        padding: 6em 0;
     }
     .about {
-        padding: 3em 0 0;
+        padding: 6em 0 0;
     }
     .agile_testimonials {
         padding: 5em 0;
