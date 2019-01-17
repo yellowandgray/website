@@ -1,31 +1,59 @@
-.navbar-brand img {
+.common-img-size {
     width: 100%;
-}
-.sub-banner {
     height: auto;
-    background-size: cover !important;
-    max-width: none;
-    width: 100%;
 }
-
-.sub-banner-contant {
-    padding: 25px;
-}
-
-.sub-banner h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 30px;
-    text-align: center;
-    color: #fff;
-    font-weight: 700;
-    padding: 47px;
-}
-
 .link-effect-8 {
-    padding-top: 20px;
+    padding-top: 35px;
+}
+
+.morgin-top-35 {
+    margin-top: 35px;
 }
 
 .nav li {
-    font-size: 18px;
+    font-size: 16px
+}
+.aboutbottom li {
+    text-align: left;
+    color: #4c4b4b ;
+    font-size: 15px;
+    line-height: 28px;
+}
+
+.our-infra h2 {
+    font-size: 26px;
+    color: #ccc;
+    margin: 1em 0 .8em;
+}
+
+.our-infra span {
+    color: #ccc;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.margin-top-3em {
+    margin-top: 3em;
+}
+.heading-with-ping {
+    font-size: 45px;
+    color: #af3bb1 !important;
+    letter-spacing: 0px;
+    position: relative;
+    text-align: left !important ;
+}
+.agile_tesimonials_content ul {
+    margin: 38px ;
+}
+
+.box-border {    
+    border: 2px solid #999;
+    border-bottom: 10px solid #af3bb1 ;
+    padding: 50px
+}
+.ping {
+    color: #af3bb1 !important;
+}
+.list-margin {
+    margin-bottom: 84px;
 }
