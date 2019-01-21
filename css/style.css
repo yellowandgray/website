@@ -210,10 +210,10 @@ nav.navbar.navbar-default {
 }*/
 /*-- //nav --*/
 .w3_agile_banner_info{
-    margin:4em 12em 0;
+    margin:2em 12em 0;
 }
 .w3_agile_banner_info h2,.w3_agile_banner_info h3 {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 700;
     text-transform: capitalize;
     color: #fff;
@@ -1339,7 +1339,7 @@ ul.banneraddress {
     border-bottom: 2px solid transparent;
 }
 .bannerbottom h3 {
-    font-size: 15.1px;
+    font-size: 12.9px;
     margin-bottom: 26px;
     color: #fff;
     text-transform: capitalize;
@@ -1366,7 +1366,7 @@ ul.banneraddress {
 .bannergrids{
     margin:0 auto;
     width: 70%;
-    margin-top: 7em;
+    margin-top: 9em;
 }
 /*-- bannergrids --*/
 /*-- bootstrap-modal-pop-up --*/
