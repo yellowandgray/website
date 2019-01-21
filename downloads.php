@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col-md-6 text-center">
                             <a href="images/calendar/ENPEE-School-Calendar-2019.pdf" download>
-                                <h5 class="bold green-color" title="ENPEE-School-Calendar-2019">ENPEE International School Calendar - 2019</h5>
+                                <h5 title="ENPEE-School-Calendar-2019">ENPEE International School Calendar - 2019</h5>
                                 <img src="images/ENPEE-School-Calendar-2019-.jpg" class="img-width download-box" alt="ENPEE-School-Calendar-2019" title="ENPEE-School-Calendar-2019">
                             </a>
                         </div>
