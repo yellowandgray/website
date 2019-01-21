@@ -179,7 +179,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="col-md-4 bottomgrid1">
                             <h3>Client Focus</h3>
                             <span class="fa fa-circle" aria-hidden="true"></span>
-
                             <ul>
                                 <li>Large enough to execute big projects; small enough to be agile</li>
                                 <li>Simple organization with strong commitment to customer service</li>
