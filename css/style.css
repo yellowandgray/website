@@ -404,7 +404,7 @@ fieldset {
 
 legend {
     display: block;
-    width: 56%;
+    width: auto;
     text-transform: capitalize;
     margin-bottom: 20px;
     padding: 0 1em;
@@ -442,7 +442,7 @@ a.abtlink {
 
 .abt-pos {
     position: absolute;
-    top: 47%;
+    top: 37%;
     width: 100%;
     z-index: 1;
     left: 12%;
@@ -716,9 +716,9 @@ h3.title {
     font-size: 3em;
 }
 
-.service-subgrids:nth-child(odd) {
+/*.service-subgrids:nth-child(odd) {
     background: #026fbf;
-}
+}*/
 
 .service-subgrids:nth-child(odd) p,
 .service-subgrids:nth-child(odd) h6,
