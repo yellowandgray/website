@@ -5,7 +5,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <!--Footer Widget Start-->
                     <div class="footer-widget about-ecova ul-padding-color">
-                        <div class="f2logo"> <img src="images/logo-enpee-international-school.png" alt="Morfosis" title="Morfosis" style="height: 115px"> </div>
+                        <div class="f2logo"> <img src="images/logo-enpee-international-school.png" alt="ENPEE International School Logo" title="ENPEE International School Logo" style="height: 115px"> </div>
                         <ul>
                             <li>Team Building</li>
                             <li>Interactive Learning</li>
