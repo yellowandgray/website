@@ -965,3 +965,8 @@ ul.submenu li a{
         height: 290px;
     }
 }
+
+.download-box {
+    box-shadow: 0 0 11px 4px #eee;
+    padding: 20px;
+}
