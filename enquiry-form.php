@@ -6,6 +6,7 @@ if ($_POST['name']) {
     $mobile = $_REQUEST['mobile'];
     $no_children = $_REQUEST['no_children'];
     $preffred_classes = $_REQUEST['preffred_classes'];
+    $social_media = $_REQUEST['social_media'];
     $subject = $_REQUEST['subject'];
     $message = $_REQUEST['message'];
     error_reporting(E_STRICT);
@@ -90,8 +91,8 @@ if ($_POST['name']) {
         $message.= $names . ',';
     }
     '</p>
-        <p style="margin:0 0 16px">Regards,</p>
-        <p style="margin:0 0 16px">ENPEE Web Team</p></div>
+        <p style = "margin:0 0 16px">How did you know us: ' . $social_media . '</p>
+        <p style="margin:0 0 16px">Sent From Website</p></div>
             </td>
             </tr>
             </tbody>

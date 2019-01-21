@@ -935,3 +935,22 @@ ul.submenu li a{
     border-color: #2f68ae !important;
     color: white !important;
 }
+
+.btn-custom-1 {
+    background: #73bf45;
+    color: #fff;
+    border: 2px solid #73bf45;
+    border-radius: 100px;
+    padding: 5px 10px;
+    line-height: 35px;
+}
+
+.btn-custom-1:hover {
+    background: #2f68ae !important;
+    border-color: #2f68ae !important;
+    color: white !important;
+}
+
+.line-height-35 {
+    line-height: 35px;
+}

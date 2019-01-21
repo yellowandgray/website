@@ -6,9 +6,11 @@
                     <p>
                         <i class="fa fa-phone"></i>&nbsp;<a href="tel:+04368 265 265"> 04368 265 265</a>&nbsp;&nbsp;
                         <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:info@enpeekkl.com">info@enpeekkl.com</a>
+<!--                        <i class="fa fa-arrow-down"></i>&nbsp;-->
+                        <a href="#" type="button" class="btn-custom-1">Download</a>
                     </p>
                 </div>
-                <div class="col-xs-6 text-right">
+                <div class="col-xs-6 text-right line-height-35">
                     <ul class="colorlib-social-icons">
                         <li><a href="https://www.facebook.com/ENPEESchool" target="blank"><i class="fa fa-facebook-official" style="color:#1c61ab"></i></a></li>&nbsp;
                         <li><a href="https://twitter.com/SchoolEnpee" target="blank"><i class="fa fa-twitter-square" style="color:#429cd6"></i></a></li>&nbsp;

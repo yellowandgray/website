@@ -129,7 +129,7 @@ if ($_POST['name']) {
             <p style = "margin:0 0 16px">Address-1: ' . $address_1 . '</p>
             <p style = "margin:0 0 16px">Address-2: ' . $address_2 . '</p>
             <p style = "margin:0 0 16px">Message: ' . $message1 . '</p>
-            <p style = "margin:0 0 16px">Regards,<br/>ENPEE Web Team.</p></div>
+            <p style = "margin:0 0 16px">Sent From Website</p></div>
             </td>
             </tr>
             </tbody>

@@ -16,6 +16,8 @@ if ($_POST['name']) {
 
     $subject = $_REQUEST['subject'];
 
+    $social_media = $_REQUEST['social_media'];
+
     $message1 = $_REQUEST['message'];
 
     error_reporting(E_STRICT);
@@ -125,12 +127,13 @@ if ($_POST['name']) {
     <?php
 
     foreach ($_POST['preffred_classes'] as $names) {
-        $message.= $names . ',';
+        $message .= $names . ',';
     }
-    $message.= '</p>
+    $message .= '</p>
         <p style = "margin:0 0 16px">Subject: ' . $subject . '</p>
+        <p style = "margin:0 0 16px">How did you know us: ' . $social_media . '</p>
         <p style = "margin:0 0 16px">Message: ' . $message1 . '</p>
-            <p style = "margin:0 0 16px">Regards,<br/>ENPEE Web Team.</p></div>
+            <p style = "margin:0 0 16px">Sent From Website</p></div>
             </td>
             </tr>
             </tbody>
