@@ -514,12 +514,14 @@
                                         <div class="form-group">
                                             <li>
                                                 <select name="social_media" class="form-control" required>
-                                                    <option value="0">How did you know us?</option>
+                                                    <option value="0">How do you know us?</option>
                                                     <option value="Facebook">Facebook</option>
-                                                    <option value="Youtube">YouTube</option>
+                                                    <option value="Linked-In">Linked-In</option>
+                                                    <option value="YouTube">YouTube</option>
                                                     <option value="Google Search">Google Search</option>
                                                     <option value="SMS">SMS</option>
                                                     <option value="Whatsapp">Whatsapp</option>
+                                                    <option value="TV">TV</option>
                                                     <option value="Other Reference">Other Reference</option>
                                                 </select>
                                             </li>

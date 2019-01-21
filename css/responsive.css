@@ -2345,7 +2345,7 @@
 
     .contact-form, .c-info, .wf100.comment-form {
 
-        margin-bottom: 30px;
+        margin-bottom: 30px !important;
 
     }
 

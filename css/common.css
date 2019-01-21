@@ -937,20 +937,31 @@ ul.submenu li a{
 }
 
 .btn-custom-1 {
-    background: #73bf45;
+    background: #2f68ae;
     color: #fff;
-    border: 2px solid #73bf45;
+    border: 2px solid #2f68ae;
     border-radius: 100px;
     padding: 5px 10px;
     line-height: 35px;
 }
 
 .btn-custom-1:hover {
-    background: #2f68ae !important;
-    border-color: #2f68ae !important;
+    background: #73bf45 !important;
+    border-color: #73bf45 !important;
     color: white !important;
 }
 
 .line-height-35 {
     line-height: 35px;
+}
+
+.c-info {
+    height: 266px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 280px) and (max-width: 355px) {
+    .c-info {
+        height: 290px;
+    }
 }
