@@ -48,7 +48,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                     <div class="logo-wrap">
                                         <h1>
                                             <a href="#main-banner" title="">
-                                                <img class="img-responsive" src="img/logo-top.png" alt="" title="MAC WORLD">
+                                                <img class="img-responsive" src="img/logo-top-1.png" alt="" title="MAC WORLD">
                                             </a>
                                         </h1>
                                     </div>
@@ -115,7 +115,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                         <ul class="nav_menu clearfix">
                             <li><a href="#">LinkedIN</a></li>
                             <li><a href="#">Facebook</a></li>
-                            <li><a href="#"></a></li>
+                            <li><a href="#">Instagram</a></li>
                             <li><a href="mailto:">Email</a></li>
                             <li class="mobile-language search-panel-right">
                                 <div class="language_flag select_language text-center" style="display: inline-block;">
@@ -199,7 +199,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                 </script>
                 <section id="our_journey" class="container-fluid back_main internation_house_section" style="background-image: url(img/ecport_house.png);">
                     <div class="row">
-                        <div class="back_img"> <img src="img/ecport_house.png" alt="" title="" style="display: none;"> </div>
+                        <div class="back_img"> <img src="img/ecport_house-1.png" alt="" title="" style="display: none;"> </div>
                         <div class="container">
                             <div class="international_exports">
                                 <div class="internation_content_wraper">
@@ -292,7 +292,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 <p class="justified-align">Being pioneers of Palm Oil export in Malaysia, in the recent years, MAC WORLD has further diversified into major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide. MAC WORLD Group have established several brands in the International market like <img class="brand-img" src="img/goldstar.jpg" alt="image" />, <img class="brand-img" src="img/goldfry.jpg" alt="image" />, <img class="brand-img" src="img/goldfat.jpg" alt="image" /> and <img class="brand-img" src="img/mrmac.jpg" alt="image" /> for its range of cooking oil, confectionery fats, vegetable ghee, tomato paste and GOLDENFARM for dairy based products such as sweetened condensed milk, evaporated milk, skim milk powder, fat filled milk powder etc. MAC WORLD has become a one stop shop in Malaysia for palm oil derivatives, oleo chemicals, confectionery fats and agro commodities for customers worldwide.</p>
                                 <p class="justified-align">Driven by the commitment to ensure that high quality products are being offered at competitive pricing by using the expertise and experience to serve the dynamic needs of customers.  MAC WORLD ensures that its values and principles are upheld at all times.</p>
 <!--                                <div class="team-images-set"><img src="img/team.jpg" alt=""></div>-->
-                                
+
                             </div>
                             <div class="our_partner_heading heading_text">
                                 <h3 class="text-center">Our Team</h3>
@@ -400,10 +400,10 @@ $categories = $db->selectAllWithoutWhere('categories');
                         <div class="container">
                             <div class="text-center our_partner_heading heading_text">
                                 <h3>Our Services</h3>
-                                
+
                                 <p class="justified-align">We offer integrated end-to-end manufacturing services and this has also assisted the MAC WORLD Group to attract customers and markets on an international level.<br>
                                 </p>
-                                
+
                             </div>
                             <div class="products-container">
                                 <div class="produts_listing">
@@ -455,7 +455,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <figure>
                                                     <img src="img/accreditations/Picture1.png" alt="" title="">
                                                 </figure>
-                                                
+
                                             </a>
                                         </li>
                                         <li class="">
@@ -463,23 +463,23 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <figure>
                                                     <img src="img/accreditations/Picture2.png" alt="" title="">
                                                 </figure>
-                                                
+
                                             </a>
                                         </li>
-<!--                                        <li class="">
-                                            <a href="#">
-                                                <figure>
-                                                    <img src="img/accreditations/Picture3.png" alt="" title="">
-                                                </figure>
-                                                
-                                            </a>
-                                        </li>-->
+                                        <!--                                        <li class="">
+                                                                                    <a href="#">
+                                                                                        <figure>
+                                                                                            <img src="img/accreditations/Picture3.png" alt="" title="">
+                                                                                        </figure>
+                                                                                        
+                                                                                    </a>
+                                                                                </li>-->
                                         <li class="">
                                             <a href="#">
                                                 <figure>
                                                     <img src="img/accreditations/Picture4.png" alt="" title="">
                                                 </figure>
-                                                
+
                                             </a>
                                         </li>
                                         <li class="">
@@ -487,23 +487,23 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <figure>
                                                     <img src="img/accreditations/Picture5.png" alt="" title="">
                                                 </figure>
-                                                
+
                                             </a>
                                         </li>
-<!--                                        <li class="">
-                                            <a href="#">
-                                                <figure>
-                                                    <img src="img/accreditations/Picture6.png" alt="" title="">
-                                                </figure>
-                                                
-                                            </a>
-                                        </li>-->
+                                        <!--                                        <li class="">
+                                                                                    <a href="#">
+                                                                                        <figure>
+                                                                                            <img src="img/accreditations/Picture6.png" alt="" title="">
+                                                                                        </figure>
+                                                                                        
+                                                                                    </a>
+                                                                                </li>-->
                                         <li class="">
                                             <a href="#">
                                                 <figure>
                                                     <img src="img/accreditations/Picture7.png" alt="" title="">
                                                 </figure>
-                                                
+
                                             </a>
                                         </li>
                                         <li class="">
@@ -511,7 +511,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <figure>
                                                     <img src="img/accreditations/Picture8.png" alt="" title="">
                                                 </figure>
-                                                
+
                                             </a>
                                         </li>
                                         <li class="">
@@ -519,7 +519,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <figure>
                                                     <img src="img/accreditations/Picture9.png" alt="" title="">
                                                 </figure>
-                                                
+
                                             </a>
                                         </li>
                                     </ul>
@@ -533,9 +533,9 @@ $categories = $db->selectAllWithoutWhere('categories');
                         <div class="container">
                             <div class="our_partner_heading our_partner_text">
                                 <h3 class="text-center">Our Partners</h3>
-                                
+
                                 <p class="justified-align">With the expansive portfolio that Mac World handles – sourcing, manufacturing, trading and distributing raw materials, MAC WORLD Group and its management believe in establishing mutually beneficial, strong strategic alliances with parties and organizations at every level of the business, across geographies, commodities and functions to achieve its mission and vision.</p>
-                                
+
                                 <ul class="clearfix">
                                     <li class="active"><a data-toggle="tab" href="#menu1">Banking</a></li>
                                     <li class=""><a data-toggle="tab" href="#menu2">Insurance</a></li>
@@ -617,17 +617,10 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                                                 </div>-->
                                     </div>
                                     <div id="menu3" class="tab-pane fade in ">
-                                        <div class="slider">
-                                            <div class="slide">
-                                                <img src="img/technology/technology.png" alt=""/>
+                                        <div>
+                                            <div class="" style="text-align: center">
+                                                <img src="img/technology/technology.png" alt="" style="width: 20%"/>
                                             </div>
-                                            <div class="slide">
-                                                
-                                            </div>
-                                            <div class="slide">
-                                                
-                                            </div>
-                                            
                                         </div>
                                         <!--                                        <div class="paginator-center text-color text-center">
                                                                                     <ul>
@@ -646,7 +639,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                         $("ul.nav.nav-tabs li").click(function () {
                             $('html, body').animate({
                                 scrollTop: $(".slick-track").offset().top
-                            }, 2200);
+                            }, 1500);
                         });
                     });
                 </script>
