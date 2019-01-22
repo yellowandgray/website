@@ -80,7 +80,8 @@ $categories = $db->selectAllWithoutWhere('categories');
             </header>
             <!-- /header -->
             <!-- content start -->
-            <div class="contain content"><section id="main-banner" class="container-fluid" style="height: 756px;">
+            <div class="contain content">
+                <section id="main-banner" class="container-fluid" style="height: 756px;">
                     <div class="row"></div>
                     <div class="banner_menu clearfix banner_sticky" style="height: 756px;">
                         <div class="sidebar-container">
@@ -129,29 +130,54 @@ $categories = $db->selectAllWithoutWhere('categories');
                     <div class="container">
                         <div class="banner_content text-center">
                             <figure><img title="" src="img/mac_wolrd.png" alt=""></figure>
-                            <h2>Futurizing Manufacturing and Commodities Commerce Globally </h2>
+                            <h2>Futurizing Manufacturing <br/>and <br/>Commodities Commerce Globally </h2>
                         </div>
                     </div>
                     <div class="sroll_down" style="display: block;"><a href="#">Scroll Down</a></div>
                     <div class="row">
                         <ul id="sb-slider" class="sb-slider" style="height: 756px; max-width: 2000px; overflow: hidden;">
                             <li style="height: 756px; display: none;" class="">
-                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/india.jpg&quot;);">
-                                    <img src="img/india.jpg" alt="image1" style="display: none;">
+                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/malaysia.jpg&quot;);">
+                                    <img src="img/malaysia.jpg" alt="image1" style="display: none;">
                                 </a>
                             </li>
                             <li style="height: 756px; display: none;" class="">
-                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/banner-img1.jpg&quot;);">
-                                    <img src="img/banner-img1.jpg" alt="image1" style="display: none;"></a></li>
+                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/indonesia.jpg&quot;);">
+                                    <img src="img/indonesia.jpg" alt="image1" style="display: none;"></a>
+                            </li>
                             <li style="height: 756px; display: none;" class="">
-                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/banner-img1-1.jpg&quot;);">
-                                    <img src="img/banner-img1-1.jpg" alt="image1" style="display: none;">
+                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/nigerya.jpg&quot;);">
+                                    <img src="img/nigerya.jpg" alt="image1" style="display: none;">
                                 </a>
                             </li>
                             <li style="height: 756px; display: block;" class="sb-current">
-                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/singapure.jpg&quot;);">
-                                    <img src="img/singapure.jpg" alt="image1" style="display: none;"></a></li>
-
+                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/benin.jpg&quot;);">
+                                    <img src="img/benin.jpg" alt="image1" style="display: none;"></a>
+                            </li>
+                            <li style="height: 756px; display: block;" class="sb-current">
+                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/guinea.jpg&quot;);">
+                                    <img src="img/guinea.jpg" alt="image1" style="display: none;"></a>
+                            </li>
+                            <li style="height: 756px; display: block;" class="sb-current">
+                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/egypt.jpg&quot;);">
+                                    <img src="img/egypt.jpg" alt="image1" style="display: none;"></a>
+                            </li>
+                            <li style="height: 756px; display: block;" class="sb-current">
+                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/india.jpg&quot;);">
+                                    <img src="img/india.jpg" alt="image1" style="display: none;"></a>
+                            </li>
+                            <li style="height: 756px; display: block;" class="sb-current">
+                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/uae.jpg&quot;);">
+                                    <img src="img/uae.jpg" alt="image1" style="display: none;"></a>
+                            </li>
+                            <li style="height: 756px; display: block;" class="sb-current">
+                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/tanzania.jpg&quot;);">
+                                    <img src="img/tanzania.jpg" alt="image1" style="display: none;"></a>
+                            </li>
+                            <li style="height: 756px; display: block;" class="sb-current">
+                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/singapore.jpg&quot;);">
+                                    <img src="img/singapore.jpg" alt="image1" style="display: none;"></a>
+                            </li>
                         </ul>
                     </div>
                 </section>
@@ -167,29 +193,25 @@ $categories = $db->selectAllWithoutWhere('categories');
                         }
                     });
                 </script>
-
-                <section id="our_journey" class="container-fluid back_main internation_house_section" style="background-image: url(&quot;img/ecport_house.png&quot;);">
+                <section id="our_journey" class="container-fluid back_main internation_house_section" style="background-image: url(img/ecport_house.png);">
                     <div class="row">
                         <div class="back_img"> <img src="img/ecport_house.png" alt="" title="" style="display: none;"> </div>
                         <div class="container">
-                            <div class="international_exports text-center">
+                            <div class="international_exports">
                                 <div class="internation_content_wraper">
                                     <div class="poretal">
-                                        <figure> <img src="img/mac_wolrd.png" alt="" title=""> </figure>
-                                        <p></p>
-                                        <h3>Futurizing Manufacturing and Commodities Commerce Globally</h3>
-                                        <p>Mac World is a diversified, yet integrated toll manufacturing group in Malaysia, who are also key players in the global commodity market. The company has grown exponentially under the forward-thinking leadership of a group of entrepreneurs who shared a common objective and vision.</p>
-                                        <p>Headquartered in Malaysia; which is abundant in natural resources, Mac World manufactures and supplies raw materials to some of the biggest food and beverage brands across the globe. With worldwide connectivity and by seamlessly integrating operations and services, the group has successfully designed, developed and commercially exported a wide range of products and services to most parts of the world.</p>
-                                        <p>Having grown organically, by applying modern and rational philosophy and approach; balancing financial Return of Investment (FROI) and Social Return of Investment (SROI), Mac World transforms raw materials into bespoke ingredients to help customers meet the ever changing demand of consumers.</p>                               
+                                        <figure class="text-center"> <img src="img/mac_wolrd.png" alt="" title=""> </figure>
+                                        <h3 class="text-center">Futurizing Manufacturing and Commodities Commerce Globally</h3>
+                                        <p class="justified-align">MAC WORLD is a diversified, yet integrated toll manufacturing group in Malaysia, who are also key players in the global commodity market. The company has grown exponentially under the forward-thinking leadership of a group of entrepreneurs who shared a common objective and vision.</p>
+                                        <p class="justified-align">Headquartered in Malaysia; which is abundant in natural resources, MAC WORLD manufactures and supplies raw materials to some of the biggest food and beverage brands across the globe. With worldwide connectivity and by seamlessly integrating operations and services, the group has successfully designed, developed and commercially exported a wide range of products and services to most parts of the world.</p>
+                                        <p class="justified-align">Having grown organically, by applying modern and rational philosophy and approach; balancing financial Return of Investment (FROI) and Social Return of Investment (SROI), MAC WORLD transforms raw materials into bespoke ingredients to help customers meet the ever changing demand of consumers.</p>
                                     </div>
-                                </div> 
-                                <a href="#our_journey" class="about_us_btn">Our Journey</a> 
+                                </div>
+                                <a href="#our_journey" class="about_us_btn">Our Journey</a>
                             </div>
                         </div>
                     </div>
                 </section>
-
-
                 <section class="container-fluid" id="about_section">
                     <div class="row">
 
@@ -201,9 +223,9 @@ $categories = $db->selectAllWithoutWhere('categories');
                                     </div>
                                     <div class="who_we_content">
                                         <h3>Who We Are</h3>
-                                        <p><strong>Expertise, Reliability and Entrepreneurial Spirit</strong></p><br/>
-                                        <p>The Mac World Group is an entrepreneurial driven entity delivering Globally Reliable and World Class products and services consistently for almost 20 years. This ambitious spirit has permeated throughout the Eco System and Value chain of the organization, contributing towards a holistic and dynamic workplace environment and leading the group and its associated companies to successfully enter new markets and secure long term customers.</p>
-                                        <p>Mac World’s Management Team has a cumulated experience of more than 100 years in multiple touch points, ranging from sourcing, branding, marketing, production and manufacturing right to customization, trade and International sales. The Management Team is supported by highly qualified and experienced technical and Research and Development personnel who are able to provide the best of breed solutions and advice to the group.</p>                                
+                                        <p class="justified-align"><strong>Expertise, Reliability and Entrepreneurial Spirit</strong></p><br/>
+                                        <p class="justified-align">The MAC WORLD Group is an entrepreneurial driven entity delivering Globally Reliable and World Class products and services consistently for almost 20 years. This ambitious spirit has permeated throughout the Eco System and Value chain of the organization, contributing towards a holistic and dynamic workplace environment and leading the group and its associated companies to successfully enter new markets and secure long term customers.</p>
+                                        <p class="justified-align">MAC WORLD's Management Team has a cumulated experience of more than 100 years in multiple touch points, ranging from sourcing, branding, marketing, production and manufacturing right to customization, trade and International sales. The Management Team is supported by highly qualified and experienced technical and Research and Development personnel who are able to provide the best of breed solutions and advice to the group.</p>
                                         <div class="text-center"><img src="img/team-02.jpg" alt="" style="width: 100%;"></div>
                                     </div>
                                 </div>
@@ -211,24 +233,24 @@ $categories = $db->selectAllWithoutWhere('categories');
 
                             <div class="col-md-6 about_right_section who_we_content_section" style="height: 756px;">
                                 <div class="row">
-                                    <div class="who_we_content about_right_content mCustomScrollbar _mCS_2" style="height: 600px;"><div id="mCSB_2" class="mCustomScrollBox mCS-dark-3 mCSB_vertical mCSB_inside" tabindex="0" style="max-height: none;"><div id="mCSB_2_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+                                    <div class="who_we_content about_right_content mCustomScrollbar _mCS_2" style="height: 720px;"><div id="mCSB_2" class="mCustomScrollBox mCS-dark-3 mCSB_vertical mCSB_inside" tabindex="0" style="max-height: none;"><div id="mCSB_2_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+                                                <div class="global_ralby">
+                                                    <h4>Vision</h4>
+                                                    <p>To provide reliable products, with sustainable supply chain, through bilateral trade</p>
+                                                </div>
                                                 <div class="global_ralby">
                                                     <h4>Mission </h4>
                                                     <p>To be the benchmark in the industry we serve.</p>
                                                 </div>
-                                                <div class="global_ralby">
-                                                    <h4>Vission</h4>
-                                                    <p>To provide reliable products, with sustainable supply chain, through bilateral trade</p>
-                                                </div>
                                                 <div class="global_ralby value_content">
-                                                    <h4>Value</h4>
+                                                    <h4>Values</h4>
                                                     <p>From the founders to the most recent employee, our values guide our conduct:</p>
                                                     <ul>
                                                         <li><span>C </span>
                                                             <p>Caring and Communicative</p>
                                                         </li>
                                                         <li><span>A </span>
-                                                            <p>Attention & Attentiveness to customers’ needs.</p>
+                                                            <p>Attention & Attentiveness to customer's needs.</p>
                                                         </li>
                                                         <li><span>R </span>
                                                             <p>Responsive to change and Reliability</p>
@@ -256,26 +278,24 @@ $categories = $db->selectAllWithoutWhere('categories');
                         </div>
                     </div>
                 </section>
-
-
                 <section class="container-fluid" id="team_section">
                     <div class="row">
                         <div class="container">
 
-                            <div class="text-center our_partner_heading heading_text">
-                                <h3>What We Do</h3>
-                                <p>The Mac World Group is an ISO 9001:2015 certified company which exports products and services to over 65 countries. The company has been continuously penetrating new markets, opening and accessing new opportunities. Since its inception in 2001, Mac World is in the business of manufacturing and trading Palm Oil; Palm Derivatives; its by-products and agro commodities.</p>
-                                <p>Being pioneers of Palm Oil export in Malaysia, in the recent years, Mac World has further diversified into major suppliers of consumer packs; soft/ lauric oils; cattle and poultry feeds; confectionary and bakery applications; agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide. The group has transformed into an established brand with GOLDSTAR, GOLDFRY, GOLDFAT and MR.MAC- its range of vegetable cooking oil, vegetable ghee, tomato paste and‘ GOLDENFARM’ for evaporated milk and become the one stop shop in Malaysia for  Palm Oil Derivatives, Oleo Chemicals, Confectionery fats and Agro commodities for manufacturers worldwide.</p>
-                                <p>Driven by the commitment to ensure that high quality products are being offered at competitive pricing and using the expertise and experience to serve the dynamic needs of customers,  Mac World ensures that its values and principles are upheld at all times.</p>
+                            <div class="our_partner_heading heading_text">
+                                <h3 class="text-center">What We Do</h3>
+                                <p class="justified-align">The MAC WORLD Group is an ISO 9001:2015 certified company which exports products and services to over 65 countries. The company has been continuously penetrating new markets, opening and accessing new opportunities. Since its inception in 2001, MAC WORLD is in the business of manufacturing and trading Palm Oil; Palm Derivatives; its by-products and agro commodities.</p>
+                                <p class="justified-align">Being pioneers of Palm Oil export in Malaysia, in the recent years, MAC WORLD has further diversified into major suppliers of consumer packs; soft/ lauric oils; cattle and poultry feeds; confectionary and bakery applications; agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide. The group has transformed into an established brand with <img class="brand-img" src="img/goldstar.jpg" alt="image" />, <img class="brand-img" src="img/goldfry.jpg" alt="image" />, <img class="brand-img" src="img/goldfat.jpg" alt="image" /> and <img class="brand-img" src="img/mrmac.jpg" alt="image" /> - its range of vegetable cooking oil, vegetable ghee, tomato paste and GOLDENFARME for evaporated milk and become the one stop shop in Malaysia for  Palm Oil Derivatives, Oleo Chemicals, Confectionery fats and Agro commodities for manufacturers worldwide.</p>
+                                <p class="justified-align">Driven by the commitment to ensure that high quality products are being offered at competitive pricing and using the expertise and experience to serve the dynamic needs of customers,  MAC WORLD ensures that its values and principles are upheld at all times.</p>
 <!--                                <div class="team-images-set"><img src="img/team.jpg" alt=""></div>-->
                                 <p></p><p></p>
                             </div>
-                            <div class="text-center our_partner_heading heading_text">
-                                <h3>Our Team</h3>
-                                <p></p><p>The Macworld Group is a largely entrepreneurial driven entity and this characteristic has permeated throughout the Eco System and Value chain of our organization. These attributes inevitably contribute towards a holistic and dynamic workplace environment and this also helps the group and our associated companies to successfully enter new markets and secure long term customers.<br>
-                                    Our Management Team has a collective industry experience of more than 100 years in multiple touch points of our industry, ranging from sourcing, branding, marketing, production, manufacturing right up to customization, trade and International sales. The Management Team is ably supported by highly qualified and experienced technical and Research and Development personnel who are able to provide the best of breed solutions and advice to the group. All this collectively, leads to the Macworld Brand being recognized as a Globally reknowned company and a brand that delivers globally reliable products and services. Our Management and Technical Team’s efforts have also let us to achieve the highly acclaimed 9001:2015 ISO certification and accreditation.</p>
+                            <div class="our_partner_heading heading_text">
+                                <h3 class="text-center">Our Team</h3>
+                                <p></p><p class="justified-align">The MAC WORLD Group is a largely entrepreneurial driven entity and this characteristic has permeated throughout the Eco System and Value chain of our organization. These attributes inevitably contribute towards a holistic and dynamic workplace environment and this also helps the group and our associated companies to successfully enter new markets and secure long term customers.<br>
+                                    Our Management Team has a collective industry experience of more than 100 years in multiple touch points of our industry, ranging from sourcing, branding, marketing, production, manufacturing right up to customization, trade and International sales. The Management Team is ably supported by highly qualified and experienced technical and Research and Development personnel who are able to provide the best of breed solutions and advice to the group. All this collectively, leads to the MAC WORLD Brand being recognized as a Globally reknowned company and a brand that delivers globally reliable products and services. Our Management and Technical Team’s efforts have also let us to achieve the highly acclaimed 9001:2015 ISO certification and accreditation.</p>
                                 <div class="team-images-set text-center"><img src="img/master-01.jpg" alt=""></div>
-                                <p>Join Our Team!</p>
+                                <p class="text-center">Join Our Team!</p>
                             </div>
                             <div class="products-container">
                                 <div class="produts_listing">
@@ -284,7 +304,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                         </div>
                     </div>
                 </section>
-
                 <section class="container-fluid light-gray-bg" id="explor_product">
                     <div class="row">
                         <div class="product-list-wrapper clearfix">
@@ -377,7 +396,8 @@ $categories = $db->selectAllWithoutWhere('categories');
                         <div class="container">
                             <div class="text-center our_partner_heading heading_text">
                                 <h3>Our Services</h3>
-                                <p></p><p>We offer intergrated end to end manufacturing services and this has also assisted the Macworld group to attract customers and markets on an international level.<br>
+                                <p></p>
+                                <p class="justified-align">We offer intergrated end to end manufacturing services and this has also assisted the MAC WORLD group to attract customers and markets on an international level.<br>
                                 </p>
                                 <p></p>
                             </div>
@@ -389,8 +409,8 @@ $categories = $db->selectAllWithoutWhere('categories');
                                         </div>
                                         <div class="containt-wrap">
                                             <h3>Integrated Financial Service</h3>
-                                            <p>The ability to access and secure finance is critical for business survival and growth and at Mac World, we truly understand this need. By leveraging strategic networking alliances and the distribution network to move products between regions, Mac World obtains competitive prices for customers on a regular basis, thus enabling buyers to procure more products at higher volumes. Sustainable finance facilitation with traders in the commodity origination sources averts operational inefficiencies and prevents wastage. Mac World’ customer centric philosophy lays emphasis on providing personalised end-to-end supply chain management solutions for buyers and suppliers to draw maximum advantage, by providing cash flow, extended credit, risk mitigation etc.</p>
-                                            <p>Mac World’s commitment to go beyond customer expectation, along with its association with financial institutions and the ability to raise finance support for critical transactions, further strengthens its partnerships with customers and suppliers and helps match supply and demand for commodities and products more effectively and efficiently.</p>
+                                            <p class="justified-align">The ability to access and secure finance is critical for business survival and growth and at MAC WORLD, we truly understand this need. By leveraging strategic networking alliances and the distribution network to move products between regions, MAC WORLD obtains competitive prices for customers on a regular basis, thus enabling buyers to procure more products at higher volumes. Sustainable finance facilitation with traders in the commodity origination sources averts operational inefficiencies and prevents wastage. MAC WORLD's customer centric philosophy lays emphasis on providing personalised end-to-end supply chain management solutions for buyers and suppliers to draw maximum advantage, by providing cash flow, extended credit, risk mitigation etc.</p>
+                                            <p class="justified-align">MAC WORLD's commitment to go beyond customer expectation, along with its association with financial institutions and the ability to raise finance support for critical transactions, further strengthens its partnerships with customers and suppliers and helps match supply and demand for commodities and products more effectively and efficiently.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -398,13 +418,12 @@ $categories = $db->selectAllWithoutWhere('categories');
                         </div>
                     </div>
                 </section>
-
                 <section class="container-fluid" id="accreditation_section">
                     <div class="row">
                         <div class="container">
                             <div class="text-center our_partner_heading heading_text">
                                 <h3>Accreditations</h3>
-                                <p>We believe in continuous improvement and adhere to international benchmarks and standards, particularly those related within our industry and focal areas. Over the years, we have been accredited by various bodies and we are also registered with industry and trade associations.</p>                        </div>
+                                <p class="justified-align">We believe in continuous improvement and adhere to international benchmarks and standards, particularly those related within our industry and focal areas. Over the years, we have been accredited by various bodies and we are also registered with industry and trade associations.</p>                        </div>
                             <div class="products-container">
                                 <div class="produts_listing clearfix">
                                     <div class="single-product clearfix accreditation_box">
@@ -412,8 +431,9 @@ $categories = $db->selectAllWithoutWhere('categories');
                                             <img src="img/accrediation.png">
                                         </div>
                                         <div class="containt-wrap">
-                                            <p>As a member of the Roundtable on Sustainable Palm Oil, MacWorld demonstrate that its palm oil is responsible. <br>
+                                            <p class="justified-align">As a member of the Roundtable on Sustainable Palm Oil, MAC WORLD demonstrate that its palm oil is responsible. 
                                                 <br>
+                                                <br/>
                                                 Through this certification, we ensure that we are not associated directly or indirectly with any kind of deforestation and loss of critical habitat. Our palm oil is produced responsibly to take care of the future of these ecosystems.</p>
                                         </div>
                                     </div>
@@ -422,7 +442,8 @@ $categories = $db->selectAllWithoutWhere('categories');
                                             <img src="img/lrukas.jpg">
                                         </div>
                                         <div class="containt-wrap">
-                                            <p>ISO 9001:2015 sets out the criteria for a quality management system and is the only ISO standard that can be certified.<br>
+                                            <p class="justified-align">ISO 9001:2015 sets out the criteria for a quality management system and is the only ISO standard that can be certified.
+                                                <br/>
                                                 This standard is based on a number of quality management principles including a strong customer focus, the motivation and implication of top management, the process approach and continual improvement. Using ISO 9001:2015 helps ensure that customers get consistent, good quality products and services, which in turn brings many business benefits</p>
                                         </div>
                                     </div>
@@ -510,15 +531,16 @@ $categories = $db->selectAllWithoutWhere('categories');
                 <section class="container-fluid out_partner_section" id="ourpartner">
                     <div class="row">
                         <div class="container">
-                            <div class="our_partner_heading our_partner_text text-center">
-                                <h3>Our Partners</h3>
-                                <p></p><p>With the expansive portfolio that Mac World handles – sourcing, manufacturing, trading and distributing raw materials, Mac World group and its Management believe in establishing mutually beneficial, strong strategic alliances with parties and organizations at every level of the business, across commodities, geographies and functions, to achieve its mission and vision.</p><p></p>
+                            <div class="our_partner_heading our_partner_text">
+                                <h3 class="text-center">Our Partners</h3>
+                                <p></p>
+                                <p class="justified-align">With the expansive portfolio that MAC WORLD handles - sourcing, manufacturing, trading and distributing raw materials, MAC WORLD group and its Management believe in establishing mutually beneficial, strong strategic alliances with parties and organizations at every level of the business, across commodities, geographies and functions, to achieve its mission and vision.</p>
+                                <p></p>
                                 <ul class="clearfix">
                                     <li class="active"><a data-toggle="tab" href="#menu1">Banking</a></li>
                                     <li class=""><a data-toggle="tab" href="#menu2">Insurance</a></li>
                                     <li class=""><a data-toggle="tab" href="#menu3">Technology</a></li>
                                 </ul>
-
                                 <div class="tab-content">
                                     <div id="menu1" class="tab-pane fade in active">
                                         <div class="slider">
@@ -623,7 +645,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                         </div>
                     </div>
                 </section>
-
                 <script>
                     $(document).ready(function () {
                         $("ul.nav.nav-tabs li").click(function () {
@@ -633,8 +654,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                         });
                     });
                 </script>
-
-
                 <div id="nav-arrows" class="nav-arrows" style="display: block;"><a href="#">Next</a></div>
 <!--                <section class="container-fluid product_section" id="our_product">
                     <div class="row">
@@ -695,7 +714,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                         </div>
                     </div>
                 </section>-->
-
                 <section id="map_indigate_section" class="container-fluid map_indigate_section">
                     <div class="row">
                         <div class="container">
@@ -720,7 +738,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                         </div>
                     </div>
                 </section>
-
                 <!-- footer start -->
                 <footer class="container-fluid back_main" id="contact_section" style="background-image: url(img/footer_image.png);">
                     <div class="row">
@@ -731,7 +748,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 <div class="footer_box">
                                     <!--<img src="img/master-1g.jpg" alt="" title="" style="width: 100%"/>-->
                                     <div class="poretal">
-                                        <h4>Mac World Industries SDN BHD (548445-V)</h4>
+                                        <h4>MAC WORLD Industries SDN BHD (548445-V)</h4>
                                         <p>3-11, Block B,<br>
                                             <br>Phileo Damansara II,<br>
                                             <br>No. 15, Jalan 16/11 Off Jalan Damansara,<br>
@@ -767,7 +784,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                     <a href="#">
                                         <figure> <img class="img-responsive" src="img/footer_logo.png" alt="" title=""> </figure>
                                     </a>
-                                    <p>All Rights Reserved. Copyright © 2018 Mac World Industries Sdn. Bhd.</p>
+                                    <p>All Rights Reserved. Copyright &copy; 2018 MAC WORLD Industries Sdn. Bhd.</p>
                                 </div>
                             </div>
                         </div>
@@ -775,7 +792,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                 </footer>
                 <!-- footer End -->
             </div>
-
             <script src="js/bootstrap.min.js" type="text/javascript"></script>
             <script src="js/slick.js" type="text/javascript"></script>
             <!-- plugin -->

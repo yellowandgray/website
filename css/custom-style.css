@@ -56,7 +56,6 @@ p,input,textarea,select,.marquee,span{font-family: 'Montserrat', sans-serif; col
     color: #d7b44e;
     font-size: 52px;
     margin-top: 15px;
-
 }
 
 .logo-wrap {
@@ -280,11 +279,10 @@ p,input,textarea,select,.marquee,span{font-family: 'Montserrat', sans-serif; col
 .sidebar-menu .menu {
     color: #252640;
     font-size: 35px;
-    text-align: center;
+    text-align: left;
     list-style: none;
     margin: 0 0 0;
-    padding: 0;
-
+    padding: 0px 0px 0px 15px;
     position: relative;
     top: 40%;
     transform: translateY(-213px);
@@ -301,7 +299,7 @@ p,input,textarea,select,.marquee,span{font-family: 'Montserrat', sans-serif; col
     position: relative;
     text-decoration: none;
     color: #e5d881;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .sidebar-menu .menu .menu-item a:before {
@@ -445,7 +443,7 @@ p,input,textarea,select,.marquee,span{font-family: 'Montserrat', sans-serif; col
     vertical-align: middle;
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
-    width: 100%;
+    width: 80%;
     margin-top: 108px;
     margin-bottom: 20px;
 }
@@ -741,7 +739,7 @@ a.mobile-social {
 .our_partner_heading h3 {margin-bottom: 80px;font-size: 48px;vertical-align: middle;color: #1b1737;font-weight: 500;}
 .team-images-set { width: 100%;}
 .team-images-set img {max-width: 100%;}
-.our_partner_heading > ul {    width: 60%; vertical-align: middle; margin: 10px auto 80px;}
+.our_partner_heading > ul { vertical-align: middle; /*margin: 10px auto 80px; width: 60%; */ margin-left: 25%;}
 .our_partner_heading > ul > li {width: 24.3%; float: left;text-align: center;}
 .our_partner_heading ul li span{display: block;margin-bottom: 2px; font-size: 16px; color: #3f3b5d;font-weight: 500;}
 .our_partner_heading ul li.active a {background: #1b1737;color: #fff;}
@@ -1345,8 +1343,8 @@ footer {
 .about_right_content {
     height: 600px;
     overflow: auto;
-    width: 90%;
-    top: 50%;
+    width: 95%;
+    top: 45%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
 }
@@ -1802,4 +1800,32 @@ input#clear_product {
     .who_we_content_section {
         height: 995px !important;
     }
+}
+
+@media only screen and (max-width: 1366px) {
+    .banner_menu .nav_menu li a {
+        font-size: 12px!important;
+    }
+}
+
+@media only screen and (max-width: 1700px) {
+    .about_right_content {
+        padding-left: 40px!important;
+    }
+}
+
+@media only screen and (max-width: 1599px) {
+    .our_partner_heading ul {
+        width: auto!important;
+    }
+}
+
+.justified-align {
+    text-align: justify;
+}
+
+.brand-img {
+    width: 100px;
+    height: auto;
+    vertical-align: baseline;
 }
