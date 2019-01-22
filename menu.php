@@ -4,14 +4,14 @@
 
         <div class="navbar-top">
             <div class="nav-top-left">
-                <ul>
+<!--                <ul>
                     <li>
                         <a href="#" class="log" data-toggle="modal" data-target="#myModal">Login</a>
                     </li>
                     <li>
                         <a href="#" class="log" data-toggle="modal" data-target="#myModal">register</a>
                     </li>
-                </ul>
+                </ul>-->
             </div>
             <div class="nav-top-right">
                 <ul>
