@@ -90,6 +90,21 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="full">
+                                                <select name="social_media" class="form-control" required>
+                                                    <option value="0">How did you here about us?</option>
+                                                    <option value="Facebook">Facebook</option>
+                                                    <option value="Linked-In">Linked-In</option>
+                                                    <option value="YouTube">YouTube</option>
+                                                    <option value="Google Search">Google Search</option>
+                                                    <option value="SMS">SMS</option>
+                                                    <option value="Whatsapp">Whatsapp</option>
+                                                    <option value="TV">TV</option>
+                                                    <option value="Other Reference">Other Reference</option>
+                                                </select>
+                                            </li>
+                                        </div>
+                                        <div class="form-group">
+                                            <li class="full">
                                                 <textarea class="textarea-control" name="message" placeholder="Message" required></textarea>
                                             </li>
                                         </div>

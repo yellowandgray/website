@@ -15,6 +15,8 @@ if ($_POST['name']) {
     $address_1 = $_REQUEST['address_1'];
 
     $address_2 = $_REQUEST['address_2'];
+    
+    $social_media = $_REQUEST['social_media'];
 
     $message1 = $_REQUEST['message'];
 
@@ -128,6 +130,7 @@ if ($_POST['name']) {
             <p style = "margin:0 0 16px">Job Role: ' . $select_role . '</p>
             <p style = "margin:0 0 16px">Address-1: ' . $address_1 . '</p>
             <p style = "margin:0 0 16px">Address-2: ' . $address_2 . '</p>
+            <p style = "margin:0 0 16px">How did you here about us: ' . $social_media . '</p>
             <p style = "margin:0 0 16px">Message: ' . $message1 . '</p>
             <p style = "margin:0 0 16px">Sent From Website</p></div>
             </td>

@@ -970,3 +970,11 @@ ul.submenu li a{
     box-shadow: 0 0 11px 4px #eee;
     padding: 20px;
 }
+
+marquee {
+    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0px;
+    margin-bottom: -10px;
+}

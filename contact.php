@@ -52,7 +52,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="half pr-15">
-                                                <input type="text" pattern="^\d{10}$" class="form-control" name="mobile" placeholder="Contact" required>
+                                                <input type="text" pattern="^\d{10}$" class="form-control" name="mobile" placeholder="Contact Number" required>
                                             </li>
                                         </div>
                                         <div class="form-group">
@@ -90,7 +90,7 @@
                                         <div class="form-group">
                                             <li class="full">
                                                 <select name="social_media" class="form-control" required>
-                                                    <option value="0">How do you know us?</option>
+                                                    <option value="0">How did you here about us?</option>
                                                     <option value="Facebook">Facebook</option>
                                                     <option value="Linked-In">Linked-In</option>
                                                     <option value="YouTube">YouTube</option>

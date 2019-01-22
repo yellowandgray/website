@@ -214,7 +214,7 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <h2>Rtn. PHF. Hajee. L. KAMAL BATCHA</h2>
+                    <h5>Rtn. PHF. Hajee. L. KAMAL BATCHA</h5>
                     <strong class="trank">Founder and CHAIRMAN:  ENPEE INTERNATIONAL SCHOOL</strong>
                     <p>He is a multi-faceted personality, with a pleasing disposition and a philanthropic bent of mind, but basically wedded to the pharma community, by creating new products at affordable rates for the community health care.</p>
                     <p>It is philanthropy that the Trust is dealing with. The Trust has the objective of developing projects for the benefit of society in the fields of Education and Health.</p>
@@ -230,6 +230,7 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
+                    <h5>Dr. K. MUJIBUR RAHMAN, M.D.</h5>
                     <P><strong>He is the Managing Trustee of ENPEE International School.</strong></p>
                     <p>He is the PROFESSOR and HEAD, Dept. of Community Medicine in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL , since 2007.</p>
                     <P>He is also the Managing Director of NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.</P>
@@ -242,6 +243,7 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
+                    <h5>Dr. K.MOHAMED ALI, M.D.</h5>
                     <p><strong>He is a Managing Trustee of ENPEE International School.</strong></p>
                     <p>He is  the PROFESSOR – Dept.of COMMUNITY MEDICINE in the VINAYAKA MISSIONS MEDICAL COLLEGE, KARAIKAL, since 2007.</p>
                     <p>He is also the DIRECTOR of NATIONAL PHARMA HOSPITAL AND RESEARCH INSTITUTE, Thanjavur from 2012.</p>
@@ -254,6 +256,7 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
+                    <h5>Mr. J. RAJA KALIFULLA, B.Sc, B.L.</h5>
                     <p><strong>Member of the Board of Management of ENPEE International School.</strong></p>
                     <p>A former Government Pleader and now a Senior Advocate, practicing in the Madras High Court for the last 38 years.</p>
                     <p>He represents the third generation in the legal profession.</p>
@@ -268,6 +271,7 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
+                    <h5>Mr. JAFER SADIQUE MUTHUVAPPA</h5>
                     <p><strong>Member of the Board of Management of ENPEE International School.</strong></p>
                     <p>Currently resident of Albany, New York, U.S.A.<br/> Born in Chennai, India, in 1966 , Mr.Muthuvappa at the age of 17, after completing his high school in Chennai migrated to the United States to pursue higher studies.</p> 
                     <p>He obtained his Associates Degree in Biology at The Sage College of Albany, New York.</p>  
@@ -283,6 +287,7 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
+                    <h5>Mr. H M A Khan, M. Sc.</h5>
                     <P><strong>Chief Executive Officer - ENPEE International School.</strong></P>
                     <P>He has about 35 years of Banking experience, holding administrative and operating positions at the Top Management Level in a highly reputed Nationalised Bank in India. An accomplished professional with an outstanding success in the banking service.</P>
                     <P>He has held the position of Arbitrator in the National Stock Exchange of India, Bangalore.</P>
@@ -298,10 +303,11 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
+                    <h5>ARRCHANA CHELLAPPA </h5>
                     <P><strong>Vice President - Academics & Operations</strong></p>
                     <p> Hailing from Chennai, this Software Engineer possessing a Masters in Educational Management turned to the Hardware of School-making purely out of passion for children’s education. The motivating factor came while she was in UK for varying periods during 2005-2012, catering to the needs of the primary school and Childrens’ centers in York</P>
                     <P>Certified in Guidance & Counselling from St.Johns University,UK, and possessing an Advanced Diploma in Montessori Education from India, in addition to several certifications from Australia, her career of 16 years encompassed challenging assignments in Business Development, Profit Center Management, Teacher Training and Operations & Academics.</P>
-                    <P>Arrchana is a highly decorated Academician well versed in the recruitment of talented resources for the Schools and in training them suitably in the appropriate curriculum. Her achievements include setting up Pre-Schools, CBSE schools, Profit planning & Management  and contributing willfully in every aspect of education aiding the development of future generations. </P>
+                    <P>Arrchana is a highly decorated Academician well versed in the recruitment of talented resources for the Schools and in training them suitably in the appropriate curriculum. Her achievements include setting up Pre-Schools, CBSE schools, Profit planning & Management  and contributing willingly in every aspect of education aiding the development of future generations. </P>
                 </div>
 
             </div>

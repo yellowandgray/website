@@ -149,7 +149,7 @@
 <!--                                <h2> <span>ecova.</span> Welcome to ENPEE INTERNATIONAL SCHOOL</h2>-->
                                 <h2>Welcome to ENPEE INTERNATIONAL SCHOOL</h2>
                                 <p><strong>Our Campus</strong></p>
-                                <p class="text-justify">The ENPEE campus covers over 5 acres surrounded by lush greenery and a serene atmosphere suitable for learning. At the heart of our campus, ENPEE International school spans an incredible area of over 40,000/- sq.ft in its Phase – I, starting from Academic year – 2019-2020. </p>
+                                <p class="text-justify">The ENPEE campus covers over 5 acres surrounded by lush greenery and a serene atmosphere suitable for learning. At the heart of our campus, ENPEE International school spans an incredible area of over 40,000 sq.ft. in its Phase – I, starting from Academic year – 2019-2020. </p>
                                 <p class="text-justify">Our second and Third phases will resume from the successive academic year of 2020-21 and 2021-22 respectively. Our campus will have a spacious Track & field, unique sports complex including but not limited to an aquatic pool, Skating rink, Archery, Basketball, Badminton, Table Tennis aiding in overall growth & development of an individual, Spacious and learner oriented laboratories, mixed age group activity studio, digitized classrooms. <a href="about.php" style="font-style: italic">Read More</a></p>
                                 <ul>
                                     <li><i class="fas fa-check"></i> Team Building</li>
@@ -514,7 +514,7 @@
                                         <div class="form-group">
                                             <li>
                                                 <select name="social_media" class="form-control" required>
-                                                    <option value="0">How do you know us?</option>
+                                                    <option value="0">How did you here about us?</option>
                                                     <option value="Facebook">Facebook</option>
                                                     <option value="Linked-In">Linked-In</option>
                                                     <option value="YouTube">YouTube</option>

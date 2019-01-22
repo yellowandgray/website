@@ -91,7 +91,7 @@ if ($_POST['name']) {
         $message.= $names . ',';
     }
     '</p>
-        <p style = "margin:0 0 16px">How did you know us: ' . $social_media . '</p>
+        <p style = "margin:0 0 16px">How did you here about us: ' . $social_media . '</p>
         <p style="margin:0 0 16px">Sent From Website</p></div>
             </td>
             </tr>

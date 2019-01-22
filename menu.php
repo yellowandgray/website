@@ -156,4 +156,5 @@
     <div class="col-md-4">
         <div class="boder-2"></div>
     </div>
+    <marquee>Admissions (2019-2020) for Pre-KG to Fifth Standard Opens From February 10th onwards.</marquee>
 </nav>
