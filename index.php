@@ -93,7 +93,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                             <li class="menu-item"><a href="#main-banner" data-content="HOME">HOME</a></li>
                                             <li class="menu-item"><a href="#our_journey" data-content="OUR JOURNEY">OUR JOURNEY</a></li>
                                             <li class="menu-item"><a href="#about_section" data-content="WHO WE ARE">WHO WE ARE</a></li>
-                                            <li class="menu-item"><a href="#team_section" data-content="OUR TEAM">OUR TEAM</a></li>
+                                            <li class="menu-item"><a href="#team_section" data-content="WHAT WE DO">WHAT WE DO</a></li>
                                             <li class="menu-item"><a href="#explor_product" data-content="PRODUCTS">PRODUCTS</a></li>
                                             <li class="menu-item"><a href="#service_section" data-content="SERVICES">SERVICES</a></li>
                                             <li class="menu-item"><a href="#accreditation_section" data-content="ACCREDITATION">ACCREDITATION</a></li>
@@ -115,7 +115,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                         <ul class="nav_menu clearfix">
                             <li><a href="#">LinkedIN</a></li>
                             <li><a href="#">Facebook</a></li>
-                            <li><a href="#">linkedin</a></li>
+                            <li><a href="#"></a></li>
                             <li><a href="mailto:">Email</a></li>
                             <li class="mobile-language search-panel-right">
                                 <div class="language_flag select_language text-center" style="display: inline-block;">
@@ -202,9 +202,9 @@ $categories = $db->selectAllWithoutWhere('categories');
                                     <div class="poretal">
                                         <figure class="text-center"> <img src="img/mac_wolrd.png" alt="" title=""> </figure>
                                         <h3 class="text-center">Futurizing Manufacturing and Commodities Commerce Globally</h3>
-                                        <p class="justified-align">MAC WORLD is a diversified, yet integrated toll manufacturing group in Malaysia, who are also key players in the global commodity market. The company has grown exponentially under the forward-thinking leadership of a group of entrepreneurs who shared a common objective and vision.</p>
-                                        <p class="justified-align">Headquartered in Malaysia; which is abundant in natural resources, MAC WORLD manufactures and supplies raw materials to some of the biggest food and beverage brands across the globe. With worldwide connectivity and by seamlessly integrating operations and services, the group has successfully designed, developed and commercially exported a wide range of products and services to most parts of the world.</p>
-                                        <p class="justified-align">Having grown organically, by applying modern and rational philosophy and approach; balancing financial Return of Investment (FROI) and Social Return of Investment (SROI), MAC WORLD transforms raw materials into bespoke ingredients to help customers meet the ever changing demand of consumers.</p>
+                                        <p class="justified-align">MAC WORLD is a diversified yet integrated toll manufacturing group in Malaysia, and key players in the global commodity market. The company has grown exponentially under the forward-thinking leadership of a group of entrepreneurs who shared a common objective and vision.</p>
+                                        <p class="justified-align">Headquartered in Malaysia which is known for it abundance in natural resources, MAC WORLD manufactures and supplies raw materials to some of the biggest food and beverage brands across the globe. With worldwide connectivity and by seamlessly integrated operations and services, the group has successfully designed, developed and commercially exported wide range of products and services to most parts of the world.</p>
+                                        <p class="justified-align">Having grown organically, by applying modern and rational philosophy and approach; balancing Financial Return of Investment (FROI) and Social Return of Investment (SROI), Mac World transforms raw materials into bespoke ingredients to help customers meet the ever changing demand of consumers.</p>
                                     </div>
                                 </div>
                                 <a href="#our_journey" class="about_us_btn">Our Journey</a>
@@ -224,8 +224,8 @@ $categories = $db->selectAllWithoutWhere('categories');
                                     <div class="who_we_content">
                                         <h3>Who We Are</h3>
                                         <p class="justified-align"><strong>Expertise, Reliability and Entrepreneurial Spirit</strong></p><br/>
-                                        <p class="justified-align">The MAC WORLD Group is an entrepreneurial driven entity delivering Globally Reliable and World Class products and services consistently for almost 20 years. This ambitious spirit has permeated throughout the Eco System and Value chain of the organization, contributing towards a holistic and dynamic workplace environment and leading the group and its associated companies to successfully enter new markets and secure long term customers.</p>
-                                        <p class="justified-align">MAC WORLD's Management Team has a cumulated experience of more than 100 years in multiple touch points, ranging from sourcing, branding, marketing, production and manufacturing right to customization, trade and International sales. The Management Team is supported by highly qualified and experienced technical and Research and Development personnel who are able to provide the best of breed solutions and advice to the group.</p>
+                                        <p class="justified-align">MAC WORLD is an entrepreneurial driven entity delivering Globally Reliable and world class products and services consistently for almost 20 years. This ambitious spirit has permeated throughout the Eco System and Value chain of the organization, contributing towards a holistic and dynamic workplace environment and leading the group and its associated companies to successfully enter new markets and secure long term customers.</p>
+                                        <p class="justified-align">MAC WORLD’ management team has a cumulative experience of more than 100 years in multiple touch points, ranging from sourcing, branding, marketing, production and manufacturing right to customization, trade and international sales. The management team is supported by highly qualified and experienced technical and Research & Development personnel who are able to provide the best of breed solutions and advice to the group.</p>
                                         <div class="text-center"><img src="img/team-02.jpg" alt="" style="width: 100%;"></div>
                                     </div>
                                 </div>
@@ -284,15 +284,15 @@ $categories = $db->selectAllWithoutWhere('categories');
 
                             <div class="our_partner_heading heading_text">
                                 <h3 class="text-center">What We Do</h3>
-                                <p class="justified-align">The MAC WORLD Group is an ISO 9001:2015 certified company which exports products and services to over 65 countries. The company has been continuously penetrating new markets, opening and accessing new opportunities. Since its inception in 2001, MAC WORLD is in the business of manufacturing and trading Palm Oil; Palm Derivatives; its by-products and agro commodities.</p>
-                                <p class="justified-align">Being pioneers of Palm Oil export in Malaysia, in the recent years, MAC WORLD has further diversified into major suppliers of consumer packs; soft/ lauric oils; cattle and poultry feeds; confectionary and bakery applications; agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide. The group has transformed into an established brand with <img class="brand-img" src="img/goldstar.jpg" alt="image" />, <img class="brand-img" src="img/goldfry.jpg" alt="image" />, <img class="brand-img" src="img/goldfat.jpg" alt="image" /> and <img class="brand-img" src="img/mrmac.jpg" alt="image" /> - its range of vegetable cooking oil, vegetable ghee, tomato paste and GOLDENFARME for evaporated milk and become the one stop shop in Malaysia for  Palm Oil Derivatives, Oleo Chemicals, Confectionery fats and Agro commodities for manufacturers worldwide.</p>
-                                <p class="justified-align">Driven by the commitment to ensure that high quality products are being offered at competitive pricing and using the expertise and experience to serve the dynamic needs of customers,  MAC WORLD ensures that its values and principles are upheld at all times.</p>
+                                <p class="justified-align">MAC WORLD is an ISO 9001:2015 certified company which exports products and services to over 65 countries. The company is continuously penetrating new markets, opening and accessing new opportunities. Since its inception in 2001, MAC WORLD is in the business of manufacturing and trading Palm Oil, Palm Derivatives, its by-products and agro commodities.</p>
+                                <p class="justified-align">Being pioneers of Palm Oil export in Malaysia, in the recent years, MAC WORLD has further diversified into major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide. MAC WORLD Group have established several brands in the International market like <img class="brand-img" src="img/goldstar.jpg" alt="image" />, <img class="brand-img" src="img/goldfry.jpg" alt="image" />, <img class="brand-img" src="img/goldfat.jpg" alt="image" /> and <img class="brand-img" src="img/mrmac.jpg" alt="image" /> for its range of cooking oil, confectionery fats, vegetable ghee, tomato paste and GOLDENFARM for dairy based products such as sweetened condensed milk, evaporated milk, skim milk powder, fat filled milk powder etc. MAC WORLD has become a one stop shop in Malaysia for palm oil derivatives, oleo chemicals, confectionery fats and agro commodities for customers worldwide.</p>
+                                <p class="justified-align">Driven by the commitment to ensure that high quality products are being offered at competitive pricing by using the expertise and experience to serve the dynamic needs of customers.  MAC WORLD ensures that its values and principles are upheld at all times.</p>
 <!--                                <div class="team-images-set"><img src="img/team.jpg" alt=""></div>-->
-                                <p></p><p></p>
+                                
                             </div>
                             <div class="our_partner_heading heading_text">
                                 <h3 class="text-center">Our Team</h3>
-                                <p></p><p class="justified-align">The MAC WORLD Group is a largely entrepreneurial driven entity and this characteristic has permeated throughout the Eco System and Value chain of our organization. These attributes inevitably contribute towards a holistic and dynamic workplace environment and this also helps the group and our associated companies to successfully enter new markets and secure long term customers.<br>
+                                <p class="justified-align">The MAC WORLD Group is a largely entrepreneurial driven entity and this characteristic has permeated throughout the Eco System and Value chain of our organization. These attributes inevitably contribute towards a holistic and dynamic workplace environment and this also helps the group and our associated companies to successfully enter new markets and secure long term customers.<br>
                                     Our Management Team has a collective industry experience of more than 100 years in multiple touch points of our industry, ranging from sourcing, branding, marketing, production, manufacturing right up to customization, trade and International sales. The Management Team is ably supported by highly qualified and experienced technical and Research and Development personnel who are able to provide the best of breed solutions and advice to the group. All this collectively, leads to the MAC WORLD Brand being recognized as a Globally reknowned company and a brand that delivers globally reliable products and services. Our Management and Technical Team’s efforts have also let us to achieve the highly acclaimed 9001:2015 ISO certification and accreditation.</p>
                                 <div class="team-images-set text-center"><img src="img/master-01.jpg" alt=""></div>
                                 <p class="text-center">Join Our Team!</p>
@@ -396,10 +396,10 @@ $categories = $db->selectAllWithoutWhere('categories');
                         <div class="container">
                             <div class="text-center our_partner_heading heading_text">
                                 <h3>Our Services</h3>
-                                <p></p>
-                                <p class="justified-align">We offer intergrated end to end manufacturing services and this has also assisted the MAC WORLD group to attract customers and markets on an international level.<br>
+                                
+                                <p class="justified-align">We offer integrated end-to-end manufacturing services and this has also assisted the MAC WORLD Group to attract customers and markets on an international level.<br>
                                 </p>
-                                <p></p>
+                                
                             </div>
                             <div class="products-container">
                                 <div class="produts_listing">
@@ -409,8 +409,8 @@ $categories = $db->selectAllWithoutWhere('categories');
                                         </div>
                                         <div class="containt-wrap">
                                             <h3>Integrated Financial Service</h3>
-                                            <p class="justified-align">The ability to access and secure finance is critical for business survival and growth and at MAC WORLD, we truly understand this need. By leveraging strategic networking alliances and the distribution network to move products between regions, MAC WORLD obtains competitive prices for customers on a regular basis, thus enabling buyers to procure more products at higher volumes. Sustainable finance facilitation with traders in the commodity origination sources averts operational inefficiencies and prevents wastage. MAC WORLD's customer centric philosophy lays emphasis on providing personalised end-to-end supply chain management solutions for buyers and suppliers to draw maximum advantage, by providing cash flow, extended credit, risk mitigation etc.</p>
-                                            <p class="justified-align">MAC WORLD's commitment to go beyond customer expectation, along with its association with financial institutions and the ability to raise finance support for critical transactions, further strengthens its partnerships with customers and suppliers and helps match supply and demand for commodities and products more effectively and efficiently.</p>
+                                            <p class="justified-align">MAC WORLD truly understands that the ability to access and secure finance is critical for business survival and growth. Our established strategic networking alliances and distribution  channels allow to leverage competitive pricing for customers on regular basis. Sustainable finance facilitation combined with ability to source from commodity origination make us price competitive and help us in delivering quality products. MAC WORLD’ customer-centric philosophy lays emphasis on providing personalised end-to-end supply chain management solutions for buyers and suppliers to draw maximum advantage in cash flow, extended credit, risk mitigation etc.</p>
+                                            <p class="justified-align">MAC WORLD’ commitment to go beyond customer expectation, along with its association with financial institutions allow us to raise finance support for critical transactions. This strengthens our partnership with customers and suppliers which help to match demand and supply for commodities more effectively and efficiently.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -423,7 +423,8 @@ $categories = $db->selectAllWithoutWhere('categories');
                         <div class="container">
                             <div class="text-center our_partner_heading heading_text">
                                 <h3>Accreditations</h3>
-                                <p class="justified-align">We believe in continuous improvement and adhere to international benchmarks and standards, particularly those related within our industry and focal areas. Over the years, we have been accredited by various bodies and we are also registered with industry and trade associations.</p>                        </div>
+                                <p class="justified-align">We believe in continuous improvement and adhere to international benchmarks and standards, particularly those related within our industry and focal areas. Over the years, we have been accredited by various bodies and we are also registered with industry and trade associations.</p>                        
+                            </div>
                             <div class="products-container">
                                 <div class="produts_listing clearfix">
                                     <div class="single-product clearfix accreditation_box">
@@ -431,20 +432,15 @@ $categories = $db->selectAllWithoutWhere('categories');
                                             <img src="img/accrediation.png">
                                         </div>
                                         <div class="containt-wrap">
-                                            <p class="justified-align">As a member of the Roundtable on Sustainable Palm Oil, MAC WORLD demonstrate that its palm oil is responsible. 
-                                                <br>
-                                                <br/>
-                                                Through this certification, we ensure that we are not associated directly or indirectly with any kind of deforestation and loss of critical habitat. Our palm oil is produced responsibly to take care of the future of these ecosystems.</p>
+                                            <p class="justified-align">As a member of the Roundtable on Sustainable Palm Oil, MAC WORLD demonstrate that its palm oil is sustainable.<br/><br/>Through this certification, we ensure that we are not associated directly or indirectly with any kind of deforestation and loss of critical habitat. Our palm oil is produced responsibly to take care of these ecosystems and their future.</p>
                                         </div>
                                     </div>
                                     <div class="single-product clearfix accreditation_box">
                                         <div class="accreditation_box_img text-center">
-                                            <img src="img/lrukas.jpg">
+                                            <img src="img/lrukas-1.jpg">
                                         </div>
                                         <div class="containt-wrap">
-                                            <p class="justified-align">ISO 9001:2015 sets out the criteria for a quality management system and is the only ISO standard that can be certified.
-                                                <br/>
-                                                This standard is based on a number of quality management principles including a strong customer focus, the motivation and implication of top management, the process approach and continual improvement. Using ISO 9001:2015 helps ensure that customers get consistent, good quality products and services, which in turn brings many business benefits</p>
+                                            <p class="justified-align">ISO 9001:2015 sets out the criteria for a quality management system with the capability of complete traceability of the cargo we have supplied. This standard is based on a number of quality management principles including a strong customer focus, the motivation and implication of top management, the process approach and continual improvement. Using ISO 9001:2015 helps ensure that customers get consistent, good quality products and services, which in turn brings good business opportunities.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -455,7 +451,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <figure>
                                                     <img src="img/accreditations/Picture1.png" alt="" title="">
                                                 </figure>
-                                                <p></p>
+                                                
                                             </a>
                                         </li>
                                         <li class="">
@@ -463,23 +459,23 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <figure>
                                                     <img src="img/accreditations/Picture2.png" alt="" title="">
                                                 </figure>
-                                                <p></p>
+                                                
                                             </a>
                                         </li>
-                                        <li class="">
+<!--                                        <li class="">
                                             <a href="#">
                                                 <figure>
                                                     <img src="img/accreditations/Picture3.png" alt="" title="">
                                                 </figure>
-                                                <p></p>
+                                                
                                             </a>
-                                        </li>
+                                        </li>-->
                                         <li class="">
                                             <a href="#">
                                                 <figure>
                                                     <img src="img/accreditations/Picture4.png" alt="" title="">
                                                 </figure>
-                                                <p></p>
+                                                
                                             </a>
                                         </li>
                                         <li class="">
@@ -487,23 +483,23 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <figure>
                                                     <img src="img/accreditations/Picture5.png" alt="" title="">
                                                 </figure>
-                                                <p></p>
+                                                
                                             </a>
                                         </li>
-                                        <li class="">
+<!--                                        <li class="">
                                             <a href="#">
                                                 <figure>
                                                     <img src="img/accreditations/Picture6.png" alt="" title="">
                                                 </figure>
-                                                <p></p>
+                                                
                                             </a>
-                                        </li>
+                                        </li>-->
                                         <li class="">
                                             <a href="#">
                                                 <figure>
                                                     <img src="img/accreditations/Picture7.png" alt="" title="">
                                                 </figure>
-                                                <p></p>
+                                                
                                             </a>
                                         </li>
                                         <li class="">
@@ -511,7 +507,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <figure>
                                                     <img src="img/accreditations/Picture8.png" alt="" title="">
                                                 </figure>
-                                                <p></p>
+                                                
                                             </a>
                                         </li>
                                         <li class="">
@@ -519,7 +515,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <figure>
                                                     <img src="img/accreditations/Picture9.png" alt="" title="">
                                                 </figure>
-                                                <p></p>
+                                                
                                             </a>
                                         </li>
                                     </ul>
@@ -533,9 +529,9 @@ $categories = $db->selectAllWithoutWhere('categories');
                         <div class="container">
                             <div class="our_partner_heading our_partner_text">
                                 <h3 class="text-center">Our Partners</h3>
-                                <p></p>
-                                <p class="justified-align">With the expansive portfolio that MAC WORLD handles - sourcing, manufacturing, trading and distributing raw materials, MAC WORLD group and its Management believe in establishing mutually beneficial, strong strategic alliances with parties and organizations at every level of the business, across commodities, geographies and functions, to achieve its mission and vision.</p>
-                                <p></p>
+                                
+                                <p class="justified-align">With the expansive portfolio that Mac World handles – sourcing, manufacturing, trading and distributing raw materials, MAC WORLD Group and its management believe in establishing mutually beneficial, strong strategic alliances with parties and organizations at every level of the business, across geographies, commodities and functions to achieve its mission and vision.</p>
+                                
                                 <ul class="clearfix">
                                     <li class="active"><a data-toggle="tab" href="#menu1">Banking</a></li>
                                     <li class=""><a data-toggle="tab" href="#menu2">Insurance</a></li>
@@ -617,22 +613,18 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                                                 </div>-->
                                     </div>
                                     <div id="menu3" class="tab-pane fade in ">
-
                                         <div class="slider">
                                             <div class="slide">
-
+                                                <img src="img/technology/technology.png" alt=""/>
                                             </div>
                                             <div class="slide">
-                                                <img src="img/technology/technology.png" alt="" />
+                                                
                                             </div>
                                             <div class="slide">
-
+                                                
                                             </div>
-                                            <div class="slide">
-
-                                            </div>
+                                            
                                         </div>
-
                                         <!--                                        <div class="paginator-center text-color text-center">
                                                                                     <ul>
                                                                                         <li class="prev slick-arrow slick-hidden" aria-disabled="true" tabindex="-1" style="display: list-item;"> <img src="img/prev_aoorw.png" alt="" title=""> </li>
@@ -768,12 +760,12 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 </a>
                                                 <p><a href="#"></a></p></li>
                                             <li>
-                                                <a href="#"> <span><img src="img/mail.png" alt="" title=""></span><p></p>
+                                                <a href="#"> <span><img src="img/mail.png" alt="" title=""></span>
                                                     <p>products@macworldinc.com</p>
                                                 </a><p><a href="#">                                        </a>
                                                 </p></li>
                                             <li>
-                                                <a href="#"> <span><img src="img/web.png" alt="" title=""></span><p></p>
+                                                <a href="#"> <span><img src="img/web.png" alt="" title=""></span>
                                                     <p>www.macworldinc.com</p>
                                                 </a><p><a href="#">                                        </a>
                                                 </p></li>
