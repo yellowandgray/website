@@ -178,6 +178,10 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/singapore.jpg&quot;);">
                                     <img src="img/singapore.jpg" alt="image1" style="display: none;"></a>
                             </li>
+                            <li style="height: 756px; display: block;" class="sb-current">
+                                <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/ivory-coast.jpg&quot;);">
+                                    <img src="img/ivory-coast.jpg" alt="image1" style="display: none;"></a>
+                            </li>
                         </ul>
                     </div>
                 </section>
