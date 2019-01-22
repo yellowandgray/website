@@ -218,62 +218,24 @@ $categories = $db->selectAllWithoutWhere('categories');
                 </section>
                 <section class="container-fluid" id="about_section">
                     <div class="row">
-
-                        <div class="clearfix">
-                            <div class="col-md-6 who_we_content_section back_main" style="background-image: url(&quot;img/about_banner.jpg&quot;); height: 756px;">
-                                <div class="row">
-                                    <div class="back_img" tab-content="">
-                                        <img src="img/about_banner.jpg" alt="" title="" style="display: none;">
-                                    </div>
-                                    <div class="who_we_content">
-                                        <h3>Who We Are</h3>
-                                        <p class="justified-align"><strong>Expertise, Reliability and Entrepreneurial Spirit</strong></p><br/>
-                                        <p class="justified-align">MAC WORLD is an entrepreneurial driven entity delivering Globally Reliable and world class products and services consistently for almost 20 years. This ambitious spirit has permeated throughout the Eco System and Value chain of the organization, contributing towards a holistic and dynamic workplace environment and leading the group and its associated companies to successfully enter new markets and secure long term customers.</p>
-                                        <p class="justified-align">MAC WORLD’ management team has a cumulative experience of more than 100 years in multiple touch points, ranging from sourcing, branding, marketing, production and manufacturing right to customization, trade and international sales. The management team is supported by highly qualified and experienced technical and Research & Development personnel who are able to provide the best of breed solutions and advice to the group.</p>
-                                        <div class="text-center"><img src="img/team-02.jpg" alt="" style="width: 100%;"></div>
-                                    </div>
+                        <div class="who_we_content_section back_main" style="background-image: url(&quot;img/about_banner.jpg&quot;);">
+                            <div class="row">
+                                <div class="back_img" tab-content="">
+                                    <img src="img/about_banner.jpg" alt="" title="" style="display: none;">
                                 </div>
-                            </div>
-
-                            <div class="col-md-6 about_right_section who_we_content_section" style="height: 756px;">
-                                <div class="row">
-                                    <div class="who_we_content about_right_content mCustomScrollbar _mCS_2" style="height: 720px;"><div id="mCSB_2" class="mCustomScrollBox mCS-dark-3 mCSB_vertical mCSB_inside" tabindex="0" style="max-height: none;"><div id="mCSB_2_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
-                                                <div class="global_ralby">
-                                                    <h4>Vision</h4>
-                                                    <p>To provide reliable products, with sustainable supply chain, through bilateral trade</p>
-                                                </div>
-                                                <div class="global_ralby">
-                                                    <h4>Mission </h4>
-                                                    <p>To be the benchmark in the industry we serve.</p>
-                                                </div>
-                                                <div class="global_ralby value_content">
-                                                    <h4>Values</h4>
-                                                    <p>From the founders to the most recent employee, our values guide our conduct:</p>
-                                                    <ul>
-                                                        <li><span>C </span>
-                                                            <p>Caring and Communicative</p>
-                                                        </li>
-                                                        <li><span>A </span>
-                                                            <p>Attention & Attentiveness to customer's needs.</p>
-                                                        </li>
-                                                        <li><span>R </span>
-                                                            <p>Responsive to change and Reliability</p>
-                                                        </li>
-                                                        <li><span>E </span>
-                                                            <p>Engagement with stakeholders, Energetic and Enthusiastic Team</p>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-dark-3 mCSB_scrollTools_vertical" style="display: block;">
-                                                <div class="mCSB_draggerContainer">
-                                                    <div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 595px; max-height: 590px; top: 0px;">
-                                                        <div class="mCSB_dragger_bar" style="line-height: 30px;">
-                                                        </div>
-                                                    </div>
-                                                    <div class="mCSB_draggerRail">
-                                                    </div>
-                                                </div>
+                                <div class="who_we_content">
+                                    <h3>Who We Are</h3>
+                                    <p class="justified-align"><strong>Expertise, Reliability and Entrepreneurial Spirit</strong></p><br/>
+                                    <p class="justified-align">MAC WORLD is an entrepreneurial driven entity delivering Globally Reliable and world class products and services consistently for almost 20 years. This ambitious spirit has permeated throughout the Eco System and Value chain of the organization, contributing towards a holistic and dynamic workplace environment and leading the group and its associated companies to successfully enter new markets and secure long term customers.</p>
+                                    <p class="justified-align">MAC WORLD’ management team has a cumulative experience of more than 100 years in multiple touch points, ranging from sourcing, branding, marketing, production and manufacturing right to customization, trade and international sales. The management team is supported by highly qualified and experienced technical and Research & Development personnel who are able to provide the best of breed solutions and advice to the group.</p>
+                                    <div class="text-center"><img src="img/team-02.jpg" alt="" style="width: 100%;"></div>
+                                    <a href="#popup1" class="about_us_btn">Join our Team</a>
+                                    <div id="popup1" class="overlay">
+                                        <div class="popup">
+                                            <h2>Here i am</h2>
+                                            <a class="close" href="#">&times;</a>
+                                            <div class="content">
+                                                Thank to pop me out of that button, but now i'm done so you can close this window.
                                             </div>
                                         </div>
                                     </div>
@@ -282,25 +244,73 @@ $categories = $db->selectAllWithoutWhere('categories');
                         </div>
                     </div>
                 </section>
-                <section class="container-fluid" id="team_section">
+                <section class="about_right_section" style="height: 740px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="who_we_content about_right_content mCustomScrollbar _mCS_2 content-margin">
+                                <div id="mCSB_2" class="mCustomScrollBox mCS-dark-3 mCSB_vertical mCSB_inside" tabindex="0" style="max-height: none;">
+                                    <div id="mCSB_2_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+                                        <div class="global_ralby">
+                                            <h4>Vision</h4>
+                                            <p>To provide reliable products, with sustainable supply chain, through bilateral trade</p>
+                                        </div>
+                                        <div class="global_ralby">
+                                            <h4>Mission </h4>
+                                            <p>To be the benchmark in the industry we serve.</p>
+                                        </div>
+                                        <div class="global_ralby value_content">
+                                            <h4>Values</h4>
+                                            <p>From the founders to the most recent employee, our values guide our conduct:</p>
+                                            <ul>
+                                                <li><span>C </span>
+                                                    <p>Caring and Communicative</p>
+                                                </li>
+                                                <li><span>A </span>
+                                                    <p>Attention & Attentiveness to customer's needs.</p>
+                                                </li>
+                                                <li><span>R </span>
+                                                    <p>Responsive to change and Reliability</p>
+                                                </li>
+                                                <li><span>E </span>
+                                                    <p>Engagement with stakeholders, Energetic and Enthusiastic Team</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-dark-3 mCSB_scrollTools_vertical" style="display: block;">
+                                        <div class="mCSB_draggerContainer">
+                                            <div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 595px; max-height: 590px; top: 0px;">
+                                                <div class="mCSB_dragger_bar" style="line-height: 30px;">
+                                                </div>
+                                            </div>
+                                            <div class="mCSB_draggerRail">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="container-fluid" id="team_section" style="background: url(img/what-we-do-bg.jpg) no-repeat">
                     <div class="row">
                         <div class="container">
 
                             <div class="our_partner_heading heading_text">
                                 <h3 class="text-center">What We Do</h3>
                                 <p class="justified-align">MAC WORLD is an ISO 9001:2015 certified company which exports products and services to over 65 countries. The company is continuously penetrating new markets, opening and accessing new opportunities. Since its inception in 2001, MAC WORLD is in the business of manufacturing and trading Palm Oil, Palm Derivatives, its by-products and agro commodities.</p>
-                                <p class="justified-align">Being pioneers of Palm Oil export in Malaysia, in the recent years, MAC WORLD has further diversified into major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide. MAC WORLD Group have established several brands in the International market like <img class="brand-img" src="img/goldstar.jpg" alt="image" />, <img class="brand-img" src="img/goldfry.jpg" alt="image" />, <img class="brand-img" src="img/goldfat.jpg" alt="image" /> and <img class="brand-img" src="img/mrmac.jpg" alt="image" /> for its range of cooking oil, confectionery fats, vegetable ghee, tomato paste and GOLDENFARM for dairy based products such as sweetened condensed milk, evaporated milk, skim milk powder, fat filled milk powder etc. MAC WORLD has become a one stop shop in Malaysia for palm oil derivatives, oleo chemicals, confectionery fats and agro commodities for customers worldwide.</p>
+                                <p class="justified-align">Being pioneers of Palm Oil export in Malaysia, in the recent years, MAC WORLD has further diversified into major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide. MAC WORLD Group have established several brands in the International market like <img class="brand-img" src="img/goldstar.jpg" alt="image" />, <img class="brand-img" src="img/goldfry.jpg" alt="image" />, <img class="brand-img" src="img/goldfat.jpg" alt="image" /> and <img class="brand-img" src="img/mrmac.jpg" alt="image" /> for its range of cooking oil, confectionery fats, vegetable ghee, tomato paste and <img class="brand-img" src="img/golden-farm.jpg" alt="image" /> for dairy based products such as sweetened condensed milk, evaporated milk, skim milk powder, fat filled milk powder etc. MAC WORLD has become a one stop shop in Malaysia for palm oil derivatives, oleo chemicals, confectionery fats and agro commodities for customers worldwide.</p>
                                 <p class="justified-align">Driven by the commitment to ensure that high quality products are being offered at competitive pricing by using the expertise and experience to serve the dynamic needs of customers.  MAC WORLD ensures that its values and principles are upheld at all times.</p>
 <!--                                <div class="team-images-set"><img src="img/team.jpg" alt=""></div>-->
 
                             </div>
-                            <div class="our_partner_heading heading_text">
-                                <h3 class="text-center">Our Team</h3>
-                                <p class="justified-align">The MAC WORLD Group is a largely entrepreneurial driven entity and this characteristic has permeated throughout the Eco System and Value chain of our organization. These attributes inevitably contribute towards a holistic and dynamic workplace environment and this also helps the group and our associated companies to successfully enter new markets and secure long term customers.<br>
-                                    Our Management Team has a collective industry experience of more than 100 years in multiple touch points of our industry, ranging from sourcing, branding, marketing, production, manufacturing right up to customization, trade and International sales. The Management Team is ably supported by highly qualified and experienced technical and Research and Development personnel who are able to provide the best of breed solutions and advice to the group. All this collectively, leads to the MAC WORLD Brand being recognized as a Globally reknowned company and a brand that delivers globally reliable products and services. Our Management and Technical Team’s efforts have also let us to achieve the highly acclaimed 9001:2015 ISO certification and accreditation.</p>
-                                <div class="team-images-set text-center"><img src="img/master-01.jpg" alt=""></div>
-                                <p class="text-center">Join Our Team!</p>
-                            </div>
+                            <!--                            <div class="our_partner_heading heading_text">
+                                                            <h3 class="text-center">Our Team</h3>
+                                                            <p class="justified-align">The MAC WORLD Group is a largely entrepreneurial driven entity and this characteristic has permeated throughout the Eco System and Value chain of our organization. These attributes inevitably contribute towards a holistic and dynamic workplace environment and this also helps the group and our associated companies to successfully enter new markets and secure long term customers.<br>
+                                                                Our Management Team has a collective industry experience of more than 100 years in multiple touch points of our industry, ranging from sourcing, branding, marketing, production, manufacturing right up to customization, trade and International sales. The Management Team is ably supported by highly qualified and experienced technical and Research and Development personnel who are able to provide the best of breed solutions and advice to the group. All this collectively, leads to the MAC WORLD Brand being recognized as a Globally reknowned company and a brand that delivers globally reliable products and services. Our Management and Technical Team’s efforts have also let us to achieve the highly acclaimed 9001:2015 ISO certification and accreditation.</p>
+                                                            <div class="team-images-set text-center"><img src="img/master-01.jpg" alt=""></div>
+                                                            <p class="text-center">Join Our Team!</p>
+                                                        </div>-->
                             <div class="products-container">
                                 <div class="produts_listing">
                                 </div>
@@ -768,6 +778,9 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 </p></li>
                                         </ul>
                                     </div>
+                                </div>
+                                <div class="padding-20">
+                                    <img src="img/team-members.jpg" alt="image" class="img-responsive" >
                                 </div>
                                 <div class="footer_logo text-center">
                                     <a href="#">
@@ -1361,7 +1374,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                                         ]
                                 });
                                 };
-
             </script>
 
             <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
