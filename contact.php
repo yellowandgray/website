@@ -57,7 +57,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
-                                                <select name="no_children" class="form-control" required>
+                                                <select name="no_children" class="form-control">
                                                     <option value="0">No. of Children</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
@@ -69,7 +69,7 @@
                                         <div class="form-group">
                                             <li class="half pr-15">
                                                 <div class="multiselect">
-                                                    <select id="contactform" class="form-control" name="preffred_classes[]" multiple required>
+                                                    <select id="contactform" class="form-control" name="preffred_classes[]" multiple>
                                                         <option value="L.K.G">Pre-KG</option>
                                                         <option value="L.K.G">LKG</option>
                                                         <option value="L.K.G">UKG</option>
@@ -84,12 +84,12 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
-                                                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                                                <input type="text" class="form-control" name="subject" placeholder="Subject">
                                             </li>
                                         </div>
                                         <div class="form-group">
                                             <li class="full">
-                                                <select name="social_media" class="form-control" required>
+                                                <select name="social_media" class="form-control">
                                                     <option value="0">How did you here about us?</option>
                                                     <option value="Facebook">Facebook</option>
                                                     <option value="Linked-In">Linked-In</option>
@@ -108,7 +108,7 @@
                                             </li>
                                         </div>
                                         <li class="full">
-                                            <input type="submit" value="Contact us" class="fsubmit">
+                                            <input type="submit" value="Submit" class="fsubmit">
                                         </li>
                                     </form>
                                 </ul>

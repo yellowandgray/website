@@ -485,7 +485,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li>
-                                                <select name="no_children" class="form-control" required>
+                                                <select name="no_children" class="form-control">
                                                     <option value="0">No. of Children</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
@@ -496,7 +496,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li>
-                                                <div class="multiselect" required>
+                                                <div class="multiselect">
                                                     <select id="contactform" class="form-control" name="preffred_classes[]" multiple>
                                                         <option value="Pre-KG">Pre-KG</option>
                                                         <option value="L.K.G">L.K.G</option>
@@ -513,7 +513,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li>
-                                                <select name="social_media" class="form-control" required>
+                                                <select name="social_media" class="form-control">
                                                     <option value="0">How did you here about us?</option>
                                                     <option value="Facebook">Facebook</option>
                                                     <option value="Linked-In">Linked-In</option>

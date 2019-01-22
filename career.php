@@ -57,7 +57,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
-                                                <select name="select_role" class="form-control" required>
+                                                <select name="select_role" class="form-control">
                                                     <option value="Select Job Role">Select Job Role</option>
                                                     <option value="Admin Manager">Admin Manager</option>
                                                     <option value="Front Office Staff">Front Office staff</option>
@@ -90,7 +90,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="full">
-                                                <select name="social_media" class="form-control" required>
+                                                <select name="social_media" class="form-control">
                                                     <option value="0">How did you here about us?</option>
                                                     <option value="Facebook">Facebook</option>
                                                     <option value="Linked-In">Linked-In</option>
