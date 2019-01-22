@@ -475,7 +475,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li>
-                                                <input type="text" pattern="^\d{10}$" class="form-control" name="mobile" placeholder="Phone" required aria-label="Phone">
+                                                <input type="text" pattern="^\d{10}$" class="form-control" name="mobile" placeholder="Phone Number" required aria-label="Phone">
                                             </li>
                                         </div>
                                         <div class="form-group">
