@@ -287,6 +287,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                         <br/>
                                         <br/>
                                         <br/>
+                                        <br/>
                                         <h4>Mission </h4>
                                         <p>To be the benchmark in the industry we serve.</p>
                                     </div>
