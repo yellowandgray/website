@@ -1130,7 +1130,7 @@ footer {
 
 .footer_box ul li span img {
     line-height: 50px;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 
 .footer_box ul li:hover span {
@@ -2073,6 +2073,10 @@ input#clear_product {
     margin-bottom: 20px;
 }
 
+.padding-rl-0 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
 
 .padding-t-80 {
     padding-top: 80px;

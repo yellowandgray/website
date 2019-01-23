@@ -307,6 +307,7 @@ screen and (height:1024px) {
     .padding-l-r-20 {padding-left: 0px !important;}
     .about_right_section {padding: 0px !important;}
     .about_us_btn3 {position: absolute !important; font-size: 14px !important; padding: 8px 10px !important;}
+    .padding-rl-0 {padding-right: 15px; padding-left: 15px;}
 
 }
 

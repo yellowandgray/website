@@ -82,11 +82,15 @@ $categories = $db->selectAllWithoutWhere('categories');
             <!-- content start -->
             <div class="contain content">
                 <section id="main-banner" class="container-fluid" style="height: 756px;">
-                    <div class="row"></div>
+                    <!--                    <div class="row"></div>-->
                     <div class="banner_menu clearfix banner_sticky" style="height: 756px;">
                         <div class="sidebar-container">
                             <div class="sidebar-menu">
-                                <div id="hamburger" class="hamburger"><span class="line-1"></span> <span class="line-2"></span> <span class="line-3"></span></div>
+                                <div id="hamburger" class="hamburger">
+                                    <span class="line-1"></span> 
+                                    <span class="line-2"></span> 
+                                    <span class="line-3"></span>
+                                </div>
                                 <ul id="menu" class="menu about_right_content mCustomScrollbar _mCS_1" style="height: 600px;">
                                     <div id="mCSB_1" class="mCustomScrollBox mCS-dark-3 mCSB_vertical mCSB_inside" style="max-height: none;" tabindex="0">
                                         <div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
@@ -100,14 +104,14 @@ $categories = $db->selectAllWithoutWhere('categories');
                                             <li class="menu-item"><a href="#ourpartner" data-content="OUR PARTNERS">OUR PARTNERS</a></li>
                                             <li class="menu-item"><a href="#contact_section" data-content="CONTACT US">CONTACT US</a></li>
                                         </div>
-<!--                                        <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-3 mCSB_scrollTools_vertical" style="display: block;">
-                                            <div class="mCSB_draggerContainer">
-                                                <div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 385px; max-height: 490px; top: 0px;">
-                                                    <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
-                                                </div>
-                                                <div class="mCSB_draggerRail"></div>
-                                            </div>
-                                        </div>-->
+                                        <!--                                        <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-3 mCSB_scrollTools_vertical" style="display: block;">
+                                                                                    <div class="mCSB_draggerContainer">
+                                                                                        <div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 385px; max-height: 490px; top: 0px;">
+                                                                                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                                                                        </div>
+                                                                                        <div class="mCSB_draggerRail"></div>
+                                                                                    </div>
+                                                                                </div>-->
                                     </div>
                                 </ul>
                             </div>
@@ -124,7 +128,8 @@ $categories = $db->selectAllWithoutWhere('categories');
                                         <option value="fr">Fr</option>
                                         <option value="ar">Ar</option>
                                     </select>
-                                </div></li>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     <div class="container">
@@ -143,7 +148,8 @@ $categories = $db->selectAllWithoutWhere('categories');
                             </li>
                             <li style="height: 756px; display: none;" class="">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/indonesia.jpg&quot;);">
-                                    <img src="img/indonesia.jpg" alt="image1" style="display: none;"></a>
+                                    <img src="img/indonesia.jpg" alt="image1" style="display: none;">
+                                </a>
                             </li>
                             <li style="height: 756px; display: none;" class="">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/nigerya.jpg&quot;);">
@@ -199,7 +205,9 @@ $categories = $db->selectAllWithoutWhere('categories');
                 </script>
                 <section id="our_journey" class="container-fluid back_main internation_house_section" style="background-image: url(img/ecport_house.png);">
                     <div class="row">
-                        <div class="back_img"> <img src="img/ecport_house-1.png" alt="" title="" style="display: none;"> </div>
+                        <div class="back_img"> 
+                            <img src="img/ecport_house-1.png" alt="" title="" style="display: none;"> 
+                        </div>
                         <div class="container">
                             <div class="international_exports">
                                 <div class="internation_content_wraper">
@@ -218,20 +226,24 @@ $categories = $db->selectAllWithoutWhere('categories');
                 </section>
                 <section id="about_section" style="background-image: url(&quot;img/about_banner.jpg&quot;); background-size: cover">
                     <div class="container-fluid">
-                        <div class="row padding-l-r-20">
-                            <div class="col-md-3">
-                                <h3>Who We Are</h3>
-                                <p style="font-size: 23px"><strong>Expertise <br/>Reliability <br/>Entrepreneurial Spirit</strong></p>
+                        <div class="row">
+                            <div class="padding-l-r-20">
+                                <div class="col-md-3">
+                                    <h3>Who We Are</h3>
+                                    <p style="font-size: 23px"><strong>Expertise <br/>Reliability <br/>Entrepreneurial Spirit</strong></p>
+                                </div>
+                                <div class="col-md-9">
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <p class="justified-align">MAC WORLD is an entrepreneurial driven entity delivering Globally Reliable and world class products and services consistently for almost 20 years. This ambitious spirit has permeated throughout the Eco System and Value chain of the organization, contributing towards a holistic and dynamic workplace environment and leading the group and its associated companies to successfully enter new markets and secure long term customers.</p>
+                                    <p class="justified-align">MAC WORLD’ management team has a cumulative experience of more than 100 years in multiple touch points, ranging from sourcing, branding, marketing, production and manufacturing right to customization, trade and international sales. The management team is supported by highly qualified and experienced technical and Research & Development personnel who are able to provide the best of breed solutions and advice to the group.</p>
+                                </div>
                             </div>
-                            <div class="col-md-9">
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <p class="justified-align">MAC WORLD is an entrepreneurial driven entity delivering Globally Reliable and world class products and services consistently for almost 20 years. This ambitious spirit has permeated throughout the Eco System and Value chain of the organization, contributing towards a holistic and dynamic workplace environment and leading the group and its associated companies to successfully enter new markets and secure long term customers.</p>
-                                <p class="justified-align">MAC WORLD’ management team has a cumulative experience of more than 100 years in multiple touch points, ranging from sourcing, branding, marketing, production and manufacturing right to customization, trade and international sales. The management team is supported by highly qualified and experienced technical and Research & Development personnel who are able to provide the best of breed solutions and advice to the group.</p>
+                            <div class="text-center">
+                                <img src="img/team-02.jpg" alt="" style="width: 100%;">
                             </div>
-                            <div class="text-center"><img src="img/team-02.jpg" alt="" style="width: 100%;"></div>
                         </div>
                     </div>
                 </section>
@@ -507,7 +519,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <figure>
                                                     <img src="img/accreditations/Picture1.png" alt="" title="">
                                                 </figure>
-
                                             </a>
                                         </li>
                                         <li class="">
@@ -515,7 +526,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <figure>
                                                     <img src="img/accreditations/Picture2.png" alt="" title="">
                                                 </figure>
-
                                             </a>
                                         </li>
                                         <!--                                        <li class="">
@@ -848,14 +858,17 @@ $categories = $db->selectAllWithoutWhere('categories');
                                             </from>
                                         </div>
                                     </div>
-                                    <img src="img/team-members.jpg" alt="image" class="img-responsive" >
                                 </div>
-                                <div class="footer_logo text-center">
-                                    <a href="#">
-                                        <figure> <img class="img-responsive" src="img/footer_logo.png" alt="" title=""> </figure>
-                                    </a>
-                                    <p>All Rights Reserved. Copyright &copy; 2018 MAC WORLD Industries Sdn. Bhd.</p>
-                                </div>
+
+                            </div>
+                        </div>
+                        <div class="container-fluid padding-rl-0">
+                            <img src="img/team-members.jpg" alt="image" class="img-responsive" style="width: 100%">
+                            <div class="footer_logo text-center">
+                                <a href="#">
+                                    <figure> <img class="img-responsive" src="img/footer_logo.png" alt="" title=""> </figure>
+                                </a>
+                                <p>All Rights Reserved. Copyright &copy; 2018 MAC WORLD Industries Sdn. Bhd.</p>
                             </div>
                         </div>
                     </div>
