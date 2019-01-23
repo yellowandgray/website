@@ -232,6 +232,25 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 <p class="justified-align">MAC WORLD’ management team has a cumulative experience of more than 100 years in multiple touch points, ranging from sourcing, branding, marketing, production and manufacturing right to customization, trade and international sales. The management team is supported by highly qualified and experienced technical and Research & Development personnel who are able to provide the best of breed solutions and advice to the group.</p>
                             </div>
                             <div class="text-center"><img src="img/team-02.jpg" alt="" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </section>
+                <script>
+                    $(window).load(function () {
+                        $(".trigger_popup_fricc").click(function () {
+                            $('.hover_bkgr_fricc').show();
+                        });
+//                        $('.hover_bkgr_fricc').click(function () {
+//                            $('.hover_bkgr_fricc').hide();
+//                        });
+                        $('.popupCloseButton').click(function () {
+                            $('.hover_bkgr_fricc').hide();
+                        });
+                    });
+                </script>
+                <section class="about_right_section">
+                    <div class="container">
+                        <div class="row">
                             <a class="about_us_btn2 trigger_popup_fricc">Join our Team</a>
                             <div class="hover_bkgr_fricc">
                                 <span class="helper"></span>
@@ -254,27 +273,11 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <script>
-                    $(window).load(function () {
-                        $(".trigger_popup_fricc").click(function () {
-                            $('.hover_bkgr_fricc').show();
-                        });
-//                        $('.hover_bkgr_fricc').click(function () {
-//                            $('.hover_bkgr_fricc').hide();
-//                        });
-                        $('.popupCloseButton').click(function () {
-                            $('.hover_bkgr_fricc').hide();
-                        });
-                    });
-                </script>
-                <section class="about_right_section">
-                    <div class="container">
+                        <br/>
+                        <!--                            <div class="who_we_content about_right_content mCustomScrollbar _mCS_2 content-margin">
+                                                        <div id="mCSB_2" class="mCustomScrollBox mCS-dark-3 mCSB_vertical mCSB_inside" tabindex="0">
+                                                            <div id="mCSB_2_container" class="mCSB_container" style="position:relative;" dir="ltr">-->
                         <div class="row">
-                            <!--                            <div class="who_we_content about_right_content mCustomScrollbar _mCS_2 content-margin">
-                                                            <div id="mCSB_2" class="mCustomScrollBox mCS-dark-3 mCSB_vertical mCSB_inside" tabindex="0">
-                                                                <div id="mCSB_2_container" class="mCSB_container" style="position:relative;" dir="ltr">-->
                             <div class="col-md-2"></div>
                             <div class="col-md-4">
                                 <div class="border-line">
@@ -339,7 +342,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 <p class="text-center"><img class="brand-img margin-lf-20" src="img/goldstar.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/goldfry.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/goldfat.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/mrmac.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/golden-farm.jpg" alt="image" /></p>
                                 <p class="justified-align">for its range of cooking oil, confectionery fats, vegetable ghee, tomato paste and dairy based products such as sweetened condensed milk, evaporated milk, skim milk powder, fat filled milk powder etc. MAC WORLD has become a one stop shop in Malaysia for palm oil derivatives, oleo chemicals, confectionery fats and agro commodities for customers worldwide.</p>
                                 <p class="justified-align">Driven by the commitment to ensure that high quality products are being offered at competitive pricing by using the expertise and experience to serve the dynamic needs of customers.  MAC WORLD ensures that its values and principles are upheld at all times.</p>
-<!--                                <div class="team-images-set"><img src="img/team.jpg" alt=""></div>-->
+        <!--                                <div class="team-images-set"><img src="img/team.jpg" alt=""></div>-->
 
                             </div>
                             <!--                            <div class="our_partner_heading heading_text">
@@ -470,7 +473,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                         </div>
                     </div>
                 </section>
-                <section class="container-fluid" id="accreditation_section">
+                <section class="container-fluid padding-t-80" id="accreditation_section">
                     <div class="row">
                         <div class="container">
                             <div class="text-center our_partner_heading heading_text">
@@ -692,12 +695,12 @@ $categories = $db->selectAllWithoutWhere('categories');
                     });
                 </script>
                 <div id="nav-arrows" class="nav-arrows" style="display: block;"><a href="#">Next</a></div>
-<!--                <section class="container-fluid product_section" id="our_product">
+        <!--                <section class="container-fluid product_section" id="our_product">
                     <div class="row">
                         <div class="container">
                             <div class="products-wrapper clearfix">
                                 <div class="match_height product_image" style="height: 409px;">
-
+        
                                     <div class="img-wrapper"> <img src="img/tellss.png"> </div>
                                 </div>
                                 <div class="match_height product_content" style="height: 409px;">
@@ -710,7 +713,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                             </div>
                             <div class="products-wrapper clearfix">
                                 <div class="match_height product_image" style="height: 411px;">
-
+        
                                     <div class="img-wrapper"> <img src="img/tellss.png"> </div>
                                 </div>
                                 <div class="match_height product_content" style="height: 411px;">
@@ -723,7 +726,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                             </div>
                             <div class="products-wrapper clearfix">
                                 <div class="match_height product_image" style="height: 409px;">
-
+        
                                     <div class="img-wrapper"> <img src="img/tellss.png"> </div>
                                 </div>
                                 <div class="match_height product_content" style="height: 409px;">
@@ -736,7 +739,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                             </div>
                             <div class="products-wrapper clearfix">
                                 <div class="match_height product_image" style="height: 411px;">
-
+        
                                     <div class="img-wrapper"> <img src="img/tellss.png"> </div>
                                 </div>
                                 <div class="match_height product_content" style="height: 411px;">
@@ -838,7 +841,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <input type="text" name="contact" pattern="[0-9]{10}" class="form-control" placeholder="Contact Number" />
                                                 <br/>
                                                 <textarea row="4" type="text" name="message" class="form-control" placeholder="Leave Comments"></textarea>
-                                                <p style="float:left;color:#000">Upload CV:</p> <input type="file" name="upload" class="form-control" accept="image/pdf*">
+                                                Upload CV <input type="file" name="upload" class="form-control" accept="image/pdf*">
                                                 <br/>
                                                 <a href="#" class="about_us_btn">Submit</a>
                                             </from>
@@ -861,9 +864,9 @@ $categories = $db->selectAllWithoutWhere('categories');
                         $(".trigger_popup_fricc1").click(function () {
                             $('.hover_bkgr_fricc1').show();
                         });
-//                        $('.hover_bkgr_fricc').click(function () {
-//                            $('.hover_bkgr_fricc').hide();
-//                        });
+                        //                        $('.hover_bkgr_fricc').click(function () {
+                        //                            $('.hover_bkgr_fricc').hide();
+                        //                        });
                         $('.popupCloseButton1').click(function () {
                             $('.hover_bkgr_fricc1').hide();
                         });
@@ -1023,40 +1026,40 @@ $categories = $db->selectAllWithoutWhere('categories');
                 });
             </script>
             <!-- <script type="text/javascript">
-
+        
                 function scrolfunction() {
                     $("section").each(function(){
                         var visibl = $(this).position().top;
                         var visiblnext = $(this).next('section').attr("id");
-
+        
                         var postio_top = visiblnext.position().top;
-
-
-
+        
+        
+        
                         var scroltop = $(window).scrollTop();
                         if (postio_top > scroltop && visibl <= scroltop ) {
                             var elementid = $(this).next("section").attr("id");
                             $(".sroll_down a").attr('href', '#' + elementid);
                             console.log(elementid);
                         }else{
-
+        
                         }
                         /**/
-
+        
                     });
                 }
-
+        
                 $(window).scroll(function(){
-
+        
                     scrolfunction();
-
+        
                 });
-
+        
                 $(document).ready(function() {
                     scrolfunction();
                 });
-
-
+        
+        
             </script> -->
             <script type="text/javascript">
                 $(document).ready(function () {
