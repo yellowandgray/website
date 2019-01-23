@@ -514,7 +514,7 @@
                                         <div class="form-group">
                                             <li>
                                                 <select name="social_media" class="form-control">
-                                                    <option value="0">How did you here about us?</option>
+                                                    <option value="">How did you here about us?</option>
                                                     <option value="Facebook">Facebook</option>
                                                     <option value="Linked-In">Linked-In</option>
                                                     <option value="YouTube">YouTube</option>
