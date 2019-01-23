@@ -229,7 +229,7 @@ screen and (height:1024px) {
 
     .who_we_content_section{height: auto !important; padding-top: 50px; padding-bottom: 50px;}
     .who_we_content{position: static; transform: none !important;}
-    .about_right_content{height: 950px !important;}
+/*    .about_right_content{height: 950px !important;}*/
     .out_partner_section {padding-bottom: 7%;}
     .header_search_lang ul li:nth-child(2) {width: auto;}
     .header_search_lang ul li .search_btn input {position: absolute;right: 0;z-index: 1}
@@ -302,6 +302,7 @@ screen and (height:1024px) {
     .halal_jakim p{width: 24%;}
     .our_partner_heading ul{width: 100%;margin-left: 0;}
     .our_team_partner{width: 100%;}
+    .border-line {height: auto}
 
 }
 

@@ -208,98 +208,136 @@ $categories = $db->selectAllWithoutWhere('categories');
                                         <h3 class="text-center">Futurizing Manufacturing and Commodities Commerce Globally</h3>
                                         <p class="justified-align">MAC WORLD is a diversified yet integrated toll manufacturing group in Malaysia, and key players in the global commodity market. The company has grown exponentially under the forward-thinking leadership of a group of entrepreneurs who shared a common objective and vision.</p>
                                         <p class="justified-align">Headquartered in Malaysia which is known for it abundance in natural resources, MAC WORLD manufactures and supplies raw materials to some of the biggest food and beverage brands across the globe. With worldwide connectivity and by seamlessly integrated operations and services, the group has successfully designed, developed and commercially exported wide range of products and services to most parts of the world.</p>
-                                        <p class="justified-align">Having grown organically, by applying modern and rational philosophy and approach; balancing Financial Return of Investment (FROI) and Social Return of Investment (SROI), Mac World transforms raw materials into bespoke ingredients to help customers meet the ever changing demand of consumers.</p>
+                                        <p class="justified-align">Having grown organically, by applying modern and rational philosophy and approach; balancing Financial Return of Investment (FROI) and Social Return of Investment (SROI), MAC WORLD transforms raw materials into bespoke ingredients to help customers meet the ever changing demand of consumers.</p>
                                     </div>
                                 </div>
-                                <a href="#our_journey" class="about_us_btn">Our Journey</a>
+                                <a class="about_us_btn1">Our Journey</a>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="container-fluid" id="about_section">
-                    <div class="row">
-                        <div class="who_we_content_section back_main" style="background-image: url(&quot;img/about_banner.jpg&quot;);">
-                            <div class="row">
-                                <div class="back_img" tab-content="">
-                                    <img src="img/about_banner.jpg" alt="" title="" style="display: none;">
-                                </div>
-                                <div class="who_we_content">
-                                    <h3>Who We Are</h3>
-                                    <p class="justified-align"><strong>Expertise, Reliability and Entrepreneurial Spirit</strong></p><br/>
-                                    <p class="justified-align">MAC WORLD is an entrepreneurial driven entity delivering Globally Reliable and world class products and services consistently for almost 20 years. This ambitious spirit has permeated throughout the Eco System and Value chain of the organization, contributing towards a holistic and dynamic workplace environment and leading the group and its associated companies to successfully enter new markets and secure long term customers.</p>
-                                    <p class="justified-align">MAC WORLD’ management team has a cumulative experience of more than 100 years in multiple touch points, ranging from sourcing, branding, marketing, production and manufacturing right to customization, trade and international sales. The management team is supported by highly qualified and experienced technical and Research & Development personnel who are able to provide the best of breed solutions and advice to the group.</p>
-                                    <div class="text-center"><img src="img/team-02.jpg" alt="" style="width: 100%;"></div>
-                                    <a href="#popup1" class="about_us_btn">Join our Team</a>
-                                    <div id="popup1" class="overlay">
-                                        <div class="popup">
-                                            <h2>Here i am</h2>
-                                            <a class="close" href="#">&times;</a>
-                                            <div class="content">
-                                                Thank to pop me out of that button, but now i'm done so you can close this window.
-                                            </div>
-                                        </div>
-                                    </div>
+                <section id="about_section" style="background-image: url(&quot;img/about_banner.jpg&quot;); background-size: cover">
+                    <div class="container-fluid">
+                        <div class="row padding-l-r-20">
+                            <div class="col-md-3">
+                                <h3>Who We Are</h3>
+                                <p style="font-size: 23px"><strong>Expertise <br/>Reliability <br/>Entrepreneurial Spirit</strong></p>
+                            </div>
+                            <div class="col-md-9">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <p class="justified-align">MAC WORLD is an entrepreneurial driven entity delivering Globally Reliable and world class products and services consistently for almost 20 years. This ambitious spirit has permeated throughout the Eco System and Value chain of the organization, contributing towards a holistic and dynamic workplace environment and leading the group and its associated companies to successfully enter new markets and secure long term customers.</p>
+                                <p class="justified-align">MAC WORLD’ management team has a cumulative experience of more than 100 years in multiple touch points, ranging from sourcing, branding, marketing, production and manufacturing right to customization, trade and international sales. The management team is supported by highly qualified and experienced technical and Research & Development personnel who are able to provide the best of breed solutions and advice to the group.</p>
+                            </div>
+                            <div class="text-center"><img src="img/team-02.jpg" alt="" style="width: 100%;"></div>
+                            <a class="about_us_btn2 trigger_popup_fricc">Join our Team</a>
+                            <div class="hover_bkgr_fricc">
+                                <span class="helper"></span>
+                                <div>
+                                    <div class="popupCloseButton">X</div>
+                                    <h5>Join our Team</h5>
+                                    <br/>
+                                    <from>
+                                        <input type="text" name="name" class="form-control" placeholder="Name" />
+                                        <br/>
+                                        <input type="email" name="email" class="form-control" placeholder="Email" />
+                                        <br/>
+                                        <input type="text" name="contact" pattern="[0-9]{10}" class="form-control" placeholder="Contact Number" />
+                                        <br/>
+                                        <textarea row="4" type="text" name="message" class="form-control" placeholder="Leave Comments"></textarea>
+                                        <p style="float:left;color:#000">Upload CV:</p> <input type="file" name="upload" class="form-control" accept="image/pdf*">
+                                        <br/>
+                                        <a href="#" class="about_us_btn">Submit</a>
+                                    </from>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="about_right_section" style="height: 740px;">
+                <script>
+                    $(window).load(function () {
+                        $(".trigger_popup_fricc").click(function () {
+                            $('.hover_bkgr_fricc').show();
+                        });
+//                        $('.hover_bkgr_fricc').click(function () {
+//                            $('.hover_bkgr_fricc').hide();
+//                        });
+                        $('.popupCloseButton').click(function () {
+                            $('.hover_bkgr_fricc').hide();
+                        });
+                    });
+                </script>
+                <section class="about_right_section">
                     <div class="container">
                         <div class="row">
-                            <div class="who_we_content about_right_content mCustomScrollbar _mCS_2 content-margin">
-                                <div id="mCSB_2" class="mCustomScrollBox mCS-dark-3 mCSB_vertical mCSB_inside" tabindex="0" style="max-height: none;">
-                                    <div id="mCSB_2_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
-                                        <div class="global_ralby">
-                                            <h4>Vision</h4>
-                                            <p>To provide reliable products, with sustainable supply chain, through bilateral trade</p>
-                                        </div>
-                                        <div class="global_ralby">
-                                            <h4>Mission </h4>
-                                            <p>To be the benchmark in the industry we serve.</p>
-                                        </div>
-                                        <div class="global_ralby value_content">
-                                            <h4>Values</h4>
-                                            <p>From the founders to the most recent employee, our values guide our conduct:</p>
-                                            <ul>
-                                                <li><span>C </span>
-                                                    <p>Caring and Communicative</p>
-                                                </li>
-                                                <li><span>A </span>
-                                                    <p>Attention & Attentiveness to customer's needs.</p>
-                                                </li>
-                                                <li><span>R </span>
-                                                    <p>Responsive to change and Reliability</p>
-                                                </li>
-                                                <li><span>E </span>
-                                                    <p>Engagement with stakeholders, Energetic and Enthusiastic Team</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-dark-3 mCSB_scrollTools_vertical" style="display: block;">
-                                        <div class="mCSB_draggerContainer">
-                                            <div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 595px; max-height: 590px; top: 0px;">
-                                                <div class="mCSB_dragger_bar" style="line-height: 30px;">
-                                                </div>
-                                            </div>
-                                            <div class="mCSB_draggerRail">
-                                            </div>
-                                        </div>
+                            <!--                            <div class="who_we_content about_right_content mCustomScrollbar _mCS_2 content-margin">
+                                                            <div id="mCSB_2" class="mCustomScrollBox mCS-dark-3 mCSB_vertical mCSB_inside" tabindex="0">
+                                                                <div id="mCSB_2_container" class="mCSB_container" style="position:relative;" dir="ltr">-->
+                            <div class="col-md-2"></div>
+                            <div class="col-md-4">
+                                <div class="border-line">
+                                    <div class="global_ralby">
+                                        <h4>Vision</h4>
+                                        <p>To provide reliable products, with sustainable supply chain, through bilateral trade</p>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <h4>Mission </h4>
+                                        <p>To be the benchmark in the industry we serve.</p>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-4">
+                                <div class="border-line">
+                                    <div class="global_ralby value_content">
+                                        <h4>Values</h4>
+                                        <p>From the founders to the most recent employee, our values guide our conduct:</p>
+                                        <ul>
+                                            <li><span>C </span>
+                                                <p>Caring and Communicative</p>
+                                            </li>
+                                            <li><span>A </span>
+                                                <p>Attention & Attentiveness to customer's needs.</p>
+                                            </li>
+                                            <li><span>R </span>
+                                                <p>Responsive to change and Reliability</p>
+                                            </li>
+                                            <li><span>E </span>
+                                                <p>Engagement with stakeholders, Energetic and Enthusiastic Team</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                            <!--                                    </div>-->
+                            <!--                                    <div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-dark-3 mCSB_scrollTools_vertical" style="display: block;">
+                                                                    <div class="mCSB_draggerContainer">
+                                                                        <div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 595px; max-height: 590px; top: 0px;">
+                                                                            <div class="mCSB_dragger_bar" style="line-height: 30px;">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mCSB_draggerRail">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>-->
+                            <!--                                </div>
+                                                        </div>-->
                         </div>
                     </div>
                 </section>
-                <section class="container-fluid" id="team_section" style="background: url(img/what-we-do-bg.jpg) no-repeat">
+                <section class="container-fluid" id="team_section" style="background: url(img/what-we-do-bg.jpg) no-repeat;background-size: cover">
                     <div class="row">
                         <div class="container">
 
                             <div class="our_partner_heading heading_text">
                                 <h3 class="text-center">What We Do</h3>
                                 <p class="justified-align">MAC WORLD is an ISO 9001:2015 certified company which exports products and services to over 65 countries. The company is continuously penetrating new markets, opening and accessing new opportunities. Since its inception in 2001, MAC WORLD is in the business of manufacturing and trading Palm Oil, Palm Derivatives, its by-products and agro commodities.</p>
-                                <p class="justified-align">Being pioneers of Palm Oil export in Malaysia, in the recent years, MAC WORLD has further diversified into major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide. MAC WORLD Group have established several brands in the International market like <img class="brand-img" src="img/goldstar.jpg" alt="image" />, <img class="brand-img" src="img/goldfry.jpg" alt="image" />, <img class="brand-img" src="img/goldfat.jpg" alt="image" /> and <img class="brand-img" src="img/mrmac.jpg" alt="image" /> for its range of cooking oil, confectionery fats, vegetable ghee, tomato paste and <img class="brand-img" src="img/golden-farm.jpg" alt="image" /> for dairy based products such as sweetened condensed milk, evaporated milk, skim milk powder, fat filled milk powder etc. MAC WORLD has become a one stop shop in Malaysia for palm oil derivatives, oleo chemicals, confectionery fats and agro commodities for customers worldwide.</p>
+                                <p class="justified-align">Being pioneers of Palm Oil export in Malaysia, in the recent years, MAC WORLD has further diversified into major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide. MAC WORLD Group have established several brands in the International market like </p>
+                                <p class="text-center"><img class="brand-img margin-lf-20" src="img/goldstar.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/goldfry.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/goldfat.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/mrmac.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/golden-farm.jpg" alt="image" /></p>
+                                <p class="justified-align">for its range of cooking oil, confectionery fats, vegetable ghee, tomato paste and dairy based products such as sweetened condensed milk, evaporated milk, skim milk powder, fat filled milk powder etc. MAC WORLD has become a one stop shop in Malaysia for palm oil derivatives, oleo chemicals, confectionery fats and agro commodities for customers worldwide.</p>
                                 <p class="justified-align">Driven by the commitment to ensure that high quality products are being offered at competitive pricing by using the expertise and experience to serve the dynamic needs of customers.  MAC WORLD ensures that its values and principles are upheld at all times.</p>
 <!--                                <div class="team-images-set"><img src="img/team.jpg" alt=""></div>-->
 
@@ -544,7 +582,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                             <div class="our_partner_heading our_partner_text">
                                 <h3 class="text-center">Our Partners</h3>
 
-                                <p class="justified-align">With the expansive portfolio that Mac World handles – sourcing, manufacturing, trading and distributing raw materials, MAC WORLD Group and its management believe in establishing mutually beneficial, strong strategic alliances with parties and organizations at every level of the business, across geographies, commodities and functions to achieve its mission and vision.</p>
+                                <p class="justified-align">With the expansive portfolio that MAC WORLD handles – sourcing, manufacturing, trading and distributing raw materials, MAC WORLD Group and its management believe in establishing mutually beneficial, strong strategic alliances with parties and organizations at every level of the business, across geographies, commodities and functions to achieve its mission and vision.</p>
 
                                 <ul class="clearfix">
                                     <li class="active"><a data-toggle="tab" href="#menu1">Banking</a></li>
@@ -552,7 +590,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                     <li class=""><a data-toggle="tab" href="#menu3">Technology</a></li>
                                 </ul>
                                 <div class="tab-content">
-                                    <div id="menu1" class="tab-pane fade in active">
+                                    <div id="menu1" class="tab-pane fade in active padding-t-50">
                                         <div class="slider">
                                             <div>
                                                 <img src="img/banking/banking-1.jpg" alt="" />
@@ -590,7 +628,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                                                     </ul>
                                                                                 </div>-->
                                     </div>
-                                    <div id="menu2" class="tab-pane fade in ">
+                                    <div id="menu2" class="tab-pane fade in padding-t-50">
 
                                         <div class="slider">
                                             <div class="slide">
@@ -626,10 +664,10 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                                                     </ul>
                                                                                 </div>-->
                                     </div>
-                                    <div id="menu3" class="tab-pane fade in ">
+                                    <div id="menu3" class="tab-pane fade in padding-t-50">
                                         <div>
                                             <div class="" style="text-align: center">
-                                                <img src="img/technology/technology.png" alt="" style="width: 20%"/>
+                                                <img src="img/technology/technology.png" alt=""/>
                                             </div>
                                         </div>
                                         <!--                                        <div class="paginator-center text-color text-center">
@@ -769,17 +807,43 @@ $categories = $db->selectAllWithoutWhere('categories');
                                             <li>
                                                 <a href="#"> <span><img src="img/mail.png" alt="" title=""></span>
                                                     <p>products@macworldinc.com</p>
-                                                </a><p><a href="#">                                        </a>
-                                                </p></li>
+                                                </a>
+                                                <p><a href="#"></a></p>
+                                            </li>
                                             <li>
                                                 <a href="#"> <span><img src="img/web.png" alt="" title=""></span>
                                                     <p>www.macworldinc.com</p>
                                                 </a><p><a href="#">                                        </a>
-                                                </p></li>
+                                                </p>
+                                            </li>
                                         </ul>
+                                        <div class="padding-t-20">
+                                            <a class="about_us_btn3 trigger_popup_fricc1">Join our Team</a>
+                                        </div>
                                     </div>
                                 </div>
+                                <br/>
                                 <div class="padding-20">
+                                    <div class="hover_bkgr_fricc1">
+                                        <span class="helper1"></span>
+                                        <div>
+                                            <div class="popupCloseButton1">X</div>
+                                            <h5>Join our Team</h5>
+                                            <br/>
+                                            <from>
+                                                <input type="text" name="name" class="form-control" placeholder="Name" />
+                                                <br/>
+                                                <input type="email" name="email" class="form-control" placeholder="Email" />
+                                                <br/>
+                                                <input type="text" name="contact" pattern="[0-9]{10}" class="form-control" placeholder="Contact Number" />
+                                                <br/>
+                                                <textarea row="4" type="text" name="message" class="form-control" placeholder="Leave Comments"></textarea>
+                                                <p style="float:left;color:#000">Upload CV:</p> <input type="file" name="upload" class="form-control" accept="image/pdf*">
+                                                <br/>
+                                                <a href="#" class="about_us_btn">Submit</a>
+                                            </from>
+                                        </div>
+                                    </div>
                                     <img src="img/team-members.jpg" alt="image" class="img-responsive" >
                                 </div>
                                 <div class="footer_logo text-center">
@@ -792,6 +856,19 @@ $categories = $db->selectAllWithoutWhere('categories');
                         </div>
                     </div>
                 </footer>
+                <script>
+                    $(window).load(function () {
+                        $(".trigger_popup_fricc1").click(function () {
+                            $('.hover_bkgr_fricc1').show();
+                        });
+//                        $('.hover_bkgr_fricc').click(function () {
+//                            $('.hover_bkgr_fricc').hide();
+//                        });
+                        $('.popupCloseButton1').click(function () {
+                            $('.hover_bkgr_fricc1').hide();
+                        });
+                    });
+                </script>
                 <!-- footer End -->
             </div>
             <script src="js/bootstrap.min.js" type="text/javascript"></script>
