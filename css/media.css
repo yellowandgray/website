@@ -249,7 +249,7 @@ screen and (height:1024px) {
     .sidebar-menu .hamburger {transition: all .4s;-webkit-transition: all .4s;position: absolute;right: -75px;top: 9px;width: 50px;cursor: pointer;z-index: 999;}
     .banner_menu {width: 100%;position: fixed;top: 0;left: 0;height: auto !important;}
     #header-top {position: absolute;top: 50px;width: 100%;z-index: 1;}
-    .sidebar-container {position: fixed;z-index: 999;top: 0;left: -80%;width: 80%;height: 100%;background: #1b1737;transition: left 1s cubic-bezier(0.3, 0.96, 0.27, 0.99);}
+    .sidebar-container {position: fixed;z-index: 999;top: 0;left: -60%;width: 60%;height: 100%;background: #1b1737;transition: left 1s cubic-bezier(0.3, 0.96, 0.27, 0.99);}
     .sidebar-menu .menu .menu-item a {font-size: 25px;}
     .logo-wrap {width: 150px;}
     .logo-wrap {margin-left: 0;}
@@ -305,12 +305,14 @@ screen and (height:1024px) {
     .border-line {height: auto}
 /*    #about_section {padding: 0 0 0 0 !important;}*/
     .padding-l-r-20 {padding-left: 0px !important;}
+    .about_right_section {padding: 0px !important;}
+    .about_us_btn3 {position: absolute !important; font-size: 14px !important; padding: 8px 10px !important;}
 
 }
 
 @media only screen and (max-width:767px) {	
     .banner_content figure img {width: 110px;padding-top: 80px;}	
-    #menu { height:380px !important;}
+    #menu { height:auto !important;}
     .banner_content h2 {  font-size: 35px;}
     .banner_content h2 { margin-top: 0px;}	
     .search-panel-right input {  width: 85%;}
@@ -480,7 +482,7 @@ screen and (height:1024px) {
     .out_partner_section{margin-bottom: 0%; padding-bottom: 0}
 
     .accreditation_box .accreditation_box_img img{width: 100%;}
-    .accreditation_box .accreditation_box_img{height: 100%; margin-bottom: 20px;}
+    .accreditation_box .accreditation_box_img{height: auto; margin-bottom: 20px;}
     .halal_jakim a figure{width: 100px !important;}
     .accrediation_logo ul li a p{font-size: 12px;}
     .heading_text p{font-size: 14px; line-height: 25px;}

@@ -259,8 +259,8 @@ p,input,textarea,select,.marquee,span{font-family: 'Montserrat', sans-serif; col
     position: fixed;
     z-index: 999;
     top: 0;
-    left: -30%;
-    width: 30%;
+    left: -20%;
+    width: 20%;
     height: 100%;
     background: #1b1737;
     transition: left 1s cubic-bezier(0.3, 0.96, 0.27, 0.99);
@@ -289,17 +289,17 @@ p,input,textarea,select,.marquee,span{font-family: 'Montserrat', sans-serif; col
     -webkit-transform: translateY(-213px);
 }
 
-.sidebar-menu .menu .menu-item {
+/*.sidebar-menu .menu .menu-item {
     margin-bottom: 20px;
     margin-top: 20px;
-}
+}*/
 
 .sidebar-menu .menu .menu-item a {
     display: inline-block;
     position: relative;
     text-decoration: none;
     color: #e5d881;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .sidebar-menu .menu .menu-item a:before {

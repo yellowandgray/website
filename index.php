@@ -100,14 +100,14 @@ $categories = $db->selectAllWithoutWhere('categories');
                                             <li class="menu-item"><a href="#ourpartner" data-content="OUR PARTNERS">OUR PARTNERS</a></li>
                                             <li class="menu-item"><a href="#contact_section" data-content="CONTACT US">CONTACT US</a></li>
                                         </div>
-                                        <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-3 mCSB_scrollTools_vertical" style="display: block;">
+<!--                                        <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-3 mCSB_scrollTools_vertical" style="display: block;">
                                             <div class="mCSB_draggerContainer">
                                                 <div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 385px; max-height: 490px; top: 0px;">
                                                     <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
                                                 </div>
                                                 <div class="mCSB_draggerRail"></div>
                                             </div>
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </ul>
                             </div>
