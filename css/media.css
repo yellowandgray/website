@@ -303,6 +303,8 @@ screen and (height:1024px) {
     .our_partner_heading ul{width: 100%;margin-left: 0;}
     .our_team_partner{width: 100%;}
     .border-line {height: auto}
+/*    #about_section {padding: 0 0 0 0 !important;}*/
+    .padding-l-r-20 {padding-left: 0px !important;}
 
 }
 
