@@ -807,25 +807,32 @@ $categories = $db->selectAllWithoutWhere('categories');
                                             <br>Selangor Darul Ehsan, Malaysia.</p>
                                         <ul>
                                             <li>
-                                                <span><img src="img/call_icon.png" alt="" title=""></span>
+<!--                                                <span></span>-->
+                                                <img src="img/call_icon1.png" alt="" title="">
                                                 <div class="footer_mobile">
                                                     <a href="tel:+603-7954 7059">+603 7954 7059</a>
                                                     <a href="tel:+603-7931 0352">+603-7931 0352</a>
                                                 </div>
                                             </li>
                                             <li>
-                                                <a href="#"> <span><img src="img/fax.png" alt="" title=""></span>
+                                                <a href="#"> 
+<!--                                            <span></span>-->
+                                                    <img src="img/fax1.png" alt="" title="">
                                                     <p>+603-7954 0059</p>
                                                 </a>
                                                 <p><a href="#"></a></p></li>
                                             <li>
-                                                <a href="#"> <span><img src="img/mail.png" alt="" title=""></span>
+                                                <a href="#"> 
+<!--                                                    <span></span>-->
+                                                    <img src="img/mail1.png" alt="" title="">
                                                     <p>products@macworldinc.com</p>
                                                 </a>
                                                 <p><a href="#"></a></p>
                                             </li>
                                             <li>
-                                                <a href="#"> <span><img src="img/web.png" alt="" title=""></span>
+                                                <a href="#"> 
+<!--                                                    <span></span>-->
+                                                    <img src="img/web1.png" alt="" title="">
                                                     <p>www.macworldinc.com</p>
                                                 </a><p><a href="#">                                        </a>
                                                 </p>
