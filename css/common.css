@@ -1,0 +1,14 @@
+.color-white {
+    color: #fff !important;
+}
+
+.span-font span {
+    font-size: 12px;
+}
+
+@media (min-width: 320px) and (max-width: 664px) {
+    .faq-info .nav-tabs li {
+        width: 100%;
+        margin: 2px 0px;
+    }
+}

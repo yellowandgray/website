@@ -108,6 +108,16 @@
         caption: true
     });
 </script>
+<script>
+    $('#demo1_thumbs1').desoSlide({
+        main: {
+            container: '#demo1_main_image1',
+            cssClass: 'img-responsive'
+        },
+        effect: 'sideFade',
+        caption: true
+    });
+</script>
 <!-- //team desoslide-JavaScript -->
 <!-- Flexslider-js for-testimonials -->
 <script src="js/jquery.flexisel.js"></script>

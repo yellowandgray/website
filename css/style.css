@@ -1,7 +1,7 @@
 /*--Author: W3Layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
+        Author URL: http://w3layouts.com
+        License: Creative Commons Attribution 3.0 Unported
+        License URL: http://creativecommons.org/licenses/by/3.0/
  --*/
 
 html,
@@ -370,6 +370,8 @@ ul.nav.navbar-nav li.active {
 
 #services {
     background: #eee;
+    background: url(../images/bg-commodity-1.jpg) no-repeat;
+    background-size: cover;
 }
 
 .section {
@@ -442,7 +444,7 @@ a.abtlink {
 
 .abt-pos {
     position: absolute;
-    top: 37%;
+    top: 13%;
     width: 100%;
     z-index: 1;
     left: 12%;
@@ -568,12 +570,13 @@ a.close {
     list-style-type: none;
     margin: 1em 0 0.5em;
     padding: 1em 0;
-    color: #000;
+    color: #bc3c82;
     text-transform: capitalize;
     font-size: 1.2em;
     -webkit-box-shadow: 5px 10px 10px 0px rgba(216, 216, 216, 0.78);
     -moz-box-shadow: 5px 10px 10px 0px rgba(216, 216, 216, 0.78);
     box-shadow: 5px 10px 10px 0px rgba(216, 216, 216, 0.78);
+    font-weight: bold;
 }
 
 .man-grid ul li i {
@@ -585,6 +588,7 @@ a.close {
 .man-grid ul li p {
     font-size: 0.9em;
     margin-top: 8px;
+    font-weight: 500;
 }
 
 h4.man-txt {
@@ -643,6 +647,11 @@ p.about-text-w3l {
 
 .w3ls-about-grid {
     padding: 2.5em 1em;
+    /* border: 2px solid #984091; */
+    margin-bottom: 20px;
+    height: 390px;
+    background: #fff;
+    border-radius: 10px;
 }
 
 .container2 h5 {
@@ -701,9 +710,9 @@ h3.title {
 .w3ls-about-grid h6 {
     text-transform: capitalize;
     font-size: 1.5em;
-    margin: 1em 0;
+    margin: 10px 0;
     letter-spacing: 1px;
-    color: #000000;
+    color: #bc3c82;
     font-weight: 700;
 }
 
@@ -712,8 +721,9 @@ h3.title {
 }
 
 .w3ls-about-grid i {
-    color: #026fbf;
-    font-size: 3em;
+    color: #0643c4;
+    font-size: 1em;
+    margin: 0 10px;
 }
 
 /*.service-subgrids:nth-child(odd) {
@@ -851,7 +861,7 @@ div#team h3.title-txt span {
     padding: 15px 20px;
     margin: 0;
     border: none;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     opacity: .5;
     border-radius: 0;
     background: #fff;
@@ -1763,7 +1773,7 @@ p.footer-class a:hover {
         padding: 5em 3em;
     }
     legend {
-        width: 62%;
+        width: auto;
     }
     .abt-container {
         width: 61%;
@@ -1779,7 +1789,7 @@ p.footer-class a:hover {
         margin-top: 8em;
     }
     legend {
-        width: 65%;
+        width: auto;
     }
     .stats-info {
         padding: 0 0em 23em;
@@ -1809,7 +1819,7 @@ p.footer-class a:hover {
         padding: 0 0em 25em;
     }
     .abt-pos {
-        top: 43%;
+        top: 10%;
     }
     .map {
         width: 64%;
@@ -1839,7 +1849,7 @@ p.footer-class a:hover {
         width: 74%;
     }
     legend {
-        width: 58%;
+        width: auto;
     }
     .man-grid {
         padding: 0;
@@ -1895,7 +1905,7 @@ p.footer-class a:hover {
         font-size: 1.8em;
     }
     legend {
-        width: 61%;
+        width: auto;
     }
     .nbs-flexisel-nav-left,
     .nbs-flexisel-nav-right {
@@ -1940,7 +1950,7 @@ p.footer-class a:hover {
         margin-bottom: 0;
     }
     legend {
-        width: 65%;
+        width: auto;
     }
     .abt-pos {
         left: 5%;
@@ -1952,13 +1962,13 @@ p.footer-class a:hover {
         padding: 0 0em 42em;
     }
     .abt-pos {
-        top: 28%;
+        top: 7%;
     }
     .about-left {
         margin-bottom: 2em;
     }
     legend {
-        width: 55%;
+        width: auto;
     }
     .about-left p {
         width: 72%;
@@ -2057,7 +2067,7 @@ p.footer-class a:hover {
         font-size: 2.8em;
     }
     legend {
-        width: 62%;
+        width: auto;
     }
 }
 
@@ -2076,7 +2086,7 @@ p.footer-class a:hover {
         font-size: 1.6em;
     }
     legend {
-        width: 66%;
+        width: auto;
         font-size: 1.7em;
     }
     .numscroller {
@@ -2162,7 +2172,7 @@ p.footer-class a:hover {
         min-height: 377px;
     }
     legend {
-        width: 68%;
+        width: auto;
     }
     .w3ls-about-right {
         padding: 0;
@@ -2204,7 +2214,7 @@ p.footer-class a:hover {
         padding: 2em 0.55em;
     }
     legend {
-        width: 72%;
+        width: auto;
         font-size: 1.6em;
     }
     fieldset {
@@ -2238,7 +2248,7 @@ p.footer-class a:hover {
         margin: 1em 0.5em;
     }
     .abt-pos {
-        top: 36%;
+        top: 7%;
         left: 3%;
     }
     .faq-info .nav-tabs {
@@ -2273,7 +2283,7 @@ p.footer-class a:hover {
         font-size: 1.3em;
     }
     legend {
-        width: 74%;
+        width: auto;
     }
     .team-w3text {
         width: 60%;
@@ -2323,11 +2333,11 @@ p.footer-class a:hover {
         font-size: 2.4em;
     }
     legend {
-        width: 78%;
+        width: auto;
         margin-bottom: 0;
     }
     .abt-pos {
-        top: 34%;
+        top: 7%;
         left: 15px;
     }
     .stats-grid {
@@ -2408,7 +2418,7 @@ p.footer-class a:hover {
         min-height: 235px;
     }
     legend {
-        width: 93%;
+        width: auto;
     }
     .stats-info {
         padding: 0 0em 43em;
@@ -2535,7 +2545,7 @@ p.footer-class a:hover {
     }
     legend {
         padding: 0 0.5em;
-        width: 100%;
+        width: auto;
         font-size: 1.5em;
     }
     .stats-grid {
@@ -2643,7 +2653,7 @@ p.footer-class a:hover {
         padding: 0 0em 44em;
     }
     .abt-pos {
-        top: 41%;
+        top: 7%;
     }
     div#about {
         padding-bottom: 4em;
