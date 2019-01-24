@@ -2081,3 +2081,7 @@ input#clear_product {
 .padding-t-80 {
     padding-top: 80px;
 }
+
+.email-margin-b {
+    margin-bottom: -20px !important;
+}

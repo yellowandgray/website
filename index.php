@@ -117,10 +117,10 @@ $categories = $db->selectAllWithoutWhere('categories');
                             </div>
                         </div>
                         <ul class="nav_menu clearfix">
+                            <li class="email-margin-b"><a href="#">Email</a></li>
                             <li><a href="#">LinkedIN</a></li>
                             <li><a href="#">Facebook</a></li>
                             <li><a href="#">Instagram</a></li>
-                            <li><a href="mailto:">Email</a></li>
                             <li class="mobile-language search-panel-right">
                                 <div class="language_flag select_language text-center" style="display: inline-block;">
                                     <select class="language_select">
