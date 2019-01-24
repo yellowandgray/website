@@ -278,7 +278,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                         <input type="text" name="contact" pattern="[0-9]{10}" class="form-control" placeholder="Contact Number" />
                                         <br/>
                                         <textarea row="4" type="text" name="message" class="form-control" placeholder="Leave Comments"></textarea>
-                                        <p style="float:left;color:#555">Upload CV</p> <input type="file" name="upload" class="form-control" accept="image/pdf*">
+                                        <p style="float:left;color:#555;font-size: 14px;margin: 10px 0 0;">Upload CV</p> <input type="file" name="upload" class="form-control" accept="image/pdf*">
                                         <br/>
                                         <a href="#" class="about_us_btn">Submit</a>
                                     </from>
@@ -859,7 +859,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <input type="text" name="contact" pattern="[0-9]{10}" class="form-control" placeholder="Contact Number" />
                                                 <br/>
                                                 <textarea row="4" type="text" name="message" class="form-control" placeholder="Leave Comments"></textarea>
-                                                <p style="float:left;color:#555">Upload CV</p> <input type="file" name="upload" class="form-control" accept="image/pdf*">
+                                                <p style="float:left;color:#555;font-size: 14px;margin: 10px 0 0;">Upload CV</p> <input type="file" name="upload" class="form-control" accept="image/pdf*">
                                                 <br/>
                                                 <a href="#" class="about_us_btn">Submit</a>
                                             </from>
