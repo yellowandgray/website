@@ -2849,3 +2849,12 @@ p.footer-class a:hover {
 }
 
 /* -- //Responsive code -- */
+
+.bold {
+    font-weight: bold;
+}
+
+.margin-tp-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
