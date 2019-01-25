@@ -364,7 +364,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Technology</a>
                         </li>
                         <li role="presentation">
-                            <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Support Hub</a>
+                            <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Competitive Edge</a>
                         </li>
                         <li role="presentation">
                             <a href="#tab4" aria-controls="messages" role="tab" data-toggle="tab">Accreditations</a>
@@ -947,7 +947,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <!-- //testimonials -->
         <!-- contact -->
-        <div class="contact-main section" id="contact">
+        <div class="contact-main section" id="contact" style="background: #ddd;">
             <div class="container">
                 <h3 class="title-txt">
                     <span>c</span>ontact us</h3>
