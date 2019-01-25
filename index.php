@@ -361,7 +361,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <a href="#testi" aria-controls="testi" role="tab" data-toggle="tab">Business Model</a>
                         </li>
                         <li role="presentation">
-                            <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Technology & Industry Sectors</a>
+                            <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Technology & Industry</a>
                         </li>
                         <li role="presentation">
                             <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Competitive Edge</a>
@@ -457,7 +457,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div role="tabpanel" class="tab-pane" id="profile">
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
-                                    <h3>Technology</h3>
+                                    <h3 class="text-center color-white bold margin-tp-20">Technology</h3>
                                     <div class="row">
                                         <div class="col-md-2"></div>
                                         <div class="col-md-8  latest-grid text-center">
@@ -501,7 +501,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>-->
                                     </div>
                                     <div class="row" style="padding-top: 20px;">
-                                        <h3>Industry Sectors</h3>
+                                        <h3 class="text-center color-white bold margin-tp-20">Industry Sectors</h3>
                                         <div class="col-md-12">
                                             <section class="customer-logos slider silder-bg">
                                                 <div class="slide"><img src="images/industry-sectors/001.png"></div>
@@ -996,7 +996,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="slide"><img src="images/clients/alias-016.jpg"></div>
                 </section>
                 <div class="map text-center">
-                    <h2>Our wide range of Branches </h2>
+<!--                    <h2>Our wide range of Branches </h2>-->
 
                     <img src="images/map.png" alt="" class="img-responsive" />
                 </div>
@@ -1028,7 +1028,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </ul>
                     </div>
                 </div>
-                  <div class="col-md-4 contact-leftgrid">
+                <div class="col-md-4 contact-leftgrid">
                     <div class="contact-g1">
                         <h6>Get In Touch</h6>
                         <ul class="address">
@@ -1048,7 +1048,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </ul>
                     </div>
                 </div>
-                  <div class="col-md-4 contact-leftgrid">
+                <div class="col-md-4 contact-leftgrid">
                     <div class="contact-g1">
                         <h6>Get In Touch</h6>
                         <ul class="address">
@@ -1098,18 +1098,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-<!--                    <div class="col-md-8 contact-g3">
-                        <div class="subscribe-grid ">
-                            <p>subscribe To receive helpful articles, customer alerts,services & more.</p>
-
-                            <form action="#" method="post">
-                                <input type="email" placeholder="Your Email" name="Subscribe" required="">
-                                <button class="btn1">
-                                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>-->
+                    <!--                    <div class="col-md-8 contact-g3">
+                                            <div class="subscribe-grid ">
+                                                <p>subscribe To receive helpful articles, customer alerts,services & more.</p>
+                    
+                                                <form action="#" method="post">
+                                                    <input type="email" placeholder="Your Email" name="Subscribe" required="">
+                                                    <button class="btn1">
+                                                        <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>-->
                 </div>
 
                 <div class="clearfix"></div>
