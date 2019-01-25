@@ -352,7 +352,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="section faq">
             <div class="container">
                 <h3 class="title-txt text-center">
-                    <span>F</span>AQ</h3>
+                    <span>W</span>HY US</h3>
 
                 <div class="faq-info">
                     <!-- Nav tabs -->
