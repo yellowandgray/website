@@ -16,3 +16,13 @@
 .faq-font h5 {
     font-size: 1.1em !important;
 }
+
+.desoSlide-wrapper {
+    padding-top: 94px;
+}
+
+.silder-bg {
+    background: #fff;
+    padding: 10px;
+    border: 2px solid #ff5050;
+}
