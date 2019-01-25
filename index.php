@@ -113,7 +113,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--                <h3 class="title-txt"><span>C</span>ommodity</h3>-->
                 <h3 class="title-txt color-white">Commodity</h3>
 <!--                <h5>we offer products and services for your<span>personal</span> and<span>professional banking</span> needs.</h5>-->
-                <h5 class="color-white">we offer products and services for your personal and professional banking needs.</h5>
+                <h5 class="color-white">we offer products and services for your personal and professional needs.</h5>
                 <div class="row">
                     <div class="col-md-4 text-center">
                         <div class="w3ls-about-grid">
@@ -358,7 +358,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active">
-                            <a href="#testi" aria-controls="testi" role="tab" data-toggle="tab">Business Modal</a>
+                            <a href="#testi" aria-controls="testi" role="tab" data-toggle="tab">Business Model</a>
                         </li>
                         <li role="presentation">
                             <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Technology</a>
@@ -684,6 +684,76 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
             </div>
         </div>
+        <!-- team -->
+        <div class="team section" id="team">
+            <div class="container">
+                <h3 class="title-txt">
+                    <span>T</span>eam</h3>
+                <div class="new-agileinfo">
+                    <div class="col-md-4 col-xs-5 team-left">
+                        <ul id="demo1_thumbs" class="list-inline">
+                            <li>
+                                <a href="images/t1.jpg">
+                                    <img src="images/t1.jpg" alt="" data-desoslide-caption="<h3>Maecenas aliqua</h3>  Eligendi optio nam libero tempore cum soluta nobis est cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
+                                    <div class="team-w3text">
+                                        <h4>Samuel C. Kelly</h4>
+                                        <p>Chairman of the Board</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/t2.jpg">
+                                    <img src="images/t2.jpg" alt="" data-desoslide-caption="<h3>Facere possimus </h3>  Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
+                                    <div class="team-w3text">
+                                        <h4>Agnes</h4>
+                                        <p>Deputy Manager</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/t3.jpg">
+                                    <img src="images/t3.jpg" alt="" data-desoslide-caption="<h3>Nulla molestie</h3>  Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
+                                    <div class="team-w3text">
+                                        <h4>Michael</h4>
+                                        <p>Financial Manager</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/t4.jpg">
+                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>Duis accumsan</h3>  Eligendi optio nam libero tempore cum soluta nobis est cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
+                                    <div class="team-w3text">
+                                        <h4>Hudson</h4>
+                                        <p>General Manager </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/t4.jpg">
+                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>Duis accumsan</h3>  Eligendi optio nam libero tempore cum soluta nobis est cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
+                                    <div class="team-w3text">
+                                        <h4>Hudson</h4>
+                                        <p>General Manager </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/t4.jpg">
+                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>Duis accumsan</h3>  Eligendi optio nam libero tempore cum soluta nobis est cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
+                                    <div class="team-w3text">
+                                        <h4>Hudson</h4>
+                                        <p>General Manager </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="demo1_main_image" class="col-md-8 col-xs-7 team-right"></div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <!-- //team -->
         <!-- gallery -->
         <div class="jarallax section gallery" id="gallery">
             <div class="container">
@@ -776,58 +846,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
         <!-- //gallery -->
-        <!-- team -->
-        <div class="team section" id="team">
-            <div class="container">
-                <h3 class="title-txt">
-                    <span>T</span>eam</h3>
-                <div class="new-agileinfo">
-                    <div class="col-md-4 col-xs-5 team-left">
-                        <ul id="demo1_thumbs" class="list-inline">
-                            <li>
-                                <a href="images/t1.jpg">
-                                    <img src="images/t1.jpg" alt="" data-desoslide-caption="<h3>Maecenas aliqua</h3>  Eligendi optio nam libero tempore cum soluta nobis est cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
-                                    <div class="team-w3text">
-                                        <h4>Samuel C. Kelly</h4>
-                                        <p>Chairman of the Board</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/t2.jpg">
-                                    <img src="images/t2.jpg" alt="" data-desoslide-caption="<h3>Facere possimus </h3>  Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
-                                    <div class="team-w3text">
-                                        <h4>Agnes</h4>
-                                        <p>Deputy Manager</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/t3.jpg">
-                                    <img src="images/t3.jpg" alt="" data-desoslide-caption="<h3>Nulla molestie</h3>  Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
-                                    <div class="team-w3text">
-                                        <h4>Michael</h4>
-                                        <p>Financial Manager</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/t4.jpg">
-                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>Duis accumsan</h3>  Eligendi optio nam libero tempore cum soluta nobis est cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
-                                    <div class="team-w3text">
-                                        <h4>Hudson</h4>
-                                        <p>General Manager </p>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="demo1_main_image" class="col-md-8 col-xs-7 team-right"></div>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-        </div>
-        <!-- //team -->
         <!-- testimonials -->
         <div class="testimonials section" id="testimonials">
             <div class="container">
