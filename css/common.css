@@ -12,3 +12,7 @@
         margin: 2px 0px;
     }
 }
+
+.faq-font h5 {
+    font-size: 1.1em !important;
+}

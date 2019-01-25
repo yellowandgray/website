@@ -518,50 +518,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
-                                        <div class="faq-left">
-                                            <div class="text-center">
-                                                <img src="images/accreditations/001.png" alt=""> 
-                                            </div>
-                                            <h5>Persatuan Industri Komputer Dan Multimedia Malaysia</h5>
+                                        <div class="faq-left faq-font">
+                                            <h5><img src="images/accreditations/001.png" alt="">  Persatuan Industri Komputer Dan Multimedia Malaysia</h5>
                                             <p>PIKOM, THE NATIONAL ICT ASSOCIATION OF MALAYSIA is the association representing the information and communications technology (ICT) industry in Malaysia.</p>
                                         </div>
-                                        <div class="faq-left">
-                                            <div class="text-center">
-                                                <img src="images/accreditations/002.png" alt=""> 
-                                            </div>
-                                            <h5>Technopreneurs Association of Malaysia(TEAM)</h5>
-                                            <p>The Technopreneurs Association of Malaysia (“TeAM”) has been formed by a group of Malaysian Technopreneurs to further the interests of Technopreneurs and to assist in the development of the technology based industry in Malaysia. Our mission is to be the voice of Technopreneurs and to enhance the ecosystem for all Technopreneurs by identifying and formulating policy proposal for the relevant stakeholders and lobbying for these proposals to be officially incorporated.</p>
+                                        <div class="faq-left faq-font">
+                                            <h5><img src="images/accreditations/002.png" alt="">  Technopreneurs Association of Malaysia(TEAM)</h5>
+                                            <p>The Technopreneurs Association of Malaysia (“TeAM”) has been formed by a group of Malaysian Technopreneurs to further the interests of Technopreneurs and to assist in the development of the technology based industry in Malaysia.</p>
                                         </div>
-                                        <div class="faq-left">
-                                            <div class="text-center">
-                                                <img src="images/accreditations/003.png" alt=""> 
-                                            </div>
-                                            <h5>The Institue Of Asset Management</h5>
-                                            <p>The IAM developed the Anatomy to provide an appreciation of asset management, for both experts and newcomers: what it is, what it can achieve, the scope of the discipline and a description of the underlying concepts and philosophy. Asset Management - an anatomy Version 3 (2015) has been accessed over 1000 times.<br/>It is intended to:help individuals on their asset management journey to better understand the discipline, where to find more information, and what to do next<br/>help organizations to decide whether to adopt asset management and/ or improve their asset management capability</p>
+                                        <div class="faq-left faq-font">
+                                                
+                                            <h5><img src="images/accreditations/003.png" alt="">  The Institue Of Asset Management</h5>
+                                            <p>The IAM developed the Anatomy to provide an appreciation of asset management, for both experts and newcomers: what it is, what it can achieve, the scope of the discipline and a description of the underlying concepts and philosophy.</p>
                                         </div>
 
                                     </div>
                                     <div class="col-md-6 latest-grid">
-                                        <div class="faq-left">
-                                            <div class="text-center">
-                                                <img src="images/accreditations/004.png" alt=""> 
-                                            </div>
-                                            <h5>The Institue Of Internal Auditors Malaysia</h5>
-                                            <p>THE INSTITUTE OF INTERNAL AUDITORS MALAYSIA (IIA Malaysia) is a non-profit professional organization dedicated to the advancement and development of the internal audit profession in Malaysia.<br/>IIA Malaysia was established in 1977 as a Chapter of The Institute of Internal Auditors Inc, USA and elevated to the status of a National Institute in 1988 when our membership exceeded the 500 mark. In July 1994, IIA Malaysia was incorporated as a Company Limited by Guarantee and since then, we have grown progressively in size and stature. Today, we serve more than 3000 members in Malaysia.</p>
+                                        <div class="faq-left faq-font">
+                                            <h5><img src="images/accreditations/004.png" alt="">  The Institue Of Internal Auditors Malaysia</h5>
+                                            <p>THE INSTITUTE OF INTERNAL AUDITORS MALAYSIA (IIA Malaysia) is a non-profit professional organization dedicated to the advancement and development of the internal audit profession in Malaysia.</p>
                                         </div>
-                                        <div class="faq-left">
-                                            <div class="text-center">
-                                                <img src="images/accreditations/005.png" alt=""> 
-                                            </div>
-                                            <h5>Malaysian Finance Association</h5>
-                                            <p>The Malaysian Finance Association (MFA) was officially established in September 1998 and is currently registered under the Faculty of Business Management, Universiti Teknologi MARA (UiTM).<br/>It was formed through the initiative of a group of finance academicians from various public higher learning institutions in the Kuala Lumpur who feels the need to consolidate effort in promoting awareness and interest in the field of finance.<br/>The objectives of MFA are to:<br/>Stimulate public interest in finance related studies<br/>Encourage and promote research and discussion of finance related issues with special reference to Malaysia<br/>Play a supporting role in promoting Kuala Lumpur as the regional financial centre.</p>
+                                        <div class="faq-left faq-font">
+                                               
+                                            <h5><img src="images/accreditations/005.png" alt="">  Malaysian Finance Association</h5>
+                                            <p>The Malaysian Finance Association (MFA) was officially established in September 1998 and is currently registered under the Faculty of Business Management, Universiti Teknologi MARA (UiTM).</p>
                                         </div>
-                                        <div class="faq-left">
-                                            <div class="text-center">
-                                                <img src="images/accreditations/006.png" alt=""> 
-                                            </div>
-                                            <h5>Malaysian Association Of Facility Management</h5>
-                                            <p>Persatuan Pengurusan Fasiliti Malaysia, or Malaysian Association of Faclity Management (MAFM) was initially formed in 2005 with it’s major agendas to bridge academicians with industry players on knowledge sharing podium via strengthening all aspects of Facility Management, spearheads FM related activities and to establish MAFM as a valid and legal society in Malaysia. It was led by Professor Dr Hjh Maziah Ismail as the President and a majority group of academicians, supported by few industry players.</p>
+                                        <div class="faq-left faq-font">
+                                                
+                                            <h5><img src="images/accreditations/006.png" alt="">  Malaysian Association Of Facility Management</h5>
+                                            <p>Persatuan Pengurusan Fasiliti Malaysia, or Malaysian Association of Faclity Management (MAFM) was initially formed in 2005 to bridge academicians with industry players on knowledge sharing podium on Facility Management related activities.</p>
                                         </div>
                                     </div>
                                     <div class="clearfix"> </div>
