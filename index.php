@@ -361,10 +361,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <a href="#testi" aria-controls="testi" role="tab" data-toggle="tab">Business Model</a>
                         </li>
                         <li role="presentation">
-                            <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Technology</a>
+                            <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Technology & Industry Sectors</a>
                         </li>
                         <li role="presentation">
-                            <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Support Hub</a>
+                            <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Competitive Edge</a>
                         </li>
                         <li role="presentation">
                             <a href="#tab4" aria-controls="messages" role="tab" data-toggle="tab">Accreditations</a>
@@ -457,47 +457,73 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div role="tabpanel" class="tab-pane" id="profile">
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
-                                    <div class="col-md-2"></div>
-                                    <div class="col-md-8  latest-grid text-center">
-                                        <img src="images/technology/platform-4.0.jpg" alt="" class="img-responsive" >
+                                    <h3>Technology</h3>
+                                    <div class="row">
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-8  latest-grid text-center">
+                                            <img src="images/technology/platform-4.0.jpg" alt="" class="img-responsive" >
+                                        </div>
+                                        <div class="col-md-2"></div>
+                                        <!--                                    <div class="col-md-6  latest-grid">
+                                                                                <div class="faq-left">
+                                                                                    <h5>
+                                                                                        <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
+                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
+                                                                                </div>
+                                                                                <div class="faq-left">
+                                                                                    <h5>
+                                                                                        <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
+                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
+                                                                                </div>
+                                                                                <div class="faq-left">
+                                                                                    <h5>
+                                                                                        <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
+                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
+                                                                                </div>
+                                        
+                                                                            </div>
+                                                                            <div class="col-md-6 latest-grid">
+                                                                                <div class="faq-left">
+                                                                                    <h5>
+                                                                                        <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
+                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
+                                                                                </div>
+                                                                                <div class="faq-left">
+                                                                                    <h5>
+                                                                                        <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
+                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
+                                                                                </div>
+                                                                                <div class="faq-left">
+                                                                                    <h5>
+                                                                                        <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
+                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
+                                                                                </div>
+                                        </div>-->
                                     </div>
-                                    <div class="col-md-2"></div>
-                                    <!--                                    <div class="col-md-6  latest-grid">
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                    
-                                                                        </div>
-                                                                        <div class="col-md-6 latest-grid">
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                        </div>-->
-                                    <div class="clearfix"> </div>
+                                    <div class="row" style="padding-top: 20px;">
+                                        <h3>Industry Sectors</h3>
+                                        <div class="col-md-12">
+                                            <section class="customer-logos slider silder-bg">
+                                                <div class="slide"><img src="images/industry-sectors/001.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/002.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/003.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/004.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/005.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/006.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/007.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/008.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/009.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/010.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/011.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/012.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/013.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/014.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/015.png"></div>
+                                                <div class="slide"><img src="images/industry-sectors/016.png"></div>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -725,55 +751,55 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <ul id="demo1_thumbs" class="list-inline">
                             <li>
                                 <a href="images/t1.jpg">
-                                    <img src="images/t1.jpg" alt="" data-desoslide-caption="<h3>Maecenas aliqua</h3>  Eligendi optio nam libero tempore cum soluta nobis est cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
+                                    <img src="images/t1.jpg" alt="" data-desoslide-caption="<h3>GERARD PILLAI</h3>  More than 25 years in Finance, Technology and Strategic Consulting with exposure to Multi National Corporations including stints with Coopers & Lybrand, United Nations funded Agency and Tech Start Ups. Armed with an MBA in International Management and a Degree in Accounting & Finance. Currently pursuing Doctorate at a leading University.">
                                     <div class="team-w3text">
-                                        <h4>Samuel C. Kelly</h4>
-                                        <p>Chairman of the Board</p>
+                                        <h4>GERARD PILLAI</h4>
+                                        <p>Chief Strategy Evangelist</p>
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="images/t2.jpg">
-                                    <img src="images/t2.jpg" alt="" data-desoslide-caption="<h3>Facere possimus </h3>  Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
+                                    <img src="images/t2.jpg" alt="" data-desoslide-caption="<h3>Facere possimus </h3>  Armed with Bachelor of Science in Electrical & Electronic Engineering and has nearly 12 years of vital industry experience in construction, commodity trading, transportation and ICT. Has managed multiple accounts for construction clients to design and build specialize structure and provided strategic consulting for clients business  movement. Also did a consultation for ICT and newly startup corporations for marketing and planning.">
                                     <div class="team-w3text">
-                                        <h4>Agnes</h4>
-                                        <p>Deputy Manager</p>
+                                        <h4>MUHAMAD FAHIM</h4>
+                                        <p>Director Corporate Strategy</p>
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="images/t3.jpg">
-                                    <img src="images/t3.jpg" alt="" data-desoslide-caption="<h3>Nulla molestie</h3>  Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
+                                    <img src="images/t3.jpg" alt="" data-desoslide-caption="<h3>Nulla molestie</h3>  Armed with a Degree in International Business and has nearly 10 years of vital industry experience in commodity trading, management, shipping, forwarding and logistics. Has managed multiple accounts for import and export clients and provided strategic consulting for ground logistics movement and warehousing . Also did consultation for Food and Beverage Businesses.">
                                     <div class="team-w3text">
-                                        <h4>Michael</h4>
-                                        <p>Financial Manager</p>
+                                        <h4>IZAT EMIR BIN ADB AZIZ</h4>
+                                        <p>Director Corporate Strategy</p>
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="images/t4.jpg">
-                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>Duis accumsan</h3>  Eligendi optio nam libero tempore cum soluta nobis est cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
+                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>JHONIE FEGIDERO</h3> Digital Disruptor">
                                     <div class="team-w3text">
-                                        <h4>Hudson</h4>
-                                        <p>General Manager </p>
+                                        <h4>JHONIE FEGIDERO</h4>
+                                        <p>Digital Disruptor</p>
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="images/t4.jpg">
-                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>Duis accumsan</h3>  Eligendi optio nam libero tempore cum soluta nobis est cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
+                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>JENIKA FEGIDERO</h3> Marketing Manager">
                                     <div class="team-w3text">
-                                        <h4>Hudson</h4>
-                                        <p>General Manager </p>
+                                        <h4>JENIKA FEGIDERO</h4>
+                                        <p>Marketing Manager</p>
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="images/t4.jpg">
-                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>Duis accumsan</h3>  Eligendi optio nam libero tempore cum soluta nobis est cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus">
+                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>C. VENKATESWARAN</h3> Country Head, India">
                                     <div class="team-w3text">
-                                        <h4>Hudson</h4>
-                                        <p>General Manager </p>
+                                        <h4>C. VENKATESWARAN</h4>
+                                        <p>Country Head, India</p>
                                     </div>
                                 </a>
                             </li>
@@ -952,22 +978,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </ul>-->
                 <!--                //Replace the images with the client logos of your customers-->
                 <section class="customer-logos slider">
-                    <div class="slide"><img src="images/industry-sectors/001.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/002.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/003.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/004.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/005.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/006.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/007.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/008.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/009.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/010.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/011.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/012.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/013.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/014.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/015.png"></div>
-                    <div class="slide"><img src="images/industry-sectors/016.png"></div>
+                    <div class="slide"><img src="images/clients/alias-001.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-002.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-003.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-004.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-005.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-006.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-007.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-008.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-009.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-010.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-011.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-012.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-013.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-014.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-015.jpg"></div>
+                    <div class="slide"><img src="images/clients/alias-016.jpg"></div>
                 </section>
                 <div class="map text-center">
                     <h2>Our wide range of Branches </h2>
@@ -978,7 +1004,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <!-- //testimonials -->
         <!-- contact -->
-        <div class="contact-main section" id="contact">
+        <div class="contact-main section" id="contact" style="background: #ddd;">
             <div class="container">
                 <h3 class="title-txt">
                     <span>c</span>ontact us</h3>
