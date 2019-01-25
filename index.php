@@ -379,38 +379,74 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
-                                        <div class="faq-left">
-                                            <img src="images/business-modal.jpg" alt="" style="width: 235px">
-<!--                                            <h5><i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>-->
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/business/image-01.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <br/>
+                                                    <br/>
+                                                    <h4><strong>BUSINESS MODEL</strong></h4>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="faq-left">
-                                            <h5>
-                                                <img src="images/business-modal/001.png" alt=""> RENTAL</h5>
-                                            <p>Fixed amount paid every month based on overall project value, spread over an agreed duration e.g 12, 24, 30 months</p>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/business/image-02.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h5>RENTAL</h5>
+                                                    <p class="padding-lf-0">Fixed amount paid every month based on overall project value, spread over an agreed duration e.g 12, 24, 30 months</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="faq-left">
-                                            <h5>
-                                                <img src="images/business-modal/002.png" alt=""> ONE TIME  FEE</h5>
-                                            <p>One off fee based on time cost and scope of work</p>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/business/image-05.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h5>PROJECT DRIVEN</h5>
+                                                    <p class="padding-lf-0">Fees based on value of project e.g. % of value subject to scope and deliverables & output. Also based on internal funds invested in deploying project and activities.</p>
+                                                </div>
+                                            </div>
                                         </div>
-
                                     </div>
                                     <div class="col-md-6 latest-grid">
-                                        <div class="faq-left">
-                                            <h5>
-                                                <img src="images/business-modal/003.png" alt=""> RETAINER</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/business/image-04.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h5>RETAINER</h5>
+                                                    <p class="padding-lf-0">Monthly retainers and payments based on scope and deliverables, subject to 3, 6, 9, 12 months duration.</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="faq-left">
-                                            <h5>
-                                                <img src="images/business-modal/004.png" alt=""> PROJECT DRIVEN</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/business/image-03.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h5>ONE TIME  FEE</h5>
+                                                    <p class="padding-lf-0">One off fee based on time cost and scope of work</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="faq-left">
-                                            <h5>
-                                                <img src="images/business-modal/005.png" alt=""> SUBSCRIPTION</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/business/image-06.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h5>SUBSCRIPTION</h5>
+                                                    <p class="padding-lf-0">Percentage or fixed amount paid every month subject to differentiated packages, whether through offline or online platforms and based on number of users/subscribers.</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="clearfix"> </div>
@@ -557,16 +593,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <img src="images/support-hub/pic-13.png" alt="">
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <p>Structured yet Flexible Commercialization and Business Model</p>
-                                                </div>
-                                            </div>
-                                        </div>
+
+
                                         <div class="faq-left faq-font">
                                             <div class="row">
                                                 <div class="col-md-4">
@@ -629,13 +657,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
                                         <div class="faq-left faq-font">
-                                            <h5>Licences</h5><br/>
-                                            <h5><img src="images/licence/pic-1.png" alt="">Ministry of Finance Malaysia</h5>
-                                            <p class="text-justify">The Minister of Finance (or simply, Finance Minister) (Malay: Menteri Kewangan) is the head of the Ministry of Finance of the Government of Malaysia. One of the senior posts in the Cabinet of Malaysia, the finance minister is responsible for determining the fiscal policy and managing national budget of the government. In many periods the Minister of Finance also served as Prime Minister of Malaysia. The current Minister of Finance is Lim Guan Eng, who took office on 21 May 2018.</p>
+                                            <h3 class="text-center">Licences</h3>
+                                            <h5><img src="images/collaboration/img-01.png" alt=""> &nbsp;&nbsp;Ministry of Finance Malaysia</h5>
+                                            <p class="text-justify">The Minister of Finance (or simply, Finance Minister) (Malay: Menteri Kewangan) is the head of the Ministry of Finance of the Government of Malaysia.</p>
                                         </div>
                                         <div class="faq-left faq-font">
-                                            <h5><img src="images/licence/pic-3.png" alt="">Malaysia External Trade Development Corporation</h5>
-                                            <p class="text-justify">MATRADE’s mission to promote Malaysia’s export has enabled many local companies to carve new frontiers in global markets. Today as we continue to put the spotlight on capable Malaysian companies on the international stage, we are helping make the phrase ‘Made-In-Malaysia’ synonymous with excellence, reliability and trustworthiness.</p>
+                                            <h5><img src="images/collaboration/img-02.png" alt=""> Malaysia External Trade Development Corporation</h5>
+                                            <p class="text-justify">MATRADE’s mission to promote Malaysia’s export has enabled many local companies to carve new frontiers in global markets.</p>
                                         </div>
                                         <!--                                        <div class="faq-left">
                                                                                     <h5>
@@ -651,9 +679,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                     <div class="col-md-6 latest-grid">                                        
                                         <div class="faq-left faq-font faq-font">
-                                            <h5>Collaborations</h5><br/>
-                                            <img src="images/licence/pic-4.png" alt=""> 
-                                            <p class="text-justify">Viva Starfish Project was established with the main objective of educating underprivileged children. Part of the profits from the sale of our main product, which is our RO 500ml water bottle, 'Just Water' had sponsored 31 kids in Klang to improve their knowledge in the English language. This pilot project was a tremendous success and we could see the enthusiasm and pride in each of the children when they were called up to do a presentation. They were also taught moral values and basic love and respect to their peers and teachers, of which was essential to have a harmonious class room environment.</p>
+                                            <h3 class="text-center">Collaborations</h3>
+                                            <div class="text-center">
+                                                <img src="images/collaboration/img-03.png" alt="">
+                                            </div>
+                                            <p class="text-justify">Viva Starfish Project was established with the main objective of educating underprivileged children. Part of the profits from the sale of our main product, which is our RO 500ml water bottle, 'Just Water' had sponsored 31 kids in Klang to improve their knowledge in the English language. </p>
+                                            <p>This pilot project was a tremendous success and we could see the enthusiasm and pride in each of the children when they were called up to do a presentation. They were also taught moral values and basic love and respect to their peers and teachers, of which was essential to have a harmonious class room environment.</p>
                                         </div>
                                         <!--                                        <div class="faq-left">
                                                                                     <h5>
@@ -957,15 +988,55 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <ul class="address">
                             <li>
                                 <span class="fa fa-phone" aria-hidden="true"></span>
-                                +1 234 567 8901
+                                +603 2011 9877
                             </li>
                             <li>
                                 <span class="fa fa-envelope" aria-hidden="true"></span>
-                                <a href="mailto:example@email.com"> mail@example.com</a>
+                                <a href="mailto:example@email.com"> info@alias-innovation.com</a>
                             </li>
                             <li>
                                 <span class="fa fa-map-marker" aria-hidden="true"></span>
-                                Broome St, California.
+                                Penthouse, 16-1, Level 16 Mz5, Wisma UOA Damansara II, No. 6, Changkat Semantan, Damansara Heights, 50490 Kuala Lumpur, Malaysia
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                  <div class="col-md-4 contact-leftgrid">
+                    <div class="contact-g1">
+                        <h6>Get In Touch</h6>
+                        <ul class="address">
+                            <li>
+                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                +603-8066 3258,+6012-908 3258
+                            </li>
+                            <li>
+                                <span class="fa fa-envelope" aria-hidden="true"></span>
+                                <a href="mailto:example@email.com"> info@alias-innovation.com</a>
+                            </li>
+                            <li>
+                                <span class="fa fa-map-marker" aria-hidden="true"></span>
+                                No. 1, Jalan Puteri 12/5, Bandar Puteri Puchong, 47100 Selangor.
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                  <div class="col-md-4 contact-leftgrid">
+                    <div class="contact-g1">
+                        <h6>Get In Touch</h6>
+                        <ul class="address">
+                            <li>
+                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                +91 98404 70876
+                            </li>
+                            <li>
+                                <span class="fa fa-envelope" aria-hidden="true"></span>
+                                <a href="mailto:example@email.com"> info@alias-innovation.com</a>
+                            </li>
+                            <li>
+                                <span class="fa fa-map-marker" aria-hidden="true"></span>
+                                12, Durga Colony 4th Cross Street, Sembakkam Chennai 600073 Tamil Nadu State India.
 
                             </li>
                         </ul>
@@ -1001,7 +1072,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-8 contact-g3">
+<!--                    <div class="col-md-8 contact-g3">
                         <div class="subscribe-grid ">
                             <p>subscribe To receive helpful articles, customer alerts,services & more.</p>
 
@@ -1012,7 +1083,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </button>
                             </form>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
 
                 <div class="clearfix"></div>
