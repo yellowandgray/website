@@ -469,46 +469,116 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div role="tabpanel" class="tab-pane" id="messages">
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
-                                    <div class="col-md-2"></div>
-                                    <div class="col-md-8 latest-grid">
-                                        <img src="images/support-hub/support-hub.jpg" alt="" class="img-responsive" >
-                                    </div>
-                                    <div class="col-md-2"></div>
-                                    <!--                                    <div class="col-md-6  latest-grid">
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                    
+                                    <!--                                    <div class="col-md-2"></div>
+                                                                        <div class="col-md-8 latest-grid">
+                                                                            <img src="images/support-hub/support-hub.jpg" alt="" class="img-responsive" >
                                                                         </div>
-                                                                        <div class="col-md-6 latest-grid">
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                        </div>-->
+                                                                        <div class="col-md-2"></div>-->
+                                    <div class="col-md-6  latest-grid">
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-5.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>100 years Collective Industry Experience</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-6.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Managing Clients with Consolidated Annual Revenue of more than USD 400 million</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-7.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Solid Support Hub Team  from different Nations including Malaysia, Philippines. India and France</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-8.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Accessibility to International Markets and Business Network</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-9.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Top Management are members of Internationally recognized Professional Organizations and Accredited Bodies</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6  latest-grid">
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-10.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Highly Experienced and Diversified Management Team from varied Cultures</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-11.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Skills Knowledge Bank ranging from ICT, Finance, Consulting, Project Management to Logistics</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-12.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>In House developed Intellectual Property and Proprietary Framework and Platform</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-13.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Structured yet Flexible Commercialization and Business Model</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-14.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Developed and Built up a Healthy Client Portfolio across multiple industry verticals</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                     <div class="clearfix"> </div>
                                 </div>
 
