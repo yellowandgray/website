@@ -680,7 +680,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="container">
                 <div class="row">
                     <h3 class="title-txt"><span>S</span>UPPORT HUB</h3>
-                    <img src="images/support-hub/support-hub.jpg" alt="Alias-Support hub">
+                    <img src="images/support-hub/support-hub.jpg" alt="Alias-Support hub" class="img-responsive">
                 </div>
             </div>
         </div>
@@ -850,75 +850,99 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="testimonials section" id="testimonials">
             <div class="container">
                 <h3 class="title-txt">
-                    <span>T</span>estimonials</h3>
-                <ul id="flexiselDemo1">
-                    <li>
-                        <div class="wthree_testimonials_grid_main">
-                            <div class="col-md-6 col-xs-6 wthree_testimonials_grid">
-                                <p>
-                                    <img src="images/left-quote.png" alt=" "> Donec laoreet eu purus eu viverra. Vestibulum sed convallis massa, eu aliquet massa. Suspendisse
-                                    lacinia rutrum tincidunt. Integer id erat porta, convallis.
-                                    <img src="images/right-quote.png" alt=" ">
-                                </p>
-                            </div>
-                            <div class="col-md-6 col-xs-6 wthree_testimonials_grid_pos">
-                                <div class="col-md-5 col-xs-5 grid-test-w3l">
-                                    <img src="images/te3.jpg" alt=" " class="img-responsive" />
-                                </div>
-                                <div class="col-md-7 col-xs-7 wthree_testimonials_grid1">
-                                    <h5>Michael Paul</h5>
-                                    <p>Client</p>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="wthree_testimonials_grid_main">
-                            <div class="col-md-6 col-xs-6 wthree_testimonials_grid">
-                                <p>
-                                    <img src="images/left-quote.png" alt=" "> Donec laoreet eu purus eu viverra. Vestibulum sed convallis massa, eu aliquet massa. Suspendisse
-                                    lacinia rutrum tincidunt. Integer id erat porta, convallis.
-                                    <img src="images/right-quote.png" alt=" ">
-                                </p>
-                            </div>
-                            <div class="col-md-6 col-xs-6 wthree_testimonials_grid_pos">
-                                <div class="col-md-5 col-xs-5 grid-test-w3l">
-                                    <img src="images/te1.jpg" alt=" " class="img-responsive" />
-                                </div>
-                                <div class="col-md-7 col-xs-7 wthree_testimonials_grid1">
-                                    <h5>hael fgul</h5>
-                                    <p>Client</p>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="wthree_testimonials_grid_main">
-                            <div class="col-md-6 col-xs-6 wthree_testimonials_grid">
-                                <p>
-                                    <img src="images/left-quote.png" alt=" "> Donec laoreet eu purus eu viverra. Vestibulum sed convallis massa, eu aliquet massa. Suspendisse
-                                    lacinia rutrum tincidunt. Integer id erat porta, convallis.
-                                    <img src="images/right-quote.png" alt=" ">
-                                </p>
-                            </div>
-                            <div class="col-md-6 col-xs-6 wthree_testimonials_grid_pos">
-                                <div class="col-md-5 col-xs-5 grid-test-w3l">
-                                    <img src="images/te2.jpg" alt=" " class="img-responsive" />
-                                </div>
-                                <div class="col-md-7 col-xs-7 wthree_testimonials_grid1">
-                                    <h5>Linda Carl</h5>
-                                    <p>Client</p>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                    </li>
-                </ul>
+                    <span>I</span>NDUSTRY <span>S</span>ECTORS</h3>
+                <!--                <ul id="flexiselDemo1">
+                                    <li>
+                                        <div class="wthree_testimonials_grid_main">
+                                            <div class="col-md-6 col-xs-6 wthree_testimonials_grid">
+                                                <p>
+                                                    <img src="images/left-quote.png" alt=" "> Donec laoreet eu purus eu viverra. Vestibulum sed convallis massa, eu aliquet massa. Suspendisse
+                                                    lacinia rutrum tincidunt. Integer id erat porta, convallis.
+                                                    <img src="images/right-quote.png" alt=" ">
+                                                </p>
+                                            </div>
+                                            <div class="col-md-6 col-xs-6 wthree_testimonials_grid_pos">
+                                                <div class="col-md-5 col-xs-5 grid-test-w3l">
+                                                    <img src="images/te3.jpg" alt=" " class="img-responsive" />
+                                                </div>
+                                                <div class="col-md-7 col-xs-7 wthree_testimonials_grid1">
+                                                    <h5>Michael Paul</h5>
+                                                    <p>Client</p>
+                                                </div>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="wthree_testimonials_grid_main">
+                                            <div class="col-md-6 col-xs-6 wthree_testimonials_grid">
+                                                <p>
+                                                    <img src="images/left-quote.png" alt=" "> Donec laoreet eu purus eu viverra. Vestibulum sed convallis massa, eu aliquet massa. Suspendisse
+                                                    lacinia rutrum tincidunt. Integer id erat porta, convallis.
+                                                    <img src="images/right-quote.png" alt=" ">
+                                                </p>
+                                            </div>
+                                            <div class="col-md-6 col-xs-6 wthree_testimonials_grid_pos">
+                                                <div class="col-md-5 col-xs-5 grid-test-w3l">
+                                                    <img src="images/te1.jpg" alt=" " class="img-responsive" />
+                                                </div>
+                                                <div class="col-md-7 col-xs-7 wthree_testimonials_grid1">
+                                                    <h5>hael fgul</h5>
+                                                    <p>Client</p>
+                                                </div>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="wthree_testimonials_grid_main">
+                                            <div class="col-md-6 col-xs-6 wthree_testimonials_grid">
+                                                <p>
+                                                    <img src="images/left-quote.png" alt=" "> Donec laoreet eu purus eu viverra. Vestibulum sed convallis massa, eu aliquet massa. Suspendisse
+                                                    lacinia rutrum tincidunt. Integer id erat porta, convallis.
+                                                    <img src="images/right-quote.png" alt=" ">
+                                                </p>
+                                            </div>
+                                            <div class="col-md-6 col-xs-6 wthree_testimonials_grid_pos">
+                                                <div class="col-md-5 col-xs-5 grid-test-w3l">
+                                                    <img src="images/te2.jpg" alt=" " class="img-responsive" />
+                                                </div>
+                                                <div class="col-md-7 col-xs-7 wthree_testimonials_grid1">
+                                                    <h5>Linda Carl</h5>
+                                                    <p>Client</p>
+                                                </div>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </li>
+                                </ul>-->
+                <!--                //Replace the images with the client logos of your customers-->
+                <section class="customer-logos slider">
+                    <div class="slide"><img src="images/industry-sectors/001.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/002.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/003.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/004.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/005.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/006.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/007.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/008.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/009.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/010.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/011.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/012.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/013.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/014.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/015.png"></div>
+                    <div class="slide"><img src="images/industry-sectors/016.png"></div>
+                </section>
+                <div class="map text-center">
+                    <h2>Our wide range of Branches </h2>
+
+                    <img src="images/map.png" alt="" class="img-responsive" />
+                </div>
             </div>
         </div>
         <!-- //testimonials -->
@@ -992,11 +1016,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
 
                 <div class="clearfix"></div>
-            </div>
-            <div class="map text-center">
-                <h2>Our wide range of Branches </h2>
-
-                <img src="images/map.jpg" alt="" class="img-responsive" />
             </div>
             <div class="section contact-bottom">
                 <div class="container">

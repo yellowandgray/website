@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/jquery.desoslide.css">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="css/infinite-slider.css" rel="stylesheet" type="text/css"/>
     <link href="css/font-awesome.css" rel="stylesheet">
     <!-- font-awesome icons -->
     <!-- //Custom Theme files -->

@@ -60,6 +60,7 @@
 <!-- //about numscroller -->
 <!-- banner Slider starts Here -->
 <script src="js/responsiveslides.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 <script>
     // You can also use "$(window).load(function() {"
     $(function () {
@@ -109,13 +110,27 @@
     });
 </script>
 <script>
-    $('#demo1_thumbs1').desoSlide({
-        main: {
-            container: '#demo1_main_image1',
-            cssClass: 'img-responsive'
-        },
-        effect: 'sideFade',
-        caption: true
+    $(document).ready(function () {
+        $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                }, {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }]
+        });
     });
 </script>
 <!-- //team desoslide-JavaScript -->
