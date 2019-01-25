@@ -370,7 +370,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <a href="#tab4" aria-controls="messages" role="tab" data-toggle="tab">Accreditations</a>
                         </li>
                         <li role="presentation">
-                            <a href="#tab5" aria-controls="messages" role="tab" data-toggle="tab">Licences</a>
+                            <a href="#tab5" aria-controls="messages" role="tab" data-toggle="tab">Licences & Collaborations</a>
                         </li>
                     </ul>
                     <!-- Tab panes -->
