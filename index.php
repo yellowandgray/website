@@ -422,9 +422,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
                                     <div class="col-md-2"></div>
-                                    <div class="col-md-10  latest-grid text-center">
+                                    <div class="col-md-8  latest-grid text-center">
                                         <img src="images/technology/platform-4.0.jpg" alt="" class="img-responsive" >
                                     </div>
+                                    <div class="col-md-2"></div>
                                     <!--                                    <div class="col-md-6  latest-grid">
                                                                             <div class="faq-left">
                                                                                 <h5>
@@ -469,9 +470,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
                                     <div class="col-md-2"></div>
-                                    <div class="col-md-10 latest-grid">
+                                    <div class="col-md-8 latest-grid">
                                         <img src="images/support-hub/support-hub.jpg" alt="" class="img-responsive" >
                                     </div>
+                                    <div class="col-md-2"></div>
                                     <!--                                    <div class="col-md-6  latest-grid">
                                                                             <div class="faq-left">
                                                                                 <h5>
