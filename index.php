@@ -559,6 +559,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
                                         <div class="faq-left faq-font">
+                                            <h5>Licences</h5><br/>
                                             <h5><img src="images/licences/pic-1.png" alt="">Ministry of Finance Malaysia</h5>
                                             <p class="text-justify">The Minister of Finance (or simply, Finance Minister) (Malay: Menteri Kewangan) is the head of the Ministry of Finance of the Government of Malaysia. One of the senior posts in the Cabinet of Malaysia, the finance minister is responsible for determining the fiscal policy and managing national budget of the government. In many periods the Minister of Finance also served as Prime Minister of Malaysia. The current Minister of Finance is Lim Guan Eng, who took office on 21 May 2018.</p>
                                         </div>
@@ -579,10 +580,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                                     </div>
                                     <div class="col-md-6 latest-grid">                                        
-<!--                                        <div class="faq-left faq-font">
-                                            <h5><img src="images/licences/pic-3.png" alt="">MALAYSIA EXTERNAL TRADE DEVELOPMENT CORPORATION</h5>
-                                            <p>MATRADE’s mission to promote Malaysia’s export has enabled many local companies to carve new frontiers in global markets. Today as we continue to put the spotlight on capable Malaysian companies on the international stage, we are helping make the phrase ‘Made-In-Malaysia’ synonymous with excellence, reliability and trustworthiness.</p>
-                                        </div>-->
+                                        <div class="faq-left faq-font faq-font">
+                                            <h5>Collaborations</h5><br/>
+                                            <img src="images/licences/pic-4.png" alt=""> 
+                                            <p class="text-justify">Viva Starfish Project was established with the main objective of educating underprivileged children. Part of the profits from the sale of our main product, which is our RO 500ml water bottle, 'Just Water' had sponsored 31 kids in Klang to improve their knowledge in the English language. This pilot project was a tremendous success and we could see the enthusiasm and pride in each of the children when they were called up to do a presentation. They were also taught moral values and basic love and respect to their peers and teachers, of which was essential to have a harmonious class room environment.</p>
+                                        </div>
 <!--                                        <div class="faq-left">
                                             <h5>
                                                 <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
