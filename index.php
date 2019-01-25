@@ -523,7 +523,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <img src="images/accreditations/001.png" alt=""> 
                                             </div>
                                             <h5>Persatuan Industri Komputer Dan Multimedia Malaysia</h5>
-                                            <p>PIKOM, THE NATIONAL ICT ASSOCIATION OF MALAYSIA is the association representing the information and communications technology (ICT) industry in Malaysia. Its membership currently stands at 800+ comprising companies involved in a whole spectrum of ICT products and services which commands 80% of the total ICT trade in Malaysia.</p>
+                                            <p>PIKOM, THE NATIONAL ICT ASSOCIATION OF MALAYSIA is the association representing the information and communications technology (ICT) industry in Malaysia.</p>
                                         </div>
                                         <div class="faq-left">
                                             <div class="text-center">
