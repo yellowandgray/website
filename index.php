@@ -676,6 +676,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
         <!-- //faq -->
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <h3 class="title-txt"><span>S</span>UPPORT HUB</h3>
+                    <img src="images/support-hub/support-hub.jpg" alt="Alias-Support hub">
+                </div>
+            </div>
+        </div>
         <!-- gallery -->
         <div class="jarallax section gallery" id="gallery">
             <div class="container">
