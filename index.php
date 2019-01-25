@@ -558,10 +558,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
-                                        <div class="faq-left">
-                                            <img src="images/licences/pic-1.png" alt="">
-                                               <h5>MINISTRY OF FINANCE MALAYSIA</h5>
+                                        <div class="faq-left faq-font">
+                                            <h5><img src="images/licences/pic-1.png" alt="">Ministry of Finance Malaysia</h5>
                                             <p>The Minister of Finance (or simply, Finance Minister) (Malay: Menteri Kewangan) is the head of the Ministry of Finance of the Government of Malaysia. One of the senior posts in the Cabinet of Malaysia, the finance minister is responsible for determining the fiscal policy and managing national budget of the government. In many periods the Minister of Finance also served as Prime Minister of Malaysia. The current Minister of Finance is Lim Guan Eng, who took office on 21 May 2018.</p>
+                                        </div>
+                                         <div class="faq-left faq-font">
+                                            <h5><img src="images/licences/pic-3.png" alt="">Malaysia External Trade Development Corporation</h5>
+                                            <p>MATRADE’s mission to promote Malaysia’s export has enabled many local companies to carve new frontiers in global markets. Today as we continue to put the spotlight on capable Malaysian companies on the international stage, we are helping make the phrase ‘Made-In-Malaysia’ synonymous with excellence, reliability and trustworthiness.</p>
                                         </div>
 <!--                                        <div class="faq-left">
                                             <h5>
@@ -575,10 +578,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>-->
 
                                     </div>
-                                    <div class="col-md-6 latest-grid">
-                                        <div class="faq-left">
-                                            <img src="images/licences/pic-2.png" alt=""> 
-                                            <h5>MALAYSIA EXTERNAL TRADE DEVELOPMENT CORPORATION</h5>
+                                    <div class="col-md-6 latest-grid">                                        
+                                        <div class="faq-left faq-font">
+                                            <h5><img src="images/licences/pic-3.png" alt="">MALAYSIA EXTERNAL TRADE DEVELOPMENT CORPORATION</h5>
                                             <p>MATRADE’s mission to promote Malaysia’s export has enabled many local companies to carve new frontiers in global markets. Today as we continue to put the spotlight on capable Malaysian companies on the international stage, we are helping make the phrase ‘Made-In-Malaysia’ synonymous with excellence, reliability and trustworthiness.</p>
                                         </div>
 <!--                                        <div class="faq-left">
