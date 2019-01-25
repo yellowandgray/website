@@ -921,6 +921,7 @@ div#contact {
 .contact-center {
     background: #eee;
     padding: 2em 2em 3.5em;
+    margin: 20px 0
 }
 
 .contact-list ul li {

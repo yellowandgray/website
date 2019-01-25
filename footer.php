@@ -1,6 +1,6 @@
 <!-- copy right -->
-<p class="footer-class">© 2018 Revenue. All Rights Reserved | Design by
-    <a href="http://w3layouts.com/" target="_blank">W3layouts</a>
+<p class="footer-class">© 2018 ALIAS. All Rights Reserved | Design by
+    <a href="http://www.yellowandgray.com/" target="_blank">YG Studio</a>
 </p>
 <!-- //copy right -->
 <!-- bootstrap-pop-up for login and register -->

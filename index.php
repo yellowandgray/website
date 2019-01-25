@@ -904,7 +904,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <!-- //gallery -->
         <!-- testimonials -->
-        <div class="testimonials section" id="testimonials">
+        <div class="testimonials section" id="testimonials" style="background: #ddd;">
             <div class="container">
                 <h3 class="title-txt">
                     <span>I</span>NDUSTRY <span>S</span>ECTORS</h3>
