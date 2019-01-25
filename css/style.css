@@ -1014,7 +1014,7 @@ ul.social-icons3 li a:hover {
 
 .map {
     margin: 4em auto;
-    width: 52%;
+/*    width: 52%;*/
 }
 
 .contact-bottom {
@@ -1822,7 +1822,7 @@ p.footer-class a:hover {
         top: 10%;
     }
     .map {
-        width: 64%;
+/*        width: 64%;*/
     }
 }
 
