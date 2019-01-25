@@ -695,27 +695,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="col-xs-4 agileits_w3layouts_gallery_grid">
                         <div class="agileits_w3layouts_gallery_grid1 w3layouts_gallery_grid1 hover14 column">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/g1.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-4.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
-                                        <img src="images/g1.jpg" alt=" " class="img-responsive" />
+                                        <img src="images/gallery/pic-4.jpg" alt=" " class="img-responsive" />
                                     </figure>
                                 </a>
                             </div>
                         </div>
                         <div class="agileits_w3layouts_gallery_grid1 hover14 column">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/g2.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-5.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
-                                        <img src="images/g2.jpg" alt=" " class="img-responsive" />
+                                        <img src="images/gallery/pic-5.jpg" alt=" " class="img-responsive" />
                                     </figure>
                                 </a>
                             </div>
                         </div>
                         <div class="agileits_w3layouts_gallery_grid1 hover14 column">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/g6.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-6.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
-                                        <img src="images/g6.jpg" alt=" " class="img-responsive" />
+                                        <img src="images/gallery/pic-6.jpg" alt=" " class="img-responsive" />
                                     </figure>
                                 </a>
                             </div>
@@ -724,18 +724,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="col-xs-4 agileits_w3layouts_gallery_grid">
                         <div class="agileits_w3layouts_gallery_grid1 hover14 column">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/g4.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-1.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
-                                        <img src="images/g4.jpg" alt=" " class="img-responsive" />
+                                        <img src="images/gallery/pic-1.jpg" alt=" " class="img-responsive" />
                                     </figure>
                                 </a>
                             </div>
                         </div>
                         <div class="agileits_w3layouts_gallery_grid1 hover14 column">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/g5.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-2.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
-                                        <img src="images/g5.jpg" alt=" " class="img-responsive" />
+                                        <img src="images/gallery/pic-2.jpg" alt=" " class="img-responsive" />
                                     </figure>
                                 </a>
                             </div>
@@ -744,27 +744,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="col-xs-4 agileits_w3layouts_gallery_grid">
                         <div class="agileits_w3layouts_gallery_grid1 w3layouts_gallery_grid1 hover14 column">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/g6.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-8.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
-                                        <img src="images/g6.jpg" alt=" " class="img-responsive" />
+                                        <img src="images/gallery/pic-8.jpg" alt=" " class="img-responsive" />
                                     </figure>
                                 </a>
                             </div>
                         </div>
                         <div class="agileits_w3layouts_gallery_grid1 hover14 column">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/g2.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-7.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
-                                        <img src="images/g2.jpg" alt=" " class="img-responsive" />
+                                        <img src="images/gallery/pic-7.jpg" alt=" " class="img-responsive" />
                                     </figure>
                                 </a>
                             </div>
                         </div>
                         <div class="agileits_w3layouts_gallery_grid1 hover14 column">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/g1.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-3.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
-                                        <img src="images/g1.jpg" alt=" " class="img-responsive" />
+                                        <img src="images/gallery/pic-3.jpg" alt=" " class="img-responsive" />
                                     </figure>
                                 </a>
                             </div>
