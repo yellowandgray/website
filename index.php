@@ -469,46 +469,116 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div role="tabpanel" class="tab-pane" id="messages">
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
-                                    <div class="col-md-2"></div>
-                                    <div class="col-md-8 latest-grid">
-                                        <img src="images/support-hub/support-hub.jpg" alt="" class="img-responsive" >
-                                    </div>
-                                    <div class="col-md-2"></div>
-                                    <!--                                    <div class="col-md-6  latest-grid">
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                    
+                                    <!--                                    <div class="col-md-2"></div>
+                                                                        <div class="col-md-8 latest-grid">
+                                                                            <img src="images/support-hub/support-hub.jpg" alt="" class="img-responsive" >
                                                                         </div>
-                                                                        <div class="col-md-6 latest-grid">
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                            <div class="faq-left">
-                                                                                <h5>
-                                                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                                                            </div>
-                                                                        </div>-->
+                                                                        <div class="col-md-2"></div>-->
+                                    <div class="col-md-6  latest-grid">
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-5.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>100 years Collective Industry Experience</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-6.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Managing Clients with Consolidated Annual Revenue of more than USD 400 million</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-7.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Solid Support Hub Team  from different Nations including Malaysia, Philippines. India and France</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-8.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Accessibility to International Markets and Business Network</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-9.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Top Management are members of Internationally recognized Professional Organizations and Accredited Bodies</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6  latest-grid">
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-10.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Highly Experienced and Diversified Management Team from varied Cultures</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-11.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Skills Knowledge Bank ranging from ICT, Finance, Consulting, Project Management to Logistics</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-12.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>In House developed Intellectual Property and Proprietary Framework and Platform</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-13.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Structured yet Flexible Commercialization and Business Model</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-14.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Developed and Built up a Healthy Client Portfolio across multiple industry verticals</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                     <div class="clearfix"> </div>
                                 </div>
 
@@ -527,7 +597,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <p>The Technopreneurs Association of Malaysia (“TeAM”) has been formed by a group of Malaysian Technopreneurs to further the interests of Technopreneurs and to assist in the development of the technology based industry in Malaysia.</p>
                                         </div>
                                         <div class="faq-left faq-font">
-                                                
+
                                             <h5><img src="images/accreditations/003.png" alt="">  The Institue Of Asset Management</h5>
                                             <p>The IAM developed the Anatomy to provide an appreciation of asset management, for both experts and newcomers: what it is, what it can achieve, the scope of the discipline and a description of the underlying concepts and philosophy.</p>
                                         </div>
@@ -539,12 +609,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <p>THE INSTITUTE OF INTERNAL AUDITORS MALAYSIA (IIA Malaysia) is a non-profit professional organization dedicated to the advancement and development of the internal audit profession in Malaysia.</p>
                                         </div>
                                         <div class="faq-left faq-font">
-                                               
+
                                             <h5><img src="images/accreditations/005.png" alt="">  Malaysian Finance Association</h5>
                                             <p>The Malaysian Finance Association (MFA) was officially established in September 1998 and is currently registered under the Faculty of Business Management, Universiti Teknologi MARA (UiTM).</p>
                                         </div>
                                         <div class="faq-left faq-font">
-                                                
+
                                             <h5><img src="images/accreditations/006.png" alt="">  Malaysian Association Of Facility Management</h5>
                                             <p>Persatuan Pengurusan Fasiliti Malaysia, or Malaysian Association of Faclity Management (MAFM) was initially formed in 2005 to bridge academicians with industry players on knowledge sharing podium on Facility Management related activities.</p>
                                         </div>
@@ -563,20 +633,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <h5><img src="images/licences/pic-1.png" alt="">Ministry of Finance Malaysia</h5>
                                             <p class="text-justify">The Minister of Finance (or simply, Finance Minister) (Malay: Menteri Kewangan) is the head of the Ministry of Finance of the Government of Malaysia. One of the senior posts in the Cabinet of Malaysia, the finance minister is responsible for determining the fiscal policy and managing national budget of the government. In many periods the Minister of Finance also served as Prime Minister of Malaysia. The current Minister of Finance is Lim Guan Eng, who took office on 21 May 2018.</p>
                                         </div>
-                                         <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font">
                                             <h5><img src="images/licences/pic-3.png" alt="">Malaysia External Trade Development Corporation</h5>
                                             <p class="text-justify">MATRADE’s mission to promote Malaysia’s export has enabled many local companies to carve new frontiers in global markets. Today as we continue to put the spotlight on capable Malaysian companies on the international stage, we are helping make the phrase ‘Made-In-Malaysia’ synonymous with excellence, reliability and trustworthiness.</p>
                                         </div>
-<!--                                        <div class="faq-left">
-                                            <h5>
-                                                <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                        </div>
-                                        <div class="faq-left">
-                                            <h5>
-                                                <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                        </div>-->
+                                        <!--                                        <div class="faq-left">
+                                                                                    <h5>
+                                                                                        <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
+                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
+                                                                                </div>
+                                                                                <div class="faq-left">
+                                                                                    <h5>
+                                                                                        <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
+                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
+                                                                                </div>-->
 
                                     </div>
                                     <div class="col-md-6 latest-grid">                                        
@@ -585,16 +655,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <img src="images/licences/pic-4.png" alt=""> 
                                             <p class="text-justify">Viva Starfish Project was established with the main objective of educating underprivileged children. Part of the profits from the sale of our main product, which is our RO 500ml water bottle, 'Just Water' had sponsored 31 kids in Klang to improve their knowledge in the English language. This pilot project was a tremendous success and we could see the enthusiasm and pride in each of the children when they were called up to do a presentation. They were also taught moral values and basic love and respect to their peers and teachers, of which was essential to have a harmonious class room environment.</p>
                                         </div>
-<!--                                        <div class="faq-left">
-                                            <h5>
-                                                <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                        </div>
-                                        <div class="faq-left">
-                                            <h5>
-                                                <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                        </div>-->
+                                        <!--                                        <div class="faq-left">
+                                                                                    <h5>
+                                                                                        <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
+                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
+                                                                                </div>
+                                                                                <div class="faq-left">
+                                                                                    <h5>
+                                                                                        <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
+                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
+                                                                                </div>-->
                                     </div>
                                     <div class="clearfix"> </div>
                                 </div>
