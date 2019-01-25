@@ -574,11 +574,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
                                         <div class="faq-left">
-                                            <h5>
-                                                <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
+                                           <img src="images/licences/pic-1.png" alt="">
+                                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
                                         </div>
-                                        <div class="faq-left">
+<!--                                        <div class="faq-left">
                                             <h5>
                                                 <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
@@ -587,7 +586,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <h5>
                                                 <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                        </div>
+                                        </div>-->
 
                                     </div>
                                     <div class="col-md-6 latest-grid">
@@ -596,7 +595,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
                                         </div>
-                                        <div class="faq-left">
+<!--                                        <div class="faq-left">
                                             <h5>
                                                 <i class="fa fa-question-circle" aria-hidden="true"></i> ed do sit amet conse eiusmod ?</h5>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
@@ -605,7 +604,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <h5>
                                                 <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
-                                        </div>
+                                        </div>-->
                                     </div>
                                     <div class="clearfix"> </div>
                                 </div>
