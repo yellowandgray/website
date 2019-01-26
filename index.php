@@ -303,12 +303,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <p>E-Kedai is a mobile-commerce platform for individuals, businesses & communities to market and promote their products & services to consumers (B2C) & businesses (B2B).</p>
                             </li>
                             <li>
-                                <img src="images/lah.png" alt=""> SODALES BLANDIT URNA
-                                <p>Our ‘LAH’ or ‘Lend a Hand’ initiative takes generosity of Malaysians a step further along the digital corridor. to build an inclusive nation</p>
+                                <img src="images/lah.png" alt=""> SOCIAL
+                                <p>Malaysian are fond of using ‘LAH’ at the end of a word or a sentence. It is in our DNA. We are a generous lot and get together to lend a helping hand.</p>
                             </li>
 
                             <li>
-                                <img src="images/acceleration-program.png" alt=""> VITEA PELLENTESQE AC
+                                <img src="images/acceleration-program.png" alt="">BUSINESS ACCELERATION PROGRAM
                                 <p>“Business accelerator, connecting entrepreneurs with global opportunities”</p>
                             </li>
 
@@ -330,15 +330,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <li>
                                 <img src="images/super-hero.png" alt=""> ORIGINAL SUPER HEROES
                                 <p>Animated superheroes for branding and online campaigns.</p>
+                                <br/>
+                                <br/>
                             </li>
                             <li>
                                 <img src="images/acceleration-program.png" alt=""> ENGAGEMENT AND CONNECTIVITY
-                                <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
+                                <p>Ideas@Pondok is a community where we can share ideas and build relationships. The goal of this community is to create networks and open business opportunities for everyone.</p>
                             </li>
-
                             <li>
                                 <img src="images/acceleration-program.png" alt=""> ACADEMY OF MUSIC
-                                <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
+                                <p>The Accelerated Music Method Academy provides a platform for individuals who aspire to learn and music.</p>
+                                <br/>
                             </li>
 
                         </ul>
@@ -826,7 +828,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="container">
                 <div class="w3ls-title">
                     <h3 class="title-txt">
-                        <span>G</span>allery</h3>
+                        <span>M</span>edia</h3>
                 </div>
                 <div class="w3ls_gallery_grids">
                     <div class="col-xs-4 agileits_w3layouts_gallery_grid">
@@ -1014,69 +1016,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <!-- //testimonials -->
         <!-- contact -->
-        <div class="contact-main section" id="contact" style="background: #ddd;">
+<!--        <div class="contact-main section" id="contact" style="background: #ddd;">
             <div class="container">
                 <h3 class="title-txt">
                     <span>c</span>ontact us</h3>
                 <div class="col-md-4 contact-leftgrid">
-                    <div class="contact-g1">
-                        <h6>Get In Touch</h6>
-                        <ul class="address">
-                            <li>
-                                <span class="fa fa-phone" aria-hidden="true"></span>
-                                +603 2011 9877
-                            </li>
-                            <li>
-                                <span class="fa fa-envelope" aria-hidden="true"></span>
-                                <a href="mailto:example@email.com"> info@alias-innovation.com</a>
-                            </li>
-                            <li>
-                                <span class="fa fa-map-marker" aria-hidden="true"></span>
-                                Penthouse, 16-1, Level 16 Mz5, Wisma UOA Damansara II, No. 6, Changkat Semantan, Damansara Heights, 50490 Kuala Lumpur, Malaysia
-
-                            </li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="col-md-4 contact-leftgrid">
-                    <div class="contact-g1">
-                        <h6>Get In Touch</h6>
-                        <ul class="address">
-                            <li>
-                                <span class="fa fa-phone" aria-hidden="true"></span>
-                                +603-8066 3258,+6012-908 3258
-                            </li>
-                            <li>
-                                <span class="fa fa-envelope" aria-hidden="true"></span>
-                                <a href="mailto:example@email.com"> info@alias-innovation.com</a>
-                            </li>
-                            <li>
-                                <span class="fa fa-map-marker" aria-hidden="true"></span>
-                                No. 1, Jalan Puteri 12/5, Bandar Puteri Puchong, 47100 Selangor.
-
-                            </li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="col-md-4 contact-leftgrid">
-                    <div class="contact-g1">
-                        <h6>Get In Touch</h6>
-                        <ul class="address">
-                            <li>
-                                <span class="fa fa-phone" aria-hidden="true"></span>
-                                +91 98404 70876
-                            </li>
-                            <li>
-                                <span class="fa fa-envelope" aria-hidden="true"></span>
-                                <a href="mailto:example@email.com"> info@alias-innovation.com</a>
-                            </li>
-                            <li>
-                                <span class="fa fa-map-marker" aria-hidden="true"></span>
-                                12, Durga Colony 4th Cross Street, Sembakkam Chennai 600073 Tamil Nadu State India.
-
-                            </li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="col-md-8 contact-center">
                     <div class="col-md-4 contact-g2">
@@ -1108,7 +1056,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    <!--                    <div class="col-md-8 contact-g3">
+                                        <div class="col-md-8 contact-g3">
                                             <div class="subscribe-grid ">
                                                 <p>subscribe To receive helpful articles, customer alerts,services & more.</p>
                     
@@ -1119,13 +1067,91 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                     </button>
                                                 </form>
                                             </div>
-                                        </div>-->
+                                        </div>
                 </div>
 
                 <div class="clearfix"></div>
-            </div>
+            </div>-->
             <div class="section contact-bottom">
                 <div class="container">
+                      <h3 class="title-txt">
+                    <span>c</span>ontact us</h3>
+                    <div class="col-md-6 contact-bot">
+                        <div class="contact-g1">
+                            <h6>HEADQUARTERS</h6>
+                            <ul class="address">
+                                <li>
+                                    <span class="fa fa-phone" aria-hidden="true"></span>
+                                    +603 2011 9877
+                                </li>
+                                <li>
+                                    <span class="fa fa-envelope" aria-hidden="true"></span>
+                                    <a href="mailto:example@email.com"> info@alias-innovation.com</a>
+                                </li>
+                                <li>
+                                    <span class="fa fa-map-marker" aria-hidden="true"></span>
+                                    Penthouse, 16-1, Level 16 Mz5, Wisma UOA Damansara II, No. 6, Changkat Semantan, Damansara Heights, 50490 Kuala Lumpur, Malaysia
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contact-g1">
+                            <h6>SATELLITE HUB</h6>
+                            <ul class="address">
+                                <li>
+                                    <span class="fa fa-phone" aria-hidden="true"></span>
+                                    +603-8066 3258,+6012-908 3258
+                                </li>
+                                <li>
+                                    <span class="fa fa-envelope" aria-hidden="true"></span>
+                                    <a href="mailto:example@email.com"> info@alias-innovation.com</a>
+                                </li>
+                                <li>
+                                    <span class="fa fa-map-marker" aria-hidden="true"></span>
+                                    No. 1, Jalan Puteri 12/5, Bandar Puteri Puchong, 47100 Selangor.
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contact-g1">
+                            <h6>INDIA OFFICE</h6>
+                            <ul class="address">
+                                <li>
+                                    <span class="fa fa-phone" aria-hidden="true"></span>
+                                    +91 98404 70876
+                                </li>
+                                <li>
+                                    <span class="fa fa-envelope" aria-hidden="true"></span>
+                                    <a href="mailto:example@email.com"> info@alias-innovation.com</a>
+                                </li>
+                                <li>
+                                    <span class="fa fa-map-marker" aria-hidden="true"></span>
+                                    12, Durga Colony 4th Cross Street, Sembakkam Chennai 600073 Tamil Nadu State India.
+
+                                </li>
+                            </ul>
+                        </div>
+                        <!--                        <div class="contact-list">
+                                                    <h6> Open a free checking account online today </h6>
+                                                    <ul class="cbot-list">
+                                                        <li>
+                                                            <i class="fa fa-check-square-o" aria-hidden="true"></i>Maece placerat eget mi
+                                                            <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check-square-o" aria-hidden="true"></i>sodales blandit urna
+                                                            <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
+                                                        </li>
+                        
+                                                        <li>
+                                                            <i class="fa fa-check-square-o" aria-hidden="true"></i>vitae pellentesque ac
+                                                            <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
+                                                        </li>
+                        
+                                                    </ul>
+                                                    <a href="#" class="log contact-link" data-toggle="modal" data-target="#myModal">create a new account</a>
+                                                </div>-->
+                    </div>
                     <div class="col-lg-6 col-md-6  contact-right-grid">
                         <h6>send us a message</h6>
                         <div class="agileits-main-right">
@@ -1143,29 +1169,36 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <input type="submit" value="SEND">
                             </form>
                         </div>
-                    </div>
-                    <div class="col-md-6 contact-bot">
-                        <div class="contact-list">
+                        <div class="row">
+                        <h6>Follow us</h6>
+                        <div class="address-grid">
 
-                            <h6> Open a free checking account online today </h6>
-                            <ul class="cbot-list">
-                                <li>
-                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>Maece placerat eget mi
-                                    <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
-                                </li>
-                                <li>
-                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>sodales blandit urna
-                                    <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
-                                </li>
+                            <ul class="social-icons3">
 
                                 <li>
-                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>vitae pellentesque ac
-                                    <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
+                                    <a href="#" class="s-iconfacebook">
+                                        <span class="fa fa-facebook" aria-hidden="true"></span>
+                                    </a>
                                 </li>
-
+                                <li>
+                                    <a href="#" class="s-icontwitter">
+                                        <span class="fa fa-twitter" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="s-icondribbble">
+                                        <span class="fa fa-dribbble" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="s-iconbehance">
+                                        <span class="fa fa-behance" aria-hidden="true"></span>
+                                    </a>
+                                </li>
                             </ul>
-                            <a href="#" class="log contact-link" data-toggle="modal" data-target="#myModal">create a new account</a>
                         </div>
+                        </div>
+                    
                     </div>
                     <div class="clearfix"></div>
                 </div>
