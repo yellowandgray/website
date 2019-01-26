@@ -655,17 +655,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <div class="col-md-6  latest-grid">
                                         <div class="faq-left faq-font">
                                             <img src="images/accreditations/001.png" alt="">  
-                                            <h5>Persatuan Industri Komputer Dan Multimedia Malaysia</h5>
+                                            <h5 class="color-pink">Persatuan Industri Komputer Dan Multimedia Malaysia</h5>
                                             <p>PIKOM, THE NATIONAL ICT ASSOCIATION OF MALAYSIA is the association representing the information and communications technology (ICT) industry in Malaysia.</p>
                                         </div>
                                         <div class="faq-left faq-font">
                                             <img src="images/accreditations/002.png" alt="">
-                                            <h5>Technopreneurs Association of Malaysia(TEAM)</h5>
+                                            <h5 class="color-pink">Technopreneurs Association of Malaysia(TEAM)</h5>
                                             <p>The Technopreneurs Association of Malaysia (“TeAM”) has been formed by a group of Malaysian Technopreneurs for development of technology based industry in Malaysia.</p>
                                         </div>
                                         <div class="faq-left faq-font">
                                             <img src="images/accreditations/003.png" alt="">
-                                            <h5>The Institue Of Asset Management</h5>
+                                            <h5 class="color-pink">The Institue Of Asset Management</h5>
                                             <p>The IAM developed the Anatomy to provide an appreciation of asset management, for both experts and newcomers.</p>
                                         </div>
 
@@ -673,17 +673,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <div class="col-md-6 latest-grid">
                                         <div class="faq-left faq-font">
                                             <img src="images/accreditations/004.png" alt="">
-                                            <h5>The Institue Of Internal Auditors Malaysia</h5>
+                                            <h5 class="color-pink">The Institue Of Internal Auditors Malaysia</h5>
                                             <p>THE INSTITUTE OF INTERNAL AUDITORS MALAYSIA (IIA Malaysia) is a non-profit professional organization dedicated to the internal audit profession in Malaysia.</p>
                                         </div>
                                         <div class="faq-left faq-font">
                                             <img src="images/accreditations/005.png" alt="">
-                                            <h5>Malaysian Finance Association</h5>
+                                            <h5 class="color-pink">Malaysian Finance Association</h5>
                                             <p>The Malaysian Finance Association (MFA) was established in September 1998. it's now registered under Faculty of Business Management, Universiti Teknologi MARA (UiTM).</p>
                                         </div>
                                         <div class="faq-left faq-font">
                                             <img src="images/accreditations/006.png" alt="">
-                                            <h5>Malaysian Association Of Facility Management</h5>
+                                            <h5 class="color-pink">Malaysian Association Of Facility Management</h5>
                                             <p>Persatuan Pengurusan Fasiliti Malaysia, or Malaysian Association of Faclity Management (MAFM) was formed in 2005 to bridge academicians with industry players.</p>
                                         </div>
                                     </div>
@@ -1078,55 +1078,55 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="container">
                 <h3 class="title-txt">
                     <span>c</span>ontact us</h3>
-                <div class="col-md-6 contact-bot">
+                <div class="col-md-4 contact-bot margin-b-20">
                     <div class="contact-g1">
                         <h6>HEADQUARTERS</h6>
                         <ul class="address text-justify">
-                            <span class="fa fa-phone" aria-hidden="true"></span>
+                            <span class="fa fa-map-marker" aria-hidden="true"></span>
                             <li>
-                                +603 2011 9877
+                                Penthouse, 16-1, Level 16 Mz5,<br/> Wisma UOA Damansara II,<br/> No. 6, Changkat Semantan,<br/> Damansara Heights,<br/> 50490 Kuala Lumpur, Malaysia
                             </li>
                             <span class="fa fa-envelope" aria-hidden="true"></span>
                             <li>
                                 <a href="mailto:example@email.com"> info@alias-innovation.com</a>
                             </li>
-                            <span class="fa fa-map-marker" aria-hidden="true"></span>
+                            <span class="fa fa-phone" aria-hidden="true"></span>
                             <li>
-                                Penthouse, 16-1, Level 16 Mz5, Wisma UOA Damansara II, No. 6, Changkat Semantan, Damansara Heights, 50490 Kuala Lumpur, Malaysia
+                                +603 2011 9877
                             </li>
                         </ul>
                     </div>
                     <div class="contact-g1">
                         <h6>SATELLITE HUB</h6>
                         <ul class="address">
-                            <span class="fa fa-phone" aria-hidden="true"></span>
+                            <span class="fa fa-map-marker" aria-hidden="true"></span>
                             <li>
-                                +603-8066 3258,+6012-908 3258
+                                No. 1, Jalan Puteri 12/5,<br/> Bandar Puteri Puchong, 47100<br/> Selangor.
                             </li>
                             <span class="fa fa-envelope" aria-hidden="true"></span>
                             <li>
                                 <a href="mailto:example@email.com"> info@alias-innovation.com</a>
                             </li>
-                            <span class="fa fa-map-marker" aria-hidden="true"></span>
+                            <span class="fa fa-phone" aria-hidden="true"></span>
                             <li>
-                                No. 1, Jalan Puteri 12/5, Bandar Puteri Puchong, 47100 Selangor.
+                                +603-8066 3258 / +6012-908 3258
                             </li>
                         </ul>
                     </div>
                     <div class="contact-g1">
                         <h6>INDIA OFFICE</h6>
                         <ul class="address">
-                            <span class="fa fa-phone" aria-hidden="true"></span>
+                            <span class="fa fa-map-marker" aria-hidden="true"></span>
                             <li>
-                                +91 98404 70876
+                                12, Durga Colony,<br/> 4th Cross Street,<br/> Sembakkam,<br/> Chennai 600073<br/> Tamil Nadu State, India.
                             </li>
                             <span class="fa fa-envelope" aria-hidden="true"></span>
                             <li>
                                 <a href="mailto:example@email.com"> info@alias-innovation.com</a>
                             </li>
-                            <span class="fa fa-map-marker" aria-hidden="true"></span>
+                            <span class="fa fa-phone" aria-hidden="true"></span>
                             <li>
-                                12, Durga Colony 4th Cross Street, Sembakkam Chennai 600073 Tamil Nadu State India.
+                                +91 98404 70876
                             </li>
                         </ul>
                     </div>
@@ -1153,7 +1153,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <div class="col-lg-6 col-md-6  contact-right-grid">
                     <h6>send us a message</h6>
-                    <div class="agileits-main-right">
+                    <div class="agileits-main-right margin-b-20">
                         <form action="#" method="post" class="agile_form">
                             <label class="header">Name</label>
                             <div class="icon1 w3ls-name1">
@@ -1169,7 +1169,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </form>
                     </div>
                     <div class="padding-tb-20">
-                        <h6>Follow us</h6>
+                        <h6 class="margin-b-20">Follow us</h6>
                         <div class="address-grid">
 
                             <ul class="social-icons3">

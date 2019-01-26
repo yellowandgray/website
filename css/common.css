@@ -79,6 +79,10 @@
     padding: 20px 0;
 }
 
+.margin-b-20 {
+    margin-bottom: 20px;
+}
+
 .color-pink {
     color: #bc3c82 !important;
 }

@@ -969,6 +969,7 @@ ul.social-icons3 {
 
 ul.social-icons3 li {
     display: inline-block;
+    margin: 0 5px;
 }
 
 ul.social-icons3 li a {
