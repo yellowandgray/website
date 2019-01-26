@@ -1097,7 +1097,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         
                         <div class="clearfix"></div>
                     </div>-->
-        <div class="section contact-bottom" id="contacts">
+        <div class="section contact-bottom" id="contacts" style="background: url(images/alias-contact-bg.png) no-repeat;background-size: cover;">
             <div class="container">
                 <h3 class="title-txt">
                     <span>c</span>ontact us</h3>
