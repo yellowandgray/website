@@ -10,6 +10,13 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .faq-info .nav-tabs li {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+}
+
 @media (min-width: 1080px) and (max-width: 1253px) {
     fieldset {
         padding: 3em 3em !important;

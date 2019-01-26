@@ -238,8 +238,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </ul>
                 
                                     </div>
-                                </div>-->
-                <!--                <div class="col-md-7 text-center agileinfo-about-grid">
+                                </div>
+                               <div class="col-md-7 text-center agileinfo-about-grid">
                                     <div class="col-md-4 col-xs-4 service-subgrids">
                                         <img src="images/commodity/001.jpg" alt="" title="" class="img-responsive">
                                                                 <div class="w3ls-about-grid">
@@ -392,7 +392,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <div class="col-md-8">
                                                     <br/>
                                                     <br/>
-                                                    <h4><strong>BUSINESS MODEL</strong></h4>
+                                                    <h4 class="color-blue"><strong>BUSINESS MODEL</strong></h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -402,7 +402,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                     <img src="images/business/image-02.png" alt="">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <h5>RENTAL</h5>
+                                                    <h5 class="color-pink">RENTAL</h5>
                                                     <p class="padding-lf-0">Fixed amount paid every month based on overall project value, spread over an agreed duration e.g 12, 24, 30 months</p>
                                                 </div>
                                             </div>
@@ -413,7 +413,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                     <img src="images/business/image-05.png" alt="">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <h5>PROJECT DRIVEN</h5>
+                                                    <h5 class="color-pink">PROJECT DRIVEN</h5>
                                                     <p class="padding-lf-0">Fees based on value of project e.g. % of value subject to scope and deliverables & output. Also based on internal funds invested in deploying project and activities.</p>
                                                 </div>
                                             </div>
@@ -426,7 +426,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                     <img src="images/business/image-04.png" alt="">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <h5>RETAINER</h5>
+                                                    <h5 class="color-pink">RETAINER</h5>
                                                     <p class="padding-lf-0">Monthly retainers and payments based on scope and deliverables, subject to 3, 6, 9, 12 months duration.</p>
                                                 </div>
                                             </div>
@@ -437,7 +437,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                     <img src="images/business/image-03.png" alt="">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <h5>ONE TIME  FEE</h5>
+                                                    <h5 class="color-pink">ONE TIME  FEE</h5>
                                                     <p class="padding-lf-0">One off fee based on time cost and scope of work</p>
                                                 </div>
                                             </div>
@@ -448,7 +448,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                     <img src="images/business/image-06.png" alt="">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <h5>SUBSCRIPTION</h5>
+                                                    <h5 class="color-pink">SUBSCRIPTION</h5>
                                                     <p class="padding-lf-0">Percentage or fixed amount paid every month subject to differentiated packages, whether through offline or online platforms and based on number of users/subscribers.</p>
                                                 </div>
                                             </div>
@@ -697,12 +697,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
                                         <div class="faq-left faq-font">
-                                            <h3 class="text-center">Licences</h3>
-                                            <h5><img src="images/collaboration/img-01.png" alt=""> &nbsp;&nbsp;Ministry of Finance Malaysia</h5>
+                                            <h3 class="text-center color-blue">Licences</h3>
+                                            <h5 class="color-pink"><img src="images/collaboration/img-01.png" alt=""> &nbsp;&nbsp;Ministry of Finance Malaysia</h5>
                                             <p class="text-justify">The Minister of Finance (or simply, Finance Minister) (Malay: Menteri Kewangan) is the head of the Ministry of Finance of the Government of Malaysia.</p>
                                         </div>
                                         <div class="faq-left faq-font">
-                                            <h5><img src="images/collaboration/img-02.png" alt=""> Malaysia External Trade Development Corporation</h5>
+                                            <h5 class="color-pink"><img src="images/collaboration/img-02.png" alt=""> Malaysia External Trade Development Corporation</h5>
                                             <p class="text-justify">MATRADE’s mission to promote Malaysia’s export has enabled many local companies to carve new frontiers in global markets.</p>
                                         </div>
                                         <!--                                        <div class="faq-left">
@@ -719,7 +719,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                     <div class="col-md-6 latest-grid">                                        
                                         <div class="faq-left faq-font faq-font">
-                                            <h3 class="text-center">Collaborations</h3>
+                                            <h3 class="text-center color-blue">Collaborations</h3>
                                             <div class="text-center">
                                                 <img src="images/collaboration/img-03.png" alt="">
                                             </div>

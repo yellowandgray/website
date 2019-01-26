@@ -24,7 +24,7 @@
 .silder-bg {
     background: #fff;
     padding: 10px;
-    border: 2px solid #ff5050;
+    border: 2px solid #bc3c82;
 }
 
 .padding-lf-0 {
@@ -77,4 +77,12 @@
 
 .padding-tb-20 {
     padding: 20px 0;
+}
+
+.color-pink {
+    color: #bc3c82 !important;
+}
+
+.color-blue {
+    color: #0567ce !important;
 }
