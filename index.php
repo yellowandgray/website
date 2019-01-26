@@ -661,12 +661,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <div class="faq-left faq-font">
                                             <img src="images/accreditations/002.png" alt="">
                                             <h5>Technopreneurs Association of Malaysia(TEAM)</h5>
-                                            <p>The Technopreneurs Association of Malaysia (“TeAM”) has been formed by a group of Malaysian Technopreneurs to assist in the development of the technology based industry in Malaysia.</p>
+                                            <p>The Technopreneurs Association of Malaysia (“TeAM”) has been formed by a group of Malaysian Technopreneurs for development of technology based industry in Malaysia.</p>
                                         </div>
                                         <div class="faq-left faq-font">
                                             <img src="images/accreditations/003.png" alt="">
                                             <h5>The Institue Of Asset Management</h5>
-                                            <p>The IAM developed the Anatomy to provide an appreciation of asset management, for both experts and newcomers: what it is, what it can achieve, the scope of the discipline and a description of the underlying concepts and philosophy.</p>
+                                            <p>The IAM developed the Anatomy to provide an appreciation of asset management, for both experts and newcomers.</p>
                                         </div>
 
                                     </div>
@@ -679,12 +679,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <div class="faq-left faq-font">
                                             <img src="images/accreditations/005.png" alt="">
                                             <h5>Malaysian Finance Association</h5>
-                                            <p>The Malaysian Finance Association (MFA) was officially established in September 1998 and is currently registered under the Faculty of Business Management, Universiti Teknologi MARA (UiTM).</p>
+                                            <p>The Malaysian Finance Association (MFA) was established in September 1998. it's now registered under Faculty of Business Management, Universiti Teknologi MARA (UiTM).</p>
                                         </div>
                                         <div class="faq-left faq-font">
                                             <img src="images/accreditations/006.png" alt="">
                                             <h5>Malaysian Association Of Facility Management</h5>
-                                            <p>Persatuan Pengurusan Fasiliti Malaysia, or Malaysian Association of Faclity Management (MAFM) was initially formed in 2005 to bridge academicians with industry players on knowledge sharing podium on Facility Management related activities.</p>
+                                            <p>Persatuan Pengurusan Fasiliti Malaysia, or Malaysian Association of Faclity Management (MAFM) was formed in 2005 to bridge academicians with industry players.</p>
                                         </div>
                                     </div>
                                     <div class="clearfix"> </div>
