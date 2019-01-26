@@ -30,3 +30,33 @@
 .padding-lf-0 {
     padding: 1em 0em  !important;
 }
+.height-160{
+    height: 160px;
+}
+@media (max-width: 1079px){
+    .height-160{
+        height: auto;
+    }
+}
+
+@media (min-width: 1080px) and (max-width: 1199px){
+    .height-160{
+        height: 220px !important;
+    }
+}
+
+.height-180 {
+    height: 180px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .height-180{
+        height: 220px !important;
+    }
+}
+
+@media (max-width: 991px){
+    .height-180{
+        height: auto;
+    }
+}

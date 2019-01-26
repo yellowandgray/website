@@ -379,7 +379,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font height-180">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-01.png" alt="">
@@ -391,7 +391,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font height-180">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-02.png" alt="">
@@ -402,7 +402,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font height-180">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-05.png" alt="">
@@ -415,7 +415,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>
                                     </div>
                                     <div class="col-md-6 latest-grid">
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font height-180">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-04.png" alt="">
@@ -426,7 +426,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font height-180">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-03.png" alt="">
@@ -437,7 +437,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font height-180">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-06.png" alt="">
@@ -535,17 +535,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                         </div>
                                                                         <div class="col-md-2"></div>-->
                                     <div class="col-md-6  latest-grid">
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-fontheight-180">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-5.png" alt="">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <p>100 years Collective Industry Experience</p>
+                                                    <br/>
+                                                    <br/>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-6.png" alt="">
@@ -555,7 +557,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-7.png" alt="">
@@ -565,7 +567,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-8.png" alt="">
@@ -575,19 +577,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
-                                                    <img src="images/support-hub/pic-9.png" alt="">
+                                                    <img src="images/support-hub/pic-13.png" alt="">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <p>Top Management are members of Internationally recognized Professional Organizations and Accredited Bodies</p>
+                                                    <p>Structured yet Flexible Commercialization and Business Model</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6  latest-grid">
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-10.png" alt="">
@@ -597,7 +599,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-11.png" alt="">
@@ -607,7 +609,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-12.png" alt="">
@@ -617,9 +619,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-
-
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font height-160">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/support-hub/pic-9.png" alt="">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Top Management are members of Internationally recognized Professional Organizations and Accredited Bodies</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-14.png" alt="">
@@ -994,7 +1004,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="slide"><img src="images/clients/alias-016.jpg"></div>
                 </section>
                 <div class="map text-center">
-<!--                    <h2>Our wide range of Branches </h2>-->
+                    <!--                    <h2>Our wide range of Branches </h2>-->
 
                     <img src="images/map.png" alt="" class="img-responsive" />
                 </div>
