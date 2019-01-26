@@ -321,7 +321,7 @@ ul.nav.navbar-nav li.active {
 }
 
 .banner-textagileinfo {
-    padding: 5em;
+    padding: 2em;
 }
 
 .banner-text {
@@ -813,7 +813,7 @@ div#team h3.title-txt span {
 
 .faq-left {
     padding: 2em;
-    background: #e7e8e8;
+    background: #ffffff;
 }
 
 .faq-left:nth-child(even) {
@@ -1024,7 +1024,7 @@ ul.social-icons3 li a:hover {
 }
 
 .contact-bottom {
-    background: url(../images/a1.jpg) no-repeat center;
+    background: url(../images/contact-1.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1777,7 +1777,7 @@ p.footer-class a:hover {
         width: 30.5%;
     }
     .banner-textagileinfo {
-        padding: 5em 3em;
+        padding: 2em 3em;
     }
     legend {
         width: auto;
