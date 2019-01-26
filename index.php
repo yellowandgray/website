@@ -177,12 +177,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src="images/alias-icons/004.png" alt="Alias Icon">
                             <h6>FINANCE</h6>
                             <ul class="text-left">
-                                <i class="fa fa-check"></i><li> Illustrations</li>
-                                <i class="fa fa-check"></i><li> Video, Images sourcing & Production</li>
-                                <i class="fa fa-check"></i><li> Design of Collaterals</li>
-                                <i class="fa fa-check"></i><li> Animation</li>
-                                <i class="fa fa-check"></i><li> Branding</li>
-                                <i class="fa fa-check"></i><li> Printing</li>
+                                <i class="fa fa-check"></i><li> Fund Raising Investments (Bonds, Syariah Compliant Funds)</li>
+                                <i class="fa fa-check"></i><li> Venture Capital, PE, Angel Funding, Sourcing & Matching</li>
+                                <i class="fa fa-check"></i><li> Financial Modeling and Projection</li>
+                                <i class="fa fa-check"></i><li> Grants & Incentives</li>
                             </ul>
                         </div>
                     </div>
@@ -305,17 +303,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="col-md-4 man-grid">
                         <ul class="span-font">
                             <li>
-                                <img src="images/app.png" alt=""> E-COMMERCE/ MOBILE-COMMERCE <span>APPLICATION</span>
-                                <p>E-Kedai is a mobile-commerce platform for individuals, businesses & communities to market and promote their products & services to consumers (B2C) & businesses (B2B).</p>
+                                <img src="images/app.png" alt=""> E-COMMERCE/ MOBILE-COMMERCE <span> APPLICATION</span><br/>
+                                <img src="images/innovation/001.jpg" align="left" > <p align="left"> is a mobile-commerce platform for individuals, businesses & communities to market and promote their products & services to consumers (B2C) & businesses (B2B).</p>
                             </li>
                             <li>
-                                <img src="images/lah.png" alt=""> SOCIAL
-                                <p>Malaysian are fond of using ‘LAH’ at the end of a word or a sentence. It is in our DNA. We are a generous lot and get together to lend a helping hand.</p>
+                                <img src="images/lah.png" alt=""> SOCIAL<br/>
+                                <img src="images/innovation/002.jpg" align="left" > <p align="left"> Malaysian are fond of using ‘LAH’ at the end of a word or a sentence. It is in our DNA. We are a generous lot and get together to lend a helping hand.</p>
                             </li>
 
                             <li>
-                                <img src="images/acceleration-program.png" alt="">BUSINESS ACCELERATION PROGRAM
-                                <p>“Business accelerator, connecting entrepreneurs with global opportunities”</p>
+                                <img src="images/acceleration-program.png" alt="">BUSINESS ACCELERATION PROGRAM<br/>
+                                <img src="images/innovation/003.jpg" align="left" > <p align="left"> “Business accelerator, connecting entrepreneurs with global opportunities”</p>
                             </li>
 
                         </ul>
@@ -334,16 +332,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="col-md-4 man-right man-grid">
                         <ul>
                             <li>
-                                <img src="images/super-hero.png" alt=""> ORIGINAL SUPER HEROES
-                                <p>Animated superheroes for branding and online campaigns.</p>
+                                <img src="images/super-hero.png" alt=""> ORIGINAL SUPER HEROES<br/>
+                                <img src="images/innovation/004.jpg" align="left" > <p align="left"> Animated superheroes for branding and online campaigns.</p>
                             </li>
                             <li>
-                                <img src="images/acceleration-program.png" alt=""> ENGAGEMENT AND CONNECTIVITY
-                                <p>Ideas@Pondok is a community where we can share ideas and build relationships. The goal of this community is to create networks and open business opportunities for everyone.</p>
+                                <img src="images/acceleration-program.png" alt=""> ENGAGEMENT AND CONNECTIVITY<br/>
+                                <img src="images/innovation/005.jpg" align="left" > <p align="left"> Ideas@Pondok is a community where we can share ideas and build relationships. The goal of this community is to create networks and open business opportunities for everyone.</p>
                             </li>
                             <li>
-                                <img src="images/acceleration-program.png" alt=""> ACADEMY OF MUSIC
-                                <p>The Accelerated Music Method Academy provides a platform for individuals who aspire to learn and music.</p>
+                                <img src="images/acceleration-program.png" alt=""> ACADEMY OF MUSIC<br/>
+                                <img src="images/innovation/006.jpg" align="left" > <p align="left"> The Accelerated Music Method Academy provides a platform for individuals who aspire to learn and music.</p>
                             </li>
 
                         </ul>
