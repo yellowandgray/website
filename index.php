@@ -354,7 +354,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <!-- //about manager -->
         <!-- faq -->
-        <div class="section faq">
+        <div class="section faq" id="why-us">
             <div class="container">
                 <h3 class="title-txt text-center">
                     <span>W</span>HY US</h3>
@@ -746,7 +746,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
         <!-- //faq -->
-        <div class="section">
+        <div class="section" id="support-hub">
             <div class="container">
                 <div class="row">
                     <h3 class="title-txt"><span>S</span>UPPORT HUB</h3>
@@ -920,7 +920,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="testimonials section" id="testimonials" style="background: #ddd;">
             <div class="container">
                 <h3 class="title-txt">
-                    <span>I</span>NDUSTRY <span>S</span>ECTORS</h3>
+                    <span>C</span>lients</h3>
                 <!--                <ul id="flexiselDemo1">
                                     <li>
                                         <div class="wthree_testimonials_grid_main">
@@ -1073,7 +1073,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         
                         <div class="clearfix"></div>
                     </div>-->
-        <div class="section contact-bottom">
+        <div class="section contact-bottom" id="contacts">
             <div class="container">
                 <h3 class="title-txt">
                     <span>c</span>ontact us</h3>
