@@ -770,7 +770,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                  <div class="col-md-4 text-center">
                         <div class="team-grid">
                             <img src="images/team-2.png" alt="" />
-                            <h6>Facere possimus</h6>
+                            <h6>Muhamad Fahim</h6>
                             <span>Director Corporate Strategy</span>
                            <p class="text-justify margin-t-10">Armed with Bachelor of Science in Electrical & Electronic Engineering and has nearly 12 years of vital industry experience in construction, commodity trading, transportation and ICT. Has managed multiple accounts for construction clients to design and build specialize structure and provided strategic consulting for clients business  movement. Also did a consultation for ICT and newly startup corporations for marketing and planning.</p>
                         </div>
@@ -778,7 +778,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                  <div class="col-md-4 text-center">
                         <div class="team-grid">
                             <img src="images/team-3.png" alt="" />
-                            <h6>Nulla molestie</h6>
+                            <h6>Izat Emir Bin Adb Aziz</h6>
                             <span>Director Corporate Strategy</span>
                             <p class="text-justify margin-t-10">Armed with a Degree in International Business and has nearly 10 years of vital industry experience in commodity trading, management, shipping, forwarding and logistics. Has managed multiple accounts for import and export clients and provided strategic consulting for ground logistics movement and warehousing. Also did consultation for Food and Beverage Businesses.</p>
                         </div>
