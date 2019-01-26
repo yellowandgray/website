@@ -43,8 +43,8 @@
 }
 
 .text-left li {
-    letter-spacing: 2px;
     padding-left: 35px;
+    font-size: 16px;
 }
 
 @media (max-width: 1079px){

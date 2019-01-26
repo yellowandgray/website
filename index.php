@@ -102,7 +102,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <br/>
                             <p>Our international markets exposure has served us well in our line of work and we have made market space connectivity in these nations.</p>
                             <!--                            <a href="#services" class="abtlink scroll">read more</a>-->
-                            <img src="images/flogs.jpg" class="img-responsive" alt="" />
+<!--                            <img src="images/flogs.jpg" class="img-responsive" alt="" />-->
                         </div>
                         <div class="col-md-6 w3ls-row">
                             <img src="images/a.jpg" class="img-responsive" alt="" />
