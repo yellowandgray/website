@@ -111,25 +111,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="services section" id="services">
             <div class="container2">
 <!--                <h3 class="title-txt"><span>C</span>ommodity</h3>-->
-                <h3 class="title-txt color-white">Commodity</h3>
+                <h3 class="title-txt color-white"><span>S</span>ervices</h3>
 <!--                <h5>we offer products and services for your<span>personal</span> and<span>professional banking</span> needs.</h5>-->
-                <h5 class="color-white">we offer products and services for your personal and professional needs.</h5>
+                <h5 class="color-white">we offer products and services for your professional needs.</h5>
                 <div class="row">
                     <div class="col-md-4 text-center">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/001.png" alt="Alias Icon">
                             <h6>CORPORATE</h6>
                             <ul class="text-left">
-                                <li><i class="fa fa-check"></i> Strategic Planning</li>
-                                <li><i class="fa fa-check"></i> Business Coaching</li>
-                                <li><i class="fa fa-check"></i> Mentoring</li>
-                                <li><i class="fa fa-check"></i> Business Plans</li>
-                                <li><i class="fa fa-check"></i> Business Valuations</li>
-                                <li><i class="fa fa-check"></i> Pre-Listing</li>
-                                <li><i class="fa fa-check"></i> Listing Lead</li>
-                                <li><i class="fa fa-check"></i> RTO and M&A</li>
-                                <li><i class="fa fa-check"></i> Feasibility Study</li>
-                                <li><i class="fa fa-check"></i> Marketing Plans</li>
+                                <i class="fa fa-check"></i><li> Strategic Planning</li>
+                                <i class="fa fa-check"></i><li> Business Coaching</li>
+                                <i class="fa fa-check"></i><li> Mentoring</li>
+                                <i class="fa fa-check"></i><li> Business Plans</li>
+                                <i class="fa fa-check"></i><li> Business Valuations</li>
+                                <i class="fa fa-check"></i><li> Pre-Listing</li>
+                                <i class="fa fa-check"></i><li> Listing Lead</li>
+                                <i class="fa fa-check"></i><li> RTO and M&A</li>
+                                <i class="fa fa-check"></i><li> Feasibility Study</li>
+                                <i class="fa fa-check"></i><li> Marketing Plans</li>
                             </ul>
                         </div>
                     </div>
@@ -138,15 +138,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src="images/alias-icons/002.png" alt="Alias Icon">
                             <h6>CONTENT</h6>
                             <ul class="text-left">
-                                <li><i class="fa fa-check"></i> Content Writing</li>
-                                <li><i class="fa fa-check"></i> Editing</li>
-                                <li><i class="fa fa-check"></i> Translation</li>
-                                <li><i class="fa fa-check"></i> Digital and offline content writing and management</li>
-                                <li><i class="fa fa-check"></i> Book Authoring & Publishing</li>
-                                <li><i class="fa fa-check"></i> Printing</li>
-                                <li><i class="fa fa-check"></i> Marketing and solutions collateral</li>
-                                <li><i class="fa fa-check"></i> Tender Writing</li>
-                                <li><i class="fa fa-check"></i> Technical Documentation</li>
+                                <i class="fa fa-check"></i><li> Content Writing</li>
+                                <i class="fa fa-check"></i><li> Editing</li>
+                                <i class="fa fa-check"></i><li> Translation</li>
+                                <i class="fa fa-check"></i><li> Digital & offline content writing & management</li>
+                                <i class="fa fa-check"></i><li> Book Authoring & Publishing</li>
+                                <i class="fa fa-check"></i><li> Printing</li>
+                                <i class="fa fa-check"></i><li> Marketing and solutions collateral</li>
+                                <i class="fa fa-check"></i><li> Tender Writing</li>
+                                <i class="fa fa-check"></i><li> Technical Documentation</li>
                             </ul>
                         </div>
                     </div>
@@ -155,12 +155,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src="images/alias-icons/003.png" alt="Alias Icon">
                             <h6>CREATIVE</h6>
                             <ul class="text-left">
-                                <li><i class="fa fa-check"></i> Illustrations</li>
-                                <li><i class="fa fa-check"></i> Video, Images sourcing & Production</li>
-                                <li><i class="fa fa-check"></i> Design of Collaterals</li>
-                                <li><i class="fa fa-check"></i> Animation</li>
-                                <li><i class="fa fa-check"></i> Branding</li>
-                                <li><i class="fa fa-check"></i> Printing</li>
+                                <i class="fa fa-check"></i><li> Illustrations</li>
+                                <i class="fa fa-check"></i><li> Video, Images sourcing & Production</li>
+                                <i class="fa fa-check"></i><li> Design of Collaterals</li>
+                                <i class="fa fa-check"></i><li> Animation</li>
+                                <i class="fa fa-check"></i><li> Branding</li>
+                                <i class="fa fa-check"></i><li> Printing</li>
                             </ul>
                         </div>
                     </div>
@@ -171,12 +171,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src="images/alias-icons/004.png" alt="Alias Icon">
                             <h6>FINANCE</h6>
                             <ul class="text-left">
-                                <li><i class="fa fa-check"></i> Illustrations</li>
-                                <li><i class="fa fa-check"></i> Video, Images sourcing & Production</li>
-                                <li><i class="fa fa-check"></i> Design of Collaterals</li>
-                                <li><i class="fa fa-check"></i> Animation</li>
-                                <li><i class="fa fa-check"></i> Branding</li>
-                                <li><i class="fa fa-check"></i> Printing</li>
+                                <i class="fa fa-check"></i><li> Illustrations</li>
+                                <i class="fa fa-check"></i><li> Video, Images sourcing & Production</li>
+                                <i class="fa fa-check"></i><li> Design of Collaterals</li>
+                                <i class="fa fa-check"></i><li> Animation</li>
+                                <i class="fa fa-check"></i><li> Branding</li>
+                                <i class="fa fa-check"></i><li> Printing</li>
                             </ul>
                         </div>
                     </div>
@@ -185,14 +185,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src="images/alias-icons/005.png" alt="Alias Icon">
                             <h6>INNOVATION</h6>
                             <ul class="text-left">
-                                <li><i class="fa fa-check"></i> Data Collection, Processing & Analyzing</li>
-                                <li><i class="fa fa-check"></i> Business Development Outsourcing Team</li>
-                                <li><i class="fa fa-check"></i> Surveys</li>
-                                <li><i class="fa fa-check"></i> Market Study</li>
-                                <li><i class="fa fa-check"></i> Research Exercises</li>
-                                <li><i class="fa fa-check"></i> Business Logic & Architecture</li>
-                                <li><i class="fa fa-check"></i> Idea Innovation</li>
-                                <li><i class="fa fa-check"></i> Online Campaigns</li>
+                                <i class="fa fa-check"></i><li> Data Collection, Processing & Analyzing</li>
+                                <i class="fa fa-check"></i><li> Business Development Outsourcing Team</li>
+                                <i class="fa fa-check"></i><li> Surveys</li>
+                                <i class="fa fa-check"></i><li> Market Study</li>
+                                <i class="fa fa-check"></i><li> Research Exercises</li>
+                                <i class="fa fa-check"></i><li> Business Logic & Architecture</li>
+                                <i class="fa fa-check"></i><li> Idea Innovation</li>
+                                <i class="fa fa-check"></i><li> Online Campaigns</li>
                             </ul>
                         </div>
                     </div>
@@ -201,16 +201,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src="images/alias-icons/006.png" alt="Alias Icon">
                             <h6>TECHNOLOGY</h6>
                             <ul class="text-left">
-                                <li><i class="fa fa-check"></i> New Media Services</li>
-                                <li><i class="fa fa-check"></i> Content Management</li>
-                                <li><i class="fa fa-check"></i> 4th Industrial Revolution</li>
-                                <li><i class="fa fa-check"></i> Web Applications</li>
-                                <li><i class="fa fa-check"></i> Mobile Apps</li>
-                                <li><i class="fa fa-check"></i> E-Commerce</li>
-                                <li><i class="fa fa-check"></i> ICT Audit</li>
-                                <li><i class="fa fa-check"></i> Infra, Software, Hardware Solutioning</li>
-                                <li><i class="fa fa-check"></i> Tender management</li>
-                                <li><i class="fa fa-check"></i> Consultancy (ICT)</li>
+                                <i class="fa fa-check"></i><li> New Media Services</li>
+                                <i class="fa fa-check"></i><li> Content Management</li>
+                                <i class="fa fa-check"></i><li> 4th Industrial Revolution</li>
+                                <i class="fa fa-check"></i><li> Web Applications</li>
+                                <i class="fa fa-check"></i><li> Mobile Apps</li>
+                                <i class="fa fa-check"></i><li> E-Commerce</li>
+                                <i class="fa fa-check"></i><li> ICT Audit</li>
+                                <i class="fa fa-check"></i><li> Infra, Software, Hardware Solutioning</li>
+                                <i class="fa fa-check"></i><li> Tender management</li>
+                                <i class="fa fa-check"></i><li> Consultancy (ICT)</li>
                             </ul>
                         </div>
                     </div>
