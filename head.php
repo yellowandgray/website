@@ -24,6 +24,7 @@
     <link href="css/common.css" rel="stylesheet" type="text/css"/>
     <link href="css/infinite-slider.css" rel="stylesheet" type="text/css"/>
     <link href="css/custom-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="css/animate.css" rel="stylesheet" type="text/css"/>
     <link href="css/font-awesome.css" rel="stylesheet">
     <!-- font-awesome icons -->
     <!-- //Custom Theme files -->

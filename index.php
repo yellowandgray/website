@@ -341,7 +341,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </li>
                             <li>
                                 <img src="images/acceleration-program.png" alt=""> ACADEMY OF MUSIC<br/>
-                                <img src="images/innovation/006.jpg" align="left" > <p align="left"> The Accelerated Music Method Academy provides a platform for individuals who aspire to learn and music.</p>
+                                <img src="images/innovation/006.jpg" align="left" > <p align="left"> The Accelerated Music Method Academy provides a platform for individuals who aspire to learn music.</p>
                             </li>
 
                         </ul>
