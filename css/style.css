@@ -1350,7 +1350,7 @@ div#team {
     background: #000;
     width: 50% !important;
     position: absolute;
-    top: 27% !important;
+    top: 9% !important;
     left: -50% !important;
     -webkit-transition: .5s all;
     -moz-transition: .5s all;
@@ -2528,12 +2528,8 @@ p.footer-class a:hover {
         margin: 0 0.5em;
         display: block;
     }
-    .top-nav {
-        margin-top: -82px !important;
-    }
     .banner {
         min-height: 179px;
-        margin-top: 82px;
     }
     .banner-text {
         width: 66%;
@@ -2746,6 +2742,12 @@ p.footer-class a:hover {
         top: 24%;
         right: 10px;
     }
+    .navbar-header img {
+        width: 79%;
+    }
+    .top-nav {
+        margin-top: -70px !important;
+    }
     .banner-text h6 {
         font-size: 1em;
     }
@@ -2771,6 +2773,7 @@ p.footer-class a:hover {
     }
     .banner {
         padding: 4px 4px 0px;
+        margin-top: 70px !important;
     }
     .abt-container {
         width: 94%;
@@ -2859,6 +2862,18 @@ p.footer-class a:hover {
     }
     .form-module input[type="submit"] {
         padding: 7px 15px;
+    }
+    .list-inline>li {
+        padding: 0 0 20px;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    .banner {
+        margin-top: 80px !important;
+    }
+    .top-nav {
+        margin-top: -80px !important;
     }
 }
 

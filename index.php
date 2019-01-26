@@ -117,9 +117,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="services section" id="services">
             <div class="container2">
 <!--                <h3 class="title-txt"><span>C</span>ommodity</h3>-->
-                <h3 class="title-txt color-white"><span>S</span>ervices</h3>
+                <h3 class="title-txt color-white text-center"><span>S</span>ervices</h3>
 <!--                <h5>we offer products and services for your<span>personal</span> and<span>professional banking</span> needs.</h5>-->
-                <h5 class="color-white">we offer products and services for your professional needs.</h5>
+                <h5 class="color-white text-center">we offer products and services for your professional needs.</h5>
                 <div class="row">
                     <div class="col-md-4 text-center">
                         <div class="w3ls-about-grid">
@@ -354,7 +354,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <!-- //about manager -->
         <!-- faq -->
-        <div class="section faq" id="why-us">
+        <div class="section faq" id="why-us" style="background: url(images/why-us-bg.jpg) no-repeat;background-size: cover;">
             <div class="container">
                 <h3 class="title-txt text-center">
                     <span>W</span>HY US</h3>

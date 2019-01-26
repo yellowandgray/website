@@ -41,34 +41,34 @@
             <!-- navbar-header -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active" style="display: none;">
+                    <li class="item-101 hovernav" style="display: none;">
                         <a href="index.php">Home</a>
                     </li>
-                    <li>
+                    <li class="item-101 hovernav">
                         <a href="#about" class="scroll">About</a>
                     </li>
-                    <li>
+                    <li class="item-101 hovernav">
                         <a href="#services" class="scroll">Services</a>
                     </li>
-                    <li>
+                    <li class="item-101 hovernav">
                         <a href="#manger" class="scroll">Innovation</a>
                     </li>
-                    <li>
+                    <li class="item-101 hovernav">
                         <a href="#why-us" class="scroll">Why Us</a>
                     </li>
-                    <li>
+                    <li class="item-101 hovernav">
                         <a href="#support-hub" class="scroll">Support Hub</a>
                     </li>
-                    <li>
+                    <li class="item-101 hovernav">
                         <a href="#team" class="scroll">Team</a>
                     </li>
-                    <li>
+                    <li class="item-101 hovernav">
                         <a href="#gallery" class="scroll">Media</a>
                     </li>
-                    <li>
+                    <li class="item-101 hovernav">
                         <a href="#testimonials" class="scroll">Clients</a>
                     </li>
-                    <li>
+                    <li class="item-101 hovernav">
                         <a href="#contacts" class="scroll">Contact</a>
                     </li>
                 </ul>
