@@ -1080,7 +1080,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="col-md-6 contact-bot">
                     <div class="contact-g1">
                         <h6>HEADQUARTERS</h6>
-                        <ul class="address">
+                        <ul class="address text-justify">
                             <li>
                                 <span class="fa fa-phone" aria-hidden="true"></span>
                                 +603 2011 9877
@@ -1090,8 +1090,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <a href="mailto:example@email.com"> info@alias-innovation.com</a>
                             </li>
                             <li>
-                                <span class="fa fa-map-marker" aria-hidden="true"></span>
-                                Penthouse, 16-1, Level 16 Mz5, Wisma UOA Damansara II, No. 6, Changkat Semantan, Damansara Heights, 50490 Kuala Lumpur, Malaysia
+                                <span class="fa fa-map-marker" aria-hidden="true"></span>Penthouse, 16-1, Level 16 Mz5, Wisma UOA Damansara II, No. 6, Changkat Semantan, Damansara Heights, 50490 Kuala Lumpur, Malaysia
 
                             </li>
                         </ul>
