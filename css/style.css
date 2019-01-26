@@ -89,6 +89,7 @@ li {
 
 ul.nav.navbar-nav {
     float: right;
+    margin-top: 10px;
 }
 
 .navbar-default {
@@ -1305,9 +1306,10 @@ div#team {
 }
 
 .list-inline>li {
-    margin: 1.2em 0;
+    /*    margin: 0 0 1.2em 0; */
     display: block;
     padding: 0;
+    padding: 0 0 82px 0;
 }
 
 .list-inline>li a {
@@ -2526,8 +2528,12 @@ p.footer-class a:hover {
         margin: 0 0.5em;
         display: block;
     }
+    .top-nav {
+        margin-top: -82px !important;
+    }
     .banner {
         min-height: 179px;
+        margin-top: 82px;
     }
     .banner-text {
         width: 66%;
@@ -2663,6 +2669,9 @@ p.footer-class a:hover {
     }
     div#about {
         padding-bottom: 4em;
+    }
+    .navbar-header img {
+        width: 80%;
     }
     h3.title {
         font-size: 1.4em;

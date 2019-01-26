@@ -41,7 +41,7 @@
             <!-- navbar-header -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li class="active" style="display: none;">
                         <a href="index.php">Home</a>
                     </li>
                     <li>
@@ -51,16 +51,25 @@
                         <a href="#services" class="scroll">Services</a>
                     </li>
                     <li>
-                        <a href="#gallery" class="scroll">gallery</a>
+                        <a href="#manger" class="scroll">Innovation</a>
+                    </li>
+                    <li>
+                        <a href="#why-us" class="scroll">Why Us</a>
+                    </li>
+                    <li>
+                        <a href="#support-hub" class="scroll">Support Hub</a>
                     </li>
                     <li>
                         <a href="#team" class="scroll">Team</a>
                     </li>
                     <li>
-                        <a href="#testimonials" class="scroll">Testimonials</a>
+                        <a href="#gallery" class="scroll">Media</a>
                     </li>
                     <li>
-                        <a href="#contact" class="scroll">contact</a>
+                        <a href="#testimonials" class="scroll">Clients</a>
+                    </li>
+                    <li>
+                        <a href="#contacts" class="scroll">Contact</a>
                     </li>
                 </ul>
             </div>
