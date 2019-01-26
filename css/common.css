@@ -73,6 +73,9 @@
     .height-180{
         height: auto;
     }
+    .services-p {
+        margin-bottom: 10px;
+    }
 }
 
 .padding-tb-20 {
