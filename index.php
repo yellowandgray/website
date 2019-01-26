@@ -22,28 +22,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <ul class="rslides" id="slider3">
                         <li>
                             <div class="banner-textagileinfo">
-                                <h6>Welcome To Revenue</h6>
-                                <h3>For Your Personal And Professional Banking Needs.</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam in consectetur.</p>
-
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="images/logo-01.png" class="img-responsive" alt=""/>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h6>ALIAS INNOVATION SDN BHD</h6>
+                                        <h3>FUTURIZING INNOVATION</h3>
+        <!--                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam in consectetur.</p>-->
+                                    </div>
+                                </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="banner-textagileinfo">
-                                <h6>the Internet banking portal</h6>
-                                <h3>Ensuring a high level of customer service.</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit llam in consectetur.</p>
-
-                            </div>
-                        </li>
-                        <li>
-                            <div class="banner-textagileinfo">
-                                <h6>Ideal for Personal Banking</h6>
-                                <h3>For Your Personal And Professional Banking Needs.</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit llam in consecteelit.</p>
-
-                            </div>
-                        </li>
+                        <!--                        <li>
+                                                    <div class="banner-textagileinfo">
+                                                        <h6>the Internet banking portal</h6>
+                                                        <h3>Ensuring a high level of customer service.</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit llam in consectetur.</p>
+                        
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="banner-textagileinfo">
+                                                        <h6>Ideal for Personal Banking</h6>
+                                                        <h3>For Your Personal And Professional Banking Needs.</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit llam in consecteelit.</p>
+                        
+                                                    </div>
+                                                </li>-->
                     </ul>
                 </div>
             </div>
@@ -783,33 +789,33 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="images/t4.jpg">
-                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>JHONIE FEGIDERO</h3> Digital Disruptor">
-                                    <div class="team-w3text">
-                                        <h4>JHONIE FEGIDERO</h4>
-                                        <p>Digital Disruptor</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/t4.jpg">
-                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>JENIKA FEGIDERO</h3> Marketing Manager">
-                                    <div class="team-w3text">
-                                        <h4>JENIKA FEGIDERO</h4>
-                                        <p>Marketing Manager</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/t4.jpg">
-                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>C. VENKATESWARAN</h3> Country Head, India">
-                                    <div class="team-w3text">
-                                        <h4>C. VENKATESWARAN</h4>
-                                        <p>Country Head, India</p>
-                                    </div>
-                                </a>
-                            </li>
+                            <!--                            <li>
+                                                            <a href="images/t4.jpg">
+                                                                <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>JHONIE FEGIDERO</h3> Digital Disruptor">
+                                                                <div class="team-w3text">
+                                                                    <h4>JHONIE FEGIDERO</h4>
+                                                                    <p>Digital Disruptor</p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="images/t4.jpg">
+                                                                <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>JENIKA FEGIDERO</h3> Marketing Manager">
+                                                                <div class="team-w3text">
+                                                                    <h4>JENIKA FEGIDERO</h4>
+                                                                    <p>Marketing Manager</p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="images/t4.jpg">
+                                                                <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>C. VENKATESWARAN</h3> Country Head, India">
+                                                                <div class="team-w3text">
+                                                                    <h4>C. VENKATESWARAN</h4>
+                                                                    <p>Country Head, India</p>
+                                                                </div>
+                                                            </a>
+                                                        </li>-->
                         </ul>
                     </div>
                     <div id="demo1_main_image" class="col-md-8 col-xs-7 team-right"></div>
