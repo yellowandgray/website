@@ -547,8 +547,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                                 <div class="col-md-8">
                                                     <p>100 years Collective Industry Experience</p>
-                                                    <br/>
-                                                    <br/>
                                                 </div>
                                             </div>
                                         </div>
@@ -568,7 +566,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                     <img src="images/support-hub/pic-7.png" alt="">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <p>Solid Support Hub Team  from different Nations including Malaysia, Philippines. India and France</p>
+                                                    <p>Solid Support Hub Team  from Malaysia, Philippines. India and France</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -630,7 +628,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                     <img src="images/support-hub/pic-9.png" alt="">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <p>Top Management are members of Internationally recognized Professional Organizations and Accredited Bodies</p>
+                                                    <p>Top Management are members of Internationally recognized Orgs & Accredited Bodies</p>
                                                 </div>
                                             </div>
                                         </div>
