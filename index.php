@@ -177,12 +177,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src="images/alias-icons/004.png" alt="Alias Icon">
                             <h6>FINANCE</h6>
                             <ul class="text-left">
-                                <i class="fa fa-check"></i><li> Illustrations</li>
-                                <i class="fa fa-check"></i><li> Video, Images sourcing & Production</li>
-                                <i class="fa fa-check"></i><li> Design of Collaterals</li>
-                                <i class="fa fa-check"></i><li> Animation</li>
-                                <i class="fa fa-check"></i><li> Branding</li>
-                                <i class="fa fa-check"></i><li> Printing</li>
+                                <i class="fa fa-check"></i><li> Fund Raising Investments (Bonds, Syariah Compliant Funds)</li>
+                                <i class="fa fa-check"></i><li> Venture Capital, PE, Angel Funding, Sourcing & Matching</li>
+                                <i class="fa fa-check"></i><li> Financial Modeling and Projection</li>
+                                <i class="fa fa-check"></i><li> Grants & Incentives</li>
                             </ul>
                         </div>
                     </div>
