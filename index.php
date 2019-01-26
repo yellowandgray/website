@@ -330,8 +330,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <li>
                                 <img src="images/super-hero.png" alt=""> ORIGINAL SUPER HEROES
                                 <p>Animated superheroes for branding and online campaigns.</p>
-                                <br/>
-                                <br/>
                             </li>
                             <li>
                                 <img src="images/acceleration-program.png" alt=""> ENGAGEMENT AND CONNECTIVITY
@@ -340,7 +338,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <li>
                                 <img src="images/acceleration-program.png" alt=""> ACADEMY OF MUSIC
                                 <p>The Accelerated Music Method Academy provides a platform for individuals who aspire to learn and music.</p>
-                                <br/>
                             </li>
 
                         </ul>
@@ -459,7 +456,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div role="tabpanel" class="tab-pane" id="profile">
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
-<!--                                    <h3 class="text-center color-white bold margin-tp-20">Technology</h3>-->
+                                    <!--                                    <h3 class="text-center color-white bold margin-tp-20">Technology</h3>-->
                                     <div class="row">
                                         <div class="col-md-12  latest-grid text-center">
                                             <img src="images/technology/platform-4.0.jpg" alt="" class="img-responsive" >
@@ -1014,193 +1011,193 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <!-- //testimonials -->
         <!-- contact -->
-<!--        <div class="contact-main section" id="contact" style="background: #ddd;">
+        <!--        <div class="contact-main section" id="contact" style="background: #ddd;">
+                    <div class="container">
+                        <h3 class="title-txt">
+                            <span>c</span>ontact us</h3>
+                        <div class="col-md-4 contact-leftgrid">
+                        </div>
+                        <div class="col-md-4 contact-leftgrid">
+                        </div>
+                        <div class="col-md-4 contact-leftgrid">
+                        </div>
+                        <div class="col-md-8 contact-center">
+                            <div class="col-md-4 contact-g2">
+                                <h6>Follow us</h6>
+                                <div class="address-grid">
+        
+                                    <ul class="social-icons3">
+        
+                                        <li>
+                                            <a href="#" class="s-iconfacebook">
+                                                <span class="fa fa-facebook" aria-hidden="true"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="s-icontwitter">
+                                                <span class="fa fa-twitter" aria-hidden="true"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="s-icondribbble">
+                                                <span class="fa fa-dribbble" aria-hidden="true"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="s-iconbehance">
+                                                <span class="fa fa-behance" aria-hidden="true"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                                                <div class="col-md-8 contact-g3">
+                                                    <div class="subscribe-grid ">
+                                                        <p>subscribe To receive helpful articles, customer alerts,services & more.</p>
+                            
+                                                        <form action="#" method="post">
+                                                            <input type="email" placeholder="Your Email" name="Subscribe" required="">
+                                                            <button class="btn1">
+                                                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                                            </button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                        </div>
+        
+                        <div class="clearfix"></div>
+                    </div>-->
+        <div class="section contact-bottom">
             <div class="container">
                 <h3 class="title-txt">
                     <span>c</span>ontact us</h3>
-                <div class="col-md-4 contact-leftgrid">
-                </div>
-                <div class="col-md-4 contact-leftgrid">
-                </div>
-                <div class="col-md-4 contact-leftgrid">
-                </div>
-                <div class="col-md-8 contact-center">
-                    <div class="col-md-4 contact-g2">
-                        <h6>Follow us</h6>
-                        <div class="address-grid">
+                <div class="col-md-6 contact-bot">
+                    <div class="contact-g1">
+                        <h6>HEADQUARTERS</h6>
+                        <ul class="address">
+                            <li>
+                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                +603 2011 9877
+                            </li>
+                            <li>
+                                <span class="fa fa-envelope" aria-hidden="true"></span>
+                                <a href="mailto:example@email.com"> info@alias-innovation.com</a>
+                            </li>
+                            <li>
+                                <span class="fa fa-map-marker" aria-hidden="true"></span>
+                                Penthouse, 16-1, Level 16 Mz5, Wisma UOA Damansara II, No. 6, Changkat Semantan, Damansara Heights, 50490 Kuala Lumpur, Malaysia
 
-                            <ul class="social-icons3">
-
-                                <li>
-                                    <a href="#" class="s-iconfacebook">
-                                        <span class="fa fa-facebook" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="s-icontwitter">
-                                        <span class="fa fa-twitter" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="s-icondribbble">
-                                        <span class="fa fa-dribbble" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="s-iconbehance">
-                                        <span class="fa fa-behance" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
-                                        <div class="col-md-8 contact-g3">
-                                            <div class="subscribe-grid ">
-                                                <p>subscribe To receive helpful articles, customer alerts,services & more.</p>
+                    <div class="contact-g1">
+                        <h6>SATELLITE HUB</h6>
+                        <ul class="address">
+                            <li>
+                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                +603-8066 3258,+6012-908 3258
+                            </li>
+                            <li>
+                                <span class="fa fa-envelope" aria-hidden="true"></span>
+                                <a href="mailto:example@email.com"> info@alias-innovation.com</a>
+                            </li>
+                            <li>
+                                <span class="fa fa-map-marker" aria-hidden="true"></span>
+                                No. 1, Jalan Puteri 12/5, Bandar Puteri Puchong, 47100 Selangor.
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contact-g1">
+                        <h6>INDIA OFFICE</h6>
+                        <ul class="address">
+                            <li>
+                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                +91 98404 70876
+                            </li>
+                            <li>
+                                <span class="fa fa-envelope" aria-hidden="true"></span>
+                                <a href="mailto:example@email.com"> info@alias-innovation.com</a>
+                            </li>
+                            <li>
+                                <span class="fa fa-map-marker" aria-hidden="true"></span>
+                                12, Durga Colony 4th Cross Street, Sembakkam Chennai 600073 Tamil Nadu State India.
+
+                            </li>
+                        </ul>
+                    </div>
+                    <!--                        <div class="contact-list">
+                                                <h6> Open a free checking account online today </h6>
+                                                <ul class="cbot-list">
+                                                    <li>
+                                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>Maece placerat eget mi
+                                                        <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>sodales blandit urna
+                                                        <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
+                                                    </li>
                     
-                                                <form action="#" method="post">
-                                                    <input type="email" placeholder="Your Email" name="Subscribe" required="">
-                                                    <button class="btn1">
-                                                        <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        </div>
+                                                    <li>
+                                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>vitae pellentesque ac
+                                                        <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
+                                                    </li>
+                    
+                                                </ul>
+                                                <a href="#" class="log contact-link" data-toggle="modal" data-target="#myModal">create a new account</a>
+                                            </div>-->
                 </div>
+                <div class="col-lg-6 col-md-6  contact-right-grid">
+                    <h6>send us a message</h6>
+                    <div class="agileits-main-right">
+                        <form action="#" method="post" class="agile_form">
+                            <label class="header">Name</label>
+                            <div class="icon1 w3ls-name1">
+                                <input placeholder=" " name="first name" type="text" required="">
+                            </div>
+                            <div class="icon2">
+                                <label class="header">Email</label>
+                                <input placeholder=" " name="Email" type="email" required="">
+                            </div>
+                            <label class="header">your message</label>
+                            <textarea class="w3l_summary" required=""></textarea>
+                            <input type="submit" value="SEND">
+                        </form>
+                    </div>
+                    <h6>Follow us</h6>
+                    <div class="address-grid">
 
+                        <ul class="social-icons3">
+
+                            <li>
+                                <a href="#" class="s-iconfacebook">
+                                    <span class="fa fa-facebook" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="s-icontwitter">
+                                    <span class="fa fa-twitter" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="s-icondribbble">
+                                    <span class="fa fa-dribbble" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="s-iconbehance">
+                                    <span class="fa fa-behance" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="clearfix"></div>
-            </div>-->
-            <div class="section contact-bottom">
-                <div class="container">
-                      <h3 class="title-txt">
-                    <span>c</span>ontact us</h3>
-                    <div class="col-md-6 contact-bot">
-                        <div class="contact-g1">
-                            <h6>HEADQUARTERS</h6>
-                            <ul class="address">
-                                <li>
-                                    <span class="fa fa-phone" aria-hidden="true"></span>
-                                    +603 2011 9877
-                                </li>
-                                <li>
-                                    <span class="fa fa-envelope" aria-hidden="true"></span>
-                                    <a href="mailto:example@email.com"> info@alias-innovation.com</a>
-                                </li>
-                                <li>
-                                    <span class="fa fa-map-marker" aria-hidden="true"></span>
-                                    Penthouse, 16-1, Level 16 Mz5, Wisma UOA Damansara II, No. 6, Changkat Semantan, Damansara Heights, 50490 Kuala Lumpur, Malaysia
-
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="contact-g1">
-                            <h6>SATELLITE HUB</h6>
-                            <ul class="address">
-                                <li>
-                                    <span class="fa fa-phone" aria-hidden="true"></span>
-                                    +603-8066 3258,+6012-908 3258
-                                </li>
-                                <li>
-                                    <span class="fa fa-envelope" aria-hidden="true"></span>
-                                    <a href="mailto:example@email.com"> info@alias-innovation.com</a>
-                                </li>
-                                <li>
-                                    <span class="fa fa-map-marker" aria-hidden="true"></span>
-                                    No. 1, Jalan Puteri 12/5, Bandar Puteri Puchong, 47100 Selangor.
-
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="contact-g1">
-                            <h6>INDIA OFFICE</h6>
-                            <ul class="address">
-                                <li>
-                                    <span class="fa fa-phone" aria-hidden="true"></span>
-                                    +91 98404 70876
-                                </li>
-                                <li>
-                                    <span class="fa fa-envelope" aria-hidden="true"></span>
-                                    <a href="mailto:example@email.com"> info@alias-innovation.com</a>
-                                </li>
-                                <li>
-                                    <span class="fa fa-map-marker" aria-hidden="true"></span>
-                                    12, Durga Colony 4th Cross Street, Sembakkam Chennai 600073 Tamil Nadu State India.
-
-                                </li>
-                            </ul>
-                        </div>
-                        <!--                        <div class="contact-list">
-                                                    <h6> Open a free checking account online today </h6>
-                                                    <ul class="cbot-list">
-                                                        <li>
-                                                            <i class="fa fa-check-square-o" aria-hidden="true"></i>Maece placerat eget mi
-                                                            <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-check-square-o" aria-hidden="true"></i>sodales blandit urna
-                                                            <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
-                                                        </li>
-                        
-                                                        <li>
-                                                            <i class="fa fa-check-square-o" aria-hidden="true"></i>vitae pellentesque ac
-                                                            <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
-                                                        </li>
-                        
-                                                    </ul>
-                                                    <a href="#" class="log contact-link" data-toggle="modal" data-target="#myModal">create a new account</a>
-                                                </div>-->
-                    </div>
-                    <div class="col-lg-6 col-md-6  contact-right-grid">
-                        <h6>send us a message</h6>
-                        <div class="agileits-main-right">
-                            <form action="#" method="post" class="agile_form">
-                                <label class="header">Name</label>
-                                <div class="icon1 w3ls-name1">
-                                    <input placeholder=" " name="first name" type="text" required="">
-                                </div>
-                                <div class="icon2">
-                                    <label class="header">Email</label>
-                                    <input placeholder=" " name="Email" type="email" required="">
-                                </div>
-                                <label class="header">your message</label>
-                                <textarea class="w3l_summary" required=""></textarea>
-                                <input type="submit" value="SEND">
-                            </form>
-                        </div>
-                        <h6>Follow us</h6>
-                        <div class="address-grid">
-
-                            <ul class="social-icons3">
-
-                                <li>
-                                    <a href="#" class="s-iconfacebook">
-                                        <span class="fa fa-facebook" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="s-icontwitter">
-                                        <span class="fa fa-twitter" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="s-icondribbble">
-                                        <span class="fa fa-dribbble" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="s-iconbehance">
-                                        <span class="fa fa-behance" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
             </div>
         </div>
-        <!-- contact -->
-        <?php include 'footer.php'; ?>
-    </body>
+    </div>
+    <!-- contact -->
+    <?php include 'footer.php'; ?>
+</body>
 
 </html>
