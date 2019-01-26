@@ -780,7 +780,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src="images/team-3.png" alt="" />
                             <h6>Nulla molestie</h6>
                             <span>Director Corporate Strategy</span>
-                            <p class="text-justify margin-t-10">Armed with a Degree in International Business and has nearly 10 years of vital industry experience in commodity trading, management, shipping, forwarding and logistics. Has managed multiple accounts for import and export clients and provided strategic consulting for ground logistics movement and warehousing . Also did consultation for Food and Beverage Businesses.</p>
+                            <p class="text-justify margin-t-10">Armed with a Degree in International Business and has nearly 10 years of vital industry experience in commodity trading, management, shipping, forwarding and logistics. Has managed multiple accounts for import and export clients and provided strategic consulting for ground logistics movement and warehousing. Also did consultation for Food and Beverage Businesses.</p>
                         </div>
                     </div>
                 
