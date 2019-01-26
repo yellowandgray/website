@@ -1167,7 +1167,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <input type="submit" value="SEND">
                             </form>
                         </div>
-                        <div class="row">
                         <h6>Follow us</h6>
                         <div class="address-grid">
 
@@ -1195,8 +1194,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </li>
                             </ul>
                         </div>
-                        </div>
-                    
                     </div>
                     <div class="clearfix"></div>
                 </div>
