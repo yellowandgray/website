@@ -303,7 +303,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="col-md-4 man-grid">
                         <ul class="span-font">
                             <li>
-                                <img src="images/app.png" alt=""> E-COMMERCE/ MOBILE-COMMERCE <span>APPLICATION</span>
+                                <img src="images/app.png" alt=""> E-COMMERCE/ MOBILE-COMMERCE <span> APPLICATION</span><br/>
                                 <img src="images/innovation/001.jpg" align="left" > <p align="left"> is a mobile-commerce platform for individuals, businesses & communities to market and promote their products & services to consumers (B2C) & businesses (B2B).</p>
                             </li>
                             <li>
