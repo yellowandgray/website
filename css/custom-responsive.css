@@ -9,3 +9,9 @@
         margin-top: -83px !important;
     }
 }
+
+@media (min-width: 1080px) and (max-width: 1253px) {
+    fieldset {
+        padding: 3em 3em !important;
+    }
+}
