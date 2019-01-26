@@ -111,25 +111,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="services section" id="services">
             <div class="container2">
 <!--                <h3 class="title-txt"><span>C</span>ommodity</h3>-->
-                <h3 class="title-txt color-white">Commodity</h3>
+                <h3 class="title-txt color-white"><span>S</span>ervices</h3>
 <!--                <h5>we offer products and services for your<span>personal</span> and<span>professional banking</span> needs.</h5>-->
-                <h5 class="color-white">we offer products and services for your personal and professional needs.</h5>
+                <h5 class="color-white">we offer products and services for your professional needs.</h5>
                 <div class="row">
                     <div class="col-md-4 text-center">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/001.png" alt="Alias Icon">
                             <h6>CORPORATE</h6>
                             <ul class="text-left">
-                                <li><i class="fa fa-check"></i> Strategic Planning</li>
-                                <li><i class="fa fa-check"></i> Business Coaching</li>
-                                <li><i class="fa fa-check"></i> Mentoring</li>
-                                <li><i class="fa fa-check"></i> Business Plans</li>
-                                <li><i class="fa fa-check"></i> Business Valuations</li>
-                                <li><i class="fa fa-check"></i> Pre-Listing</li>
-                                <li><i class="fa fa-check"></i> Listing Lead</li>
-                                <li><i class="fa fa-check"></i> RTO and M&A</li>
-                                <li><i class="fa fa-check"></i> Feasibility Study</li>
-                                <li><i class="fa fa-check"></i> Marketing Plans</li>
+                                <i class="fa fa-check"></i><li> Strategic Planning</li>
+                                <i class="fa fa-check"></i><li> Business Coaching</li>
+                                <i class="fa fa-check"></i><li> Mentoring</li>
+                                <i class="fa fa-check"></i><li> Business Plans</li>
+                                <i class="fa fa-check"></i><li> Business Valuations</li>
+                                <i class="fa fa-check"></i><li> Pre-Listing</li>
+                                <i class="fa fa-check"></i><li> Listing Lead</li>
+                                <i class="fa fa-check"></i><li> RTO and M&A</li>
+                                <i class="fa fa-check"></i><li> Feasibility Study</li>
+                                <i class="fa fa-check"></i><li> Marketing Plans</li>
                             </ul>
                         </div>
                     </div>
@@ -138,15 +138,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src="images/alias-icons/002.png" alt="Alias Icon">
                             <h6>CONTENT</h6>
                             <ul class="text-left">
-                                <li><i class="fa fa-check"></i> Content Writing</li>
-                                <li><i class="fa fa-check"></i> Editing</li>
-                                <li><i class="fa fa-check"></i> Translation</li>
-                                <li><i class="fa fa-check"></i> Digital and offline content writing and management</li>
-                                <li><i class="fa fa-check"></i> Book Authoring & Publishing</li>
-                                <li><i class="fa fa-check"></i> Printing</li>
-                                <li><i class="fa fa-check"></i> Marketing and solutions collateral</li>
-                                <li><i class="fa fa-check"></i> Tender Writing</li>
-                                <li><i class="fa fa-check"></i> Technical Documentation</li>
+                                <i class="fa fa-check"></i><li> Content Writing</li>
+                                <i class="fa fa-check"></i><li> Editing</li>
+                                <i class="fa fa-check"></i><li> Translation</li>
+                                <i class="fa fa-check"></i><li> Digital & offline content writing & management</li>
+                                <i class="fa fa-check"></i><li> Book Authoring & Publishing</li>
+                                <i class="fa fa-check"></i><li> Printing</li>
+                                <i class="fa fa-check"></i><li> Marketing and solutions collateral</li>
+                                <i class="fa fa-check"></i><li> Tender Writing</li>
+                                <i class="fa fa-check"></i><li> Technical Documentation</li>
                             </ul>
                         </div>
                     </div>
@@ -155,12 +155,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src="images/alias-icons/003.png" alt="Alias Icon">
                             <h6>CREATIVE</h6>
                             <ul class="text-left">
-                                <li><i class="fa fa-check"></i> Illustrations</li>
-                                <li><i class="fa fa-check"></i> Video, Images sourcing & Production</li>
-                                <li><i class="fa fa-check"></i> Design of Collaterals</li>
-                                <li><i class="fa fa-check"></i> Animation</li>
-                                <li><i class="fa fa-check"></i> Branding</li>
-                                <li><i class="fa fa-check"></i> Printing</li>
+                                <i class="fa fa-check"></i><li> Illustrations</li>
+                                <i class="fa fa-check"></i><li> Video, Images sourcing & Production</li>
+                                <i class="fa fa-check"></i><li> Design of Collaterals</li>
+                                <i class="fa fa-check"></i><li> Animation</li>
+                                <i class="fa fa-check"></i><li> Branding</li>
+                                <i class="fa fa-check"></i><li> Printing</li>
                             </ul>
                         </div>
                     </div>
@@ -171,12 +171,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src="images/alias-icons/004.png" alt="Alias Icon">
                             <h6>FINANCE</h6>
                             <ul class="text-left">
-                                <li><i class="fa fa-check"></i> Illustrations</li>
-                                <li><i class="fa fa-check"></i> Video, Images sourcing & Production</li>
-                                <li><i class="fa fa-check"></i> Design of Collaterals</li>
-                                <li><i class="fa fa-check"></i> Animation</li>
-                                <li><i class="fa fa-check"></i> Branding</li>
-                                <li><i class="fa fa-check"></i> Printing</li>
+                                <i class="fa fa-check"></i><li> Illustrations</li>
+                                <i class="fa fa-check"></i><li> Video, Images sourcing & Production</li>
+                                <i class="fa fa-check"></i><li> Design of Collaterals</li>
+                                <i class="fa fa-check"></i><li> Animation</li>
+                                <i class="fa fa-check"></i><li> Branding</li>
+                                <i class="fa fa-check"></i><li> Printing</li>
                             </ul>
                         </div>
                     </div>
@@ -185,14 +185,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src="images/alias-icons/005.png" alt="Alias Icon">
                             <h6>INNOVATION</h6>
                             <ul class="text-left">
-                                <li><i class="fa fa-check"></i> Data Collection, Processing & Analyzing</li>
-                                <li><i class="fa fa-check"></i> Business Development Outsourcing Team</li>
-                                <li><i class="fa fa-check"></i> Surveys</li>
-                                <li><i class="fa fa-check"></i> Market Study</li>
-                                <li><i class="fa fa-check"></i> Research Exercises</li>
-                                <li><i class="fa fa-check"></i> Business Logic & Architecture</li>
-                                <li><i class="fa fa-check"></i> Idea Innovation</li>
-                                <li><i class="fa fa-check"></i> Online Campaigns</li>
+                                <i class="fa fa-check"></i><li> Data Collection, Processing & Analyzing</li>
+                                <i class="fa fa-check"></i><li> Business Development Outsourcing Team</li>
+                                <i class="fa fa-check"></i><li> Surveys</li>
+                                <i class="fa fa-check"></i><li> Market Study</li>
+                                <i class="fa fa-check"></i><li> Research Exercises</li>
+                                <i class="fa fa-check"></i><li> Business Logic & Architecture</li>
+                                <i class="fa fa-check"></i><li> Idea Innovation</li>
+                                <i class="fa fa-check"></i><li> Online Campaigns</li>
                             </ul>
                         </div>
                     </div>
@@ -201,16 +201,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src="images/alias-icons/006.png" alt="Alias Icon">
                             <h6>TECHNOLOGY</h6>
                             <ul class="text-left">
-                                <li><i class="fa fa-check"></i> New Media Services</li>
-                                <li><i class="fa fa-check"></i> Content Management</li>
-                                <li><i class="fa fa-check"></i> 4th Industrial Revolution</li>
-                                <li><i class="fa fa-check"></i> Web Applications</li>
-                                <li><i class="fa fa-check"></i> Mobile Apps</li>
-                                <li><i class="fa fa-check"></i> E-Commerce</li>
-                                <li><i class="fa fa-check"></i> ICT Audit</li>
-                                <li><i class="fa fa-check"></i> Infra, Software, Hardware Solutioning</li>
-                                <li><i class="fa fa-check"></i> Tender management</li>
-                                <li><i class="fa fa-check"></i> Consultancy (ICT)</li>
+                                <i class="fa fa-check"></i><li> New Media Services</li>
+                                <i class="fa fa-check"></i><li> Content Management</li>
+                                <i class="fa fa-check"></i><li> 4th Industrial Revolution</li>
+                                <i class="fa fa-check"></i><li> Web Applications</li>
+                                <i class="fa fa-check"></i><li> Mobile Apps</li>
+                                <i class="fa fa-check"></i><li> E-Commerce</li>
+                                <i class="fa fa-check"></i><li> ICT Audit</li>
+                                <i class="fa fa-check"></i><li> Infra, Software, Hardware Solutioning</li>
+                                <i class="fa fa-check"></i><li> Tender management</li>
+                                <i class="fa fa-check"></i><li> Consultancy (ICT)</li>
                             </ul>
                         </div>
                     </div>
@@ -330,8 +330,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <li>
                                 <img src="images/super-hero.png" alt=""> ORIGINAL SUPER HEROES
                                 <p>Animated superheroes for branding and online campaigns.</p>
-                                <br/>
-                                <br/>
                             </li>
                             <li>
                                 <img src="images/acceleration-program.png" alt=""> ENGAGEMENT AND CONNECTIVITY
@@ -340,7 +338,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <li>
                                 <img src="images/acceleration-program.png" alt=""> ACADEMY OF MUSIC
                                 <p>The Accelerated Music Method Academy provides a platform for individuals who aspire to learn and music.</p>
-                                <br/>
                             </li>
 
                         </ul>
@@ -459,7 +456,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div role="tabpanel" class="tab-pane" id="profile">
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
-<!--                                    <h3 class="text-center color-white bold margin-tp-20">Technology</h3>-->
+                                    <!--                                    <h3 class="text-center color-white bold margin-tp-20">Technology</h3>-->
                                     <div class="row">
                                         <div class="col-md-12  latest-grid text-center">
                                             <img src="images/technology/platform-4.0.jpg" alt="" class="img-responsive" >
@@ -1014,193 +1011,193 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <!-- //testimonials -->
         <!-- contact -->
-<!--        <div class="contact-main section" id="contact" style="background: #ddd;">
+        <!--        <div class="contact-main section" id="contact" style="background: #ddd;">
+                    <div class="container">
+                        <h3 class="title-txt">
+                            <span>c</span>ontact us</h3>
+                        <div class="col-md-4 contact-leftgrid">
+                        </div>
+                        <div class="col-md-4 contact-leftgrid">
+                        </div>
+                        <div class="col-md-4 contact-leftgrid">
+                        </div>
+                        <div class="col-md-8 contact-center">
+                            <div class="col-md-4 contact-g2">
+                                <h6>Follow us</h6>
+                                <div class="address-grid">
+        
+                                    <ul class="social-icons3">
+        
+                                        <li>
+                                            <a href="#" class="s-iconfacebook">
+                                                <span class="fa fa-facebook" aria-hidden="true"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="s-icontwitter">
+                                                <span class="fa fa-twitter" aria-hidden="true"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="s-icondribbble">
+                                                <span class="fa fa-dribbble" aria-hidden="true"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="s-iconbehance">
+                                                <span class="fa fa-behance" aria-hidden="true"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                                                <div class="col-md-8 contact-g3">
+                                                    <div class="subscribe-grid ">
+                                                        <p>subscribe To receive helpful articles, customer alerts,services & more.</p>
+                            
+                                                        <form action="#" method="post">
+                                                            <input type="email" placeholder="Your Email" name="Subscribe" required="">
+                                                            <button class="btn1">
+                                                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                                            </button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                        </div>
+        
+                        <div class="clearfix"></div>
+                    </div>-->
+        <div class="section contact-bottom">
             <div class="container">
                 <h3 class="title-txt">
                     <span>c</span>ontact us</h3>
-                <div class="col-md-4 contact-leftgrid">
-                </div>
-                <div class="col-md-4 contact-leftgrid">
-                </div>
-                <div class="col-md-4 contact-leftgrid">
-                </div>
-                <div class="col-md-8 contact-center">
-                    <div class="col-md-4 contact-g2">
-                        <h6>Follow us</h6>
-                        <div class="address-grid">
+                <div class="col-md-6 contact-bot">
+                    <div class="contact-g1">
+                        <h6>HEADQUARTERS</h6>
+                        <ul class="address">
+                            <li>
+                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                +603 2011 9877
+                            </li>
+                            <li>
+                                <span class="fa fa-envelope" aria-hidden="true"></span>
+                                <a href="mailto:example@email.com"> info@alias-innovation.com</a>
+                            </li>
+                            <li>
+                                <span class="fa fa-map-marker" aria-hidden="true"></span>
+                                Penthouse, 16-1, Level 16 Mz5, Wisma UOA Damansara II, No. 6, Changkat Semantan, Damansara Heights, 50490 Kuala Lumpur, Malaysia
 
-                            <ul class="social-icons3">
-
-                                <li>
-                                    <a href="#" class="s-iconfacebook">
-                                        <span class="fa fa-facebook" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="s-icontwitter">
-                                        <span class="fa fa-twitter" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="s-icondribbble">
-                                        <span class="fa fa-dribbble" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="s-iconbehance">
-                                        <span class="fa fa-behance" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
-                                        <div class="col-md-8 contact-g3">
-                                            <div class="subscribe-grid ">
-                                                <p>subscribe To receive helpful articles, customer alerts,services & more.</p>
+                    <div class="contact-g1">
+                        <h6>SATELLITE HUB</h6>
+                        <ul class="address">
+                            <li>
+                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                +603-8066 3258,+6012-908 3258
+                            </li>
+                            <li>
+                                <span class="fa fa-envelope" aria-hidden="true"></span>
+                                <a href="mailto:example@email.com"> info@alias-innovation.com</a>
+                            </li>
+                            <li>
+                                <span class="fa fa-map-marker" aria-hidden="true"></span>
+                                No. 1, Jalan Puteri 12/5, Bandar Puteri Puchong, 47100 Selangor.
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contact-g1">
+                        <h6>INDIA OFFICE</h6>
+                        <ul class="address">
+                            <li>
+                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                +91 98404 70876
+                            </li>
+                            <li>
+                                <span class="fa fa-envelope" aria-hidden="true"></span>
+                                <a href="mailto:example@email.com"> info@alias-innovation.com</a>
+                            </li>
+                            <li>
+                                <span class="fa fa-map-marker" aria-hidden="true"></span>
+                                12, Durga Colony 4th Cross Street, Sembakkam Chennai 600073 Tamil Nadu State India.
+
+                            </li>
+                        </ul>
+                    </div>
+                    <!--                        <div class="contact-list">
+                                                <h6> Open a free checking account online today </h6>
+                                                <ul class="cbot-list">
+                                                    <li>
+                                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>Maece placerat eget mi
+                                                        <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>sodales blandit urna
+                                                        <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
+                                                    </li>
                     
-                                                <form action="#" method="post">
-                                                    <input type="email" placeholder="Your Email" name="Subscribe" required="">
-                                                    <button class="btn1">
-                                                        <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        </div>
+                                                    <li>
+                                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>vitae pellentesque ac
+                                                        <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
+                                                    </li>
+                    
+                                                </ul>
+                                                <a href="#" class="log contact-link" data-toggle="modal" data-target="#myModal">create a new account</a>
+                                            </div>-->
                 </div>
+                <div class="col-lg-6 col-md-6  contact-right-grid">
+                    <h6>send us a message</h6>
+                    <div class="agileits-main-right">
+                        <form action="#" method="post" class="agile_form">
+                            <label class="header">Name</label>
+                            <div class="icon1 w3ls-name1">
+                                <input placeholder=" " name="first name" type="text" required="">
+                            </div>
+                            <div class="icon2">
+                                <label class="header">Email</label>
+                                <input placeholder=" " name="Email" type="email" required="">
+                            </div>
+                            <label class="header">your message</label>
+                            <textarea class="w3l_summary" required=""></textarea>
+                            <input type="submit" value="SEND">
+                        </form>
+                    </div>
+                    <h6>Follow us</h6>
+                    <div class="address-grid">
 
+                        <ul class="social-icons3">
+
+                            <li>
+                                <a href="#" class="s-iconfacebook">
+                                    <span class="fa fa-facebook" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="s-icontwitter">
+                                    <span class="fa fa-twitter" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="s-icondribbble">
+                                    <span class="fa fa-dribbble" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="s-iconbehance">
+                                    <span class="fa fa-behance" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="clearfix"></div>
-            </div>-->
-            <div class="section contact-bottom">
-                <div class="container">
-                      <h3 class="title-txt">
-                    <span>c</span>ontact us</h3>
-                    <div class="col-md-6 contact-bot">
-                        <div class="contact-g1">
-                            <h6>HEADQUARTERS</h6>
-                            <ul class="address">
-                                <li>
-                                    <span class="fa fa-phone" aria-hidden="true"></span>
-                                    +603 2011 9877
-                                </li>
-                                <li>
-                                    <span class="fa fa-envelope" aria-hidden="true"></span>
-                                    <a href="mailto:example@email.com"> info@alias-innovation.com</a>
-                                </li>
-                                <li>
-                                    <span class="fa fa-map-marker" aria-hidden="true"></span>
-                                    Penthouse, 16-1, Level 16 Mz5, Wisma UOA Damansara II, No. 6, Changkat Semantan, Damansara Heights, 50490 Kuala Lumpur, Malaysia
-
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="contact-g1">
-                            <h6>SATELLITE HUB</h6>
-                            <ul class="address">
-                                <li>
-                                    <span class="fa fa-phone" aria-hidden="true"></span>
-                                    +603-8066 3258,+6012-908 3258
-                                </li>
-                                <li>
-                                    <span class="fa fa-envelope" aria-hidden="true"></span>
-                                    <a href="mailto:example@email.com"> info@alias-innovation.com</a>
-                                </li>
-                                <li>
-                                    <span class="fa fa-map-marker" aria-hidden="true"></span>
-                                    No. 1, Jalan Puteri 12/5, Bandar Puteri Puchong, 47100 Selangor.
-
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="contact-g1">
-                            <h6>INDIA OFFICE</h6>
-                            <ul class="address">
-                                <li>
-                                    <span class="fa fa-phone" aria-hidden="true"></span>
-                                    +91 98404 70876
-                                </li>
-                                <li>
-                                    <span class="fa fa-envelope" aria-hidden="true"></span>
-                                    <a href="mailto:example@email.com"> info@alias-innovation.com</a>
-                                </li>
-                                <li>
-                                    <span class="fa fa-map-marker" aria-hidden="true"></span>
-                                    12, Durga Colony 4th Cross Street, Sembakkam Chennai 600073 Tamil Nadu State India.
-
-                                </li>
-                            </ul>
-                        </div>
-                        <!--                        <div class="contact-list">
-                                                    <h6> Open a free checking account online today </h6>
-                                                    <ul class="cbot-list">
-                                                        <li>
-                                                            <i class="fa fa-check-square-o" aria-hidden="true"></i>Maece placerat eget mi
-                                                            <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-check-square-o" aria-hidden="true"></i>sodales blandit urna
-                                                            <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
-                                                        </li>
-                        
-                                                        <li>
-                                                            <i class="fa fa-check-square-o" aria-hidden="true"></i>vitae pellentesque ac
-                                                            <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
-                                                        </li>
-                        
-                                                    </ul>
-                                                    <a href="#" class="log contact-link" data-toggle="modal" data-target="#myModal">create a new account</a>
-                                                </div>-->
-                    </div>
-                    <div class="col-lg-6 col-md-6  contact-right-grid">
-                        <h6>send us a message</h6>
-                        <div class="agileits-main-right">
-                            <form action="#" method="post" class="agile_form">
-                                <label class="header">Name</label>
-                                <div class="icon1 w3ls-name1">
-                                    <input placeholder=" " name="first name" type="text" required="">
-                                </div>
-                                <div class="icon2">
-                                    <label class="header">Email</label>
-                                    <input placeholder=" " name="Email" type="email" required="">
-                                </div>
-                                <label class="header">your message</label>
-                                <textarea class="w3l_summary" required=""></textarea>
-                                <input type="submit" value="SEND">
-                            </form>
-                        </div>
-                        <h6>Follow us</h6>
-                        <div class="address-grid">
-
-                            <ul class="social-icons3">
-
-                                <li>
-                                    <a href="#" class="s-iconfacebook">
-                                        <span class="fa fa-facebook" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="s-icontwitter">
-                                        <span class="fa fa-twitter" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="s-icondribbble">
-                                        <span class="fa fa-dribbble" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="s-iconbehance">
-                                        <span class="fa fa-behance" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
             </div>
         </div>
-        <!-- contact -->
-        <?php include 'footer.php'; ?>
-    </body>
+    </div>
+    <!-- contact -->
+    <?php include 'footer.php'; ?>
+</body>
 
 </html>
