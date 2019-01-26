@@ -76,6 +76,9 @@
     .services-p {
         margin-bottom: 15px !important;
     }
+    .team-grid {
+        height: auto !important;
+    }
 }
 
 .padding-tb-20 {
@@ -85,6 +88,9 @@
 .margin-b-20 {
     margin-bottom: 20px;
 }
+.margin-t-10 {
+    margin-top: 10px;
+}
 
 .color-pink {
     color: #bc3c82 !important;
@@ -92,4 +98,24 @@
 
 .color-blue {
     color: #0567ce !important;
+}
+
+.team-grid {
+    padding: 2.5em 1em;
+    /* border: 2px solid #984091; */
+    margin-bottom: 20px;
+    height: 480px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.team-grid h6 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: #0567ce;
+}
+.team-grid span {
+    font-size: 15px;
+    color: #bc3c82;
+    margin-bottom: 20px
 }

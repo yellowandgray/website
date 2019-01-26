@@ -760,27 +760,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <span>T</span>eam</h3>
                 <div class="new-agileinfo">
                  <div class="col-md-4 text-center">
-                        <div class="w3ls-about-grid">
+                        <div class="team-grid">
                             <img src="images/team-1.png" alt="" />
-                            <h6>GERARD PILLAI</h6>
-                            <p>CHIEF STRATEGY EVANGELIST</p>
-                           <p class="text-justify">More than 25 years in Finance, Technology and Strategic Consulting with exposure to Multi National Corporations including stints with Coopers & Lybrand, United Nations funded Agency and Tech Start Ups. Armed with an MBA in International Management and a Degree in Accounting & Finance. Currently pursuing Doctorate at a leading University.</p>
+                            <h6>Gerard Pillai</h6>
+                            <span>Chief Strategy Evangelist</span>
+                           <p class="text-justify margin-t-10">More than 25 years in Finance, Technology and Strategic Consulting with exposure to Multi National Corporations including stints with Coopers & Lybrand, United Nations funded Agency and Tech Start Ups. Armed with an MBA in International Management and a Degree in Accounting & Finance. Currently pursuing Doctorate at a leading University.</p>
                         </div>
                     </div>
                  <div class="col-md-4 text-center">
-                        <div class="w3ls-about-grid">
+                        <div class="team-grid">
                             <img src="images/team-2.png" alt="" />
                             <h6>Facere possimus</h6>
-                            <p>DIRECTOR CORPORATE STRATEGY</p>
-                           <p class="text-justify">Armed with Bachelor of Science in Electrical & Electronic Engineering and has nearly 12 years of vital industry experience in construction, commodity trading, transportation and ICT. Has managed multiple accounts for construction clients to design and build specialize structure and provided strategic consulting for clients business  movement. Also did a consultation for ICT and newly startup corporations for marketing and planning.</p>
+                            <span>Director Corporate Strategy</span>
+                           <p class="text-justify margin-t-10">Armed with Bachelor of Science in Electrical & Electronic Engineering and has nearly 12 years of vital industry experience in construction, commodity trading, transportation and ICT. Has managed multiple accounts for construction clients to design and build specialize structure and provided strategic consulting for clients business  movement. Also did a consultation for ICT and newly startup corporations for marketing and planning.</p>
                         </div>
                     </div>
                  <div class="col-md-4 text-center">
-                        <div class="w3ls-about-grid">
+                        <div class="team-grid">
                             <img src="images/team-3.png" alt="" />
                             <h6>Nulla molestie</h6>
-                            <p>DIRECTOR CORPORATE STRATEGY</p>
-                            <p class="text-justify">Armed with a Degree in International Business and has nearly 10 years of vital industry experience in commodity trading, management, shipping, forwarding and logistics. Has managed multiple accounts for import and export clients and provided strategic consulting for ground logistics movement and warehousing . Also did consultation for Food and Beverage Businesses.</p>
+                            <span>Ddirector Corporate Strategy</span>
+                            <p class="text-justify margin-t-10">Armed with a Degree in International Business and has nearly 10 years of vital industry experience in commodity trading, management, shipping, forwarding and logistics. Has managed multiple accounts for import and export clients and provided strategic consulting for ground logistics movement and warehousing . Also did consultation for Food and Beverage Businesses.</p>
                         </div>
                     </div>
                 
