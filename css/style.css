@@ -915,8 +915,9 @@ div#contact {
 
 .contact-g1 {
     padding: 2em;
-    background: #eee;
-    height: 264px ;
+    background: #e0dddd;
+    height: 205px;
+    margin-bottom: 5px;
 }
 
 .contact-center {
