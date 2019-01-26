@@ -1,0 +1,11 @@
+@media (min-width: 385px) and (max-width: 425px) {
+    .navbar-header img {
+        width: 80%;
+    }
+    .banner {
+        margin-top: 90px !important;
+    }
+    .top-nav {
+        margin-top: -90px !important;
+    }
+}

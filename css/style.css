@@ -918,7 +918,7 @@ div#contact {
 .contact-g1 {
     padding: 2em;
     background: #e0dddd;
-    height: 205px;
+    height: 250px;
     margin-bottom: 5px;
 }
 
@@ -2138,6 +2138,9 @@ p.footer-class a:hover {
     .wthree_testimonials_grid_pos {
         margin-top: 2em;
     }
+    .list-inline>li {
+        padding: 0 0 0 0px !important;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -2876,6 +2879,9 @@ p.footer-class a:hover {
     }
     .top-nav {
         margin-top: -80px !important;
+    }
+    .list-inline>li {
+        padding: 0 0 0 0px !important;
     }
 }
 
