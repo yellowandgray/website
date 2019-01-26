@@ -13,7 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <?php include 'menu.php'; ?>
         <!--/nav ends here-->
         <!-- banner -->
-        <div class="banner">
+        <div class="banner" id="banner-top">
             <!--            <div class="banner-right">
                             <img src="images/new.png" alt="" class="img-responsive" />
                         </div>-->
@@ -457,13 +457,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div role="tabpanel" class="tab-pane" id="profile">
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
-                                    <h3 class="text-center color-white bold margin-tp-20">Technology</h3>
+<!--                                    <h3 class="text-center color-white bold margin-tp-20">Technology</h3>-->
                                     <div class="row">
-                                        <div class="col-md-2"></div>
-                                        <div class="col-md-8  latest-grid text-center">
+                                        <div class="col-md-12  latest-grid text-center">
                                             <img src="images/technology/platform-4.0.jpg" alt="" class="img-responsive" >
                                         </div>
-                                        <div class="col-md-2"></div>
                                         <!--                                    <div class="col-md-6  latest-grid">
                                                                                 <div class="faq-left">
                                                                                     <h5>

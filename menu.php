@@ -42,7 +42,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="index.php">Home</a>
+                        <a href="#banner-top">Home</a>
                     </li>
                     <li>
                         <a href="#about" class="scroll">About</a>
