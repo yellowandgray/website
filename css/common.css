@@ -978,3 +978,8 @@ marquee {
     padding: 10px 0px;
     margin-bottom: -10px;
 }
+
+.download h5 {
+    padding: 20px;
+    height: 100px;
+}

@@ -156,5 +156,5 @@
     <div class="col-md-4">
         <div class="boder-2"></div>
     </div>
-    <marquee>Our School Launch is on February 10, 2019 at AVS Imperiaa, Karaikal. All are Welcome.</marquee>
+    <marquee>Our School Launch is on 10th February, SUNDAY at Hotel AVS Imperiaa, Karaikal. All are Welcome.</marquee>
 </nav>
