@@ -1,17 +1,17 @@
 <div class="top-nav">
     <!--nav top-->
-    <div class="container">
+<!--    <div class="container">
 
         <div class="navbar-top">
             <div class="nav-top-left">
-<!--                <ul>
+                <ul>
                     <li>
                         <a href="#" class="log" data-toggle="modal" data-target="#myModal">Login</a>
                     </li>
                     <li>
                         <a href="#" class="log" data-toggle="modal" data-target="#myModal">register</a>
                     </li>
-                </ul>-->
+                </ul>
             </div>
             <div class="nav-top-right">
                 <ul>
@@ -25,7 +25,7 @@
             </div>
             <div class="clearfix"></div>
         </div>
-    </div>
+    </div>-->
     <!-- nav-bottom -->
     <div class="inner-header">
         <nav class="navbar navbar-default">
@@ -42,7 +42,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="#banner-top">Home</a>
+                        <a href="index.php">Home</a>
                     </li>
                     <li>
                         <a href="#about" class="scroll">About</a>
@@ -67,4 +67,5 @@
             <div class="clearfix"> </div>
         </nav>
     </div>
+    <div class="clearfix"></div>
 </div>

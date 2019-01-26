@@ -316,7 +316,7 @@ ul.nav.navbar-nav li.active {
     position: relative;
     min-height: 654px;
     padding: 0 4em;
-    margin-top: 174px;
+    margin-top: 98px;
 }
 
 .banner-textagileinfo {
@@ -376,7 +376,7 @@ ul.nav.navbar-nav li.active {
 }
 
 .section {
-    padding: 5em 0;
+    padding: 6.5em 0;
 }
 
 /* about */
@@ -862,7 +862,7 @@ div#team h3.title-txt span {
     padding: 15px 20px;
     margin: 0;
     border: none;
-/*    text-transform: uppercase;*/
+    /*    text-transform: uppercase;*/
     opacity: .5;
     border-radius: 0;
     background: #fff;
@@ -1017,7 +1017,7 @@ ul.social-icons3 li a:hover {
 
 .map {
     margin: 4em auto;
-/*    width: 52%;*/
+    /*    width: 52%;*/
 }
 
 .contact-bottom {
@@ -1825,7 +1825,7 @@ p.footer-class a:hover {
         top: 10%;
     }
     .map {
-/*        width: 64%;*/
+        /*        width: 64%;*/
     }
 }
 
@@ -2631,6 +2631,7 @@ p.footer-class a:hover {
     .callbacks_tabs {
         top: 33%;
         right: 18px;
+        z-index: 9;
     }
     .nav-top-right ul li {
         display: block;

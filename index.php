@@ -13,7 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <?php include 'menu.php'; ?>
         <!--/nav ends here-->
         <!-- banner -->
-        <div class="banner" id="banner-top">
+        <div class="banner">
             <!--            <div class="banner-right">
                             <img src="images/new.png" alt="" class="img-responsive" />
                         </div>-->
