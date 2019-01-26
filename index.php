@@ -761,7 +761,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <h3 class="title-txt">
                     <span>T</span>eam</h3>
                 <div class="new-agileinfo">
-                    <div class="col-md-4 col-xs-5 team-left">
+                 <div class="col-md-4 text-center">
+                        <div class="w3ls-about-grid">
+                            <img src="images/team-1.png" alt="" />
+                            <h6>GERARD PILLAI</h6>
+                            <p>CHIEF STRATEGY EVANGELIST</p>
+                           <p class="text-justify">More than 25 years in Finance, Technology and Strategic Consulting with exposure to Multi National Corporations including stints with Coopers & Lybrand, United Nations funded Agency and Tech Start Ups. Armed with an MBA in International Management and a Degree in Accounting & Finance. Currently pursuing Doctorate at a leading University.</p>
+                        </div>
+                    </div>
+                 <div class="col-md-4 text-center">
+                        <div class="w3ls-about-grid">
+                            <img src="images/team-2.png" alt="" />
+                            <h6>Facere possimus</h6>
+                            <p>DIRECTOR CORPORATE STRATEGY</p>
+                           <p class="text-justify">Armed with Bachelor of Science in Electrical & Electronic Engineering and has nearly 12 years of vital industry experience in construction, commodity trading, transportation and ICT. Has managed multiple accounts for construction clients to design and build specialize structure and provided strategic consulting for clients business  movement. Also did a consultation for ICT and newly startup corporations for marketing and planning.</p>
+                        </div>
+                    </div>
+                 <div class="col-md-4 text-center">
+                        <div class="w3ls-about-grid">
+                            <img src="images/team-3.png" alt="" />
+                            <h6>Nulla molestie</h6>
+                            <p>DIRECTOR CORPORATE STRATEGY</p>
+                            <p class="text-justify">Armed with a Degree in International Business and has nearly 10 years of vital industry experience in commodity trading, management, shipping, forwarding and logistics. Has managed multiple accounts for import and export clients and provided strategic consulting for ground logistics movement and warehousing . Also did consultation for Food and Beverage Businesses.</p>
+                        </div>
+                    </div>
+                
+<!--                    <div class="col-md-4 col-xs-5 team-left">
                         <ul id="demo1_thumbs" class="list-inline">
                             <li>
                                 <a href="images/t1.jpg">
@@ -790,7 +815,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </a>
                             </li>
-                            <!--                            <li>
+                                                        <li>
                                                             <a href="images/t4.jpg">
                                                                 <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>JHONIE FEGIDERO</h3> Digital Disruptor">
                                                                 <div class="team-w3text">
@@ -816,10 +841,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                     <p>Country Head, India</p>
                                                                 </div>
                                                             </a>
-                                                        </li>-->
+                                                        </li>
                         </ul>
-                    </div>
-                    <div id="demo1_main_image" class="col-md-8 col-xs-7 team-right"></div>
+                    </div>-->
+                    <!--<div id="demo1_main_image" class="col-md-8 col-xs-7 team-right"></div>-->
                     <div class="clearfix"> </div>
                 </div>
             </div>
