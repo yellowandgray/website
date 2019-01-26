@@ -942,16 +942,19 @@ div#contact {
     margin-bottom: 1em;
 }
 
-ul.address li span {
+ul.address span {
     color: #026fbf;
     font-size: 1.2em;
     margin-right: 1em;
+    position: absolute;
+    margin: 0 10px;
 }
 
 ul.address li {
-    margin: 1em 0 0;
+    margin: 0 0 0.5em 0.5em;
     font-size: 1.1em;
     color: #777;
+    padding-left: 35px;
 }
 
 ul.address li a {

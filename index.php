@@ -1081,53 +1081,51 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="contact-g1">
                         <h6>HEADQUARTERS</h6>
                         <ul class="address text-justify">
+                            <span class="fa fa-phone" aria-hidden="true"></span>
                             <li>
-                                <span class="fa fa-phone" aria-hidden="true"></span>
                                 +603 2011 9877
                             </li>
+                            <span class="fa fa-envelope" aria-hidden="true"></span>
                             <li>
-                                <span class="fa fa-envelope" aria-hidden="true"></span>
                                 <a href="mailto:example@email.com"> info@alias-innovation.com</a>
                             </li>
+                            <span class="fa fa-map-marker" aria-hidden="true"></span>
                             <li>
-                                <span class="fa fa-map-marker" aria-hidden="true"></span>Penthouse, 16-1, Level 16 Mz5, Wisma UOA Damansara II, No. 6, Changkat Semantan, Damansara Heights, 50490 Kuala Lumpur, Malaysia
-
+                                Penthouse, 16-1, Level 16 Mz5, Wisma UOA Damansara II, No. 6, Changkat Semantan, Damansara Heights, 50490 Kuala Lumpur, Malaysia
                             </li>
                         </ul>
                     </div>
                     <div class="contact-g1">
                         <h6>SATELLITE HUB</h6>
                         <ul class="address">
+                            <span class="fa fa-phone" aria-hidden="true"></span>
                             <li>
-                                <span class="fa fa-phone" aria-hidden="true"></span>
                                 +603-8066 3258,+6012-908 3258
                             </li>
+                            <span class="fa fa-envelope" aria-hidden="true"></span>
                             <li>
-                                <span class="fa fa-envelope" aria-hidden="true"></span>
                                 <a href="mailto:example@email.com"> info@alias-innovation.com</a>
                             </li>
+                            <span class="fa fa-map-marker" aria-hidden="true"></span>
                             <li>
-                                <span class="fa fa-map-marker" aria-hidden="true"></span>
                                 No. 1, Jalan Puteri 12/5, Bandar Puteri Puchong, 47100 Selangor.
-
                             </li>
                         </ul>
                     </div>
                     <div class="contact-g1">
                         <h6>INDIA OFFICE</h6>
                         <ul class="address">
+                            <span class="fa fa-phone" aria-hidden="true"></span>
                             <li>
-                                <span class="fa fa-phone" aria-hidden="true"></span>
                                 +91 98404 70876
                             </li>
+                            <span class="fa fa-envelope" aria-hidden="true"></span>
                             <li>
-                                <span class="fa fa-envelope" aria-hidden="true"></span>
                                 <a href="mailto:example@email.com"> info@alias-innovation.com</a>
                             </li>
+                            <span class="fa fa-map-marker" aria-hidden="true"></span>
                             <li>
-                                <span class="fa fa-map-marker" aria-hidden="true"></span>
                                 12, Durga Colony 4th Cross Street, Sembakkam Chennai 600073 Tamil Nadu State India.
-
                             </li>
                         </ul>
                     </div>
