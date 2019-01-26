@@ -1167,32 +1167,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <input type="submit" value="SEND">
                         </form>
                     </div>
-                    <h6>Follow us</h6>
-                    <div class="address-grid">
+                    <div class="padding-tb-20">
+                        <h6>Follow us</h6>
+                        <div class="address-grid">
 
-                        <ul class="social-icons3">
+                            <ul class="social-icons3">
 
-                            <li>
-                                <a href="#" class="s-iconfacebook">
-                                    <span class="fa fa-facebook" aria-hidden="true"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="s-icontwitter">
-                                    <span class="fa fa-twitter" aria-hidden="true"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="s-icondribbble">
-                                    <span class="fa fa-dribbble" aria-hidden="true"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="s-iconbehance">
-                                    <span class="fa fa-behance" aria-hidden="true"></span>
-                                </a>
-                            </li>
-                        </ul>
+                                <li>
+                                    <a href="#" class="s-iconfacebook">
+                                        <span class="fa fa-facebook" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="s-icontwitter">
+                                        <span class="fa fa-twitter" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="s-icondribbble">
+                                        <span class="fa fa-dribbble" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="s-iconbehance">
+                                        <span class="fa fa-behance" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="clearfix"></div>
