@@ -24,7 +24,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="banner-textagileinfo">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img src="images/logo-01.png" class="img-responsive" alt=""/>
+                                        <img src="images/logo-01.png" class="img-responsive" alt="">
                                     </div>
                                     <div class="col-md-9">
                                         <h6>ALIAS INNOVATION SDN BHD</h6>
