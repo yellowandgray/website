@@ -891,7 +891,7 @@ div#team h3.title-txt span {
 #testi label,
 #profile label,
 #messages label {
-    color: #dc7a7a;
+    color: #ffffff;
     font-size: 14px;
     padding-top: 10px;
 }
@@ -936,27 +936,29 @@ div#contact {
 
 .contact-g1 h6,
 .contact-g2 h6 {
-    color: #000;
+    color: #026fbf;
     font-size: 1.5em;
     font-weight: 600;
     margin-bottom: 1em;
 }
 
-ul.address li span {
+ul.address span {
     color: #026fbf;
     font-size: 1.2em;
     margin-right: 1em;
+    position: absolute;
+    margin: 0 10px;
 }
 
 ul.address li {
-    margin: 1em 0 0;
+    margin: 0 0 0.5em 0.5em;
     font-size: 1.1em;
-    font-weight: 600;
-    color: #000;
+    color: #777;
+    padding-left: 35px;
 }
 
 ul.address li a {
-    color: #000;
+    color: #777;
 }
 
 ul.social-icons3 {
