@@ -300,22 +300,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <h3 class="title-txt wow fadeInUp">
                     <span>I</span>NTELLECTUAL <span>P</span>ROPERTY & <span>I</span>NNOVATION</h3>
                 <div class="about-main">
-                    <div class="col-md-4 man-grid wow fadeInUp">
+                    <div class="col-md-4 man-grid">
                         <ul class="span-font">
-                            <li>
+                            <li class="wow fadeInUp">
                                 <img src="images/app.png" alt=""> E-COMMERCE/ MOBILE-COMMERCE <span> APPLICATION</span><br/>
                                 <img src="images/innovation/001.jpg" align="left" > <p align="left"> is a mobile-commerce platform for individuals, businesses & communities to market and promote their products & services to consumers (B2C) & businesses (B2B).</p>
                             </li>
-                            <li>
+                            <li class="wow fadeInUp">
                                 <img src="images/lah.png" alt=""> SOCIAL<br/>
                                 <img src="images/innovation/002.jpg" align="left" > <p align="left"> Malaysian are fond of using ‘LAH’ at the end of a word or a sentence. It is in our DNA. We are a generous lot and get together to lend a helping hand.</p>
                             </li>
-
-                            <li>
+                            <li class="wow fadeInUp">
                                 <img src="images/acceleration-program.png" alt="">BUSINESS ACCELERATION PROGRAM<br/>
                                 <img src="images/innovation/003.jpg" align="left" > <p align="left"> “Business accelerator, connecting entrepreneurs with global opportunities”</p>
                             </li>
-
                         </ul>
                         <!--                        <div class="man-grid2"><h5>Ensuring there's a high level of customer service.</h5></div>
                                                 <p class="about-text-w3l">Pellentesque accumsan cursus dui, sodales blandit urna sodal vitaepel entesque accumsan cursus dui,sod
@@ -329,24 +327,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <img class="img-responsive" src="images/innovation-1.jpg" alt="about-image" />
                         <div class="clearfix"></div>
                     </div>
-                    <div class="col-md-4 man-right man-grid wow fadeInUp">
+                    <div class="col-md-4 man-right man-grid">
                         <ul>
-                            <li>
+                            <li class="wow fadeInUp">
                                 <img src="images/super-hero.png" alt=""> ORIGINAL SUPER HEROES<br/>
                                 <img src="images/innovation/004.jpg" align="left" > <p align="left"> Animated superheroes for branding and online campaigns.</p>
                             </li>
-                            <li>
+                            <li class="wow fadeInUp">
                                 <img src="images/acceleration-program.png" alt=""> ENGAGEMENT AND CONNECTIVITY<br/>
                                 <img src="images/innovation/005.jpg" align="left" > <p align="left"> Ideas@Pondok is a community where we can share ideas and build relationships. The goal of this community is to create networks and open business opportunities for everyone.</p>
                             </li>
-                            <li>
+                            <li class="wow fadeInUp">
                                 <img src="images/acceleration-program.png" alt=""> ACADEMY OF MUSIC<br/>
                                 <img src="images/innovation/006.jpg" align="left" > <p align="left"> The Accelerated Music Method Academy provides a platform for individuals who aspire to learn music.</p>
                             </li>
-
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
