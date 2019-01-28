@@ -378,7 +378,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
-                                        <div class="faq-left height-210 tab-1-height">
+                                        <div class="faq-left height-225 tab-1-height">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-01.png" alt="">
@@ -390,7 +390,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left height-210 tab-1-height">
+                                        <div class="faq-left height-225 tab-1-height">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-02.png" alt="">
@@ -401,7 +401,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left height-210 tab-1-height">
+                                        <div class="faq-left height-225 tab-1-height">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-05.png" alt="">
@@ -414,7 +414,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>
                                     </div>
                                     <div class="col-md-6 latest-grid">
-                                        <div class="faq-left height-210 tab-1-height">
+                                        <div class="faq-left height-225 tab-1-height">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-04.png" alt="">
@@ -425,7 +425,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left height-210 tab-1-height">
+                                        <div class="faq-left height-225 tab-1-height">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-03.png" alt="">
@@ -436,7 +436,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left height-210 tab-1-height">
+                                        <div class="faq-left height-225 tab-1-height">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-06.png" alt="">
@@ -1115,7 +1115,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </li>
                         </ul>
                     </div>
-                    <div class="contact-g1 wow fadeInUp">
+                    <div class="contact-g1 wow fadeInUp">H
                         <h6>SATELLITE HUB</h6>
                         <ul class="address">
                             <span class="fa fa-map-marker" aria-hidden="true"></span>
