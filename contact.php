@@ -42,22 +42,22 @@
                                     <form role="form" class="contact">
                                         <div class="form-group">
                                             <li class="half pr-15">
-                                                <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+                                                <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required>
                                             </li>
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
-                                                <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                                             </li>
                                         </div>
                                         <div class="form-group">
                                             <li class="half pr-15">
-                                                <input type="text" pattern="^\d{10}$" class="form-control" name="mobile" placeholder="Contact Number" required>
+                                                <input type="text" pattern="^\d{10}$" id="mobile" class="form-control" name="mobile" placeholder="Contact Number" required>
                                             </li>
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
-                                                <select name="no_children" class="form-control">
+                                                <select name="no_children" class="form-control" id="no_children">
                                                     <option value="0">No. of Children</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
@@ -84,12 +84,12 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
-                                                <input type="text" class="form-control" name="subject" placeholder="Subject">
+                                                <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject">
                                             </li>
                                         </div>
                                         <div class="form-group">
                                             <li class="full">
-                                                <select name="social_media" class="form-control">
+                                                <select name="social_media" class="form-control" id="social_media">
                                                     <option value="">How did you here about us?</option>
                                                     <option value="Facebook">Facebook</option>
                                                     <option value="Linked-In">Linked-In</option>
@@ -104,11 +104,11 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="full">
-                                                <textarea class="textarea-control" name="message" placeholder="Message" required></textarea>
+                                                <textarea class="textarea-control" id="message" name="message" placeholder="Message" required></textarea>
                                             </li>
                                         </div>
                                         <li class="full">
-                                            <input type="submit" value="Submit" class="fsubmit">
+                                            <input type="submit" value="Submit" class="fsubmit" onClick="clearform();">
                                         </li>
                                     </form>
                                 </ul>
@@ -165,6 +165,18 @@
             <script>
                 $('#contactform').multiSelect({
                     noneText: 'Choose Your Program'});
+
+//                function clearform()
+//                {
+//                    document.getElementById("name").value = ""; //don't forget to set the textbox id
+//                    document.getElementById("email").value = "";
+//                    document.getElementById("mobile").value = "";
+//                    document.getElementById("no_children").value = "";
+//                    document.getElementById("contactform").value = "";
+//                    document.getElementById("subject").value = "";
+//                    document.getElementById("social_media").value = "";
+//                    document.getElementById("message").value = "";
+//                }
             </script>
         </div>
 
