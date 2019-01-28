@@ -2406,7 +2406,7 @@ p.footer-class a:hover {
         width: 33%;
     }
     .banner-text h3 {
-        font-size: 1.2em;
+        font-size: 0.9em;
     }
     .nav-top-left,
     .nav-top-right {
@@ -2437,7 +2437,7 @@ p.footer-class a:hover {
         padding: 1em 1.3em;
     }
     .banner-text h6 {
-        font-size: 1.4em;
+        font-size: 1em;
     }
     .banner {
         min-height: 232px;
@@ -2563,7 +2563,7 @@ p.footer-class a:hover {
         font-size: 1.2em;
     }
     .banner-text h3 {
-        font-size: 1.1em;
+        font-size: 1em;
     }
     .banner-textagileinfo p {
         font-size: 1em;
@@ -2728,7 +2728,7 @@ p.footer-class a:hover {
         margin-top: 16px;
     }
     .banner-text h6 {
-        font-size: 1.1em;
+        font-size: 1em;
         font-weight: 800;
     }
     .abt-container {
@@ -2770,13 +2770,13 @@ p.footer-class a:hover {
         margin-top: -70px !important;
     }
     .banner-text h6 {
-        font-size: 1em;
+        font-size: 0.9em;
     }
     .banner-text {
         margin-top: 25px;
     }
     .banner-text h3 {
-        font-size: 1.05em;
+        font-size: 0.9em;
     }
     .banner-textagileinfo p {
         font-size: 0.96em;
