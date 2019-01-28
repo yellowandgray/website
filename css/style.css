@@ -8,7 +8,7 @@ html,
 body {
     margin: 0;
     background: #fff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 body a,
@@ -29,7 +29,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.2;
 }
 
@@ -401,7 +401,7 @@ h3.title-txt span {
 /*-- about --*/
 
 fieldset {
-    padding: 3em 3em;
+    padding: 1em 3em;
     margin: 0 2px;
     border: 2px solid #026fbf;
 }
@@ -711,7 +711,7 @@ h3.title {
 
 .w3ls-about-grid h6 {
     text-transform: capitalize;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 10px 0;
     letter-spacing: 1px;
     color: #bc3c82;
@@ -871,7 +871,6 @@ div#team h3.title-txt span {
     color: #000;
     font-weight: 600;
     font-size: 16px;
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .faq-info .nav-tabs li {
@@ -2792,7 +2791,7 @@ p.footer-class a:hover {
         font-size: 1.3em;
     }
     fieldset {
-        padding: 20px 7px;
+        padding: 12px 7px;
     }
     legend {
         font-size: 1.3em;
