@@ -499,7 +499,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>-->
                                     </div>
                                     <div class="row" style="padding-top: 20px;">
-                                        <h3 class="text-center color-white bold margin-tp-20">Industry Sectors</h3>
+                                        <h3 class="text-center color-white bold margin-tp-20">INDUSTRY SECTORS</h3>
                                         <div class="col-md-12">
                                             <section class="customer-logos slider silder-bg">
                                                 <div class="slide"><img src="images/industry-sectors/001.png"></div>
