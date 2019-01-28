@@ -98,7 +98,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <!--                            <p class="about-bottom">Duis euismod massa ut sem fringilla blandit.</p>-->
                             <p>is an established boutique consulting entity that pools together professionals from multiple industry verticals that have vital exposure in Global Multi National Corporations, Inter-Governmental Organizations and the start up scene. We have more than 100 years of collective industry experience.</p>
                             <br/>
-                            <p>Our differentiation lies in our mission to <strong class="color-pink">ENERGIZE, MONETIZE</strong> AND <strong class="color-pink">FUTURIZE</strong> the businesses of all clients.</p>
+                            <p>Our differentiation lies in our mission to <strong class="color-blue">ENERGIZE, MONETIZE</strong> AND <strong class="color-blue">FUTURIZE</strong> the businesses of all clients.</p>
                             <br/>
                             <p>Our international markets exposure has served us well in our line of work and we have made market space connectivity in these nations.</p>
                             <!--                            <a href="#services" class="abtlink scroll">read more</a>-->
@@ -379,7 +379,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
-                                        <div class="faq-left height-180 wow fadeInUp">
+                                        <div class="faq-left height-210 tab-1-height wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-01.png" alt="">
@@ -391,7 +391,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left height-180 wow fadeInUp">
+                                        <div class="faq-left height-210 tab-1-height wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-02.png" alt="">
@@ -402,7 +402,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left height-180 wow fadeInUp">
+                                        <div class="faq-left height-210 tab-1-height wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-05.png" alt="">
@@ -415,7 +415,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>
                                     </div>
                                     <div class="col-md-6 latest-grid">
-                                        <div class="faq-left height-180 wow fadeInUp">
+                                        <div class="faq-left height-210 tab-1-height wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-04.png" alt="">
@@ -426,7 +426,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left height-180 wow fadeInUp">
+                                        <div class="faq-left height-210 tab-1-height wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-03.png" alt="">
@@ -437,7 +437,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left height-180 wow fadeInUp">
+                                        <div class="faq-left height-210 tab-1-height wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-06.png" alt="">
@@ -855,27 +855,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <div class="w3ls_gallery_grids">
                     <div class="col-xs-4 agileits_w3layouts_gallery_grid">
-                        <div class="agileits_w3layouts_gallery_grid1 w3layouts_gallery_grid1 hover14 column wow fadeInUp">
+                        <div class="agileits_w3layouts_gallery_grid1 w3layouts_gallery_grid1 hover14 column wow fadeInUpBig">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/gallery/pic-4.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-4.jpg" class="sb">
                                     <figure>
                                         <img src="images/gallery/pic-4.jpg" alt=" " class="img-responsive" />
                                     </figure>
                                 </a>
                             </div>
                         </div>
-                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUp">
+                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUpBig">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/gallery/pic-5.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-5.jpg" class="sb">
                                     <figure>
                                         <img src="images/gallery/pic-5.jpg" alt=" " class="img-responsive" />
                                     </figure>
                                 </a>
                             </div>
                         </div>
-                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUp">
+                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUpBig">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/gallery/pic-6.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-6.jpg" class="sb">
                                     <figure>
                                         <img src="images/gallery/pic-6.jpg" alt=" " class="img-responsive" />
                                     </figure>
@@ -884,18 +884,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                     </div>
                     <div class="col-xs-4 agileits_w3layouts_gallery_grid">
-                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUp">
+                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUpBig">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/gallery/pic-1.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-1.jpg" class="sb">
                                     <figure>
                                         <img src="images/gallery/pic-1.jpg" alt=" " class="img-responsive" />
                                     </figure>
                                 </a>
                             </div>
                         </div>
-                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUp">
+                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUpBig">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/gallery/pic-2.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-2.jpg" class="sb">
                                     <figure>
                                         <img src="images/gallery/pic-2.jpg" alt=" " class="img-responsive" />
                                     </figure>
@@ -904,27 +904,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                     </div>
                     <div class="col-xs-4 agileits_w3layouts_gallery_grid">
-                        <div class="agileits_w3layouts_gallery_grid1 w3layouts_gallery_grid1 hover14 column wow fadeInUp">
+                        <div class="agileits_w3layouts_gallery_grid1 w3layouts_gallery_grid1 hover14 column wow fadeInUpBig">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/gallery/pic-8.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-8.jpg" class="sb">
                                     <figure>
                                         <img src="images/gallery/pic-8.jpg" alt=" " class="img-responsive" />
                                     </figure>
                                 </a>
                             </div>
                         </div>
-                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUp">
+                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUpBig">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/gallery/pic-7.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-7.jpg" class="sb">
                                     <figure>
                                         <img src="images/gallery/pic-7.jpg" alt=" " class="img-responsive" />
                                     </figure>
                                 </a>
                             </div>
                         </div>
-                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUp">
+                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUpBig">
                             <div class="w3_agile_gallery_effect">
-                                <a href="images/gallery/pic-3.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
+                                <a href="images/gallery/pic-3.jpg" class="sb">
                                     <figure>
                                         <img src="images/gallery/pic-3.jpg" alt=" " class="img-responsive" />
                                     </figure>
