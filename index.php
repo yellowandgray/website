@@ -307,7 +307,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </li>
                             <li class="wow fadeInUp">
                                 <img src="images/lah.png" alt=""> SOCIAL<br/>
-                                <img src="images/innovation/002.jpg" align="left" class="img-responsive" > <p align="left"> Malaysian are fond of using ‘LAH’ at the end of a word or a sentence. It is in our DNA. We are a generous lot and get together to lend a helping hand.</p>
+                                <img src="images/innovation/002.png" align="left" class="img-responsive" > <p align="left"> Malaysian are fond of using ‘LAH’ at the end of a word or a sentence. It is in our DNA. We are a generous lot and get together to lend a helping hand.</p>
                             </li>
                             <li class="wow fadeInUp">
                                 <img src="images/acceleration-program.png" alt="">BUSINESS ACCELERATION PROGRAM<br/>
@@ -330,15 +330,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <ul>
                             <li class="wow fadeInUp">
                                 <img src="images/super-hero.png" alt=""> ORIGINAL SUPER HEROES<br/>
-                                <img src="images/innovation/004.jpg" align="left" class="img-responsive"> <p align="left"> Animated superheroes for branding and online campaigns.</p>
+                                <img src="images/innovation/004.png" align="left" class="img-responsive"> <p align="left"> Animated superheroes for branding and online campaigns.</p>
                             </li>
                             <li class="wow fadeInUp">
                                 <img src="images/acceleration-program.png" alt=""> ENGAGEMENT AND CONNECTIVITY<br/>
-                                <img src="images/innovation/005.jpg" align="left" class="img-responsive"> <p align="left"> Ideas@Pondok is a community where we can share ideas and build relationships. The goal of this community is to create networks and open business opportunities for everyone.</p>
+                                <img src="images/innovation/007.png" align="left" class="img-responsive"> <p align="left"> Ideas@Pondok is a community where we can share ideas and build relationships. The goal of this community is to create networks and open business opportunities for everyone.</p>
                             </li>
                             <li class="wow fadeInUp">
                                 <img src="images/acceleration-program.png" alt=""> ACADEMY OF MUSIC<br/>
-                                <img src="images/innovation/006.jpg" align="left" class="img-responsive"> <p align="left"> The Accelerated Music Method Academy provides a platform for individuals who aspire to learn music.</p>
+                                <img src="images/innovation/006.png" align="left" class="img-responsive"> <p align="left"> The Accelerated Music Method Academy provides a platform for individuals who aspire to learn music.</p>
                             </li>
                         </ul>
                     </div>
