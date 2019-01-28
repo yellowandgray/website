@@ -17,7 +17,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <!--            <div class="banner-right">
                             <img src="images/new.png" alt="" class="img-responsive" />
                         </div>-->
-            <div class="banner-text">
+            <div class="banner-text wow fadeInUp">
                 <div id="top" class="callbacks_container">
                     <ul class="rslides" id="slider3">
                         <li>
@@ -59,9 +59,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- //banner -->
         <!--about -->
         <div id="about" class="section">
-            <h3 class="title-txt">
+            <h3 class="title-txt wow fadeInUp">
                 <span>a</span>bout us</h3>
-            <div class="abt-container">
+            <div class="abt-container wow fadeInUp">
                 <fieldset>
                     <legend>Alias Innovation Sdn Bhd</legend>
                     <div class="stats-info">
@@ -93,7 +93,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="clearfix"></div>
                     </div>
                     <div class="abt-pos">
-                        <div class="col-md-6  about-left">
+                        <div class="col-md-6 about-left wow fadeInUp">
                             <!--                            <h3 class="title">Alias Innovation Sdn Bhd</h3>-->
                             <!--                            <p class="about-bottom">Duis euismod massa ut sem fringilla blandit.</p>-->
                             <p>is an established boutique consulting entity that pools together professionals from multiple industry verticals that have vital exposure in Global Multi National Corporations, Inter-Governmental Organizations and the start up scene. We have more than 100 years of collective industry experience.</p>
@@ -104,7 +104,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <!--                            <a href="#services" class="abtlink scroll">read more</a>-->
 <!--                            <img src="images/flogs.jpg" class="img-responsive" alt="" />-->
                         </div>
-                        <div class="col-md-6 w3ls-row">
+                        <div class="col-md-6 w3ls-row wow fadeInUp">
                             <img src="images/a.jpg" class="img-responsive" alt="" />
                         </div>
                         <div class="clearfix"> </div>
@@ -117,11 +117,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="services section" id="services">
             <div class="container2">
 <!--                <h3 class="title-txt"><span>C</span>ommodity</h3>-->
-                <h3 class="title-txt color-white text-center"><span>S</span>ervices</h3>
+                <h3 class="title-txt color-white text-center wow fadeInUp"><span>S</span>ervices</h3>
 <!--                <h5>we offer products and services for your<span>personal</span> and<span>professional banking</span> needs.</h5>-->
                 <h5 class="color-white text-center services-p"><img src="images/services-startegem.png" align="center"> we offer products and services for your professional needs.</h5>
                 <div class="row">
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.1s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/001.png" alt="Alias Icon">
                             <h6>CORPORATE</h6>
@@ -139,7 +139,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.2s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/002.png" alt="Alias Icon">
                             <h6>CONTENT</h6>
@@ -156,7 +156,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.3s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/003.png" alt="Alias Icon">
                             <h6>CREATIVE</h6>
@@ -172,7 +172,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.4s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/004.png" alt="Alias Icon">
                             <h6>FINANCE</h6>
@@ -184,7 +184,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.5s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/005.png" alt="Alias Icon">
                             <h6>INNOVATION</h6>
@@ -200,7 +200,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.6s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/006.png" alt="Alias Icon">
                             <h6>TECHNOLOGY</h6>
@@ -297,10 +297,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!--about manager -->
         <div class="section manager" id="manger">
             <div class="container-fluid">
-                <h3 class="title-txt">
+                <h3 class="title-txt wow fadeInUp">
                     <span>I</span>NTELLECTUAL <span>P</span>ROPERTY & <span>I</span>NNOVATION</h3>
                 <div class="about-main">
-                    <div class="col-md-4 man-grid">
+                    <div class="col-md-4 man-grid wow fadeInUp">
                         <ul class="span-font">
                             <li>
                                 <img src="images/app.png" alt=""> E-COMMERCE/ MOBILE-COMMERCE <span> APPLICATION</span><br/>
@@ -325,11 +325,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <h4 class="man-txt">Samuel C. Kelly</h4>
                                                 <p> Chairman of the Board</p>-->
                     </div>
-                    <div class="col-md-4 man-right man-grid">
+                    <div class="col-md-4 man-right man-grid wow fadeInUp">
                         <img class="img-responsive" src="images/innovation-1.jpg" alt="about-image" />
                         <div class="clearfix"></div>
                     </div>
-                    <div class="col-md-4 man-right man-grid">
+                    <div class="col-md-4 man-right man-grid wow fadeInUp">
                         <ul>
                             <li>
                                 <img src="images/super-hero.png" alt=""> ORIGINAL SUPER HEROES<br/>
@@ -354,12 +354,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- faq -->
         <div class="section faq" id="why-us" style="background: url(images/why-us-bg.jpg) no-repeat;background-size: cover;">
             <div class="container">
-                <h3 class="title-txt text-center">
-                    <span>W</span>HY US</h3>
+                <h3 class="title-txt text-center wow fadeInUp">
+                    <span>W</span>HY US
+                </h3>
 
                 <div class="faq-info">
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist">
+                    <ul class="nav nav-tabs wow fadeInUp" role="tablist">
                         <li role="presentation" class="active">
                             <a href="#testi" aria-controls="testi" role="tab" data-toggle="tab">Business Model</a>
                         </li>
@@ -382,7 +383,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
-                                        <div class="faq-left faq-font height-180">
+                                        <div class="faq-left faq-font height-180 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-01.png" alt="">
@@ -394,7 +395,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-180">
+                                        <div class="faq-left faq-font height-180 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-02.png" alt="">
@@ -405,7 +406,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-180">
+                                        <div class="faq-left faq-font height-180 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-05.png" alt="">
@@ -418,7 +419,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>
                                     </div>
                                     <div class="col-md-6 latest-grid">
-                                        <div class="faq-left faq-font height-180">
+                                        <div class="faq-left faq-font height-180 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-04.png" alt="">
@@ -429,7 +430,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-180">
+                                        <div class="faq-left faq-font height-180 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-03.png" alt="">
@@ -440,7 +441,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-180">
+                                        <div class="faq-left faq-font height-180 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-06.png" alt="">
@@ -462,7 +463,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="faq-subinfo">
                                     <!--                                    <h3 class="text-center color-white bold margin-tp-20">Technology</h3>-->
                                     <div class="row">
-                                        <div class="col-md-12  latest-grid text-center">
+                                        <div class="col-md-12  latest-grid text-center wow fadeInUp">
                                             <img src="images/technology/platform-4.0.jpg" alt="" class="img-responsive" >
                                         </div>
                                         <!--                                    <div class="col-md-6  latest-grid">
@@ -502,8 +503,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>-->
                                     </div>
                                     <div class="row" style="padding-top: 20px;">
-                                        <h3 class="text-center color-white bold margin-tp-20">Industry Sectors</h3>
-                                        <div class="col-md-12">
+                                        <h3 class="text-center color-white bold margin-tp-20 wow fadeInUp">Industry Sectors</h3>
+                                        <div class="col-md-12 wow fadeInUp">
                                             <section class="customer-logos slider silder-bg">
                                                 <div class="slide"><img src="images/industry-sectors/001.png"></div>
                                                 <div class="slide"><img src="images/industry-sectors/002.png"></div>
@@ -537,8 +538,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                             <img src="images/support-hub/support-hub.jpg" alt="" class="img-responsive" >
                                                                         </div>
                                                                         <div class="col-md-2"></div>-->
-                                    <div class="col-md-6  latest-grid">
-                                        <div class="faq-left faq-fontheight-180">
+                                    <div class="col-md-6 latest-grid">
+                                        <div class="faq-left faq-fontheight-180 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-5.png" alt="">
@@ -548,7 +549,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160">
+                                        <div class="faq-left faq-font height-160 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-6.png" alt="">
@@ -558,7 +559,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160">
+                                        <div class="faq-left faq-font height-160 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-7.png" alt="">
@@ -568,7 +569,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160">
+                                        <div class="faq-left faq-font height-160 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-8.png" alt="">
@@ -578,7 +579,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160">
+                                        <div class="faq-left faq-font height-160 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-13.png" alt="">
@@ -589,8 +590,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6  latest-grid">
-                                        <div class="faq-left faq-font height-160">
+                                    <div class="col-md-6 latest-grid">
+                                        <div class="faq-left faq-font height-160 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-10.png" alt="">
@@ -600,7 +601,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160">
+                                        <div class="faq-left faq-font height-160 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-11.png" alt="">
@@ -610,7 +611,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160">
+                                        <div class="faq-left faq-font height-160 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-12.png" alt="">
@@ -620,7 +621,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160">
+                                        <div class="faq-left faq-font height-160 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-9.png" alt="">
@@ -630,7 +631,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160">
+                                        <div class="faq-left faq-font height-160 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-14.png" alt="">
@@ -650,18 +651,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div role="tabpanel" class="tab-pane" id="tab4">
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
-                                    <div class="col-md-6  latest-grid">
-                                        <div class="faq-left faq-font">
+                                    <div class="col-md-6 latest-grid">
+                                        <div class="faq-left faq-font wow fadeInUp">
                                             <img src="images/accreditations/001.png" alt="">  
                                             <h5 class="color-pink">Persatuan Industri Komputer Dan Multimedia Malaysia</h5>
                                             <p>PIKOM, THE NATIONAL ICT ASSOCIATION OF MALAYSIA is the association representing the information and communications technology (ICT) industry in Malaysia.</p>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font wow fadeInUp">
                                             <img src="images/accreditations/002.png" alt="">
                                             <h5 class="color-pink">Technopreneurs Association of Malaysia(TEAM)</h5>
                                             <p>The Technopreneurs Association of Malaysia (“TeAM”) has been formed by a group of Malaysian Technopreneurs for development of technology based industry in Malaysia.</p>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font wow fadeInUp">
                                             <img src="images/accreditations/003.png" alt="">
                                             <h5 class="color-pink">The Institue Of Asset Management</h5>
                                             <p>The IAM developed the Anatomy to provide an appreciation of asset management, for both experts and newcomers.</p>
@@ -669,17 +670,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                                     </div>
                                     <div class="col-md-6 latest-grid">
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font wow fadeInUp">
                                             <img src="images/accreditations/004.png" alt="">
                                             <h5 class="color-pink">The Institue Of Internal Auditors Malaysia</h5>
                                             <p>THE INSTITUTE OF INTERNAL AUDITORS MALAYSIA (IIA Malaysia) is a non-profit professional organization dedicated to the internal audit profession in Malaysia.</p>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font wow fadeInUp">
                                             <img src="images/accreditations/005.png" alt="">
                                             <h5 class="color-pink">Malaysian Finance Association</h5>
                                             <p>The Malaysian Finance Association (MFA) was established in September 1998. it's now registered under Faculty of Business Management, Universiti Teknologi MARA (UiTM).</p>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font wow fadeInUp">
                                             <img src="images/accreditations/006.png" alt="">
                                             <h5 class="color-pink">Malaysian Association Of Facility Management</h5>
                                             <p>Persatuan Pengurusan Fasiliti Malaysia, or Malaysian Association of Faclity Management (MAFM) was formed in 2005 to bridge academicians with industry players.</p>
@@ -694,12 +695,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font wow fadeInUp">
                                             <h3 class="text-center color-blue">Licences</h3>
                                             <h5 class="color-pink"><img src="images/collaboration/img-01.png" alt=""> &nbsp;&nbsp;Ministry of Finance Malaysia</h5>
                                             <p class="text-justify">The Minister of Finance (or simply, Finance Minister) (Malay: Menteri Kewangan) is the head of the Ministry of Finance of the Government of Malaysia.</p>
                                         </div>
-                                        <div class="faq-left faq-font">
+                                        <div class="faq-left faq-font wow fadeInUp">
                                             <h5 class="color-pink"><img src="images/collaboration/img-02.png" alt=""> Malaysia External Trade Development Corporation</h5>
                                             <p class="text-justify">MATRADE’s mission to promote Malaysia’s export has enabled many local companies to carve new frontiers in global markets.</p>
                                         </div>
@@ -715,7 +716,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                                 </div>-->
 
                                     </div>
-                                    <div class="col-md-6 latest-grid">                                        
+                                    <div class="col-md-6 latest-grid wow fadeInUp">                                        
                                         <div class="faq-left faq-font faq-font">
                                             <h3 class="text-center color-blue">Collaborations</h3>
                                             <div class="text-center">
@@ -748,34 +749,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="section" id="support-hub">
             <div class="container">
                 <div class="row">
-                    <h3 class="title-txt"><span>S</span>UPPORT HUB</h3>
-                    <img src="images/support-hub/support-hub.jpg" alt="Alias-Support hub" class="img-responsive">
+                    <h3 class="title-txt wow fadeInUp"><span>S</span>UPPORT HUB</h3>
+                    <img src="images/support-hub/support-hub.jpg" alt="Alias-Support hub" class="img-responsive wow fadeInUp">
                 </div>
             </div>
         </div>
         <!-- team -->
         <div class="team section" id="team">
             <div class="container">
-                <h3 class="title-txt">
+                <h3 class="title-txt wow fadeInUp">
                     <span>T</span>eam</h3>
                 <div class="new-agileinfo">
-                 <div class="col-md-4 text-center">
+                    <div class="col-md-4 text-center wow fadeInUp">
                         <div class="team-grid">
                             <img src="images/team-1.png" alt="" />
                             <h6>Gerard Pillai</h6>
                             <span>Chief Strategy Evangelist</span>
-                           <p class="text-justify margin-t-10">More than 25 years in Finance, Technology and Strategic Consulting with exposure to Multi National Corporations including stints with Coopers & Lybrand, United Nations funded Agency and Tech Start Ups. Armed with an MBA in International Management and a Degree in Accounting & Finance. Currently pursuing Doctorate at a leading University.</p>
+                            <p class="text-justify margin-t-10">More than 25 years in Finance, Technology and Strategic Consulting with exposure to Multi National Corporations including stints with Coopers & Lybrand, United Nations funded Agency and Tech Start Ups. Armed with an MBA in International Management and a Degree in Accounting & Finance. Currently pursuing Doctorate at a leading University.</p>
                         </div>
                     </div>
-                 <div class="col-md-4 text-center">
+                    <div class="col-md-4 text-center wow fadeInUp">
                         <div class="team-grid">
                             <img src="images/team-2.png" alt="" />
                             <h6>Muhamad Fahim</h6>
                             <span>Director Corporate Strategy</span>
-                           <p class="text-justify margin-t-10">Armed with Bachelor of Science in Electrical & Electronic Engineering and has nearly 12 years of vital industry experience in construction, commodity trading, transportation and ICT. Has managed multiple accounts for construction clients to design and build specialize structure and provided strategic consulting for clients business  movement. Also did a consultation for ICT and newly startup corporations for marketing and planning.</p>
+                            <p class="text-justify margin-t-10">Armed with Bachelor of Science in Electrical & Electronic Engineering and has nearly 12 years of vital industry experience in construction, commodity trading, transportation and ICT. Has managed multiple accounts for construction clients to design and build specialize structure and provided strategic consulting for clients business  movement. Also did a consultation for ICT and newly startup corporations for marketing and planning.</p>
                         </div>
                     </div>
-                 <div class="col-md-4 text-center">
+                    <div class="col-md-4 text-center wow fadeInUp">
                         <div class="team-grid">
                             <img src="images/team-3.png" alt="" />
                             <h6>Izat Emir Bin Adb Aziz</h6>
@@ -783,65 +784,65 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <p class="text-justify margin-t-10">Armed with a Degree in International Business and has nearly 10 years of vital industry experience in commodity trading, management, shipping, forwarding and logistics. Has managed multiple accounts for import and export clients and provided strategic consulting for ground logistics movement and warehousing. Also did consultation for Food and Beverage Businesses.</p>
                         </div>
                     </div>
-                
-<!--                    <div class="col-md-4 col-xs-5 team-left">
-                        <ul id="demo1_thumbs" class="list-inline">
-                            <li>
-                                <a href="images/t1.jpg">
-                                    <img src="images/t1.jpg" alt="" data-desoslide-caption="<h3>GERARD PILLAI</h3>  More than 25 years in Finance, Technology and Strategic Consulting with exposure to Multi National Corporations including stints with Coopers & Lybrand, United Nations funded Agency and Tech Start Ups. Armed with an MBA in International Management and a Degree in Accounting & Finance. Currently pursuing Doctorate at a leading University.">
-                                    <div class="team-w3text">
-                                        <h4>GERARD PILLAI</h4>
-                                        <p>Chief Strategy Evangelist</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/t2.jpg">
-                                    <img src="images/t2.jpg" alt="" data-desoslide-caption="<h3>Facere possimus </h3>  Armed with Bachelor of Science in Electrical & Electronic Engineering and has nearly 12 years of vital industry experience in construction, commodity trading, transportation and ICT. Has managed multiple accounts for construction clients to design and build specialize structure and provided strategic consulting for clients business  movement. Also did a consultation for ICT and newly startup corporations for marketing and planning.">
-                                    <div class="team-w3text">
-                                        <h4>MUHAMAD FAHIM</h4>
-                                        <p>Director Corporate Strategy</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/t3.jpg">
-                                    <img src="images/t3.jpg" alt="" data-desoslide-caption="<h3>Nulla molestie</h3>  Armed with a Degree in International Business and has nearly 10 years of vital industry experience in commodity trading, management, shipping, forwarding and logistics. Has managed multiple accounts for import and export clients and provided strategic consulting for ground logistics movement and warehousing . Also did consultation for Food and Beverage Businesses.">
-                                    <div class="team-w3text">
-                                        <h4>IZAT EMIR BIN ADB AZIZ</h4>
-                                        <p>Director Corporate Strategy</p>
-                                    </div>
-                                </a>
-                            </li>
-                                                        <li>
-                                                            <a href="images/t4.jpg">
-                                                                <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>JHONIE FEGIDERO</h3> Digital Disruptor">
-                                                                <div class="team-w3text">
-                                                                    <h4>JHONIE FEGIDERO</h4>
-                                                                    <p>Digital Disruptor</p>
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="images/t4.jpg">
-                                                                <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>JENIKA FEGIDERO</h3> Marketing Manager">
-                                                                <div class="team-w3text">
-                                                                    <h4>JENIKA FEGIDERO</h4>
-                                                                    <p>Marketing Manager</p>
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="images/t4.jpg">
-                                                                <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>C. VENKATESWARAN</h3> Country Head, India">
-                                                                <div class="team-w3text">
-                                                                    <h4>C. VENKATESWARAN</h4>
-                                                                    <p>Country Head, India</p>
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                        </ul>
-                    </div>-->
+
+                    <!--                    <div class="col-md-4 col-xs-5 team-left">
+                                            <ul id="demo1_thumbs" class="list-inline">
+                                                <li>
+                                                    <a href="images/t1.jpg">
+                                                        <img src="images/t1.jpg" alt="" data-desoslide-caption="<h3>GERARD PILLAI</h3>  More than 25 years in Finance, Technology and Strategic Consulting with exposure to Multi National Corporations including stints with Coopers & Lybrand, United Nations funded Agency and Tech Start Ups. Armed with an MBA in International Management and a Degree in Accounting & Finance. Currently pursuing Doctorate at a leading University.">
+                                                        <div class="team-w3text">
+                                                            <h4>GERARD PILLAI</h4>
+                                                            <p>Chief Strategy Evangelist</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="images/t2.jpg">
+                                                        <img src="images/t2.jpg" alt="" data-desoslide-caption="<h3>Facere possimus </h3>  Armed with Bachelor of Science in Electrical & Electronic Engineering and has nearly 12 years of vital industry experience in construction, commodity trading, transportation and ICT. Has managed multiple accounts for construction clients to design and build specialize structure and provided strategic consulting for clients business  movement. Also did a consultation for ICT and newly startup corporations for marketing and planning.">
+                                                        <div class="team-w3text">
+                                                            <h4>MUHAMAD FAHIM</h4>
+                                                            <p>Director Corporate Strategy</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="images/t3.jpg">
+                                                        <img src="images/t3.jpg" alt="" data-desoslide-caption="<h3>Nulla molestie</h3>  Armed with a Degree in International Business and has nearly 10 years of vital industry experience in commodity trading, management, shipping, forwarding and logistics. Has managed multiple accounts for import and export clients and provided strategic consulting for ground logistics movement and warehousing . Also did consultation for Food and Beverage Businesses.">
+                                                        <div class="team-w3text">
+                                                            <h4>IZAT EMIR BIN ADB AZIZ</h4>
+                                                            <p>Director Corporate Strategy</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                                            <li>
+                                                                                <a href="images/t4.jpg">
+                                                                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>JHONIE FEGIDERO</h3> Digital Disruptor">
+                                                                                    <div class="team-w3text">
+                                                                                        <h4>JHONIE FEGIDERO</h4>
+                                                                                        <p>Digital Disruptor</p>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="images/t4.jpg">
+                                                                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>JENIKA FEGIDERO</h3> Marketing Manager">
+                                                                                    <div class="team-w3text">
+                                                                                        <h4>JENIKA FEGIDERO</h4>
+                                                                                        <p>Marketing Manager</p>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="images/t4.jpg">
+                                                                                    <img src="images/t4.jpg" alt="" data-desoslide-caption="<h3>C. VENKATESWARAN</h3> Country Head, India">
+                                                                                    <div class="team-w3text">
+                                                                                        <h4>C. VENKATESWARAN</h4>
+                                                                                        <p>Country Head, India</p>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                            </ul>
+                                        </div>-->
                     <!--<div id="demo1_main_image" class="col-md-8 col-xs-7 team-right"></div>-->
                     <div class="clearfix"> </div>
                 </div>
@@ -852,12 +853,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="jarallax section gallery" id="gallery">
             <div class="container">
                 <div class="w3ls-title">
-                    <h3 class="title-txt">
-                        <span>M</span>edia</h3>
+                    <h3 class="title-txt wow fadeInUp">
+                        <span>M</span>edia
+                    </h3>
                 </div>
                 <div class="w3ls_gallery_grids">
                     <div class="col-xs-4 agileits_w3layouts_gallery_grid">
-                        <div class="agileits_w3layouts_gallery_grid1 w3layouts_gallery_grid1 hover14 column">
+                        <div class="agileits_w3layouts_gallery_grid1 w3layouts_gallery_grid1 hover14 column wow fadeInUp">
                             <div class="w3_agile_gallery_effect">
                                 <a href="images/gallery/pic-4.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
@@ -866,7 +868,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </a>
                             </div>
                         </div>
-                        <div class="agileits_w3layouts_gallery_grid1 hover14 column">
+                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUp">
                             <div class="w3_agile_gallery_effect">
                                 <a href="images/gallery/pic-5.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
@@ -875,7 +877,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </a>
                             </div>
                         </div>
-                        <div class="agileits_w3layouts_gallery_grid1 hover14 column">
+                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUp">
                             <div class="w3_agile_gallery_effect">
                                 <a href="images/gallery/pic-6.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
@@ -886,7 +888,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                     </div>
                     <div class="col-xs-4 agileits_w3layouts_gallery_grid">
-                        <div class="agileits_w3layouts_gallery_grid1 hover14 column">
+                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUp">
                             <div class="w3_agile_gallery_effect">
                                 <a href="images/gallery/pic-1.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
@@ -895,7 +897,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </a>
                             </div>
                         </div>
-                        <div class="agileits_w3layouts_gallery_grid1 hover14 column">
+                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUp">
                             <div class="w3_agile_gallery_effect">
                                 <a href="images/gallery/pic-2.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
@@ -906,7 +908,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                     </div>
                     <div class="col-xs-4 agileits_w3layouts_gallery_grid">
-                        <div class="agileits_w3layouts_gallery_grid1 w3layouts_gallery_grid1 hover14 column">
+                        <div class="agileits_w3layouts_gallery_grid1 w3layouts_gallery_grid1 hover14 column wow fadeInUp">
                             <div class="w3_agile_gallery_effect">
                                 <a href="images/gallery/pic-8.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
@@ -915,7 +917,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </a>
                             </div>
                         </div>
-                        <div class="agileits_w3layouts_gallery_grid1 hover14 column">
+                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUp">
                             <div class="w3_agile_gallery_effect">
                                 <a href="images/gallery/pic-7.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
@@ -924,7 +926,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </a>
                             </div>
                         </div>
-                        <div class="agileits_w3layouts_gallery_grid1 hover14 column">
+                        <div class="agileits_w3layouts_gallery_grid1 hover14 column wow fadeInUp">
                             <div class="w3_agile_gallery_effect">
                                 <a href="images/gallery/pic-3.jpg" class="sb" title="quis nostrud exercitation ullamco laboris quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum">
                                     <figure>
@@ -943,7 +945,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- testimonials -->
         <div class="testimonials section" id="testimonials" style="background: #ddd;">
             <div class="container">
-                <h3 class="title-txt">
+                <h3 class="title-txt wow fadeInUp">
                     <span>C</span>lients</h3>
                 <!--                <ul id="flexiselDemo1">
                                     <li>
@@ -1014,7 +1016,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </li>
                                 </ul>-->
                 <!--                //Replace the images with the client logos of your customers-->
-                <section class="customer-logos slider">
+                <section class="customer-logos slider wow fadeInUp">
                     <div class="slide"><img src="images/clients/alias-001.jpg"></div>
                     <div class="slide"><img src="images/clients/alias-002.jpg"></div>
                     <div class="slide"><img src="images/clients/alias-003.jpg"></div>
@@ -1035,7 +1037,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="map text-center">
                     <!--                    <h2>Our wide range of Branches </h2>-->
 
-                    <img src="images/map.png" alt="" class="img-responsive" />
+                    <img src="images/map.png" alt="" class="img-responsive wow fadeInUp" />
                 </div>
             </div>
         </div>
@@ -1099,10 +1101,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>-->
         <div class="section contact-bottom" id="contacts" style="background: url(images/alias-contact-bg.png) no-repeat;background-size: cover;">
             <div class="container">
-                <h3 class="title-txt">
+                <h3 class="title-txt wow fadeInUp">
                     <span>c</span>ontact us</h3>
                 <div class="col-md-4 contact-bot margin-b-20">
-                    <div class="contact-g1">
+                    <div class="contact-g1 wow fadeInUp">
                         <h6>HEADQUARTERS</h6>
                         <ul class="address text-justify">
                             <span class="fa fa-map-marker" aria-hidden="true"></span>
@@ -1119,7 +1121,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </li>
                         </ul>
                     </div>
-                    <div class="contact-g1">
+                    <div class="contact-g1 wow fadeInUp">
                         <h6>SATELLITE HUB</h6>
                         <ul class="address">
                             <span class="fa fa-map-marker" aria-hidden="true"></span>
@@ -1136,7 +1138,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </li>
                         </ul>
                     </div>
-                    <div class="contact-g1">
+                    <div class="contact-g1 wow fadeInUp">
                         <h6>INDIA OFFICE</h6>
                         <ul class="address">
                             <span class="fa fa-map-marker" aria-hidden="true"></span>
@@ -1174,9 +1176,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <a href="#" class="log contact-link" data-toggle="modal" data-target="#myModal">create a new account</a>
                                             </div>-->
                 </div>
-                <div class="col-lg-6 col-md-6  contact-right-grid">
+                <div class="col-lg-6 col-md-6  contact-right-grid wow fadeInUp">
                     <h6>send us a message</h6>
-                    <div class="agileits-main-right margin-b-20">
+                    <div class="agileits-main-right margin-b-20 wow fadeInUp">
                         <form action="#" method="post" class="agile_form">
                             <label class="header">Name</label>
                             <div class="icon1 w3ls-name1">
@@ -1191,11 +1193,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <input type="submit" value="SEND">
                         </form>
                     </div>
-                    <div class="padding-tb-20">
+                    <div class="padding-tb-20 wow fadeInUp">
                         <h6 class="margin-b-20">Follow us</h6>
                         <div class="address-grid">
 
-                            <ul class="social-icons3">
+                            <ul class="social-icons3 wow fadeInUp">
 
                                 <li>
                                     <a href="#" class="s-iconfacebook">
@@ -1227,6 +1229,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </div>
     <!-- contact -->
     <?php include 'footer.php'; ?>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>

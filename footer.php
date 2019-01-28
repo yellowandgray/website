@@ -201,7 +201,7 @@
 <!-- //smooth-scrolling-of-move-up -->
 <!-- gallery smoothbox -->
 <script src="js/smoothbox.jquery2.js"></script>
-<script src="js/WOW.js" type="text/javascript"></script>
+<script src="js/wow.js" type="text/javascript"></script>
 <!-- //gallery smoothbox -->
 <!-- Bootstrap core JavaScript
 ================================================== -->
