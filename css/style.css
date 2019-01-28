@@ -1691,7 +1691,7 @@ p.footer-class {
     text-align: center;
     padding: 1.5em 0;
     color: #fff;
-    letter-spacing: 2px;
+/*    letter-spacing: 2px;*/
     background: #201f1f;
 }
 
@@ -1744,6 +1744,9 @@ p.footer-class a:hover {
 @media screen and (max-width: 991px) {
     .agileits_w3layouts_gallery_grid {
         padding: 0 .5em;
+    }
+    .contact-g1 {
+        height: auto !important;
     }
     .agileits_w3layouts_gallery_grid1.hover14 {
         padding: 0.5em 0;

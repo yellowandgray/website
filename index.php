@@ -120,7 +120,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--                <h5>we offer products and services for your<span>personal</span> and<span>professional banking</span> needs.</h5>-->
                 <h5 class="color-white text-center services-p"><img src="images/services-startegem.png" align="center"></h5>
                 <div class="row">
-                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.1s">
+                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.2s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/001.png" alt="Alias Icon">
                             <h6>CORPORATE</h6>
@@ -138,7 +138,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.2s">
+                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.4s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/002.png" alt="Alias Icon">
                             <h6>CONTENT</h6>
@@ -155,7 +155,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.3s">
+                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.6s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/003.png" alt="Alias Icon">
                             <h6>CREATIVE</h6>
@@ -171,7 +171,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.4s">
+                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.8s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/004.png" alt="Alias Icon">
                             <h6>FINANCE</h6>
@@ -183,7 +183,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.5s">
+                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="1s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/005.png" alt="Alias Icon">
                             <h6>INNOVATION</h6>
@@ -199,7 +199,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.6s">
+                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="1.2s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/006.png" alt="Alias Icon">
                             <h6>TECHNOLOGY</h6>
