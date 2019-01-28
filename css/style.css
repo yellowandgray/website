@@ -1803,7 +1803,7 @@ p.footer-class a:hover {
         width: auto;
     }
     .abt-container {
-        width: 61%;
+        width: 66%;
     }
 }
 
@@ -1852,7 +1852,7 @@ p.footer-class a:hover {
         /*        width: 64%;*/
     }
     .team-grid {
-        height: auto !important;
+        height: 575px !important;
     }
 }
 

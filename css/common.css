@@ -121,8 +121,8 @@
     margin-bottom: 20px
 }
 
-.height-210 {
-    height: 210px;
+.height-225 {
+    height: 225px;
 }
 
 @media screen and (max-width: 425px) {
@@ -138,7 +138,7 @@
 }
 
 @media screen and (max-width: 991px) {
-    .height-210 {
+    .height-225 {
         height: auto !important;
     }
 }
