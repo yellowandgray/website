@@ -108,7 +108,7 @@
                                             </li>
                                         </div>
                                         <li class="full">
-                                            <input type="submit" value="Submit" class="fsubmit" onClick="clearform();">
+                                            <input type="submit" value="Submit" class="fsubmit">
                                         </li>
                                     </form>
                                 </ul>
