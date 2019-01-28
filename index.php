@@ -60,10 +60,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!--about -->
         <div id="about" class="section">
             <h3 class="title-txt wow fadeInUp">
-                <span>a</span>bout us</h3>
+                <span>ABOUT US</span></h3>
             <div class="abt-container wow fadeInUp">
                 <fieldset>
-                    <legend>Alias Innovation Sdn Bhd</legend>
+                    <legend class="color-pink">ALIAS INNOVATION SDN BHD</legend>
                     <div class="stats-info">
 <!--                        <img src="images/c.png" alt="" title="" class="img-responsive" >
                                                <div class="col-sm-3 col-xs-3 stats-grid">
@@ -98,7 +98,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <!--                            <p class="about-bottom">Duis euismod massa ut sem fringilla blandit.</p>-->
                             <p>is an established boutique consulting entity that pools together professionals from multiple industry verticals that have vital exposure in Global Multi National Corporations, Inter-Governmental Organizations and the start up scene. We have more than 100 years of collective industry experience.</p>
                             <br/>
-                            <p>Our differentiation lies in our mission to <strong>ENERGIZE, MONETIZE</strong> AND <strong>FUTURIZE</strong> the businesses of all clients.</p>
+                            <p>Our differentiation lies in our mission to <strong class="color-pink">ENERGIZE, MONETIZE</strong> AND <strong class="color-pink">FUTURIZE</strong> the businesses of all clients.</p>
                             <br/>
                             <p>Our international markets exposure has served us well in our line of work and we have made market space connectivity in these nations.</p>
                             <!--                            <a href="#services" class="abtlink scroll">read more</a>-->
@@ -117,11 +117,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="services section" id="services">
             <div class="container2">
 <!--                <h3 class="title-txt"><span>C</span>ommodity</h3>-->
-                <h3 class="title-txt color-white text-center wow fadeInUp"><span>S</span>ervices</h3>
+                <h3 class="title-txt color-white text-center wow fadeInUp">SERVICES</h3>
 <!--                <h5>we offer products and services for your<span>personal</span> and<span>professional banking</span> needs.</h5>-->
                 <h5 class="color-white text-center services-p"><img src="images/services-startegem.png" align="center"></h5>
                 <div class="row">
-                    <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.1s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/001.png" alt="Alias Icon">
                             <h6>CORPORATE</h6>
@@ -139,7 +139,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.2s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/002.png" alt="Alias Icon">
                             <h6>CONTENT</h6>
@@ -156,7 +156,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.3s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/003.png" alt="Alias Icon">
                             <h6>CREATIVE</h6>
@@ -172,7 +172,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.4s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/004.png" alt="Alias Icon">
                             <h6>FINANCE</h6>
@@ -184,7 +184,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.5s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/005.png" alt="Alias Icon">
                             <h6>INNOVATION</h6>
@@ -200,7 +200,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="col-md-4 text-center wow fadeInUpBig" data-wow-delay="0.6s">
                         <div class="w3ls-about-grid">
                             <img src="images/alias-icons/006.png" alt="Alias Icon">
                             <h6>TECHNOLOGY</h6>
@@ -298,7 +298,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="section manager" id="manger">
             <div class="container-fluid">
                 <h3 class="title-txt wow fadeInUp">
-                    <span>I</span>NTELLECTUAL <span>P</span>ROPERTY & <span>I</span>NNOVATION</h3>
+                    <span>INTELLECTUAL</span> <span>PROPERTY & </span><span>INNOVATION</span></h3>
                 <div class="about-main">
                     <div class="col-md-4 man-grid">
                         <ul class="span-font">
@@ -379,7 +379,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
-                                        <div class="faq-left faq-font height-180 wow fadeInUp">
+                                        <div class="faq-left height-180 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-01.png" alt="">
@@ -391,7 +391,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-180 wow fadeInUp">
+                                        <div class="faq-left height-180 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-02.png" alt="">
@@ -402,7 +402,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-180 wow fadeInUp">
+                                        <div class="faq-left height-180 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-05.png" alt="">
@@ -415,7 +415,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>
                                     </div>
                                     <div class="col-md-6 latest-grid">
-                                        <div class="faq-left faq-font height-180 wow fadeInUp">
+                                        <div class="faq-left height-180 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-04.png" alt="">
@@ -426,7 +426,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-180 wow fadeInUp">
+                                        <div class="faq-left height-180 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-03.png" alt="">
@@ -437,7 +437,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-180 wow fadeInUp">
+                                        <div class="faq-left height-180 wow fadeInUp">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-06.png" alt="">
@@ -745,7 +745,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="section" id="support-hub">
             <div class="container">
                 <div class="row">
-                    <h3 class="title-txt wow fadeInUp"><span>S</span>UPPORT HUB</h3>
+                    <h3 class="title-txt wow fadeInUp"><span>SUPPORT HUB</span></h3>
                     <img src="images/support-hub/support-hub.jpg" alt="Alias-Support hub" class="img-responsive wow fadeInUp">
                 </div>
             </div>
@@ -754,9 +754,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="team section" id="team">
             <div class="container">
                 <h3 class="title-txt wow fadeInUp">
-                    <span>T</span>eam</h3>
+                    <span>TEAM</span></h3>
                 <div class="new-agileinfo">
-                    <div class="col-md-4 text-center wow fadeInUp">
+                    <div class="col-md-4 text-center wow fadeInUpBig">
                         <div class="team-grid">
                             <img src="images/team-1.png" alt="" />
                             <h6>Gerard Pillai</h6>
@@ -764,7 +764,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <p class="text-justify margin-t-10">More than 25 years in Finance, Technology and Strategic Consulting with exposure to Multi National Corporations including stints with Coopers & Lybrand, United Nations funded Agency and Tech Start Ups. Armed with an MBA in International Management and a Degree in Accounting & Finance. Currently pursuing Doctorate at a leading University.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center wow fadeInUp">
+                    <div class="col-md-4 text-center wow fadeInUpBig">
                         <div class="team-grid">
                             <img src="images/team-2.png" alt="" />
                             <h6>Muhamad Fahim</h6>
@@ -772,7 +772,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <p class="text-justify margin-t-10">Armed with Bachelor of Science in Electrical & Electronic Engineering and has nearly 12 years of vital industry experience in construction, commodity trading, transportation and ICT. Has managed multiple accounts for construction clients to design and build specialize structure and provided strategic consulting for clients business  movement. Also did a consultation for ICT and newly startup corporations for marketing and planning.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center wow fadeInUp">
+                    <div class="col-md-4 text-center wow fadeInUpBig">
                         <div class="team-grid">
                             <img src="images/team-3.png" alt="" />
                             <h6>Izat Emir Bin Adb Aziz</h6>
@@ -850,7 +850,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="container">
                 <div class="w3ls-title">
                     <h3 class="title-txt wow fadeInUp">
-                        <span>M</span>edia
+                        <span>MEDIA</span>
                     </h3>
                 </div>
                 <div class="w3ls_gallery_grids">
@@ -942,7 +942,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="testimonials section" id="testimonials" style="background: #ddd;">
             <div class="container">
                 <h3 class="title-txt wow fadeInUp">
-                    <span>C</span>lients</h3>
+                    <span>CLIENTS</span></h3>
                 <!--                <ul id="flexiselDemo1">
                                     <li>
                                         <div class="wthree_testimonials_grid_main">
@@ -1097,8 +1097,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>-->
         <div class="section contact-bottom" id="contacts" style="background: url(images/alias-contact-bg.png) no-repeat;background-size: cover;">
             <div class="container">
-                <h3 class="title-txt wow fadeInUp">
-                    <span>c</span>ontact us</h3>
+                <h3 class="title-txt color-white wow fadeInUp">CONTACT US</h3>
                 <div class="col-md-4 contact-bot margin-b-20">
                     <div class="contact-g1 wow fadeInUp">
                         <h6>HEADQUARTERS</h6>

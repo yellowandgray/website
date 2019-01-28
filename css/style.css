@@ -392,6 +392,7 @@ h3.title-txt {
     font-size: 3em;
     color: #000;
     margin-bottom: 1em;
+    font-weight: 600;
 }
 
 h3.title-txt span {
@@ -403,7 +404,7 @@ h3.title-txt span {
 fieldset {
     padding: 1em 3em;
     margin: 0 2px;
-    border: 2px solid #026fbf;
+    border: 2px solid #bc3c82;
 }
 
 legend {
@@ -442,6 +443,7 @@ a.abtlink {
 .about-left p {
     width: 86%;
     font-size: 1.1em;
+    font-weight: bold;
 }
 
 .abt-pos {
@@ -936,7 +938,7 @@ div#contact {
 
 .contact-g1 h6,
 .contact-g2 h6 {
-    color: #026fbf;
+    color: #bc3c82;
     font-size: 1.5em;
     font-weight: 600;
     margin-bottom: 1em;
