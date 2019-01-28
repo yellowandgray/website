@@ -378,7 +378,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
-                                        <div class="faq-left height-210 tab-1-height wow fadeInUp">
+                                        <div class="faq-left height-210 tab-1-height">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-01.png" alt="">
@@ -390,7 +390,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left height-210 tab-1-height wow fadeInUp">
+                                        <div class="faq-left height-210 tab-1-height">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-02.png" alt="">
@@ -401,7 +401,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left height-210 tab-1-height wow fadeInUp">
+                                        <div class="faq-left height-210 tab-1-height">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-05.png" alt="">
@@ -414,7 +414,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>
                                     </div>
                                     <div class="col-md-6 latest-grid">
-                                        <div class="faq-left height-210 tab-1-height wow fadeInUp">
+                                        <div class="faq-left height-210 tab-1-height">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-04.png" alt="">
@@ -425,7 +425,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left height-210 tab-1-height wow fadeInUp">
+                                        <div class="faq-left height-210 tab-1-height">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-03.png" alt="">
@@ -436,7 +436,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left height-210 tab-1-height wow fadeInUp">
+                                        <div class="faq-left height-210 tab-1-height">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/business/image-06.png" alt="">
@@ -458,7 +458,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="faq-subinfo">
                                     <!--                                    <h3 class="text-center color-white bold margin-tp-20">Technology</h3>-->
                                     <div class="row">
-                                        <div class="col-md-12  latest-grid text-center wow fadeInUp">
+                                        <div class="col-md-12  latest-grid text-center">
                                             <img src="images/technology/platform-4.0.jpg" alt="" class="img-responsive" >
                                         </div>
                                         <!--                                    <div class="col-md-6  latest-grid">
@@ -534,7 +534,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                         </div>
                                                                         <div class="col-md-2"></div>-->
                                     <div class="col-md-6 latest-grid">
-                                        <div class="faq-left faq-fontheight-180 wow fadeInUp">
+                                        <div class="faq-left faq-fontheight-180">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-5.png" alt="">
@@ -544,7 +544,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160 wow fadeInUp">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-6.png" alt="">
@@ -554,7 +554,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160 wow fadeInUp">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-7.png" alt="">
@@ -564,7 +564,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160 wow fadeInUp">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-8.png" alt="">
@@ -574,7 +574,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160 wow fadeInUp">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-13.png" alt="">
@@ -586,7 +586,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>
                                     </div>
                                     <div class="col-md-6 latest-grid">
-                                        <div class="faq-left faq-font height-160 wow fadeInUp">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-10.png" alt="">
@@ -596,7 +596,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160 wow fadeInUp">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-11.png" alt="">
@@ -606,7 +606,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160 wow fadeInUp">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-12.png" alt="">
@@ -616,7 +616,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160 wow fadeInUp">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-9.png" alt="">
@@ -626,7 +626,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="faq-left faq-font height-160 wow fadeInUp">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-14.png" alt="">
@@ -647,17 +647,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
                                     <div class="col-md-6 latest-grid">
-                                        <div class="faq-left faq-font wow fadeInUp">
+                                        <div class="faq-left faq-font">
                                             <img src="images/accreditations/001.png" alt="">  
                                             <h5 class="color-pink">Persatuan Industri Komputer Dan Multimedia Malaysia</h5>
                                             <p>PIKOM, THE NATIONAL ICT ASSOCIATION OF MALAYSIA is the association representing the information and communications technology (ICT) industry in Malaysia.</p>
                                         </div>
-                                        <div class="faq-left faq-font wow fadeInUp">
+                                        <div class="faq-left faq-font">
                                             <img src="images/accreditations/002.png" alt="">
                                             <h5 class="color-pink">Technopreneurs Association of Malaysia(TEAM)</h5>
                                             <p>The Technopreneurs Association of Malaysia (“TeAM”) has been formed by a group of Malaysian Technopreneurs for development of technology based industry in Malaysia.</p>
                                         </div>
-                                        <div class="faq-left faq-font wow fadeInUp">
+                                        <div class="faq-left faq-font">
                                             <img src="images/accreditations/003.png" alt="">
                                             <h5 class="color-pink">The Institue Of Asset Management</h5>
                                             <p>The IAM developed the Anatomy to provide an appreciation of asset management, for both experts and newcomers.</p>
@@ -665,17 +665,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                                     </div>
                                     <div class="col-md-6 latest-grid">
-                                        <div class="faq-left faq-font wow fadeInUp">
+                                        <div class="faq-left faq-font">
                                             <img src="images/accreditations/004.png" alt="">
                                             <h5 class="color-pink">The Institue Of Internal Auditors Malaysia</h5>
                                             <p>THE INSTITUTE OF INTERNAL AUDITORS MALAYSIA (IIA Malaysia) is a non-profit professional organization dedicated to the internal audit profession in Malaysia.</p>
                                         </div>
-                                        <div class="faq-left faq-font wow fadeInUp">
+                                        <div class="faq-left faq-font">
                                             <img src="images/accreditations/005.png" alt="">
                                             <h5 class="color-pink">Malaysian Finance Association</h5>
                                             <p>The Malaysian Finance Association (MFA) was established in September 1998. it's now registered under Faculty of Business Management, Universiti Teknologi MARA (UiTM).</p>
                                         </div>
-                                        <div class="faq-left faq-font wow fadeInUp">
+                                        <div class="faq-left faq-font">
                                             <img src="images/accreditations/006.png" alt="">
                                             <h5 class="color-pink">Malaysian Association Of Facility Management</h5>
                                             <p>Persatuan Pengurusan Fasiliti Malaysia, or Malaysian Association of Faclity Management (MAFM) was formed in 2005 to bridge academicians with industry players.</p>
@@ -690,12 +690,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="faqmain-info">
                                 <div class="faq-subinfo">
                                     <div class="col-md-6  latest-grid">
-                                        <div class="faq-left faq-font wow fadeInUp">
+                                        <div class="faq-left faq-font">
                                             <h3 class="text-center color-blue">Licences</h3>
                                             <h5 class="color-pink"><img src="images/collaboration/img-01.png" alt=""> &nbsp;&nbsp;Ministry of Finance Malaysia</h5>
                                             <p class="text-justify">The Minister of Finance (or simply, Finance Minister) (Malay: Menteri Kewangan) is the head of the Ministry of Finance of the Government of Malaysia.</p>
                                         </div>
-                                        <div class="faq-left faq-font wow fadeInUp">
+                                        <div class="faq-left faq-font">
                                             <h5 class="color-pink"><img src="images/collaboration/img-02.png" alt=""> Malaysia External Trade Development Corporation</h5>
                                             <p class="text-justify">MATRADE’s mission to promote Malaysia’s export has enabled many local companies to carve new frontiers in global markets.</p>
                                         </div>
@@ -711,7 +711,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                                 </div>-->
 
                                     </div>
-                                    <div class="col-md-6 latest-grid wow fadeInUp">                                        
+                                    <div class="col-md-6 latest-grid">                                        
                                         <div class="faq-left faq-font faq-font">
                                             <h3 class="text-center color-blue">Collaborations</h3>
                                             <div class="text-center">
