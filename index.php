@@ -499,8 +499,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>-->
                                     </div>
                                     <div class="row" style="padding-top: 20px;">
-                                        <h3 class="text-center color-white bold margin-tp-20 wow fadeInUp">Industry Sectors</h3>
-                                        <div class="col-md-12 wow fadeInUp">
+                                        <h3 class="text-center color-white bold margin-tp-20">Industry Sectors</h3>
+                                        <div class="col-md-12">
                                             <section class="customer-logos slider silder-bg">
                                                 <div class="slide"><img src="images/industry-sectors/001.png"></div>
                                                 <div class="slide"><img src="images/industry-sectors/002.png"></div>
@@ -1189,11 +1189,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <input type="submit" value="SEND">
                         </form>
                     </div>
-                    <div class="padding-tb-20 wow fadeInUp">
+                    <div class="padding-tb-20">
                         <h6 class="margin-b-20">Follow us</h6>
                         <div class="address-grid">
 
-                            <ul class="social-icons3 wow fadeInUp">
+                            <ul class="social-icons3">
 
                                 <li>
                                     <a href="#" class="s-iconfacebook">
