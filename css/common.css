@@ -146,3 +146,20 @@
 .img-width P{
     width: 100%;
 }
+
+@media (min-width: 1051px) and (max-width: 1080px) {
+    .banner-text h6 {
+        font-size: 2em;
+    }
+}
+@media (min-width: 1081px) and (max-width: 1366px) {
+    .banner-text h6 {
+        font-size: 2.1em;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .contact-g1 {
+        height: auto !important;
+    }
+}

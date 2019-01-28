@@ -338,7 +338,7 @@ ul.nav.navbar-nav li.active {
 }
 
 .banner-text h6 {
-    font-size: 2.4em;
+    font-size: 3.4em;
     color: #fff;
     margin-bottom: 0.5em;
     padding-bottom: 0.5em;
@@ -348,7 +348,10 @@ ul.nav.navbar-nav li.active {
     border-bottom: 1px solid #fff;
     display: inline-block;
     text-transform: capitalize;
-    text-shadow: 5px 3px 5px #790c6c;
+     text-shadow: 2px 5px 1px #ffffff;
+    background: -webkit-linear-gradient(#924194, #1c0a1d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .banner-text h3 {
@@ -358,7 +361,10 @@ ul.nav.navbar-nav li.active {
     font-weight: 600;
     text-transform: capitalize;
     /* letter-spacing: 19.5px; */
-    text-shadow: 5px 3px 5px #790c6c;
+    text-shadow: 2px 5px 1px #ffffff;
+    background: -webkit-linear-gradient(#924194, #1c0a1d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .banner-text h3 span {
