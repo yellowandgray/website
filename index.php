@@ -119,7 +119,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--                <h3 class="title-txt"><span>C</span>ommodity</h3>-->
                 <h3 class="title-txt color-white text-center wow fadeInUp"><span>S</span>ervices</h3>
 <!--                <h5>we offer products and services for your<span>personal</span> and<span>professional banking</span> needs.</h5>-->
-                <h5 class="color-white text-center services-p"><img src="images/services-startegem.png" align="center"> we offer products and services for your professional needs.</h5>
+                <h5 class="color-white text-center services-p"><img src="images/services-startegem.png" align="center"></h5>
                 <div class="row">
                     <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.1s">
                         <div class="w3ls-about-grid">
