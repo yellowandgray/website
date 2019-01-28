@@ -1843,6 +1843,9 @@ p.footer-class a:hover {
     .map {
         /*        width: 64%;*/
     }
+    .team-grid {
+        height: auto !important;
+    }
 }
 
 @media screen and (max-width: 1080px) {
