@@ -119,3 +119,13 @@
     color: #0567ce;
     margin-bottom: 20px
 }
+
+.height-210 {
+    height: 210px;
+}
+
+@media screen and (max-width: 425px) {
+    .tab-1-height {
+        height: auto !important
+    }
+}

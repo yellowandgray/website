@@ -8,7 +8,7 @@ html,
 body {
     margin: 0;
     background: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body a,
@@ -29,7 +29,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.2;
 }
 
@@ -402,7 +402,7 @@ h3.title-txt span {
 /*-- about --*/
 
 fieldset {
-    padding: 1em 3em;
+    padding: 3em 3em;
     margin: 0 2px;
     border: 2px solid #bc3c82;
 }
@@ -443,7 +443,7 @@ a.abtlink {
 .about-left p {
     width: 86%;
     font-size: 1.1em;
-    font-weight: bold;
+    color: #000;
 }
 
 .abt-pos {
@@ -873,6 +873,7 @@ div#team h3.title-txt span {
     color: #000;
     font-weight: 600;
     font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .faq-info .nav-tabs li {
@@ -1303,7 +1304,8 @@ a.sb {
 /*-- team --*/
 
 div#team {
-    background: rgb(2, 111, 191);
+    background: url(../images/team-bg.jpg) no-repeat;
+    background-size: cover;
 }
 
 .team-w3text p {
@@ -2233,7 +2235,7 @@ p.footer-class a:hover {
         font-size: 1.6em;
     }
     fieldset {
-        padding: 1em;
+        padding: 2em;
     }
     .desoSlide-overlay {
         width: 100% !important;
@@ -2793,7 +2795,7 @@ p.footer-class a:hover {
         font-size: 1.3em;
     }
     fieldset {
-        padding: 12px 7px;
+        padding: 40px 7px;
     }
     legend {
         font-size: 1.3em;
