@@ -45,6 +45,7 @@
 .text-left li {
     padding-left: 35px;
     font-size: 16px;
+    padding-bottom: 5px;
 }
 
 @media (max-width: 1079px){
@@ -104,7 +105,7 @@
     padding: 2.5em 1em;
     /* border: 2px solid #984091; */
     margin-bottom: 20px;
-    height: 480px;
+    height: 520px;
     background: #fff;
     border-radius: 10px;
 }
@@ -128,4 +129,20 @@
     .tab-1-height {
         height: auto !important
     }
+}
+
+@media (min-width: 606px) and (max-width: 991px) {
+    .man-grid ul li {
+        height: 174px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .height-210 {
+        height: auto !important;
+    }
+}
+
+.img-width P{
+    width: 100%;
 }

@@ -17,19 +17,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <!--            <div class="banner-right">
                             <img src="images/new.png" alt="" class="img-responsive" />
                         </div>-->
-            <div class="banner-text wow fadeInUp">
+            <div class="banner-text">
                 <div id="top" class="callbacks_container">
                     <ul class="rslides" id="slider3">
                         <li>
                             <div class="banner-textagileinfo">
                                 <div class="row">
-                                    <div class="col-md-3">
-                                        <img src="images/logo-01.png" class="img-responsive" alt="">
+                                    <div class="col-md-12 text-center wow fadeInRightBig" data-wow-delay="0.2s">
+                                        <img align="center" src="images/logo-01.png" class="img-width" alt="">
                                     </div>
-                                    <div class="col-md-9">
+                                    <div class="col-md-12 text-center wow fadeInRightBig" data-wow-delay="0.6s">
                                         <h6>ALIAS INNOVATION SDN BHD</h6>
                                         <h3>FUTURIZING INNOVATION</h3>
-        <!--                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam in consectetur.</p>-->
                                     </div>
                                 </div>
                             </div>
@@ -846,7 +845,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <!-- //team -->
         <!-- gallery -->
-        <div class="jarallax section gallery" id="gallery">
+        <div class="jarallax section gallery" id="gallery" style="background: url(images/media-bg.jpg) no-repeat;background-size: cover;">
             <div class="container">
                 <div class="w3ls-title">
                     <h3 class="title-txt wow fadeInUp">
