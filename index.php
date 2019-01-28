@@ -326,7 +326,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <p> Chairman of the Board</p>-->
                     </div>
                     <div class="col-md-4 man-right man-grid">
-                        <img class="img-responsive" src="images/innovation.jpg" alt="about-image" />
+                        <img class="img-responsive" src="images/innovation-1.jpg" alt="about-image" />
                         <div class="clearfix"></div>
                     </div>
                     <div class="col-md-4 man-right man-grid">
