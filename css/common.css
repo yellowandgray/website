@@ -48,7 +48,7 @@
     padding-bottom: 5px;
 }
 
-@media (max-width: 1079px){
+@media (max-width: 992px){
     .height-160{
         height: auto;
     }
@@ -171,3 +171,4 @@
         height: auto !important;
     }
 }
+

@@ -534,7 +534,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                         </div>
                                                                         <div class="col-md-2"></div>-->
                                     <div class="col-md-6 latest-grid">
-                                        <div class="faq-left faq-fontheight-180">
+                                        <div class="faq-left faq-font height-160">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <img src="images/support-hub/pic-5.png" alt="">
@@ -660,7 +660,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <div class="faq-left faq-font">
                                             <img src="images/accreditations/003.png" alt="">
                                             <h5 class="color-pink">The Institue Of Asset Management</h5>
-                                            <p>The IAM developed the Anatomy to provide an appreciation of asset management, for both experts and newcomers.</p>
+                                            <p>The IAM developed the Anatomy to provide an appreciation of asset management, for both experts and newcomers.</p><br/>
                                         </div>
 
                                     </div>
@@ -1100,7 +1100,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="col-md-4 contact-bot margin-b-20">
                     <div class="contact-g1 wow fadeInUp">
                         <h6>HEADQUARTERS</h6>
-                        <ul class="address text-justify">
+                        <ul class="address">
                             <span class="fa fa-map-marker" aria-hidden="true"></span>
                             <li>
                                 Penthouse, 16-1, Level 16 Mz5,<br/> Wisma UOA Damansara II,<br/> No. 6, Changkat Semantan,<br/> Damansara Heights,<br/> 50490 Kuala Lumpur, Malaysia
@@ -1115,7 +1115,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </li>
                         </ul>
                     </div>
-                    <div class="contact-g1 wow fadeInUp">H
+                    <div class="contact-g1 wow fadeInUp">
                         <h6>SATELLITE HUB</h6>
                         <ul class="address">
                             <span class="fa fa-map-marker" aria-hidden="true"></span>
