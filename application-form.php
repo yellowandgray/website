@@ -135,7 +135,7 @@ value="male"<!doctype html>
                                     </div>
                                 </div>
                                 <div class="col-md-12 bg-green text-center">
-                                    <p>Parent Information</p>
+                                    <p>PARENT INFORMATION</p>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
@@ -227,7 +227,7 @@ value="male"<!doctype html>
                                     </div>
                                 </div>
                                 <div class="col-md-12 bg-green text-center">
-                                    <p>Health Information</p>
+                                    <p>HEALTH INFORMATION</p>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
@@ -284,7 +284,7 @@ value="male"<!doctype html>
                                     </div>
                                 </div>
                                 <div class="col-md-12 bg-green text-center">
-                                    <p>General Information<p>
+                                    <p>GENERAL INFORMATION<p>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
@@ -307,7 +307,7 @@ value="male"<!doctype html>
                                     </div>
                                 </div>
                                 <div class="col-md-12 bg-green text-center">
-                                    <p>Permission</p>
+                                    <p>PERMISSION</p>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
@@ -360,7 +360,7 @@ value="male"<!doctype html>
                                     </div>
                                 </div>
                                 <div class="col-md-12 bg-green text-center">
-                                    <p>Declaration</p>
+                                    <p>DECLARATION</p>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
