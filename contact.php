@@ -42,22 +42,22 @@
                                     <form role="form" class="contact">
                                         <div class="form-group">
                                             <li class="half pr-15">
-                                                <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required>
+                                                <input type="text" class="form-control" name="name" placeholder="Full Name" required>
                                             </li>
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
-                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                                <input type="email" class="form-control" name="email" placeholder="Email" required>
                                             </li>
                                         </div>
                                         <div class="form-group">
                                             <li class="half pr-15">
-                                                <input type="text" pattern="^\d{10}$" id="mobile" class="form-control" name="mobile" placeholder="Contact Number" required>
+                                                <input type="text" pattern="^\d{10}$" class="form-control" name="mobile" placeholder="Contact Number" required>
                                             </li>
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
-                                                <select name="no_children" class="form-control" id="no_children">
+                                                <select name="no_children" class="form-control">
                                                     <option value="0">No. of Children</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
@@ -84,7 +84,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="half pl-15">
-                                                <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject">
+                                                <input type="text" class="form-control" name="subject" placeholder="Subject">
                                             </li>
                                         </div>
                                         <div class="form-group">
@@ -104,7 +104,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="full">
-                                                <textarea class="textarea-control" id="message" name="message" placeholder="Message" required></textarea>
+                                                <textarea class="textarea-control" name="message" placeholder="Message" required></textarea>
                                             </li>
                                         </div>
                                         <li class="full">
@@ -134,7 +134,7 @@
                                 <p><strong>ENPEE International School</strong><br/> <i class="light-green">Château Français</i><br/>
                                     ENPEE Enclave, 241/2, Puthakudy Village,  <br/> 
                                     Vadamattam Main Road, Nedungadu Panchayat, <br/>
-                                    Karaikal – 609603. U.T of Puducherry
+                                    Karaikal – 609609. U.T of Puducherry
                                 </p>
                             </div>
                         </div>

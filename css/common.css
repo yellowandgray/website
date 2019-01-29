@@ -88,7 +88,12 @@
 }
 .margin-bottom-40 {margin-bottom: 40px;}
 .boder-10 { border-bottom: 10px solid #07a8e6; margin-left: -15px;}
-.boder-2 { border-bottom: 10px solid #b3bb05; margin-right: -15px; margin-left: -25px;}
+.boder-2 { 
+/*    border-bottom: 10px solid #b3bb05;*/
+    border-bottom: 10px solid #73bf45;
+    margin-right: -15px;
+    margin-left: -25px;
+}
 .bold {font-weight: bold;}
 .color-white {color: #ffffff !important;}
 .color-blue {color: #429ffc;}
@@ -982,4 +987,27 @@ marquee {
 .download h5 {
     padding: 20px;
     height: 100px;
+}
+
+@media (min-width: 335px) and (max-width: 375px) {
+    .btn-custom-1 {
+        font-size: 16px !important;
+        line-height: 45px !important;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 389px) {
+    .btn-custom-1 {
+        font-size: 18px;
+        line-height: 45px;
+    }
+}
+
+
+
+@media (min-width: 390px) and (max-width: 425px) {
+    .btn-custom-1 {
+        font-size: 8px;
+        line-height: 30px;
+    }
 }
