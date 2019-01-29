@@ -165,7 +165,7 @@
     .banner-text h6 {
         font-size: 2.1em;
     }
-    
+}
 @media screen and (max-width: 1199px) {
     .contact-g1 {
         height: auto !important;
