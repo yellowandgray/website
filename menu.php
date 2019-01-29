@@ -8,7 +8,7 @@
                         <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:info@enpeekkl.com">info@enpeekkl.com</a>
 <!--                        <i class="fa fa-arrow-down"></i>&nbsp;-->
                         <a href="downloads.php" type="button" class="btn-custom-1">Download Resources</a>
-                        <a href="#" type="button" class="btn-custom-1">Download Application</a>
+                        <a href="application-form.php" type="button" class="btn-custom-1">Download Application</a>
                     </p>
                 </div>
                 <div class="col-xs-4 text-right line-height-35">

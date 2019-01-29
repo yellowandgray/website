@@ -89,7 +89,7 @@
 .margin-bottom-40 {margin-bottom: 40px;}
 .boder-10 { border-bottom: 10px solid #07a8e6; margin-left: -15px;}
 .boder-2 { 
-/*    border-bottom: 10px solid #b3bb05;*/
+    /*    border-bottom: 10px solid #b3bb05;*/
     border-bottom: 10px solid #73bf45;
     margin-right: -15px;
     margin-left: -25px;
@@ -1010,4 +1010,44 @@ marquee {
         font-size: 8px;
         line-height: 30px;
     }
+}
+
+.bg-blue {
+    background: #3363a6;
+    padding: 10px
+}
+
+.bg-blue  h4 {
+    color: #fff;
+    margin: 0px !important;
+}
+.bg-green {
+    background: #7dab4a;
+    padding: 5px ;   
+}
+
+.bg-green p {
+    color: #fff;
+    margin: 0px !important;
+}
+
+.application-form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.application-form  p{
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.application-form input {
+    border: 2px solid #e1e1e1;
+    background: #fafafa;
+    color: #555555;
+/*    height: 53px;*/
+    line-height: 49px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
