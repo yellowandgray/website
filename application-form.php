@@ -240,9 +240,9 @@ value="male"<!doctype html>
                                     </div>
                                     <div class="col-md-4">
                                         <label for=radio9>Yes</label>
-                                        <input id="radio9" name="radio1" type="radio" value="yes">
+                                        <input id="radio9" name="radio4" type="radio" value="yes">
                                         <label for="radio10">No</label>
-                                        <input id="radio10" name="radio1" type="radio" value="no">
+                                        <input id="radio10" name="radio4" type="radio" value="no">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -251,9 +251,9 @@ value="male"<!doctype html>
                                     </div>
                                     <div class="col-md-4">
                                         <label for=radio11>Yes</label>
-                                        <input id="radio11" name="radio1" type="radio" value="yes">
+                                        <input id="radio11" name="radio5" type="radio" value="yes">
                                         <label for="radio12">No</label>
-                                        <input id="radio12" name="radio1" type="radio" value="no">
+                                        <input id="radio12" name="radio5" type="radio" value="no">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -262,9 +262,9 @@ value="male"<!doctype html>
                                     </div>
                                     <div class="col-md-4">
                                         <label for=radio13>Yes</label>
-                                        <input id="radio13" name="radio1" type="radio" value="yes">
+                                        <input id="radio13" name="radio6" type="radio" value="yes">
                                         <label for="radio14">No</label>
-                                        <input id="radio14" name="radio1" type="radio" value="no">
+                                        <input id="radio14" name="radio6" type="radio" value="no">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -273,9 +273,9 @@ value="male"<!doctype html>
                                     </div>
                                     <div class="col-md-4">
                                         <label for=radio15>Yes</label>
-                                        <input id="radio15" name="radio1" type="radio" value="yes">
+                                        <input id="radio15" name="radio7" type="radio" value="yes">
                                         <label for="radio16">No</label>
-                                        <input id="radio16" name="radio1" type="radio" value="no">
+                                        <input id="radio16" name="radio7" type="radio" value="no">
                                     </div>
                                 </div>
                                 <div class="row">
