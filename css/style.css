@@ -1974,7 +1974,7 @@ p.footer-class a:hover {
         width: 55%;
     }
     .banner-text h6 {
-        font-size: 1.85em;
+        font-size: 1.5em;
     }
     .container2 h5 {
         margin-bottom: 0;
@@ -2241,7 +2241,7 @@ p.footer-class a:hover {
         min-height: 340px;
     }
     .banner-text h6 {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     .w3ls-about-grid {
         padding: 2em 0.55em;
@@ -2356,7 +2356,7 @@ p.footer-class a:hover {
         font-size: 1.1em;
     }
     .banner-text h6 {
-        font-size: 1.6em;
+        font-size: 1.1em;
     }
     .navbar-top ul li:first-child {
         margin-right: 0.5em;
@@ -2567,12 +2567,12 @@ p.footer-class a:hover {
     .banner-right {
         width: 30%;
     }
-    .banner-text h6 {
+/*    .banner-text h6 {
         font-size: 1.2em;
-    }
-    .banner-text h3 {
+    }*/
+/*    .banner-text h3 {
         font-size: 1em;
-    }
+    }*/
     .banner-textagileinfo p {
         font-size: 1em;
     }
@@ -2736,7 +2736,7 @@ p.footer-class a:hover {
         margin-top: 16px;
     }
     .banner-text h6 {
-        font-size: 1em;
+        font-size: 0.9em;
         font-weight: 800;
     }
     .abt-container {

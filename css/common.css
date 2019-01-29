@@ -152,12 +152,20 @@
         font-size: 2em;
     }
 }
-@media (min-width: 1081px) and (max-width: 1366px) {
+@media (min-width: 1184px) and (max-width: 1900px) {
     .banner-text h6 {
-        font-size: 2.1em;
+        font-size: 2.4em;
+    }
+    .banner-text h3 {
+        font-size: 2em;
     }
 }
 
+@media (min-width: 1035px) and (max-width: 1183px) {
+    .banner-text h6 {
+        font-size: 2.1em;
+    }
+    
 @media screen and (max-width: 1199px) {
     .contact-g1 {
         height: auto !important;
