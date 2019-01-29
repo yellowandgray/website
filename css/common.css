@@ -1045,9 +1045,15 @@ marquee {
     border: 2px solid #e1e1e1;
     background: #fafafa;
     color: #555555;
-/*    height: 53px;*/
+    /*    height: 53px;*/
     line-height: 49px;
     padding: 0 20px;
     margin-bottom: 10px;
     margin-top: 5px;
+}
+
+.list-margin {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px
 }

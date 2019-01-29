@@ -362,16 +362,94 @@ value="male"<!doctype html>
                                 <div class="col-md-12 bg-green text-center">
                                     <p>Declaration</p>
                                 </div>
-                                <div class="col-md-12">
-                                    <p>I hereby certify that the information given in the admission form is complete and accurate. I understand and agree that misrepresentation or
-                                        omission of facts will justify the denial of admission, the cancellation of admission or expulsion.</p>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>I hereby certify that the information given in the admission form is complete and accurate. I understand and agree that misrepresentation or
+                                            omission of facts will justify the denial of admission, the cancellation of admission or expulsion.</p>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" name="signature_of_father" placeholder="Signature of Father" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control" name="phone_number" placeholder="Signature of Mother" required>
+                                        <input type="text" class="form-control" name="signature_of_mother" placeholder="Signature of Mother" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" name="date" placeholder="Date" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" name="place" placeholder="Place" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>For Office use only :</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="col-md-6">
+                                            <p><i class="fa fa-circle-thin" aria-hidden="true"></i> Birth Certificate</p>
+                                            <p><i class="fa fa-circle-thin" aria-hidden="true"></i> Medical Certificate</p>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <p><i class="fa fa-circle-thin" aria-hidden="true"></i> Admission fees</p>
+                                            <p><i class="fa fa-circle-thin" aria-hidden="true"></i> Other Documents (If any)</p>
+                                        </div> 
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="col-md-6">
+                                            <p><i class="fa fa-circle-thin" aria-hidden="true"></i> Passport Document</p>
+                                            <p><i class="fa fa-circle-thin" aria-hidden="true"></i> Address Proof</p>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <p><i class="fa fa-circle-thin" aria-hidden="true"></i> Photograph</p>
+                                            <p><i class="fa fa-circle-thin" aria-hidden="true"></i> Aadhaar card</p>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="col-md-12 bg-green text-center">
+                                    <p>Obligations</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>These terms and conditions govern the basis on which we agree to provide childcare services to you.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 list-margin">
+                                        <ol>
+                                            <li>Inform us if your child is suffering from any contagious disease immediately. For the benefit of other children, you must not allow your child to attend the preschool if he/she is suffering from any contagious disease. The child would be allowed to attend school only after a doctor has cleared it to do so</li>
+                                            <li>The persons who will be collecting your child from the school have to be registered with the preschool by providing necessary identification documents. Any other person who is not registered would not be allowed to collect the child. It is the responsibility of the parents to collect the child from the preschool in case the authorized person is not available to collect the child. </li>
+                                            <li>Parents must arrive within 15 minutes from the time of dispersal to collect the child. In case of late pick up more than 3 times in a month, a late pick up fee would be charged.</li>
+                                            <li>Late fee of 100 Rupees per 15 mins per child will be charged for any late pick ups</li>
+                                            <li>Inform us of any change in your contact details immediately.</li>
+                                            <li>Children are encouraged not to bring their own toys from home unless specifically asked to do so for any activity. We carry a wide range of toys and equipment necessary for engaging the children at the preschool.</li>
+                                            <li>Photographs would be taken of the children engaged in activities as part of the documentation of classroom activities. In case you do not wish your child&#39;s photographs for promotional purposes please inform us about the same in writing in advance.</li>
+                                            <li>Fees must be paid in two instalments. All payments made should be through cheque I debit card I credit card I through payment gateway.</li>
+                                            <li>In case of failure to make the fee payment before the stipulated date, we would withdraw the provision of childcare to the child. Nonpayment of the fees beyond 1month from the due-date would result in the termination of admission of the child.</li>
+                                            <li>No refunds would be given for periods for which the School is not attended by your child for any reason whatsoever, including any natural calamities like flood, fire, rain.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>Signature of the parent / guardian :</p>
+                                    </div>
+                                </div>
+                                 <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" name="name" placeholder="Name" required>
+                                    </div>
+                                </div>
+                                 <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" name="date_1" placeholder="Date" required>
                                     </div>
                                 </div>
                             </form>
