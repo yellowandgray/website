@@ -1023,7 +1023,8 @@ marquee {
 }
 .bg-green {
     background: #7dab4a;
-    padding: 5px ;   
+    padding: 5px;
+    margin: 10px 0 20px;
 }
 
 .bg-green p {
