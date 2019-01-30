@@ -325,7 +325,7 @@ ul.nav.navbar-nav li.active {
 }
 
 .banner-text {
-    width: 50%;
+    width: 60%;
     float: right;
     margin-top: 13em;
     margin-right: 10em;
@@ -1812,7 +1812,7 @@ p.footer-class a:hover {
         width: 32.5%;
     }
     .banner-text {
-        width: 52%;
+        width: 70%;
         margin-top: 8.2em;
     }
     legend {
@@ -1834,7 +1834,7 @@ p.footer-class a:hover {
         font-size: 1.8em;
     }
     .banner-text h3 {
-        font-size: 1.68em;
+        font-size: 33px;
     }
     .banner-right {
         width: 34.5%;
@@ -1864,7 +1864,7 @@ p.footer-class a:hover {
         width: 33.28%;
     }
     .banner-text h3 {
-        font-size: 1.55em;
+        font-size: 30px;
     }
     .banner-textagileinfo {
         padding: 3em 3em 3.5em;
@@ -1926,10 +1926,10 @@ p.footer-class a:hover {
         width: 88%;
     }
     .banner-text {
-        width: 54%;
+        width: 70%;
     }
     .banner-text h6 {
-        font-size: 2.1em;
+        font-size: 35px;
     }
     .container2 h5 {
         font-size: 1.8em;
@@ -1953,7 +1953,7 @@ p.footer-class a:hover {
         min-height: 442px;
     }
     .banner-text h6 {
-        font-size: 1.9em;
+        font-size: 35px;
     }
     .container2 {
         width: 93%;
@@ -1971,10 +1971,10 @@ p.footer-class a:hover {
         padding: 0 2em;
     }
     .banner-text {
-        width: 55%;
+        width: 75%;
     }
     .banner-text h6 {
-        font-size: 1.5em;
+        font-size: 40px;
     }
     .container2 h5 {
         margin-bottom: 0;

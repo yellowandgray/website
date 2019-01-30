@@ -163,7 +163,7 @@
 
 @media (min-width: 1035px) and (max-width: 1183px) {
     .banner-text h6 {
-        font-size: 2.1em;
+        font-size: 40px;
     }
 }
 @media screen and (max-width: 1199px) {
@@ -172,3 +172,14 @@
     }
 }
 
+@media screen and (max-width: 540px) {
+    .banner-text h6 {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 668px) and (max-width: 941px) {
+    .banner-text h6 {
+        font-size: 20px;
+    }
+}
