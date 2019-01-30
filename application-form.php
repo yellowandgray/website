@@ -1,4 +1,4 @@
-value="male"<!doctype html>
+<!doctype html>
 <html lang="en">
     <?php
     $page = 'career';
