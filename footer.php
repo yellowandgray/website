@@ -1,5 +1,5 @@
 <!-- copy right -->
-<p class="footer-class">© 2018 ALIAS. All Rights Reserved | Designed by
+<p class="footer-class">© 2019 ALIAS. All Rights Reserved | Designed by
     <a href="http://www.yellowandgray.com/" target="_blank">YG Studio</a>
 </p>
 <!-- //copy right -->
