@@ -1173,17 +1173,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="col-lg-6 col-md-6  contact-right-grid wow fadeInUp">
                     <h6>send us a message</h6>
                     <div class="agileits-main-right margin-b-20 wow fadeInUp">
-                        <form action="#" method="post" class="agile_form">
-                            <label class="header">Name</label>
-                            <div class="icon1 w3ls-name1">
-                                <input placeholder=" " name="first name" type="text" required="">
+                        <form class="contact agile_form">
+                            <div class="form-group">
+                                <label class="header">Name</label>
+                                <div class="icon1 w3ls-name1">
+                                    <input placeholder=" " name="name" type="text" required="">
+                                </div>
                             </div>
-                            <div class="icon2">
-                                <label class="header">Email</label>
-                                <input placeholder=" " name="Email" type="email" required="">
+                            <div class="form-group">
+                                <div class="icon2">
+                                    <label class="header">Email</label>
+                                    <input placeholder=" " name="email" type="email" required="">
+                                </div>
                             </div>
-                            <label class="header">your message</label>
-                            <textarea class="w3l_summary" required=""></textarea>
+                            <div class="form-group">
+                                <label class="header">your message</label>
+                                <textarea class="w3l_summary" name="message" required=""></textarea>
+                            </div>
                             <input type="submit" value="SEND">
                         </form>
                     </div>
