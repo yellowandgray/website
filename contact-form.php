@@ -59,7 +59,7 @@ if ($_POST['name']) {
             <tbody>
             <tr>
             <td style = "padding:36px 48px;display:block">
-            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://2dotask.com/alias/images/logo.png" alt = "ALIAS" style = "width:50%" /></h1>
+            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://alias-innovation.com/images/logo.png" alt = "ALIAS" style = "width:50%" /></h1>
             </td>
             </tr>
             </tbody>
