@@ -175,6 +175,7 @@
 @media screen and (max-width: 540px) {
     .banner-text h6 {
         font-size: 13px;
+        -webkit-text-stroke: 1px #8c004d;
     }
 }
 
