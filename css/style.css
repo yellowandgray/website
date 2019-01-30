@@ -2186,6 +2186,9 @@ p.footer-class a:hover {
     .list-inline>li {
         padding: 0 0 0 0px !important;
     }
+    .banner-textagileinfo img {
+        width: 37%;
+    }
 }
 
 @media screen and (max-width: 767px) {
