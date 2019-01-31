@@ -24,7 +24,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="banner-textagileinfo">
                                 <div class="row">
                                     <div class="col-md-12 text-center wow fadeInRightBig" data-wow-delay="0.2s">
-                                        <img align="center" src="images/logo-01.png" class="img-width" alt="">
+                                        <img align="center" src="images/logo-01.png" class="img-width" alt="" style="padding: 10px;">
                                     </div>
                                     <div class="col-md-12 text-center wow fadeInRightBig" data-wow-delay="0.6s">
                                         <h6>ALIAS INNOVATION SDN BHD</h6>
