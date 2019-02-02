@@ -62,7 +62,7 @@
 <script src="js/responsiveslides.min.js"></script>
 <script src="js/contactform.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-<script>
+<!--<script>
     // You can also use "$(window).load(function() {"
     $(function () {
         // Slideshow 3
@@ -81,7 +81,7 @@
         });
 
     });
-</script>
+</script>-->
 <!-- //banner slider script ends -->
 <!-- sign in and signup pop up toggle script -->
 <script>
@@ -100,7 +100,7 @@
 <!-- sign in and signup pop up toggle script -->
 <!-- team desoslide-JavaScript -->
 <script src="js/jquery.desoslide.js"></script>
-<script>
+<!--<script>
     $('#demo1_thumbs').desoSlide({
         main: {
             container: '#demo1_main_image',
@@ -109,7 +109,7 @@
         effect: 'sideFade',
         caption: true
     });
-</script>
+</script>-->
 <script>
     $(document).ready(function () {
         $('.customer-logos').slick({
