@@ -9,13 +9,13 @@ foreach ($data as $val) {
 }
 $body = $body . '</tbody></table>';
 $mail = new PHPMailer();
-$mail->From = 'projects@yellowandgray.com';
+$mail->From = 'info@alias-innovation.com';
 $mail->FromName = 'Alisa Innovation';
-$mail->AddReplyTo('projects@yellowandgray.com', 'Alisa Innovation');
+$mail->AddReplyTo('info@alias-innovation.com', 'Alisa Innovation');
 $mail->Subject = 'Contact Form';
 $mail->Body = $body;
 $mail->AltBody = $body;
-$mail->AddAddress('projects@yellowandgray.com', 'Alisa Innovation');
+$mail->AddAddress('info@alias-innovation.com', 'Alisa Innovation');
 if ($mail->Send()) {
     $res = array('error' => false, 'message' => 'Form submitted successfully');
 }
