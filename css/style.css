@@ -2929,3 +2929,7 @@ p.footer-class a:hover {
 .hidden {
     display: none;
 }
+
+.submit-response {
+    color: #ffffff;
+} 

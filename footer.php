@@ -60,6 +60,7 @@
 <!-- //about numscroller -->
 <!-- banner Slider starts Here -->
 <script src="js/responsiveslides.min.js"></script>
+<script src="js/contactform.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 <script>
     // You can also use "$(window).load(function() {"
@@ -87,7 +88,7 @@
     $('.toggle').click(function () {
         // Switches the Icon
         $(this).children('i').toggleClass('fa-pencil');
-        // Switches the forms  
+        // Switches the forms
         $('.form').animate({
             height: "toggle",
             'padding-top': 'toggle',
@@ -236,7 +237,7 @@
          containerID: 'toTop', // fading element id
          containerHoverID: 'toTopHover', // fading element hover id
          scrollSpeed: 1200,
-         easingType: 'linear' 
+         easingType: 'linear'
          };
          */
 

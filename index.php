@@ -35,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                         <h6>the Internet banking portal</h6>
                                                         <h3>Ensuring a high level of customer service.</h3>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit llam in consectetur.</p>
-                        
+
                                                     </div>
                                                 </li>
                                                 <li>
@@ -43,7 +43,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                         <h6>Ideal for Personal Banking</h6>
                                                         <h3>For Your Personal And Professional Banking Needs.</h3>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit llam in consecteelit.</p>
-                        
+
                                                     </div>
                                                 </li>-->
                     </ul>
@@ -217,7 +217,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <!--                <div class="col-md-5 service-left-grid">
                                     <div class="services-left">
-                
+
                                         <h4> Lorem ipsum dolor sit amet,
                                             <span>consectetur adipisicing elit, sed do</span> sit amet conse eiusmod. </h4>
                                         <p> Taque earum rerum hic tenetur a sapiente delectus. Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -230,7 +230,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <a href="#contact" class="abtlink scroll">contact us</a>
                                             </li>
                                         </ul>
-                
+
                                     </div>
                                 </div>
                                <div class="col-md-7 text-center agileinfo-about-grid">
@@ -242,7 +242,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                     <p> Taque earum rerum hitaque tenetur rum sapiente</p>
                                                                 </div>
                                     </div>
-                
+
                                     <div class="col-md-4 col-xs-4 service-subgrids">
                                         <img src="images/commodity/002.jpg" alt="" title="" class="img-responsive">
                                                                 <div class="w3ls-about-grid">
@@ -267,7 +267,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                     <p> Taque earum rerum hitaque tenetur rum sapiente</p>
                                                                 </div>
                                     </div>
-                
+
                                     <div class="col-md-4 col-xs-4 service-subgrids">
                                         <img src="images/commodity/005.jpg" alt="" title="" class="img-responsive">
                                                                 <div class="w3ls-about-grid">
@@ -474,7 +474,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                                         <i class="fa fa-question-circle" aria-hidden="true"></i> conse eiusmod ed do sit amet ?</h5>
                                                                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do sit amet conse eiusmod.</p>
                                                                                 </div>
-                                        
+
                                                                             </div>
                                                                             <div class="col-md-6 latest-grid">
                                                                                 <div class="faq-left">
@@ -645,7 +645,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="faq-subinfo">
                                     <div class="col-md-6 latest-grid">
                                         <div class="faq-left faq-font">
-                                            <img src="images/accreditations/001.png" alt="">  
+                                            <img src="images/accreditations/001.png" alt="">
                                             <h5 class="color-pink">Persatuan Industri Komputer Dan Multimedia Malaysia</h5>
                                             <p>PIKOM, THE NATIONAL ICT ASSOCIATION OF MALAYSIA is the association representing the information and communications technology (ICT) industry in Malaysia.</p>
                                         </div>
@@ -708,7 +708,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                                 </div>-->
 
                                     </div>
-                                    <div class="col-md-6 latest-grid">                                        
+                                    <div class="col-md-6 latest-grid">
                                         <div class="faq-left faq-font faq-font">
                                             <h3 class="text-center color-blue">Collaborations</h3>
                                             <div class="text-center">
@@ -1049,9 +1049,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="col-md-4 contact-g2">
                                 <h6>Follow us</h6>
                                 <div class="address-grid">
-        
+
                                     <ul class="social-icons3">
-        
+
                                         <li>
                                             <a href="#" class="s-iconfacebook">
                                                 <span class="fa fa-facebook" aria-hidden="true"></span>
@@ -1078,7 +1078,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <div class="col-md-8 contact-g3">
                                                     <div class="subscribe-grid ">
                                                         <p>subscribe To receive helpful articles, customer alerts,services & more.</p>
-                            
+
                                                         <form action="#" method="post">
                                                             <input type="email" placeholder="Your Email" name="Subscribe" required="">
                                                             <button class="btn1">
@@ -1088,7 +1088,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                     </div>
                                                 </div>
                         </div>
-        
+
                         <div class="clearfix"></div>
                     </div>-->
         <div class="section contact-bottom" id="contacts" style="background: url(images/alias-contact-bg.png) no-repeat;background-size: cover;">
@@ -1157,12 +1157,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                         <i class="fa fa-check-square-o" aria-hidden="true"></i>sodales blandit urna
                                                         <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
                                                     </li>
-                    
+
                                                     <li>
                                                         <i class="fa fa-check-square-o" aria-hidden="true"></i>vitae pellentesque ac
                                                         <p>les blandit urna urna sodales vitae pellentesq urna sodales vitaeue</p>
                                                     </li>
-                    
+
                                                 </ul>
                                                 <a href="#" class="log contact-link" data-toggle="modal" data-target="#myModal">create a new account</a>
                                             </div>-->
@@ -1185,7 +1185,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </div>
                             <div class="form-group">
                                 <label class="header">your message</label>
-                                <textarea class="w3l_summary" name="message" id="message" data-message="Enter message" data-emaillabel="Message" required class="mandatory field"></textarea>
+                                <textarea name="message" id="message" data-message="Enter message" data-emaillabel="Message" required class="w3l_summary mandatory field"></textarea>
                             </div>
                             <input type="submit" value="SEND" />
                             <div class="submit-response"></div>

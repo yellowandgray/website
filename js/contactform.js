@@ -374,7 +374,7 @@ function submitForm(id) {
             success: function (response) {
                 $('.form-loader').addClass('hidden');
                 if (response.error === false) {
-                    $('.submit-response').html(response.message).fadeOut(3000);
+                    $('.submit-response').html(response.message).fadeOut(5000);
                     $('.field').each(function (key, ele) {
                         $(ele).val('');
                     });
