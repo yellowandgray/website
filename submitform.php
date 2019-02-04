@@ -10,14 +10,14 @@ foreach ($data as $val) {
 $body = $body . '</tbody></table>';
 $mail = new PHPMailer();
 $mail->From = 'info@alias-innovation.com';
-$mail->FromName = 'Alisa Innovation';
-$mail->AddReplyTo('info@alias-innovation.com', 'Alisa Innovation');
+$mail->FromName = 'Alias Innovation';
+$mail->AddReplyTo('info@alias-innovation.com', 'Alias Innovation');
 $mail->Subject = 'Contact Form';
 $mail->Body = $body;
 $mail->AltBody = $body;
-$mail->AddCC('gerard@alias-innovation.com', 'Alisa Innovation');
-$mail->AddCC('jenika@icontent.my', 'Alisa Innovation');
-$mail->AddAddress('info@alias-innovation.com', 'Alisa Innovation');
+$mail->AddCC('gerard@alias-innovation.com', 'Alias Innovation');
+$mail->AddCC('jenika@icontent.my', 'Alias Innovation');
+$mail->AddAddress('info@alias-innovation.com', 'Alias Innovation');
 if ($mail->Send()) {
     $res = array('error' => false, 'message' => 'Thank You! Your message has been sent. We will get back to you very soon!');
 }
