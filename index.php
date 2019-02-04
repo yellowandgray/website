@@ -308,7 +308,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </li>
                             <li class="wow fadeInUp">
                                 <img src="images/acceleration-program.png" alt="">BUSINESS ACCELERATION PROGRAM<br/>
-                                <img src="images/innovation/003.jpg" align="left" class="img-responsive"  > <p align="left"> “Business accelerator, connecting entrepreneurs with global opportunities�?</p>
+                                <img src="images/innovation/003.jpg" align="left" class="img-responsive"  > <p align="left"> “Business accelerator, connecting entrepreneurs with global opportunities�?</p>
                             </li>
                         </ul>
                         <!--                        <div class="man-grid2"><h5>Ensuring there's a high level of customer service.</h5></div>
@@ -652,7 +652,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <div class="faq-left faq-font">
                                             <img src="images/accreditations/002.png" alt="">
                                             <h5 class="color-pink">Technopreneurs Association of Malaysia(TEAM)</h5>
-                                            <p>The Technopreneurs Association of Malaysia (“TeAM�?) has been formed by a group of Malaysian Technopreneurs for development of technology based industry in Malaysia.</p>
+                                            <p>The Technopreneurs Association of Malaysia (“TeAM�?) has been formed by a group of Malaysian Technopreneurs for development of technology based industry in Malaysia.</p>
                                         </div>
                                         <div class="faq-left faq-font">
                                             <img src="images/accreditations/003.png" alt="">
@@ -930,6 +930,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <div class="clearfix"> </div>
 
+                </div>
+                <div class="padding-tb-20 text-center">
+                    <a href="gallery.php" class="btn">See More Images</a>
                 </div>
             </div>
         </div>
@@ -1225,11 +1228,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="clearfix"></div>
             </div>
         </div>
-    </div>
-    <!-- contact -->
-    <?php include 'footer.php'; ?>
-    <script>
-        new WOW().init();
-    </script>
-</body>
+        <!-- contact -->
+        <?php include 'footer.php'; ?>
+        <script>
+            new WOW().init();
+        </script>
+    </body>
 </html>
