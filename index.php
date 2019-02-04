@@ -4,8 +4,13 @@
     $page = 'home';
     include 'head.php';
     ?>
-
-    <body>
+    <script>
+        setTimeout(
+                function showModal() {
+                    $('#myModal').modal('show');
+                }, 2000);
+    </script>
+    <body onload="showModal()">
         <div class="wrapper home1">
             <!--Header Start-->
             <?php include 'menu.php'; ?>
@@ -608,9 +613,10 @@
             <!--Partner Logos Section End--> 
             <!--Footer Start-->
             <?php include 'footer.php'; ?>
+            <?php include 'onload-popup.php'; ?>
             <script>
-                $('#contactform').multiSelect({
-                    noneText: 'Choose Your Program'});
+            $('#contactform').multiSelect({
+            noneText: 'Choose Your Program'});
             </script>
-    </body>
+</body>
 </html>
