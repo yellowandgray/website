@@ -602,7 +602,7 @@
                     <div class="item"><img src="images/plogo4.png" alt=""></div>
                     <div class="item"><img src="images/plogo5.png" alt=""></div>-->
                     <!--                    </div>-->
-                    <a href="#" class="btn-primary" id="myBtn">Click Popup</a>
+                    <!--                    <a href="#" class="btn-primary" id="myBtn">Click Popup</a>-->
                 </div>
             </div>
             <!--Partner Logos Section End--> 
@@ -615,7 +615,7 @@
                 <!-- Modal content -->
                 <div class="modal-content modal-width">
                     <span class="close">&times;</span>
-<!--                    <h5> </h5>-->
+                    <!--                    <h5> </h5>-->
                     <iframe src="https://www.youtube.com/embed/goeGx-V71yY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
@@ -653,6 +653,7 @@
                 };
                 $(".close").click(function () {
                     modal.style.display = "none";
+                    video_container.innerHTML = '';
                 });
             </script>
         </div>
