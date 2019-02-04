@@ -3,7 +3,7 @@
 require_once('PHPMailer/class.phpmailer.php');
 $res = array('error' => true, 'message' => 'Unable to submit your form');
 $data = $_POST['data'];
-$body = '<table><tbody><tr><td colspan="2">Dear Admin, <br/><br/>New form submitted following are the details.</td></tr>';
+$body = '<table><tbody><tr><td colspan="2">Dear Admin, <br/><br/>New form submitted following are the details.<br/></td></tr>';
 foreach ($data as $val) {
     $body = $body . '<tr><td>' . $val['label'] . '</td><td>' . $val['value'] . '</td></tr>';
 }
