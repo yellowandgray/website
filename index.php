@@ -4,13 +4,7 @@
     $page = 'home';
     include 'head.php';
     ?>
-    <script>
-        setTimeout(
-                function showModal() {
-                    $('#myModal').modal('show');
-                }, 2000);
-    </script>
-    <body onload="showModal()">
+    <body>
         <div class="wrapper home1">
             <!--Header Start-->
             <?php include 'menu.php'; ?>
@@ -608,15 +602,59 @@
                     <div class="item"><img src="images/plogo4.png" alt=""></div>
                     <div class="item"><img src="images/plogo5.png" alt=""></div>-->
                     <!--                    </div>-->
+                    <a href="#" class="btn-primary" id="myBtn">Click Popup</a>
                 </div>
             </div>
             <!--Partner Logos Section End--> 
             <!--Footer Start-->
             <?php include 'footer.php'; ?>
-            <?php include 'onload-popup.php'; ?>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content modal-width">
+                    <span class="close">&times;</span>
+<!--                    <h5> </h5>-->
+                    <iframe src="https://www.youtube.com/embed/goeGx-V71yY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+            </div>
             <script>
-            $('#contactform').multiSelect({
-            noneText: 'Choose Your Program'});
+                $('#contactform').multiSelect({
+                    noneText: 'Choose Your Program'});
+
+
+                // Get the modal
+                var modal = document.getElementById('myModal');
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                onload = function () {
+                    modal.style.display = "block";
+                };
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                };
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+
+                };
+                $(".close").click(function () {
+                    modal.style.display = "none";
+                });
             </script>
-</body>
+        </div>
+    </body>
 </html>
