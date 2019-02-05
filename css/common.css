@@ -352,7 +352,7 @@ fieldset {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 999; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -390,10 +390,11 @@ fieldset {
 
 
 .differend-li ul li{
-    line-height: 32px;
+    line-height: 35px;
     font-size: 17.5px;
     color: #444444;
     font-weight: 500;
+    display: flex;
 }
 
 .differend-li ul{
@@ -406,8 +407,9 @@ fieldset {
 
 .differend-li ul i {
     color: #00cd93;
-    font-size: 12px;
-    margin-right: 3px;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 .francais {

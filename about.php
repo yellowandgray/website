@@ -11,10 +11,10 @@
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-02.jpg) no-repeat;">
                 <div class="container">
                     <h1>About Us</h1>
-<!--                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                    </ul>-->
+                    <!--                    <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">About Us</a></li>
+                                        </ul>-->
                 </div>
             </section>
             <!--Inner Header End--> 
@@ -98,26 +98,26 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12 timeline-box" style="margin-top: 10px;">
-                                    <div class="section-title-2">
+                                    <div class="section-title-2 differend-li">
                                         <!--                                        <h5>About our History</h5>-->
                                         <h5>We are committed to our VISION</h5>
                                         <ul style="list-style: none;">
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i> To emerge as the most preferred institution offering Quality Education , matching international standards.</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i> To enable, energise and enhance young minds through new learning to conquer excellence.</li>
+                                            <li class="vission"><i class="fas fa-check"></i> To emerge as the most preferred institution offering Quality Education , matching international standards.</li>
+                                            <li class="vission"><i class="fas fa-check"></i> To enable, energise and enhance young minds through new learning to conquer excellence.</li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-md-12 timeline-box" style="margin-top: 10px;">
-                                    <div class="section-title-2">
+                                    <div class="section-title-2 differend-li">
                                         <!--                                        <h5>About our History</h5>-->
                                         <h5>MISSION</h5>
                                         <ul style="list-style: none;">
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i> To become role model in setting standards of Quality Education.</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i> To build ably qualified, skilful & dedicated Teaching Fraternity.</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i> To impart education of highest standards to all socio-economic sections of society in fulfilment of Corporate Social Responsibility.</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i> To provide a safe, secure and Children-friendly Environment.</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i> To design and roll over robust and ultra-modern Infrastructure Facilities.</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i> To expand the foot-print to nearby districts by establishing similar schools to serve local community.</li>
+                                            <li class="vission"><i class="fas fa-check"></i> To become role model in setting standards of Quality Education.</li>
+                                            <li class="vission"><i class="fas fa-check"></i> To build ably qualified, skilful & dedicated Teaching Fraternity.</li>
+                                            <li class="vission"><i class="fas fa-check"></i> To impart education of highest standards to all socio-economic sections of society in fulfilment of Corporate Social Responsibility.</li>
+                                            <li class="vission"><i class="fas fa-check"></i> To provide a safe, secure and Children-friendly Environment.</li>
+                                            <li class="vission"><i class="fas fa-check"></i> To design and roll over robust and ultra-modern Infrastructure Facilities.</li>
+                                            <li class="vission"><i class="fas fa-check"></i> To expand the foot-print to nearby districts by establishing similar schools to serve local community.</li>
                                         </ul>
                                     </div>
                                 </div>
