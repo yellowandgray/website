@@ -131,7 +131,7 @@ if ($_POST['name']) {
     }
     $message .= '</p>
         <p style = "margin:0 0 16px">Subject: ' . $subject . '</p>
-        <p style = "margin:0 0 16px">How did you here about us: ' . $social_media . '</p>
+        <p style = "margin:0 0 16px">How did you hear about us: ' . $social_media . '</p>
         <p style = "margin:0 0 16px">Message: ' . $message1 . '</p>
             <p style = "margin:0 0 16px">Sent From Website</p></div>
             </td>
