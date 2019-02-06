@@ -1062,7 +1062,7 @@ marquee {
 }
 
 .modal-width iframe {
-    width: 590px;
+    width: 100%;
     height: 330px;
 }
 
