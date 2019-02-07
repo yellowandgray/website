@@ -99,6 +99,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="container-fluid">
                 <h3 class="title-txt wow fadeInUp">
                     <span>Gallery</span></h3>
+                
                 <div class="tab">
                     <button class="tablinks" onclick="openCity(event, 'E-kedai')" id="defaultOpen">E-Kedai</button>
                     <button class="tablinks" onclick="openCity(event, 'Starting-Your-Own-Business')">Starting Your Own Business</button>
@@ -108,6 +109,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <button class="tablinks" onclick="openCity(event, 'Effective-Business-Plan')">Effective Business Plan</button>
                     <button class="tablinks" onclick="openCity(event, 'Smart-Sourcing-Summit')">Smart Sourcing Summit</button>
                 </div>
+                
                 <div id="E-kedai" class="tabcontent">
                     <div class="tab-content-padding">
                         <h3>E-Kedai</h3>
@@ -138,6 +140,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </section>
                     </div>
                 </div>
+                
                 <div id="Starting-Your-Own-Business" class="tabcontent">
                     <div class="tab-content-padding">
                         <h3>ideas@thepondok - University Connectivity | Starting Your Own Business</h3>
@@ -258,6 +261,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </section>
                     </div>
                 </div>
+                
                 <div id="Building-a-Brand" class="tabcontent">
                     <div class="tab-content-padding">
                         <h3>ideas@thepondok - Industry Connectivity Program | Building a Brand</h3>
@@ -284,6 +288,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </section>
                     </div>
                 </div>
+                
                 <div id="Effective-Business-Plan" class="tabcontent">
                     <div class="tab-content-padding">
                         <h3>ideas@thepondok - University Connectivity | Writing an Effective Business Plan</h3>
@@ -306,6 +311,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </section>
                     </div>
                 </div>
+                
                 <div id="Smart-Sourcing-Summit" class="tabcontent">
                     <div class="tab-content-padding">
                         <h3>Smart Sourcing Summit</h3>
@@ -326,6 +332,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </section>
                     </div>
                 </div>
+                
                 <div id="Content-Evangelizing-Program" class="tabcontent">
                     <div class="tab-content-padding">
                         <h3>ideas@thepondok - Content Evangelizing Program | Sarawak</h3>
@@ -351,6 +358,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </section>
                     </div>
                 </div>
+                
                 <div id="gcma" class="tabcontent">
                     <div class="tab-content-padding">
                         <h3>Visit to GCMA</h3>
@@ -359,6 +367,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </section>
                     </div>
                 </div>
+                
                 <div id="ic-collaboration" class="tabcontent">
                     <div class="tab-content-padding">
                         <h3>Sabritech - iContent Collaboration</h3>
@@ -372,6 +381,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </section>
                     </div>
                 </div>
+                
                 <div id="dhaka-sessions" class="tabcontent">
                     <div class="tab-content-padding">
                         <h3>ideas@thepondok - International Network Connectivity | The Dhaka Sessions</h3>
@@ -398,6 +408,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </section>
                     </div>
                 </div>
+                
                 <div id="network-connectivity" class="tabcontent">
                     <div class="tab-content-padding">
                         <h3>ideas@thepondok - International Network Connectivity</h3>
@@ -411,6 +422,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </section>
                     </div>
                 </div>
+                
                 <div id="personal-Branding" class="tabcontent">
                     <div class="tab-content-padding">
                         <h3>Personal Branding Session with Datin Winnie Loo @ KL Hilton</h3>
@@ -419,6 +431,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </section>
                     </div>
                 </div>
+                
                 <div class="tab tab-1">
                     <button class="tablinks" onclick="openCity(event, 'Content-Evangelizing-Program')">Content Evangelizing Program</button>
                     <button class="tablinks" onclick="openCity(event, 'gcma')">Visit to GCMA</button>
@@ -427,6 +440,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <button class="tablinks" onclick="openCity(event, 'network-connectivity')">Network Connectivity</button>
                     <button class="tablinks" onclick="openCity(event, 'personal-Branding')">Personal Branding Session</button>
                 </div>
+                
             </div>
         </div>
         <!-- //about -->
