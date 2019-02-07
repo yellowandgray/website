@@ -110,7 +110,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <div id="E-kedai" class="tabcontent">
                     <div class="tab-content-padding">
-                        <h3>ideas@thepondok - University Connectivity | Starting Your Own Business</h3>
+                        <h3>E-Kedai</h3>
                         <section class="customer-logos slider">
                             <div class="slide"><img class="zoom" src="images/gallery-1/00/001.jpg" alt=""/></div>
                             <div class="slide"><img class="zoom" src="images/gallery-1/00/002.jpg" alt=""/></div>
