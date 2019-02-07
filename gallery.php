@@ -142,55 +142,55 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="tab-content-padding">
                         <h3>ideas@thepondok - University Connectivity | Starting Your Own Business</h3>
                         <section class="customer-logos slider">
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/001.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/002.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/003.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/004.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/005.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/006.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/007.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/008.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/009.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/010.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/011.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/012.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/013.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/014.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/015.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/016.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/017.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/018.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/019.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/020.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/021.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/022.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/023.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/024.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/025.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/026.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/027.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/028.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/029.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/030.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/031.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/032.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/033.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/034.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/035.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/036.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/037.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/038.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/039.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/040.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/041.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/042.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/043.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/044.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/045.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/046.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/047.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/048.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/01/049.JPG" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/001.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/002.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/003.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/004.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/005.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/006.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/007.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/008.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/009.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/010.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/011.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/012.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/013.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/014.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/015.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/016.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/017.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/018.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/019.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/020.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/021.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/022.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/023.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/024.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/025.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/026.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/027.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/028.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/029.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/030.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/031.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/032.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/033.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/034.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/035.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/036.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/037.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/038.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/039.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/040.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/041.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/042.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/043.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/044.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/045.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/046.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/047.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/048.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/01/049.jpg" alt=""/></div>
                         </section>
                     </div>
                 </div>
@@ -199,26 +199,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="tab-content-padding">
                         <h3>Pikom Software and Services Showcase (PS3) - World Congress On IT</h3>
                         <section class="customer-logos slider">
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/001.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/002.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/003.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/004.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/005.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/006.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/007.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/008.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/009.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/010.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/011.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/012.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/013.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/014.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/015.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/016.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/017.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/018.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/019.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/02/020.JPG" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/001.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/002.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/003.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/004.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/005.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/006.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/007.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/008.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/009.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/010.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/011.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/012.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/013.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/014.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/015.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/016.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/017.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/018.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/019.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/02/020.jpg" alt=""/></div>
                         </section>
                     </div>
                 </div>
@@ -227,34 +227,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="tab-content-padding">
                         <h3>ideas@thepondok - Industry Connectivity Program</h3>
                         <section class="customer-logos slider">
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/001.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/002.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/003.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/004.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/005.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/006.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/007.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/008.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/009.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/010.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/011.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/012.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/013.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/014.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/015.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/016.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/017.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/018.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/019.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/020.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/021.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/022.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/023.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/024.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/025.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/026.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/027.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/03/028.JPG" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/001.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/002.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/003.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/004.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/005.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/006.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/007.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/008.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/009.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/010.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/011.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/012.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/013.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/014.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/015.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/016.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/017.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/018.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/019.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/020.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/021.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/022.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/023.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/024.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/025.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/026.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/027.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/03/028.jpg" alt=""/></div>
                         </section>
                     </div>
                 </div>
@@ -262,25 +262,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="tab-content-padding">
                         <h3>ideas@thepondok - Industry Connectivity Program | Building a Brand</h3>
                         <section class="customer-logos slider">
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/001.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/002.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/003.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/004.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/005.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/006.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/007.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/008.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/009.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/010.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/012.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/013.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/014.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/015.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/016.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/017.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/018.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/019.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/04/020.JPG" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/001.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/002.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/003.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/004.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/005.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/006.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/007.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/008.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/009.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/010.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/012.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/013.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/014.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/015.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/016.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/017.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/018.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/019.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/04/020.jpg" alt=""/></div>
                         </section>
                     </div>
                 </div>
@@ -288,21 +288,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="tab-content-padding">
                         <h3>ideas@thepondok - University Connectivity | Writing an Effective Business Plan</h3>
                         <section class="customer-logos slider">
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/001.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/002.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/003.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/004.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/005.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/006.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/007.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/008.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/009.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/010.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/012.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/013.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/014.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/015.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/05/016.JPG" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/001.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/002.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/003.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/004.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/005.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/006.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/007.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/008.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/009.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/010.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/012.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/013.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/014.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/015.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/05/016.jpg" alt=""/></div>
                         </section>
                     </div>
                 </div>
@@ -310,19 +310,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="tab-content-padding">
                         <h3>Smart Sourcing Summit</h3>
                         <section class="customer-logos slider">
-                            <div class="slide"><img class="zoom" src="images/gallery-1/06/001.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/06/002.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/06/003.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/06/004.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/06/005.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/06/006.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/06/007.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/06/008.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/06/009.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/06/010.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/06/012.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/06/013.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/06/014.JPG" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/06/001.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/06/002.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/06/003.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/06/004.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/06/005.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/06/006.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/06/007.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/06/008.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/06/009.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/06/010.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/06/012.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/06/013.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/06/014.jpg" alt=""/></div>
                         </section>
                     </div>
                 </div>
@@ -330,24 +330,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="tab-content-padding">
                         <h3>ideas@thepondok - Content Evangelizing Program | Sarawak</h3>
                         <section class="customer-logos slider">
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/001.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/002.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/003.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/004.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/005.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/006.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/007.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/008.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/009.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/010.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/012.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/013.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/014.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/015.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/016.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/017.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/018.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/07/019.JPG" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/001.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/002.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/003.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/004.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/005.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/006.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/007.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/008.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/009.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/010.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/012.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/013.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/014.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/015.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/016.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/017.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/018.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/07/019.jpg" alt=""/></div>
                         </section>
                     </div>
                 </div>
@@ -355,7 +355,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="tab-content-padding">
                         <h3>Visit to GCMA</h3>
                         <section class="text-center">
-                            <div><img class="zoom" src="images/gallery-1/08/001.JPG" alt=""/></div>
+                            <div><img class="zoom" src="images/gallery-1/08/001.jpg" alt=""/></div>
                         </section>
                     </div>
                 </div>
@@ -363,12 +363,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="tab-content-padding">
                         <h3>Sabritech - iContent Collaboration</h3>
                         <section class="customer-logos slider">
-                            <div class="slide"><img class="zoom" src="images/gallery-1/09/001.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/09/002.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/09/003.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/09/004.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/09/005.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/09/006.JPG" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/09/001.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/09/002.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/09/003.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/09/004.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/09/005.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/09/006.jpg" alt=""/></div>
                         </section>
                     </div>
                 </div>
@@ -402,12 +402,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="tab-content-padding">
                         <h3>ideas@thepondok - International Network Connectivity</h3>
                         <section class="customer-logos slider">
-                            <div class="slide"><img class="zoom" src="images/gallery-1/11/001.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/11/002.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/11/003.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/11/004.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/11/005.JPG" alt=""/></div>
-                            <div class="slide"><img class="zoom" src="images/gallery-1/11/006.JPG" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/11/001.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/11/002.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/11/003.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/11/004.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/11/005.jpg" alt=""/></div>
+                            <div class="slide"><img class="zoom" src="images/gallery-1/11/006.jpg" alt=""/></div>
                         </section>
                     </div>
                 </div>
@@ -415,7 +415,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="tab-content-padding">
                         <h3>Personal Branding Session with Datin Winnie Loo @ KL Hilton</h3>
                         <section class="text-center">
-                            <div><img class="zoom" src="images/gallery-1/12/001.JPG" alt=""/></div>
+                            <div><img class="zoom" src="images/gallery-1/12/001.jpg" alt=""/></div>
                         </section>
                     </div>
                 </div>
