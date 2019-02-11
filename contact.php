@@ -135,6 +135,11 @@
                                     ENPEE Enclave, 241/2, Puthakudy Village,  <br/> 
                                     Vadamattam Main Road, Nedungadu Panchayat, <br/>
                                     Karaikal – 609609. U.T of Puducherry
+                                </p><br/>
+                                <p><strong>ADMINISTRATIVE OFFICE:</strong><br/>
+                                    Old No 79, MOHIDEEN PALLI STREET, <br/> 
+                                    OPP:AXIS BANK  & LATHAA SUPER MARKET,<br/>
+                                    KARAIKAL 609 602. U.T of Puducherry
                                 </p>
                             </div>
                         </div>

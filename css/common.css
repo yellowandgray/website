@@ -963,13 +963,13 @@ ul.submenu li a{
 }
 
 .c-info {
-    height: 266px;
+    height: 430px;
     margin-bottom: 20px;
 }
 
 @media (min-width: 280px) and (max-width: 355px) {
     .c-info {
-        height: 290px;
+        height: auto;
     }
 }
 
