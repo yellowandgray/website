@@ -138,7 +138,7 @@
                                 </p><br/>
                                 <p><strong>ADMINISTRATIVE OFFICE:</strong><br/>
                                     Old No 79, Mohideen Palli Street, <br/> 
-                                    OPP:Axis Bank & Lathaa Super Market,<br/>
+                                    OPP: Axis Bank & Lathaa Super Market,<br/>
                                      Karaikal - 609602. U.T of Puducherry
                                 </p>
                             </div>
