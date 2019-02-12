@@ -137,9 +137,9 @@
                                     Karaikal – 609609. U.T of Puducherry
                                 </p><br/>
                                 <p><strong>ADMINISTRATIVE OFFICE:</strong><br/>
-                                    Old No 79, MOHIDEEN PALLI STREET, <br/> 
-                                    OPP:AXIS BANK  & LATHAA SUPER MARKET,<br/>
-                                    KARAIKAL 609 602. U.T of Puducherry
+                                    Old No 79, Mohideen Palli Street, <br/> 
+                                    OPP:Axis Bank & Lathaa Super Market,<br/>
+                                     Karaikal - 609602. U.T of Puducherry
                                 </p>
                             </div>
                         </div>
