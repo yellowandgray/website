@@ -894,11 +894,12 @@ a.mobile-social {
     font-size: 17px;
     color: #000000;
     line-height: 33px;
+    text-align: justify;
 }
 
 .products-content-main figure figcaption h3 {
     color: #1b1737;
-    font-size: 45px;
+    font-size: 35px;
     margin-bottom: 30px;
 }
 
