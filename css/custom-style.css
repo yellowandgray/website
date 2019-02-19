@@ -880,7 +880,7 @@ a.mobile-social {
     -moz-box-shadow: 4px 6px 39px -5px rgba(0, 0, 0, 0.18);
     box-shadow: 4px 6px 39px -5px rgba(0, 0, 0, 0.18);
     margin-bottom: 20px;
-    max-width: 445px;
+    max-width: 555px;
     margin-left: 450px;
     background: #fff;
     float: left;
@@ -2086,4 +2086,12 @@ input#clear_product {
 
 .email-margin-b {
     margin-bottom: -20px !important;
+}
+
+#tab4 .products-content-main figure .img-wrapper img {
+    top: 38% !important;
+}
+
+#tab7 .products-content-main figure .img-wrapper img {
+    top: 38% !important;
 }

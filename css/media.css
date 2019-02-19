@@ -131,6 +131,9 @@
         font-size: 16px;
         line-height: 30px;
     }
+    .products-content-main figure figcaption {
+        max-width: 445px !important;
+    }
 }
 
 @media screen and (width: 1440px),
