@@ -110,7 +110,7 @@
         line-height: 40px;
     }
     .products-content-main figure figcaption h3 {
-        font-size: 32px;
+        font-size: 20px;
         margin-bottom: 18px;
     }
     .products-content-main figure figcaption p {
@@ -339,7 +339,7 @@ screen and (height:1024px) {
     .products-content-main figure figcaption {margin-left: 0;}
     .products-content-main figure .img-wrapper {float: none;position: static;transform: translateY(0%);-webkit-transform: translateY(0%);top: 0;left: 0;display: block;margin: 0 auto;margin-top: 30px;}
     .products-content-main figure figcaption {max-width: 31%;}
-    .tab-content-product {padding-left: 0;padding-top: 70px;padding-bottom: 70px;position: relative;padding: 30px 22px;}
+    .tab-content-product {padding-left: 0;padding-top: 70px;padding-bottom: 70px;position: relative;padding: 30px 5px;}
     .our_partner_heading h3{margin-bottom: 40px;}
     .our_partner_heading ul li a {font-size: 14px;color: #d7b44e;padding: 8px 12px;border: 1px solid #d7b44e;border-right: 0;}
     .international_exports p {font-size: 14px;color: #88888f;line-height: 32px;margin-top: 30px;font-weight: 400;}
@@ -347,7 +347,7 @@ screen and (height:1024px) {
     .products-content-main figure .img-wrapper {max-width: 100%;}
     .products-content-main figure .img-wrapper {min-height: 300px;max-height: 300px;}
     .next-prev-btn {margin-left: 0;max-width: 100%;}
-    .products-content-main {padding: 30px 30px;}
+/*    .products-content-main {padding: 30px 5px;}*/
     .header_social_icon {width: 50%;float: right;padding-top: 40px;}
     .header_search_lang {width: 20%;padding-top: 40px;}
     .header_about_logo {width: 30%;}
@@ -452,7 +452,7 @@ screen and (height:1024px) {
 
 @media only screen and (max-width:480px) {
 
-    .products-content-main figure .img-wrapper {min-height: 250px;max-height: 250px;}
+    .products-content-main figure .img-wrapper {min-height: 550px;max-height: 550px;}
     .search_barbig input {width: 300px !important;}
     .products-wrapper .img-wrapper img {width: 100%;}
     .international_exports {padding: 20px 30px 50px 15px;}

@@ -1794,7 +1794,7 @@ input#clear_product {
         max-width: 100%!important;
     }
     .slick-active img {
-        width: inherit!important;
+        width: 100% !important;
     }
     .thumline-img img {
         width: 60px!important;
