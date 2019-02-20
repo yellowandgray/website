@@ -157,5 +157,5 @@
     <div class="col-md-4">
         <div class="boder-2"></div>
     </div>
-    <marquee><a href="http://enpeekkl.com/images/download/ENPEE-School-Flyer-ENG&TAM-2019.pdf" target="blank">Our School Launch is on 10th February, SUNDAY at Hotel AVS Imperiaa, Karaikal. All are Welcome.</a></marquee>
+    <!--<marquee><a href="http://enpeekkl.com/images/download/ENPEE-School-Flyer-ENG&TAM-2019.pdf" target="blank">Our School Launch is on 10th February, SUNDAY at Hotel AVS Imperiaa, Karaikal. All are Welcome.</a></marquee>-->
 </nav>
