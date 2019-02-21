@@ -157,5 +157,5 @@
     <div class="col-md-4">
         <div class="boder-2"></div>
     </div>
-    <!--<marquee><a href="http://enpeekkl.com/images/download/ENPEE-School-Flyer-ENG&TAM-2019.pdf" target="blank">Our School Launch is on 10th February, SUNDAY at Hotel AVS Imperiaa, Karaikal. All are Welcome.</a></marquee>-->
+    <marquee><a href="http://enpeekkl.com/images/download/ENPEE-School-Flyer-ENG&TAM-2019.pdf" target="blank">Admissions open for PreKG to STD V. Contact our City Office at Old No 79, MOHIDEEN PALLI STREET, OPPOSITE: AXIS BANK  & LATHAA SUPER MARKET, KARAIKAL 609 602. Call 04368 265 265.</a></marquee>
 </nav>
