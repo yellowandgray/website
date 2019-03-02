@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-    <?php $page = 'programs-offered';
+    <?php
+    $page = 'programs-offered';
     include 'head.php';
     ?>
     <body>
@@ -19,14 +20,14 @@
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-04.jpg) no-repeat;">
                 <div class="container">
                     <h1>Programs Offered</h1>
-<!--                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Programs Offered</a></li>
-                    </ul>-->
+                    <!--                    <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">Programs Offered</a></li>
+                                        </ul>-->
                 </div>
             </section>
             <!--Inner Header End--> 
-            <?php include 'admission-content.php'; ?>
+<?php include 'admission-content.php'; ?>
             <!--About Start-->
             <section class="wf100 about">
                 <!--Fundraising Campaigns Section Start-->
@@ -90,5 +91,6 @@
             <!--About End--> 
             <!--Footer Start-->
 <?php include 'footer.php'; ?>
+        </div>
     </body>
 </html>

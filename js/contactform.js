@@ -330,6 +330,8 @@ jQuery(document).ready(function ($) {
         else
             var form = $('#resume').attr('files');
         var formData = new FormData(this);
+        $('#submittingtxt').removeClass('hidden');
+        $('.fsubmit').addClass('hidden');
         $.ajax({
             type: "POST",
             dataType: 'json',
@@ -341,7 +343,12 @@ jQuery(document).ready(function ($) {
             success: function (msg) {
                 // alert(msg);
                 if (msg == 'OK') {
+                    $('input').val('');
+                    $('select').val('');
+                    $('textarea').val('');
                     $("#sendmessage").addClass("show");
+                    $('#submittingtxt').addClass('hidden');
+                    $('.fsubmit').removeClass('hidden');
                     $("#errormessage").removeClass("show");
                     swal("Success", "Thank you, We will contact you soon!", 'success');
                 } else {

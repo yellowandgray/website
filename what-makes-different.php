@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
-    <?php $page = 'make-different';  include 'head.php'; ?>
+    <?php $page = 'make-different';
+    include 'head.php'; ?>
     <body>
         <div class="wrapper">
             <!--Header Start-->
-            <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
             <div id="search">
                 <button type="button" class="close">×</button>
                 <form class="search-overlay-form">
@@ -17,14 +18,14 @@
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-05.jpg) no-repeat;">
                 <div class="container">
                     <h1>What Makes Us Different</h1>
-<!--                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">What Makes Us Different</a></li>
-                    </ul>-->
+                    <!--                    <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">What Makes Us Different</a></li>
+                                        </ul>-->
                 </div>
             </section>
             <!--Inner Header End--> 
-            <?php include 'admission-content.php'; ?>
+<?php include 'admission-content.php'; ?>
             <section class="home-about wf100 p80">
                 <div class="container">
                     <div class="row">
@@ -66,6 +67,7 @@
                 </div>
             </section>
             <!--Footer Start-->
-            <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
+        </div>
     </body>
 </html>

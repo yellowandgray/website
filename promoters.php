@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
     <?php $page = 'about';
-    include 'head.php'; ?>
+    include 'head.php';
+    ?>
     <body>
         <div class="wrapper">
             <!--Header Start-->
@@ -18,15 +19,15 @@
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-01.jpg) no-repeat;">
                 <div class="container">
                     <h1>Promoters</h1>
-<!--                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Promoters</a></li>
-                    </ul>-->
+                    <!--                    <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">About Us</a></li>
+                                            <li><a href="#">Promoters</a></li>
+                                        </ul>-->
                 </div>
             </section>
             <!--Inner Header End--> 
-            <?php include 'admission-content.php'; ?>
+<?php include 'admission-content.php'; ?>
             <!--About Start-->
             <section class="wf100 about">
                 <!--About Txt Video Start-->
@@ -92,21 +93,21 @@
                                                                                 </ul>-->
                                     </div>
                                 </div>
-<!--                                <div class="col-md-12 timeline-box" style="margin-top: 10px;">
-                                    <div class="section-title-2">
-
-                                                                                <h5>About our History</h5>
-                                         <h5>MISSION</h5>
-                                        <ul style="list-style: none;">
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To become role model in setting standards of Quality Education.</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To build ably qualified, skilful & dedicated Teaching Fraternity .</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To impart education of highest standards to all socio-economic sections of society in fulfilment of Corporate Social Responsibility.</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To provide a safe, secure and Children-friendly Environment.</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To design and roll over robust and ultra-modern Infrastructure Facilities .</li>
-                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To expand the foot-print to nearby districts by establishing similar schools to serve local community.</li>
-                                        </ul>
-                                    </div>
-                                </div>-->
+                                <!--                                <div class="col-md-12 timeline-box" style="margin-top: 10px;">
+                                                                    <div class="section-title-2">
+                                
+                                                                                                                <h5>About our History</h5>
+                                                                         <h5>MISSION</h5>
+                                                                        <ul style="list-style: none;">
+                                                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To become role model in setting standards of Quality Education.</li>
+                                                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To build ably qualified, skilful & dedicated Teaching Fraternity .</li>
+                                                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To impart education of highest standards to all socio-economic sections of society in fulfilment of Corporate Social Responsibility.</li>
+                                                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To provide a safe, secure and Children-friendly Environment.</li>
+                                                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To design and roll over robust and ultra-modern Infrastructure Facilities .</li>
+                                                                            <li class="vission"><i class="fas fa-check" style="padding-right: 3px;"></i>To expand the foot-print to nearby districts by establishing similar schools to serve local community.</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>-->
                                 <!--                                <div class="section-title-2">
                                                                     <h5>About our History</h5>
                                                                     <h2>Our Success Story</h2>
@@ -280,5 +281,6 @@
             <!--About End--> 
             <!--Footer Start-->
 <?php include 'footer.php'; ?>
+        </div>
     </body>
 </html>

@@ -24,11 +24,11 @@
                     <!--                    <ul>
                                             <li><a href="#">Home</a></li>
                                             <li><a href="#"> Contact </a></li>
-                    
+
                                         </ul>-->
                 </div>
             </section>
-            <!--Inner Header End--> 
+            <!--Inner Header End-->
             <?php include 'admission-content.php'; ?>
             <!--Contact Start-->
             <section class="contact-page wf100 p80">
@@ -58,7 +58,7 @@
                                         <div class="form-group">
                                             <li class="half pl-15">
                                                 <select name="select_role" class="form-control">
-                                                    <option value="Select Job Role">Select Job Role</option>
+                                                    <option value="">Select Job Role</option>
                                                     <option value="Admin Manager">Admin Manager</option>
                                                     <option value="Front Office Staff">Front Office staff</option>
                                                     <option value="Teacher">Teacher</option>
@@ -79,7 +79,7 @@
                                                                                                         <option value="IV STD">IV STD</option>
                                                                                                         <option value="V STD">V STD</option>
                                                                                                     </select>
-                                                
+
                                                                                                 </div>-->
                                             </li>
                                         </div>
@@ -114,7 +114,8 @@
                                             </li>
                                         </div>
                                         <li class="full">
-                                            <input type="submit" value="Submit" class="fsubmit btn-primary" style="width: 200px;">
+                                            <div id="submittingtxt" class="hidden">Submitting your details...</div>
+                                            <button type="submit" class="fsubmit btn-primary" style="width: 200px;">Submit</button>
                                         </li>
                                     </form>
                                 </ul>
@@ -133,13 +134,13 @@
                                             <div class="c-info">
                                                 <h6>Address:</h6>
                                                 <p><strong>ENPEE International School</strong><br/> <i>Château Français</i><br/>
-                                                    ENPEE Enclave, 241/2, Puthakudy Village,  <br/> 
+                                                    ENPEE Enclave, 241/2, Puthakudy Village,  <br/>
                                                     Vadamattam Main Road, Nedunkadu Panchayat, <br/>
                                                     Karaikal – 609603, U.T of Puducherry
                                                 </p>
                                             </div>
                                         </div>
-                                        Contact Info End 
+                                        Contact Info End
                                         Contact Info Start
                                         <div class="col-md-4 text-right">
                                             <div class="c-info">
@@ -148,7 +149,7 @@
                                                 <p><strong>Phone:</strong><a href="tel:+91 8300111265"> +91 8300 111 265</a></p>
                                             </div>
                                         </div>
-                                        Contact Info End 
+                                        Contact Info End
                                         Contact Info Start
                                         <div class="col-md-4 text-right">
                                             <div class="c-info">
@@ -157,11 +158,11 @@
                                                 <p><a href="mailto:admin@enpeekl.com">admin@enpeekkl.com</a></p>
                                             </div>
                                         </div>
-                                        Contact Info End 
+                                        Contact Info End
                                     </div>
                                 </div>-->
             </section>
-            <!--Contact End--> 
+            <!--Contact End-->
             <?php include 'footer.php'; ?>
             <script>
                 $('#contactform').multiSelect({

@@ -1158,3 +1158,14 @@ marquee {
         width: 65% !important;
     }
 }
+
+@media (min-width: 320px) and (max-width: 522px) {
+    .btn-apply {
+        font-size: 9.6px !important;
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    .line-height-35 {
+        line-height: 15px !important;
+    }
+}

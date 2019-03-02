@@ -19,7 +19,8 @@
                         <li><a href="https://www.instagram.com/enpeeschool/" target="blank"><i class="fa fa-instagram" style="color:#125688"></i></a></li>&nbsp;
                         <li><a href="https://www.youtube.com/channel/UCcYOtTSP__ZyX8EY5TiHY9g" target="blank"><i class="fa fa-youtube-square" style="color:#cd201f"></i></a></li>&nbsp;
                     </ul>
-                    <p class="btn-apply"><a href="index.php#enquiry">Enquire Now</a></p>
+                    <p class="btn-apply"><a href="index.php#enquiry">Enquire Now</a></p> |
+                    <p class="btn-apply"><a href="news-events.php">News & Events</a></p>
                 </div>
             </div>
         </div>

@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
-    <?php $page = 'way-work';  include 'head.php'; ?>
+    <?php $page = 'way-work';
+    include 'head.php'; ?>
     <body>
         <div class="wrapper">
             <!--Header Start-->
-            <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
             <div id="search">
                 <button type="button" class="close">×</button>
                 <form class="search-overlay-form">
@@ -17,14 +18,14 @@
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-03.jpg) no-repeat;">
                 <div class="container">
                     <h1>The Way We Work</h1>
-<!--                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">The Way We Work</a></li>
-                    </ul>-->
+                    <!--                    <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">The Way We Work</a></li>
+                                        </ul>-->
                 </div>
             </section>
             <!--Inner Header End--> 
-            <?php include 'admission-content.php'; ?>
+<?php include 'admission-content.php'; ?>
             <!--About Start-->
             <section class="wf100 about">
                 <!--About Txt Video Start-->
@@ -110,7 +111,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="section-title-2">
-<!--                                    <h5>Why you Need to</h5>-->
+                                    <!--                                    <h5>Why you Need to</h5>-->
                                     <h2>TEACHING & LEARNING METHODOLOGIES</h2>
                                 </div>
                                 <div class="row">
@@ -124,7 +125,7 @@
                                     <div class="col-md-4">
                                         <div class="eco-box height-145">
                                             <span class="econ-icon"><i class="far fa-thumbs-up"></i></span>
-<!--                                            <h5> Interactive Approach </h5>-->
+                                            <!--                                            <h5> Interactive Approach </h5>-->
                                             <p><strong>Interactive Approach </strong>thus enabling Learners to get involved, explore and enrich their understanding</p>
                                         </div>
                                     </div>
@@ -161,6 +162,7 @@
             </section>
             <!--About End--> 
             <!--Footer Start-->
-            <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
+        </div>
     </body>
 </html>

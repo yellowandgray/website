@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
-    <?php $page = 'chateau'; include 'head.php'; ?>
+    <?php $page = 'chateau';
+    include 'head.php'; ?>
     <body>
         <div class="wrapper">
             <!--Header Start-->
-            <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
             <div id="search">
                 <button type="button" class="close">×</button>
                 <form class="search-overlay-form">
@@ -17,14 +18,14 @@
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-02.jpg) no-repeat;">
                 <div class="container">
                     <h1>Château Français</h1>
-<!--                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Château Français</a></li>
-                    </ul>-->
+                    <!--                    <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">Château Français</a></li>
+                                        </ul>-->
                 </div>
             </section>
             <!--Inner Header End--> 
-            <?php include 'admission-content.php'; ?>
+<?php include 'admission-content.php'; ?>
             <!--About Start-->
             <section class="wf100 about">
                 <!--About Txt Video Start-->
@@ -121,6 +122,7 @@
             </section>
             <!--About End--> 
             <!--Footer Start-->
-            <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
+        </div>
     </body>
 </html>

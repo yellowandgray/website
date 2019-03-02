@@ -80,7 +80,6 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-4">
-
                                 <div class="story-title-bg-01"> <strong class="t1">CBSE</strong> <strong class="t2">Method</strong> <strong class="t3"> of Education</strong> 
                                 </div>
                             </div>
@@ -465,11 +464,10 @@
                     </div>
                 </div>
         </div>
-    </div>
-    <!--Our Success Story End--> 
-</section>
-<!--About End--> 
-<!--Footer Start-->
-<?php include 'footer.php'; ?>
+        <!--Our Success Story End--> 
+    </section>
+    <!--About End--> 
+    <!--Footer Start-->
+    <?php include 'footer.php'; ?>
 </body>
 </html>

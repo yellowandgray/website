@@ -25,7 +25,7 @@
                             <strong>Karaikal's 1st Premium School</strong>
                             <!--                     <h1>Heal the World</h1>
                                                  <p> Environmental awareness is not a trend that comes into style a few months and stops. Individuals working towards making a small impact on Earth.</p>-->
-                            <!--                            <a href="#" class="active">Join us Now</a> 
+                            <!--                            <a href="#" class="active">Join us Now</a>
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                             <strong>CBSE Method of Education</strong>
                             <!--                     <h1>Stop Air Pollution</h1>
                                                  <p> Air Pollution is another main environmental pollution faced by our world today. Air pollution takes place when damaging stuff including particulates.</p>-->
-                            <!--                            <a href="#" class="active">Join us Now</a> 
+                            <!--                            <a href="#" class="active">Join us Now</a>
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
@@ -90,8 +90,8 @@
                                             <strong>A Well-Disciplined & Friendly Environment</strong>
                                                                  <h1>Stop Air Pollution</h1>
                                                                  <p> Air Pollution is another main environmental pollution faced by our world today. Air pollution takes place when damaging stuff including particulates.</p>
-                                                                        <a href="#" class="active">Join us Now</a> 
-                                                                        <a href="#">More About Us</a> 
+                                                                        <a href="#" class="active">Join us Now</a>
+                                                                        <a href="#">More About Us</a>
                                         </div>
                                     </div>
                                     <img src="images/banner/banner-discipline.jpg" alt=""/>
@@ -103,7 +103,7 @@
                             <strong>Emphasis on Mental & Physical activities</strong>
                             <!--                     <h1>Stop Air Pollution</h1>
                                                  <p> Air Pollution is another main environmental pollution faced by our world today. Air pollution takes place when damaging stuff including particulates.</p>-->
-                            <!--                            <a href="#" class="active">Join us Now</a> 
+                            <!--                            <a href="#" class="active">Join us Now</a>
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                             <strong>Unique Sports Complex</strong>
                             <!--                     <h1>Stop Air Pollution</h1>
                                                  <p> Air Pollution is another main environmental pollution faced by our world today. Air pollution takes place when damaging stuff including particulates.</p>-->
-                            <!--                            <a href="#" class="active">Join us Now</a> 
+                            <!--                            <a href="#" class="active">Join us Now</a>
                                                         <a href="#">More About Us</a> -->
                         </div>
                     </div>
@@ -178,7 +178,7 @@
                     </div>
                 </div>
             </section>
-            <!--About Section End--> 
+            <!--About Section End-->
             <!--Services Slider Start-->
             <section class="home-services wf100 p80bottom">
                 <div class="row">
@@ -191,67 +191,67 @@
                             </div>
                             <div class="ser-txt">
                                 <h4> <a href="#">Fully Secured 5 Acre Campus </a> </h4>
-                                <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                <span class="aicon"><i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
                     </div>
-                    <!--Services Box End--> 
+                    <!--Services Box End-->
                     <!--Services Box Start-->
                     <div class="ser-col">
                         <div class="ser-box height-440">
-                            <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> 
+                            <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a>
                                 <img src="images/interactive-digitized.jpg" alt="Interactive/ Digitized Classrooms - ENPEE International School" title="Interactive/ Digitized Classrooms - ENPEE International School"></div>
                             <div class="ser-txt">
                                 <h4> <a href="#">Interactive/ Digitized Classrooms</a>
                                 </h4>
-                                <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                <span class="aicon"><i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
                     </div>
-                    <!--Services Box End--> 
+                    <!--Services Box End-->
                     <!--Services Box Start-->
                     <div class="ser-col">
                         <div class="ser-box height-440">
-                            <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> 
+                            <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a>
                                 <img src="images/sports-complex.jpg" alt="Unique Sports Complex - ENPEE International School" title="Unique Sports Complex - ENPEE International School"></div>
                             <div class="ser-txt">
-                                <h4> <a href="#">Unique Sports Complex</a> 
+                                <h4> <a href="#">Unique Sports Complex</a>
                                 </h4>
-                                <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                <span class="aicon"><i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
                     </div>
-                    <!--Services Box End--> 
+                    <!--Services Box End-->
                     <!--Services Box Start-->
                     <div class="ser-col">
                         <div class="ser-box height-440">
-                            <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> 
+                            <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a>
                                 <img src="images/community-football.jpg" alt="Community Football Ground - ENPEE International School" title="Community Football Ground - ENPEE International School"></div>
                             <div class="ser-txt">
-                                <h4> <a href="#">Community Football Ground</a> 
+                                <h4> <a href="#">Community Football Ground</a>
                                 </h4>
-                                <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                <span class="aicon"><i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
                     </div>
-                    <!--Services Box End--> 
+                    <!--Services Box End-->
                     <!--Services Box Start-->
                     <div class="ser-col">
                         <div class="ser-box height-440">
-                            <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> 
+                            <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a>
                                 <img src="images/air-buses.jpg" alt="Air-Conditioned School Buses - ENPEE International School" title="Air-Conditioned School Buses - ENPEE International School"></div>
                             <div class="ser-txt">
-                                <h4> <a href="#">Air-Conditioned School Buses</a> 
+                                <h4> <a href="#">Air-Conditioned School Buses</a>
                                 </h4>
-                                <span class="aicon"><i class="fas fa-arrow-right"></i></span> 
+                                <span class="aicon"><i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
                     </div>
-                    <!--Services Box End--> 
+                    <!--Services Box End-->
                 </div>
                 <!--                <div class="load-more text-center w-100"> <a href="#" class="lm">View More Work</a> </div>-->
             </section>
-            <!--Services Slider End--> 
+            <!--Services Slider End-->
             <!--News Post Section Start-->
             <section class="news-posts wf100 p80">
                 <div class="container">
@@ -277,7 +277,7 @@
                                         <p class="text-justify">Early Childhood education is the child’s first step towards social engagement. This prepares toddlers through Experiential learning activities, making real life connections. Our program is based largely on the developmentally appropriate practice thereby delivering the right curriculum at the right age.</p>
                                     </div>
                                 </div>
-                                <!--Blog Post End--> 
+                                <!--Blog Post End-->
                                 <!--Blog Post Start-->
                                 <div class="blog-post wf100">
                                     <div class="blog-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-lkg-ukg.jpg" alt="LKG-UKG - ENPEE International School" title="LKG-UKG - ENPEE International School"></div>
@@ -290,7 +290,7 @@
                                         <p class="text-justify"> The role of Early Childhood & Primary education is to ensure overall development in a child, which means attention must be paid to both cognitive & intellectual aspects as well as social & emotional development of a child. At ENPEE, Our Kindergarten programs provide the child with Academic and overall readiness to step into the world of Primary education, from Early years.</p>
                                     </div>
                                 </div>
-                                <!--Blog Post End--> 
+                                <!--Blog Post End-->
                                 <!--Blog Post Start-->
                                 <div class="blog-post wf100">
                                     <div class="blog-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-class-one-five.jpg" alt="Class I to V - ENPEE International School" title="Class I to V - ENPEE International School"></div>
@@ -303,7 +303,7 @@
                                         <p class="text-justify"> Our CBSE method of education through Continuous Comprehensive Evaluation(CCE) is a curricular initiative shifting emphasis from assessment to holistic learning. We follow the NCERT books, which supplements the learning process at ENPEE. Our friendly & welcoming classrooms offer children the space to learn the right way. </p>
                                     </div>
                                 </div>
-                                <!--Blog Post End--> 
+                                <!--Blog Post End-->
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -328,7 +328,7 @@
                                         <p><i class="fas fa-map-marker-alt"></i> AVS Imperiaa, (Star hotel in Karaikal) </p>
                                     </div>
                                 </div>
-                                <!--Blog Post End--> 
+                                <!--Blog Post End-->
                                 <!--Blog Post Start-->
                                 <div class="event-post">
                                     <div class="pic-link">
@@ -344,13 +344,13 @@
                                         <p><i class="fas fa-map-marker-alt"></i> ENPEE International School, Karaikal, <br/>U.T of Puducherry </p>
                                     </div>
                                 </div>
-                                <!--Blog Post End--> 
+                                <!--Blog Post End-->
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!--News Post Section End--> 
+            <!--News Post Section End-->
             <!--Fundraising Campaigns Section Start-->
 <!--            <section class="wf100 p80 fcampaigns">
                 <div class="container">
@@ -361,7 +361,7 @@
                                 <strong>Our</strong>
                                 <h2>Founder and Chairman</h2>
                             </div>
-                            title end 
+                            title end
                         </div>
                     </div>
                     <div class="row">
@@ -391,9 +391,9 @@
                                                                             <li><strong>$9750.00</strong> Required</li>
                                                                         </ul>
                                 </div>
-                                <a href="management.php" class="dbutton">Read More</a> 
+                                <a href="management.php" class="dbutton">Read More</a>
                             </div>
-                            campaign box end 
+                            campaign box end
                         </div>
                         <div class="col-md-8 award-img">
                             <div class="row">
@@ -433,7 +433,7 @@
                     </div>
                 </div>
             </section>-->
-            <!--Fundraising Campaigns Section End--> 
+            <!--Fundraising Campaigns Section End-->
             <!--Current Promises Section Start-->
             <section class="promises wf100 p80" id="enquiry">
                 <div class="container">
@@ -466,7 +466,7 @@
                                     <h2>Enquiry Form</h2>
                                 </div>
                                 <ul>
-                                    <form role="form" class="enquiry">  
+                                    <form role="form" class="enquiry">
                                         <div class="form-group">
                                             <li>
                                                 <input type="text" class="form-control" name="name" placeholder="Your Name" required aria-label="Your Name">
@@ -538,7 +538,7 @@
                     </div>
                 </div>
             </section>
-            <!--Current Promises Section End--> 
+            <!--Current Promises Section End-->
             <!--Activities Gallery Section Start-->
             <section class="agallery gallery wf100 p80">
                 <div class="container">
@@ -549,7 +549,7 @@
                                 <strong>Our Other</strong>
                                 <h2>Activities</h2>
                             </div>
-                            <!--title end--> 
+                            <!--title end-->
                         </div>
                         <!--                        <div class="col-lg-7">
                                                     <ul class="flinks">
@@ -577,7 +577,7 @@
                     </div>
                 </div>
             </section>
-            <!--Activities Gallery Section End--> 
+            <!--Activities Gallery Section End-->
             <!--Partner Logos Section Start-->
             <div class="partner-logos wf100 mb80">
                 <div class="container">
@@ -605,7 +605,7 @@
                     <!--                    <a href="#" class="btn-primary" id="myBtn">Click Popup</a>-->
                 </div>
             </div>
-            <!--Partner Logos Section End--> 
+            <!--Partner Logos Section End-->
             <!--Footer Start-->
             <?php include 'footer.php'; ?>
 
@@ -634,9 +634,9 @@
                 // Get the <span> element that closes the modal
                 var span = document.getElementsByClassName("close")[0];
 
-                // When the user clicks the button, open the modal 
+                // When the user clicks the button, open the modal
                 onload = function () {
-                    modal.style.display = "block";
+                    //modal.style.display = "block";
                 };
 
                 // When the user clicks on <span> (x), close the modal
