@@ -30,15 +30,15 @@
                 <!--About Txt Video Start-->
                 <div class="about-video-section wf100">
                     <div class="container">
-                        <div class="row">
+                        <div class="row events-margin">
                             <div class="col-md-4">
-                                <img src="images/about-sub.jpg" alt="Events" title="Events-ENPEE International School" />
+                                <img src="images/events/001.jpg" alt="Events" title="Events-ENPEE International School" />
                             </div>
                             <div class="col-md-4">
-                                <img src="images/about-sub.jpg" alt="Events" title="Events-ENPEE International School" />
+                                <img src="images/events/001.jpg" alt="Events" title="Events-ENPEE International School" />
                             </div>
                             <div class="col-md-4">
-                                <img src="images/about-sub.jpg" alt="Events" title="Events-ENPEE International School" />
+                                <img src="images/events/001.jpg" alt="Events" title="Events-ENPEE International School" />
                             </div>
                         </div>
                     </div>

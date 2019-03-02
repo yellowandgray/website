@@ -1169,3 +1169,8 @@ marquee {
         line-height: 15px !important;
     }
 }
+
+.events-margin img {
+    margin-bottom: 20px;
+    width: 100%;
+}
