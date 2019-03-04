@@ -8,7 +8,7 @@
                         <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:info@enpeekkl.com">info@enpeekkl.com</a>
 <!--                        <i class="fa fa-arrow-down"></i>&nbsp;-->
                         <a href="downloads.php" type="button" class="btn-custom-1">Download Resources</a>
-<!--                        <a href="application-form.php" type="button" class="btn-custom-1">Download Application</a>-->
+                        <!--                        <a href="application-form.php" type="button" class="btn-custom-1">Download Application</a>-->
                     </p>
                 </div>
                 <div class="col-xs-4 text-right line-height-35">
@@ -20,7 +20,8 @@
                         <li><a href="https://www.youtube.com/channel/UCcYOtTSP__ZyX8EY5TiHY9g" target="blank"><i class="fa fa-youtube-square" style="color:#cd201f"></i></a></li>&nbsp;
                     </ul>
                     <p class="btn-apply"><a href="index.php#enquiry">Enquire Now</a></p> |
-                    <p class="btn-apply"><a href="news-events.php">News & Events</a></p>
+                    <!--<p class="btn-apply"><a href="news-events.php">News & Events</a></p>-->
+                    <p class="btn-apply"><a href="#">News & Events</a></p>
                 </div>
             </div>
         </div>
@@ -45,7 +46,7 @@
                         ?>">
                             <input id="check01" type="checkbox" name="menu" style="display: none"/>
                             <label for="check01">About Us</label>
-<!--                            <a href="#">About Us</a>-->
+                            <!--                            <a href="#">About Us</a>-->
                             <ul class="submenu">
                                 <li class="text-left"><a href="about.php" class="margin-left-10">About the School</a></li>
                                 <li class="text-left"><a href="promoters.php" class="margin-left-10">Promoters</a></li>
