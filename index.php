@@ -31,7 +31,7 @@
                             <img src="img/aaluv-robotics.png" alt="AALUV LOGO" />
                             <hr>
                             <h2>AALUV ROBOTICS</h2>
-                            <a href="#" class="site-btn">Explore</a>
+                            <a href="aalvu-robotics/index.php" class="site-btn">Explore</a>
                         </div>
                     </div>
                 </div>
