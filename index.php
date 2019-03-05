@@ -4,6 +4,8 @@
         <meta name="description" content="AALVU">
         <meta name="keywords" content="AALVU">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Favicon -->   
+        <link href="img/favicon.png" rel="shortcut icon"/>
         <link href="css/css.css" rel="stylesheet" type="text/css"/>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/animate.css" rel="stylesheet" type="text/css"/>
@@ -29,7 +31,7 @@
                             <img src="img/aaluv-robotics.png" alt="AALUV LOGO" />
                             <hr>
                             <h2>AALUV ROBOTICS</h2>
-                            <a href="#" class="site-btn">Explore</a>
+                            <a href="aalvu-robotics/index.php" class="site-btn">Explore</a>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,352 @@
+.span-color span{
+    color: #fe4e7c;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.call-p {
+    line-height: 35px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.color-white {
+    color: #fff !important;
+}
+
+.site-btn:hover {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50px;
+    transition: all 0.5s;
+}
+
+.padding-50 {
+    padding: 50px;
+}
+.padding-40 {
+    padding: 40px;
+}
+.padding-30 {
+    padding: 30px;
+}
+.padding-20 {
+    padding: 20px;
+}
+
+.padding-tb-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.padding-b-20 {
+    padding-bottom: 20px;
+}
+
+.courses-section p {
+    font-size: 18px;
+}
+
+.clear-both {
+    clear: both;
+}
+.bold {
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+
+/* Tab CSS */
+
+.grid {
+    list-style: none;
+    /*    margin-left: -40px;*/
+}
+
+.gc {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: -.25em;
+    min-height: 1px;
+    /*    padding-left: 40px;*/
+    vertical-align: top;
+}
+
+.gc--1-of-3 {
+    width: 33.33333%;
+}
+
+.gc--2-of-3 {
+    width: 66.66666%;
+}
+
+.naccs {
+    position: relative;
+    max-width: 100%;
+    /*    margin: 100px auto 0;*/
+}
+
+.naccs .menu div {
+    padding: 15px 20px 15px 40px;
+    margin-bottom: 10px;
+    color: #fff;
+    background: #4b9bb3;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    font-weight: 700;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.naccs .menu div:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.naccs .menu div span.light {
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: 24px;
+    left: 15px;
+    background-color: #c6e53f;
+    border-radius: 100%;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.naccs .menu div.active span.light {
+    background-color: #c6e53f;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    top: 0;
+    border-radius: 0;
+}
+
+.naccs .menu div.active {
+    color: #c6e53f;
+    padding: 15px 20px 15px 20px;
+    background: #267c95;
+}
+
+ul.nacc {
+    position: relative;
+    height: 0px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+ul.nacc li {
+    opacity: 0;
+    transform: translateX(50px);
+    position: absolute;
+    list-style: none;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin-right: 35px;
+}
+
+ul.nacc li.active {
+    transition-delay: .3s;
+    z-index: 2;
+    opacity: 1;
+    transform: translateX(0px);
+    background: none !important;
+}
+
+ul.nacc li p {
+    margin: 0;
+}
+
+/* End Tab CSS */
+
+.h3-bg-border {
+    background: #ff4e7c;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.padding-section {padding: 0 25px 0 120px;}
+.padding-b-70 {
+    padding: 0px 0px 70px;
+}
+.margin-b-0 {
+    margin-bottom: 0 !important;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.icon-position li {
+    list-style: none;
+    padding: 0 0 0 30px;
+}
+
+.icon-position i {
+    position: absolute;
+    color: #4bd191;
+}
+
+.comment-form label {
+    padding: 12px 0 0 0px;
+    font-size: 20px;
+}
+
+.sub-banner-section {
+    background-position: center !important;
+}
+
+/*.accordion {
+    background-color: #4bd191;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 1s;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.active, .accordion:hover {
+    background-color: #c6e53f; 
+}*/
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.classroom-textarea textarea {
+    height: 65px !important;
+}
+
+.list-style-none {
+    list-style: none;
+}
+
+.list-style-none i {
+    position: absolute;
+    font-size: 22px;
+    color: #fe4e7c;
+}
+
+.list-style-none li {
+    padding-left: 30px;
+}
+
+
+.faq-active ul {
+    list-style: none;
+    padding: 0;
+}
+
+.faq-active ul .inner {
+    padding-left: 1em;
+    overflow: hidden;
+    display: none;
+    padding-top: 20px;
+    color: #000;
+    background: #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border: 2px solid #a9a9a9;
+    border-top: none;
+}
+
+.faq-active ul li {
+    margin: 1em 0;
+}
+
+.faq-active ul li a.toggle {
+    width: 100%;
+    display: block;
+    background: rgb(255, 78, 124);
+    color: #fefefe;
+    padding: 0.75em;
+    border-radius: 0.15em;
+    transition: background 0.3s ease;
+}
+
+.faq-active ul li a.toggle:hover {
+    background: rgb(255, 148, 177);
+}
+
+#other{
+    display: none;
+}
+
+#button {
+    display: inline-block;
+    background-color: #4cd192;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 35px;
+    color: #fff;
+}
+#button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+#button:active {
+    background-color: #555;
+}
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.color-rose {
+    color: #fe4e7c;
+}
+.fa-arrow-right {
+   width: 100px
+}
+.fa-arrow-right:hover {
+    transition: width 2s;
+}
