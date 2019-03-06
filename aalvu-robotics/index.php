@@ -16,9 +16,9 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <!--                                    <div class="hs-subtitle">Award Winning UNIVERSITY</div>-->
-                                    <h2 class="hs-title">Worried about your child's maths performance?</h2>
-<!--                                    <p class="hs-des">Education is not just about going to school and getting a degree. It's about widening your<br> knowledge and absorbing the truth about life. Knowledge is power.</p>
-                                    <div class="site-btn">GET STARTED</div>-->
+                                    <!--                                    <h2 class="hs-title">Worried about your child's maths performance?</h2>-->
+                                    <!--                                    <p class="hs-des">Education is not just about going to school and getting a degree. It's about widening your<br> knowledge and absorbing the truth about life. Knowledge is power.</p>
+                                                                        <div class="site-btn">GET STARTED</div>-->
                                 </div>
                             </div>
                         </div>
@@ -30,9 +30,9 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <!--                                    <div class="hs-subtitle">Award Winning UNIVERSITY</div>-->
-                                    <h2 class="hs-title">Tired of helping your child with their maths homework?</h2>
-<!--                                    <p class="hs-des">Education is not just about going to school and getting a degree. It's about widening your<br> knowledge and absorbing the truth about life. Knowledge is power.</p>
-                                    <div class="site-btn">GET STARTED</div>-->
+                                    <!--                                    <h2 class="hs-title">Tired of helping your child with their maths homework?</h2>-->
+                                    <!--                                    <p class="hs-des">Education is not just about going to school and getting a degree. It's about widening your<br> knowledge and absorbing the truth about life. Knowledge is power.</p>
+                                                                        <div class="site-btn">GET STARTED</div>-->
                                 </div>
                             </div>
                         </div>
@@ -44,9 +44,9 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <!--                                    <div class="hs-subtitle">Award Winning UNIVERSITY</div>-->
-                                    <h2 class="hs-title">Encourage your child to understand and conquer math through a creative classroom of self learning</h2>
-<!--                                    <p class="hs-des">Education is not just about going to school and getting a degree. It's about widening your<br> knowledge and absorbing the truth about life. Knowledge is power.</p>
-                                    <div class="site-btn">GET STARTED</div>-->
+                                    <!--                                    <h2 class="hs-title">Encourage your child to understand and conquer math through a creative classroom of self learning</h2>-->
+                                    <!--                                    <p class="hs-des">Education is not just about going to school and getting a degree. It's about widening your<br> knowledge and absorbing the truth about life. Knowledge is power.</p>
+                                                                        <div class="site-btn">GET STARTED</div>-->
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
 
 
         <!-- Counter section  -->
-        <section class="counter-section wow fadeInDown">
+<!--        <section class="counter-section wow fadeInDown">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 col-md-6">
@@ -80,7 +80,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <!-- Counter section end -->
 
 
@@ -88,34 +88,32 @@
         <section class="service-section spad">
             <div class="container">
                 <div class="section-title text-center">
-                    <h3 class="color-rose">WELCOME TO AALUV MATHS</h3>
+                    <h3 class="color-rose">WELCOME TO AALUV ROBOTICS</h3>
 <!--                    <p>Learning at one's own pace, improving fundamental academic capability</p>-->
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 about-text">
-                        <img src="img/icon1.png" align="left"> 
-                        <p class="text-justify" align="left">Aaluv Maths is a unique Comprehensive Mathematic Learning Solution helping millions of students world-wide developing a self-motivated learning and attitude which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
-                        <p class="text-justify" align="left">Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
-                        <h3>Company Profile</h3>
-                        <p class="text-justify" align="left">The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe. <a href="#"> Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
-                    </div>
-                    <div class="col-lg-6 pt-5 pt-lg-0">
+                    <div class="col-lg-6 pt-5 pt-lg-0 border-img">
                         <img src="img/about.jpg" alt="">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>No two persons have the same appetite at the same time</h3>
-                    </div>
-                    <div class="col-lg-5 about-text">
-                        <img src="img/about-1.jpg" alt="" />
-                    </div>
-                    <div class="col-lg-7">
-                        <p class="text-justify">There is no reason why they should; each of them has their own learning patterns. Aaluv maths helps Children learn Math's according to their individual abilities. That is why lessons are tailored to fit each child's potential.</p>
-                        <p class="text-justify">The <span>Aaluv math’s</span> Diagnostic Test is a time-tested method of evaluation to determine learning capabilities of a child in Mathematics. This test helps understand their level of individual ability and understanding. Accordingly, personalized worksheets are devised to improve the concept and fundamentals of mathematics.</p>
-                        <p class="text-justify">The result of this evaluation helps to create each child. A unique learning plan and guide for each child.</p>
+                    <div class="col-lg-6 about-text">
+                        <p class="text-justify">AALUV is a Holistic Brain Development company, developing children's mind to better equip them for the challenges of Life,  this training program transforms and empowers Children to perform extensive calculations at stunning speed and accuracy with nothing but their own sharp mind to aid them.</p>
+                        <p class="text-justify">The curriculum is specifically designed to enhance a child's skill set for the 21st Century’s robust Challenges.</p>
+                        <p class="text-justify">AALUV endows the child with creativity, concentration, memory, speed writing, lateral thinking, listening capacity, analytical skills and over all self confidence making them an “Enhanced Global Citizens”</p>
                     </div>
                 </div>
+                <!--                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3>No two persons have the same appetite at the same time</h3>
+                                    </div>
+                                    <div class="col-lg-5 about-text">
+                                        <img src="img/about-1.jpg" alt="" />
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <p class="text-justify">There is no reason why they should; each of them has their own learning patterns. Aaluv maths helps Children learn Math's according to their individual abilities. That is why lessons are tailored to fit each child's potential.</p>
+                                        <p class="text-justify">The <span>Aaluv math’s</span> Diagnostic Test is a time-tested method of evaluation to determine learning capabilities of a child in Mathematics. This test helps understand their level of individual ability and understanding. Accordingly, personalized worksheets are devised to improve the concept and fundamentals of mathematics.</p>
+                                        <p class="text-justify">The result of this evaluation helps to create each child. A unique learning plan and guide for each child.</p>
+                                    </div>
+                                </div>-->
             </div>
             <!--            <div class="container services">
                             <div class="section-title text-center">
@@ -186,27 +184,46 @@
         <!-- Enroll section -->
         <section class="enroll-section spad set-bg" data-setbg="img/enroll-bg.jpg">
             <div class="container">
+                <h2 class="text-center color-white">WHAT ROBOTICS CAN TEACH?</h2>
                 <div class="row">
-                    <div class="col-md-4 text-center padding-50">
-                        <img class="text-center contents" src="img/icon7.png">
-                        <h2 class="text-center color-white">About Aaluv </h2>
-                        <p class="text-justify home-para color-white">Considering Aaluv is originally a book publisher, our role virtually finishes when our books are sold. Therefore, we never know how children read and use the books.</p>
+                    <div class="col-md-4 padding-50">
+                        <div class="text-center">
+                            <img class="contents" src="img/icon7.png">
+                            <h2 class="color-white">ENDOW RIGOR</h2>
+                        </div>
+                        <ul class="list-style-none color-white">
+                            <i class="fa fa-check" aria-hidden="true"></i><li>Learn something real</li>
+                            <i class="fa fa-check" aria-hidden="true"></i><li>Teach the realities and depth of science</li>
+                        </ul>
+                        <br>
                         <div class="text-center">
                             <button class="site-btn">Read More</button>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center padding-50">
-                        <img class="text-center contents" src="img/icon8.png">
-                        <h2 class="text-center color-white">Our Classroom</h2>
-                        <p class="text-justify home-para color-white">Aaluv have experienced as Educational publisher, and we would want to contribute to education of children with the classrooms. That’s why we started Aaluv Maths in 1980.</p>
+                    <div class="col-md-4 padding-50">
+                        <div class="text-center">
+                            <img class="contents" src="img/icon8.png">
+                            <h2 class="color-white">DESIGN</h2>
+                        </div>
+                        <ul class="list-style-none color-white">
+                            <i class="fa fa-check" aria-hidden="true"></i><li>Tinkering to explore</li>
+                            <i class="fa fa-check" aria-hidden="true"></i><li>Connect high and low level issues</li>
+                            <i class="fa fa-check" aria-hidden="true"></i><li>learn uncertainty & variability of world</li>
+                        </ul>
                         <div class="text-center">
                             <button class="site-btn">Read More</button>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center padding-50">
-                        <img class="text-center contents" src="img/icon9.png">
-                        <h2 class="text-center color-white">Our Philosophy</h2>
-                        <p class="text-justify home-para color-white">Aaluv Maths wish to bring “Joy of learning” “Confidence” “Zest for Living” to Children.</p><br/><br/>
+                    <div class="col-md-4 padding-50">
+                        <div class="text-center">
+                            <img class="contents" src="img/icon9.png">
+                            <h2 class="color-white">WORK IN TEAMS</h2>
+                        </div>
+                        <ul class="list-style-none color-white">
+                            <i class="fa fa-check" aria-hidden="true"></i><li>Performance assessment through Competition</li>
+                            <i class="fa fa-check" aria-hidden="true"></i><li>Faster team spirit and camaraderie</li>
+                        </ul>
+                        <br>
                         <div class="text-center">
                             <button class="site-btn">Read More</button>
                         </div>
@@ -250,12 +267,11 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-7 text-justify padding-section">
-                        <h2 class="text-center"> News and Events </h2>
-                        <!--                        <h3 >  Opening Shortly at ADYAR &#38; NEELANKARAI</h3>-->
-                        <h4 class="text-center">Now at ADYAR (Chennai) &amp; NEELANKARAI (Chennai)</h4>
-                        <p>Aaluv Maths is a unique Comprehensive Educational Solution from Japan. Its first classroom in India was opened on 6 July 2016 at Kaba Plaza, 57, L B Road, Adyar, Chennai-20 (opposite to Adyar Bus Depot).</p>
-                        <p>Aaluv Maths is helping millions of students world-wide develop self-motivated learning and attitude, which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
-                        <p>Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
+                        <h2> Who Needs Robotics in Education? </h2>
+                        <p>Teachers / Educators</p>
+                        <p>Students / Learners</p>
+                        <h3 class="text-center">IN</h3>
+                        <h3>SCIENCE / MATHS / INFORMATICS / TECHNOLOGY…</h3>
                     </div>
                     <div class="col-lg-5">
                         <div class="contact-form">

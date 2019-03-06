@@ -36,9 +36,8 @@
         <ul class="main-menu">
             <li class="<?php if ($page == 'home'){ echo 'active';} ?>"><a href="index.php">Home</a></li>
             <li class="<?php if ($page == 'about') {echo 'active';} ?>"><a href="about.php">About Us</a></li>
-            <li class="<?php if ($page == 'classroom') {echo 'active';} ?>"><a href="aaluv-classroom.php">Classroom</a></li>
-            <li class="<?php if ($page == 'news&events') {echo 'active';} ?>"><a href="news-events.php">News & Events</a></li>
-            <li class="<?php if ($page == 'franchise') {echo 'active';} ?>"><a href="franchise.php">Franchise</a></li>
+            <li class="<?php if ($page == 'learning') {echo 'active';} ?>"><a href="learning.php">Learning</a></li>
+            <li class="<?php if ($page == 'syllabus') {echo 'active';} ?>"><a href="syllabus.php">Syllabus</a></li>
             <li class="<?php if ($page == 'contact') {echo 'active';} ?>"><a href="contact.php">Contact</a></li>
             <li class="<?php if ($page == 'career') {echo 'active';} ?>"><a href="careers.php">Careers</a></li>
             <li class="<?php if ($page == 'faq') {echo 'active';} ?>"><a href="faq.php">FAQ</a></li>

@@ -31,82 +31,23 @@
                     <h3>WELCOME TO AALUV</h3>
                 </div>
                 <div class="row">
-                    <div class="col-lg-7 about-text">
-                        <h5>Why We Started "Aaluv Maths"</h5>
-                        <p>The founder, Hideto Furuoka sums up his vision and values as follows;</p>
-                        <p class="text-justify">Considering Aaluv is originally a book publisher, our role virtually finishes when our books are sold. Therefore, we never know how children read and use the books. However, in the classroom, things don’t end when you publish and sell a book. That’s just the start. “Aaluv Classroom” serves as a community where “teacher-child”, “child-child”, “teacher-mother” bonds build through learning.</p>
-                        <h6 class="bold">Furuoka's passion for education never dies and all of us have shared his values over the years.</h6>
-                        <div class="clear-both"></div>
-                        <h5>Overcoming the challenge of staying self-motivated learning and attitude</h5>
-                        <p class="text-justify">Aaluv Maths program emphasizes on problem solving skills among the young students. The program also provides mathematical questions presented through various figures, charts, and scenarios closely related to real-life situations to challenge and improve their problem-solving approach and capability. This significantly helps the overall development of each student.</p>
-                        <h5 class="bold">Company Address</h5>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <th>Company:</th>
-                                    <td>Educhild Australia Pty Ltd.</td>
-                                </tr>
-                                <tr>
-                                    <th>Address:</th>
-                                    <td> 40, Kershaw Drive, Narre Warren South, Melbourne, Victoria 3805, Australia.</td>
-                                </tr>
-                                <tr>
-                                    <th>Establishment:</th>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th>Capital:</th>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th>Annual sales:</th>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th>CEO:</th>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <h5 class="bold">Growth of Business</h5>
-                        <p>After establishment of Aaluv in 1946, we have experienced as Educational publisher, and we would want to contribute to education of children with the classrooms. That’s why we started Aaluv in 1980.</p>
-                        <h6 class="bold">The largest market share in the Japanese after-school learning industry where children learn primary maths.</h6>
+                    <div class="col-lg-7">
+                        <h5>AALUV ROBOTICS</h5>
+                        <p class="text-justify">AALUV is a Holistic Brain Development company, developing children's mind to better equip them for the challenges of Life,  this training program transforms and empowers Children to perform extensive calculations at stunning speed and accuracy with nothing but their own sharp mind to aid them.</p>
+                        <p class="text-justify">The curriculum is specifically designed to enhance a child's skill set for the 21st Century’s robust Challenges.</p>
+                        <p class="text-justify">AALUV endows the child with creativity, concentration, memory, speed writing, lateral thinking, listening capacity, analytical skills and over all self confidence making them an “Enhanced Global Citizens”</p>
                     </div>
-                    <div class="col-lg-5 pt-5 pt-lg-0 text-center">
+                    <div class="col-lg-5 pt-5 pt-lg-0 text-center border-img">
                         <img src="img/about.jpg" alt="">
-                        <h5>Founder of Aaluv</h5>
-                        <h6>Founder Name</h6>
-                        <img src="img/persons.png">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h5>TRANSFORMATION AFTER ASSOCIATING WITH AALUV CLASSROOM</h5>
-                        <ul class="list-style-none">
-                            <i class="fa fa-check-circle-o"></i><li>Develop a systematic study habit</li>
-                            <i class="fa fa-check-circle-o"></i><li>Improve one’s calculation skills.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Learn to solve mathematical problems.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Tackle all problems oneself.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Write meticulously.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Improve in mathematical skills.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Develop a fondness for studies</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>Why "Aaluv Math"</h5>
-                        <ul class="list-style-none">
-                            <i class="fa fa-check-circle-o"></i><li>Superior educational tools.</li>
-                            <i class="fa fa-check-circle-o"></i><li>One-on-one learning.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Progression to the next topic only after a thorough understanding of the previous chapter is attained.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Boosts academic learning.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Concentrating on grasping the concept & principle behind each sum.</li>
-                        </ul>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <h5 class="text-center">Fueling the students’ invisible abilities</h5>
-                        <p class="text-justify">Aaluv Maths prioitizes and motivate the “desire to learn “ to students and develop their invisible abilities like concentration, logical thinking, good judgment, patience, and passion. Aaluv math, through personto person communication, facilitates students to acquire the skills to think about how to reach the answer. Further, it supports and fosters the habit of learning, imagination, and creativeness and other abilities required at school and at home.</p>
+                        <h5>About AALUV Robotics</h5>
+                        <p class="text-justify">AALUV ROBOTICS is a “Curriculum Aligned  Robotic Program” for school students with  Classes taken both “During School Hours”  and “After School Hours” as well. (Full time & Part time)</p>
+                        <p class="text-justify">Integrated into the Academic curriculum which enable change in contemporary education System.</p>
+                        <p class="text-justify">Introduces students to Knowledge, Concepts and skills that’s needed for understanding technology of the future which is highly interactive, multi-modal, adaptive and autonomous</p>
+                        <p class="text-justify">Teachers / Instructors are well trained by our professional technical team with standby technicians if necessary.</p>
                     </div>
                 </div>
             </div>
