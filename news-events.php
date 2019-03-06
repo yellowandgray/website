@@ -30,6 +30,19 @@
                 <!--About Txt Video Start-->
                 <div class="about-video-section wf100">
                     <div class="container">
+                        <h2 class="margin-bottom-0 text-center">ENPEE International School - Grand Launch</h2> 
+                        <p class="text-center">(Feb 10, 2019 Sunday)</p>
+                        <div class="row events-margin padding-bottom-30">
+                            <div class="col-md-6">
+                                <iframe src="https://www.youtube.com/embed/Nd0kcs83jZc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-md-6 event-justify">
+                                <h4>SCHOOL ENPEE - THE BEST IN IT'S CLASS.</h4>
+                                <p>ENPEE International School was launched in pomp and style on 10th Feb, the Sunday, at Hotel AVS Imperia, Karaikal. Event was launched by chief guest, in the presence of special invitees, parent with their children.</p>
+                                <p>Event commenced with creative sessions & games with the concept of KNOWLEDGE, INNOVATION AND EXCELLENCE. All children were bestowed with certificates and Awards. </p>
+                                <p>Admissions for Pre-KG to Std V open on the same day. ENPEE International School is determined to bring out the best in your children with quality education, ethics and discipline matching international standards.</p>
+                            </div>
+                        </div>
                         <div class="row events-margin">
                             <div class="col-md-4">
                                 <img src="images/events/event-img-01.jpg" alt="Events" title="Events-ENPEE International School" />

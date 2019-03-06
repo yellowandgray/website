@@ -1168,6 +1168,10 @@ marquee {
     .line-height-35 {
         line-height: 15px !important;
     }
+    .events-margin iframe {
+        width: 100% !important;
+        height: auto !important;
+    }
 }
 
 .events-margin img {
@@ -1176,4 +1180,13 @@ marquee {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
+}
+
+.events-margin iframe {
+    width: 100%;
+    height: 315px;
+}
+
+.event-justify p {
+    text-align: justify;
 }
