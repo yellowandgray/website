@@ -264,14 +264,12 @@
 
         <!-- Courses section -->
         <section class="courses-section spad">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-7 text-justify padding-section">
-                        <h2> Who Needs Robotics in Education? </h2>
-                        <p>Teachers / Educators</p>
-                        <p>Students / Learners</p>
-                        <h3 class="text-center">IN</h3>
-                        <h3>SCIENCE / MATHS / INFORMATICS / TECHNOLOGY…</h3>
+                        <h2>R & D</h2>
+                        <p>AALUV has to developed expertise in setting up well appreciated Robotics Laboratories inside Schools for the exclusive use of the school students which is unique and tailor made for its Curriculum.</p>
+                        <p>Program comes with complete Robotics kits and operation manual. </p>
                     </div>
                     <div class="col-lg-5">
                         <div class="contact-form">

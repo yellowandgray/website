@@ -6,7 +6,7 @@
     <body>
         <?php include 'menu.php'; ?>
         <!-- Banner Section -->
-        <div class="sub-banner-section" style="background: url(img/sub-banner/class-room.jpg)no-repeat; height: 250px;"></div>
+        <div class="sub-banner-section" style="background: url(img/sub-banner/learning.jpg)no-repeat; height: 250px;"></div>
         <!-- End Banner Section -->
 
         <!-- Breadcrumb section -->
@@ -22,13 +22,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2>AALUV FOCUS on LEARNING</h2>
+                        <h2 class="color-blue">AALUV FOCUS on LEARNING</h2>
                         <ul class="list-style-none p-margin">
-                            <i class="fa fa-circle" aria-hidden="true"></i><li>EMOTIONAL ENGAGEMENT !</li>
-                            <i class="fa fa-circle" aria-hidden="true"></i><li>INTERACTION WITH PHYSICAL DEVICES !</li>
-                            <i class="fa fa-circle" aria-hidden="true"></i><li>PRACTICAL LEARNING !</li>
-                            <i class="fa fa-circle" aria-hidden="true"></i><li>MULTI-DISCIPLINARY LEARNING !</li>
-                            <i class="fa fa-circle" aria-hidden="true"></i><li>CONSTRUCTIVIST APPROACH !</li>
+                            <i class="fas fa-check"></i><li>EMOTIONAL ENGAGEMENT !</li>
+                            <i class="fas fa-check"></i><li>INTERACTION WITH PHYSICAL DEVICES !</li>
+                            <i class="fas fa-check"></i><li>PRACTICAL LEARNING !</li>
+                            <i class="fas fa-check"></i><li>MULTI-DISCIPLINARY LEARNING !</li>
+                            <i class="fas fa-check"></i><li>CONSTRUCTIVIST APPROACH !</li>
                         </ul>
                     </div>
                     <div class="col-md-6">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>STRENGTHS OF ROBOTICS IN EDUCATION</h2>
+                        <h2 class="color-blue">STRENGTHS OF ROBOTICS IN EDUCATION</h2>
                         <p>TRAINED TEACHERS – “teach as they were taught,.. Not as they are told to teach”</p>
                         <p>WELL DEFINED CURRICULAM – Aligned with academic curriculam”</p>
                         <p>PROPER EDUCATION PHILOSOPHY – “ to evoke interest and enthusiasm in subject”</p>
@@ -57,8 +57,8 @@
                             <h2 class="color-white">ENDOW RIGOR</h2>
                         </div>
                         <ul class="list-style-none color-white">
-                            <i class="fa fa-check" aria-hidden="true"></i><li>Learn something real</li>
-                            <i class="fa fa-check" aria-hidden="true"></i><li>Teach the realities and depth of science</li>
+                            <i class="fas fa-check"></i><li>Learn something real</li>
+                            <i class="fas fa-check"></i><li>Teach the realities and depth of science</li>
                         </ul>
                         <br>
                         <div class="text-center">
@@ -71,9 +71,9 @@
                             <h2 class="color-white">DESIGN</h2>
                         </div>
                         <ul class="list-style-none color-white">
-                            <i class="fa fa-check" aria-hidden="true"></i><li>Tinkering to explore</li>
-                            <i class="fa fa-check" aria-hidden="true"></i><li>Connect high and low level issues</li>
-                            <i class="fa fa-check" aria-hidden="true"></i><li>learn uncertainty & variability of world</li>
+                            <i class="fas fa-check"></i><li>Tinkering to explore</li>
+                            <i class="fas fa-check"></i><li>Connect high and low level issues</li>
+                            <i class="fas fa-check"></i><li>learn uncertainty & variability of world</li>
                         </ul>
                         <div class="text-center">
                             <button class="site-btn">Read More</button>
@@ -85,8 +85,8 @@
                             <h2 class="color-white">WORK IN TEAMS</h2>
                         </div>
                         <ul class="list-style-none color-white">
-                            <i class="fa fa-check" aria-hidden="true"></i><li>Performance assessment through Competition</li>
-                            <i class="fa fa-check" aria-hidden="true"></i><li>Faster team spirit and camaraderie</li>
+                            <i class="fas fa-check"></i><li>Performance assessment through Competition</li>
+                            <i class="fas fa-check"></i><li>Faster team spirit and camaraderie</li>
                         </ul>
                         <br>
                         <div class="text-center">
@@ -102,10 +102,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Who Needs Robotics in Education?</h2>
+                        <h2 class="color-blue">Who Needs Robotics in Education?</h2>
                         <ul class="list-style-none p-margin">
-                            <i class="fa fa-circle" aria-hidden="true"></i><li>Teachers / Educators</li>
-                            <i class="fa fa-circle" aria-hidden="true"></i><li>Students / Learners</li>
+                            <i class="fas fa-check"></i><li>Teachers / Educators</li>
+                            <i class="fas fa-check"></i><li>Students / Learners</li>
                         </ul>
                         <p>IN SCIENCE / MATHS / INFORMATICS / TECHNOLOGY…</p>
                     </div>
