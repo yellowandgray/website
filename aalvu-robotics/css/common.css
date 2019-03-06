@@ -66,6 +66,22 @@ td, th {
     padding: 8px;
 }
 
+.syllabus table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.syllabus td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.syllabus tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
 
 /* Tab CSS */
 
@@ -345,8 +361,54 @@ ul.nacc li p {
     color: #fe4e7c;
 }
 .fa-arrow-right {
-   width: 100px
+    width: 100px
 }
 .fa-arrow-right:hover {
     transition: width 2s;
+}
+
+.border-img img {
+    border: 1px solid #fe4e7c;
+}
+
+.p-margin li {
+    margin: 15px 0px;
+}
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
