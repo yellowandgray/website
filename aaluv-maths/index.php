@@ -105,15 +105,15 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>No two persons have the same appetite at the same time</h3>
+                        <h3>AALUV Classroom Instructor</h3>
                     </div>
                     <div class="col-lg-5 about-text">
                         <img src="img/about-1.jpg" alt="" />
                     </div>
                     <div class="col-lg-7">
-                        <p class="text-justify">There is no reason why they should; each of them has their own learning patterns. Aaluv maths helps Children learn Math's according to their individual abilities. That is why lessons are tailored to fit each child's potential.</p>
-                        <p class="text-justify">The <span>Aaluv math’s</span> Diagnostic Test is a time-tested method of evaluation to determine learning capabilities of a child in Mathematics. This test helps understand their level of individual ability and understanding. Accordingly, personalized worksheets are devised to improve the concept and fundamentals of mathematics.</p>
-                        <p class="text-justify">The result of this evaluation helps to create each child. A unique learning plan and guide for each child.</p>
+                        <p class="text-justify">AALUV aims at nurturing the joy of learning mathematics in children, building self-confidence and imparting knowledge that will complement what they have learned in school. It helps children develop their logical thinking skill through learning numbers and acquiring knowledge and also develop independence in solving problems. </p>
+                        <p class="text-justify">Training Details:  Instructor has to complete the worksheets provided before they start the classes for students of their batch and answered works sheets will be kept only in the center under lock and key.</p>
+                        
                     </div>
                 </div>
             </div>
@@ -190,26 +190,32 @@
                     <div class="col-md-4 text-center padding-50">
                         <img class="text-center contents" src="img/icon7.png">
                         <h2 class="text-center color-white">About Aaluv </h2>
-                        <p class="text-justify home-para color-white">Considering Aaluv is originally a book publisher, our role virtually finishes when our books are sold. Therefore, we never know how children read and use the books.</p>
-                        <div class="text-center">
+                        <p class="text-justify home-para color-white">The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe.</p>
+<!--                        <div class="text-center">
                             <button class="site-btn">Read More</button>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="col-md-4 text-center padding-50">
                         <img class="text-center contents" src="img/icon8.png">
                         <h2 class="text-center color-white">Our Classroom</h2>
-                        <p class="text-justify home-para color-white">Aaluv have experienced as Educational publisher, and we would want to contribute to education of children with the classrooms. That’s why we started Aaluv Maths in 1980.</p>
-                        <div class="text-center">
+                        <p class="text-justify home-para color-white">Min Area required1000 Sq. Ft, in a Semi Commercial Area.A well-illuminated and ventilated classroom of about 250 Sq. ft each and minimum of 2-3 class rooms with basic amenities such as Air condition, Fans, drinking water and washroom facilities. A comfortable seating arrangement.Separate Rooms for Counselling and Admin activity such as fee collection and parents meeting. </p>
+<!--                        <div class="text-center">
                             <button class="site-btn">Read More</button>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="col-md-4 text-center padding-50">
                         <img class="text-center contents" src="img/icon9.png">
-                        <h2 class="text-center color-white">Our Philosophy</h2>
-                        <p class="text-justify home-para color-white">Aaluv Maths wish to bring “Joy of learning” “Confidence” “Zest for Living” to Children.</p><br/><br/>
-                        <div class="text-center">
+                        <h2 class="text-center color-white">Our Principles</h2>
+                        <ul class="text-left home-para color-white">
+                            <li>Boosting fundamental academic skills </li>
+                            <li>No grading </li>
+                            <li>Self-Learning</li>
+                            <li>Comprehensive, life-skill-based education</li>
+                        </ul>
+<!--                        <br/><br/>-->
+<!--                        <div class="text-center">
                             <button class="site-btn">Read More</button>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <!--                                <div class="row">
@@ -249,13 +255,19 @@
         <section class="courses-section spad">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-7 text-justify padding-section">
-                        <h2 class="text-center"> News and Events </h2>
+                    <div class="col-lg-7 padding-section">
+                        <h3>AALUV Classroom Franchisee Desired Qualities</h3>
                         <!--                        <h3 >  Opening Shortly at ADYAR &#38; NEELANKARAI</h3>-->
-                        <h4 class="text-center">Now at ADYAR (Chennai) &amp; NEELANKARAI (Chennai)</h4>
-                        <p>Aaluv Maths is a unique Comprehensive Educational Solution from Japan. Its first classroom in India was opened on 6 July 2016 at Kaba Plaza, 57, L B Road, Adyar, Chennai-20 (opposite to Adyar Bus Depot).</p>
-                        <p>Aaluv Maths is helping millions of students world-wide develop self-motivated learning and attitude, which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
-                        <p>Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
+                        <h4>The prospective franchisee must have:</h4>
+                        <ul>
+                            <li>An interest in being an entrepreneur and have a positive attitude to work while maintaining quality. Professional ethics are of paramount importance.</li>
+                            <li>Passionate about education and working with children</li>
+                            <li>A genuine commitment to strive for growth and expansion that will translate into profits for yourself.</li>
+                            <li>The aptitude to head your enterprise and manage the  Center.</li>
+                            <li>The ability to devote your time and make this as their main activity.</li>
+                            <li>Interested in child enrichment</li>
+                            <li>Totally agree with Aaluv's philosophy</li>
+                        </ul>
                     </div>
                     <div class="col-lg-5">
                         <div class="contact-form">
