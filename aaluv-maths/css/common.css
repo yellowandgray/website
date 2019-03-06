@@ -362,3 +362,6 @@ ul {
 .color-blue {
     color: #4b9bb3 !important;
 }
+.list-style-disc {
+list-style-type:disc;
+}

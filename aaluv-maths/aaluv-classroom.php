@@ -33,6 +33,7 @@
                                 <div><span class="light"></span><span>Our Instructor</span></div>
                                 <div><span class="light"></span><span>Practice Sheets</span></div>
                                 <div><span class="light"></span><span>Transformation and Improvement</span></div>
+                                <div><span class="light"></span><span>Over View</span></div>
 <!--                                <div><span class="light"></span><span>Guardian's Voice</span></div>-->
                             </div>
                         </div>
@@ -263,6 +264,22 @@
                                                 <p>4. A well-balanced line-up in taught including the following four domains of math: ‘Numbers and calculation’, ‘Quantities and measurement’, ‘Geometrical figures’ and ‘Mathematical relation’ .</p>
                                             </div>
                                         </div>
+                                    </div>
+                                </li>
+                                 <li>
+                                    <div>
+                                        <h3 class="h3-bg-border">Self Learning Proficiency</h3>
+<!--                                        <img src="img/tab-img/learning-methods.jpg">-->
+                                        <div class="p-margin-15">
+                                            <p><i class="fas fa-check color-blue"></i> To forever inculcate in children the ability to self-learning, enhancing their learning skills is the first step.</p>
+                                            <p><i class="fas fa-check color-blue"></i> To foster competency to face the challenges of the global need in the future.</p>
+                                            <p><i class="fas fa-check color-blue"></i> Abilities to contemplate on the right answer that would expand one’s perspectives. </p>
+                                            <p><i class="fas fa-check color-blue"></i> The contemporary child will have a response for every question under the sky, irrespective of whether it is appropriate or not. However, we need to nurture their attitudes and steer them on the right course to do the following:</p>
+                                            <p><i class="fas fa-check color-blue"></i> Insist on attempting to work out the sums rather than ignoring them. </p>
+                                            <p><i class="fas fa-check color-blue"></i> Promote individualistic thoughts to analyze any given situation and react suitably.</p>
+                                            <p><i class="fas fa-check color-blue"></i> Present one’s ideas in one’s own words and express them with conviction.</p>
+                                            <p><i class="fas fa-check color-blue"></i> These skills will promote their analytical thinking. In addition, it will cultivate fundamental academic aptitudes with the guidance of competent and proficient instructors. Practice sheets are developed individually to fit each child’s unique learning abilities.</p>
+                                            </div>
                                     </div>
                                 </li>
 <!--                                <li>

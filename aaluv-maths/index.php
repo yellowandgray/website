@@ -93,7 +93,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-6 about-text">
-                        <img src="img/icon1.png" align="left"> 
+<!--                        <img src="img/icon1.png" align="left"> -->
                         <p class="text-justify" align="left">Aaluv Maths is a unique Comprehensive Mathematic Learning Solution helping millions of students world-wide developing a self-motivated learning and attitude which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
                         <p class="text-justify" align="left">Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
                         <h3 class="color-blue">Company Profile</h3>
@@ -256,17 +256,17 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-7 padding-section">
-                        <h3>AALUV Classroom Franchisee Desired Qualities</h3>
+                        <h3 class="color-blue">AALUV Classroom Franchisee Desired Qualities</h3>
                         <!--                        <h3 >  Opening Shortly at ADYAR &#38; NEELANKARAI</h3>-->
                         <h4>The prospective franchisee must have:</h4>
-                        <ul>
-                            <li>An interest in being an entrepreneur and have a positive attitude to work while maintaining quality. Professional ethics are of paramount importance.</li>
-                            <li>Passionate about education and working with children</li>
-                            <li>A genuine commitment to strive for growth and expansion that will translate into profits for yourself.</li>
-                            <li>The aptitude to head your enterprise and manage the  Center.</li>
-                            <li>The ability to devote your time and make this as their main activity.</li>
-                            <li>Interested in child enrichment</li>
-                            <li>Totally agree with Aaluv's philosophy</li>
+                        <ul class="list-style-none">
+                            <i class="fas fa-check color-blue"></i><li>An interest in being an entrepreneur and have a positive attitude to work while maintaining quality. Professional ethics are of paramount importance.</li>
+                            <i class="fas fa-check color-blue"></i><li>Passionate about education and working with children</li>
+                            <i class="fas fa-check color-blue"></i><li>A genuine commitment to strive for growth and expansion that will translate into profits for yourself.</li>
+                            <i class="fas fa-check color-blue"></i><li>The aptitude to head your enterprise and manage the  Center.</li>
+                            <i class="fas fa-check color-blue"></i><li>The ability to devote your time and make this as their main activity.</li>
+                            <i class="fas fa-check color-blue"></i><li>Interested in child enrichment</li>
+                            <i class="fas fa-check color-blue"></i><li>Totally agree with Aaluv's philosophy</li>
                         </ul>
                     </div>
                     <div class="col-lg-5">

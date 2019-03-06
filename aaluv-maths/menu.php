@@ -17,7 +17,7 @@
                 <p><span>Phone:</span>+61 3 97056268</p>
             </div>
             <div class="hf-item">
-                <i class="fa fa-envelope-o"></i>
+               <i class="fas fa-envelope"></i>
                 <p><span>Email:</span>info@aaluvglobal.org</p>
             </div>
         </div>
