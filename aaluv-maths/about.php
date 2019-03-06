@@ -28,85 +28,85 @@
         <section class="about-section spad pt-0">
             <div class="container">
                 <div class="section-title text-center">
-                    <h3>WELCOME TO AALUV</h3>
+                    <h3 class="color-blue">WELCOME TO AALUV</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-7 about-text">
-                        <h5>Why We Started "Aaluv Maths"</h5>
-                        <p>The founder, Hideto Furuoka sums up his vision and values as follows;</p>
-                        <p class="text-justify">Considering Aaluv is originally a book publisher, our role virtually finishes when our books are sold. Therefore, we never know how children read and use the books. However, in the classroom, things don’t end when you publish and sell a book. That’s just the start. “Aaluv Classroom” serves as a community where “teacher-child”, “child-child”, “teacher-mother” bonds build through learning.</p>
-                        <h6 class="bold">Furuoka's passion for education never dies and all of us have shared his values over the years.</h6>
+                        <h3 class="color-blue">AALUV Maths</h3>
+                        <p class="text-justify">Aaluv Maths is a unique Comprehensive Mathematic Learning Solution helping millions of students world-wide developing a self-motivated learning and attitude which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
+                        <p class="text-justify">Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
+                        <p><em>About Company: Take from PPT “Company Profile”</em></p>
                         <div class="clear-both"></div>
-                        <h5>Overcoming the challenge of staying self-motivated learning and attitude</h5>
-                        <p class="text-justify">Aaluv Maths program emphasizes on problem solving skills among the young students. The program also provides mathematical questions presented through various figures, charts, and scenarios closely related to real-life situations to challenge and improve their problem-solving approach and capability. This significantly helps the overall development of each student.</p>
-                        <h5 class="bold">Company Address</h5>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <th>Company:</th>
-                                    <td>Educhild Australia Pty Ltd.</td>
-                                </tr>
-                                <tr>
-                                    <th>Address:</th>
-                                    <td> 40, Kershaw Drive, Narre Warren South, Melbourne, Victoria 3805, Australia.</td>
-                                </tr>
-                                <tr>
-                                    <th>Establishment:</th>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th>Capital:</th>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th>Annual sales:</th>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th>CEO:</th>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <h5 class="bold">Growth of Business</h5>
-                        <p>After establishment of Aaluv in 1946, we have experienced as Educational publisher, and we would want to contribute to education of children with the classrooms. That’s why we started Aaluv in 1980.</p>
-                        <h6 class="bold">The largest market share in the Japanese after-school learning industry where children learn primary maths.</h6>
+                        <h3 class="color-blue">About Company: Take from PPT “Company Profile”</h3>
+                        <p class="text-justify">Aaluv Maths program emphasizes on</p>
+                        <p><i class="fas fa-check color-blue"></i> problem solving skills among the young students. </p>
+                        <p><i class="fas fa-check color-blue"></i> mathematical questions presented through various figures, charts, and scenarios closely related to real-life situations </p>
+                        <p><i class="fas fa-check color-blue"></i> challenge and improve their problem-solving approach and capability. </p>
+                        <p><i class="fas fa-check color-blue"></i> Significantly helps the overall development of each student.</p>
+
+<!--                        <table>
+          <tbody>
+              <tr>
+                  <th>Company:</th>
+                  <td>Educhild Australia Pty Ltd.</td>
+              </tr>
+              <tr>
+                  <th>Address:</th>
+                  <td> 40, Kershaw Drive, Narre Warren South, Melbourne, Victoria 3805, Australia.</td>
+              </tr>
+              <tr>
+                  <th>Establishment:</th>
+                  <td></td>
+              </tr>
+              <tr>
+                  <th>Capital:</th>
+                  <td></td>
+              </tr>
+              <tr>
+                  <th>Annual sales:</th>
+                  <td></td>
+              </tr>
+              <tr>
+                  <th>CEO:</th>
+                  <td></td>
+              </tr>
+          </tbody>
+      </table>-->
+
+
                     </div>
                     <div class="col-lg-5 pt-5 pt-lg-0 text-center">
-                        <img src="img/about.jpg" alt="">
-                        <h5>Founder of Aaluv</h5>
-                        <h6>Founder Name</h6>
-                        <img src="img/persons.png">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h5>TRANSFORMATION AFTER ASSOCIATING WITH AALUV CLASSROOM</h5>
-                        <ul class="list-style-none">
-                            <i class="fa fa-check-circle-o"></i><li>Develop a systematic study habit</li>
-                            <i class="fa fa-check-circle-o"></i><li>Improve one’s calculation skills.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Learn to solve mathematical problems.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Tackle all problems oneself.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Write meticulously.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Improve in mathematical skills.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Develop a fondness for studies</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>Why "Aaluv Math"</h5>
-                        <ul class="list-style-none">
-                            <i class="fa fa-check-circle-o"></i><li>Superior educational tools.</li>
-                            <i class="fa fa-check-circle-o"></i><li>One-on-one learning.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Progression to the next topic only after a thorough understanding of the previous chapter is attained.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Boosts academic learning.</li>
-                            <i class="fa fa-check-circle-o"></i><li>Concentrating on grasping the concept & principle behind each sum.</li>
-                        </ul>
+                        <img src="img/course/class-01.jpg" alt="" class="margin-top-20">
+                        
+                        <!--                        <h6>Founder Name</h6>
+                                                <img src="img/persons.png">-->
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <h5 class="text-center">Fueling the students’ invisible abilities</h5>
-                        <p class="text-justify">Aaluv Maths prioitizes and motivate the “desire to learn “ to students and develop their invisible abilities like concentration, logical thinking, good judgment, patience, and passion. Aaluv math, through personto person communication, facilitates students to acquire the skills to think about how to reach the answer. Further, it supports and fosters the habit of learning, imagination, and creativeness and other abilities required at school and at home.</p>
+                    <h3 class="color-blue">Advantage AALUV Maths</h3>
+                    <p class="text-justify">Preparing children as global digital citizens for the world that doesn’t yet exist by imparting critical 21st century skills such as problem solving ,creativity, Analytic thinking, collaboration, communication, ethics, action ,empathy ,tolerance ,environmental awareness and global awareness every child needs to survive and succeed understanding. what abilities and traits will serve them in a time that’s Rapidly changing and developing.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-style-none">
+                           <i class="fas fa-check color-blue"></i><li>To develop an affinity with numbers with the right practice and right level.</li>
+                           <i class="fas fa-check color-blue"></i><li>Enable students to become independent by positive mind-set and self – learning skills.</li>
+                           <i class="fas fa-check color-blue"></i><li>Develop natural progress in academics.</li>
+                           <i class="fas fa-check color-blue"></i><li>When each student begins the maths programmes, they are given a study projection. </li>
+                           <i class="fas fa-check color-blue"></i><li>assessment at every level and reflection of the progress</li>
+                           
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                       <ul class="list-style-none">
+                           <i class="fas fa-check color-blue"></i><li>Individualized study projection.</li>
+                           <i class="fas fa-check color-blue"></i><li>Competency</li>
+                           <i class="fas fa-check color-blue"></i><li>National Level Competition to showcase the talent.</li>
+                           <i class="fas fa-check color-blue"></i><li>National Level Competition to showcase the talent.</li>
+                           <i class="fas fa-check color-blue"></i><li>increases their concentration and stamina and confidence.</li>
+                           <i class="fas fa-check color-blue"></i><li>Unique assessment and individualized teaching method.</li>
+                           <i class="fas fa-check color-blue"></i><li>assessment are respective Parents / Students / Instructors. </li>
+                        </ul>
                     </div>
                 </div>
             </div>

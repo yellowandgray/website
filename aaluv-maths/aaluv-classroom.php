@@ -25,127 +25,252 @@
                         <div class="gc col-md-3">
                             <div class="menu">
                                 <div class="active" id="defaultOpen"><span class="light"></span><span>4 Guiding Principles</span></div>
-                                <div><span class="light"></span><span>Tokuiku</span></div>
-                                <div><span class="light"></span><span>4 Learning Skills</span></div>
-                                <div><span class="light"></span><span>4 Learning Methods</span></div>
-                                <div><span class="light"></span><span>Learning Flow</span></div>
-                                <div><span class="light"></span><span>operation</span></div>
-                                <div><span class="light"></span><span>Our Worksheet</span></div>
-                                <div><span class="light"></span><span>Before and After</span></div>
-                                <div><span class="light"></span><span>Guardian's Voice</span></div>
+                                <div><span class="light"></span><span>Interaction Essentials</span></div>
+                                <div><span class="light"></span><span>Etiquette</span></div>
+                                <div><span class="light"></span><span>Reasoning</span></div>
+                                <div><span class="light"></span><span>Learning Process</span></div>
+                                <div><span class="light"></span><span>Story Based Sums</span></div>
+                                <div><span class="light"></span><span>Our Instructor</span></div>
+                                <div><span class="light"></span><span>Practice Sheets</span></div>
+                                <div><span class="light"></span><span>Transformation and Improvement</span></div>
+<!--                                <div><span class="light"></span><span>Guardian's Voice</span></div>-->
                             </div>
                         </div>
                         <div class="gc col-md-9">
                             <ul class="nacc">
                                 <li class="active">
                                     <div>
-                                        <h3>4 Guiding Principles</h3>
-                                        <h4>Establishing Fundamental academic abilities</h4>
-                                        <p>Develop their learning skill. Repeated learning and every day home work will give them good studyhabit.</p>
-                                        <h4>No-grade method according to our student’s individual learning progress</h4>
-                                        <p>Understanding individual ability and character and teach accordingly. Children can learn in own path, and proceed after understanding.</p>
-                                        <h4>Self-Learning</h4>
-                                        <p>Cultivate the attitude to learn and think by own, with Aaluv method which providing appropriate Worksheets and enough advisesto Children.</p>
-                                        <h4>Well-rounded, life-skill based education</h4>
-                                        <p>Not only academic ability, but also focusing on greetings, cleaning and the other basic moral education.</p>
+                                        <h3 class="h3-bg-border">4 Guiding Principles</h3>
+                                        <h4>1. Boosting fundamental academic skills</h4>
+                                        <p>To promote a daily learning habit with advancement in their learning skills. Frequent learning of various topics and daily homework will inculcate a good study habit.</p>
+                                        <h4>2. No grading</h4>
+                                        <p>Students are not graded but are assessed as per their individual learning progress.</p>
+                                        <p>Each child’s ability in unique, which is evaluated distinctly. Further more, the character of the child is assessed and taught accordingly. </p>
+                                        <p>Children can learn in their own style and proceed on understanding the concept completely.</p>
+                                        <h4>3. Self-Learning</h4>
+                                        <p>Nurture approaches that make one think and learn by self. One of the most popular self-learning approaches is the Aaluv method, which offers suitable practice sheets and counseling to children.</p>
+                                        <h4>4. Comprehensive,life-skill-based education</h4>
+                                        <p>We need to not only train the child academically, but also cultivate good manners such as salutations, self-hygiene and ethics.</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <h3>“Tokuiku” – “Etiquette”</h3>
-                                        <h4>Life Skills, manners, etc.</h4>
-                                        <p>Greetings when entering and leaving the class.</p>
-                                        <p>Using personal space cleanly</p>
-                                        <p>Putting away bags, organizing stationery, clean up <span class="bold">after themselves, etc.</span></p>
-                                        <p>Sit with and maintain correct posture</p>
-                                        <p>Following the rules of the classroom</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <div style="background: url(img/tab-img/bg.png) no-repeat;background-size: cover;">
-                                            <h3 class="h3-bg-border">4 Learning Skills</h3>
-                                            <div class="row">
-                                                <div class="col-md-6 padding-40">
-                                                    <img src="img/tab-img/001.png">
-                                                    <p class="text-justify">That feeling, "I got it!," when you figure 'out something now all on your own is the most powerful incentive for learning. The enjoyment gained from those, "I did it!," experiences triggers further learning.</p>
-                                                </div>
-                                                <div class="col-md-6 padding-40">
-                                                    <img src="img/tab-img/002.png">
-                                                    <p class="text-justify">These are the skills for making and following through with a system for reasoning through problems and recognising the underlying issues. The ability to grasp the main point leads to the permanent acquisition of the learning points and fueks further expansion on them.</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6 padding-40">
-                                                    <img src="img/tab-img/003.png">
-                                                    <p class="text-justify">Working through a variety of diverse problems and accumulating success experiences results in the acquisition of skills to learn on one's own. The experience of successfully solving problems all on one's own builds confidence and encourages self-initiative in trying to figure things out for oneself.</p>
-                                                </div>
-                                                <div class="col-md-6 padding-40">
-                                                    <img src="img/tab-img/004.png">
-                                                    <p class="text-justify">The skills to adopt the knowledge and skills that one has learnt, and apply them to new problems or to find new answers to old problems. These are the problem-solving, self expression, self-improvement. At Aaluv, these three skills, which are essential for any successful adult in today's global society, are instilled and reinforced through the learning experience itself.</p>
-                                                </div>
-                                            </div>
+                                        <h3 class="h3-bg-border">Interaction Essentials</h3>
+                                        <div class="p-margin-15">
+                                            <p>1. Classroom Days: 2 days in a week.</p>
+                                            <p>2. Subject: Maths </p>
+                                            <p>3. Target Groups: Primary School Children</p>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <h3 class="h3-bg-border">4 Learning Methods</h3>
-                                        <img src="img/tab-img/learning-methods.jpg">
+                                        <h3 class="h3-bg-border">Etiquette</h3>
+                                        <h4>The child also needs to be trained in life skills and taught good manners.</h4>
+                                        <div class="p-margin-15">
+                                            <p><i class="fas fa-check color-blue"></i> Salutations while entering and departing from class.</p>
+                                            <p><i class="fas fa-check color-blue"></i> Hygiene and sanitation.</p>
+                                            <p><i class="fas fa-check color-blue"></i> Systematically arranging their belongings such as bags,stationeries, etc. </p>
+                                            <p><i class="fas fa-check color-blue"></i> Maintaining the correct posture in the classroom.</p>
+                                            <p><i class="fas fa-check color-blue"></i> Abiding by the regulations of the classroom.</p>
+                                        </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <h3 class="h3-bg-border">Learning Flow</h3>
-                                        <img src="img/tab-img/image1.jpg">
+                                        <h3 class="h3-bg-border">Reasoning</h3>
+                                        <h4>Why To Choose “AALUV Math Classroom”</h4>
+                                        <div class="p-margin-15">
+                                            <p>1. Superior educational tools.</p>
+                                            <p>2. One-on-one learning.</p>
+                                            <p>3. Progression to the next topic only after a thorough understanding of the previous is attained.</p>
+                                            <p>4. Boosts academic learning.</p>
+                                            <p>5. Concentrating on grasping the concept and principle behind each sum.</p>
+                                        </div>
+                                        <h4>Transformation After Associating With AALUV Classroom</h4>
+                                        <div class="p-margin-15">
+                                            <p>1. Develop a systematic study habit.</p>
+                                            <p>2. Improve one’s calculation skills.</p>
+                                            <p>3. Learn to solve mathematical problems.</p>
+                                            <p>4. Tackle all problems oneself.</p>
+                                            <p>5. Write meticulously.</p>
+                                            <p>6. Improve in mathematical skills.</p>
+                                            <p>7. Develop a fondness for studies.</p>
+                                        </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <h3>operation</h3>
-                                        <p>Aaluv Days:</p>
-                                        <p>Subjects : Maths</p>
-                                        <p>Target Age Group : 5 to 13</p>
-                                        <div class="row padding-tb-20">
-                                            <div class="col-md-2">
-                                                <img src="img/tab-img/operation-001.jpg">
+                                        <h3 class="h3-bg-border">Learning Process</h3>
+<!--                                        <img src="img/tab-img/learning-methods.jpg">-->
+                                        <div class="p-margin-15">
+                                            <p><i class="fas fa-check color-blue"></i> Initially,students take an evaluation test.</p>
+                                            <p><i class="fas fa-check color-blue"></i> Math practice sheets are prepared individually catering for each student as per their proficiency.</p>
+                                            <p><i class="fas fa-check color-blue"></i> Interaction between tutor and student is once a week.</p>
+                                            <p><i class="fas fa-check color-blue"></i> The students cultivate ‘How to think’ aptitudes first and later apply these skills to solve the exercise problems. They are expected to complete the prerequisite practice sheets daily.</p>
+                                            <p><i class="fas fa-check color-blue"></i> The instructor grades the papers, and may counsel the students and provide thinking tips.</p>
+                                            <p><i class="fas fa-check color-blue"></i> Have students assess their graded papers. The students should keep trying until they get a perfect score.</p>
+                                            <p><i class="fas fa-check color-blue"></i> Perfect scores instill confidence in the students and are a boost to their academic abilities. The classes are concluded after making sure the children are given homework.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="p-margin-15">
+                                            <h3 class="h3-bg-border">Story Based Sums</h3>
+                                            <p><i class="fas fa-check color-blue"></i> By acquiring knowledge regarding the ‘analytical thinking process’ associated with problem solving, children improve their skills and aptitudes, enabling them to apply these proficiencies in real-life settings. </p>
+                                            <p><i class="fas fa-check color-blue"></i> Children are given an in-depth understanding of the procedure for problem solving and the significance of the target calculation is also explained prior to the start of the exercises.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <h3 class="h3-bg-border">Our Instructor</h3>
+                                        <div class="p-margin-15">
+                                            <h4>AALUV Math Classroom Instructors are MASTERS AT GIVING HINTS AND NOT ANSWERS.</h4>
+                                            <p><i class="fas fa-check color-blue"></i> Our instructors don’t just teach math, but the processes behind problem solving. We have individualized guidance, customized to the child’s learning progress. Our students learn at their own pace. This is hard to achieve with group-oriented teaching. The students learn to arrive at solutions on their own.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--                                <li>
+                                                                    <div>
+                                                                        <h3>operation</h3>
+                                                                        <p>Aaluv Days:</p>
+                                                                        <p>Subjects : Maths</p>
+                                                                        <p>Target Age Group : 5 to 13</p>
+                                                                        <div class="row padding-tb-20">
+                                                                            <div class="col-md-2">
+                                                                                <img src="img/tab-img/operation-001.jpg">
+                                                                            </div>
+                                                                            <div class="col-md-8 text-center">
+                                                                                <p>The result of customer satisfation research</p>
+                                                                                <h4>Educational Service Division</h4>
+                                                                            </div>
+                                                                            <div class="col-md-2">
+                                                                                <img src="img/tab-img/operation-002.jpg">
+                                                                            </div>
+                                                                        </div>
+                                                                        <p>Aaluv got first ranking in a row for the research of customer satisfaction. Last year, customer satisfaction was not first ranking, but Aaluv got high evaluation in this year.</p>
+                                                                        <img src="img/tab-img/operation-003.jpg">
+                                                                    </div>
+                                                                </li>-->
+                                <li>
+                                    <div>
+                                        <h3 class="h3-bg-border">Practice Sheets</h3>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="img/worksheet-01.jpg">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <img src="img/worksheet-02.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6  p-margin-15">
+                                            <p><i class="fas fa-check color-blue"></i> Children gain </p>
+                                            <p><i class="fas fa-check color-blue"></i> understanding of the </p>
+                                            <p><i class="fas fa-check color-blue"></i> process and meaning </p>
+                                        </div>
+                                        <div class="col-md-6 p-margin-15">
+                                            <p><i class="fas fa-check color-blue"></i> behind the target </p>
+                                            <p><i class="fas fa-check color-blue"></i> calculation before they </p>
+                                            <p><i class="fas fa-check color-blue"></i> start the exercises.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="h3-bg-border">Transformation and Improvement</h3>
+                                    <div class="p-margin-15">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table>
+                                                    <tr>
+                                                        <th>Rank</th>
+                                                        <th>Content</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>1</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>Develop a regular study habit.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>2</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>Improve one’s calculation skills. </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>3</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>Learn to solve mathematical problems.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>4</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>Tackle all problems oneself.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>5</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>Write meticulously.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>1</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>Develop a regular study habit.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>6</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>Improve in mathematical skills. </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>7</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>Develop a fondness for studies.</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                             </div>
-                                            <div class="col-md-8 text-center">
-                                                <p>The result of customer satisfation research</p>
-                                                <h4>Educational Service Division</h4>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <img src="img/tab-img/operation-002.jpg">
+                                            <div class="col-md-6">
+                                                <h4 class="text-justify">In addition to improving arithmetic skills, our students are equipped with logical thinking skills. Logical thinking is fostered by the use of story-based problems.</h4>
+                                                <p>1. Focusing on the calculation process, our students cultivate arithmetic skills through a genuine understanding of the concept.</p>
+                                                <p>2. Learn how to approach and solve problems by working on story-based problems.</p>
+                                                <p>3. Attain a thorough understanding of the mathematical concepts through our small-step method.</p>
+                                                <p>4. A well-balanced line-up in taught including the following four domains of math: ‘Numbers and calculation’, ‘Quantities and measurement’, ‘Geometrical figures’ and ‘Mathematical relation’ .</p>
                                             </div>
                                         </div>
-                                        <p>Aaluv got first ranking in a row for the research of customer satisfaction. Last year, customer satisfaction was not first ranking, but Aaluv got high evaluation in this year.</p>
-                                        <img src="img/tab-img/operation-003.jpg">
                                     </div>
                                 </li>
-                                <li>
-                                    <div>
-                                        <h3 class="h3-bg-border">Worksheet</h3>
-                                        <img src="img/tab-img/our-worksheet.jpg">
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <h3>Before and After</h3>
-                                        <p>1. My child now studies more often on a regular basis.</p>
-                                        <p>2. My child is now much better at calculation.</p>
-                                        <p>3. My child is now much better at solving story problems.</p>
-                                        <p>4. My child now studies on his / her own.</p>
-                                        <p>5. My child now writes more carefully.</p>
-                                        <p>6. My child is now much better at figure problems.</p>
-                                        <p>7. My child now likes to study much more.</p>
-                                    </div>
-                                </li>
-                                <li>
+<!--                                <li>
                                     <div>
                                         <h3>Guardian's Voice</h3>
                                         <img src="img/tab-img/guardian-voice.png">
                                     </div>
-                                </li>
+                                </li>-->
                             </ul>
                         </div>
                     </div>

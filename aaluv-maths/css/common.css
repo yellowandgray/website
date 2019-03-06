@@ -255,7 +255,7 @@ ul.nacc li p {
 
 .list-style-none i {
     position: absolute;
-    font-size: 22px;
+    font-size: 16px;
     color: #fe4e7c;
 }
 
@@ -354,4 +354,11 @@ ul {
     font-size: 16px;
     color: #636363;
     line-height: 1.6;
+}
+
+.p-margin-15 p {
+    margin: 15px 0px !important;
+}
+.color-blue {
+    color: #4b9bb3 !important;
 }

@@ -88,7 +88,7 @@
         <section class="service-section spad">
             <div class="container">
                 <div class="section-title text-center">
-                    <h3 class="color-rose">WELCOME TO AALUV MATHS</h3>
+                    <h3 class="color-blue">WELCOME TO AALUV MATHS</h3>
 <!--                    <p>Learning at one's own pace, improving fundamental academic capability</p>-->
                 </div>
                 <div class="row">
@@ -96,8 +96,8 @@
                         <img src="img/icon1.png" align="left"> 
                         <p class="text-justify" align="left">Aaluv Maths is a unique Comprehensive Mathematic Learning Solution helping millions of students world-wide developing a self-motivated learning and attitude which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
                         <p class="text-justify" align="left">Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
-                        <h3>Company Profile</h3>
-                        <p class="text-justify" align="left">The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe. <a href="#"> Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
+                        <h3 class="color-blue">Company Profile</h3>
+                        <p class="text-justify" align="left">The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe. <a href="#"> Read More <i class="fas fa-arrow-right"></i></a></p>
                     </div>
                     <div class="col-lg-6 pt-5 pt-lg-0">
                         <img src="img/about.jpg" alt="">
@@ -105,7 +105,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>AALUV Classroom Instructor</h3>
+                        <h3 class="color-blue">AALUV Classroom Instructor</h3>
                     </div>
                     <div class="col-lg-5 about-text">
                         <img src="img/about-1.jpg" alt="" />
