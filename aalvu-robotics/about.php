@@ -54,6 +54,29 @@
         </section>
         <!-- About section end-->
 
+        <!-- About section -->
+        <section class="about-section spad pt-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h5>Why AALUV Robotics</h5>
+                        <ul class="list-style-none">
+                            <i class="fas fa-check"></i><li>Extensive syllabus on Robotics for the School students starting from Class 1 to Class – 12</li>
+                            <i class="fas fa-check"></i><li>Accepted as a part of the curriculum in the schools</li>
+                            <i class="fas fa-check"></i><li>The syllabus has been aligned along the lines of the Science and Mathematics syllabus that the students learn in the classrooms.</li>
+                            <i class="fas fa-check"></i><li>This curriculum on Robotics gives a Hands-on Experience with live physical models</li>
+                            <i class="fas fa-check"></i><li>Better understanding and an interesting learning experience.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5>R & D</h5>
+                        <p class="text-justify">AALUV has to developed expertise in setting up well appreciated Robotics Laboratories inside Schools for the exclusive use of the school students which is unique and tailor made for its Curriculum. Program comes with complete Robotics kits and operation manual.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About section end-->
+
 
         <!-- Testimonial section  -->
 <!--        <section class="testimonial-section spad">

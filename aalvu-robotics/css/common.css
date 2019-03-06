@@ -79,7 +79,8 @@ td, th {
 }
 
 .syllabus tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #4ea491;
+    color: #fff;
 }
 
 
@@ -393,16 +394,19 @@ ul.nacc li p {
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 17px;
+    width: 11.11%;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #ddd;
+    background-color: #ee4f77;
+    color: #fff;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-    background-color: #ccc;
+    background-color: #ee4f77;
+    color: #fff;
 }
 
 /* Style the tab content */
@@ -411,4 +415,12 @@ ul.nacc li p {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .tab button {
+        width: 100% !important;
+        border: 1px solid #fff;
+        padding: 3px 0px;
+    }
 }
