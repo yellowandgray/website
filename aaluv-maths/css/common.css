@@ -363,7 +363,7 @@ ul {
     color: #4b9bb3 !important;
 }
 .list-style-disc {
-list-style-type:disc;
+    list-style-type:disc;
 }
 
 .padding-l-20 p {
@@ -372,4 +372,12 @@ list-style-type:disc;
 
 .padding-l-20 i {
     padding-top: 5px;
+}
+.section-background {
+    background-color: #f7f7f7;
+    padding-top: 30px !important;
+}
+.breadcrumb-bg {
+    padding: 15px 0 !important;
+    background-color: #eee;
 }
