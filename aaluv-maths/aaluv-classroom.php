@@ -13,7 +13,7 @@
         <div class="site-breadcrumb breadcrumb-bg">
             <div class="container">
                 <a href="index.php"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-right"></i>
-                <span>Aaluv Classroom</span>
+                <span>Classroom</span>
             </div>
         </div>
         <!-- Breadcrumb section end -->

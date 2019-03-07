@@ -10,7 +10,7 @@
         <!-- End Banner Section -->
 
         <!-- Breadcrumb section -->
-        <div class="site-breadcrumb">
+        <div class="site-breadcrumb breadcrumb-bg">
             <div class="container">
                 <a href="index.php"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-right"></i>
                 <span>News & Events</span>

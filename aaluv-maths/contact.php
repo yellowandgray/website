@@ -17,7 +17,7 @@
         <!-- End Banner Section -->
 
         <!-- Breadcrumb section -->
-        <div class="site-breadcrumb">
+        <div class="site-breadcrumb breadcrumb-bg">
             <div class="container">
                 <a href="index.php"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-right"></i>
                 <span>Contact</span>
@@ -27,7 +27,7 @@
 
 
         <!-- Courses section -->
-        <section class="contact-page spad pt-0">
+        <section class="contact-page spad pt-0 section-background">
             <div class="container">
                 <div class="map-section">
                     <div class="contact-info-warp">

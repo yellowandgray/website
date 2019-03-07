@@ -10,14 +10,14 @@
         <!-- End Banner Section -->
 
         <!-- Breadcrumb section -->
-        <div class="site-breadcrumb">
+        <div class="site-breadcrumb breadcrumb-bg">
             <div class="container">
                 <a href="index.php"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-right"></i>
                 <span>Franchise</span>
             </div>
         </div>
         <!-- Breadcrumb section end -->
-        <section class="padding-b-70">
+        <section class="padding-b-70 section-background">
             <div class="container">
                 <h3>What's it like to be a Aaluv instructor?</h3>
                 <div class="row padding-b-20">
