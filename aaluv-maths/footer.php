@@ -6,7 +6,7 @@
             <div class="col-sm-6 col-lg-3 footer-widget">
                 <div class="about-widget">
                     <img src="img/aaluv-logo.png" alt="">
-                    <p>lorem ipsum dolor sit amet, consecter adipiscing elite. Donec minos varius, viverra justo ut, aliquet nisl.</p>
+                    <p>Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
                     <div class="social pt-1">
                         <a href=""><i class="fab fa-twitter-square"></i></a>
                         <a href=""><i class="fab fa-facebook-square"></i></a>
@@ -25,26 +25,26 @@
                         <li><a href="about.php">About us</a></li>
                         <li><a href="aaluv-classroom.php">Classroom</a></li>
                         <li><a href="news-events.php">News&Events</a></li>
-                        <li><a href="franchise.php">Franchise</a></li>
+                        <li><a href="business-requisites-franchise.php">Franchise</a></li>
                         <li><a href="contact.php">Contact</a></li>
                         <li><a href="careers.php">Careers</a></li>
                         <li><a href="faq.php">FAQs</a></li>
-                        <li><a href="classroom-enrollment.php">Classroom Enrollment</a></li>
+<!--                        <li><a href="classroom-enrollment.php">Classroom Enrollment</a></li>-->
                     </ul>
                 </div>
             </div>
             <!-- widget -->
             <div class="col-sm-6 col-lg-3 footer-widget">
-                <h6 class="fw-title">RECENT POST</h6>
+                <h6 class="fw-title">ABOUT AALUV</h6>
                 <ul class="recent-post">
                     <li>
-                        <p>Snackable study:How to break <br> up your master's degree</p>
-                        <span><i class="fa fa-clock-o"></i>24 Mar 2018</span>
+                        <p class="text-justify">Aaluv Maths is a unique Comprehensive Mathematic Learning Solution helping millions of students world-wide developing a self-motivated learning and attitude which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
+<!--                        <span><i class="fa fa-clock-o"></i>24 Mar 2018</span>-->
                     </li>
-                    <li>
+<!--                    <li>
                         <p>Open University plans major <br> cuts to number of staff</p>
                         <span><i class="fa fa-clock-o"></i>24 Mar 2018</span>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
             <!-- widget -->
@@ -53,7 +53,7 @@
                 <ul class="contact">
                     <li><p><i class="fa fa-map-marker"></i> 40, Kershaw Drive, Narre Warren South, Melbourne, Victoria 3805, Australia.</p></li>
                     <li><p><i class="fa fa-phone"></i> +61 3 97056268</p></li>
-                    <li><p><i class="fa fa-envelope"></i> info@aaluvglobal.org</p></li>
+                    <li><p><i class="fa fa-envelope"></i> info@aaluvglobal.com</p></li>
 <!--                    <li><p><i class="fa fa-clock-o"></i> Monday - Friday, 08:00AM - 06:00 PM</p></li>-->
                 </ul>
             </div>

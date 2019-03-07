@@ -85,7 +85,7 @@
 
 
         <!-- Services section -->
-        <section class="service-section spad">
+        <section class="service-section spad wow fadeInDown">
             <div class="container">
                 <div class="section-title text-center">
                     <h3 class="color-blue">WELCOME TO AALUV MATHS</h3>
@@ -184,10 +184,10 @@
 
 
         <!-- Enroll section -->
-        <section class="enroll-section spad set-bg" data-setbg="img/enroll-bg.jpg">
+        <section class="enroll-section spad set-bg wow fadeInDown" data-setbg="img/enroll-bg.jpg">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 text-center padding-50">
+                    <div class="col-md-4 text-center padding-38 wow fadeInDown">
                         <img class="text-center contents" src="img/icon7.png">
                         <h2 class="text-center color-white">About Aaluv </h2>
                         <p class="text-justify home-para color-white">The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe.</p>
@@ -195,7 +195,7 @@
                             <button class="site-btn">Read More</button>
                         </div>-->
                     </div>
-                    <div class="col-md-4 text-center padding-50">
+                    <div class="col-md-4 text-center padding-38 wow fadeInDown">
                         <img class="text-center contents" src="img/icon8.png">
                         <h2 class="text-center color-white">Our Classroom</h2>
                         <p class="text-justify home-para color-white">Min Area required1000 Sq. Ft, in a Semi Commercial Area.A well-illuminated and ventilated classroom of about 250 Sq. ft each and minimum of 2-3 class rooms with basic amenities such as Air condition, Fans, drinking water and washroom facilities. A comfortable seating arrangement.Separate Rooms for Counselling and Admin activity such as fee collection and parents meeting. </p>
@@ -203,14 +203,14 @@
                             <button class="site-btn">Read More</button>
                         </div>-->
                     </div>
-                    <div class="col-md-4 text-center padding-50">
+                    <div class="col-md-4 text-center padding-38 wow fadeInDown">
                         <img class="text-center contents" src="img/icon9.png">
                         <h2 class="text-center color-white">Our Principles</h2>
-                        <ul class="text-left home-para color-white">
-                            <li>Boosting fundamental academic skills </li>
-                            <li>No grading </li>
-                            <li>Self-Learning</li>
-                            <li>Comprehensive, life-skill-based education</li>
+                        <ul class="text-left icon-position home-para color-white">
+                            <i class="fas fa-check"></i><li>Boosting fundamental academic skills </li>
+                            <i class="fas fa-check"></i><li>No grading </li>
+                            <i class="fas fa-check"></i><li>Self-Learning</li>
+                            <i class="fas fa-check"></i><li>Comprehensive, life-skill-based education</li>
                         </ul>
 <!--                        <br/><br/>-->
 <!--                        <div class="text-center">
@@ -255,7 +255,7 @@
         <section class="courses-section spad">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-7 padding-section">
+                    <div class="col-lg-7 padding-section wow fadeInDown">
                         <h3 class="color-blue">AALUV Classroom Franchisee Desired Qualities</h3>
                         <!--                        <h3 >  Opening Shortly at ADYAR &#38; NEELANKARAI</h3>-->
                         <h4>The prospective franchisee must have:</h4>
@@ -269,7 +269,7 @@
                             <i class="fas fa-check color-blue"></i><li>Totally agree with Aaluv's philosophy</li>
                         </ul>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 wow fadeInDown">
                         <div class="contact-form">
                             <div class="text-center">
                                 <h3>Enquiry Form</h3>
