@@ -6,7 +6,7 @@
     <body>
         <?php include 'menu.php'; ?>
         <!-- Banner Section -->
-        <div class="sub-banner-section" style="background: url(img/sub-banner/franchise.jpg)no-repeat; height: 250px;"></div>
+        <div class="sub-banner-section" style="background: url(img/sub-banner/gallery.jpg)no-repeat; height: 250px;"></div>
         <!-- End Banner Section -->
 
         <!-- Breadcrumb section -->
