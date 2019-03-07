@@ -270,7 +270,7 @@
         <section class="courses-section spad">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7 text-justify padding-section wow fadeInDown">
+                    <div class="col-lg-7 text-justify wow fadeInDown">
                         <h3>R & D</h3>
                         <p>AALUV has to developed expertise in setting up well appreciated Robotics Laboratories inside Schools for the exclusive use of the school students which is unique and tailor made for its Curriculum.</p>
                         <p>Program comes with complete Robotics kits and operation manual. </p>
