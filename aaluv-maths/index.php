@@ -97,7 +97,7 @@
                         <p class="text-justify" align="left">Aaluv Maths is a unique Comprehensive Mathematic Learning Solution helping millions of students world-wide developing a self-motivated learning and attitude which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
                         <p class="text-justify" align="left">Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
                         <h3 class="color-blue">Company Profile</h3>
-                        <p class="text-justify" align="left">The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe. <a href="#"> Read More <i class="fas fa-arrow-right"></i></a></p>
+                        <p class="text-justify" align="left">The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe. <a href="about.php"> Read More <i class="fas fa-arrow-right"></i></a></p>
                     </div>
                     <div class="col-lg-6 pt-5 pt-lg-0">
                         <img src="img/about.jpg" alt="">

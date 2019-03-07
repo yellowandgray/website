@@ -87,15 +87,15 @@
         <!-- Services section -->
         <section class="service-section spad">
             <div class="container">
-                <div class="section-title text-center">
+                <div class="section-title text-center wow fadeInDown">
                     <h3 class="color-rose">WELCOME TO AALUV ROBOTICS</h3>
 <!--                    <p>Learning at one's own pace, improving fundamental academic capability</p>-->
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 pt-5 pt-lg-0 border-img">
+                    <div class="col-lg-6 pt-5 pt-lg-0 border-img wow fadeInDown">
                         <img src="img/about.jpg" alt="">
                     </div>
-                    <div class="col-lg-6 about-text">
+                    <div class="col-lg-6 about-text wow fadeInDown">
                         <p class="text-justify">AALUV is a Holistic Brain Development company, developing children's mind to better equip them for the challenges of Life,  this training program transforms and empowers Children to perform extensive calculations at stunning speed and accuracy with nothing but their own sharp mind to aid them.</p>
                         <p class="text-justify">The curriculum is specifically designed to enhance a child's skill set for the 21st Century’s robust Challenges.</p>
                         <p class="text-justify">AALUV endows the child with creativity, concentration, memory, speed writing, lateral thinking, listening capacity, analytical skills and over all self confidence making them an “Enhanced Global Citizens”</p>
@@ -184,9 +184,9 @@
         <!-- Enroll section -->
         <section class="enroll-section spad set-bg" data-setbg="img/enroll-bg.jpg">
             <div class="container">
-                <h2 class="text-center color-white">WHAT ROBOTICS CAN TEACH?</h2>
+                <h2 class="text-center color-white wow fadeInDown">WHAT ROBOTICS CAN TEACH?</h2>
                 <div class="row">
-                    <div class="col-md-4 padding-50">
+                    <div class="col-md-4 padding-50 wow fadeInDown">
                         <div class="text-center">
                             <img class="contents" src="img/icon7.png">
                             <h2 class="color-white">ENDOW RIGOR</h2>
@@ -200,7 +200,7 @@
                             <button class="site-btn">Read More</button>
                         </div>
                     </div>
-                    <div class="col-md-4 padding-50">
+                    <div class="col-md-4 padding-50 wow fadeInDown">
                         <div class="text-center">
                             <img class="contents" src="img/icon8.png">
                             <h2 class="color-white">DESIGN</h2>
@@ -214,7 +214,7 @@
                             <button class="site-btn">Read More</button>
                         </div>
                     </div>
-                    <div class="col-md-4 padding-50">
+                    <div class="col-md-4 padding-50 wow fadeInDown">
                         <div class="text-center">
                             <img class="contents" src="img/icon9.png">
                             <h2 class="color-white">WORK IN TEAMS</h2>
@@ -266,12 +266,12 @@
         <section class="courses-section spad">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7 text-justify padding-section">
+                    <div class="col-lg-7 text-justify padding-section wow fadeInDown">
                         <h3>R & D</h3>
                         <p>AALUV has to developed expertise in setting up well appreciated Robotics Laboratories inside Schools for the exclusive use of the school students which is unique and tailor made for its Curriculum.</p>
                         <p>Program comes with complete Robotics kits and operation manual. </p>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 wow fadeInDown">
                         <div class="contact-form">
                             <div class="text-center">
                                 <h3>Enquiry Form</h3>
