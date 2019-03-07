@@ -95,7 +95,7 @@
                     <div class="col-lg-6 pt-5 pt-lg-0 border-img wow fadeInDown">
                         <img src="img/about.jpg" alt="">
                     </div>
-                    <div class="col-lg-6 about-text wow fadeInDown">
+                    <div class="col-lg-6 about-text wow fadeInDown box-shadow">
                         <p class="text-justify">AALUV is a Holistic Brain Development company, developing children's mind to better equip them for the challenges of Life,  this training program transforms and empowers Children to perform extensive calculations at stunning speed and accuracy with nothing but their own sharp mind to aid them.</p>
                         <p class="text-justify">The curriculum is specifically designed to enhance a child's skill set for the 21st Century’s robust Challenges.</p>
                         <p class="text-justify">AALUV endows the child with creativity, concentration, memory, speed writing, lateral thinking, listening capacity, analytical skills and over all self confidence making them an “Enhanced Global Citizens”</p>
@@ -186,46 +186,50 @@
             <div class="container">
                 <h2 class="text-center color-white wow fadeInDown">WHAT ROBOTICS CAN TEACH?</h2>
                 <div class="row">
-                    <div class="col-md-4 padding-50 wow fadeInDown">
-                        <div class="text-center">
-                            <img class="contents" src="img/icon7.png">
-                            <h2 class="color-white">ENDOW RIGOR</h2>
-                        </div>
-                        <ul class="list-style-none color-white">
-                            <i class="fa fa-check" aria-hidden="true"></i><li>Learn something real</li>
-                            <i class="fa fa-check" aria-hidden="true"></i><li>Teach the realities and depth of science</li>
-                        </ul>
-                        <br>
-                        <div class="text-center">
-                            <button class="site-btn">Read More</button>
-                        </div>
-                    </div>
-                    <div class="col-md-4 padding-50 wow fadeInDown">
-                        <div class="text-center">
-                            <img class="contents" src="img/icon8.png">
-                            <h2 class="color-white">DESIGN</h2>
-                        </div>
-                        <ul class="list-style-none color-white">
-                            <i class="fa fa-check" aria-hidden="true"></i><li>Tinkering to explore</li>
-                            <i class="fa fa-check" aria-hidden="true"></i><li>Connect high and low level issues</li>
-                            <i class="fa fa-check" aria-hidden="true"></i><li>learn uncertainty & variability of world</li>
-                        </ul>
-                        <div class="text-center">
-                            <button class="site-btn">Read More</button>
+                    <div class="col-md-4 margin-b-20 wow fadeInDown">
+                        <div class="shadow">
+                            <div class="text-center">
+                                <img class="contents" src="img/icon7.png">
+                                <h2 class="color-white">ENDOW RIGOR</h2>
+                            </div>
+                            <ul class="list-style-none color-white">
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Learn something real</li>
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Teach the realities and depth of science</li>
+                            </ul>
+                            <div class="text-center">
+                                <button class="site-btn">Read More</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4 padding-50 wow fadeInDown">
-                        <div class="text-center">
-                            <img class="contents" src="img/icon9.png">
-                            <h2 class="color-white">WORK IN TEAMS</h2>
+                    <div class="col-md-4 margin-b-20 wow fadeInDown">
+                        <div class="shadow">
+                            <div class="text-center">
+                                <img class="contents" src="img/icon8.png">
+                                <h2 class="color-white">DESIGN</h2>
+                            </div>
+                            <ul class="list-style-none color-white">
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Tinkering to explore</li>
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Connect high and low level issues</li>
+                                <i class="fa fa-check" aria-hidden="true"></i><li>learn uncertainty & variability of world</li>
+                            </ul>
+                            <div class="text-center">
+                                <button class="site-btn">Read More</button>
+                            </div>
                         </div>
-                        <ul class="list-style-none color-white">
-                            <i class="fa fa-check" aria-hidden="true"></i><li>Performance assessment through Competition</li>
-                            <i class="fa fa-check" aria-hidden="true"></i><li>Faster team spirit and camaraderie</li>
-                        </ul>
-                        <br>
-                        <div class="text-center">
-                            <button class="site-btn">Read More</button>
+                    </div>
+                    <div class="col-md-4 margin-b-20 wow fadeInDown">
+                        <div class="shadow">
+                            <div class="text-center">
+                                <img class="contents" src="img/icon9.png">
+                                <h2 class="color-white">WORK IN TEAMS</h2>
+                            </div>
+                            <ul class="list-style-none color-white">
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Performance assessment through Competition</li>
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Faster team spirit and camaraderie</li>
+                            </ul>
+                            <div class="text-center">
+                                <button class="site-btn">Read More</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -271,7 +275,7 @@
                         <p>AALUV has to developed expertise in setting up well appreciated Robotics Laboratories inside Schools for the exclusive use of the school students which is unique and tailor made for its Curriculum.</p>
                         <p>Program comes with complete Robotics kits and operation manual. </p>
                     </div>
-                    <div class="col-lg-5 wow fadeInDown">
+                    <div class="col-lg-5 wow fadeInDown enquiry-box">
                         <div class="contact-form">
                             <div class="text-center">
                                 <h3>Enquiry Form</h3>

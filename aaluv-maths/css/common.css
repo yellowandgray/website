@@ -384,3 +384,16 @@ ul {
     padding: 15px 0 !important;
     background-color: #eee;
 }
+
+.shadow {
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #544e50;
+    height: 100%
+}
+
+.margin-b-20 {
+    margin-bottom: 20px;
+}

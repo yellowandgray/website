@@ -113,7 +113,7 @@
                     <div class="col-lg-7">
                         <p class="text-justify">AALUV aims at nurturing the joy of learning mathematics in children, building self-confidence and imparting knowledge that will complement what they have learned in school. It helps children develop their logical thinking skill through learning numbers and acquiring knowledge and also develop independence in solving problems. </p>
                         <p class="text-justify">Training Details:  Instructor has to complete the worksheets provided before they start the classes for students of their batch and answered works sheets will be kept only in the center under lock and key.</p>
-                        
+
                     </div>
                 </div>
             </div>
@@ -187,35 +187,41 @@
         <section class="enroll-section spad set-bg wow fadeInDown" data-setbg="img/enroll-bg.jpg">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 text-center padding-38 wow fadeInDown">
-                        <img class="text-center contents" src="img/icon7.png">
-                        <h2 class="text-center color-white">About Aaluv </h2>
-                        <p class="text-justify home-para color-white">The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe.</p>
-<!--                        <div class="text-center">
-                            <button class="site-btn">Read More</button>
-                        </div>-->
+                    <div class="col-md-4 text-center margin-b-20 wow fadeInDown">
+                        <div class="shadow">
+                            <img class="text-center contents" src="img/icon7.png">
+                            <h2 class="text-center color-white">About Aaluv </h2>
+                            <p class="text-justify home-para color-white">The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe.</p>
+                            <!--                        <div class="text-center">
+                                                        <button class="site-btn">Read More</button>
+                                                    </div>-->
+                        </div>
                     </div>
-                    <div class="col-md-4 text-center padding-38 wow fadeInDown">
-                        <img class="text-center contents" src="img/icon8.png">
-                        <h2 class="text-center color-white">Our Classroom</h2>
-                        <p class="text-justify home-para color-white">Min Area required1000 Sq. Ft, in a Semi Commercial Area.A well-illuminated and ventilated classroom of about 250 Sq. ft each and minimum of 2-3 class rooms with basic amenities such as Air condition, Fans, drinking water and washroom facilities. A comfortable seating arrangement.Separate Rooms for Counselling and Admin activity such as fee collection and parents meeting. </p>
-<!--                        <div class="text-center">
-                            <button class="site-btn">Read More</button>
-                        </div>-->
+                    <div class="col-md-4 text-center margin-b-20 wow fadeInDown">
+                        <div class="shadow">
+                            <img class="text-center contents" src="img/icon8.png">
+                            <h2 class="text-center color-white">Our Classroom</h2>
+                            <p class="text-justify home-para color-white">Min Area required1000 Sq. Ft, in a Semi Commercial Area.A well-illuminated and ventilated classroom of about 250 Sq. ft each and minimum of 2-3 class rooms with basic amenities such as Air condition, Fans, drinking water and washroom facilities. A comfortable seating arrangement.Separate Rooms for Counselling and Admin activity such as fee collection and parents meeting. </p>
+                            <!--                        <div class="text-center">
+                                                        <button class="site-btn">Read More</button>
+                                                    </div>-->
+                        </div>
                     </div>
-                    <div class="col-md-4 text-center padding-38 wow fadeInDown">
-                        <img class="text-center contents" src="img/icon9.png">
-                        <h2 class="text-center color-white">Our Principles</h2>
-                        <ul class="text-left icon-position home-para color-white">
-                            <i class="fas fa-check"></i><li>Boosting fundamental academic skills </li>
-                            <i class="fas fa-check"></i><li>No grading </li>
-                            <i class="fas fa-check"></i><li>Self-Learning</li>
-                            <i class="fas fa-check"></i><li>Comprehensive, life-skill-based education</li>
-                        </ul>
-<!--                        <br/><br/>-->
-<!--                        <div class="text-center">
-                            <button class="site-btn">Read More</button>
-                        </div>-->
+                    <div class="col-md-4 text-center margin-b-20 wow fadeInDown">
+                        <div class="shadow">
+                            <img class="text-center contents" src="img/icon9.png">
+                            <h2 class="text-center color-white">Our Principles</h2>
+                            <ul class="text-left icon-position home-para color-white">
+                                <i class="fas fa-check"></i><li>Boosting fundamental academic skills </li>
+                                <i class="fas fa-check"></i><li>No grading </li>
+                                <i class="fas fa-check"></i><li>Self-Learning</li>
+                                <i class="fas fa-check"></i><li>Comprehensive, life-skill-based education</li>
+                            </ul>
+                            <!--                        <br/><br/>-->
+                            <!--                        <div class="text-center">
+                                                        <button class="site-btn">Read More</button>
+                                                    </div>-->
+                        </div>
                     </div>
                 </div>
                 <!--                                <div class="row">

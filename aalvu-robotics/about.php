@@ -25,7 +25,7 @@
 
 
         <!-- About section -->
-        <section class="about-section spad pt-0">
+        <section class="about-section padding-b-20 pt-0">
             <div class="container">
                 <div class="section-title text-center">
                     <h3>WELCOME TO AALUV</h3>
@@ -55,7 +55,7 @@
         <!-- About section end-->
 
         <!-- About section -->
-        <section class="about-section spad pt-0">
+        <section class="about-section ptb-60" style="background: #eee">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">

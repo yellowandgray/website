@@ -79,7 +79,7 @@ td, th {
 }
 
 .syllabus tr:nth-child(even) {
-    background-color: #4ea491;
+    background-color: #4fa491;
     color: #fff;
 }
 
@@ -272,8 +272,9 @@ ul.nacc li p {
 
 .list-style-none i {
     position: absolute;
-    font-size: 22px;
+    font-size: 20px;
     color: #fe4e7c;
+    margin-top: 5px;
 }
 
 .list-style-none li {
@@ -369,7 +370,25 @@ ul.nacc li p {
 }
 
 .border-img img {
-    border: 1px solid #fe4e7c;
+    box-shadow: 0 0 20px 3px #0000001f;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.box-shadow {
+    box-shadow: 0 0 20px 3px #0000001f;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.enquiry-box {
+    background: #0000008c;
+    box-shadow: 0px 0px 6px 0px #000;
+    padding: 20px;
+}
+
+.enquiry-box h3 {
+    color: #fff !important;
 }
 
 .p-margin li {
@@ -425,4 +444,21 @@ ul.nacc li p {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
+}
+
+.shadow {
+    background: rgba(255, 255, 255, 0.1);
+    /*    text-align: center;*/
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #544e50;
+}
+
+.margin-b-20 {
+    margin-bottom: 20px;
+}
+
+.ptb-60 {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }

@@ -51,46 +51,50 @@
             <div class="container">
                 <h2 class="text-center color-white">WHAT ROBOTICS CAN TEACH?</h2>
                 <div class="row">
-                    <div class="col-md-4 padding-50">
-                        <div class="text-center">
-                            <img class="contents" src="img/icon7.png">
-                            <h2 class="color-white">ENDOW RIGOR</h2>
-                        </div>
-                        <ul class="list-style-none color-white">
-                            <i class="fas fa-check"></i><li>Learn something real</li>
-                            <i class="fas fa-check"></i><li>Teach the realities and depth of science</li>
-                        </ul>
-                        <br>
-                        <div class="text-center">
-                            <button class="site-btn">Read More</button>
-                        </div>
-                    </div>
-                    <div class="col-md-4 padding-50">
-                        <div class="text-center">
-                            <img class="contents" src="img/icon8.png">
-                            <h2 class="color-white">DESIGN</h2>
-                        </div>
-                        <ul class="list-style-none color-white">
-                            <i class="fas fa-check"></i><li>Tinkering to explore</li>
-                            <i class="fas fa-check"></i><li>Connect high and low level issues</li>
-                            <i class="fas fa-check"></i><li>learn uncertainty & variability of world</li>
-                        </ul>
-                        <div class="text-center">
-                            <button class="site-btn">Read More</button>
+                    <div class="col-md-4 margin-b-20 wow fadeInDown">
+                        <div class="shadow">
+                            <div class="text-center">
+                                <img class="contents" src="img/icon7.png">
+                                <h2 class="color-white">ENDOW RIGOR</h2>
+                            </div>
+                            <ul class="list-style-none color-white">
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Learn something real</li>
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Teach the realities and depth of science</li>
+                            </ul>
+                            <div class="text-center">
+                                <button class="site-btn">Read More</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4 padding-50">
-                        <div class="text-center">
-                            <img class="contents" src="img/icon9.png">
-                            <h2 class="color-white">WORK IN TEAMS</h2>
+                    <div class="col-md-4 margin-b-20 wow fadeInDown">
+                        <div class="shadow">
+                            <div class="text-center">
+                                <img class="contents" src="img/icon8.png">
+                                <h2 class="color-white">DESIGN</h2>
+                            </div>
+                            <ul class="list-style-none color-white">
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Tinkering to explore</li>
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Connect high and low level issues</li>
+                                <i class="fa fa-check" aria-hidden="true"></i><li>learn uncertainty & variability of world</li>
+                            </ul>
+                            <div class="text-center">
+                                <button class="site-btn">Read More</button>
+                            </div>
                         </div>
-                        <ul class="list-style-none color-white">
-                            <i class="fas fa-check"></i><li>Performance assessment through Competition</li>
-                            <i class="fas fa-check"></i><li>Faster team spirit and camaraderie</li>
-                        </ul>
-                        <br>
-                        <div class="text-center">
-                            <button class="site-btn">Read More</button>
+                    </div>
+                    <div class="col-md-4 margin-b-20 wow fadeInDown">
+                        <div class="shadow">
+                            <div class="text-center">
+                                <img class="contents" src="img/icon9.png">
+                                <h2 class="color-white">WORK IN TEAMS</h2>
+                            </div>
+                            <ul class="list-style-none color-white">
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Performance assessment through Competition</li>
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Faster team spirit and camaraderie</li>
+                            </ul>
+                            <div class="text-center">
+                                <button class="site-btn">Read More</button>
+                            </div>
                         </div>
                     </div>
                 </div>
