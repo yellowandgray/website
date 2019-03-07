@@ -418,3 +418,11 @@ ul.nacc li p {
 }
 
 .color-blue {color: #10778e}
+
+.gallery-img img {
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}

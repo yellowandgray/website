@@ -17,7 +17,7 @@
                 <p><span>Phone:</span>+61 3 97056268</p>
             </div>
             <div class="hf-item">
-                <i class="fa fa-envelope-o"></i>
+                <i class="far fa-envelope"></i>
                 <p><span>Email:</span>info@aaluvglobal.org</p>
             </div>
         </div>
@@ -38,7 +38,7 @@
             <li class="<?php if ($page == 'about') {echo 'active';} ?>"><a href="about.php">About Us</a></li>
             <li class="<?php if ($page == 'learning') {echo 'active';} ?>"><a href="learning.php">Learning</a></li>
             <li class="<?php if ($page == 'syllabus') {echo 'active';} ?>"><a href="syllabus.php">Syllabus</a></li>
-            <li class="<?php if ($page == 'gallery') {echo 'active';} ?>"><a href="#">Gallery</a></li>
+            <li class="<?php if ($page == 'gallery') {echo 'active';} ?>"><a href="gallery.php">Gallery</a></li>
             <li class="<?php if ($page == 'contact') {echo 'active';} ?>"><a href="contact.php">Contact</a></li>
 <!--            <li class="<?php if ($page == 'career') {echo 'active';} ?>"><a href="careers.php">Careers</a></li>
             <li class="<?php if ($page == 'faq') {echo 'active';} ?>"><a href="faq.php">FAQ</a></li>
