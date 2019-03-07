@@ -46,29 +46,29 @@
                     <div class="col-md-12">
                         <h4>WE BELIEVE IN YOU</h4>
                         <ul class="list-style-none">
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i><li>Unlike the typical tuition centre jobs</li>
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i><li>We are passionate about our people</li>
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i><li>We encourage our talents to pursue their professional development by providing support and training to enable them to achieve their individual goals.</li>
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i><li>Our talents enjoy a wide range of benefits in addition to those expected as Country Standard</li>
+                            <i class="fas fa-check" aria-hidden="true"></i><li>Unlike the typical tuition centre jobs</li>
+                            <i class="fas fa-check" aria-hidden="true"></i><li>We are passionate about our people</li>
+                            <i class="fas fa-check" aria-hidden="true"></i><li>We encourage our talents to pursue their professional development by providing support and training to enable them to achieve their individual goals.</li>
+                            <i class="fas fa-check" aria-hidden="true"></i><li>Our talents enjoy a wide range of benefits in addition to those expected as Country Standard</li>
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <h4>REQUIREMENTS</h4>
                         <ul class="list-style-none">
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i><li>Strong organisational and office skills.</li>
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i><li>Self Motivated and Passionate about Building business.</li>
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i><li>Excellent communication skills and able to connect with parents effortlessly.</li>
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i><li>Excellent interpersonal skills and thrives on teamwork.</li>
+                            <i class="fas fa-check" aria-hidden="true"></i><li>Strong organisational and office skills.</li>
+                            <i class="fas fa-check" aria-hidden="true"></i><li>Self Motivated and Passionate about Building business.</li>
+                            <i class="fas fa-check" aria-hidden="true"></i><li>Excellent communication skills and able to connect with parents effortlessly.</li>
+                            <i class="fas fa-check" aria-hidden="true"></i><li>Excellent interpersonal skills and thrives on teamwork.</li>
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <h4>WE ARE LOOKING FOR CANDIDATES</h4>
                         <strong>WHO</strong>
                         <ul class="list-style-none">
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i><li>Enjoy a young and vibrant work environment</li>
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i><li>Are pro-active go getter who make things to happen</li>
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i><li>Want a career where learning and change is the only constant</li>
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i><li>Are able to work on weekends</li>
+                            <i class="fas fa-check" aria-hidden="true"></i><li>Enjoy a young and vibrant work environment</li>
+                            <i class="fas fa-check" aria-hidden="true"></i><li>Are pro-active go getter who make things to happen</li>
+                            <i class="fas fa-check" aria-hidden="true"></i><li>Want a career where learning and change is the only constant</li>
+                            <i class="fas fa-check" aria-hidden="true"></i><li>Are able to work on weekends</li>
                         </ul>
                     </div>
                 </div>
