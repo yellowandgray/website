@@ -10,7 +10,7 @@
         <!-- End Banner Section -->
 
         <!-- Breadcrumb section -->
-        <div class="site-breadcrumb">
+        <div class="site-breadcrumb breadcrumb-bg">
             <div class="container">
                 <a href="index.php"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-right"></i>
                 <span>Aaluv Classroom</span>
@@ -18,7 +18,7 @@
         </div>
         <!-- Breadcrumb section end -->
 
-        <section class="classroom-section spad pt-0">
+        <section class="classroom-section spad pt-0 section-background">
             <div class="container">
                 <div class="naccs">
                     <div class="grid">

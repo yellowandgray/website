@@ -15,7 +15,7 @@
         <!-- End Banner Section -->
 
         <!-- Breadcrumb section -->
-        <div class="site-breadcrumb">
+        <div class="site-breadcrumb breadcrumb-bg">
             <div class="container">
                 <a href="index.php"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-right"></i>
                 <span>About Us</span>
@@ -25,7 +25,7 @@
 
 
         <!-- About section -->
-        <section class="about-section spad pt-0">
+        <section class="about-section spad pt-0 section-background">
             <div class="container">
                 <div class="section-title text-center">
                     <h3 class="color-blue">WELCOME TO AALUV</h3>
