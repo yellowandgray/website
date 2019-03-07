@@ -378,6 +378,6 @@ ul {
     padding-top: 30px !important;
 }
 .breadcrumb-bg {
-    padding: 15px 0 !important;
-    background-color: #eee;
+/*    padding: 15px 0 !important;*/
+    background-color: #f7f7f7;
 }
