@@ -8,10 +8,10 @@
                     <img src="img/aaluv-logo.png" alt="">
                     <p>lorem ipsum dolor sit amet, consecter adipiscing elite. Donec minos varius, viverra justo ut, aliquet nisl.</p>
                     <div class="social pt-1">
-                        <a href=""><i class="fa fa-twitter-square"></i></a>
-                        <a href=""><i class="fa fa-facebook-square"></i></a>
-                        <a href=""><i class="fa fa-google-plus-square"></i></a>
-                        <a href=""><i class="fa fa-linkedin-square"></i></a>
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <a href=""><i class="fab fa-facebook-square"></i></a>
+                        <a href=""><i class="fab fa-google-plus-square"></i></a>
+                        <a href=""><i class="fab fa-linkedin-square"></i></a>
                         <a href=""><i class="fa fa-rss-square"></i></a>
                     </div>
                 </div>

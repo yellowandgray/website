@@ -365,3 +365,11 @@ ul {
 .list-style-disc {
 list-style-type:disc;
 }
+
+.padding-l-20 p {
+    padding-left: 20px;
+}
+
+.padding-l-20 i {
+    padding-top: 5px;
+}

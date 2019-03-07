@@ -35,3 +35,12 @@
         padding: 15px !important;
     }
 }
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .tab button {
+        width: 100% !important;
+        border: 1px solid #fff;
+        padding: 3px 0px;
+    }
+}

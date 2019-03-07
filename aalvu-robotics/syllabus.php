@@ -28,7 +28,7 @@
         <section class="about-section spad pt-0">
             <div class="container syllabus">
                 <div class="section-title text-center">
-                    <h3>WELCOME TO AALUV</h3>
+                    <h3>Syllabus</h3>
                 </div>
                 <div class="tab">
                     <button class="tablinks" onclick="openCity(event, 'tab-1')" id="defaultOpen">Class 1</button>
