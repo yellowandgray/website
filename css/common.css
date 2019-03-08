@@ -573,7 +573,7 @@ h2{
 }
 
 .syllabus tr:nth-child(even) {
-    background-color: #4fa491;
+    background-color: #267c95;;
     color: #fff;
 }
 .tab {
@@ -594,7 +594,7 @@ h2{
 }
 
 .tab button.active {
-    background-color: #ee4f77;
+    background-color:  #4cd192;
     color: #fff;
 }
 .tabcontent {

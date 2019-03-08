@@ -88,11 +88,11 @@
                         <div class="box-radius-bg-60">
                             <h4>SYLLABUS</h4>
                             <ul class="list-style-none color-white">
-                                <i class="fas fa-check"></i><li>EMOTIONAL ENGAGEMENT !</li>
-                                <i class="fas fa-check"></i><li>INTERACTION WITH PHYSICAL DEVICES !</li>
-                                <i class="fas fa-check"></i><li>PRACTICAL LEARNING !</li>
-                                <i class="fas fa-check"></i><li>MULTI-DISCIPLINARY LEARNING !</li>
-                                <i class="fas fa-check"></i><li>CONSTRUCTIVIST APPROACH !</li>
+                                <i class="fas fa-check"></i><li>class-1</li>
+                                <i class="fas fa-check"></i><li>class-2</li>
+                                <i class="fas fa-check"></i><li>class-3</li>
+                                <i class="fas fa-check"></i><li>class-4</li>
+                                <i class="fas fa-check"></i><li>class-5</li>
                             </ul>
                             <a href="syllabus.php" class="site-btn">Read More</a>
                         </div>
