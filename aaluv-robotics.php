@@ -11,11 +11,11 @@
         <!-- Header section end -->
 
         <!-- Banner Section -->
-        <div class="sub-banner-section" style="background: url(img/sub-banner/about-sub.jpg)no-repeat; height: 250px;"></div>
+        <div class="sub-banner-section" style="background: url(img/sub-banner/syllabus.jpg)no-repeat; height: 250px;"></div>
         <!-- End Banner Section -->
 
         <!-- Breadcrumb section -->
-        <div class="site-breadcrumb">
+        <div class="site-breadcrumb breadcrumb-bg">
             <div class="container">
                 <a href="index.php"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-right"></i>
                 <span>AALUV Robotics</span>
@@ -25,14 +25,14 @@
 
 
         <!-- About section -->
-        <section class="about-section padding-b-20 pt-0">
+        <section class="about-section padding-b-20 spad">
             <div class="container">
                 <div class="section-title text-center">
-                    <h3>WELCOME TO AALUV</h3>
+                    <h3 class="color-blue text-center">AALUV Robotics</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-7">
-                        <h5>About AALUV Robotics</h5>
+                        <h4 class="color-blue">About AALUV Robotics</h4>
                         <p class="text-justify">AALUV ROBOTICS is a “Curriculum Aligned  Robotic Program” for school students with  Classes taken both “During School Hours”  and “After School Hours” as well. (Full time & Part time)</p>
                         <p class="text-justify">Integrated into the Academic curriculum which enable change in contemporary education System.</p>
                         <p class="text-justify">Introduces students to Knowledge, Concepts and skills that’s needed for understanding technology of the future which is highly interactive, multi-modal, adaptive and autonomous</p>
@@ -52,17 +52,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h5>Why AALUV Robotics</h5>
+                        <h4 class="color-blue">Why AALUV Robotics</h4>
                         <ul class="list-style-none">
                             <i class="fas fa-check color-blue"></i><li>Extensive syllabus on Robotics for the School students starting from Class 1 to Class – 12</li>
-                             <i class="fas fa-check color-blue"></i><li>Accepted as a part of the curriculum in the schools</li>
-                             <i class="fas fa-check color-blue"></i><li>The syllabus has been aligned along the lines of the Science and Mathematics syllabus that the students learn in the classrooms.</li>
-                             <i class="fas fa-check color-blue"></i><li>This curriculum on Robotics gives a Hands-on Experience with live physical models</li>
-                             <i class="fas fa-check color-blue"></i><li>Better understanding and an interesting learning experience.</li>
+                            <i class="fas fa-check color-blue"></i><li>Accepted as a part of the curriculum in the schools</li>
+                            <i class="fas fa-check color-blue"></i><li>The syllabus has been aligned along the lines of the Science and Mathematics syllabus that the students learn in the classrooms.</li>
+                            <i class="fas fa-check color-blue"></i><li>This curriculum on Robotics gives a Hands-on Experience with live physical models</li>
+                            <i class="fas fa-check color-blue"></i><li>Better understanding and an interesting learning experience.</li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
-                        <h5>R & D</h5>
+                        <h4 class="color-blue">R & D</h4>
                         <p class="text-justify">AALUV has to developed expertise in setting up well appreciated Robotics Laboratories inside Schools for the exclusive use of the school students which is unique and tailor made for its Curriculum. Program comes with complete Robotics kits and operation manual.</p>
                     </div>
                 </div>
@@ -70,164 +70,83 @@
         </section>
         <section class="about-section ptb-60">
             <div class="container">
-                <h5>LEARNING</h5>
                 <div class="row">
-                    <div class="col-lg-6">
-                       <ul class="list-style-none">
-                             <i class="fas fa-check color-blue"></i><li>EMOTIONAL ENGAGEMENT !</li>
-                             <i class="fas fa-check color-blue"></i><li>INTERACTION WITH PHYSICAL DEVICES !</li>
-                             <i class="fas fa-check color-blue"></i><li>PRACTICAL LEARNING !</li>
-                             <i class="fas fa-check color-blue"></i><li>MULTI-DISCIPLINARY LEARNING !</li>
-                             <i class="fas fa-check color-blue"></i><li>CONSTRUCTIVIST APPROACH !</li>
+                    <div class="col-lg-6 padding-30">
+                        <h4 class="color-blue">LEARNING</h4>
+                        <ul class="list-style-none">
+                            <i class="fas fa-check color-blue"></i><li>EMOTIONAL ENGAGEMENT !</li>
+                            <i class="fas fa-check color-blue"></i><li>INTERACTION WITH PHYSICAL DEVICES !</li>
+                            <i class="fas fa-check color-blue"></i><li>PRACTICAL LEARNING !</li>
+                            <i class="fas fa-check color-blue"></i><li>MULTI-DISCIPLINARY LEARNING !</li>
+                            <i class="fas fa-check color-blue"></i><li>CONSTRUCTIVIST APPROACH !</li>
                         </ul>
-                        <div>Read More</div>
+                        <a href="learning.php" class="site-btn">Read More</a>
                     </div>
                     <div class="col-lg-6">
-                       <img src="img/learning.png" alt="" />
+                        <img src="img/learning.png" alt="" />
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="about-section spad">
+            <div class="container">
+                <h4 class="color-blue text-center">GALLERY</h4>
+                <section class="customer-logos slider spad">
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-001.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-002.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-003.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-004.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-005.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-006.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-007.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-008.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-009.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-010.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-011.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-012.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-013.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-014.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-015.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-016.jpg" alt=""/></div>
+                    <div class="slide"><img src="img/gallery/aaluv-robotics-017.jpg" alt=""/></div>
+                </section>
+                <div class="text-center">
+                    <a href="learning.php" class="site-btn">Read More</a>
+                </div>
+            </div>
+        </section>
+
         <!-- About section end-->
-
-
-        <!-- Testimonial section  -->
-<!--        <section class="testimonial-section spad">
-            <div class="container">
-                <div class="testimonial-slider owl-carousel">
-                    <div class="ts-item">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="ts-author-pic set-bg" data-setbg="img/member/5.jpg"></div>
-                            </div>
-                            <div class="col-md-9 ts-text">
-                                <p>“ I want to let you know that I am very absolutely delighted with the course in every respect. It has been particularly pleasing for me, with an interest in seeing the application and good educational practice to school education. Learn a different approach that leads to better outcomes. ”</p>
-                                <h5>Mr. Peter Crough</h5>
-                                <span>Student’s Parent</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ts-item">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="ts-author-pic set-bg" data-setbg="img/member/5.jpg"></div>
-                            </div>
-                            <div class="col-md-9 ts-text">
-                                <p>“ I want to let you know that I am very absolutely delighted with the course in every respect. It has been particularly pleasing for me, with an interest in seeing the application and good educational practice to school education. Learn a different approach that leads to better outcomes. ”</p>
-                                <h5>Mr. Peter Crough</h5>
-                                <span>Student’s Parent</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ts-item">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="ts-author-pic set-bg" data-setbg="img/member/5.jpg"></div>
-                            </div>
-                            <div class="col-md-9 ts-text">
-                                <p>“ I want to let you know that I am very absolutely delighted with the course in every respect. It has been particularly pleasing for me, with an interest in seeing the application and good educational practice to school education. Learn a different approach that leads to better outcomes. ”</p>
-                                <h5>Mr. Peter Crough</h5>
-                                <span>Student’s Parent</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>-->
-        <!-- Testimonial section end -->
-
-
-        <!-- Team section  -->
-<!--        <section class="team-section spad">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h3>OUR TEAM</h3>
-                    <p>The professional standards and expectations</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="member">
-                            <div class="member-pic set-bg" data-setbg="img/member/1.jpg">
-                                <div class="member-social">
-                                    <a href=""><i class="fa fa-facebook"></i></a>
-                                    <a href=""><i class="fa fa-twitter"></i></a>
-                                    <a href=""><i class="fa fa-pinterest"></i></a>
-                                </div>
-                            </div>
-                            <h5>Sasha Johnson</h5>
-                            <p>Literature Teacher</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="member">
-                            <div class="member-pic set-bg" data-setbg="img/member/2.jpg">
-                                <div class="member-social">
-                                    <a href=""><i class="fa fa-facebook"></i></a>
-                                    <a href=""><i class="fa fa-twitter"></i></a>
-                                    <a href=""><i class="fa fa-pinterest"></i></a>
-                                </div>
-                            </div>
-                            <h5>Darmian Shaw</h5>
-                            <p>Physics Teacher</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="member">
-                            <div class="member-pic set-bg" data-setbg="img/member/3.jpg">
-                                <div class="member-social">
-                                    <a href=""><i class="fa fa-facebook"></i></a>
-                                    <a href=""><i class="fa fa-twitter"></i></a>
-                                    <a href=""><i class="fa fa-pinterest"></i></a>
-                                </div>
-                            </div>
-                            <h5>Joshua Matt</h5>
-                            <p>Matt Teacher</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="member">
-                            <div class="member-pic set-bg" data-setbg="img/member/4.jpg">
-                                <div class="member-social">
-                                    <a href=""><i class="fa fa-facebook"></i></a>
-                                    <a href=""><i class="fa fa-twitter"></i></a>
-                                    <a href=""><i class="fa fa-pinterest"></i></a>
-                                </div>
-                            </div>
-                            <h5>Taylor Launer</h5>
-                            <p>Music Teacher</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>-->
-        <!-- Team section end -->
-
-
-        <!-- Newsletter section -->
-<!--        <section class="newsletter-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5 col-lg-7">
-                        <div class="section-title mb-md-0">
-                            <h3>NEWSLETTER</h3>
-                            <p>Subscribe and get the latest news and useful tips, advice and best offer.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-7 col-lg-5">
-                        <form class="newsletter">
-                            <input type="text" placeholder="Enter your email">
-                            <button class="site-btn">SUBSCRIBE</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>-->
-        <!-- Newsletter section end -->	
-
 
         <!-- Footer section -->
         <?php include 'footer.php'; ?>
         <!-- Footer section end-->
+        <script>
+            $(document).ready(function () {
+                $('.customer-logos').slick({
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: false,
+                    responsive: [{
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 4
+                            }
+                        }, {
+                            breakpoint: 520,
+                            settings: {
+                                slidesToShow: 3
+                            }
+                        }]
+                });
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
     </body>
 </html>

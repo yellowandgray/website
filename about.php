@@ -11,7 +11,7 @@
         <!-- Header section end -->
 
         <!-- Banner Section -->
-        <div class="sub-banner-section" style="background: url(img/sub-banner/about-sub.jpg)no-repeat; height: 250px;"></div>
+        <div class="sub-banner-section" style="background: url(img/sub-banner/syllabus.jpg)no-repeat; height: 250px;"></div>
         <!-- End Banner Section -->
 
         <!-- Breadcrumb section -->
@@ -25,7 +25,7 @@
 
 
         <!-- About section -->
-        <section class="about-section spad pt-0 section-background">
+        <section class="about-section section-background spad">
             <div class="container">
                 <div class="section-title text-center">
                     <h3 class="color-blue">WELCOME TO AALUV</h3>
@@ -97,33 +97,7 @@
                                                 <p><i class="fas fa-check color-blue"></i> Significantly helps the overall development of each student.</p>-->
                     </div>
                 </div>
-                <!--                <div class="row">
-                                    <div class="col-md-12">
-                                        <h3 class="color-blue">Advantage AALUV Maths</h3>
-                                        <p class="text-justify">Preparing children as global digital citizens for the world that doesn’t yet exist by imparting critical 21st century skills such as problem solving ,creativity, Analytic thinking, collaboration, communication, ethics, action ,empathy ,tolerance ,environmental awareness and global awareness every child needs to survive and succeed understanding. what abilities and traits will serve them in a time that’s Rapidly changing and developing.</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <ul class="list-style-none">
-                                            <i class="fas fa-check color-blue"></i><li>To develop an affinity with numbers with the right practice and right level.</li>
-                                            <i class="fas fa-check color-blue"></i><li>Develop natural progress in academics.</li>
-                                            <i class="fas fa-check color-blue"></i><li>When each student begins the maths programmes, they are given a study projection. </li>
-                                            <i class="fas fa-check color-blue"></i><li>assessment at every level and reflection of the progress</li>
-                                            <i class="fas fa-check color-blue"></i><li>Competency</li>
-                                            <i class="fas fa-check color-blue"></i><li>assessment are respective Parents / Students / Instructors. </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <ul class="list-style-none">
-                                            <i class="fas fa-check color-blue"></i><li>Individualized study projection.</li>
-                                            <i class="fas fa-check color-blue"></i><li>Enable students to become independent by positive mind-set and self – learning skills.</li>
-                                            <i class="fas fa-check color-blue"></i><li>National Level Competition to showcase the talent.</li>
-                                            <i class="fas fa-check color-blue"></i><li>Aaluv Method of Learning develops academic ability , empowerment and ownerhip of their own learning.</li>
-                                            <i class="fas fa-check color-blue"></i><li>increases their concentration and stamina and confidence.</li>
-                                            <i class="fas fa-check color-blue"></i><li>Unique assessment and individualized teaching method.</li>
-                
-                                        </ul>
-                                    </div>
-                                </div>-->
+           
             </div>
         </section>
         <!-- About section end-->
