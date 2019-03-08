@@ -293,16 +293,17 @@ ul.nacc li p {
 .faq-active ul li a.toggle {
     width: 100%;
     display: block;
-    background: rgb(255, 78, 124);
+    background: rgb(37, 124, 149);
     color: #fefefe;
     padding: 0.75em;
     border-radius: 0.15em;
     transition: background 0.3s ease;
 }
 
-.faq-active ul li a.toggle:hover {
-    background: rgb(255, 148, 177);
+.faq-active ul li a.toggle:hover {   
+    background: rgba(38, 124, 148, 0.7);
 }
+
 
 #other{
     display: none;
