@@ -106,16 +106,18 @@
 <!--                    <p>Learning at one's own pace, improving fundamental academic capability</p>-->
                 </div>
                 <div class="row">
+                    <div class="col-md-12">
+                       <h3 class="color-blue">Company Profile</h3>  
+                    </div>
                     <div class="col-lg-6 about-text">
 <!--                        <img src="img/icon1.png" align="left"> -->
-                        <h3 class="color-blue">Company Profile</h3>
                         <p class="text-justify">AALUV is a Holistic Brain Development company, developing children's mind to better equip them for the challenges of Life, this training program transforms and empowers Children to perform extensive calculations at stunning speed and accuracy with nothing but their own sharp mind to aid them.</p>
                         <p class="text-justify">The curriculum is specifically designed to enhance a child's skill set for the 21st Century’s robust Challenges.</p>
                         <p class="text-justify">AALUV endows the child with creativity, concentration, memory, speed writing, lateral thinking, listening capacity, analytical skills and over all self confidence making them an “Enhanced Global Citizens”.</p>
                         <a href="about.php"> Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="col-lg-6 pt-5 pt-lg-0">
-                        <img src="img/about.jpg" alt="">
+                        <img src="img/about.jpg" alt="" class="box-radius-20">
                     </div>
                 </div>
                 <div class="row">
