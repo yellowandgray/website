@@ -111,6 +111,7 @@ td, th {
     vertical-align: middle;
     font-weight: 700;
     transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-radius: 5px;
 }
 
 .naccs .menu div:hover {
