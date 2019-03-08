@@ -18,7 +18,7 @@
             </div>
             <div class="hf-item">
                 <i class="far fa-envelope"></i>
-                <p><span>Email:</span>info@aaluvglobal.org</p>
+                <p><span>Email:</span>info@aaluvglobal.com</p>
             </div>
         </div>
     </div>
