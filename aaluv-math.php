@@ -17,7 +17,7 @@
             </div>
         </div>
         <!-- Breadcrumb section end -->
-        <section class="classroom-section spad pt-0 section-background">
+        <section class="classroom-section spad">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -67,7 +67,7 @@
 
             </div>
         </section>
-        <section class="classroom-section spad pt-0 section-background">
+        <section class="classroom-section padding-b-70">
             <div class="container">
                 <div class="naccs">
                     <div class="grid">

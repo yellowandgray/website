@@ -18,7 +18,7 @@
         </div>
         <!-- Breadcrumb section end -->
 
-        <section class="padding-b-70">
+        <section class="spad">
             <div class="container">
                 <h3 class="margin-b-0">News and Events</h3>
                 <h4>Now at ADYAR (Chennai) &</h4>

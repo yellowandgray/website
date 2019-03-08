@@ -18,11 +18,11 @@
         </div>
         <!-- Breadcrumb section end -->
 
-        <section class="section-background">
+        <section class="spad">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="color-blue">AALUV CLASSROOM SITE SPECIFICATIONS</h3>
+                        <h3 class="color-blue text-center">AALUV CLASSROOM SITE SPECIFICATIONS</h3>
                         <div class="row">
                             <div class="col-md-6">
                                 <h3 class="color-blue">Option A</h3>

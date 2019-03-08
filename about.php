@@ -25,7 +25,7 @@
 
 
         <!-- About section -->
-        <section class="about-section section-background spad">
+        <section class="about-section spad">
             <div class="container">
                 <div class="section-title text-center">
                     <h3 class="color-blue">WELCOME TO AALUV</h3>

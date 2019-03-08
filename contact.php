@@ -27,7 +27,7 @@
 
 
         <!-- Courses section -->
-        <section class="contact-page spad pt-0 section-background">
+        <section class="contact-page spad">
             <div class="container">
                 <div class="map-section">
                     <div class="contact-info-warp">

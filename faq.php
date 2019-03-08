@@ -18,7 +18,7 @@
         </div>
         <!-- Breadcrumb section end -->
 
-        <section class="section spad pt-0 section-background">
+        <section class="section spad">
             <div class="container faq-active">
                 <ul class="accordion">
                     <li>
