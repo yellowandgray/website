@@ -90,7 +90,7 @@
                             <ul class="nacc">
                                 <li class="active">
                                     <div>
-                                        <h3 class="h3-bg-border">4 Guiding Principles</h3>
+                                        <h3 class="color-blue">4 Guiding Principles</h3>
                                         <h4>1. Boosting fundamental academic skills</h4>
                                         <p>To promote a daily learning habit with advancement in their learning skills. Frequent learning of various topics and daily homework will inculcate a good study habit.</p>
                                         <h4>2. No grading</h4>
@@ -105,7 +105,7 @@
                                 </li>
                                 <li>
                                     <div>
-                                        <h3 class="h3-bg-border">Interaction Essentials</h3>
+                                        <h3 class="color-blue">Interaction Essentials</h3>
                                         <div class="p-margin-15">
                                             <p>1. Classroom Days: 2 days in a week.</p>
                                             <p>2. Subject: Maths </p>
@@ -115,7 +115,7 @@
                                 </li>
                                 <li>
                                     <div>
-                                        <h3 class="h3-bg-border">Etiquette</h3>
+                                        <h3 class="color-blue">Etiquette</h3>
                                         <h4>The child also needs to be trained in life skills and taught good manners.</h4>
                                         <div class="p-margin-15">
                                             <p><i class="fas fa-check color-blue"></i> Salutations while entering and departing from class.</p>
@@ -128,7 +128,7 @@
                                 </li>
                                 <li>
                                     <div>
-                                        <h3 class="h3-bg-border">Reasoning</h3>
+                                        <h3 class="color-blue">Reasoning</h3>
                                         <h4>Why To Choose “AALUV Math Classroom”</h4>
                                         <div class="p-margin-15">
                                             <p>1. Superior educational tools.</p>
@@ -151,7 +151,7 @@
                                 </li>
                                 <li>
                                     <div>
-                                        <h3 class="h3-bg-border">Learning Process</h3>
+                                        <h3 class="color-blue">Learning Process</h3>
 <!--                                        <img src="img/tab-img/learning-methods.jpg">-->
                                         <div class="p-margin-15 icon-position padding-l-20">
                                             <i class="fas fa-check color-blue"></i><p> Initially,students take an evaluation test.</p>
@@ -167,7 +167,7 @@
                                 <li>
                                     <div>
                                         <div class="p-margin-15 icon-position padding-l-20">
-                                            <h3 class="h3-bg-border">Story Based Sums</h3>
+                                            <h3 class="color-blue">Story Based Sums</h3>
                                             <i class="fas fa-check color-blue"></i><p> By acquiring knowledge regarding the ‘analytical thinking process’ associated with problem solving, children improve their skills and aptitudes, enabling them to apply these proficiencies in real-life settings. </p>
                                             <i class="fas fa-check color-blue"></i><p> Children are given an in-depth understanding of the procedure for problem solving and the significance of the target calculation is also explained prior to the start of the exercises.</p>
                                         </div>
@@ -175,7 +175,7 @@
                                 </li>
                                 <li>
                                     <div>
-                                        <h3 class="h3-bg-border">Our Instructor</h3>
+                                        <h3 class="color-blue">Our Instructor</h3>
                                         <div class="p-margin-15 icon-position padding-l-20">
                                             <h4>AALUV Math Classroom Instructors are MASTERS AT GIVING HINTS AND NOT ANSWERS.</h4>
                                             <i class="fas fa-check color-blue"></i><p> Our instructors don’t just teach math, but the processes behind problem solving. We have individualized guidance, customized to the child’s learning progress. Our students learn at their own pace. This is hard to achieve with group-oriented teaching. The students learn to arrive at solutions on their own.</p>
@@ -206,7 +206,7 @@
                                                                 </li>-->
                                 <li>
                                     <div>
-                                        <h3 class="h3-bg-border">Practice Sheets</h3>
+                                        <h3 class="color-blue">Practice Sheets</h3>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
@@ -230,7 +230,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <h3 class="h3-bg-border">Transformation and Improvement</h3>
+                                    <h3 class="color-blue">Transformation and Improvement</h3>
                                     <div class="p-margin-15">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -309,7 +309,7 @@
                                 </li>
                                 <li>
                                     <div>
-                                        <h3 class="h3-bg-border">Self Learning Proficiency</h3>
+                                        <h3 class="color-blue">Self Learning Proficiency</h3>
 <!--                                        <img src="img/tab-img/learning-methods.jpg">-->
                                         <div class="p-margin-15 icon-position padding-l-20">
                                             <i class="fas fa-check color-blue"></i><p> To forever inculcate in children the ability to self-learning, enhancing their learning skills is the first step.</p>
