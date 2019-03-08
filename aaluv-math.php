@@ -167,7 +167,7 @@
                                 <li>
                                     <div>
                                         <div class="p-margin-15 icon-position padding-l-20">
-                                            <h3 class="h3-bg-border">Story Based Sums</h3>
+                                            <h3 class="color-blue">Story Based Sums</h3>
                                             <i class="fas fa-check"></i><p> By acquiring knowledge regarding the ‘analytical thinking process’ associated with problem solving, children improve their skills and aptitudes, enabling them to apply these proficiencies in real-life settings. </p>
                                             <i class="fas fa-check"></i><p> Children are given an in-depth understanding of the procedure for problem solving and the significance of the target calculation is also explained prior to the start of the exercises.</p>
                                         </div>
