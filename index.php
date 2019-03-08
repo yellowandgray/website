@@ -125,7 +125,7 @@
                         <h3 class="color-blue">AALUV Classroom Instructor</h3>
                     </div>
                     <div class="col-lg-5 about-text">
-                        <img src="img/about-1.jpg" alt="" />
+                        <img src="img/about-1.jpg" alt="" class="box-radius-20"/>
                     </div>
                     <div class="col-lg-7">
                         <p class="text-justify">AALUV aims at nurturing the joy of learning mathematics in children, building self-confidence and imparting knowledge that will complement what they have learned in school. It helps children develop their logical thinking skill through learning numbers and acquiring knowledge and also develop independence in solving problems. </p>
