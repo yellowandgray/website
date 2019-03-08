@@ -20,6 +20,7 @@
     border: 1px solid #000;
     border-radius: 50px;
     transition: all 0.5s;
+    transform: scale(0.8);
 }
 
 .padding-50 {
