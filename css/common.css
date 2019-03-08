@@ -397,3 +397,23 @@ ul {
 .margin-b-20 {
     margin-bottom: 20px;
 }
+
+.enquiry-box {
+    background: #0000008c;
+    box-shadow: 0px 0px 6px 0px #000;
+    padding: 20px;
+    margin-top: 20px;
+/*    margin-right: 20px;*/
+}
+
+.enquiry-box h3 {
+    color: #fff !important;
+}
+
+.margin-left-30 {
+    margin-left: -30px;
+}
+
+.margin-right-30 {
+    margin-right: -30px;
+}
