@@ -86,7 +86,7 @@
                     </div>
                     <div class="col-lg-6 padding-30">
                         <div class="box-radius-bg-60">
-                            <h4>LEARNING</h4>
+                            <h4>SYLLABUS</h4>
                             <ul class="list-style-none color-white">
                                 <i class="fas fa-check"></i><li>EMOTIONAL ENGAGEMENT !</li>
                                 <i class="fas fa-check"></i><li>INTERACTION WITH PHYSICAL DEVICES !</li>
@@ -94,7 +94,7 @@
                                 <i class="fas fa-check"></i><li>MULTI-DISCIPLINARY LEARNING !</li>
                                 <i class="fas fa-check"></i><li>CONSTRUCTIVIST APPROACH !</li>
                             </ul>
-                            <a href="learning.php" class="site-btn">Read More</a>
+                            <a href="syllabus.php" class="site-btn">Read More</a>
                         </div>
                     </div>
                 </div>
