@@ -43,22 +43,22 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="list-style-none">
-                                    <i class="fas fa-check color-blue"></i><li>To develop an affinity with numbers with the right practice and right level.</li>
-                                    <i class="fas fa-check color-blue"></i><li>Develop natural progress in academics.</li>
-                                    <i class="fas fa-check color-blue"></i><li>When each student begins the maths programmes, they are given a study projection. </li>
-                                    <i class="fas fa-check color-blue"></i><li>assessment at every level and reflection of the progress</li>
-                                    <i class="fas fa-check color-blue"></i><li>Competency</li>
-                                    <i class="fas fa-check color-blue"></i><li>assessment are respective Parents / Students / Instructors. </li>
+                                    <i class="fas fa-check"></i><li>To develop an affinity with numbers with the right practice and right level.</li>
+                                    <i class="fas fa-check"></i><li>Develop natural progress in academics.</li>
+                                    <i class="fas fa-check"></i><li>When each student begins the maths programmes, they are given a study projection. </li>
+                                    <i class="fas fa-check"></i><li>assessment at every level and reflection of the progress</li>
+                                    <i class="fas fa-check"></i><li>Competency</li>
+                                    <i class="fas fa-check"></i><li>assessment are respective Parents / Students / Instructors. </li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
                                 <ul class="list-style-none">
-                                    <i class="fas fa-check color-blue"></i><li>Individualized study projection.</li>
-                                    <i class="fas fa-check color-blue"></i><li>Enable students to become independent by positive mind-set and self – learning skills.</li>
-                                    <i class="fas fa-check color-blue"></i><li>National Level Competition to showcase the talent.</li>
-                                    <i class="fas fa-check color-blue"></i><li>Aaluv Method of Learning develops academic ability , empowerment and ownerhip of their own learning.</li>
-                                    <i class="fas fa-check color-blue"></i><li>increases their concentration and stamina and confidence.</li>
-                                    <i class="fas fa-check color-blue"></i><li>Unique assessment and individualized teaching method.</li>
+                                    <i class="fas fa-check"></i><li>Individualized study projection.</li>
+                                    <i class="fas fa-check"></i><li>Enable students to become independent by positive mind-set and self – learning skills.</li>
+                                    <i class="fas fa-check"></i><li>National Level Competition to showcase the talent.</li>
+                                    <i class="fas fa-check"></i><li>Aaluv Method of Learning develops academic ability , empowerment and ownerhip of their own learning.</li>
+                                    <i class="fas fa-check"></i><li>increases their concentration and stamina and confidence.</li>
+                                    <i class="fas fa-check"></i><li>Unique assessment and individualized teaching method.</li>
                                 </ul>
                             </div>
                         </div>
@@ -118,11 +118,11 @@
                                         <h3 class="color-blue">Etiquette</h3>
                                         <h4>The child also needs to be trained in life skills and taught good manners.</h4>
                                         <div class="p-margin-15">
-                                            <p><i class="fas fa-check color-blue"></i> Salutations while entering and departing from class.</p>
-                                            <p><i class="fas fa-check color-blue"></i> Hygiene and sanitation.</p>
-                                            <p><i class="fas fa-check color-blue"></i> Systematically arranging their belongings such as bags,stationeries, etc. </p>
-                                            <p><i class="fas fa-check color-blue"></i> Maintaining the correct posture in the classroom.</p>
-                                            <p><i class="fas fa-check color-blue"></i> Abiding by the regulations of the classroom.</p>
+                                            <p><i class="fas fa-check"></i> Salutations while entering and departing from class.</p>
+                                            <p><i class="fas fa-check"></i> Hygiene and sanitation.</p>
+                                            <p><i class="fas fa-check"></i> Systematically arranging their belongings such as bags,stationeries, etc. </p>
+                                            <p><i class="fas fa-check"></i> Maintaining the correct posture in the classroom.</p>
+                                            <p><i class="fas fa-check"></i> Abiding by the regulations of the classroom.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -154,22 +154,22 @@
                                         <h3 class="color-blue">Learning Process</h3>
 <!--                                        <img src="img/tab-img/learning-methods.jpg">-->
                                         <div class="p-margin-15 icon-position padding-l-20">
-                                            <i class="fas fa-check color-blue"></i><p> Initially,students take an evaluation test.</p>
-                                            <i class="fas fa-check color-blue"></i><p> Math practice sheets are prepared individually catering for each student as per their proficiency.</p>
-                                            <i class="fas fa-check color-blue"></i><p> Interaction between tutor and student is once a week.</p>
-                                            <i class="fas fa-check color-blue"></i><p> The students cultivate ‘How to think’ aptitudes first and later apply these skills to solve the exercise problems. They are expected to complete the prerequisite practice sheets daily.</p>
-                                            <i class="fas fa-check color-blue"></i><p> The instructor grades the papers, and may counsel the students and provide thinking tips.</p>
-                                            <i class="fas fa-check color-blue"></i><p> Have students assess their graded papers. The students should keep trying until they get a perfect score.</p>
-                                            <i class="fas fa-check color-blue"></i><p> Perfect scores instill confidence in the students and are a boost to their academic abilities. The classes are concluded after making sure the children are given homework.</p>
+                                            <i class="fas fa-check"></i><p> Initially,students take an evaluation test.</p>
+                                            <i class="fas fa-check"></i><p> Math practice sheets are prepared individually catering for each student as per their proficiency.</p>
+                                            <i class="fas fa-check"></i><p> Interaction between tutor and student is once a week.</p>
+                                            <i class="fas fa-check"></i><p> The students cultivate ‘How to think’ aptitudes first and later apply these skills to solve the exercise problems. They are expected to complete the prerequisite practice sheets daily.</p>
+                                            <i class="fas fa-check"></i><p> The instructor grades the papers, and may counsel the students and provide thinking tips.</p>
+                                            <i class="fas fa-check"></i><p> Have students assess their graded papers. The students should keep trying until they get a perfect score.</p>
+                                            <i class="fas fa-check"></i><p> Perfect scores instill confidence in the students and are a boost to their academic abilities. The classes are concluded after making sure the children are given homework.</p>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
                                         <div class="p-margin-15 icon-position padding-l-20">
-                                            <h3 class="color-blue">Story Based Sums</h3>
-                                            <i class="fas fa-check color-blue"></i><p> By acquiring knowledge regarding the ‘analytical thinking process’ associated with problem solving, children improve their skills and aptitudes, enabling them to apply these proficiencies in real-life settings. </p>
-                                            <i class="fas fa-check color-blue"></i><p> Children are given an in-depth understanding of the procedure for problem solving and the significance of the target calculation is also explained prior to the start of the exercises.</p>
+                                            <h3 class="h3-bg-border">Story Based Sums</h3>
+                                            <i class="fas fa-check"></i><p> By acquiring knowledge regarding the ‘analytical thinking process’ associated with problem solving, children improve their skills and aptitudes, enabling them to apply these proficiencies in real-life settings. </p>
+                                            <i class="fas fa-check"></i><p> Children are given an in-depth understanding of the procedure for problem solving and the significance of the target calculation is also explained prior to the start of the exercises.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -178,7 +178,7 @@
                                         <h3 class="color-blue">Our Instructor</h3>
                                         <div class="p-margin-15 icon-position padding-l-20">
                                             <h4>AALUV Math Classroom Instructors are MASTERS AT GIVING HINTS AND NOT ANSWERS.</h4>
-                                            <i class="fas fa-check color-blue"></i><p> Our instructors don’t just teach math, but the processes behind problem solving. We have individualized guidance, customized to the child’s learning progress. Our students learn at their own pace. This is hard to achieve with group-oriented teaching. The students learn to arrive at solutions on their own.</p>
+                                            <i class="fas fa-check"></i><p> Our instructors don’t just teach math, but the processes behind problem solving. We have individualized guidance, customized to the child’s learning progress. Our students learn at their own pace. This is hard to achieve with group-oriented teaching. The students learn to arrive at solutions on their own.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -218,14 +218,14 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6  p-margin-15">
-                                            <p><i class="fas fa-check color-blue"></i> Children gain </p>
-                                            <p><i class="fas fa-check color-blue"></i> understanding of the </p>
-                                            <p><i class="fas fa-check color-blue"></i> process and meaning </p>
+                                            <p><i class="fas fa-check"></i> Children gain </p>
+                                            <p><i class="fas fa-check"></i> understanding of the </p>
+                                            <p><i class="fas fa-check"></i> process and meaning </p>
                                         </div>
                                         <div class="col-md-6 p-margin-15">
-                                            <p><i class="fas fa-check color-blue"></i> behind the target </p>
-                                            <p><i class="fas fa-check color-blue"></i> calculation before they </p>
-                                            <p><i class="fas fa-check color-blue"></i> start the exercises.</p>
+                                            <p><i class="fas fa-check"></i> behind the target </p>
+                                            <p><i class="fas fa-check"></i> calculation before they </p>
+                                            <p><i class="fas fa-check"></i> start the exercises.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -312,14 +312,14 @@
                                         <h3 class="color-blue">Self Learning Proficiency</h3>
 <!--                                        <img src="img/tab-img/learning-methods.jpg">-->
                                         <div class="p-margin-15 icon-position padding-l-20">
-                                            <i class="fas fa-check color-blue"></i><p> To forever inculcate in children the ability to self-learning, enhancing their learning skills is the first step.</p>
-                                            <i class="fas fa-check color-blue"></i><p> To foster competency to face the challenges of the global need in the future.</p>
-                                            <i class="fas fa-check color-blue"></i><p> Abilities to contemplate on the right answer that would expand one’s perspectives. </p>
-                                            <i class="fas fa-check color-blue"></i> <p> The contemporary child will have a response for every question under the sky, irrespective of whether it is appropriate or not. However, we need to nurture their attitudes and steer them on the right course to do the following:</p>
-                                            <i class="fas fa-check color-blue"></i><p> Insist on attempting to work out the sums rather than ignoring them. </p>
-                                            <i class="fas fa-check color-blue"></i><p> Promote individualistic thoughts to analyze any given situation and react suitably.</p>
-                                            <i class="fas fa-check color-blue"></i><p> Present one’s ideas in one’s own words and express them with conviction.</p>
-                                            <i class="fas fa-check color-blue"></i> <p> These skills will promote their analytical thinking. In addition, it will cultivate fundamental academic aptitudes with the guidance of competent and proficient instructors. Practice sheets are developed individually to fit each child’s unique learning abilities.</p>
+                                            <i class="fas fa-check"></i><p> To forever inculcate in children the ability to self-learning, enhancing their learning skills is the first step.</p>
+                                            <i class="fas fa-check"></i><p> To foster competency to face the challenges of the global need in the future.</p>
+                                            <i class="fas fa-check"></i><p> Abilities to contemplate on the right answer that would expand one’s perspectives. </p>
+                                            <i class="fas fa-check"></i> <p> The contemporary child will have a response for every question under the sky, irrespective of whether it is appropriate or not. However, we need to nurture their attitudes and steer them on the right course to do the following:</p>
+                                            <i class="fas fa-check"></i><p> Insist on attempting to work out the sums rather than ignoring them. </p>
+                                            <i class="fas fa-check"></i><p> Promote individualistic thoughts to analyze any given situation and react suitably.</p>
+                                            <i class="fas fa-check"></i><p> Present one’s ideas in one’s own words and express them with conviction.</p>
+                                            <i class="fas fa-check"></i> <p> These skills will promote their analytical thinking. In addition, it will cultivate fundamental academic aptitudes with the guidance of competent and proficient instructors. Practice sheets are developed individually to fit each child’s unique learning abilities.</p>
                                         </div>
                                     </div>
                                 </li>
