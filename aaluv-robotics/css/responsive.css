@@ -44,3 +44,10 @@
         padding: 3px 0px;
     }
 }
+@media (max-width: 767px) and (min-width: 320px) {
+    .tab button {
+        width: 100% !important;
+        border: 1px solid #fff;
+        padding: 3px 0px;
+    }
+}
