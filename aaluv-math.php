@@ -117,12 +117,12 @@
                                     <div>
                                         <h3 class="color-blue">Etiquette</h3>
                                         <h4>The child also needs to be trained in life skills and taught good manners.</h4>
-                                        <div class="p-margin-15">
-                                            <p><i class="fas fa-check"></i> Salutations while entering and departing from class.</p>
-                                            <p><i class="fas fa-check"></i> Hygiene and sanitation.</p>
-                                            <p><i class="fas fa-check"></i> Systematically arranging their belongings such as bags,stationeries, etc. </p>
-                                            <p><i class="fas fa-check"></i> Maintaining the correct posture in the classroom.</p>
-                                            <p><i class="fas fa-check"></i> Abiding by the regulations of the classroom.</p>
+                                        <div class="p-margin-15 icon-position">
+                                            <i class="fas fa-check"></i><p> Salutations while entering and departing from class.</p>
+                                            <i class="fas fa-check"></i><p> Hygiene and sanitation.</p>
+                                            <i class="fas fa-check"></i><p> Systematically arranging their belongings such as bags,stationeries, etc. </p>
+                                            <i class="fas fa-check"></i><p> Maintaining the correct posture in the classroom.</p>
+                                            <i class="fas fa-check"></i><p> Abiding by the regulations of the classroom.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -182,28 +182,6 @@
                                         </div>
                                     </div>
                                 </li>
-                                <!--                                <li>
-                                                                    <div>
-                                                                        <h3>operation</h3>
-                                                                        <p>Aaluv Days:</p>
-                                                                        <p>Subjects : Maths</p>
-                                                                        <p>Target Age Group : 5 to 13</p>
-                                                                        <div class="row padding-tb-20">
-                                                                            <div class="col-md-2">
-                                                                                <img src="img/tab-img/operation-001.jpg">
-                                                                            </div>
-                                                                            <div class="col-md-8 text-center">
-                                                                                <p>The result of customer satisfation research</p>
-                                                                                <h4>Educational Service Division</h4>
-                                                                            </div>
-                                                                            <div class="col-md-2">
-                                                                                <img src="img/tab-img/operation-002.jpg">
-                                                                            </div>
-                                                                        </div>
-                                                                        <p>Aaluv got first ranking in a row for the research of customer satisfaction. Last year, customer satisfaction was not first ranking, but Aaluv got high evaluation in this year.</p>
-                                                                        <img src="img/tab-img/operation-003.jpg">
-                                                                    </div>
-                                                                </li>-->
                                 <li>
                                     <div>
                                         <h3 class="color-blue">Practice Sheets</h3>
@@ -217,15 +195,15 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6  p-margin-15">
-                                            <p><i class="fas fa-check"></i> Children gain </p>
-                                            <p><i class="fas fa-check"></i> understanding of the </p>
-                                            <p><i class="fas fa-check"></i> process and meaning </p>
+                                        <div class="col-md-6 p-margin-15 icon-position">
+                                            <i class="fas fa-check margin-top-20"></i><p> Children gain </p>
+                                            <i class="fas fa-check"></i><p> understanding of the </p>
+                                            <i class="fas fa-check"></i><p> process and meaning </p>
                                         </div>
-                                        <div class="col-md-6 p-margin-15">
-                                            <p><i class="fas fa-check"></i> behind the target </p>
-                                            <p><i class="fas fa-check"></i> calculation before they </p>
-                                            <p><i class="fas fa-check"></i> start the exercises.</p>
+                                        <div class="col-md-6 p-margin-15 icon-position">
+                                            <i class="fas fa-check margin-top-20"></i><p> behind the target </p>
+                                            <i class="fas fa-check"></i><p> calculation before they </p>
+                                            <i class="fas fa-check"></i><p> start the exercises.</p>
                                         </div>
                                     </div>
                                 </li>
