@@ -16,9 +16,9 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <!--                                    <div class="hs-subtitle">Award Winning UNIVERSITY</div>-->
-                                    <h2 class="hs-title">Worried about your child's maths performance?</h2>
-<!--                                    <p class="hs-des">Education is not just about going to school and getting a degree. It's about widening your<br> knowledge and absorbing the truth about life. Knowledge is power.</p>
-                                    <div class="site-btn">GET STARTED</div>-->
+                                    <!--                                    <h2 class="hs-title">Worried about your child's maths performance?</h2>-->
+                                    <!--                                    <p class="hs-des">Education is not just about going to school and getting a degree. It's about widening your<br> knowledge and absorbing the truth about life. Knowledge is power.</p>
+                                                                        <div class="site-btn">GET STARTED</div>-->
                                 </div>
                             </div>
                         </div>
@@ -30,9 +30,9 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <!--                                    <div class="hs-subtitle">Award Winning UNIVERSITY</div>-->
-                                    <h2 class="hs-title">Tired of helping your child with their maths homework?</h2>
-<!--                                    <p class="hs-des">Education is not just about going to school and getting a degree. It's about widening your<br> knowledge and absorbing the truth about life. Knowledge is power.</p>
-                                    <div class="site-btn">GET STARTED</div>-->
+                                    <!--                                    <h2 class="hs-title">Tired of helping your child with their maths homework?</h2>-->
+                                    <!--                                    <p class="hs-des">Education is not just about going to school and getting a degree. It's about widening your<br> knowledge and absorbing the truth about life. Knowledge is power.</p>
+                                                                        <div class="site-btn">GET STARTED</div>-->
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,21 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <!--                                    <div class="hs-subtitle">Award Winning UNIVERSITY</div>-->
-                                    <h2 class="hs-title">Encourage your child to understand and conquer math through a creative classroom of self learning</h2>
+                                    <!--                                    <h2 class="hs-title">Encourage your child to understand and conquer math through a creative classroom of self learning</h2>-->
+                                    <!--                                    <p class="hs-des">Education is not just about going to school and getting a degree. It's about widening your<br> knowledge and absorbing the truth about life. Knowledge is power.</p>
+                                                                        <div class="site-btn">GET STARTED</div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hs-item set-bg" data-setbg="img/hero-slider/4.jpg">
+                    <div class="hs-text">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <!--                                    <div class="hs-subtitle">Award Winning UNIVERSITY</div>-->
+                                    <!--<h2 class="hs-title">Encourage your child to understand and conquer math through a creative classroom of self learning</h2>-->
 <!--                                    <p class="hs-des">Education is not just about going to school and getting a degree. It's about widening your<br> knowledge and absorbing the truth about life. Knowledge is power.</p>
                                     <div class="site-btn">GET STARTED</div>-->
                                 </div>
@@ -275,7 +289,7 @@
                             <i class="fas fa-check color-blue"></i><li>Totally agree with Aaluv's philosophy</li>
                         </ul>
                     </div>
-                    <div class="col-lg-5 wow fadeInDown">
+                    <div class="col-lg-5 wow fadeInDown enquiry-box">
                         <div class="contact-form">
                             <div class="text-center">
                                 <h3>Enquiry Form</h3>
