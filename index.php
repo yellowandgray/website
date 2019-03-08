@@ -108,10 +108,11 @@
                 <div class="row">
                     <div class="col-lg-6 about-text">
 <!--                        <img src="img/icon1.png" align="left"> -->
-                        <p class="text-justify" align="left">Aaluv Maths is a unique Comprehensive Mathematic Learning Solution helping millions of students world-wide developing a self-motivated learning and attitude which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
-                        <p class="text-justify" align="left">Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
                         <h3 class="color-blue">Company Profile</h3>
-                        <p class="text-justify" align="left">The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe. <a href="about.php"> Read More <i class="fas fa-arrow-right"></i></a></p>
+                        <p class="text-justify">AALUV is a Holistic Brain Development company, developing children's mind to better equip them for the challenges of Life, this training program transforms and empowers Children to perform extensive calculations at stunning speed and accuracy with nothing but their own sharp mind to aid them.</p>
+                        <p class="text-justify">The curriculum is specifically designed to enhance a child's skill set for the 21st Century’s robust Challenges.</p>
+                        <p class="text-justify">AALUV endows the child with creativity, concentration, memory, speed writing, lateral thinking, listening capacity, analytical skills and over all self confidence making them an “Enhanced Global Citizens”.</p>
+                        <a href="about.php"> Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="col-lg-6 pt-5 pt-lg-0">
                         <img src="img/about.jpg" alt="">

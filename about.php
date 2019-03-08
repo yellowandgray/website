@@ -11,7 +11,7 @@
         <!-- Header section end -->
 
         <!-- Banner Section -->
-        <div class="sub-banner-section" style="background: url(img/sub-banner/syllabus.jpg)no-repeat; height: 250px;"></div>
+        <div class="sub-banner-section" style="background: url(img/sub-banner/about-sub.jpg)no-repeat; height: 250px;"></div>
         <!-- End Banner Section -->
 
         <!-- Breadcrumb section -->
