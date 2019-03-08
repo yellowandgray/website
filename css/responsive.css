@@ -35,3 +35,15 @@
         padding: 15px !important;
     }
 }
+@media (max-width: 767px) and (min-width: 320px) {
+    .box-gray  {
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 991px) and (min-width: 767px) {
+    .box-gray  {
+        height:600px !important;
+
+    }
+}
