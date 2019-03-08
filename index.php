@@ -281,13 +281,13 @@
                         <!--                        <h3 >  Opening Shortly at ADYAR &#38; NEELANKARAI</h3>-->
                         <h4>The prospective franchisee must have:</h4>
                         <ul class="list-style-none">
-                            <i class="fas fa-check color-blue"></i><li>An interest in being an entrepreneur and have a positive attitude to work while maintaining quality. Professional ethics are of paramount importance.</li>
-                            <i class="fas fa-check color-blue"></i><li>Passionate about education and working with children</li>
-                            <i class="fas fa-check color-blue"></i><li>A genuine commitment to strive for growth and expansion that will translate into profits for yourself.</li>
-                            <i class="fas fa-check color-blue"></i><li>The aptitude to head your enterprise and manage the  Center.</li>
-                            <i class="fas fa-check color-blue"></i><li>The ability to devote your time and make this as their main activity.</li>
-                            <i class="fas fa-check color-blue"></i><li>Interested in child enrichment</li>
-                            <i class="fas fa-check color-blue"></i><li>Totally agree with Aaluv's philosophy</li>
+                            <i class="fas fa-check"></i><li>An interest in being an entrepreneur and have a positive attitude to work while maintaining quality. Professional ethics are of paramount importance.</li>
+                            <i class="fas fa-check"></i><li>Passionate about education and working with children</li>
+                            <i class="fas fa-check"></i><li>A genuine commitment to strive for growth and expansion that will translate into profits for yourself.</li>
+                            <i class="fas fa-check"></i><li>The aptitude to head your enterprise and manage the  Center.</li>
+                            <i class="fas fa-check"></i><li>The ability to devote your time and make this as their main activity.</li>
+                            <i class="fas fa-check"></i><li>Interested in child enrichment</li>
+                            <i class="fas fa-check"></i><li>Totally agree with Aaluv's philosophy</li>
                         </ul>
                     </div>
                     <div class="col-lg-5 wow fadeInDown enquiry-box">

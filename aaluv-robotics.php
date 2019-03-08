@@ -54,11 +54,11 @@
                     <div class="col-lg-6">
                         <h4 class="color-blue">Why AALUV Robotics</h4>
                         <ul class="list-style-none">
-                            <i class="fas fa-check color-blue"></i><li>Extensive syllabus on Robotics for the School students starting from Class 1 to Class – 12</li>
-                            <i class="fas fa-check color-blue"></i><li>Accepted as a part of the curriculum in the schools</li>
-                            <i class="fas fa-check color-blue"></i><li>The syllabus has been aligned along the lines of the Science and Mathematics syllabus that the students learn in the classrooms.</li>
-                            <i class="fas fa-check color-blue"></i><li>This curriculum on Robotics gives a Hands-on Experience with live physical models</li>
-                            <i class="fas fa-check color-blue"></i><li>Better understanding and an interesting learning experience.</li>
+                            <i class="fas fa-check"></i><li>Extensive syllabus on Robotics for the School students starting from Class 1 to Class – 12</li>
+                            <i class="fas fa-check"></i><li>Accepted as a part of the curriculum in the schools</li>
+                            <i class="fas fa-check"></i><li>The syllabus has been aligned along the lines of the Science and Mathematics syllabus that the students learn in the classrooms.</li>
+                            <i class="fas fa-check"></i><li>This curriculum on Robotics gives a Hands-on Experience with live physical models</li>
+                            <i class="fas fa-check"></i><li>Better understanding and an interesting learning experience.</li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
@@ -75,11 +75,11 @@
                         <div class="box-radius-bg-60">
                             <h4>LEARNING</h4>
                             <ul class="list-style-none color-white">
-                                <i class="fas fa-check color-blue"></i><li>EMOTIONAL ENGAGEMENT !</li>
-                                <i class="fas fa-check color-blue"></i><li>INTERACTION WITH PHYSICAL DEVICES !</li>
-                                <i class="fas fa-check color-blue"></i><li>PRACTICAL LEARNING !</li>
-                                <i class="fas fa-check color-blue"></i><li>MULTI-DISCIPLINARY LEARNING !</li>
-                                <i class="fas fa-check color-blue"></i><li>CONSTRUCTIVIST APPROACH !</li>
+                                <i class="fas fa-check"></i><li>EMOTIONAL ENGAGEMENT !</li>
+                                <i class="fas fa-check"></i><li>INTERACTION WITH PHYSICAL DEVICES !</li>
+                                <i class="fas fa-check"></i><li>PRACTICAL LEARNING !</li>
+                                <i class="fas fa-check"></i><li>MULTI-DISCIPLINARY LEARNING !</li>
+                                <i class="fas fa-check"></i><li>CONSTRUCTIVIST APPROACH !</li>
                             </ul>
                             <a href="learning.php" class="site-btn">Read More</a>
                         </div>
@@ -88,11 +88,11 @@
                         <div class="box-radius-bg-60">
                             <h4>LEARNING</h4>
                             <ul class="list-style-none color-white">
-                                <i class="fas fa-check color-blue"></i><li>EMOTIONAL ENGAGEMENT !</li>
-                                <i class="fas fa-check color-blue"></i><li>INTERACTION WITH PHYSICAL DEVICES !</li>
-                                <i class="fas fa-check color-blue"></i><li>PRACTICAL LEARNING !</li>
-                                <i class="fas fa-check color-blue"></i><li>MULTI-DISCIPLINARY LEARNING !</li>
-                                <i class="fas fa-check color-blue"></i><li>CONSTRUCTIVIST APPROACH !</li>
+                                <i class="fas fa-check"></i><li>EMOTIONAL ENGAGEMENT !</li>
+                                <i class="fas fa-check"></i><li>INTERACTION WITH PHYSICAL DEVICES !</li>
+                                <i class="fas fa-check"></i><li>PRACTICAL LEARNING !</li>
+                                <i class="fas fa-check"></i><li>MULTI-DISCIPLINARY LEARNING !</li>
+                                <i class="fas fa-check"></i><li>CONSTRUCTIVIST APPROACH !</li>
                             </ul>
                             <a href="learning.php" class="site-btn">Read More</a>
                         </div>

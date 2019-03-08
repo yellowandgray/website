@@ -485,7 +485,7 @@ ol {
 
 .counter-section .big-icon i {
     font-size: 30px;
-    color: #ff4e7c;
+    color: #4cd192;
 }
 
 .counter-section .counter {
@@ -530,7 +530,7 @@ ol {
 }
 
 .counter-content p i {
-    color: #ff4e7c;
+    color: #4cd192;
     margin-right: 10px;
 }
 
@@ -1914,4 +1914,8 @@ select {
     .comment-warp .comment .comment-content {
         padding-left: 0;
     }
+}
+
+.box-radius-bg-60 h4 {
+    color: #fff !important;
 }
