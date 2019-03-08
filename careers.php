@@ -17,9 +17,9 @@
             </div>
         </div>
         <!-- Breadcrumb section end -->
-        <section class="padding-b-70 section-background">
+        <section class="spad">
             <div class="container">
-                <h3>What's it like to be a Aaluv instructor?</h3>
+                <h3 class="text-center">What's it like to be a Aaluv instructor?</h3>
                 <div class="row padding-b-20">
                     <div class="col-md-6">
                         <img src="img/career-1.jpg" />

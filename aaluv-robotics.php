@@ -89,7 +89,7 @@
             </div>
         </section>
 
-        <section class="about-section spad">
+        <section class="about-section spad section-background">
             <div class="container">
                 <h4 class="color-blue text-center">GALLERY</h4>
                 <section class="customer-logos slider spad">
