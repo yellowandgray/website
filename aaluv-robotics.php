@@ -68,12 +68,12 @@
                 </div>
             </div>
         </section>
-        <section class="about-section ptb-60">
+        <section class="about-section spad">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 padding-30">
+                    <div class="col-lg-6 padding-30 box-radius-bg-60">
                         <h4 class="color-blue">LEARNING</h4>
-                        <ul class="list-style-none">
+                        <ul class="list-style-none color-white">
                             <i class="fas fa-check color-blue"></i><li>EMOTIONAL ENGAGEMENT !</li>
                             <i class="fas fa-check color-blue"></i><li>INTERACTION WITH PHYSICAL DEVICES !</li>
                             <i class="fas fa-check color-blue"></i><li>PRACTICAL LEARNING !</li>

@@ -538,3 +538,9 @@ h2{
 .slick-arrow.slick-hidden {
     display: none;
 }
+.box-radius-bg-60 {
+    margin: 20px 0px;
+    background: #252525;
+    border-radius: 60px 0px;
+    box-shadow: 3px -1px 10px 2px #868686;
+}
