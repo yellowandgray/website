@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="color-blue">AALUV FOCUS on LEARNING</h2>
+                        <h3 class="color-blue">AALUV FOCUS on LEARNING</h3>
                         <ul class="list-style-none p-margin">
                             <i class="fas fa-check"></i><li>EMOTIONAL ENGAGEMENT !</li>
                             <i class="fas fa-check"></i><li>INTERACTION WITH PHYSICAL DEVICES !</li>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="color-blue">STRENGTHS OF ROBOTICS IN EDUCATION</h2>
+                        <h3 class="color-blue">STRENGTHS OF ROBOTICS IN EDUCATION</h3>
                         <p>TRAINED TEACHERS – “teach as they were taught,.. Not as they are told to teach”</p>
                         <p>WELL DEFINED CURRICULAM – Aligned with academic curriculam”</p>
                         <p>PROPER EDUCATION PHILOSOPHY – “ to evoke interest and enthusiasm in subject”</p>
@@ -49,7 +49,7 @@
         <!-- Enroll section -->
         <section class="enroll-section spad set-bg" data-setbg="img/enroll-bg.jpg">
             <div class="container">
-                <h2 class="text-center color-white">WHAT ROBOTICS CAN TEACH?</h2>
+                <h3 class="text-center color-white">WHAT ROBOTICS CAN TEACH?</h3>
                 <div class="row">
                     <div class="col-md-4 margin-b-20 wow fadeInDown">
                         <div class="shadow">
@@ -106,7 +106,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="color-blue">Who Needs Robotics in Education?</h2>
+                        <h3 class="color-blue">Who Needs Robotics in Education?</h3>
                         <ul class="list-style-none p-margin">
                             <i class="fas fa-check"></i><li>Teachers / Educators</li>
                             <i class="fas fa-check"></i><li>Students / Learners</li>

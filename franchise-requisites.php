@@ -25,7 +25,7 @@
                         <h3 class="color-blue text-center">AALUV CLASSROOM SITE SPECIFICATIONS</h3>
                         <div class="row">
                             <div class="col-md-6">
-                                <h3 class="color-blue">Option A</h3>
+                                <h3 class="color-blue text-center">Option A</h3>
                                 <div class="row">
                                     <div class="col-md-4">
                                         <img src="img/course/class-001.png" alt=""/>
@@ -56,7 +56,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <h3 class="color-blue">Option B</h3>
+                                <h3 class="color-blue text-center">Option B</h3>
                                 <h4>Area requirement for Hiring of Kinder Garden or Regular School classroom </h4>
                                 <p>investment to cover the franchise expenses and Licensee Fee will be required:</p>
                                 <p>Well-illuminated and ventilated classroom</p>
@@ -69,7 +69,7 @@
             </div>
         </section>
 
-        <section class="section-background">
+        <section class="padding-30">
             <div class="container">
 
                 <div class="row">
@@ -87,7 +87,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-background">
+        <section class="padding-30">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -106,7 +106,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-background">
+        <section class="padding-30">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -126,7 +126,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-background">
+        <section class="padding-30">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -147,7 +147,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-background">
+        <section class="padding-30">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
