@@ -103,7 +103,7 @@
 
         <section class="about-section spad section-background">
             <div class="container">
-                <h4 class="color-blue text-center">GALLERY</h4>
+                <h4 class="color-white text-center">GALLERY</h4>
                 <section class="customer-logos slider spad">
                     <div class="slide"><img src="img/gallery/aaluv-robotics-001.jpg" alt=""/></div>
                     <div class="slide"><img src="img/gallery/aaluv-robotics-002.jpg" alt=""/></div>

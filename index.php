@@ -102,7 +102,7 @@
         <section class="service-section spad wow fadeInDown">
             <div class="container">
                 <div class="section-title text-center">
-                    <h3 class="color-blue">WELCOME TO AALUV MATHS</h3>
+                    <h3 class="color-blue">WELCOME TO AALUV GLOBAL</h3>
 <!--                    <p>Learning at one's own pace, improving fundamental academic capability</p>-->
                 </div>
                 <div class="row">

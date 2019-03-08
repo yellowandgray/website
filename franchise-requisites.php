@@ -51,7 +51,7 @@
 
                                     </div>
                                     <div class="col-md-8">
-                                        <p><b>Seating:</b> A comfortable seating arrangement.</p>
+                                        <p class="padding-tb-20"><b>Seating:</b> A comfortable seating arrangement.</p>
                                     </div>
                                 </div>
                             </div>

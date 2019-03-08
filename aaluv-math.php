@@ -13,7 +13,7 @@
         <div class="site-breadcrumb breadcrumb-bg">
             <div class="container">
                 <a href="index.php"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-right"></i>
-                <span>ALUV Math</span>
+                <span>AALUV Math</span>
             </div>
         </div>
         <!-- Breadcrumb section end -->
@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="color-blue text-center">AALUV Maths</h3>
+                        <h3 class="color-blue text-center">AALUV MATHS</h3>
                         <p class="text-justify">Aaluv Maths is a unique Comprehensive Mathematic Learning Solution helping millions of students world-wide developing a self-motivated learning and attitude which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
                         <p class="text-justify">Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
                     </div>

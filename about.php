@@ -28,7 +28,7 @@
         <section class="about-section spad">
             <div class="container">
                 <div class="section-title text-center">
-                    <h3 class="color-blue">WELCOME TO AALUV</h3>
+                    <h3 class="color-blue">WELCOME TO AALUV GLOBAL</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-7 about-text">
