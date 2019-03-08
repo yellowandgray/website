@@ -357,7 +357,7 @@ ol {
 -----------------------*/
 
 .hs-item {
-/*    min-height: 760px;*/
+    /*    min-height: 760px;*/
     position: relative;
     display: table;
     width: 100%;
@@ -1500,9 +1500,9 @@ ol {
     width: 100%;
     border: 1px solid #cccccc;
     font-size: 14px;
-    padding: 18px 20px;
+    padding: 10px 20px;
     margin-bottom: 15px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 select {
     width: 100%;
@@ -1524,7 +1524,7 @@ select {
 }
 
 .comment-form.contact textarea {
-/*    margin-bottom: 50px;*/
+    /*    margin-bottom: 50px;*/
 }
 
 .widget {

@@ -273,9 +273,9 @@
 
         <!-- Courses section -->
         <section class="courses-section spad">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-7 padding-section wow fadeInDown">
+                    <div class="col-lg-7 wow fadeInDown">
                         <h3 class="color-blue">AALUV Classroom Franchisee Desired Qualities</h3>
                         <!--                        <h3 >  Opening Shortly at ADYAR &#38; NEELANKARAI</h3>-->
                         <h4>The prospective franchisee must have:</h4>

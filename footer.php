@@ -23,12 +23,13 @@
                     <ul>
                         <li><a href="index.php">Home</a></li>
                         <li><a href="about.php">About us</a></li>
-                        <li><a href="aaluv-classroom.php">Classroom</a></li>
-                        <li><a href="news-events.php">News&Events</a></li>
-                        <li><a href="business-requisites-franchise.php">Franchise</a></li>
+                        <li><a href="aaluv-math.php.php">Aaluv Maths</a></li>
+                        <li><a href="aaluv-robotics.php">Aaluv Robotics</a></li>
+                        <li><a href="franchise-requisites.php">Franchise</a></li>
                         <li><a href="contact.php">Contact</a></li>
                         <li><a href="careers.php">Careers</a></li>
                         <li><a href="faq.php">FAQs</a></li>
+                        <li><a href="news-events.php">News&Events</a></li>
 <!--                        <li><a href="classroom-enrollment.php">Classroom Enrollment</a></li>-->
                     </ul>
                 </div>
