@@ -203,7 +203,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 text-center margin-b-20 wow fadeInDown">
-                        <div class="shadow">
+                        <div class="shadow height-100">
                             <img class="text-center contents" src="img/icon7.png">
                             <h2 class="text-center color-white">About Aaluv </h2>
                             <p class="text-justify home-para color-white">The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe.</p>
@@ -213,7 +213,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 text-center margin-b-20 wow fadeInDown">
-                        <div class="shadow">
+                        <div class="shadow height-100">
                             <img class="text-center contents" src="img/icon8.png">
                             <h2 class="text-center color-white">Our Classroom</h2>
                             <p class="text-justify home-para color-white">Min Area required1000 Sq. Ft, in a Semi Commercial Area.A well-illuminated and ventilated classroom of about 250 Sq. ft each and minimum of 2-3 class rooms with basic amenities such as Air condition, Fans, drinking water and washroom facilities. A comfortable seating arrangement.Separate Rooms for Counselling and Admin activity such as fee collection and parents meeting. </p>
@@ -223,7 +223,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 text-center margin-b-20 wow fadeInDown">
-                        <div class="shadow">
+                        <div class="shadow height-100">
                             <img class="text-center contents" src="img/icon9.png">
                             <h2 class="text-center color-white">Our Principles</h2>
                             <ul class="text-left icon-position home-para color-white">
