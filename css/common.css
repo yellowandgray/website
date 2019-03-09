@@ -19,7 +19,7 @@
     color: #000;
     border: 1px solid #000;
     border-radius: 50px;
-    transition: all 0.5s;
+    transition: all 0.3s;
     transform: scale(0.8);
 }
 
