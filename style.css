@@ -1450,7 +1450,7 @@ ul {
 }
 .home5 .rs-header .main-menu .rs-menu ul {
   text-align: right;
-  margin-right: 112px;
+/*  margin-right: 112px;*/
 }
 .home5 .rs-header .main-menu .rs-menu > ul > li > a {
   color: #00bcd4;
