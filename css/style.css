@@ -149,7 +149,7 @@ ol {
     border: none;
     cursor: pointer;
     margin-top: 20px;
-    transition: transform 1s;
+    transition: transform .3s;
 }
 
 /* Image Popup */
