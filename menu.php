@@ -5,17 +5,17 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="rs-toolbar-left">
-                        <div class="welcome-message">
+<!--                        <div class="welcome-message">
                             <i class="glyph-icon flaticon-placeholder"></i>
                             <span>Edulearn NYC, USA</span> 
-                        </div>
+                        </div>-->
                         <div class="welcome-message">
                             <i class="glyph-icon flaticon-phone-call"></i>
                             <span><a href="tel:1234567890">+1234-567-890</a></span> 
                         </div>
                         <div class="welcome-message">
                             <i class="glyph-icon flaticon-email"></i>
-                            <span><a href="mailto:info@domain.com">info@domain.com</a></span> 
+                            <span><a href="mailto:info@domain.com">info@amoka.com</a></span> 
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                                 <ul class="nav-menu">
                                     <!-- Home -->
                                     <li class="current-menu-item current_page_item menu-item-has-children"> <a href="index.php" class="home">Home</a></li>
-                                    <li class="menu-item-has-children"> <a href="#">About Us</a></li>
+                                    <li class="menu-item-has-children"> <a href="about.php">About Us</a></li>
                                     <li class="menu-item-has-children"> <a href="#">WHY AMOKA</a></li>
                                     <li class="menu-item-has-children"> <a href="#">PROGRAMS</a></li>
                                     <li class="menu-item-has-children"> <a href="#">AMOKA ADVANTAGES</a></li>

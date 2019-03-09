@@ -20,7 +20,7 @@
         <!--Preloader area end here-->
 
         <!--Full width header Start-->
-<?php include 'menu.php'; ?>
+        <?php include 'menu.php'; ?>
         <!--Full width header End-->
 
         <!-- Slider Area Start -->
@@ -33,7 +33,7 @@
                         <div class="display-table">
                             <div class="display-table-cell">
                                 <div class="container text-center">
-                                    <h1 class="slider-title" data-animation-in="fadeInLeft" data-animation-out="animate-out">Best <span class="red-color">Education</span> For <span class="orange-color">your</span> kids</h1>
+                                    <h1 class="slider-title" data-animation-in="fadeInLeft" data-animation-out="animate-out">Best <span class="red-color">Education</span> For <span class="color-green">your</span> kids</h1>
                                     <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">Fusce sem dolor, interdum in efficitur at, faucibus nec lorem.Sed nec molestie justo.<br class="hidden-sm-dow"> Nunc quis sapien in arcu pharetra volutpat.Morbi nec vulputate dolor.</p>
                                     <a href="#" class="sl-get-started-btn" data-animation-in="lightSpeedIn" data-animation-out="animate-out">Contact us Now</a>
                                 </div>
@@ -49,7 +49,7 @@
                         <div class="display-table">
                             <div class="display-table-cell">
                                 <div class="container text-center">
-                                    <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">Are <span class="red-color">You</span> Ready <span class="orange-color">To</span> apply?</h1>
+                                    <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">Are <span class="red-color">You</span> Ready <span class="color-green">To</span> apply?</h1>
                                     <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">Fusce sem dolor, interdum in efficitur at, faucibus nec lorem.Sed nec molestie justo.<br class="hidden-sm-dow"> Nunc quis sapien in arcu pharetra volutpat.Morbi nec vulputate dolor.</p>  
                                     <a href="#" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">Contact us Now</a>
                                 </div>
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="services-item orange-color rs-animation-hover">
+                        <div class="services-item color-green rs-animation-hover">
                             <div class="services-icon">
                                 <i class="fa fa-book rs-animation-scale-up"></i>
                             </div>
@@ -125,19 +125,20 @@
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="sec-title mb-50">
-                            <h2><span class="orange-color">ABOUT</span> US</h2>      
-                            <p>Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.</p>
+                            <h2><span class="color-green">ABOUT</span> US</h2>      
+                            <p>Amoka is a Holistic Brain Development company, developing children's mind on all sides, this training program transforms and empowers Children to perform extensive calculations at stunning speed and accuracy with nothing but their own sharp mind to aid them. With a curriculum designed to enhance a child's skill set, Amoka endows the child with creativity, concentration, memory, speed writing, lateral thinking, listening capacity, analytical skills and over all self confidence.</p>
                         </div>
                         <div id="accordion" class="rs-accordion-style1">
                             <div class="card">
                                 <div class="card-header" id="headingOne">
                                     <h3 class="acdn-title" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Our History
+                                        Our Bio
                                     </h3>
                                 </div>
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                     <div class="card-body">
-                                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                                        <p>AMOKA ABACUS is the group company of KK Academy, Chennai - India has engraved its name in the field of education ever since  the year 2002 with its roots in India and Abroad. Since then, the company has thrived on delivering quality education programs such as Abacus, Arts, English, Math's to a large number of students across India. It introduced new courses matching the needs of students for surviving in today’s competitive World.</p>
+                                        <p>Over the years the Company has been lauded with accolades from the society and the education fraternity for its Service, innovation & customer satisfaction. KK Academy offers Brain Development Solutions to students, by making them to learn with specially designed curriculum.</p>
                                     </div>
                                 </div>
                             </div>
@@ -149,7 +150,8 @@
                                 </div>
                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                                     <div class="card-body">
-                                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                                        <p>To become the supreme authority in setting benchmarks and standards  in the field of Innovative education.</p>
+                                        <p>To unleash the inherent power in the human mind towards knowledge- based society.</p>
                                     </div>
                                 </div>
                             </div>
@@ -161,7 +163,7 @@
                                 </div>
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                                     <div class="card-body">
-                                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                                        <p>To equip the new generation cognitively  and functionally to meet and overcome  the challenges  in today’s competitive environment.</p>
                                     </div>
                                 </div>
                             </div>
@@ -179,228 +181,74 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="rs-counter-list">
-                            <h2 class="counter-number plus">60</h2>                  
-                            <h4 class="counter-desc">TEACHERS</h4>
+                            <h3 class="color-white">Ability</h3>
+
+                            <!--                            <h2 class="counter-number">60</h2>                  
+                                                        <h4 class="counter-desc">TEACHERS</h4>-->
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="rs-counter-list blue-color">
-                            <h2 class="counter-number plus">40</h2>
-                            <h4 class="counter-desc">COURSES</h4>
+                            <h3 class="color-white">Seeing</h3>
+                            <!--                            <h2 class="counter-number plus">40</h2>
+                                                        <h4 class="counter-desc">COURSES</h4>-->
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="rs-counter-list orange-color">
-                            <h2 class="counter-number plus">900</h2>                  
-                            <h4 class="counter-desc">STUDENTS</h4>
+                        <div class="rs-counter-list color-green">
+                            <h3 class="color-white">Hearing</h3>
+                            <!--                            <h2 class="counter-number plus">900</h2>                  
+                                                        <h4 class="counter-desc">STUDENTS</h4>-->
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="rs-counter-list red-color">
-                            <h2 class="counter-number plus">3675</h2>
-                            <h4 class="counter-desc">Satisfied Client</h4>
+                            <h3 class="color-white">Talking</h3>
+                            <!--                            <h2 class="counter-number plus">3675</h2>
+                                                        <h4 class="counter-desc">Satisfied Client</h4>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="rs-counter-list">
+                            <h3 class="color-white">Skill</h3>
+
+                            <!--                            <h2 class="counter-number">60</h2>                  
+                                                        <h4 class="counter-desc">TEACHERS</h4>-->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="rs-counter-list blue-color">
+                            <h3 class="color-white">Observation</h3>
+                            <!--                            <h2 class="counter-number plus">40</h2>
+                                                        <h4 class="counter-desc">COURSES</h4>-->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="rs-counter-list color-green">
+                            <h3 class="color-white">Listening</h3>
+                            <!--                            <h2 class="counter-number plus">900</h2>                  
+                                                        <h4 class="counter-desc">STUDENTS</h4>-->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="rs-counter-list red-color">
+                            <h3 class="color-white">Communication</h3>
+                            <!--                            <h2 class="counter-number plus">3675</h2>
+                                                        <h4 class="counter-desc">Satisfied Client</h4>-->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Counter Down Section End -->
-
-        <!-- Courses Start -->
-        <div id="rs-courses" class="rs-courses sec-color sec-spacer">
-            <div class="container">
-                <div class="sec-title mb-50 text-center">
-                    <h2><span class="orange-color">OUR</span> POPULAR COURSES</h2>      
-                    <p>Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="false" data-autoplay-timeout="5000" data-smart-speed="1200" data-dots="true" data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="true" data-mobile-device-dots="true" data-ipad-device="2" data-ipad-device-nav="true" data-ipad-device-dots="true" data-md-device="3" data-md-device-nav="true" data-md-device-dots="true">
-                            <div class="cource-item blue-color">
-                                <div class="cource-img">
-                                    <img src="images/courses/kids1.jpg" alt="" />
-                                    <a class="image-link" href="courses-details.html" title="University Tour 2018">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                    <span class="course-value">$450</span>
-                                </div>
-                                <div class="course-body">
-                                    <a href="#" class="course-category">Science</a>
-                                    <h4 class="course-title"><a href="courses-details.html">Electrical Engineering</a></h4>
-                                    <div class="review-wrap">
-                                        <ul class="rating">
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star-half-empty"></li>
-                                        </ul>
-                                        <span class="review">25 Reviews</span>
-                                    </div>
-                                    <div class="course-desc">
-                                        <p>
-                                            Cras ultricies lacus consectetur, consectetur
-                                            scelerisque arcu curabitur
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="course-footer">
-                                    <div class="course-time">
-                                        <span class="label">Course Time</span>
-                                        <span class="desc">3 Year</span>
-                                    </div>
-                                    <div class="course-student">
-                                        <span class="label">Course Student</span>
-                                        <span class="desc">95</span>
-                                    </div>
-                                    <div class="class-duration">
-                                        <span class="label">Class Duration</span>
-                                        <span class="desc">8:30-4:00</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cource-item orange-color">
-                                <div class="cource-img">
-                                    <img src="images/courses/kids2.jpg" alt="" />
-                                    <a class="image-link" href="courses-details.html" title="University Tour 2018">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                    <span class="course-value">$450</span>
-                                </div>
-                                <div class="course-body">
-                                    <a href="#" class="course-category">Science</a>
-                                    <h4 class="course-title"><a href="courses-details.html">Computer Engineering</a></h4>
-                                    <div class="review-wrap">
-                                        <ul class="rating">
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star-half-empty"></li>
-                                        </ul>
-                                        <span class="review">39 Reviews</span>
-                                    </div>
-                                    <div class="course-desc">
-                                        <p>
-                                            Cras ultricies lacus consectetur, consectetur
-                                            scelerisque arcu curabitur
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="course-footer">
-                                    <div class="course-time">
-                                        <span class="label">Course Time</span>
-                                        <span class="desc">4 Years</span>
-                                    </div>
-                                    <div class="course-student">
-                                        <span class="label">Course Student</span>
-                                        <span class="desc">99</span>
-                                    </div>
-                                    <div class="class-duration">
-                                        <span class="label">Class Duration</span>
-                                        <span class="desc">8:30-4:00</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cource-item purple-color">
-                                <div class="cource-img">
-                                    <img src="images/courses/kids3.jpg" alt="" />
-                                    <a class="image-link" href="courses-details.html" title="University Tour 2018">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                    <span class="course-value">$450</span>
-                                </div>
-                                <div class="course-body">
-                                    <a href="#" class="course-category">Science</a>
-                                    <h4 class="course-title"><a href="courses-details.html">Civil Engineering</a></h4>
-                                    <div class="review-wrap">
-                                        <ul class="rating">
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star-half-empty"></li>
-                                        </ul>
-                                        <span class="review">22 Reviews</span>
-                                    </div>
-                                    <div class="course-desc">
-                                        <p>
-                                            Cras ultricies lacus consectetur, consectetur
-                                            scelerisque arcu curabitur
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="course-footer">
-                                    <div class="course-time">
-                                        <span class="label">Course Time</span>
-                                        <span class="desc">3.5 Years</span>
-                                    </div>
-                                    <div class="course-student">
-                                        <span class="label">Course Student</span>
-                                        <span class="desc">80</span>
-                                    </div>
-                                    <div class="class-duration">
-                                        <span class="label">Class Duration</span>
-                                        <span class="desc">8:30-4:00</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cource-item red-color">
-                                <div class="cource-img">
-                                    <img src="images/courses/kids1.jpg" alt="" />
-                                    <a class="image-link" href="courses-details.html" title="University Tour 2018">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                    <span class="course-value">$450</span>
-                                </div>
-                                <div class="course-body">
-                                    <a href="#" class="course-category">Science</a>
-                                    <h4 class="course-title"><a href="courses-details.html">Civil Engineering</a></h4>
-                                    <div class="review-wrap">
-                                        <ul class="rating">
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star"></li>
-                                            <li class="fa fa-star-half-empty"></li>
-                                        </ul>
-                                        <span class="review">22 Reviews</span>
-                                    </div>
-                                    <div class="course-desc">
-                                        <p>
-                                            Cras ultricies lacus consectetur, consectetur
-                                            scelerisque arcu curabitur
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="course-footer">
-                                    <div class="course-time">
-                                        <span class="label">Course Time</span>
-                                        <span class="desc">3.5 Years</span>
-                                    </div>
-                                    <div class="course-student">
-                                        <span class="label">Course Student</span>
-                                        <span class="desc">80</span>
-                                    </div>
-                                    <div class="class-duration">
-                                        <span class="label">Class Duration</span>
-                                        <span class="desc">8:30-4:00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Courses End -->
-
-        <!-- Team Start -->
+<!-- Team Start -->
         <div id="rs-team" class="rs-team blue-bg bg8 sec-spacer">
             <div class="blue-overlay"></div>
             <div class="container">
                 <div class="sec-title mb-50 text-center">
-                    <h2><span class="orange-color">Our</span> Kids Teachers</h2>      
+                    <h2><span class="color-green">Our</span> Kids Teachers</h2>      
                     <p class="white-color">Considering desire as primary motivation for the generation of narratives is a useful concept.</p>
                 </div>
                 <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="false" data-autoplay-timeout="5000" data-smart-speed="1200" data-dots="true" data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="true" data-mobile-device-dots="true" data-ipad-device="2" data-ipad-device-nav="true" data-ipad-device-dots="true" data-md-device="3" data-md-device-nav="true" data-md-device-dots="true">
@@ -513,7 +361,7 @@
         <div id="rs-events" class="rs-events sec-spacer">
             <div class="container">
                 <div class="sec-title mb-50 text-center">
-                    <h2><span class="orange-color">Our</span> kids Event</h2>      
+                    <h2><span class="color-green">Our</span> kids Event</h2>      
                     <p>I feel the presence of the Almighty, who formed us in his own image, and the breath.</p>
                 </div>
                 <div class="row">
@@ -575,7 +423,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="event-item orange-color">
+                            <div class="event-item color-green">
                                 <div class="event-img">
                                     <img src="images/events/kids/kids3.jpg" alt="" />
                                     <a class="image-link" href="events-details.html" title="University Tour 2018">
@@ -643,7 +491,7 @@
             <div class="blue-overlay"></div>
             <div class="container">
                 <div class="sec-title mb-50 text-center">
-                    <h2><span class="orange-color">WHAT</span> PEOPLE SAYS</h2>      
+                    <h2><span class="color-green">WHAT</span> PEOPLE SAYS</h2>      
                     <p class="white-color">Fusce sem dolor, interdum in efficitur at, faucibus nec lorem. Sed nec molestie justo.</p>
                 </div>
                 <div class="row">
@@ -715,7 +563,7 @@
         <div id="rs-latest-news" class="rs-latest-news sec-spacer">
             <div class="container">
                 <div class="sec-title mb-50 text-center">
-                    <h2><span class="orange-color">OUR</span> LASTEST NEWS</h2>      
+                    <h2><span class="color-green">OUR</span> LASTEST NEWS</h2>      
                     <p>Fusce sem dolor, interdum in efficitur at, faucibus nec lorem. Sed nec molestie justo.</p>
                 </div>
                 <div class="row">
@@ -890,7 +738,7 @@
         <!-- Partner End -->
 
         <!-- Footer Start -->
-<?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
         <!-- Footer End -->
 
         <!-- start scrollUp  -->

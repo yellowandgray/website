@@ -1,50 +1,49 @@
-   <footer id="rs-footer" class="bg8 blue-bg rs-footer">
-            <div class="blue-overlay"></div>
-            <div class="container">
-                <!-- Footer Address -->
-                <div>
-                    <div class="row footer-contact-desc">
-                        <div class="col-md-4">
-                            <div class="contact-inner">
-                                <i class="fa fa-map-marker"></i>
-                                <h4 class="contact-title">Address</h4>
-                                <p class="contact-desc">
-                                    503  Old Buffalo Street<br>
-                                    Northwest #205, New York-3087
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="contact-inner">
-                                <i class="fa fa-phone"></i>
-                                <h4 class="contact-title">Phone Number</h4>
-                                <p class="contact-desc">
-                                    +3453-909-6565<br>
-                                    +2390-875-2235
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="contact-inner">
-                                <i class="fa fa-map-marker"></i>
-                                <h4 class="contact-title">Email Address</h4>
-                                <p class="contact-desc">
-                                    infoname@gmail.com<br>
-                                    www.yourname.com
-                                </p>
-                            </div>
-                        </div>
-                    </div>					
-                </div>
-            </div>
-
-            <!-- Footer Top -->
+     <footer id="rs-footer" class="bg3 rs-footer">
+			<div class="container">
+				<!-- Footer Address -->
+				<div>
+					<div class="row footer-contact-desc">
+						<div class="col-md-4">
+							<div class="contact-inner">
+								<i class="fa fa-map-marker"></i>
+								<h4 class="contact-title">Address</h4>
+								<p class="contact-desc">
+									503  Old Buffalo Street<br>
+									Northwest #205, New York-3087
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="contact-inner">
+								<i class="fa fa-phone"></i>
+								<h4 class="contact-title">Phone Number</h4>
+								<p class="contact-desc">
+									+3453-909-6565<br>
+									+2390-875-2235
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="contact-inner">
+								<i class="fa fa-map-marker"></i>
+								<h4 class="contact-title">Email Address</h4>
+								<p class="contact-desc">
+									infoname@gmail.com<br>
+									www.yourname.com
+								</p>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+			
+			<!-- Footer Top -->
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-3 col-md-12">
                             <div class="about-widget">
-                                <img src="images/logo-footer2.png" alt="Footer Logo">
+                                <img src="images/logo-footer.png" alt="Footer Logo">
                                 <p>We create Premium Html Themes for more than three years. Our team goal is to reunite the elegance of unique.</p>
                                 <p class="margin-remove">We create Unique and Easy To Use Flexible Html Themes.</p>
                             </div>
@@ -92,12 +91,15 @@
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-12">
-                            <h5 class="footer-title">NEWSLETTER</h5>
-                            <p>Sign Up to Our Newsletter to Get Latest Updates &amp; Services</p>
-                            <form class="news-form">
-                                <input type="text" class="form-input" placeholder="Enter Your Email">
-                                <button type="submit" class="form-button"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-                            </form>
+                            <h3 class="footer-title">FLICKR FEED</h3>
+                            <ul class="flickr-feed">
+                                <li><a href="#"><img src="images/flickr/1.jpg" alt="Project Image"></a></li>
+                                <li><a href="#"><img src="images/flickr/2.jpg" alt="Project Image"></a></li>
+                                <li><a href="#"><img src="images/flickr/3.jpg" alt="Project Image"></a></li>
+                                <li><a href="#"><img src="images/flickr/4.jpg" alt="Project Image"></a></li>
+                                <li><a href="#"><img src="images/flickr/5.jpg" alt="Project Image"></a></li>
+                                <li><a href="#"><img src="images/flickr/6.jpg" alt="Project Image"></a></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="footer-share">
@@ -121,6 +123,10 @@
                 </div>
             </div>
         </footer>
+    <!-- start scrollUp  -->
+        <div id="scrollUp">
+            <i class="fa fa-angle-up"></i>
+        </div>
 <!-- modernizr js -->
         <script src="js/modernizr-2.8.3.min.js"></script>
         <!-- jquery latest version -->
