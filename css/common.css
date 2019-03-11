@@ -845,13 +845,16 @@ ul.submenu li a{
 
 .addmission-section {
     padding: 30px 0px;
-    text-align: center;
+/*    text-align: center;*/
     background: #eee;
 }
 
+.addmission-section h5 {font-size: 18px !important;}
+.addmission-section .btn-custom {line-height: 75px !important;}
+
 .addmission-section p {
     font-family: 'Roboto Slab', serif;
-    font-size: 24px;
+    font-size: 17px;
     margin: 0px;
     color: #1c61ab;
     font-weight: 600;
