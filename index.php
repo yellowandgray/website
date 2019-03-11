@@ -73,7 +73,7 @@
 
         <!-- Counter section  -->
         <section class="counter-section wow fadeInDown">
-            <div class="container">
+<!--            <div class="container">
                 <div class="row">
                     <div class="col-lg-7 col-md-6">
                         <div class="big-icon">
@@ -93,7 +93,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </section>
         <!-- Counter section end -->
 

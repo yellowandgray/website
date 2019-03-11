@@ -5,7 +5,7 @@
             <!-- widget -->
             <div class="col-sm-6 col-lg-3 footer-widget">
                 <div class="about-widget">
-                    <img src="img/aaluv-logo.png" alt="">
+                    <img src="img/aaluv-logo1.png" alt="">
                     <p>Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
                     <div class="social pt-1">
                         <a href=""><i class="fab fa-twitter-square"></i></a>
