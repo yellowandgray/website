@@ -59,7 +59,7 @@
                                     <li class="menu-item-has-children"> <a href="about.php">About Us</a></li>
                                     <li class="menu-item-has-children"> <a href="whyus.php">WHY AMOKA</a></li>
                                     <li class="menu-item-has-children"> <a href="program.php">PROGRAMS</a></li>
-                                    <li class="menu-item-has-children"> <a href="#">AMOKA ADVANTAGES</a></li>
+                                    <li class="menu-item-has-children"> <a href="amoka-advantage.php">AMOKA ADVANTAGES</a></li>
                                     <li class="menu-item-has-children"> <a href="#">SYLLABUS</a></li>
                                     <!--                                <li class="menu-item-has-children"> <a href="#">Events</a></li>
                                                                     <li class="menu-item-has-children"> <a href="#">Blog</a></li>-->

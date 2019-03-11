@@ -27,52 +27,67 @@
         <!-- Breadcrumbs End -->
 
         <!-- History Start -->
-        <div class="rs-history sec-spacer">
+        <section class="light-yellow-bg">
+            <div class="rs-history sec-spacer">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 rs-vertical-bottom mobile-mb-50">
-                        <a href="#">
-                            <img src="images/about/history.jpg" alt="History Image"/>
-                        </a>
+                    <div class="col-md-12">
+                        <h2 class="text-center">AMOKA’S BENEFITS:</h2>
                     </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="abt-title">
-                            <h2>Why Abacus is a must for a child?</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Greater concentration</li>
+                            <li>Keen Listening skills</li>
+                            <li>Better reflexes</li>
+                            <li>Better application skills</li>
+                            <li>Improved analytical skills</li>
+                            <li>Better comprehension and calculation skills </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Better creative and imaginative skills</li>
+                            <li>Improved reading writing and learning skills</li>
+                            <li>Better Memory</li>
+                            <li>Sharper observation</li>
+                            <li>Self – confidence</li>
+                            <li>Better expression</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            </section>
+        <!-- History End -->
+
+        <!-- Mission Start -->
+     <div class="rs-mission sec-color sec-spacer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="abt-title">
+                                <h2>Can you tell :  4325 X 235 = ?  or 7354 / 2345 = ? in seconds.</h2>
+                            </div>
+                            <div class="about-desc">
+                                <p>Can you imagine these same sums, that have baffled you, are being solved by an eight year old child just in 8 seconds flat and too that without using any of the external aids</p>
+                                <h3>Incredible that  AMOKA challenges .!!!</h3>
+                                <p><b>SYNAPSE</b> in Right Brain will be ACTIVE if they are strengthened in kids  before 12 Years of age.</p>
+                                <p><b>BRAIN GROWTH</b></p>          
+                                <p>Till 5 YEARS – 50 cm - 90 % Growth </p>
+                                <p>LIFETIME – 60 cm</p>
+
+                            </div>
                         </div>
-                        <div class="about-desc">
-                            <p>Abacus is a form of calculation that does not involve use of any physical or external gadgets/instruments such as a Calculator, Paper, Pencil or a computer.</p>
-                            <p>It (calculations) is solely done by human brain using mental power performing Mathematical Calculations .</p>
+                        <div class="col-md-6">
+                            <img src="images/why-us.jpg" alt=""/>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- History End -->
 
-        <!-- Mission Start -->
-        <div class="rs-mission sec-color sec-spacer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="abt-title">
-                            <h2>Can you tell :  4325 X 235 = ?  or 7354 / 2345 = ? in seconds.</h2>
-                        </div>
-                        <div class="about-desc">
-                            <p>Can you imagine these same sums, that have baffled you, are being solved by an eight year old child just in 8 seconds flat and too that without using any of the external aids</p>
-                            <h3>Incredible that  AMOKA challenges .!!!</h3>
-                            <p><b>SYNAPSE</b> in Right Brain will be ACTIVE if they are strengthened in kids  before 12 Years of age.</p>
-                            <p><b>BRAIN GROWTH</b></p>          
-                            <p>Till 5 YEARS – 50 cm - 90 % Growth </p>
-                            <p>LIFETIME – 60 cm</p>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                             <img src="images/why-us.jpg" alt=""/>
-                           </div>
-               </div>
-            </div>
-        </div>
         <!-- Mission End -->
 
         <!-- Vision Start -->

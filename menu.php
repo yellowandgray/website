@@ -1,14 +1,14 @@
 <div class="full-width-header">
     <!-- Toolbar Start -->
-    <div class="rs-toolbar">
+<!--    <div class="rs-toolbar">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="rs-toolbar-left">
-<!--                        <div class="welcome-message">
+                        <div class="welcome-message">
                             <i class="glyph-icon flaticon-placeholder"></i>
                             <span>Edulearn NYC, USA</span> 
-                        </div>-->
+                        </div>
                         <div class="welcome-message">
                             <i class="glyph-icon flaticon-phone-call"></i>
                             <span><a href="tel:1234567890">+1234-567-890</a></span> 
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Toolbar End -->
 
     <!--Header Start-->
@@ -45,12 +45,12 @@
         <div class="menu-area menu-sticky">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-3 col-md-12">
                         <div class="logo-area">
                             <a href="index-2.html"><img src="images/logo2.png" alt="logo"></a>
                         </div>
                     </div>
-                    <div class="col-lg-8 col-md-12">
+                    <div class="col-lg-11 col-md-12">
                         <div class="main-menu">
                             <!-- <div id="logo-sticky" class="text-center">
                                 <a href="index.html"><img src="images/logo.png" alt="logo"></a>

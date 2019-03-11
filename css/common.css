@@ -45,3 +45,9 @@ td, th {
   border: 1px solid #ddd;
   padding: 8px;
 }
+.light-yellow-bg {
+    background-color: #eaecda;
+}
+.margin-top-80 {
+    margin:80px;
+}
