@@ -14,7 +14,7 @@
             </div>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/enpeekkl-news-events-banner.jpg) no-repeat; background-size: contain">
+            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/enpeekkl-news-events-banner.jpg) no-repeat; background-position: center;">
                 <div class="container">
                     <h1>News & Events</h1>
                     <!--                    <ul>
@@ -42,7 +42,7 @@
                                 <p>The Hon’ble members of legislature Sri  K A U Asana, MLA of Karaikal South, Smt. Geetha Anandan, MLA of Neravy – T R Pattinam, Sri Mahesh Kumar Barnwal, Senior Supt of Police, the Chief Educational Officer of Karaikal, Selvi A.Ally were also present.</p>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row event-justify">
                             <div class="col-md-12">
                                 <p>The ENPEE INTERNATIONAL SCHOOL is promoted by the NP business group having interest in Pharma and Medical education. Haji L.Kamal Batcha, a noted Rotarian too, is the Chairman of the School, with his sons, Prof. Dr.K.Mujibur Rahman M.D. as the Managing Director and Prof. Dr. K.Mohammed Ali. M.D. as a  Director.</p>
                                 <p>Sri H.M.A.Khan, the CEO of the school welcomed the gathering while  Ms Arrchana Chellappa, Vice President, proposed the vote of thanks.</p>
@@ -128,7 +128,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <div class="row">
+                                <div class="row event-justify">
                                     <!--                                    <h2 class="margin-bottom-0 text-center">ENPEE INTERNATIONAL SCHOOL - GRAND LAUNCH ON 10TH FEBRUARY, 2019</h2> -->
                                     <div class="col-md-12">
                                         <p>The function was preceded by various special activities designed to attract the young  children, with the concept of KNOWLEDGE, INNOVATION AND EXCELLENCE. There were programmes for the parents also. All children were bestowed with certificates and Awards.</p>
@@ -189,7 +189,7 @@
                                         <img src="images/events/event-img-46.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                 </div>
-                                <div class="row events-margin">
+                                <div class="row events-margin event-justify">
                                     <div class="col-md-6">
                                         <img src="images/event-school.jpg" alt="ENPEE-International-School-Image" title="Event- ENPEE Interantional School" />
                                     </div>
