@@ -1194,6 +1194,10 @@ marquee {
         width: 100% !important;
         height: auto !important;
     }
+    .volunteer-form .multi-select-button {
+        width: 110% !important;
+        max-width: 110% !important;
+    }
 }
 
 .events-margin img {
