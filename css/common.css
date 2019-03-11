@@ -845,11 +845,15 @@ ul.submenu li a{
 
 .addmission-section {
     padding: 30px 0px;
-/*    text-align: center;*/
+    /*    text-align: center;*/
     background: #eee;
 }
 
-.addmission-section h5 {font-size: 18px !important;}
+.addmission-section h5 {    
+    font-size: 20px !important;
+    text-align: center;
+    margin-bottom: 10px;
+}
 .addmission-section .btn-custom {line-height: 75px !important;}
 
 .addmission-section p {
@@ -913,7 +917,7 @@ ul.submenu li a{
         bottom: 350px !important;
     }
     .addmission-section p {
-        font-size: 24px !important;
+        font-size: 14px !important;
     }
     .open-button img {
         width: 100% !important;
@@ -938,6 +942,15 @@ ul.submenu li a{
     border-radius: 100px;
     padding: 11px 25px;
     line-height: 45px;
+}
+
+.addmission-section .btn-custom-1 {
+    background: #2f68ae;
+    color: #fff;
+    border: 2px solid #2f68ae;
+    border-radius: 100px;
+    padding: 11px 25px;
+    line-height: 75px;
 }
 
 .btn-custom:hover {
@@ -973,6 +986,12 @@ ul.submenu li a{
 @media (min-width: 280px) and (max-width: 355px) {
     .c-info {
         height: auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+    .addmission-section iframe {
+        height: auto !important;
     }
 }
 
@@ -1191,5 +1210,17 @@ marquee {
 }
 
 .event-justify p {
+    text-align: justify;
+}
+
+.events-hover:hover {
+    color: #000;
+}
+
+.event-section center {
+    margin-bottom: 10px;
+}
+
+.event-school-section p {
     text-align: justify;
 }
