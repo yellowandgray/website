@@ -118,7 +118,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="copyright">
-                <p>© 2018 <a href="#">RS Theme</a>. All Rights Reserved.</p>
+                <p>© 2019 <a href="#">AALUV</a>. All Rights Reserved.</p>
             </div>
         </div>
     </div>
