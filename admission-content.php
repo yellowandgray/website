@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="row">
-                    <h5>Admission Opens</h5>
+                    <h5>Admissions Open</h5>
                     <div class="col-md-6">
                         <img src="images/enpeekkl-admission-open.jpg" alt="Enpee International School Admission Opens" title="Enpee International School Admission Opens" />
                     </div>
