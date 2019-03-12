@@ -8,8 +8,7 @@
                         <i class="fa fa-map-marker"></i>
                         <h4 class="contact-title">Address</h4>
                         <p class="contact-desc">
-                            503  Old Buffalo Street<br>
-                            Northwest #205, New York-3087
+                            17/7, 1st Ave Shastri Nagar,<br> Adyar Chennai, Tamil Nadu 600020
                         </p>
                     </div>
                 </div>
@@ -18,8 +17,7 @@
                         <i class="fa fa-phone"></i>
                         <h4 class="contact-title">Phone Number</h4>
                         <p class="contact-desc">
-                            +3453-909-6565<br>
-                            +2390-875-2235
+                             7601044444
                         </p>
                     </div>
                 </div>
@@ -28,8 +26,7 @@
                         <i class="fa fa-map-marker"></i>
                         <h4 class="contact-title">Email Address</h4>
                         <p class="contact-desc">
-                            infoname@gmail.com<br>
-                            www.yourname.com
+                            info@aaluvglobal.com
                         </p>
                     </div>
                 </div>
