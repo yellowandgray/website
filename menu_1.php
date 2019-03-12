@@ -54,7 +54,7 @@
                                             <li><a href="aaluv-robotics.php">AALUV ROBOTICS</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item-has-children <?php if($page == 'happening'){ echo 'active';} ?>"> <a href="#">HAPPENINGS</a></li>
+                                    <li class="menu-item-has-children <?php if($page == 'happening'){ echo 'active';} ?>"> <a href="happening.php">HAPPENINGS</a></li>
                                     <li class="menu-item-has-children <?php if($page == 'locate'){ echo 'active';} ?>"> <a href="contact.php">LOCATE US</a></li>
                                     <!--                                <li class="menu-item-has-children"> <a href="#">Events</a></li>
                                                                     <li class="menu-item-has-children"> <a href="#">Blog</a></li>-->

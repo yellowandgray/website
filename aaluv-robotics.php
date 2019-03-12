@@ -42,7 +42,7 @@
         <!-- Breadcrumbs End -->
 
         <!-- History Start -->
-        <section id="about-section" class="padding-100 bg-img-2">
+        <section id="about-section" class="padding-100 bg-img-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -66,7 +66,7 @@
         <!-- History End -->
 
         <!-- Mission Start -->
-        <section id="about-section" class="padding-100 bg-img-3">
+        <section id="about-section" class="padding-100 bg-img-6">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -88,7 +88,7 @@
         <!-- Mission End -->
 
         <!-- Vision Start -->
-        <section id="about-section" class="bg-img-4 padding-100">
+        <section id="about-section" class="bg-img-7 padding-100">
             <div class="container">
                 <div class="row padding-top-30">
                     <div class="col-md-6">

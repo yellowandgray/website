@@ -333,3 +333,19 @@ ul.nacc li p {
 .rs-header-2 .menu-area .rs-menu li ul li a:hover {
     color: #eee !important;
 }
+
+.bg-img-5 {
+    background-image: url(../images/background-06.jpg);
+    background-size: cover;
+    height: auto;
+}
+.bg-img-6 {
+    background-image: url(../images/background-07.jpg);
+    background-size: cover;
+    height: auto;
+}
+.bg-img-7 {
+    background-image: url(../images/background-08.jpg);
+    background-size: cover;
+    height: auto;
+}
