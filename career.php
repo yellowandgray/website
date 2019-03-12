@@ -4,7 +4,7 @@
     <!-- Mirrored from keenitsolutions.com/products/html/edulearn/edulearn-demo/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Mar 2019 06:06:12 GMT -->
     <?php
     include 'head.php';
-    $page = 'about';
+    $page = 'withus';
     ?>
     <body class="inner-page">
         <!--Preloader area start here-->
@@ -42,8 +42,8 @@
         <!-- Breadcrumbs End -->
 
         <!-- History Start -->
-        <section id="about-section" class="padding-100 bg-img-2">
-            <div class="container">
+        <section id="about-section" class="padding-100 bg-gray">
+            <div class="container  contact-page-section">
                 <div class="contact-comment-section">
                     <h3>Leave Comment</h3>
                     <div id="form-messages"></div>
@@ -76,9 +76,9 @@
                                         <ul class="job-drop-down">
                                             <li>
                                                 <select>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
+                                                    <option>---</option>
+                                                    <option>Teacher</option>
+                                                    <option>Central Manager</option>
                                                 </select>
                                             </li>
                                         </ul>

@@ -434,3 +434,6 @@ ul.nacc li p {
     padding: 6px;
     border-radius: 4px;
 }
+.bg-gray {
+    background: #ccc;
+}
