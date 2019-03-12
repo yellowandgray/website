@@ -56,13 +56,13 @@ Version: 1.0.0
     top: 100%;
     width: 100%;
     display: none;
-    background-color: #ddd; 
+    background-color: #0eaa99; 
 }
 .home5 .rs-menu ul ul {
-    background-color: #ddd; 
+    background-color: #0ea999; 
 }
 .home5 .rs-menu ul ul li {
-    border-bottom:1px solid #048d9e;
+    border-bottom: 1px solid #ffffff;
 }
 .home5 .rs-menu a{
     color: #fff;
