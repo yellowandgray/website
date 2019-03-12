@@ -27,7 +27,7 @@ Version: 1.0.0
 .rs-menu i {
     border: 0;
     margin: 0;
-    padding: 10px 0px 0px 0px;
+    padding: 4px 0px 0px 0px;
 }
 
 .rs-menu li {
@@ -56,10 +56,10 @@ Version: 1.0.0
     top: 100%;
     width: 100%;
     display: none;
-    background-color: #048d9e; 
+    background-color: #ddd; 
 }
 .home5 .rs-menu ul ul {
-    background-color: #00bcd4; 
+    background-color: #ddd; 
 }
 .home5 .rs-menu ul ul li {
     border-bottom:1px solid #048d9e;
@@ -718,9 +718,9 @@ Version: 1.0.0
     .home5 .rs-menu > ul > li > a{
         height: 18px;
         line-height: 20px;
-        padding: 0 17px;
+        padding: 0 15px;
         border-left: 1px solid black;
-        margin: 49px 0px;
+        margin: 45px 0px;
     }
     .home5 .sticky4 .rs-menu > ul > li:first-child a{
         padding-left: 0;

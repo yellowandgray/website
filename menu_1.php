@@ -7,7 +7,7 @@
                 <div class="col-md-6">
                     <div class="rs-toolbar-left">
                         <div class="welcome-message">
-                           <span>Welcome to AALUV</span> 
+                           <span>Welcome to Aaluv</span> 
                         </div>
                     </div>
                 </div>
@@ -16,12 +16,12 @@
                         <div class="toolbar-share-icon">
                             <ul>
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+<!--                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>-->
                             </ul>
                         </div>
-                        <a href="#" class="apply-btn">Apply Now</a>
+<!--                        <a href="#" class="apply-btn">Apply Now</a>-->
                     </div>
                 </div>
             </div>
