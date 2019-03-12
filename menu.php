@@ -6,18 +6,18 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="rs-toolbar-left top-toolbar">
                         <p>Welcome to Aaluv</p>
-<!--                        <div class="welcome-message">
-                            <i class="glyph-icon flaticon-placeholder"></i>
-                            <span>Edulearn NYC, USA</span> 
-                        </div>
-                        <div class="welcome-message">
-                            <i class="glyph-icon flaticon-phone-call"></i>
-                            <span><a href="tel:1234567890">+1234-567-890</a></span> 
-                        </div>
-                        <div class="welcome-message">
-                            <i class="glyph-icon flaticon-email"></i>
-                            <span><a href="mailto:info@domain.com">info@amoka.com</a></span> 
-                        </div>-->
+                        <!--                        <div class="welcome-message">
+                                                    <i class="glyph-icon flaticon-placeholder"></i>
+                                                    <span>Edulearn NYC, USA</span> 
+                                                </div>
+                                                <div class="welcome-message">
+                                                    <i class="glyph-icon flaticon-phone-call"></i>
+                                                    <span><a href="tel:1234567890">+1234-567-890</a></span> 
+                                                </div>
+                                                <div class="welcome-message">
+                                                    <i class="glyph-icon flaticon-email"></i>
+                                                    <span><a href="mailto:info@domain.com">info@amoka.com</a></span> 
+                                                </div>-->
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -30,9 +30,9 @@
                                 <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>-->
                             </ul>
                         </div>
-<!--                        <a class="hidden-xs rs-search" data-target=".search-modal" data-toggle="modal" href="#">
-                            <i class="fa fa-search"></i>
-                        </a>-->
+                        <!--                        <a class="hidden-xs rs-search" data-target=".search-modal" data-toggle="modal" href="#">
+                                                    <i class="fa fa-search"></i>
+                                                </a>-->
                     </div>
                 </div>
             </div>
@@ -72,7 +72,17 @@
                                     <li class="menu-item-has-children"> <a href="contact.php">LOCATE US</a></li>
                                     <!--                                <li class="menu-item-has-children"> <a href="#">Events</a></li>
                                                                     <li class="menu-item-has-children"> <a href="#">Blog</a></li>-->
-                                    <li> <a href="franchise-requisites.php">Franchise Requisites</a></li>
+                                    <li class="menu-item-has-children <?php
+                                    if ($page == 'withus') {
+                                        echo 'active';
+                                    }
+                                    ?>"> <a href="#">PRO WITH US</a>
+                                        <ul class="sub-menu">
+                                            <li> <a href="franchise-requisites.php">Franchise Requisites</a></li>
+                                            <li> <a href="franchise-requisites.php">CENTRAL MANAGER</a></li>
+
+                                        </ul>
+                                    </li>
                                 </ul>
                             </nav>
                             <!--                            <div class="apply-box">
