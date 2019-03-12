@@ -47,7 +47,7 @@
                 <div class="contact-comment-section">
                     <h3>Career Form</h3>
                     <div id="form-messages"></div>
-                    <form id="contact-form" method="post" action="http://keenitsolutions.com/products/html/edulearn/edulearn-demo/mailer.php">
+                    <form role="form" id="contact-form" class="career" enctype="multipart/form-data">
                         <fieldset>
                             <div class="row">                                      
                                 <div class="col-md-6 col-sm-12">
