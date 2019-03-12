@@ -73,7 +73,7 @@
         <!-- History End -->
 
         <!-- Mission Start -->
-        <section id="about-section" class="padding-100 bg-img-3">
+        <section id="about-section" class="padding-100 bg-fixed">
             <div class="container">
                 <h3 class="text-center">WHAT ROBOTICS CAN TEACH?</h3>
                 <div class="row">
@@ -131,12 +131,12 @@
         <!-- Mission End -->
 
         <!-- Vision Start -->
-        <section id="about-section" class="bg-img-4 padding-b-100">
+        <section id="about-section" class="padding-b-100">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <h3 class="color-blue">Who Needs Robotics in Education?</h3>
-                        <ul class="list-style-none p-margin">
+                        <ul class="list-align">
                             <i class="fas fa-check"></i><li>Teachers / Educators</li>
                             <i class="fas fa-check"></i><li>Students / Learners</li>
                         </ul>

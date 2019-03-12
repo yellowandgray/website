@@ -424,3 +424,7 @@ ul.nacc li p {
     background-size: cover;
     height: auto;
 }
+
+.bg-fixed {
+    background: url(images/)
+}
