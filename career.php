@@ -27,12 +27,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h1 class="page-title">About Us</h1>
+                            <h1 class="page-title">Career</h1>
                             <ul>
                                 <li>
                                     <a class="active" href="index-2.html">Home</a>
                                 </li>
-                                <li>About Us</li>
+                                <li>Career</li>
                             </ul>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
         <section id="about-section" class="padding-100 bg-gray">
             <div class="container  contact-page-section">
                 <div class="contact-comment-section">
-                    <h3>Leave Comment</h3>
+                    <h3>Career Form</h3>
                     <div id="form-messages"></div>
                     <form id="contact-form" method="post" action="http://keenitsolutions.com/products/html/edulearn/edulearn-demo/mailer.php">
                         <fieldset>
