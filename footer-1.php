@@ -17,7 +17,7 @@
                         <i class="fa fa-phone"></i>
                         <h4 class="contact-title">Phone Number</h4>
                         <p class="contact-desc">
-                             7601044444
+                            7601044444
                         </p>
                     </div>
                 </div>
@@ -92,15 +92,23 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-12">
-                    <h3 class="footer-title">FLICKR FEED</h3>
-                    <ul class="flickr-feed">
-                        <li><a href="#"><img src="images/flickr/1.jpg" alt="Project Image"></a></li>
-                        <li><a href="#"><img src="images/flickr/2.jpg" alt="Project Image"></a></li>
-                        <li><a href="#"><img src="images/flickr/3.jpg" alt="Project Image"></a></li>
-                        <li><a href="#"><img src="images/flickr/4.jpg" alt="Project Image"></a></li>
-                        <li><a href="#"><img src="images/flickr/5.jpg" alt="Project Image"></a></li>
-                        <li><a href="#"><img src="images/flickr/6.jpg" alt="Project Image"></a></li>
-                    </ul>
+                    <h3 class="footer-title">SOCIAL MEDIA</h3>
+                    <!--                    <ul class="flickr-feed">
+                                            <li><a href="#"><img src="images/flickr/1.jpg" alt="Project Image"></a></li>
+                                            <li><a href="#"><img src="images/flickr/2.jpg" alt="Project Image"></a></li>
+                                            <li><a href="#"><img src="images/flickr/3.jpg" alt="Project Image"></a></li>
+                                            <li><a href="#"><img src="images/flickr/4.jpg" alt="Project Image"></a></li>
+                                            <li><a href="#"><img src="images/flickr/5.jpg" alt="Project Image"></a></li>
+                                            <li><a href="#"><img src="images/flickr/6.jpg" alt="Project Image"></a></li>
+                                        </ul>-->
+                    <div class="footer-share">
+                        <ul class="text-left">
+                            <li><a href="https://www.facebook.com/aaluv.maths.79"><i class="fab fa-facebook-f"></i></a></li>
+<!--                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>   -->
+                        </ul>
+                    </div>  
                 </div>
             </div>
             <div class="footer-share">
@@ -118,7 +126,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="copyright">
-                <p>© 2018 <a href="#">AALUV</a>. All Rights Reserved.</p>
+                <p>© 2019 <a href="#">AALUV</a>. All Rights Reserved.</p>
             </div>
         </div>
     </div>

@@ -95,7 +95,7 @@
                     <h3 class="footer-title">SOCIAL MEDIA</h3>
                     <div class="footer-share">
                         <ul class="text-left">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.facebook.com/aaluv.maths.79"><i class="fab fa-facebook-f"></i></a></li>
 <!--                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>   -->

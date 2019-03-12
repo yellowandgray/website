@@ -1817,7 +1817,7 @@ ul {
     right: 13px;
 }
 .rs-breadcrumbs ul li a:hover {
-    color: #ff3115;
+    color: #0eaa9a;
 }
 .breadcrumbs-overlay {
     position: relative;
@@ -6506,7 +6506,7 @@ ul {
     z-index: 999;
 }
 #scrollUp i {
-    background-color: #ff3115;
+    background-color: #0ea99a;
     height: 40px;
     font-size: 24px;
     width: 42px;
@@ -6897,7 +6897,7 @@ ul {
     background: rgba(255, 255, 255, 0.15);
 }
 .rs-footer .footer-share ul li a:hover {
-    background-color: #ff3115;
+    background-color: #0eaa9a;
     color: #ffffff;
 }
 .rs-footer .footer-share ul li + li {
