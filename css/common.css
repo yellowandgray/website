@@ -78,9 +78,12 @@ td, th {
 }
 .list-align li{
     padding-left: 25px;
+    padding-left: 25px;
+    line-height: 35px;
 }
 .list-align p{
     padding-left: 25px;
+    line-height: 35px;
 }
 .enquiry-box {
     background: #0000008c;
@@ -306,3 +309,26 @@ ul.nacc li p {
 }
 
 /* End Tab CSS */
+
+
+.uppercase .news-normal-block {
+    padding: 15px;
+    border: 1px solid rgba(34, 34, 34, 0.1);
+    transition: all 0.3s ease 0s;
+    margin-bottom: 20px;
+    height: 650px;
+}
+.uppercase .news-normal-block img {
+    width: 100%;
+}
+.uppercase .news-normal-block:hover {
+    -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.rs-header .menu-area .rs-menu li ul li a:hover {
+    color: #eee !important;
+}
+.rs-header-2 .menu-area .rs-menu li ul li a:hover {
+    color: #eee !important;
+}
