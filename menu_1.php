@@ -60,8 +60,8 @@
                                                                     <li class="menu-item-has-children"> <a href="#">Blog</a></li>-->
                                      <li class="menu-item-has-children <?php if($page == 'withus'){ echo 'active';} ?>"> <a href="#">PRO WITH US</a>
                                         <ul class="sub-menu">
-                                            <li> <a href="franchise-requisites.php">Franchise Requisites</a></li>
-                                            <li> <a href="central-manager.php">CENTRAL MANAGER</a></li>
+                                            <li> <a href="franchise-requisites.php">FRANCHISE REQUISITES</a></li>
+                                            <li> <a href="career.php">Career</a></li>
                                       
                                         </ul>
                                     </li>
