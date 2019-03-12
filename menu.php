@@ -78,7 +78,7 @@
                                     }
                                     ?>"> <a href="#">PRO WITH US</a>
                                         <ul class="sub-menu">
-                                            <li> <a href="franchise-requisites.php">Franchise Requisites</a></li>
+                                            <li> <a href="franchise-requisites.php">FRANCHISE REQUISITES</a></li>
                                             <li> <a href="franchise-requisites.php">CENTRAL MANAGER</a></li>
 
                                         </ul>

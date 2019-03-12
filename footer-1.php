@@ -75,7 +75,11 @@
                     <ul class="sitemap-widget">
                         <li class="active"><a href="index.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Home</a></li>
                         <li ><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i>About</a></li>
-                        <li><a href="courses.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses</a></li>
+                        <li ><a href="aaluv-math.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Programs</a></li>
+                        <li ><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Happenings</a></li>
+                        <li ><a href="contact.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Locate us</a></li>
+                        <li ><a href="franchise-requisites.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Pro With us</a></li>
+<!--                        <li><a href="courses.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses</a></li>
                         <li><a href="courses-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses Details</a></li>
                         <li><a href="events.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events</a></li>
                         <li><a href="events-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events Details</a></li>                                
@@ -84,7 +88,7 @@
                         <li><a href="teachers.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Teachers</a></li>
                         <li><a href="teachers-single.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Teachers Details</a></li>
                         <li><a href="contact.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Contact</a></li>
-                        <li><a href="error-404.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Error 404</a></li>
+                        <li><a href="error-404.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Error 404</a></li>-->
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-12">

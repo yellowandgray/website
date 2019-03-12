@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="contact-inner">
-                        <i class="fa fa-map-marker"></i>
+                        <i class="fa fa-envelope"></i>
                         <h4 class="contact-title">Email Address</h4>
                         <p class="contact-desc">
                             info@aaluvglobal.com
@@ -75,10 +75,10 @@
                     <ul class="sitemap-widget">
                         <li class="active"><a href="index.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Home</a></li>
                         <li ><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i>About</a></li>
-                        <li ><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Programs</a></li>
-                        <li ><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Happenings</a></li>
-                        <li ><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Locate us</a></li>
-                        <li ><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Pro With us</a></li>
+                        <li ><a href="aaluv-math.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Programs</a></li>
+                        <li ><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Happenings</a></li>
+                        <li ><a href="contact.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Locate us</a></li>
+                        <li ><a href="franchise-requisites.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Pro With us</a></li>
 <!--                        <li><a href="courses.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses</a></li>
                         <li><a href="courses-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses Details</a></li>
                         <li><a href="events.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events</a></li>
@@ -93,6 +93,14 @@
                 </div>
                 <div class="col-lg-3 col-md-12">
                     <h3 class="footer-title">SOCIAL MEDIA</h3>
+                    <div class="footer-share">
+                        <ul class="text-left">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+<!--                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>   -->
+                        </ul>
+                    </div> 
                     <!--<ul class="flickr-feed">
                         <li><a href="#"><img src="images/flickr/1.jpg" alt="Project Image"></a></li>
                         <li><a href="#"><img src="images/flickr/2.jpg" alt="Project Image"></a></li>
@@ -103,14 +111,14 @@
                     </ul>-->
                 </div>
             </div>
-            <div class="footer-share">
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>   
-                </ul>
-            </div>                                
+            <!--            <div class="footer-share">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>   
+                            </ul>
+                        </div>                                -->
         </div>
     </div>
 
