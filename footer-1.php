@@ -41,8 +41,8 @@
                 <div class="col-lg-3 col-md-12">
                     <div class="about-widget">
                         <img src="images/logo.png" alt="Footer Logo">
-                        <p>We create Premium Html Themes for more than three years. Our team goal is to reunite the elegance of unique.</p>
-                        <p class="margin-remove">We create Unique and Easy To Use Flexible Html Themes.</p>
+                        <p>Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
+<!--                        <p class="margin-remove">We create Unique and Easy To Use Flexible Html Themes.</p>-->
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-12">

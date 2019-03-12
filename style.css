@@ -431,7 +431,7 @@
 -------------------------------------*/
 html,
 body {
-    font-size: 18px;
+    font-size: 16px;
     color: #505050;
     font-family: Pluto,'Hiragino Sans GB', 'Microsoft YaHei', arial, helvetica, sans-serif;
     vertical-align: baseline;
@@ -1456,7 +1456,7 @@ ul {
     /*  margin-right: 112px;*/
 }
 .home5 .rs-header .main-menu .rs-menu > ul > li > a {
-    color: #203469;
+    color: #000000;
 }
 /*.home5 .rs-header .main-menu .rs-menu ul li a:hover,*/
 .home5 .rs-header .main-menu .rs-menu ul li.active a,
@@ -1518,7 +1518,7 @@ ul {
 .home5 .rs-team .team-item .team-img .normal-text,
 .home5 .rs-team .team-item .team-title:after,
 .home5 #scrollUp i {
-    background: #92278f;
+    background: #0eaa99;
 }
 .home5 .rs-footer .footer-bottom,
 .home5 .rs-footer .footer-top .recent-post-widget .post-item + .post-item,
@@ -1547,7 +1547,7 @@ ul {
     color: #00bcd4;
 }
 .home5 .rs-footer .footer-contact-desc .contact-inner i {
-    color: #e84b3a;
+    color: #d2de28;
 }
 .home5 .rs-footer {
     color: #505050;
@@ -6816,7 +6816,7 @@ ul {
     border-top: 1px solid rgba(102, 102, 102, 0.5);
 }
 .rs-footer .footer-top .sitemap-widget li {
-    width: 50%;
+    width: 100%;
     float: left;
     line-height: 33px;
 }
