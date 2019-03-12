@@ -437,3 +437,10 @@ ul.nacc li p {
 .bg-gray {
     background: #ccc;
 }
+.bg-black {
+    background: #000;
+    opacity: 0.8;
+}
+.bg-black ul li {
+    color: #fff;
+}

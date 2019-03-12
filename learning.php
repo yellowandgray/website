@@ -73,9 +73,9 @@
         <!-- History End -->
 
         <!-- Mission Start -->
-        <section id="about-section" class="padding-100 bg-fixed">
+        <section id="about-section" class="padding-100 bg-black">
             <div class="container">
-                <h3 class="text-center">WHAT ROBOTICS CAN TEACH?</h3>
+                <h3 class="text-center color-blue">WHAT ROBOTICS CAN TEACH?</h3>
                 <div class="row">
                     <div class="col-md-4 uppercase-1">
                         <div class="news-normal-block">
@@ -131,7 +131,7 @@
         <!-- Mission End -->
 
         <!-- Vision Start -->
-        <section id="about-section" class="padding-b-100">
+        <section id="about-section" class="padding-b-100 padding-top-30">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
