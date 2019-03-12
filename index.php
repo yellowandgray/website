@@ -33,7 +33,7 @@
                         <div class="display-table">
                             <div class="display-table-cell">
                                 <div class="container text-center">
-                                    <h1 class="slider-title" data-animation-in="fadeInLeft" data-animation-out="animate-out">Best <span class="red-color">Education</span> For <span class="color-green">your</span> kids</h1>
+                                    <h1 class="slider-title" data-animation-in="fadeInLeft" data-animation-out="animate-out">Best <span class="red-color">Education</span> For your kids</h1>
                                     <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">Fusce sem dolor, interdum in efficitur at, faucibus nec lorem.Sed nec molestie justo.<br class="hidden-sm-dow"> Nunc quis sapien in arcu pharetra volutpat.Morbi nec vulputate dolor.</p>
                                     <a href="#" class="sl-get-started-btn" data-animation-in="lightSpeedIn" data-animation-out="animate-out">Contact us Now</a>
                                 </div>
@@ -49,7 +49,7 @@
                         <div class="display-table">
                             <div class="display-table-cell">
                                 <div class="container text-center">
-                                    <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">Are <span class="red-color">You</span> Ready <span class="color-green">To</span> apply?</h1>
+                                    <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">Are <span class="red-color">You</span> Ready To apply?</h1>
                                     <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">Fusce sem dolor, interdum in efficitur at, faucibus nec lorem.Sed nec molestie justo.<br class="hidden-sm-dow"> Nunc quis sapien in arcu pharetra volutpat.Morbi nec vulputate dolor.</p>  
                                     <a href="#" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">Contact us Now</a>
                                 </div>

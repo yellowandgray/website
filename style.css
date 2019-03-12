@@ -504,7 +504,7 @@ ul {
     color: #ffffff;
 }
 ::selection {
-    background: #ff3115;
+    background: #1266a2;
     text-shadow: none;
     color: #ffffff;
 }
@@ -1085,7 +1085,7 @@ ul {
 .rs-header-2 .menu-area .rs-menu li a:hover,
 .rs-header-3 .menu-area .rs-menu li a:hover,
 .rs-header-4 .menu-area .rs-menu li a:hover {
-    color: #ff3115 !important;
+    color: #0ea99a !important;
 }
 .rs-header-2 {
     position: absolute;
@@ -1429,7 +1429,7 @@ ul {
     color: #ff3115;
 }
 .home5 .rs-toolbar {
-    background: #00bcd4;
+    background: #0ea999;
 }
 .home5 .rs-toolbar .toolbar-share-icon {
     margin-right: 15px;
@@ -1461,7 +1461,7 @@ ul {
 .home5 .rs-header .main-menu .rs-menu ul li a:hover,
 .home5 .rs-header .main-menu .rs-menu ul li.active a,
 .home5 .rs-header .main-menu .rs-menu ul li.current-menu-item > a {
-    color: #ee364c !important;
+    color: #0ea999 !important;
 }
 .home5 .rs-header .main-menu .nav-expander {
     font-size: 20px;
@@ -1740,7 +1740,7 @@ ul {
     opacity: 0.95;
 }
 .home5 span.red-color {
-    color: #e84b3a;
+    color: #d2dd29;
 }
 .home5 span.orange-color {
     color: #fc7f0c;
@@ -1749,7 +1749,7 @@ ul {
     position: relative;
 }
 .home5 #rs-slider .slide-content .slider-title {
-    color: #92278f;
+    color: #0ea999;
 }
 .home5 #rs-slider .slide-content .slider-title,
 .home5 #rs-slider .slide-content .slider-desc,
@@ -1789,7 +1789,7 @@ ul {
     padding: 0;
 }
 .rs-breadcrumbs ul li {
-    color: #ff3115;
+    color: #0ea999;
     display: inline-block;
     font-weight: 400;
 }

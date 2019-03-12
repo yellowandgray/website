@@ -57,6 +57,9 @@ td, th {
 .color-blue {
     color : #0ea999;
 }
+.top-toolbar p {
+    color: #fff;
+}
 
 #about-section h3  {
     text-align: center;
