@@ -104,11 +104,10 @@
             </div>
             <div class="footer-share">
                 <ul>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>    
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>   
                 </ul>
             </div>                                
         </div>
@@ -123,10 +122,18 @@
         </div>
     </div>
 </footer>
+<!-- Footer End -->
+
 <!-- start scrollUp  -->
 <div id="scrollUp">
     <i class="fa fa-angle-up"></i>
 </div>
+
+<!-- Search Modal Start -->
+
+<!-- Search Modal End -->
+
+
 <!-- modernizr js -->
 <script src="js/modernizr-2.8.3.min.js"></script>
 <!-- jquery latest version -->

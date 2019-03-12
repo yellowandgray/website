@@ -982,3 +982,8 @@
 @media only screen and (max-width: 320px) {
 	
 }
+@media (min-width: 991px) {
+.width-1580 {
+    max-width: 1580px !important;
+}
+}

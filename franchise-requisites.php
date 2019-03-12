@@ -4,7 +4,7 @@
     <!-- Mirrored from keenitsolutions.com/products/html/edulearn/edulearn-demo/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Mar 2019 06:06:12 GMT -->
     <?php
     include 'head.php';
-    $page = 'about';
+    $page = 'withus';
     ?>
     <body class="inner-page">
         <!--Preloader area start here-->
@@ -27,12 +27,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h1 class="page-title">About Us</h1>
+                            <h1 class="page-title">FRANCHISE REQUISITES</h1>
                             <ul>
                                 <li>
-                                    <a class="active" href="index-2.html">Home</a>
+                                    <a class="active" href="index.php">Home</a>
                                 </li>
-                                <li>About Us</li>
+                                <li>Franchise Requisites</li>
                             </ul>
                         </div>
                     </div>
@@ -46,14 +46,52 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="color-blue">WELCOME TO AALUV GLOBAL</h3>
+                        <h3 class="color-blue">AALUV CLASSROOM SITE SPECIFICATIONS</h3>
                     </div>
                 </div>
-                <div class="row uppercase">
-                    <div class="col-md-12 text-p">
-                        <p>AALUV is a Holistic Brain Development company, developing children's mind to better equip them for the challenges of Life, this training program transforms and empowers Children to perform extensive calculations at stunning speed and accuracy with nothing but their own sharp mind to aid them.</p>
-                        <p>The curriculum is specifically designed to enhance a child's skill set for the 21st Century’s robust Challenges.</p>
-                        <p>AALUV endows the child with creativity, concentration, memory, speed writing, lateral thinking, listening capacity, analytical skills and over all self confidence making them an “Enhanced Global Citizens”.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box-gray">
+                            <h3 class="color-blue text-center">Option A</h3>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="images/course/class-001.png" alt="">
+
+                                </div>
+                                <div class="col-md-8">
+                                    <p><b>Area requirement for Stand Alone Centre:</b></p>
+                                    <p>Min Area required1000 Sq. Ft, in a Semi Commercial Area.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="images/course/class-003.png" alt="">
+
+                                </div>
+                                <div class="col-md-8">
+                                    <p><b>Class Room:</b> A well-illuminated and ventilated classroom of about 250 Sq. ft each and minimum of 2-3 class rooms with basic amenities such as Air condition, Fans, drinking water and washroom facilities.  </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="images/course/class-002.png" alt="">
+
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="padding-tb-20"><b>Seating:</b> A comfortable seating arrangement.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="box-gray">
+                            <h3 class="color-blue text-center">Option B</h3>
+                            <h4>Area requirement for Hiring of Kinder Garden or Regular School classroom </h4>
+                            <p>investment to cover the franchise expenses and Licensee Fee will be required:</p>
+                            <p>Well-illuminated and ventilated classroom</p>
+                            <p>Comfortable Table and Chairs.</p>
+                            <p>Separate Rooms for Counselling and Admin activity such as fee collection and parents meeting.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -65,14 +103,36 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="color-blue">Expanding Global Business</h3>
-                        <h4 class="text-center">The Global business is expanding</h4>
+                        <h3 class="color-blue">WHO CAN BECOME OUR FRANCHISEE?</h3>
+                        <ul class="list-align">
+                            <i class="fas fa-check"></i><li>Business People with an entrepreneurial spirit.</li>
+                            <i class="fas fa-check"></i><li>Home makers and single mothers looking to break into the business world.</li>
+                            <i class="fas fa-check"></i><li>Retired people looking for a new source of income.</li>
+                            <i class="fas fa-check"></i><li>Married couples wanting more financial independence.</li>
+                            <i class="fas fa-check"></i><li>Working people looking to make a career change.</li>
+                            <i class="fas fa-check"></i><li>Recent graduates looking to launch their careers but also be self employee.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row uppercase">
-                    <div class="col-md-12 text-p">
-                        <p>The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe. Essentially, in these programs, the infinite potential of the human brain and its effective use is unveiled through the Scientific Brain Management Techniques.</p>
-                        <p>Being a vibrant organization, it stands for a mission committed to create a new generation, which will be mentally equipped to face the challenges in a competitive environment. Steered by visionary leadership, the Company has set new benchmarks for the industry and is currently expanding its operations in Australia. Kindly check with the author,if it is1300 students or countries??? Because,1300 what is the question?? And it looks incomplete.</p>
+            </div>
+        </section>
+        <!-- Mission End -->
+        <!-- Mission Start -->
+        <section id="about-section" class="padding-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="color-blue">AALUV  CLASSROOM FRANCHISEE DESIRED QUALITIES</h3>
+                        <h4>The prospective franchisee must have:</h4>
+                        <ul class="list-align">
+                            <i class="fas fa-check"></i><li>An interest in being an entrepreneur and have a positive attitude to work while maintaining quality. Professional ethics are of paramount importance.</li>
+                            <i class="fas fa-check"></i><li>Passionate about education and working with children</li>
+                            <i class="fas fa-check"></i><li>A genuine commitment to strive for growth and expansion that will translate into profits for yourself.</li>
+                            <i class="fas fa-check"></i><li>The aptitude to head your enterprise and manage the  Center.</li>
+                            <i class="fas fa-check"></i><li>The ability to devote your time and make this as their main activity.</li>
+                            <i class="fas fa-check"></i><li>Interested in child enrichment</li>
+                            <i class="fas fa-check"></i><li>Totally agree with Aaluv's philosophy</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -80,26 +140,62 @@
         <!-- Mission End -->
 
         <!-- Vision Start -->
-        <section id="about-section" class="bg-img-4 padding-b-100">
+        <section id="about-section" class="bg-img-4 padding-100">
             <div class="container">
-                <div class="row padding-top-30">
+                <div class="row">
+                    <div class="col-md-12 padding-30">
+                        <h3 class="color-blue">AALUV CLASSROOM INSTRUCTOR</h3>
+                        <p>AALUV aims at nurturing the joy of learning mathematics in children, building self-confidence and imparting knowledge that will complement what they have learned in school. It helps children develop their logical thinking skill through learning numbers and acquiring knowledge and also develop independence in solving problems.</p>
+                        <p><b>Training Details:</b>  Instructor has to complete the worksheets provided before they start the classes for students of their batch and answered works sheets will be kept only in the center under lock and key.</p>
+                    </div>
                     <div class="col-md-12">
-                        <h3 class="color-blue">VISION</h3>
+                        <h3 class="color-blue">DUTIES OF AALUV CLASSROOM INSTRUCTOR</h3>
+                        <ul class="list-align">
+                            <i class="fas fa-check"></i><li>Make a difference every day!</li>
+                            <i class="fas fa-check"></i><li>Assist the Center Director with the Centre's Operations, ensuring that the centre functions in accordance with company Norms &amp; Standards</li>
+                            <i class="fas fa-check"></i><li>Responsibility to Ensure Utmost Care, Safety, Cleanliness and Cordial environment for both Children &amp; Parents.</li>
+                            <i class="fas fa-check"></i><li>Inspire the Children each day, in building  Self-Esteem while helping them learn the “NEW MATH CONCEPT” Each day.</li>
+                            <i class="fas fa-check"></i><li>Teach, educate and monitor children as needed</li>
+                            <i class="fas fa-check"></i><li>Promote the positive image of the company and play a major role in Prtryaing the company as a provider of choice in educational programs for the communities that we serve.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row uppercase">
-                    <div class="col-md-12 text-p">
-                        <p>‘To endow the new generation with intelligent and expert cognizance enabling them to scale and conquer all heights’.</p>
+            </div>
+        </section>
+        <section class="about-section padding-100 bg-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 padding-30">
+                        <h3 class="color-blue">Desired Qualification</h3>
+                        <p>A young and dynamic <b>MATHS GRADUATE</b> preferably between 25-45 years of age. The Course Instructor has to sign an agreement with the Corporate Office, which is valid for 3 years.</p>
+                        <p>To prepare, guide and conduct Aaluv Classroom.</p>
+                        <ul class="list-align">
+                            <i class="fas fa-check"></i><li>Dedication and commitment to&nbsp;Aaluv Math Classroom</li>
+                            <i class="fas fa-check"></i><li>Competency in Mathematics</li>
+                            <i class="fas fa-check"></i><li>Passionate in children &nbsp;Education</li>
+                            <i class="fas fa-check"></i><li>Good communication skills.</li>
+                            <i class="fas fa-check"></i><li>Enjoy a young and vibrant work environment.</li>
+                            <i class="fas fa-check"></i><li>Pro-active go getter who make things to happen</li>
+                            <i class="fas fa-check"></i><li>Passion for a career with belief that “change is only the constant”</li>
+                            <i class="fas fa-check"></i><li>Able to work on weekends</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="row padding-top-30">
                     <div class="col-md-12">
-                        <h3 class="color-blue">MISSION</h3>
-                    </div>
-                </div>
-                <div class="row uppercase">
-                    <div class="col-md-12 text-p">
-                        <p>‘To be recognized as Experts in the field of Innovative Education and as the leading authority in establishing Benchmarks and Standards. Furthermore, to unlock the innate aptitude of the human mind and cultivate knowledge through Math Classroom tutoring’.</p>
+                        <h3 class="color-blue">AALUV MATHS SUGGESTED MARKETING ACTIVITIES</h3>
+                        <ul class="list-align">
+                            <i class="fas fa-check"></i><li>Release periodic advertisements inbNational Newspapers, Satellite Channels, Magazines, etc.</li>
+                            <i class="fas fa-check"></i><li>Press Note.</li>
+                            <i class="fas fa-check"></i><li>Participating in Educational Exhibitions.</li>
+                            <i class="fas fa-check"></i><li>Road shows and conducting demo in Public place like Malls, Schools and gathering.</li>
+                            <i class="fas fa-check"></i><li>Glow Sign Board.</li>
+                            <i class="fas fa-check"></i><li>Referral Scheme.</li>
+                            <i class="fas fa-check"></i><li>Advertisement in social media.</li>
+                            <i class="fas fa-check"></i><li>Door to Door activity</li>
+                            <i class="fas fa-check"></i><li>Auto, Bus Panel display.</li>
+                            <i class="fas fa-check"></i><li>Flier Distribution.</li>
+                            <i class="fas fa-check"></i><li>SMS / WhatsApp / Email Campaign.</li>
+                        </ul>
+                        <p>The Franchisee is solely responsible for local promotional activity.</p>
                     </div>
                 </div>
             </div>

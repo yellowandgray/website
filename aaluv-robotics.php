@@ -4,7 +4,7 @@
     <!-- Mirrored from keenitsolutions.com/products/html/edulearn/edulearn-demo/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Mar 2019 06:06:12 GMT -->
     <?php
     include 'head.php';
-    $page = 'about';
+    $page = 'programs';
     ?>
     <body class="inner-page">
         <!--Preloader area start here-->
@@ -27,12 +27,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h1 class="page-title">About Us</h1>
+                            <h1 class="page-title">AALUV ROBOTICS</h1>
                             <ul>
                                 <li>
-                                    <a class="active" href="index-2.html">Home</a>
+                                    <a class="active" href="index.php">Home</a>
                                 </li>
-                                <li>About Us</li>
+                                <li>Aaluv Robotics</li>
                             </ul>
                         </div>
                     </div>
@@ -46,14 +46,19 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="color-blue">WELCOME TO AALUV GLOBAL</h3>
+                        <h3 class="color-blue">AALUV ROBOTICS</h3>
+                        <h4>About AALUV Robotics</h4>
                     </div>
                 </div>
                 <div class="row uppercase">
-                    <div class="col-md-12 text-p">
-                        <p>AALUV is a Holistic Brain Development company, developing children's mind to better equip them for the challenges of Life, this training program transforms and empowers Children to perform extensive calculations at stunning speed and accuracy with nothing but their own sharp mind to aid them.</p>
-                        <p>The curriculum is specifically designed to enhance a child's skill set for the 21st Century’s robust Challenges.</p>
-                        <p>AALUV endows the child with creativity, concentration, memory, speed writing, lateral thinking, listening capacity, analytical skills and over all self confidence making them an “Enhanced Global Citizens”.</p>
+                    <div class="col-md-6">
+                        <p>AALUV ROBOTICS is a “Curriculum Aligned Robotic Program” for school students with Classes taken both “During School Hours” and “After School Hours” as well. (Full time & Part time)</p>
+                        <p>Integrated into the Academic curriculum which enable change in contemporary education System.</p>
+                        <p>Introduces students to Knowledge, Concepts and skills that’s needed for understanding technology of the future which is highly interactive, multi-modal, adaptive and autonomous</p>
+                        <p>Teachers / Instructors are well trained by our professional technical team with standby technicians if necessary.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/aaluv-robotics-009.jpg" alt="" />
                     </div>
                 </div>
             </div>
@@ -65,14 +70,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="color-blue">Expanding Global Business</h3>
+                        <h3 class="color-blue">Why AALUV:</h3>
                         <h4 class="text-center">The Global business is expanding</h4>
                     </div>
                 </div>
                 <div class="row uppercase">
-                    <div class="col-md-12 text-p">
-                        <p>The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe. Essentially, in these programs, the infinite potential of the human brain and its effective use is unveiled through the Scientific Brain Management Techniques.</p>
-                        <p>Being a vibrant organization, it stands for a mission committed to create a new generation, which will be mentally equipped to face the challenges in a competitive environment. Steered by visionary leadership, the Company has set new benchmarks for the industry and is currently expanding its operations in Australia. Kindly check with the author,if it is1300 students or countries??? Because,1300 what is the question?? And it looks incomplete.</p>
+                    <div class="col-md-12">
+                        <p>Aaluv Maths program emphasizes on</p>
+                        <p>problem solving skills among the young students.</p>
+                        <p>mathematical questions presented through various figures, charts, and scenarios closely related to real-life situations</p>
+                        <p>challenge and improve their problem-solving approach and capability.</p>
+                        <p>Significantly helps the overall development of each student.</p>
                     </div>
                 </div>
             </div>
@@ -80,26 +88,54 @@
         <!-- Mission End -->
 
         <!-- Vision Start -->
-        <section id="about-section" class="bg-img-4 padding-b-100">
+        <section id="about-section" class="bg-img-4 padding-100">
             <div class="container">
                 <div class="row padding-top-30">
-                    <div class="col-md-12">
-                        <h3 class="color-blue">VISION</h3>
+                    <div class="col-md-6">
+                        <h3 class="color-blue">Why AALUV Robotics</h3>
+                        <ul class="list-align">
+                            <i class="fas fa-check"></i><li>Extensive syllabus on Robotics for the School students starting from Class 1 to Class – 12</li>
+                            <i class="fas fa-check"></i><li>Accepted as a part of the curriculum in the schools</li>
+                            <i class="fas fa-check"></i><li>The syllabus has been aligned along the lines of the Science and Mathematics syllabus that the students learn in the classrooms.</li>
+                            <i class="fas fa-check"></i><li>This curriculum on Robotics gives a Hands-on Experience with live physical models</li>
+                            <i class="fas fa-check"></i><li>Better understanding and an interesting learning experience.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="color-blue">R & D</h3>
+                        <p class="text-justify">AALUV has to developed expertise in setting up well appreciated Robotics Laboratories inside Schools for the exclusive use of the school students which is unique and tailor made for its Curriculum. Program comes with complete Robotics kits and operation manual.</p>
                     </div>
                 </div>
-                <div class="row uppercase">
-                    <div class="col-md-12 text-p">
-                        <p>‘To endow the new generation with intelligent and expert cognizance enabling them to scale and conquer all heights’.</p>
+            </div>
+        </section>
+        <section class="about-section padding-100 bg-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="box-radius-bg-60">
+                            <h4>LEARNING</h4>
+                            <ul class="list-style-none color-white list-align">
+                                <i class="fas fa-check"></i><li>Emotional Engagement!</li>
+                                <i class="fas fa-check"></i><li>Interaction with Physical Devices !</li>
+                                <i class="fas fa-check"></i><li>Practical Learning !</li>
+                                <i class="fas fa-check"></i><li>Multi-disciplinary Learning !</li>
+                                <i class="fas fa-check"></i><li>Constructivist Approach !</li>
+                            </ul>
+                            <a href="learning.php" class="site-btn">Read More</a>
+                        </div>
                     </div>
-                </div>
-                <div class="row padding-top-30">
-                    <div class="col-md-12">
-                        <h3 class="color-blue">MISSION</h3>
-                    </div>
-                </div>
-                <div class="row uppercase">
-                    <div class="col-md-12 text-p">
-                        <p>‘To be recognized as Experts in the field of Innovative Education and as the leading authority in establishing Benchmarks and Standards. Furthermore, to unlock the innate aptitude of the human mind and cultivate knowledge through Math Classroom tutoring’.</p>
+                    <div class="col-lg-6 padding-30">
+                        <div class="box-radius-bg-60">
+                            <h4>SYLLABUS</h4>
+                            <ul class="list-style-none color-white list-align">
+                                <i class="fas fa-check"></i><li>class-1</li>
+                                <i class="fas fa-check"></i><li>class-2</li>
+                                <i class="fas fa-check"></i><li>class-3</li>
+                                <i class="fas fa-check"></i><li>class-4</li>
+                                <i class="fas fa-check"></i><li>class-5</li>
+                            </ul>
+                            <a href="syllabus.php" class="site-btn">Read More</a>
+                        </div>
                     </div>
                 </div>
             </div>

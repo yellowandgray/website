@@ -1,7 +1,7 @@
 <head>
         <!-- meta tag -->
         <meta charset="utf-8">
-        <title>AMOKA</title>
+        <title>AALUV</title>
         <meta name="description" content="">
         <!-- responsive tag -->
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -36,6 +36,8 @@
         <!-- responsive css -->
         <link rel="stylesheet" type="text/css" href="css/responsive.css">
         <link href="css/common.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
