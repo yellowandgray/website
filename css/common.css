@@ -444,3 +444,6 @@ ul.nacc li p {
 .bg-black ul li {
     color: #fff;
 }
+.bg-none {
+    background: none !important;
+}

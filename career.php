@@ -107,6 +107,13 @@
                                     </div>
                                 </div>
                             </div>							        
+                            <div class="row"> 
+                                <div class="col-md-12 col-sm-12">    
+                                    <div class="form-group">
+                                     <input ame="resume" class="form-control bg-none" type="file">
+                                    </div>
+                                </div>
+                            </div>							        
                             <div class="form-group mb-0">
                                 <input class="btn-send" type="submit" value="Submit Now">
                             </div>
