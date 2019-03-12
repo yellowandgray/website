@@ -174,7 +174,21 @@ td, th {
     color: #000;
 }
 .site-btn:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
 
+.btn-custom {
+    border-radius: 10px;
+    padding: 0px 40px;
+    background-color: #d2dd29;
+    line-height: 50px;
+    color: #000;
+    border: none;
+}
+
+.btn-custom:hover {
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
@@ -319,10 +333,23 @@ ul.nacc li p {
     margin-bottom: 20px;
     height: 650px;
 }
+
 .uppercase .news-normal-block img {
     width: 100%;
 }
 .uppercase .news-normal-block:hover {
+    -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.uppercase-1 .news-normal-block {
+    padding: 15px;
+    border: 1px solid rgba(34, 34, 34, 0.1);
+    transition: all 0.3s ease 0s;
+    margin-bottom: 20px;
+    height: 375px;
+}
+.uppercase-1 .news-normal-block:hover {
     -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
@@ -334,6 +361,54 @@ ul.nacc li p {
     color: #eee !important;
 }
 
+
+/* Tab Content */
+
+.syllabus table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.syllabus td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.syllabus tr:nth-child(even) {
+    background-color: #267c95;;
+    color: #fff;
+}
+.tab {
+    overflow: hidden;
+    border: 1px solid #57bd8d;
+    background-color: #f1f1f1;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    width: 11.11%;
+}
+
+.tab button.active {
+    background-color:  #4cd192;
+    color: #fff;
+}
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #57bd8d;
+    border-top: none;
+}
+
+/* End Tab Content */
 .bg-img-5 {
     background-image: url(../images/background-06.jpg);
     background-size: cover;
