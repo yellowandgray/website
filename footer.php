@@ -90,7 +90,7 @@
                         <li><a href="error-404.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Error 404</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-12">
+<!--                <div class="col-lg-3 col-md-12">
                     <h3 class="footer-title">FLICKR FEED</h3>
                     <ul class="flickr-feed">
                         <li><a href="#"><img src="images/flickr/1.jpg" alt="Project Image"></a></li>
@@ -100,7 +100,7 @@
                         <li><a href="#"><img src="images/flickr/5.jpg" alt="Project Image"></a></li>
                         <li><a href="#"><img src="images/flickr/6.jpg" alt="Project Image"></a></li>
                     </ul>
-                </div>
+                </div>-->
             </div>
             <div class="footer-share">
               <ul>
