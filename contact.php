@@ -21,7 +21,7 @@
         <!--Full width header End-->
 
         <!-- Breadcrumbs Start -->
-        <div class="rs-breadcrumbs bg7 breadcrumbs-overlay">
+        <div class="rs-breadcrumbs bg7 breadcrumbs-overlay" style="background-image: url(images/sub-banner/sub-04.jpg) !important;">
             <div class="breadcrumbs-inner">
                 <div class="container">
                     <div class="row">
