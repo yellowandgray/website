@@ -47,6 +47,18 @@
                                 <p>The ENPEE INTERNATIONAL SCHOOL is promoted by the NP business group having interest in Pharma and Medical education. Haji L.Kamal Batcha, a noted Rotarian too, is the Chairman of the School, with his sons, Prof. Dr.K.Mujibur Rahman M.D. as the Managing Director and Prof. Dr. K.Mohammed Ali. M.D. as a  Director.</p>
                                 <p>Sri H.M.A.Khan, the CEO of the school welcomed the gathering while  Ms Arrchana Chellappa, Vice President, proposed the vote of thanks.</p>
                                 <p>Mr. Tan Peng San, Chairman & MD., Herbs Pharma SDN BHD., Kuala Lumpur, Malaysia had come specially for this occasion, in his capacity as Advisor to the School. Other advisors, Mr. Raja Kalifulla,  Senior Advocate, Former Govt. Pleader of Madras High Court, Chennai and Prof. Dr.V.Sakthivel, M.D., Professor & Head, Dept. of Medicine,  Vinayaka Mission’s Medical College, Karaikal were also present to grace the occasion.</p>
+                                <span>In this great occasion, management donates the following:</span>
+                                
+                                <ul class="list-style-none">
+                                    <i class="fas fa-check"></i><li>Social Welfare measures.
+                                        <ul class="list-style-type-inside" type="a">
+                                            <li>a) Tricycles - 3 nos</li>
+                                            <li>b) Hearing aids</li>
+                                        </ul>
+                                    </li>
+                                    <i class="fas fa-check"></i><li>5 Almirahs to 5 government schools in all 5 constituencies in Karaikal</li>
+                                    <i class="fas fa-check"></i><li>Marriage assitance to poor unmarried girls</li>
+                                </ul>
                             </div>
                             <div class="col-md-12">
                                 <div class="row events-margin">

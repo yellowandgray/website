@@ -1228,3 +1228,20 @@ marquee {
 .event-school-section p {
     text-align: justify;
 }
+
+.list-style-none {
+    list-style-type: none;
+}
+.list-style-none i {
+    position: absolute;
+    margin-top: 5px;
+    color: #00cd93;
+}
+
+.list-style-none li {
+    margin-left: 25px;
+}
+
+.list-style-none li ul {
+    list-style-type: none;
+}
