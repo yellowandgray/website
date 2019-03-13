@@ -62,6 +62,8 @@
                                         <ul class="sub-menu">
                                             <li> <a href="franchise-requisites.php">FRANCHISE REQUISITES</a></li>
                                             <li> <a href="career.php">Career</a></li>
+                                            <li> <a href="Course-instructor.php">Course instructor</a></li>
+                                            <li> <a href="Co-ordinator">Career</a></li>
                                       
                                         </ul>
                                     </li>

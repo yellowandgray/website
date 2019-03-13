@@ -35,7 +35,7 @@
                                 <div class="container text-center">
                                     <h1 class="slider-title" data-animation-in="fadeInLeft" data-animation-out="animate-out">AALUV is a<span class="red-color"> Holistic Brain Development company</span></h1>
                                     <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">AALUV aims at nurturing the joy of learning mathematics in children,<br class="hidden-sm-dow"> building self-confidence and imparting knowledge.</p>
-                                    <a href="#" class="sl-get-started-btn" data-animation-in="lightSpeedIn" data-animation-out="animate-out">Read More</a>
+                                    <a href="index.php" class="sl-get-started-btn" data-animation-in="lightSpeedIn" data-animation-out="animate-out">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -51,7 +51,37 @@
                                 <div class="container text-center">
                                     <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">Aaluv is a<span class="red-color"> Global Leader in educational field</span></h1>
                                     <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">Aims to help children develop their logical thinking skill<br class="hidden-sm-dow"> through learning numbers and acquiring knowledge.</p>  
-                                    <a href="#" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">Read More</a>
+                                    <a href="index.php" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="item">
+                    <img src="images/slider/home5/1_2.jpg" alt="Slide2" />
+                    <div class="slide-content">
+                        <div class="display-table">
+                            <div class="display-table-cell">
+                                <div class="container text-center">
+                                    <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">Aaluv<span class="red-color"> MATHS</span></h1>
+                                    <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">Aaluv Maths is a unique Comprehensive Mathematic <br class="hidden-sm-dow">Learning Solution helping millions of students world-wide.</p>  
+                                    <a href="aaluv-math.php" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="item">
+                    <img src="images/slider/home5/1_2.jpg" alt="Slide2" />
+                    <div class="slide-content">
+                        <div class="display-table">
+                            <div class="display-table-cell">
+                                <div class="container text-center">
+                                    <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">Aaluv<span class="red-color"> ROBOTICS</span></h1>
+                                    <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">AALUV ROBOTICS is a “Curriculum Aligned Robotic Program” for school students</p>  
+                                    <a href="aaluv-robotics.php" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">Read More</a>
                                 </div>
                             </div>
                         </div>

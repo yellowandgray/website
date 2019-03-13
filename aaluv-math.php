@@ -42,7 +42,7 @@
         <!-- Breadcrumbs End -->
 
         <!-- History Start -->
-        <section id="about-section" class="padding-100 bg-img-2">
+        <section id="about-section" class="padding-100">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -60,7 +60,7 @@
         <!-- History End -->
 
         <!-- Mission Start -->
-        <section id="about-section" class="padding-100 bg-img-3">
+        <section id="about-section" class="padding-100">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -69,12 +69,12 @@
                     </div>
                 </div>
                 <div class="row uppercase">
-                    <div class="col-md-12 text-p">
-                        <p>Aaluv Maths program emphasizes on</p>
-                        <p>problem solving skills among the young students.</p>
-                        <p>mathematical questions presented through various figures, charts, and scenarios closely related to real-life situations</p>
-                        <p>challenge and improve their problem-solving approach and capability.</p>
-                        <p>Significantly helps the overall development of each student.</p>
+                    <div class="col-md-12">
+                        <ul class="list-align">
+                            <i class="fas fa-check"></i><li>Aaluv Maths program emphasizes on problem solving skills among the young students.</li>
+                            <i class="fas fa-check"></i><li>mathematical questions presented through various figures, charts, and scenarios closely related to real-life situations challenge and improve their problem-solving approach and capability.</li>
+                            <i class="fas fa-check"></i><li>Significantly helps the overall development of each student.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
         <!-- Mission End -->
 
         <!-- Vision Start -->
-        <section id="about-section" class="bg-img-4 padding-b-100">
+        <section id="about-section" class="padding-b-100">
             <div class="container">
                 <div class="row padding-top-30">
                     <div class="col-md-12">
@@ -119,7 +119,7 @@
             </div>
         </section>
         <!-- Vision End -->
-        <section id="about-section" class="bg-img-4 padding-b-100">
+        <section id="about-section" class="padding-b-100">
             <div class="container">
                 <div class="naccs">
                     <div class="grid">

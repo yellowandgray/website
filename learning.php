@@ -42,7 +42,7 @@
         <!-- Breadcrumbs End -->
 
         <!-- History Start -->
-        <section id="about-section" class="padding-100 bg-img-2">
+        <section id="about-section" class="padding-100">
             <div class="container">
                 <h3 class="color-blue text-center">AALUV FOCUS on LEARNING</h3>
                 <div class="row">
@@ -73,55 +73,65 @@
         <!-- History End -->
 
         <!-- Mission Start -->
-        <section id="about-section" class="padding-100 bg-black">
+        <section id="about-section" class="padding-100 enroll-section set-bg" style="background-image: url(images/enroll-bg.jpg);">
             <div class="container">
-                <h3 class="text-center color-blue">WHAT ROBOTICS CAN TEACH?</h3>
                 <div class="row">
-                    <div class="col-md-4 uppercase-1">
-                        <div class="news-normal-block">
-                            <div class="text-center">
-                                <img class="contents" src="images/icon7.png">
-                                <h2 class="color-white">ENDOW RIGOR</h2>
-                            </div>
-                            <ul class="list-align">
-                                <i class="fa fa-check" aria-hidden="true"></i><li>Learn something real</li>
-                                <i class="fa fa-check" aria-hidden="true"></i><li>Teach the realities and depth of science</li>
-                            </ul>
-                            <br>
-                            <div class="text-center">
-                                <button class="btn-custom">Read More</button>
+                    <div class="row">
+                        <h3 class="text-center color-white">WHAT ROBOTICS CAN TEACH?</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 uppercase-1 ">
+                            <div class=" bg-border">
+                                <div class="news-normal-block">
+                                    <div class="text-center">
+                                        <img class="contents" src="images/icon7.png">
+                                        <h2 class="color-white">ENDOW RIGOR</h2>
+                                    </div>
+                                    <ul class="list-align">
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>Learn something real</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>Teach the realities and depth of science</li>
+                                    </ul>
+                                    <br>
+                                    <div class="text-center">
+                                        <button class="btn-custom">Read More</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 uppercase-1">
-                        <div class="news-normal-block">
-                            <div class="text-center">
-                                <img class="contents" src="images/icon8.png">
-                                <h2 class="color-white">DESIGN</h2>
-                            </div>
-                            <ul class="list-align">
-                                <i class="fa fa-check" aria-hidden="true"></i><li>Tinkering to explore</li>
-                                <i class="fa fa-check" aria-hidden="true"></i><li>Connect high and low level issues</li>
-                                <i class="fa fa-check" aria-hidden="true"></i><li>learn uncertainty & variability of world</li>
-                            </ul>
-                            <div class="text-center">
-                                <button class="btn-custom">Read More</button>
+                        <div class="col-md-4 uppercase-1">
+                            <div class=" bg-border">
+                                <div class="news-normal-block">
+                                    <div class="text-center">
+                                        <img class="contents" src="images/icon8.png">
+                                        <h2 class="color-white">DESIGN</h2>
+                                    </div>
+                                    <ul class="list-align">
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>Tinkering to explore</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>Connect high and low level issues</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>learn uncertainty & variability of world</li>
+                                    </ul>
+                                    <div class="text-center">
+                                        <button class="btn-custom">Read More</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 uppercase-1">
-                        <div class="news-normal-block">
-                            <div class="text-center">
-                                <img class="contents" src="images/icon9.png">
-                                <h2 class="color-white">WORK IN TEAMS</h2>
-                            </div>
-                            <ul class="list-align">
-                                <i class="fa fa-check" aria-hidden="true"></i><li>Performance assessment through Competition</li>
-                                <i class="fa fa-check" aria-hidden="true"></i><li>Faster team spirit and camaraderie</li>
-                            </ul>
-                            <br>
-                            <div class="text-center">
-                                <button class="btn-custom">Read More</button>
+                        <div class="col-md-4 uppercase-1">
+                            <div class=" bg-border">
+                                <div class="news-normal-block">
+                                    <div class="text-center">
+                                        <img class="contents" src="images/icon9.png">
+                                        <h2 class="color-white">WORK IN TEAMS</h2>
+                                    </div>
+                                    <ul class="list-align">
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>Performance assessment through Competition</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>Faster team spirit and camaraderie</li>
+                                    </ul>
+                                    <br>
+                                    <div class="text-center">
+                                        <button class="btn-custom">Read More</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

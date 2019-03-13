@@ -22,7 +22,7 @@
         <!--Full width header End-->
 
         <!-- Breadcrumbs Start -->
-        <div class="rs-breadcrumbs bg7 breadcrumbs-overlay" style="background-image: url(images/sub-banner/sub-01.jpg) !important;">
+        <div class="rs-breadcrumbs bg7 breadcrumbs-overlay" style="background-image: url(images/sub-banner/sub-06.jpg) !important;">
             <div class="breadcrumbs-inner">
                 <div class="container">
                     <div class="row">
@@ -42,7 +42,7 @@
         <!-- Breadcrumbs End -->
 
         <!-- History Start -->
-        <section id="about-section" class="padding-100 bg-img-2">
+        <section id="about-section" class="padding-100">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -61,7 +61,7 @@
         <!-- History End -->
 
         <!-- Mission Start -->
-        <section id="about-section" class="padding-100 bg-img-3">
+        <section id="about-section" class="padding-100">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -80,7 +80,7 @@
         <!-- Mission End -->
 
         <!-- Vision Start -->
-        <section id="about-section" class="bg-img-4 padding-b-100">
+        <section id="about-section" class="padding-b-100">
             <div class="container">
                 <div class="row padding-top-30">
                     <div class="col-md-12">

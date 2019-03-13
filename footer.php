@@ -46,26 +46,24 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-12">
-                    <h5 class="footer-title">RECENT POSTS</h5>
+                    <h5 class="footer-title">OUR PROGRAMS</h5>
                     <div class="recent-post-widget">
                         <div class="post-item">
                             <div class="post-date">
-                                <span>28</span>
-                                <span>June</span>
+                                <img src="images/course/math.png" alt=""/>
                             </div>
                             <div class="post-desc">
-                                <h5 class="post-title"><a href="#">While the lovely valley team work</a></h5>
-                                <span class="post-category">Keyword Analysis</span>
+                                <h5 class="post-title"><a href="aaluv-math.php">AALUV Maths</a></h5>
+                                
                             </div>
                         </div>
                         <div class="post-item">
                             <div class="post-date">
-                                <span>28</span>
-                                <span>June</span>
+                                <img src="images/course/robotics.png" alt=""/>
                             </div>
                             <div class="post-desc">
-                                <h5 class="post-title"><a href="#">I must explain to you how all this idea</a></h5>
-                                <span class="post-category">Spoken English</span>
+                                <h5 class="post-title"><a href="aaluv-robotics.php">AALUV Robotics</a></h5>
+                                
                             </div>
                         </div>
                     </div>

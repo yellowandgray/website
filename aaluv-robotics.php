@@ -75,13 +75,11 @@
                     </div>
                 </div>
                 <div class="row uppercase">
-                    <div class="col-md-12">
-                        <p>Aaluv Maths program emphasizes on</p>
-                        <p>problem solving skills among the young students.</p>
-                        <p>mathematical questions presented through various figures, charts, and scenarios closely related to real-life situations</p>
-                        <p>challenge and improve their problem-solving approach and capability.</p>
-                        <p>Significantly helps the overall development of each student.</p>
-                    </div>
+                    <ul class="list-align">
+                        <i class="fas fa-check"></i><li>Aaluv Maths program emphasizes on problem solving skills among the young students.</li>
+                        <i class="fas fa-check"></i><li>mathematical questions presented through various figures, charts, and scenarios closely related to real-life situations challenge and improve their problem-solving approach and capability.</li>
+                        <i class="fas fa-check"></i><li>Significantly helps the overall development of each student.</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -138,6 +136,33 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="about-section gallery-bg">
+            <div class="container">
+                <h3 class="color-white text-center">GALLERY</h3>
+                <section class="customer-logos slider spad">
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-001.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-002.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-003.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-004.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-005.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-006.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-007.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-008.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-009.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-010.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-011.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-012.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-013.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-014.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-015.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-016.jpg" alt=""/></div>
+                    <div class="slide"><img src="images/gallery/aaluv-robotics-017.jpg" alt=""/></div>
+                </section>
+<!--                <div class="text-center padding-top-30">
+                    <a href="gallery.php" class="site-btn">Read More</a>
+                </div>-->
             </div>
         </section>
         <!-- Vision End -->
@@ -335,6 +360,32 @@
 
         <!-- Footer Start -->
         <?php include 'footer-1.php'; ?>
+           <script>
+            $(document).ready(function () {
+                $('.customer-logos').slick({
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: false,
+                    responsive: [{
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 4
+                            }
+                        }, {
+                            breakpoint: 520,
+                            settings: {
+                                slidesToShow: 3
+                            }
+                        }]
+                });
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+     
     </body>
 
     <!-- Mirrored from keenitsolutions.com/products/html/edulearn/edulearn-demo/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Mar 2019 06:06:32 GMT -->
