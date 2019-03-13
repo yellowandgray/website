@@ -154,7 +154,7 @@ td, th {
     text-align: center;
     margin: 35px 0 0px;
     line-height: 35px;
-    font-size: 19px;
+    font-size: 18px;
 }
 .padding-top-30 {
     padding-top: 30px;
@@ -597,3 +597,6 @@ ul.nacc li p {
 .bg-border li{
    color: #fff;
 }
+ .z-1 { 
+     z-index: 1;
+ }

@@ -61,7 +61,7 @@
         <!-- History End -->
 
         <!-- Mission Start -->
-        <section id="about-section" class="padding-100">
+        <section id="about-section" class="padding-100 bg-img-1">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -80,7 +80,7 @@
         <!-- Mission End -->
 
         <!-- Vision Start -->
-        <section id="about-section" class="padding-b-100">
+        <section id="about-section" class="padding-100">
             <div class="container">
                 <div class="row padding-top-30">
                     <div class="col-md-12">
@@ -89,7 +89,7 @@
                 </div>
                 <div class="row uppercase">
                     <div class="col-md-12 text-p">
-                        <p>‘To endow the new generation with intelligent and expert cognizance enabling them to scale and conquer all heights’.</p>
+                        <p>To endow the new generation with intelligent and expert cognizance enabling them to scale and conquer all heights.</p>
                     </div>
                 </div>
                 <div class="row padding-top-30">
@@ -99,7 +99,7 @@
                 </div>
                 <div class="row uppercase">
                     <div class="col-md-12 text-p">
-                        <p>‘To be recognized as Experts in the field of Innovative Education and as the leading authority in establishing Benchmarks and Standards. Furthermore, to unlock the innate aptitude of the human mind and cultivate knowledge through Math Classroom tutoring’.</p>
+                        <p>To be recognized as Experts in the field of Innovative Education and as the leading authority in establishing Benchmarks and Standards. Furthermore, to unlock the innate aptitude of the human mind and cultivate knowledge through Math Classroom tutoring.</p>
                     </div>
                 </div>
             </div>

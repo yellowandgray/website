@@ -44,7 +44,7 @@
         <!-- History Start -->
         <section id="about-section" class="padding-100">
             <div class="container">
-                <h3 class="color-blue text-center">AALUV FOCUS on LEARNING</h3>
+                <h3 class="color-blue">AALUV FOCUS on LEARNING</h3>
                 <div class="row">
                     <div class="col-md-6">
                         <ul class="list-align">
@@ -59,7 +59,7 @@
                         <img src="images/learning.png" alt="" />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row padding-top-30">
                     <div class="col-md-12">
                         <h3 class="color-blue">STRENGTHS OF ROBOTICS IN EDUCATION</h3>
                         <p>TRAINED TEACHERS – “teach as they were taught,.. Not as they are told to teach”</p>
@@ -75,11 +75,10 @@
         <!-- Mission Start -->
         <section id="about-section" class="padding-100 enroll-section set-bg" style="background-image: url(images/enroll-bg.jpg);">
             <div class="container">
-                <div class="row">
-                    <div class="row">
-                        <h3 class="text-center color-white">WHAT ROBOTICS CAN TEACH?</h3>
-                    </div>
-                    <div class="row">
+                <div class="col-md-12">
+                  <h3 class=" color-white text-center">WHAT ROBOTICS CAN TEACH?</h3>
+                </div>
+             <div class="row">
                         <div class="col-md-4 uppercase-1 ">
                             <div class=" bg-border">
                                 <div class="news-normal-block">
@@ -135,7 +134,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+             
             </div>
         </section>
         <!-- Mission End -->

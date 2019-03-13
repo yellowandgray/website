@@ -99,7 +99,7 @@
         <!-- History End -->
 
         <!-- Mission Start -->
-        <section id="about-section" class="padding-100 bg-img-3">
+        <section id="about-section" class="padding-100">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -118,7 +118,7 @@
         </section>
         <!-- Mission End -->
         <!-- Mission Start -->
-        <section id="about-section" class="padding-100">
+        <section id="about-section" class="padding-b-100">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -136,19 +136,14 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Mission End -->
-
-        <!-- Vision Start -->
-        <section id="about-section" class="bg-img-4 padding-100">
-            <div class="container">
+             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 padding-30">
+                    <div class="col-md-12 padding-top-30">
                         <h3 class="color-blue">AALUV CLASSROOM INSTRUCTOR</h3>
                         <p>AALUV aims at nurturing the joy of learning mathematics in children, building self-confidence and imparting knowledge that will complement what they have learned in school. It helps children develop their logical thinking skill through learning numbers and acquiring knowledge and also develop independence in solving problems.</p>
                         <p><b>Training Details:</b>  Instructor has to complete the worksheets provided before they start the classes for students of their batch and answered works sheets will be kept only in the center under lock and key.</p>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12  padding-top-30">
                         <h3 class="color-blue">DUTIES OF AALUV CLASSROOM INSTRUCTOR</h3>
                         <ul class="list-align">
                             <i class="fas fa-check"></i><li>Make a difference every day!</li>
@@ -162,7 +157,11 @@
                 </div>
             </div>
         </section>
-        <section class="about-section padding-100 bg-section">
+        <!-- Mission End -->
+
+        <!-- Vision Start -->
+       
+        <section class="about-section padding-b-100 bg-img-7">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 padding-30">

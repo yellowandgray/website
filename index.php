@@ -149,7 +149,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="color-blue">WELCOME TO AALUV GLOBAL</h3>
+                        <h3 class="color-blue text-center">WELCOME TO AALUV GLOBAL</h3>
                     </div>
                 </div>
                 <div class="row uppercase">

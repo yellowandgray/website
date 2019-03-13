@@ -72,15 +72,13 @@
                                     <li class="menu-item-has-children"> <a href="contact.php">LOCATE US</a></li>
                                     <!--                                <li class="menu-item-has-children"> <a href="#">Events</a></li>
                                                                     <li class="menu-item-has-children"> <a href="#">Blog</a></li>-->
-                                    <li class="menu-item-has-children <?php
-                                    if ($page == 'withus') {
-                                        echo 'active';
-                                    }
-                                    ?>"> <a href="#">GROW WITH US</a>
+                                    <li class="menu-item-has-children <?php if($page == 'withus'){ echo 'active';} ?>"> <a href="#">GROW WITH US</a>
                                         <ul class="sub-menu">
                                             <li> <a href="franchise-requisites.php">FRANCHISE REQUISITES</a></li>
-                                            <li> <a href="career.php">Career</a></li>
-
+                                            <li> <a href="career.php">Center manager</a></li>
+                                            <li> <a href="Course-instructor.php">Course instructor</a></li>
+                                            <li> <a href="Co-ordinator.php">Co Ordinator</a></li>
+                                      
                                         </ul>
                                     </li>
                                 </ul>
