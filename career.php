@@ -47,7 +47,7 @@
                 <div class="contact-comment-section">
                     <h3>Career Form</h3>
                     <div id="form-messages"></div>
-                    <form id="contact-form" method="post" action="http://keenitsolutions.com/products/html/edulearn/edulearn-demo/mailer.php">
+                    <form role="form" id="contact-form" class="career" enctype="multipart/form-data">
                         <fieldset>
                             <div class="row">                                      
                                 <div class="col-md-6 col-sm-12">
@@ -59,7 +59,7 @@
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input name="lname" id="lname" class="form-control" type="text">
+                                        <input name="email" id="email" class="form-control" type="text">
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label>Contact Number</label>
-                                        <input name="email" id="email" class="form-control" type="email">
+                                        <input name="contact_number" id="contact_number" class="form-control" type="text">
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12">
@@ -75,8 +75,8 @@
                                         <label>Select Job Role</label>
                                         <ul class="job-drop-down">
                                             <li>
-                                                <select>
-                                                    <option>---</option>
+                                                <select name="select_role" id="select_role">
+                                                    <option>Select Job Role</option>
                                                     <option>Teacher</option>
                                                     <option>Central Manager</option>
                                                 </select>
@@ -89,13 +89,13 @@
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label>Address-1</label>
-                                        <input name="email" id="email" class="form-control" type="email">
+                                        <input name="address_1" id="address_1" class="form-control" type="text">
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label>Address-2</label>
-                                        <input name="subject" id="subject" class="form-control" type="text">
+                                        <input name="address_2" id="address_2" class="form-control" type="text">
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@
                             <div class="row"> 
                                 <div class="col-md-12 col-sm-12">    
                                     <div class="form-group">
-                                     <input ame="resume" class="form-control bg-none" type="file">
+                                     <input name="resume" class="form-control bg-none" type="file">
                                     </div>
                                 </div>
                             </div>							        
