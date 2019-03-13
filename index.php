@@ -59,7 +59,7 @@
                 </div>
                 <!-- Item 3 -->
                 <div class="item">
-                    <img src="images/slider/home5/1_2.jpg" alt="Slide2" />
+                    <img src="images/slider/home5/banner-03.jpg" alt="Slide2" />
                     <div class="slide-content">
                         <div class="display-table">
                             <div class="display-table-cell">
@@ -74,7 +74,7 @@
                 </div>
                 <!-- Item 4 -->
                 <div class="item">
-                    <img src="images/slider/home5/1_2.jpg" alt="Slide2" />
+                    <img src="images/slider/home5/banner-04.jpg" alt="Slide2" />
                     <div class="slide-content">
                         <div class="display-table">
                             <div class="display-table-cell">
