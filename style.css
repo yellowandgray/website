@@ -1564,7 +1564,7 @@ ul {
 }
 .home5 .rs-footer .footer-contact-desc {
     border-radius: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+/*    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);*/
 }
 .home5 .rs-footer .footer-bottom {
     background: #269aa9;
@@ -1791,7 +1791,7 @@ ul {
     padding: 0;
 }
 .rs-breadcrumbs ul li {
-    color: #0ea999;
+    color: #d2de28;
     display: inline-block;
     font-weight: 400;
 }
@@ -6713,7 +6713,7 @@ ul {
 }
 .rs-footer .footer-contact-desc {
     margin: 0;
-    background: #222;
+    background: #0eaa99;
     text-align: center;
     padding: 35px;
     position: absolute;
@@ -6747,7 +6747,7 @@ ul {
 .rs-footer .footer-contact-desc .contact-inner i {
     font-size: 28px;
     margin-bottom: 12px;
-    color: #ff3115;
+    color: #d2de28;
 }
 .rs-footer .footer-contact-desc .contact-inner .contact-title {
     margin-bottom: 10px;

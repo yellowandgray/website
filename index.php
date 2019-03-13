@@ -63,7 +63,7 @@
                     <div class="slide-content">
                         <div class="display-table">
                             <div class="display-table-cell">
-                                <div class="container text-center">
+                                <div class="container text-center babnner-bg">
                                     <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">Aaluv<span class="red-color"> MATHS</span></h1>
                                     <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">Aaluv Maths is a unique Comprehensive Mathematic <br class="hidden-sm-dow">Learning Solution helping millions of students world-wide.</p>  
                                     <a href="aaluv-math.php" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">Read More</a>
@@ -78,7 +78,7 @@
                     <div class="slide-content">
                         <div class="display-table">
                             <div class="display-table-cell">
-                                <div class="container text-center">
+                                <div class="container text-center babnner-bg">
                                     <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">Aaluv<span class="red-color"> ROBOTICS</span></h1>
                                     <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">AALUV ROBOTICS is a “Curriculum Aligned Robotic Program” for school students</p>  
                                     <a href="aaluv-robotics.php" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">Read More</a>

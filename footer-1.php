@@ -5,7 +5,8 @@
             <div class="row footer-contact-desc">
                 <div class="col-md-4">
                     <div class="contact-inner">
-                        <i class="fa fa-map-marker"></i>
+<!--                       <i class="fa fa-map-marker"></i>-->
+                       <img src="images/footer-loc.png" alt=""/>
                         <h4 class="contact-title">Address</h4>
                         <p class="contact-desc">
                             17/7, 1st Ave Shastri Nagar,<br> Adyar Chennai, Tamil Nadu 600020
@@ -14,7 +15,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="contact-inner">
-                        <i class="fa fa-phone"></i>
+<!--                        <i class="fa fa-phone"></i>-->
+                        <img src="images/footer-call.png" alt=""/>
                         <h4 class="contact-title">Phone Number</h4>
                         <p class="contact-desc">
                             7601044444
@@ -23,7 +25,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="contact-inner">
-                        <i class="fa fa-map-marker"></i>
+<!--                        <i class="fa fa-map-marker"></i>-->
+                        <img src="images/footer-msg.png" alt=""/>
                         <h4 class="contact-title">Email Address</h4>
                         <p class="contact-desc">
                             info@aaluvglobal.com
