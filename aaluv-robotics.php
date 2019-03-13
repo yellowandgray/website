@@ -52,10 +52,10 @@
                 </div>
                 <div class="row uppercase">
                     <div class="col-md-6">
-                        <p>AALUV ROBOTICS is a “Curriculum Aligned Robotic Program” for school students with Classes taken both “During School Hours” and “After School Hours” as well. (Full time & Part time)</p>
-                        <p>Integrated into the Academic curriculum which enable change in contemporary education System.</p>
-                        <p>Introduces students to Knowledge, Concepts and skills that’s needed for understanding technology of the future which is highly interactive, multi-modal, adaptive and autonomous</p>
-                        <p>Teachers / Instructors are well trained by our professional technical team with standby technicians if necessary.</p>
+                        <li>AALUV ROBOTICS is a “Curriculum Aligned Robotic Program” for school students with Classes taken both “During School Hours” and “After School Hours” as well. (Full time & Part time)</li>
+                        <li>Integrated into the Academic curriculum which enable change in contemporary education System.</li>
+                        <li>Introduces students to Knowledge, Concepts and skills that's needed for understanding technology of the future which is highly interactive, multi-modal, adaptive and autonomous</li>
+                        <li>Teachers / Instructors are well trained by our professional technical team with standby technicians if necessary.</li>
                     </div>
                     <div class="col-md-6">
                         <img src="images/aaluv-robotics-009.jpg" alt="" />

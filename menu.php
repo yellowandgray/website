@@ -76,7 +76,7 @@
                                     if ($page == 'withus') {
                                         echo 'active';
                                     }
-                                    ?>"> <a href="#">PRO WITH US</a>
+                                    ?>"> <a href="#">GROW WITH US</a>
                                         <ul class="sub-menu">
                                             <li> <a href="franchise-requisites.php">FRANCHISE REQUISITES</a></li>
                                             <li> <a href="career.php">Career</a></li>
