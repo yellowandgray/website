@@ -126,6 +126,28 @@
                                         <img src="images/events/event-img-28.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                 </div>
+                                <div class="row events-margin">
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-53.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-54.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-55.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                </div>
+                                <div class="row events-margin">
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-56.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <!--<img src="images/events/event-img-27.jpg" alt="Events" title="Events-ENPEE International School" />-->
+                                    </div>
+                                    <div class="col-md-4">
+                                        <!--<img src="images/events/event-img-28.jpg" alt="Events" title="Events-ENPEE International School" />-->
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="row event-justify">
@@ -261,9 +283,10 @@
                                         <img src="images/events/event-img-51.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
-<!--                                        <img src="images/events/event-img-49.jpg" alt="Events" title="Events-ENPEE International School" />-->
+                                        <img src="images/events/event-img-52.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                 </div>
+                             
                             </div>
                         </div>
                     </div>
