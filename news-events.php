@@ -54,10 +54,10 @@
                                         <img src="images/events/events-invitation.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="images/events/event-img-11.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        <img src="images/events/event-img-12.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="images/events/event-img-12.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        <img src="images/events/event-img-39.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                 </div>
                                 <div class="row events-margin">
@@ -65,7 +65,7 @@
                                         <img src="images/events/event-img-14.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="images/events/event-img-39.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        <img src="images/events/event-img-44.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-30.jpg" alt="Events" title="Events-ENPEE International School" />
@@ -104,17 +104,17 @@
                                         <img src="images/events/event-img-42.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                 </div>
-                                <div class="row events-margin">
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-44.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
+<!--                                <div class="row events-margin">
+                                                                        <div class="col-md-4">
+                                                                            <img src="images/events/event-img-44.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                        </div>
+                                     <div class="col-md-4">
                                         <img src="images/events/event-img-45.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-49.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                </div>
+                                                                        <div class="col-md-4">
+                                                                            <img src="images/events/event-img-49.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                        </div>
+                                </div>-->
                                 <div class="row events-margin">
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-26.jpg" alt="Events" title="Events-ENPEE International School" />
@@ -126,28 +126,7 @@
                                         <img src="images/events/event-img-28.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                 </div>
-                                <div class="row events-margin">
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-53.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-54.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-55.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                </div>
-                                <div class="row events-margin">
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-56.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <!--<img src="images/events/event-img-27.jpg" alt="Events" title="Events-ENPEE International School" />-->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <!--<img src="images/events/event-img-28.jpg" alt="Events" title="Events-ENPEE International School" />-->
-                                    </div>
-                                </div>
+
                             </div>
                             <div class="col-md-12">
                                 <div class="row event-justify">
@@ -156,17 +135,17 @@
                                         <p>The function was preceded by various special activities designed to attract the young  children, with the concept of KNOWLEDGE, INNOVATION AND EXCELLENCE. There were programmes for the parents also. All children were bestowed with certificates and Awards.</p>
                                     </div>
                                 </div>
-                                <div class="row events-margin">
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-04.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-06.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-07.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                </div>
+                                <!--                                <div class="row events-margin">
+                                                                    <div class="col-md-4">
+                                                                        <img src="images/events/event-img-04.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <img src="images/events/event-img-06.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <img src="images/events/event-img-07.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                    </div>
+                                                                </div>-->
                                 <div class="row events-margin">
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-16.jpg" alt="Events" title="Events-ENPEE International School" />
@@ -178,17 +157,17 @@
                                         <img src="images/events/event-img-20.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                 </div>
-                                <div class="row events-margin">
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-21.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-22.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-24.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                </div>
+                                <!--                                <div class="row events-margin">
+                                                                    <div class="col-md-4">
+                                                                        <img src="images/events/event-img-21.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <img src="images/events/event-img-22.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <img src="images/events/event-img-24.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                    </div>
+                                                                </div>-->
                                 <div class="row events-margin">
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-34.jpg" alt="Events" title="Events-ENPEE International School" />
@@ -202,7 +181,7 @@
                                 </div>
                                 <div class="row events-margin">
                                     <div class="col-md-4">
-                                        <img src="images/events/event-img-03.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        <img src="images/events/event-img-07.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-05.jpg" alt="Events" title="Events-ENPEE International School" />
@@ -242,7 +221,7 @@
                                         <img src="images/events/event-img-23.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                 </div>
-                                <div class="row events-margin">
+<!--                                <div class="row events-margin">
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-25.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
@@ -252,13 +231,13 @@
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-35.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="row events-margin">
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-38.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-37.jpg" alt="Events" title="Events-ENPEE International School" />
+                                   <div class="col-md-4">
+                                        <img src="images/events/event-img-34.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-40.jpg" alt="Events" title="Events-ENPEE International School" />
@@ -276,17 +255,17 @@
                                     </div>
                                 </div>
                                 <div class="row events-margin">
-                                    <div class="col-md-4">
+<!--                                    <div class="col-md-4">
                                         <img src="images/events/event-img-50.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
+                                    </div>-->
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-51.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-52.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
+                                    <!--                                    <div class="col-md-4">
+                                                                            <img src="images/events/event-img-52.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                        </div>-->
                                 </div>
-                             
+
                             </div>
                         </div>
                     </div>
