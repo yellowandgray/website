@@ -42,9 +42,9 @@
         <!-- Breadcrumbs End -->
 
         <!-- History Start -->
-        <section id="about-section" class="padding-100 bg-gray">
+        <section id="about-section" class="padding-100">
             <div class="container  contact-page-section">
-                <div class="contact-comment-section">
+                <div class="contact-comment-section box-form">
                     <h3>Co-ordinator Form</h3>
                     <div id="form-messages"></div>
                     <form role="form" id="contact-form" class="career" enctype="multipart/form-data">

@@ -42,8 +42,8 @@
         <!-- Breadcrumbs End -->
 
         <!-- History Start -->
-        <section id="about-section" class="padding-100 bg-gray">
-            <div class="container  contact-page-section">
+        <section id="about-section" class="padding-100">
+            <div class="container  contact-page-section box-form">
                 <div class="contact-comment-section">
                     <h3>Career Form</h3>
                     <div id="form-messages"></div>
