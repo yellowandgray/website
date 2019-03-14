@@ -44,14 +44,14 @@
                         </div>
                         <div class="row event-justify">
                             <div class="col-md-12">
-                                <p>The ENPEE INTERNATIONAL SCHOOL is promoted by the National Pharma having interest in Pharmaceutical Manufacturing , Health Care , Para Medical education.  Haji L.Kamal Batcha, well known Rotarian and Paul Harris fellow is the Chairman of the School, with his sons, Prof. Dr.K.Mujibur Rahman M.D. as the Managing Director and Prof. Dr. K.Mohammed Ali. M.D. as the Director.</p>
+                                <p>The ENPEE INTERNATIONAL SCHOOL is promoted by the National Pharma having interest in Pharmaceutical Manufacturing , Health Care , Para Medical education.  Haji L.Kamal Batcha, a well known Rotarian and Paul Harris fellow is the Chairman of the School, with his sons, Prof. Dr.K.Mujibur Rahman M.D. as the Managing Director and Prof. Dr. K.Mohammed Ali. M.D. as the Director.</p>
                                 <p>Sri H.M.A.Khan, the CEO of the school who has occupied top posts in leading Nationalised Bank with Decades  of expertise , welcomed the gathering.</p>
                                 <p>Ms Arrchana Chellappa, Vice President ,  a master's degree holder in Educational Management with an international experience in Education services  proposed the vote of thanks.</p>
                                 <p>Mr. Tan Peng San, Chairman & MD., Herbs Pharma SDN BHD., Kuala Lumpur, Malaysia had come specially for this occasion, in his capacity as Advisor to the School. Other advisors, Mr. Raja Kalifulla,  Senior Advocate, Former Govt. Pleader of Madras High Court, Chennai and Prof. Dr.V.Sakthivel, M.D., Professor & Head, Dept. of Medicine,  Vinayaka Mission’s Medical College, Karaikal were also present to grace the occasion.</p>
                                 <span>One of the important programs in the Launch is the distribution of Social Welfare measures for Physically Challenged and Hearing impaired persons.</span>
                                 <ul class="list-style-none">
                                     <li>a) Tricycles - 3 nos</li>
-                                    <li>b) Hearing aids</li>
+                                    <li>b) Hearing aids - 4 nos</li>
                                     <li>c) 5 Almirahs to 5 government schools in all 5 constituencies in Karaikal to the Chief Educational Officer</li>
                                 </ul>
                                 <p>These were handed over by the honorable chief guests.</p>
