@@ -990,3 +990,28 @@
         max-width: 1580px !important;
     }
 }
+@media (max-width: 1200px) {
+    .banner-bg {
+      border-radius : 0px !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .home5 .rs-menu > ul > li > a {
+        height: 18px;
+        line-height: 20px;
+        padding: 0px 9px !important;
+        border-left: 1px solid black;
+        margin: 38px 0px;
+    }
+}
+@media (max-width: 1200px) {
+    .banner-bg {
+      border-radius : 0px !important;
+    }
+}
+@media only screen and (max-width: 767px) {
+#rs-slider .slide-content .slider-title {
+    font-size: 23px;
+}
+}
