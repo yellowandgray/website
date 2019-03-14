@@ -3,7 +3,7 @@
     <div class="rs-toolbar">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-12">
+                <div class="col-md-6">
                     <div class="rs-toolbar-left top-toolbar">
                         <p>Welcome to Aaluv</p>
                         <!--                        <div class="welcome-message">
