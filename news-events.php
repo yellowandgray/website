@@ -44,21 +44,18 @@
                         </div>
                         <div class="row event-justify">
                             <div class="col-md-12">
-                                <p>The ENPEE INTERNATIONAL SCHOOL is promoted by the NP business group having interest in Pharma and Medical education. Haji L.Kamal Batcha, a noted Rotarian too, is the Chairman of the School, with his sons, Prof. Dr.K.Mujibur Rahman M.D. as the Managing Director and Prof. Dr. K.Mohammed Ali. M.D. as a  Director.</p>
-                                <p>Sri H.M.A.Khan, the CEO of the school welcomed the gathering while  Ms Arrchana Chellappa, Vice President, proposed the vote of thanks.</p>
+                                <p>The ENPEE INTERNATIONAL SCHOOL is promoted by the National Pharma having interest in Pharmaceutical Manufacturing , Health Care , Para Medical education.  Haji L.Kamal Batcha, well known Rotarian and Paul Harris fellow is the Chairman of the School, with his sons, Prof. Dr.K.Mujibur Rahman M.D. as the Managing Director and Prof. Dr. K.Mohammed Ali. M.D. as the Director.</p>
+                                <p>Sri H.M.A.Khan, the CEO of the school who has occupied top posts in leading Nationalised Bank with Decades  of expertise , welcomed the gathering.</p>
+                                <p>Ms Arrchana Chellappa, Vice President ,  a master's degree holder in Educational Management with an international experience in Education services  proposed the vote of thanks.</p>
                                 <p>Mr. Tan Peng San, Chairman & MD., Herbs Pharma SDN BHD., Kuala Lumpur, Malaysia had come specially for this occasion, in his capacity as Advisor to the School. Other advisors, Mr. Raja Kalifulla,  Senior Advocate, Former Govt. Pleader of Madras High Court, Chennai and Prof. Dr.V.Sakthivel, M.D., Professor & Head, Dept. of Medicine,  Vinayaka Mission’s Medical College, Karaikal were also present to grace the occasion.</p>
-                                <span>In this great occasion, management donates the following:</span>
-                                
+                                <span>One of the important programs in the Launch is the distribution of Social Welfare measures for Physically Challenged and Hearing impaired persons.</span>
                                 <ul class="list-style-none">
-                                    <i class="fas fa-check"></i><li>Social Welfare measures.
-                                        <ul class="list-style-type-inside" type="a">
-                                            <li>a) Tricycles - 3 nos</li>
-                                            <li>b) Hearing aids</li>
-                                        </ul>
-                                    </li>
-                                    <i class="fas fa-check"></i><li>5 Almirahs to 5 government schools in all 5 constituencies in Karaikal</li>
-                                    <i class="fas fa-check"></i><li>Marriage assitance to poor unmarried girls</li>
+                                    <li>a) Tricycles - 3 nos</li>
+                                    <li>b) Hearing aids</li>
+                                    <li>c) 5 Almirahs to 5 government schools in all 5 constituencies in Karaikal to the Chief Educational Officer</li>
                                 </ul>
+                                <p>These were handed over by the honorable chief guests.</p>
+                                <p>Marriage assitance to poor unmarried girls was also given to assist and reduce the burden of marriage cost to the needy.</p>
                             </div>
                             <div class="col-md-12">
                                 <div class="row events-margin">
@@ -116,17 +113,17 @@
                                         <img src="images/events/event-img-42.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                 </div>
-<!--                                <div class="row events-margin">
-                                                                        <div class="col-md-4">
-                                                                            <img src="images/events/event-img-44.jpg" alt="Events" title="Events-ENPEE International School" />
-                                                                        </div>
-                                     <div class="col-md-4">
-                                        <img src="images/events/event-img-45.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                                                        <div class="col-md-4">
-                                                                            <img src="images/events/event-img-49.jpg" alt="Events" title="Events-ENPEE International School" />
-                                                                        </div>
-                                </div>-->
+                                <!--                                <div class="row events-margin">
+                                                                                                        <div class="col-md-4">
+                                                                                                            <img src="images/events/event-img-44.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                                                        </div>
+                                                                     <div class="col-md-4">
+                                                                        <img src="images/events/event-img-45.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                    </div>
+                                                                                                        <div class="col-md-4">
+                                                                                                            <img src="images/events/event-img-49.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                                                        </div>
+                                                                </div>-->
                                 <div class="row events-margin">
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-26.jpg" alt="Events" title="Events-ENPEE International School" />
@@ -233,22 +230,22 @@
                                         <img src="images/events/event-img-23.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                 </div>
-<!--                                <div class="row events-margin">
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-25.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-34.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-35.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                </div>-->
+                                <!--                                <div class="row events-margin">
+                                                                    <div class="col-md-4">
+                                                                        <img src="images/events/event-img-25.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <img src="images/events/event-img-34.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <img src="images/events/event-img-35.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                    </div>
+                                                                </div>-->
                                 <div class="row events-margin">
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-38.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
-                                   <div class="col-md-4">
+                                    <div class="col-md-4">
                                         <img src="images/events/event-img-34.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
@@ -267,9 +264,9 @@
                                     </div>
                                 </div>
                                 <div class="row events-margin">
-<!--                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-50.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>-->
+                                    <!--                                    <div class="col-md-4">
+                                                                            <img src="images/events/event-img-50.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                        </div>-->
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-51.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
