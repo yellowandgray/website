@@ -61,7 +61,7 @@
         <!-- History End -->
 
         <!-- Mission Start -->
-        <section id="about-section" class="padding-100 bg-img-1">
+        <section id="about-section" class="padding-b-100 bg-img-1">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -80,7 +80,7 @@
         <!-- Mission End -->
 
         <!-- Vision Start -->
-        <section id="about-section" class="padding-100">
+        <section id="about-section" class="padding-b-100">
             <div class="container">
                 <div class="row padding-top-30">
                     <div class="col-md-12">
