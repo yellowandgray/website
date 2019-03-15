@@ -205,7 +205,7 @@
                 </div>
             </div>
         </section>
-        <section id="about-section" class="padding-100 padding-b-100 bg-img">
+        <section id="about-section" class="padding-b-100 bg-img">
             <div class="container">
                 <div class="row uppercase">
                     <div class="col-md-12">

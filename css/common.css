@@ -20,7 +20,7 @@ h4 {
     border-radius: 20px;
 }
 .color-green {
-    color : #619e0c;
+    color : #d2de27;
 }
 .box-green {
     background: #619e0c;
@@ -55,7 +55,7 @@ td, th {
     margin-left: 70px;
 }
 .color-blue {
-    color : #0ea999;
+    color : #0eaa99;
 }
 .top-toolbar p {
     color: #fff;
@@ -74,7 +74,7 @@ td, th {
 .list-align i{
     position: absolute;
     margin-top: 10px;
-    color: #d2dd29;
+    color: #d2de27;
 }
 .list-align li{
     padding-left: 25px;
@@ -116,7 +116,7 @@ td, th {
     border-radius: 8px;
     padding: 0px 50px;
     border: 0px solid #fff;
-    background-color: #0ea999;
+    background-color: #0eaa99;
     color: #fff;
 }
 .padding-b-100 {
@@ -151,10 +151,10 @@ td, th {
 
 }
 .text-p {
-    text-align: center;
+/*    text-align: center;*/
     margin: 35px 0 0px;
     line-height: 35px;
-    font-size: 18px;
+    font-size: 17px;
 }
 .padding-top-30 {
     padding-top: 30px;
@@ -169,7 +169,7 @@ td, th {
 .site-btn {
     border-radius: 16px;
     padding: 6px 47px;
-    background-color: #d2dd29;
+    background-color: #d2de27;
     line-height: 50px;
     color: #000;
 }
@@ -182,7 +182,7 @@ td, th {
 .btn-custom {
     border-radius: 10px;
     padding: 0px 40px;
-    background-color: #d2dd29;
+    background-color: #d2de27;
     line-height: 50px;
     color: #000;
     border: none;
@@ -377,7 +377,7 @@ ul.nacc li p {
 }
 
 .syllabus tr:nth-child(even) {
-    background-color: #267c95;;
+    background-color: #0eaa99;
     color: #fff;
 }
 .tab {
@@ -398,7 +398,7 @@ ul.nacc li p {
 }
 
 .tab button.active {
-    background-color:  #4cd192;
+    background-color:  #737374;
     color: #fff;
 }
 .tabcontent {
@@ -564,7 +564,7 @@ ul.nacc li p {
     display: none;
 }
 .gallery-bg {
-    background: #4e4e4e;
+    background: #737374;
     padding: 150px;
 }
 .gallery-bg h3 {

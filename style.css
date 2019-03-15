@@ -431,16 +431,16 @@
 -------------------------------------*/
 html,
 body {
-    font-size: 16px;
-    color: #505050;
-    font-family: Pluto,'Hiragino Sans GB', 'Microsoft YaHei', arial, helvetica, sans-serif;
+    font-size: 17px;
+    color: #737374;
+     font-family: 'Libel Suit', arial;
     vertical-align: baseline;
     line-height: 26px;
     font-weight: 400;
     overflow-x: hidden;
 }
 .font  ul li a{
-    font-family: Pluto,'Hiragino Sans GB', 'Microsoft YaHei', arial, helvetica, sans-serif !important;
+    font-family: 'Libel Suit', arial;
 }
 img {
     max-width: 100%;
@@ -455,7 +455,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Pluto,'Hiragino Sans GB', 'Microsoft YaHei', arial, helvetica, sans-serif;
+     font-family: 'Libel Suit', arial;
     color: #212121;
     margin: 0 0 26px;
     font-weight: 700;
@@ -1085,7 +1085,7 @@ ul {
 .rs-header-2 .menu-area .rs-menu li a:hover,
 .rs-header-3 .menu-area .rs-menu li a:hover,
 .rs-header-4 .menu-area .rs-menu li a:hover {
-    color: #0ea99a !important;
+    color: #0eaa99 !important;
 }
 .rs-header-2 {
     position: absolute;
@@ -1429,7 +1429,7 @@ ul {
     color: #ff3115;
 }
 .home5 .rs-toolbar {
-    background: #0ea999;
+    background: #0eaa99;
 }
 .home5 .rs-toolbar .toolbar-share-icon {
     margin-right: 15px;
@@ -1456,12 +1456,12 @@ ul {
     /*  margin-right: 112px;*/
 }
 .home5 .rs-header .main-menu .rs-menu > ul > li > a {
-    color: #000000;
+    color: #737374;
 }
 /*.home5 .rs-header .main-menu .rs-menu ul li a:hover,*/
 .home5 .rs-header .main-menu .rs-menu ul li.active a,
 .home5 .rs-header .main-menu .rs-menu ul li.current-menu-item > a {
-    color: #0ea999 !important;
+    color: #0eaa99 !important;
 }
 .home5 .rs-header .main-menu .nav-expander {
     font-size: 20px;
@@ -1547,7 +1547,7 @@ ul {
     color: #00bcd4;
 }
 .home5 .rs-footer .footer-contact-desc .contact-inner i {
-    color: #d2de28;
+    color: #d2de27;
 }
 .home5 .rs-footer {
     color: #ffffff;
@@ -1564,10 +1564,10 @@ ul {
 }
 .home5 .rs-footer .footer-contact-desc {
     border-radius: 30px;
-/*    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);*/
+    /*    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);*/
 }
 .home5 .rs-footer .footer-bottom {
-    background: #269aa9;
+    background: #737374;
 }
 .home5 .rs-toolbar .rs-toolbar-left .welcome-message i {
     color: #fff;
@@ -1740,7 +1740,7 @@ ul {
     opacity: 0.95;
 }
 .home5 span.red-color {
-    color: #d2dd29;
+    color: #d2de27;
 }
 .home5 span.orange-color {
     color: #fc7f0c;
@@ -1749,7 +1749,7 @@ ul {
     position: relative;
 }
 .home5 #rs-slider .slide-content .slider-title {
-    color: #d2dd29;
+    color: #d2de27;
 }
 .home5 #rs-slider .slide-content .slider-title,
 .home5 #rs-slider .slide-content .slider-desc,
@@ -1759,7 +1759,7 @@ ul {
 }
 .home5 #rs-slider .slide-content .sl-get-started-btn {
     border: none;
-    background: #0ea999;
+    background: #0eaa99;
     border-radius: 30px;
     font-weight: 600;
     padding-top: 12px;
@@ -1791,7 +1791,7 @@ ul {
     padding: 0;
 }
 .rs-breadcrumbs ul li {
-    color: #d2de28;
+    color: #d2de27;
     display: inline-block;
     font-weight: 400;
 }
@@ -2975,7 +2975,7 @@ ul {
     margin-bottom: 0;
 }
 .rs-courses-details .course-instructor .instructor-title {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Libel Suit', arial;
     font-size: 16px;
     margin-bottom: 20px;
 }
@@ -2996,7 +2996,7 @@ ul {
 }
 .rs-courses-details .instructor-inner .instructor-body .name {
     font-size: 16px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Libel Suit', arial;
     margin-bottom: 0;
 }
 .rs-courses-details .instructor-inner .instructor-body .designation {
@@ -3060,7 +3060,7 @@ ul {
 }
 .rs-courses-details .course-desc .share-area h3 {
     margin-bottom: 0;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Libel Suit', arial;
     font-size: 15px;
 }
 .rs-courses-details .course-desc .share-area .share-inner {
@@ -3109,7 +3109,7 @@ ul {
 }
 .rs-courses-details .course-desc .course-syllabus ul.syllabus li span:before {
     content: "\f054";
-    font-family: "FontAwesome";
+    font-family: 'Libel Suit', arial;
     font-size: 10px;
     left: 0;
     position: absolute;
@@ -4707,7 +4707,7 @@ ul {
     font-size: 15px;
     margin-bottom: 0;
     margin-top: 25px;
-    font-family: 'Roboto Condensed', sans-serif;
+     font-family: 'Libel Suit', arial;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -4737,7 +4737,7 @@ ul {
     border-radius: 4px 4px 0px 0px;
 }
 .rs-pricing .pricing-plan .pricing-head .name {
-    font-family: 'Roboto Condensed', sans-serif;
+     font-family: 'Libel Suit', arial;
     font-size: 18px;
     line-height: normal;
     margin-bottom: 10px;
@@ -5493,7 +5493,7 @@ ul {
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 19px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Libel Suit', arial;
 }
 .single-blog-details .leave-comments-area label {
     color: #505050;
@@ -6593,7 +6593,7 @@ ul {
     border-top: 5px solid #ecf0f1;
     border-bottom: 5px solid #ecf0f1;
     border-right: 5px solid #ecf0f1;
-    background: #d2de28;
+    background: #d2de27;
     width: 50px;
     height: 60px;
     -webkit-transform-origin: 0% 50%;
@@ -6713,7 +6713,7 @@ ul {
 }
 .rs-footer .footer-contact-desc {
     margin: 0;
-    background: #0eaa99;
+    background: #737374;
     text-align: center;
     padding: 35px;
     position: absolute;
@@ -6778,7 +6778,7 @@ ul {
     flex: 0 0 70px;
     text-align: center;
     float: left;
-/*    background-color: #ff3115;*/
+    /*    background-color: #ff3115;*/
     color: #ffffff;
     margin-right: 15px;
     -webkit-transition: all 0.4s ease 0s;
@@ -6800,7 +6800,7 @@ ul {
     font-weight: 400;
 }
 .rs-footer .footer-top .recent-post-widget .post-item .post-title a {
-    font-family: 'Montserrat', sans-serif;
+     font-family: 'Libel Suit', arial;
     color: #e8e8e8;
 }
 .rs-footer .footer-top .recent-post-widget .post-item .post-title a:hover,

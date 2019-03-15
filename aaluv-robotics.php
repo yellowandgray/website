@@ -138,7 +138,8 @@
                 </div>
             </div>
         </section>
-        <section class="about-section gallery-bg">
+        <section class="about-section padding-b-100">
+            <div class="gallery-bg">
             <div class="container">
                 <h3 class="color-white text-center">GALLERY</h3>
                 <section class="customer-logos slider spad">
@@ -163,6 +164,7 @@
 <!--                <div class="text-center padding-top-30">
                     <a href="gallery.php" class="site-btn">Read More</a>
                 </div>-->
+            </div>
             </div>
         </section>
         <!-- Vision End -->

@@ -83,22 +83,14 @@
         <section id="about-section" class="padding-b-100">
             <div class="container">
                 <div class="row padding-top-30">
-                    <div class="col-md-12">
-                        <h3 class="color-blue">VISION</h3>
-                    </div>
-                </div>
-                <div class="row uppercase">
                     <div class="col-md-12 text-p">
+                        <h3 class="color-blue">VISION</h3>
                         <p>To endow the new generation with intelligent and expert cognizance enabling them to scale and conquer all heights.</p>
                     </div>
                 </div>
-                <div class="row padding-top-30">
-                    <div class="col-md-12">
-                        <h3 class="color-blue">MISSION</h3>
-                    </div>
-                </div>
-                <div class="row uppercase">
+                <div class="row padding-tb-20">
                     <div class="col-md-12 text-p">
+                        <h3 class="color-blue">MISSION</h3>
                         <p>To be recognized as Experts in the field of Innovative Education and as the leading authority in establishing Benchmarks and Standards. Furthermore, to unlock the innate aptitude of the human mind and cultivate knowledge through Math Classroom tutoring.</p>
                     </div>
                 </div>
