@@ -91,9 +91,9 @@
                                         <i class="fa fa-check" aria-hidden="true"></i><li>Teach the realities and depth of science</li>
                                     </ul>
                                     <br>
-                                    <div class="text-center">
+<!--                                    <div class="text-center">
                                         <button class="btn-custom">Read More</button>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
@@ -109,9 +109,9 @@
                                         <i class="fa fa-check" aria-hidden="true"></i><li>Connect high and low level issues</li>
                                         <i class="fa fa-check" aria-hidden="true"></i><li>learn uncertainty & variability of world</li>
                                     </ul>
-                                    <div class="text-center">
+<!--                                    <div class="text-center">
                                         <button class="btn-custom">Read More</button>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
@@ -127,9 +127,9 @@
                                         <i class="fa fa-check" aria-hidden="true"></i><li>Faster team spirit and camaraderie</li>
                                     </ul>
                                     <br>
-                                    <div class="text-center">
+<!--                                    <div class="text-center">
                                         <button class="btn-custom">Read More</button>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
