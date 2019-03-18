@@ -45,13 +45,13 @@
         <section id="about-section" class="padding-100 bg-img-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">AALUV ROBOTICS</h3>
                         <h4>About AALUV Robotics</h4>
                     </div>
                 </div>
-                <div class="row uppercase">
-                    <div class="col-md-6 wow fadeInUp">
+                <div class="row uppercase wow fadeInUp">
+                    <div class="col-md-6">
                         <li>AALUV ROBOTICS is a “Curriculum Aligned Robotic Program” for school students with Classes taken both “During School Hours” and “After School Hours” as well. (Full time & Part time)</li>
                         <li>Integrated into the Academic curriculum which enable change in contemporary education System.</li>
                         <li>Introduces students to Knowledge, Concepts and skills that's needed for understanding technology of the future which is highly interactive, multi-modal, adaptive and autonomous</li>
@@ -69,13 +69,13 @@
         <section id="about-section" class="padding-b-100">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">Why AALUV:</h3>
                         <h4 class="text-center">The Global business is expanding</h4>
                     </div>
                 </div>
-                <div class="row uppercase">
-                    <ul class="list-align wow fadeInUp">
+                <div class="row uppercase wow fadeInUp">
+                    <ul class="list-align">
                         <i class="fas fa-check"></i><li>Aaluv Maths program emphasizes on problem solving skills among the young students.</li>
                         <i class="fas fa-check"></i><li>mathematical questions presented through various figures, charts, and scenarios closely related to real-life situations challenge and improve their problem-solving approach and capability.</li>
                         <i class="fas fa-check"></i><li>Significantly helps the overall development of each student.</li>
@@ -89,9 +89,9 @@
         <section id="about-section" class="bg-img-7 padding-100">
             <div class="container">
                 <div class="row padding-top-30">
-                    <div class="col-md-6">
+                    <div class="col-md-6 wow fadeInUp">
                         <h3 class="color-blue">Why AALUV Robotics</h3>
-                        <ul class="list-align wow fadeInUp">
+                        <ul class="list-align">
                             <i class="fas fa-check"></i><li>Extensive syllabus on Robotics for the School students starting from Class 1 to Class – 12</li>
                             <i class="fas fa-check"></i><li>Accepted as a part of the curriculum in the schools</li>
                             <i class="fas fa-check"></i><li>The syllabus has been aligned along the lines of the Science and Mathematics syllabus that the students learn in the classrooms.</li>
@@ -99,7 +99,7 @@
                             <i class="fas fa-check"></i><li>Better understanding and an interesting learning experience.</li>
                         </ul>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 wow fadeInUp">
                         <h3 class="color-blue">R & D</h3>
                         <p class="text-justify wow fadeInUp">AALUV has to developed expertise in setting up well appreciated Robotics Laboratories inside Schools for the exclusive use of the school students which is unique and tailor made for its Curriculum. Program comes with complete Robotics kits and operation manual.</p>
                     </div>
@@ -109,10 +109,10 @@
         <section class="about-section padding-100 bg-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 wow fadeInUp">
                         <div class="box-radius-bg-60">
                             <h4>LEARNING</h4>
-                            <ul class="list-style-none color-white list-align wow fadeInUp">
+                            <ul class="list-style-none color-white list-align">
                                 <i class="fas fa-check"></i><li>Emotional Engagement!</li>
                                 <i class="fas fa-check"></i><li>Interaction with Physical Devices !</li>
                                 <i class="fas fa-check"></i><li>Practical Learning !</li>
@@ -122,10 +122,10 @@
                             <a href="learning.php" class="site-btn">Read More</a>
                         </div>
                     </div>
-                    <div class="col-lg-6 padding-30">
+                    <div class="col-lg-6 padding-30 wow fadeInUp">
                         <div class="box-radius-bg-60">
                             <h4>SYLLABUS</h4>
-                            <ul class="list-style-none color-white list-align wow fadeInUp">
+                            <ul class="list-style-none color-white list-align">
                                 <i class="fas fa-check"></i><li>class-1</li>
                                 <i class="fas fa-check"></i><li>class-2</li>
                                 <i class="fas fa-check"></i><li>class-3</li>

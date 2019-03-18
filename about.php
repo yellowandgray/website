@@ -45,7 +45,7 @@
         <section id="about-section" class="padding-100">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">WELCOME TO AALUV GLOBAL</h3>
                     </div>
                 </div>
@@ -64,9 +64,9 @@
         <section id="about-section" class="padding-b-100 bg-img-1">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">Expanding Global Business</h3>
-                        <h4 class="text-center">The Global business is expanding</h4>
+                        <h4>The Global business is expanding</h4>
                     </div>
                 </div>
                 <div class="row uppercase">

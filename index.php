@@ -148,53 +148,53 @@
         <section id="about-section" class="padding-100">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 wow fadeInDown">
                         <h3 class="color-blue text-center">WELCOME TO AALUV GLOBAL</h3>
                     </div>
                 </div>
                 <div class="row uppercase">
-                    <div class="col-md-4">
+                    <div class="col-md-4 wow fadeInUpBig">
                         <div class="news-normal-block">
                             <img src="images/about/about-01.jpg" alt=""/>
                             <h4 class="text-center">Company Profile</h4>
-                            <p class="wow fadeInUp">AALUV is a Holistic Brain Development company, developing children's mind to better equip them for the challenges of Life, this training program transforms and empowers Children to perform extensive calculations at stunning speed and accuracy with nothing but their own sharp mind to aid them.</p>
+                            <p>AALUV is a Holistic Brain Development company, developing children's mind to better equip them for the challenges of Life, this training program transforms and empowers Children to perform extensive calculations at stunning speed and accuracy with nothing but their own sharp mind to aid them.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 wow fadeInUpBig">
                         <div class="news-normal-block">
                             <img src="images/about/about-02.jpg" alt=""/>
                             <h4 class="text-center">AALUV Classroom Instructor</h4>
-                            <p class="wow fadeInUp">AALUV aims at nurturing the joy of learning mathematics in children, building self-confidence and imparting knowledge that will complement what they have learned in school. It helps children develop their logical thinking skill through learning numbers and acquiring knowledge and also develop independence in solving problems.</p>
+                            <p>AALUV aims at nurturing the joy of learning mathematics in children, building self-confidence and imparting knowledge that will complement what they have learned in school. It helps children develop their logical thinking skill through learning numbers and acquiring knowledge and also develop independence in solving problems.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 wow fadeInUpBig">
                         <div class="news-normal-block">
                             <img src="images/about/about-03.jpg" alt=""/>
                             <h4 class="text-center">Expanding Global Business</h4>
-                            <p class="wow fadeInUp">he group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe.</p>
+                            <p>he group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe.</p>
                         </div>
                     </div>
                 </div>
                 <div class="row uppercase">
-                    <div class="col-md-4">
+                    <div class="col-md-4 wow fadeInUpBig">
                         <div class="news-normal-block">
                             <img src="images/about/about-06.jpg" alt=""/>
                             <h4 class="text-center">About Aaluv</h4>
-                            <p class="wow fadeInUp">The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe.</p>
+                            <p>The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 wow fadeInUpBig">
                         <div class="news-normal-block">
                             <img src="images/about/about-04.jpg" alt=""/>
                             <h4 class="text-center">Our Classroom</h4>
-                            <p class="wow fadeInUp">Min Area required1000 Sq. Ft, in a Semi Commercial Area.A well-illuminated and ventilated classroom of about 250 Sq. ft each and minimum of 2-3 class rooms with basic amenities such as Air condition, Fans, drinking water and washroom facilities. A comfortable seating arrangement.Separate Rooms for Counselling and Admin activity such as fee collection and parents meeting.</p>
+                            <p>Min Area required1000 Sq. Ft, in a Semi Commercial Area.A well-illuminated and ventilated classroom of about 250 Sq. ft each and minimum of 2-3 class rooms with basic amenities such as Air condition, Fans, drinking water and washroom facilities. A comfortable seating arrangement.Separate Rooms for Counselling and Admin activity such as fee collection and parents meeting.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 wow fadeInUpBig">
                         <div class="news-normal-block">
                             <img src="images/about/about-05.jpg" alt=""/>
                             <h4 class="text-center">Our Principles</h4>
-                            <ul class="list-align wow fadeInUp">
+                            <ul class="list-align">
                                 <i class="fas fa-check"></i><li>Boosting fundamental academic skills </li>
                                 <i class="fas fa-check"></i><li>No grading </li>
                                 <i class="fas fa-check"></i><li>Self-Learning</li>
@@ -208,12 +208,12 @@
         <section id="about-section" class="padding-b-100 bg-img">
             <div class="container">
                 <div class="row uppercase">
-                    <div class="col-md-12">
+                    <div class="col-md-12 wow fadeInDown">
                         <h3 class="color-blue text-center">AALUV Classroom Franchisee Desired Qualities</h3>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 wow fadeInDown">
                         <h4>The prospective franchisee must have:</h4>
-                        <ul class="list-align wow fadeInUp">
+                        <ul class="list-align">
                             <i class="fas fa-check"></i><li>An interest in being an entrepreneur and have a positive attitude to work while maintaining quality. Professional ethics are of paramount importance.</li>
                             <i class="fas fa-check"></i><li>Passionate about education and working with children</li>
                             <i class="fas fa-check"></i><li>A genuine commitment to strive for growth and expansion that will translate into profits for yourself.</li>

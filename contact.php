@@ -47,7 +47,7 @@
                 <!--                <div id="googleMap"></div>-->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d971.8859881878383!2d80.25991618730163!3d13.000994724738561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1552392514256" style="width:100%;height: 400px" frameborder="0" style="border:0" allowfullscreen></iframe>
                 <div class="row contact-address-section">
-                    <div class="col-md-4 pl-0">
+                    <div class="col-md-4 pl-0 wow fadeInUp">
                         <div class="contact-info contact-address">
                             <i class="fa fa-map-marker"></i>
                             <h4>Address</h4>
@@ -55,14 +55,14 @@
                             <p>Adyar Chennai, Tamil Nadu 600020.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 wow fadeInUp">
                         <div class="contact-info contact-phone">
                             <i class="fa fa-phone"></i>
                             <h4>Phone Number</h4>
                             <a href="tel:7601044444">7601044444</a><br>
                         </div>
                     </div>
-                    <div class="col-md-4 pr-0">
+                    <div class="col-md-4 pr-0 wow fadeInUp">
                         <div class="contact-info contact-email">
                             <i class="fa fa-envelope"></i>
                             <h4>Email Address</h4>
@@ -71,10 +71,10 @@
                     </div>
                 </div>
 
-                <div class="contact-comment-section">
+                <div class="contact-comment-section wow fadeInUp">
                     <h3>Leave Comment</h3>
                     <div id="form-messages"></div>
-                    <form id="contact-form" method="post" action="http://keenitsolutions.com/products/html/edulearn/edulearn-demo/mailer.php">
+                    <form id="contact-form">
                         <fieldset>
                             <div class="row">                                      
                                 <div class="col-md-6 col-sm-12">
