@@ -43,7 +43,7 @@
 
         <!-- History Start -->
         <section id="about-section" class="padding-100">
-            <div class="container syllabus">
+            <div class="container syllabus wow fadeInUp">
                 <div class="row">
                     <div class="col-md-12">
                         <h3 class="color-blue">Syllabus</h3>

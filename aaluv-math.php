@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="row uppercase">
-                    <div class="col-md-12 text-p">
+                    <div class="col-md-12 text-p wow fadeInUp">
                         <p>Aaluv Maths is a unique Comprehensive Mathematic Learning Solution helping millions of students world-wide developing a self-motivated learning and attitude which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
                         <p>Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
                     </div>
@@ -63,13 +63,13 @@
         <section id="about-section" class="padding-b-100">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">Why AALUV Maths:</h3>
                         <h4 class="text-center">The Global business is expanding</h4>
                     </div>
                 </div>
                 <div class="row uppercase">
-                    <div class="col-md-12">
+                    <div class="col-md-12 wow fadeInUp">
                         <ul class="list-align">
                             <i class="fas fa-check"></i><li>Aaluv Maths program emphasizes on problem solving skills among the young students.</li>
                             <i class="fas fa-check"></i><li>mathematical questions presented through various figures, charts, and scenarios closely related to real-life situations challenge and improve their problem-solving approach and capability.</li>
@@ -90,12 +90,12 @@
                     </div>
                 </div>
                 <div class="row uppercase">
-                    <div class="col-md-12 text-p">
+                    <div class="col-md-12 text-p wow fadeInUp">
                         <p>Preparing children as global digital citizens for the world that doesn’t yet exist by imparting critical 21st century skills such as problem solving ,creativity, Analytic thinking, collaboration, communication, ethics, action ,empathy ,tolerance ,environmental awareness and global awareness every child needs to survive and succeed understanding. what abilities and traits will serve them in a time that’s Rapidly changing and developing.</p>
                     </div>
                 </div>
                 <div class="row padding-top-30">
-                    <div class="col-md-6">
+                    <div class="col-md-6 wow fadeInUp">
                         <ul class="list-align">
                             <i class="fas fa-check"></i><li>To develop an affinity with numbers with the right practice and right level.</li>
                             <i class="fas fa-check"></i><li>Develop natural progress in academics.</li>
@@ -105,7 +105,7 @@
                             <i class="fas fa-check"></i><li>assessment are respective Parents / Students / Instructors.</li>
                         </ul>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 wow fadeInUp">
                         <ul class="list-align">
                             <i class="fas fa-check"></i><li>Individualized study projection.</li>
                             <i class="fas fa-check"></i><li>Enable students to become independent by positive mind-set and self – learning skills.</li>

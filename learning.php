@@ -43,7 +43,7 @@
 
         <!-- History Start -->
         <section id="about-section" class="padding-100">
-            <div class="container">
+            <div class="container wow fadeInUp">
                 <h3 class="color-blue">AALUV FOCUS on LEARNING</h3>
                 <div class="row">
                     <div class="col-md-6">
@@ -59,7 +59,7 @@
                         <img src="images/learning.png" alt="" />
                     </div>
                 </div>
-                <div class="row padding-top-30">
+                <div class="row padding-top-30 wow fadeInUp">
                     <div class="col-md-12">
                         <h3 class="color-blue">STRENGTHS OF ROBOTICS IN EDUCATION</h3>
                         <p>TRAINED TEACHERS – “teach as they were taught,.. Not as they are told to teach”</p>
@@ -81,7 +81,7 @@
              <div class="row">
                         <div class="col-md-4 uppercase-1 ">
                             <div class=" bg-border">
-                                <div class="news-normal-block">
+                                <div class="news-normal-block  wow fadeInUp">
                                     <div class="text-center">
                                         <img class="contents" src="images/icon7.png">
                                         <h2 class="color-white">ENDOW RIGOR</h2>
@@ -99,7 +99,7 @@
                         </div>
                         <div class="col-md-4 uppercase-1">
                             <div class=" bg-border">
-                                <div class="news-normal-block">
+                                <div class="news-normal-block  wow fadeInUp">
                                     <div class="text-center">
                                         <img class="contents" src="images/icon8.png">
                                         <h2 class="color-white">DESIGN</h2>
@@ -117,7 +117,7 @@
                         </div>
                         <div class="col-md-4 uppercase-1">
                             <div class=" bg-border">
-                                <div class="news-normal-block">
+                                <div class="news-normal-block  wow fadeInUp">
                                     <div class="text-center">
                                         <img class="contents" src="images/icon9.png">
                                         <h2 class="color-white">WORK IN TEAMS</h2>
@@ -142,7 +142,7 @@
         <!-- Vision Start -->
         <section id="about-section" class="padding-b-100 padding-top-30">
             <div class="container">
-                <div class="row">
+                <div class="row  wow fadeInUp">
                     <div class="col-md-12">
                         <h3 class="color-blue">Who Needs Robotics in Education?</h3>
                         <ul class="list-align">

@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="row uppercase">
-                    <div class="col-md-12 text-p">
+                    <div class="col-md-12 text-p wow fadeInUp">
                         <p>AALUV is a Holistic Brain Development company, developing children's mind to better equip them for the challenges of Life, this training program transforms and empowers Children to perform extensive calculations at stunning speed and accuracy with nothing but their own sharp mind to aid them.</p>
                         <p>The curriculum is specifically designed to enhance a child's skill set for the 21st Century’s robust Challenges.</p>
                         <p>AALUV endows the child with creativity, concentration, memory, speed writing, lateral thinking, listening capacity, analytical skills and over all self confidence making them an “Enhanced Global Citizens”.</p>
@@ -70,7 +70,7 @@
                     </div>
                 </div>
                 <div class="row uppercase">
-                    <div class="col-md-12 text-p">
+                    <div class="col-md-12 text-p wow fadeInUp">
                         <p>The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe. Essentially, in these programs, the infinite potential of the human brain and its effective use is unveiled through the Scientific Brain Management Techniques.</p>
                         <p>Being a vibrant organization, it stands for a mission committed to create a new generation, which will be mentally equipped to face the challenges in a competitive environment. Steered by visionary leadership, the Company has set new benchmarks for the industry and is currently expanding its operations in Australia. Kindly check with the author,if it is1300 students or countries??? Because,1300 what is the question?? And it looks incomplete.</p>
                     </div>
@@ -83,13 +83,13 @@
         <section id="about-section" class="padding-b-100">
             <div class="container">
                 <div class="row padding-top-30">
-                    <div class="col-md-12 text-p">
+                    <div class="col-md-12 text-p wow fadeInUp">
                         <h3 class="color-blue">VISION</h3>
                         <p>To endow the new generation with intelligent and expert cognizance enabling them to scale and conquer all heights.</p>
                     </div>
                 </div>
                 <div class="row padding-tb-20">
-                    <div class="col-md-12 text-p">
+                    <div class="col-md-12 text-p wow fadeInUp">
                         <h3 class="color-blue">MISSION</h3>
                         <p>To be recognized as Experts in the field of Innovative Education and as the leading authority in establishing Benchmarks and Standards. Furthermore, to unlock the innate aptitude of the human mind and cultivate knowledge through Math Classroom tutoring.</p>
                     </div>
