@@ -45,7 +45,7 @@
         <section id="about-section" class="padding-100">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">AALUV MATHS</h3>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
         <section id="about-section" class="padding-b-100 bg-img-2">
             <div class="container">
                 <div class="row padding-top-30">
-                    <div class="col-md-12">
+                    <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">Advantage AALUV Maths</h3>
                     </div>
                 </div>

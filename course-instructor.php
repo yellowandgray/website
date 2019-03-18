@@ -27,12 +27,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h1 class="page-title">Career</h1>
+                            <h1 class="page-title">Course-instructor</h1>
                             <ul>
                                 <li>
                                     <a class="active" href="index-2.html">Home</a>
                                 </li>
-                                <li>Career</li>
+                                <li>Course-instructor</li>
                             </ul>
                         </div>
                     </div>
@@ -44,8 +44,8 @@
         <!-- History Start -->
         <section id="about-section" class="padding-100">
             <div class="container  contact-page-section box-form">
-                <div class="contact-comment-section">
-                    <h3>Career Form</h3>
+                <div class="contact-comment-section wow fadeInUp">
+                    <h2 class="text-center">Course-instructor</h2>
                     <div id="form-messages"></div>
                     <form role="form" id="contact-form" class="career" enctype="multipart/form-data">
                         <fieldset>
@@ -107,13 +107,13 @@
                                     </div>
                                 </div>
                             </div>							        
-                            <div class="row"> 
+<!--                            <div class="row"> 
                                 <div class="col-md-12 col-sm-12">    
                                     <div class="form-group">
                                      <input name="resume" class="form-control bg-none" type="file">
                                     </div>
                                 </div>
-                            </div>							        
+                            </div>							        -->
                             <div class="form-group mb-0">
                                 <input class="btn-send" type="submit" value="Submit Now">
                             </div>

@@ -27,12 +27,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h1 class="page-title">Course-instructor</h1>
+                            <h1 class="page-title">Co-ordinator</h1>
                             <ul>
                                 <li>
                                     <a class="active" href="index-2.html">Home</a>
                                 </li>
-                                <li>Course-instructor</li>
+                                <li>Co-ordinator</li>
                             </ul>
                         </div>
                     </div>
@@ -43,9 +43,9 @@
 
         <!-- History Start -->
         <section id="about-section" class="padding-100">
-            <div class="container  contact-page-section box-form">
-                <div class="contact-comment-section">
-                    <h3>Course-instructor</h3>
+            <div class="container  contact-page-section">
+                <div class="contact-comment-section box-form wow fadeInUp">
+                    <h2 class="text-center">Co-ordinator Form</h2>
                     <div id="form-messages"></div>
                     <form role="form" id="contact-form" class="career" enctype="multipart/form-data">
                         <fieldset>
