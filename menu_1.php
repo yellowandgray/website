@@ -50,7 +50,7 @@
                                     <li class="menu-item-has-children <?php if($page == 'about'){ echo 'active';} ?>"> <a href="about.php">About Us</a></li>
                                     <li class="menu-item-has-children <?php if($page == 'programs'){ echo 'active';} ?>"> <a href="#">PROGRAMS</a>
                                         <ul class="sub-menu">
-                                            <li> <a href="aaluv-math.php">AALUV MATHS</a></li>
+                                            <li> <a href="aaluv-math.php">AALUV MATH</a></li>
                                             <li><a href="aaluv-robotics.php">AALUV ROBOTICS</a></li>
                                         </ul>
                                     </li>
