@@ -992,7 +992,7 @@
 }
 @media (max-width: 1200px) {
     .banner-bg {
-      border-radius : 0px !important;
+        border-radius : 0px !important;
     }
 }
 
@@ -1007,13 +1007,13 @@
 }
 @media (max-width: 1200px) {
     .banner-bg {
-      border-radius : 0px !important;
+        border-radius : 0px !important;
     }
 }
 @media only screen and (max-width: 767px) {
-#rs-slider .slide-content .slider-title {
-    font-size: 23px;
-}
+    #rs-slider .slide-content .slider-title {
+        font-size: 23px;
+    }
 }
 @media (max-width:992px) {
     .logo-area a img {
@@ -1026,10 +1026,25 @@
     }
 }
 @media (min-width: 350px) {
-.col-md-6 {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
+    .col-md-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media (max-width: 991px) {
+    .enquiry-box {
+        margin-top: 20px ; 
+    } 
+}
+@media only screen and (min-width: 513px) and (max-width: 767px) {
+    .margin-top-27 {
+        margin-top: 0px !important;
+}
+}
+@media only screen and (min-width: 540px) and (max-width: 767px) {
+    .margin-top-27 {
+        margin-left: 27px;
 }
 }

@@ -42,27 +42,14 @@
         <!-- Breadcrumbs End -->
 
         <!-- History Start -->
-        <section id="about-section" class="padding-100">
+         <section id="about-section" class="padding-100 bg-img-1">
             <div class="container">
-                <div class="row">
+               <div class="row">
                     <div class="col-md-12 wow fadeInUp">
-                        <h3 class="color-blue">WELCOME TO AALUV GLOBAL</h3>
+                        <h3 class="color-blue">COMPANY PROFILE</h3>
+                        <p>AALUV GLOBAL is a wholistic Brain Development company, developing children's mind to better equip them for the challenges of Life.</p>
                     </div>
                 </div>
-                <div class="row uppercase">
-                    <div class="col-md-12 text-p wow fadeInUp">
-                        <p>AALUV is a Holistic Brain Development company, developing children's mind to better equip them for the challenges of Life, this training program transforms and empowers Children to perform extensive calculations at stunning speed and accuracy with nothing but their own sharp mind to aid them.</p>
-                        <p>The curriculum is specifically designed to enhance a child's skill set for the 21st Century’s robust Challenges.</p>
-                        <p>AALUV endows the child with creativity, concentration, memory, speed writing, lateral thinking, listening capacity, analytical skills and over all self confidence making them an “Enhanced Global Citizens”.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- History End -->
-
-        <!-- Mission Start -->
-        <section id="about-section" class="padding-b-100 bg-img-1">
-            <div class="container">
                 <div class="row">
                     <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">Expanding Global Business</h3>
@@ -71,17 +58,26 @@
                 </div>
                 <div class="row uppercase">
                     <div class="col-md-12 text-p wow fadeInUp">
-                        <p>The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe. Essentially, in these programs, the infinite potential of the human brain and its effective use is unveiled through the Scientific Brain Management Techniques.</p>
-                        <p>Being a vibrant organization, it stands for a mission committed to create a new generation, which will be mentally equipped to face the challenges in a competitive environment. Steered by visionary leadership, the Company has set new benchmarks for the industry and is currently expanding its operations in Australia. Kindly check with the author,if it is1300 students or countries??? Because,1300 what is the question?? And it looks incomplete.</p>
+                        <p>The Parent company <b>Aloha India</b>, is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 5-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 5500 centres in 35 countries across globe. Essentially, in these programs, the infinite potential of the human brain and its effective use is unveiled through the Scientific Brain Management Techniques.</p>
                     </div>
                 </div>
-            </div>
+              </div>
         </section>
+        <!-- History End -->
+
+        <!-- Mission Start -->
+     
         <!-- Mission End -->
 
         <!-- Vision Start -->
         <section id="about-section" class="padding-b-100">
             <div class="container">
+                <div class="row  padding-top-30">
+                    <div class="col-md-12 wow fadeInUp">
+                        <h3 class="color-blue">AALUV GLOBAL:</h3>
+                        <p>Being a vibrant organization, it stands for a mission committed to create a new generation, which will be mentally equipped to face the challenges in a competitive environment. Steered by visionary leadership, the Company has set new benchmarks for the industry and is currently expanding its operations in Australia.<p>
+                    </div>
+                </div>
                 <div class="row padding-top-30">
                     <div class="col-md-12 text-p wow fadeInUp">
                         <h3 class="color-blue">VISION</h3>

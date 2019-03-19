@@ -27,12 +27,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h1 class="page-title">AALUV MATHS</h1>
+                            <h1 class="page-title">AALUV MATH</h1>
                             <ul>
                                 <li>
                                     <a class="active" href="index.php">Home</a>
                                 </li>
-                                <li>Aaluv Maths</li>
+                                <li>Aaluv Math</li>
                             </ul>
                         </div>
                     </div>
@@ -46,13 +46,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 wow fadeInUp">
-                        <h3 class="color-blue">AALUV MATHS</h3>
+                        <h3 class="color-blue">AALUV MATH</h3>
                     </div>
                 </div>
                 <div class="row uppercase">
                     <div class="col-md-12 text-p wow fadeInUp">
-                        <p>Aaluv Maths is a unique Comprehensive Mathematic Learning Solution helping millions of students world-wide developing a self-motivated learning and attitude which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
-                        <p>Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
+                        <p>Aaluv Math is a unique Comprehensive Mathematic Learning Solution helping students in self-motivated learning and attitude which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
+                        <p>Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration & thinking skills.</p>
                     </div>
                 </div>
             </div>
@@ -65,14 +65,15 @@
                 <div class="row">
                     <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">Why AALUV Maths:</h3>
-                        <h4 class="text-center">The Global business is expanding</h4>
+                        <!--                        <h4 class="text-center">The Global business is expanding</h4>-->
                     </div>
                 </div>
                 <div class="row uppercase">
                     <div class="col-md-12 wow fadeInUp">
                         <ul class="list-align">
+                            <i class="fas fa-check"></i><li>The Global business is expanding</li>
                             <i class="fas fa-check"></i><li>Aaluv Maths program emphasizes on problem solving skills among the young students.</li>
-                            <i class="fas fa-check"></i><li>mathematical questions presented through various figures, charts, and scenarios closely related to real-life situations challenge and improve their problem-solving approach and capability.</li>
+                            <i class="fas fa-check"></i><li>Mathematical questions are closely related to real-life situations challenge and improve their problem-solving approach and capability.</li>
                             <i class="fas fa-check"></i><li>Significantly helps the overall development of each student.</li>
                         </ul>
                     </div>
@@ -91,7 +92,7 @@
                 </div>
                 <div class="row uppercase">
                     <div class="col-md-12 text-p wow fadeInUp">
-                        <p>Preparing children as global digital citizens for the world that doesn’t yet exist by imparting critical 21st century skills such as problem solving ,creativity, Analytic thinking, collaboration, communication, ethics, action ,empathy ,tolerance ,environmental awareness and global awareness every child needs to survive and succeed understanding. what abilities and traits will serve them in a time that’s Rapidly changing and developing.</p>
+                        <p>Preparing children in problem solving ,creativity, Analytic thinking, collaboration, communication, ethics, action ,empathy ,tolerance every child needs to survive and succeed understanding.</p>
                     </div>
                 </div>
                 <div class="row padding-top-30">
@@ -99,22 +100,25 @@
                         <ul class="list-align">
                             <i class="fas fa-check"></i><li>To develop an affinity with numbers with the right practice and right level.</li>
                             <i class="fas fa-check"></i><li>Develop natural progress in academics.</li>
-                            <i class="fas fa-check"></i><li>When each student begins the maths programmes, they are given a study projection.</li>
-                            <i class="fas fa-check"></i><li>assessment at every level and reflection of the progress</li>
-                            <i class="fas fa-check"></i><li>Competency</li>
-                            <i class="fas fa-check"></i><li>assessment are respective Parents / Students / Instructors.</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 wow fadeInUp">
-                        <ul class="list-align">
                             <i class="fas fa-check"></i><li>Individualized study projection.</li>
                             <i class="fas fa-check"></i><li>Enable students to become independent by positive mind-set and self – learning skills.</li>
-                            <i class="fas fa-check"></i><li>National Level Competition to showcase the talent.</li>
+                            <i class="fas fa-check"></i><li>Eliminates examination fear.</li>
                             <i class="fas fa-check"></i><li>Aaluv Method of Learning develops academic ability , empowerment and ownerhip of their own learning.</li>
                             <i class="fas fa-check"></i><li>increases their concentration and stamina and confidence.</li>
                             <i class="fas fa-check"></i><li>Unique assessment and individualized teaching method.</li>
+                            <i class="fas fa-check"></i><li>Insist on attempting to work out the sums rather than ignoring them.</li>
                         </ul>
                     </div>
+                    <!--                    <div class="col-md-6 wow fadeInUp">
+                                            <ul class="list-align">
+                                                <i class="fas fa-check"></i><li>Individualized study projection.</li>
+                                                <i class="fas fa-check"></i><li>Enable students to become independent by positive mind-set and self – learning skills.</li>
+                                                <i class="fas fa-check"></i><li>National Level Competition to showcase the talent.</li>
+                                                <i class="fas fa-check"></i><li>Aaluv Method of Learning develops academic ability , empowerment and ownerhip of their own learning.</li>
+                                                <i class="fas fa-check"></i><li>increases their concentration and stamina and confidence.</li>
+                                                <i class="fas fa-check"></i><li>Unique assessment and individualized teaching method.</li>
+                                            </ul>
+                                        </div>-->
                 </div>
             </div>
         </section>
@@ -132,8 +136,8 @@
                                 <div><span class="light"></span><span>Learning Process</span></div>
                                 <div><span class="light"></span><span>Story Based Sums</span></div>
                                 <div><span class="light"></span><span>Our Instructor</span></div>
-                                <div><span class="light"></span><span>Practice Sheets</span></div>
-                                <div><span class="light"></span><span>Transformation and Improvement</span></div>
+<!--                                <div><span class="light"></span><span>Practice Sheets</span></div>
+                                <div><span class="light"></span><span>Transformation and Improvement</span></div>-->
                                 <div><span class="light"></span><span>Over View</span></div>
 <!--                                <div><span class="light"></span><span>Guardian's Voice</span></div>-->
                             </div>
@@ -143,25 +147,24 @@
                                 <li class="active">
                                     <div>
                                         <h3 class="color-blue">4 Guiding Principles</h3>
-                                        <h4>1. Boosting fundamental academic skills</h4>
-                                        <p>To promote a daily learning habit with advancement in their learning skills. Frequent learning of various topics and daily homework will inculcate a good study habit.</p>
-                                        <h4>2. No grading</h4>
-                                        <p>Students are not graded but are assessed as per their individual learning progress.</p>
-                                        <p>Each child’s ability in unique, which is evaluated distinctly. Further more, the character of the child is assessed and taught accordingly. </p>
+                                        <h4>1. Boosting basic academic skills</h4>
+                                        <p>To promote a daily learning habit with advancement in their learning skills. Frequent learning of various topics and daily homework to inculcate learning habit.</p>
+                                        <h4>2. Calibrate student’s Level</h4>
+                                        <p>Students are assessed as per their individual learning progress, as each child’s ability in unique, which is evaluated distinctly. Furthermore, the character of the child is assessed and taught accordingly.</p>
                                         <p>Children can learn in their own style and proceed on understanding the concept completely.</p>
-                                        <h4>3. Self-Learning</h4>
-                                        <p>Nurture approaches that make one think and learn by self. One of the most popular self-learning approaches is the Aaluv method, which offers suitable practice sheets and counseling to children.</p>
-                                        <h4>4. Comprehensive,life-skill-based education</h4>
+                                        <h4>3. Encourage to think on their own:</h4>
+                                        <p>Aaluv Math make one think and learn by self, which offers suitable practice sheets and counseling to children.</p>
+                                        <h4>4. Comprehensive, life-skill-based education</h4>
                                         <p>We need to not only train the child academically, but also cultivate good manners such as salutations, self-hygiene and ethics.</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
                                         <h3 class="color-blue">Interaction Essentials</h3>
-                                        <div class="p-margin-15">
-                                            <p>1. Classroom Days: 2 days in a week.</p>
-                                            <p>2. Subject: Maths </p>
-                                            <p>3. Target Groups: Primary School Children</p>
+                                        <div class="p-margin-15 list-align">
+                                             <i class="fas fa-check"></i><p> Classroom Days: 5 days in a week. (Concept & Academic)</p>
+                                             <i class="fas fa-check"></i><p> Subject: Maths</p>
+                                             <i class="fas fa-check"></i><p> Target Groups: Primary School Children</p>
                                         </div>
                                     </div>
                                 </li>
@@ -170,9 +173,9 @@
                                         <h3 class="color-blue">Etiquette</h3>
                                         <h4>The child also needs to be trained in life skills and taught good manners.</h4>
                                         <div class="list-align">
-                                            <i class="fas fa-check"></i><p> Salutations while entering and departing from class.</p>
+                                            <i class="fas fa-check"></i><p> Greetings while entering and departing from class.</p>
                                             <i class="fas fa-check"></i><p> Hygiene and sanitation.</p>
-                                            <i class="fas fa-check"></i><p> Systematically arranging their belongings such as bags,stationeries, etc. </p>
+                                            <i class="fas fa-check"></i><p> Systematically arranging their belongings such as bags, stationeries, etc.</p>
                                             <i class="fas fa-check"></i><p> Maintaining the correct posture in the classroom.</p>
                                             <i class="fas fa-check"></i><p> Abiding by the regulations of the classroom.</p>
                                         </div>
@@ -183,21 +186,20 @@
                                         <h3 class="color-blue">Reasoning</h3>
                                         <h4>Why To Choose “AALUV Math Classroom”</h4>
                                         <div class="p-margin-15">
-                                            <p>1. Superior educational tools.</p>
+                                            <p>1. Work sheet methodology</p>
                                             <p>2. One-on-one learning.</p>
                                             <p>3. Progression to the next topic only after a thorough understanding of the previous is attained.</p>
                                             <p>4. Boosts academic learning.</p>
                                             <p>5. Concentrating on grasping the concept and principle behind each sum.</p>
+                                            <p>6. Helps to score higher in academics.</p>
                                         </div>
                                         <h4>Transformation After Associating With AALUV Classroom</h4>
                                         <div class="p-margin-15">
                                             <p>1. Develop a systematic study habit.</p>
-                                            <p>2. Improve one’s calculation skills.</p>
+                                            <p>2. Improve one’s understanding skills in Math.</p>
                                             <p>3. Learn to solve mathematical problems.</p>
-                                            <p>4. Tackle all problems oneself.</p>
-                                            <p>5. Write meticulously.</p>
-                                            <p>6. Improve in mathematical skills.</p>
-                                            <p>7. Develop a fondness for studies.</p>
+                                            <p>4. Enhances reading skills.</p>
+                                            <p>5. Develop a fondness for studies.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -208,11 +210,10 @@
                                         <div class="list-align">
                                             <i class="fas fa-check"></i><p> Initially,students take an evaluation test.</p>
                                             <i class="fas fa-check"></i><p> Math practice sheets are prepared individually catering for each student as per their proficiency.</p>
-                                            <i class="fas fa-check"></i><p> Interaction between tutor and student is once a week.</p>
                                             <i class="fas fa-check"></i><p> The students cultivate ‘How to think’ aptitudes first and later apply these skills to solve the exercise problems. They are expected to complete the prerequisite practice sheets daily.</p>
-                                            <i class="fas fa-check"></i><p> The instructor grades the papers, and may counsel the students and provide thinking tips.</p>
+                                            <i class="fas fa-check"></i><p> The instructor grades the papers and  provide thinking tips by giving examples.</p>
                                             <i class="fas fa-check"></i><p> Have students assess their graded papers. The students should keep trying until they get a perfect score.</p>
-                                            <i class="fas fa-check"></i><p> Perfect scores instill confidence in the students and are a boost to their academic abilities. The classes are concluded after making sure the children are given homework.</p>
+                                            <i class="fas fa-check"></i><p> The classes are concluded after making sure the children are given homework.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -220,8 +221,7 @@
                                     <div>
                                         <div class="list-align">
                                             <h3 class="color-blue">Story Based Sums</h3>
-                                            <i class="fas fa-check"></i><p> By acquiring knowledge regarding the ‘analytical thinking process’ associated with problem solving, children improve their skills and aptitudes, enabling them to apply these proficiencies in real-life settings. </p>
-                                            <i class="fas fa-check"></i><p> Children are given an in-depth understanding of the procedure for problem solving and the significance of the target calculation is also explained prior to the start of the exercises.</p>
+                                            <i class="fas fa-check"></i><p> By acquiring knowledge regarding the ‘analytical thinking process’ associated with problem solving, children improve their skills and aptitudes, enabling them to apply these proficiencies in real-life.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -234,7 +234,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+<!--                                <li>
                                     <div>
                                         <h3 class="color-blue">Practice Sheets</h3>
                                     </div>
@@ -258,8 +258,8 @@
                                             <i class="fas fa-check"></i><p> start the exercises.</p>
                                         </div>
                                     </div>
-                                </li>
-                                <li>
+                                </li>-->
+<!--                                <li>
                                     <h3 class="color-blue">Transformation and Improvement</h3>
                                     <div class="p-margin-15">
                                         <div class="row">
@@ -336,7 +336,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </li>
+                                </li>-->
                                 <li>
                                     <div>
                                         <h3 class="color-blue">Self Learning Proficiency</h3>

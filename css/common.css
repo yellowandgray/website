@@ -67,6 +67,9 @@ td, th {
 .padding-100  {
     padding: 100px 0;
 }
+.padding-t-100  {
+    padding: 100px 0px 0px 0px;
+}
 .uppercase h4 {
     text-transform: uppercase;
     color : #0ea999;
@@ -89,7 +92,7 @@ td, th {
     background: #0000008c;
     box-shadow: 0px 0px 6px 0px #000;
     padding: 20px;
-    margin-top: 20px;
+/*    margin-top: 20px;*/
     /*    margin-right: 20px;*/
 }
 
@@ -151,7 +154,7 @@ td, th {
 
 }
 .text-p {
-/*    text-align: center;*/
+    /*    text-align: center;*/
     margin: 35px 0 0px;
     line-height: 35px;
     font-size: 17px;
@@ -331,7 +334,7 @@ ul.nacc li p {
     border: 1px solid rgba(34, 34, 34, 0.1);
     transition: all 0.3s ease 0s;
     margin-bottom: 20px;
-    height: 650px;
+/*    height: 265px;*/
 }
 
 .uppercase .news-normal-block img {
@@ -609,4 +612,13 @@ ul.nacc li p {
     box-shadow: 0px 0px 13px 9px #eee;
     padding: 30px;
     background: #fff;
+}
+.uppercase .news-normal {
+    padding: 15px;
+    border: 1px solid rgba(34, 34, 34, 0.1);
+    transition: all 0.3s ease 0s;
+    
+}
+.margin-top-27 {
+        margin-top: 27px;
 }
