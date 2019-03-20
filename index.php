@@ -203,11 +203,39 @@
                         </div>
                     </div>
                 </div>
+                 <div class="row uppercase display-none">
+                    <div class="col-md-4 wow fadeInUpBig">
+                        <div class="news-normal-block">
+                            <img src="images/about/about-12.jpg" alt=""/>
+                            <!--                            <h4 class="text-center">About Aaluv</h4>
+                                                        <p>The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe.</p>-->
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUpBig">
+                        <div class="news-normal-block">
+                            <img src="images/about/about-11.jpg" alt=""/>
+                            <!--                            <h4 class="text-center">Our Classroom</h4>
+                                                        <p>Min Area required1000 Sq. Ft, in a Semi Commercial Area.A well-illuminated and ventilated classroom of about 250 Sq. ft each and minimum of 2-3 class rooms with basic amenities such as Air condition, Fans, drinking water and washroom facilities. A comfortable seating arrangement.Separate Rooms for Counselling and Admin activity such as fee collection and parents meeting.</p>-->
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUpBig">
+                        <div class="news-normal-block">
+                            <img src="images/about/about-13.jpg" alt=""/>
+                            <!--                            <h4 class="text-center">Our Principles</h4>
+                                                        <ul class="list-align">
+                                                            <i class="fas fa-check"></i><li>Boosting fundamental academic skills </li>
+                                                            <i class="fas fa-check"></i><li>No grading </li>
+                                                            <i class="fas fa-check"></i><li>Self-Learning</li>
+                                                            <i class="fas fa-check"></i><li>Comprehensive, life-skill-based education</li>
+                                                        </ul>-->
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="about-section" class="padding-b-100 bg-img">
             <div class="container">
-                <div class="row uppercase">
+               <div class="row uppercase">
                     <!--                    <div class="col-md-12 wow fadeInDown">
                                             <h3 class="color-blue text-center">AALUV Classroom Franchisee Desired Qualities</h3>
                                         </div>
@@ -224,7 +252,7 @@
                                             </ul>
                                         </div>-->
 
-                    <div class="col-md-3 wow fadeInUpBig">
+                    <div class="col-md-3 wow fadeInUpBig display-none-1">
                         <div class="news-normal">
                             <img src="images/about/about-07.jpg" alt=""/>
                             <img src="images/about/about-08.jpg" alt="" class="margin-top-27"/>
@@ -237,9 +265,9 @@
                                                         </ul>-->
                         </div>
                     </div>
-                    <div class="col-md-4 wow fadeInUpBig">
+                    <div class="col-md-4 wow fadeInUpBig display-none-1">
                         <div class="news-normal">
-                            <img src="images/about/about-10.jpg" alt=""/>
+                            <img src="images/about/about-10.jpg" alt="" class="height-363"/>
                             <!--                            <h4 class="text-center">Our Principles</h4>
                                                         <ul class="list-align">
                                                             <i class="fas fa-check"></i><li>Boosting fundamental academic skills </li>
@@ -249,6 +277,7 @@
                                                         </ul>-->
                         </div>
                     </div>
+                   
                     
                     <div class="col-lg-5 wow fadeInDown enquiry-box">
                         <div class="contact-form">

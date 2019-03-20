@@ -1041,10 +1041,28 @@
 @media only screen and (min-width: 513px) and (max-width: 767px) {
     .margin-top-27 {
         margin-top: 0px !important;
-}
+    }
 }
 @media only screen and (min-width: 540px) and (max-width: 767px) {
     .margin-top-27 {
         margin-left: 27px;
+    }
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .margin-top-27 {
+        margin-top: 72px !important;
+    }
+    .height-363 {
+        height: 363px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .display-none {
+        display: flex !important;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .display-none-1 {
+        display: none !important;
+    }
 }
