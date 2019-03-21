@@ -85,7 +85,7 @@
         <!-- Vision Start -->
         <section id="about-section" class="padding-b-100 bg-img-2">
             <div class="container">
-                <div class="row padding-top-30">
+                <div class="row">
                     <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">Advantage AALUV Maths</h3>
                     </div>
@@ -96,7 +96,7 @@
                     </div>
                 </div>
                 <div class="row padding-top-30">
-                    <div class="col-md-6 wow fadeInUp">
+                    <div class="col-md-12 wow fadeInUp">
                         <ul class="list-align">
                             <i class="fas fa-check"></i><li>To develop an affinity with numbers with the right practice and right level.</li>
                             <i class="fas fa-check"></i><li>Develop natural progress in academics.</li>

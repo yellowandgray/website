@@ -155,7 +155,7 @@ td, th {
 }
 .text-p {
     /*    text-align: center;*/
-    margin: 35px 0 0px;
+    margin: 6px 0 0px;
     line-height: 35px;
     font-size: 17px;
 }
@@ -635,3 +635,6 @@ ul.nacc li p {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
+.text-1 {
+    display: none;
+}

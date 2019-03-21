@@ -1099,3 +1099,24 @@
         height: 243px !important;
     }
 }
+@media only screen and (min-width: 651px) and (max-width: 992px) {
+    .gallery-bg {
+        padding:  90px !important;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .gallery-bg {
+        padding:  40px !important;
+    }
+    .gallery-bg .text{
+        display: none !important;
+    }
+}
+@media only screen and (max-width: 1199px) {
+    .box-radius-bg-60 {
+        padding: 20px 50px!important;
+    }
+    .box-radius-bg-60 .text-1{
+        display: block !important;
+    }
+}
