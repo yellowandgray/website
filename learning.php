@@ -44,28 +44,101 @@
         <!-- History Start -->
         <section id="about-section" class="padding-100">
             <div class="container wow fadeInUp">
-                <h3 class="color-blue">AALUV FOCUS on LEARNING</h3>
-                <div class="row">
+                <h3 class="color-blue">AALUV LEARNING</h3>
+                <div class="row uppercase col-6-align">
                     <div class="col-md-6">
-                        <ul class="list-align">
-                            <i class="fas fa-check"></i><li>EMOTIONAL ENGAGEMENT !</li>
-                            <i class="fas fa-check"></i><li>INTERACTION WITH PHYSICAL DEVICES !</li>
-                            <i class="fas fa-check"></i><li>PRACTICAL LEARNING !</li>
-                            <i class="fas fa-check"></i><li>MULTI-DISCIPLINARY LEARNING !</li>
-                            <i class="fas fa-check"></i><li>CONSTRUCTIVIST APPROACH !</li>
-                        </ul>
+                        <div class="news-normal-block">
+                            <h4 class="text-center">Required Materials</h4>
+                            <img src="images/events/learning-01.jpg" alt=""/>
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="images/learning.png" alt="" />
+                        <div class="news-normal-block">
+                            <h4 class="text-center">Resources guided / Provided by us</h4>
+                            <img src="images/events/learning-02.jpg" alt=""/>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="about-section" class="padding-b-100">
+            <div class="container wow fadeInUp">
+                <h3 class="color-blue">Sample Activity in LEGO Robotics using Math Concept:</h3>
+                <div class="row col-6-align">
+                    <div class="col-md-6">
+                        <div>
+                            <ul class="list-align">
+                                <i class="fas fa-check"></i><li>Students have to recollect the different types of triangles and how they vary as they change angles and length of sides.</li>
+                                <i class="fas fa-check"></i><li>Stem Education Sharpens problem solving skills</li>
+                                <i class="fas fa-check"></i><li>Builds Foundation in Coding concepts</li>
+                                <i class="fas fa-check"></i><li>Nurture Creativity</li>
+                                <i class="fas fa-check"></i><li>Exposure to Stem Element</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 uppercase">
+                        <div class="shadow">
+                            <img src="images/events/learning-04.jpg" alt=""/>
+                        </div>
                     </div>
                 </div>
-                <div class="row padding-top-30 wow fadeInUp">
+                <div class="row uppercase box-1 padding-top-30">
+                    <div class="col-md-4 wow fadeInUpBig">
+                        <div class="news-normal-block">
+                            <h4>LEGO EV3</h4>
+                            <img src="images/about/about-15.jpg" alt=""/>
+                            <!--                            <h4 class="text-center">About Aaluv</h4>
+                                                        <p>The group company of Aaluv is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 1300 centres across the globe.</p>-->
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUpBig">
+                        <div class="news-normal-block">
+                            <h4>ROBOTIC KIT – LEGO WE DO 2.o</h4>
+                            <img src="images/about/about-14.jpg" alt=""/>
+                            <!--                            <h4 class="text-center">Our Classroom</h4>
+                                                        <p>Min Area required1000 Sq. Ft, in a Semi Commercial Area.A well-illuminated and ventilated classroom of about 250 Sq. ft each and minimum of 2-3 class rooms with basic amenities such as Air condition, Fans, drinking water and washroom facilities. A comfortable seating arrangement.Separate Rooms for Counselling and Admin activity such as fee collection and parents meeting.</p>-->
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUpBig">
+                        <div class="news-normal-block">
+                            <h4>Object Sorting Robots</h4>
+                            <img src="images/about/about-16.jpg" alt=""/>
+                            <!--                            <h4 class="text-center">Our Principles</h4>
+                                                        <ul class="list-align">
+                                                            <i class="fas fa-check"></i><li>Boosting fundamental academic skills </li>
+                                                            <i class="fas fa-check"></i><li>No grading </li>
+                                                            <i class="fas fa-check"></i><li>Self-Learning</li>
+                                                            <i class="fas fa-check"></i><li>Comprehensive, life-skill-based education</li>
+                                                        </ul>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about-section" class="padding-b-100">
+            <div class="container wow fadeInUp">
+                <div class="row wow fadeInUp">
                     <div class="col-md-12">
                         <h3 class="color-blue">STRENGTHS OF ROBOTICS IN EDUCATION</h3>
-                        <p>TRAINED TEACHERS – “teach as they were taught,.. Not as they are told to teach”</p>
-                        <p>WELL DEFINED CURRICULAM – Aligned with academic curriculam”</p>
-                        <p>PROPER EDUCATION PHILOSOPHY – “ to evoke interest and enthusiasm in subject”</p>
-                        <p>SUPPORTIVE LEARNING ENVIRONMENT - “Our success is shifting focus from Technology to Pedagogy”</p>
+                        <p>TRAINED TEACHERS – <em>“teach as they were taught,.. Not as they are told to teach”</em></p>
+                        <p>WELL DEFINED CURRICULAM – <em>Aligned with academic curriculam”</em></p>
+                        <p>PROPER EDUCATION PHILOSOPHY –<em> “to evoke interest and enthusiasm in subject”</em></p>
+                        <p>SUPPORTIVE LEARNING ENVIRONMENT - <em>“Our success is shifting focus from Technology to Pedagogy”</em></p>
+                    </div>
+                </div>
+                <div class="row col-6-align padding-top-30 block-height">
+                    <div class="col-md-6 uppercase">
+                        <div class="news-normal-block">
+                            <h4 class="color-blue">Activity in Classical Robotics</h4>
+                            <img src="images/events/learning-05.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 uppercase">
+                        <div class="news-normal-block">
+                            <h4 class="color-blue">Activity in Classical Robotics using Science Dark and light sensor</h4>
+                            <img src="images/events/learning-06.jpg" alt=""/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,65 +149,65 @@
         <section id="about-section" class="padding-100 enroll-section set-bg" style="background-image: url(images/enroll-bg.jpg);">
             <div class="container">
                 <div class="col-md-12">
-                  <h3 class=" color-white text-center">WHAT ROBOTICS CAN TEACH?</h3>
+                    <h3 class=" color-white text-center">WHAT ROBOTICS CAN TEACH?</h3>
                 </div>
-             <div class="row">
-                        <div class="col-md-4 uppercase-1 ">
-                            <div class=" bg-border">
-                                <div class="news-normal-block  wow fadeInUp">
-                                    <div class="text-center">
-                                        <img class="contents" src="images/icon7.png">
-                                        <h2 class="color-white">ENDOW RIGOR</h2>
-                                    </div>
-                                    <ul class="list-align">
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Learn something real</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Teach the realities and depth of science</li>
-                                    </ul>
-                                    <br>
-<!--                                    <div class="text-center">
-                                        <button class="btn-custom">Read More</button>
-                                    </div>-->
+                <div class="row">
+                    <div class="col-md-4 uppercase-1 ">
+                        <div class=" bg-border">
+                            <div class="news-normal-block  wow fadeInUp">
+                                <div class="text-center">
+                                    <img class="contents" src="images/icon7.png">
+                                    <h2 class="color-white">ENDOW RIGOR</h2>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 uppercase-1">
-                            <div class=" bg-border">
-                                <div class="news-normal-block  wow fadeInUp">
-                                    <div class="text-center">
-                                        <img class="contents" src="images/icon8.png">
-                                        <h2 class="color-white">DESIGN</h2>
-                                    </div>
-                                    <ul class="list-align">
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Tinkering to explore</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Connect high and low level issues</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>learn uncertainty & variability of world</li>
-                                    </ul>
-<!--                                    <div class="text-center">
-                                        <button class="btn-custom">Read More</button>
-                                    </div>-->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 uppercase-1">
-                            <div class=" bg-border">
-                                <div class="news-normal-block  wow fadeInUp">
-                                    <div class="text-center">
-                                        <img class="contents" src="images/icon9.png">
-                                        <h2 class="color-white">WORK IN TEAMS</h2>
-                                    </div>
-                                    <ul class="list-align">
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Performance assessment through Competition</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Faster team spirit and camaraderie</li>
-                                    </ul>
-                                    <br>
-<!--                                    <div class="text-center">
-                                        <button class="btn-custom">Read More</button>
-                                    </div>-->
-                                </div>
+                                <ul class="list-align">
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Learn something real</li>
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Teach the realities and depth of science</li>
+                                </ul>
+                                <br>
+                                <!--                                    <div class="text-center">
+                                                                        <button class="btn-custom">Read More</button>
+                                                                    </div>-->
                             </div>
                         </div>
                     </div>
-             
+                    <div class="col-md-4 uppercase-1">
+                        <div class=" bg-border">
+                            <div class="news-normal-block  wow fadeInUp">
+                                <div class="text-center">
+                                    <img class="contents" src="images/icon8.png">
+                                    <h2 class="color-white">DESIGN</h2>
+                                </div>
+                                <ul class="list-align">
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Tinkering to explore</li>
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Connect high and low level issues</li>
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>learn uncertainty & variability of world</li>
+                                </ul>
+                                <!--                                    <div class="text-center">
+                                                                        <button class="btn-custom">Read More</button>
+                                                                    </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 uppercase-1">
+                        <div class=" bg-border">
+                            <div class="news-normal-block  wow fadeInUp">
+                                <div class="text-center">
+                                    <img class="contents" src="images/icon9.png">
+                                    <h2 class="color-white">WORK IN TEAMS</h2>
+                                </div>
+                                <ul class="list-align">
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Performance assessment through Competition</li>
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Faster team spirit and camaraderie</li>
+                                </ul>
+                                <br>
+                                <!--                                    <div class="text-center">
+                                                                        <button class="btn-custom">Read More</button>
+                                                                    </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
         <!-- Mission End -->
