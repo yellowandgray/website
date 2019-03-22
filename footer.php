@@ -54,7 +54,7 @@
                             </div>
                             <div class="post-desc">
                                 <h5 class="post-title"><a href="aaluv-math.php">AALUV Maths</a></h5>
-                                
+
                             </div>
                         </div>
                         <div class="post-item">
@@ -63,7 +63,7 @@
                             </div>
                             <div class="post-desc">
                                 <h5 class="post-title"><a href="aaluv-robotics.php">AALUV Robotics</a></h5>
-                                
+
                             </div>
                         </div>
                     </div>

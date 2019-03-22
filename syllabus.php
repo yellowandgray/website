@@ -4,7 +4,7 @@
     <!-- Mirrored from keenitsolutions.com/products/html/edulearn/edulearn-demo/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Mar 2019 06:06:12 GMT -->
     <?php
     include 'head.php';
-    $page = 'about';
+    $page = 'programs';
     ?>
     <body class="inner-page">
         <!--Preloader area start here-->
