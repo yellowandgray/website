@@ -45,13 +45,13 @@
         <!-- Menu Start -->
         <div class="menu-area menu-sticky">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
+                <div class="row margin-b-10">
+                    <div class="col-md-3 width-20">
                         <div class="logo-area">
                             <a href="index.php"><img src="images/logo2.png" alt="logo"></a>
                         </div>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-9 width-80">
                         <div class="main-menu">
                             <!-- <div id="logo-sticky" class="text-center">
                                 <a href="index.html"><img src="images/logo.png" alt="logo"></a>
@@ -72,9 +72,9 @@
                                     <li class="menu-item-has-children"> <a href="contact.php">LOCATE US</a></li>
                                     <!--                                <li class="menu-item-has-children"> <a href="#">Events</a></li>
                                                                     <li class="menu-item-has-children"> <a href="#">Blog</a></li>-->
+                                    <li> <a href="franchise-requisites.php">FRANCHISE REQUISITES</a></li>
                                     <li class="menu-item-has-children <?php if($page == 'withus'){ echo 'active';} ?>"> <a href="#">GROW WITH US</a>
                                         <ul class="sub-menu">
-                                            <li> <a href="franchise-requisites.php">FRANCHISE REQUISITES</a></li>
                                             <li> <a href="center-manager.php">CENTER MANAGER</a></li>
                                             <li> <a href="course-instructor.php">COURSE INSTRUCTOR</a></li>
                                             <li> <a href="co-ordinator.php">CO-ORDINATOR</a></li>

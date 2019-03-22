@@ -49,7 +49,7 @@
                         <h3 class="color-blue">AALUV CLASSROOM SITE SPECIFICATIONS</h3>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row  col-6-align">
                     <div class="col-md-6">
                         <div class="box-gray">
                             <h3 class="color-blue text-center wow fadeInUp">Option A</h3>

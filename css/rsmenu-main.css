@@ -163,7 +163,7 @@ Version: 1.0.0
 .inner-page .rs-menu ul.nav-menu > li,
 .home3 .rs-menu ul.nav-menu > li,
 .home1 .rs-menu ul.nav-menu > li{
-    margin-right: 30px;
+    margin-right: 20px;
 }
 .home1 .rs-menu ul.nav-menu > li:last-child{
     margin-right: 0;
@@ -718,7 +718,7 @@ Version: 1.0.0
     .home5 .rs-menu > ul > li > a{
         height: 18px;
         line-height: 20px;
-        padding: 0 15px;
+        padding: 0 12px;
         border-left: 1px solid black;
         margin: 45px 0px;
     }

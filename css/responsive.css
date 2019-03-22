@@ -91,7 +91,7 @@
     .inner-page .rs-menu ul.nav-menu > li, 
     .home3 .rs-menu ul.nav-menu > li, 
     .home1 .rs-menu ul.nav-menu > li {
-        margin-right: 35px;
+        margin-right:  26px;
     }
 }
 /* Tablet Layout: 1199px. */
@@ -576,7 +576,7 @@
     .rs-toolbar .rs-toolbar-left .welcome-message,
     .rs-toolbar .rs-toolbar-right,
     .home3 .rs-toolbar .rs-toolbar-left{
-        text-align: center;
+        text-align: end;
     }
     .sec-title .view-more {
         position: absolute;
@@ -996,13 +996,14 @@
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1199px) {
     .home5 .rs-menu > ul > li > a {
         height: 18px;
         line-height: 20px;
-        padding: 0px 9px !important;
+        padding: 1px 9px !important;
         border-left: 1px solid black;
         margin: 38px 0px;
+        font-size: 13px;
     }
 }
 @media (max-width: 1200px) {
@@ -1015,14 +1016,17 @@
         font-size: 23px;
     }
 }
-@media (max-width:992px) {
+@media (max-width:991px) {
     .logo-area a img {
-        height: 45px !important;
+        height: 39px !important;
     }
 }
 @media (max-width:480px) {
     .logo-area a img {
         height: 42px !important;
+    }
+    .margin-b-10 {
+        margin-bottom: 10px !important;
     }
 }
 @media (min-width: 350px) {
@@ -1067,12 +1071,12 @@
     }
 }
 @media (max-width: 767px) {
-.col-6-align .col-md-6 {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-}
+    .col-6-align .col-md-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
 }
 @media only screen and (min-width: 767px) and (max-width: 991px) {
     .col-6-align .news-normal-block {
@@ -1118,5 +1122,25 @@
     }
     .box-radius-bg-60 .text-1{
         display: block !important;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .width-80 {
+        -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 80% !important;
+        flex: 0 0 80% !important;
+        max-width: 80% !important;
+    }
+    .width-20 {
+        -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 20% !important;
+        flex: 0 0 20% !important;
+        max-width: 20% !important;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px)
+{
+    .font-12 a {
+        font-size: 12px !important;
     }
 }
