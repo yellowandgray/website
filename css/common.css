@@ -701,3 +701,53 @@ ul.nacc li p {
     color: #fff;
     text-align: center;
 }
+
+.contact-shadow select {
+    width: 100%;
+    min-height: 40px;
+    display: block;
+    padding: 10px 15px;
+    color: #505050;
+}
+
+.btn-send {
+    width: 100%;
+    margin-top: 25px;
+    background-color: #ff3115;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -ms-transition: 0.4s;
+    cursor: pointer;
+}
+
+.contact-shadow {
+    padding: 20px;
+    border: 1px solid rgb(34, 34, 34);
+    transition: all 0.3s ease 0s;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.contact-shadow:hover {
+    webkit-box-shadow: 0 10px 40px rgb(0, 0, 0);
+    box-shadow: 0 10px 40px #000000;
+}
+
+.video-border {
+    border: 5px solid #ffffff;
+}
+
+
+.bg-contact {
+    background-image: url(../images/bg-contacts.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center top;
+}

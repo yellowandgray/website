@@ -268,11 +268,11 @@
         <!-- Mission End -->
 
         <!-- Vision Start -->
-        <div class="rs-vision sec-spacer">
+        <div class="rs-vision sec-spacer bg-contact">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 mobile-mb-50">
-                        <div class="vision-img rs-animation-hover">
+                        <div class="vision-img rs-animation-hover video-border">
                             <img src="images/about/vision.jpg" alt="img02"/>
                             <a class="popup-youtube rs-animation-fade" href="https://www.youtube.com/watch?v=3f9CAMoj3Ec" title="Video Icon">
                             </a>
@@ -280,13 +280,98 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="abt-title">
-                            <h2>OUR VISION</h2>
-                        </div>
-                        <div class="vision-desc">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe derit in voluptate velit esse cillum.</p>
-
-                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot fore see the pain and trouble that are bound to ensue; and equal who fail in their duty.</p>
+                        <div class="contact-shadow">
+                            <div class="abt-title">
+                                <h5>Get in touch with us today!</h5>
+                            </div>
+                            <div class="check-out-box">
+                                <form id="contact-form" method="post">
+                                    <fieldset>
+                                        <div class="row"> 
+                                            <div class="col-md-6 col-sm-12 col-xs-12">    
+                                                <label>Which country would you like to franchise I Can Read? (*)</label>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12">   
+                                                <div class="form-group">
+                                                    <select>
+                                                        <option>Select Your Country</option>
+                                                        <option>India</option>
+                                                        <option>Bangladesh</option>
+                                                        <option>Srilanka</option>
+                                                        <option>UAE</option>
+                                                        <option>Muscat</option>
+                                                        <option>Malaysia</option>
+                                                        <option>Singapore</option>
+                                                        <option>Australia</option>
+                                                        <option>Canada</option>
+                                                        <option>Italy</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">                                      
+                                            <div class="col-lg-6 col-md-12">
+                                                <label>Name (*)</label>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="form-group">
+                                                    <input name="fname" class="form-control" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row"> 
+                                            <div class="col-md-6 col-sm-12 col-xs-12">    
+                                                <label>Email (*)</label>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12">    
+                                                <div class="form-group">
+                                                    <input id="email" name="email" class="form-control" type="email">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-12">
+                                                <label>Primary Phone Number (*)</label>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="form-group">
+                                                    <input name="pnumber" class="form-control" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row"> 
+                                            <div class="col-md-6 col-sm-12 col-xs-12">    
+                                                <label>Address (*)</label>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12">    
+                                                <div class="form-group">
+                                                    <input name="address" class="form-control" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row"> 
+                                            <div class="col-md-6 col-sm-12 col-xs-12">    
+                                                <label>Zip / Postal Code (*)</label>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12">    
+                                                <div class="form-group">
+                                                    <input name="zip" class="form-control" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row"> 
+                                            <div class="col-md-12 col-sm-12 col-xs-12">    
+                                                <div class="form-group">
+                                                    <label>Questions or Comments</label>
+                                                    <textarea rows="3" name="comments" class="form-control" type="text"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span>* Required fields</span>
+                                        <input style="float: right" class="btn-send" type="submit" value="Send">
+                                    </fieldset>
+                                </form>	
+                            </div>
                         </div>
                     </div>
                 </div>
