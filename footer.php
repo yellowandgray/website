@@ -76,7 +76,8 @@
                         <li ><a href="aaluv-math.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Programs</a></li>
                         <li ><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Happenings</a></li>
                         <li ><a href="contact.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Locate us</a></li>
-                        <li ><a href="franchise-requisites.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Pro With us</a></li>
+                        <li ><a href="franchise-requisites.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Franchise Requisites</a></li>
+                        <li ><a href="center-manager.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Grow With us</a></li>
 <!--                        <li><a href="courses.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses</a></li>
                         <li><a href="courses-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses Details</a></li>
                         <li><a href="events.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events</a></li>

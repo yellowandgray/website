@@ -6,7 +6,7 @@
                 <div class="col-md-4">
                     <div class="contact-inner">
 <!--                       <i class="fa fa-map-marker"></i>-->
-                       <img src="images/footer-loc.png" alt=""/>
+                        <img src="images/footer-loc.png" alt=""/>
                         <h4 class="contact-title">Address</h4>
                         <p class="contact-desc">
                             17/7, 1st Ave Shastri Nagar,<br> Adyar Chennai, Tamil Nadu 600020
@@ -48,7 +48,7 @@
 <!--                        <p class="margin-remove">We create Unique and Easy To Use Flexible Html Themes.</p>-->
                     </div>
                 </div>
-               <div class="col-lg-3 col-md-12">
+                <div class="col-lg-3 col-md-12">
                     <h5 class="footer-title">OUR PROGRAMS</h5>
                     <div class="recent-post-widget">
                         <div class="post-item">
@@ -57,7 +57,7 @@
                             </div>
                             <div class="post-desc">
                                 <h5 class="post-title"><a href="aaluv-math.php">AALUV Maths</a></h5>
-                                
+
                             </div>
                         </div>
                         <div class="post-item">
@@ -66,7 +66,7 @@
                             </div>
                             <div class="post-desc">
                                 <h5 class="post-title"><a href="aaluv-robotics.php">AALUV Robotics</a></h5>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,8 @@
                         <li ><a href="aaluv-math.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Programs</a></li>
                         <li ><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Happenings</a></li>
                         <li ><a href="contact.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Locate us</a></li>
-                        <li ><a href="franchise-requisites.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Pro With us</a></li>
+                        <li ><a href="franchise-requisites.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Franchise Requisites</a></li>
+                        <li ><a href="center-manager.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Grow With us</a></li>
 <!--                        <li><a href="courses.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses</a></li>
                         <li><a href="courses-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses Details</a></li>
                         <li><a href="events.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events</a></li>
@@ -112,14 +113,14 @@
                     </div>  
                 </div>
             </div>
-<!--            <div class="footer-share">
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>   
-                </ul>
-            </div>                                -->
+            <!--            <div class="footer-share">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>   
+                            </ul>
+                        </div>                                -->
         </div>
     </div>
 

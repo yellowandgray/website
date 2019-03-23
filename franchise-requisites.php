@@ -368,7 +368,7 @@
                                             </div>
                                         </div>
                                         <span>* Required fields</span>
-                                        <input style="float: right" class="btn-send" type="submit" value="Send">
+                                        <input style="float: right" class="btn-send-1" type="submit" value="Send">
                                     </fieldset>
                                 </form>	
                             </div>
