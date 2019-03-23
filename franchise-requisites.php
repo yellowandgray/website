@@ -98,26 +98,32 @@
         <!-- History End -->
 
         <!-- Mission Start -->
-        <section id="about-section" class="padding-100">
+        <section id="about-section" class="rs-latest-news padding-100">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue text-center">The Best Reading System in the World</h3>
                         <div class="row">
                             <div class="col-md-4 text-center custom-svg">
-                                <img src="images/svg/001.png" alt="" />
-                                <h5>We love what we do. Here’s why:</h5>
-                                <p class="text-justify">At I Can Read, we love to read. We want to share the joy of reading with your children. Our primary focus is to help children overcome the challenges of reading, also to aid them in overcoming the difficulties they may face. Our attentive Reading Specialists look out for these challenges faced by each budding reader, and use our unique methodology to help them get through it the stages. You will observe progressive improvement in the student’s reading, writing, spelling and speaking skills week after week – developing them into confident and independent readers.</p>
+                                <div class="news-normal-block height-550">
+                                    <img src="images/svg/001.png" alt="" />
+                                    <h5>We love what we do. Here’s why:</h5>
+                                    <p class="text-justify">At I Can Read, we love to read. We want to share the joy of reading with your children. Our primary focus is to help children overcome the challenges of reading, also to aid them in overcoming the difficulties they may face. Our attentive Reading Specialists look out for these challenges faced by each budding reader, and use our unique methodology to help them get through it the stages. You will observe progressive improvement in the student’s reading, writing, spelling and speaking skills week after week – developing them into confident and independent readers.</p>
+                                </div>
                             </div>
                             <div class="col-md-4 text-center custom-svg">
-                                <img src="images/svg/002.png" alt="" />
-                                <h5>The I Can Read secret</h5>
-                                <p class="text-justify">The I Can Read formula is developed over 15 years of study in Child Psychology and English Literacy research, with linguistics science in particular. From the extensive research, it shows we have a fair understanding of the challenges children face. More than 200,000 students have benefited from our method and there are proofs that the system works.</p>
+                                <div class="news-normal-block height-550">
+                                    <img src="images/svg/002.png" alt="" />
+                                    <h5>The I Can Read secret</h5>
+                                    <p class="text-justify">The I Can Read formula is developed over 15 years of study in Child Psychology and English Literacy research, with linguistics science in particular. From the extensive research, it shows we have a fair understanding of the challenges children face. More than 200,000 students have benefited from our method and there are proofs that the system works.</p>
+                                </div>
                             </div>
                             <div class="col-md-4 text-center custom-svg">
-                                <img src="images/svg/003.png" alt="" />
-                                <h5>We love what we do. Here’s why:</h5>
-                                <p class="text-justify">If you have the love for children, and strongly care for their future, you are in the right place! Parents all around the world want the best for their children. I Can Read provides an effective reading system for their needs. I Can Read is a low and solid investment business with a high return on investment (ROI). It is a business that will bring you a stable passive income while providing a service to the community.</p>
+                                <div class="news-normal-block height-550">
+                                    <img src="images/svg/003.png" alt="" />
+                                    <h5>We love what we do. Here’s why:</h5>
+                                    <p class="text-justify">If you have the love for children, and strongly care for their future, you are in the right place! Parents all around the world want the best for their children. I Can Read provides an effective reading system for their needs. I Can Read is a low and solid investment business with a high return on investment (ROI). It is a business that will bring you a stable passive income while providing a service to the community.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -260,6 +266,34 @@
             </div>
         </section>
         <!-- Mission End -->
+
+        <!-- Vision Start -->
+        <div class="rs-vision sec-spacer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 mobile-mb-50">
+                        <div class="vision-img rs-animation-hover">
+                            <img src="images/about/vision.jpg" alt="img02"/>
+                            <a class="popup-youtube rs-animation-fade" href="https://www.youtube.com/watch?v=3f9CAMoj3Ec" title="Video Icon">
+                            </a>
+                            <div class="overly-border"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="abt-title">
+                            <h2>OUR VISION</h2>
+                        </div>
+                        <div class="vision-desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe derit in voluptate velit esse cillum.</p>
+
+                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot fore see the pain and trouble that are bound to ensue; and equal who fail in their duty.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Vision End -->
+
         <!-- Mission Start -->
         <section id="about-section" class="padding-100">
             <div class="container">

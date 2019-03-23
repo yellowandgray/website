@@ -6917,3 +6917,29 @@ ul {
 .rs-footer-2 .footer-share {
     margin-top: 20px;
 }
+
+.height-550 {
+    height: 550px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .height-550 {
+        height: auto !important;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .height-550 {
+        height: 900px !important;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .height-550 {
+        height: 650px !important;
+        margin-bottom: 20px;
+    }
+}
