@@ -31,6 +31,9 @@
                         <p class="contact-desc">
                             info@aaluvglobal.com
                         </p>
+                        <p class="contact-desc">
+                            franchise@aaluvglobal.com
+                        </p>
                     </div>
                 </div>
             </div>					
@@ -44,7 +47,7 @@
                 <div class="col-lg-3 col-md-12">
                     <div class="about-widget">
                         <img src="images/logo.png" alt="Footer Logo">
-                        <p>Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
+                        <p>Aaluv Math prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
 <!--                        <p class="margin-remove">We create Unique and Easy To Use Flexible Html Themes.</p>-->
                     </div>
                 </div>
@@ -56,7 +59,7 @@
                                 <img src="images/course/math.png" alt=""/>
                             </div>
                             <div class="post-desc">
-                                <h5 class="post-title"><a href="aaluv-math.php">AALUV Maths</a></h5>
+                                <h5 class="post-title"><a href="aaluv-math.php">AALUV Math</a></h5>
 
                             </div>
                         </div>

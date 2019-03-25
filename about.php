@@ -50,10 +50,10 @@
                         <p>AALUV GLOBAL is a wholistic Brain Development company, developing children's mind to better equip them for the challenges of Life.</p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row padding-top-30">
                     <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">Expanding Global Business</h3>
-                        <h4>The Global business is expanding</h4>
+                        <h4 class="color-blue">The Global business is expanding</h4>
                         <p>The Parent company <b>Aloha India</b>, is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 5-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 5500 centres in 35 countries across globe. Essentially, in these programs, the infinite potential of the human brain and its effective use is unveiled through the Scientific Brain Management Techniques.</p>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                         <p>To endow the new generation with intelligent and expert cognizance enabling them to scale and conquer all heights.</p>
                     </div>
                 </div>
-                <div class="row padding-tb-20">
+                <div class="row padding-top-30">
                     <div class="col-md-12 text-p wow fadeInUp">
                         <h3 class="color-blue">MISSION</h3>
                         <p>To be recognized as Experts in the field of Innovative Education and as the leading authority in establishing Benchmarks and Standards. Furthermore, to unlock the innate aptitude of the human mind and cultivate knowledge through Math Classroom tutoring.</p>

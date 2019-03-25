@@ -66,7 +66,8 @@
                         <div class="contact-info contact-email">
                             <i class="fa fa-envelope"></i>
                             <h4>Email Address</h4>
-                            <a href="mailto:info@aaluvglobal.com"><p>info@aaluvglobal.com</p></a><br>
+                            <a href="mailto:info@aaluvglobal.com"><p>info@aaluvglobal.com</p></a>
+                            <a href="mailto:franchise@aaluvglobal.com"><p>franchise@aaluvglobal.com</p></a>
                         </div>
                     </div>
                 </div>

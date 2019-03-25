@@ -77,8 +77,9 @@
                                             <li>
                                                 <select name="select_role" id="select_role">
                                                     <option>Select Job Role</option>
-                                                    <option>Teacher</option>
-                                                    <option>Central Manager</option>
+                                                    <option>Instructor</option>
+                                                    <option>Center Manager</option>
+                                                    <option>Other</option>
                                                 </select>
                                             </li>
                                         </ul>

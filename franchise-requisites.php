@@ -46,7 +46,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center wow fadeInUp">
-                        <h3 class="color-blue">AALUV CLASSROOM SITE SPECIFICATIONS</h3>
+                        <h3 class="color-blue">FRANCHISE CLASSROOM'S SITE SPECIFICATIONS</h3>
                     </div>
                 </div>
                 <div class="row  col-6-align">
@@ -85,7 +85,7 @@
                     <div class="col-md-6 wow fadeInUp">
                         <div class="box-gray">
                             <h3 class="color-blue text-center">Option B</h3>
-                            <h4>Area requirement for Hiring of Kinder Garden or Regular School classroom </h4>
+                            <P><b>Area requirement for Hiring of Kinder Garden or Regular School classroom </b></P>
                             <p>investment to cover the franchise expenses and Licensee Fee will be required:</p>
                             <p>Well-illuminated and ventilated classroom</p>
                             <p>Comfortable Table and Chairs.</p>
@@ -102,27 +102,27 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 wow fadeInUp">
-                        <h3 class="color-blue text-center">The Best Reading System in the World</h3>
+                        <!--<h3 class="color-blue text-center">The Best Reading System in the World</h3>-->
                         <div class="row">
                             <div class="col-md-4 text-center custom-svg">
                                 <div class="news-normal-block height-550">
                                     <img src="images/svg/001.png" alt="" />
-                                    <h5>We love what we do. Here’s why:</h5>
-                                    <p class="text-justify">At I Can Read, we love to read. We want to share the joy of reading with your children. Our primary focus is to help children overcome the challenges of reading, also to aid them in overcoming the difficulties they may face. Our attentive Reading Specialists look out for these challenges faced by each budding reader, and use our unique methodology to help them get through it the stages. You will observe progressive improvement in the student’s reading, writing, spelling and speaking skills week after week – developing them into confident and independent readers.</p>
+                                    <!--<h5>We love what we do. Here’s why:</h5>-->
+                                    <p class="text-justify">At AALUV, we love to read. We want to share the joy of reading with your children. Our primary focus is to help children overcome the challenges of reading, also to aid them in overcoming the difficulties they may face. Our attentive Reading Specialists look out for these challenges faced by each budding reader, and use our unique methodology to help them get through it the stages. You will observe progressive improvement in the student’s reading, writing, spelling and speaking skills week after week – developing them into confident and independent readers.</p>
                                 </div>
                             </div>
                             <div class="col-md-4 text-center custom-svg">
                                 <div class="news-normal-block height-550">
                                     <img src="images/svg/002.png" alt="" />
-                                    <h5>The I Can Read secret</h5>
-                                    <p class="text-justify">The I Can Read formula is developed over 15 years of study in Child Psychology and English Literacy research, with linguistics science in particular. From the extensive research, it shows we have a fair understanding of the challenges children face. More than 200,000 students have benefited from our method and there are proofs that the system works.</p>
+                                    <!--<h5>The AALUV secret</h5>-->
+                                    <p class="text-justify">The AALUV formula is developed over 15 years of study in Child Psychology and English Literacy research, with linguistics science in particular. From the extensive research, it shows we have a fair understanding of the challenges children face. More than 200,000 students have benefited from our method and there are proofs that the system works.</p>
                                 </div>
                             </div>
                             <div class="col-md-4 text-center custom-svg">
                                 <div class="news-normal-block height-550">
                                     <img src="images/svg/003.png" alt="" />
-                                    <h5>We love what we do. Here’s why:</h5>
-                                    <p class="text-justify">If you have the love for children, and strongly care for their future, you are in the right place! Parents all around the world want the best for their children. I Can Read provides an effective reading system for their needs. I Can Read is a low and solid investment business with a high return on investment (ROI). It is a business that will bring you a stable passive income while providing a service to the community.</p>
+                                    <!--<h5>We love what we do. Here’s why:</h5>-->
+                                    <p class="text-justify">If you have the love for children, and strongly care for their future, you are in the right place! Parents all around the world want the best for their children. AALUV provides an effective reading system for their needs. AALUV is a low and solid investment business with a high return on investment (ROI). It is a business that will bring you a stable passive income while providing a service to the community.</p>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 wow fadeInUp">
-                        <h3 class="color-blue text-center">Industry Overview</h3>
+                        <h3 class="color-white text-center">Industry Overview</h3>
                         <div class="row">
                             <div class="col-md-4 text-center">
                                 <div class="box-hover">
@@ -171,7 +171,7 @@
         <div class="rs-counter pt-100 pb-70 bg3">
             <div class="container">
                 <div class="sec-title white-text mb-50 text-center">
-                    <h2>Best Proven Franchise System</h2>      
+                    <!--<h2>Best Proven Franchise System</h2>-->      
 <!--                    <p>Fusce sem dolor, interdum in efficitur at, faucibus nec lorem. Sed nec molestie justo.</p>-->
                 </div>
                 <div class="row">
@@ -184,23 +184,27 @@
                     </div>
                     <div class="col-md-3">
                         <div class="rs-counter-list">
-                            <h2 class="counter-number plus">50000</h2>
-                            <h4 class="counter-desc">Students</h4>
+                            <h2 class="counter-number plus">5</h2>
+                            <h4 class="counter-desc">Million Students</h4>
                         </div>
-                        <p>Successfully taught over 50,000 students Globally</p>
+                        <p>Successfully taught over 5 million students Globally</p>
                     </div>
                     <div class="col-md-3">
-                        <div class="rs-counter-list">
+<!--                        <div class="rs-counter-list">
                             <img src="images/singapore.png" alt="" />
+                        </div>-->
+                        <div class="rs-counter-list">
+                            <h2 class="counter-number plus">35</h2>
+                            <h4 class="counter-desc">Countries</h4>
                         </div>
                         <p>Proven programme piloted in schools and centers</p>
                     </div>
                     <div class="col-md-3">
                         <div class="rs-counter-list">
-                            <h2 class="counter-number plus">1300</h2>
+                            <h2 class="counter-number plus">5500</h2>
                             <h4 class="counter-desc">Centres</h4>
                         </div>
-                        <p>Over 1300 centres throughout in world</p>
+                        <p>Over 5500  centres throughout in world</p>
                     </div>
                 </div>
             </div>
@@ -260,7 +264,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center wow fadeInUp">
                         <h3 class="color-blue">Our Presence</h3>
-                        <img src="images/overview-map.jpg" alt="" />
+                        <img src="images/map.jpg" alt="" />
                     </div>
                 </div>
             </div>
@@ -289,7 +293,7 @@
                                     <fieldset>
                                         <div class="row"> 
                                             <div class="col-md-6 col-sm-12 col-xs-12">    
-                                                <label>Which country would you like to franchise I Can Read? (*)</label>
+                                                <label>Which country would you like to franchise AALUV? (*)</label>
                                             </div>
                                             <div class="col-md-6 col-sm-12 col-xs-12">   
                                                 <div class="form-group">
@@ -403,8 +407,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 wow fadeInUp">
-                        <h3 class="color-blue">AALUV  CLASSROOM FRANCHISEE DESIRED QUALITIES</h3>
-                        <h4>The prospective franchisee must have:</h4>
+                        <h3 class="color-blue">AALUV FRANCHISEE DESIRED QUALITIES</h3>
+                        <h4 class="color-blue">The prospective franchisee must have:</h4>
                         <ul class="list-align">
                             <i class="fas fa-check"></i><li>An interest in being an entrepreneur and have a positive attitude to work while maintaining quality. Professional ethics are of paramount importance.</li>
                             <i class="fas fa-check"></i><li>Passionate about education and working with children</li>
@@ -420,12 +424,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 padding-top-30 wow fadeInUp">
-                        <h3 class="color-blue">AALUV CLASSROOM INSTRUCTOR</h3>
+                        <h3 class="color-blue">AALUV INSTRUCTOR</h3>
                         <p>AALUV aims at nurturing the joy of learning mathematics in children, building self-confidence and imparting knowledge that will complement what they have learned in school. It helps children develop their logical thinking skill through learning numbers and acquiring knowledge and also develop independence in solving problems.</p>
                         <p><b>Training Details:</b>  Instructor has to complete the worksheets provided before they start the classes for students of their batch and answered works sheets will be kept only in the center under lock and key.</p>
                     </div>
                     <div class="col-md-12  padding-top-30 wow fadeInUp">
-                        <h3 class="color-blue">DUTIES OF AALUV CLASSROOM INSTRUCTOR</h3>
+                        <h3 class="color-blue">DUTIES OF AALUV INSTRUCTOR</h3>
                         <ul class="list-align">
                             <i class="fas fa-check"></i><li>Make a difference every day!</li>
                             <i class="fas fa-check"></i><li>Assist the Center Director with the Centre's Operations, ensuring that the centre functions in accordance with company Norms &amp; Standards</li>
@@ -447,7 +451,7 @@
                 <div class="row">
                     <div class="col-md-12 padding-30 wow fadeInUp">
                         <h3 class="color-blue">Desired Qualification</h3>
-                        <p>A young and dynamic <b>MATHS GRADUATE</b> preferably between 25-45 years of age. The Course Instructor has to sign an agreement with the Corporate Office, which is valid for 3 years.</p>
+                        <p>A young and dynamic <b>MATH GRADUATE</b> preferably between 25-45 years of age. The Course Instructor has to sign an agreement with the Corporate Office, which is valid for 3 years.</p>
                         <p>To prepare, guide and conduct Aaluv Classroom.</p>
                         <ul class="list-align">
                             <i class="fas fa-check"></i><li>Dedication and commitment to&nbsp;Aaluv Math Classroom</li>
@@ -461,7 +465,7 @@
                         </ul>
                     </div>
                     <div class="col-md-12 wow fadeInUp">
-                        <h3 class="color-blue">AALUV MATHS SUGGESTED MARKETING ACTIVITIES</h3>
+                        <h3 class="color-blue">AALUV MATH SUGGESTED MARKETING ACTIVITIES</h3>
                         <ul class="list-align">
                             <i class="fas fa-check"></i><li>Release periodic advertisements inbNational Newspapers, Satellite Channels, Magazines, etc.</li>
                             <i class="fas fa-check"></i><li>Press Note.</li>

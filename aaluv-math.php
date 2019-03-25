@@ -52,7 +52,7 @@
                 <div class="row uppercase">
                     <div class="col-md-12 text-p wow fadeInUp">
                         <p>Aaluv Math is a unique Comprehensive Mathematic Learning Solution helping students in self-motivated learning and attitude which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
-                        <p>Aaluv Maths prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration & thinking skills.</p>
+                        <p>Aaluv Math prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration & thinking skills.</p>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 wow fadeInUp">
-                        <h3 class="color-blue">Why AALUV Maths:</h3>
+                        <h3 class="color-blue">Why AALUV Math:</h3>
                         <!--                        <h4 class="text-center">The Global business is expanding</h4>-->
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                     <div class="col-md-12 wow fadeInUp">
                         <ul class="list-align">
                             <i class="fas fa-check"></i><li>The Global business is expanding</li>
-                            <i class="fas fa-check"></i><li>Aaluv Maths program emphasizes on problem solving skills among the young students.</li>
+                            <i class="fas fa-check"></i><li>Aaluv Math program emphasizes on problem solving skills among the young students.</li>
                             <i class="fas fa-check"></i><li>Mathematical questions are closely related to real-life situations challenge and improve their problem-solving approach and capability.</li>
                             <i class="fas fa-check"></i><li>Significantly helps the overall development of each student.</li>
                         </ul>
@@ -87,7 +87,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 wow fadeInUp">
-                        <h3 class="color-blue">Advantage AALUV Maths</h3>
+                        <h3 class="color-blue">Advantage AALUV Math</h3>
                     </div>
                 </div>
                 <div class="row uppercase">
@@ -163,7 +163,7 @@
                                         <h3 class="color-blue">Interaction Essentials</h3>
                                         <div class="p-margin-15 list-align">
                                              <i class="fas fa-check"></i><p> Classroom Days: 5 days in a week. (Concept & Academic)</p>
-                                             <i class="fas fa-check"></i><p> Subject: Maths</p>
+                                             <i class="fas fa-check"></i><p> Subject: Math</p>
                                              <i class="fas fa-check"></i><p> Target Groups: Primary School Children</p>
                                         </div>
                                     </div>
