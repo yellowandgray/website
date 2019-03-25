@@ -56,7 +56,7 @@
                     <div class="recent-post-widget">
                         <div class="post-item">
                             <div class="post-date">
-                                <img src="images/course/math.png" alt=""/>
+                                <img src="images/course/math-001.png" alt=""/>
                             </div>
                             <div class="post-desc">
                                 <h5 class="post-title"><a href="aaluv-math.php">AALUV Math</a></h5>
@@ -65,10 +65,10 @@
                         </div>
                         <div class="post-item">
                             <div class="post-date">
-                                <img src="images/course/robotics.png" alt=""/>
+                                <img src="images/course/robotics-001.png" alt=""/>
                             </div>
                             <div class="post-desc">
-                                <h5 class="post-title"><a href="aaluv-robotics.php">AALUV Robotics</a></h5>
+                                <h5 class="post-title"><a href="aaluv-robotics.php">AALUV Robotic's</a></h5>
 
                             </div>
                         </div>
@@ -131,7 +131,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="copyright">
-                <p>© 2019 <a href="#">AALUV</a>. All Rights Reserved.</p>
+                 <p>© 2019 All Rights Reserved. | Designed By <a href="http://www.yellowandgray.com/" target="blank">YG STUDIO.</a></p>
             </div>
         </div>
     </div>

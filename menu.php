@@ -68,7 +68,7 @@
                                             <li><a href="aaluv-robotics.php">AALUV ROBOTICS</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item-has-children"> <a href="#">HAPPENINGS</a></li>
+                                    <li class="menu-item-has-children"> <a href="happening.php">HAPPENINGS</a></li>
                                     <li class="menu-item-has-children"> <a href="contact.php">LOCATE US</a></li>
                                     <!--                                <li class="menu-item-has-children"> <a href="#">Events</a></li>
                                                                     <li class="menu-item-has-children"> <a href="#">Blog</a></li>-->

@@ -64,7 +64,7 @@
         </section>
         <section id="about-section" class="padding-b-100">
             <div class="container wow fadeInUp">
-                <h3 class="color-blue">Sample Activity in LEGO Robotics using Math Concept:</h3>
+                <h3 class="color-blue">Sample Activity in LEGO Robotic's using Math Concept:</h3>
                 <div class="row col-6-align">
                     <div class="col-md-6">
                         <div>
@@ -120,7 +120,7 @@
             <div class="container wow fadeInUp">
                 <div class="row wow fadeInUp">
                     <div class="col-md-12">
-                        <h3 class="color-blue">STRENGTHS OF ROBOTICS IN EDUCATION</h3>
+                        <h3 class="color-blue">STRENGTHS OF ROBOTIC'S IN EDUCATION</h3>
                         <p>TRAINED TEACHERS – <em>“teach as they were taught,.. Not as they are told to teach”</em></p>
                         <p>WELL DEFINED CURRICULAM – <em>Aligned with academic curriculam”</em></p>
                         <p>PROPER EDUCATION PHILOSOPHY –<em> “to evoke interest and enthusiasm in subject”</em></p>
@@ -130,13 +130,13 @@
                 <div class="row col-6-align padding-top-30 block-height">
                     <div class="col-md-6 uppercase">
                         <div class="news-normal-block">
-                            <h4 class="color-blue">Activity in Classical Robotics</h4>
+                            <h4 class="color-blue">Activity in Classical Robotic's</h4>
                             <img src="images/events/learning-05.jpg" alt=""/>
                         </div>
                     </div>
                     <div class="col-md-6 uppercase">
                         <div class="news-normal-block">
-                            <h4 class="color-blue">Activity in Classical Robotics using Science Dark and light sensor</h4>
+                            <h4 class="color-blue">Activity in Classical Robotic's using Science Dark and light sensor</h4>
                             <img src="images/events/learning-06.jpg" alt=""/>
                         </div>
                     </div>
@@ -149,7 +149,7 @@
         <section id="about-section" class="padding-100 enroll-section set-bg" style="background-image: url(images/enroll-bg.jpg);">
             <div class="container">
                 <div class="col-md-12">
-                    <h3 class=" color-white text-center">WHAT ROBOTICS CAN TEACH?</h3>
+                    <h3 class=" color-white text-center">WHAT ROBOTIC'S CAN TEACH?</h3>
                 </div>
                 <div class="row">
                     <div class="col-md-4 uppercase-1 ">
@@ -217,7 +217,7 @@
             <div class="container">
                 <div class="row  wow fadeInUp">
                     <div class="col-md-12">
-                        <h3 class="color-blue">Who Needs Robotics in Education?</h3>
+                        <h3 class="color-blue">Who Needs Robotic's in Education?</h3>
                         <ul class="list-align">
                             <i class="fas fa-check"></i><li>Teachers / Educators</li>
                             <i class="fas fa-check"></i><li>Students / Learners</li>

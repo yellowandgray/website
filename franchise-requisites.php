@@ -98,30 +98,30 @@
         <!-- History End -->
 
         <!-- Mission Start -->
-        <section id="about-section" class="rs-latest-news padding-100">
+<!--        <section id="about-section" class="rs-latest-news padding-100">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 wow fadeInUp">
-                        <!--<h3 class="color-blue text-center">The Best Reading System in the World</h3>-->
+                        <h3 class="color-blue text-center">The Best Reading System in the World</h3>
                         <div class="row">
                             <div class="col-md-4 text-center custom-svg">
                                 <div class="news-normal-block height-550">
                                     <img src="images/svg/001.png" alt="" />
-                                    <!--<h5>We love what we do. Here’s why:</h5>-->
+                                    <h5>We love what we do. Here’s why:</h5>
                                     <p class="text-justify">At AALUV, we love to read. We want to share the joy of reading with your children. Our primary focus is to help children overcome the challenges of reading, also to aid them in overcoming the difficulties they may face. Our attentive Reading Specialists look out for these challenges faced by each budding reader, and use our unique methodology to help them get through it the stages. You will observe progressive improvement in the student’s reading, writing, spelling and speaking skills week after week – developing them into confident and independent readers.</p>
                                 </div>
                             </div>
                             <div class="col-md-4 text-center custom-svg">
                                 <div class="news-normal-block height-550">
                                     <img src="images/svg/002.png" alt="" />
-                                    <!--<h5>The AALUV secret</h5>-->
+                                    <h5>The AALUV secret</h5>
                                     <p class="text-justify">The AALUV formula is developed over 15 years of study in Child Psychology and English Literacy research, with linguistics science in particular. From the extensive research, it shows we have a fair understanding of the challenges children face. More than 200,000 students have benefited from our method and there are proofs that the system works.</p>
                                 </div>
                             </div>
                             <div class="col-md-4 text-center custom-svg">
                                 <div class="news-normal-block height-550">
                                     <img src="images/svg/003.png" alt="" />
-                                    <!--<h5>We love what we do. Here’s why:</h5>-->
+                                    <h5>We love what we do. Here’s why:</h5>
                                     <p class="text-justify">If you have the love for children, and strongly care for their future, you are in the right place! Parents all around the world want the best for their children. AALUV provides an effective reading system for their needs. AALUV is a low and solid investment business with a high return on investment (ROI). It is a business that will bring you a stable passive income while providing a service to the community.</p>
                                 </div>
                             </div>
@@ -129,7 +129,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <!-- Mission End -->
         <!-- Mission Start -->
         <section id="about-section" class="padding-100 bg-absolute">
@@ -204,7 +204,7 @@
                             <h2 class="counter-number plus">5500</h2>
                             <h4 class="counter-desc">Centres</h4>
                         </div>
-                        <p>Over 5500  centres throughout in world</p>
+                        <p>Over 5500  centres throughout the world</p>
                     </div>
                 </div>
             </div>

@@ -27,10 +27,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h1 class="page-title">About Us</h1>
+                            <h1 class="page-title">happening</h1>
                             <ul>
                                 <li>
-                                    <a class="active" href="index-2.html">Home</a>
+                                    <a class="active" href="index.php">Home</a>
                                 </li>
                                 <li>happening</li>
                             </ul>
