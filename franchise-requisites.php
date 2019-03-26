@@ -18,7 +18,7 @@
         <!--Preloader area end here-->
 
         <!--Full width header Start-->
-        <?php include 'menu_1.php'; ?>
+        <?php include 'menu-2.php'; ?>
         <!--Full width header End-->
 
         <!-- Breadcrumbs Start -->
@@ -384,7 +384,7 @@
         <!-- Vision End -->
 
         <!-- Mission Start -->
-        <section id="about-section" class="padding-100">
+<!--        <section id="about-section" class="padding-100">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 wow fadeInUp">
@@ -400,14 +400,14 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <!-- Mission End -->
         <!-- Mission Start -->
-        <section id="about-section" class="padding-b-100">
+<!--        <section id="about-section" class="padding-b-100">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 wow fadeInUp">
-                        <h3 class="color-blue">AALUV FRANCHISEE DESIRED QUALITIES</h3>
+                        <h3 class="color-blue">AALUV FRANCHISE DESIRED QUALITIES</h3>
                         <h4 class="color-blue">The prospective franchisee must have:</h4>
                         <ul class="list-align">
                             <i class="fas fa-check"></i><li>An interest in being an entrepreneur and have a positive attitude to work while maintaining quality. Professional ethics are of paramount importance.</li>
@@ -441,12 +441,12 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <!-- Mission End -->
 
         <!-- Vision Start -->
 
-        <section class="about-section padding-b-100 padding-t-100 bg-img-7">
+<!--        <section class="about-section padding-b-100 padding-t-100 bg-img-7">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 padding-30 wow fadeInUp">
@@ -483,7 +483,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <!-- Vision End -->
         <!--
                  Calltoaction Start 

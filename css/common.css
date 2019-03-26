@@ -737,7 +737,7 @@ ul.nacc li p {
 
 .contact-shadow:hover {
     webkit-box-shadow: 0 10px 40px rgb(0, 0, 0);
-    box-shadow: 0 10px 40px #000000;
+    box-shadow: 0 10px 40px #afafaf;
 }
 
 .video-border {
@@ -754,3 +754,59 @@ ul.nacc li p {
 .custom-svg img {
     margin-bottom: 20px; 
 }
+.menu-2 li a {
+    color: #0eaa99 !important;
+}
+.menu-2 .rs-header .sticky {
+    background: #fff;
+}
+
+.block-list-faq {
+    background-color: #c5d4dc;
+    -webkit-border-radius: 0 0 45px 0;
+    -moz-border-radius: 0 0 45px 0;
+    border-radius: 0 0 45px 0;
+    padding: 39px 62px;
+    margin-top: 0;
+    box-shadow: 1px -1px 10px 9px #e2e2e2;
+
+}
+
+.box-2 {
+
+    padding:0 20px 20px  20px;
+}
+.box-02 {  border: 1px solid rgba(238, 54, 76, 0.22);
+           -webkit-border-radius: 0 0 30px 0;
+           -moz-border-radius: 0 0 30px 0;
+           border-radius: 0 0 30px 0;
+           background-color: #fff;
+           width: 100%;
+           padding-bottom: 15px;
+           box-shadow: -1px 12px 46px rgba(122, 122, 122, 0.4);
+}
+.box-03 {      
+    background-color: #fff;
+    width: 100%;
+    padding: 25px 40px;
+    box-shadow: 1px -1px 17px rgba(122, 122, 122, 0.4);
+    margin-bottom: 20px;
+}
+
+.list-align-1 ul i {
+    font-size: 10px !important;
+    margin-top: 10px;
+    color: #002e6d !important;
+}
+.list-align-1 ul li {
+
+    color: #002e6d !important;
+}
+
+.padding-tb-40 {
+    padding: 20px 0px !important;
+}
+.margin-b-140 {
+        margin-bottom: 140px;
+}
+
