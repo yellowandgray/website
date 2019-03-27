@@ -1151,7 +1151,13 @@
     flex: 0 0 100%;
     max-width: 100%;
 }}
+
 @media (max-width: 768px) {
 .not-active {
   pointer-events: auto !important;
+}}
+
+@media (max-width: 768px) {
+.block-list-faq {
+    width: 100%;
 }}
