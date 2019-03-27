@@ -53,18 +53,18 @@
                         </div>
                     </div>
                     <div class="col-md-9 width-80">
-                        <div class="main-menu">
+                        <div class="main-menu menu-block">
                             <!-- <div id="logo-sticky" class="text-center">
                                 <a href="index.html"><img src="images/logo.png" alt="logo"></a>
                             </div> -->
                             <a class="rs-menu-toggle"><i class="fa fa-bars"></i>Menu</a>
                             <nav class="rs-menu font">
-                               <ul class="nav-menu font-12">
+                               <ul class="nav-menu font-12 menu-border">
                                     <!-- Home -->
                                      <li class="menu-item-has-children <?php if($page == 'home'){ echo 'active';} ?>"> <a href="index.php" class="home">Home</a></li>
                                      <li class="menu-item-has-children <?php if($page == 'why-franchise'){ echo 'active';} ?>"> <a href="whyus.php">Why Franchise AALUV Math?</a></li>
                                      <li class="menu-item-has-children <?php if($page == 'opportunities'){ echo 'active';} ?>"> <a href="opportunities.php">Franchise Opportunities</a></li>
-                                     <li class="menu-item-has-children <?php if($page == 'hear-from'){ echo 'active';} ?>"> <a href="hear-from-franchise.php">Hear From Our Franchise</a></li>
+                                     <li class="menu-item-has-children <?php if($page == 'next-step'){ echo 'active';} ?>"> <a href="next-step.php">Next steps</a></li>
                                     <!--<li class="menu-item-has-children <?php if($page == 'next-step'){ echo 'active';} ?>"> <a href="#">Next steps</a></li>-->
                                     
                                 </ul>

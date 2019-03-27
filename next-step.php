@@ -4,23 +4,23 @@
     <!-- Mirrored from keenitsolutions.com/products/html/edulearn/edulearn-demo/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Mar 2019 06:06:12 GMT -->
     <?php
     include 'head.php';
-    $page = 'why-franchise';
+    $page = 'next-step';
     ?>
     <body class="inner-page">
-<?php include 'menu-2.php'; ?>
+        <?php include 'menu-2.php'; ?>
 
         <!-- Breadcrumbs Start -->
-        <div class="rs-breadcrumbs bg7 breadcrumbs-overlay">
+        <div class="rs-breadcrumbs bg9 breadcrumbs-overlay">
             <div class="breadcrumbs-inner">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h1 class="page-title">WHY FRANCHISE AALUV MATH</h1>
+                            <h1 class="page-title">Next steps</h1>
                             <ul>
                                 <li>
                                     <a class="active" href="index.php">Home</a>
                                 </li>
-                                <li>WHY FRANCHISE AALUV MATH</li>
+                                <li>Next steps</li>
                             </ul>
                         </div>
                     </div>
@@ -172,7 +172,7 @@
                             </ul>
                         </div>
                         <div id="how" class="tabcon">
-                           <h4 class="color-blue green-bg">How do I finance my franchise?</h4>
+                            <h4 class="color-blue green-bg">How do I finance my franchise?</h4>
                             <p class="text-justify">Funding a project that you are passionate about is not as difficult as it may look. </p>
                             <p class="text-justify">With our experience in ALOHA franchisees, have tapped into a variety of financing resources ranging from personal savings, company loans, conventional loans and home-equity loans. Before we can offer this to our franchisees, here are some ways to fund your dream.</p>
                             <h5>Local Banks</h5>
@@ -214,14 +214,14 @@
                                 <b class="step-1">STEP 3: Seal the deal</b>
                                 <p class="text-justify">Sign the Memorandum of Understanding (MOU) to get you started.</p>
                             </div>
-                        
+
                             <div style="background-image: url(images/course/start-bg.jpg)"  class="margin-t-80">
                                 <div class="container padding-tb-40 margin-b-140">
                                     <h4 class="text-center color-gray">The 100 Day Planck</h4>
-                                    <img src="images/course/100-plan.png" alt=""/>
+                                    <a href="images/course/pic-0003.jpg"><img src="images/course/pic-0003.jpg" alt=""/></a>
                                 </div>
                             </div>
-                      
+
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -231,7 +231,7 @@
                                     <i class="far fa-question-circle"></i>
                                 </div>
                                 <ul class="list-align color-gray">
-                                    <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'story')" id="defaultOpen"> <a href="#story" class="not-active">The Evolution of AALUV GLOBAL</a></li>
+                                    <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'story')"> <a href="#story" class="not-active">The Evolution of AALUV GLOBAL</a></li>
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'big')"> <a href="#big" class="not-active">How big is the global enrichment industry?</a></li>
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'why')"><a href="#why" class="not-active">Why franchise an I Can Read centre?</a></li>
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'types')"> <a href="#types" class="not-active">What are the types of franchise models available?</a></li>
@@ -243,12 +243,11 @@
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'customer')"><a href="#customer" class="not-active">Who are my customers?</a></li>
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'how')"><a href="#how" class="not-active">How do I finance my franchise?</a></li>
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'team')"><a href="#team" class="not-active">Meet the management team</a></li>
-                                    <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'step')"><a href="#step" class="not-active">Next Steps</a></li>
-
+                                    <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'step')" id="defaultOpen"><a href="#step" class="not-active">Next Steps</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="row box-2 margin-b-40">
+                        <div class="row box-2">
                             <div class="contact-shadow">
                                 <div class="abt-title">
                                     <h5>Get in touch with us today!</h5>
@@ -348,14 +347,14 @@
                 </div>
             </div>
         </div>
-<!--        <div id="step" class="tabcon">
+        <div id="step" class="tabcon">
             <section style="background-image: url(images/course/start-bg.jpg)">
                 <div class="container padding-tb-40 margin-b-140">
                     <h4 class="text-center color-gray">The 100 Day Planck</h4>
                     <img src="images/course/100-plan.png" alt=""/>
                 </div>
             </section>
-        </div>-->
+        </div>
         <!-- History End -->
 
         <!-- Mission Start -->
@@ -367,12 +366,12 @@
                                     <h2>Can you tell :  4325 X 235 = ?  or 7354 / 2345 = ? in seconds.</h2>
                                 </div>
                                 <div class="about-desc">
-                                    <p>Can you imagine these same sums, that have baffled you, are being solved by an eight year old child just in 8 seconds flat and too that without using any of the external aids</p>
+                                    <p class="text-justify">Can you imagine these same sums, that have baffled you, are being solved by an eight year old child just in 8 seconds flat and too that without using any of the external aids</p>
                                     <h3>Incredible that  AMOKA challenges .!!!</h3>
-                                    <p><b>SYNAPSE</b> in Right Brain will be ACTIVE if they are strengthened in kids  before 12 Years of age.</p>
-                                    <p><b>BRAIN GROWTH</b></p>          
-                                    <p>Till 5 YEARS – 50 cm - 90 % Growth </p>
-                                    <p>LIFETIME – 60 cm</p>
+                                    <p class="text-justify"><b>SYNAPSE</b> in Right Brain will be ACTIVE if they are strengthened in kids  before 12 Years of age.</p>
+                                    <p class="text-justify"><b>BRAIN GROWTH</b></p>          
+                                    <p class="text-justify">Till 5 YEARS – 50 cm - 90 % Growth </p>
+                                    <p class="text-justify">LIFETIME – 60 cm</p>
         
                                 </div>
                             </div>
@@ -401,10 +400,10 @@
                                     <h2>ADVANTAGE ABACUS : ---</h2>
                                 </div>
                                 <div class="vision-desc">
-                                    <p>Research shows  that a child's mental growth is most rapid before 12 years of age.. </p>
-                                    <p>The degree of mental development achieved by a child during this time has a great influence over his / her future. </p>
-                                    <p>A child who has received good mental formation by the age of 12 will continue to remain brilliant even up to the age of 70. </p>
-                                    <p>Whereas a child who lacks this formation can experience a sharp decline in mental abilities even as early as 20.</p>
+                                    <p class="text-justify">Research shows  that a child's mental growth is most rapid before 12 years of age.. </p>
+                                    <p class="text-justify">The degree of mental development achieved by a child during this time has a great influence over his / her future. </p>
+                                    <p class="text-justify">A child who has received good mental formation by the age of 12 will continue to remain brilliant even up to the age of 70. </p>
+                                    <p class="text-justify">Whereas a child who lacks this formation can experience a sharp decline in mental abilities even as early as 20.</p>
                                     <h3>Teaching KVA Method -Kinesthetic Visual Auditory</h3>
                                 </div>
                             </div>
@@ -432,7 +431,7 @@
                     <div class="container">
                         <div class="abt-title mb-70 text-center">
                             <h2>OUR EXPERIENCED STAFFS</h2>      
-                            <p>Considering desire as primary motivation for the generation of narratives is a useful concept.</p>
+                            <p class="text-justify">Considering desire as primary motivation for the generation of narratives is a useful concept.</p>
                         </div>
                         <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="false" data-autoplay-timeout="5000" data-smart-speed="1200" data-dots="true" data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="true" data-mobile-device-dots="true" data-ipad-device="2" data-ipad-device-nav="true" data-ipad-device-dots="true" data-md-device="3" data-md-device-nav="true" data-md-device-dots="true">
                             <div class="team-item">
@@ -520,7 +519,7 @@
                     <div class="container">
                         <div class="abt-title mb-70 text-center">
                             <h2>OUR BRANCHES</h2>      
-                            <p>Considering desire as primary motivation for the generatio.</p>
+                            <p class="text-justify">Considering desire as primary motivation for the generatio.</p>
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-6">
@@ -530,7 +529,7 @@
                                         <span>01</span>
                                         Australia
                                     </h3>
-                                    <p>
+                                    <p class="text-justify">
                                         503  Old Buffalo Street<br>
                                         Northwest City #205, Australia
                                     </p>
@@ -543,7 +542,7 @@
                                         <span>02</span>
                                         China
                                     </h3>
-                                    <p>
+                                    <p class="text-justify">
                                         503  Old Buffalo Street<br>
                                         Northwest City #205, China
                                     </p>
@@ -556,7 +555,7 @@
                                         <span>03</span>
                                         India
                                     </h3>
-                                    <p>
+                                    <p class="text-justify">
                                         503  Old Buffalo Street<br>
                                         Northwest City #205, India
                                     </p>
@@ -569,7 +568,7 @@
                                         <span>04</span>
                                         United States
                                     </h3>
-                                    <p>
+                                    <p class="text-justify">
                                         503  Old Buffalo Street<br>
                                         Northwest City #205, United States
                                     </p>
@@ -604,7 +603,7 @@
                 </div>
                  Partner End -->
 
-<?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
         <script>
             function openCity(evt, cityName) {
                 var i, tabcon, tablinks;

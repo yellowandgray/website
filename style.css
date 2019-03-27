@@ -573,16 +573,24 @@ ul {
     background-position: center top;
 }
 .bg7 {
-    background-image: url(images/bg/bg3.jpg);
+    background-image: url(images/bg/bg9.jpg);
     background-size: cover;
     background-position: center;
     background-position: center top;
 }
 .bg8 {
     background-image: url(images/bg/bg8.jpg);
-    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     background-position: center top;
 }
+.bg9 {
+    background-image: url(images/bg/bg10.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position: center top;
+}
+
 /* ------------------------------------
     02. Global Class
 ---------------------------------------*/
