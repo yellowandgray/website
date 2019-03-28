@@ -1,4 +1,4 @@
-<footer id="rs-footer" class="bg3 rs-footer">
+<footer id="rs-footer" class="rs-footer" style="background-color: #0eaa99;">
     <div class="container">
         <!-- Footer Address -->
         <div>
@@ -43,8 +43,8 @@
             <div class="row">
                 <div class="col-lg-3 col-md-12">
                     <div class="about-widget">
-                        <img src="images/logo.png" alt="Footer Logo">
-                        <p>Aaluv Math prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration.</p>
+                        <img src="images/logo-001.jpg" alt="Footer Logo">
+          
 <!--                        <p class="margin-remove">We create Unique and Easy To Use Flexible Html Themes.</p>-->
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                     <div class="recent-post-widget">
                         <div class="post-item">
                             <div class="post-date">
-                                <img src="images/course/math-001.png" alt=""/>
+                                <img src="images/course/math-001.jpg" alt=""/>
                             </div>
                             <div class="post-desc">
                                 <h5 class="post-title"><a href="aaluv-math.php">AALUV Math</a></h5>
@@ -62,7 +62,7 @@
                         </div>
                         <div class="post-item">
                             <div class="post-date">
-                                <img src="images/course/robotics-001.png" alt=""/>
+                                <img src="images/course/robotics-001.jpg" alt=""/>
                             </div>
                             <div class="post-desc">
                                 <h5 class="post-title"><a href="aaluv-robotics.php">AALUV Robotic's</a></h5>

@@ -433,7 +433,7 @@ html,
 body {
     font-size: 17px;
     color: #737374;
-     font-family: 'Libel Suit', arial;
+    font-family: 'Libel Suit', arial;
     vertical-align: baseline;
     line-height: 26px;
     font-weight: 400;
@@ -455,7 +455,7 @@ h3,
 h4,
 h5,
 h6 {
-     font-family: 'Libel Suit', arial;
+    font-family: 'Libel Suit', arial;
     color: #212121;
     margin: 0 0 26px;
     font-weight: 700;
@@ -549,7 +549,7 @@ ul {
     background-position: center top;
 }
 .bg3 {
-    background-image: url(images/bg/counter-bg.jpg);
+    background: #0fab9a;
     background-size: cover;
     background-attachment: fixed;
     background-position: center top;
@@ -1107,7 +1107,7 @@ ul {
     text-align: right;
 }
 .rs-header-2 .menu-area .rs-menu .nav-menu > li > a {
-    color: #ffffff;
+    color: #737374;
 }
 .rs-header-2 .menu-area .rs-menu .nav-menu > li > a:hover {
     color: #ff3115;
@@ -4715,7 +4715,7 @@ ul {
     font-size: 15px;
     margin-bottom: 0;
     margin-top: 25px;
-     font-family: 'Libel Suit', arial;
+    font-family: 'Libel Suit', arial;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -4745,7 +4745,7 @@ ul {
     border-radius: 4px 4px 0px 0px;
 }
 .rs-pricing .pricing-plan .pricing-head .name {
-     font-family: 'Libel Suit', arial;
+    font-family: 'Libel Suit', arial;
     font-size: 18px;
     line-height: normal;
     margin-bottom: 10px;
@@ -6808,7 +6808,7 @@ ul {
     font-weight: 400;
 }
 .rs-footer .footer-top .recent-post-widget .post-item .post-title a {
-     font-family: 'Libel Suit', arial;
+    font-family: 'Libel Suit', arial;
     color: #e8e8e8;
 }
 .rs-footer .footer-top .recent-post-widget .post-item .post-title a:hover,

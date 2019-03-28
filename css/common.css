@@ -884,3 +884,9 @@ ul.nacc li p {
   text-decoration: none;
   color: black;*/
 }
+ .menu-area {
+     padding:0px !important; 
+}
+.rs-vertical-middle .logo-area {
+    line-height: 60px !important;
+}

@@ -32,7 +32,7 @@
     <!--Header Start-->
     <header id="rs-header-2" class="rs-header-2">
         <!-- Menu Start -->
-        <div class="menu-area menu-sticky">
+        <div class="menu-area menu-sticky"  style =" background:#fff;">
             <div class="container">
                 <div class="row rs-vertical-middle">
                     <div class="col-lg-3 col-md-12 width-20">
