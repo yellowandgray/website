@@ -218,7 +218,7 @@
                             <div style="background-image: url(images/course/start-bg.jpg)"  class="margin-t-80">
                                 <div class="container padding-tb-40 margin-b-140">
                                     <h4 class="text-center color-gray">The 100 Day Planck</h4>
-                                    <a href="images/course/pic-0003.jpg"><img src="images/course/pic-0003.jpg" alt=""/></a>
+                                    <a href="images/course/pic-0003.jpg" class="day" target="blank"><img src="images/course/pic-0003.jpg" alt=""/></a>
                                 </div>
                             </div>
 

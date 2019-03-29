@@ -1155,6 +1155,9 @@
 @media (max-width: 768px) {
 .not-active {
   pointer-events: auto !important;
+}
+.day {
+     pointer-events: none !important;
 }}
 
 @media (max-width: 768px) {
