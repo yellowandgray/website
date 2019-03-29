@@ -730,12 +730,12 @@ ul.nacc li p {
     padding: 20px;
     border: 1px solid rgb(34, 34, 34);
     transition: all 0.3s ease 0s;
-    background: #fff;
+    background: #eee;
     border-radius: 10px;
 }
 
 .contact-shadow:hover {
-    webkit-box-shadow: 0 10px 40px rgb(0, 0, 0);
+    -webkit-box-shadow: 0 10px 40px rgb(0, 0, 0);
     box-shadow: 0 10px 40px #afafaf;
 }
 
@@ -795,7 +795,7 @@ ul.nacc li p {
 .list-align-1 ul i {
     font-size: 10px !important;
     margin-top: 10px;
-    color: #002e6d !important;
+    color: #d2de28 !important;
 }
 .list-align-1 ul li {
 
