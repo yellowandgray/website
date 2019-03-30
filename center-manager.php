@@ -109,7 +109,7 @@
                                 </div>
                             </div>							        
                             <div class="row"> 
-                                <div class="col-md-12 col-sm-12">    
+                                <div class="col-md-6 col-sm-12">    
                                     <div class="form-group">
                                      <input name="resume" class="form-control bg-none" type="file">
                                     </div>
