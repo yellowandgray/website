@@ -52,7 +52,7 @@
                 <div class="row uppercase">
                     <div class="col-md-12 text-p wow fadeInUp">
                         <p>Aaluv Math is a unique Comprehensive Mathematic Learning Solution helping students in self-motivated learning and attitude which is the greatest challenge of contemporary parents, teachers and the students themselves.</p>
-                        <p>Aaluv Math prioritizes and gives shape to the “desire to learn” and develops in students, invisible abilities like concentration & thinking skills.</p>
+                        <p>Aaluv Math prioritizes and gives shape to the “desire to learn” and develops in students invisible abilities like concentration & thinking skills.</p>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                 <div class="row uppercase">
                     <div class="col-md-12 wow fadeInUp">
                         <ul class="list-align">
-                            <i class="fas fa-check"></i><li>The Global business is expanding</li>
+                            <i class="fas fa-check"></i><li>The Global private tutoring business is expanding</li>
                             <i class="fas fa-check"></i><li>Aaluv Math program emphasizes on problem solving skills among the young students.</li>
                             <i class="fas fa-check"></i><li>Mathematical questions are closely related to real-life situations challenge and improve their problem-solving approach and capability.</li>
                             <i class="fas fa-check"></i><li>Significantly helps the overall development of each student.</li>
@@ -104,7 +104,7 @@
                             <i class="fas fa-check"></i><li>Enable students to become independent by positive mind-set and self – learning skills.</li>
                             <i class="fas fa-check"></i><li>Eliminates examination fear.</li>
                             <i class="fas fa-check"></i><li>Aaluv Method of Learning develops academic ability , empowerment and ownerhip of their own learning.</li>
-                            <i class="fas fa-check"></i><li>increases their concentration and stamina and confidence.</li>
+                            <i class="fas fa-check"></i><li>increases their concentration, stamina and confidence.</li>
                             <i class="fas fa-check"></i><li>Unique assessment and individualized teaching method.</li>
                             <i class="fas fa-check"></i><li>Insist on attempting to work out the sums rather than ignoring them.</li>
                         </ul>
@@ -150,11 +150,11 @@
                                         <h4>1. Boosting basic academic skills</h4>
                                         <p>To promote a daily learning habit with advancement in their learning skills. Frequent learning of various topics and daily homework to inculcate learning habit.</p>
                                         <h4>2. Calibrate student’s Level</h4>
-                                        <p>Students are assessed as per their individual learning progress, as each child’s ability in unique, which is evaluated distinctly. Furthermore, the character of the child is assessed and taught accordingly.</p>
+                                        <p>Students are assessed as per their individual learning progress, as each child’s ability is unique, which is evaluated distinctly. Furthermore, the character of the child is assessed and taught accordingly.</p>
                                         <p>Children can learn in their own style and proceed on understanding the concept completely.</p>
                                         <h4>3. Encourage to think on their own:</h4>
                                         <p>Aaluv Math make one think and learn by self, which offers suitable practice sheets and counseling to children.</p>
-                                        <h4>4. Comprehensive, life-skill-based education</h4>
+                                        <h4>4. Comprehensive life-skill-based education</h4>
                                         <p>We need to not only train the child academically, but also cultivate good manners such as salutations, self-hygiene and ethics.</p>
                                     </div>
                                 </li>
@@ -184,7 +184,7 @@
                                 <li>
                                     <div>
                                         <h3 class="color-blue">Reasoning</h3>
-                                        <h4>Why To Choose “AALUV Math Classroom”</h4>
+                                        <h4>Why To Choose “AALUV Math Program”</h4>
                                         <div class="p-margin-15">
                                             <p>1. Work sheet methodology</p>
                                             <p>2. One-on-one learning.</p>
@@ -193,7 +193,7 @@
                                             <p>5. Concentrating on grasping the concept and principle behind each sum.</p>
                                             <p>6. Helps to score higher in academics.</p>
                                         </div>
-                                        <h4>Transformation After Associating With AALUV Classroom</h4>
+                                        <h4>Transformation After Associating With AALUV Math Program</h4>
                                         <div class="p-margin-15">
                                             <p>1. Develop a systematic study habit.</p>
                                             <p>2. Improve one’s understanding skills in Math.</p>
@@ -208,7 +208,7 @@
                                         <h3 class="color-blue">Learning Process</h3>
 <!--                                        <img src="img/tab-img/learning-methods.jpg">-->
                                         <div class="list-align">
-                                            <i class="fas fa-check"></i><p> Initially,students take an evaluation test.</p>
+                                            <i class="fas fa-check"></i><p> Initially students take an evaluation test.</p>
                                             <i class="fas fa-check"></i><p> Math practice sheets are prepared individually catering for each student as per their proficiency.</p>
                                             <i class="fas fa-check"></i><p> The students cultivate ‘How to think’ aptitudes first and later apply these skills to solve the exercise problems. They are expected to complete the prerequisite practice sheets daily.</p>
                                             <i class="fas fa-check"></i><p> The instructor grades the papers and  provide thinking tips by giving examples.</p>
@@ -229,7 +229,7 @@
                                     <div>
                                         <h3 class="color-blue">Our Instructor</h3>
                                         <div class="list-align">
-                                            <h4>AALUV Math Classroom Instructors are MASTERS AT GIVING HINTS AND NOT ANSWERS.</h4>
+                                            <h4>AALUV Math Program Instructors are MASTERS AT GIVING HINTS AND NOT ANSWERS.</h4>
                                             <i class="fas fa-check"></i><p> Our instructors don’t just teach math, but the processes behind problem solving. We have individualized guidance, customized to the child’s learning progress. Our students learn at their own pace. This is hard to achieve with group-oriented teaching. The students learn to arrive at solutions on their own.</p>
                                         </div>
                                     </div>

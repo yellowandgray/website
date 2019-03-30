@@ -20,7 +20,10 @@
                                 <li>
                                     <a class="active" href="index.php">Home</a>
                                 </li>
-                                <li>FRANCHISE OPPORTUNITIES</li>
+                                <li>
+                                    <a class="active" href="franchise-requisites.php">Franchise Requisites</a>
+                                </li>
+                                <li>Franchise Opportunities</li>
                             </ul>
                         </div>
                     </div>
@@ -278,10 +281,10 @@
                                 <p class="text-justify">Sign the Memorandum of Understanding (MOU) to get you started.</p>
                             </div>
 
-                            <div style="background-image: url(images/course/start-bg.jpg)"  class="margin-t-80">
+                             <div style="background: #fffe88;"  class="zoom-1 margin-t-80">
                                 <div class="container padding-tb-40 margin-b-140">
-                                    <h4 class="text-center color-gray">The 100 Day Planck</h4>
-                                    <img src="images/course/100-plan.png" alt=""/>
+                                    <h4 class="text-center">The 100 Day Plan</h4>
+                                    <a href="images/course/pic-0003.jpg" class="day" target="blank"><img src="images/course/pic-0003.jpg" alt=""/></a>
                                 </div>
                             </div>
 

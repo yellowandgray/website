@@ -879,14 +879,20 @@ ul.nacc li p {
     top: 36px;
 }
 .not-active {
-  pointer-events: none;
-/*  cursor: default;
-  text-decoration: none;
-  color: black;*/
+    pointer-events: none;
+    /*  cursor: default;
+      text-decoration: none;
+      color: black;*/
 }
- .menu-area {
-     padding:0px !important; 
+.menu-area {
+    padding:0px !important; 
 }
 .rs-vertical-middle .logo-area {
     line-height: 60px !important;
+}
+
+.zoom-1:hover {
+    transition: all 0.5s; 
+    box-shadow: -1px 1px 8px 7px #dbdbdb;
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }

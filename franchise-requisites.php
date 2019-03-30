@@ -46,7 +46,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center wow fadeInUp">
-                        <h3 class="color-blue">FRANCHISE CLASSROOM'S SITE SPECIFICATIONS</h3>
+                        <h3 class="color-blue">AALUV MATH FRANCHISE SITE SPECIFICATIONS</h3>
                     </div>
                 </div>
                 <div class="row  col-6-align">
