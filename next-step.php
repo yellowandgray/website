@@ -350,14 +350,14 @@
                 </div>
             </div>
         </div>
-        <div id="step" class="tabcon">
+<!--        <div id="step" class="tabcon">
             <section style="background-image: url(images/course/start-bg.jpg)">
                 <div class="container padding-tb-40 margin-b-140">
                     <h4 class="text-center color-gray">The 100 Day Planck</h4>
                     <img src="images/course/100-plan.png" alt=""/>
                 </div>
             </section>
-        </div>
+        </div>-->
         <!-- History End -->
 
         <!-- Mission Start -->
