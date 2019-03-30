@@ -30,7 +30,10 @@
                             <h1 class="page-title">Learning</h1>
                             <ul>
                                 <li>
-                                    <a class="active" href="index-2.html">Home</a>
+                                    <a class="active" href="index.php">Home</a>
+                                </li>
+                                <li>
+                                    <a class="active" href="aaluv-robotics.php">AALUV Robotic's</a>
                                 </li>
                                 <li>Learning</li>
                             </ul>

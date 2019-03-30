@@ -456,7 +456,7 @@ h4,
 h5,
 h6 {
     font-family: 'Libel Suit', arial;
-    color: #212121;
+    color: #737374;
     margin: 0 0 26px;
     font-weight: 700;
 }
@@ -479,7 +479,7 @@ h6 {
     font-size: 14px;
 }
 a {
-    color: #ff3115;
+    color: #ffffff;
     transition: all 0.3s ease 0s;
     text-decoration: none !important;
     outline: none !important;
@@ -488,7 +488,7 @@ a:active,
 a:hover {
     text-decoration: none;
     outline: 0 none;
-    color: #e41f05;
+    color: #000000;
 }
 ul {
     list-style: outside none none;
