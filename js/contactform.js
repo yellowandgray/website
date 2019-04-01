@@ -2,7 +2,7 @@ jQuery(document).ready(function ($) {
     "use strict";
 
     //Contact
-    $('form.contact').submit(function () {
+    $('form.form-contact').submit(function () {
         var f = $(this).find('.form-group'),
                 ferror = false,
                 emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
