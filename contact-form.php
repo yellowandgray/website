@@ -5,25 +5,17 @@ if ($_POST['name']) {
 
 
     $fname = $_REQUEST['fname'];
-    
+
     $lname = $_REQUEST['lname'];
 
     $email = $_REQUEST['email'];
 
-    $mobile = $_REQUEST['mobile'];
+    $Contact = $_REQUEST['Contact'];
 
-    $select_role = $_REQUEST['select_role'];
-
-    $address_1 = $_REQUEST['address_1'];
-
-    $address_2 = $_REQUEST['address_2'];
-    
-    $social_media = $_REQUEST['social_media'];
-
-    $message1 = $_REQUEST['message'];
+    $message = $_REQUEST['message'];
 
     //$filename = $_FILES['pic']['name'];
-    $temp_name =  $_FILES['resume']['tmp_name'];
+    $temp_name = $_FILES['resume']['tmp_name'];
     //$extension = strtolower($this->getExtension($filename));
     $temp_file_name = $_FILES['resume']['name'];
     $temp_file_path = 'uploads/' . $temp_file_name;
@@ -75,7 +67,7 @@ if ($_POST['name']) {
 
 
 
-    $mail->Username = "noreply@enpeekkl.com";  // GMAIL username
+    $mail->Username = "noreply@aaluvglobal.com";  // GMAIL username
 
 
 
@@ -83,7 +75,7 @@ if ($_POST['name']) {
 
     $mail->IsHTML(true);
 
-    $mail->SetFrom('noreply@enpeekkl.com', 'ENPEEKKL');
+    $mail->SetFrom('noreply@aaluvglobal.com', 'AALUVGLOBAL');
 
     $mail->Subject = "Career Form Submited" . date('d-m-y H:i:s');
 
@@ -107,7 +99,7 @@ if ($_POST['name']) {
             <tbody>
             <tr>
             <td style = "padding:36px 48px;display:block">
-            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://enpeekkl.com/images/logo-enpee-international-school.png" alt = "ENPEEKKL" style = "width:50%" /></h1>
+            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://www.aaluvglobal.com/images/aalvu-global-logo.png" alt = "AALUVGLOBAL" style = "width:50%" /></h1>
             </td>
             </tr>
             </tbody>
@@ -126,14 +118,11 @@ if ($_POST['name']) {
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
             <h3 style = "margin:0 0 16px; text-align:center;">Job Enquiry</h3>
-            <p style = "margin:0 0 16px">Name: ' . $name . '</p>
+            <p style = "margin:0 0 16px">first Name: ' . $fname . '</p>
+            <p style = "margin:0 0 16px">Last Name: ' . $lname . '</p>
             <p style = "margin:0 0 16px">Email: ' . $email . '</p>
-            <p style = "margin:0 0 16px">Phone Number: ' . $mobile . '</p>
-            <p style = "margin:0 0 16px">Job Role: ' . $select_role . '</p>
-            <p style = "margin:0 0 16px">Address-1: ' . $address_1 . '</p>
-            <p style = "margin:0 0 16px">Address-2: ' . $address_2 . '</p>
-            <p style = "margin:0 0 16px">How did you hear about us: ' . $social_media . '</p>
-            <p style = "margin:0 0 16px">Message: ' . $message1 . '</p>
+            <p style = "margin:0 0 16px">Contact: ' . $contact . '</p>
+            <p style = "margin:0 0 16px">Message: ' . $message . '</p>
             <p style = "margin:0 0 16px">Sent From Website</p></div>
             </td>
             </tr>
@@ -181,9 +170,9 @@ if ($_POST['name']) {
     //$attach = $_FILES['pic'];
 
 
-    $mail->AddAddress($address, "ENPEEKKL");
-    $mail->AddCC('npschoolkkl@gmail.com', 'ENPEEKKL');
-    $mail->AddCC('arrchanac@gmail.com', 'ENPEEKKL');
+    $mail->AddAddress($address, "AALUVGLOBAL");
+//    $mail->AddCC('npschoolkkl@gmail.com', 'ENPEEKKL');
+//    $mail->AddCC('arrchanac@gmail.com', 'ENPEEKKL');
     $mail->AddAttachment($temp_file_path);
 
 

@@ -100,8 +100,8 @@
                                 </div>
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
-                                        <label>Subject *</label>
-                                        <input name="subject" id="subject" class="form-control" type="text">
+                                        <label>Contact</label>
+                                        <input name="contact" id="subject" class="form-control" type="text">
                                     </div>
                                 </div>
                             </div>

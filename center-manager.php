@@ -47,7 +47,7 @@
                 <div class="contact-comment-section wow fadeInUp">
                     <h2 class="text-center">Center Manager</h2>
                     <div id="form-messages"></div>
-                    <form role="form" id="contact-form" class="career" enctype="multipart/form-data">
+                    <form role="form" id="career-form" class="career" enctype="multipart/form-data">
                         <fieldset>
                             <div class="row">                                      
                                 <div class="col-md-6 col-sm-12">

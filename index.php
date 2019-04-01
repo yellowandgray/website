@@ -287,21 +287,21 @@
                             <form id="contact-form" class="comment-form contact">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="First Name">
+                                        <input name="fname" type="text" placeholder="First Name">
                                     </div>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="Last Name">
+                                        <input name="lname" type="text" placeholder="Last Name">
+                                    </div>
+                                     <div class="col-lg-6">
+                                        <input name="email" type="email" placeholder="Email">
                                     </div>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="Contact">
+                                        <input name="contact" type="text" placeholder="Contact">
                                     </div>
-                                    <div class="col-lg-6">
-                                        <input type="email" placeholder="Email">
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <textarea placeholder="Message"></textarea>
+                                   <div class="col-lg-12">
+                                        <textarea name="message" placeholder="Message"></textarea>
                                         <div class="text-center">
-                                            <button class="site-btn">SUBMIT</button>
+                                            <button type="submit" class="site-btn">SUBMIT</button>
                                         </div>
                                     </div>
                                 </div>
