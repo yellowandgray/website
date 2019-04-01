@@ -284,7 +284,7 @@
                             <div class="text-center">
                                 <h3>Enquiry Form</h3>
                             </div>
-                            <form class="comment-form contact">
+                            <form id="contact-form" class="comment-form contact">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <input type="text" placeholder="First Name">
