@@ -1,6 +1,6 @@
 <?php
 
-if ($_POST['name']) {
+if ($_POST['fname']) {
 
 
 
@@ -10,16 +10,9 @@ if ($_POST['name']) {
 
     $email = $_REQUEST['email'];
 
-    $Contact = $_REQUEST['Contact'];
+    $contact = $_REQUEST['contact'];
 
     $message = $_REQUEST['message'];
-
-    //$filename = $_FILES['pic']['name'];
-    $temp_name = $_FILES['resume']['tmp_name'];
-    //$extension = strtolower($this->getExtension($filename));
-    $temp_file_name = $_FILES['resume']['name'];
-    $temp_file_path = 'uploads/' . $temp_file_name;
-    move_uploaded_file($temp_name, $temp_file_path);
 
     error_reporting(E_STRICT);
 
@@ -59,7 +52,7 @@ if ($_POST['name']) {
 
 
 
-    $mail->Host = "box975.bluehost.com";      // sets GMAIL as the SMTP server
+    $mail->Host = "mail.aaluvglobal.com";      // sets GMAIL as the SMTP server
 
 
 
@@ -67,17 +60,17 @@ if ($_POST['name']) {
 
 
 
-    $mail->Username = "noreply@aaluvglobal.com";  // GMAIL username
+    $mail->Username = "dev@aaluvglobal.com";  // GMAIL username
 
 
 
-    $mail->Password = "Admin@EnPE3Kkl";            // GMAIL password
+    $mail->Password = "Admin@aaluvglobal";            // GMAIL password
 
     $mail->IsHTML(true);
 
     $mail->SetFrom('noreply@aaluvglobal.com', 'AALUVGLOBAL');
 
-    $mail->Subject = "Career Form Submited" . date('d-m-y H:i:s');
+    $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
 
     $message = '<table border = "0" cellpadding = "0" cellspacing = "0" height = "100%" width = "100%">
             <tbody>
@@ -157,8 +150,6 @@ if ($_POST['name']) {
 
     $headers = "MIME-Version: 1.0" . "\r\n";
 
-    $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
-
     // headers for attachment 
     $headers .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
 
@@ -166,16 +157,10 @@ if ($_POST['name']) {
 
     // More headers
 
-    $address = "info@enpeekkl.com";
-    //$attach = $_FILES['pic'];
+    $address = "dev@aaluvglobal.com";
 
 
     $mail->AddAddress($address, "AALUVGLOBAL");
-//    $mail->AddCC('npschoolkkl@gmail.com', 'ENPEEKKL');
-//    $mail->AddCC('arrchanac@gmail.com', 'ENPEEKKL');
-    $mail->AddAttachment($temp_file_path);
-
-
 
 
     if (!$mail->Send()) {

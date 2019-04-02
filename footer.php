@@ -162,5 +162,6 @@
 <script src="js/rsmenu-main.js"></script>
 <!-- plugins js -->
 <script src="js/plugins.js"></script>
+<script src="js/contactform.js" type="text/javascript"></script>
 <!-- main js -->
 <script src="js/main.js"></script>
