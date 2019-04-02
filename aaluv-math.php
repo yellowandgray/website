@@ -134,7 +134,7 @@
                                 <div><span class="light"></span><span>Etiquette</span></div>
                                 <div><span class="light"></span><span>Reasoning</span></div>
                                 <div><span class="light"></span><span>Learning Process</span></div>
-                                <div><span class="light"></span><span>Story Based Sums</span></div>
+                                <div><span class="light"></span><span>Concept Based Learning</span></div>
                                 <div><span class="light"></span><span>Our Instructor</span></div>
 <!--                                <div><span class="light"></span><span>Practice Sheets</span></div>
                                 <div><span class="light"></span><span>Transformation and Improvement</span></div>-->
@@ -164,7 +164,7 @@
                                         <div class="p-margin-15 list-align">
                                              <i class="fas fa-check"></i><p> Classroom Days: 5 days in a week. (Concept & Academic)</p>
                                              <i class="fas fa-check"></i><p> Subject: Math</p>
-                                             <i class="fas fa-check"></i><p> Target Groups: Primary School Children</p>
+                                             <i class="fas fa-check"></i><p> Target Groups: 4 to 18 Year's </p>
                                         </div>
                                     </div>
                                 </li>
@@ -188,7 +188,7 @@
                                         <div class="p-margin-15">
                                             <p>1. Work sheet methodology</p>
                                             <p>2. One-on-one learning.</p>
-                                            <p>3. Progression to the next topic only after a thorough understanding of the previous is attained.</p>
+                                            <p>3. Progression to the next topic only after a thorough understanding.</p>
                                             <p>4. Boosts academic learning.</p>
                                             <p>5. Concentrating on grasping the concept and principle behind each sum.</p>
                                             <p>6. Helps to score higher in academics.</p>
@@ -220,7 +220,7 @@
                                 <li>
                                     <div>
                                         <div class="list-align">
-                                            <h3 class="color-blue">Story Based Sums</h3>
+                                            <h3 class="color-blue">Concept Based Learning</h3>
                                             <i class="fas fa-check"></i><p> By acquiring knowledge regarding the ‘analytical thinking process’ associated with problem solving, children improve their skills and aptitudes, enabling them to apply these proficiencies in real-life.</p>
                                         </div>
                                     </div>
@@ -349,7 +349,8 @@
                                             <i class="fas fa-check"></i><p> Insist on attempting to work out the sums rather than ignoring them. </p>
                                             <i class="fas fa-check"></i><p> Promote individualistic thoughts to analyze any given situation and react suitably.</p>
                                             <i class="fas fa-check"></i><p> Present one’s ideas in one’s own words and express them with conviction.</p>
-                                            <i class="fas fa-check"></i> <p> These skills will promote their analytical thinking. In addition, it will cultivate fundamental academic aptitudes with the guidance of competent and proficient instructors. Practice sheets are developed individually to fit each child’s unique learning abilities.</p>
+                                            <i class="fas fa-check"></i><p> These skills will promote their analytical thinking. In addition, it will cultivate fundamental academic aptitudes with the guidance of competent and proficient instructors.</p>
+                                            <i class="fas fa-check"></i><p>Practice sheets are developed individually to fit each child’s unique learning abilities.</p>
                                         </div>
                                     </div>
                                 </li>
