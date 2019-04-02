@@ -1,6 +1,6 @@
 <?php
 
-if ($_POST['name']) {
+if ($_POST['fname']) {
 
 
 
@@ -10,7 +10,7 @@ if ($_POST['name']) {
 
     $email = $_REQUEST['email'];
 
-    $Contact = $_REQUEST['Contact'];
+    $contact = $_REQUEST['contact'];
 
     $message = $_REQUEST['message'];
 
