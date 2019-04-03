@@ -34,6 +34,7 @@
     <!-- style css -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- responsive css -->
+    <link href="css/sweetalert.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link href="css/common.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">

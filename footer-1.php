@@ -176,3 +176,4 @@
 <!-- main js -->
 <script src="js/main.js"></script>
 <script src="js/contactform.js" type="text/javascript"></script>
+<script src="js/sweetalert.min.js" type="text/javascript"></script>

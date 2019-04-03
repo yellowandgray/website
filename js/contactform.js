@@ -88,11 +88,9 @@ jQuery(document).ready(function ($) {
                 i.next('.validation').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
             }
         });
-        if (ferror){
-            alert ('if')
+        if (ferror) {
             return false;
-        }else
-            alert('else')
+        } else
             var str = $(this).serialize();
         $.ajax({
             type: "POST",
