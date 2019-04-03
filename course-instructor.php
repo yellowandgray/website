@@ -76,10 +76,10 @@
                                         <ul class="job-drop-down">
                                             <li>
                                                 <select name="select_role" id="select_role">
-                                                    <option>Select Job Role</option>
-                                                    <option>Instructor</option>
-                                                    <option>Center Manager</option>
-                                                    <option>Other</option>
+                                                    <option value="Select Job Role">Select Job Role</option>
+                                                    <option value="Instructor">Instructor</option>
+                                                    <option value="Center Manager">Center Manager</option>
+                                                    <option value="Other">Other</option>
                                                 </select>
                                             </li>
                                         </ul>
