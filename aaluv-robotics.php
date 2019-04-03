@@ -59,8 +59,8 @@
                             <i class="fas fa-check"></i><li>We will provide well trained Faculty along with sufficient Robotic Kits(Twin Sharing Basis) where the students will be split into two teams who will parallely work on construction and programming as sub teams in each class.</li>
                             <i class="fas fa-check"></i><li><b>Robotic's Lab Research Academy (RLRA)</b>
                                 <ul class="nested-list">
-                                    <i class="fas fa-circle"></i><li>Aaluv Robotic's is in technical collaboration with RLRA and R & D wing for development of robotics in schools and colleges</li>
-                                    <i class="fas fa-circle"></i><li>The Robotic devices used in this program kindles the children’s mind to think logically and empowers them to perform exceptionally well in Science & Math's at the formative stage  of learning, thus equipping them to counter the academic challenges with ease using their own creative skills with self confidence.</li>
+                                    <i class="fas fa-circle"></i><li>&nbsp; Aaluv Robotic's is in technical collaboration with RLRA and R & D wing for development of robotics in schools and colleges</li>
+                                    <i class="fas fa-circle"></i><li>&nbsp; The Robotic devices used in this program kindles the children’s mind to think logically and empowers them to perform exceptionally well in Science & Math's at the formative stage  of learning, thus equipping them to counter the academic challenges with ease using their own creative skills with self confidence.</li>
                                 </ul>
 
                             </li>

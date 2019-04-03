@@ -85,7 +85,7 @@
                                     </div>
                                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                                         <div class="card-body">
-                                            Where the I Can Read Curriculum is licensed to an institution or chain of institutions to be used to teach their students.
+                                            Where the AALUV Math Curriculum is licensed to an institution or chain of institutions to be used to teach their students.
                                         </div>
                                     </div>
                                 </div>
@@ -300,7 +300,7 @@
                                     <li class="tablinks" onclick="openCity(event, '100')" id="defaultOpen"></li>
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'story')"> <a href="#story" class="not-active">The Evolution of AALUV GLOBAL</a></li>
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'big')"> <a href="#big" class="not-active">How big is the global enrichment industry?</a></li>
-                                    <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'why')"><a href="#why" class="not-active">Why franchise an I Can Read centre?</a></li>
+                                    <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'why')"><a href="#why" class="not-active">Why franchise an AALUV Math centre?</a></li>
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'types')"> <a href="#types" class="not-active">What are the types of franchise models available?</a></li>
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'makes')"><a href="#makes" class="not-active">What makes a successful franchisee?</a></li>
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'support')"><a href="#support" class="not-active">Franchise support</a></li>
