@@ -116,7 +116,6 @@
                             <div class="form-group mb-0">
                                 <input class="btn-send" type="submit" value="Submit Now">
                             </div>
-
                         </fieldset>
                     </form>						
                 </div>

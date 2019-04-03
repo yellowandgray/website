@@ -203,7 +203,7 @@
                         </div>
                     </div>
                 </div>
-                 <div class="row uppercase display-none">
+                <div class="row uppercase display-none">
                     <div class="col-md-4 wow fadeInUpBig">
                         <div class="news-normal-block">
                             <img src="images/about/about-12.jpg" alt=""/>
@@ -235,7 +235,7 @@
         </section>
         <section id="about-section" class="padding-b-100 bg-img">
             <div class="container">
-               <div class="row uppercase">
+                <div class="row uppercase">
                     <!--                    <div class="col-md-12 wow fadeInDown">
                                             <h3 class="color-blue text-center">AALUV Classroom Franchisee Desired Qualities</h3>
                                         </div>
@@ -277,34 +277,46 @@
                                                         </ul>-->
                         </div>
                     </div>
-                   
-                    
+
+
                     <div class="col-lg-5 wow fadeInDown enquiry-box">
                         <div class="contact-form">
                             <div class="text-center">
                                 <h3>Enquiry Form</h3>
                             </div>
-                            <form id="contact-form" class="comment-form contact">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <input name="fname" type="text" placeholder="First Name">
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <input name="lname" type="text" placeholder="Last Name">
-                                    </div>
-                                     <div class="col-lg-6">
-                                        <input name="email" type="email" placeholder="Email">
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <input name="contact" type="text" placeholder="Contact">
-                                    </div>
-                                   <div class="col-lg-12">
-                                        <textarea name="message" placeholder="Message"></textarea>
-                                        <div class="text-center">
-                                            <button type="submit" class="site-btn">SUBMIT</button>
+                            <form class="index-form comment-form contact">
+                                <fieldset>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input name="fname" class="form-control" type="text" placeholder="First Name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input name="lname" class="form-control" type="text" placeholder="Last Name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input name="email" class="form-control" type="email" placeholder="Email" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input name="contact" class="form-control" type="text" placeholder="Contact" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <textarea name="message" class="form-control" placeholder="Message" required></textarea>
+                                            </div>
+                                            <div class="text-center form-group">
+                                                <button type="submit" class="site-btn">SUBMIT</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </fieldset>
                             </form>
                         </div>
                     </div>
