@@ -257,7 +257,7 @@
                                     <h5>Get in touch with us today!</h5>
                                 </div>
                                 <div class="check-out-box">
-                                    <form id="contact-form" method="post">
+                                    <form id="contact-form" class="form-contact" method="post">
                                         <fieldset>
                                             <div class="row"> 
                                                 <div class="col-md-6 col-sm-12 col-xs-12">    
@@ -265,7 +265,7 @@
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">   
                                                     <div class="form-group">
-                                                        <select>
+                                                        <select va >
                                                             <option>Select Your Country</option>
                                                             <option>India</option>
                                                             <option>Bangladesh</option>

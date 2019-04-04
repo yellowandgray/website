@@ -284,7 +284,7 @@
                             <div class="text-center">
                                 <h3>Enquiry Form</h3>
                             </div>
-                            <form class="index-form comment-form contact">
+                            <form class="form-contact comment-form contact">
                                 <fieldset>
                                     <div class="row">
                                         <div class="col-lg-6">
