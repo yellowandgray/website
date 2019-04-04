@@ -265,7 +265,7 @@
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">   
                                                     <div class="form-group">
-                                                        <select name="country">
+                                                        <select name="country" required>
                                                             <option value="0">Select Your Country</option>
                                                             <option value="India">India</option>
                                                             <option value="Bangladesh">Bangladesh</option>
@@ -287,7 +287,7 @@
                                                 </div>
                                                 <div class="col-lg-6 col-md-12">
                                                     <div class="form-group">
-                                                        <input name="fname" class="form-control" type="text">
+                                                        <input name="fname" class="form-control" type="text" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -297,7 +297,7 @@
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">    
                                                     <div class="form-group">
-                                                        <input id="email" name="email" class="form-control" type="email">
+                                                        <input id="email" name="email" class="form-control" type="email" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -307,7 +307,7 @@
                                                 </div>
                                                 <div class="col-lg-6 col-md-12">
                                                     <div class="form-group">
-                                                        <input name="phone_number" class="form-control" type="text">
+                                                        <input name="phone_number" class="form-control" type="text" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -317,7 +317,7 @@
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">    
                                                     <div class="form-group">
-                                                        <input name="address" class="form-control" type="text">
+                                                        <input name="address" class="form-control" type="text" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -327,7 +327,7 @@
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">    
                                                     <div class="form-group">
-                                                        <input name="zip" class="form-control" type="text">
+                                                        <input name="zip" class="form-control" type="text" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -335,14 +335,14 @@
                                                 <div class="col-md-12 col-sm-12 col-xs-12">    
                                                     <div class="form-group">
                                                         <label>Questions or Comments</label>
-                                                        <textarea rows="3" name="comments" class="form-control" type="text"></textarea>
+                                                        <textarea rows="3" name="comments" class="form-control" type="text" required></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                             <span>* Required fields</span>
                                             <input style="float: right" class="btn-send-1" type="submit" value="Send">
                                         </fieldset>
-                                    </form>	
+                                    </form>
                                 </div>
                             </div>
 

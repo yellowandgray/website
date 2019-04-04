@@ -190,9 +190,9 @@
                         <p>Successfully taught over 5 million students Globally</p>
                     </div>
                     <div class="col-md-3">
-<!--                        <div class="rs-counter-list">
-                            <img src="images/singapore.png" alt="" />
-                        </div>-->
+                        <!--                        <div class="rs-counter-list">
+                                                    <img src="images/singapore.png" alt="" />
+                                                </div>-->
                         <div class="rs-counter-list">
                             <h2 class="counter-number plus">35</h2>
                             <h4 class="counter-desc">Countries</h4>
@@ -289,7 +289,7 @@
                                 <h5>Get in touch with us today!</h5>
                             </div>
                             <div class="check-out-box">
-                                <form id="contact-form" method="post">
+                                <form id="contact-form" class="form-franchise" method="post">
                                     <fieldset>
                                         <div class="row"> 
                                             <div class="col-md-6 col-sm-12 col-xs-12">    
@@ -297,18 +297,18 @@
                                             </div>
                                             <div class="col-md-6 col-sm-12 col-xs-12">   
                                                 <div class="form-group">
-                                                    <select>
-                                                        <option>Select Your Country</option>
-                                                        <option>India</option>
-                                                        <option>Bangladesh</option>
-                                                        <option>Srilanka</option>
-                                                        <option>UAE</option>
-                                                        <option>Muscat</option>
-                                                        <option>Malaysia</option>
-                                                        <option>Singapore</option>
-                                                        <option>Australia</option>
-                                                        <option>Canada</option>
-                                                        <option>Italy</option>
+                                                    <select name="country" required>
+                                                        <option value="0">Select Your Country</option>
+                                                        <option value="India">India</option>
+                                                        <option value="Bangladesh">Bangladesh</option>
+                                                        <option value="Srilanka">Srilanka</option>
+                                                        <option value="UAE">UAE</option>
+                                                        <option value="Muscat">Muscat</option>
+                                                        <option value="Malaysia">Malaysia</option>
+                                                        <option value="Singapore">Singapore</option>
+                                                        <option value="Australia">Australia</option>
+                                                        <option value="Canada">Canada</option>
+                                                        <option value="Italy">Italy</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -319,7 +319,7 @@
                                             </div>
                                             <div class="col-lg-6 col-md-12">
                                                 <div class="form-group">
-                                                    <input name="fname" class="form-control" type="text">
+                                                    <input name="fname" class="form-control" type="text" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -329,7 +329,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-12 col-xs-12">    
                                                 <div class="form-group">
-                                                    <input id="email" name="email" class="form-control" type="email">
+                                                    <input id="email" name="email" class="form-control" type="email" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -339,7 +339,7 @@
                                             </div>
                                             <div class="col-lg-6 col-md-12">
                                                 <div class="form-group">
-                                                    <input name="pnumber" class="form-control" type="text">
+                                                    <input name="phone_number" class="form-control" type="text" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -349,7 +349,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-12 col-xs-12">    
                                                 <div class="form-group">
-                                                    <input name="address" class="form-control" type="text">
+                                                    <input name="address" class="form-control" type="text" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -359,7 +359,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-12 col-xs-12">    
                                                 <div class="form-group">
-                                                    <input name="zip" class="form-control" type="text">
+                                                    <input name="zip" class="form-control" type="text" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -367,14 +367,14 @@
                                             <div class="col-md-12 col-sm-12 col-xs-12">    
                                                 <div class="form-group">
                                                     <label>Questions or Comments</label>
-                                                    <textarea rows="3" name="comments" class="form-control" type="text"></textarea>
+                                                    <textarea rows="3" name="comments" class="form-control" type="text" required></textarea>
                                                 </div>
                                             </div>
                                         </div>
                                         <span>* Required fields</span>
                                         <input style="float: right" class="btn-send-1" type="submit" value="Send">
                                     </fieldset>
-                                </form>	
+                                </form>
                             </div>
                         </div>
                     </div>

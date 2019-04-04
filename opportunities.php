@@ -281,7 +281,7 @@
                                 <p class="text-justify">Sign the Memorandum of Understanding (MOU) to get you started.</p>
                             </div>
 
-                             <div style="background: #fffe88;"  class="zoom-1 margin-t-80">
+                            <div style="background: #fffe88;"  class="zoom-1 margin-t-80">
                                 <div class="container padding-tb-40 margin-b-140">
                                     <h4 class="text-center">The 100 Day Plan</h4>
                                     <a href="images/course/pic-0003.jpg" class="day" target="blank"><img src="images/course/pic-0003.jpg" alt=""/></a>
@@ -321,7 +321,7 @@
                                     <h5>Get in touch with us today!</h5>
                                 </div>
                                 <div class="check-out-box">
-                                     <form id="contact-form" class="form-franchise" method="post">
+                                    <form id="contact-form" class="form-franchise" method="post">
                                         <fieldset>
                                             <div class="row"> 
                                                 <div class="col-md-6 col-sm-12 col-xs-12">    
@@ -329,18 +329,18 @@
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">   
                                                     <div class="form-group">
-                                                        <select name="country">
-                                                            <option>Select Your Country</option>
-                                                            <option>India</option>
-                                                            <option>Bangladesh</option>
-                                                            <option>Srilanka</option>
-                                                            <option>UAE</option>
-                                                            <option>Muscat</option>
-                                                            <option>Malaysia</option>
-                                                            <option>Singapore</option>
-                                                            <option>Australia</option>
-                                                            <option>Canada</option>
-                                                            <option>Italy</option>
+                                                        <select name="country" required>
+                                                            <option value="0">Select Your Country</option>
+                                                            <option value="India">India</option>
+                                                            <option value="Bangladesh">Bangladesh</option>
+                                                            <option value="Srilanka">Srilanka</option>
+                                                            <option value="UAE">UAE</option>
+                                                            <option value="Muscat">Muscat</option>
+                                                            <option value="Malaysia">Malaysia</option>
+                                                            <option value="Singapore">Singapore</option>
+                                                            <option value="Australia">Australia</option>
+                                                            <option value="Canada">Canada</option>
+                                                            <option value="Italy">Italy</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -351,7 +351,7 @@
                                                 </div>
                                                 <div class="col-lg-6 col-md-12">
                                                     <div class="form-group">
-                                                        <input name="fname" class="form-control" type="text">
+                                                        <input name="fname" class="form-control" type="text" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -361,7 +361,7 @@
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">    
                                                     <div class="form-group">
-                                                        <input id="email" name="email" class="form-control" type="email">
+                                                        <input id="email" name="email" class="form-control" type="email" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -371,7 +371,7 @@
                                                 </div>
                                                 <div class="col-lg-6 col-md-12">
                                                     <div class="form-group">
-                                                        <input name="phone_number" class="form-control" type="text">
+                                                        <input name="phone_number" class="form-control" type="text" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -381,7 +381,7 @@
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">    
                                                     <div class="form-group">
-                                                        <input name="address" class="form-control" type="text">
+                                                        <input name="address" class="form-control" type="text" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -391,7 +391,7 @@
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">    
                                                     <div class="form-group">
-                                                        <input name="zip" class="form-control" type="text">
+                                                        <input name="zip" class="form-control" type="text" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -399,7 +399,7 @@
                                                 <div class="col-md-12 col-sm-12 col-xs-12">    
                                                     <div class="form-group">
                                                         <label>Questions or Comments</label>
-                                                        <textarea rows="3" name="comments" class="form-control" type="text"></textarea>
+                                                        <textarea rows="3" name="comments" class="form-control" type="text" required></textarea>
                                                     </div>
                                                 </div>
                                             </div>
