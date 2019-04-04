@@ -47,7 +47,7 @@
                 <div class="contact-comment-section wow fadeInUp">
                     <h2 class="text-center">Center Manager</h2>
                     <div id="form-messages"></div>
-                    <form role="form" id="career-form" class="career" enctype="multipart/form-data">
+                    <form role="form" id="contact-form" class="career" enctype="multipart/form-data">
                         <fieldset>
                             <div class="row">                                      
                                 <div class="col-md-6 col-sm-12">
@@ -76,10 +76,11 @@
                                         <ul class="job-drop-down">
                                             <li>
                                                 <select name="select_role" id="select_role">
-                                                    <option>Select Job Role</option>
-                                                    <option>Instructor</option>
-                                                    <option>Center Manager</option>
-                                                    <option>Other</option>
+                                                    <option value="Select Job Role">Select Job Role</option>
+                                                    <option value="Instructor">Instructor</option>
+                                                    <option value="Center Manager">Center Manager</option>
+                                                    <option value="Co-Ordinator">Center Manager</option>
+                                                    <option value="Other">Other</option>
                                                 </select>
                                             </li>
                                         </ul>
@@ -104,27 +105,26 @@
                                 <div class="col-md-12 col-sm-12">    
                                     <div class="form-group">
                                         <label>Message</label>
-                                        <textarea cols="40" rows="10" id="message" name="message" class="textarea form-control"></textarea>
+                                        <textarea cols="40" rows="10" id="message" name="message" class="form-control textarea"></textarea>
                                     </div>
                                 </div>
                             </div>							        
                             <div class="row"> 
                                 <div class="col-md-6 col-sm-12">    
                                     <div class="form-group">
-                                     <input name="resume" class="form-control bg-none" type="file">
+                                        <input name="resume" id="resume" class="form-control bg-none" type="file">
                                     </div>
                                 </div>
                             </div>							        
                             <div class="form-group mb-0">
                                 <input class="btn-send" type="submit" value="Submit Now">
                             </div>
-
                         </fieldset>
-                    </form>						
+                    </form>
                 </div>
-                </div>
+            </div>
         </section>
-      
+
         <!-- Footer Start -->
         <?php include 'footer-1.php'; ?>
     </body>

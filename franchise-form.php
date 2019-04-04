@@ -1,6 +1,6 @@
 <?php
 
-if ($_POST['name']) {
+if ($_POST['country']) {
 
 
     $country = $_REQUEST['country'];
@@ -19,7 +19,7 @@ if ($_POST['name']) {
 
 
     //$filename = $_FILES['pic']['name'];
-   
+
 
     error_reporting(E_STRICT);
 
@@ -59,7 +59,7 @@ if ($_POST['name']) {
 
 
 
-    $mail->Host = "box975.bluehost.com";      // sets GMAIL as the SMTP server
+    $mail->Host = "mail.aaluvglobal.com";      // sets GMAIL as the SMTP server
 
 
 
@@ -67,11 +67,11 @@ if ($_POST['name']) {
 
 
 
-    $mail->Username = "noreply@aaluvglobal.com";  // GMAIL username
+    $mail->Username = "dev@aaluvglobal.com";  // GMAIL username
 
 
 
-    $mail->Password = "Admin@EnPE3Kkl";            // GMAIL password
+    $mail->Password = "Admin@aaluvglobal";            // GMAIL password
 
     $mail->IsHTML(true);
 
@@ -99,7 +99,7 @@ if ($_POST['name']) {
             <tbody>
             <tr>
             <td style = "padding:36px 48px;display:block">
-            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://www.aaluvglobal.com/images/aalvu-global-logo.png" alt = "AALUVGLOBAL" style = "width:50%" /></h1>
+            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://www.aaluvglobal.com/images/aalvu-global-logo.png" alt = "AALUVGLOBAL" style = "width:25%" /></h1>
             </td>
             </tr>
             </tbody>
@@ -168,7 +168,7 @@ if ($_POST['name']) {
 
     // More headers
 
-    $address = "info@enpeekkl.com";
+    $address = "info@aaluvglobal.com";
     //$attach = $_FILES['pic'];
 
 
