@@ -175,7 +175,7 @@ if ($_POST['country']) {
     $mail->AddAddress($address, "AALUVGLOBAL");
 //    $mail->AddCC('npschoolkkl@gmail.com', 'AALUVGLOBAL');
 //    $mail->AddCC('arrchanac@gmail.com', 'AALUVGLOBAL');
-    $mail->AddAttachment($temp_file_path);
+//    $mail->AddAttachment($temp_file_path);
 
 
 

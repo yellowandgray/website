@@ -266,17 +266,17 @@
                                                 <div class="col-md-6 col-sm-12 col-xs-12">   
                                                     <div class="form-group">
                                                         <select name="country">
-                                                            <option>Select Your Country</option>
-                                                            <option>India</option>
-                                                            <option>Bangladesh</option>
-                                                            <option>Srilanka</option>
-                                                            <option>UAE</option>
-                                                            <option>Muscat</option>
-                                                            <option>Malaysia</option>
-                                                            <option>Singapore</option>
-                                                            <option>Australia</option>
-                                                            <option>Canada</option>
-                                                            <option>Italy</option>
+                                                            <option value="0">Select Your Country</option>
+                                                            <option value="India">India</option>
+                                                            <option value="Bangladesh">Bangladesh</option>
+                                                            <option value="Srilanka">Srilanka</option>
+                                                            <option value="UAE">UAE</option>
+                                                            <option value="Muscat">Muscat</option>
+                                                            <option value="Malaysia">Malaysia</option>
+                                                            <option value="Singapore">Singapore</option>
+                                                            <option value="Australia">Australia</option>
+                                                            <option value="Canada">Canada</option>
+                                                            <option value="Italy">Italy</option>
                                                         </select>
                                                     </div>
                                                 </div>
