@@ -104,14 +104,14 @@
                                 <div class="col-md-12 col-sm-12">    
                                     <div class="form-group">
                                         <label>Message</label>
-                                        <textarea cols="40" rows="10" id="message" name="message" class="textarea form-control"></textarea>
+                                        <textarea cols="40" rows="10" id="message" name="message" class="form-control textarea"></textarea>
                                     </div>
                                 </div>
                             </div>							        
                             <div class="row"> 
                                 <div class="col-md-6 col-sm-12">    
                                     <div class="form-group">
-                                     <input name="resume" class="form-control bg-none" type="file">
+                                        <input name="resume" id="resume" class="form-control bg-none" type="file">
                                     </div>
                                 </div>
                             </div>							        

@@ -1,12 +1,10 @@
 <?php
 
-if ($_POST['name']) {
+if ($_POST['fname']) {
 
 
 
     $fname = $_REQUEST['fname'];
-    
-    $lname = $_REQUEST['lname'];
 
     $email = $_REQUEST['email'];
 
@@ -65,7 +63,7 @@ if ($_POST['name']) {
 
 
 
-    $mail->Host = "box975.bluehost.com";      // sets GMAIL as the SMTP server
+    $mail->Host = "mail.aaluvglobal.com";      // sets GMAIL as the SMTP server
 
 
 
@@ -73,11 +71,11 @@ if ($_POST['name']) {
 
 
 
-    $mail->Username = "noreply@aaluvglobal.com";  // GMAIL username
+    $mail->Username = "dev@aaluvglobal.com";  // GMAIL username
 
 
 
-    $mail->Password = "Admin@EnPE3Kkl";            // GMAIL password
+    $mail->Password = "Admin@aaluvglobal";            // GMAIL password
 
     $mail->IsHTML(true);
 
@@ -124,8 +122,7 @@ if ($_POST['name']) {
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
             <h3 style = "margin:0 0 16px; text-align:center;">Job Enquiry</h3>
-            <p style = "margin:0 0 16px">First Name: ' . $fname . '</p>
-            <p style = "margin:0 0 16px">Last Name: ' . $lname . '</p>
+            <p style = "margin:0 0 16px">Full Name: ' . $fname . '</p>
             <p style = "margin:0 0 16px">Email: ' . $email . '</p>
             <p style = "margin:0 0 16px">Phone Number: ' . $contact_number . '</p>
             <p style = "margin:0 0 16px">Job Role: ' . $select_role . '</p>
