@@ -321,7 +321,7 @@
                                     <h5>Get in touch with us today!</h5>
                                 </div>
                                 <div class="check-out-box">
-                                    <form id="contact-form" method="post">
+                                     <form id="contact-form" class="form-franchise" method="post">
                                         <fieldset>
                                             <div class="row"> 
                                                 <div class="col-md-6 col-sm-12 col-xs-12">    
@@ -329,7 +329,7 @@
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">   
                                                     <div class="form-group">
-                                                        <select>
+                                                        <select name="country">
                                                             <option>Select Your Country</option>
                                                             <option>India</option>
                                                             <option>Bangladesh</option>
@@ -371,7 +371,7 @@
                                                 </div>
                                                 <div class="col-lg-6 col-md-12">
                                                     <div class="form-group">
-                                                        <input name="pnumber" class="form-control" type="text">
+                                                        <input name="phone_number" class="form-control" type="text">
                                                     </div>
                                                 </div>
                                             </div>
@@ -406,7 +406,7 @@
                                             <span>* Required fields</span>
                                             <input style="float: right" class="btn-send-1" type="submit" value="Send">
                                         </fieldset>
-                                    </form>	
+                                    </form>
                                 </div>
                             </div>
 
