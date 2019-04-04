@@ -77,7 +77,7 @@ if ($_POST['country']) {
 
     $mail->SetFrom('noreply@aaluvglobal.com', 'AALUVGLOBAL');
 
-    $mail->Subject = "Career Form Submited" . date('d-m-y H:i:s');
+    $mail->Subject = "Form Submited" . date('d-m-y H:i:s');
 
     $message = '<table border = "0" cellpadding = "0" cellspacing = "0" height = "100%" width = "100%">
             <tbody>
