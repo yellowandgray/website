@@ -52,16 +52,16 @@
                         <h3 class="color-blue">Syllabus</h3>
                     </div>
                 </div>
-                <div class="tab">
-                    <button class="tablinks" onclick="openCity(event, 'tab-1')" id="defaultOpen">Class 1</button>
-                    <button class="tablinks" onclick="openCity(event, 'tab-2')">Class 2</button>
-                    <button class="tablinks" onclick="openCity(event, 'tab-3')">Class 3</button>
-                    <button class="tablinks" onclick="openCity(event, 'tab-4')">Class 4</button>
-                    <button class="tablinks" onclick="openCity(event, 'tab-5')">Class 5</button>
-                    <button class="tablinks" onclick="openCity(event, 'tab-6')">Class 6</button>
-                    <button class="tablinks" onclick="openCity(event, 'tab-7')">Class 7</button>
-                    <button class="tablinks" onclick="openCity(event, 'tab-8')">Class 8</button>
-                    <button class="tablinks" onclick="openCity(event, 'tab-9')">Class 9</button>
+                <div class="tab tab-hide">
+                    <button class="tablinks" onclick="openCity(event, 'tab-1')" id="defaultOpen"><p>Class 1</p><span>I</span></button>
+                    <button class="tablinks" onclick="openCity(event, 'tab-2')"><p>Class 2</p><span>II</span></button>
+                    <button class="tablinks" onclick="openCity(event, 'tab-3')"><p>Class 3</p><span>III</span></button>
+                    <button class="tablinks" onclick="openCity(event, 'tab-4')"><p>Class 4</p><span>IV</span></button>
+                    <button class="tablinks" onclick="openCity(event, 'tab-5')"><p>Class 5</p><span>V</span></button>
+                    <button class="tablinks" onclick="openCity(event, 'tab-6')"><p>Class 6</p><span>VI</span></button>
+                    <button class="tablinks" onclick="openCity(event, 'tab-7')"><p>Class 7</p><span>VII</span></button>
+                    <button class="tablinks" onclick="openCity(event, 'tab-8')"><p>Class 8</p><span>VIII</span></button>
+                    <button class="tablinks" onclick="openCity(event, 'tab-9')"><p>Class 9</p><span>IX</span></button>
                 </div>
 
                 <div id="tab-1" class="tabcontent">
