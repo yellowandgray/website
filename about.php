@@ -54,7 +54,7 @@
                     <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">Expanding Global Business</h3>
                         <h4 class="color-blue">The Global business is expanding</h4>
-                        <p>The Parent company <b>Aloha India</b>, is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 5-14 years. Since their existence in the last 17 years, they have trained more than 5 million students with 5500 centres in 35 countries across globe. Essentially, in these programs, the infinite potential of the human brain and its effective use is unveiled through the Scientific Brain Management Techniques.</p>
+                        <p>The Parent company <b>Aloha India</b>, is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-18 years. Since their existence in the last 17 years, they have trained more than 800 thousand students with 1300 centres across in india. Essentially, in these programs, the infinite potential of the human brain and its effective use is unveiled through the Scientific Brain Management Techniques.</p>
                     </div>
                 </div>
               

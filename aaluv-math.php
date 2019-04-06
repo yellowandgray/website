@@ -148,9 +148,9 @@
                                     <div>
                                         <h3 class="color-blue">4 Guiding Principles</h3>
                                         <h4>1. Boosting basic academic skills</h4>
-                                        <p>To promote a daily learning habit with advancement in their learning skills. Frequent learning of various topics and daily homework to inculcate learning habit.</p>
+                                        <p>We help students to master the fundamentals of math to enhance the academic. </p>
                                         <h4>2. Calibrate student’s Level</h4>
-                                        <p>Students are assessed as per their individual learning progress, as each child’s ability is unique, which is evaluated distinctly. Furthermore, the character of the child is assessed and taught accordingly.</p>
+                                        <p>Students are assessed as per their individual learning ability, as each child’s is unique, which is evaluated distinctly. Furthermore, the character of the child is assessed and taught accordingly.</p>
                                         <p>Children can learn in their own style and proceed on understanding the concept completely.</p>
                                         <h4>3. Encourage to think on their own:</h4>
                                         <p>Aaluv Math make one think and learn by self, which offers suitable practice sheets and counseling to children.</p>
@@ -164,6 +164,8 @@
                                         <div class="p-margin-15 list-align">
                                              <i class="fas fa-check"></i><p> Classroom Days: 5 days in a week. (Concept & Academic)</p>
                                              <i class="fas fa-check"></i><p> Subject: Math</p>
+                                             <i class="fas fa-check"></i><p> Concept Math: 2 days</p>
+                                             <i class="fas fa-check"></i><p> Academic Math: 3 days</p>
                                              <i class="fas fa-check"></i><p> Target Groups: 4 to 18 Year's </p>
                                         </div>
                                     </div>
