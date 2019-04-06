@@ -62,9 +62,9 @@
                                 <p class="text-justify">AALUV goes beyond Math tutoring. Instead, children actively develop critical thinking skills while progressing independently through a carefully crafted Indigenous curriculum. The AALUV Math programs cover everything from counting to calculus, and phonemics to Shakespeare. The worksheets enable children to learn new concepts on their own. our programs allow students to progress one small step at a time through daily practice. AALUV helps children:</p>
                                 <ul class="nested-list margin-left-70">
                                     <i class="fas fa-circle"></i><li>&nbsp;&nbsp; Foster a “Joy of learning”</li>
-                                    <i class="fas fa-circle"></i><li>&nbsp;&nbsp;Progress at their own pace</li>
+                                    <i class="fas fa-circle"></i><li>&nbsp;&nbsp; Progress at their own pace</li>
                                     <i class="fas fa-circle"></i><li>&nbsp;&nbsp; Develop good study habits and self-learning ability</li>
-                                    <i class="fas fa-circle"></i><li>&nbsp;&nbsp;Eliminate the fear of Examination </li>
+                                    <i class="fas fa-circle"></i><li>&nbsp;&nbsp; Eliminate the fear of Examination </li>
                                 </ul>
 
                             </li>
