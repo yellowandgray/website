@@ -122,6 +122,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Vision End -->
         <section id="about-section" class="padding-100">
             <div class="container">
@@ -139,7 +140,7 @@
 <!--                                <div><span class="light"></span><span>Practice Sheets</span></div>
                                 <div><span class="light"></span><span>Transformation and Improvement</span></div>-->
                                 <div><span class="light"></span><span>Over View</span></div>
-<!--                                <div><span class="light"></span><span>Guardian's Voice</span></div>-->
+                                <div><span class="light"></span><span>FAQ</span></div>
                             </div>
                         </div>
                         <div class="gc col-md-8">
@@ -148,7 +149,7 @@
                                     <div>
                                         <h3 class="color-blue">4 Guiding Principles</h3>
                                         <h4>1. Boosting basic academic skills</h4>
-                                        <p>We help students to master the fundamentals of math to enhance the academic. </p>
+                                        <p>We help students to master the fundamentals of math to enhance their academic skills.</p>
                                         <h4>2. Calibrate student’s Level</h4>
                                         <p>Students are assessed as per their individual learning ability, as each child’s is unique, which is evaluated distinctly. Furthermore, the character of the child is assessed and taught accordingly.</p>
                                         <p>Children can learn in their own style and proceed on understanding the concept completely.</p>
@@ -162,11 +163,11 @@
                                     <div>
                                         <h3 class="color-blue">Interaction Essentials</h3>
                                         <div class="p-margin-15 list-align">
-                                             <i class="fas fa-check"></i><p> Classroom Days: 5 days in a week. (Concept & Academic)</p>
-                                             <i class="fas fa-check"></i><p> Subject: Math</p>
-                                             <i class="fas fa-check"></i><p> Concept Math: 2 days</p>
-                                             <i class="fas fa-check"></i><p> Academic Math: 3 days</p>
-                                             <i class="fas fa-check"></i><p> Target Groups: 4 to 18 Year's </p>
+                                            <i class="fas fa-check"></i><p> Subject: Math</p>
+                                            <i class="fas fa-check"></i><p> Classroom Days: 5 days in a week. (Concept & Academic)</p>
+                                            <i class="fas fa-check"></i><p> Concept Math: 2 days</p>
+                                            <i class="fas fa-check"></i><p> Academic Math: 3 days</p>
+                                            <i class="fas fa-check"></i><p> Target Groups: 4 to 18 Year's </p>
                                         </div>
                                     </div>
                                 </li>
@@ -236,109 +237,109 @@
                                         </div>
                                     </div>
                                 </li>
-<!--                                <li>
-                                    <div>
-                                        <h3 class="color-blue">Practice Sheets</h3>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <img src="images/worksheet-01.jpg">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <img src="images/worksheet-02.jpg">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 p-margin-15 list-align">
-                                            <i class="fas fa-check margin-top-20"></i><p> Children gain </p>
-                                            <i class="fas fa-check"></i><p> understanding of the </p>
-                                            <i class="fas fa-check"></i><p> process and meaning </p>
-                                        </div>
-                                        <div class="col-md-6 list-align">
-                                            <i class="fas fa-check margin-top-20"></i><p> behind the target </p>
-                                            <i class="fas fa-check"></i><p> calculation before they </p>
-                                            <i class="fas fa-check"></i><p> start the exercises.</p>
-                                        </div>
-                                    </div>
-                                </li>-->
-<!--                                <li>
-                                    <h3 class="color-blue">Transformation and Improvement</h3>
-                                    <div class="p-margin-15">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <table>
-                                                    <tr>
-                                                        <th>Rank</th>
-                                                        <th>Content</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p>1</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>Develop a regular study habit.</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p>2</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>Improve one’s calculation skills. </p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p>3</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>Learn to solve mathematical problems.</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p>4</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>Tackle all problems oneself.</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p>5</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>Write meticulously.</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p>6</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>Improve in mathematical skills. </p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p>7</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>Develop a fondness for studies.</p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p class="bold text-justify">In addition to improving arithmetic skills, our students are equipped with logical thinking skills. Logical thinking is fostered by the use of story-based problems.</p>
-                                                <p class="text-justify">1. Focusing on the calculation process, our students cultivate arithmetic skills through a genuine understanding of the concept.</p>
-                                                <p class="text-justify">2. Learn how to approach and solve problems by working on story-based problems.</p>
-                                                <p class="text-justify">3. Attain a thorough understanding of the mathematical concepts through our small-step method.</p>
-                                                <p class="text-justify">4. A well-balanced line-up in taught including the following four domains of math: ‘Numbers and calculation’, ‘Quantities and measurement’, ‘Geometrical figures’ and ‘Mathematical relation’ .</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>-->
+                                <!--                                <li>
+                                                                    <div>
+                                                                        <h3 class="color-blue">Practice Sheets</h3>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <img src="images/worksheet-01.jpg">
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <img src="images/worksheet-02.jpg">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6 p-margin-15 list-align">
+                                                                            <i class="fas fa-check margin-top-20"></i><p> Children gain </p>
+                                                                            <i class="fas fa-check"></i><p> understanding of the </p>
+                                                                            <i class="fas fa-check"></i><p> process and meaning </p>
+                                                                        </div>
+                                                                        <div class="col-md-6 list-align">
+                                                                            <i class="fas fa-check margin-top-20"></i><p> behind the target </p>
+                                                                            <i class="fas fa-check"></i><p> calculation before they </p>
+                                                                            <i class="fas fa-check"></i><p> start the exercises.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>-->
+                                <!--                                <li>
+                                                                    <h3 class="color-blue">Transformation and Improvement</h3>
+                                                                    <div class="p-margin-15">
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <th>Rank</th>
+                                                                                        <th>Content</th>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <p>1</p>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <p>Develop a regular study habit.</p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <p>2</p>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <p>Improve one’s calculation skills. </p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <p>3</p>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <p>Learn to solve mathematical problems.</p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <p>4</p>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <p>Tackle all problems oneself.</p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <p>5</p>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <p>Write meticulously.</p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <p>6</p>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <p>Improve in mathematical skills. </p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <p>7</p>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <p>Develop a fondness for studies.</p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <p class="bold text-justify">In addition to improving arithmetic skills, our students are equipped with logical thinking skills. Logical thinking is fostered by the use of story-based problems.</p>
+                                                                                <p class="text-justify">1. Focusing on the calculation process, our students cultivate arithmetic skills through a genuine understanding of the concept.</p>
+                                                                                <p class="text-justify">2. Learn how to approach and solve problems by working on story-based problems.</p>
+                                                                                <p class="text-justify">3. Attain a thorough understanding of the mathematical concepts through our small-step method.</p>
+                                                                                <p class="text-justify">4. A well-balanced line-up in taught including the following four domains of math: ‘Numbers and calculation’, ‘Quantities and measurement’, ‘Geometrical figures’ and ‘Mathematical relation’ .</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>-->
                                 <li>
                                     <div>
                                         <h3 class="color-blue">Self Learning Proficiency</h3>
@@ -356,6 +357,26 @@
                                         </div>
                                     </div>
                                 </li>
+                                <li>
+                                    <div>
+                                        <h3 class="color-blue">FAQ AALUV MATHS:</h3>
+<!--                                        <img src="img/tab-img/learning-methods.jpg">-->
+                                        <h4>1. How AALAUV MATH Works? </h4>
+                                        <p class="text-justify">AALUV goes beyond Math tutoring. Instead, children actively develop critical thinking skills while progressing independently through a carefully crafted Indigenous curriculum. The AALUV Math programs cover everything from counting to calculus, and phonemics to Shakespeare. The worksheets enable children to learn new concepts on their own. our programs allow students to progress one small step at a time through daily practice. AALUV helps children:</p>
+                                        <div class="margin-left-70 align-icon">
+                                            <i class="fas fa-circle"></i><p>&nbsp;&nbsp; Foster a “Joy of learning”</p>
+                                            <i class="fas fa-circle"></i><p>&nbsp;&nbsp; Progress at their own pace</p>
+                                            <i class="fas fa-circle"></i><p>&nbsp;&nbsp; Develop good study habits and self-learning ability</p>
+                                            <i class="fas fa-circle"></i><p>&nbsp;&nbsp; Eliminate the fear of Examination</p>
+                                        </div>
+                                        <h4>2. What is the Right age for AALUV? </h4>
+                                        <p class="text-justify">AALUV Math Program starts from the age of 4yrs to 18 yrs or in between. AALUV can help your child advance in school – regardless of age and learning abilities.</p>
+                                        <a href="faq.php" class="site-btn">Read More</a>
+                                    </div>
+                                </li>
+
+
+
                                 <!--                                <li>
                                                                     <div>
                                                                         <h3>Guardian's Voice</h3>

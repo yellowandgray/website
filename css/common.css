@@ -896,3 +896,13 @@ ul.nacc li p {
     box-shadow: -1px 1px 8px 7px #dbdbdb;
     transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+
+.align-icon p{
+    position: relative !important;
+    padding: -13px 0px 0px 0px !important;
+    margin: -27px 0px 13px 9px !important;
+}
+
+.align-icon i {
+       font-size: 11px !important;
+}

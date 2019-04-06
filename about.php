@@ -30,7 +30,7 @@
                             <h1 class="page-title">About Us</h1>
                             <ul>
                                 <li>
-                                    <a class="active" href="index-2.html">Home</a>
+                                    <a class="active" href="index.php">Home</a>
                                 </li>
                                 <li>About Us</li>
                             </ul>
