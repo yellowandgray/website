@@ -52,7 +52,7 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Host = "mail.aaluvglobal.com";      // sets GMAIL as the SMTP server
+    $mail->Host = "sg3plcpnl0022.prod.sin3.secureserver.net";      // sets GMAIL as the SMTP server
 
 
 
@@ -60,11 +60,11 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Username = "dev@aaluvglobal.com";  // GMAIL username
+    $mail->Username = "noreply@aaluvglobal.com";  // GMAIL username
 
 
 
-    $mail->Password = "Admin@aaluvglobal";            // GMAIL password
+    $mail->Password = "Admin@aaluv";            // GMAIL password
 
     $mail->IsHTML(true);
 
@@ -157,7 +157,7 @@ if ($_POST['fname']) {
 
     // More headers
 
-    $address = "info@aaluvglobal.com";
+    $address = "umasekar098@gmail.com";
 
 
     $mail->AddAddress($address, "AALUVGLOBAL");
