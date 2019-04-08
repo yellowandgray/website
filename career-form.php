@@ -63,7 +63,7 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Host = "mail.aaluvglobal.com";      // sets GMAIL as the SMTP server
+   $mail->Host = "sg3plcpnl0022.prod.sin3.secureserver.net";      // sets GMAIL as the SMTP server
 
 
 
@@ -71,17 +71,17 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Username = "dev@aaluvglobal.com";  // GMAIL username
+    $mail->Username = "noreply@aaluvglobal.com";  // GMAIL username
 
 
 
-    $mail->Password = "Admin@aaluvglobal";            // GMAIL password
+    $mail->Password = "Admin@aaluv";            // GMAIL password
 
     $mail->IsHTML(true);
 
     $mail->SetFrom('noreply@aaluvglobal.com', 'AALUVGLOBAL');
 
-    $mail->Subject = "Career Form Submited" . date('d-m-y H:i:s');
+    $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
 
     $message = '<table border = "0" cellpadding = "0" cellspacing = "0" height = "100%" width = "100%">
             <tbody>
@@ -103,7 +103,7 @@ if ($_POST['fname']) {
             <tbody>
             <tr>
             <td style = "padding:36px 48px;display:block">
-            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://www.aaluvglobal.com/images/aalvu-global-logo.png" alt = "AALUVGLOBAL" style = "width:25%" /></h1>
+            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://www.aaluvglobal.com/images/logo-png.jpg" alt = "AALUVGLOBAL" style = "width:25%" /></h1>
             </td>
             </tr>
             </tbody>

@@ -92,7 +92,7 @@ if ($_POST['fname']) {
             <tbody>
             <tr>
             <td style = "padding:36px 48px;display:block">
-            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://www.aaluvglobal.com/images/aalvu-global-logo.png" alt = "AALUVGLOBAL" style = "width:25%" /></h1>
+            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://www.aaluvglobal.com/images/logo-png.jpg" alt = "AALUVGLOBAL" style = "width:25%" /></h1>
             </td>
             </tr>
             </tbody>
@@ -157,7 +157,7 @@ if ($_POST['fname']) {
 
     // More headers
 
-    $address = "umasekar098@gmail.com";
+    $address = "info@aaluvglobal.com";
 
 
     $mail->AddAddress($address, "AALUVGLOBAL");
