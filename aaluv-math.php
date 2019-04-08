@@ -164,9 +164,7 @@
                                         <h3 class="color-blue">Interaction Essentials</h3>
                                         <div class="p-margin-15 list-align">
                                             <i class="fas fa-check"></i><p> Subject: Math</p>
-                                            <i class="fas fa-check"></i><p> Classroom Days: 5 days in a week. (Concept & Academic)</p>
-                                            <i class="fas fa-check"></i><p> Concept Math: 2 days</p>
-                                            <i class="fas fa-check"></i><p> Academic Math: 3 days</p>
+                                            <i class="fas fa-check"></i><p> Classroom Days: 2 days in a week. (Concept & Academic)</p>
                                             <i class="fas fa-check"></i><p> Target Groups: 4 to 18 Year's </p>
                                         </div>
                                     </div>

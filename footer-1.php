@@ -46,7 +46,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-12">
                     <div class="about-widget">
-                        <img src="images/logo-001.jpg" alt="Footer Logo">
+                        <img src="images/logo-001.png" alt="Footer Logo">
                         
 <!--                        <p class="margin-remove">We create Unique and Easy To Use Flexible Html Themes.</p>-->
                     </div>
@@ -56,7 +56,7 @@
                     <div class="recent-post-widget">
                         <div class="post-item">
                             <div class="post-date">
-                                <img src="images/course/math-001.jpg" alt=""/>
+                                <img src="images/course/math-001.png" alt=""/>
                             </div>
                             <div class="post-desc">
                                 <h5 class="post-title"><a href="aaluv-math.php">AALUV Math</a></h5>
@@ -65,7 +65,7 @@
                         </div>
                         <div class="post-item">
                             <div class="post-date">
-                                <img src="images/course/robotics-001.jpg" alt=""/>
+                                <img src="images/course/robotics-001.png" alt=""/>
                             </div>
                             <div class="post-desc">
                                 <h5 class="post-title"><a href="aaluv-robotics.php">AALUV Robotic's</a></h5>
