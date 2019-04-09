@@ -40,7 +40,7 @@ hr {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #fff;
 }
-p{font-size: 15px;}
+p{font-size: 20px;}
 .gradiant {
   background-image: -moz-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%);
   background-image: -webkit-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%);
@@ -194,8 +194,8 @@ border-radius: 0;
     /* border-top: 6px solid #f3b600; */
     box-sizing: border-box;
     /* padding: 34px 15px; */
-    border-bottom: 4px solid #f92222;
-    border-top: 4px solid #f92222;
+    border-bottom: 4px solid #ec008c;
+    border-top: 4px solid #ec008c;
   }
   #main-nav.navbar-default .dropdown-menu {
     padding: 0 20px;

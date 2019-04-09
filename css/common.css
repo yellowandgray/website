@@ -1,0 +1,41 @@
+.read {
+    padding: 10px 20px;
+    border: 1px solid black;
+    width: 180px;
+}
+.read:hover {
+    background: #ff90d2;
+    transform: scale(1.05);
+    transition: all cubic-bezier(0.4, 0, 1, 1);
+    border: none;
+    box-shadow: 1px 1px 6px 4px #b6b6b6;
+}
+.group {
+    height: 500px;
+}
+.group .group-all{
+    background: rgba(76, 75, 75, 0.59);
+    padding: 7px 10px;
+    position: relative;
+    top: 314px;
+    color: #fff;
+}
+
+.group-all p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+.btn {
+    background: #ffffff2e;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 4px 25px;
+    color: #fff;
+}
+
+.btn:hover {
+    background: #ffffff;
+    color: #000;
+    border: 1px solid #000;
+}
