@@ -663,10 +663,10 @@
                                 <h3>Contact Info</h3>
 
                                 <address class="address">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i><p>No.1, Jalan Puteri Puchong 12/5, Grand View,<br>Bandar Puteri Puchong 12, Puchong,<br>Selangor, Malaysia.</p>
-                                    <i class="fa fa-phone" aria-hidden="true"></i> <p><a href="tel:+60380613258">+6 03 8061 3258</a></p>
-                                    <i class="fa fa-mobile" aria-hidden="true"></i> <p><a href="tel:+60123206544">+6012 3206 544</a><br><a href="tel:+60123293258">+6012 3293 258</a></p>
-                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;<p><a>info@vivacity.com</a></p>
+                                    <img src="images/ico/add-04.png"> <p>No.1, Jalan Puteri Puchong 12/5, Grand View,<br>Bandar Puteri Puchong 12, Puchong,<br>Selangor, Malaysia.</p>
+                                    <img src="images/ico/add-03.png"> <p><a href="tel:+60380613258">+6 03 8061 3258</a></p>
+                                    <img src="images/ico/add-03.png"> <p><a href="tel:+60123206544">+6012 3206 544</a><br><a href="tel:+60123293258">+6012 3293 258</a></p>
+                                    <img src="images/ico/add-05.png"> <p><a>info@vivacity.com</a></p>
                                 </address>
                             </div></div>
                         <div class="col-sm-8 col-md-8">
