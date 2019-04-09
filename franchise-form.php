@@ -67,7 +67,7 @@ if ($_POST['country']) {
 
 
 
-    $mail->Username = "noreply@aaluvglobal.com";  // GMAIL username
+   $mail->Username = "noreply@aaluvglobal.com";  // GMAIL username
 
 
 
