@@ -39,3 +39,23 @@
     color: #000;
     border: 1px solid #000;
 }
+.media-body h4 {
+    margin-top: 10px;
+    color: #eb008b;
+    text-align: center;
+}
+.address p {
+    position: relative;
+    top: -29px;
+    left: 27px;
+}
+.address i{
+    font-size: 20px;
+}
+.address p a{
+    color: #000000;
+}
+.address p a:hover {
+   color: #ec008c;
+}
+

@@ -125,95 +125,136 @@
                     <h2 class="section-title text-center wow fadeInDown">Our Services</h2>
                     <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
                 </div>
-
                 <div class="row">
                     <div class="features">
-                        <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
                             <div class="media service-box">
-                                <div class="hexagon">
-                                    <div class="inner">              
-                                        <i class="fa fa-heart-o"></i>
-                                    </div>
-                                </div> 
+                                <img src="images/service/001.png" alt="">
                                 <div class="media-body">
-                                    <h4 class="media-heading">Car Wash</h4>
-                                    <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                                    <h4 class="media-heading">Viva Kick Starters</h4>
+                                    <p>Identifying Viable Ideas & Start Ups, Coaching & Mentoring, Investing In Start Ups & Ideas, Knowledge Transfer Exercises</p>
                                 </div>
                             </div>
                         </div><!--/.col-md-4-->
 
-                        <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
                             <div class="media service-box">
-                                <div class="hexagon">
-                                    <div class="inner">              
-                                        <i class="fa fa-line-chart"></i>
-                                    </div>
-                                </div>  
+                                <img src="images/service/002.png" alt=""> 
                                 <div class="media-body">
-                                    <h4 class="media-heading">Car Servicing</h4>
-                                    <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                                    <h4 class="media-heading">Viva Education</h4>
+                                    <p>Safety And Other Programs Targeted At The Oil & Gas Sector, Topshot, Iwc Training, 2 Weeks Course For Homeless, Customized</p>
                                 </div>
                             </div>
                         </div><!--/.col-md-4-->
 
-                        <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
                             <div class="media service-box"> 
-                                <div class="hexagon">
-                                    <div class="inner">  
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                </div>  
+                                <img src="images/service/003.png" alt="">
                                 <div class="media-body">
-                                    <h4 class="media-heading">Car Checkup</h4>
-                                    <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                                    <h4 class="media-heading">Viva Ventures</h4>
+                                    <p>Forging International Collaborations, Embarking On International Social Projects, Partnership With Government Backed Projects & Initiatives</p>
                                 </div>
                             </div>
                         </div><!--/.col-md-4-->
 
-                        <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
                             <div class="media service-box">
-
-                                <div class="hexagon">
-                                    <div class="inner">  
-                                        <i class="fa fa-clock-o"></i>
-                                    </div>
-                                </div>  
+                                <img src="images/service/004.png" alt="">
                                 <div class="media-body">
-                                    <h4 class="media-heading">Alignment</h4>
-                                    <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
-                                </div>
-                            </div>
-                        </div><!--/.col-md-4-->
-
-                        <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
-                            <div class="media service-box">
-                                <div class="hexagon">
-                                    <div class="inner">  
-                                        <i class="fa fa-paper-plane-o"></i>
-                                    </div>
-                                </div>   
-                                <div class="media-body">
-                                    <h4 class="media-heading">Painting</h4>
-                                    <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
-                                </div>
-                            </div>
-                        </div><!--/.col-md-4-->
-
-                        <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
-                            <div class="media service-box">
-                                <div class="hexagon">
-                                    <div class="inner">  
-                                        <i class="fa fa-calendar"></i>
-                                    </div>
-                                </div>    
-                                <div class="media-body">
-                                    <h4 class="media-heading">Modifiying</h4>
-                                    <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                                    <h4 class="media-heading">Viva Tech</h4>
+                                    <p>Oil & Gas, Safety Management Software Solutions, Mobile Applications, Research & Development of Innovative Solutions, Research & Development</p>
                                 </div>
                             </div>
                         </div><!--/.col-md-4-->
                     </div>
                 </div><!--/.row-->    
+                <div class="row">
+                    <div class="features">
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                            <div class="media service-box">
+                                <img src="images/service/005.png" alt="">
+                                <div class="media-body">
+                                    <h4 class="media-heading">Viva Recruit</h4>
+                                    <p>Identifying, Selecting And Aggregating Candidates For Job Placements, Job Placement Eco-system For Both Regular And Special Crowd</p>
+                                </div>
+                            </div>
+                        </div><!--/.col-md-4-->
+
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                            <div class="media service-box">
+                                <img src="images/service/006.png" alt="">
+                                <div class="media-body">
+                                    <h4 class="media-heading">Viva Youth</h4>
+                                    <p>EMPOWERING YOUTH with right tools and cultivating mindsets to enable Youth to ‘Think BIG’</p>
+                                </div>
+                            </div>
+                        </div><!--/.col-md-4-->
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
+                            <div class="media service-box">
+                                <img src="images/service/009.png" alt="">
+                                <div class="media-body">
+                                    <h4 class="media-heading">Viva Realty</h4>
+                                    <p>Creating Accomodation for homeless, investing in real estate (Residential, Agricultural etc), Abandoned Properties, Rescuing Distressed Properties</p>
+                                </div>
+                            </div>
+                        </div><!--/.col-md-4-->
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                            <div class="media service-box">
+                                <img src="images/service/011.png" alt="">
+                                <div class="media-body">
+                                    <h4 class="media-heading">Viva Agro</h4>
+                                    <p>HYDROPHONICS Projects to create an Eco-system that is self sustaining that will help create jobs, income etc</p>
+                                </div>
+                            </div>
+                        </div><!--/.col-md-4-->
+                    </div>
+                </div><!--/.row--> 
+                <div class="row">
+                    <div class="features">
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+                            <div class="media service-box"> 
+                                <img src="images/service/007.png" alt="">
+                                <div class="media-body">
+                                    <h4 class="media-heading">Viva Social</h4>
+                                    <p>Advocate Social Entrepreneurship, Encouraging people to create a Career in Social Enterprises,  Establishing Learning Centres for the Underprivileged Providing Jobs for Rehab Centre Individuals</p>
+                                </div>
+                            </div>
+                        </div><!--/.col-md-4-->
+
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
+                            <div class="media service-box">
+                                <img src="images/service/008.png" alt="">
+                                <div class="media-body">
+                                    <h4 class="media-heading">Viva Networking</h4>
+                                    <p>Fostering Relationships with Non-Governmental Organizations, Corporate Organizations, Assisting these organizations to focus and dedicate their Resources to projects which require funding assistance</p>
+
+                                </div>
+                            </div>
+                        </div><!--/.col-md-4-->
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                            <div class="media service-box">
+                                <img src="images/service/010.png" alt="">
+                                <div class="media-body">
+                                    <h4 class="media-heading">Viva Green</h4>
+                                    <p>Working on Solar Technology to empower Indigenous People, Building a Solar Academy, Using SOLAR to equip people with the right training, knowledge on how best to apply SOLAR in Their Community to improve standard of living</p>
+                                </div>
+                            </div>
+                        </div><!--/.col-md-4-->
+
+
+
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+                            <div class="media service-box"> 
+                                <img src="images/service/012.png" alt="">
+                                <div class="media-body">
+                                    <h4 class="media-heading">Viva Health</h4>
+                                    <p>Introducing a ‘TRANSIT’ point and hub for recovery and rehabilitation (mental counseling support) for all welfare organizations, Bringing in doctors, wellness professionals in a ONE STOP CENTRE</p>
+                                </div>
+                            </div>
+                        </div><!--/.col-md-4-->
+
+                    </div>
+                </div><!--/.row-->  
             </div><!--/.container-->
         </section><!--/#services-->
 
@@ -621,11 +662,11 @@
                             <div class="contact-form">
                                 <h3>Contact Info</h3>
 
-                                <address>
-                                    <strong>Amazing Company, Inc.</strong><br>
-                                    12345 NewYork, Street 125<br>
-                                    United States 94107<br>
-                                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                                <address class="address">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i><p>No.1, Jalan Puteri Puchong 12/5, Grand View,<br>Bandar Puteri Puchong 12, Puchong,<br>Selangor, Malaysia.</p>
+                                    <i class="fa fa-phone" aria-hidden="true"></i> <p><a href="tel:+60380613258">+6 03 8061 3258</a></p>
+                                    <i class="fa fa-mobile" aria-hidden="true"></i> <p><a href="tel:+60123206544">+6012 3206 544</a><br><a href="tel:+60123293258">+6012 3293 258</a></p>
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;<p><a>info@vivacity.com</a></p>
                                 </address>
                             </div></div>
                         <div class="col-sm-8 col-md-8">
