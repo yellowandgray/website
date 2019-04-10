@@ -99,7 +99,7 @@
                             <div style="background:url('images/group/odyssey.jpg') no-repeat">
                                 <div class="group">
                                     <div class="group-all">
-                                        <p>Viva Starfish Sdn. Bhd. is a social enterprise which sells bottled drinking water and office and home delivery. The profits are used to educate Underprivileged Children.</p>
+                                        <p>Viva Starfish Sdn. Bhd. is a social enterprise which sells bottled drinking water and office and home delivery. The profits are used to educate Underprivileged Children.</p><br>
                                         <center><a href="#" class="btn text-center" target="_blank">Read more</a></center>
                                     </div>
                                 </div>
@@ -732,7 +732,8 @@
         <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script>$(document).ready(function () {
+        <script>
+            $(document).ready(function () {
                 $('.customer-logos').slick({
                     slidesToShow: 6,
                     slidesToScroll: 1,
@@ -753,7 +754,8 @@
                             }
                         }]
                 });
-            });</script>
+            });
+        </script>
 
         <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <script src="js/owl.carousel.min.js"></script>
