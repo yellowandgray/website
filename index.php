@@ -16,6 +16,7 @@
         <link href="css/magnific-popup.css" rel="stylesheet">  
         <link href="css/gallery-1.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet"> 
+        <link href="css/slider.css" rel="stylesheet" type="text/css"/>
         <link href="css/common.css" rel="stylesheet" type="text/css"/>
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
@@ -655,7 +656,6 @@
             </section>
         </div>
 
-
         <section id="contact-us">
             <div class="container">
                 <div class="section-header">
@@ -671,18 +671,18 @@
             <div class="container">
                 <div class="container contact-info">
                     <div class="row">
-                        <div class="col-sm-4 col-md-4">
+                        <div class="col-sm-4 col-md-4 box-1">
                             <div class="contact-form">
                                 <h3>Contact Info</h3>
 
                                 <address class="address">
-                                    <img src="images/ico/add-04.png"> <p>No.1, Jalan Puteri Puchong 12/5, Grand View,<br>Bandar Puteri Puchong 12, Puchong,<br>Selangor, Malaysia.</p>
+                                    <img src="images/ico/add-04.png"> <p>No.1, Jalan Puteri Puchong 12/5, Grand View, <br>Bandar Puteri Puchong 12, Puchong,<br>Selangor, Malaysia.</p>
                                     <img src="images/ico/add-03.png"> <p><a href="tel:+60380613258">+6 03 8061 3258</a></p>
                                     <img src="images/ico/add-03.png"> <p><a href="tel:+60123206544">+6012 3206 544</a><br><a href="tel:+60123293258">+6012 3293 258</a></p>
                                     <img src="images/ico/add-05.png"> <p><a>info@vivacity.com</a></p>
                                 </address>
                             </div></div>
-                        <div class="col-sm-8 col-md-8">
+                        <div class="col-sm-8 col-md-8 margin-t-25">
                             <div class="contact-form">
 
                                 <!--NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form-->
@@ -727,8 +727,10 @@
         <!--footer-->
         <?php include 'footer.php'; ?>
         <!--footer-->
-        <script>
-            $(document).ready(function () {
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script>$(document).ready(function () {
                 $('.customer-logos').slick({
                     slidesToShow: 6,
                     slidesToScroll: 1,
@@ -749,10 +751,8 @@
                             }
                         }]
                 });
-            });
-        </script>
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+            });</script>
+
         <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/mousescroll.js"></script>
@@ -762,7 +762,6 @@
         <script src="js/wow.min.js"></script>
         <script src="contact/jqBootstrapValidation.js"></script>
         <script src="contact/contact_me.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
         <script type="text/javascript" src="js/jquery.isotope.min.js"></script><!-- Gallery Filter -->
         <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script><!-- Gallery Popup -->
 
