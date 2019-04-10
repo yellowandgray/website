@@ -96,7 +96,8 @@
 .gallery-item:hover .gallery-thumb .gallery-zoom {
     display: block;
     left: 50%;
-    margin-left: -48px;
+    margin-left: -25px;
+/*    margin-left: -48px;*/
 }
 
 .gallery-item:hover .gallery-thumb .gallery-link {

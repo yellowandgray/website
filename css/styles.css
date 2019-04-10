@@ -79,11 +79,12 @@ p{font-size: 16px;}
 .btn.btn-primary {
     background: #f92222;
     color: #FFFFFF;
-    padding: 10px 20px;
+    padding: 10px 40px;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary:focus {
-    background: #de4811;
+    background: #fff;
+    color: #000;
 }
 .column-title {
     margin-top: 0;
@@ -355,6 +356,21 @@ ul.nostyle i {
     padding: 100px 0 75px;
     border-top: 4px solid #f92222;
 }
+#group {
+    padding: 100px 0 75px;
+    border-top: 4px solid #f92222;
+    background: #fff;
+}
+#awards {
+    padding: 100px 0 75px;
+    border-top: 4px solid #f92222;
+    background: #fff;
+}
+#clients {
+    padding: 100px 0 75px;
+    border-top: 4px solid #f92222;
+    background: #fff;
+}
 /*==================  Hexagon  ======================*/
 .hexagon {
     display: inline-block;
@@ -409,7 +425,7 @@ ul.nostyle i {
     text-align: justify;
     background: #fff;
     padding: 15px;
-    height: 450px;
+    height: 470px;
 }
 .media.service-box .pull-left {
     margin-right: 20px;
@@ -435,7 +451,7 @@ ul.nostyle i {
 }
 #portfolio {
     padding: 100px 0;
-    background: #000000;
+    background: #d6d6d6;
 }
 #portfolio .portfolio-filter {
     list-style: none;
@@ -573,8 +589,8 @@ img.img-responsive {
     max-width: 100%;
     height: auto;
     line-height: 1.42857143;
-    border: 1px solid #ddd;
-    border-radius: 0px;
+    /*    border: 1px solid #ddd;*/
+    border-radius: 50px;
     padding:0px;
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
@@ -632,6 +648,7 @@ img.img-responsive {
 /*Team*/ 
 #our-team {
     padding: 100px 0;
+    background: #fff;
 }
 #our-team .team-member {
     padding: 10px;

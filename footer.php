@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                &copy; 2019 Company Name. <a href="https://webthemez.com/free-bootstrap-templates/" target="_blank">Free Bootstrap Theme</a> by WebThemez
+                &copy; 2019 Vivacityglobal. Designed By <a href="#" target="_blank">YG Studio</a>
             </div>
             <div class="col-sm-6">
                 <ul class="social-icons">
@@ -11,7 +11,7 @@
                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
                     <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+<!--                    <li><a href="#"><i class="fa fa-github"></i></a></li>-->
                 </ul>
             </div>
         </div>
