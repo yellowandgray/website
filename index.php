@@ -97,7 +97,7 @@
                             <div style="background:url('images/group/odyssey.jpg') no-repeat">
                                 <div class="group">
                                     <div class="group-all">
-                                        <p>Viva Odyssey designed and developed a web-based solution that was initially targeted to improve the Health, Safety and Environment(HSE) activities notably, for the high-risk activities in the Oil & Gas Industry.   </p>
+                                        <p>Viva Starfish Sdn. Bhd. is a social enterprise which sells bottled drinking water and office and home delivery. The profits are used to educate Underprivileged Children.</p>
                                         <center><a href="#" class="btn text-center" target="_blank">Read more</a></center>
                                     </div>
                                 </div>
@@ -258,7 +258,7 @@
             </div><!--/.container-->
         </section><!--/#services-->
 
-        <section id="about">
+<!--        <section id="about">
             <div class="container">
 
                 <div class="section-header">
@@ -285,7 +285,7 @@
                     </div>
                 </div>
             </div>
-        </section><!--/#about-->
+        </section>/#about-->
         <section id="portfolio">
             <!-- Start Gallery 1-2 -->
             <section id="gallery-1" data-section="gallery-1" class="data-section"  class="content-block section-wrapper gallery-1">
@@ -493,7 +493,7 @@
             </div>
         </section><!--/#our-team-->
 
-        <section id="pricing">
+<!--        <section id="pricing">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title text-center wow fadeInDown">Best Plans</h2>
@@ -603,7 +603,7 @@
                     </div>
                 </div>
             </div>
-        </section><!--/#pricing-->
+        </section>/#pricing-->
 
         <section id="testimonial">
             <div class="container">
@@ -641,6 +641,19 @@
                 </div>
             </div>
         </section><!--/#testimonial-->
+        <div class="container">
+            <h2>Our  Partners</h2>
+            <section class="customer-logos slider">
+                <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
+            </section>
+        </div>
 
 
         <section id="contact-us">
@@ -714,7 +727,30 @@
         <!--footer-->
         <?php include 'footer.php'; ?>
         <!--footer-->
-
+        <script>
+            $(document).ready(function () {
+                $('.customer-logos').slick({
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: false,
+                    responsive: [{
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 4
+                            }
+                        }, {
+                            breakpoint: 520,
+                            settings: {
+                                slidesToShow: 3
+                            }
+                        }]
+                });
+            });
+        </script>
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
@@ -726,7 +762,7 @@
         <script src="js/wow.min.js"></script>
         <script src="contact/jqBootstrapValidation.js"></script>
         <script src="contact/contact_me.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
         <script type="text/javascript" src="js/jquery.isotope.min.js"></script><!-- Gallery Filter -->
         <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script><!-- Gallery Popup -->
 
