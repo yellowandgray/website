@@ -736,7 +736,7 @@
                     </div>
                 </div>
             </div>
-            <div id="google-map" style="height:400px" data-latitude="40.7141667" data-longitude="-74.00638891"></div>   
+            <div id="google-map" style="height:400px" data-latitude="3.9142462" data-longitude="103.582023"></div>   
         </section><!--/#bottom-->
 
         <!--footer-->
