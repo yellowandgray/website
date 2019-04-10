@@ -186,7 +186,7 @@
                             <p class="text-justify">For more information, please fill in the franchisee request form or request a representative to walk you through the process. You will find it easier to reach your dream than you think!</p>
                         </div>
                         <div id="team" class="tabcon">
-                            <h4 class="color-blue green-bg">Franchise FACTS</h4>
+                            <h4 class="color-blue green-bg">Franchise facts</h4>
                             <h4>Franchise Opportunity</h4>
                             <h4>Do you have a burning desire to be your own boss?</h4>
                             <p class="text-justify">Well, if you have this burning desire, then we have the skills, expertise, proven business model, well defined system and real time experience to help you create a successful business venture, starting from scratch.</p>
@@ -245,7 +245,7 @@
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'location')"><a href="#location" class="not-active">What makes a good location?</a></li>
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'customer')"><a href="#customer" class="not-active">Who are my customers?</a></li>
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'how')"><a href="#how" class="not-active">How do I finance my franchise?</a></li>
-                                    <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'team')"><a href="#team" class="not-active">Franchise FACTS</a></li>
+                                    <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'team')"><a href="#team" class="not-active">Franchise facts</a></li>
                                     <i class="fas fa-circle"></i><li class="tablinks" onclick="openCity(event, 'step')"><a href="#step" class="not-active">Next Steps</a></li>
 
                                 </ul>
