@@ -6,6 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="webthemez">
         <title>Vivacityglobal</title>
+        <link rel="shortcut icon" href="images/ico/fav-01.png"> 
         <!-- core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -17,11 +18,11 @@
         <link href="css/gallery-1.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet"> 
         <link href="css/common.css" rel="stylesheet" type="text/css"/>
+        <link href="css/infinite-slider.css" rel="stylesheet" type="text/css"/>
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
-        <![endif]-->       
-        <link rel="shortcut icon" href="images/ico/fav-01.png"> 
+        <![endif]-->  
     </head> 
 
     <body id="home">
@@ -641,19 +642,20 @@
                 </div>
             </div>
         </section><!--/#testimonial-->
-        <div class="container">
-            <h2>Our  Partners</h2>
-            <section class="customer-logos slider">
-                <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
-                <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
-                <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
-                <div class="slide"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
-                <div class="slide"><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
-                <div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
-                <div class="slide"><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
-                <div class="slide"><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
-            </section>
-        </div>
+        <section id="services" >
+            <div class="container">
+                <section class="customer-logos slider">
+                    <div class="slide"><img src="images/image1.png"></div>
+                    <div class="slide"><img src="images/image2.png"></div>
+                    <div class="slide"><img src="images/image3.png"></div>
+                    <div class="slide"><img src="images/image4.png"></div>
+                    <div class="slide"><img src="images/image5.png"></div>
+                    <div class="slide"><img src="images/image6.png"></div>
+                    <div class="slide"><img src="images/image7.png"></div>
+                    <div class="slide"><img src="images/image8.png"></div>
+                </section>
+            </div>
+        </section>
 
 
         <section id="contact-us">
@@ -733,7 +735,7 @@
                     slidesToShow: 6,
                     slidesToScroll: 1,
                     autoplay: true,
-                    autoplaySpeed: 1500,
+                    autoplaySpeed: 1000,
                     arrows: false,
                     dots: false,
                     pauseOnHover: false,
@@ -762,7 +764,7 @@
         <script src="js/wow.min.js"></script>
         <script src="contact/jqBootstrapValidation.js"></script>
         <script src="contact/contact_me.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+        <script src="js/slick-slider.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/jquery.isotope.min.js"></script><!-- Gallery Filter -->
         <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script><!-- Gallery Popup -->
 
