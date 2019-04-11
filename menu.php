@@ -41,13 +41,13 @@
                                             </div>
                                             <div class="collapse navbar-collapse" id="navbar">
                                                 <ul class="navbar-nav ml-auto">
-                                                    <li><a class="active" href="index.php">Home</a></li>
-                                                    <li><a href="about-us.php">About us</a></li>
-                                                    <li><a href="Our-Passion.php">Our Passion</a></li>
-                                                    <li><a href="Our-Movement.php">Our Movement</a></li>
-                                                    <li><a href="pricing.php">In the Press</a></li>
-                                                    <li><a href="pricing.php">Knowledge Bank</a></li>
-                                                    <li><a href="contact.php">Get in touch</a></li>
+                                                    <li><a class="<?php if ($page == 'home') {echo 'active';} ?>" href="index.php">Home</a></li>
+                                                    <li><a class="<?php if ($page == 'about') {echo 'active';} ?>" href="about-us.php">About us</a></li>
+                                                    <li><a class="<?php if ($page == 'passion') {echo 'active';} ?>" href="Our-Passion.php">Our Passion</a></li>
+                                                    <li><a class="<?php if ($page == 'movment') {echo 'active';} ?>" href="Our-Movement.php">Our Movement</a></li>
+                                                    <li><a class="<?php if ($page == 'press') {echo 'active';} ?>" href="pricing.php">In the Press</a></li>
+                                                    <li><a class="<?php if ($page == 'bank') {echo 'active';} ?>" href="pricing.php">Knowledge Bank</a></li>
+                                                    <li><a class="<?php if ($page == 'touch') {echo 'active';} ?>" href="contact.php">Get in touch</a></li>
                                                 </ul>
                                             </div>
                                         </div>
