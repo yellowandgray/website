@@ -49,7 +49,7 @@
                             <h4>EDNA SUNG BURONGOH CO-FOUNDER, INTEGRITY AND OPERATIONS DIRECTOR </h4>
                             <p class="text-justify">A mother of 4 beautiful children, wife to a visionary man, managing the family business, heading the operations of Viva Starfish Project (VSP), currently pursuing Masters in Counseling and in the process of becoming a Journey practitioner, she is quite a woman. Basically she oversees the daily operational needs of VSP as well as ensuring the integrity of each department in handling the contribution and commitment is uphold to a high standard.</p>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 box-4">
                             <img src="images/gallery/our-passion-001.jpg" atl="" class=" width-100"/>
                         </div>
 
@@ -72,7 +72,7 @@
                         </div>
 
                     </div>
-                    <div class="row box-2">
+                    <div class="row box-2 box-3">
                         <div class="col-md-3">
                             <img src="images/gallery/our-passion-003.jpg" atl="" class="width-100"/>
                         </div>
@@ -151,17 +151,17 @@
                     <div class="row">
                         <div class="col-md-6">
                             <h4>Community Centre and Literacy Program</h4>
-                            <ul>
-                                <li>Impact Measurements </li>
-                                <li>Increase Literacy Rate </li>
-                                <li>Community Engagement </li>
-                                <li>Women Empowerment</li>
-                                <li>Create Livelihood Activities</li>
-                                <li>Increase Household Income </li>
-                                <li>Motivation and Mental Health Support</li>
+                            <ul class="list-align">
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Impact Measurements </li>
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Increase Literacy Rate </li>
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Community Engagement </li>
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Women Empowerment</li>
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Create Livelihood Activities</li>
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Increase Household Income </li>
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Motivation and Mental Health Support</li>
                             </ul>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 box-4">
                             <img src="images/gallery/our-passion-002.jpg" atl="" class=" width-100"/> 
                         </div>
 
@@ -243,7 +243,7 @@
                     <div class="row padding-20">
                         <div class="col-md-6"></div>
                         <p class="text-center">"This project aims to create sustainable impact by educating real life skills and vocational training to the Orang Asli community with the goal to make them employable and entrepeneurial material"</p>
-                        <a href="about-us.php" class="btn11"><span>Learn More</span><div class="transition"></div></a>
+                        <a href="orang-asli.php" class="btn11"><span>Learn More</span><div class="transition"></div></a>
                     </div>
                 </div><!-- end title -->
             </div><!-- end container -->
