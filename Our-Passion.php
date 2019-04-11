@@ -23,7 +23,7 @@
         <?php include 'menu.php'; ?>
         <!-- menu-->
 
-        <div class="banner-area banner-bg-1">
+        <div class="banner-area banner-bg-1" style="background: url(images/sub-banner/passion-sub-banner.jpg)">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">

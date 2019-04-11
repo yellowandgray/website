@@ -3152,7 +3152,7 @@ select.mobile-device {
     top: 0;
     width: 100%;
     z-index: -1;
-    background: rgba(205, 213, 31, 0.8);
+    background: rgba(0, 0, 0, 0.09);
 }
 
 .banner{
