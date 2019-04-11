@@ -80,7 +80,7 @@
                 </div>
             </div>
         </div>
-    </div>
+ 
 
     <div id="about" class="section wb">
         <div class="container">
@@ -104,7 +104,7 @@
                 </div><!-- end col -->
             </div><!-- end row -->
 
-            <hr class="hr1"> 
+           
 
 
             <div class="row">
