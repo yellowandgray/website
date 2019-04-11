@@ -48,11 +48,21 @@
 }
 .box-2 img:hover {
     transform: scale(1.05);
-   
+
 }
 .border-r {
     border-right: 2px solid black;
 }
 .bg-gray {
     background: #eee;
+}
+.padding-tb-30 {
+    padding: 30px 0px;
+}
+.box-3 img {
+    outline: 1px solid #d4d4d4;
+}
+.box-3 img:hover {
+    box-shadow: 1px 1px 15px 5px #d6d4d4;
+    transition: 0.2s all linear;
 }

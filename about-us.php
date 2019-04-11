@@ -51,10 +51,10 @@
                         </div><!-- end messagebox -->
                     </div><!-- end col -->
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 box-3">
                         <div class="post-media wow fadeIn">
-                            <img src="uploads/about_01.jpg" alt="" class="img-fluid img-rounded">
-                            <a href="http://www.youtube.com/watch?v=nrJtHemSPW4" data-rel="prettyPhoto[gal]" class="playbutton"><i class="flaticon-play-button"></i></a>
+                            <img src="images/gallery//about_01.jpg" alt="" class="img-fluid img-rounded padding-20 width-100">
+
                         </div><!-- end media -->
                     </div><!-- end col -->
                 </div><!-- end row -->
@@ -110,7 +110,7 @@
             </div><!-- end container -->
         </div>
 
-       <?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
 
         <!-- ALL JS FILES -->
         <script src="js/all.js"></script>
