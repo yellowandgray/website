@@ -547,7 +547,8 @@ li.social-links a {
 }
 
 .slide-text h1 span{
-    color: #cdd51f;
+    color: #ff49b0;
+/*    color: #cdd51f;*/
 }
 
 .slide-text h2 {
@@ -586,7 +587,7 @@ li.social-links a {
     right: 0;
     width: auto;
     height: auto;
-    background: none;
+    background: #2bd841;
     color: #ffffff;
 }
 
@@ -602,7 +603,7 @@ li.social-links a {
     left: 0px;
     width: auto;
     height: auto;
-    background: none;
+    background: #2bd841;
     color: #ffffff;
 }
 
@@ -3418,6 +3419,7 @@ select.mobile-device {
     bottom: 20px;
 }
 
-
-
-
+.box-img {
+    box-shadow: 1px 1px 20px 0px #797679;
+    transition: 0.2s all linear;
+}

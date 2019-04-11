@@ -17,10 +17,10 @@
                                 <div class="col-md-6 col-sm-6">
                                     <div class="left-top">
                                         <div class="email-box">
-                                            <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> youremail@gmail.com</a>
+                                            <a href="mailto:support@vivastarfishproject.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> support@vivastarfishproject.com</a>
                                         </div>
                                         <div class="phone-box">
-                                            <a href="tel:1234567890"><i class="fa fa-phone" aria-hidden="true"></i> +1 234 567 890</a>
+                                            <a href="tel:+6012-908 3258"><i class="fa fa-phone" aria-hidden="true"></i> +6012-908 3258</a>
                                         </div>
                                     </div>
                                 </div>
@@ -43,8 +43,8 @@
                                                 <ul class="navbar-nav ml-auto">
                                                     <li><a class="<?php if ($page == 'home') {echo 'active';} ?>" href="index.php">Home</a></li>
                                                     <li><a class="<?php if ($page == 'about') {echo 'active';} ?>" href="about-us.php">About us</a></li>
-                                                    <li><a class="<?php if ($page == 'passion') {echo 'active';} ?>" href="Our-Passion.php">Our Passion</a></li>
-                                                    <li><a class="<?php if ($page == 'movment') {echo 'active';} ?>" href="Our-Movement.php">Our Movement</a></li>
+                                                    <li><a class="<?php if ($page == 'passion') {echo 'active';} ?>" href="our-passion.php">Our Passion</a></li>
+                                                    <li><a class="<?php if ($page == 'movment') {echo 'active';} ?>" href="our-movement.php">Our Movement</a></li>
                                                     <li><a class="<?php if ($page == 'press') {echo 'active';} ?>" href="pricing.php">In the Press</a></li>
                                                     <li><a class="<?php if ($page == 'bank') {echo 'active';} ?>" href="pricing.php">Knowledge Bank</a></li>
                                                     <li><a class="<?php if ($page == 'touch') {echo 'active';} ?>" href="contact.php">Get in touch</a></li>

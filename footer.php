@@ -19,11 +19,12 @@
 
                     <ul class="footer-links hov">
                         <li><a href="#">Home <span class="icon icon-arrow-right2"></span></a></li>
-                        <li><a href="#">Blog <span class="icon icon-arrow-right2"></span></a></li>
-                        <li><a href="#">Pricing <span class="icon icon-arrow-right2"></span></a></li>
-                        <li><a href="#">About <span class="icon icon-arrow-right2"></span></a></li>
-                        <li><a href="#">Faq <span class="icon icon-arrow-right2"></span></a></li>
-                        <li><a href="#">Contact <span class="icon icon-arrow-right2"></span></a></li>
+                        <li><a href="#">About Us <span class="icon icon-arrow-right2"></span></a></li>
+                        <li><a href="#">Our Passion <span class="icon icon-arrow-right2"></span></a></li>
+                        <li><a href="#">Our Movement <span class="icon icon-arrow-right2"></span></a></li>
+                        <li><a href="#">In The Press <span class="icon icon-arrow-right2"></span></a></li>
+                        <li><a href="#">Knowledge Bank <span class="icon icon-arrow-right2"></span></a></li>
+                        <li><a href="#">Contact Us <span class="icon icon-arrow-right2"></span></a></li>
                     </ul><!-- end links -->
                 </div><!-- end clearfix -->
             </div><!-- end col -->
@@ -67,9 +68,9 @@
                     </div>
 
                     <ul>
-                        <li>Address: PO Box 16122 Collins Street West Victoria 8007 Australia</li>
-                        <li>Phone: <a href="#">+62 3 8376 8080  </a></li>
-                        <li>Email: <a href="#">info@yoursite.com </a></li>
+                        <li>Address: Viva Starfish Sdn Bhd, No. 1, Jalan Puteri 12/5, Bandar Puteri Puchong, 47100 Selangor.</li>
+                        <li>Phone: <a href="#">+6012-908 3258  </a></li>
+                        <li>Email: <a href="#">support@vivastarfishproject.com </a></li>
                     </ul>
                     <ul class="social-list">
                         <li><a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a></li>
@@ -92,11 +93,8 @@
     <div class="container">
         <div class="footer-distributed">
             <div class="footer-left">                   
-                <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">Linkweb</a> Design By : 
-                    <a href="https://html.design/">html design</a></p>
+                <p class="footer-company-name">&copy; 2019 All Rights Reserved. Design By : <a href="#">YG Studio.</a>  
             </div>
-
-
         </div>
     </div><!-- end container -->
 </div><!-- end copyrights -->
