@@ -2,7 +2,8 @@
 <html lang="en">
 
     <!--head -->
-    <?php include 'head.php'; $page = 'movement'; ?> 
+    <?php include 'head.php';
+    $page = 'movment'; ?> 
     <!--head -->
     <body>
 
@@ -20,7 +21,7 @@
         <!-- END LOADER -->
 
         <!-- menu-->
-        <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
         <!-- menu-->
 
         <div class="banner-area banner-bg-1">
@@ -206,15 +207,8 @@
             </div><!-- end container -->
         </div><!-- end section -->
 
-        
-<?php include 'footer.php'; ?>
 
-        <!-- ALL JS FILES -->
-        <script src="js/all.js"></script>
-        <!-- ALL PLUGINS -->
-        <script src="js/custom.js"></script>
-        <script src="js/portfolio.js"></script>
-        <script src="js/hoverdir.js"></script>    
+<?php include 'footer.php'; ?>
 
     </body>
 </html>
