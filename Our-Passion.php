@@ -24,7 +24,7 @@
 <?php include 'menu.php'; ?>
         <!-- menu-->
 
-        <div class="banner-area banner-bg-1">
+        <div class="banner-area banner-bg-1" style="background: url(images/sub-banner/passion-sub-banner.jpg)">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -242,7 +242,7 @@
                     <div class="row padding-20">
                         <div class="col-md-6"></div>
                         <p class="text-center">"This project aims to create sustainable impact by educating real life skills and vocational training to the Orang Asli community with the goal to make them employable and entrepeneurial material"</p>
-                        <a href="about-us.php" class="btn11"><span>Learn More</span><div class="transition"></div></a>
+                        <a href="orang-asli.php" class="btn11"><span>Learn More</span><div class="transition"></div></a>
                     </div>
                 </div><!-- end title -->
             </div><!-- end container -->
@@ -360,14 +360,7 @@
                     </div> end container 
                 </div> end section -->
 
-<?php include 'footer.php'; ?>
-
-        <!-- ALL JS FILES -->
-        <script src="js/all.js"></script>
-        <!-- ALL PLUGINS -->
-        <script src="js/custom.js"></script>
-        <script src="js/portfolio.js"></script>
-        <script src="js/hoverdir.js"></script>    
+        <?php include 'footer.php'; ?>
 
     </body>
 </html>

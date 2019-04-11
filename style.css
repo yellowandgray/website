@@ -430,7 +430,7 @@ a img.aligncenter {
 .header_style_01 .navbar-light .navbar-nav > li a.active{
     color: #fff;;
     box-shadow: 0 4px 3px 0 rgba(5, 16, 44, .15);
-/*    border-radius: 10px;*/
+    /*    border-radius: 10px;*/
     background: #2bd841;
 }
 
@@ -438,7 +438,7 @@ a img.aligncenter {
 .header_style_01 .navbar-light .navbar-nav > li:focus a {
     color: #fff;
     box-shadow: 0 4px 3px 0 rgba(5, 16, 44, .15);
-/*    border-radius: 10px;*/
+    /*    border-radius: 10px;*/
     background: #2bd841;
 }
 
@@ -842,7 +842,7 @@ li.social-links a {
 
 .service-widget{
     background: #ffffff;
-    height: 350px;
+    height: 270px;
 }
 
 .section.lb .service-dit h3{
@@ -1374,7 +1374,7 @@ li.social-links a {
 }
 
 .message-box p {
-/*    margin-bottom: 20px;*/
+    /*    margin-bottom: 20px;*/
 }
 
 .message-box .lead {
@@ -1445,20 +1445,20 @@ li.social-links a {
 }
 
 .hoverbutton {
-/*    background-color: rgba(85, 214, 54, 0.54117647058);
-    position: absolute;
-    color: #ffffff !important;
-    top: 0;
-    font-size: 21px;
-    z-index: 12;
-    left: 0;
-    opacity: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    line-height: 50px;
-    text-align: center;
-    margin: 0px auto;*/
+    /*    background-color: rgba(85, 214, 54, 0.54117647058);
+        position: absolute;
+        color: #ffffff !important;
+        top: 0;
+        font-size: 21px;
+        z-index: 12;
+        left: 0;
+        opacity: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 50px;
+        text-align: center;
+        margin: 0px auto;*/
 
 }
 
@@ -3152,7 +3152,7 @@ select.mobile-device {
     top: 0;
     width: 100%;
     z-index: -1;
-    background: rgba(205, 213, 31, 0.8);
+    background: rgba(0, 0, 0, 0.09);
 }
 
 .banner{
@@ -3190,7 +3190,7 @@ select.mobile-device {
     position: relative;
 }
 .page-title-link li a {
-    color: #333333;
+    color: #fffefe;
     font-size: 14px;
     letter-spacing: 1px;
     margin: 0 15px;
@@ -3201,8 +3201,8 @@ select.mobile-device {
     color: #201e21;
 }
 .page-title-link li::after {
-    background: #201e21;
-    bottom: 8px;
+    background: #ffffff;
+    bottom: 12px;
     content: "";
     height: 2px;
     margin-left: -1px;

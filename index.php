@@ -172,7 +172,7 @@
                         </div>
                         <div class="service-dit">
                             <h3>Star Malaysian Golden Hearts:</h3>
-                            <p>video: https://drive.google.com/file/d/12_PbJp m4vIcRgqrzzQk0TBifcSf20zIp/view? usp=sharing</p>
+<!--                            <p></p>-->
                         </div>
                     </div>
                     <!-- end service -->
@@ -410,12 +410,6 @@
                 </div> end section -->
 
         <?php include 'footer.php'; ?> 
-        <!-- ALL JS FILES -->
-        <script src="js/all.js"></script>
-        <!-- ALL PLUGINS -->
-        <script src="js/custom.js"></script>
-        <script src="js/portfolio.js"></script>
-        <script src="js/hoverdir.js"></script>    
-
+       
     </body>
 </html>

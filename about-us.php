@@ -22,7 +22,7 @@
         <?php include 'menu.php'; ?>
         <!-- menu-->
 
-        <div class="banner-area banner-bg-1">
+        <div class="banner-area banner-bg-1" style="background: url(images/sub-banner/about-sub-banner.jpg);">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -111,13 +111,5 @@
         </div>
 
         <?php include 'footer.php'; ?>
-
-        <!-- ALL JS FILES -->
-        <script src="js/all.js"></script>
-        <!-- ALL PLUGINS -->
-        <script src="js/custom.js"></script>
-        <script src="js/portfolio.js"></script>
-        <script src="js/hoverdir.js"></script>    
-
     </body>
 </html>
