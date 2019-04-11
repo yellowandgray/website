@@ -84,24 +84,26 @@
 
         <div id="about" class="section wb">
             <div class="container">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="message-box">
-                                <h2 class="text-center">Welcome to VIVA STARFISH</h2>
-                                <p class="text-justify">Welcome to a process of changing your mind set that empowers you to support life-changing projects through simple choices in your everyday life. </p>
+                <div class="row padding-tb-30">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="message-box">
+                                    <h2 class="text-center">Welcome to VIVA STARFISH</h2>
+                                    <p class="text-justify">Welcome to a process of changing your mind set that empowers you to support life-changing projects through simple choices in your everyday life. </p>
 
-                                <p class="text-justify">Thousands of our kids have not received basic education as well as the rate of urban poverty and unemployment is at its highest. Meanwhile Malaysians spend hundreds of millions of ringgit every year on bottled water. </p>
+                                    <p class="text-justify">Thousands of our kids have not received basic education as well as the rate of urban poverty and unemployment is at its highest. Meanwhile Malaysians spend hundreds of millions of ringgit every year on bottled water. </p>
 
                             <!--<a class="btn11" href="#0"><span>Learn More</span><div class="transition"></div></a>-->
-                            </div><!-- end messagebox -->
-                        </div><!-- end col -->
+                                </div><!-- end messagebox -->
+                            </div><!-- end col -->
 
-                        <div class="col-md-6">
-                            <div class="post-media wow fadeIn">
-                                <img src="images/gallery//about_01.jpg" alt="" class="img-fluid img-rounded">
-                                
-                            </div><!-- end media -->
+                            <div class="col-md-6 box-3">
+                                <div class="post-media wow fadeIn">
+                                    <img src="images/gallery//about_01.jpg" alt="" class="img-fluid img-rounded padding-20 width-100">
+
+                                </div><!-- end media -->
+                            </div><!-- end col -->
                         </div><!-- end col -->
                     </div><!-- end col -->
                 </div><!-- end row -->
@@ -109,7 +111,7 @@
 
 
 
-                <div class="row padding-20">
+                <div class="row">
                     <div class="col-md-12">
                         <div class="message-box">
                             <h2 class="text-center">OUR STORY</h2>
