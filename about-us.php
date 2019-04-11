@@ -37,19 +37,17 @@
                 </div>
             </div>
         </div>
-
         <div id="about" class="section wb">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="message-box">
-                            <h4>About Us</h4>
-                            <h2>Welcome to Linkweb</h2>
-                            <p class="lead">Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
+                            <h2 class="text-center">Welcome to VIVA STARFISH</h2>
+                            <p class="text-justify">Welcome to a process of changing your mind set that empowers you to support life-changing projects through simple choices in your everyday life. </p>
 
-                            <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vitae rutrum neque. Ut id erat sit amet libero bibendum aliquam. Donec ac egestas libero, eu bibendum risus. Phasellus et congue justo. </p>
+                            <p class="text-justify">Thousands of our kids have not received basic education as well as the rate of urban poverty and unemployment is at its highest. Meanwhile Malaysians spend hundreds of millions of ringgit every year on bottled water. </p>
 
-                            <a class="btn11" href="#0"><span>Learn More</span><div class="transition"></div></a>
+                            <!--<a class="btn11" href="#0"><span>Learn More</span><div class="transition"></div></a>-->
                         </div><!-- end messagebox -->
                     </div><!-- end col -->
 
@@ -63,249 +61,56 @@
 
                 <hr class="hr1"> 
 
+
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="message-box">
-                            <h2>Get best plans for Linkweb</h2>
-                            <p class="lead">Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
+                            <h2 class="text-center">OUR STORY-THE BEGINNING</h2>
+                            <p class="text-justify">A young boy was walking along a beach upon which thousands of starfish had been washed up during a terrible storm. When he came to each starfish, he would pick it up, and throw it back into the ocean. People watched him with amusement. </p>
+                            <p class="text-justify">He had been doing this for some time when a man approached him and said, “Little boy, why are you doing this? Look at this beach! You can’t save all these starfish. You can’t begin to make a difference!” </p>
+                            <p class="text-justify">The boy seemed crushed, suddenly deflated. But after a few moments, he bent down, picked up another starfish, and hurled it as far as he could into the ocean. Then he looked up at the man and replied, “Well, I made a difference to that one!” </p>
+                            <p class="text-justify">The old man looked at the boy inquisitively and thought about what he had done. Inspired, he joined the little boy in throwing starfish back into the sea. Soon others joined, and all the starfish were saved. — Adapted from The Star Thrower by Loren C. Eiseley </p>
+                            <p class="text-justify">This story inspired us to create our business, we believe strongly that by changing a water, you change a life.</p>
 
-                            <ul>
-                                <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> Donec eget est ut nulla tristique maximus quis a nisi.</li>
-                                <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> Integer vel metus pretium, mollis quam id, dignissim leo.</li>
-                            </ul>
-
-                            <a href="#" class="btn11"><span>Learn More</span><div class="transition"></div></a>
-                        </div><!-- end messagebox -->
-                    </div><!-- end col -->
-
-                    <div class="col-md-6">
-                        <div class="message-box">
-                            <h2>We Are Linkweb</h2>
-                            <p class="lead">Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
-
-                            <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vitae rutrum neque. Ut id erat sit amet libero bibendum aliquam. Donec ac egestas libero, eu bibendum risus. Phasellus et congue justo. </p>
-
-                            <a href="#" class="btn11"><span>Learn More</span><div class="transition"></div></a>
+                            <!--<a href="#" class="btn11"><span>Learn More</span><div class="transition"></div></a>-->
                         </div><!-- end messagebox -->
                     </div><!-- end col -->
                 </div><!-- end row -->
-            </div><!-- end container -->
-        </div><!-- end section -->
-
-        <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.png');">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h3>Testimonials</h3>
-                    <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about Linkweb website template!</p>
-                </div><!-- end title -->
-
                 <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                        <div class="testi-carousel owl-carousel owl-theme">
-                            <div class="testimonial clearfix">
-
-                                <div class="desc">
-                                    <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                                    <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-                                </div>
-                                <div class="testi-meta">
-                                    <h4>James Fernando <small>- Manager of Racer</small></h4>
-                                </div>
-                                <!-- end testi-meta -->
-                            </div>
-                            <!-- end testimonial -->
-
-                            <div class="testimonial clearfix">
-                                <div class="desc">
-                                    <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                                    <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-                                </div>
-                                <div class="testi-meta">
-                                    <h4>Jacques Philips <small>- Designer</small></h4>
-                                </div>
-                                <!-- end testi-meta -->
-                            </div>
-                            <!-- end testimonial -->
-
-                            <div class="testimonial clearfix">
-                                <div class="desc">
-                                    <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                                    <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                                </div>
-                                <div class="testi-meta">
-                                    <h4>Venanda Mercy <small>- Newyork City</small></h4>
-                                </div>
-                                <!-- end testi-meta -->
-                            </div>
-                            <!-- end testimonial -->
-                            <div class="testimonial clearfix">
-                                <div class="desc">
-                                    <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                                    <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-                                </div>
-                                <div class="testi-meta">                                
-                                    <h4>James Fernando <small>- Manager of Racer</small></h4>
-                                </div>
-                                <!-- end testi-meta -->
-                            </div>
-                            <!-- end testimonial -->
-
-                            <div class="testimonial clearfix">
-                                <div class="desc">
-                                    <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                                    <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-                                </div>
-                                <div class="testi-meta">                                
-                                    <h4>Jacques Philips <small>- Designer</small></h4>
-                                </div>
-                                <!-- end testi-meta -->
-                            </div>
-                            <!-- end testimonial -->
-
-                            <div class="testimonial clearfix">
-                                <div class="desc">
-                                    <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                                    <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                                </div>
-                                <div class="testi-meta">                                
-                                    <h4>Venanda Mercy <small>- Newyork City</small></h4>
-                                </div>
-                                <!-- end testi-meta -->
-                            </div><!-- end testimonial -->
-                        </div><!-- end carousel -->
+                    <div class="col-md-12">
+                        <div class="message-box">
+                            <h2 class="text-center">OUR STORY - THE MIDDLE</h2>
+                            <p class="text-justify">Viva Starfish Sdn. Bhd. is a social enterprise which sells bottled drinking water and office and home delivery. The profits are used to educate Underprivileged Children. </p>
+                            <p class="text-justify">Our employees are from a special crowd, which includes homeless, ex-drug addicts, ex- alcoholic, graduates from rehab centre or stage 5 & urban poor. Thus, we help them to restore their dignity and self-esteem. We also initiate impact driven initiatives that are sustainable and create independent livelihood thereafter.</p>
+                            <!--<a href="#" class="btn11"><span>Learn More</span><div class="transition"></div></a>-->
+                        </div><!-- end messagebox -->
                     </div><!-- end col -->
                 </div><!-- end row -->
-
-                <hr class="hr1">
-
-                <div class="row logos">
-                    <div class="col-md-2 col-sm-2 wow fadeInUp">
-                        <a href="#"><img src="uploads/logo_01.png" alt="" class="img-repsonsive"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-2 wow fadeInUp">
-                        <a href="#"><img src="uploads/logo_02.png" alt="" class="img-repsonsive"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-2 wow fadeInUp">
-                        <a href="#"><img src="uploads/logo_03.png" alt="" class="img-repsonsive"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-2 wow fadeInUp">
-                        <a href="#"><img src="uploads/logo_04.png" alt="" class="img-repsonsive"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-2 wow fadeInUp">
-                        <a href="#"><img src="uploads/logo_05.png" alt="" class="img-repsonsive"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-2 wow fadeInUp">
-                        <a href="#"><img src="uploads/logo_06.png" alt="" class="img-repsonsive"></a>
-                    </div>
-                </div><!-- end row -->
-
-            </div><!-- end container -->
-        </div><!-- end section -->
-
-        <footer class="footer">
-            <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="widget clearfix">
-                            <div class="widget-title">
-                                <img src="images/logos/logo-2.png" alt="" />
-                            </div>
-                            <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>                        
-                        </div><!-- end clearfix -->
+                    <div class="col-md-12">
+                        <div class="message-box">
+                            <h2 class="text-center">OUR STORY - NOT THE END</h2>
+                            <h4>ON-GOING PROJECTS</h4>
+                            <p class="text-justify">Learning How To Learn Program Venue: SRJK (T) Simpang Lima Klang. Program Launch: 3/9/2015</p>
+                            <p class="text-justify">SRJK (T) Simpang Lima Klang. Total no of students 31. Viva Starfish inaugural initiative together with Rotary Bandar Bukit Tinggi Klang. This program will run for a total of 3 months at this school Development Program for Rehab Centers </p>
+                            <p class="text-justify">Even those who had made bad decisions in their past, needs second chances. Viva Starfish creates business modals for the centers to facilitate their students in entering back to the society, as well as to sustain the centers in their daily activities. If the world has rejected them, we employ them to restore hope and dignity </p>
+                            <h4>UPCOMING PROJECTS </h4>
+                            <p class="text-justify">Chow Kit Kids and theCommunity The main core of our program is education. It is the first ripple effect when that droplet of water touches the surface. For us it is when you change your drinking water to our brand you will be sponsoring an underprivileged child in their education. So stay tune to this space for more update on the Chow Kit Kids </p>
+
+                            <!--                                                            <ul>
+                                                                                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                                                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> Donec eget est ut nulla tristique maximus quis a nisi.</li>
+                                                                                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> Integer vel metus pretium, mollis quam id, dignissim leo.</li>
+                                                                                        </ul>-->
+
+                            <!--<a href="#" class="btn11"><span>Learn More</span><div class="transition"></div></a>-->
+                        </div><!-- end messagebox -->
                     </div><!-- end col -->
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="widget clearfix">
-                            <div class="widget-title">
-                                <h3>Useful links</h3>
-                            </div>
-
-                            <ul class="footer-links hov">
-                                <li><a href="#">Home <span class="icon icon-arrow-right2"></span></a></li>
-                                <li><a href="#">Blog <span class="icon icon-arrow-right2"></span></a></li>
-                                <li><a href="#">Pricing <span class="icon icon-arrow-right2"></span></a></li>
-                                <li><a href="#">About <span class="icon icon-arrow-right2"></span></a></li>
-                                <li><a href="#">Faq <span class="icon icon-arrow-right2"></span></a></li>
-                                <li><a href="#">Contact <span class="icon icon-arrow-right2"></span></a></li>
-                            </ul><!-- end links -->
-                        </div><!-- end clearfix -->
-                    </div><!-- end col -->
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="footer-recent clearfix">
-                            <div class="widget-title">
-                                <h3>Recent posts</h3>
-                            </div>
-
-                            <ul>
-                                <li>
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span>Posted By : Ahmed Rubel</span>
-                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                    <span> Time : 1.30 Am</span>
-                                    <h2>Etiam dignissim augue a commodo</h2>
-                                </li>
-                                <li>
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span>Posted By : Ahmed Rubel</span>
-                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                    <span> Time : 1.30 Am</span>
-                                    <h2>Etiam dignissim augue a commodo</h2>
-                                </li>
-                                <li>
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span>Posted By : Ahmed Rubel</span>
-                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                    <span> Time : 1.30 Am</span>
-                                    <h2>Etiam dignissim augue a commodo</h2>
-                                </li>
-                            </ul>
-
-                        </div><!-- end clearfix -->
-                    </div><!-- end col -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="widget footer-contact clearfix">
-                            <div class="widget-title">
-                                <h3>Contact Us</h3>
-                            </div>
-
-                            <ul>
-                                <li>Address: PO Box 16122 Collins Street West Victoria 8007 Australia</li>
-                                <li>Phone: <a href="#">+62 3 8376 8080  </a></li>
-                                <li>Email: <a href="#">info@yoursite.com </a></li>
-                            </ul>
-                            <ul class="social-list">
-                                <li><a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="https://twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="https://linkedin.com/" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="https://www.instagram.com/" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="https://plus.google.com/" class="googlePlus"><i class="fa fa-google-plus"></i></a></li>
-                            </ul>
-
-                        </div>
-                    </div>
-
-
-
                 </div><!-- end row -->
             </div><!-- end container -->
-        </footer><!-- end footer -->
+        </div>
 
-        <div class="copyrights">
-            <div class="container">
-                <div class="footer-distributed">
-                    <div class="footer-left">                   
-                        <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">Linkweb</a> Design By : 
-                            <a href="https://html.design/">html design</a></p>
-                    </div>
-
-
-                </div>
-            </div><!-- end container -->
-        </div><!-- end copyrights -->
-
-        <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+       <?php include 'footer.php'; ?>
 
         <!-- ALL JS FILES -->
         <script src="js/all.js"></script>

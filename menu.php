@@ -42,11 +42,9 @@
                                             <div class="collapse navbar-collapse" id="navbar">
                                                 <ul class="navbar-nav ml-auto">
                                                     <li><a class="active" href="index.php">Home</a></li>
-                                                    <li><a href="about-us.php">Our Story</a></li>
-                                                    <li><a href="services.php">Our Passion</a></li>
-                                                    <li><a href="portfolio.php">We are Humbled</a></li>
-                                                    <li><a href="features.php">Our Mouvement</a></li>
-                                                    <li><a href="testimonials.php">Our Friends</a></li>
+                                                    <li><a href="about-us.php">About us</a></li>
+                                                    <li><a href="Our-Passion.php">Our Passion</a></li>
+                                                    <li><a href="Our-Movement.php">Our Movement</a></li>
                                                     <li><a href="pricing.php">In the Press</a></li>
                                                     <li><a href="pricing.php">Knowledge Bank</a></li>
                                                     <li><a href="contact.php">Get in touch</a></li>

@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
+    <link href="css/common.css" rel="stylesheet" type="text/css"/>
 
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
