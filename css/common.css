@@ -66,3 +66,24 @@
     box-shadow: 1px 1px 15px 5px #d6d4d4;
     transition: 0.2s all linear;
 }
+.box-4 img {
+
+    /* padding: 27px; */
+    margin-top: 34px;
+    outline: 1px solid #e6e3e3;
+    padding: 20px;
+
+}
+.box-4 img:hover {
+    box-shadow: 1px 1px 15px 5px #d6d4d4;
+    transition: 0.2s all linear;
+}
+.list-align li{
+    position: relative;
+    padding: 21px 0px 0px 23px;
+    margin-top: -55px;
+}
+.list-align i{
+    color: #eb1c97;
+    font-size: 15px;
+}

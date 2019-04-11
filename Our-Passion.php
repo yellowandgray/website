@@ -2,7 +2,8 @@
 <html lang="en">
 
     <!--head -->
-    <?php include 'head.php'; $page = 'passion'; ?> 
+    <?php include 'head.php';
+    $page = 'passion'; ?> 
     <!--head -->
     <body>
 
@@ -20,7 +21,7 @@
         <!-- END LOADER -->
 
         <!-- menu-->
-        <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
         <!-- menu-->
 
         <div class="banner-area banner-bg-1">
@@ -49,7 +50,7 @@
                             <h4>EDNA SUNG BURONGOH CO-FOUNDER, INTEGRITY AND OPERATIONS DIRECTOR </h4>
                             <p class="text-justify">A mother of 4 beautiful children, wife to a visionary man, managing the family business, heading the operations of Viva Starfish Project (VSP), currently pursuing Masters in Counseling and in the process of becoming a Journey practitioner, she is quite a woman. Basically she oversees the daily operational needs of VSP as well as ensuring the integrity of each department in handling the contribution and commitment is uphold to a high standard.</p>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 box-4">
                             <img src="images/gallery/our-passion-001.jpg" atl="" class=" width-100"/>
                         </div>
 
@@ -109,27 +110,27 @@
                             <th class="text-center">2.EMPLOYERS DIFFICULTIES</th>
                             <th class="text-center">3.TRAINING</th>
                             </thead>
-                            <tbody>
+                            <tbody class="list-align">
                                 <tr>
                                     <td valign="top">
                                         <ul>
-                                            <li>Jobs are difficult to secure,</li>
-                                            <li>Illiterate and unable to read,</li>
-                                            <li>Jobs are provided to foreign workers</li>
-                                            <li>Job recruitment companies are not considering their plight</li>
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Jobs are difficult to secure,</li>
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Illiterate and unable to read,</li>
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Jobs are provided to foreign workers</li>
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Job recruitment companies are not considering their plight</li>
                                         </ul>
                                     </td>
                                     <td valign="top">
                                         <ul>
-                                            <li>Employers are willing to consider the homeless but unable to conduct street interviews</li>
-                                            <li>Shortage of workers</li>
-                                            <li>Unskilled and untrained</li>
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Employers are willing to consider the homeless but unable to conduct street interviews</li>
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Shortage of workers</li>
+                                           <i class="fa fa-check" aria-hidden="true"></i><li>Unskilled and untrained</li>
                                         </ul>
                                     </td>
                                     <td valign="top">
                                         <ul>
-                                            <li>Homeless need training to perform the job</li>
-                                            <li>Employees are hiring but not providing fast track training to improve the chance of success</li>
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Homeless need training to perform the job</li>
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Employees are hiring but not providing fast track training to improve the chance of success</li>
 
                                         </ul>
                                     </td> 
@@ -148,19 +149,19 @@
                 <div class="message-box">
                     <h2 class="text-center">CHILDREN</h2>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 list-align">
                             <h4>Community Centre and Literacy Program</h4>
                             <ul>
-                                <li>Impact Measurements </li>
-                                <li>Increase Literacy Rate </li>
-                                <li>Community Engagement </li>
-                                <li>Women Empowerment</li>
-                                <li>Create Livelihood Activities</li>
-                                <li>Increase Household Income </li>
-                                <li>Motivation and Mental Health Support</li>
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Impact Measurements </li>
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Increase Literacy Rate </li>
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Community Engagement </li>
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Women Empowerment</li>
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Create Livelihood Activities</li>
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Increase Household Income </li>
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Motivation and Mental Health Support</li>
                             </ul>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 box-4">
                             <img src="images/gallery/our-passion-002.jpg" atl="" class=" width-100"/> 
                         </div>
 
@@ -175,29 +176,29 @@
                                 <th class="text-center">2.LACK OF WORK SUPPORT</th>
                                 <th class="text-center">3.TRAINING</th>
                                 </thead>
-                                <tbody>
+                                <tbody class="list-align">
                                     <tr>
                                         <td valign="top">
                                             <ul>
-                                                <li>Lack of funds and ideas to create new opportunities</li>
-                                                <li>Lack the skills or entrepreneurship ability to create income generating activities</li>
-                                                <li>Jobs are difficult to secure</li>
-                                                <li>Left out in job employment</li>
-                                                <li>Other negative groups are approaching and enticing them with illegal activities</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Lack of funds and ideas to create new opportunities</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Lack the skills or entrepreneurship ability to create income generating activities</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Jobs are difficult to secure</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Left out in job employment</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Other negative groups are approaching and enticing them with illegal activities</li>
                                             </ul>
                                         </td>
                                         <td valign="top">
                                             <ul>
-                                                <li>The communities are secluded and not much income generating activities at the areas despite having land and plantations</li>
-                                                <li>Communities are not trained to run business and depend on middlemen to purchase their products</li>
-                                                <li>Lack of funds to start new businesses</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>The communities are secluded and not much income generating activities at the areas despite having land and plantations</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Communities are not trained to run business and depend on middlemen to purchase their products</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Lack of funds to start new businesses</li>
                                             </ul>
                                         </td>
                                         <td valign="top">
                                             <ul>
-                                                <li>Rural communities need training to carry on income generating operations</li>
-                                                <li>Lots of training but not followed up with a kickstarter project</li>
-                                                <li>Upon starting a income generating business like farming or livestock breeding, they are not sure where to sell the produce. Often middlemen take advantage of the situation</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Rural communities need training to carry on income generating operations</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Lots of training but not followed up with a kickstarter project</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Upon starting a income generating business like farming or livestock breeding, they are not sure where to sell the produce. Often middlemen take advantage of the situation</li>
 
                                             </ul>
                                         </td> 
@@ -359,7 +360,7 @@
                     </div> end container 
                 </div> end section -->
 
-        <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
 
         <!-- ALL JS FILES -->
         <script src="js/all.js"></script>
