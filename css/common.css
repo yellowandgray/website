@@ -50,3 +50,9 @@
     transform: scale(1.05);
    
 }
+.border-r {
+    border-right: 2px solid black;
+}
+.bg-gray {
+    background: #eee;
+}
