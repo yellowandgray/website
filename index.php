@@ -24,7 +24,7 @@
 
         <div class="slider-area">
             <div class="slider-wrapper owl-carousel">
-                <div class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-two">
+                <div class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-one">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-two">
+                <div class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-three">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
