@@ -46,7 +46,7 @@
                                                     <li><a class="<?php if ($page == 'passion') {echo 'active';} ?>" href="our-passion.php">Our Passion</a></li>
                                                     <li><a class="<?php if ($page == 'movment') {echo 'active';} ?>" href="our-movement.php">Our Movement</a></li>
                                                     <li><a class="<?php if ($page == 'press') {echo 'active';} ?>" href="pricing.php">In the Press</a></li>
-                                                    <li><a class="<?php if ($page == 'bank') {echo 'active';} ?>" href="pricing.php">Knowledge Bank</a></li>
+                                                    <li><a class="<?php if ($page == 'bank') {echo 'active';} ?>" href="knowledge.php">Knowledge Bank</a></li>
                                                     <li><a class="<?php if ($page == 'touch') {echo 'active';} ?>" href="contact.php">Get in touch</a></li>
                                                 </ul>
                                             </div>

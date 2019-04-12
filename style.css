@@ -2269,7 +2269,7 @@ select.mobile-device {
 
 .footer-links a:hover,
 .footer a:hover {
-    color: #cdd51f !important;
+    color: #2bd841 !important;
 }
 
 .footer-links li {
@@ -2310,7 +2310,7 @@ select.mobile-device {
 }
 .footer-recent ul li i{
     font-size: 14px;
-    color: #cdd51f;
+    color: #2bd841;
 }
 .footer-recent ul li span {
     font-size: 12px;
@@ -2350,7 +2350,7 @@ select.mobile-device {
     font-size: 16px;
 }
 .social-list li a:hover{
-    border: 3px solid #cdd51f;
+    border: 3px solid #9f4b77;
 }
 
 
@@ -3398,6 +3398,7 @@ select.mobile-device {
     padding: 0px 15px;
     width: 31%;
     box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+    height: 253px;
 }
 
 .address-icon{

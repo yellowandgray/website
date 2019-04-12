@@ -1,5 +1,5 @@
 .message-box h2 {
-    background: #f294c8; 
+    background: #9f4b77; 
     padding: 10px;
     margin-bottom: 25px;
 
@@ -13,7 +13,7 @@
     border-collapse: collapse;
     border: 1px solid black;
     padding: 20px;
-    background: #f294c8;
+    background: #9f4b77;
     color: #fff;
     width: 300px;
 }
@@ -84,6 +84,6 @@
     margin-top: -55px;
 }
 .list-align i{
-    color: #eb1c97;
+    color: #2bd841;
     font-size: 15px;
 }

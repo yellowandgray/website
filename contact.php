@@ -2,7 +2,8 @@
 <html lang="en">
 
     <!--head -->
-    <?php include 'head.php'; ?> 
+    <?php include 'head.php';
+    $page = 'touch';?> 
     <!--head -->
     <body>
 
@@ -83,24 +84,23 @@
                                 <i class="icon icon-location2"></i>
                             </div>
                             <h3>Headquarters</h3>
-                            <p>PO Box 16122 Collins Street West 
-                                <br> Victoria 8007 Australia</p>
+                            <p>Viva Starfish Sdn Bhd, 
+                                <br>No. 1, Jalan Puteri 12/5
+                                <br>Bandar Puteri Puchong, 47100 Selangor.</p>
                         </div>
                         <div class="address-item">
                             <div class="address-icon">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                             </div>
                             <h3>Email Us</h3>
-                            <p>info@yoursite.com
-                                <br>info@yoursite.com</p>
+                            <p>support@vivastarfishproject.com </p>
                         </div>
                         <div class="address-item">
                             <div class="address-icon">
                                 <i class="icon icon-headphones"></i>
                             </div>
                             <h3>Call Us</h3>
-                            <p>+61 3 8376 6284
-                                <br>+61 3 8376 6185</p>
+                            <a href="tel:+6012-908 3258"><p>+6012-908 3258</p></a>
                         </div>
                     </div>
                 </div><!-- end row -->

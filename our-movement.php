@@ -194,8 +194,8 @@
                 </div><!-- end row -->
             </div>
         </section>
-
-        <div class="parallax section noover" data-stellar-background-ratio="0.7" style="background-image:url('uploads/parallax_05.png');">
+        <section class="padding-tb-30 bg-gray">
+        <div class="parallax section noover" data-stellar-background-ratio="0.7">
             <div class="container">
                 <div class="row text-center align-items-center">
                     <div class="col-md-12">
@@ -206,7 +206,7 @@
                 </div><!-- end row -->
             </div><!-- end container -->
         </div><!-- end section -->
-
+        </section>
 
 <?php include 'footer.php'; ?>
 

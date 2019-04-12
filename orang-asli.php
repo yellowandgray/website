@@ -139,6 +139,7 @@
                                 <i class="fa fa-circle" aria-hidden="true"></i><li>Education Centre – Mothers became teachers</li>
                                 <i class="fa fa-circle" aria-hidden="true"></i><li>New livelihood activities – Farming Activities (Increasehousehold income by 300%)</li>
                                 <i class="fa fa-circle" aria-hidden="true"></i><li>Tourism, Handicraft, fish farm, Aquaponic </li>
+                                <i class="fa fa-circle" aria-hidden="true"></i><li>Improved health condition </li>
                                 <i class="fa fa-circle" aria-hidden="true"></i><li>Increase literacy education </li>
                                 <i class="fa fa-circle" aria-hidden="true"></i><li>Create Trade link with distributors in KL</li>
                             </ul>
@@ -151,13 +152,14 @@
                 </div>
 
             </div>
+        </div>
 
 
 
 
 
 
-            <?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
 
     </body>
 </html>

@@ -69,7 +69,7 @@
 
                     <ul>
                         <li>Address: Viva Starfish Sdn Bhd, No. 1, Jalan Puteri 12/5, Bandar Puteri Puchong, 47100 Selangor.</li>
-                        <li>Phone: <a href="#">+6012-908 3258  </a></li>
+                        <li>Phone: <a href="tel:+6012-908 3258">+6012-908 3258</a></li>
                         <li>Email: <a href="#">support@vivastarfishproject.com </a></li>
                     </ul>
                     <ul class="social-list">

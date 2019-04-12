@@ -2,7 +2,8 @@
 <html lang="en">
 
     <!--head -->
-    <?php include 'head.php'; $page = 'passion'; ?> 
+    <?php include 'head.php';
+    $page = 'passion'; ?> 
     <!--head -->
     <body>
 
@@ -20,7 +21,7 @@
         <!-- END LOADER -->
 
         <!-- menu-->
-        <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
         <!-- menu-->
 
         <div class="banner-area banner-bg-1" style="background: url(images/sub-banner/passion-sub-banner.jpg)">
@@ -31,7 +32,7 @@
                             <h2><span>Our Passion</span></h2>
                             <ul class="page-title-link">
                                 <li><a href="#">Home</a></li>
-                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Our</a></li>
                             </ul>
                         </div>
                     </div>
@@ -112,24 +113,24 @@
                             <tbody>
                                 <tr>
                                     <td valign="top">
-                                        <ul>
-                                            <li>Jobs are difficult to secure,</li>
-                                            <li>Illiterate and unable to read,</li>
-                                            <li>Jobs are provided to foreign workers</li>
-                                            <li>Job recruitment companies are not considering their plight</li>
+                                        <ul class="list-align">
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Jobs are difficult to secure,</li>
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Illiterate and unable to read,</li>
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Jobs are provided to foreign workers</li>
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Job recruitment companies are not considering their plight</li>
                                         </ul>
                                     </td>
                                     <td valign="top">
-                                        <ul>
-                                            <li>Employers are willing to consider the homeless but unable to conduct street interviews</li>
-                                            <li>Shortage of workers</li>
-                                            <li>Unskilled and untrained</li>
+                                        <ul class="list-align">
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Employers are willing to consider the homeless but unable to conduct street interviews</li>
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Shortage of workers</li>
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Unskilled and untrained</li>
                                         </ul>
                                     </td>
                                     <td valign="top">
-                                        <ul>
-                                            <li>Homeless need training to perform the job</li>
-                                            <li>Employees are hiring but not providing fast track training to improve the chance of success</li>
+                                        <ul class="list-align">
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Homeless need training to perform the job</li>
+                                            <i class="fa fa-check" aria-hidden="true"></i><li>Employees are hiring but not providing fast track training to improve the chance of success</li>
 
                                         </ul>
                                     </td> 
@@ -143,7 +144,7 @@
                 </div><!-- end title -->
             </div><!-- end container -->
         </div><!-- end section -->
-        
+
         <div id="services" class="parallax ">
             <div class="container">
                 <div class="message-box">
@@ -179,26 +180,26 @@
                                 <tbody>
                                     <tr>
                                         <td valign="top">
-                                            <ul>
-                                                <li>Lack of funds and ideas to create new opportunities</li>
-                                                <li>Lack the skills or entrepreneurship ability to create income generating activities</li>
-                                                <li>Jobs are difficult to secure</li>
-                                                <li>Left out in job employment</li>
-                                                <li>Other negative groups are approaching and enticing them with illegal activities</li>
+                                            <ul class="list-align">
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Lack of funds and ideas to create new opportunities</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Lack the skills or entrepreneurship ability to create income generating activities</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Jobs are difficult to secure</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Left out in job employment</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Other negative groups are approaching and enticing them with illegal activities</li>
                                             </ul>
                                         </td>
                                         <td valign="top">
-                                            <ul>
-                                                <li>The communities are secluded and not much income generating activities at the areas despite having land and plantations</li>
-                                                <li>Communities are not trained to run business and depend on middlemen to purchase their products</li>
-                                                <li>Lack of funds to start new businesses</li>
+                                            <ul class="list-align">
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>The communities are secluded and not much income generating activities at the areas despite having land and plantations</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Communities are not trained to run business and depend on middlemen to purchase their products</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Lack of funds to start new businesses</li>
                                             </ul>
                                         </td>
                                         <td valign="top">
-                                            <ul>
-                                                <li>Rural communities need training to carry on income generating operations</li>
-                                                <li>Lots of training but not followed up with a kickstarter project</li>
-                                                <li>Upon starting a income generating business like farming or livestock breeding, they are not sure where to sell the produce. Often middlemen take advantage of the situation</li>
+                                            <ul class="list-align">
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Rural communities need training to carry on income generating operations</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Lots of training but not followed up with a kickstarter project</li>
+                                                <i class="fa fa-check" aria-hidden="true"></i><li>Upon starting a income generating business like farming or livestock breeding, they are not sure where to sell the produce. Often middlemen take advantage of the situation</li>
 
                                             </ul>
                                         </td> 
@@ -211,7 +212,7 @@
             </div><!-- end container -->
 
         </div>
-        
+
         <div id="services" class="parallax" style="background: #eee;">
             <div class="container">
                 <div class="section-title message-box">
@@ -361,7 +362,7 @@
                     </div> end container 
                 </div> end section -->
 
-        <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
 
         <!-- ALL JS FILES -->
         <script src="js/all.js"></script>
