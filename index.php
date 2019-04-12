@@ -153,7 +153,7 @@
                                 <center><img src="images/service/003.png" alt=""></center>
                                 <div class="media-body">
                                     <h4 class="media-heading">Viva Ventures</h4>
-                                    <p>Forging International Collaborations, Embarking On International Social Projects, Partnership With Government Backed Projects & Initiatives</p>
+                                    <p>Forging International Collaborations, Embarking On International Social Projects, Partnerships With Government Backed Projects & Initiatives</p>
                                 </div>
                             </div>
                         </div><!--/.col-md-4-->
