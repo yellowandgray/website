@@ -84,7 +84,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-4">
-                            <div style="background:url('images/group/odyssey.jpg') no-repeat;background-size: cover;">
+                            <div class="bg-group" style="background:url('images/group/odyssey.jpg') no-repeat;background-size: cover;">
                                 <div class="group">
                                     <div class="group-all">
                                         <p>Viva Odyssey designed and developed a web-based solution that was initially targeted to improve the Health, Safety and Environment(HSE) activities notably, for the high-risk activities in the Oil & Gas Industry.</p>
@@ -94,7 +94,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div style="background:url('images/group/odyssey.jpg') no-repeat;background-size: cover;">
+                            <div class="bg-group" style="background:url('images/group/odyssey.jpg') no-repeat;background-size: cover;">
                                 <div class="group">
                                     <div class="group-all">
                                         <p>Viva Starfish Sdn. Bhd. is a social enterprise which sells bottled drinking water and office and home delivery. The profits are used to educate Underprivileged Children.</p><br>
@@ -104,7 +104,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div style="background:url('images/group/odyssey.jpg') no-repeat;background-size: cover;">
+                            <div class="bg-group" style="background:url('images/group/odyssey.jpg') no-repeat;background-size: cover;">
                                 <div class="group">
                                     <div class="group-all">
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen</p>

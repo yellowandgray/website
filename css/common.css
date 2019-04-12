@@ -107,4 +107,17 @@
     .media.service-box {
         height: auto
     }
+    .bg-group {
+        height: 525px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1520px) {
+    .group {
+        margin-bottom: 20px;
+    }
+    .media.service-box {
+        height: 600px;
+    }
 }
