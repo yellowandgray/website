@@ -87,3 +87,22 @@
     color: #2bd841;
     font-size: 15px;
 }
+
+.box-5 {
+    border: 1px solid #e2e0e0;
+    padding: 10px;
+    background: #eae4e7;
+    height: 300px;
+}
+.box-5:hover {
+    border: 1px solid #eae4e7;
+    box-shadow: 1px 1px 7px 3px #d4cece;
+    transform: scale(1.05);
+    transition: 0.2s all linear;
+    background: #eee;
+}
+.box-5  h3 {
+    color: #6c6b6b !important;
+    padding: 20px 0px;
+    text-align: center;
+}

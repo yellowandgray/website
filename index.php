@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <!--head -->
-    <?php include 'head.php'; $page = 'home'; ?> 
+    <?php
+    include 'head.php';
+    $page = 'home';
+    ?> 
     <!--head -->
     <body>
 
@@ -164,48 +167,45 @@
                     <h2>WE ARE HUMBLED</h2>
                 </div><!-- end title -->
 
-                <div class="owl-services owl-carousel owl-theme">
-                    <div class="service-widget">
-                        <div class="post-media wow fadeIn">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class=" box-5">
                             <a data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"></a>
                             <img src="images/gallery/001.jpg" alt="" class="img-fluid img-rounded">
-                        </div>
-                        <div class="service-dit">
                             <h3>Star Malaysian Golden Hearts:</h3>
-<!--                            <p></p>-->
                         </div>
                     </div>
+                    <!--                                               </div>
+                                                                    </div>
                     <!-- end service -->
 
-                    <div class="service-widget">
-                        <div class="post-media wow fadeIn">
+                    <div class="col-md-3">
+                        <div class="box-5">
                             <a data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"></a>
                             <img src="images/gallery/002.jpg" alt="" class="img-fluid img-rounded">
-                        </div>
-                        <div class="service-dit">
+
                             <h3>Best of Social Enterprise & SME Award 2018</h3>
+
                         </div>
                     </div>
                     <!-- end service -->
 
-                    <div class="service-widget">
-                        <div class="post-media wow fadeIn">
+                    <div class="col-md-3">
+                        <div class="box-5">
                             <a data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"></a>
                             <img src="images/gallery/003.jpg" alt="" class="img-fluid img-rounded">
-                        </div>
-                        <div class="service-dit">
+
                             <h3>(VIP) Volunteer International Professionals Best Impact Project for Livelihood</h3>
+
                         </div>
                     </div>
                     <!-- end service -->
-
-                    <div class="service-widget">
-                        <div class="post-media wow fadeIn">
+                    <div class="col-md-3">
+                        <div class="box-5">
                             <a data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"></a>
                             <img src="images/gallery/004.jpg"0 alt="" class="img-fluid img-rounded">
-                        </div>
-                        <div class="service-dit">
                             <h3>Malaysian National Influencer for Unity</h3>
+
                         </div>
                     </div>
                     <!-- end service -->
@@ -216,200 +216,200 @@
                 <!--                <div class="text-center">
                                     <a href="#" class="btn11"><span>View Our Portfolio</span></a>
                                 </div>-->
-            </div><!-- end container -->
-        </div><!-- end section -->
+            </div>
+        </div>
+    </div><!-- end container -->
+</div><!-- end section -->
+<!--        <div id="features" class="section lb">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Features & Overviews</h3>
+                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, <br>lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
+                </div> end title 
 
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <ul class="features-left">
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+                                <i class="flaticon-wordpress-logo"></i>
+                                <div class="fl-inner">
+                                    <h4>WordPress Installation</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                                <i class="flaticon-windows"></i>
+                                <div class="fl-inner">
+                                    <h4>Browser Compatible</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
+                                <i class="flaticon-price-tag"></i>
+                                <div class="fl-inner">
+                                    <h4>eCommerce Ready</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                                <i class="flaticon-new-file"></i>
+                                <div class="fl-inner">
+                                    <h4>Easy to Customize</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 hidden-xs hidden-sm">
+                        <img src="uploads/ipad.png" class="img-center img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <ul class="features-right">
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+                                <i class="flaticon-pantone"></i>
+                                <div class="fr-inner">
+                                    <h4>Limitless Colors</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                                <i class="flaticon-cloud-computing"></i>
+                                <div class="fr-inner">
+                                    <h4>Lifetime Update</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
+                                <i class="flaticon-line-graph"></i>
+                                <div class="fr-inner">
+                                    <h4>SEO Friendly</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                                <i class="flaticon-coding"></i>
+                                <div class="fr-inner">
+                                    <h4>Simple Clean Code</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> end col 
+                </div> end row 
+            </div> end container 
+        </div> end section 
 
-        <!--        <div id="features" class="section lb">
-                    <div class="container">
-                        <div class="section-title text-center">
-                            <h3>Features & Overviews</h3>
-                            <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, <br>lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
-                        </div> end title 
-        
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                <ul class="features-left">
-                                    <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-                                        <i class="flaticon-wordpress-logo"></i>
-                                        <div class="fl-inner">
-                                            <h4>WordPress Installation</h4>
-                                            <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
-                                        </div>
-                                    </li>
-                                    <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
-                                        <i class="flaticon-windows"></i>
-                                        <div class="fl-inner">
-                                            <h4>Browser Compatible</h4>
-                                            <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
-                                        </div>
-                                    </li>
-                                    <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
-                                        <i class="flaticon-price-tag"></i>
-                                        <div class="fl-inner">
-                                            <h4>eCommerce Ready</h4>
-                                            <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
-                                        </div>
-                                    </li>
-                                    <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-                                        <i class="flaticon-new-file"></i>
-                                        <div class="fl-inner">
-                                            <h4>Easy to Customize</h4>
-                                            <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 hidden-xs hidden-sm">
-                                <img src="uploads/ipad.png" class="img-center img-fluid" alt="">
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                <ul class="features-right">
-                                    <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
-                                        <i class="flaticon-pantone"></i>
-                                        <div class="fr-inner">
-                                            <h4>Limitless Colors</h4>
-                                            <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
-                                        </div>
-                                    </li>
-                                    <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
-                                        <i class="flaticon-cloud-computing"></i>
-                                        <div class="fr-inner">
-                                            <h4>Lifetime Update</h4>
-                                            <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
-                                        </div>
-                                    </li>
-                                    <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
-                                        <i class="flaticon-line-graph"></i>
-                                        <div class="fr-inner">
-                                            <h4>SEO Friendly</h4>
-                                            <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
-                                        </div>
-                                    </li>
-                                    <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                                        <i class="flaticon-coding"></i>
-                                        <div class="fr-inner">
-                                            <h4>Simple Clean Code</h4>
-                                            <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div> end col 
-                        </div> end row 
-                    </div> end container 
-                </div> end section 
-        
-                <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.png');">
-                    <div class="container">
-                        <div class="section-title text-center">
-                            <h3>Testimonials</h3>
-                            <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about Linkweb website template!</p>
-                        </div> end title 
-        
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="testi-carousel owl-carousel owl-theme">
-                                    <div class="testimonial clearfix">
-        
-                                        <div class="desc">
-                                            <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                                            <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-                                        </div>
-                                        <div class="testi-meta">
-                                            <h4>James Fernando <small>- Manager of Racer</small></h4>
-                                        </div>
-                                         end testi-meta 
-                                    </div>
-                                     end testimonial 
-        
-                                    <div class="testimonial clearfix">
-                                        <div class="desc">
-                                            <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                                            <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-                                        </div>
-                                        <div class="testi-meta">
-                                            <h4>Jacques Philips <small>- Designer</small></h4>
-                                        </div>
-                                         end testi-meta 
-                                    </div>
-                                     end testimonial 
-        
-                                    <div class="testimonial clearfix">
-                                        <div class="desc">
-                                            <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                                            <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                                        </div>
-                                        <div class="testi-meta">
-                                            <h4>Venanda Mercy <small>- Newyork City</small></h4>
-                                        </div>
-                                         end testi-meta 
-                                    </div>
-                                     end testimonial 
-                                    <div class="testimonial clearfix">
-                                        <div class="desc">
-                                            <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                                            <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-                                        </div>
-                                        <div class="testi-meta">                                
-                                            <h4>James Fernando <small>- Manager of Racer</small></h4>
-                                        </div>
-                                         end testi-meta 
-                                    </div>
-                                     end testimonial 
-        
-                                    <div class="testimonial clearfix">
-                                        <div class="desc">
-                                            <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                                            <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-                                        </div>
-                                        <div class="testi-meta">                                
-                                            <h4>Jacques Philips <small>- Designer</small></h4>
-                                        </div>
-                                         end testi-meta 
-                                    </div>
-                                     end testimonial 
-        
-                                    <div class="testimonial clearfix">
-                                        <div class="desc">
-                                            <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                                            <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                                        </div>
-                                        <div class="testi-meta">                                
-                                            <h4>Venanda Mercy <small>- Newyork City</small></h4>
-                                        </div>
-                                         end testi-meta 
-                                    </div> end testimonial 
-                                </div> end carousel 
-                            </div> end col 
-                        </div> end row 
-        
-                        <hr class="hr1">
-        
-                        <div class="row logos">
-                            <div class="col-md-2 col-sm-2 wow fadeInUp">
-                                <a href="#"><img src="uploads/logo_01.png" alt="" class="img-repsonsive"></a>
-                            </div>
-                            <div class="col-md-2 col-sm-2 wow fadeInUp">
-                                <a href="#"><img src="uploads/logo_02.png" alt="" class="img-repsonsive"></a>
-                            </div>
-                            <div class="col-md-2 col-sm-2 wow fadeInUp">
-                                <a href="#"><img src="uploads/logo_03.png" alt="" class="img-repsonsive"></a>
-                            </div>
-                            <div class="col-md-2 col-sm-2 wow fadeInUp">
-                                <a href="#"><img src="uploads/logo_04.png" alt="" class="img-repsonsive"></a>
-                            </div>
-                            <div class="col-md-2 col-sm-2 wow fadeInUp">
-                                <a href="#"><img src="uploads/logo_05.png" alt="" class="img-repsonsive"></a>
-                            </div>
-                            <div class="col-md-2 col-sm-2 wow fadeInUp">
-                                <a href="#"><img src="uploads/logo_06.png" alt="" class="img-repsonsive"></a>
-                            </div>
-                        </div> end row 
-        
-                    </div> end container 
-                </div> end section -->
+        <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.png');">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Testimonials</h3>
+                    <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about Linkweb website template!</p>
+                </div> end title 
 
-        <?php include 'footer.php'; ?> 
-       
-    </body>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="testi-carousel owl-carousel owl-theme">
+                            <div class="testimonial clearfix">
+
+                                <div class="desc">
+                                    <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
+                                    <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+                                </div>
+                                <div class="testi-meta">
+                                    <h4>James Fernando <small>- Manager of Racer</small></h4>
+                                </div>
+                                 end testi-meta 
+                            </div>
+                             end testimonial 
+
+                            <div class="testimonial clearfix">
+                                <div class="desc">
+                                    <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
+                                    <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                                </div>
+                                <div class="testi-meta">
+                                    <h4>Jacques Philips <small>- Designer</small></h4>
+                                </div>
+                                 end testi-meta 
+                            </div>
+                             end testimonial 
+
+                            <div class="testimonial clearfix">
+                                <div class="desc">
+                                    <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
+                                    <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
+                                </div>
+                                <div class="testi-meta">
+                                    <h4>Venanda Mercy <small>- Newyork City</small></h4>
+                                </div>
+                                 end testi-meta 
+                            </div>
+                             end testimonial 
+                            <div class="testimonial clearfix">
+                                <div class="desc">
+                                    <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
+                                    <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+                                </div>
+                                <div class="testi-meta">                                
+                                    <h4>James Fernando <small>- Manager of Racer</small></h4>
+                                </div>
+                                 end testi-meta 
+                            </div>
+                             end testimonial 
+
+                            <div class="testimonial clearfix">
+                                <div class="desc">
+                                    <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
+                                    <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                                </div>
+                                <div class="testi-meta">                                
+                                    <h4>Jacques Philips <small>- Designer</small></h4>
+                                </div>
+                                 end testi-meta 
+                            </div>
+                             end testimonial 
+
+                            <div class="testimonial clearfix">
+                                <div class="desc">
+                                    <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
+                                    <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
+                                </div>
+                                <div class="testi-meta">                                
+                                    <h4>Venanda Mercy <small>- Newyork City</small></h4>
+                                </div>
+                                 end testi-meta 
+                            </div> end testimonial 
+                        </div> end carousel 
+                    </div> end col 
+                </div> end row 
+
+                <hr class="hr1">
+
+                <div class="row logos">
+                    <div class="col-md-2 col-sm-2 wow fadeInUp">
+                        <a href="#"><img src="uploads/logo_01.png" alt="" class="img-repsonsive"></a>
+                    </div>
+                    <div class="col-md-2 col-sm-2 wow fadeInUp">
+                        <a href="#"><img src="uploads/logo_02.png" alt="" class="img-repsonsive"></a>
+                    </div>
+                    <div class="col-md-2 col-sm-2 wow fadeInUp">
+                        <a href="#"><img src="uploads/logo_03.png" alt="" class="img-repsonsive"></a>
+                    </div>
+                    <div class="col-md-2 col-sm-2 wow fadeInUp">
+                        <a href="#"><img src="uploads/logo_04.png" alt="" class="img-repsonsive"></a>
+                    </div>
+                    <div class="col-md-2 col-sm-2 wow fadeInUp">
+                        <a href="#"><img src="uploads/logo_05.png" alt="" class="img-repsonsive"></a>
+                    </div>
+                    <div class="col-md-2 col-sm-2 wow fadeInUp">
+                        <a href="#"><img src="uploads/logo_06.png" alt="" class="img-repsonsive"></a>
+                    </div>
+                </div> end row 
+
+            </div> end container 
+        </div> end section -->
+
+<?php include 'footer.php'; ?> 
+
+</body>
 </html>
