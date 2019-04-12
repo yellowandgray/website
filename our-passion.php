@@ -2,8 +2,10 @@
 <html lang="en">
 
     <!--head -->
-    <?php include 'head.php';
-    $page = 'passion'; ?> 
+    <?php
+    include 'head.php';
+    $page = 'passion';
+    ?> 
     <!--head -->
     <body>
 
@@ -21,7 +23,7 @@
         <!-- END LOADER -->
 
         <!-- menu-->
-<?php include 'menu.php'; ?>
+        <?php include 'menu.php'; ?>
         <!-- menu-->
 
         <div class="banner-area banner-bg-1" style="background: url(images/sub-banner/passion-sub-banner.jpg)">
@@ -52,6 +54,7 @@
                         </div>
                         <div class="col-md-6 box-4">
                             <img src="images/gallery/our-passion-001.jpg" atl="" class=" width-100"/>
+                            <img src="images/gallery/our-passion-001.jpg" atl="" class="i-margin-t-10 width-100"/>
                         </div>
 
                     </div>
@@ -139,6 +142,27 @@
 
                             </tbody>
                         </table>
+                        <div class="table-display">
+                            <h4>1.JOBLESS</h4>
+                            <ul class="list-align">
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Jobs are difficult to secure,</li>
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Illiterate and unable to read,</li>
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Jobs are provided to foreign workers</li>
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Job recruitment companies are not considering their plight</li>
+                            </ul>
+                            <h4>2.EMPLOYERS DIFFICULTIES</h4>
+                            <ul class="list-align">
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Employers are willing to consider the homeless but unable to conduct street interviews</li>
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Shortage of workers</li>
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Unskilled and untrained</li>
+                            </ul>
+                            <h4>3.TRAINING</h4>
+                            <ul class="list-align">
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Homeless need training to perform the job</li>
+                                <i class="fa fa-check" aria-hidden="true"></i><li>Employees are hiring but not providing fast track training to improve the chance of success</li>
+
+                            </ul>
+                        </div>
 
                     </div>
                 </div><!-- end title -->
@@ -206,6 +230,28 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="table-display">
+                                <h4>1.LIVELHOOD OF RURAL COMMUNITIES</h4>
+                                <ul class="list-align">
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Lack of funds and ideas to create new opportunities</li>
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Lack the skills or entrepreneurship ability to create income generating activities</li>
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Jobs are difficult to secure</li>
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Left out in job employment</li>
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Other negative groups are approaching and enticing them with illegal activities</li>
+                                </ul>
+                                <h4>2.LACK OF WORK SUPPORT</h4>
+                                <ul class="list-align">
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>The communities are secluded and not much income generating activities at the areas despite having land and plantations</li>
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Communities are not trained to run business and depend on middlemen to purchase their products</li>
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Lack of funds to start new businesses</li>
+                                </ul>
+                                <h4>2.LACK OF WORK SUPPORT</h4>
+                                <ul class="list-align">
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Rural communities need training to carry on income generating operations</li>
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Lots of training but not followed up with a kickstarter project</li>
+                                    <i class="fa fa-check" aria-hidden="true"></i><li>Upon starting a income generating business like farming or livestock breeding, they are not sure where to sell the produce. Often middlemen take advantage of the situation</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div><!-- end title -->
@@ -362,7 +408,7 @@
                     </div> end container 
                 </div> end section -->
 
-<?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
 
         <!-- ALL JS FILES -->
         <script src="js/all.js"></script>

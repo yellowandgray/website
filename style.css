@@ -330,7 +330,7 @@ a img.aligncenter {
 }
 .email-box{
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 18px;
 }
 .email-box a{
     color: #ffffff;
@@ -381,7 +381,7 @@ a img.aligncenter {
 
 
 .header_style_01 {
-    background-color: rgba(255, 255, 255);
+    background-color: rgba (255, 255, 255, 1);
     display: block;
     left: 0;
     position: relative;
@@ -423,7 +423,7 @@ a img.aligncenter {
 
 .header_style_01 .navbar-light .navbar-nav > li a {
     color: #333333;
-    padding: 7px 18px;
+    padding: 7px 17px;
     display: inline-block;
 }
 
@@ -466,6 +466,7 @@ li.social-links a {
 
 .navbar-nav li {
     position: relative;	
+    margin-right: 3px;
 }
 
 .navbar-nav span {
@@ -548,7 +549,7 @@ li.social-links a {
 
 .slide-text h1 span{
     color: #ff49b0;
-/*    color: #cdd51f;*/
+    /*    color: #cdd51f;*/
 }
 
 .slide-text h2 {

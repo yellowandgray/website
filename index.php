@@ -104,6 +104,7 @@
                             <div class="col-md-6 box-3">
                                 <div class="post-media wow fadeIn">
                                     <img src="images/gallery//about_01.jpg" alt="" class="img-fluid img-rounded padding-20 width-100">
+                                    <img src="images/gallery//about_01.jpg" alt="" class=" i-margin-t-10 img-fluid img-rounded padding-20 width-100">
 
                                 </div><!-- end media -->
                             </div><!-- end col -->
@@ -171,7 +172,7 @@
                     <div class="col-md-3">
                         <div class=" box-5">
                             <a data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"></a>
-                            <img src="images/gallery/001.jpg" alt="" class="img-fluid img-rounded">
+                            <center><img src="images/gallery/001.jpg" alt="" class="img-fluid img-rounded"></center>
                             <h3>Star Malaysian Golden Hearts:</h3>
                         </div>
                     </div>
@@ -182,7 +183,7 @@
                     <div class="col-md-3">
                         <div class="box-5">
                             <a data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"></a>
-                            <img src="images/gallery/002.jpg" alt="" class="img-fluid img-rounded">
+                            <center><img src="images/gallery/002.jpg" alt="" class="img-fluid img-rounded"></center>
 
                             <h3>Best of Social Enterprise & SME Award 2018</h3>
 
@@ -193,9 +194,9 @@
                     <div class="col-md-3">
                         <div class="box-5">
                             <a data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"></a>
-                            <img src="images/gallery/003.jpg" alt="" class="img-fluid img-rounded">
+                            <center><img src="images/gallery/003.jpg" alt="" class="img-fluid img-rounded">
 
-                            <h3>(VIP) Volunteer International Professionals Best Impact Project for Livelihood</h3>
+                            <h3>(VIP) Volunteer International Professionals Best Impact Project for Livelihood</h3></center>
 
                         </div>
                     </div>
@@ -203,7 +204,7 @@
                     <div class="col-md-3">
                         <div class="box-5">
                             <a data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"></a>
-                            <img src="images/gallery/004.jpg"0 alt="" class="img-fluid img-rounded">
+                            <center><img src="images/gallery/004.jpg"0 alt="" class="img-fluid img-rounded"></center>
                             <h3>Malaysian National Influencer for Unity</h3>
 
                         </div>

@@ -106,3 +106,15 @@
     padding: 20px 0px;
     text-align: center;
 }
+.i-margin-t-10 {
+    margin-top: 10px;
+    display: none;
+}
+.table-display {
+   
+    display: none;
+}
+.table-1 {
+   
+    display: block;
+}
