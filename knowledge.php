@@ -41,13 +41,13 @@
                 </div>
             </div>
         </div>
-
-        <div id="about" class="section wb">
+        <h1 style="margin: 0 auto;color: #000;">UNDER CONSTRUCTION</h1>
+<!--        <div id="about" class="section wb">
             <div class="container">
                 <div class="section-title text-center">
                     <h3>Pricing</h3>
                     <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about GoodWEB Solutions website template!</p>
-                </div><!-- end title -->
+                </div> end title 
 
                 <div class="row">
                     <div class="col-lg-4 col-sm-6">
@@ -100,16 +100,16 @@
                                                 <a href="#" class="btn11 pricingTable-signup"><span>Sign Up</span></a>
                                             </div>
                                         </div>
-                                        </div><!-- end row -->
-                                        </div><!-- end container -->
-                                        </div><!-- end section -->
+                                        </div> end row 
+                                        </div> end container 
+                                        </div> end section 
 
                                         <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.png');">
                                             <div class="container">
                                                 <div class="section-title text-center">
                                                     <h3>Testimonials</h3>
                                                     <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about Linkweb website template!</p>
-                                                </div><!-- end title -->
+                                                </div> end title 
 
                                                 <div class="row">
                                                     <div class="col-md-12 col-sm-12">
@@ -123,9 +123,9 @@
                                                                 <div class="testi-meta">
                                                                     <h4>James Fernando <small>- Manager of Racer</small></h4>
                                                                 </div>
-                                                                <!-- end testi-meta -->
+                                                                 end testi-meta 
                                                             </div>
-                                                            <!-- end testimonial -->
+                                                             end testimonial 
 
                                                             <div class="testimonial clearfix">
                                                                 <div class="desc">
@@ -135,9 +135,9 @@
                                                                 <div class="testi-meta">
                                                                     <h4>Jacques Philips <small>- Designer</small></h4>
                                                                 </div>
-                                                                <!-- end testi-meta -->
+                                                                 end testi-meta 
                                                             </div>
-                                                            <!-- end testimonial -->
+                                                             end testimonial 
 
                                                             <div class="testimonial clearfix">
                                                                 <div class="desc">
@@ -147,9 +147,9 @@
                                                                 <div class="testi-meta">
                                                                     <h4>Venanda Mercy <small>- Newyork City</small></h4>
                                                                 </div>
-                                                                <!-- end testi-meta -->
+                                                                 end testi-meta 
                                                             </div>
-                                                            <!-- end testimonial -->
+                                                             end testimonial 
                                                             <div class="testimonial clearfix">
                                                                 <div class="desc">
                                                                     <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
@@ -158,9 +158,9 @@
                                                                 <div class="testi-meta">                                
                                                                     <h4>James Fernando <small>- Manager of Racer</small></h4>
                                                                 </div>
-                                                                <!-- end testi-meta -->
+                                                                 end testi-meta 
                                                             </div>
-                                                            <!-- end testimonial -->
+                                                             end testimonial 
 
                                                             <div class="testimonial clearfix">
                                                                 <div class="desc">
@@ -170,9 +170,9 @@
                                                                 <div class="testi-meta">                                
                                                                     <h4>Jacques Philips <small>- Designer</small></h4>
                                                                 </div>
-                                                                <!-- end testi-meta -->
+                                                                 end testi-meta 
                                                             </div>
-                                                            <!-- end testimonial -->
+                                                             end testimonial 
 
                                                             <div class="testimonial clearfix">
                                                                 <div class="desc">
@@ -182,11 +182,11 @@
                                                                 <div class="testi-meta">                                
                                                                     <h4>Venanda Mercy <small>- Newyork City</small></h4>
                                                                 </div>
-                                                                <!-- end testi-meta -->
-                                                            </div><!-- end testimonial -->
-                                                        </div><!-- end carousel -->
-                                                    </div><!-- end col -->
-                                                </div><!-- end row -->
+                                                                 end testi-meta 
+                                                            </div> end testimonial 
+                                                        </div> end carousel 
+                                                    </div> end col 
+                                                </div> end row 
 
                                                 <hr class="hr1">
 
@@ -209,10 +209,10 @@
                                                     <div class="col-md-2 col-sm-2 wow fadeInUp">
                                                         <a href="#"><img src="uploads/logo_06.png" alt="" class="img-repsonsive"></a>
                                                     </div>
-                                                </div><!-- end row -->
+                                                </div> end row 
 
-                                            </div><!-- end container -->
-                                        </div><!-- end section -->
+                                            </div> end container 
+                                        </div> end section -->
 
                                         <?php include 'footer.php'; ?> 
                                         </body>

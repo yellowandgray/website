@@ -3425,3 +3425,33 @@ select.mobile-device {
     box-shadow: 1px 1px 20px 0px #797679;
     transition: 0.2s all linear;
 }
+
+.img-box img {
+    box-shadow: 1px 1px 20px 0px #797679;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.section-1 {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding: 70px 0;
+}
+
+.section-1 h4, h3 {
+    color: #000;
+    margin: 20px 0px 0;
+}
+
+.section-1 a {
+    color: #4285f4;
+}
+
+.section-1 a:hover {
+    color: #2bd841;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
