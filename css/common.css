@@ -89,9 +89,9 @@
 }
 
 .box-5 {
-    border: 1px solid #e2e0e0;
+    /* border: 1px solid #e2e0e0; */
     padding: 10px;
-    background: #eae4e7;
+    background: #8f8c8e;
     height: 300px;
 }
 .box-5:hover {
@@ -99,10 +99,12 @@
     box-shadow: 1px 1px 7px 3px #d4cece;
     transform: scale(1.05);
     transition: 0.2s all linear;
-    background: #eee;
+    background: #545252;
+   
 }
+
 .box-5  h3 {
-    color: #6c6b6b !important;
+    color: #ffffff !important;
     padding: 20px 0px;
     text-align: center;
 }
@@ -111,10 +113,10 @@
     display: none;
 }
 .table-display {
-   
+
     display: none;
 }
 .table-1 {
-   
+
     display: block;
 }

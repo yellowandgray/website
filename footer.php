@@ -2,7 +2,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-3 col-lg-3">
                 <div class="widget clearfix">
                     <div class="widget-title">
                         <img src="images/logos/logo-002.png" alt="" />
@@ -11,7 +11,7 @@
                 </div><!-- end clearfix -->
             </div><!-- end col -->
 
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-3 col-lg-3">
                 <div class="widget clearfix">
                     <div class="widget-title">
                         <h3>Useful links</h3>
@@ -29,7 +29,7 @@
                 </div><!-- end clearfix -->
             </div><!-- end col -->
 
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-3 col-lg-3">
                 <div class="footer-recent clearfix">
                     <div class="widget-title">
                         <h3>Recent posts</h3>
@@ -61,7 +61,7 @@
 
                 </div><!-- end clearfix -->
             </div><!-- end col -->
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-3 col-lg-3">
                 <div class="widget footer-contact clearfix">
                     <div class="widget-title">
                         <h3>Contact Us</h3>
