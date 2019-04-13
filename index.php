@@ -617,23 +617,42 @@
 
         <section id="clients">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title text-center wow fadeInDown">Our Clients</h2>
+                <div class="row margin-b-50">
+                    <div class="section-header">
+                        <h2 class="section-title text-center wow fadeInDown">Our Clients</h2>
+                    </div>
+                    <section class="customer-logos slider">
+                        <div class="slide"><img src="images/client/client-001.jpg" alt=""/></div>
+                        <div class="slide"><img src="images/client/client-002.jpg" alt=""/></div>
+                        <div class="slide"><img src="images/client/client-003.jpg" alt=""/></div>
+                        <div class="slide"><img src="images/client/client-004.jpg" alt=""/></div>
+                        <div class="slide"><img src="images/client/client-005.jpg" alt=""/></div>
+                        <div class="slide"><img src="images/client/client-006.jpg" alt=""/></div>
+                        <div class="slide"><img src="images/client/client-007.jpg" alt=""/></div>
+                        <div class="slide"><img src="images/client/client-008.jpg" alt=""/></div>
+                        <div class="slide"><img src="images/client/client-009.jpg" alt=""/></div>
+                        <div class="slide"><img src="images/client/client-010.jpg" alt=""/></div>
+                        <div class="slide"><img src="images/client/client-011.jpg" alt=""/></div>
+                        <div class="slide"><img src="images/client/client-012.jpg" alt=""/></div>
+                    </section>
                 </div>
-                <section class="customer-logos slider">
-                    <div class="slide"><img src="images/client/client-001.jpg" alt=""/></div>
-                    <div class="slide"><img src="images/client/client-002.jpg" alt=""/></div>
-                    <div class="slide"><img src="images/client/client-003.jpg" alt=""/></div>
-                    <div class="slide"><img src="images/client/client-004.jpg" alt=""/></div>
-                    <div class="slide"><img src="images/client/client-005.jpg" alt=""/></div>
-                    <div class="slide"><img src="images/client/client-006.jpg" alt=""/></div>
-                    <div class="slide"><img src="images/client/client-007.jpg" alt=""/></div>
-                    <div class="slide"><img src="images/client/client-008.jpg" alt=""/></div>
-                    <div class="slide"><img src="images/client/client-009.jpg" alt=""/></div>
-                    <div class="slide"><img src="images/client/client-010.jpg" alt=""/></div>
-                    <div class="slide"><img src="images/client/client-011.jpg" alt=""/></div>
-                    <div class="slide"><img src="images/client/client-012.jpg" alt=""/></div>
-                </section>
+                <div class="section-header">
+                    <h2 class="section-title text-center wow fadeInDown">Featured Affiliates</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <div class="box-img">
+                            <a href="http://www.heritage.edu.my/about/" target="_blank"><img src="images/affiliates-heritage.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box-img">
+                            <a href="https://www.facebook.com/constantco.my/" target="_blank"><img src="images/affiliates-constant.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
             </div>
         </section>
 

@@ -121,3 +121,30 @@
         height: 600px;
     }
 }
+
+.margin-b-50 {
+    margin-bottom: 50px;
+}
+
+.box-img {
+    text-align: center;
+}
+
+.box-img img {
+    border: 1px solid #000;
+    border-radius: 125px;
+    /* background: #fff; */
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.box-img img:hover {
+    box-shadow: 0 0 20px 0px #bdbaba;
+    /* padding: 10px; */
+    transition: all 0.2s ease;
+    background: #eee;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
