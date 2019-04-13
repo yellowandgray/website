@@ -3,7 +3,8 @@
 
     <!--head -->
     <?php include 'head.php';
-    $page = 'touch';?> 
+    $page = 'contact';
+    ?> 
     <!--head -->
     <body>
 
@@ -21,7 +22,7 @@
         <!-- END LOADER -->
 
         <!-- menu-->
-        <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
         <!-- menu-->
 
         <div class="banner-area banner-bg-1">
@@ -48,6 +49,35 @@
                 </div><!-- end title -->
 
                 <div class="row">
+                    <div class="offset-md-1 col-sm-10 col-md-10 offset-sm-1 pd-add">
+                        <div class="address-item">
+                            <div class="address-icon">
+                                <i class="icon icon-location2"></i>
+                            </div>
+                            <h3>Address</h3>
+                            <p>Viva Starfish Sdn Bhd, 
+                                <br>No. 1, Jalan Puteri 12/5
+                                <br>Bandar Puteri Puchong, 47100 Selangor.</p>
+                        </div>
+                        <div class="address-item">
+                            <div class="address-icon">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <h3>Email Us</h3>
+                            <a href="mailto:support@vivastarfishproject.com"><p>support@vivastarfishproject.com </p></a>
+                        </div>
+                        <div class="address-item">
+                            <div class="address-icon">
+                                <i class="icon icon-headphones"></i>
+                            </div>
+                            <h3>Call Us</h3>
+                            <a href="tel:+6012-908 3258"><p>+6012-908 3258</p></a>
+                            <a href="tel:+6012-908 3258"><p>+6012-908 3258</p></a>
+                        </div>
+                    </div>
+                </div><!-- end row -->
+
+                <div class="row">
                     <div class="col-md-8 offset-md-2">
                         <div class="contact_form">
                             <div id="message"></div>
@@ -56,13 +86,13 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
                                     </div>
-                                     <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
                                         <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
                                     </div>
-                                     <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
                                         <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
                                     </div>
-                                     <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
                                         <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone">
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -77,38 +107,10 @@
                     </div><!-- end col -->
                 </div><!-- end row -->
 
-                <div class="row">
-                    <div class="offset-md-1 col-sm-10 col-md-10 offset-sm-1 pd-add">
-                        <div class="address-item">
-                            <div class="address-icon">
-                                <i class="icon icon-location2"></i>
-                            </div>
-                            <h3>Headquarters</h3>
-                            <p>Viva Starfish Sdn Bhd, 
-                                <br>No. 1, Jalan Puteri 12/5
-                                <br>Bandar Puteri Puchong, 47100 Selangor.</p>
-                        </div>
-                        <div class="address-item">
-                            <div class="address-icon">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                            </div>
-                            <h3>Email Us</h3>
-                            <p>support@vivastarfishproject.com </p>
-                        </div>
-                        <div class="address-item">
-                            <div class="address-icon">
-                                <i class="icon icon-headphones"></i>
-                            </div>
-                            <h3>Call Us</h3>
-                            <a href="tel:+6012-908 3258"><p>+6012-908 3258</p></a>
-                        </div>
-                    </div>
-                </div><!-- end row -->
-
             </div><!-- end container -->
         </div><!-- end section -->
 
-       <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
 
         <!-- ALL JS FILES -->
         <script src="js/all.js"></script>

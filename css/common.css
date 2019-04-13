@@ -91,17 +91,28 @@
 .box-5 {
     /* border: 1px solid #e2e0e0; */
     padding: 10px;
-    background: #8f8c8e;
+    background: #2bd841;
     height: 300px;
+    border-radius: 10px 10px 10px 10px;
 }
-.box-5:hover {
+
+/*.box-5:hover {
     border: 1px solid #eae4e7;
     box-shadow: 1px 1px 7px 3px #d4cece;
     transform: scale(1.05);
     transition: 0.2s all linear;
     background: #545252;
-   
-}
+
+}*/
+
+/*.box-5:hover {
+    border: 1px solid #eae4e7;
+    box-shadow: 1px 1px 7px 3px #d4cece;
+    transform: scale(1.05);
+    transition: 0.2s all linear;
+    background: #545252;
+
+}*/
 
 .box-5  h3 {
     color: #ffffff !important;

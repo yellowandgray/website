@@ -3399,7 +3399,7 @@ select.mobile-device {
     padding: 0px 15px;
     width: 31%;
     box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
-    height: 253px;
+    height: 275px;
 }
 
 .address-icon{
@@ -3454,4 +3454,8 @@ select.mobile-device {
 
 .margin-top-50 {
     margin-top: 50px;
+}
+
+.margin-0 {
+    margin: 0px;
 }

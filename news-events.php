@@ -4,7 +4,7 @@
     <!--head -->
     <?php
     include 'head.php';
-    $page = 'press';
+    $page = 'news';
     ?> 
     <!--head -->
     <body>
@@ -31,10 +31,10 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="banner">
-                            <h2><span>Media</span></h2>
+                            <h2><span>News & Events</span></h2>
                             <ul class="page-title-link">
                                 <li><a href="#">Home</a></li>
-                                <li><a href="#">Media</a></li>
+                                <li><a href="#">News & Events</a></li>
                             </ul>
                         </div>
                     </div>
@@ -184,88 +184,91 @@
             </div>
         </div>
 
-        <div class="section-1">
+        <div class="section-1" style="background: #eee;">
             <div class="container">
-                <div class="section-title text-center">
+                <div class="section-title text-center margin-0">
                     <h3 style="color: #000;">Online Media</h3>
 <!--                    <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about GoodWEB Solutions website template!</p>-->
                 </div><!-- end title -->
                 <div class="row">
-                    <div class="col-md-12">
-                        <h4>Our Video:</h4>
-                        <a href="https://www.youtube.com/watch?v=_-mepdRubxU&feature=youtu.be" target="_blank"><b>https://www.youtube.com/watch?v=_-mepdRubxU&feature=youtu.be</b></a>
+                    <div class="col-md-6">
+                        <div class="col-md-12">
+                            <h4>Our Video:</h4>
+                            <a href="https://www.youtube.com/watch?v=_-mepdRubxU&feature=youtu.be" target="_blank"><b>https://www.youtube.com/watch?v=_-mepdRubxU&feature=youtu.be</b></a>
+                        </div>
+                        <div class="col-md-12">
+                            <h4>Our BFM Podcast:</h4>
+                            <a href="https://www.bfm.my/open-for-business-viva-starfish-jerrysondoss-edna-sung.html" target="_blank"><b>https://www.bfm.my/open-for-business-viva-starfish-jerrysondoss-edna-sung.html</b></a>
+                        </div>
+                        <div class="col-md-12">
+                            <h4>Astro VBUZZ: (from 10:38)</h4>
+                            <a href="https://www.youtube.com/watch?v=p2IusUhGNzE&feature=youtu.be" target="_blank"><b>https://www.youtube.com/watch?v=p2IusUhGNzE&feature=youtu.be</b></a><br/>
+                            <a href="https://www.youtube.com/watch?v=cxS_CJjHmIc&feature=youtu.be" target="_blank"><b>https://www.youtube.com/watch?v=cxS_CJjHmIc&feature=youtu.be</b></a>
+                        </div>
+                        <div class="col-md-12">
+                            <h4>Free Malaysia Today:</h4>
+                            <a href="https://www.youtube.com/watch?v=uSTcUbZPPik" target="_blank"><b>https://www.youtube.com/watch?v=uSTcUbZPPik</b></a>
+                        </div>
                     </div>
-                    <div class="col-md-12">
-                        <h4>Our BFM Podcast:</h4>
-                        <a href="https://www.bfm.my/open-for-business-viva-starfish-jerrysondoss-edna-sung.html" target="_blank"><b>https://www.bfm.my/open-for-business-viva-starfish-jerrysondoss-edna-sung.html</b></a>
-                    </div>
-                    <div class="col-md-12">
-                        <h4>Astro VBUZZ: (from 10:38)</h4>
-                        <a href="https://www.youtube.com/watch?v=p2IusUhGNzE&feature=youtu.be" target="_blank"><b>https://www.youtube.com/watch?v=p2IusUhGNzE&feature=youtu.be</b></a><br/>
-                        <a href="https://www.youtube.com/watch?v=cxS_CJjHmIc&feature=youtu.be" target="_blank"><b>https://www.youtube.com/watch?v=cxS_CJjHmIc&feature=youtu.be</b></a>
-                    </div>
-                    <div class="col-md-12">
-                        <h4>Free Malaysia Today:</h4>
-                        <a href="https://www.youtube.com/watch?v=uSTcUbZPPik" target="_blank"><b>https://www.youtube.com/watch?v=uSTcUbZPPik</b></a>
-                    </div>
-                    <div class="col-md-12">
-                        <h4>Bernama New:</h4>
-                        <a href="https://www.youtube.com/watch?v=5DfuSSsz7vM" target="_blank"><b>https://www.youtube.com/watch?v=5DfuSSsz7vM</b></a>
-                    </div>
-                    <div class="col-md-12">
-                        <h4>Star New: Recipient of Star Golden Hearts Award</h4>
-                        <a href="https://www.youtube.com/watch?v=pIykU1gFsF0" target="_blank"><b>https://www.youtube.com/watch?v=pIykU1gFsF0</b></a>
-                    </div>
-                    <div class="col-md-12">
-                        <h4>International Documentary (BNI Foundation Worldwide)</h4>
-                        <a href="https://www.youtube.com/watch?v=LgBXgxC1u8I" target="_blank"><b>https://www.youtube.com/watch?v=LgBXgxC1u8I</b></a>
-                    </div>
-                    <div class="col-md-12">
-                        <h4>Malaysia Entrepreneurs Convention 2017</h4>
-                        <a href="https://www.youtube.com/watch?v=_-mepdRubxU" target="_blank"><b>https://www.youtube.com/watch?v=_-mepdRubxU</b></a>
-                    </div>
-                    <div class="col-md-12">
-                        <h4>Google Most Unlikely Among Us Finalist</h4>
-                        <a href="https://www.youtube.com/watch?v=BpVEP11MPNE" target="_blank"><b>https://www.youtube.com/watch?v=BpVEP11MPNE</b></a>
-                    </div>
-                    <div class="col-md-12">
-                        <h4>The Starfish Movement</h4>
-                        <a href="https://www.youtube.com/watch?v=_-mepdRubxU&t=64s" target="_blank"><b>https://www.youtube.com/watch?v=_-mepdRubxU&t=64s</b></a>
-                    </div>
-                </div>
-<!--                <div class="row">
-                    <div class="col-md-12 margin-top-50">
-                        <h3><b>INTERVIEW</b></h3>
-                        <h4>VBuzz (from 10:38 to the end)</h4>
-                        <a href="https://drive.google.com/file/d/1jkmh8vmKIrpY2ZB4zMadIPzfH6iVDOXC/view?usp=sharing" target="_blank"><b>https://drive.google.com/file/d/1jkmh8vmKIrpY2ZB4zMadIPzfH6iVDOXC/view?usp=sharing</b></a>
-                    </div>
-                    <div class="col-md-12">
-                        <h4>Bernema News Today on BNC:</h4>
-                        <a href="https://drive.google.com/file/d/1An2bP7l1O_pxceySwhJeCzOmSuCEjcnF/view?usp=sharing" target="_blank"><b>https://drive.google.com/file/d/1An2bP7l1O_pxceySwhJeCzOmSuCEjcnF/view?usp=sharing</b></a>
-                    </div>
-                    <div class="col-md-12">
-                        <h4>Toy Story - The Beast :</h4>
-                        <span>Part 1:</span><a href="https://drive.google.com/file/d/1UCjnayCHOHbmZwG5QxKtLx9Ucz-bjRUB/view?usp=sharing" target="_blank"><b> https://drive.google.com/file/d/1UCjnayCHOHbmZwG5QxKtLx9Ucz-bjRUB/view?usp=sharing</b></a><br/>
-                        <span>Part 2:</span><a href="https://drive.google.com/file/d/1BF2-zf7dZNkdhD1rRE2syXVdTHqpXKrU/view?usp=sharing" target="_blank"><b> https://drive.google.com/file/d/1BF2-zf7dZNkdhD1rRE2syXVdTHqpXKrU/view?usp=sharing</b></a>
+                    <div class="col-md-6">
+                        <div class="col-md-12">
+                            <h4>Bernama New:</h4>
+                            <a href="https://www.youtube.com/watch?v=5DfuSSsz7vM" target="_blank"><b>https://www.youtube.com/watch?v=5DfuSSsz7vM</b></a>
+                        </div>
+                        <div class="col-md-12">
+                            <h4>Star New: Recipient of Star Golden Hearts Award</h4>
+                            <a href="https://www.youtube.com/watch?v=pIykU1gFsF0" target="_blank"><b>https://www.youtube.com/watch?v=pIykU1gFsF0</b></a>
+                        </div>
+                        <div class="col-md-12">
+                            <h4>International Documentary (BNI Foundation Worldwide)</h4>
+                            <a href="https://www.youtube.com/watch?v=LgBXgxC1u8I" target="_blank"><b>https://www.youtube.com/watch?v=LgBXgxC1u8I</b></a>
+                        </div>
+                        <div class="col-md-12">
+                            <h4>Malaysia Entrepreneurs Convention 2017</h4>
+                            <a href="https://www.youtube.com/watch?v=_-mepdRubxU" target="_blank"><b>https://www.youtube.com/watch?v=_-mepdRubxU</b></a>
+                        </div>
+                        <div class="col-md-12">
+                            <h4>Google Most Unlikely Among Us Finalist</h4>
+                            <a href="https://www.youtube.com/watch?v=BpVEP11MPNE" target="_blank"><b>https://www.youtube.com/watch?v=BpVEP11MPNE</b></a>
+                        </div>
+                        <div class="col-md-12">
+                            <h4>The Starfish Movement</h4>
+                            <a href="https://www.youtube.com/watch?v=_-mepdRubxU&t=64s" target="_blank"><b>https://www.youtube.com/watch?v=_-mepdRubxU&t=64s</b></a>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12 margin-top-50">
-                        <h3><b>OTHERS</b></h3>
-                        <h4>BNI Connect Video Worldwide (from 8:24)</h4>
-                        <a href="https://drive.google.com/file/d/1gYFKapYXV16BihBmCU7_zK9akxViYW1v/view?usp=sharing" target="_blank"><b>https://drive.google.com/file/d/1gYFKapYXV16BihBmCU7_zK9akxViYW1v/view?usp=sharing</b></a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 margin-top-50">
-                        <h3><b>PODCAST</b></h3>
-                        <h4>BFM Podcast:</h4>
-                        <a href="http://www.bfm.my/open-for-business-viva-starfish-jerryson-doss-edna-sung.html" target="_blank"><b>http://www.bfm.my/open-for-business-viva-starfish-jerryson-doss-edna-sung.html</b></a>
-                    </div>
-                </div>-->
+                <!--                <div class="row">
+                                    <div class="col-md-12 margin-top-50">
+                                        <h3><b>INTERVIEW</b></h3>
+                                        <h4>VBuzz (from 10:38 to the end)</h4>
+                                        <a href="https://drive.google.com/file/d/1jkmh8vmKIrpY2ZB4zMadIPzfH6iVDOXC/view?usp=sharing" target="_blank"><b>https://drive.google.com/file/d/1jkmh8vmKIrpY2ZB4zMadIPzfH6iVDOXC/view?usp=sharing</b></a>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <h4>Bernema News Today on BNC:</h4>
+                                        <a href="https://drive.google.com/file/d/1An2bP7l1O_pxceySwhJeCzOmSuCEjcnF/view?usp=sharing" target="_blank"><b>https://drive.google.com/file/d/1An2bP7l1O_pxceySwhJeCzOmSuCEjcnF/view?usp=sharing</b></a>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <h4>Toy Story - The Beast :</h4>
+                                        <span>Part 1:</span><a href="https://drive.google.com/file/d/1UCjnayCHOHbmZwG5QxKtLx9Ucz-bjRUB/view?usp=sharing" target="_blank"><b> https://drive.google.com/file/d/1UCjnayCHOHbmZwG5QxKtLx9Ucz-bjRUB/view?usp=sharing</b></a><br/>
+                                        <span>Part 2:</span><a href="https://drive.google.com/file/d/1BF2-zf7dZNkdhD1rRE2syXVdTHqpXKrU/view?usp=sharing" target="_blank"><b> https://drive.google.com/file/d/1BF2-zf7dZNkdhD1rRE2syXVdTHqpXKrU/view?usp=sharing</b></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 margin-top-50">
+                                        <h3><b>OTHERS</b></h3>
+                                        <h4>BNI Connect Video Worldwide (from 8:24)</h4>
+                                        <a href="https://drive.google.com/file/d/1gYFKapYXV16BihBmCU7_zK9akxViYW1v/view?usp=sharing" target="_blank"><b>https://drive.google.com/file/d/1gYFKapYXV16BihBmCU7_zK9akxViYW1v/view?usp=sharing</b></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 margin-top-50">
+                                        <h3><b>PODCAST</b></h3>
+                                        <h4>BFM Podcast:</h4>
+                                        <a href="http://www.bfm.my/open-for-business-viva-starfish-jerryson-doss-edna-sung.html" target="_blank"><b>http://www.bfm.my/open-for-business-viva-starfish-jerryson-doss-edna-sung.html</b></a>
+                                    </div>
+                                </div>-->
             </div>
         </div>
-
 
         <!--        <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.png');">
                     <div class="container">
