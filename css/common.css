@@ -61,7 +61,9 @@
 }
 .box-3 img {
     outline: 1px solid #d4d4d4;
+    background: #e3e3e3;
 }
+
 .box-3 img:hover {
     box-shadow: 1px 1px 15px 5px #d6d4d4;
     transition: 0.2s all linear;
@@ -130,4 +132,7 @@
 .table-1 {
 
     display: block;
+}
+.padding-10 {
+    padding: 10px;
 }
