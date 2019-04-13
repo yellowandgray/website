@@ -200,7 +200,7 @@
                 <div class="row text-center align-items-center">
                     <div class="col-md-12">
                         <div class="customwidget text-left">
-                            <img src="images/gallery/Viva-Starfish-24.png" alt="">
+                            <img src="images/gallery/Viva-Starfish-24.png" alt="" class="width-100">
                         </div>
                     </div><!-- end col -->
                 </div><!-- end row -->

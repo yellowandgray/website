@@ -61,7 +61,7 @@
 }
 .box-3 img {
     outline: 1px solid #d4d4d4;
-    background: #e3e3e3;
+/*    background: #e3e3e3;*/
 }
 
 .box-3 img:hover {
@@ -93,7 +93,7 @@
 .box-5 {
     /* border: 1px solid #e2e0e0; */
     padding: 10px;
-    background: #2bd841;
+    background: #fffeff;
     height: 300px;
     border-radius: 10px 10px 10px 10px;
 }
@@ -108,12 +108,12 @@
 }*/
 
 .box-5 img:hover {
-    transform: scale(1.05);
+    transform: scale(1.07);
     transition: 0.2s all linear;
 }
 
 .box-5  h3 {
-    color: #ffffff !important;
+    color: #817d81 !important;
     padding: 20px 0px;
     text-align: center;
 }
@@ -131,4 +131,14 @@
 }
 .padding-10 {
     padding: 10px;
+}
+
+@media screen and (max-width: 1199px) {
+    .contact_form .form-control {
+        width: 100%
+    }
+}
+
+fieldset {
+    width: 100%;
 }

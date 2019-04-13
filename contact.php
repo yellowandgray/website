@@ -45,7 +45,7 @@
             <div class="container">
                 <div class="section-title text-center">
                     <h3>Get in touch</h3>
-                    <p class="lead">Let us give you more details about the special offer website you want us. Please fill out the form below. <br>We have million of website owners who happy to work with us!</p>
+<!--                    <p class="lead">Let us give you more details about the special offer website you want us. Please fill out the form below. <br>We have million of website owners who happy to work with us!</p>-->
                 </div><!-- end title -->
 
                 <div class="row">
