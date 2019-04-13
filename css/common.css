@@ -107,14 +107,10 @@
 
 }*/
 
-/*.box-5:hover {
-    border: 1px solid #eae4e7;
-    box-shadow: 1px 1px 7px 3px #d4cece;
+.box-5 img:hover {
     transform: scale(1.05);
     transition: 0.2s all linear;
-    background: #545252;
-
-}*/
+}
 
 .box-5  h3 {
     color: #ffffff !important;
