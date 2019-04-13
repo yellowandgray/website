@@ -103,8 +103,8 @@
 
                             <div class="col-md-6 box-3">
                                 <div class="post-media wow fadeIn">
-                                    <img src="images/gallery//about_01.jpg" alt="" class="img-fluid img-rounded padding-20 width-100">
-                                    <img src="images/gallery//about_01.jpg" alt="" class=" i-margin-t-10 img-fluid img-rounded padding-20 width-100">
+                                    <img src="images/gallery//about_01.jpg" alt="" class="img-fluid img-rounded padding-10 width-100">
+                                    <img src="images/gallery//about_01.jpg" alt="" class=" i-margin-t-10 img-fluid img-rounded padding-10 width-100">
 
                                 </div><!-- end media -->
                             </div><!-- end col -->
