@@ -129,6 +129,41 @@
                             </div>
                         </div>
                     </div>
+                    <div class="container">
+                        <center><p class="v-smash-text-large-2x pull-top">
+                                <span>VISION, MISSION, VALUES</span>
+                            </p>
+                        </center>
+                        <div class="horizontal-break center"></div>
+                        <div class="row app-brief">
+                            <div class="col-sm-6">
+                                <div class="box-1">
+                                    <h3 class="text-center">VISION & MISSION</h3>
+                                    <div class="horizontal-break center"></div>
+                                    <ul class="v-list-v2">
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="150"><i class="fa fa-check"></i><span class="v-lead">Eradicate poverty</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="300"><i class="fa fa-check"></i><span class="v-lead">Developing and empowering communities to become entrepreneurs with a social agenda at heart</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="450"><i class="fa fa-check"></i><span class="v-lead">Empowering leaders to lead and head</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="box-1">
+                                    <h3 class="text-center">OUR VALUES</h3>
+                                    <div class="horizontal-break center"></div>
+                                    <!--                                <div class="v-spacer col-sm-12 v-height-small"></div>-->
+                                    <ul class="v-list-v2">
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="150"><i class="fa fa-check"></i><span class="v-lead">Safety</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="300"><i class="fa fa-check"></i><span class="v-lead">Environment & Leadership</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="450"><i class="fa fa-check"></i><span class="v-lead">Attitude</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="600"><i class="fa fa-check"></i><span class="v-lead">Managing</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="750"><i class="fa fa-check"></i><span class="v-lead">Advancement</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="900"><i class="fa fa-check"></i><span class="v-lead">Teamwork</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--            <div class="container" id="features">
                 
@@ -246,48 +281,11 @@
                             </div>-->
                 <!--End Features-->
 
-
                 <!--Why Us-->
-                <div class="v-parallax v-bg-stylish v-bg-stylish-v4 no-shadow" id="vision">
-                    <div class="container">
-                        <center><p class="v-smash-text-large-2x pull-top">
-                                <span>VISION, MISSION, VALUES</span>
-                            </p>
-                        </center>
-                        <div class="horizontal-break center"></div>
-                        <div class="row app-brief">
-                            <div class="col-sm-6">
-                                <div class="box-1">
-                                    <h3 class="text-center">VISION & MISSION</h3>
-                                    <div class="horizontal-break center"></div>
-                                    <ul class="v-list-v2">
-                                        <li class="v-animation" data-animation="fade-from-right" data-delay="150"><i class="fa fa-check"></i><span class="v-lead">Eradicate poverty</span></li>
-                                        <li class="v-animation" data-animation="fade-from-right" data-delay="300"><i class="fa fa-check"></i><span class="v-lead">Developing and empowering communities to become entrepreneurs with a social agenda at heart</span></li>
-                                        <li class="v-animation" data-animation="fade-from-right" data-delay="450"><i class="fa fa-check"></i><span class="v-lead">Empowering leaders to lead and head</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="box-1">
-                                    <h3 class="text-center">OUR VALUES</h3>
-                                    <div class="horizontal-break center"></div>
-                                    <!--                                <div class="v-spacer col-sm-12 v-height-small"></div>-->
-                                    <ul class="v-list-v2">
-                                        <li class="v-animation" data-animation="fade-from-right" data-delay="150"><i class="fa fa-check"></i><span class="v-lead">Safety</span></li>
-                                        <li class="v-animation" data-animation="fade-from-right" data-delay="300"><i class="fa fa-check"></i><span class="v-lead">Environment & Leadership</span></li>
-                                        <li class="v-animation" data-animation="fade-from-right" data-delay="450"><i class="fa fa-check"></i><span class="v-lead">Attitude</span></li>
-                                        <li class="v-animation" data-animation="fade-from-right" data-delay="600"><i class="fa fa-check"></i><span class="v-lead">Managing</span></li>
-                                        <li class="v-animation" data-animation="fade-from-right" data-delay="750"><i class="fa fa-check"></i><span class="v-lead">Advancement</span></li>
-                                        <li class="v-animation" data-animation="fade-from-right" data-delay="900"><i class="fa fa-check"></i><span class="v-lead">Teamwork</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!--                <div class="v-parallax v-bg-stylish v-bg-stylish-v4 no-shadow" id="vision">
+                                    
+                                </div>-->
                 <!--End Why Us-->
-
-
 
                 <!--Services-->
                 <div class="v-parallax v-parallax-video v-bg-stylish" id="services" style="background-image: url(img/slider/slider4.jpg);">
@@ -301,7 +299,7 @@
                             <div class="col-sm-4">
                                 <div class="feature-box feature-box-secundary-one v-animation" data-animation="grow" data-delay="0">
                                     <div class="feature-box-icon small">
-                                        <i class="fa fa-laptop v-icon"></i>
+                                        <i class="fa fa-file-text-o v-icon"></i>
                                     </div>
                                     <div class="feature-box-text clearfix">
                                         <h3>License $C3030100</h3>
@@ -318,7 +316,7 @@
                             <div class="col-sm-4">
                                 <div class="feature-box feature-box-secundary-one v-animation" data-animation="grow" data-delay="200">
                                     <div class="feature-box-icon small">
-                                        <i class="fa fa-leaf v-icon"></i>
+                                        <i class="fa fa-file-text-o v-icon"></i>
                                     </div>
                                     <div class="feature-box-text">
                                         <h3>License SM2031100</h3>
@@ -334,7 +332,7 @@
                             <div class="col-sm-4">
                                 <div class="feature-box feature-box-secundary-one v-animation" data-animation="grow" data-delay="400">
                                     <div class="feature-box-icon small">
-                                        <i class="fa fa-scissors v-icon"></i>
+                                        <i class="fa fa-file-text-o v-icon"></i>
                                     </div>
                                     <div class="feature-box-text">
                                         <h3>License $C2030100</h3>
@@ -356,7 +354,8 @@
                 <!--Describe-->
                 <div class="v-parallax v-bg-stylish" id="describe">
                     <div class="container">
-                        <center><p class="v-smash-text-large-2x pull-top">
+                        <center>
+                            <p class="v-smash-text-large-2x pull-top">
                                 <span>ENERGY</span>
                             </p>
                         </center>
@@ -372,25 +371,102 @@
                                 <p class="v-lead">Safety Training Officers to provide On-site support for Company's Safety Program <p class="v-lead">Develop Safety Programs and supply Specialist to Facilitate these Programs</p>
                                 <a href="#" class="read-more read">Read More</a>
                             </div>
-                            
+
                             <div class="col-sm-6">
-                                <img class="img-responsive phone-image v-animation" data-animation="fade-from-right" data-delay="300" src="img/landing/2-iphone-right.png" />
+                                <img class="img-responsive phone-image v-animation" data-animation="fade-from-right" data-delay="300" src="img/viva-energy.png" />
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--End Describe-->
-                <!--Features-->
-                <div class="container">
-                    <div class="v-spacer col-sm-12 v-height-big"></div>
+
+                <!--Download-->
+                <div class="v-parallax v-bg-stylish v-bg-stylish-v10" id="download" style="background-image: url(img/slider/slider4.jpg);">
+
+                    <div class="container">
+                        <div class="row center">
+
+                            <div class="col-sm-12">
+
+                                <div class="v-content-wrapper">
+                                    <p class="v-smash-text-large-2x">
+                                        <span>Team</span>
+                                    </p>
+
+                                    <div class="v-spacer col-sm-12 v-height-standard"></div>
+                                    <div class="">
+                                        <img src="img/team/01.jpg" alt="" />
+                                        <h2>Jerryson Abraham <br/> G.Doss</h2>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="text-center border-line">
+                                                <h3>Edna Sung Burongoh <br/>Burongoh</h3>
+                                                <p>Director of Finance</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="text-center border-line">
+                                                <h3>Gerard M. Pillai</h3>
+                                                <p>Director, Strategy <br/>Planning</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="text-center border-line">
+                                                <h3>Edgar Sung Burongoh</h3>
+                                                <p>Chief Technology <br/>Officer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--                                    <div id="intro_stores">
+                                                                            <a href="#">
+                                                                                <img src="img/landing/appstore.png" alt="appstore_icon"></a>
+                                                                            <a href="#">
+                                                                                <img src="img/landing/google.png" alt="google_icon"></a>
+                                                                            <a href="#">
+                                                                                <img src="img/landing/amazon.png" alt="amazon_icon"></a>
+                                                                        </div>-->
+
+                                    <div class="v-spacer col-sm-12 v-height-big"></div>
+
+<!--                                    <p class="v-smash-text-large-2x">
+                                        <span>Subscribe Now!</span>
+                                    </p>-->
+
+                                    <div class="v-spacer col-sm-12 v-height-small"></div>
+
+                                    <!--                                    <form class="subscription-form form-inline">
+                                    
+                                                                            <input type="email" name="EMAIL" placeholder="Your Email" class="subscriber-email form-control input-box">
+                                                                            <a href="#" type="submit" class="subscriber-button btn v-btn v-medium-button no-three-d v-belize-hole"><i class="fa fa-fire"></i>Subscribe</a>
+                                                                        </form>-->
+                                </div>
+
+                            </div>
+
+                            <div class="v-bg-overlay overlay-colored"></div>
+                        </div>
+                    </div>
                 </div>
+                <!--End Download-->
+
+                <!--Features-->
+                <!--                <div class="container">
+                                    <div class="v-spacer col-sm-12 v-height-big"></div>
+                                </div>-->
                 <div class="v-parallax v-bg-stylish v-bg-stylish-v4 no-shadow" id="features">
                     <div class="container">
+                        <center>
+                            <p class="v-smash-text-large-2x pull-top">
+                                <span>FEATURES</span>
+                            </p>
+                        </center>
                         <div class="row  v-counter-wrap v-animation" data-animation="grow" data-delay="200">
                             <div class="col-sm-4">
                                 <div>
                                     <div class="pic-1">
-                                        <img src="" alt="" style="width: 100%">
+                                        <img src="img/viva-tech.jpg" alt="" style="width: 100%">
                                     </div>
                                     <div  class="box-2">
                                         <h3 class=text-center>TECH</h3>
@@ -409,7 +485,7 @@
                             <div class="col-sm-4">
                                 <div>
                                     <div class="pic-1">
-                                        <img src="" alt="" style="width: 100%">
+                                        <img src="img/viva-education.jpg" alt="" style="width: 100%">
                                     </div>
                                     <div class="box-2">
                                         <h3 class=text-center>EDUCATION</h3>
@@ -419,21 +495,22 @@
                                                 <ul>
                                                     <li>offline</li>
                                                     <li>online</li>
-                                                </ul></li>
+                                                </ul>
+                                            </li>
                                             <li class="v-animation" data-animation="fade-from-right" data-delay="450"><i class="fa fa-check"></i><span class="v-lead">Learnings Programs</span>
                                                 <ul>
                                                     <li>offline</li>
                                                     <li>online</li>
-                                                </ul></li>
+                                                </ul>   
+                                            </li>
                                         </ul>
-
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div>
                                     <div class="pic-1">
-                                        <img src="" alt="" style="width: 100%">
+                                        <img src="img/viva-resources.jpg" alt="" style="width: 100%">
                                     </div>
                                     <div  class="box-2">
                                         <h3 class=text-center>RESOURCES</h3>
@@ -451,8 +528,98 @@
                     </div>
                 </div>
                 <!--End Features-->
-                <div class="container">
-                    <div class="v-spacer col-sm-12 v-height-standard"></div>
+                <!--                <div class="container">
+                                    <div class="v-spacer col-sm-12 v-height-standard">
+                
+                                    </div>
+                                </div>-->
+                <div class="v-parallax v-bg-stylish" id="clients">
+                    <div class="container">
+                        <center>
+                            <p class="v-smash-text-large-2x pull-top">
+                                <span>OUR CLIENTS</span>
+                            </p>
+                        </center>
+                        <section class="customer-logos slider">
+                            <div class="slide"><img src="img/client/odyssey-client-001.jpg"></div>
+                            <div class="slide"><img src="img/client/odyssey-client-002.jpg"></div>
+                            <div class="slide"><img src="img/client/odyssey-client-003.jpg"></div>
+                            <div class="slide"><img src="img/client/odyssey-client-004.jpg"></div>
+                            <div class="slide"><img src="img/client/odyssey-client-005.jpg"></div>
+                            <div class="slide"><img src="img/client/odyssey-client-006.jpg"></div>
+                            <div class="slide"><img src="img/client/odyssey-client-007.jpg"></div>
+                            <div class="slide"><img src="img/client/odyssey-client-008.jpg"></div>
+                            <div class="slide"><img src="img/client/odyssey-client-009.jpg"></div>
+                            <div class="slide"><img src="img/client/odyssey-client-010.jpg"></div>
+                            <div class="slide"><img src="img/client/odyssey-client-011.jpg"></div>
+                            <div class="slide"><img src="img/client/odyssey-client-012.jpg"></div>
+                            <div class="slide"><img src="img/client/odyssey-client-013.jpg"></div>
+                        </section>
+                    </div>
+                </div>
+                <div class="v-parallax v-bg-stylish" style="border-top: none">
+                    <div class="container">
+                        <center>
+                            <p class="v-smash-text-large-2x pull-top">
+                                <span>TESTIMONIALS</span>
+                            </p>
+                        </center>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                                    <!-- Carousel Slides / Quotes -->
+                                    <div class="carousel-inner text-center">
+                                        <!-- Quote 1 -->
+                                        <div class="item active">
+                                            <blockquote>
+                                                <div class="row">
+                                                    <div class="col-sm-8 col-sm-offset-2">
+                                                        <p>"I have a stable career with a global O&G player and I am doing what I love. Life is good..."</p>
+                                                        <small>-Muhammad Afiq Bin Makmon, 26, SapuraKencana</small>
+                                                    </div>
+                                                </div>
+                                            </blockquote>
+                                        </div>
+                                        <!-- Quote 2 -->
+                                        <div class="item">
+                                            <blockquote>
+                                                <div class="row">
+                                                    <div class="col-sm-8 col-sm-offset-2">
+                                                        <p>"My salary has been boosted by 35% since my participation in the TOPSHOT program..."</p>
+                                                        <small>Ganeson, 29, Transocean</small>
+                                                    </div>
+                                                </div>
+                                            </blockquote>
+                                        </div>
+                                        <!-- Quote 3 -->
+                                        <div class="item">
+                                            <blockquote>
+                                                <div class="row">
+                                                    <div class="col-sm-8 col-sm-offset-2">
+                                                        <p>"Previously I was unemployed. There was uncertainty. Now, I have stability and a solid career path..."</p>
+                                                        <small>-Ajni Bt Abd amil, 23, SapuraKencana</small>
+                                                    </div>
+                                                </div>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                    <!-- Bottom Carousel Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="img/testimonial/001.jpg" alt="">
+                                        </li>
+                                        <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="img/testimonial/002.jpg" alt="">
+                                        </li>
+                                        <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="img/testimonial/003.jpg" alt="">
+                                        </li>
+                                    </ol>
+
+                                    <!-- Carousel Buttons Next/Prev -->
+                                    <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                                    <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!--Screenshots-->
@@ -461,153 +628,119 @@
                         <div class="row center">
                             <div class="col-sm-12">
                                 <p class="v-smash-text-large-2x">
-                                    <span>Screenshots</span>
+                                    <span>RECOGNITIONS</span>
                                 </p>
                                 <div class="horizontal-break"></div>
-                                <p class="lead" style="color: #999;">
+<!--                                <p class="lead" style="color: #999;">
                                     Responsive & optimized for mobile devices.
-                                </p>
+                                </p>-->
                             </div>
                             <div class="v-spacer col-sm-12 v-height-standard"></div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-sm-12">
-
-                                <div class="carousel-wrap">
-
-                                    <div class="owl-carousel" data-plugin-options='{"items": 4, "singleItem": false, "pagination": true}'>
-                                        <div class="item">
-                                            <figure class="lightbox animated-overlay overlay-alt clearfix">
-                                                <img src="img/landing/1.jpg" class="attachment-full">
-                                                <a class="view" href="img/landing/1.jpg" rel="image-gallery"></a>
-                                                <figcaption>
-                                                    <div class="thumb-info">
-                                                        <h4>Lorem ipsum dolor sit amet.</h4>
-                                                        <i class="fa fa-eye"></i>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-
-                                        <div class="item">
-                                            <figure class="lightbox animated-overlay overlay-alt clearfix">
-                                                <img src="img/landing/2.jpg" class="attachment-full">
-                                                <a class="view" href="img/landing/2.jpg" rel="image-gallery"></a>
-                                                <figcaption>
-                                                    <div class="thumb-info">
-                                                        <h4>Lorem ipsum dolor sit amet.</h4>
-                                                        <i class="fa fa-eye"></i>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-
-                                        <div class="item">
-                                            <figure class="lightbox animated-overlay overlay-alt clearfix">
-                                                <img src="img/landing/3.jpg" class="attachment-full">
-                                                <a class="view" href="img/landing/3.jpg" rel="image-gallery"></a>
-                                                <figcaption>
-                                                    <div class="thumb-info">
-                                                        <h4>Lorem ipsum dolor sit amet.</h4>
-                                                        <i class="fa fa-eye"></i>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-
-                                        <div class="item">
-                                            <figure class="lightbox animated-overlay overlay-alt clearfix">
-                                                <img src="img/landing/4.jpg" class="attachment-full">
-                                                <a class="view" href="img/landing/4.jpg" rel="image-gallery"></a>
-                                                <figcaption>
-                                                    <div class="thumb-info">
-                                                        <h4>Lorem ipsum dolor sit amet.</h4>
-                                                        <i class="fa fa-eye"></i>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-
-                                        <div class="item">
-                                            <figure class="lightbox animated-overlay overlay-alt clearfix">
-                                                <img src="img/landing/1.jpg" class="attachment-full">
-                                                <a class="view" href="img/landing/1.jpg" rel="image-gallery"></a>
-                                                <figcaption>
-                                                    <div class="thumb-info">
-                                                        <h4>Lorem ipsum dolor sit amet.</h4>
-                                                        <i class="fa fa-eye"></i>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-
-                                        <div class="item">
-                                            <figure class="lightbox animated-overlay overlay-alt clearfix">
-                                                <img src="img/landing/2.jpg" class="attachment-full">
-                                                <a class="view" href="img/landing/2.jpg" rel="image-gallery"></a>
-                                                <figcaption>
-                                                    <div class="thumb-info">
-                                                        <h4>Lorem ipsum dolor sit amet.</h4>
-                                                        <i class="fa fa-eye"></i>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="row text-center">
+                            <div class="col-sm-6">
+                                <h3>APICTA Awards 2018</h3>
+                                <img src="img/awards/001.jpg" alt="" class="width-img" />
+                            </div> 
+                            <div class="col-sm-6">
+                                <h3>Best of Social Enterprise and SMEs Award</h3>
+                                <img src="img/awards/004.jpg" alt="" class="width-img" />
+                            </div> 
+                            <div class="col-sm-6">
+                                <h3>International Business Award 2017/2018</h3>
+                                <img src="img/awards/002.jpg" alt="" class="width-img" />
+                            </div> 
+                            <div class="col-sm-6">
+                                <h3>Grandeur TOP 10 Awards</h3>
+                                <img src="img/awards/003.jpg" alt="" class="width-img" />
+                            </div> 
+                            <!--                                <div class="carousel-wrap">
+                            
+                                                                <div class="owl-carousel" data-plugin-options='{"items": 4, "singleItem": false, "pagination": true}'>
+                                                                    <div class="item">
+                                                                        <figure class="lightbox animated-overlay overlay-alt clearfix">
+                                                                            <img src="img/landing/1.jpg" class="attachment-full">
+                                                                            <a class="view" href="img/landing/1.jpg" rel="image-gallery"></a>
+                                                                            <figcaption>
+                                                                                <div class="thumb-info">
+                                                                                    <h4>Lorem ipsum dolor sit amet.</h4>
+                                                                                    <i class="fa fa-eye"></i>
+                                                                                </div>
+                                                                            </figcaption>
+                                                                        </figure>
+                                                                    </div>
+                            
+                                                                    <div class="item">
+                                                                        <figure class="lightbox animated-overlay overlay-alt clearfix">
+                                                                            <img src="img/landing/2.jpg" class="attachment-full">
+                                                                            <a class="view" href="img/landing/2.jpg" rel="image-gallery"></a>
+                                                                            <figcaption>
+                                                                                <div class="thumb-info">
+                                                                                    <h4>Lorem ipsum dolor sit amet.</h4>
+                                                                                    <i class="fa fa-eye"></i>
+                                                                                </div>
+                                                                            </figcaption>
+                                                                        </figure>
+                                                                    </div>
+                            
+                                                                    <div class="item">
+                                                                        <figure class="lightbox animated-overlay overlay-alt clearfix">
+                                                                            <img src="img/landing/3.jpg" class="attachment-full">
+                                                                            <a class="view" href="img/landing/3.jpg" rel="image-gallery"></a>
+                                                                            <figcaption>
+                                                                                <div class="thumb-info">
+                                                                                    <h4>Lorem ipsum dolor sit amet.</h4>
+                                                                                    <i class="fa fa-eye"></i>
+                                                                                </div>
+                                                                            </figcaption>
+                                                                        </figure>
+                                                                    </div>
+                            
+                                                                    <div class="item">
+                                                                        <figure class="lightbox animated-overlay overlay-alt clearfix">
+                                                                            <img src="img/landing/4.jpg" class="attachment-full">
+                                                                            <a class="view" href="img/landing/4.jpg" rel="image-gallery"></a>
+                                                                            <figcaption>
+                                                                                <div class="thumb-info">
+                                                                                    <h4>Lorem ipsum dolor sit amet.</h4>
+                                                                                    <i class="fa fa-eye"></i>
+                                                                                </div>
+                                                                            </figcaption>
+                                                                        </figure>
+                                                                    </div>
+                            
+                                                                    <div class="item">
+                                                                        <figure class="lightbox animated-overlay overlay-alt clearfix">
+                                                                            <img src="img/landing/1.jpg" class="attachment-full">
+                                                                            <a class="view" href="img/landing/1.jpg" rel="image-gallery"></a>
+                                                                            <figcaption>
+                                                                                <div class="thumb-info">
+                                                                                    <h4>Lorem ipsum dolor sit amet.</h4>
+                                                                                    <i class="fa fa-eye"></i>
+                                                                                </div>
+                                                                            </figcaption>
+                                                                        </figure>
+                                                                    </div>
+                            
+                                                                    <div class="item">
+                                                                        <figure class="lightbox animated-overlay overlay-alt clearfix">
+                                                                            <img src="img/landing/2.jpg" class="attachment-full">
+                                                                            <a class="view" href="img/landing/2.jpg" rel="image-gallery"></a>
+                                                                            <figcaption>
+                                                                                <div class="thumb-info">
+                                                                                    <h4>Lorem ipsum dolor sit amet.</h4>
+                                                                                    <i class="fa fa-eye"></i>
+                                                                                </div>
+                                                                            </figcaption>
+                                                                        </figure>
+                                                                    </div>
+                                                                </div>
+                                                            </div>-->
                         </div>
                     </div>
                 </div>
                 <!--End Screenshots-->
-
-                <!--Download-->
-<!--                <div class="v-parallax v-bg-stylish v-bg-stylish-v10" id="download" style="background-image: url(img/slider/slider4.jpg);">
-
-                    <div class="container">
-                        <div class="row center">
-
-                            <div class="col-sm-12">
-
-                                <div class="v-content-wrapper">
-                                    <p class="v-smash-text-large-2x">
-                                        <span>Download the app on</span>
-                                    </p>
-
-                                    <div class="v-spacer col-sm-12 v-height-standard"></div>
-
-                                    <div id="intro_stores">
-                                        <a href="#">
-                                            <img src="img/landing/appstore.png" alt="appstore_icon"></a>
-                                        <a href="#">
-                                            <img src="img/landing/google.png" alt="google_icon"></a>
-                                        <a href="#">
-                                            <img src="img/landing/amazon.png" alt="amazon_icon"></a>
-                                    </div>
-
-                                    <div class="v-spacer col-sm-12 v-height-big"></div>
-
-                                    <p class="v-smash-text-large-2x">
-                                        <span>Subscribe Now!</span>
-                                    </p>
-
-                                    <div class="v-spacer col-sm-12 v-height-small"></div>
-
-                                    <form class="subscription-form form-inline">
-
-                                        <input type="email" name="EMAIL" placeholder="Your Email" class="subscriber-email form-control input-box">
-                                        <a href="#" type="submit" class="subscriber-button btn v-btn v-medium-button no-three-d v-belize-hole"><i class="fa fa-fire"></i>Subscribe</a>
-                                    </form>
-                                </div>
-
-                            </div>
-
-                            <div class="v-bg-overlay overlay-colored"></div>
-                        </div>
-                    </div>
-                </div>-->
-                <!--End Download-->
 
                 <!--Call Us-->
                 <div class="v-parallax v-bg-stylish" id="contact-us">
@@ -704,7 +837,7 @@
                                 </section>
                             </div>
                             <div class="col-sm-8">
-                               <h4>Contact Us</h4>
+                                <h4>Contact Us</h4>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <section class="widget">
@@ -793,5 +926,30 @@
         <script src="plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
         <script src="js/theme-core.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.customer-logos').slick({
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: false,
+                    responsive: [{
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 4
+                            }
+                        }, {
+                            breakpoint: 520,
+                            settings: {
+                                slidesToShow: 3
+                            }
+                        }]
+                });
+            });
+        </script>
     </body>
 </html>

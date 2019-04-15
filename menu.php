@@ -37,23 +37,29 @@
                     <li>
                         <a data-hash href="#about"><i class="fa fa-fire"></i>About</a>
                     </li>
-                    <li>
+<!--                    <li>
                         <a data-hash href="#vision"><i class="fa fa-location-arrow"></i>Vision & Mision</a>
-                    </li>
+                    </li>-->
 
                     <li>
-                        <a data-hash href="#services"><i class="fa fa-umbrella"></i>Petronas Licenses</a>
+                        <a data-hash href="#services"><i class="fa fa-file-text-o"></i>Petronas Licenses</a>
                     </li>
                     <li>
                         <a data-hash href="#describe"><i class="fa fa-flash"></i>Energy</a>
                     </li>
                     <li>
+                        <a data-hash href="#download"><i class="fa fa-users"></i>Team</a>
+                    </li>
+                    <li>
                         <a data-hash href="#features"><i class="fa fa-laptop"></i>Features</a>
                     </li>
                     <li>
-                        <a data-hash href="#download"><i class="fa fa-download"></i>Download</a>
+                        <a data-hash href="#clients"><i class="fa fa-handshake-o"></i>Clients</a>
                     </li>
-                    <li class="dropdown">
+                    <li>
+                        <a data-hash href="#clients"><i class="fa fa-phone"></i>Contact us</a>
+                    </li>
+<!--                    <li class="dropdown">
                         <a class="dropdown-toggle menu-icon" href="#"><i class="fa fa-umbrella"></i>Menu <i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Blog - Standard</a></li>
@@ -69,7 +75,7 @@
                                 </ul>
                             </li>
                         </ul>
-                    </li>
+                    </li>-->
                 </ul>
             </nav>
             <!--End Main Menu-->
