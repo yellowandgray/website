@@ -1,0 +1,49 @@
+.box-1 {
+
+    /* border: 1px solid black; */
+    padding: 15px 50px;
+    background: #eee;
+    box-shadow: 0px 0px 8px 5px #d3d0d0;
+    /* outline: 1px solid #cc8939; */
+    border-radius: 22px;
+    height: 382px;
+
+}
+.color-white {
+    color: #fff; 
+}
+
+.read     {
+    padding: 5px 10px;
+    background: #8c8b8b;
+    border-radius: 12px;
+    color: #fff;
+}
+.read:hover    {
+    transform: scale(1.1);
+    transition: 0.2s all linear;
+}
+.pic-1 {
+
+    border: 1px solid black;
+    height: 150px;
+    padding: 10px;
+
+}
+.box-2 {
+    border: 1px solid #c9c8c8;
+    margin-top: 3px;
+    padding: 20px;
+    height: 350px;
+    background: rgba(190, 190, 190, 0.12156862745098039);
+}
+
+.footer-contact-info p {
+    position: relative;
+    padding: 0px 19px 0px 22px;
+    margin-top: -20px;
+    line-height: 26px;
+}
+
+
+
