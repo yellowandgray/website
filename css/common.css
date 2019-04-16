@@ -267,3 +267,15 @@
 .padding-t-10 {
     padding: 10px 0px 0px 0px ;
 }
+
+.box-2 h3 {
+    color: #fff !important;
+}
+
+.ul-font-color li {
+    color: #fff;
+}
+
+.ul-font-color li i {
+    color: #fff;
+}

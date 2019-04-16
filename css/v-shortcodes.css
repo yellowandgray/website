@@ -3063,7 +3063,7 @@ blockquote.pullquote {
 .v-list-v2 li {
     padding: 7px 0;
     line-height: 185%;
-    border-bottom: 1px solid rgb(240, 240, 240);
+/*    border-bottom: 1px solid rgb(240, 240, 240);*/
 }
 
 .v-list-v2 li i {
