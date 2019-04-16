@@ -547,7 +547,7 @@
                     </div>
 
                     <!--Screenshots-->
-                    <div class="v-parallax v-bg-stylish v-bg-stylish-v4 no-shadow padding-t-50" id="screenshots">
+<!--                    <div class="v-parallax v-bg-stylish v-bg-stylish-v4 no-shadow padding-t-50" id="screenshots">
                         <div class="container">
                             <div class="row center">
                                 <div class="col-sm-12">
@@ -555,9 +555,9 @@
                                         <span>RECOGNITIONS</span>
                                     </p>
                                     <div class="horizontal-break"></div>
-    <!--                                <p class="lead" style="color: #999;">
+                                    <p class="lead" style="color: #999;">
                                         Responsive & optimized for mobile devices.
-                                    </p>-->
+                                    </p>
                                 </div>
                                 <div class="v-spacer col-sm-12 v-height-standard"></div>
                             </div>
@@ -579,7 +579,7 @@
                                     <h3>Grandeur TOP 10 Awards</h3>
                                     <img src="img/awards/003.jpg" alt="" class="width-img" />
                                 </div> 
-                                <!--                                <div class="carousel-wrap">
+                                                                <div class="carousel-wrap">
                                 
                                                                     <div class="owl-carousel" data-plugin-options='{"items": 4, "singleItem": false, "pagination": true}'>
                                                                         <div class="item">
@@ -660,10 +660,10 @@
                                                                             </figure>
                                                                         </div>
                                                                     </div>
-                                                                </div>-->
+                                                                </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <!--End Screenshots-->
 
                     <!--Call Us-->

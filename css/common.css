@@ -22,7 +22,7 @@
     font-size: 15px;
 }
 .read:hover    {
-/*    transform: scale(1.1);*/
+    /*    transform: scale(1.1);*/
     transition: 0.2s all linear;
     color: #fff;
     background: #000;
@@ -35,11 +35,11 @@
 
 }
 .box-2 {
-    border: 1px solid #c9c8c8;
+    border: 1px solid #e5e5e5;
     margin-top: 3px;
     padding: 20px;
     height: 460px;
-    background: rgba(190, 190, 190, 0.12156862745098039);
+    background: #31ABEC;
 }
 
 .footer-contact-info p {
