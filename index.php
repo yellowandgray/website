@@ -501,8 +501,8 @@
                                         </div>
                                         <div class="item">
                                             <div class="row" style="padding: 20px">
-                                                <button style="border: none;"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i></button>
-                                                <p class="testimonial_para">My salary has been boosted by 35% since my participation in the TOPSHOT program...</p><br>
+<!--                                                <button style="border: none;"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i></button>-->
+                                                <p class="testimonial_para"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i> My salary has been boosted by 35% since my participation in the TOPSHOT program...</p><br>
                                                 <div class="row">
                                                     <div class="col-sm-6" style="padding-left: 430px">
                                                         <img class="img-responsive padding-t-10" src="img/testimonial/002.jpg" alt="" style="width: 80px">
@@ -517,8 +517,8 @@
                                         </div>
                                         <div class="item">
                                             <div class="row" style="padding: 20px">
-                                                <button style="border: none;"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i></button>
-                                                <p class="testimonial_para">Previously I was unemployed. There was uncertainty. Now, I have stability and a solid career path...</p><br>
+<!--                                                <button style="border: none;"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i></button>-->
+                                                <p class="testimonial_para"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i> Previously I was unemployed. There was uncertainty. Now, I have stability and a solid career path...</p><br>
                                                 <div class="row">
                                                     <div class="col-sm-6" style="padding-left: 400px">
                                                         <img class="img-responsive padding-t-10" src="img/testimonial/003.jpg" alt="" style="width: 80px">
