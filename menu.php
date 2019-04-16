@@ -57,7 +57,7 @@
                         <a data-hash href="#clients"><i class="fa fa-handshake-o"></i>Clients</a>
                     </li>
                     <li>
-                        <a data-hash href="#contact-us"><i class="fa fa-phone"></i>Contact us</a>
+                        <a data-hash href="#join-us"><i class="fa fa-phone"></i>Join us</a>
                     </li>
 <!--                    <li class="dropdown">
                         <a class="dropdown-toggle menu-icon" href="#"><i class="fa fa-umbrella"></i>Menu <i class="fa fa-caret-down"></i></a>
