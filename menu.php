@@ -1,10 +1,10 @@
 <header class="semi-transparent-header" data-bg-color="rgba(9, 103, 139, 0.36)" data-font-color="#fff">
-    <div class="container">
+    <div class="container menu-container">
 
         <!--Site Logo-->
         <div class="logo" data-sticky-logo="img/logo-white.png" data-normal-logo="img/logo.png">
-            <a href="index.html">
-                <img alt="Venue" src="img/logo.png" data-logo-height="35">
+            <a href="index.php">
+                <img alt="Viva Odyssey Logo" src="img/logo.png" data-logo-height="50">
             </a>
         </div>
         <!--End Site Logo-->
@@ -57,7 +57,7 @@
                         <a data-hash href="#clients"><i class="fa fa-handshake-o"></i>Clients</a>
                     </li>
                     <li>
-                        <a data-hash href="#join-us"><i class="fa fa-phone"></i>Join us</a>
+                        <a data-hash href="#contact-us"><i class="fa fa-phone"></i>Contact us</a>
                     </li>
 <!--                    <li class="dropdown">
                         <a class="dropdown-toggle menu-icon" href="#"><i class="fa fa-umbrella"></i>Menu <i class="fa fa-caret-down"></i></a>
