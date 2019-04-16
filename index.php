@@ -21,7 +21,7 @@
                         <li data-transition="fade" data-slotamount="7" data-masterspeed="600">
                             <img src="img/slider/image2.png" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                             <div class="tp-caption v-caption-big-white sfl stl" data-x="450" data-y="245" data-speed="600" data-start="600" data-easing="Power1.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0" data-endspeed="300">
-                                THE LAST TEMPLATE
+                                Viva Odyssey designed and developed a web-based solution
                                 <br />
                                 YOU'LL HAVE TO BUY
                             </div>
@@ -37,7 +37,7 @@
                             </div>
                             <div class="tp-caption sfl stl" data-x="110" data-y="130" data-speed="600" data-start="1800" data-easing="Power1.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0" data-endspeed="300">
                                 <!--<a href='#' class="btn v-btn v-third-light">GET IT NOW!</a>-->
-                                <img src="img/iphone2.png" />
+<!--                                <img src="img/iphone2.png" />-->
                             </div>
                             <!--<div class="v-slider-overlay overlay-colored"></div>-->
                         </li>
@@ -312,6 +312,9 @@
                                 <p class="v-lead text-justify">Safety Training Officers to provide On-site support for Company's Safety Program <p class="v-lead">Develop Safety Programs and supply Specialist to Facilitate these Programs</p>
                                 <a href="#" class="read-more read">Read More</a>
                             </div>
+                            <div class="col-sm-6">
+                                <img class="img-responsive phone-image v-animation" data-animation="fade-from-right" data-delay="300" src="img/viva-energy.png" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -319,12 +322,9 @@
 
                 <!--Download-->
                 <div class="v-parallax v-bg-stylish v-bg-stylish-v10" id="download" style="background-image: url(img/slider/slider4.jpg);">
-
                     <div class="container">
                         <div class="row center">
-
                             <div class="col-sm-12">
-
                                 <div class="v-content-wrapper">
                                     <p class="v-smash-text-large-2x padding-t-50">
                                         <span>Team</span>
@@ -343,19 +343,19 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4">
+
+                                        </div>
+                                        <div class="col-md-4">
                                             <div class="text-center border-line">
                                                 <h3>Gerard M. Pillai</h3>
                                                 <p>Director, Strategy <br/>Planning</p>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="text-center border-line">
-                                                <h3>Edgar Sung Burongoh</h3>
-                                                <p>Chief Technology <br/>Officer</p>
-                                            </div>
+                                            <!--                                            <div class="text-center border-line">
+                                                                                            <h3>Edgar Sung Burongoh</h3>
+                                                                                            <p>Chief Technology <br/>Officer</p>
+                                                                                        </div>-->
                                         </div>
                                     </div>
-
                                     <!--                                    <div id="intro_stores">
                                                                             <a href="#">
                                                                                 <img src="img/landing/appstore.png" alt="appstore_icon"></a>
@@ -364,24 +364,19 @@
                                                                             <a href="#">
                                                                                 <img src="img/landing/amazon.png" alt="amazon_icon"></a>
                                                                         </div>-->
-
                                     <div class="v-spacer col-sm-12 v-height-big"></div>
-
+                                    <p>Our team of highly skilled and experienced trainers and consultants have all had distinguished careers in senior management roles and some of whom have been working with a wide variety of clients since 1990 and bring with them a wealth of practical experience to each course</p>
 <!--                                    <p class="v-smash-text-large-2x">
                                         <span>Subscribe Now!</span>
-                                    </p>-->
-
+                                    </p>-->                             
                                     <div class="v-spacer col-sm-12 v-height-small"></div>
-
                                     <!--                                    <form class="subscription-form form-inline">
                                     
                                                                             <input type="email" name="EMAIL" placeholder="Your Email" class="subscriber-email form-control input-box">
                                                                             <a href="#" type="submit" class="subscriber-button btn v-btn v-medium-button no-three-d v-belize-hole"><i class="fa fa-fire"></i>Subscribe</a>
                                                                         </form>-->
                                 </div>
-
                             </div>
-
                             <div class="v-bg-overlay overlay-colored"></div>
                         </div>
                     </div>

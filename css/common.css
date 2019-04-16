@@ -14,14 +14,18 @@
 }
 
 .read     {
-    padding: 5px 10px;
-    background: #8c8b8b;
+    padding: 12px 30px;
+    background: #ffffff;
     border-radius: 12px;
-    color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    font-size: 15px;
 }
 .read:hover    {
-    transform: scale(1.1);
+/*    transform: scale(1.1);*/
     transition: 0.2s all linear;
+    color: #fff;
+    background: #000;
 }
 .pic-1 {
 
@@ -250,11 +254,11 @@
     color: #0aaa7a;
     font-size: 12px;
 }
-  .testimonial_btn{
+.testimonial_btn{
     background-color: #373d4b !important;
     color: #fff !important;
- }
- .seprator {
+}
+.seprator {
     height: 2px;
     width: 56px;
     background-color: #0aaa7a;

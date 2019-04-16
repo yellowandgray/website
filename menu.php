@@ -1,4 +1,4 @@
-<header class="semi-transparent-header" data-bg-color="rgba(9, 103, 139, 0.36)" data-font-color="#fff">
+<header class="semi-transparent-header" data-bg-color="rgb(32, 32, 32)" data-font-color="#fff">
     <div class="container menu-container">
 
         <!--Site Logo-->
@@ -12,7 +12,7 @@
         <div class="navbar-collapse nav-main-collapse collapse">
 
             <!--Header Search-->
-            <div class="search" id="headerSearch">
+<!--            <div class="search" id="headerSearch">
                 <a href="#" id="headerSearchOpen"><i class="fa fa-search"></i></a>
                 <div class="search-input">
                     <form id="headerSearchForm" action="#" method="get">
@@ -25,7 +25,7 @@
                     </form>
                     <span class="v-arrow-wrap"><span class="v-arrow-inner"></span></span>
                 </div>
-            </div>
+            </div>-->
             <!--End Header Search-->
 
             <!--Main Menu-->
@@ -54,10 +54,10 @@
                         <a data-hash href="#features"><i class="fa fa-laptop"></i>Features</a>
                     </li>
                     <li>
-                        <a data-hash href="#clients"><i class="fa fa-handshake-o"></i>Clients</a>
+                        <a data-hash href="#clients"><i class="fa fa fa-user"></i>Clients</a>
                     </li>
                     <li>
-                        <a data-hash href="#join-us"><i class="fa fa-phone"></i>Contact us</a>
+                        <a data-hash href="#join-us"><i class="fa fa-phone"></i>Join us</a>
                     </li>
 <!--                    <li class="dropdown">
                         <a class="dropdown-toggle menu-icon" href="#"><i class="fa fa-umbrella"></i>Menu <i class="fa fa-caret-down"></i></a>
