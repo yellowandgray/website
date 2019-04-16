@@ -21,7 +21,7 @@
                         <li data-transition="fade" data-slotamount="7" data-masterspeed="600">
                             <img src="img/slider/image2.png" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                             <div class="tp-caption v-caption-big-white sfl stl" data-x="450" data-y="245" data-speed="600" data-start="600" data-easing="Power1.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0" data-endspeed="300">
-                                THE LAST TEMPLATE
+                                Viva Odyssey designed and developed a web-based solution
                                 <br />
                                 YOU'LL HAVE TO BUY
                             </div>
