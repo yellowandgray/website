@@ -429,7 +429,7 @@
                                             <div class="footer-contact-info">
                                                 <ul>
                                                     <li>
-                                                        <i class="fa fa-building"></i><p>VIVA ODYSSEY</p>
+                                                        <i class="fa fa-building"></i><p>VIVA ODYSSEY SDN. BHD.</p>
                                                     </li>
                                                     <li>
                                                         <i class="fa fa-map-marker"></i><p>No.1, Jalan Puteri 12/5</br>Wisma Grand View</br>Bandar Puteri Puchong</br>47100 Puchong</br>Selangor</p>
