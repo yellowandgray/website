@@ -677,22 +677,18 @@
                         <div class="row  v-counter-wrap v-animation" data-animation="grow" data-delay="200">
                             <div class="col-sm-4">
                                 <div  class="box-3">
-                                    <h3 class="text-center color-white">JOBS</h3>
+                                    <a href="jobs.php" target="blank" class="text-center color-white">JOBS</a>
                                 </div>
-
                             </div>
                             <div class="col-sm-4">
                                 <img src="img/pic/join.png" alt="" style="width: 100%">
-
                             </div>
                             <div class="col-sm-4">
                                 <div  class="box-3">
-                                    <h3 class="text-center color-white">INTERNSHIP</h3>
+                                    <a href="internship.php" target="blank" class="text-center color-white">INTERNSHIP</a>
                                 </div>
-
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-md-12">
                                 <form action="#" method="post">
@@ -715,10 +711,8 @@
                                                 <label>Comment <span class="required">*</span></label>
                                                 <textarea maxlength="5000" rows="10" class="form-control height-185" name="comment" id="Textarea1"></textarea>
                                             </div>
-
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <br />
@@ -726,14 +720,11 @@
                                         </div>
                                     </div>
                                 </form> 
-
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="v-spacer col-sm-12 v-height-small"></div>
                         </div>
-
                         <div class="row center">
                             <ul class="social-icons large center">
                                 <li class="twitter"><a href="http://www.twitter.com/#" target="_blank"><i class="fa fa-twitter"></i><i class="fa fa-twitter"></i></a></li>
@@ -750,7 +741,6 @@
                 </div>
                 <!--End Call Us-->
             </div>
-
             <!--Footer-Wrap-->
             <div class="footer-wrap">
                 <footer>
@@ -759,9 +749,7 @@
                             <div class="col-sm-4">
                                 <section class="widget">
                                     <img alt="Venue" src="img/logo-white.png" style="height: 40px; margin-bottom: 20px;">
-                                    <p class="pull-bottom-small">
-                                        Viva Odyssey Sdn Bhd is a Malaysian company located in the heart of Kuala Lumpur, founded and incorporated in 2009 by Jerryson Abraham.
-                                    </p>
+                                    <p class="pull-bottom-small">Viva Odyssey Sdn Bhd is a Malaysian company located in the heart of Kuala Lumpur, founded and incorporated in 2009 by Jerryson Abraham.</p>
                                     <p>
                                         <a href="index.php">Read More →</a>
                                     </p>
