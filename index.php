@@ -363,12 +363,12 @@
                         <div class="row app-brief">
                             <div class="col-sm-6">
                                 <h3>Manpower - HSE Consultants / Safety & Health Officers / Trainers</h3>
-                                <p class="v-lead">Viva focuses on providing Malaysian Nationals to cater for the drilling industry. However, we have Expatriates and Regional Consultants from SEA to furnish operations within the Asia Pacific unit. Daily Rate (12hour) - an ALL inclusive cost of medical benefits and Work Injury Compensation and Basic Offshore Survival Training (OPITO Standard)</p>
+                                <p class="v-lead text-justify">Viva focuses on providing Malaysian Nationals to cater for the drilling industry. However, we have Expatriates and Regional Consultants from SEA to furnish operations within the Asia Pacific unit. Daily Rate (12hour) - an ALL inclusive cost of medical benefits and Work Injury Compensation and Basic Offshore Survival Training (OPITO Standard)</p>
 
-                                <p class="v-lead">VO is able to provide HSE Coaches and Safety Training Officers to support services for the following position to meet the clients request.</p>
+                                <p class="v-lead text-justify">VO is able to provide HSE Coaches and Safety Training Officers to support services for the following position to meet the clients request.</p>
                                 <h3>Scope of HSE Work</h3>
-                                <p class="v-lead">Offshore Safety Training Officers (STO), capable of performing services required for Safety, Training development of safety presentations/programs based on the clients scope.</p>
-                                <p class="v-lead">Safety Training Officers to provide On-site support for Company's Safety Program <p class="v-lead">Develop Safety Programs and supply Specialist to Facilitate these Programs</p>
+                                <p class="v-lead text-justify">Offshore Safety Training Officers (STO), capable of performing services required for Safety, Training development of safety presentations/programs based on the clients scope.</p>
+                                <p class="v-lead text-justify">Safety Training Officers to provide On-site support for Company's Safety Program <p class="v-lead">Develop Safety Programs and supply Specialist to Facilitate these Programs</p>
                                 <a href="#" class="read-more read">Read More</a>
                             </div>
 
@@ -389,10 +389,10 @@
                             <div class="col-sm-12">
 
                                 <div class="v-content-wrapper">
-                                    <p class="v-smash-text-large-2x">
+                                    <p class="v-smash-text-large-2x padding-t-50">
                                         <span>Team</span>
                                     </p>
-
+                                    <div class="horizontal-break center"></div>
                                     <div class="v-spacer col-sm-12 v-height-standard"></div>
                                     <div class="">
                                         <img src="img/team/01.jpg" alt="" />
@@ -462,66 +462,55 @@
                                 <span>FEATURES</span>
                             </p>
                         </center>
+                        <div class="horizontal-break center"></div>
                         <div class="row  v-counter-wrap v-animation" data-animation="grow" data-delay="200">
                             <div class="col-sm-4">
-                                <div>
-                                    <div class="pic-1">
-                                        <img src="img/viva-tech.jpg" alt="" style="width: 100%">
-                                    </div>
-                                    <div  class="box-2">
-                                        <h3 class=text-center>TECH</h3>
-                                        <ul class="v-list-v2">
-                                            <li class="v-animation" data-animation="fade-from-right" data-delay="150"><i class="fa fa-check"></i><span class="v-lead">Data collection</span></li>
-                                            <li class="v-animation" data-animation="fade-from-right" data-delay="300"><i class="fa fa-check"></i><span class="v-lead">Scenario Planning</span></li>
-                                            <li class="v-animation" data-animation="fade-from-right" data-delay="450"><i class="fa fa-check"></i><span class="v-lead">Big data</span></li>
-                                            <li class="v-animation" data-animation="fade-from-right" data-delay="600"><i class="fa fa-check"></i><span class="v-lead">Industry 4.0</span></li>
-                                            <li class="v-animation" data-animation="fade-from-right" data-delay="750"><i class="fa fa-check"></i><span class="v-lead">Enterprise 2.0 Tech platform</span></li>
-                                            <li class="v-animation" data-animation="fade-from-right" data-delay="900"><i class="fa fa-check"></i><span class="v-lead">POT Knowledge Hub</span></li>
-                                        </ul>
+                                <div  class="box-2">
+                                    <img src="img/viva-tech.jpg" alt="" style="width: 100%">
+                                    <h3 class=text-center>TECH</h3>
+                                    <ul class="v-list-v2">
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="150"><i class="fa fa-check"></i><span class="v-lead">Data collection</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="300"><i class="fa fa-check"></i><span class="v-lead">Scenario Planning</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="450"><i class="fa fa-check"></i><span class="v-lead">Big data</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="600"><i class="fa fa-check"></i><span class="v-lead">Industry 4.0</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="750"><i class="fa fa-check"></i><span class="v-lead">Enterprise 2.0 Tech platform</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="900"><i class="fa fa-check"></i><span class="v-lead">POT Knowledge Hub</span></li>
+                                    </ul>
 
-                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="box-2">
+                                    <img src="img/viva-education.jpg" alt="" style="width: 100%">
+                                    <h3 class=text-center>EDUCATION</h3>
+                                    <ul class="v-list-v2">
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="150"><i class="fa fa-check"></i><span class="v-lead">Safety Training</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="300"><i class="fa fa-check"></i><span class="v-lead">Customized Training</span>
+                                            <ul>
+                                                <li>offline</li>
+                                                <li>online</li>
+                                            </ul>
+                                        </li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="450"><i class="fa fa-check"></i><span class="v-lead">Learnings Programs</span>
+                                            <ul>
+                                                <li>offline</li>
+                                                <li>online</li>
+                                            </ul>   
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="col-sm-4">
-                                <div>
-                                    <div class="pic-1">
-                                        <img src="img/viva-education.jpg" alt="" style="width: 100%">
-                                    </div>
-                                    <div class="box-2">
-                                        <h3 class=text-center>EDUCATION</h3>
-                                        <ul class="v-list-v2">
-                                            <li class="v-animation" data-animation="fade-from-right" data-delay="150"><i class="fa fa-check"></i><span class="v-lead">Safety Training</span></li>
-                                            <li class="v-animation" data-animation="fade-from-right" data-delay="300"><i class="fa fa-check"></i><span class="v-lead">Customized Training</span>
-                                                <ul>
-                                                    <li>offline</li>
-                                                    <li>online</li>
-                                                </ul>
-                                            </li>
-                                            <li class="v-animation" data-animation="fade-from-right" data-delay="450"><i class="fa fa-check"></i><span class="v-lead">Learnings Programs</span>
-                                                <ul>
-                                                    <li>offline</li>
-                                                    <li>online</li>
-                                                </ul>   
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div>
-                                    <div class="pic-1">
-                                        <img src="img/viva-resources.jpg" alt="" style="width: 100%">
-                                    </div>
-                                    <div  class="box-2">
-                                        <h3 class=text-center>RESOURCES</h3>
-                                        <ul class="v-list-v2">
-                                            <li class="v-animation" data-animation="fade-from-right" data-delay="150"><i class="fa fa-check"></i><span class="v-lead">Credentials decks </span></li>
-                                            <li class="v-animation" data-animation="fade-from-right" data-delay="300"><i class="fa fa-check"></i><span class="v-lead">Press Kit</span></li>
-                                            <li class="v-animation" data-animation="fade-from-right" data-delay="450"><i class="fa fa-check"></i><span class="v-lead">Brochures</span></li>
-                                            <li class="v-animation" data-animation="fade-from-right" data-delay="600"><i class="fa fa-check"></i><span class="v-lead">Branding Kit </span></li>
-                                        </ul>
-
-                                    </div>
+                                <div  class="box-2">
+                                    <img src="img/viva-resources.jpg" alt="" style="width: 100%">
+                                    <h3 class=text-center>RESOURCES</h3>
+                                    <ul class="v-list-v2">
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="150"><i class="fa fa-check"></i><span class="v-lead">Credentials decks </span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="300"><i class="fa fa-check"></i><span class="v-lead">Press Kit</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="450"><i class="fa fa-check"></i><span class="v-lead">Brochures</span></li>
+                                        <li class="v-animation" data-animation="fade-from-right" data-delay="600"><i class="fa fa-check"></i><span class="v-lead">Branding Kit </span></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -540,6 +529,7 @@
                                 <span>OUR CLIENTS</span>
                             </p>
                         </center>
+                        <div class="horizontal-break center"></div>
                         <section class="customer-logos slider">
                             <div class="slide"><img src="img/client/odyssey-client-001.jpg"></div>
                             <div class="slide"><img src="img/client/odyssey-client-002.jpg"></div>
@@ -557,65 +547,72 @@
                         </section>
                     </div>
                 </div>
+
                 <div class="v-parallax v-bg-stylish" style="border-top: none">
                     <div class="container">
-                        <center>
-                            <p class="v-smash-text-large-2x pull-top">
-                                <span>TESTIMONIALS</span>
-                            </p>
-                        </center>
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="carousel slide" data-ride="carousel" id="quote-carousel">
-                                    <!-- Carousel Slides / Quotes -->
-                                    <div class="carousel-inner text-center">
-                                        <!-- Quote 1 -->
+                            <div class="col-sm-12">
+                                <h3  class="text-center"><strong>Testimonial</strong></h3>
+                                <center><div class="seprator"></div></center>
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner">
                                         <div class="item active">
-                                            <blockquote>
+                                            <div class="row" style="padding: 20px">
+                                                <button style="border: none;"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i></button>
+                                                <p class="testimonial_para">I have a stable career with a global O&G player and I am doing what I love. Life is good...</p><br>
                                                 <div class="row">
-                                                    <div class="col-sm-8 col-sm-offset-2">
-                                                        <p>"I have a stable career with a global O&G player and I am doing what I love. Life is good..."</p>
-                                                        <small>-Muhammad Afiq Bin Makmon, 26, SapuraKencana</small>
+                                                    <div class="col-sm-1">
+                                                        <img class="img-responsive padding-t-10 " src="img/testimonial/001.jpg" alt="" style="width: 80px">
+                                                    </div>
+                                                    <div class="col-sm-11">
+                                                        <h4><strong>Muhammad Afiq Bin Makmon,</strong></h4>
+                                                        <p class="testimonial_subtitle"><span> 26, SapuraKencana</span><br>
+                                                        </p>
                                                     </div>
                                                 </div>
-                                            </blockquote>
+                                            </div>
                                         </div>
-                                        <!-- Quote 2 -->
                                         <div class="item">
-                                            <blockquote>
+                                            <div class="row" style="padding: 20px">
+                                                <button style="border: none;"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i></button>
+                                                <p class="testimonial_para">My salary has been boosted by 35% since my participation in the TOPSHOT program...</p><br>
                                                 <div class="row">
-                                                    <div class="col-sm-8 col-sm-offset-2">
-                                                        <p>"My salary has been boosted by 35% since my participation in the TOPSHOT program..."</p>
-                                                        <small>Ganeson, 29, Transocean</small>
+                                                    <div class="col-sm-1">
+                                                        <img class="img-responsive padding-t-10" src="img/testimonial/002.jpg" alt="" style="width: 80px">
+                                                    </div>
+                                                    <div class="col-sm-11">
+                                                        <h4><strong>Ganeson,</strong></h4>
+                                                        <p class="testimonial_subtitle"><span>29, Transocean</span>
+                                                        </p>
                                                     </div>
                                                 </div>
-                                            </blockquote>
+                                            </div>
                                         </div>
-                                        <!-- Quote 3 -->
                                         <div class="item">
-                                            <blockquote>
+                                            <div class="row" style="padding: 20px">
+                                                <button style="border: none;"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i></button>
+                                                <p class="testimonial_para">Previously I was unemployed. There was uncertainty. Now, I have stability and a solid career path...</p><br>
                                                 <div class="row">
-                                                    <div class="col-sm-8 col-sm-offset-2">
-                                                        <p>"Previously I was unemployed. There was uncertainty. Now, I have stability and a solid career path..."</p>
-                                                        <small>-Ajni Bt Abd amil, 23, SapuraKencana</small>
+                                                    <div class="col-sm-1">
+                                                        <img class="img-responsive padding-t-10" src="img/testimonial/003.jpg" alt="" style="width: 80px">
+                                                    </div>
+                                                    <div class="col-sm-11">
+                                                        <h4><strong>Ajni Bt Abd amil,</strong></h4>
+                                                        <p class="testimonial_subtitle"><span>23, SapuraKencana</span>
+                                                        </p>
                                                     </div>
                                                 </div>
-                                            </blockquote>
+                                            </div>
                                         </div>
                                     </div>
-                                    <!-- Bottom Carousel Indicators -->
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="img/testimonial/001.jpg" alt="">
-                                        </li>
-                                        <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="img/testimonial/002.jpg" alt="">
-                                        </li>
-                                        <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="img/testimonial/003.jpg" alt="">
-                                        </li>
-                                    </ol>
+                                </div>
+                                <div class="controls testimonial_control text-center">
+                                    <a class="left fa fa-chevron-left btn btn-default testimonial_btn" href="#carousel-example-generic"
+                                       data-slide="prev"></a>
 
-                                    <!-- Carousel Buttons Next/Prev -->
-                                    <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
-                                    <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                                    <a class="right fa fa-chevron-right btn btn-default testimonial_btn" href="#carousel-example-generic"
+                                       data-slide="next"></a>
                                 </div>
                             </div>
                         </div>
@@ -623,7 +620,7 @@
                 </div>
 
                 <!--Screenshots-->
-                <div class="v-parallax v-bg-stylish v-bg-stylish-v4 no-shadow" id="screenshots">
+                <div class="v-parallax v-bg-stylish v-bg-stylish-v4 no-shadow padding-t-50" id="screenshots">
                     <div class="container">
                         <div class="row center">
                             <div class="col-sm-12">
@@ -743,48 +740,59 @@
                 <!--End Screenshots-->
 
                 <!--Call Us-->
-                <div class="v-parallax v-bg-stylish" id="contact-us">
+                <div class="v-parallax v-bg-stylish" id="join-us">
                     <div class="container">
-                        <div class="row center">
-                            <div class="col-sm-8 col-sm-offset-2">
-                                <p class="v-smash-text-large-2x">
-                                    <span>Call us today!</span>
-                                </p>
-                                <br />
-                                <p class="lead" style="color: #999;">
-                                    +181 500 600 1
-                                </p>
-                                <div class="horizontal-break"></div>
+                        <center>
+                            <p class="v-smash-text-large-2x pull-top">
+                                <span>JOIN US</span>
+                            </p>
+                        </center>
+                        <div class="horizontal-break center"></div>
+                        <div class="row  v-counter-wrap v-animation" data-animation="grow" data-delay="200">
+                            <div class="col-sm-4">
+                                <div  class="box-3">
+                                    <h3 class="text-center color-white">JOBS</h3>
+                                </div>
 
-                                <div class="v-spacer col-sm-12 v-height-small"></div>
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="img/pic/join.png" alt="" style="width: 100%">
 
+                            </div>
+                            <div class="col-sm-4">
+                                <div  class="box-3">
+                                    <h3 class="text-center color-white">INTERNSHIP</h3>
+                                </div>
 
+                            </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="col-md-12">
                                 <form action="#" method="post">
                                     <div class="row">
+                                        <div class="col-md-12">
+                                            <h3>Enquiry</h3>
+                                        </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="form-group">
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-5">
                                                 <label>Your name <span class="required">*</span></label>
                                                 <input type="text" value="" maxlength="100" class="form-control" name="name" id="name">
-                                            </div>
-                                            <div class="col-sm-4">
                                                 <label>Your email address <span class="required">*</span></label>
                                                 <input type="email" value="" maxlength="100" class="form-control" name="email" id="email1">
-                                            </div>
-                                            <div class="col-sm-4">
                                                 <label>Website</label>
                                                 <input type="text" value="" maxlength="100" class="form-control" name="website" id="website">
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
+                                            <div class="col-sm-7">
                                                 <label>Comment <span class="required">*</span></label>
-                                                <textarea maxlength="5000" rows="10" class="form-control" name="comment" id="Textarea1"></textarea>
+                                                <textarea maxlength="5000" rows="10" class="form-control height-185" name="comment" id="Textarea1"></textarea>
                                             </div>
+
                                         </div>
                                     </div>
+
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <br />
