@@ -37,7 +37,7 @@
                             </div>
                             <div class="tp-caption sfl stl" data-x="110" data-y="130" data-speed="600" data-start="1800" data-easing="Power1.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0" data-endspeed="300">
                                 <!--<a href='#' class="btn v-btn v-third-light">GET IT NOW!</a>-->
-                                <img src="img/iphone2.png" />
+<!--                                <img src="img/iphone2.png" />-->
                             </div>
                             <!--<div class="v-slider-overlay overlay-colored"></div>-->
                         </li>
