@@ -294,19 +294,23 @@
                         </center>
                         <div class="horizontal-break center"></div>
                         <div class="row app-brief">
-                            <div class="col-sm-6">
+                            <div class="col-sm-8">
                                 <h3>Manpower - HSE Consultants / Safety & Health Officers / Trainers</h3>
                                 <p class="v-lead text-justify">Viva focuses on providing Malaysian Nationals to cater for the drilling industry. However, we have Expatriates and Regional Consultants from SEA to furnish operations within the Asia Pacific unit. Daily Rate (12hour) - an ALL inclusive cost of medical benefits and Work Injury Compensation and Basic Offshore Survival Training (OPITO Standard)</p>
 
                                 <p class="v-lead text-justify">VO is able to provide HSE Coaches and Safety Training Officers to support services for the following position to meet the clients request.</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <img class="img-responsive phone-image v-animation" data-animation="fade-from-right" data-delay="300" src="img/viva-energy-01.png" />
+                            </div>
+
+                        </div>
+                        <div class="row app-brief">
+                            <div class="col-sm-12">
                                 <h3>Scope of HSE Work</h3>
                                 <p class="v-lead text-justify">Offshore Safety Training Officers (STO), capable of performing services required for Safety, Training development of safety presentations/programs based on the clients scope.</p>
                                 <p class="v-lead text-justify">Safety Training Officers to provide On-site support for Company's Safety Program <p class="v-lead">Develop Safety Programs and supply Specialist to Facilitate these Programs</p>
                                 <a href="#" class="read-more read">Read More</a>
-                            </div>
-
-                            <div class="col-sm-6">
-                                <img class="img-responsive phone-image v-animation" data-animation="fade-from-right" data-delay="300" src="img/viva-energy.png" />
                             </div>
                         </div>
                     </div>
@@ -767,13 +771,10 @@
                                 <section class="widget">
                                     <img alt="Venue" src="img/logo-white.png" style="height: 40px; margin-bottom: 20px;">
                                     <p class="pull-bottom-small">
-                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-                                        per inceptos himenaeos. Nulla nunc dui, tristique in semper vel,
-                                        congue sed ligula auctor fringill torquent per conubia nostra.
-                                        Class aptent taciti sociosqu ad litora conubia nostra.
+                                        Viva Odyssey Sdn Bhd is a Malaysian company located in the heart of Kuala Lumpur, founded and incorporated in 2009 by Jerryson Abraham.
                                     </p>
                                     <p>
-                                        <a href="page-about-us-2.html">Read More →</a>
+                                        <a href="index.php">Read More →</a>
                                     </p>
                                 </section>
                             </div>
