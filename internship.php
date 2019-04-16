@@ -26,8 +26,7 @@
                                 <input type="text" value="" maxlength="100" class="form-control" name="website" id="website">
                                 <label>Comment <span class="required">*</span></label>
                                 <textarea maxlength="5000" rows="5" class="form-control" name="comment" id="Textarea1"></textarea>
-                                <label>Resume <span class="required">*</span></label>
-                                <input type="file" class="form-control" name="file_upload" id="file" accept="application/pdf"/>
+                                
                             </div>
                         </div>
                         <div class="col-md-3"></div>
