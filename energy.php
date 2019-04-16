@@ -43,32 +43,32 @@
                     <nav class="nav-main mega-menu one-page-menu">
                         <ul class="nav nav-pills nav-main" id="mainMenu">
                             <li class="active">
-                                <a data-hash href="index.php"><i class="fa fa-home"></i>Home</a>
-                            </li>
+                                <a href="index.php"><i class="fa fa-home"></i>Home</a>
+                            </li> 
                             <li>
-                                <a data-hash href="#about"><i class="fa fa-fire"></i>About</a>
+                                <a href="index.php#about"><i class="fa fa-fire"></i>About</a>
                             </li>
                             <!--                    <li>
                                                     <a data-hash href="#vision"><i class="fa fa-location-arrow"></i>Vision & Mision</a>
                                                 </li>-->
 
                             <li>
-                                <a data-hash href="index.php#services"><i class="fa fa-file-text-o"></i>Petronas Licenses</a>
+                                <a href="index.php#services"><i class="fa fa-file-text-o"></i>Petronas Licenses</a>
                             </li>
                             <li>
-                                <a data-hash href="index.php#describe"><i class="fa fa-flash"></i>Energy</a>
+                                <a href="index.php#describe"><i class="fa fa-flash"></i>Energy</a>
                             </li>
                             <li>
-                                <a data-hash href="index.php#download"><i class="fa fa-users"></i>Team</a>
+                                <a href="index.php#download"><i class="fa fa-users"></i>Team</a>
                             </li>
                             <li>
-                                <a data-hash href="index.php#features"><i class="fa fa-laptop"></i>Features</a>
+                                <a href="index.php#features"><i class="fa fa-laptop"></i>Features</a>
                             </li>
                             <li>
-                                <a data-hash href="index.php#clients"><i class="fa fa fa-user"></i>Clients</a>
+                                <a href="index.php#clients"><i class="fa fa fa-user"></i>Clients</a>
                             </li>
                             <li>
-                                <a data-hash href="index.php#join-us"><i class="fa fa-phone"></i>Join us</a>
+                                <a href="index.php#join-us"><i class="fa fa-phone"></i>Join us</a>
                             </li>
                             <!--                    <li class="dropdown">
                                                     <a class="dropdown-toggle menu-icon" href="#"><i class="fa fa-umbrella"></i>Menu <i class="fa fa-caret-down"></i></a>
@@ -107,23 +107,20 @@
                         <li data-transition="fade" data-slotamount="7" data-masterspeed="600">
                             <img src="img/slider/image2.png" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                             <div class="tp-caption v-caption-big-white sfl stl" data-x="450" data-y="245" data-speed="600" data-start="600" data-easing="Power1.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0" data-endspeed="300">
-                                THE LAST TEMPLATE
-                                <br />
-                                YOU'LL HAVE TO BUY
+                             
                             </div>
                             <div class="tp-caption v-caption-h1 sfl stl" data-x="450" data-y="360" data-speed="700" data-start="1200" data-easing="Power1.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0" data-endspeed="300">
-                                Built on cutting edge technology.<br>
-                                Create modern design using Venue.
+                               
                             </div>
                             <div class="tp-caption sfl stl" data-x="450" data-y="450" data-speed="600" data-start="1800" data-easing="Power1.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0" data-endspeed="300">
-                                <a href='#' class="btn v-btn v-second-light">GET IT NOW!</a>
+                                <!--<a href='#' class="btn v-btn v-second-light">GET IT NOW!</a>-->
                             </div>
                             <div class="tp-caption sfl stl" data-x="605" data-y="450" data-speed="600" data-start="2200" data-easing="Power1.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0" data-endspeed="300">
-                                <a href='#' class="btn v-btn v-second-light">FIND OUT MORE</a>
+                                <!--<a href='#' class="btn v-btn v-second-light">FIND OUT MORE</a>-->
                             </div>
                             <div class="tp-caption sfl stl" data-x="110" data-y="130" data-speed="600" data-start="1800" data-easing="Power1.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0" data-endspeed="300">
                                 <!--<a href='#' class="btn v-btn v-third-light">GET IT NOW!</a>-->
-                                <img src="img/iphone2.png" />
+                            
                             </div>
                             <!--<div class="v-slider-overlay overlay-colored"></div>-->
                         </li>
@@ -183,7 +180,7 @@
                     </div>
                 </div>
 
-                <div class="v-parallax v-bg-stylish v-bg-stylish-v4 no-shadow" id="features">
+                <div class="v-parallax v-bg-stylish v-bg-stylish-v4 no-shadow padding-t-50" id="features">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
@@ -208,7 +205,7 @@
                 </div>
 
 
-                <div class="v-parallax v-bg-stylish no-shadow" id="features">
+                <div class="v-parallax v-bg-stylish no-shadow padding-t-50" id="features">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
@@ -238,7 +235,7 @@
                         <p>General Workforce Specialties Maritime crew, Oil & Gas Personnel, Offshore Personnel, Recruitment Services, Offshore Catering and Food Supply</p>
                     </div>
                 </div>
-                <div class="v-parallax v-bg-stylish v-bg-stylish-v4 no-shadow" id="features">
+                <div class="v-parallax v-bg-stylish v-bg-stylish-v4 no-shadow padding-t-50" id="features">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
