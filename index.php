@@ -17,100 +17,35 @@
             <!--Set your own slider options. Look at the v_RevolutionSlider() function in 'theme-core.js' file to see options-->
             <div class="home-slider-wrap fullwidthbanner-container" id="home">
                 <div class="v-rev-slider" data-slider-options='{ "startheight": 700 }'>
-
                     <ul>
-
                         <li data-transition="fade" data-slotamount="7" data-masterspeed="600">
-
                             <img src="img/slider/image2.png" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-
-                            <div class="tp-caption v-caption-big-white sfl stl"
-                                 data-x="450"
-                                 data-y="245"
-                                 data-speed="600"
-                                 data-start="600"
-                                 data-easing="Power1.easeInOut"
-                                 data-splitin="none"
-                                 data-splitout="none"
-                                 data-elementdelay="0"
-                                 data-endelementdelay="0"
-                                 data-endspeed="300">
+                            <div class="tp-caption v-caption-big-white sfl stl" data-x="450" data-y="245" data-speed="600" data-start="600" data-easing="Power1.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0" data-endspeed="300">
                                 THE LAST TEMPLATE
                                 <br />
                                 YOU'LL HAVE TO BUY
                             </div>
-
-                            <div class="tp-caption v-caption-h1 sfl stl"
-                                 data-x="450"
-                                 data-y="360"
-                                 data-speed="700"
-                                 data-start="1200"
-                                 data-easing="Power1.easeInOut"
-                                 data-splitin="none"
-                                 data-splitout="none"
-                                 data-elementdelay="0"
-                                 data-endelementdelay="0"
-                                 data-endspeed="300">
+                            <div class="tp-caption v-caption-h1 sfl stl" data-x="450" data-y="360" data-speed="700" data-start="1200" data-easing="Power1.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0" data-endspeed="300">
                                 Built on cutting edge technology.<br>
                                 Create modern design using Venue.
                             </div>
-
-                            <div class="tp-caption sfl stl"
-                                 data-x="450"
-                                 data-y="450"
-                                 data-speed="600"
-                                 data-start="1800"
-                                 data-easing="Power1.easeInOut"
-                                 data-splitin="none"
-                                 data-splitout="none"
-                                 data-elementdelay="0"
-                                 data-endelementdelay="0"
-                                 data-endspeed="300">
+                            <div class="tp-caption sfl stl" data-x="450" data-y="450" data-speed="600" data-start="1800" data-easing="Power1.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0" data-endspeed="300">
                                 <a href='#' class="btn v-btn v-second-light">GET IT NOW!</a>
                             </div>
-
-                            <div class="tp-caption sfl stl"
-                                 data-x="605"
-                                 data-y="450"
-                                 data-speed="600"
-                                 data-start="2200"
-                                 data-easing="Power1.easeInOut"
-                                 data-splitin="none"
-                                 data-splitout="none"
-                                 data-elementdelay="0"
-                                 data-endelementdelay="0"
-                                 data-endspeed="300">
+                            <div class="tp-caption sfl stl" data-x="605" data-y="450" data-speed="600" data-start="2200" data-easing="Power1.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0" data-endspeed="300">
                                 <a href='#' class="btn v-btn v-second-light">FIND OUT MORE</a>
                             </div>
-
-                            <div class="tp-caption sfl stl"
-                                 data-x="110"
-                                 data-y="130"
-                                 data-speed="600"
-                                 data-start="1800"
-                                 data-easing="Power1.easeInOut"
-                                 data-splitin="none"
-                                 data-splitout="none"
-                                 data-elementdelay="0"
-                                 data-endelementdelay="0"
-                                 data-endspeed="300">
+                            <div class="tp-caption sfl stl" data-x="110" data-y="130" data-speed="600" data-start="1800" data-easing="Power1.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0" data-endspeed="300">
                                 <!--<a href='#' class="btn v-btn v-third-light">GET IT NOW!</a>-->
                                 <img src="img/iphone2.png" />
                             </div>
-
-
-
                             <!--<div class="v-slider-overlay overlay-colored"></div>-->
                         </li>
                     </ul>
                 </div>
-
                 <div class="shadow-right"></div>
             </div>
-
             <div class="v-page-wrap no-bottom-spacing">
-
-
 
                 <!--Features-->
 
@@ -118,9 +53,7 @@
                     <div class="container">
                         <div class="row center app-brief">
                             <div class="col-sm-12">
-                                <p class="v-smash-text-large-2x">
-                                    <span>ABOUT VIVA ODYSSEY</span>
-                                </p>
+                                <p class="v-smash-text-large-2x"><span>ABOUT VIVA ODYSSEY</span></p>
                                 <div class="horizontal-break"></div>
                                 <p class="text-justify">Viva Odyssey Sdn Bhd is a Malaysian company located in the heart of Kuala Lumpur, founded and incorporated in 2009 by Jerryson Abraham.</p>
                                 <p class="text-justify">Viva Odyssey designed and developed a web-based solution that was initially targeted to improve the Health, Safety and Environment (HSE) activities notably, for the high-risk activities in the Oil & Gas Industry.</p>
@@ -130,9 +63,8 @@
                         </div>
                     </div>
                     <div class="container">
-                        <center><p class="v-smash-text-large-2x pull-top">
-                                <span>VISION, MISSION, VALUES</span>
-                            </p>
+                        <center>
+                            <p class="v-smash-text-large-2x pull-top"><span>VISION, MISSION, VALUES</span></p>
                         </center>
                         <div class="horizontal-break center"></div>
                         <div class="row app-brief">
@@ -291,7 +223,8 @@
                 <div class="v-parallax v-parallax-video v-bg-stylish" id="services" style="background-image: url(img/slider/slider4.jpg);">
                     <div class="container">
                         <div class="row">
-                            <center><p class="v-smash-text-large-2x pull-top">
+                            <center>
+                                <p class="v-smash-text-large-2x pull-top">
                                     <span class="color-white">PETRONAS LICENSES</span>
                                 </p>
                             </center>
