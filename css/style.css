@@ -447,7 +447,7 @@ table.dataTable thead th, table.dataTable thead td {
 }
 
 .levels-dropdown {
-    background-color: #fcb833;
+    background-color: #c7cdcd;
 }
 
 .levels-dropdown.second {
@@ -672,8 +672,8 @@ table.dataTable thead th, table.dataTable thead td {
 /******** Tabs UI End ********/
 
 .btn-primary {
-    background-color: #5f6469;
-    border-color: #4e4e4e;
+    background-color: #878787;
+    border-color: #c7cdcd;
 }
 
 .btn-warning {
@@ -755,7 +755,7 @@ table.dataTable thead th, table.dataTable thead td {
     display: inline-block;
     margin: 0;
     padding: 10px;
-    color: #334f67;
+    color: #ff6d04;
     line-height: 25px;
     text-align: center;
     margin-top: 30px;
