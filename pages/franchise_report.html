@@ -1,0 +1,65 @@
+<header class="navbar-fixed" ng-include="'pages/header.html'" ng-controller="HeaderController"></header>
+<section class="body-section">
+    <div class="container-fluid">
+        <div class="row row-eq-height">
+            <div class="col-md-2 no-padding menu-container">
+                <div ng-include="'pages/adminmenu.html'"></div>
+            </div>
+            <div class="col-md-10 padding-t-b-15">
+                <div class="row no-margin">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="franchise" class="cols-sm-2 control-label">Franchise</label>
+                            <select class="form-control" ng-model="form.franchise">
+                                <option value="all">All</option>
+                                <option ng-value="row.ID" ng-repeat="row in franchises">{{row.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="start" class="cols-sm-2 control-label">From</label>
+                            <input type="date" name="start" id="start" class="form-control" ng-model="form.start" />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="to" class="cols-sm-2 control-label">To</label>
+                            <input type="date" name="to" id="to" class="form-control" ng-model="form.end" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="button" class="cols-sm-2 control-label">&nbsp;</label>
+                            <input ng-disabled="(form.start && !form.end) || (!form.start && form.end)" type="button" name="button" id="button" class="form-control btn btn-primary" ng-click="getData();" value="Get Report" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin padding-t-b-15" ng-if="data !== null">
+                    <table datatable="ng" dt-options="programOptions" dt-column-defs="programColumnDefs">
+                        <thead>
+                            <tr>
+                                <th>Franchise Name</th>
+                                <th>Level One</th>
+                                <th>Level Two</th>
+                                <th>Level Three</th>
+                                <th>From</th>
+                                <th>To</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="row in data">
+                                <td>{{row.franchise | validateavailable}}</td>
+                                <td>{{row.level_one_name | validateavailable}}</td>
+                                <td>{{row.level_two_name | validateavailable}}</td>
+                                <td>{{row.level_three_name | validateavailable}}</td>
+                                <td>{{row.start_date| dateformat}}</td>
+                                <td>{{row.end_date| dateformat}}</td>
+                            </tr>                                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

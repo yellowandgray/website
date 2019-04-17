@@ -1,0 +1,76 @@
+<header class="navbar-fixed" ng-include="'pages/header.html'" ng-controller="HeaderController"></header>
+<section class="body-section">
+    <div class="container-fluid">
+        <div class="row row-eq-height">
+            <div class="col-md-2 no-padding menu-container">
+                <div ng-include="'pages/homemenu.html'"></div>
+            </div>
+            <div class="col-md-10 padding-t-b-15">
+                <div class="col-md-9">
+                    <div class="row padding-b-15">
+                        <div class="col-md-4">
+                            <div class="btn-group">
+                                <button
+                                    class="btn btn-primary"
+                                    mwl-date-modifier
+                                    date="viewDate"
+                                    decrement="calendarView"
+                                    ng-click="cellIsOpen = false">
+                                    Previous
+                                </button>
+                                <button
+                                    class="btn btn-primary"
+                                    mwl-date-modifier
+                                    date="viewDate"
+                                    set-to-today
+                                    ng-click="cellIsOpen = false">
+                                    Today
+                                </button>
+                                <button
+                                    class="btn btn-primary"
+                                    mwl-date-modifier
+                                    date="viewDate"
+                                    increment="calendarView"
+                                    ng-click="cellIsOpen = false">
+                                    Next
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h3 class="no-margin">{{calendarTitle}}</h3>
+                        </div>
+                        <div class="col-md-5 text-right">
+                            <div class="btn-group">
+                                <label class="btn btn-warning" ng-model="calendarView" uib-btn-radio="'year'" ng-click="cellIsOpen = false">Year</label>
+                                <label class="btn btn-warning" ng-model="calendarView" uib-btn-radio="'month'" ng-click="cellIsOpen = false">Month</label>
+                                <label class="btn btn-warning" ng-model="calendarView" uib-btn-radio="'week'" ng-click="cellIsOpen = false">Week</label>
+                                <label class="btn btn-warning" ng-model="calendarView" uib-btn-radio="'day'" ng-click="cellIsOpen = false">Day</label>
+                            </div>
+                        </div>
+                    </div>
+                    <mwl-calendar
+                        view="calendarView"
+                        view-date="viewDate"
+                        cell-is-open="cellIsOpen"
+                        view-title="calendarTitle"
+                        on-timespan-click="timespanClicked(calendarDate, calendarCell)"
+                        cell-auto-open-disabled="true"
+                        events="data">
+                    </mwl-calendar>
+                </div>
+                <div class="col-md-3">
+                    <div ng-repeat="(key, val) in selectedEvents">
+                        <h4>{{key}}</h4>
+                        <div class="calendar-event-detail" ng-repeat="row in val">
+                            <h4>{{row.title}}</h4>
+                            <div  class="padding-5">
+                                <div>From: {{row.startsAt| dateformat}}</div>
+                                <div>To: {{row.endsAt| dateformat}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

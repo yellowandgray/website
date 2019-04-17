@@ -1,0 +1,454 @@
+<header class="navbar-fixed" ng-include="'pages/header.html'" ng-controller="HeaderController"></header>
+<section class="body-section">
+    <div class="container-fluid">
+        <div class="row row-eq-height">
+            <div class="col-md-2 no-padding menu-container">
+                <div ng-include="'pages/adminmenu.html'"></div>
+            </div>
+            <div class="col-md-10 padding-t-b-15">
+                <div class="row padding-b-10 no-padding">
+                    <div class="col-md-1">
+                        <button type="button" class="add-button" ng-click="openForm('contents', 'contents', 'Content', 0);">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="col-md-2" ng-if="selected_items.length > 0">
+                        <select class="form-control" ng-change="doMoreAction();" ng-model="do_more.selected">
+                            <option value="">--Selected with--</option>
+                            <option value="delete">Delete</option>
+                        </select>
+                    </div>
+                </div>
+                <uib-tabset type="pills">
+                    <uib-tab heading="Activity Sheet" select="getData(1);">
+                        <div class="padding-t-15" id="DataTables_Table_0_filter">
+                            <table datatable="ng" dt-options="contentOptions" dt-column-defs="contentColumnDefs">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox" ng-change="checkAll(0);" ng-model="select_all.checkbox" />
+                                        </th>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Downloadable</th>
+                                        <th>Printable</th>
+                                        <th>Template Type</th>
+                                        <th>Template Parent</th>
+                                        <th>Mapping Type</th>
+                                        <th>Created By</th>
+                                        <th>Created At</th>
+                                        <th>Updated By</th>
+                                        <th>Updated At</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="row in data">
+                                        <td>
+                                            <input type="checkbox" ng-click="checkRow(row.ID);" ng-checked="checkCheckedRow(row.ID);" />
+                                        </td>
+                                        <td>{{row.name}}</td>
+                                        <td>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'mp3'">
+                                                <i class="fa fa-volume-up"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'mp4' || row.extension === 'mov' || row.extension === 'wmv'">
+                                                <i class="fa fa-video-camera"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'xls' || row.extension === 'xlsx'">
+                                                <i class="fa fa-file-excel-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'doc' || row.extension === 'docx'">
+                                                <i class="fa fa-file-word-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'pptx' || row.extension === 'ppt'">
+                                                <i class="fa fa-file-powerpoint-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'zip' || row.extension === 'rar'">
+                                                <i class="fa fa-file-archive-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'pdf'">
+                                                <i class="fa fa-file-pdf-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'png' || row.extension === 'jpg' || row.extension === 'jpeg' || row.extension === 'gif'">
+                                                <i class="fa fa-file-photo-o"></i>
+                                            </span>
+                                        </td>
+                                        <td>{{row.is_downloadable| yesno}}</td>
+                                        <td>{{row.is_printable| yesno}}</td>
+                                        <td>{{row.template_type| tmptype}}</td>
+                                        <td>{{row.template_parent| templateparent}}</td>
+                                        <td>{{row.mapping_type| uppercase}}</td>
+                                        <td>{{row.created_by| admin}}</td>
+                                        <td>{{row.created_at| dateformat}}</td>
+                                        <td>{{row.updated_by| admin}}</td>
+                                        <td>{{row.updated_at| dateformat}}</td>
+                                        <td>
+                                            <a ng-click="openForm('contents', 'contents', 'Content', row.ID);" class="pointer">
+                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                            </a>
+                                            <a ng-click="deleteRecord('contents', row.ID, 'Content');" class="pointer">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                    </tr>                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </uib-tab>
+                    <uib-tab heading="Teachers Copy" select="getData(2);">
+                        <div class="padding-t-15" id="DataTables_Table_1_filter">
+                            <table datatable="ng" dt-options="contentOptions" dt-column-defs="contentColumnDefs">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox" ng-change="checkAll(1);" ng-model="select_all.checkbox" />
+                                        </th>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Downloadable</th>
+                                        <th>Printable</th>
+                                        <th>Template Type</th>
+                                        <th>Template Parent</th>
+                                        <th>Mapping Type</th>
+                                        <th>Created By</th>
+                                        <th>Created At</th>
+                                        <th>Updated By</th>
+                                        <th>Updated At</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="row in data">
+                                        <td>
+                                            <input type="checkbox" ng-click="checkRow(row.ID);" ng-checked="checkCheckedRow(row.ID);" />
+                                        </td>
+                                        <td>{{row.name}}</td>
+                                        <td>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'mp3'">
+                                                <i class="fa fa-volume-up"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'mp4' || row.extension === 'mov' || row.extension === 'wmv'">
+                                                <i class="fa fa-video-camera"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'xls' || row.extension === 'xlsx'">
+                                                <i class="fa fa-file-excel-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'doc' || row.extension === 'docx'">
+                                                <i class="fa fa-file-word-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'pptx' || row.extension === 'ppt'">
+                                                <i class="fa fa-file-powerpoint-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'zip' || row.extension === 'rar'">
+                                                <i class="fa fa-file-archive-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'pdf'">
+                                                <i class="fa fa-file-pdf-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'png' || row.extension === 'jpg' || row.extension === 'jpeg' || row.extension === 'gif'">
+                                                <i class="fa fa-file-photo-o"></i>
+                                            </span>
+                                        </td>
+                                        <td>{{row.is_downloadable| yesno}}</td>
+                                        <td>{{row.is_printable| yesno}}</td>
+                                        <td>{{row.template_type| tmptype}}</td>
+                                        <td>{{row.template_parent| templateparent}}</td>
+                                        <td>{{row.mapping_type| uppercase}}</td>
+                                        <td>{{row.created_by| admin}}</td>
+                                        <td>{{row.created_at| dateformat}}</td>
+                                        <td>{{row.updated_by| admin}}</td>
+                                        <td>{{row.updated_at| dateformat}}</td>
+                                        <td>
+                                            <a ng-click="openForm('contents', 'contents', 'Content', row.ID);" class="pointer">
+                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                            </a>
+                                            <a ng-click="deleteRecord('contents', row.ID, 'Content');" class="pointer">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                    </tr>                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </uib-tab>
+                    <uib-tab heading="Songs/Videos" select="getData(3);">
+                        <div class="padding-t-15" id="DataTables_Table_2_filter">
+                            <table datatable="ng" dt-options="contentOptions" dt-column-defs="contentColumnDefs">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox" ng-change="checkAll(2);" ng-model="select_all.checkbox" />
+                                        </th>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Downloadable</th>
+                                        <th>Printable</th>
+                                        <th>Template Type</th>
+                                        <th>Template Parent</th>
+                                        <th>Mapping Type</th>
+                                        <th>Created By</th>
+                                        <th>Created At</th>
+                                        <th>Updated By</th>
+                                        <th>Updated At</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="row in data">
+                                        <td>
+                                            <input type="checkbox" ng-click="checkRow(row.ID);" ng-checked="checkCheckedRow(row.ID);" />
+                                        </td>
+                                        <td>{{row.name}}</td>
+                                        <td>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'mp3'">
+                                                <i class="fa fa-volume-up"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'mp4' || row.extension === 'mov' || row.extension === 'wmv'">
+                                                <i class="fa fa-video-camera"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'xls' || row.extension === 'xlsx'">
+                                                <i class="fa fa-file-excel-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'doc' || row.extension === 'docx'">
+                                                <i class="fa fa-file-word-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'pptx' || row.extension === 'ppt'">
+                                                <i class="fa fa-file-powerpoint-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'zip' || row.extension === 'rar'">
+                                                <i class="fa fa-file-archive-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'pdf'">
+                                                <i class="fa fa-file-pdf-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'png' || row.extension === 'jpg' || row.extension === 'jpeg' || row.extension === 'gif'">
+                                                <i class="fa fa-file-photo-o"></i>
+                                            </span>
+                                        </td>
+                                        <td>{{row.is_downloadable| yesno}}</td>
+                                        <td>{{row.is_printable| yesno}}</td>
+                                        <td>{{row.template_type| tmptype}}</td>
+                                        <td>{{row.template_parent| templateparent}}</td>
+                                        <td>{{row.mapping_type| uppercase}}</td>
+                                        <td>{{row.created_by| admin}}</td>
+                                        <td>{{row.created_at| dateformat}}</td>
+                                        <td>{{row.updated_by| admin}}</td>
+                                        <td>{{row.updated_at| dateformat}}</td>
+                                        <td>
+                                            <a ng-click="openForm('contents', 'contents', 'Content', row.ID);" class="pointer">
+                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                            </a>
+                                            <a ng-click="deleteRecord('contents', row.ID, 'Content');" class="pointer">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                    </tr>                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </uib-tab>
+                    <uib-tab heading="Documents" select="getData(4);">
+                        <div class="padding-t-15" id="DataTables_Table_3_filter">
+                            <table datatable="ng" dt-options="contentOptions" dt-column-defs="contentColumnDefs">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox" ng-change="checkAll(3);" ng-model="select_all.checkbox" />
+                                        </th>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Downloadable</th>
+                                        <th>Printable</th>
+                                        <th>Template Type</th>
+                                        <th>Template Parent</th>
+                                        <th>Mapping Type</th>
+                                        <th>Created By</th>
+                                        <th>Created At</th>
+                                        <th>Updated By</th>
+                                        <th>Updated At</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="row in data">
+                                        <td>
+                                            <input type="checkbox" ng-click="checkRow(row.ID);" ng-checked="checkCheckedRow(row.ID);" />
+                                        </td>
+                                        <td>{{row.name}}</td>
+                                        <td>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'mp3'">
+                                                <i class="fa fa-volume-up"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'mp4' || row.extension === 'mov' || row.extension === 'wmv'">
+                                                <i class="fa fa-video-camera"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'xls' || row.extension === 'xlsx'">
+                                                <i class="fa fa-file-excel-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'doc' || row.extension === 'docx'">
+                                                <i class="fa fa-file-word-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'pptx' || row.extension === 'ppt'">
+                                                <i class="fa fa-file-powerpoint-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'zip' || row.extension === 'rar'">
+                                                <i class="fa fa-file-archive-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'pdf'">
+                                                <i class="fa fa-file-pdf-o"></i>
+                                            </span>
+                                            <span class="preview-icon" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);" ng-if="row.extension === 'png' || row.extension === 'jpg' || row.extension === 'jpeg' || row.extension === 'gif'">
+                                                <i class="fa fa-file-photo-o"></i>
+                                            </span>
+                                        </td>
+                                        <td>{{row.is_downloadable| yesno}}</td>
+                                        <td>{{row.is_printable| yesno}}</td>
+                                        <td>{{row.template_type| tmptype}}</td>
+                                        <td>{{row.template_parent| templateparent}}</td>
+                                        <td>{{row.mapping_type| uppercase}}</td>
+                                        <td>{{row.created_by| admin}}</td>
+                                        <td>{{row.created_at| dateformat}}</td>
+                                        <td>{{row.updated_by| admin}}</td>
+                                        <td>{{row.updated_at| dateformat}}</td>
+                                        <td>
+                                            <a ng-click="openForm('contents', 'contents', 'Content', row.ID);" class="pointer">
+                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                            </a>
+                                            <a ng-click="deleteRecord('contents', row.ID, 'Content');" class="pointer">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                    </tr>                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </uib-tab>
+                </uib-tabset>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/ng-template" id="contents.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Content Master <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();">
+    <span aria-hidden="true">&times;</span>
+    </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <form name="popupForm" ng-submit="submitForm();">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="name" class="cols-sm-2 control-label">Name</label>
+    <input class="form-control" type="text" name="name" ng-model="form.name" id="name" required autofocus />
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="image" class="cols-sm-2 control-label">File</label>
+    <label for="image" class="form-control image-icon"><i class="fa fa-paperclip" aria-hidden="true"></i> {{attach_file}}</label>
+    <input class="form-control" style="display: none;" type="file" name="image" ng-model="image" id="image" accept="image/*" onchange="angular.element(this).scope().uploadImage(this.files, 'file');" />
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="is_downloadable" class="cols-sm-2 control-label">Download Access</label>
+    <select class="form-control" name="is_downloadable" ng-model="form.is_downloadable" id="is_downloadable" required>
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+    </select>
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="is_printable" class="cols-sm-2 control-label">Print Access</label>
+    <select class="form-control" name="is_printable" ng-model="form.is_printable" id="is_printable" required>
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="template_type" class="cols-sm-2 control-label">Content Type</label>
+    <select class="form-control" name="template_type" ng-model="form.template_type" id="template_type" required>
+    <option value="0">None</option>
+    <option value="1">Parent</option>
+    <option value="2">Child</option>
+    </select>
+    </div>
+    </div>
+    <div class="col-md-6" ng-if="form.template_type == 2 || form.template_type == '2'">
+    <div class="form-group">
+    <label for="template_parent" class="cols-sm-2 control-label">Parent Content</label>
+    <select class="form-control" name="template_parent" ng-model="form.template_parent" id="template_parent" required>
+    <option ng-repeat="row in parents" value="{{row.ID}}">{{row.name}}</option>
+    </select>
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="mapping_type" class="cols-sm-2 control-label">Content Reference</label>
+    <select class="form-control" name="mapping_type" ng-model="form.mapping_type" id="mapping_type" required>
+    <option value="program">Program</option>
+    <option value="guideline">Guideline</option>
+    </select>
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="category" class="cols-sm-2 control-label">Category</label>
+    <select class="form-control" name="category" ng-model="form.category" id="category" required>
+    <option value="1">Activity Sheet</option>
+    <option value="2">Teachers Copy</option>
+    <option value="3">Songs/Videos</option>
+    <option value="4">Documents</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    <div class="form-group" style="text-align: right;">
+    <button ng-disabled="!popupForm.$valid" type="submit" class="btn btn-primary">Save</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+    </form>
+    </div>
+</script>
+
+<script type="text/ng-template" id="file.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">{{data.name}} <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();">
+    <span aria-hidden="true">&times;</span>
+    </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <div class="row padding-b-10">
+    <div class="col-md-12">
+    <button ng-click="printDocument();" ng-if="data.print == 1" class="btn btn-primary">Print</button>
+    <a ng-href="{{data.file| image_url}}" ng-if="data.download == 1" class="btn btn-danger" download>Download</a>
+    </div>
+    </div>
+    <video style="width: 100%; height: auto;" controls ng-if="data.type === 'mp4' || data.type === 'mov' || data.type === 'wmv'">
+    <source ng-src="{{data.file| image_url}}" type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+    <audio style="width: 100%;" controls ng-if="data.type === 'mp3'">
+    <source ng-src="{{data.file| image_url}}" type="audio/mpeg" />
+    Your browser does not support the audio tag.
+    </audio>
+    <iframe id="document_window" ng-if="data.type === 'pdf'" style="width: 100%; height: 350px;" src="{{data.file| trustAsResourceUrl}}"></iframe>
+    <img id="document_window" ng-if="data.type === 'png' || data.type === 'jpg' || data.type === 'gif' || data.type === 'jpeg'" style="width: 100%; height: auto;" ng-src="{{data.file| image_url}}" />
+    <div class="row" ng-if="templates.length > 0">
+    <div class="col-md-12" ng-repeat="row in templates">
+    <a ng-href="{{row.file | image_url}}" download><img class="preview pointer" ng-if="row.extension === 'mp3' || row.extension === 'mp4' || row.extension === 'pdf' || row.extension === 'xls' || row.extension === 'xlsx' || row.extension === 'doc' || row.extension === 'docx'" ng-src="images/icon/{{row.extension}}-icon.png" alt="image" />
+    <img class="preview pointer" ng-if="row.extension !== 'mp3' && row.extension !== 'mp4' && row.extension !== 'pdf' && row.extension !== 'xls' && row.extension !== 'xlsx' && row.extension !== 'doc' && row.extension !== 'docx'" ng-src="{{row.file| image_url}}" alt="image" /> <span>{{row.name}}</span></a>
+    </div>
+    </div>
+    </div>
+</script>

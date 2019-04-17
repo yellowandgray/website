@@ -1,0 +1,45 @@
+<header class="navbar-fixed" ng-include="'pages/header.html'" ng-controller="HeaderController"></header>
+<section class="body-section">
+    <div class="container-fluid">
+        <div class="row row-eq-height">
+            <div class="col-md-2 no-padding menu-container">
+                <div ng-include="'pages/homemenu.html'"></div>
+            </div>
+            <div class="col-md-7 padding-t-b-15">
+                <div class="row programs no-margin">
+                    <div class="col-md-4 pointer text-center relative margin-t-15 padding-b-15" ng-click="goToDetailPage(row.ID);" ng-repeat="row in data.programs">
+                        <div ng-class="checkAccess(row.ID)">
+                            <img ng-src="{{row.image|image_url}}" alt="image" />
+                            <h5 class="no-margin bold">{{row.name}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding-left padding-t-b-15">
+                <div class="timeline-container">
+                    <ul class="timeline">
+                        <li ng-repeat="row in data.notifications">
+                            <span>{{row.created_at| dateformat}}</span>
+                            <p>{{row.message}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/ng-template" id="become_franchise.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Want to become a franchise of this program? <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+    <span aria-hidden="true">&times;</span> 
+    </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <div class="row">
+    <div class="col-md-12">
+    Dear Partner, To get access to this program get in touch with your Franchisor!
+    </div>
+    </div>
+    </div>
+</script>

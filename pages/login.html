@@ -1,0 +1,49 @@
+<!--<header ng-include="'pages/header.html'" ng-controller="HeaderController"></header>-->
+<section class="login-background height-100vh body-section">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="login-icon">
+                <img class="pointer" ng-src="images/icon/home.png" alt="icon" />
+            </div>
+            <div class="login">
+                <div style="position: relative;">
+                    <form ng-submit="loginForm();" class="login-form">
+                        <div class="input-container">
+                            <i class="fa fa-user"></i>
+                            <input ng-model="formFields.email" type="text" name="username" placeholder="User Name" autofocus />
+                        </div>
+                        <div class="input-container">
+                            <i class="fa fa-lock"></i>
+                            <input ng-model="formFields.password" type="password" name="pass" placeholder="Password" />
+                        </div>
+                        <button class="btn-primary btn login-btn" type="submit">Log In</button>
+                        <br/>
+                        <br/>
+                        <div class="text-center">
+                            <a class="forgot-password pointer" ng-click="forgotPassword();">Forgot Password</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/ng-template" id="forgot_password.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">
+    Forgot Password
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+    <span aria-hidden="true">&times;</span> 
+    </button>
+    </h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <div>Enter your registered Email ID to receive your password</div>
+    <form ng-submit="forgotPassword();">
+    <div class="form-group">
+    <input class="form-control" ng-model="email" type="text" name="email" placeholder="Email ID" autofocus />
+    </div>
+    <button class="btn-primary btn login-btn" type="submit">SEND</button>
+    </form>
+    </div>
+</script>

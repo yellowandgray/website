@@ -1,0 +1,81 @@
+<header class="navbar-fixed" ng-include="'pages/header.html'" ng-controller="HeaderController"></header>
+<section class="body-section">
+    <div class="container-fluid">
+        <div class="row row-eq-height">
+            <div class="col-md-2 no-padding menu-container">
+                <div ng-include="'pages/adminmenu.html'"></div>
+            </div>
+            <div class="col-md-10 padding-t-b-15">
+                <div class="row">
+                    <div class="col-md-3 no-padding-right">
+                        <ul class="levels-dropdown second">
+                            <li ng-repeat="(key, val) in data">
+                                <div ng-click="mappingActive(key, '', '');" class="level-one" ng-class="{'active': key === selected_levelone}">
+                                    <img ng-src="{{key|image}}" class="list-icon" alt="image" /> {{key|name}}
+                                </div>
+                                <div ng-if="data[key] && notArray(data[key][ke])" ng-repeat="(ke, va) in data[key]">
+                                    <div ng-click="mappingActive(key, ke, '');" class="level-two" ng-class="{'active': key === selected_levelone && ke === selected_leveltwo, 'hidden': key !== selected_levelone}">
+                                        <img ng-src="{{ke|image}}" class="list-icon" alt="image" /> {{ke|name}}
+                                    </div>
+                                    <div ng-if="data[key][ke] && notArray(data[key][ke][k])" ng-repeat="(k, v) in data[key][ke]">
+                                        <div ng-click="mappingActive(key, ke, k);" class="level-three" ng-class="{'active':  key === selected_levelone && ke === selected_leveltwo && k === selected_levelthree, 'hidden':  key !== selected_levelone || ke !== selected_leveltwo}">
+                                            <img ng-src="{{k|image}}" class="list-icon" alt="image" /> {{k|name}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row no-margin">
+                            <div class="col-md-5 no-padding">
+                                <div class="breadcrumb-section">
+                                    <span>{{selected_levelone| name}}</span> <span ng-if="selected_leveltwo !== ''">&gt; {{selected_leveltwo| name}}</span> <span ng-if="selected_levelthree !== ''">&gt; {{selected_levelthree| name}}</span>
+                                    <button type="button" class="add-button" ng-click="openForm('notification', 'notification', 'Notification', 0);">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-7 no-padding">
+                                <div class="program-search">
+                                    <input type="text" ng-model="search" placeholder="Search" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row padding-t-b-15">
+                            <div class="col-md-3" ng-repeat="row in notifications">
+                                <div class="event-detail">
+                                    <h4 ng-if="(row.message).length < 30">{{row.message}}<span class="remove" ng-click="deleteRecord('notifications', row.ID, 'Notification', 'notification');">Remove</span></h4>
+                                    <h4 ng-if="(row.message).length >= 30" uib-popover="{{row.message}}" popover-trigger="'mouseenter'" popover-placement="top">{{row.message | charlimit:30}}<span class="remove" ng-click="deleteRecord('notifications', row.ID, 'Notification', 'notification');">Remove</span></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/ng-template" id="notification.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Notification <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();">
+    <span aria-hidden="true">&times;</span>
+    </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <form name="popupForm" ng-submit="addNotification();">
+    <div class="row">
+    <div class="col-md-12">
+    <div class="form-group">
+    <label for="description" class="cols-sm-12 control-label">Notification Message</label>
+    <textarea class="form-control" rows="5" ng-model="notification" required autofocus></textarea>
+    </div>
+    </div>
+    </div>
+    <div class="form-group" style="text-align: right;">
+    <button ng-disabled="!popupForm.$valid" type="submit" class="btn btn-primary">Save</button>
+    </div>
+    </form>
+    </div>
+</script>

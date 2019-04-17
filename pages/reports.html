@@ -1,0 +1,529 @@
+<header class="navbar-fixed" ng-include="'pages/header.html'" ng-controller="HeaderController"></header>
+<section class="body-section">
+    <div class="container-fluid">
+        <div class="row row-eq-height">
+            <div class="col-md-2 no-padding menu-container">
+                <div ng-include="'pages/homemenu.html'"></div>
+            </div>
+            <div class="col-md-10 padding-t-b-15">
+                <div ng-if="reports.length > 0">
+                    <uib-tabset type="pills">
+                        <uib-tab heading="{{row.name}}" select="getData(row.report_id);" ng-repeat="row in reports">
+                            <div class="col-md-2 padding-t-b-15 no-padding">
+                                <button type="button" class="add-button" ng-click="openForm(row.form_name, 'report_submits', row.name, row.report_id);">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                            <table datatable="ng" dt-options="reportOptions" dt-column-defs="reportColumnDefs">
+                                <thead>
+                                    <tr>
+                                        <th>Sl. No.</th>
+                                        <th>Submitted Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="row in data">
+                                        <td>{{row.id}}</td>
+                                        <td>{{row.name}}</td>
+                                        <td>
+                                            <a ng-click="openForm('my_bee_club_weekly_submitted', 'my_bee_club_weekly_submitted', 'Form', row.ID);" class="pointer">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                    </tr>                                        
+                                </tbody>
+                            </table>                        
+                        </uib-tab>
+                    </uib-tabset>
+                </div>
+                <div class="text-center" ng-if="reports.length === 0">
+                    <div class="no-reports-available">
+                        No Reports available for this User
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/ng-template" id="mbc_daily.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">My Bee Club Daily Report <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"><span aria-hidden="true">&times;</span></button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 0 auto; border: 3px solid #c00000;">
+    <tr>
+    <td colspan="6" style="border-bottom:3px solid #c00000; padding:10px; text-align: center; background-color: #eaf1dd;">
+    <img src="http://yellowandgray.com/eshine/reports/mbcdaily.jpg" alt="image" />
+    </td>
+    </tr>
+    <tr>
+    <td style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #e5b8b7; font-size: 14px;" colspan="6">
+    STUDENT ATTENDANCE
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">PHONICS</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy, nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">DRAWING</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy, nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">HANDWRITING</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">KIDS YOGA</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6;">
+    <span style="text-decoration: underline; display: block;">SPOKEN ENGLISH</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6;">
+    <span style="text-decoration: underline; display: block;">YOUNG LEAD</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="" ng-model="formFields.play_group_highlights" />
+    </td>
+    </tr>
+    <tr>
+    <td style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #fabf8f; font-size: 14px;" colspan="6">
+    ADMIN ATTENDANCE
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #fef2e8; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">Teacher</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="00:00" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #fef2e8; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">Nanny</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="00:00" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #fef2e8; vertical-align: bottom;" colspan="2">
+    <span style="text-decoration: underline; display: block;">Teachers Reported Late</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #fef2e8; vertical-align: bottom;" colspan="2">
+    <span style="text-decoration: underline; display: block;">Nannies Reported Late</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="" ng-model="formFields.play_group_highlights" />
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #fef2e8; vertical-align: bottom; border-bottom: 3px solid #c00000;" colspan="2">
+    <span style="text-decoration: underline; display: block;">Admin Reporting Time</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="00:00" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #fef2e8; vertical-align: bottom; border-bottom: 3px solid #c00000;" colspan="2">
+    <span style="text-decoration: underline; display: block;">Van Reporting Time</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="00:00" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #fef2e8; vertical-align: bottom; border-bottom: 3px solid #c00000;" colspan="2">
+    <span style="text-decoration: underline; display: block;">Attendance Comments</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="" ng-model="formFields.play_group_highlights" />
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 3px solid #c00000; border-bottom: 3px solid #c00000; font-size: 12px; background-color: #e0ebcd;" colspan="6">
+    <span style="text-decoration: underline; display: block;">Highlight of Yesterday's Activity</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_highlights" placeholder="(Describe in brief about how the day went with the programs and highlights - Children/Parents/Teachers/Instructions)"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 3px solid #c00000; border-bottom: 3px solid #c00000; font-size: 12px; background-color: #e0ebcd;" colspan="3">
+    <span style="text-decoration: underline; display: block;">Challenges</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_highlights" placeholder="(Any challenges faced with the activities, curriculum, administration, parents, staff, children, transportation, suppliers, corporate or other work related challenges. If there are no challenges, just say none)"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; border-bottom: 3px solid #c00000; background-color: #e0ebcd;" colspan="3">
+    <span style="text-decoration: underline; display: block;">Open Items</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_challenges" placeholder="(Any open items related to curriculum, administration, parents, staff, children, suppliers, corporate, hiring new staff, yourself. If there are no open items, just say none)"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 3px solid #c00000; font-size: 12px; background-color: #e0ebcd;" colspan="3">
+    <span style="text-decoration: underline; display: block;">Important Updates</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_highlights" placeholder="(Update on recruiting, sales, parent request, happy parents, and unhappy parents. If there are no important updates, just say none)"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #e0ebcd; width: 50%; vertical-align: top;" colspan="3">
+    <span style="text-decoration: underline; display: block;">Attachments</span>
+    <span style="margin: 5px 0px; display: block;">(Student Records, Sales Leads, Recruiting, Others - whenever you attach a file please mention the name of the file(s) you are attaching. You will send these files for review every time you update them)</span>
+    <input type="file" />
+    </td>
+    </tr>
+    </table>
+    </div>
+</script>
+
+<script type="text/ng-template" id="mbc_weekly.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">My Bee Club Weekly Report <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"><span aria-hidden="true">&times;</span></button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 0 auto; border: 3px solid #c00000;">
+    <tr>
+    <td colspan="2" style="border-bottom:3px solid #c00000; padding:10px; text-align: center; background-color: #eaf1dd;">
+    <img src="http://yellowandgray.com/eshine/reports/mbcweekly.jpg" alt="image" />
+    </td>
+    </tr>
+    <tr>
+    <td colspan="2" style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #e5b8b7; font-size: 14px;">
+    PHONICS
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; border-right: 3px solid #c00000; background-color: #f6e6e6; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">HIGHLIGHTS</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="5"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">CHALLENGES</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="5"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td colspan="2" style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #8db3e2; font-size: 14px;">
+    DRAWING
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 3px solid #c00000; font-size: 12px; background-color: #d7e5f5;">
+    <span style="text-decoration: underline; display: block;">HIGHLIGHTS</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #d7e5f5;">
+    <span style="text-decoration: underline; display: block;">CHALLENGES</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td colspan="2" style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #c2d69b; font-size: 14px;">
+    HANDWRITING
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 3px solid #c00000; font-size: 12px; background-color: #f0f5e7;">
+    <span style="text-decoration: underline; display: block;">HIGHLIGHTS</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f0f5e7;">
+    <span style="text-decoration: underline; display: block;">CHALLENGES</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td colspan="2" style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #e5b8b7; font-size: 14px;">
+    KIDS YOGA
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6; vertical-align: bottom; border-right: 3px solid #c00000;">
+    <span style="text-decoration: underline; display: block;">HIGHLIGHTS</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">CHALLENGES</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td colspan="2" style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #8db3e2; font-size: 14px;">
+    SPOKEN ENGLISH
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 3px solid #c00000; font-size: 12px; background-color: #d7e5f5;">
+    <span style="text-decoration: underline; display: block;">HIGHLIGHTS</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #d7e5f5;">
+    <span style="text-decoration: underline; display: block;">CHALLENGES</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td colspan="2" style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #fabf8f; font-size: 14px;">
+    YOUNG LEAD
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #fef2e8; vertical-align: bottom; border-bottom: 3px solid #c00000;">
+    <span style="text-decoration: underline; display: block;">HIGHLIGHTS</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #fef2e8; vertical-align: bottom; border-bottom: 3px solid #c00000;">
+    <span style="text-decoration: underline; display: block;">CHALLENGES</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 1px solid #c00000; border-bottom: 1px solid #c00000; font-size: 12px; background-color: #e0ebcd;">
+    <span style="text-decoration: underline; display: block;">General Challenges</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_highlights" placeholder="(Any challenges faced with the activities, curriculum, administration, parents, staff, children, transportation, suppliers, corporate or other work related challenges. If there are no challenges, just say none)"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; border-bottom: 1px solid #c00000; background-color: #e0ebcd;">
+    <span style="text-decoration: underline; display: block;">Open Items</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_challenges" placeholder="(Any open items related to curriculum, administration, parents, staff, children, suppliers, corporate, hiring new staff, yourself. If there are no open items, just say none)"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 1px solid #c00000; border-bottom: 1px solid #c00000; font-size: 12px; background-color: #e0ebcd;">
+    <span style="text-decoration: underline; display: block;">Important updates</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_highlights" placeholder="(Update on recruiting, sales, parent request, happy parents, and unhappy parents. If there are no important updates, just say none)"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; border-bottom: 1px solid #c00000; background-color: #e0ebcd;">
+    <span style="text-decoration: underline; display: block;">Important events - Next week</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_challenges" placeholder="(Compensation class,  PTA,  Group review, Start of a new level, Extension class)"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td colspan="2" style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #e0ebcd; width: 50%; vertical-align: top;">
+    <span style="text-decoration: underline; display: block;">Attachments</span>
+    <span style="margin: 15px 0px; display: block;">(Student Records, Sales Leads, Recruiting, Others - whenever you attach a file please mention the name of the file(s) you are attaching. You will send these files for review every time you update them)</span>
+    <input type="file" />
+    </td>
+    </tr>
+    </table>
+    </div>
+</script>
+
+<script type="text/ng-template" id="pre_school_daily.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Pre School Daily Report <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"><span aria-hidden="true">&times;</span></button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 0 auto; border: 3px solid #c00000;">
+    <tr>
+    <td colspan="8" style="border-bottom:3px solid #c00000; padding:10px; text-align: center; background-color: #e0ebcd;">
+    <img src="http://yellowandgray.com/eshine/reports/preschooldaily.jpg" alt="image" />
+    </td>
+    </tr>
+    <tr>
+    <td style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #e5b8b7; font-size: 14px;" colspan="8">
+    PLAY GROUP ATTENDANCE
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">Jumpstart PG</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy, nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">Play Group</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy, nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">Teacher</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">Nanny</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6;" colspan="2">
+    <span style="text-decoration: underline; display: block;">Teachers reported late</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6;" colspan="2">
+    <span style="text-decoration: underline; display: block;">Nannies reported late</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="" ng-model="formFields.play_group_highlights" />
+    </td>
+    </tr>
+    <tr>
+    <td style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #8db3e2; font-size: 14px;" colspan="8">
+    PRE SCHOOL ATTENDANCE
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #d7e5f5; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">PR - I</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #d7e5f5; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">PR - II</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #d7e5f5; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">PR - III</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #d7e5f5; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">PR - IV</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #d7e5f5; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">Teacher</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #d7e5f5; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">Nanny</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #d7e5f5; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">Teachers reported late</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #d7e5f5; vertical-align: bottom;">
+    <span style="text-decoration: underline; display: block;">Nannies reported late</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="" ng-model="formFields.play_group_highlights" />
+    </td>
+    </tr>
+    <tr>
+    <td style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #c2d69b; font-size: 14px;" colspan="8">
+    EXTENDED CARE ATTENDANCE (MyBeeHive)
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f0f5e7; vertical-align: bottom; border-bottom: 3px solid #c00000;">
+    <span style="text-decoration: underline; display: block;">EC</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f0f5e7; vertical-align: bottom; border-bottom: 3px solid #c00000;">
+    <span style="text-decoration: underline; display: block;">Teacher</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f0f5e7; vertical-align: bottom; border-bottom: 3px solid #c00000;" colspan="2">
+    <span style="text-decoration: underline; display: block;">Nanny</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="nn:yy" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f0f5e7; vertical-align: bottom; border-bottom: 3px solid #c00000;" colspan="2">
+    <span style="text-decoration: underline; display: block;">Teachers reported late</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f0f5e7; vertical-align: bottom; border-bottom: 3px solid #c00000;" colspan="2">
+    <span style="text-decoration: underline; display: block;">Nannies reported late</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="" ng-model="formFields.play_group_highlights" />
+    </td>
+    </tr>
+    <tr>
+    <td style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #fabf8f; font-size: 14px;" colspan="8">
+    ADMIN ATTENDANCE
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #fef2e8; vertical-align: bottom; border-bottom: 3px solid #c00000;" colspan="2">
+    <span style="text-decoration: underline; display: block;">Reporting Time</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="00:00" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #fef2e8; vertical-align: bottom; border-bottom: 3px solid #c00000;" colspan="3">
+    <span style="text-decoration: underline; display: block;">Van Reporting Time</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="00:00" ng-model="formFields.play_group_highlights" />
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #fef2e8; vertical-align: bottom; border-bottom: 3px solid #c00000;" colspan="3">
+    <span style="text-decoration: underline; display: block;">Attendance Comments</span>
+    <input style="display: block; width: 100%; margin-top: 5px;" placeholder="" ng-model="formFields.play_group_highlights" />
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 3px solid #c00000; border-bottom: 3px solid #c00000; font-size: 12px; background-color: #e0ebcd;" colspan="8">
+    <span style="text-decoration: underline; display: block;">Highlight of Yesterday's Activity</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_highlights" placeholder="(Describe in brief about how the day went with the programs and highlights - Children/Parents/Teachers/Instructions)"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 3px solid #c00000; border-bottom: 3px solid #c00000; font-size: 12px; background-color: #e0ebcd;" colspan="4">
+    <span style="text-decoration: underline; display: block;">Challenges</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_highlights" placeholder="(Any challenges faced with the activities, curriculum, administration, parents, staff, children, transportation, suppliers, corporate or other work related challenges. If there are no challenges, just say none)"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; border-bottom: 3px solid #c00000; background-color: #e0ebcd;" colspan="4">
+    <span style="text-decoration: underline; display: block;">Open Items</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_challenges" placeholder="(Any open items related to curriculum, administration, parents, staff, children, suppliers, corporate, hiring new staff, yourself. If there are no open items, just say none)"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 3px solid #c00000; font-size: 12px; background-color: #e0ebcd;" colspan="4">
+    <span style="text-decoration: underline; display: block;">Important Updates</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_highlights" placeholder="(Update on recruiting, sales, parent request, happy parents, and unhappy parents. If there are no important updates, just say none)"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #e0ebcd; width: 50%; vertical-align: top;" colspan="4">
+    <span style="text-decoration: underline; display: block;">Attachments</span>
+    <span style="margin: 5px 0px; display: block;">(Student Records, Sales Leads, Recruiting, Others - whenever you attach a file please mention the name of the file(s) you are attaching. You will send these files for review every time you update them)</span>
+    <input type="file" />
+    </td>
+    </tr>
+    </table>
+    </div>
+</script>
+
+<script type="text/ng-template" id="pre_school_weekly.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Pre School Weekly Report <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"><span aria-hidden="true">&times;</span></button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 0 auto; border: 3px solid #c00000;">
+    <tr>
+    <td colspan="2" style="border-bottom:3px solid #c00000; padding:10px; text-align: center; background-color: #e0ebcd;">
+    <img src="http://yellowandgray.com/eshine/reports/preschoolweekly.jpg" alt="image" />
+    </td>
+    </tr>
+    <tr>
+    <td style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #e5b8b7; font-size: 14px;" colspan="2">
+    PLAY GROUP
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 3px solid #c00000; font-size: 12px; background-color: #f6e6e6;">
+    <span style="text-decoration: underline; display: block;">HIGHLIGHTS</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6" ng-model="formFields.play_group_highlights"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f6e6e6;">
+    <span style="text-decoration: underline; display: block;">CHALLENGES</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6" ng-model="formFields.play_group_challenges"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #8db3e2; font-size: 14px;" colspan="2">
+    PRE SCHOOL
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 3px solid #c00000; font-size: 12px; background-color: #d7e5f5;">
+    <span style="text-decoration: underline; display: block;">HIGHLIGHTS</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6" ng-model="formFields.play_group_highlights"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #d7e5f5;">
+    <span style="text-decoration: underline; display: block;">CHALLENGES</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6" ng-model="formFields.play_group_challenges"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td style="text-align: center; color: #000000; padding: 5px 0px; font-weight: bold; background-color: #c2d69b; font-size: 14px;" colspan="2">
+    EXTENDED CARE
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 3px solid #c00000; font-size: 12px; background-color: #f0f5e7;">
+    <span style="text-decoration: underline; display: block;">HIGHLIGHTS</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6" ng-model="formFields.play_group_highlights"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #f0f5e7;">
+    <span style="text-decoration: underline; display: block;">CHALLENGES</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="6" ng-model="formFields.play_group_challenges"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 3px solid #c00000; border-bottom: 3px solid #c00000; font-size: 12px; background-color: #e0ebcd;">
+    <span style="text-decoration: underline; display: block;">General Challenges</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_highlights" placeholder="(Any challenges faced with the activities, curriculum, administration, parents, staff, children, transportation, suppliers, corporate or other work related challenges. If there are no challenges, just say none)"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; border-bottom: 3px solid #c00000; background-color: #e0ebcd;">
+    <span style="text-decoration: underline; display: block;">Open Items</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_challenges" placeholder="(Any open items related to curriculum, administration, parents, staff, children, suppliers, corporate, hiring new staff, yourself. If there are no open items, just say none)"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td style="color: #000000; padding: 5px; font-weight: bold; border-right: 3px solid #c00000; font-size: 12px; background-color: #e0ebcd;">
+    <span style="text-decoration: underline; display: block;">Important Updates</span>
+    <textarea style="display: block; width: 100%; margin-top: 5px;" rows="8" ng-model="formFields.play_group_highlights" placeholder="(Update on recruiting, sales, parent request, happy parents, and unhappy parents. If there are no important updates, just say none)"></textarea>
+    </td>
+    <td style="color: #000000; padding: 5px; font-weight: bold; font-size: 12px; background-color: #e0ebcd; width: 50%; vertical-align: top;">
+    <span style="text-decoration: underline; display: block;">Attachments</span>
+    <span style="margin: 5px 0px; display: block;">(Student Records, Sales Leads, Recruiting, Others - whenever you attach a file please mention the name of the file(s) you are attaching. You will send these files for review every time you update them)</span>
+    <input type="file" />
+    </td>
+    </tr>
+    </table>
+    </div>
+</script>

@@ -1,0 +1,346 @@
+<header class="navbar-fixed" ng-include="'pages/header.html'" ng-controller="HeaderController"></header>
+<section class="body-section">
+    <div class="container-fluid">
+        <div class="row row-eq-height">
+            <div class="col-md-2 no-padding menu-container">
+                <div ng-include="'pages/adminmenu.html'"></div>
+            </div>
+            <div class="col-md-10 padding-t-b-15">
+                <uib-tabset type="pills">
+                    <uib-tab heading="Level One" select="getData('level_one');">
+                        <div class="row padding-t-b-15 no-padding">
+                            <div class="col-md-1">
+                                <button type="button" class="add-button" ng-click="openForm('level_one', 'level_one', 'New Level One', 0);">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-2" ng-if="selected_items.length > 0">
+                                <select class="form-control" ng-change="doMoreAction();" ng-model="do_more.selected">
+                                    <option value="">--Selected with--</option>
+                                    <option value="delete">Delete</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="DataTables_Table_0_filter">
+                            <table datatable="ng" dt-options="programOptions" dt-column-defs="programColumnDefs">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox" ng-change="checkAll(0);" ng-model="select_all.checkbox" />
+                                        </th>
+                                        <th>Name</th>
+                                        <th>Icon</th>
+                                        <th>Created By</th>
+                                        <th>Created On</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="row in data">
+                                        <td>
+                                            <input type="checkbox" ng-click="checkRow(row.ID);" ng-checked="checkCheckedRow(row.ID);" />
+                                        </td>
+                                        <td>{{row.name}}</td>
+                                        <td>
+                                            <img ng-if="row.image !== ''" class="preview" ng-src="{{row.image| image_url}}" alt="image" />
+                                        </td>
+                                        <td>{{row.created_by| admin}}</td>
+                                        <td>{{row.created_at| dateformat}}</td>
+                                        <td>
+                                            <a ng-click="openForm('level_one', 'level_one', 'Level One', row.ID);" class="pointer">
+                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                            </a>
+                                            <a ng-click="deleteRecord('level_one', row.ID, 'Level');" class="pointer">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                    </tr>                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </uib-tab>
+                    <uib-tab heading="Level Two" select="getData('level_two');">
+                        <div class="row padding-t-b-15 no-padding">
+                            <div class="col-md-1">
+                                <button type="button" class="add-button" ng-click="openForm('level_two', 'level_two', 'New Level Two', 0);">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-2" ng-if="selected_items.length > 0">
+                                <select class="form-control" ng-change="doMoreAction();" ng-model="do_more.selected">
+                                    <option value="">--Selected with--</option>
+                                    <option value="delete">Delete</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="DataTables_Table_1_filter">
+                            <table datatable="ng" dt-options="programOptions" dt-column-defs="programColumnDefs">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox" ng-change="checkAll(1);" ng-model="select_all.checkbox" />
+                                        </th>
+                                        <th>Name</th>
+                                        <th>Icon</th>
+                                        <th>Created By</th>
+                                        <th>Created On</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="row in data">
+                                        <td>
+                                            <input type="checkbox" ng-click="checkRow(row.ID);" ng-checked="checkCheckedRow(row.ID);" />
+                                        </td>
+                                        <td>{{row.name}}</td>
+                                        <td>
+                                            <img ng-if="row.image !== ''" class="preview" ng-src="{{row.image| image_url}}" alt="image" />
+                                        </td>
+                                        <td>{{row.created_by| admin}}</td>
+                                        <td>{{row.created_at| dateformat}}</td>
+                                        <td>
+                                            <a ng-click="openForm('level_two', 'level_two', 'Level Two', row.ID);" class="pointer">
+                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                            </a>
+                                            <a ng-click="deleteRecord('level_two', row.ID, 'Level');" class="pointer">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                    </tr>                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </uib-tab>
+                    <uib-tab heading="Level Three" select="getData('level_three');">
+                        <div class="row padding-t-b-15 no-padding">
+                            <div class="col-md-1">
+                                <button type="button" class="add-button" ng-click="openForm('level_three', 'level_three', 'New Level Three', 0);">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-2" ng-if="selected_items.length > 0">
+                                <select class="form-control" ng-change="doMoreAction();" ng-model="do_more.selected">
+                                    <option value="">--Selected with--</option>
+                                    <option value="delete">Delete</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="DataTables_Table_2_filter">
+                            <table datatable="ng" dt-options="programOptions" dt-column-defs="programColumnDefs">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox" ng-change="checkAll(2);" ng-model="select_all.checkbox" />
+                                        </th>
+                                        <th>Name</th>
+                                        <th>Icon</th>
+                                        <th>Created By</th>
+                                        <th>Created On</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="row in data">
+                                        <td>
+                                            <input type="checkbox" ng-click="checkRow(row.ID);" ng-checked="checkCheckedRow(row.ID);" />
+                                        </td>
+                                        <td>{{row.name}}</td>
+                                        <td>
+                                            <img ng-if="row.image !== ''" class="preview" ng-src="{{row.image| image_url}}" alt="image" />
+                                        </td>
+                                        <td>{{row.created_by| admin}}</td>
+                                        <td>{{row.created_at| dateformat}}</td>
+                                        <td>
+                                            <a ng-click="openForm('level_three', 'level_three', 'Level Three', row.ID);" class="pointer">
+                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                            </a>
+                                            <a ng-click="deleteRecord('level_three', row.ID, 'Level');" class="pointer">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                    </tr>                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </uib-tab>
+                    <uib-tab heading="Level Four" select="getData('level_four');">
+                        <div class="row padding-t-b-15 no-padding">
+                            <div class="col-md-1">
+                                <button type="button" class="add-button" ng-click="openForm('level_four', 'level_four', 'New Level Four', 0);">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-2" ng-if="selected_items.length > 0">
+                                <select class="form-control" ng-change="doMoreAction();" ng-model="do_more.selected">
+                                    <option value="">--Selected with--</option>
+                                    <option value="delete">Delete</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="DataTables_Table_3_filter">
+                            <table datatable="ng" dt-options="programOptions" dt-column-defs="programColumnDefs">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox" ng-change="checkAll(3);" ng-model="select_all.checkbox" />
+                                        </th>
+                                        <th>Name</th>
+                                        <th>Icon</th>
+                                        <th>Created By</th>
+                                        <th>Created On</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="row in data">
+                                        <td>
+                                            <input type="checkbox" ng-click="checkRow(row.ID);" ng-checked="checkCheckedRow(row.ID);" />
+                                        </td>
+                                        <td>{{row.name}}</td>
+                                        <td>
+                                            <img ng-if="row.image !== ''" class="preview" ng-src="{{row.image| image_url}}" alt="image" />
+                                        </td>
+                                        <td>{{row.created_by| admin}}</td>
+                                        <td>{{row.created_at| dateformat}}</td>
+                                        <td>
+                                            <a ng-click="openForm('level_four', 'level_four', 'Level Four', row.ID);" class="pointer">
+                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                            </a>
+                                            <a ng-click="deleteRecord('level_four', row.ID, 'Level');" class="pointer">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                    </tr>                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </uib-tab>
+                </uib-tabset>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/ng-template" id="level_one.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Program - Level One <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+    <span aria-hidden="true">&times;</span> 
+    </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <form name="popupForm" ng-submit="submitForm();">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="name" class="cols-sm-2 control-label">Name</label>
+    <input class="form-control" type="text" name="name" ng-model="form.name" id="name" required autofocus />
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="image" class="cols-sm-2 control-label">Image</label>
+    <label for="image" class="form-control image-icon"><i class="fa fa-paperclip" aria-hidden="true"></i> {{attach_file}}</label>
+    <input class="form-control" style="display: none;" type="file" name="image" ng-model="image" id="image" accept="image/*" onchange="angular.element(this).scope().uploadImage(this.files, 'image');" />
+    </div>
+    </div>
+    </div>
+    <div class="form-group" style="text-align: right;">
+    <button ng-disabled="!popupForm.$valid" type="submit" class="btn btn-primary">Save</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+    </form>
+    </div>
+</script>
+
+<script type="text/ng-template" id="level_two.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Program - Level Two <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+    <span aria-hidden="true">&times;</span> 
+    </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <form name="popupForm" ng-submit="submitForm();">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="name" class="cols-sm-2 control-label">Name</label>
+    <input class="form-control" type="text" name="name" ng-model="form.name" id="name" required autofocus />
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="image" class="cols-sm-2 control-label">Image</label>
+    <label for="image" class="form-control image-icon"><i class="fa fa-paperclip" aria-hidden="true"></i> {{attach_file}}</label>
+    <input class="form-control" style="display: none;" type="file" name="image" ng-model="image" id="image" accept="image/*" onchange="angular.element(this).scope().uploadImage(this.files, 'image');" />
+    </div>
+    </div>
+    </div>
+    <div class="form-group" style="text-align: right;">
+    <button ng-disabled="!popupForm.$valid" type="submit" class="btn btn-primary">Save</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+    </form>
+    </div>
+</script>
+
+<script type="text/ng-template" id="level_three.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Program - Level Three <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+    <span aria-hidden="true">&times;</span> 
+    </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <form name="popupForm" ng-submit="submitForm();">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="name" class="cols-sm-2 control-label">Name</label>
+    <input class="form-control" type="text" name="name" ng-model="form.name" id="name" required autofocus />
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="image" class="cols-sm-2 control-label">Image</label>
+    <label for="image" class="form-control image-icon"><i class="fa fa-paperclip" aria-hidden="true"></i> {{attach_file}}</label>
+    <input class="form-control" style="display: none;" type="file" name="image" ng-model="image" id="image" accept="image/*" onchange="angular.element(this).scope().uploadImage(this.files, 'image');" />
+    </div>
+    </div>
+    </div>
+    <div class="form-group" style="text-align: right;">
+    <button ng-disabled="!popupForm.$valid" type="submit" class="btn btn-primary">Save</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+    </form>
+    </div>
+</script>
+
+<script type="text/ng-template" id="level_four.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Program - Level Four <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+    <span aria-hidden="true">&times;</span> 
+    </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <form name="popupForm" ng-submit="submitForm();">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="name" class="cols-sm-2 control-label">Name</label>
+    <input class="form-control" type="text" name="name" ng-model="form.name" id="name" required autofocus />
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="image" class="cols-sm-2 control-label">Image</label>
+    <label for="image" class="form-control image-icon"><i class="fa fa-paperclip" aria-hidden="true"></i> {{attach_file}}</label>
+    <input class="form-control" style="display: none;" type="file" name="image" ng-model="image" id="image" accept="image/*" onchange="angular.element(this).scope().uploadImage(this.files, 'image');" />
+    </div>
+    </div>
+    </div>
+    <div class="form-group" style="text-align: right;">
+    <button ng-disabled="!popupForm.$valid" type="submit" class="btn btn-primary">Save</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+    </form>
+    </div>
+</script>

@@ -1,0 +1,971 @@
+<header class="navbar-fixed" ng-include="'pages/header.html'" ng-controller="HeaderController"></header>
+<section class="body-section">
+    <div class="container-fluid">
+        <div class="row row-eq-height">
+            <div class="col-md-2 no-padding menu-container">
+                <div ng-include="'pages/adminmenu.html'"></div>
+            </div>
+            <div class="col-md-10 padding-t-b-15">
+                <uib-tabset type="pills" active="$root.activeProgramMappingTab">
+                    <uib-tab heading="Program" select="getProgramMapping();">
+                        <div class="row">
+                            <div class="col-md-12 padding-t-b-15">
+                                <button type="button" class="map-button" ng-click="openForm('level_two_mapping', 'level_two_mapping', 'Second Level Mapping');">
+                                    Map Level Two
+                                </button>
+                                <button type="button" class="map-button" ng-click="openForm('level_three_mapping', 'level_three_mapping', 'Third Level Mapping');">
+                                    Map Level Three
+                                </button>
+                                <button type="button" class="map-button" ng-click="openForm('level_four_mapping', 'level_four_mapping', 'Fourth Level Mapping');">
+                                    Map Level Four
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row row-eq-height" ng-if="data !== null">
+                            <div class="col-md-3 no-padding-right" style="width: 28%;">
+                                <ul class="levels-dropdown second">
+                                    <li ng-repeat="(key, val) in data">
+                                        <div ng-click="mappingActive(key, '', '');" class="level-one" ng-class="{'active': key === selected_levelone}">
+                                            <img ng-src="{{key|image}}" class="list-icon" alt="image" /> {{key|name}}
+                                            <a class="delete-btn" ng-click="deleteProgramLevel('one');"><i class="fa fa-trash"></i></a>
+                                        </div>
+                                        <div ng-if="data[key] && notArray(data[key][ke])" ng-repeat="(ke, va) in data[key]">
+                                            <div ng-click="mappingActive(key, ke, '');" class="level-two" ng-class="{'active': key === selected_levelone && ke === selected_leveltwo, 'hidden': key !== selected_levelone}">
+                                                <img ng-src="{{ke|image}}" class="list-icon" alt="image" /> {{ke|name}}
+                                                <a class="delete-btn" ng-click="deleteProgramLevel('two');"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                            <div ng-if="data[key][ke] && notArray(data[key][ke][k])" ng-repeat="(k, v) in data[key][ke]">
+                                                <div ng-click="mappingActive(key, ke, k);" class="level-three" ng-class="{'active':  key === selected_levelone && ke === selected_leveltwo && k === selected_levelthree, 'hidden':  key !== selected_levelone || ke !== selected_leveltwo}">
+                                                    <img ng-src="{{k|image}}" class="list-icon" alt="image" /> {{k|name}}
+                                                    <a class="delete-btn" ng-click="deleteProgramLevel('three');"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-9" style="width: 72%;">
+                                <div class="row no-margin">
+                                    <div class="col-md-8 no-padding">
+                                        <div class="breadcrumb-section">
+                                            <span>{{selected_levelone| name}}</span> <span ng-if="selected_leveltwo !== ''">&gt; {{selected_leveltwo| name}}</span> <span ng-if="selected_levelthree !== ''">&gt; {{selected_levelthree| name}}</span> <button ng-if="mainCurriculam() !== '0' && mainCurriculam() !== 0" class="btn btn-danger" ng-click="removeProgramCurriculam();">Remove Curriculum</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 no-padding">
+                                        <div class="program-search">
+                                            <input type="text" ng-model="search" placeholder="Search" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row program-detail-container" style="min-height: calc(100% - 54px);">
+                                    <div class="col-md-9 no-padding">
+                                        <div class="text-center" ng-if="mainCurriculam() === '0' || mainCurriculam() === 0">
+                                            <button type="button" class="map-button" ng-click="openForm('add_media', 'main_curriculam_mapping', 'Curriculum Mapped');">Add Curriculum</button>
+                                        </div>
+                                        <div id="framearea" ng-if="mainCurriculam() !== '0' && mainCurriculam() !== 0">
+                                            <div id="framecover" style="position:absolute; z-index:2; height: 95%; width: 94%">
+                                                <img ng-src="images/dot.gif" style="width: 100%; height: 100%;" BORDER="0" onmousedown="this.oncontextmenu = new Function('return false')" onmouseup="this.oncontextmenu = new Function('return false')" />
+                                            </div>
+                                            <iframe class="curriculam" ng-src="{{mainCurriculamPath() | trustAsResourceUrl}}"></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 no-padding">
+                                        <ul class="program-level-four-container">
+                                            <li>
+                                                <button type="button" class="add-button" ng-click="openForm('level_four_mapping_additional', 'level_four_mapping_additional', 'Level Four');">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+                                            </li>
+                                            <li ng-repeat="(key, row) in curriculam();" ng-class="{'active': key === selected_levelfour}" ng-click="makeActive(key, row[0].ID);">
+                                                <img style="max-width: 35px;" ng-src="{{row[0].level_four_image| image_url}}" alt="image" uib-popover="{{key}}" popover-trigger="'mouseenter'" popover-placement="right" />
+                                                <a class="delete-lf-btn" ng-click="deleteProgramLevel('four');"><i class="fa fa-trash"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <div class="franchise-program-content" style="line-height: 400%;">
+                                            <button type="button" class="add-button" ng-click="openForm('add_media', 'program_content_mapping', 'Program Content', 0);">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+                                        <div class="franchise-program-content" ng-repeat="row in contents| filter:search" ng-click="openDocument(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);">
+                                            <img ng-src="{{row.file| image_url}}" alt="image" ng-if="row.extension === 'png' || row.extension === 'jpg' || row.extension === 'gif' || row.extension === 'jpeg'" />
+                                            <img ng-src="images/icon/{{row.extension}}-icon.png" alt="image" ng-if="row.extension !== 'png' && row.extension !== 'jpg' && row.extension !== 'gif' && row.extension !== 'jpge'" />
+                                            <div><small uib-popover="{{row.name}}" popover-trigger="'mouseenter'" popover-placement="top">{{row.name | charlimit:10}}</small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </uib-tab>
+                    <uib-tab heading="Guideline" select="getGuidelineMapping();">
+                        <div class="row">
+                            <div class="col-md-12 padding-t-b-15">
+                                <button type="button" class="map-button" ng-click="openGuidelineForm('level_two_mapping_guideline', 'level_two_mapping_guideline', 'Second Level Mapping');">
+                                    Map Level Two
+                                </button>
+                                <button type="button" class="map-button" ng-click="openGuidelineForm('level_three_mapping_guideline', 'level_three_mapping_guideline', 'Third Level Mapping');">
+                                    Map Level Three
+                                </button>
+                                <button type="button" class="map-button" ng-click="openGuidelineForm('level_four_mapping_guideline', 'level_four_mapping_guideline', 'Fourth Level Mapping');">
+                                    Map Level Four
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row row-eq-height" ng-if="data_guideline !== null">
+                            <div class="col-md-3 no-padding-right" style="width: 28%;">
+                                <ul class="levels-dropdown second">
+                                    <li ng-repeat="(key, val) in data_guideline">
+                                        <div ng-click="mappingActiveGuideline(key, '', '');" class="level-one" ng-class="{'active': key === selected_levelone_guideline}">
+                                            <img ng-src="{{key|image}}" class="list-icon" alt="image" /> {{key|name}}
+                                            <a class="delete-btn" ng-click="deleteGuidelineLevel('one');"><i class="fa fa-trash"></i></a>
+                                        </div>
+                                        <div ng-if="data_guideline[key] && notArray(data_guideline[key][ke])" ng-repeat="(ke, va) in data_guideline[key]">
+                                            <div ng-click="mappingActiveGuideline(key, ke, '');" class="level-two" ng-class="{'active': key === selected_levelone_guideline && ke === selected_leveltwo_guideline, 'hidden': key !== selected_levelone_guideline}">
+                                                <img ng-src="{{ke|image}}" class="list-icon" alt="image" /> {{ke|name}}
+                                                <a class="delete-btn" ng-click="deleteGuidelineLevel('two');"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                            <div ng-if="data_guideline[key][ke] && notArray(data_guideline[key][ke][k])" ng-repeat="(k, v) in data_guideline[key][ke]">
+                                                <div ng-click="mappingActiveGuideline(key, ke, k);" class="level-three" ng-class="{'active':  key === selected_levelone_guideline && ke === selected_leveltwo_guideline && k === selected_levelthree_guideline, 'hidden':  key !== selected_levelone_guideline || ke !== selected_leveltwo_guideline}">
+                                                    <img ng-src="{{k|image}}" class="list-icon" alt="image" /> {{k|name}}
+                                                    <a class="delete-btn" ng-click="deleteGuidelineLevel('three');"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-9" style="width: 72%;">
+                                <div class="row no-margin">
+                                    <div class="col-md-7 no-padding">
+                                        <div class="breadcrumb-section">
+                                            <span>{{selected_levelone_guideline| name}}</span> <span ng-if="selected_leveltwo_guideline !== ''">&gt; {{selected_leveltwo_guideline| name}}</span> <span ng-if="selected_levelthree_guideline !== ''">&gt; {{selected_levelthree_guideline| name}}</span> <button ng-if="mainCurriculamGuideline() !== '0' && mainCurriculamGuideline() !== 0" class="btn btn-danger" ng-click="removeGuidelineCurriculam();">Remove Curriculum</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 no-padding">
+                                        <div class="program-search">
+                                            <input type="text" ng-model="search" placeholder="Search" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row program-detail-container" style="min-height: calc(100% - 44px);">
+                                    <div class="col-md-9 no-padding">
+                                        <div class="text-center" ng-if="mainCurriculamGuideline() === '0' || mainCurriculam() === 0">
+                                            <button type="button" class="map-button" ng-click="openGuidelineForm('add_media', 'main_curriculam_mapping', 'Curriculum Mapped');">Add Curriculum</button>
+                                        </div>
+                                        <div id="framearea" ng-if="mainCurriculamGuideline() !== '0' && mainCurriculamGuideline() !== 0">
+                                            <div id="framecover" style="position:absolute; z-index:2; height: 95%; width: 94%">
+                                                <img ng-src="images/dot.gif" style="width: 100%; height: 100%;" BORDER="0" onmousedown="this.oncontextmenu = new Function('return false')" onmouseup="this.oncontextmenu = new Function('return false')" />
+                                            </div>
+                                            <iframe class="curriculam" ng-src="{{mainCurriculamGuidelinePath() | trustAsResourceUrl}}"></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 no-padding">
+                                        <ul class="program-level-four-container">
+                                            <li>
+                                                <button type="button" class="add-button" ng-click="openGuidelineForm('level_four_mapping_additional', 'level_four_mapping_additional', 'Level Four');">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+                                            </li>
+                                            <li ng-repeat="(key, row) in curriculamGuideline();" ng-class="{'active': key === selected_levelfour_guideline}" ng-click="makeActiveGuideline(key, row[0].ID);">
+                                                <img style="max-width: 35px;" ng-src="{{row[0].level_four_image| image_url}}" alt="image" uib-popover="{{key}}" popover-trigger="'mouseenter'" popover-placement="right" />
+                                                <a class="delete-lf-btn" ng-click="deleteGuidelineLevel('four');"><i class="fa fa-trash"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <div class="franchise-program-content" style="line-height: 400%;">
+                                            <button type="button" class="add-button" ng-click="openGuidelineForm('add_media', 'program_content_mapping', 'Program Content', 0);">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+                                        <div class="franchise-program-content" ng-repeat="row in contents_guideline| filter:search" ng-click="openDocumentGuideline(row.file, row.extension, row.is_downloadable, row.is_printable, row.template_type, row.ID, row.name);">
+                                            <img ng-src="{{row.file| image_url}}" alt="image" ng-if="row.extension === 'png' || row.extension === 'jpg' || row.extension === 'gif' || row.extension === 'jpeg'" />
+                                            <img ng-src="images/icon/{{row.extension}}-icon.png" alt="image" ng-if="row.extension !== 'png' && row.extension !== 'jpg' && row.extension !== 'gif' && row.extension !== 'jpge'" />
+                                            <div><small uib-popover="{{row.name}}" popover-trigger="'mouseenter'" popover-placement="top">{{row.name | charlimit:10}}</small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </uib-tab>
+                </uib-tabset>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/ng-template" id="level_two_mapping.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Mapping Level Two <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+            <span aria-hidden="true">&times;</span> 
+        </button></h4>
+</div>
+<div class="modal-body" id="modal-body">
+    <uib-tabset type="pills">
+        <uib-tab heading="Mapped" select="getLevelTwoOccupied('level_two');">
+            <div ng-if="occupied.length > 0">
+                <div class="row padding-t-15">
+                    <div class="col-md-6">
+                        <div class="program-search">
+                            <input type="text" ng-model="search_filter_occupied.text" placeholder="Search" />
+                        </div>
+                    </div>
+                    <div class="col-md-6" ng-if="selected_items.length > 0">
+                        <select class="form-control" ng-change="doMoreAction();" ng-model="do_more.selected">
+                            <option value="">--Selected with--</option>
+                            <option value="delete">Delete</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mapping-section">
+                    <div>
+                        <label class="padding-t-10 red-font">
+                            <input type="checkbox" ng-change="checkAll('occupied', 'selected_items', 'search_filter_occupied');" ng-model="select_all.checkbox" /> Check All
+                        </label>
+                    </div>
+                    <div ng-repeat="row in occupied| filter: search_filter_occupied.text">
+                        <label>
+                            <input type="checkbox" ng-click="checkRow(row.ID);" ng-checked="checkCheckedRow(row.ID);" /> {{row.level_one}} > {{row.level_two}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="occupied.length === 0" class="padding-t-15">
+                No Level Two Mappings Found
+            </div>
+        </uib-tab>
+        <uib-tab heading="Avails" select="getLevelTwoAvails();">
+            <div class="row padding-t-15" ng-if="data.first_section.length > 0">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="level_one_id" class="cols-sm-2 control-label">Level One</label>
+                        <select class="form-control" name="level_one_id" ng-model="data.level_one_id" id="level_one_id" ng-change="getLevelTwoItems();">
+                            <option value="0">--Select Level One--</option>
+                            <option ng-repeat="row in data.first_section" value="{{row.ID}}">{{row.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div ng-if="data.second_section.length > 0">
+                        <div class="form-group no-margin">                
+                            <label for="level_one_id" class="cols-sm-2 control-label no-margin">&nbsp;</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="program-search">
+                                    <input type="text" ng-model="search_filter.text" placeholder="Search" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mapping-section">
+                            <div>
+                                <label class="padding-t-10 red-font">
+                                    <input type="checkbox" ng-change="checkAll('data.second_section', 'data.second_selections', 'search_filter');" ng-model="select_all.checkbox" /> Check All
+                                </label>
+                            </div>
+                            <div ng-repeat="row in data.second_section| filter: search_filter.text">
+                                <label>
+                                    <input type="checkbox" ng-checked="exists(row.ID, data.second_selections)" ng-click="toggle(row.ID, data.second_selections)" /> {{row.name}}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="data.second_section.length === 0">
+                        {{errMsg}}
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-if="data.first_section.length > 0">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-warning" ng-click="mapLevelTwo();" ng-disabled="data.level_one_id === 0 || data.level_one_id === '0' || data.second_selections.length === 0">
+                        Submit
+                    </button>
+                </div>
+            </div>
+            <div class="row padding-t-15" ng-if="data.first_section.length === 0">
+                <div class="col-md-12">
+                    {{errMsg}}
+                </div>
+            </div>   
+        </uib-tab>
+    </uib-tabset>
+</div>
+</script>
+
+<script type="text/ng-template" id="level_three_mapping.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Mapping Level Three 
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+            <span aria-hidden="true">&times;</span> 
+        </button>
+    </h4>
+</div>
+<div class="modal-body" id="modal-body">
+    <uib-tabset type="pills">
+        <uib-tab heading="Mapped" select="getLevelTwoOccupied('level_three');">
+            <div ng-if="occupied.length > 0">
+                <div class="row padding-t-15">                    
+                    <div class="col-md-6">
+                        <div class="program-search">
+                            <input type="text" ng-model="search_filter_occupied.text" placeholder="Search" />
+                        </div>
+                    </div>
+                    <div class="col-md-6" ng-if="selected_items.length > 0">
+                        <select class="form-control" ng-change="doMoreAction();" ng-model="do_more.selected">
+                            <option value="">--Selected with--</option>
+                            <option value="delete">Delete</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mapping-section">
+                    <div>
+                        <label class="padding-t-10 red-font">
+                            <input type="checkbox" ng-change="checkAll('occupied', 'selected_items', 'search_filter_occupied');" ng-model="select_all.checkbox" /> Check All
+                        </label>
+                    </div>
+                    <div ng-repeat="row in occupied| filter: search_filter_occupied.text">
+                        <label>
+                            <input type="checkbox" ng-click="checkRow(row.ID);" ng-checked="checkCheckedRow(row.ID);" /> {{row.level_one}} > {{row.level_two}} > {{row.level_three}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="occupied.length === 0" class="padding-t-15">
+                No Level Three Mappings Found
+            </div>
+        </uib-tab>
+        <uib-tab heading="Avails" select="getLevelThreeAvails();">
+            <div class="row padding-t-15" ng-if="data.first_section.length > 0">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="level_two_mapping_id" class="cols-sm-2 control-label">Level Two Mapping</label>
+                        <select class="form-control" name="level_two_mapping_id" ng-model="data.level_two_mapping_id" id="level_two_mapping_id" ng-change="getLevelThreeItems();">
+                            <option value="0">--Select Level Two Mapping--</option>
+                            <option ng-repeat="row in data.first_section" value="{{row.ID}}">{{row.level_one_name}} > {{row.level_two_name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div ng-if="data.second_section.length > 0">
+                        <div class="form-group no-margin">
+                            <label for="level_one_id" class="cols-sm-2 control-label no-margin">&nbsp;</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="program-search">
+                                    <input type="text" ng-model="search_filter.text" placeholder="Search" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mapping-section">
+                            <div>
+                                <label class="padding-t-10 red-font">
+                                    <input type="checkbox" ng-change="checkAll('data.second_section', 'data.second_selections', 'search_filter');" ng-model="select_all.checkbox" /> Check All
+                                </label>
+                            </div>
+                            <div class="program-mapping-section" ng-repeat="row in data.second_section| filter: search_filter.text">
+                                <label>
+                                    <input type="checkbox" ng-checked="exists(row.ID, data.second_selections)" ng-click="toggle(row.ID, data.second_selections)" /> {{row.name}}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="data.second_section.length === 0">
+                        {{errMsg}}
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-if="data.first_section.length > 0">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-warning" ng-click="mapLevelThree();" ng-disabled="data.level_two_mapping_id === 0 || data.level_two_mapping_id === '0' || data.second_selections.length === 0">
+                        Submit
+                    </button>
+                </div>
+            </div>
+            <div class="row padding-t-15" ng-if="data.first_section.length === 0">
+                <div class="col-md-12">
+                    No data found to map
+                </div>
+            </div>            
+        </uib-tab>
+    </uib-tabset>
+</div>
+</script>
+
+<script type="text/ng-template" id="level_four_mapping.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Mapping Level Four <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+            <span aria-hidden="true">&times;</span> 
+        </button></h4>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="row padding-t-15" ng-if="data.first_section.length > 0">
+        <div class="col-md-6">
+            <div class="row">
+            <div class="col-md-12">
+                <div class="program-search">
+                    <input type="text" ng-model="search_filter.text" placeholder="Search" />
+                </div>
+                </div>
+                </div>
+            <div class="mapping-section">
+                <div>
+                    <label class="padding-t-10 red-font">
+                        <input type="checkbox" ng-change="checkAll('data.second_section', 'data.second_selections', 'search_filter');" ng-model="select_all.checkbox" /> Check All
+                    </label>
+                </div>
+                <div class="program-mapping-section" ng-repeat="row in data.first_section | filter: search_filter.text">
+                    <label>
+                        <input type="checkbox" ng-checked="existsFourMapping(row.ID, row.level_two_mapping_id, row.level_one_id, row.level_two_id, row.level_three_id)" ng-click="toggleFourMapping(row.ID, row.level_two_mapping_id, row.level_one_id, row.level_two_id, row.level_three_id)" /> <span ng-if="row.level_one_name">{{row.level_one_name}}</span> <span ng-if="row.level_two_name"> > {{row.level_two_name}}</span> <span ng-if="row.level_three_name"> > {{row.level_three_name}}</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="program-search">
+                    <input type="text" ng-model="search_filter.text" placeholder="Search" />
+                </div>
+                </div>
+                </div>
+            <div class="mapping-section">
+                <div>
+                    <label class="padding-t-10 red-font">
+                        <input type="checkbox" ng-change="checkAll('data.second_section', 'data.second_selections');" ng-model="select_all.checkbox" /> Check All
+                    </label>
+                </div>
+                <div class="program-mapping-section" ng-repeat="row in data.second_section | filter: search_filter.text">
+                    <label>
+                        <input type="checkbox" ng-checked="exists(row.ID, data.second_selections)" ng-click="toggle(row.ID, data.second_selections)" /> {{row.name}}
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" ng-if="data.first_section.length > 0">
+        <div class="col-md-12">
+            <button type="button" class="btn btn-warning" ng-click="mapLevelFour();" ng-disabled="data.first_selections.length === 0 || data.second_selections.length === 0">
+                Submit
+            </button>
+        </div>
+    </div>
+    <div class="row padding-t-15" ng-if="data.first_section.length === 0">
+        <div class="col-md-12">
+            No data found to map
+        </div>
+    </div>
+</div>
+</script>
+
+<script type="text/ng-template" id="level_four_mapping_additional.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Mapping Level Four <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+    <spanaria-hidden="true">&times;</span> 
+    </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <div class="row" ng-if="data.second_section.length > 0">
+    <div class="col-md-6">
+    <div class="program-mapping-section" ng-repeat="row in data.second_section">
+    <label>
+    <input type="checkbox" ng-checked="exists(row.ID, data.second_selections)" ng-click="toggle(row.ID, data.second_selections)" /> {{row.name}}
+    </label>
+    </div>
+    </div>
+    </div>
+    <div class="row" ng-if="data.second_section.length > 0">
+    <div class="col-md-12">
+    <button type="button" class="btn btn-warning" ng-click="mapLevelFourAdditional();" ng-disabled="data.second_selections.length === 0">
+    Submit
+    </button>
+    </div>
+    </div>
+    <div class="row" ng-if="data.second_section.length === 0">
+    <div class="col-md-12">
+    No data found to map
+    </div>
+    </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="level_two_mapping_guideline.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Mapping Level Two Guideline <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+            <span aria-hidden="true">&times;</span> 
+        </button></h4>
+</div>
+<div class="modal-body" id="modal-body">
+    <uib-tabset type="pills">
+        <uib-tab heading="Mapped" select="getLevelTwoOccupied('level_two');">
+            <div ng-if="occupied.length > 0">
+                <div class="row padding-t-15">
+                    <div class="col-md-6">
+                        <div class="program-search">
+                            <input type="text" ng-model="search_filter_occupied.text" placeholder="Search" />
+                        </div>
+                    </div>
+                    <div class="col-md-6" ng-if="selected_items.length > 0">
+                        <select class="form-control" ng-change="doMoreAction();" ng-model="do_more.selected">
+                            <option value="">--Selected with--</option>
+                            <option value="delete">Delete</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mapping-section">
+                <div>
+                        <label class="padding-t-10 red-font">
+                            <input type="checkbox" ng-change="checkAll('occupied', 'selected_items', 'search_filter_occupied');" ng-model="select_all.checkbox" /> Check All
+                        </label>
+                    </div>
+                    <div ng-repeat="row in occupied| filter: search_filter_occupied.text">
+                        <label>
+                            <input type="checkbox" ng-click="checkRow(row.ID);" ng-checked="checkCheckedRow(row.ID);" /> {{row.level_one}} > {{row.level_two}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="occupied.length === 0" class="padding-t-15">
+                No Level Two Mappings Found
+            </div>
+        </uib-tab>
+        <uib-tab heading="Avails" select="getLevelTwoAvails();">
+            <div class="row padding-t-15" ng-if="data.first_section.length > 0">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="level_one_id" class="cols-sm-2 control-label">Level One</label>
+                        <select class="form-control" name="level_one_id" ng-model="data.level_one_id" id="level_one_id" ng-change="getLevelTwoItems();">
+                            <option value="0">--Select Level One--</option>
+                            <option ng-repeat="row in data.first_section" value="{{row.ID}}">{{row.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div ng-if="data.second_section.length > 0">
+                        <div class="form-group no-margin">                
+                            <label for="level_one_id" class="cols-sm-2 control-label no-margin">&nbsp;</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="program-search">
+                                    <input type="text" ng-model="search_filter.text" placeholder="Search" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mapping-section">
+                        <div>
+                                <label class="padding-t-10 red-font">
+                                    <input type="checkbox" ng-change="checkAll('data.second_section', 'data.second_selections', 'search_filter');" ng-model="select_all.checkbox" /> Check All
+                                </label>
+                            </div>
+                            <div ng-repeat="row in data.second_section| filter: search_filter.text">
+                                <label>
+                                    <input type="checkbox" ng-checked="exists(row.ID, data.second_selections)" ng-click="toggle(row.ID, data.second_selections)" /> {{row.name}}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="data.second_section.length === 0">
+                        {{errMsg}}
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-if="data.first_section.length > 0">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-warning" ng-click="mapLevelTwo();" ng-disabled="data.level_one_id === 0 || data.level_one_id === '0' || data.second_selections.length === 0">
+                        Submit
+                    </button>
+                </div>
+            </div>
+            <div class="row padding-t-15" ng-if="data.first_section.length === 0">
+                <div class="col-md-12">
+                    {{errMsg}}
+                </div>
+            </div>   
+        </uib-tab>
+    </uib-tabset>
+</div>
+</script>
+
+<script type="text/ng-template" id="level_three_mapping_guideline.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Mapping Level Three Guideline
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+            <span aria-hidden="true">&times;</span> 
+        </button>
+    </h4>
+</div>
+<div class="modal-body" id="modal-body">
+    <uib-tabset type="pills">
+        <uib-tab heading="Mapped" select="getLevelTwoOccupied('level_three');">
+            <div ng-if="occupied.length > 0">
+                <div class="row padding-t-15">                    
+                    <div class="col-md-6">
+                        <div class="program-search">
+                            <input type="text" ng-model="search_filter_occupied.text" placeholder="Search" />
+                        </div>
+                    </div>
+                    <div class="col-md-6" ng-if="selected_items.length > 0">
+                        <select class="form-control" ng-change="doMoreAction();" ng-model="do_more.selected">
+                            <option value="">--Selected with--</option>
+                            <option value="delete">Delete</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mapping-section">
+                <div>
+                        <label class="padding-t-10 red-font">
+                            <input type="checkbox" ng-change="checkAll('occupied', 'selected_items', 'search_filter_occupied');" ng-model="select_all.checkbox" /> Check All
+                        </label>
+                    </div>
+                    <div ng-repeat="row in occupied| filter: search_filter_occupied.text">
+                        <label>
+                            <input type="checkbox" ng-click="checkRow(row.ID);" ng-checked="checkCheckedRow(row.ID);" /> {{row.level_one}} > {{row.level_two}} > {{row.level_three}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="occupied.length === 0" class="padding-t-15">
+                No Level Three Mappings Found
+            </div>
+        </uib-tab>
+        <uib-tab heading="Avails" select="getLevelThreeAvails();">
+            <div class="row padding-t-15" ng-if="data.first_section.length > 0">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="level_two_mapping_id" class="cols-sm-2 control-label">Level Two Mapping</label>
+                        <select class="form-control" name="level_two_mapping_id" ng-model="data.level_two_mapping_id" id="level_two_mapping_id" ng-change="getLevelThreeItems();">
+                            <option value="0">--Select Level Two Mapping--</option>
+                            <option ng-repeat="row in data.first_section" value="{{row.ID}}">{{row.level_one_name}} > {{row.level_two_name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div ng-if="data.second_section.length > 0">
+                        <div class="form-group no-margin">
+                            <label for="level_one_id" class="cols-sm-2 control-label no-margin">&nbsp;</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="program-search">
+                                    <input type="text" ng-model="search_filter.text" placeholder="Search" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mapping-section">
+                        <div>
+                                <label class="padding-t-10 red-font">
+                                    <input type="checkbox" ng-change="checkAll('data.second_section', 'data.second_selections', 'search_filter');" ng-model="select_all.checkbox" /> Check All
+                                </label>
+                            </div>
+                            <div class="program-mapping-section" ng-repeat="row in data.second_section | filter: search_filter.text">
+                                <label>
+                                    <input type="checkbox" ng-checked="exists(row.ID, data.second_selections)" ng-click="toggle(row.ID, data.second_selections)" /> {{row.name}}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="data.second_section.length === 0">
+                        {{errMsg}}
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-if="data.first_section.length > 0">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-warning" ng-click="mapLevelThree();" ng-disabled="data.level_two_mapping_id === 0 || data.level_two_mapping_id === '0' || data.second_selections.length === 0">
+                        Submit
+                    </button>
+                </div>
+            </div>
+            <div class="row padding-t-15" ng-if="data.first_section.length === 0">
+                <div class="col-md-12">
+                    No data found to map
+                </div>
+            </div>            
+        </uib-tab>
+    </uib-tabset>
+</div>
+</script>
+
+<script type="text/ng-template" id="level_four_mapping_guideline.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Mapping Level Four <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+            <span aria-hidden="true">&times;</span> 
+        </button></h4>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="row padding-t-15" ng-if="data.first_section.length > 0">
+        <div class="col-md-6">
+        <div class="row">
+                <div class="col-md-12">
+                    <div class="program-search">
+                        <input type="text" ng-model="search_filter.text" placeholder="Search" />
+                    </div>
+                </div>
+            </div>
+            <div class="mapping-section">
+            <div>
+                    <label class="padding-t-10 red-font">
+                        <input type="checkbox" ng-change="checkAll('data.second_section', 'data.second_selections', 'search_filter');" ng-model="select_all.checkbox" /> Check All
+                    </label>
+                </div>
+                <div class="program-mapping-section" ng-repeat="row in data.first_section | filter: search_filter.text">
+                    <label>
+                        <input type="checkbox" ng-checked="existsFourMapping(row.ID, row.level_two_mapping_id, row.level_one_id, row.level_two_id, row.level_three_id)" ng-click="toggleFourMapping(row.ID, row.level_two_mapping_id, row.level_one_id, row.level_two_id, row.level_three_id)" /> <span ng-if="row.level_one_name">{{row.level_one_name}}</span> <span ng-if="row.level_two_name"> > {{row.level_two_name}}</span> <span ng-if="row.level_three_name"> > {{row.level_three_name}}</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+        <div class="row">
+                <div class="col-md-12">
+                    <div class="program-search">
+                        <input type="text" ng-model="search_filter.text" placeholder="Search" />
+                    </div>
+                </div>
+            </div>
+            <div class="mapping-section">
+            <div>
+                    <label class="padding-t-10 red-font">
+                        <input type="checkbox" ng-change="checkAll('data.second_section', 'data.second_selections', 'search_filter');" ng-model="select_all.checkbox" /> Check All
+                    </label>
+                </div>
+                <div class="program-mapping-section" ng-repeat="row in data.second_section | filter: search_filter.text">
+                    <label>
+                        <input type="checkbox" ng-checked="exists(row.ID, data.second_selections)" ng-click="toggle(row.ID, data.second_selections)" /> {{row.name}}
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" ng-if="data.first_section.length > 0">
+        <div class="col-md-12">
+            <button type="button" class="btn btn-warning" ng-click="mapLevelFour();" ng-disabled="data.first_selections.length === 0 || data.second_selections.length === 0">
+                Submit
+            </button>
+        </div>
+    </div>
+    <div class="row padding-t-15" ng-if="data.first_section.length === 0">
+        <div class="col-md-12">
+            No data found to map
+        </div>
+    </div>
+</div>
+</script>
+
+<script type="text/ng-template" id="play_media.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">{{data.name}} <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> <span aria-hidden="true">&times;</span> </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <div class="row padding-b-10">
+    <div class="col-md-12">
+    <button ng-click="printDocument();" ng-if="data.print == 1" class="btn btn-primary">Print</button>
+    <a ng-href="{{data.file| image_url}}" ng-if="data.download == 1" class="btn btn-danger" download>Download</a>
+    <button ng-click="deleteMappedDocument();" class="btn btn-danger">Delete</button>
+    </div>
+    </div>
+    <video style="width: 100%; height: auto;" controls ng-if="data.type === 'mp4' || data.type === 'mov' || data.type === 'wmv'">
+    <source ng-src="{{data.file | image_url}}" type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+    <audio style="width: 100%;" controls ng-if="data.type === 'mp3'">
+    <source ng-src="{{data.file | image_url}}" type="audio/mpeg" />
+    Your browser does not support the audio tag.
+    </audio>
+    <iframe id="document_window" ng-if="data.type === 'pdf'" style="width: 100%; height: 350px;" src="{{data.file | trustAsResourceUrl}}"></iframe>
+    <img id="document_window" ng-if="data.type === 'jpg' || data.type === 'png' || data.type === 'gif' || data.type === 'jpeg'" style="width: 100%; height: auto;" ng-src="{{data.file | image_url}}" />
+    <div class="row" ng-if="templates.length > 0">
+    <div class="col-md-12" ng-repeat="row in templates">
+    <a ng-href="{{row.file | image_url}}" download><img class="preview pointer" ng-if="row.extension === 'mp3' || row.extension === 'mp4' || row.extension === 'pdf' || row.extension === 'xls' || row.extension === 'xlsx' || row.extension === 'doc' || row.extension === 'docx'" ng-src="images/icon/{{row.extension}}-icon.png" alt="image" />
+    <img class="preview pointer" ng-if="row.extension !== 'mp3' && row.extension !== 'mp4' && row.extension !== 'pdf' && row.extension !== 'xls' && row.extension !== 'xlsx' && row.extension !== 'doc' && row.extension !== 'docx'" ng-src="{{row.file| image_url}}" alt="image" /> <span>{{row.name}}</span></a>
+    </div>
+    </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="play_media_guideline.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">{{data.name}} <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> <span aria-hidden="true">&times;</span> </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <div class="row padding-b-10">
+    <div class="col-md-12">
+    <button ng-click="printDocument();" ng-if="data.print == 1" class="btn btn-primary">Print</button>
+    <a ng-href="{{data.file| image_url}}" ng-if="data.download == 1" class="btn btn-danger" download>Download</a>
+    <button ng-click="deleteMappedGuidelineDocument();" class="btn btn-danger">Delete</button>
+    </div>
+    </div>
+    <video style="width: 100%; height: auto;" controls ng-if="data.type === 'mp4' || data.type === 'mov' || data.type === 'wmv'">
+    <source ng-src="{{data.file | image_url}}" type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+    <audio style="width: 100%; height: auto;" controls ng-if="data.type === 'mp3'">
+    <source ng-src="{{data.file | image_url}}" type="audio/mpeg" />
+    Your browser does not support the audio tag.
+    </audio>
+    <iframe id="document_window" ng-if="data.type === 'pdf'" style="width: 100%; height: 350px;" src="{{data.file | trustAsResourceUrl}}"></iframe>
+    <img id="document_window" ng-if="data.type === 'jpg' || data.type === 'png' || data.type === 'gif' || data.type === 'jpeg'" style="width: 100%; height: auto;" ng-src="{{data.file | image_url}}" />
+    <div class="row" ng-if="templates.length > 0">
+    <div class="col-md-12" ng-repeat="row in templates">
+    <a ng-href="{{row.file | image_url}}" download><img class="preview pointer" ng-if="row.extension === 'mp3' || row.extension === 'mp4' || row.extension === 'pdf' || row.extension === 'xls' || row.extension === 'xlsx' || row.extension === 'doc' || row.extension === 'docx'" ng-src="images/icon/{{row.extension}}-icon.png" alt="image" />
+    <img class="preview pointer" ng-if="row.extension !== 'mp3' && row.extension !== 'mp4' && row.extension !== 'pdf' && row.extension !== 'xls' && row.extension !== 'xlsx' && row.extension !== 'doc' && row.extension !== 'docx'" ng-src="{{row.file| image_url}}" alt="image" /> <span>{{row.name}}</span></a>
+    </div>
+    </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="add_media.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Content Mapping <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> <span aria-hidden="true">&times;</span> </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+<uib-tabset type="pills">
+                <uib-tab heading="Activity Sheet" select="programContentMapping(1);">
+                    <div class="padding-t-15">
+<table datatable="ng" dt-options="contentOptions" dt-column-defs="contentColumnDefs">
+<thead>
+<tr>
+<th ng-if="data.table === 'program_content_mapping'"></th>
+<th>Type</th>
+<th>Name</th>
+<th ng-if="data.table === 'main_curriculam_mapping'"></th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="row in data.first_section">
+<td ng-if="data.table === 'program_content_mapping'"><input type="checkbox" ng-checked="exists(row.ID, data.first_selections)" ng-click="toggle(row.ID, data.first_selections)" /></td>
+<td>
+<img class="preview pointer" ng-if="row.extension === 'mp3' || row.extension === 'mp4' || row.extension === 'pdf' || row.extension === 'xls' || row.extension === 'xlsx' || row.extension === 'zip' || row.extension === 'rar' || row.extension === 'pptx' || row.extension === 'ppt' || row.extension === 'wmv' || row.extension === 'doc' || row.extension === 'docx'" ng-src="images/icon/{{row.extension}}-icon.png" alt="image" />
+<img class="preview pointer" ng-if="row.extension !== 'mp3' && row.extension !== 'mp4' && row.extension !== 'pdf' && row.extension !== 'xls' && row.extension !== 'xlsx' && row.extension !== 'zip' && row.extension !== 'rar' && row.extension !== 'pptx' && row.extension !== 'ppt' && row.extension !== 'wmv' && row.extension !== 'doc' && row.extension !== 'docx'" ng-src="{{row.file| image_url}}" alt="image" />
+</td>
+<td>{{row.name}}</td>
+<td ng-if="data.table === 'main_curriculam_mapping'"><button type="button" class="btn btn-warning" ng-click="mapMainCurriculam(row.ID);">
+Submit
+</button></td>
+</tr>                                        
+</tbody>
+</table>                        
+                    </div>
+                </uib-tab>
+                <uib-tab heading="Teachers Copy" select="programContentMapping(2);">
+                    <div class="padding-t-15">
+<table datatable="ng" dt-options="contentOptions" dt-column-defs="contentColumnDefs">
+<thead>
+<tr>
+<th ng-if="data.table === 'program_content_mapping'"></th>
+<th>Type</th>
+<th>Name</th>
+<th ng-if="data.table === 'main_curriculam_mapping'"></th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="row in data.first_section">
+<td ng-if="data.table === 'program_content_mapping'"><input type="checkbox" ng-checked="exists(row.ID, data.first_selections)" ng-click="toggle(row.ID, data.first_selections)" /></td>
+<td>
+<img class="preview pointer" ng-if="row.extension === 'mp3' || row.extension === 'mp4' || row.extension === 'pdf' || row.extension === 'xls' || row.extension === 'xlsx' || row.extension === 'zip' || row.extension === 'rar' || row.extension === 'pptx' || row.extension === 'ppt' || row.extension === 'wmv' || row.extension === 'doc' || row.extension === 'docx'" ng-src="images/icon/{{row.extension}}-icon.png" alt="image" />
+<img class="preview pointer" ng-if="row.extension !== 'mp3' && row.extension !== 'mp4' && row.extension !== 'pdf' && row.extension !== 'xls' && row.extension !== 'xlsx' && row.extension !== 'zip' && row.extension !== 'rar' && row.extension !== 'pptx' && row.extension !== 'ppt' && row.extension !== 'wmv' && row.extension !== 'doc' && row.extension !== 'docx'" ng-src="{{row.file| image_url}}" alt="image" />
+</td>
+<td>{{row.name}}</td>
+<td ng-if="data.table === 'main_curriculam_mapping'"><button type="button" class="btn btn-warning" ng-click="mapMainCurriculam(row.ID);">
+Submit
+</button></td>
+</tr>                                        
+</tbody>
+</table>                        
+                    </div>
+                </uib-tab>
+                <uib-tab heading="Songs/Videos" select="programContentMapping(3);">
+                    <div class="padding-t-15">
+<table datatable="ng" dt-options="contentOptions" dt-column-defs="contentColumnDefs">
+<thead>
+<tr>
+<th ng-if="data.table === 'program_content_mapping'"></th>
+<th>Type</th>
+<th>Name</th>
+<th ng-if="data.table === 'main_curriculam_mapping'"></th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="row in data.first_section">
+<td ng-if="data.table === 'program_content_mapping'"><input type="checkbox" ng-checked="exists(row.ID, data.first_selections)" ng-click="toggle(row.ID, data.first_selections)" /></td>
+<td>
+<img class="preview pointer" ng-if="row.extension === 'mp3' || row.extension === 'mp4' || row.extension === 'pdf' || row.extension === 'xls' || row.extension === 'xlsx' || row.extension === 'zip' || row.extension === 'rar' || row.extension === 'pptx' || row.extension === 'ppt' || row.extension === 'wmv' || row.extension === 'doc' || row.extension === 'docx'" ng-src="images/icon/{{row.extension}}-icon.png" alt="image" />
+<img class="preview pointer" ng-if="row.extension !== 'mp3' && row.extension !== 'mp4' && row.extension !== 'pdf' && row.extension !== 'xls' && row.extension !== 'xlsx' && row.extension !== 'zip' && row.extension !== 'rar' && row.extension !== 'pptx' && row.extension !== 'ppt' && row.extension !== 'wmv' && row.extension !== 'doc' && row.extension !== 'docx'" ng-src="{{row.file| image_url}}" alt="image" />
+</td>
+<td>{{row.name}}</td>
+<td ng-if="data.table === 'main_curriculam_mapping'"><button type="button" class="btn btn-warning" ng-click="mapMainCurriculam(row.ID);">
+Submit
+</button></td>
+</tr>                                        
+</tbody>
+</table>                        
+                    </div>
+                </uib-tab>
+                <uib-tab heading="Documents" select="programContentMapping(4);">
+                    <div class="padding-t-15">
+<table datatable="ng" dt-options="contentOptions" dt-column-defs="contentColumnDefs">
+<thead>
+<tr>
+<th ng-if="data.table === 'program_content_mapping'"></th>
+<th>Type</th>
+<th>Name</th>
+<th ng-if="data.table === 'main_curriculam_mapping'"></th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="row in data.first_section">
+<td ng-if="data.table === 'program_content_mapping'"><input type="checkbox" ng-checked="exists(row.ID, data.first_selections)" ng-click="toggle(row.ID, data.first_selections)" /></td>
+<td>
+<img class="preview pointer" ng-if="row.extension === 'mp3' || row.extension === 'mp4' || row.extension === 'pdf' || row.extension === 'xls' || row.extension === 'xlsx' || row.extension === 'zip' || row.extension === 'rar' || row.extension === 'pptx' || row.extension === 'ppt' || row.extension === 'wmv' || row.extension === 'doc' || row.extension === 'docx'" ng-src="images/icon/{{row.extension}}-icon.png" alt="image" />
+<img class="preview pointer" ng-if="row.extension !== 'mp3' && row.extension !== 'mp4' && row.extension !== 'pdf' && row.extension !== 'xls' && row.extension !== 'xlsx' && row.extension !== 'zip' && row.extension !== 'rar' && row.extension !== 'pptx' && row.extension !== 'ppt' && row.extension !== 'wmv' && row.extension !== 'doc' && row.extension !== 'docx'" ng-src="{{row.file| image_url}}" alt="image" />
+</td>
+<td>{{row.name}}</td>
+<td ng-if="data.table === 'main_curriculam_mapping'"><button type="button" class="btn btn-warning" ng-click="mapMainCurriculam(row.ID);">
+Submit
+</button></td>
+</tr>                                        
+</tbody>
+</table>                        
+                    </div>
+                </uib-tab>
+</uib-tabset>
+    <div class="row" ng-if="data.first_section.length > 0 && data.table === 'program_content_mapping'">
+    <div class="col-md-12">
+    <button type="button" class="btn btn-warning" ng-disabled="data.first_selections.length === 0" ng-click="submitProgramContent();">
+    Submit
+    </button>
+    </div>
+    </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="add_content.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Guideline Content Mapping <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> <span aria-hidden="true">&times;</span> </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <table datatable="ng" dt-options="contentOptions" dt-column-defs="contentColumnDefs">
+    <thead>
+    <tr>
+    <th>Type</th>
+    <th>Name</th>
+    <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="row in data.first_section">
+    <td>
+    <img class="preview pointer" ng-if="row.extension === 'mp3' || row.extension === 'mp4' || row.extension === 'pdf' || row.extension === 'xls' || row.extension === 'xlsx' || row.extension === 'doc' || row.extension === 'docx'" ng-src="images/icon/{{row.extension}}-icon.png" alt="image" />
+    <img class="preview pointer" ng-if="row.extension !== 'mp3' && row.extension !== 'mp4' && row.extension !== 'pdf' && row.extension !== 'xls' && row.extension !== 'xlsx' && row.extension !== 'doc' && row.extension !== 'docx'" ng-src="{{row.file| image_url}}" alt="image" />
+    </td>
+    <td>{{row.name}}</td>
+    <td><button type="button" class="btn btn-warning" ng-click="mapMainCurriculam(row.ID);">
+    Submit
+    </button></td>
+    </tr>                                        
+    </tbody>
+    </table>
+    </div>
+</script>

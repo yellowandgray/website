@@ -1,0 +1,54 @@
+<header class="navbar-fixed" ng-include="'pages/header.html'" ng-controller="HeaderController"></header>
+<section class="body-section">
+    <div class="container-fluid">
+        <div class="row row-eq-height">
+            <div class="col-md-2 no-padding menu-container">
+                <div ng-include="'pages/homemenu.html'"></div>
+            </div>
+            <div class="col-md-10 padding-t-b-15">
+                <uib-tabset type="pills">
+                    <uib-tab heading="Program" select="getProgramMapping();">
+                        <div class="padding-t-b-15"></div>
+                        <div class="row" ng-repeat="(key, row) in value" ng-if="$index % 3 === 0">
+                            <div class="col-md-4">
+                                <treecontrol class="tree-light" tree-model="data[value[$index]]" options="treeOptions" on-selection="redirectToProgram(node, row)">
+                                    {{node.name}}
+                                </treecontrol>                                
+                            </div>
+                            <div class="col-md-4">
+                                <treecontrol class="tree-light" tree-model="data[value[$index + 1]]" options="treeOptions" on-selection="redirectToProgram(node)">
+                                    {{node.name}}
+                                </treecontrol>                                
+                            </div>
+                            <div class="col-md-4">
+                                <treecontrol class="tree-light" tree-model="data[value[$index + 2]]" options="treeOptions" on-selection="redirectToProgram(node)">
+                                    {{node.name}}
+                                </treecontrol>                                
+                            </div>
+                        </div>
+                    </uib-tab>
+                    <uib-tab heading="Guideline" select="getGuidelineMapping();">
+                        <div class="padding-t-b-15"></div>
+                        <div class="row" ng-repeat="(key, row) in value" ng-if="$index % 3 === 0">
+                            <div class="col-md-4">
+                                <treecontrol class="tree-light" tree-model="data[value[$index]]" options="treeOptions" on-selection="redirectToGuideline(node)">
+                                    {{node.name}}
+                                </treecontrol>                                
+                            </div>
+                            <div class="col-md-4">
+                                <treecontrol class="tree-light" tree-model="data[value[$index + 1]]" options="treeOptions" on-selection="redirectToGuideline(node)">
+                                    {{node.name}}
+                                </treecontrol>                                
+                            </div>
+                            <div class="col-md-4">
+                                <treecontrol class="tree-light" tree-model="data[value[$index + 2]]" options="treeOptions" on-selection="redirectToGuideline(node)">
+                                    {{node.name}}
+                                </treecontrol>                                
+                            </div>
+                        </div>
+                    </uib-tab>
+                </uib-tabset>
+            </div>
+        </div>
+    </div>
+</section>

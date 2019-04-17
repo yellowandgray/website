@@ -1,0 +1,69 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-faded background-blue" ng-controller="HeaderController">
+    <a class="navbar-brand"> 
+        <img ng-src="images/logo.png" style="width: 90%;" alt="image" />
+    </a>
+    <img ng-src="images/eshine-welcome.png" alt="image" width="20%;" />
+    <div class="float-right" style="line-height: 92px;" ng-if="$root.title !== 'login'">
+        <div uib-dropdown style="display: inline-block;">
+            <img ng-if="user.type === 'franchise'" class="m-r-15 pointer" ng-src="images/icon/menu.jpg" alt="image" uib-dropdown-toggle />
+            <div class="dropdown-menu" uib-dropdown-menu ng-click="$event.stopPropagation();">
+                <div class="row popup-programs-container">
+                    <div class="col-md-4 pointer text-center popup-program relative wow fadeIn" data-wow-delay=".10s" ng-click="goToDetailPage(row.ID);" ng-repeat="row in data.programs| limitTo:limit">
+                        <div ng-class="checkAccess(row.ID)">
+                            <img ng-src="{{row.image|image_url}}" alt="image" />
+                            <h5 ng-if="(row.name).length >= 10" class="no-margin bold" uib-popover="{{row.name}}" popover-trigger="'mouseenter'" popover-placement="top">{{row.name| charlimit:10}}</h5>
+                            <h5 ng-if="(row.name).length < 10" class="no-margin bold" uib-popover="{{row.name}}">{{row.name| charlimit:10}}</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" ng-click="toggleExpand(1);" ng-if="expand === 0;">Show More</button>
+                    <button class="btn btn-warning" ng-click="toggleExpand(0);" ng-if="expand === 1;">Show Less</button>
+                </div>
+                <hr/>
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <div class="popup-additional-links">
+                            <i class="fa fa-book" aria-hidden="true"></i>
+                            <a class="pointer" ng-href="#!/guideline">Guideline</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="popup-additional-links">
+                            <i class="fa fa-flag" aria-hidden="true"></i>
+                            <a class="pointer" ng-href="#!/terms">Terms</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div uib-dropdown style="display: inline-block;">
+            <img class="m-r-15 pointer" ng-src="images/icon/logout.jpg" alt="image" uib-dropdown-toggle />
+            <div class="dropdown-menu header" uib-dropdown-menu>
+                <ul>
+                    <li>
+                        <a class="header-submenu" ng-href="#!/change_password">Change Password</a>
+                    </li>
+                    <li>
+                        <a class="header-submenu" ng-click="logout();">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="empty-band"></div>
+<script type="text/ng-template" id="become_franchise.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Want to become a franchise of this program? <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+    <span aria-hidden="true">&times;</span> 
+    </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <div class="row">
+    <div class="col-md-12">
+    Dear Partner, To get access to this program get in touch with your Franchisor!
+    </div>
+    </div>
+    </div>
+</script>

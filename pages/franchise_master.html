@@ -1,0 +1,318 @@
+<header class="navbar-fixed" ng-include="'pages/header.html'" ng-controller="HeaderController"></header>
+<section class="body-section">
+    <div class="container-fluid">
+        <div class="row row-eq-height">
+            <div class="col-md-2 no-padding menu-container">
+                <div ng-include="'pages/adminmenu.html'"></div>
+            </div>
+            <div class="col-md-10 padding-t-b-15">
+                <div class="row no-margin">
+                    <div class="col-md-1 no-padding padding-b-15">
+                        <button type="button" class="add-button" ng-click="openForm('franchise', 'franchise', 'Franchise', 0);">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="col-md-2 no-padding padding-b-15" ng-if="selected_items.length > 0">
+                        <select class="form-control" ng-change="doMoreAction();" ng-model="do_more.selected">
+                            <option value="">--Selected with--</option>
+                            <option value="delete">Delete</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <table datatable="ng" dt-options="programOptions" dt-column-defs="programColumnDefs">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" ng-change="checkAll();" ng-model="select_all.checkbox" />
+                                </th>
+                                <th>Franchise Name</th>
+                                <th>Area / Location</th>
+                                <th>Contact Person</th>
+                                <th>Email</th>
+                                <th>Mobile</th>
+                                <th>Office Phone</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="row in data">
+                                <td>
+                                    <input type="checkbox" ng-click="checkRow(row.ID);" ng-checked="checkCheckedRow(row.ID);" />
+                                </td>
+                                <td>{{row.name}}</td>
+                                <td>{{row.address2}}</td>
+                                <td>{{row.contact_person}}</td>
+                                <td>{{row.email}}</td>
+                                <td>{{row.mobile}}</td>
+                                <td>{{row.office_phone}}</td>
+                                <td>
+                                    <a ng-click="openForm('franchise', 'franchise', 'Franchise', row.ID);" class="pointer f-s-24">
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    </a>
+                                    <a ng-click="openForm('franchise_programs', 'franchise_programs', 'Programs', row.ID);" class="pointer f-s-24">
+                                        <i class="fa fa-institution" aria-hidden="true"></i>
+                                    </a>
+                                    <a ng-click="openForm('franchise_reports', 'franchise_reports', 'Reports', row.ID);" class="pointer f-s-24">
+                                        <i class="fa fa-file-text" aria-hidden="true"></i>
+                                    </a>
+                                    <a ng-click="deleteRecord('franchise', row.ID, 'Franchise');" class="pointer f-s-24">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                            </tr>                                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/ng-template" id="franchise.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Franchise <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+    <span aria-hidden="true">&times;</span> 
+    </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <form name="popupForm" ng-submit="submitForm();">
+    <div class="row">
+    <div class="col-md-4">
+    <div class="form-group">
+    <label for="name" class="cols-sm-2 control-label">Franchise Name</label>
+    <input class="form-control" type="text" name="name" ng-model="form.name" id="name" required autofocus />
+    </div>
+    </div>
+    <div class="col-md-4">
+    <div class="form-group">
+    <label for="office_phone" class="cols-sm-2 control-label">Office Phone</label>
+    <input class="form-control" type="text" name="office_phone" ng-model="form.office_phone" id="office_phone" required />
+    </div>
+    </div>    
+    <div class="col-md-4">
+    <div class="form-group">
+    <label for="ipaddress" class="cols-sm-2 control-label">MAC Address</label>
+    <input class="form-control" type="text" name="ipaddress" ng-model="form.ipaddress" id="ipaddress" required />
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="address1" class="cols-sm-2 control-label">Door / Street Name</label>
+    <input class="form-control" type="text" name="address1" ng-model="form.address1" id="address1" required />
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="address2" class="cols-sm-2 control-label">Area / Location</label>
+    <input class="form-control" type="text" name="address2" ng-model="form.address2" id="name" required />
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="country_id" class="cols-sm-2 control-label">Country</label>
+    <select class="form-control" name="country_id" ng-model="form.country_id" id="country_id" required ng-change="loadAddressData('states', 'country_id');">
+    <option value="{{row.ID}}" ng-repeat="row in countries">{{row.name}}</option>
+    </select>
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="state_id" class="cols-sm-2 control-label">State</label>
+    <select class="form-control" name="state_id" ng-model="form.state_id" id="state_id" required ng-change="loadAddressData('cities', 'state_id');">
+    <option value="{{row.ID}}" ng-repeat="row in states">{{row.name}}</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="city_id" class="cols-sm-2 control-label">City</label>
+    <select class="form-control" name="city_id" ng-model="form.city_id" id="city_id" required>
+    <option value="{{row.ID}}" ng-repeat="row in cities">{{row.name}}</option>
+    </select>
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="pincode" class="cols-sm-2 control-label">Pincode</label>
+    <input class="form-control" type="text" name="pincode" ng-model="form.pincode" id="pincode" required />
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-4">
+    <div class="form-group">
+    <label for="contact_person" class="cols-sm-2 control-label">Contact Person</label>
+    <input class="form-control" type="text" name="contact_person" ng-model="form.contact_person" id="contact_person" required />
+    </div>
+    </div>
+    <div class="col-md-4">
+    <div class="form-group">
+    <label for="mobile" class="cols-sm-2 control-label">Mobile Number</label>
+    <input class="form-control" type="text" name="mobile" ng-model="form.mobile" id="mobile" required />
+    </div>
+    </div>
+    <div class="col-md-4">
+    <div class="form-group">
+    <label for="email" class="cols-sm-2 control-label">Email</label>
+    <input class="form-control" type="email" name="email" ng-model="form.email" id="email" required />
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="user_name" class="cols-sm-2 control-label">User Name</label>
+    <input class="form-control" type="text" name="user_name" ng-model="form.user_name" id="user_name" required />
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="password" class="cols-sm-2 control-label">Password</label>
+    <input class="form-control" type="text" name="password" ng-model="form.password" id="password" required />
+    </div>
+    </div>
+    </div>
+    <div class="form-group" style="text-align: right;">
+    <button ng-disabled="!popupForm.$valid" type="submit" class="btn btn-primary">Save</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+    </form>
+    </div>
+</script>
+
+<script type="text/ng-template" id="franchise_reports.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Reports <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+    <span aria-hidden="true">&times;</span> 
+    </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <div class="row">
+    <div class="col-md-6">
+    <h4>Assigned reports for this franchise</h4>
+    <div ng-if="data.exist.length > 0">
+    <div class="program-mapping-section" ng-repeat="row in data.exist">
+    {{row.name}} <a ng-click="deleteRecord('franchise_reports', row.ID, 'Franchise Report');" class="pointer">
+    <i class="fa fa-trash" aria-hidden="true"></i>
+    </a>
+    </div>    
+    </div>
+    <div ng-if="data.exist.length === 0">
+    No Reports assigned
+    </div>    
+    </div>
+    <div class="col-md-6">
+    <h4>Avail reports for this franchise</h4>
+    <div ng-if="data.avail.length > 0">
+    <div class="program-mapping-section" ng-repeat="row in data.avail">
+    <label>
+    <input type="checkbox" ng-checked="exists(row.ID, avail_selected)" ng-click="toggle(row.ID, avail_selected)" /> {{row.name}}
+    </label>
+    </div>
+    <button type="button" class="btn btn-warning" ng-click="mapReports();" ng-disabled="avail_selected.length === 0">
+    Submit
+    </button>    
+    </div>
+    <div ng-if="data.avail.length === 0">
+    No Reports available to assign
+    </div>
+    </div>
+    </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="franchise_programs.html">
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Programs <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+            <span aria-hidden="true">&times;</span> 
+        </button></h4>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="row">
+        <div class="col-md-7">
+            <h4>Assigned programs for this franchise 
+                <select ng-if="selected_items.length > 0" class="form-control" ng-change="doMoreAction();" ng-model="do_more.selected">
+                    <option value="">--Selected with--</option>
+                    <option value="delete">Delete</option>
+                </select>
+            </h4>
+            <div ng-if="data.exist.length > 0">
+            <div class="row">
+                    <div class="col-md-12">
+                        <div class="program-search">
+                            <input type="text" ng-model="search_filter_exist.text" placeholder="Search" />
+                        </div>
+                    </div>
+                </div>
+                <div class="mapping-section">
+                    <div class="program-mapping-section">
+                    <label>
+                        <input type="checkbox" ng-model="select_all.checkbox" ng-change="checkAll();" /> Check All</label>
+                    </div>
+                    <div class="program-mapping-section" ng-repeat="row in data.exist | filter: search_filter_exist.text">
+                        <label>
+                            <input type="checkbox" ng-click="checkRow(row.ID);" ng-checked="checkCheckedRow(row.ID);" />
+                            {{row.level_one_name}} <span ng-if="row.level_two_name !== null">&gt; {{row.level_two_name}}</span><span ng-if="row.level_three_name !== null">&gt; {{row.level_three_name}}</span>  ({{row.start_date| dateformat4}} - {{row.end_date| dateformat4}})</label>
+                        <a ng-click="deleteRecord('franchise_programs', row.ID, 'Franchise Program');" class="pointer">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </a>
+                    </div>    
+                </div>    
+            </div>
+            <div ng-if="data.exist.length === 0">
+                No Programs assigned
+            </div>                           
+        </div>
+        <div class="col-md-5">
+            <h4>Avail programs for this franchise</h4>
+            <div ng-if="data.avail.length > 0">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="program-search">
+                            <input type="text" ng-model="search_filter.text" placeholder="Search" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row padding-t-15">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="start" class="cols-sm-2 control-label">From</label>
+                            <input type="date" name="start" id="start" class="form-control" ng-model="form.start" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="end" class="cols-sm-2 control-label">To</label>
+                            <input type="date" name="end" id="end" class="form-control" ng-model="form.end" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="mapping-section">
+                <div class="program-mapping-section">
+                    <label>
+                        <input type="checkbox" ng-model="select_all.checkbox_avail" ng-change="checkAllAvails();" /> Check All</label>
+                    </div>
+                    <div class="program-mapping-section" ng-repeat="row in data.avail| filter: search_filter.text">
+                        <label>
+                            <input type="checkbox" ng-checked="existsProgram(row.level_one_id, row.level_two_id, row.level_three_id, avail_selected)" ng-click="toggleProgram(row.level_one_id, row.level_two_id, row.level_three_id, avail_selected)" /> {{row.level_one_name}} <span ng-if="row.level_two_name !== null">&gt; {{row.level_two_name}}</span>  <span ng-if="row.level_three_name !== null">&gt; {{row.level_three_name}}</span>
+                        </label>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-warning" ng-click="mapPrograms();" ng-disabled="avail_selected.length === 0 || !form.start || !form.end">
+                    Submit
+                </button>    
+            </div>
+            <div ng-if="data.avail.length === 0">
+                No Programs available to assign
+            </div>
+        </div>
+    </div>
+</div>
+</script>

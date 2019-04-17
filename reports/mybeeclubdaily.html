@@ -1,0 +1,103 @@
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="6" style="border-bottom:3px solid #c00000; padding:10px; text-align: center;">
+            <img src="http://yellowandgray.com/eshine/reports/mbcdaily.jpg" alt="image" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="6" style="background:#e5b8b7; text-align:center; margin:0; padding:5px;">
+            <h3 class="h31">STUDENT ATTENDANCE</h3>
+        </td>
+    </tr>
+    <tr class="pink">
+        <td><span>PHONICS</span><br><input type="text" name="sat1" class="cclear" alt="nn:yy, nn:yy" title="" value="nn:yy, nn:yy"></td>
+        <td><span>DRAWING</span><br><input type="text" name="sat2" class="cclear" alt="nn:yy, nn:yy" title="" value="nn:yy, nn:yy"></td>
+        <td><span>HANDWRITING</span><br><input type="text" name="sat3" class="cclear" alt="nn:yy, nn:yy" title="" value="nn:yy, nn:yy"></td>
+        <td><span>KIDS YOGA</span><br><input type="text" name="sat4" class="cclear" alt="nn:yy, nn:yy" title="" value="nn:yy, nn:yy"></td>
+        <td><span>SPOKEN&nbsp;ENGLISH</span><br><input type="text" name="sat5" class="cclear" alt="nn:yy, nn:yy" title="" value="nn:yy, nn:yy"></td>
+        <td><span>YOUNG LEAD</span><br><input type="text" name="sat6" class="cclear" alt="nn:yy, nn:yy" title="" value="nn:yy, nn:yy"></td>
+    </tr>
+    <tr>
+        <td colspan="6" style="background:#8db3e2; text-align:center; margin:0; padding:5px;">
+            <h3 class="h32">ADMIN ATTENDANCE</h3>
+        </td>
+    </tr>
+    <tr class="tan">
+        <td colspan="2"><span>Teacher</span><br><input type="text" name="adat1" class="cclear" alt="nn:yy" title="" value="nn:yy"></td>
+        <td colspan="2"><span>Nanny</span><br><input type="text" name="adat2" class="cclear" alt="nn:yy" title="" value="nn:yy"></td>
+        <td><span>Teachers reported late</span><br><input type="text" name="adat3" ></td>
+        <td><span>Nannies reported late</span><br><input type="text" name="adat4" ></td>
+    </tr>
+    <tr class="tan">
+        <td colspan="2"><span>Admin. reporting time</span><br><input type="text" name="adat5" value="00:00" class="cclear" alt="00:00" title="" value="00:00"></td>
+        <td colspan="2"><span>Van reporting time</span><br><input type="text" value="00:00" name="adat6" class="cclear" alt="00:00" title="" value="00:00"></td>
+        <td><span>Attendance comments</span><br><input type="text" name="adat7"></td>
+        <td>&nbsp;  </td>
+    </tr>
+    <tr>
+        <td colspan="6" class="border1">
+            <span>Highlight of yesterday's activity</span><br>
+            <br>
+            <textarea name="high" onClick="if (this.value == '(Describe in brief about how the day went with the programs and highlights - Children/Parents/Teachers/Instructions)') {
+                        this.value = ('')
+                    }" onBlur="if (this.value == '') {
+                                this.value = '(Describe in brief about how the day went with the programs and highlights - Children/Parents/Teachers/Instructions)'
+                            }">(Describe in brief about how the day went with the programs and highlights - Children/Parents/Teachers/Instructions)</textarea>
+        </td>
+    </tr>
+    <tr>
+        <td class="b1" colspan="3">
+            <span>Challenges</span><br>
+            <br>
+            <textarea name="chal" onClick="if (this.value == '(Any challenges faced with the activities, curriculum, administration, parents, staff, children, transportation, suppliers, corporate or other work related challenges. If there are no challenges, just say none)') {
+                        this.value = ('')
+                    }" onBlur="if (this.value == '') {
+                                this.value = '(Any challenges faced with the activities, curriculum, administration, parents, staff, children, transportation, suppliers, corporate or other work related challenges. If there are no challenges, just say none)'
+                            }">(Any challenges faced with the activities, curriculum, administration, parents, staff, children, transportation, suppliers, corporate or other work related challenges. If there are no challenges, just say none)</textarea>
+        </td>
+
+        <td class="b2" colspan="3">
+            <span>Open items</span><br>
+            <br>
+            <textarea name="openitems" onClick="if (this.value == '(Any open items related to curriculum, administration, parents, staff, children, suppliers, corporate, hiring new staff, yourself. If there are no open items, just say none)') {
+                        this.value = ('')
+                    }" onBlur="if (this.value == '') {
+                                this.value = '(Any open items related to curriculum, administration, parents, staff, children, suppliers, corporate, hiring new staff, yourself. If there are no open items, just say none)'
+                            }">(Any open items related to curriculum, administration, parents, staff, children, suppliers, corporate, hiring new staff, yourself. If there are no open items, just say none)</textarea>
+        </td>
+    </tr>
+    <tr>
+        <td class="b3" colspan="3">
+            <span>Important updates</span><br>
+            <br>
+            <textarea name="imptupdates" onClick="if (this.value == '(Update on recruiting, sales, parent request, happy parents, and unhappy parents. If there are no important updates, just say none)') {
+                        this.value = ('')
+                    }" onBlur="if (this.value == '') {
+                                this.value = '(Update on recruiting, sales, parent request, happy parents, and unhappy parents. If there are no important updates, just say none)'
+                            }">(Update on recruiting, sales, parent request, happy parents, and unhappy parents. If there are no important updates, just say none)</textarea>
+        </td>
+        <td class="b4" colspan="3">
+            <span>Attachments</span><br>
+            <br>
+            <h5>(Student Records, Sales Leads, Recruiting, Others - whenever you attach a file please mention the name of the file(s) you are attaching. You will send these files for review every time you update them)</h5>
+            <input type="hidden" id="upd_count" value="1">
+            <input type="file" id="files" name="files" />
+            <!-- <input type="hidden" name="files" id="upd_files" value=""  />
+    <div id="upload" >Add Attachment</div><span id="status"></span>
+    <div id="files"></div>-->
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="border1">
+            <h3 class="h33">SPOKEN ENGLISH</h3>
+        </td>
+    </tr>
+    <tr class="sky">
+        <td colspan="3"><input type="text" name="email" value="Enter email address. Enter comma  for more than one email address" onClick="if (this.value == 'Enter email address. Enter comma  for more than one email address') {
+                    this.value = ('')
+                }" onBlur="if (this.value == '') {
+                            this.value = 'Enter email address. Enter comma  for more than one email address'
+                        }" class="eval"><br><div id="evalerror" style="color:red;"></td>
+        <td colspan="3"><input type="submit" value="Save" name="save">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Send" name="send">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/eshine/staff/landingpage.php" style="text-decoration:none;"><input type="button" value="Exit" name="exit"></a></td>
+    </tr>
+</table>

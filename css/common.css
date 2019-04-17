@@ -1,0 +1,120 @@
+.underline {
+    text-decoration: underline;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.navbar ul{
+    list-style: none;
+}
+
+.height-100vh{
+    height: 100vh;
+}
+
+.height-84vh{
+    height: 84vh;
+}
+
+.no-padding{
+    padding: 0px;
+}
+
+.color-white {
+    color: #ffffff !important;
+}
+
+.color-blue {
+    color: #1d99d5;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.padding-t-b-15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.padding-t-15 {
+    padding-top: 15px;
+}
+
+.padding-t-10 {
+    padding-top: 10px;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.padding-b-10 {
+    padding-bottom: 10px;
+}
+
+.padding-b-15 {
+    padding-bottom: 15px;
+}
+
+.no-margin {
+    margin: 0!important;
+}
+
+.no-padding-left {
+    padding-left: 0;
+}
+
+.no-padding-right {
+    padding-right: 0;
+}
+
+.f-s-24 {
+    font-size: 24px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.padding-5 {
+    padding: 5px;
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+.margin-t-15 {
+    margin-top: 15px;
+}
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.margin-b-15 {
+    margin-bottom: 15px;
+}

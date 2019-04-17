@@ -1,0 +1,256 @@
+<header class="navbar-fixed" ng-include="'pages/header.html'" ng-controller="HeaderController"></header>
+<section class="body-section">
+    <div class="container-fluid">
+        <div class="row row-eq-height">
+            <div class="col-md-2 no-padding menu-container">
+                <div ng-include="'pages/adminmenu.html'"></div>
+            </div>
+            <div class="col-md-10 padding-t-b-15">
+                <uib-tabset type="pills">
+                    <uib-tab heading="Calendar" select="getData('calendar');">
+                        <div class="row no-margin">
+                            <div class="col-md-2 padding-t-b-15 no-padding">
+                                <button type="button" class="add-button" ng-click="openForm('calendar', 'calendar', 'Schedule');">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row no-margin">
+                            <div class="col-md-9">
+                                <div class="row padding-b-15">
+                                    <div class="col-md-4">
+                                        <div class="btn-group">
+                                            <button
+                                                class="btn btn-primary"
+                                                mwl-date-modifier
+                                                date="viewDate"
+                                                decrement="calendarView"
+                                                ng-click="cellIsOpen = false">
+                                                Previous
+                                            </button>
+                                            <button
+                                                class="btn btn-primary"
+                                                mwl-date-modifier
+                                                date="viewDate"
+                                                set-to-today
+                                                ng-click="cellIsOpen = false">
+                                                Today
+                                            </button>
+                                            <button
+                                                class="btn btn-primary"
+                                                mwl-date-modifier
+                                                date="viewDate"
+                                                increment="calendarView"
+                                                ng-click="cellIsOpen = false">
+                                                Next
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3 class="no-margin">{{calendarTitle}}</h3>
+                                    </div>
+                                    <div class="col-md-5 text-right">
+                                        <div class="btn-group">
+                                            <label class="btn btn-warning" ng-model="calendarView" uib-btn-radio="'year'" ng-click="cellIsOpen = false">Year</label>
+                                            <label class="btn btn-warning" ng-model="calendarView" uib-btn-radio="'month'" ng-click="cellIsOpen = false">Month</label>
+                                            <label class="btn btn-warning" ng-model="calendarView" uib-btn-radio="'week'" ng-click="cellIsOpen = false">Week</label>
+                                            <label class="btn btn-warning" ng-model="calendarView" uib-btn-radio="'day'" ng-click="cellIsOpen = false">Day</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <mwl-calendar
+                                    view="calendarView"
+                                    view-date="viewDate"
+                                    cell-is-open="cellIsOpen"
+                                    view-title="calendarTitle"
+                                    on-timespan-click="timespanClicked(calendarDate, calendarCell)"
+                                    cell-auto-open-disabled="true"
+                                    events="data">
+                                </mwl-calendar>
+                            </div>
+                            <div class="col-md-3">
+                                <div ng-repeat="(key, val) in selectedEvents">
+                                    <h4>{{key}}</h4>
+                                    <div class="calendar-event-detail" ng-repeat="row in val">
+                                        <h4>{{row.title}} <span class="remove-icon" ng-click="deleteRecord('calendar', row.ID, 'Schedule', 'calendar');"><i class="fa fa-trash"></i></span></h4>
+                                        <div  class="padding-5">
+                                            <div>From: {{row.startsAt| dateformat}}</div>
+                                            <div>To: {{row.endsAt| dateformat}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </uib-tab>
+                    <uib-tab heading="Events" select="getData('event');">
+                        <div class="row no-margin">
+                            <div class="col-md-2 padding-t-b-15 no-padding">
+                                <button type="button" class="add-button" ng-click="openForm('event', 'calendar', 'Event');">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row no-margin">
+                            <div class="col-md-9">
+                                <div class="row padding-b-15">
+                                    <div class="col-md-4">
+                                        <div class="btn-group">
+                                            <button
+                                                class="btn btn-primary"
+                                                mwl-date-modifier
+                                                date="viewDate"
+                                                decrement="calendarView"
+                                                ng-click="cellIsOpen = false">
+                                                Previous
+                                            </button>
+                                            <button
+                                                class="btn btn-primary"
+                                                mwl-date-modifier
+                                                date="viewDate"
+                                                set-to-today
+                                                ng-click="cellIsOpen = false">
+                                                Today
+                                            </button>
+                                            <button
+                                                class="btn btn-primary"
+                                                mwl-date-modifier
+                                                date="viewDate"
+                                                increment="calendarView"
+                                                ng-click="cellIsOpen = false">
+                                                Next
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3 class="no-margin">{{calendarTitle}}</h3>
+                                    </div>
+                                    <div class="col-md-5 text-right">
+                                        <div class="btn-group">
+                                            <label class="btn btn-warning" ng-model="calendarView" uib-btn-radio="'year'" ng-click="cellIsOpen = false">Year</label>
+                                            <label class="btn btn-warning" ng-model="calendarView" uib-btn-radio="'month'" ng-click="cellIsOpen = false">Month</label>
+                                            <label class="btn btn-warning" ng-model="calendarView" uib-btn-radio="'week'" ng-click="cellIsOpen = false">Week</label>
+                                            <label class="btn btn-warning" ng-model="calendarView" uib-btn-radio="'day'" ng-click="cellIsOpen = false">Day</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <mwl-calendar
+                                    view="calendarView"
+                                    view-date="viewDate"
+                                    cell-is-open="cellIsOpen"
+                                    view-title="calendarTitle"
+                                    on-timespan-click="timespanClicked(calendarDate, calendarCell)"
+                                    cell-auto-open-disabled="true"
+                                    events="data">
+                                </mwl-calendar>
+                            </div>
+                            <div class="col-md-3">
+                                <div ng-repeat="(key, val) in selectedEvents">
+                                    <h4>{{key}}</h4>
+                                    <div class="calendar-event-detail" ng-repeat="row in val">
+                                        <h4>{{row.title}} <span class="remove-icon" ng-click="deleteRecord('calendar', row.ID, 'Event', 'event');"><i class="fa fa-trash"></i></span></h4>
+                                        <div  class="padding-5">
+                                            <div>From: {{row.startsAt| dateformat}}</div>
+                                            <div>To: {{row.endsAt| dateformat}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </uib-tab>
+                </uib-tabset>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/ng-template" id="calendar.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Calendar <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();">
+    <span aria-hidden="true">&times;</span> 
+    </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <form name="popupForm" ng-submit="submitForm();">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="start" class="cols-sm-2 control-label">From</label>
+    <input type="datetime-local" name="start" id="start" class="form-control" ng-model="form.start" required />
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="end" class="cols-sm-2 control-label">To</label>
+    <input type="datetime-local" name="end" id="end" class="form-control" ng-model="form.end" required />
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-8">
+    <div class="form-group">
+    <label for="title" class="cols-sm-2 control-label">Title / Description</label>
+    <input class="form-control" type="text" name="title" ng-model="form.title" id="title" required />
+    </div>
+    </div>
+    <div class="col-md-4">
+    <div class="form-group">
+    <label for="level_one_id" class="cols-sm-2 control-label">Program</label>
+    <select class="form-control" name="level_one_id" ng-model="form.level_one_id" id="level_one_id" required multiple>
+    <option value="{{row.ID}}" ng-repeat="row in data">{{row.name}}</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    <div class="form-group" style="text-align: right;">
+    <button ng-disabled="!popupForm.$valid" type="submit" class="btn btn-primary">Save</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+    </form>
+    </div>
+</script>
+
+<script type="text/ng-template" id="event.html">
+    <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Event <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();">
+    <span aria-hidden="true">&times;</span> 
+    </button></h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+    <form name="popupForm" ng-submit="submitForm();">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="start" class="cols-sm-2 control-label">From</label>
+    <input type="datetime-local" name="start" id="start" class="form-control" ng-model="form.start" required />
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="end" class="cols-sm-2 control-label">To</label>
+    <input type="datetime-local" name="end" id="end" class="form-control" ng-model="form.end" required />
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-8">
+    <div class="form-group">
+    <label for="title" class="cols-sm-2 control-label">Title / Description</label>
+    <input class="form-control" type="text" name="title" ng-model="form.title" id="title" required />
+    </div>
+    </div>
+    <div class="col-md-4">
+    <div class="form-group">
+    <label for="level_one_id" class="cols-sm-2 control-label">Program</label>
+    <select class="form-control" name="level_one_id" ng-model="form.level_one_id" id="level_one_id" required multiple>
+    <option value="{{row.ID}}" ng-repeat="row in data">{{row.name}}</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    <div class="form-group" style="text-align: right;">
+    <button ng-disabled="!popupForm.$valid" type="submit" class="btn btn-primary">Save</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+    </form>
+    </div>
+</script>
