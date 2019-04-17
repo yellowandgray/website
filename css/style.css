@@ -362,7 +362,7 @@ table.dataTable thead th, table.dataTable thead td {
 }
 
 .dataTable tr th {
-    background-color: #334f67;
+    background-color: #c22d00;
     color: #ffffff;
 }
 
@@ -451,7 +451,7 @@ table.dataTable thead th, table.dataTable thead td {
 }
 
 .levels-dropdown.second {
-    background-color: #6dcff6;
+    background-color: #d9d9d9;
 }
 
 .program-dropdown {
@@ -536,7 +536,7 @@ table.dataTable thead th, table.dataTable thead td {
 }
 
 .menu-container {
-    background-color: #fcb833;
+    background-color: #d9d9d9;
     position: relative;
     min-height: calc(100vh - 110px);
 }
@@ -552,7 +552,7 @@ table.dataTable thead th, table.dataTable thead td {
 .add-button, .map-button {
     color: #ffffff;
     border: 0;
-    background-color: #334f67;
+    background-color: #878787;
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -654,9 +654,9 @@ table.dataTable thead th, table.dataTable thead td {
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-    border-bottom: 5px solid #334f67;
+    border-bottom: 5px solid #878787;
     background-color: transparent!important;
-    color: #334f67;
+    color: #c22d00;
 }
 
 .nav-pills>li>a {
@@ -665,15 +665,15 @@ table.dataTable thead th, table.dataTable thead td {
 }
 
 .nav-pills>li>a:hover {
-    border-bottom: 5px solid #334f67;
+    border-bottom: 5px solid #878787;
     background-color: transparent!important;
 }
 
 /******** Tabs UI End ********/
 
 .btn-primary {
-    background-color: #334f67;
-    border-color: #334f67;
+    background-color: #5f6469;
+    border-color: #4e4e4e;
 }
 
 .btn-warning {
