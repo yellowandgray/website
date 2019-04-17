@@ -149,22 +149,24 @@ th, td {
 }
 
 .login{
-    background-image: url('../images/login.png');
+    /*    background-image: url('../images/login.png');*/
     width: 400px;
     height: 250px;
     position: absolute;
     text-align: center;
-    padding: 45px 20px 10px 10px;
+    padding: 0px;
     top: 55%;
     left: 35%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background: #fff;
+    box-shadow: 0px 8px 19px 13px #eee;
+    /*    background-repeat: no-repeat;
+        background-size: 100% 100%;*/
 }
 
 .login-form {
     position: absolute;
-    right: 0;
-    top: 0;
+    left: 26%;
+    top: 50px;
 }
 
 .input-container {
