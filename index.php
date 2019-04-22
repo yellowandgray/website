@@ -228,7 +228,7 @@
                             </center>
                             <div class="horizontal-break center"></div> 
                             <div class="col-sm-4">
-                                <div class="feature-box feature-box-secundary-one v-animation" data-animation="grow" data-delay="0">
+                                <div class="height-box-1 feature-box feature-box-secundary-one v-animation" data-animation="grow" data-delay="0">
                                     <div class="feature-box-icon small">
                                         <i class="fa fa-file-text-o v-icon"></i>
                                     </div>
@@ -487,51 +487,72 @@
                                         <div class="item active">
                                             <div class="row" style="padding: 20px">
 <!--                                                    <button style="border: none;float: left"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i></button>-->
-                                                <p class="testimonial_para"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i> I have a stable career with a global O&G player and I am doing what I love. Life is good...</p><br>
-                                                <div class="row">
-                                                    <div class="col-sm-6" style="padding-left: 400px">
-                                                        <img class="img-responsive padding-t-10 " src="img/testimonial/001.jpg" alt="" style="width: 80px;">
-                                                    </div>
-                                                    <div class="col-sm-6" style="padding-right: 400px">
-                                                        <h4><strong> Muhammad Afiq Bin Makmon,</strong></h4>
-                                                        <p class="testimonial_subtitle"><span> 26, SapuraKencana</span><br></p>
+                                                <div class="col-md-12">
+                                                    <p class="testimonial_para"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i> I have a stable career with a global O&G player and I am doing what I love. Life is good...</p><br>
+                                                </div>
+
+                                                <div class="col-md-12 center">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <img class="img-responsive" src="img/testimonial/001.jpg" alt="" style="float:right" >
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div style="float: left">
+                                                                <h4><strong> Muhammad Afiq Bin Makmon,</strong></h4>
+                                                                <p class="testimonial_subtitle"><span> 26, SapuraKencana</span><br></p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                         <div class="item">
                                             <div class="row" style="padding: 20px">
-                                                <button style="border: none;"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i></button>
-                                                <p class="testimonial_para">My salary has been boosted by 35% since my participation in the TOPSHOT program...</p><br>
-                                                <div class="row">
-                                                    <div class="col-sm-6" style="padding-left: 430px">
-                                                        <img class="img-responsive padding-t-10" src="img/testimonial/002.jpg" alt="" style="width: 80px">
-                                                    </div>
-                                                    <div class="col-sm-6" style="padding-right: 430px">
-                                                        <h4><strong>Ganeson,</strong></h4>
-                                                        <p class="testimonial_subtitle"><span>29, Transocean</span>
-                                                        </p>
+<!--                                                    <button style="border: none;float: left"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i></button>-->
+                                                <div class="col-md-12">
+                                                    <p class="testimonial_para">My salary has been boosted by 35% since my participation in the TOPSHOT program...</p><br>
+                                                </div>
+
+                                                <div class="col-md-12 center">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <img class="img-responsive padding-t-10" src="img/testimonial/002.jpg" alt="" style="float:right">
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div style="float: left">
+                                                                <h4><strong>Ganeson,</strong></h4>
+                                                                <p class="testimonial_subtitle"><span>29, Transocean</span></p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                         <div class="item">
                                             <div class="row" style="padding: 20px">
-                                                <button style="border: none;"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i></button>
-                                                <p class="testimonial_para">Previously I was unemployed. There was uncertainty. Now, I have stability and a solid career path...</p><br>
-                                                <div class="row">
-                                                    <div class="col-sm-6" style="padding-left: 400px">
-                                                        <img class="img-responsive padding-t-10" src="img/testimonial/003.jpg" alt="" style="width: 80px">
-                                                    </div>
-                                                    <div class="col-sm-6" style="padding-right: 400px">
-                                                        <h4><strong>Ajni Bt Abd amil,</strong></h4>
-                                                        <p class="testimonial_subtitle"><span>23, SapuraKencana</span>
-                                                        </p>
+<!--                                                    <button style="border: none;float: left"><i class="fa fa-quote-left testimonial_fa" aria-hidden="true"></i></button>-->
+                                                <div class="col-md-12">
+                                                    <p class="testimonial_para">Previously I was unemployed. There was uncertainty. Now, I have stability and a solid career path...</p><br>
+                                                </div>
+
+                                                <div class="col-md-12 center">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <img class="img-responsive padding-t-10" src="img/testimonial/003.jpg" alt="" style="float:right">
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div style="float: left">
+                                                                <h4><strong>Ajni Bt Abd amil,</strong></h4>
+                                                                <p class="testimonial_subtitle"><span>23, SapuraKencana</span></p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                     </div>
                                 </div>
                                 <div class="controls testimonial_control text-center">
                                     <a class="left fa fa-chevron-left btn btn-default testimonial_btn" href="#carousel-example-generic"

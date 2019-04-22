@@ -147,7 +147,7 @@
                                 <p class="v-lead text-justify">VO is able to provide HSE Coaches and Safety Training Officers to support services for the following position to meet the clients request.</p>
                             </div>
                             <div class="col-sm-4">
-                                <img class="img-responsive phone-image v-animation" data-animation="fade-from-right" data-delay="300" src="img/viva-energy-01.png" />
+                                <img class="img-responsive" data-animation="fade-from-right" src="img/viva-energy-01.png" />
                             </div>
                         </div>
                         <div class="row app-brief">
@@ -192,7 +192,7 @@
                                 <p class="text-justify">The TOPSHOT development programs is a fast track program to develop the candidates to familiarize themselves with Offshore Safety requirements especially understanding of the drilling operations. Candidates will receive sufficient training in drilling operations and would have the necessary skill to conduct training on all the modules. This program is specifically created to expedite the process of developing local Offshore Safety Officers/Advisers to cater for the Drilling Industry. The participants are trained on detailed drilling modules and safety processes to meet the local demand for qualified safety officers who are well versed in the technical aspect of petroleum drilling. All training received is in accordance to SHELL IG Well Services standards. The programs will develop participants to have a better understanding on how to assist (Audit, Train, Coach, & Mentor) on-site personnel to ensure VO Clients' HSSE Management Standards are in place with full compliance on all sites within the region.</p>
                             </div>
                             <div class="col-sm-4">
-                                <img src="img/viva-energy-02.jpg" alt="" class="img-responsive">
+                                <img src="img/viva-energy-02.jpg" alt="" class="img-responsive width-img">
                             </div>
                         </div>
                         <div class="row">
