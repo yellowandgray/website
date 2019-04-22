@@ -787,7 +787,7 @@
                                             <div class="footer-contact-info">
                                                 <ul>
                                                     <li>
-                                                        <i class="fa fa-building"></i><p>VIVA ODYSSEY</p>
+                                                        <i class="fa fa-building"></i><p>VIVA ODYSSEY SDN. BHD.</p>
                                                     </li>
                                                     <li>
                                                         <i class="fa fa-map-marker"></i><p>No.1, Jalan Puteri 12/5</br>Wisma Grand View</br>Bandar Puteri Puchong</br>47100 Puchong</br>Selangor</p>
@@ -806,7 +806,12 @@
                                                     <i class="fa fa-envelope"></i><p><strong>Email:</strong> <a href="mailto:info@vivaodyssey.com">info@vivaodyssey.com</a></p>
                                                 </li>
                                                 <li>
-                                                    <i class="fa fa-phone"></i><p><strong>Phone:</strong></br><a href="tel:+60380663258">(+603) 8066-3258</a></br><a href="tel:+60123206544">(+6012) 3206544</a></br><a href="tel:+60123206544"> (+6012) 329 3258 </a></p>
+                                                    <i class="fa fa-phone"></i>
+                                                    <p><strong>Phone:</strong>
+                                                        <a href="tel:+60380663258">(+603) 8066-3258</a><br/>
+                                                        <a href="tel:+60123206544">(+6012) 3206544</a> /
+                                                        <a href="tel:+60123206544"> (+6012) 329 3258 </a>
+                                                    </p>
                                                 </li>
                                             </ul>
                                             <br />
