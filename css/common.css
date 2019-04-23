@@ -291,3 +291,9 @@
 .backtohome:hover {
     text-decoration: underline !important;
 }
+.padding-tb-20 {
+    padding: 20px 0px;
+}
+.margin-r-150 {
+    margin: 0px 0px 0px 150px;
+}
