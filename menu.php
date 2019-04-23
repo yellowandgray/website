@@ -72,7 +72,7 @@
                                     <li class="menu-item-has-children"> <a href="contact.php">LOCATE US</a></li>
                                     <!--                                <li class="menu-item-has-children"> <a href="#">Events</a></li>
                                                                     <li class="menu-item-has-children"> <a href="#">Blog</a></li>-->
-                                    <li> <a href="franchise-requisites.php">FRANCHISE REQUISITES</a></li>
+                                    <li> <a href="franchise-opportunities.php">FRANCHISE OPPORTUNITIES</a></li>
                                     <li class="menu-item-has-children <?php if($page == 'withus'){ echo 'active';} ?>"> <a href="#">GROW WITH US</a>
                                         <ul class="sub-menu">
                                             <li> <a href="center-manager.php">CENTER MANAGER</a></li>

@@ -29,10 +29,10 @@
                         <div class="col-md-12 text-center">
                             <h1 class="page-title">AALUV ROBOTIC'S</h1>
                             <ul>
-                                <li>
+                                <li class="text-justify">
                                     <a class="active" href="index.php">Home</a>
                                 </li>
-                                <li>Aaluv Robotic's</li>
+                                <li class="text-justify">Aaluv Robotic's</li>
                             </ul>
                         </div>
                     </div>
@@ -53,14 +53,14 @@
                 <div class="row uppercase wow fadeInUp">
                     <div class="col-md-12">
                         <ul class="list-align">
-                            <i class="fas fa-check"></i><li>AALUV ROBOTIC'S Academy is an exclusive & integrated Curriculum based program for School Children.</li>
-                            <i class="fas fa-check"></i><li><b>Curriculum Aligned Robotic's Program (CARP)</b> which is specially designed  for student  from Grade1 upwards to suit  Classes “During School Hours”  and “After School Hours” as well. (Full time & Part time)</li>
-                            <i class="fas fa-check"></i><li>The CARP which enables  remarkable change in contemporary education System. Introducing students to Knowledge, Concepts and skills that’s needed for understanding technology of the future which is highly interactive, multi-modal, adaptive and autonomous The Program is currently part of the curriculum in Shri JT Surana Jain Vidyalaya, Sowcarpet. Gt Aloha Vidya Mandir ECR, Bala Vidya Mandir Adyar. St Bedes School, Santhome. Fathima CBSE School. SBOA Junior Academy. KV IIT Madras etc..,</li>
-                            <i class="fas fa-check"></i><li>We will provide well trained Faculty along with sufficient Robotic Kits(Twin Sharing Basis) where the students will be split into two teams who will parallely work on construction and programming as sub teams in each class.</li>
-                            <i class="fas fa-check"></i><li><b>Robotic's Lab Research Academy (RLRA)</b>
+                            <i class="fas fa-check"></i><li class="text-justify">AALUV ROBOTIC'S Academy is an exclusive & integrated Curriculum based program for School Children.</li>
+                            <i class="fas fa-check"></i><li class="text-justify"><b>Curriculum Aligned Robotic's Program (CARP)</b> which is specially designed  for student  from Grade1 upwards to suit  Classes “During School Hours”  and “After School Hours” as well. (Full time & Part time)</li>
+                            <i class="fas fa-check"></i><li class="text-justify">The CARP which enables  remarkable change in contemporary education System. Introducing students to Knowledge, Concepts and skills that’s needed for understanding technology of the future which is highly interactive, multi-modal, adaptive and autonomous The Program is currently part of the curriculum in Shri JT Surana Jain Vidyalaya, Sowcarpet. GT Vidya Mandir ECR, Bala Vidya Mandir Adyar. St Bedes School, Santhome. Fathima CBSE School. SBOA Junior Academy. KV IIT Madras etc..,</li>
+                            <i class="fas fa-check"></i><li class="text-justify">We will provide well trained Faculty along with sufficient Robotic Kits(Twin Sharing Basis) where the students will be split into two teams who will parallely work on construction and programming as sub teams in each class.</li>
+                            <i class="fas fa-check"></i><li class="text-justify"><b>Robotic's Lab Research Academy (RLRA)</b>
                                 <ul class="nested-list">
-                                    <i class="fas fa-circle"></i><li>&nbsp; Aaluv Robotic's is in technical collaboration with RLRA and R & D wing for development of robotics in schools and colleges</li>
-                                    <i class="fas fa-circle"></i><li>&nbsp; The Robotic devices used in this program kindles the children’s mind to think logically and empowers them to perform exceptionally well in Science & Math's at the formative stage  of learning, thus equipping them to counter the academic challenges with ease using their own creative skills with self confidence.</li>
+                                    <i class="fas fa-circle"></i><li class="text-justify">&nbsp; Aaluv Robotic's is in technical collaboration with RLRA and R & D wing for development of robotics in schools and colleges</li>
+                                    <i class="fas fa-circle"></i><li class="text-justify">&nbsp; The Robotic devices used in this program kindles the children’s mind to think logically and empowers them to perform exceptionally well in Science & Math's at the formative stage  of learning, thus equipping them to counter the academic challenges with ease using their own creative skills with self confidence.</li>
                                 </ul>
 
                             </li>
@@ -83,10 +83,10 @@
                     </div>
                     <div class="col-md-6">
                         <ul class="list-align">
-                            <i class="fas fa-check"></i><li>Weekly assignments</li>
-                            <i class="fas fa-check"></i><li>Projects</li>
-                            <i class="fas fa-check"></i><li>Quizzes</li>
-                            <i class="fas fa-check"></i><li>Final Exam</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Weekly assignments</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Projects</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Quizzes</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Final Exam</li>
                         </ul>
                     </div>
                     <div class="col-md-6">
@@ -100,18 +100,18 @@
                         <h3 class="color-blue">Instructional Methods …</h3>
                     </div>
                     <div class="col-md-6">
-                        <p>We will provide well trained faculty on our payroll along with sufficient robotic Kits (twin sharing basis) where the students will be distributed into teams who will parallelly work on construction and programming as sub teams in each class.</p>
+                        <!--<p class="text-justify">We will provide well trained faculty on our payroll along with sufficient robotic Kits (twin sharing basis) where the students will be distributed into teams who will parallelly work on construction and programming as sub teams in each class.</p>-->
                         <ul class="list-align">
-                            <i class="fas fa-check"></i><li>Class discussion/Virtual discussions</li>
-                            <i class="fas fa-check"></i><li>Individual/group projects</li>
-                            <i class="fas fa-check"></i><li>Labs for programming and analysis</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Class discussion/Virtual discussions</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Individual/group projects</li>
+                            <i class="fas fa-check"></i><li class="text-justify">We request the school to support us with a smart board or Projector for classes and share its computer lab for testing programs</li>
+
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <ul class="list-align">
-                            <i class="fas fa-check"></i><li>AALUV ROBOTIC'S will provide sufficient kits for the students to build multiple robots both in LEGO ROBOTIC'S and CLASSICAL ROBOTIC'S in three student sharing basis.</li>
-                            <i class="fas fa-check"></i><li>We request the school to support us with a smart board or Projector for classes and share its computer lab for testing programs</li>
-
+                            <i class="fas fa-check"></i><li class="text-justify">AALUV ROBOTIC'S will provide sufficient kits for the students to build multiple robots both in LEGO ROBOTIC'S and CLASSICAL ROBOTIC'S in three student sharing basis.</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Labs for programming and analysis</li>
                         </ul>
                     </div>
                 </div>
@@ -132,21 +132,21 @@
                 <div class="row padding-top-30">
                     <div class="col-md-6 uppercase wow fadeInUp">
                         <ul class="list-align">
-                            <i class="fas fa-check"></i><li>To understand the concept like never before</li>
-                            <i class="fas fa-check"></i><li>Develop skills in math and science</li>
-                            <i class="fas fa-check"></i><li>Apply the process of scientific inquiry to everyday life</li>
-                            <i class="fas fa-check"></i><li>Build understanding of basic science concepts</li>
-                            <i class="fas fa-check"></i><li>Convert everyday robotics platform experience to enhance student learning.</li>
-                            <i class="fas fa-check"></i><li>Apply the skills and knowledge they are developing to new challenges.</li>
+                            <i class="fas fa-check"></i><li class="text-justify">To understand the concept like never before</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Develop skills in math and science</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Apply the process of scientific inquiry to everyday life</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Build understanding of basic science concepts</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Convert everyday robotics platform experience to enhance student learning.</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Apply the skills and knowledge they are developing to new challenges.</li>
                         </ul>
                     </div>
                     <div class="col-md-6 wow fadeInUp">
                         <ul class="list-align">
-                            <i class="fas fa-check"></i><li>Extensive syllabus on Robotic's for the School students starting from Class 1 to Class – 12</li>
-                            <i class="fas fa-check"></i><li>Accepted as a part of the curriculum in the schools</li>
-                            <i class="fas fa-check"></i><li>The syllabus has been aligned along the lines of the Science and Mathematics syllabus that the students learn in the classrooms.</li>
-                            <i class="fas fa-check"></i><li>This curriculum on Robotic's gives a Hands-on Experience with live physical models</li>
-                            <i class="fas fa-check"></i><li>Better understanding and an interesting learning experience.</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Extensive syllabus on Robotic's for the School students starting from Class 1 to Class – 12</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Accepted as a part of the curriculum in the schools</li>
+                            <i class="fas fa-check"></i><li class="text-justify">The syllabus has been aligned along the lines of the Science and Mathematics syllabus that the students learn in the classrooms.</li>
+                            <i class="fas fa-check"></i><li class="text-justify">This curriculum on Robotic's gives a Hands-on Experience with live physical models</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Better understanding and an interesting learning experience.</li>
                         </ul>
                     </div>
                 </div>
@@ -159,11 +159,11 @@
                         <div class="box-radius-bg-60">
                             <h4>AALUV FOCUS on LEARNING</h4>
                             <ul class="list-style-none color-white list-align">
-                                <i class="fas fa-check"></i><li>EMOTIONAL ENGAGEMENT!</li>
-                                <i class="fas fa-check"></i><li>INTERACTION WITH PHYSICAL DEVICES!</li>
-                                <i class="fas fa-check"></i><li>PRACTICAL LEARNING!</li>
-                                <i class="fas fa-check"></i><li>MULTI-DISCIPLINARY LEARNING!</li>
-                                <i class="fas fa-check"></i><li>CONSTRUCTIVIST APPROACH!</li>
+                                <i class="fas fa-check"></i><li class="text-justify">EMOTIONAL ENGAGEMENT!</li>
+                                <i class="fas fa-check"></i><li class="text-justify">INTERACTION WITH PHYSICAL DEVICES!</li>
+                                <i class="fas fa-check"></i><li class="text-justify">PRACTICAL LEARNING!</li>
+                                <i class="fas fa-check"></i><li class="text-justify">MULTI-DISCIPLINARY LEARNING!</li>
+                                <i class="fas fa-check"></i><li class="text-justify">CONSTRUCTIVIST APPROACH!</li>
                             </ul>
                             <a href="learning.php" class="site-btn">Read More</a>
                         </div>
@@ -172,12 +172,12 @@
                         <div class="box-radius-bg-60">
                             <h4>SYLLABUS</h4>
                             <ul class="list-style-none color-white list-align">
-                                <i class="fas fa-check"></i><li>class-1</li>
-                                <i class="fas fa-check"></i><li>class-2</li>
-                                <i class="fas fa-check"></i><li>class-3</li>
-                                <i class="fas fa-check"></i><li>class-4</li>
-                                <i class="fas fa-check"></i><li>class-5</li>
-                                <span class="text-1"><i class="fas fa-check"></i><li>class-6</li></span>
+                                <i class="fas fa-check"></i><li class="text-justify">class-1</li>
+                                <i class="fas fa-check"></i><li class="text-justify">class-2</li>
+                                <i class="fas fa-check"></i><li class="text-justify">class-3</li>
+                                <i class="fas fa-check"></i><li class="text-justify">class-4</li>
+                                <i class="fas fa-check"></i><li class="text-justify">class-5</li>
+                                <span class="text-1"><i class="fas fa-check"></i><li class="text-justify">class-6</li></span>
                             </ul>
                             <a href="syllabus.php" class="site-btn">Read More</a>
                         </div>
@@ -185,8 +185,8 @@
                 </div>
                 <div class="col-md-12">
                     <h3 class="color-blue">Research & Development </h3>
-                    <p>AALUV has developed expertise in setting up well appreciated Robotic's Laboratories inside Schools for the exclusive use of the school students which is unique and tailor made for its Curriculum.</p>
-                    <p>Program comes with complete Robotic's kits and operation manual.</p>
+                    <p class="text-justify">AALUV has developed expertise in setting up well appreciated Robotic's Laboratories inside Schools for the exclusive use of the school students which is unique and tailor made for its Curriculum.</p>
+                    <p class="text-justify">Program comes with complete Robotic's kits and operation manual.</p>
                 </div>
             </div>
 
@@ -241,7 +241,7 @@
                     <div class="container">
                         <div class="abt-title mb-70 text-center">
                             <h2>OUR EXPERIENCED STAFFS</h2>      
-                            <p>Considering desire as primary motivation for the generation of narratives is a useful concept.</p>
+                            <p class="text-justify">Considering desire as primary motivation for the generation of narratives is a useful concept.</p>
                         </div>
                         <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="false" data-autoplay-timeout="5000" data-smart-speed="1200" data-dots="true" data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="true" data-mobile-device-dots="true" data-ipad-device="2" data-ipad-device-nav="true" data-ipad-device-dots="true" data-md-device="3" data-md-device-nav="true" data-md-device-dots="true">
                             <div class="team-item">
@@ -329,7 +329,7 @@
                     <div class="container">
                         <div class="abt-title mb-70 text-center">
                             <h2>OUR BRANCHES</h2>      
-                            <p>Considering desire as primary motivation for the generatio.</p>
+                            <p class="text-justify">Considering desire as primary motivation for the generatio.</p>
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-6">
@@ -339,7 +339,7 @@
                                         <span>01</span>
                                         Australia
                                     </h3>
-                                    <p>
+                                    <p class="text-justify">
                                         503  Old Buffalo Street<br>
                                         Northwest City #205, Australia
                                     </p>
@@ -352,7 +352,7 @@
                                         <span>02</span>
                                         China
                                     </h3>
-                                    <p>
+                                    <p class="text-justify">
                                         503  Old Buffalo Street<br>
                                         Northwest City #205, China
                                     </p>
@@ -365,7 +365,7 @@
                                         <span>03</span>
                                         India
                                     </h3>
-                                    <p>
+                                    <p class="text-justify">
                                         503  Old Buffalo Street<br>
                                         Northwest City #205, India
                                     </p>
@@ -378,7 +378,7 @@
                                         <span>04</span>
                                         United States
                                     </h3>
-                                    <p>
+                                    <p class="text-justify">
                                         503  Old Buffalo Street<br>
                                         Northwest City #205, United States
                                     </p>

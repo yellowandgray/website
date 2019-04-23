@@ -616,7 +616,7 @@
         margin-top: 0;
     }
     .rs-footer {
-        padding-top: 50px;
+        padding-top: 50px !important;
     }
     .rs-why-choose .choose-item,
     .rs-footer .footer-contact-desc .contact-inner{
@@ -1000,7 +1000,7 @@
     .home5 .rs-menu > ul > li > a {
         height: 18px;
         line-height: 20px;
-        padding: 1px 9px !important;
+        padding: 1px 7px !important;
         border-left: 1px solid black;
         margin: 38px 0px;
         font-size: 13px;
@@ -1184,3 +1184,14 @@
         display: none;
         
     }}
+
+@media only screen and (max-width: 446px) {
+    h3 {
+    font-size: 26px !important;
+}
+}
+@media only screen and (max-width: 446px) {
+    h4 {
+    font-size: 20px !important;
+}
+}

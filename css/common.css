@@ -310,7 +310,7 @@ ul.nacc li {
     position: absolute;
     list-style: none;
     transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
-    margin-right: 35px;
+    /*margin-right: 35px;*/
 }
 
 ul.nacc li.active {

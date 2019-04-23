@@ -27,12 +27,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h1 class="page-title">FRANCHISE REQUISITES</h1>
+                            <h1 class="page-title">FRANCHISE OPPORTUNITIES</h1>
                             <ul>
                                 <li>
                                     <a class="active" href="index.php">Home</a>
                                 </li>
-                                <li>Franchise Requisites</li>
+                                <li>Franchise opportunities</li>
                             </ul>
                         </div>
                     </div>

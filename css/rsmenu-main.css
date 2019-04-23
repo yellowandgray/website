@@ -718,7 +718,7 @@ Version: 1.0.0
     .home5 .rs-menu > ul > li > a{
         height: 18px;
         line-height: 20px;
-        padding: 0 12px;
+        padding: 0 10px;
         border-left: 1px solid black;
         margin: 45px 0px;
     }

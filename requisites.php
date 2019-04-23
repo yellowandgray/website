@@ -15,15 +15,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h1 class="page-title">FRANCHISE OPPORTUNITIES</h1>
+                            <h1 class="page-title">FRANCHISE REQUISITES</h1>
                             <ul>
                                 <li>
                                     <a class="active" href="index.php">Home</a>
                                 </li>
                                 <li>
-                                    <a class="active" href="franchise-requisites.php">Franchise Requisites</a>
+                                    <a class="active" href="franchise-opportunities.php">Franchise opportunities</a>
                                 </li>
-                                <li>Franchise Opportunities</li>
+                                <li>Franchise Requisites</li>
                             </ul>
                         </div>
                     </div>

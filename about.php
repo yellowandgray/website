@@ -47,14 +47,14 @@
                <div class="row">
                     <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">COMPANY PROFILE</h3>
-                        <p>AALUV GLOBAL is a wholistic Brain Development company, developing children's mind to better equip them for the challenges of Life.</p>
+                        <p class="text-justify">AALUV GLOBAL is a wholistic Brain Development company, developing children's mind to better equip them for the challenges of Life.</p>
                     </div>
                 </div>
                 <div class="row padding-top-30">
                     <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">Expanding Global Business</h3>
                         <h4 class="color-blue">The Global business is expanding</h4>
-                        <p>The Parent company <b>Aloha India</b>, is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-18 years. Since their existence in the last 17 years, they have trained more than 800 thousand students with 1300 centres across in india. Essentially, in these programs, the infinite potential of the human brain and its effective use is unveiled through the Scientific Brain Management Techniques.</p>
+                        <p class="text-justify">The Parent company <b>Aloha India</b>, is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-18 years. Since their existence in the last 17 years, they have trained more than 800 thousand students with 1300 centres across in india. Essentially, in these programs, the infinite potential of the human brain and its effective use is unveiled through the Scientific Brain Management Techniques.</p>
                     </div>
                 </div>
               
@@ -72,19 +72,19 @@
                 <div class="row  padding-top-30">
                     <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">AALUV GLOBAL:</h3>
-                        <p>Being a vibrant organization, it stands for a mission committed to create a new generation, which will be mentally equipped to face the challenges in a competitive environment. Steered by visionary leadership, the Company has set new benchmarks for the industry and is currently expanding its operations in Australia.<p>
+                        <p class="text-justify">Being a vibrant organization, it stands for a mission committed to create a new generation, which will be mentally equipped to face the challenges in a competitive environment. Steered by visionary leadership, the Company has set new benchmarks for the industry and is currently expanding its operations in World Wide.<p class="text-justify">
                     </div>
                 </div>
                 <div class="row padding-top-30">
                     <div class="col-md-12 text-p wow fadeInUp">
                         <h3 class="color-blue">VISION</h3>
-                        <p>To endow the new generation with intelligent and expert cognizance enabling them to scale and conquer all heights.</p>
+                        <p class="text-justify">To endow the new generation with intelligent and expert cognizance enabling them to scale and conquer all heights.</p>
                     </div>
                 </div>
                 <div class="row padding-top-30">
                     <div class="col-md-12 text-p wow fadeInUp">
                         <h3 class="color-blue">MISSION</h3>
-                        <p>To be recognized as Experts in the field of Innovative Education and as the leading authority in establishing Benchmarks and Standards. Furthermore, to unlock the innate aptitude of the human mind and cultivate knowledge through Math Classroom tutoring.</p>
+                        <p class="text-justify">To be recognized as Experts in the field of Innovative Education and as the leading authority in establishing Benchmarks and Standards. Furthermore, to unlock the innate aptitude of the human mind and cultivate knowledge through Math Classroom tutoring.</p>
                     </div>
                 </div>
             </div>
@@ -110,7 +110,7 @@
                     <div class="container">
                         <div class="abt-title mb-70 text-center">
                             <h2>OUR EXPERIENCED STAFFS</h2>      
-                            <p>Considering desire as primary motivation for the generation of narratives is a useful concept.</p>
+                            <p class="text-justify">Considering desire as primary motivation for the generation of narratives is a useful concept.</p>
                         </div>
                         <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="false" data-autoplay-timeout="5000" data-smart-speed="1200" data-dots="true" data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="true" data-mobile-device-dots="true" data-ipad-device="2" data-ipad-device-nav="true" data-ipad-device-dots="true" data-md-device="3" data-md-device-nav="true" data-md-device-dots="true">
                             <div class="team-item">
@@ -198,7 +198,7 @@
                     <div class="container">
                         <div class="abt-title mb-70 text-center">
                             <h2>OUR BRANCHES</h2>      
-                            <p>Considering desire as primary motivation for the generatio.</p>
+                            <p class="text-justify">Considering desire as primary motivation for the generatio.</p>
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-6">
@@ -208,7 +208,7 @@
                                         <span>01</span>
                                         Australia
                                     </h3>
-                                    <p>
+                                    <p class="text-justify">
                                         503  Old Buffalo Street<br>
                                         Northwest City #205, Australia
                                     </p>
@@ -221,7 +221,7 @@
                                         <span>02</span>
                                         China
                                     </h3>
-                                    <p>
+                                    <p class="text-justify">
                                         503  Old Buffalo Street<br>
                                         Northwest City #205, China
                                     </p>
@@ -234,7 +234,7 @@
                                         <span>03</span>
                                         India
                                     </h3>
-                                    <p>
+                                    <p class="text-justify">
                                         503  Old Buffalo Street<br>
                                         Northwest City #205, India
                                     </p>
@@ -247,7 +247,7 @@
                                         <span>04</span>
                                         United States
                                     </h3>
-                                    <p>
+                                    <p class="text-justify">
                                         503  Old Buffalo Street<br>
                                         Northwest City #205, United States
                                     </p>

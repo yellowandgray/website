@@ -109,9 +109,9 @@
                     <div class="footer-share">
                         <ul class="text-left">
                             <li><a href="https://www.facebook.com/aaluv.maths.79"><i class="fab fa-facebook-f"></i></a></li>
-<!--                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>   -->
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>   
                         </ul>
                     </div>  
                 </div>
@@ -131,7 +131,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="copyright">
-                 <p>© 2019 All Rights Reserved. | Designed By <a href="http://www.yellowandgray.com/" target="blank">YG STUDIO.</a></p>
+                 <p>© 2019 All Rights Reserved. | Designed By <a>YG STUDIO.</a></p>
             </div>
         </div>
     </div>

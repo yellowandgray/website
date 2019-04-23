@@ -21,7 +21,7 @@
                                     <a class="active" href="index.php">Home</a>
                                 </li>
                                 <li>
-                                    <a class="active" href="franchise-requisites.php">Franchise Requisites</a>
+                                    <a class="active" href="franchise-opportunities.php">Franchise opportunities</a>
                                 </li>
                                 <li>Why Franchise AALUV Math</li>
                             </ul>
