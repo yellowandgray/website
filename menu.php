@@ -30,18 +30,18 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="index.php" class="nav-link pl-0">Home</a></li>
                 <li class="nav-item dropdown">
-                    <a href="about.html" class="nav-link" data-toggle="dropdown">About Us</a>
+                    <a href="#" class="nav-link" data-toggle="dropdown">About Us</a>
 <!--                    <ul class="dropdown-content">
                         <li><a href="">Hello World!</a></li>
                         <li><a href="">Hello World!</a></li>
                         <li><a href="">Hello World!</a></li>
                     </ul>-->
                 </li>
-                <li class="nav-item"><a href="teacher.html" class="nav-link">Aloha Programs</a></li>
-                <li class="nav-item"><a href="courses.html" class="nav-link">Virtual Classroom</a></li>
-                <li class="nav-item"><a href="pricing.html" class="nav-link">News & Events</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Apply</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Resource</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Aloha Programs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Virtual Classroom</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">News & Events</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Apply</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Resource</a></li>
             </ul>
         </div>
     </div>
