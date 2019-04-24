@@ -111,74 +111,129 @@
         <section class="ftco-section ftco-no-pt ftc-no-pb">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-5 order-md-last wrap-about py-5 wrap-about bg-light">
+                    <div class="col-md-6 wrap-about py-5 wrap-about bg-light">
                         <div class="text px-4 ftco-animate">
-                            <h2 class="mb-4">Welcome to ALOHA</h2>
-                            <p>Aloha India, which was established in 2002 at Chennai, is the Indian subsidiary of Aloha International, Malaysia, a global leader in advanced abacus and Mental Arithmetic programs specially designed for children in the 4-14 year age span. Essentially, the Aloha Programs are nothing but scientific brain management techniques that unveil the infinite potential of the human brain and its effective use.</p>
+                            <h2 class="mb-4 color-black">Welcome to ALOHA</h2>
+
+                            <p class="text-justify">Aloha India, which was established in 2002 at Chennai, is the Indian subsidiary of Aloha International, Malaysia, a global leader in advanced abacus and Mental Arithmetic programs specially designed for children in the 4-14 year age span. Essentially, the Aloha Programs are nothing but scientific brain management techniques that unveil the infinite potential of the human brain and its effective use.</p>
 <!--                            <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. And if she hasn’t been rewritten, then they are still using her.</p>-->
                             <p><a href="#" class="btn btn-secondary px-4 py-3">Read More</a></p>
                         </div>
                     </div>
-                    <div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
-                        <h2 class="mb-4">What We Offer</h2>
-                        <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word.</p>
-                        <div class="row mt-5">
-                            <div class="col-lg-6">
-                                <div class="services-2 d-flex">
-                                    <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-security"></span></div>
-                                    <div class="text">
-                                        <h3>Safety First</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                                    </div>
+                    <div class="col-md-6 col-center m-auto wrap-about py-5">
+                        <h2 class="mb-4 color-black">Testimonials</h2>
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Carousel indicators -->
+                                                        <ol class="carousel-indicators">
+                                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                                                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                                                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                                                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                                                        </ol>   
+                            <!-- Wrapper for carousel items -->
+                            <div class="carousel-inner">
+                                <div class="item carousel-item active">
+                                    <h5 class="text-left color-green" style="text-transform: uppercase;"><strong>INTERNATIONAL COMPETITION 2019</strong> &nbsp;&nbsp; <img src="http://www.alohaindia.com/wp-content/uploads/2016/11/new.gif" alt="New" width="55px" height="55px"></h5>
+                                    <p class="text-left"><a class="link-cls" href="images/events/China-invitation.pdf" target="_blank">&gt; INVITATION</a></p>
+                                    <p class="text-left"><a class="link-cls" href="images/events/Flyer-International-Competition-China-2019.pdf" target="_blank">&gt; FLYER INTERNATIONAL COMPETITION</a></p>
+                                    <p class="text-left"><a class="link-cls" href="images/events/International-Competition-China-2019-Word-with-cover.pdf" target="_blank">&gt; EVENT DETAILS</a></p>
+                                    <p class="text-left"><a class="link-cls" href="images/events/Student-Registration-Form-China2019.pdf" target="_blank">&gt; STUDENT REGISTRATION FORM</a></p>
+                                </div>
+                                <div class="item carousel-item">
+                                    <h5 class="text-left color-green" style="text-transform: uppercase;"><strong>15th NATIONAL LEVEL COMPETITION WINNERS 2018<br>
+                                        </strong> &nbsp;&nbsp; <img src="http://www.alohaindia.com/wp-content/uploads/2016/11/new.gif" alt="New" width="55px" height="55px"></h5>
+                                    <p class="text-left"><a class="link-cls" href="images/events/ZHUSUAN-LIST-2018.pdf" target="_blank">&gt; ZHUSUAN AWARDEES 2018</a></p>
+                                    <p class="text-left"><a class="link-cls" href="images/events/NLC-MENTAL-ARITHMETIC-2018-WINNERS.pdf" target="_blank">&gt; NATIONAL LEVEL MENTAL ARITHMETIC WINNERS 2018</a></p>
+                                    <p class="text-left"><a class="link-cls" href="images/events/NLC-TINY-TOTS-2018-WINNERS.pdf" target="_blank">&gt; NATIONAL LEVEL TINY TOTS WINNERS 2018</a></p>
+                                    <p class="text-left"><a class="link-cls" href="images/events/NLC-ENGLISH-SMART-2018-WINNERS.pdf" target="_blank">&gt; NATIONAL LEVEL ENGLISH SMART WINNERS 2018</a></p>
+                                    <p class="text-left"><a class="link-cls" href="images/events/NLC-SPEED-MATHS-2018-WINNERS.pdf" target="_blank">&gt; NATIONAL LEVEL SPEED MATHS WINNERS 2018</a></p>
+                                    <p class="text-left"><a class="link-cls" href="images/events/NLC-CHAMPION-2018-WINNERS.pdf" target="_blank">&gt; NAITONAL LEVEL CHAMPIONS 2018</a></p>
+                                </div>
+                                <div class="item carousel-item">
+                                    <h5 class="text-left color-green" style="text-transform: uppercase;"><strong>National Level Competition 2018 Franchise Circular<br>
+                                        </strong></h5>
+                                    <p class="text-left"><a class="link-cls" href="images/events/NLC-Circular-1.pdf" target="_blank">&gt; NLC CIRCULAR Ref AI / NLC/01/18</a></p>
+                                    <p class="text-left"><a class="link-cls" href="images/events/NLC-Circular-2.pdf" target="_blank">&gt; NLC CIRCULAR Ref AI / NLC/02/18 </a></p>
+                                    <p class="text-left"><a class="link-cls" href="images/events/NLC-Circular-3.pdf" target="_blank">&gt; NLC CIRCULAR Ref AI / NLC/03/18 </a></p>
+                                    <p class="text-left"><a class="link-cls" href="images/events/NLC-2018-Hotel-Details.pdf" target="_blank">&gt; Hotel Details </a></p>
+                                </div>
+                                <div class="item carousel-item">
+                                    <h5 class="text-left color-green" style="text-transform: uppercase;"><strong>Aloha International Competition 2018 – Moscow, Russia</strong> &nbsp;&nbsp; <img src="http://www.alohaindia.com/wp-content/uploads/2016/11/new.gif" alt="New" width="55px" height="55px"></h5>
+                                    <p class="text-left"><a class="link-cls" href="images/events/India-WLIC2018.pdf" target="_blank">&gt; Winners List</a></p>
+                                    <p class="text-left"><a class="link-cls" href="images/events/Football-Class-Aloha-INLC-Participants.pdf" target="_blank">&gt; Football Class for Aloha INLC Participants</a></p>
+                                </div>
+                                <div class="item carousel-item">
+                                    <h5 class="text-left color-green" style="text-transform: uppercase;"><strong>15th Aloha National Level Competition</strong> &nbsp;&nbsp; <img src="http://www.alohaindia.com/wp-content/uploads/2016/11/new.gif" alt="New" width="55px" height="55px"></h5>
+                                    <p class="text-left"><a class="link-cls" href="https://drive.google.com/drive/folders/1ibTS_XCdL1Obx5JGXLweZ12feDbKniFL" target="_blank">&gt; Competition Day</a></p>
+                                    <p class="text-left"><a class="link-cls" href="https://drive.google.com/drive/folders/14S8qVL21qaZNMI7Tcyz9Rzv3N20nxihz" target="_blank">&gt; Prize Distribution Day</a></p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="services-2 d-flex">
-                                    <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-reading"></span></div>
-                                    <div class="text">
-                                        <h3>Regular Classes</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="services-2 d-flex">
-                                    <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-diploma"></span></div>
-                                    <div class="text">
-                                        <h3>Certified Teachers</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="services-2 d-flex">
-                                    <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-education"></span></div>
-                                    <div class="text">
-                                        <h3>Sufficient Classrooms</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="services-2 d-flex">
-                                    <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-jigsaw"></span></div>
-                                    <div class="text">
-                                        <h3>Creative Lessons</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="services-2 d-flex">
-                                    <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-kids"></span></div>
-                                    <div class="text">
-                                        <h3>Sports Facilities</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- Carousel controls -->
                         </div>
                     </div>
+
+                    <!--                    <div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
+                                            <h2 class="mb-4">What We Offer</h2>
+                                            <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word.</p>
+                    
+                                                                    <div class="row mt-5">
+                                                <div class="col-lg-6">
+                                                    <div class="services-2 d-flex">
+                                                        <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-security"></span></div>
+                                                        <div class="text">
+                                                            <h3>Safety First</h3>
+                                                            <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="services-2 d-flex">
+                                                        <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-reading"></span></div>
+                                                        <div class="text">
+                                                            <h3>Regular Classes</h3>
+                                                            <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="services-2 d-flex">
+                                                        <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-diploma"></span></div>
+                                                        <div class="text">
+                                                            <h3>Certified Teachers</h3>
+                                                            <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="services-2 d-flex">
+                                                        <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-education"></span></div>
+                                                        <div class="text">
+                                                            <h3>Sufficient Classrooms</h3>
+                                                            <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="services-2 d-flex">
+                                                        <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-jigsaw"></span></div>
+                                                        <div class="text">
+                                                            <h3>Creative Lessons</h3>
+                                                            <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="services-2 d-flex">
+                                                        <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-kids"></span></div>
+                                                        <div class="text">
+                                                            <h3>Sports Facilities</h3>
+                                                            <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>-->
                 </div>
             </div>
         </section>
@@ -189,26 +244,27 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h2>Franchise Details</h2>
-                        <img src="images/franch.jpg" alt="" />
+                        <img src="images/franch.jpg" alt="" class="width-100"/>
                         <h3>Advantages</h3>
-                        <ul class="list-style">
-                            <li>Working with children always is challenging – and very satisfying!</li>
-                            <li>And what better way than to open their limitless mind to a powerful learning system?</li>
-                            <li>Aloha India invites energetic, aggressive individuals, businessmen and women entrepreneur to explore our franchisee business opportunities.</li>
-                        </ul>
+
+                        <p class="text-justify">Working with children always is challenging – and very satisfying!</p>
+                        <p class="text-justify">And what better way than to open their limitless mind to a powerful learning system?</p>
+                        <p class="text-justify">Aloha India invites energetic, aggressive individuals, businessmen and women entrepreneur to explore our franchisee business opportunities.</p>
+
                         <p class="mb-0"></p>
                     </div>
-<!--                    <div class="col-md-6 d-flex align-items-center">-->
+                    <!--                    <div class="col-md-6 d-flex align-items-center">-->
                     <div class="col-md-6">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/OFNFKESjvzU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<!--                        <p class="mb-0"><a href="#" class="btn btn-secondary px-4 py-3">Take a Course</a></p>-->
+                        <h2>Video</h2>
+                        <iframe class="width-100" height="310px" src="https://www.youtube.com/embed/OFNFKESjvzU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p class="mb-0"><a href="#" class="btn btn-secondary px-4 py-3">Take a Course</a></p>
                     </div>
                 </div>
             </div>
         </section>
 
 
-        <section class="ftco-section ftco-no-pb">
+<!--        <section class="ftco-section ftco-no-pb">
             <div class="container">
                 <div class="row justify-content-center mb-5 pb-2">
                     <div class="col-md-8 text-center heading-section ftco-animate">
@@ -299,51 +355,99 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
 
         <section class="ftco-section">
             <div class="container">
                 <div class="row justify-content-center mb-5 pb-2">
                     <div class="col-md-8 text-center heading-section ftco-animate">
-                        <h2 class="mb-4"><span>Our</span> Courses</h2>
-                        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                        <h2 class="mb-4"><span>Our</span> Programs</h2>
+                        <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
                     </div>
                 </div>	
                 <div class="row">
-                    <div class="col-md-6 course d-lg-flex ftco-animate">
-                        <div class="img" style="background-image: url(images/course-1.jpg);"></div>
-                        <div class="text bg-light p-4">
-                            <h3><a href="#">Arts Lesson</a></h3>
-                            <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-                            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                    <div class="col-md-3 course d-lg-flex ftco-animate">
+                        <div class="img">
+                            <img src="images/program-001.png" alt="" class="width-100">
+                            <div class="pad-10">
+                                <h3><a href="#">Arts Lesson</a></h3>
+                                <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
+                                <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 course d-lg-flex ftco-animate">
+                        <div class="img">
+                            <img src="images/program-002.png" alt="" class="width-100">
+                            <div class="pad-10">
+                                <h3><a href="#">Arts Lesson</a></h3>
+                                <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
+                                <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 course d-lg-flex ftco-animate">
-                        <div class="img" style="background-image: url(images/course-2.jpg);"></div>
-                        <div class="text bg-light p-4">
-                            <h3><a href="#">Language Lesson</a></h3>
-                            <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-                            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                    <div class="col-md-3 course d-lg-flex ftco-animate">
+                        <div class="img">
+                            <img src="images/program-003.png" alt="" class="width-100">
+                            <div class="pad-10">
+                                <h3><a href="#">Arts Lesson</a></h3>
+                                <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
+                                <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 course d-lg-flex ftco-animate">
-                        <div class="img" style="background-image: url(images/course-3.jpg);"></div>
-                        <div class="text bg-light p-4">
-                            <h3><a href="#">Music Lesson</a></h3>
-                            <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-                            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                    <div class="col-md-3 course d-lg-flex ftco-animate">
+                        <div class="img">
+                            <img src="images/program-004.png" alt="" class="width-100">
+                            <div class="pad-10">
+                                <h3><a href="#">Arts Lesson</a></h3>
+                                <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
+                                <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 course d-lg-flex ftco-animate">
-                        <div class="img" style="background-image: url(images/course-4.jpg);"></div>
-                        <div class="text bg-light p-4">
-                            <h3><a href="#">Sports Lesson</a></h3>
-                            <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-                            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                    <div class="col-md-3 course d-lg-flex ftco-animate">
+                        <div class="img">
+                            <img src="images/program-005.png" alt="" class="width-100">
+                            <div class="pad-10">
+                                <h3><a href="#">Arts Lesson</a></h3>
+                                <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
+                                <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 course d-lg-flex ftco-animate">
+                        <div class="img">
+                            <img src="images/program-006.png" alt="" class="width-100">
+                            <div class="pad-10">
+                                <h3><a href="#">Arts Lesson</a></h3>
+                                <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
+                                <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 course d-lg-flex ftco-animate">
+                        <div class="img">
+                            <img src="images/program-007.png" alt="" class="width-100">
+                            <div class="pad-10">
+                                <h3><a href="#">Arts Lesson</a></h3>
+                                <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
+                                <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 course d-lg-flex ftco-animate">
+                        <div class="img">
+                            <img src="images/program-008.png" alt="" class="width-100">
+                            <div class="pad-10">
+                                <h3><a href="#">Arts Lesson</a></h3>
+                                <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
+                                <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
 
         <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);" data-stellar-background-ratio="0.5">
@@ -491,8 +595,8 @@
                 <div class="row justify-content-end">
                     <div class="col-md-6 py-5 px-md-5 bg-primary">
                         <div class="heading-section heading-section-white ftco-animate mb-5">
-                            <h2 class="mb-4">Request A Quote</h2>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <h2 class="mb-4">Contact Us</h2>
+                            <p>Please fill the form and get interesting articles. Your details will not be shared.</p>
                         </div>
                         <form action="#" class="appointment-form ftco-animate">
                             <div class="d-md-flex">
@@ -504,20 +608,23 @@
                                 </div>
                             </div>
                             <div class="d-md-flex">
+                                <!--                                <div class="form-group">
+                                                                    <div class="form-field">
+                                                                        <div class="select-wrap">
+                                                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                                            <select name="" id="" class="form-control">
+                                                                                <option value="">Select Your Course</option>
+                                                                                <option value="">Art Lesson</option>
+                                                                                <option value="">Language Lesson</option>
+                                                                                <option value="">Music Lesson</option>
+                                                                                <option value="">Sports</option>
+                                                                                <option value="">Other Services</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>-->
                                 <div class="form-group">
-                                    <div class="form-field">
-                                        <div class="select-wrap">
-                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">Select Your Course</option>
-                                                <option value="">Art Lesson</option>
-                                                <option value="">Language Lesson</option>
-                                                <option value="">Music Lesson</option>
-                                                <option value="">Sports</option>
-                                                <option value="">Other Services</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                    <input type="email" class="form-control" placeholder="email">
                                 </div>
                                 <div class="form-group ml-md-4">
                                     <input type="text" class="form-control" placeholder="Phone">
@@ -528,7 +635,7 @@
                                     <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
                                 </div>
                                 <div class="form-group ml-md-4">
-                                    <input type="submit" value="Request A Quote" class="btn btn-secondary py-3 px-4">
+                                    <input type="submit" value="submit" class="btn btn-secondary py-3 px-4">
                                 </div>
                             </div>
                         </form>
