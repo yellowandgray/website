@@ -7985,7 +7985,7 @@ body {
     font-size: 16px;
     line-height: 1.8;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.5); }
+    color: #6b6b6b; }
 body.menu-show {
     overflow: hidden;
     position: fixed;
@@ -7996,10 +7996,10 @@ a {
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
-    color: #1eaaf1; }
+    color: #ffffff; }
 a:hover, a:focus {
     text-decoration: none;
-    color: #1eaaf1;
+    color: #cfd600;
     outline: none !important; }
 
 h1, h2, h3, h4, h5,
@@ -8580,7 +8580,7 @@ h1, h2, h3, h4, h5,
     background-repeat: no-repeat;
     background-position: top center;
     position: relative;
-    color: #f9f9f9; }
+    color: #cfd600; }
 @media (max-width: 1199.98px) {
     .ftco-intro {
         background-position: center center !important; } }
