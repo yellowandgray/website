@@ -12,7 +12,7 @@
                             <div class="footer_section footer_about">
                                 <div class="footer_logo_container">
                                     <a href="#">
-                                        <img src="images/aloha-home.png" alt="" style="width: 100%"/>
+                                        <img src="images/aloha-home.png" alt="" />
                                     </a>
                                 </div>
                                 <div class="footer_about_text">
