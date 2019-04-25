@@ -30,25 +30,6 @@
                                     <div class="row">
                                         <div class="col text-center">
                                             <div class="home_slider_title">Improve Child's Memory Power, Hearing Power & creativity</div>
-                                            <!--                                            <div class="home_slider_subtitle">Future Of Education Technology</div>-->
-                                            <!--                                            <div class="home_slider_form_container">
-                                                                                            <form action="#" id="home_search_form_1" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
-                                                                                                <div class="d-flex flex-row align-items-center justify-content-start">
-                                                                                                    <input type="search" class="home_search_input" placeholder="Keyword Search" required="required">
-                                                                                                    <select class="dropdown_item_select home_search_input">
-                                                                                                        <option>Category Courses</option>
-                                                                                                        <option>Category</option>
-                                                                                                        <option>Category</option>
-                                                                                                    </select>
-                                                                                                    <select class="dropdown_item_select home_search_input">
-                                                                                                        <option>Select Price Type</option>
-                                                                                                        <option>Price Type</option>
-                                                                                                        <option>Price Type</option>
-                                                                                                    </select>
-                                                                                                </div>
-                                                                                                <button type="submit" class="home_search_button">search</button>
-                                                                                            </form>
-                                                                                        </div>-->
                                         </div>
                                     </div>
                                 </div>
@@ -63,25 +44,6 @@
                                     <div class="row">
                                         <div class="col text-center">
                                             <div class="home_slider_title">Aloha Programs are Scientific Brain Management Techniques</div>
-                                            <!--                                            <div class="home_slider_subtitle">Future Of Education Technology</div>-->
-                                            <!--                                            <div class="home_slider_form_container">
-                                                                                            <form action="#" id="home_search_form_2" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
-                                                                                                <div class="d-flex flex-row align-items-center justify-content-start">
-                                                                                                    <input type="search" class="home_search_input" placeholder="Keyword Search" required="required">
-                                                                                                    <select class="dropdown_item_select home_search_input">
-                                                                                                        <option>Category Courses</option>
-                                                                                                        <option>Category</option>
-                                                                                                        <option>Category</option>
-                                                                                                    </select>
-                                                                                                    <select class="dropdown_item_select home_search_input">
-                                                                                                        <option>Select Price Type</option>
-                                                                                                        <option>Price Type</option>
-                                                                                                        <option>Price Type</option>
-                                                                                                    </select>
-                                                                                                </div>
-                                                                                                <button type="submit" class="home_search_button">search</button>
-                                                                                            </form>
-                                                                                        </div>-->
                                         </div>
                                     </div>
                                 </div>
@@ -96,25 +58,6 @@
                                     <div class="row">
                                         <div class="col text-center">
                                             <div class="home_slider_title">Empower Your Child for Success in School & in Life</div>
-                                            <!--<div class="home_slider_subtitle">Future Of Education Technology</div>-->
-                                            <!--                                            <div class="home_slider_form_container">
-                                                                                            <form action="#" id="home_search_form_3" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
-                                                                                                <div class="d-flex flex-row align-items-center justify-content-start">
-                                                                                                    <input type="search" class="home_search_input" placeholder="Keyword Search" required="required">
-                                                                                                    <select class="dropdown_item_select home_search_input">
-                                                                                                        <option>Category Courses</option>
-                                                                                                        <option>Category</option>
-                                                                                                        <option>Category</option>
-                                                                                                    </select>
-                                                                                                    <select class="dropdown_item_select home_search_input">
-                                                                                                        <option>Select Price Type</option>
-                                                                                                        <option>Price Type</option>
-                                                                                                        <option>Price Type</option>
-                                                                                                    </select>
-                                                                                                </div>
-                                                                                                <button type="submit" class="home_search_button">search</button>
-                                                                                            </form>
-                                                                                        </div>-->
                                         </div>
                                     </div>
                                 </div>
@@ -129,25 +72,6 @@
                                     <div class="row">
                                         <div class="col text-center">
                                             <div class="home_slider_title">A Global Leader in Advanced Abacus Mental Arithmetic Programs</div>
-                                            <!--<div class="home_slider_subtitle">Future Of Education Technology</div>-->
-                                            <!--                                            <div class="home_slider_form_container">
-                                                                                            <form action="#" id="home_search_form_3" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
-                                                                                                <div class="d-flex flex-row align-items-center justify-content-start">
-                                                                                                    <input type="search" class="home_search_input" placeholder="Keyword Search" required="required">
-                                                                                                    <select class="dropdown_item_select home_search_input">
-                                                                                                        <option>Category Courses</option>
-                                                                                                        <option>Category</option>
-                                                                                                        <option>Category</option>
-                                                                                                    </select>
-                                                                                                    <select class="dropdown_item_select home_search_input">
-                                                                                                        <option>Select Price Type</option>
-                                                                                                        <option>Price Type</option>
-                                                                                                        <option>Price Type</option>
-                                                                                                    </select>
-                                                                                                </div>
-                                                                                                <button type="submit" class="home_search_button">search</button>
-                                                                                            </form>
-                                                                                        </div>-->
                                         </div>
                                     </div>
                                 </div>
@@ -163,86 +87,138 @@
                 <div class="home_slider_nav home_slider_next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
             </div>
 
-            <div class="welcom-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="box-shadow welcome-p">
-                                <h2>Welcome to Aloha</h2>
-                                <p class="text-justify">Aloha India, which was established in 2002 at Chennai, is the Indian subsidiary of Aloha International, Malaysia, a global leader in advanced abacus and Mental Arithmetic programs specially designed for children in the 4-14 year age span. Essentially, the Aloha Programs are nothing but scientific brain management techniques that unveil the infinite potential of the human brain and its effective use.</p>
-                                <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Read More</a></p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-center m-auto">
-                            <div class="box-shadow">
-                                <h2>Current Affairs</h2>
-                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                    <!-- Carousel indicators -->
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                                        <li data-target="#myCarousel" data-slide-to="4"></li>
-                                    </ol>   
-                                    <!-- Wrapper for carousel items -->
-                                    <div class="carousel-inner">
-                                        <div class="item carousel-item active">
-                                            <p class="overview"><b>INTERNATIONAL COMPETITION 2019 </b></p>
-                                            <p class="testimonial"><a href="images/events/China-invitation.pdf" target="blank">> INVITATION</a></p>
-                                            <p class="testimonial"><a href="images/events/Flyer-International-Competition-China-2019.pdf" target="blank">> FLYER INTERNATIONAL COMPETITION</a></p>
-                                            <p class="testimonial"><a href="images/events/International-Competition-China-2019-Word-with-cover.pdf" target="blank">> EVENT DETAILS</a></p>
-                                            <p class="testimonial"><a href="images/events/Student-Registration-Form-China2019.pdf" target="blank">> STUDENT REGISTRATION FORM</a></p>
-                                            <p class="testimonial">&nbsp;</p>
-                                            <p class="testimonial">&nbsp;</p>
-                                        </div>
-                                        <div class="item carousel-item">
-                                            <p class="overview"><b>15TH NATIONAL LEVEL COMPETITION WINNERS 2018</b></p>
-                                            <p class="testimonial"><a href="images/events/ZHUSUAN-LIST-2018.pdf" target="blank">> ZHUSUAN AWARDEES 2018</a></p>
-                                            <p class="testimonial"><a href="images/events/NLC-MENTAL-ARITHMETIC-2018-WINNERS.pdf" target="blank">> NATIONAL LEVEL MENTAL ARITHMETIC WINNERS 2018</a></p>
-                                            <p class="testimonial"><a href="images/events/NLC-TINY-TOTS-2018-WINNERS.pdf" target="blank">> NATIONAL LEVEL TINY TOTS WINNERS 2018</a></p>
-                                            <p class="testimonial"><a href="images/events/NLC-ENGLISH-SMART-2018-WINNERS.pdf" target="blank">> NATIONAL LEVEL ENGLISH SMART WINNERS 2018</a></p>
-                                            <p class="testimonial"><a href="images/events/NLC-SPEED-MATHS-2018-WINNERS.pdf" target="blank">> NATIONAL LEVEL SPEED MATHS WINNERS 2018</a></p>
-                                            <p class="testimonial"><a href="images/events/NLC-CHAMPION-2018-WINNERS.pdf" target="blank">> NAITONAL LEVEL CHAMPIONS 2018</a></p>
-                                        </div>
-                                        <div class="item carousel-item">
-                                            <p class="overview"><b>NATIONAL LEVEL COMPETITION 2018 FRANCHISE CIRCULAR</b></p>
-                                            <p class="testimonial"><a href="images/events/NLC-Circular-1.pdf" target="blank">> NLC CIRCULAR Ref AI / NLC/01/18</a></p>
-                                            <p class="testimonial"><a href="images/events/NLC-Circular-2.pdf" target="blank">> NLC CIRCULAR Ref AI / NLC/02/18</a></p>
-                                            <p class="testimonial"><a href="images/events/NLC-Circular-3.pdf" target="blank">> NLC CIRCULAR Ref AI / NLC/03/18</a></p>
-                                            <p class="testimonial"><a href="images/events/NLC-2018-Hotel-Details.pdf" target="blank">> Hotel Details</a></p>
-                                            <p class="testimonial">&nbsp;</p>
-                                            <p class="testimonial">&nbsp;</p>
-                                        </div>
-                                        <div class="item carousel-item">
-                                            <p class="overview"><b>ALOHA INTERNATIONAL COMPETITION 2018 – MOSCOW, RUSSIA</b></p>
-                                            <p class="testimonial"><a href="images/events/India-WLIC2018.pdf" target="blank">> Winners List</a></p>
-                                            <p class="testimonial"><a href="images/events/Football-Class-Aloha-INLC-Participants.pdf" target="blank">> Football Class for Aloha INLC Participants</a></p>
-                                            <p class="testimonial">&nbsp;</p>
-                                            <p class="testimonial">&nbsp;</p>
-                                            <p class="testimonial">&nbsp;</p>
-                                            <p class="testimonial">&nbsp;</p>
-                                        </div>
-                                        <div class="item carousel-item">
-                                            <p class="overview"><b>15TH ALOHA NATIONAL LEVEL COMPETITION</b></p><br/>
-                                            <p class="testimonial"><a href="https://drive.google.com/drive/folders/1ibTS_XCdL1Obx5JGXLweZ12feDbKniFL" target="blank">> Competition Day</a></p>
-                                            <p class="testimonial"><a href="https://drive.google.com/drive/folders/14S8qVL21qaZNMI7Tcyz9Rzv3N20nxihz" target="blank">> Prize Distribution Day</a></p>
-                                            <p class="testimonial">&nbsp;</p>
-                                            <p class="testimonial">&nbsp;</p>
-                                            <p class="testimonial">&nbsp;</p>
-                                            <p class="testimonial">&nbsp;</p>
+            <!--            <div class="welcom-section">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="box-shadow welcome-p">
+                                            <h2>Welcome to Aloha</h2>
+                                            <p class="text-justify">Aloha India, which was established in 2002 at Chennai, is the Indian subsidiary of Aloha International, Malaysia, a global leader in advanced abacus and Mental Arithmetic programs specially designed for children in the 4-14 year age span. Essentially, the Aloha Programs are nothing but scientific brain management techniques that unveil the infinite potential of the human brain and its effective use.</p>
+                                            <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Read More</a></p>
                                         </div>
                                     </div>
-                                    <!-- Carousel controls -->
-                                    <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
-                                        <i class="fa fa-angle-left"></i>
-                                    </a>
-                                    <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
-                                        <i class="fa fa-angle-right"></i>
-                                    </a>
+                                    <div class="col-md-6 col-center m-auto">
+                                        <div class="box-shadow">
+                                            <h2>Current Affairs</h2>
+                                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                                 Carousel indicators 
+                                                <ol class="carousel-indicators">
+                                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                                                </ol>   
+                                                 Wrapper for carousel items 
+                                                <div class="carousel-inner">
+                                                    <div class="item carousel-item active">
+                                                        <p class="overview"><b>INTERNATIONAL COMPETITION 2019 </b></p>
+                                                        <p class="testimonial"><a href="images/events/China-invitation.pdf" target="blank">> INVITATION</a></p>
+                                                        <p class="testimonial"><a href="images/events/Flyer-International-Competition-China-2019.pdf" target="blank">> FLYER INTERNATIONAL COMPETITION</a></p>
+                                                        <p class="testimonial"><a href="images/events/International-Competition-China-2019-Word-with-cover.pdf" target="blank">> EVENT DETAILS</a></p>
+                                                        <p class="testimonial"><a href="images/events/Student-Registration-Form-China2019.pdf" target="blank">> STUDENT REGISTRATION FORM</a></p>
+                                                        <p class="testimonial">&nbsp;</p>
+                                                        <p class="testimonial">&nbsp;</p>
+                                                    </div>
+                                                    <div class="item carousel-item">
+                                                        <p class="overview"><b>15TH NATIONAL LEVEL COMPETITION WINNERS 2018</b></p>
+                                                        <p class="testimonial"><a href="images/events/ZHUSUAN-LIST-2018.pdf" target="blank">> ZHUSUAN AWARDEES 2018</a></p>
+                                                        <p class="testimonial"><a href="images/events/NLC-MENTAL-ARITHMETIC-2018-WINNERS.pdf" target="blank">> NATIONAL LEVEL MENTAL ARITHMETIC WINNERS 2018</a></p>
+                                                        <p class="testimonial"><a href="images/events/NLC-TINY-TOTS-2018-WINNERS.pdf" target="blank">> NATIONAL LEVEL TINY TOTS WINNERS 2018</a></p>
+                                                        <p class="testimonial"><a href="images/events/NLC-ENGLISH-SMART-2018-WINNERS.pdf" target="blank">> NATIONAL LEVEL ENGLISH SMART WINNERS 2018</a></p>
+                                                        <p class="testimonial"><a href="images/events/NLC-SPEED-MATHS-2018-WINNERS.pdf" target="blank">> NATIONAL LEVEL SPEED MATHS WINNERS 2018</a></p>
+                                                        <p class="testimonial"><a href="images/events/NLC-CHAMPION-2018-WINNERS.pdf" target="blank">> NAITONAL LEVEL CHAMPIONS 2018</a></p>
+                                                    </div>
+                                                    <div class="item carousel-item">
+                                                        <p class="overview"><b>NATIONAL LEVEL COMPETITION 2018 FRANCHISE CIRCULAR</b></p>
+                                                        <p class="testimonial"><a href="images/events/NLC-Circular-1.pdf" target="blank">> NLC CIRCULAR Ref AI / NLC/01/18</a></p>
+                                                        <p class="testimonial"><a href="images/events/NLC-Circular-2.pdf" target="blank">> NLC CIRCULAR Ref AI / NLC/02/18</a></p>
+                                                        <p class="testimonial"><a href="images/events/NLC-Circular-3.pdf" target="blank">> NLC CIRCULAR Ref AI / NLC/03/18</a></p>
+                                                        <p class="testimonial"><a href="images/events/NLC-2018-Hotel-Details.pdf" target="blank">> Hotel Details</a></p>
+                                                        <p class="testimonial">&nbsp;</p>
+                                                        <p class="testimonial">&nbsp;</p>
+                                                    </div>
+                                                    <div class="item carousel-item">
+                                                        <p class="overview"><b>ALOHA INTERNATIONAL COMPETITION 2018 – MOSCOW, RUSSIA</b></p>
+                                                        <p class="testimonial"><a href="images/events/India-WLIC2018.pdf" target="blank">> Winners List</a></p>
+                                                        <p class="testimonial"><a href="images/events/Football-Class-Aloha-INLC-Participants.pdf" target="blank">> Football Class for Aloha INLC Participants</a></p>
+                                                        <p class="testimonial">&nbsp;</p>
+                                                        <p class="testimonial">&nbsp;</p>
+                                                        <p class="testimonial">&nbsp;</p>
+                                                        <p class="testimonial">&nbsp;</p>
+                                                    </div>
+                                                    <div class="item carousel-item">
+                                                        <p class="overview"><b>15TH ALOHA NATIONAL LEVEL COMPETITION</b></p><br/>
+                                                        <p class="testimonial"><a href="https://drive.google.com/drive/folders/1ibTS_XCdL1Obx5JGXLweZ12feDbKniFL" target="blank">> Competition Day</a></p>
+                                                        <p class="testimonial"><a href="https://drive.google.com/drive/folders/14S8qVL21qaZNMI7Tcyz9Rzv3N20nxihz" target="blank">> Prize Distribution Day</a></p>
+                                                        <p class="testimonial">&nbsp;</p>
+                                                        <p class="testimonial">&nbsp;</p>
+                                                        <p class="testimonial">&nbsp;</p>
+                                                        <p class="testimonial">&nbsp;</p>
+                                                    </div>
+                                                </div>
+                                                 Carousel controls 
+                                                <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                                                    <i class="fa fa-angle-left"></i>
+                                                </a>
+                                                <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                                                    <i class="fa fa-angle-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>-->
+
+            <div class="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="text-center">
+                                <h2 class="section_title">Welcome To ALOHA</h2>
+                                <div class="section_subtitle"><p>Aloha India, which was established in 2002 at Chennai, is the Indian subsidiary of Aloha International, Malaysia, a global leader in advanced abacus and Mental Arithmetic programs specially designed for children in the 4-14 year age span. Essentially, the Aloha Programs are nothing but scientific brain management techniques that unveil the infinite potential of the human brain and its effective use.</p></div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="row features_row">
+
+                        <!-- Features Item -->
+                        <div class="col-lg-3 feature_col">
+                            <div class="feature text-center trans_400">
+                                <div class="feature_icon"><img src="images/icon_1.png" alt=""></div>
+                                <h3 class="feature_title">The Experts</h3>
+                                <div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
+                            </div>
+                        </div>
+
+                        <!-- Features Item -->
+                        <div class="col-lg-3 feature_col">
+                            <div class="feature text-center trans_400">
+                                <div class="feature_icon"><img src="images/icon_2.png" alt=""></div>
+                                <h3 class="feature_title">Book & Library</h3>
+                                <div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
+                            </div>
+                        </div>
+
+                        <!-- Features Item -->
+                        <div class="col-lg-3 feature_col">
+                            <div class="feature text-center trans_400">
+                                <div class="feature_icon"><img src="images/icon_3.png" alt=""></div>
+                                <h3 class="feature_title">Best Courses</h3>
+                                <div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
+                            </div>
+                        </div>
+
+                        <!-- Features Item -->
+                        <div class="col-lg-3 feature_col">
+                            <div class="feature text-center trans_400">
+                                <div class="feature_icon"><img src="images/icon_4.png" alt=""></div>
+                                <h3 class="feature_title">Award & Reward</h3>
+                                <div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -272,168 +248,183 @@
             </div>
 
             <!-- Team -->
-
-            <div class="team">
-                <div class="team_background parallax-window" data-parallax="scroll" data-image-src="images/team_background.jpg" data-speed="0.8"></div>
+            <div class="courses">
+                <div class="section_background parallax-window" data-parallax="scroll" data-image-src="images/bg-programs.jpg" data-speed="0.8"></div>
                 <div class="container">
                     <div class="row">
-                        <div class="col">
+                        <div class="col title-bg-white">
                             <div class="section_title_container text-center">
                                 <h2 class="section_title">ALOHA PROGRAMS</h2>
-<!--                                <div class="section_subtitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p></div>-->
+                                <div class="section_subtitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p></div>
                             </div>
                         </div>
                     </div>
-                    <div class="row team_row">
+                    
+                    <div class="row courses_row">
 
-                        <!-- Team Item -->
-                        <div class="col-lg-3 col-md-6 team_col">
-                            <div class="team_item">
-                                <div class="team_image"><img src="images/programs/program-001.png" alt=""></div>
-                                <div class="team_body">
-                                    <div class="team_title"><a href="#">Aloha Mental Arithmetic</a></div>
-                                    <div class="team_subtitle">For Ages: 6 - 14</div>
-                                    <div class="social_list">
-                                        <!--                                        <ul>
-                                                                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                                                                </ul>-->
+                        <!-- Course -->
+                        <div class="col-lg-3 course_col">
+                            <div class="course">
+                                <div class="course_image"><img src="images/programs/program-001.png" alt=""></div>
+                                <div class="course_body text-center">
+                                    <h3 class="course_title"><a href="#">Aloha Mental Arithmetic</a></h3>
+                                    <div class="course_teacher">For Ages: 6 - 14</div>
+                                    <div class="course_text">
+                                        <p>Before we start to explain the concept, we would just like to ask you a few questions</p>
+                                    </div>
+                                </div>
+                                <div class="course_footer">
+                                    <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Team Item -->
-                        <div class="col-lg-3 col-md-6 team_col">
-                            <div class="team_item">
-                                <div class="team_image"><img src="images/programs/program-002.png" alt=""></div>
-                                <div class="team_body">
-                                    <div class="team_title"><a href="#">Aloha Tiny Tots</a></div>
-                                    <div class="team_subtitle">For Ages: 4 - 7</div>
-                                    <div class="social_list">
-                                        <!--                                        <ul>
-                                                                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                                                                </ul>-->
+                        <!-- Course -->
+                        <div class="col-lg-3 course_col">
+                            <div class="course">
+                                <div class="course_image"><img src="images/programs/program-002.png" alt=""></div>
+                                <div class="course_body text-center">
+                                    <h3 class="course_title"><a href="#">Aloha Tiny Tots</a></h3>
+                                    <div class="course_teacher">For Ages: 4 - 7</div>
+                                    <div class="course_text">
+                                        <p>To achieve success, your kids need special skills and they need to start early. </p>
+                                    </div>
+                                </div>                               
+                                <div class="course_footer">
+                                    <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Team Item -->
-                        <div class="col-lg-3 col-md-6 team_col">
-                            <div class="team_item">
-                                <div class="team_image"><img src="images/programs/program-003.png" alt=""></div>
-                                <div class="team_body">
-                                    <div class="team_title"><a href="#">Aloha English Smart</a></div>
-                                    <div class="team_subtitle">For Ages: 6 - 14</div>
-                                    <div class="social_list">
-                                        <!--                                        <ul>
-                                                                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                                                                </ul>-->
+                        <!-- Course -->
+                        <div class="col-lg-3 course_col">
+                            <div class="course">
+                                <div class="course_image"><img src="images/programs/program-003.png" alt=""></div>
+                                <div class="course_body text-center">
+                                    <h3 class="course_title"><a href="#">Aloha English Smart</a></h3>
+                                    <div class="course_teacher">For Ages: 6 - 14</div>
+                                    <div class="course_text">
+                                        <p>In today’s world, everyone recognizes the need for good communicative power...</p>
+                                    </div>
+                                </div>
+                                <div class="course_footer">
+                                    <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Team Item -->
-                        <div class="col-lg-3 col-md-6 team_col">
-                            <div class="team_item">
-                                <div class="team_image"><img src="images/programs/program-004.png" alt=""></div>
-                                <div class="team_body">
-                                    <div class="team_title"><a href="#">Aloha Kids Art</a></div>
-                                    <div class="team_subtitle">For Ages: 4 - 15</div>
-                                    <div class="social_list">
-                                        <!--                                        <ul>
-                                                                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                                                                </ul>-->
+                        <!-- Course -->
+                        <div class="col-lg-3 course_col">
+                            <div class="course">
+                                <div class="course_image"><img src="images/programs/program-004.png" alt=""></div>
+                                <div class="course_body text-center">
+                                    <h3 class="course_title"><a href="#">Aloha Kids Art</a></h3>
+                                    <div class="course_teacher">For Ages: 4 - 15</div>
+                                    <div class="course_text">
+                                        <p>Founded by Mr.Zhou Guo Liang of China, Kids Art has been specially formulated...</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="row team_row">
-
-                        <!-- Team Item -->
-                        <div class="col-lg-3 col-md-6 team_col">
-                            <div class="team_item">
-                                <div class="team_image"><img src="images/programs/program-005.png" alt=""></div>
-                                <div class="team_body">
-                                    <div class="team_title"><a href="#">Aloha Hand Writing Skills</a></div>
-                                    <div class="team_subtitle">For Ages: 5 & above</div>
-                                    <div class="social_list">
-                                        <!--                                        <ul>
-                                                                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                                                                </ul>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Team Item -->
-                        <div class="col-lg-3 col-md-6 team_col">
-                            <div class="team_item">
-                                <div class="team_image"><img src="images/programs/program-006.png" alt=""></div>
-                                <div class="team_body">
-                                    <div class="team_title"><a href="#">Aloha Speed Maths</a></div>
-                                    <div class="team_subtitle">For Ages: 12 & above</div>
-                                    <div class="social_list">
-                                        <!--                                        <ul>
-                                                                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                                                                </ul>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Team Item -->
-                        <div class="col-lg-3 col-md-6 team_col">
-                            <div class="team_item">
-                                <div class="team_image"><img src="images/programs/program-007.png" alt=""></div>
-                                <div class="team_body">
-                                    <div class="team_title"><a href="#">Aloha Third Brain</a></div>
-                                    <div class="team_subtitle">For Ages: 5 - 14</div>
-                                    <div class="social_list">
-                                        <!--                                        <ul>
-                                                                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                                                                </ul>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Team Item -->
-                        <div class="col-lg-3 col-md-6 team_col">
-                            <div class="team_item">
-                                <div class="team_image"><img src="images/programs/program-008.png" alt=""></div>
-                                <div class="team_body">
-                                    <div class="team_title"><a href="#">The Aloha School</a></div>
-                                    <div class="team_subtitle"></div><br/>
-                                    <div class="social_list">
-                                        <!--                                        <ul>
-                                                                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                                                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                                                                </ul>-->
+                                <div class="course_footer">
+                                    <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                     </div>
+                    
+                     <div class="row courses_row">
+
+                        <!-- Course -->
+                        <div class="col-lg-3 course_col">
+                            <div class="course">
+                                <div class="course_image"><img src="images/programs/program-005.png" alt=""></div>
+                                <div class="course_body text-center">
+                                    <h3 class="course_title"><a href="#">Aloha Hand Writing Skills</a></h3>
+                                    <div class="course_teacher">For Ages: 5 & above</div>
+                                    <div class="course_text">
+                                        <p>The Aloha Handwriting Skills program is intended to improve the student’s writing style</p>
+                                    </div>
+                                </div>
+                                <div class="course_footer">
+                                    <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course -->
+                        <div class="col-lg-3 course_col">
+                            <div class="course">
+                                <div class="course_image"><img src="images/programs/program-006.png" alt=""></div>
+                                <div class="course_body text-center">
+                                    <h3 class="course_title"><a href="#">Aloha Speed Maths</a></h3>
+                                    <div class="course_teacher">For Ages: 12 & above</div>
+                                    <div class="course_text">
+                                        <p>ALOHA SPEED MATHS not only helps children in their childhood to perform, but this tool comes handy</p>
+                                    </div>
+                                </div>                               
+                                <div class="course_footer">
+                                    <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course -->
+                        <div class="col-lg-3 course_col">
+                            <div class="course">
+                                <div class="course_image"><img src="images/programs/program-007.png" alt=""></div>
+                                <div class="course_body text-center">
+                                    <h3 class="course_title"><a href="#">Aloha Third Brain</a></h3>
+                                    <div class="course_teacher">For Ages: 5 - 14</div>
+                                    <div class="course_text">
+                                        <p>The Aloha Third Brian is a technology of optimizing the function of the Midbrain(Interbrain). </p>
+                                    </div>
+                                </div>
+                                <div class="course_footer">
+                                    <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course -->
+                        <div class="col-lg-3 course_col">
+                            <div class="course">
+                                <div class="course_image"><img src="images/programs/program-008.png" alt=""></div>
+                                <div class="course_body text-center">
+                                    <h3 class="course_title"><a href="#">The Aloha School</a></h3>
+                                    <div class="course_teacher">&nbsp;</div>
+                                    <div class="course_text">
+                                        <p>Mr Kumaran K started Aloha India with just one centre at Chennai in Aug 2002 with 3 students.</p>
+                                    </div>
+                                </div>
+                                <div class="course_footer">
+                                    <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+<!--                    <div class="row">
+                        <div class="col">
+                            <div class="courses_button trans_200"><a href="#">view all courses</a></div>
+                        </div>
+                    </div>-->
                 </div>
             </div>
 

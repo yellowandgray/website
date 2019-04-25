@@ -977,7 +977,7 @@ section
 {
     position: relative;
     font-size: 20px;
-    margin-top: 75px;
+    margin-top: 23px;
 }
 
 /*********************************
@@ -1015,14 +1015,14 @@ section
 .course_body
 {
     padding-top: 22px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-bottom: 23px;
 }
 .course_title a
 {
     font-family: 'Roboto Slab', serif;
-    font-size: 20px;
+    font-size: 17.2px;
     color: #384158;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
