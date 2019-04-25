@@ -47,7 +47,7 @@
                                 <li class="dropdown">
                                     <a href="#">About <i class="fa fa-caret-down" aria-hidden="true"></i></a>
                                     <ul class="dropdown-content">
-                                        <li><a href="company-profile.php">Company Profile</a></li>
+                                        <li><a href="#">Company Profile</a></li>
                                         <li><a href="#">Vision & Mission</a></li>
                                         <li><a href="#">Message From Chairman</a></li>
                                         <li><a href="#">Research</a></li>
