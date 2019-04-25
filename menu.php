@@ -32,16 +32,55 @@
                 <li class="nav-item dropdown">
                     <a href="about.html" class="nav-link" data-toggle="dropdown">About Us</a>
                     <ul class="dropdown-content">
-                        <li><a href="">Hello World!</a></li>
-                        <li><a href="">Hello World!</a></li>
-                        <li><a href="">Hello World!</a></li>
+                        <li><a href="">Company Profile</a></li>
+                        <li><a href="">Vision & Mission</a></li>
+                        <li><a href="">Message From Chairman</a></li>
+                        <li><a href="">Research</a></li>
+                        <li><a href="">Contact Us</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a href="teacher.html" class="nav-link">Aloha Programs</a></li>
-                <li class="nav-item"><a href="courses.html" class="nav-link">Virtual Classroom</a></li>
+                <li class="nav-item dropdown">
+                    <a href="teacher.html" class="nav-link"  data-toggle="dropdown">Aloha Programs</a>
+                    <ul class="dropdown-content">
+                        <li><a href="">Mental Arithmetic</a></li>
+                        <li><a href="">Tiny Tots</a></li>
+                        <li><a href="">English Smart</a></li>
+                        <li><a href="">Aloha Kids art</a></li>
+                        <li><a href="">Aloha Handwriting</a></li>
+                        <li><a href="">Speed Maths</a></li>
+                        <li><a href="">Aloha Third Brain</a></li>
+                        <li><a href="">The Aloha School</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="courses.html" class="nav-link"  data-toggle="dropdown">Virtual Classroom</a>
+                    <ul class="dropdown-content">
+                        <li><a href="">Finger Calculation</a></li>
+                        <li><a href="">Abacus Calculation</a></li>
+                        <li><a href="">Online Demo</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a href="pricing.html" class="nav-link">News & Events</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Apply</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Resource</a></li>
+                <li class="nav-item dropdown">
+                    <a href="blog.html" class="nav-link" data-toggle="dropdown">Apply</a>
+                    <ul class="dropdown-content">
+                        <li><a href="">Franchise Enquiry</a></li>
+                        <li><a href="">Parents Feedback</a></li>
+                        <li><a href="">Student Application</a></li>
+                        <li><a href="">Course Instructor</a></li>
+                        <li><a href="">Careers</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="contact.html" class="nav-link" data-toggle="dropdown">Resource</a>
+                    <ul class="dropdown-content">
+                        <li><a href="">Newsletter</a></li>
+                        <li><a href="">Press Release</a></li>
+                        <li><a href="">Gallery</a></li>
+                        <li><a href="">Useful Links</a></li>
+                        <li><a href="">Model Centre</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

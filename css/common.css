@@ -7,7 +7,7 @@
     display: none;
     position: absolute;
     background-color: #1faaf1;
-    min-width: 160px;
+    min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
@@ -160,11 +160,60 @@
     color: #757575 !important;
 }
 .carousel-inner p a:hover {
-    color: #007bff !important;
+    color: #0792ec !important;
 }
 .pad-b-70 {
     padding-bottom: 70px !important;
 }
 .pad-30 {
     padding: 30px 0px !important;
+}
+.btn.btn-primary-1 {
+    background: #c9d000;
+    /*border: 1px solid #cfd600;*/
+    color: #fff;
+}
+.btn.btn-primary-1:hover {
+    border: 1px solid #004071;
+    background: transparent;
+    color: #0ba231;
+}
+.btn.btn-secondary-1 {
+    background: #3285bb;
+    /*border: 1px solid #cfd600;*/
+    color: #fff;
+}
+.btn-secondary-1:hover {
+    background: #f9f9f9;
+    border: 1px solid #cfd600;
+    color: #004877;
+}
+.height-200 {
+    height: 200px;
+}
+.btn-secondary-2 {
+    background: #3285bb;
+    /*border: 1px solid #cfd600;*/
+    color: #fff;
+}
+.btn-secondary-2:hover {
+    border: 1px solid #1eaaf1;
+    background: transparent;
+    color: #1eaaf1;
+}
+.btn.btn-tertiary:hover {
+    border: 1px solid #1eaaf1;
+    background: transparent;
+    color: #1eaaf1;
+}
+.height-80 {
+    height: 80px;
+}
+.program-h3-size a{
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 22px;
+}
+.color-white {
+    color: #fff !important;
 }

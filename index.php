@@ -113,15 +113,18 @@
                 <div class="row">
                     <div class="col-md-6 wrap-about py-5 wrap-about bg-light">
                         <div class="text px-4 ftco-animate">
-                            <h2 class="mb-4 color-black">Welcome to ALOHA</h2>
 
+                            <div class="heading-section ftco-animate">
+                                <h2 class="mb-4"><span>Welcome to</span> ALOHA</h2>
+                            </div>
                             <p class="text-justify">Aloha India, which was established in 2002 at Chennai, is the Indian subsidiary of Aloha International, Malaysia, a global leader in advanced abacus and Mental Arithmetic programs specially designed for children in the 4-14 year age span. Essentially, the Aloha Programs are nothing but scientific brain management techniques that unveil the infinite potential of the human brain and its effective use.</p>
-<!--                            <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. And if she hasn’t been rewritten, then they are still using her.</p>-->
-                            <p><a href="#" class="btn btn-secondary px-4 py-3">Read More</a></p>
+                            <p><a href="#" class="btn btn-secondary-1">See More Details...</a></p>
                         </div>
                     </div>
                     <div class="col-md-6 col-center m-auto wrap-about py-5">
-                        <h2 class="mb-4 color-black">Current Affairs</h2>
+                        <div class="heading-section ftco-animate">
+                            <h2 class="mb-4">Current Affairs</h2>
+                        </div>
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <!-- Carousel indicators -->
                             <ol class="carousel-indicators">
@@ -180,9 +183,8 @@
             <div class="overlay"></div>
             <div class="container">
                 <div class="row justify-content-center mb-5 pb-2">
-                    <div class="col-md-8 text-center heading-section ftco-animate">
-                        <h2 class="mb-4"><span>Our</span> Programs</h2>
-                        <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
+                    <div class="col-md-12 text-center heading-section ftco-animate">
+                        <h2 class="mb-4 color-white"><span>Our</span> Programs</h2>
                     </div>
                 </div>	
                 <div class="row">
@@ -190,10 +192,11 @@
                         <div class="img text-center box-1">
                             <img src="images/program-001.png" alt="" class="width-100p">
                             <div class="pad-10">
-                                <h3><a href="#">Mental Arithmetic</a></h3>
+                                <div class="height-80">
+                                    <h3><a href="#">Mental Arithmetic</a></h3>
+                                </div>
                                 <p class="subheading"><span>For ages:</span> 6 - 14</p>
-                                 <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
-                            </div>
+                             </div>
                         </div>
 
                     </div>
@@ -201,9 +204,10 @@
                         <div class="img text-center box-1">
                             <img src="images/program-002.png" alt="" class="width-100p">
                             <div class="pad-10">
-                                <h3><a href="#">Tiny Tots</a></h3>
+                                <div class="height-80">
+                                    <h3 class="program-h3-size"><a href="#">Tiny Tots</a></h3>
+                                </div>
                                 <p class="subheading"><span>For ages:</span> 4 - 7</p>
-                                <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
                             </div>
                         </div>
                     </div>
@@ -211,9 +215,10 @@
                         <div class="img text-center box-1">
                             <img src="images/program-003.png" alt="" class="width-100p">
                             <div class="pad-10">
-                                <h3><a href="#">English Smart</a></h3>
+                                <div class="height-80">
+                                    <h3 class="program-h3-size"><a href="#">English Smart</a></h3>
+                                </div>
                                 <p class="subheading"><span>For ages:</span> 6 - 14</p>
-                                <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
                             </div>
                         </div>
                     </div>
@@ -221,19 +226,21 @@
                         <div class="img text-center box-1">
                             <img src="images/program-004.png" alt="" class="width-100p">
                             <div class="pad-10">
-                                <h3><a href="#">Aloha Kids art</a></h3>
+                                <div class="height-80">
+                                    <h3 class="program-h3-size"><a href="#">Aloha Kids art</a></h3>
+                                </div>
                                 <p class="subheading"><span>For ages:</span> 4 - 15</p>
-                                 <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
-                            </div>
+                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 course d-lg-flex ftco-animate">
                         <div class="img text-center box-1">
                             <img src="images/program-005.png" alt="" class="width-100p">
                             <div class="pad-10">
-                                <h3><a href="#">Aloha Handwriting</a></h3>
+                                <div class="height-80">
+                                    <h3 class="program-h3-size"><a href="#">Aloha Handwriting</a></h3>
+                                </div>
                                 <p class="subheading"><span>For ages:</span> 5 & above</p>
-                                 <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
                             </div>
                         </div>
                     </div>
@@ -241,9 +248,10 @@
                         <div class="img text-center box-1">
                             <img src="images/program-006.png" alt="" class="width-100p">
                             <div class="pad-10">
-                                <h3><a href="#">Speed Maths</a></h3>
+                                <div class="height-80">
+                                    <h3 class="program-h3-size"><a href="#">Speed Maths</a></h3>
+                                </div>
                                 <p class="subheading"><span>For ages:</span> 12 & above</p>
-                                <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
                             </div>
                         </div>
                     </div>
@@ -251,19 +259,20 @@
                         <div class="img text-center box-1">
                             <img src="images/program-007.png" alt="" class="width-100p">
                             <div class="pad-10">
-                                <h3><a href="#">Aloha Third Brain</a></h3>
+                                <div class="height-80">
+                                    <h3 class="program-h3-size"><a href="#">Aloha Third Brain</a></h3>
+                                </div>
                                 <p class="subheading"><span>For ages:</span>5 - 14</p>
-                                <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
-                            </div>
+                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 course d-lg-flex ftco-animate">
                         <div class="img text-center box-1">
                             <img src="images/program-008.png" alt="" class="width-100p">
                             <div class="pad-10">
-                                <h3><a href="#">The Aloha School</a></h3>
-<!--                                <p class="subheading"><span>For ages:</span> 6 - 14</p>-->
-                                <!--<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>-->
+                                <div class="height-80">
+                                    <h3 class="program-h3-size"><a href="#">The Aloha School</a></h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -276,21 +285,24 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="color-black">Franchise Details</h2>
-                        <img src="images/franch.jpg" alt="" class="width-100"/>
+                        <div class="heading-section ftco-animate">
+                            <h2 class="mb-4"><span>Franchise</span> Details</h2>
+                        </div>
+                        <img src="images/franch-1.jpg" alt="" class="width-100"/>
                         <h3 class="color-black">Advantages</h3>
 
-                        <p class="text-justify">1. Working with children always is challenging – and very satisfying!</p>
-                        <p class="text-justify">2. And what better way than to open their limitless mind to a powerful learning system?</p>
-                        <p class="text-justify">3. Aloha India invites energetic, aggressive individuals, businessmen and women entrepreneur to explore our franchisee business opportunities.</p>
-
-                        <p class="mb-0"></p>
+                        <p class="text-justify">Working with children always is challenging – and very satisfying!And what better way than to open their limitless mind to a powerful learning system?</p>
+                        <p class="text-justify">Aloha India invites energetic, aggressive individuals, businessmen and women entrepreneur to explore our franchisee business opportunities.</p>
+                        <p class="button"><a href="#" class="btn btn-primary-1">See More Details...</a></p>
                     </div>
                     <!--                    <div class="col-md-6 d-flex align-items-center">-->
                     <div class="col-md-6">
-                        <h2 class="color-black">Video</h2>
-                        <iframe class="width-100" height="310px" src="https://www.youtube.com/embed/OFNFKESjvzU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <p class="mb-0"><a href="#" class="btn btn-secondary px-4 py-3">Take a Course</a></p>
+
+                        <div class="heading-section ftco-animate">
+                            <h2 class="mb-4">Video</h2>
+                        </div>
+                        <iframe class="width-100" height="380px" src="https://www.youtube.com/embed/OFNFKESjvzU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p class="mb-0"><a href="#" class="btn btn-secondary-1">See More Videos...</a></p>
                     </div>
                 </div>
             </div>
@@ -304,11 +316,11 @@
                                 <p><span class="price">Testimonials</span></p>
                             </div>
                             <img src="images/testimonials-icon.png" alt="">
-                            <div class="px-4">
+                            <div class="px-4 height-200">
                                 <h3 class="color-black">K.Rajesh</h3>
                                 <p>The students were well benifitted and we found classes have many impressive approach in it […]</p>
                             </div>
-                            <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Take A Course</a></p>
+                            <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Read More</a></p>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-4 ftco-animate">
@@ -317,11 +329,11 @@
                                 <p><span class="price">FAQ</span></p>
                             </div>
                             <img src="images/faq-icon.png" alt="">
-                            <div class="px-4">
+                            <div class="px-4 height-200">
                                 <h3 class="color-black">Frequently Asked Questions</h3>
                                 <p>How much would Franchise cost me? The investment varies for Centers: A, B, C & D for information on investment, please refer to the enclosed financials.</p>
                             </div>
-                            <p class="button text-center"><a href="#" class="btn btn-secondary px-4 py-3">Take A Course</a></p>
+                            <p class="button text-center"><a href="#" class="btn btn-secondary-2 px-4 py-3">Read More</a></p>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-4 ftco-animate">
@@ -330,11 +342,11 @@
                                 <p><span class="price">Achievements</span></p>
                             </div>
                             <img src="images/achievements-icon.png" alt="">
-                            <div class="px-4">
+                            <div class="px-4 height-200">
                                 <h3 class="color-black">Aloha Talented Buds @ Gujarat</h3>
                                 <p>Aloha India is proud of the various shining stars of Initiative Academy, Ahmedabad, Gujarat. </p>
                             </div>
-                            <p class="button text-center"><a href="#" class="btn btn-tertiary px-4 py-3">Take A Course</a></p>
+                            <p class="button text-center"><a href="#" class="btn btn-tertiary px-4 py-3">Read More</a></p>
                         </div>
                     </div>
 
