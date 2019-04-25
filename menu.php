@@ -32,11 +32,11 @@
                 <li class="nav-item dropdown">
                     <a href="about.html" class="nav-link" data-toggle="dropdown">About Us</a>
                     <ul class="dropdown-content">
-                        <li><a href="">Company Profile</a></li>
-                        <li><a href="">Vision & Mission</a></li>
-                        <li><a href="">Message From Chairman</a></li>
-                        <li><a href="">Research</a></li>
-                        <li><a href="">Contact Us</a></li>
+                        <li><a href="company-profile.php">Company Profile</a></li>
+                        <li><a href="vision-mission.php">Vision & Mission</a></li>
+                        <li><a href="from-chairman.php">Message From Chairman</a></li>
+                        <li><a href="research.php">Research</a></li>
+                        <li><a href="contact-us.php">Contact Us</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

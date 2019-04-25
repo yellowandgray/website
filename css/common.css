@@ -145,7 +145,7 @@
 .box-1 {
     padding: 20px;
     outline-offset: 8px;
-    background: #9e9e9e73;
+    background: #31678a;
 }
 .box-1:hover {
     padding: 20px;
@@ -216,4 +216,25 @@
 }
 .color-white {
     color: #fff !important;
+}
+.pad-t-70 {
+    padding-top: 70px;
+}
+.color-l-green {
+    color: #cfd600 !important;
+}
+
+.subheading {
+    color: #c4eeff;
+}
+.box-1:hover .subheading {
+    color: #000000;
+}
+.mt-10 {
+    margin-top: 10px !important;
+}
+.border-r img {
+    border-radius: 50%;
+    /* outline: 1px solid; */
+    border: 1px solid #cfd600;
 }

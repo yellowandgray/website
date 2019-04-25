@@ -2068,10 +2068,10 @@ a.btn.disabled,
 fieldset:disabled a.btn {
     pointer-events: none; }
 
-.btn-primary {
+/*.btn-primary {
     color: #fff;
     background-color: #007bff;
-    border-color: #007bff; }
+    border-color: #007bff; }*/
 .btn-primary:hover {
     color: #fff;
     background-color: #0069d9;
@@ -8005,7 +8005,7 @@ a:hover, a:focus {
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
     line-height: 1.5;
-    color: #e6e6e6;
+    color: #000000;
     font-weight: 400; }
 
 .text-primary {
@@ -8441,7 +8441,7 @@ h1, h2, h3, h4, h5,
     outline: none; }
 .btn.btn-primary {
     background: #4dbf9d;
-    border: 1px solid #1eaaf1;
+    /*border: 1px solid #1eaaf1;*/
     color: #fff;
 }
 .btn.btn-primary:hover {
@@ -8582,7 +8582,7 @@ h1, h2, h3, h4, h5,
     background-repeat: no-repeat;
     background-position: top center;
     position: relative;
-    color: #cfd600; }
+    color: #484844; }
 @media (max-width: 1199.98px) {
     .ftco-intro {
         background-position: center center !important; } }
@@ -8622,7 +8622,7 @@ h1, h2, h3, h4, h5,
         height: 300px; } }
 
 .staff {
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin-bottom: 30px;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -8730,7 +8730,7 @@ h1, h2, h3, h4, h5,
     .pricing-entry {
         margin-bottom: 30px; } }
 .pricing-entry > div {
-    padding: 20px; }
+    padding: 10px; }
 .pricing-entry > div p {
     margin-bottom: 0; }
 .pricing-entry h3 {
@@ -8739,7 +8739,7 @@ h1, h2, h3, h4, h5,
 .pricing-entry p .price {
     font-weight: 900;
     font-size: 28px;
-    color: #1eaaf1;
+    color: #0ba231;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
