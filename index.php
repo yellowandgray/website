@@ -225,11 +225,11 @@
 
 
             <div class="welcom-section-1">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="row">
                         <div class="col-md-6">
                             <h2>Franchise Details</h2>
-                            <img src="images/franch.jpg" alt="" class="width-100"/>
+<!--                            <img src="images/franch.jpg" alt="" class="width-100"/>-->
                             <h3>Advantages</h3>
                             <ul class="list-style">
                                 <i class="fa fa-check" aria-hidden="true"></i><li>Working with children always is challenging – and very satisfying!</li>
@@ -240,7 +240,7 @@
                         </div>
                         <div class="col-md-6">
                             <h2>Video</h2>
-                            <iframe class="width-100" height="450" src="https://www.youtube.com/embed/OFNFKESjvzU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="width-100" height="315" src="https://www.youtube.com/embed/OFNFKESjvzU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <a href="#" class="btn">See More Videos</a>
                         </div>
                     </div>
@@ -259,7 +259,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row courses_row">
 
                         <!-- Course -->
@@ -339,8 +339,8 @@
                         </div>
 
                     </div>
-                    
-                     <div class="row courses_row">
+
+                    <div class="row courses_row">
 
                         <!-- Course -->
                         <div class="col-lg-3 course_col">
@@ -419,12 +419,12 @@
                         </div>
 
                     </div>
-                    
-<!--                    <div class="row">
-                        <div class="col">
-                            <div class="courses_button trans_200"><a href="#">view all courses</a></div>
-                        </div>
-                    </div>-->
+
+                    <!--                    <div class="row">
+                                            <div class="col">
+                                                <div class="courses_button trans_200"><a href="#">view all courses</a></div>
+                                            </div>
+                                        </div>-->
                 </div>
             </div>
 
@@ -432,43 +432,43 @@
             <div class="width-100 padding-tb-100">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 col-lg-4">
-                            <div class="bg-light pb-4 text-center height-585 margin-b-20">
-                                <div class="padding-tb-20">
+                        <div class="col-md-12 col-lg-4 ftco-animate">
+                            <div class="pricing-entry pb-4 text-center">
+                                <div>
                                     <h2>Testimonials</h2>
                                 </div>
-                                <img src="images/testimonials-icon.png" alt="">
-                                <div class="px-4">
-                                    <h3 class="color-black">K.Rajesh</h3>
-                                    <p>The students were well benifitted and we found classes have many impressive approach in it […]</p>
-                                </div>
-                                <p class="button text-center" style="margin-top: 62px;"><a href="#" class="btn btn-primary px-4 py-3">Take A Course</a></p>
+                                <img src="images/testimonials-icon-01.png" alt="" class="width-100p">
+                                <div class="px-4 height-200">
+                                    <h3 class="color-l-green">K.Rajesh</h3>
+                                    <p class="color-white">The students were well benifitted and we found classes have many impressive approach in it […]</p>
+                                </div><br/><br/><br/><br/>
+                                <p class="button text-center"><a href="#" class="btn btn-primary">Read More</a></p>
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-4 ftco-animate">
-                            <div class="bg-light pb-4 text-center height-585 margin-b-20">
-                                <div class="padding-tb-20">
+                            <div class="pricing-entry  pb-4 text-center">
+                                <div>
                                     <h2>FAQ</h2>
                                 </div>
-                                <img src="images/faq-icon.png" alt="">
-                                <div class="px-4">
-                                    <h3 class="color-black">Frequently Asked Questions</h3>
-                                    <p>How much would Franchise cost me? The investment varies for Centers: A, B, C & D for information on investment, please refer to the enclosed financials.</p>
-                                </div>
-                                <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Take A Course</a></p>
+                                <img src="images/faq-icon-01.png" alt="" class="width-100p">
+                                <div class="px-4 height-200">
+                                    <h3 class="color-l-green">Frequently Asked Questions</h3>
+                                    <p class="color-white">How much would Franchise cost me? The investment varies for Centers: A, B, C & D for information on investment, please refer to the enclosed financials.</p>
+                                </div><br/>
+                                <p class="button text-center"><a href="#" class="btn btn-primary">Read More</a></p>
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-4 ftco-animate">
-                            <div class="bg-light active pb-4 text-center height-585 margin-b-20">
-                                <div class="padding-tb-20">
-                                    <h2>Achievements </h2>
+                            <div class="pricing-entry active pb-4 text-center">
+                                <div>
+                                    <h2>Achievements</h2>
                                 </div>
-                                <img src="images/achievements-icon.png" alt="">
-                                <div class="px-4">
-                                    <h3 class="color-black">Aloha Talented Buds @ Gujarat</h3>
-                                    <p>Aloha India is proud of the various shining stars of Initiative Academy, Ahmedabad, Gujarat. </p>
-                                </div>
-                                <p class="button text-center" style="margin-top: 32px;"><a href="#" class="btn btn-primary px-4 py-3">Take A Course</a></p>
+                                <img src="images/achievements-icon-01.png" alt="" class="width-100p">
+                                <div class="px-4 height-200">
+                                    <h3 class="color-l-green">Aloha Talented Buds @ Gujarat</h3>
+                                    <p class="color-white">Aloha India is proud of the various shining stars of Initiative Academy, Ahmedabad, Gujarat. </p>
+                                </div><br/><br/><br/>
+                                <p class="button text-center" style="margin-top: -12px"><a href="#" class="btn btn-primary">Read More</a></p>
                             </div>
                         </div>
 
@@ -476,30 +476,77 @@
                 </div>
             </div>
 
-            <div class="newsletter">
-                <div class="newsletter_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
+            <div class="counter">
+                <div class="counter_background" style="background-image:url(images/counter_background.jpg)"></div>
                 <div class="container">
                     <div class="row">
-                        <div class="col">
-                            <div class="newsletter_container d-flex flex-lg-row flex-column align-items-center justify-content-start">
-
-                                <!-- Newsletter Content -->
-                                <div class="newsletter_content text-lg-left text-center">
-                                    <div class="newsletter_title">sign up for news and offers</div>
-                                    <div class="newsletter_subtitle">Subcribe to lastest smartphones news & great deals we offer</div>
+                        <div class="col-lg-6">
+                            <div class="counter_content">
+                                <h2 class="counter_title">Franchise Details</h2>
+                                <h3 class="counter_title">Advantages</h3>
+                                <div class="counter_text">
+                                    <ul class="list-style">
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>Working with children always is challenging – and very satisfying!</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>And what better way than to open their limitless mind to a powerful learning system?</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>Aloha India invites energetic, aggressive individuals, businessmen and women entrepreneur to explore our franchisee business opportunities.</li>
+                                        <a href="#" class="btn" style="font-size: 18px">See More</a>
+                                    </ul>
                                 </div>
+                                <!-- Milestones -->
 
-                                <!-- Newsletter Form -->
-                                <div class="newsletter_form_container ml-lg-auto">
-                                    <form action="#" id="newsletter_form" class="newsletter_form d-flex flex-row align-items-center justify-content-center">
-                                        <input type="email" class="newsletter_input" placeholder="Your Email" required="required">
-                                        <button type="submit" class="newsletter_button">subscribe</button>
-                                    </form>
+                                <div class="milestones d-flex flex-md-row flex-column align-items-center justify-content-between">
+
+                                    <!-- Milestone -->
+                                    <div class="milestone">
+                                        <div class="milestone_counter" data-end-value="15">0</div>
+                                        <div class="milestone_text">years</div>
+                                    </div>
+
+                                    <!-- Milestone -->
+                                    <div class="milestone">
+                                        <div class="milestone_counter" data-end-value="120" data-sign-after="k">0</div>
+                                        <div class="milestone_text">years</div>
+                                    </div>
+
+                                    <!-- Milestone -->
+                                    <div class="milestone">
+                                        <div class="milestone_counter" data-end-value="670" data-sign-after="+">0</div>
+                                        <div class="milestone_text">years</div>
+                                    </div>
+
+                                    <!-- Milestone -->
+                                    <div class="milestone">
+                                        <div class="milestone_counter" data-end-value="320">0</div>
+                                        <div class="milestone_text">years</div>
+                                    </div>
+
                                 </div>
+                            </div>
 
+                        </div>
+                    </div>
+
+                    <div class="counter_form">
+                        <div class="row fill_height">
+                            <div class="col fill_height">
+                                <form class="counter_form_content d-flex flex-column align-items-center justify-content-center" action="#">
+                                    <div class="counter_form_title">Contact Us</div>
+                                    <input type="text" class="counter_input" placeholder="Your Name:" required="required">
+                                    <input type="tel" class="counter_input" placeholder="Phone:" required="required">
+                                    <input type="text" class="counter_input" placeholder="Subject:" required="required">
+<!--                                    <select name="counter_select" id="counter_select" class="counter_input counter_options">
+                                        <option>Choose Subject</option>
+                                        <option>Subject</option>
+                                        <option>Subject</option>
+                                        <option>Subject</option>
+                                    </select>-->
+                                    <textarea class="counter_input counter_text_input" placeholder="Message:" required="required"></textarea>
+                                    <button type="submit" class="counter_form_button">submit now</button>
+                                </form>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 

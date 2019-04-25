@@ -221,6 +221,21 @@
 .title-bg-white {
     background: #fff;
     padding: 20px 0;
+    border-radius: 20px;
+}
+
+.counter_content li {
+    color: white;
+}
+
+.counter_content i {
+    color: white;
+}
+
+.pricing-entry {
+    background: #f5f5f5;
+    padding: 15px 0px 0px 0px;
+    box-shadow: 8px 1px 9px 6px #eee;
 }
 
 @media only screen and (max-width: 991px) {
