@@ -250,23 +250,22 @@ class="width-100p"<!DOCTYPE html>
         </section>
         <section class="ftco-section ftco-no-pb">
             <div class="container">
+                <div class="row justify-content-center mb-5 pb-2">
+                    <div class="col-md-12 text-center heading-section ftco-animate">
+                        <h2 class="mb-4"><span>Our</span> Programs</h2>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-3 ftco-animate">
                         <div class="staff">
                             <div class="img-wrap d-flex align-items-stretch">
-                                <div class="img align-self-stretch" style="background-image: url(images/teacher-1.jpg);"></div>
+                                <div class="img align-self-stretch" style="background-image: url(images/program/001.jpg);"></div>
                             </div>
                             <div class="text pt-3 text-center">
-                                <h3>Bianca Wilson</h3>
-                                <span class="position mb-2">Teacher</span>
+                                <h3>Mental Arithmetic</h3>
+                                <span class="position mb-2">For ages: 6 - 14</span>
                                 <div class="faded">
                                     <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                                    <ul class="ftco-social text-center">
-                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -274,19 +273,13 @@ class="width-100p"<!DOCTYPE html>
                     <div class="col-md-6 col-lg-3 ftco-animate">
                         <div class="staff">
                             <div class="img-wrap d-flex align-items-stretch">
-                                <div class="img align-self-stretch" style="background-image: url(images/teacher-2.jpg);"></div>
+                                <div class="img align-self-stretch" style="background-image: url(images/program/002.jpg);"></div>
                             </div>
                             <div class="text pt-3 text-center">
-                                <h3>Mitch Parker</h3>
-                                <span class="position mb-2">English Teacher</span>
+                                <h3>Tiny Tots</h3>
+                                <span class="position mb-2">For ages: 4 - 7</span>
                                 <div class="faded">
                                     <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                                    <ul class="ftco-social text-center">
-                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -294,19 +287,14 @@ class="width-100p"<!DOCTYPE html>
                     <div class="col-md-6 col-lg-3 ftco-animate">
                         <div class="staff">
                             <div class="img-wrap d-flex align-items-stretch">
-                                <div class="img align-self-stretch" style="background-image: url(images/teacher-3.jpg);"></div>
+                                <div class="img align-self-stretch" style="background-image: url(images/program/003.jpg);"></div>
                             </div>
                             <div class="text pt-3 text-center">
-                                <h3>Stella Smith</h3>
-                                <span class="position mb-2">Art Teacher</span>
+                                <h3>English Smart</h3>
+                                <span class="position mb-2">For ages: 6 - 14</span>
                                 <div class="faded">
                                     <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                                    <ul class="ftco-social text-center">
-                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                                    </ul>
+
                                 </div>
                             </div>
                         </div>
@@ -314,19 +302,13 @@ class="width-100p"<!DOCTYPE html>
                     <div class="col-md-6 col-lg-3 ftco-animate">
                         <div class="staff">
                             <div class="img-wrap d-flex align-items-stretch">
-                                <div class="img align-self-stretch" style="background-image: url(images/teacher-4.jpg);"></div>
+                                <div class="img align-self-stretch" style="background-image: url(images/program/004.jpg);"></div>
                             </div>
                             <div class="text pt-3 text-center">
-                                <h3>Monshe Henderson</h3>
-                                <span class="position mb-2">Science Teacher</span>
+                                <h3>Aloha Kids art</h3>
+                                <span class="position mb-2">For ages: 4 - 15</span>
                                 <div class="faded">
                                     <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                                    <ul class="ftco-social text-center">
-                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -334,19 +316,13 @@ class="width-100p"<!DOCTYPE html>
                     <div class="col-md-6 col-lg-3 ftco-animate">
                         <div class="staff">
                             <div class="img-wrap d-flex align-items-stretch">
-                                <div class="img align-self-stretch" style="background-image: url(images/teacher-5.jpg);"></div>
+                                <div class="img align-self-stretch" style="background-image: url(images/program/005.jpg);"></div>
                             </div>
                             <div class="text pt-3 text-center">
-                                <h3>Daniel Tribor</h3>
-                                <span class="position mb-2">Teacher</span>
+                                <h3>Aloha Handwriting</h3>
+                                <span class="position mb-2">For ages: 5 & above</span>
                                 <div class="faded">
                                     <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                                    <ul class="ftco-social text-center">
-                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -354,19 +330,13 @@ class="width-100p"<!DOCTYPE html>
                     <div class="col-md-6 col-lg-3 ftco-animate">
                         <div class="staff">
                             <div class="img-wrap d-flex align-items-stretch">
-                                <div class="img align-self-stretch" style="background-image: url(images/teacher-6.jpg);"></div>
+                                <div class="img align-self-stretch" style="background-image: url(images/program/006.jpg);"></div>
                             </div>
                             <div class="text pt-3 text-center">
-                                <h3>Mitch Parker</h3>
-                                <span class="position mb-2">English Teacher</span>
+                                <h3>Speed Maths</h3>
+                                <span class="position mb-2">For ages: 12 & above</span>
                                 <div class="faded">
                                     <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                                    <ul class="ftco-social text-center">
-                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -374,19 +344,13 @@ class="width-100p"<!DOCTYPE html>
                     <div class="col-md-6 col-lg-3 ftco-animate">
                         <div class="staff">
                             <div class="img-wrap d-flex align-items-stretch">
-                                <div class="img align-self-stretch" style="background-image: url(images/teacher-7.jpg);"></div>
+                                <div class="img align-self-stretch" style="background-image: url(images/program/007.jpg);"></div>
                             </div>
                             <div class="text pt-3 text-center">
-                                <h3>Stella Smith</h3>
-                                <span class="position mb-2">Art Teacher</span>
+                                <h3>Aloha Third Brain</h3>
+                                <span class="position mb-2">For ages:5 - 14</span>
                                 <div class="faded">
                                     <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                                    <ul class="ftco-social text-center">
-                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -394,19 +358,13 @@ class="width-100p"<!DOCTYPE html>
                     <div class="col-md-6 col-lg-3 ftco-animate">
                         <div class="staff">
                             <div class="img-wrap d-flex align-items-stretch">
-                                <div class="img align-self-stretch" style="background-image: url(images/teacher-8.jpg);"></div>
+                                <div class="img align-self-stretch" style="background-image: url(images/program/008.jpg);"></div>
                             </div>
                             <div class="text pt-3 text-center">
-                                <h3>Monshe Henderson</h3>
-                                <span class="position mb-2">Science Teacher</span>
+                                <h3>The Aloha School</h3>
+                                <span class="position mb-2"></span>
                                 <div class="faded">
                                     <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                                    <ul class="ftco-social text-center">
-                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -414,7 +372,7 @@ class="width-100p"<!DOCTYPE html>
                 </div>
             </div>
         </section>
-        <section class="ftco-section ftco-no-pb">
+<!--        <section class="ftco-section ftco-no-pb">
             <div class="container">
                 <div class="row justify-content-center mb-5 pb-2">
                     <div class="col-md-12 text-center heading-section ftco-animate">
@@ -538,101 +496,7 @@ class="width-100p"<!DOCTYPE html>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="ftco-section ftco-no-pb">
-            <div class="container">
-                <div class="row justify-content-center mb-5 pb-2">
-                    <div class="col-md-8 text-center heading-section ftco-animate">
-                        <h2 class="mb-4"><span>Certified</span> Teachers</h2>
-                        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-                    </div>
-                </div>	
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 ftco-animate">
-                        <div class="staff">
-                            <div class="img-wrap d-flex align-items-stretch">
-                                <div class="img align-self-stretch" style="background-image: url(images/program/001.jpg);"></div>
-                            </div>
-                            <div class="text pt-3 text-center">
-                                <h3>Bianca Wilson</h3>
-                                <span class="position mb-2">Teacher</span>
-                                <div class="faded">
-                                    <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                                    <ul class="ftco-social text-center">
-                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 ftco-animate">
-                        <div class="staff">
-                            <div class="img-wrap d-flex align-items-stretch">
-                                <div class="img align-self-stretch" style="background-image: url(images/teacher-2.jpg);"></div>
-                            </div>
-                            <div class="text pt-3 text-center">
-                                <h3>Mitch Parker</h3>
-                                <span class="position mb-2">English Teacher</span>
-                                <div class="faded">
-                                    <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                                    <ul class="ftco-social text-center">
-                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 ftco-animate">
-                        <div class="staff">
-                            <div class="img-wrap d-flex align-items-stretch">
-                                <div class="img align-self-stretch" style="background-image: url(images/teacher-3.jpg);"></div>
-                            </div>
-                            <div class="text pt-3 text-center">
-                                <h3>Stella Smith</h3>
-                                <span class="position mb-2">Art Teacher</span>
-                                <div class="faded">
-                                    <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                                    <ul class="ftco-social text-center">
-                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 ftco-animate">
-                        <div class="staff">
-                            <div class="img-wrap d-flex align-items-stretch">
-                                <div class="img align-self-stretch" style="background-image: url(images/teacher-4.jpg);"></div>
-                            </div>
-                            <div class="text pt-3 text-center">
-                                <h3>Monshe Henderson</h3>
-                                <span class="position mb-2">Science Teacher</span>
-                                <div class="faded">
-                                    <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                                    <ul class="ftco-social text-center">
-                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        </section>-->
         <section class="ftco-intro" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
             <div class="container">
