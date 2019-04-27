@@ -605,7 +605,8 @@ img.img-responsive {
     margin: 0 8px;
     color: #fff;}
 #about {
-    padding: 100px 0;
+    padding: 120px 0;
+    background: #ece9e7;
 }
 .carousel-content{
     padding: 50px 20px;
@@ -636,10 +637,12 @@ img.img-responsive {
 #course .team-member {
     padding: 15px;
     border: 2px solid #ffffff;
-    background: #fff;
+    background: #ffffff8f;
     height: 400px;
     margin-bottom: 15px;
+    box-shadow: 7px 9px 20px 0px #eee;
 }
+
 #course .team-member .team-img {
     margin: -15px -15px 0 -15px;
     text-align: center;
@@ -835,17 +838,17 @@ img.img-responsive {
     color: #121D29;
 }
 #contact-us {
-    padding: 100px 0 0px;
+    padding: 120px 0 0px;
     /* background: #D2D2D2; */
     color: #121D29;
 }
 #contact-us h1,
 #contact-us h2 {
-    color: #ffffff;
+    color: #000000;
 }
 
 #contact-us .section-header p {
-    color: #ffffff;
+    color: #000000;
 }
 
 /*Contact*/
@@ -869,10 +872,11 @@ img.img-responsive {
 }
 
 .contact-form {
-    background: #ffffffad;
+    background: #ffffff;
     padding: 35px 60px;
     border: 1px solid;
-    border-radius: 5px
+    border-radius: 5px;
+    height: 390px;
 }
 
 .form-control:focus {
@@ -892,10 +896,10 @@ img.img-responsive {
     background: #141414;
 }
 #footer a {
-    color: #f92222;
+    color: #f15c2b;
 }
 #footer a:hover {
-    color: #45aed6;
+    color: #ffffff;
 }
 #footer ul {
     list-style: none;
@@ -906,7 +910,7 @@ img.img-responsive {
     display: inline-block;
     /* background: rgb(54, 54, 54); */
     padding: 3px 0;
-    width: 31px;
+    /*    width: 31px;*/
     text-align: center;
 }
 @media only screen and (min-width: 768px) {
@@ -990,21 +994,21 @@ img.img-responsive {
 .contact-add{
     border: 1px solid;
     padding: 20px;
-    background: #ffffffbd;
+    background: #ffffff;
     margin-bottom: 10px;
 }
 
 #why {
-    padding: 100px 0;
+    padding: 120px 0;
     background: #000000;
 }
 #home {
-    padding: 100px 0;
+    padding: 120px 0;
     background: #fff;
 
 }
 #course {
-    padding: 100px 0;
+    padding: 120px 0;
 
 }
 .color-white {
@@ -1031,4 +1035,14 @@ img.img-responsive {
 .width-100{
     width: 100%;
     height: auto;
+}
+.logo {
+    height: auto;
+    padding: 40px 0;
+}
+
+.about-img img{
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }

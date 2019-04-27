@@ -34,7 +34,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                        <a class="logo" href="#main-slider"><img src="images/logo.png" alt="logo"></a>
                     </div>
 
                     <div class="collapse navbar-collapse navbar-right">
@@ -60,7 +60,7 @@
                             <div class="row"> 
                                 <div class="carousel-caption">
                                     <div class="carousel-content">
-                                        <h2>Enrich Academy</h2>
+                                        <h2>Nurturing Academic Excellence</h2>
                                         <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod.</p>--> 
                                     </div>
                                 </div> 
@@ -74,12 +74,27 @@
                             <div class="row"> 
                                 <div class="carousel-caption">
                                     <div class="carousel-content">
-                                        <h2>Enrich Academy</h2>
+                                        <h2>Well-Qualified Faculty Team</h2>
                                         <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod.</p>--> 
                                     </div>
                                 </div>
                             </div>
-                        </div> </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(images/pic03.jpg);">
+                    <div class="slider-inner">
+                        <div class="container">
+                            <div class="row"> 
+                                <div class="carousel-caption">
+                                    <div class="carousel-content">
+                                        <h2>Systematic and Structured Courses</h2>
+                                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod.</p>--> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
                 </div>
             </div>
         </section><!--/#main-slider--> 
@@ -114,7 +129,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-6 wow fadeInLeft">
+                    <div class="col-sm-6 wow fadeInLeft about-img">
                         <img class="img-responsive  wow fadeInDown width-100" src="images/about.jpg" alt="">
                     </div>
 
@@ -135,7 +150,7 @@
                 </div>
             </div>
         </section><!--/#about-->
-        <section id="why">
+        <section id="why" style="background: url(images/why-bg.jpg)no-repeat;background-size: cover;">
             <!-- Start Gallery 1-2 -->
             <section id="gallery-1" data-section="gallery-1" class="data-section"  class="content-block section-wrapper gallery-1">
 
@@ -180,7 +195,7 @@
 
 
 
-        <section id="course">
+        <section id="course" style="background: url(images/courses-bg.jpg)no-repeat;background-size: cover;">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title text-center wow fadeInDown">Courses</h2>
@@ -425,7 +440,7 @@
         </section>/#contact-us-->
 
 
-        <section id="contact-us" style="background: url(images/contact-bg.jpg) no-repeat;">
+        <section id="contact-us" style="background: url(images/contact-bg.jpg) no-repeat;background-size: cover;">
 
             <div class="container">
                 <div class="section-header">
@@ -435,7 +450,7 @@
                 <div class="container contact-info">
                     <div class="row">
                         <div class="col-sm-6 col-md-6">
-                            <div class="contact-form contact-add">
+                            <div class="contact-form contact-add wow fadeInDown">
                                 <h3>Contact Info</h3>
                                 <i class="fa fa-phone-square" aria-hidden="true"></i> <p><a href="tel:+91 9962459875">+91 9962459875</a></p>
                                 <i class="fa fa-envelope" aria-hidden="true"></i>  <p><a href="mailto:"> admin@enrichkids.net</a></p>
@@ -445,9 +460,10 @@
                                     Gangai Nagar Main Road<br>
                                     Urapakkam – 603210<br>
                                 </p>
-                            </div></div>
+                            </div>
+                        </div>
                         <div class="col-sm-6 col-md-6">
-                            <div class="contact-form">
+                            <div class="contact-form wow fadeInDown">
 
                                 <form name="sentMessage" id="contactForm"  novalidate> 
                                     <div class="control-group mb-5">
@@ -491,12 +507,12 @@
                     </div>
                     <div class="col-sm-6">
                         <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> +91 9962459875</a></li> / 
+                            <li><a href="#"><i class="fa fa-envelope-o"></i> admin@enrichkids.net</a></li>
+<!--                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
                             <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fa fa-github"></i></a></li>
+                            <li><a href="#"><i class="fa fa-github"></i></a></li>-->
                         </ul>
                     </div>
                 </div>
