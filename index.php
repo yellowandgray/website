@@ -60,8 +60,8 @@
                             <div class="row"> 
                                 <div class="carousel-caption">
                                     <div class="carousel-content">
-                                        <h2>Car Servicing</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod.</p> 
+                                        <h2>Enrich Academy</h2>
+                                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod.</p>--> 
                                     </div>
                                 </div> 
                             </div>
@@ -74,8 +74,8 @@
                             <div class="row"> 
                                 <div class="carousel-caption">
                                     <div class="carousel-content">
-                                        <h2>Quick Car Wash</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod.</p> 
+                                        <h2>Enrich Academy</h2>
+                                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod.</p>--> 
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@
                     <p class="text-center wow fadeInDown">Welcome to Enrich Academy! An educational institute focussed on Nurturing Academic Excellence…</p>
                 </div>
 
-                <div class="row">
+                <div class="row wow fadeInDown">
                     <div class="features">
                         <div class="col-sm-12">
                             <p class="text-justify">Enclass="text-justifrich Academy, a supplementary educational institute at Urapakkam is launched by Enrich, a holistic educational services provider since 2010. Enrich also runs the Enrich Kids Preschool at Urapakkam since 2016. The academy is the germination of the need to provide an equal opportunity to students of all walks of life to succeed in their board exams and shine well in any competitive exam!</p>  
@@ -115,11 +115,11 @@
 
                 <div class="row">
                     <div class="col-sm-6 wow fadeInLeft">
-                        <img class="img-responsive" src="images/about.jpg" alt="">
+                        <img class="img-responsive  wow fadeInDown width-100" src="images/about.jpg" alt="">
                     </div>
 
                     <div class="col-sm-6 wow fadeInRight">
-                        <ul class="list-2">
+                        <ul class="list-2  wow fadeInDown">
                             <i class="fa fa-share" aria-hidden="true"></i><li>Personality Development Workshops</li>
                             <i class="fa fa-share" aria-hidden="true"></i><li>Counselling services for Kids and Parents</li>
                             <i class="fa fa-share" aria-hidden="true"></i><li>Parenting workshop</li>
@@ -146,7 +146,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
-                            <ul class="list-1">
+                            <ul class="list-1  wow fadeInDown">
                                 <i class="fa fa-hand-o-right" aria-hidden="true"></i> <li>Well-qualified, experienced and dedicated faculty</li>
                                 <i class="fa fa-hand-o-right" aria-hidden="true"></i><li>Faculty mentored by senior academicians and authors</li>
                                 <i class="fa fa-hand-o-right" aria-hidden="true"></i><li>A one-stop centre for maths and science subjects</li>
@@ -158,7 +158,7 @@
                             </ul>
                         </div>
                         <div class="col-sm-6">
-                            <ul class="list-1">
+                            <ul class="list-1  wow fadeInDown">
 
                                 <i class="fa fa-hand-o-right" aria-hidden="true"></i><li>Spacious classrooms with digital aids</li>
                                 <i class="fa fa-hand-o-right" aria-hidden="true"></i><li>Result-oriented mock-tests</li>
@@ -187,15 +187,15 @@
                 </div>
                 <div class="col-md-12  pad-t-15">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-6 col-sm-12">
                             <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
                                 <div class="team-img">
                                     <h3>+2 State Board</h3>
                                     <!--<img class="img-responsive" src="images/team/01.jpg" alt="">-->
                                 </div>
                                 <div>
-                                    <p class="text-justify">With the new syllabus from 2019 – 20, this course will be challenging for students. Utmost care will be taken to deliver the course in an-easy and effective way to ensure maximum results. Key highlights of this course include:</p>
-                                    <ul class="list-2">
+                                    <p class="text-justify  wow fadeInDown">With the new syllabus from 2019 – 20, this course will be challenging for students. Utmost care will be taken to deliver the course in an-easy and effective way to ensure maximum results. Key highlights of this course include:</p>
+                                    <ul class="list-2  wow fadeInDown">
                                         <i class="fa fa-arrow-right text-left" aria-hidden="true"></i><li class="text-left">Classes will be conducted on all days of the week</li>
                                         <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-left">Syllabus will be aimed to be completed by December</li>
                                         <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-left">Multiple Revision and Model exams will be provided during Jan and Feb</li>
@@ -204,7 +204,7 @@
                                 </div>  
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-6 col-sm-12">
                             <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
                                 <div class="team-img">
                                     <h3>+1 State Board</h3>
@@ -226,7 +226,7 @@
 
                 <div class="col-md-12 pad-t-15">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-6 col-sm-12">
                             <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
                                 <div class="team-img">
                                     <h3>Class X State Board</h3>
@@ -243,7 +243,7 @@
                                 </div>  
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-6 col-sm-12">
                             <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
                                 <div class="team-img">
                                     <h3>Class X CBSE Board</h3>
@@ -450,10 +450,9 @@
                             <div class="contact-form">
 
                                 <form name="sentMessage" id="contactForm"  novalidate> 
-                                    <div class="control-group mb-25">
+                                    <div class="control-group mb-5">
                                         <div class="controls">
                                             <input type="text" class="form-control" placeholder="Full Name" id="name" required data-validation-required-message="Please enter your name" />
-                                            <p class="help-block"></p>
                                         </div>
                                     </div> 	
                                     <div class="control-group  mb-5">

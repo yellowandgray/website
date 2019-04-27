@@ -638,6 +638,7 @@ img.img-responsive {
     border: 2px solid #ffffff;
     background: #fff;
     height: 400px;
+    margin-bottom: 15px;
 }
 #course .team-member .team-img {
     margin: -15px -15px 0 -15px;
@@ -990,7 +991,9 @@ img.img-responsive {
     border: 1px solid;
     padding: 20px;
     background: #ffffffbd;
+    margin-bottom: 10px;
 }
+
 #why {
     padding: 100px 0;
     background: #000000;
@@ -1023,4 +1026,9 @@ img.img-responsive {
 
 :-ms-input-placeholder {
     color: #000;
+}
+
+.width-100{
+    width: 100%;
+    height: auto;
 }
