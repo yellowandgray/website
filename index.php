@@ -43,12 +43,12 @@
                             <li class="scroll"><a href="#about">About Us</a></li>
                             <li class="scroll"><a href="#why">Why Enrich</a></li>
                             <li class="dropdown scroll">
-                                <a href="#course" data-toggle="dropdown">Courses</a>
+                                <a data-toggle="dropdown">Courses</a>
                                 <div class="dropdown-content">
-                                    <a href="">+2 State Board</a>
-                                    <a href="">+1 State Board</a>
-                                    <a href="">Class X State Board</a>
-                                    <a href="">Class X CBSE Board</a>
+                                    <a href="#course">+2 State Board</a>
+                                    <a href="#course">+1 State Board</a>
+                                    <a href="#course">Class X State Board</a>
+                                    <a href="#course">Class X CBSE Board</a>
                                 </div>
                             </li>
 
