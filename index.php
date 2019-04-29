@@ -90,18 +90,17 @@
                 <div class="row">
                     <div class="col-md-5 order-md-last wrap-about py-5 wrap-about bg-light">
                         <div class="row">
-                            <div class="col-md-12 wrap-about py-5 wrap-about bg-light">
+                            <div class="col-md-12 wrap-about wrap-about bg-light">
                                 <div class="text ftco-animate">
-
                                     <div class="heading-section ftco-animate">
                                         <h2 class="mb-4"><span>Welcome to</span> ALOHA</h2>
                                     </div>
-                                    <p class="text-justify">Aloha India, which was established in 2002 at Chennai, is the Indian subsidiary of Aloha International, Malaysia, a global leader in advanced abacus and Mental Arithmetic programs specially designed for children in the 4-14 year age span. Essentially, the Aloha Programs are nothing but scientific brain management techniques that unveil the infinite potential of the human brain and its effective use.</p>
+                                    <p class="text-justify">Aloha India, which was established in 2002 at Chennai, is the Indian subsidiary of Aloha International, Malaysia, a global leader in advanced abacus and Mental Arithmetic programs specially designed for children in the 4-14 year age span.</p>
                                     <p><a href="#" class="btn btn-secondary-1">See More Details...</a></p>
                                 </div>
                             </div>
                             <div class="col-md-12 col-center m-auto wrap-about">
-                                <div class="heading-section ftco-animate">
+                                <div class="ftco-animate">
                                     <h2 class="mb-4">Current Affairs</h2>
                                 </div>
                                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -116,15 +115,14 @@
                                     <!-- Wrapper for carousel items -->
                                     <div class="carousel-inner">
                                         <div class="item carousel-item active">
-                                            <h5 class="text-left color-green" style="text-transform: uppercase;"><strong>INTERNATIONAL COMPETITION 2019</strong> &nbsp;&nbsp; <img src="http://www.alohaindia.com/wp-content/uploads/2016/11/new.gif" alt="New" width="55px" height="55px"></h5>
+                                            <h5 class="text-left color-green" style="text-transform: uppercase;margin:0"><strong>INTERNATIONAL COMPETITION 2019</strong></h5>
                                             <p class="text-left"><a class="link-cls" href="images/events/China-invitation.pdf" target="_blank">&gt; INVITATION</a></p>
                                             <p class="text-left"><a class="link-cls" href="images/events/Flyer-International-Competition-China-2019.pdf" target="_blank">&gt; FLYER INTERNATIONAL COMPETITION</a></p>
                                             <p class="text-left"><a class="link-cls" href="images/events/International-Competition-China-2019-Word-with-cover.pdf" target="_blank">&gt; EVENT DETAILS</a></p>
                                             <p class="text-left"><a class="link-cls" href="images/events/Student-Registration-Form-China2019.pdf" target="_blank">&gt; STUDENT REGISTRATION FORM</a></p>
                                         </div>
                                         <div class="item carousel-item">
-                                            <h5 class="text-left color-green" style="text-transform: uppercase;"><strong>15th NATIONAL LEVEL COMPETITION WINNERS 2018<br>
-                                                </strong> &nbsp;&nbsp; <img src="http://www.alohaindia.com/wp-content/uploads/2016/11/new.gif" alt="New" width="55px" height="55px"></h5>
+                                            <h5 class="text-left color-green" style="text-transform: uppercase;margin:0"><strong>15th NATIONAL LEVEL COMPETITION WINNERS 2018</strong></h5>
                                             <p class="text-left"><a class="link-cls" href="images/events/ZHUSUAN-LIST-2018.pdf" target="_blank">&gt; ZHUSUAN AWARDEES 2018</a></p>
                                             <p class="text-left"><a class="link-cls" href="images/events/NLC-MENTAL-ARITHMETIC-2018-WINNERS.pdf" target="_blank">&gt; NATIONAL LEVEL MENTAL ARITHMETIC WINNERS 2018</a></p>
                                             <p class="text-left"><a class="link-cls" href="images/events/NLC-TINY-TOTS-2018-WINNERS.pdf" target="_blank">&gt; NATIONAL LEVEL TINY TOTS WINNERS 2018</a></p>
@@ -133,20 +131,19 @@
                                             <p class="text-left"><a class="link-cls" href="images/events/NLC-CHAMPION-2018-WINNERS.pdf" target="_blank">&gt; NAITONAL LEVEL CHAMPIONS 2018</a></p>
                                         </div>
                                         <div class="item carousel-item">
-                                            <h5 class="text-left color-green" style="text-transform: uppercase;"><strong>National Level Competition 2018 Franchise Circular<br>
-                                                </strong></h5>
+                                            <h5 class="text-left color-green" style="text-transform: uppercase;margin:0"><strong>National Level Competition 2018 Franchise Circular</strong></h5>
                                             <p class="text-left"><a class="link-cls" href="images/events/NLC-Circular-1.pdf" target="_blank">&gt; NLC CIRCULAR Ref AI / NLC/01/18</a></p>
                                             <p class="text-left"><a class="link-cls" href="images/events/NLC-Circular-2.pdf" target="_blank">&gt; NLC CIRCULAR Ref AI / NLC/02/18 </a></p>
                                             <p class="text-left"><a class="link-cls" href="images/events/NLC-Circular-3.pdf" target="_blank">&gt; NLC CIRCULAR Ref AI / NLC/03/18 </a></p>
                                             <p class="text-left"><a class="link-cls" href="images/events/NLC-2018-Hotel-Details.pdf" target="_blank">&gt; Hotel Details </a></p>
                                         </div>
                                         <div class="item carousel-item">
-                                            <h5 class="text-left color-green" style="text-transform: uppercase;"><strong>Aloha International Competition 2018 – Moscow, Russia</strong> &nbsp;&nbsp; <img src="http://www.alohaindia.com/wp-content/uploads/2016/11/new.gif" alt="New" width="55px" height="55px"></h5>
+                                            <h5 class="text-left color-green" style="text-transform: uppercase;margin:0"><strong>Aloha International Competition 2018 – Moscow, Russia</strong></h5>
                                             <p class="text-left"><a class="link-cls" href="images/events/India-WLIC2018.pdf" target="_blank">&gt; Winners List</a></p>
                                             <p class="text-left"><a class="link-cls" href="images/events/Football-Class-Aloha-INLC-Participants.pdf" target="_blank">&gt; Football Class for Aloha INLC Participants</a></p>
                                         </div>
                                         <div class="item carousel-item">
-                                            <h5 class="text-left color-green" style="text-transform: uppercase;"><strong>15th Aloha National Level Competition</strong> &nbsp;&nbsp; <img src="http://www.alohaindia.com/wp-content/uploads/2016/11/new.gif" alt="New" width="55px" height="55px"></h5>
+                                            <h5 class="text-left color-green" style="text-transform: uppercase;margin:0"><strong>15th Aloha National Level Competition</strong></h5>
                                             <p class="text-left"><a class="link-cls" href="https://drive.google.com/drive/folders/1ibTS_XCdL1Obx5JGXLweZ12feDbKniFL" target="_blank">&gt; Competition Day</a></p>
                                             <p class="text-left"><a class="link-cls" href="https://drive.google.com/drive/folders/14S8qVL21qaZNMI7Tcyz9Rzv3N20nxihz" target="_blank">&gt; Prize Distribution Day</a></p>
                                         </div>
@@ -524,7 +521,7 @@
                                 <h3 class="color-l-green">Frequently Asked Questions</h3>
                                 <p class="color-white">How much would Franchise cost me? The investment varies for Centers: A, B, C & D for information on investment, please refer to the enclosed financials.</p>
                             </div>
-                            <p class="button text-center"><a href="#" class="btn btn-secondary-2 px-4 py-3">Read More</a></p>
+                            <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Read More</a></p>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-4 ftco-animate">
@@ -537,7 +534,7 @@
                                 <h3 class="color-l-green">Aloha Talented Buds @ Gujarat</h3>
                                 <p class="color-white">Aloha India is proud of the various shining stars of Initiative Academy, Ahmedabad, Gujarat. </p>
                             </div>
-                            <p class="button text-center"><a href="#" class="btn btn-tertiary px-4 py-3">Read More</a></p>
+                            <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Read More</a></p>
                         </div>
                     </div>
 
@@ -556,7 +553,7 @@
                         </div>-->
         </section>
 
-        <section class="ftco-section testimony-section bg-light">
+<!--        <section class="ftco-section testimony-section bg-light">
             <div class="container">
                 <div class="row justify-content-center mb-5 pb-2">
                     <div class="col-md-8 text-center heading-section ftco-animate">
@@ -641,7 +638,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
 
         <section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb pad-30" style="background-image: url(images/bg_5.jpg);" data-stellar-background-ratio="0.5">
             <div class="container">

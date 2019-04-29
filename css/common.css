@@ -62,7 +62,7 @@
     font-size: 14px;
 
     overflow: hidden;
-    min-height: 290px;
+    min-height: 240px;
 }
 .carousel .item .img-box {
     width: 135px;
@@ -240,4 +240,8 @@
     border-radius: 50%;
     /* outline: 1px solid; */
     border: 1px solid #cfd600;
+}
+
+.carousel-item p {
+    margin-bottom: 0px;
 }
