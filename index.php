@@ -1,4 +1,4 @@
-class="width-100p"<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <?php
     include 'head.php';
