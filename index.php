@@ -39,10 +39,19 @@
 
                     <div class="collapse navbar-collapse navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="scroll active"><a href="#main-slider">Home</a></li> 
+                            <li class="scroll"><a href="#main-slider">Home</a></li> 
                             <li class="scroll"><a href="#about">About Us</a></li>
                             <li class="scroll"><a href="#why">Why Enrich</a></li>
-                            <li class="scroll"><a href="#course">Courses</a></li>
+                            <li class="dropdown scroll">
+                                <a href="#course" data-toggle="dropdown">Courses</a>
+                                <div class="dropdown-content">
+                                    <a href="">+2 State Board</a>
+                                    <a href="">+1 State Board</a>
+                                    <a href="">Class X State Board</a>
+                                    <a href="">Class X CBSE Board</a>
+                                </div>
+                            </li>
+
                             <!--                            <li class="scroll"><a href="#our-team">Team</a></li>
                                                         <li class="scroll"><a href="#pricing">Pricing</a></li>-->
                             <li class="scroll"><a href="#contact-us">Contact</a></li>                        
@@ -88,7 +97,7 @@
                             <div class="row"> 
                                 <div class="carousel-caption">
                                     <div class="carousel-content">
-                                        <h2>Systematic and Structured Courses</h2>
+                                        <h2>Systematic and Structured Approach</h2>
                                         <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod.</p>--> 
                                     </div>
                                 </div>
