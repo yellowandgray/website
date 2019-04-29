@@ -16,7 +16,7 @@
                                     </a>
                                 </div>
                                 <div class="footer_about_text">
-                                    <p>Aloha India, which was established in 2002 at Chennai, is the Indian subsidiary of Aloha International,</p>
+                                    <p>Aloha India, which was established in 2002 at Chennai, is the Indian subsidiary of Aloha International.</p>
                                 </div>
                                 <div class="footer_social">
                                     <ul>
@@ -88,7 +88,7 @@
             <div class="col">
                 <div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
                     <div class="cr_text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed by <a href="http://yellowandgray.com/" target="_blank">YG Studio</a>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 <!--                    <div class="ml-lg-auto cr_links">
                         <ul class="cr_list">

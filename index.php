@@ -229,18 +229,79 @@
                     <div class="row">
                         <div class="col-md-6">
                             <h2>Franchise Details</h2>
-<!--                            <img src="images/franch.jpg" alt="" class="width-100"/>-->
-                            <h3>Advantages</h3>
-                            <ul class="list-style">
-                                <i class="fa fa-check" aria-hidden="true"></i><li>Working with children always is challenging – and very satisfying!</li>
-                                <i class="fa fa-check" aria-hidden="true"></i><li>And what better way than to open their limitless mind to a powerful learning system?</li>
-                                <i class="fa fa-check" aria-hidden="true"></i><li>Aloha India invites energetic, aggressive individuals, businessmen and women entrepreneur to explore our franchisee business opportunities.</li>
-                            </ul>
+                            <div class="col-center m-auto">
+                                <div class="box-shadow">
+                                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                                        </ol>   
+                                        <div class="carousel-inner">
+                                            <div class="item carousel-item active">
+                                                <p class="overview"><b>INTERNATIONAL COMPETITION 2019 </b></p>
+                                                <p class="testimonial"><a href="images/events/China-invitation.pdf" target="blank">> INVITATION</a></p>
+                                                <p class="testimonial"><a href="images/events/Flyer-International-Competition-China-2019.pdf" target="blank">> FLYER INTERNATIONAL COMPETITION</a></p>
+                                                <p class="testimonial"><a href="images/events/International-Competition-China-2019-Word-with-cover.pdf" target="blank">> EVENT DETAILS</a></p>
+                                                <p class="testimonial"><a href="images/events/Student-Registration-Form-China2019.pdf" target="blank">> STUDENT REGISTRATION FORM</a></p>
+                                                <p class="testimonial">&nbsp;</p>
+                                                <p class="testimonial">&nbsp;</p>
+                                            </div>
+                                            <div class="item carousel-item">
+                                                <p class="overview"><b>15TH NATIONAL LEVEL COMPETITION WINNERS 2018</b></p>
+                                                <p class="testimonial"><a href="images/events/ZHUSUAN-LIST-2018.pdf" target="blank">> ZHUSUAN AWARDEES 2018</a></p>
+                                                <p class="testimonial"><a href="images/events/NLC-MENTAL-ARITHMETIC-2018-WINNERS.pdf" target="blank">> NATIONAL LEVEL MENTAL ARITHMETIC WINNERS 2018</a></p>
+                                                <p class="testimonial"><a href="images/events/NLC-TINY-TOTS-2018-WINNERS.pdf" target="blank">> NATIONAL LEVEL TINY TOTS WINNERS 2018</a></p>
+                                                <p class="testimonial"><a href="images/events/NLC-ENGLISH-SMART-2018-WINNERS.pdf" target="blank">> NATIONAL LEVEL ENGLISH SMART WINNERS 2018</a></p>
+                                                <p class="testimonial"><a href="images/events/NLC-SPEED-MATHS-2018-WINNERS.pdf" target="blank">> NATIONAL LEVEL SPEED MATHS WINNERS 2018</a></p>
+                                                <p class="testimonial"><a href="images/events/NLC-CHAMPION-2018-WINNERS.pdf" target="blank">> NAITONAL LEVEL CHAMPIONS 2018</a></p>
+                                            </div>
+                                            <div class="item carousel-item">
+                                                <p class="overview"><b>NATIONAL LEVEL COMPETITION 2018 FRANCHISE CIRCULAR</b></p>
+                                                <p class="testimonial"><a href="images/events/NLC-Circular-1.pdf" target="blank">> NLC CIRCULAR Ref AI / NLC/01/18</a></p>
+                                                <p class="testimonial"><a href="images/events/NLC-Circular-2.pdf" target="blank">> NLC CIRCULAR Ref AI / NLC/02/18</a></p>
+                                                <p class="testimonial"><a href="images/events/NLC-Circular-3.pdf" target="blank">> NLC CIRCULAR Ref AI / NLC/03/18</a></p>
+                                                <p class="testimonial"><a href="images/events/NLC-2018-Hotel-Details.pdf" target="blank">> Hotel Details</a></p>
+                                                <p class="testimonial">&nbsp;</p>
+                                                <p class="testimonial">&nbsp;</p>
+                                            </div>
+                                            <div class="item carousel-item">
+                                                <p class="overview"><b>ALOHA INTERNATIONAL COMPETITION 2018 – MOSCOW, RUSSIA</b></p>
+                                                <p class="testimonial"><a href="images/events/India-WLIC2018.pdf" target="blank">> Winners List</a></p>
+                                                <p class="testimonial"><a href="images/events/Football-Class-Aloha-INLC-Participants.pdf" target="blank">> Football Class for Aloha INLC Participants</a></p>
+                                                <p class="testimonial">&nbsp;</p>
+                                                <p class="testimonial">&nbsp;</p>
+                                                <p class="testimonial">&nbsp;</p>
+                                                <p class="testimonial">&nbsp;</p>
+                                            </div>
+                                            <div class="item carousel-item">
+                                                <p class="overview"><b>15TH ALOHA NATIONAL LEVEL COMPETITION</b></p><br/>
+                                                <p class="testimonial"><a href="https://drive.google.com/drive/folders/1ibTS_XCdL1Obx5JGXLweZ12feDbKniFL" target="blank">> Competition Day</a></p>
+                                                <p class="testimonial"><a href="https://drive.google.com/drive/folders/14S8qVL21qaZNMI7Tcyz9Rzv3N20nxihz" target="blank">> Prize Distribution Day</a></p>
+                                                <p class="testimonial">&nbsp;</p>
+                                                <p class="testimonial">&nbsp;</p>
+                                                <p class="testimonial">&nbsp;</p>
+                                                <p class="testimonial">&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                                            <i class="fa fa-angle-left"></i>
+                                        </a>
+                                        <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                             <a href="#" class="btn">See More</a>
                         </div>
                         <div class="col-md-6">
                             <h2>Video</h2>
-                            <iframe class="width-100" height="315" src="https://www.youtube.com/embed/OFNFKESjvzU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="margin-b-20">
+                                <iframe class="width-100" height="315" src="https://www.youtube.com/embed/OFNFKESjvzU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
                             <a href="#" class="btn">See More Videos</a>
                         </div>
                     </div>
@@ -250,16 +311,17 @@
             <!-- Team -->
             <div class="courses">
                 <div class="section_background parallax-window" data-parallax="scroll" data-image-src="images/bg-programs.jpg" data-speed="0.8"></div>
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col title-bg-white">
                             <div class="section_title_container text-center">
                                 <h2 class="section_title">ALOHA PROGRAMS</h2>
-                                <div class="section_subtitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p></div>
+                                <div class="section_subtitle"><p>Aloha Programs are nothing but scientific brain management techniques that unveil the infinite potential of the human brain and its effective use.</p></div>
                             </div>
                         </div>
                     </div>
-
+                </div>
+                <div class="container">
                     <div class="row courses_row">
 
                         <!-- Course -->
@@ -275,7 +337,7 @@
                                 </div>
                                 <div class="course_footer">
                                     <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
+                                        <a href="#" class="btn-primary margin-0-auto">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -294,7 +356,7 @@
                                 </div>                               
                                 <div class="course_footer">
                                     <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
+                                        <a href="#" class="btn-primary margin-0-auto">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -313,7 +375,7 @@
                                 </div>
                                 <div class="course_footer">
                                     <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
+                                        <a href="#" class="btn-primary margin-0-auto">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -332,7 +394,7 @@
                                 </div>
                                 <div class="course_footer">
                                     <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
+                                        <a href="#" class="btn-primary margin-0-auto">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -355,7 +417,7 @@
                                 </div>
                                 <div class="course_footer">
                                     <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
+                                        <a href="#" class="btn-primary margin-0-auto">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -374,7 +436,7 @@
                                 </div>                               
                                 <div class="course_footer">
                                     <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
+                                        <a href="#" class="btn-primary margin-0-auto">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -393,7 +455,7 @@
                                 </div>
                                 <div class="course_footer">
                                     <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
+                                        <a href="#" class="btn-primary margin-0-auto">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -412,7 +474,7 @@
                                 </div>
                                 <div class="course_footer">
                                     <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-                                        <a href="#" class="btn btn-primary margin-0-auto">Read More</a>
+                                        <a href="#" class="btn-primary margin-0-auto">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -442,7 +504,7 @@
                                     <h3 class="color-l-green">K.Rajesh</h3>
                                     <p class="color-white">The students were well benifitted and we found classes have many impressive approach in it […]</p>
                                 </div><br/><br/><br/><br/>
-                                <p class="button text-center"><a href="#" class="btn btn-primary">Read More</a></p>
+                                <p class="button text-center"><a href="#" class="btn-primary">Read More</a></p>
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-4 ftco-animate">
@@ -455,7 +517,7 @@
                                     <h3 class="color-l-green">Frequently Asked Questions</h3>
                                     <p class="color-white">How much would Franchise cost me? The investment varies for Centers: A, B, C & D for information on investment, please refer to the enclosed financials.</p>
                                 </div><br/>
-                                <p class="button text-center"><a href="#" class="btn btn-primary">Read More</a></p>
+                                <p class="button text-center"><a href="#" class="btn-primary">Read More</a></p>
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-4 ftco-animate">
@@ -468,7 +530,7 @@
                                     <h3 class="color-l-green">Aloha Talented Buds @ Gujarat</h3>
                                     <p class="color-white">Aloha India is proud of the various shining stars of Initiative Academy, Ahmedabad, Gujarat. </p>
                                 </div><br/><br/><br/>
-                                <p class="button text-center" style="margin-top: -12px"><a href="#" class="btn btn-primary">Read More</a></p>
+                                <p class="button text-center" style="margin-top: -12px"><a href="#" class="btn-primary">Read More</a></p>
                             </div>
                         </div>
 
@@ -534,7 +596,7 @@
                                     <input type="text" class="counter_input" placeholder="Your Name:" required="required">
                                     <input type="tel" class="counter_input" placeholder="Phone:" required="required">
                                     <input type="text" class="counter_input" placeholder="Subject:" required="required">
-<!--                                    <select name="counter_select" id="counter_select" class="counter_input counter_options">
+    <!--                                    <select name="counter_select" id="counter_select" class="counter_input counter_options">
                                         <option>Choose Subject</option>
                                         <option>Subject</option>
                                         <option>Subject</option>

@@ -142,12 +142,12 @@
 
 .box-shadow {
     background: #fff;
-    padding: 50px;
+    padding: 20px;
     -moz-box-shadow: 3px 3px 5px 6px #ccc;
     -webkit-box-shadow: 3px 3px 5px 6px #ccc;
     box-shadow: 3px 3px 5px 6px #ccc;
     margin-bottom: 20px;
-    height: 400px;
+    height: 315px;
 }
 
 .welcom-section-1 h2 {
@@ -219,9 +219,8 @@
 }
 
 .title-bg-white {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px 0;
-    border-radius: 20px;
 }
 
 .counter_content li {
@@ -263,4 +262,38 @@
     .carousel-item p {
         font-size: 14px;
     }
+}
+
+.btn-primary {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0ba231;
+    border-color: #0ba231;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12),
+        0 2px 4px 0 rgba(0,0,0,0.08);
+}
+
+.btn:hover {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12),
+        0 2px 4px 0 rgba(0,0,0,0.08);
 }
