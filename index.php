@@ -39,7 +39,7 @@
 
                     <div class="collapse navbar-collapse navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="scroll active"><a href="#home">Home</a></li> 
+                            <li class="scroll active"><a href="#main-slider">Home</a></li> 
                             <li class="scroll"><a href="#about">About Us</a></li>
                             <li class="scroll"><a href="#why">Why Enrich</a></li>
                             <li class="scroll"><a href="#course">Courses</a></li>
@@ -447,7 +447,7 @@
                     <h2 class="section-title text-center wow fadeInDown">Contact Us</h2>
                     <p class="text-center wow fadeInDown">Feel free to contact us</p>
                 </div>
-                <div class="container contact-info">
+                <div class="contact-info">
                     <div class="row">
                         <div class="col-sm-6 col-md-6">
                             <div class="contact-form contact-add wow fadeInDown">
