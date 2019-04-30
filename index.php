@@ -38,12 +38,28 @@
                     </div>
 
                     <div class="collapse navbar-collapse navbar-right">
+                        <!--                        <ul class="nav navbar-nav">
+                                                    <li class="scroll"><a href="#main-slider">Home</a></li> 
+                                                    <li class="scroll"><a href="#about">About Us</a></li>
+                                                    <li class="scroll"><a href="#why">Why Enrich</a></li>
+                                                    <li class="dropdown scroll"><a href="#course">Courses</a>
+                                                                                        <div class="dropdown-content">
+                                                                                            <a href="#course">+2 State Board</a>
+                                                                                            <a href="#course">+1 State Board</a>
+                                                                                            <a href="#course">Class X State Board</a>
+                                                                                            <a href="#course">Class X CBSE Board</a>
+                                                                                        </div>
+                                                    </li>
+                        
+                                                                                <li class="scroll"><a href="#our-team">Team</a></li>
+                                                                                <li class="scroll"><a href="#pricing">Pricing</a></li>
+                                                    <li class="scroll"><a href="#contact-us">Contact</a></li>                        
+                                                </ul>-->
                         <ul class="nav navbar-nav">
                             <li class="scroll"><a href="#main-slider">Home</a></li> 
                             <li class="scroll"><a href="#about">About Us</a></li>
                             <li class="scroll"><a href="#why">Why Enrich</a></li>
-                            <li class="dropdown scroll">
-                                <a data-toggle="dropdown">Courses</a>
+                            <li class="scroll dropdown"><a href="#">Courses <i class="fa fa-chevron-down"></i></a>
                                 <div class="dropdown-content">
                                     <a href="#course">+2 State Board</a>
                                     <a href="#course">+1 State Board</a>
@@ -51,10 +67,7 @@
                                     <a href="#course">Class X CBSE Board</a>
                                 </div>
                             </li>
-
-                            <!--                            <li class="scroll"><a href="#our-team">Team</a></li>
-                                                        <li class="scroll"><a href="#pricing">Pricing</a></li>-->
-                            <li class="scroll"><a href="#contact-us">Contact</a></li>                        
+                            <li class="scroll"><a href="#contact-us">Contact</a></li>                    
                         </ul>
                     </div>
                 </div><!--/.container-->

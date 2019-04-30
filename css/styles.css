@@ -1160,3 +1160,8 @@ pdown:hover .dropbtn {background-color: #3e8e41;}
         background: #9a9a9a !important;
     }
 }
+@media (max-width: 991px) and (min-width: 768px) {
+    .nav>li>a {
+        padding: 10px 10px;
+    }
+}
