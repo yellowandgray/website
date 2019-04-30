@@ -197,7 +197,11 @@
                                 <a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.html" role="button">Read More </a>
                             </div>
                         </div>
+
                         <div class="clearfix"></div>
+                    </div>
+                    <div class="pad-20">
+                        <img src="images/logos-ej-media.png" alt=""/>
                     </div>
                 </div>
             </div>
@@ -213,7 +217,7 @@
                                 <div class="banner_bottom_grid_left_grid">
                                     <span class="fa fa-laptop" aria-hidden="true"></span>
                                 </div>
-                            
+
                                 <h4 class="color-w">Digital Solutions</h4>
                                 <p class="color-black">Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
 
@@ -229,7 +233,7 @@
                                 <div class="banner_bottom_grid_left_grid">
                                     <span class="fa fa-pencil-square-o" aria-hidden="true"></span>
                                 </div>
-                            
+
                                 <h4 class="color-w">Digital Solutions</h4>
                                 <p class="color-black">Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
 
@@ -245,7 +249,7 @@
                                 <div class="banner_bottom_grid_left_grid">
                                     <span class="fa fa-newspaper-o" aria-hidden="true"></span>
                                 </div>
-                            
+
                                 <h4 class="color-w">Digital Solutions</h4>
                                 <p class="color-black">Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
 
@@ -346,274 +350,274 @@
             </div>
         </div>
         <!--/projects-->
-<!--        <div class="banner_bottom proj">
-            <div class="wrap_view">
-                <h3 class="tittle-w3ls">Projects</h3>
-                <div class="inner_sec">
-                    <ul class="portfolio-categ filter">
-                        <li class="port-filter all active">
-                            <a href="#">All</a>
-                        </li>
-                        <li class="cat-item-1">
-                            <a href="#" title="Category 1">Category 1</a>
-                        </li>
-                        <li class="cat-item-2">
-                            <a href="#" title="Category 2">Category 2</a>
-                        </li>
-                        <li class="cat-item-3">
-                            <a href="#" title="Category 3">Category 3</a>
-                        </li>
-                        <li class="cat-item-4">
-                            <a href="#" title="Category 4">Category 4</a>
-                        </li>
-                    </ul>
-
-
-                    <ul class="portfolio-area">
-
-                        <li class="portfolio-item2" data-id="id-0" data-type="cat-item-4">
-                            <div>
-                                <span class="image-block img-hover">
-                                    <a class="image-zoom" href="images/g1.jpg" rel="prettyPhoto[gallery]">
-
-                                        <img src="images/g1.jpg" class="img-responsive" alt="Conceit">
-                                        <div class="port-info">
-                                            <h5>View Project</h5>
-                                            <p>Add Some Description</p>
-                                        </div>
-                                    </a>
-                                </span>
-                            </div>
-                        </li>
-
-
-                        <li class="portfolio-item2" data-id="id-1" data-type="cat-item-2">
-                            <div>
-                                <span class="image-block">
-                                    <a class="image-zoom" href="images/g2.jpg" rel="prettyPhoto[gallery]">
-
-                                        <img src="images/g2.jpg" class="img-responsive" alt="Conceit">
-                                        <div class="port-info">
-                                            <h5>View Project</h5>
-                                            <p>Add Some Description</p>
-                                        </div>
-                                    </a>
-                                </span>
-                            </div>
-                        </li>
-
-
-                        <li class="portfolio-item2" data-id="id-2" data-type="cat-item-1">
-                            <div>
-                                <span class="image-block">
-                                    <a class="image-zoom" href="images/g3.jpg" rel="prettyPhoto[gallery]">
-
-                                        <img src="images/g3.jpg" class="img-responsive" alt="Conceit">
-                                        <div class="port-info">
-                                            <h5>View Project</h5>
-                                            <p>Add Some Description</p>
-                                        </div>
-                                    </a>
-                                </span>
-                            </div>
-                        </li>
-
-
-                        <li class="portfolio-item2" data-id="id-3" data-type="cat-item-4">
-                            <div>
-                                <span class="image-block">
-                                    <a class="image-zoom" href="images/g4.jpg" rel="prettyPhoto[gallery]">
-
-                                        <img src="images/g4.jpg" class="img-responsive" alt="Conceit">
-                                        <div class="port-info">
-                                            <h5>View Project</h5>
-                                            <p>Add Some Description</p>
-                                        </div>
-                                    </a>
-                                </span>
-                            </div>
-                        </li>
-
-
-                        <li class="portfolio-item2" data-id="id-4" data-type="cat-item-3">
-                            <div>
-                                <span class="image-block">
-                                    <a class="image-zoom" href="images/g5.jpg" rel="prettyPhoto[gallery]">
-
-                                        <img src="images/g5.jpg" class="img-responsive" alt="Conceit">
-                                        <div class="port-info">
-                                            <h5>View Project</h5>
-                                            <p>Add Some Description</p>
-                                        </div>
-                                    </a>
-                                </span>
-                            </div>
-                        </li>
-
-
-                        <li class="portfolio-item2" data-id="id-5" data-type="cat-item-2">
-                            <div>
-                                <span class="image-block">
-                                    <a class="image-zoom" href="images/g6.jpg" rel="prettyPhoto[gallery]">
-
-                                        <img src="images/g6.jpg" class="img-responsive" alt="Conceit">
-                                        <div class="port-info">
-                                            <h5>View Project</h5>
-                                            <p>Add Some Description</p>
-                                        </div>
-                                    </a>
-                                </span>
-                            </div>
-                        </li>
-
-
-                        <li class="portfolio-item2" data-id="id-6" data-type="cat-item-1">
-                            <div>
-                                <span class="image-block">
-                                    <a class="image-zoom" href="images/g7.jpg" rel="prettyPhoto[gallery]">
-
-                                        <img src="images/g7.jpg" class="img-responsive" alt="Conceit">
-                                        <div class="port-info">
-                                            <h5>View Project</h5>
-                                            <p>Add Some Description</p>
-                                        </div>
-                                    </a>
-                                </span>
-                            </div>
-                        </li>
-
-
-                        <li class="portfolio-item2" data-id="id-7" data-type="cat-item-1">
-                            <div>
-                                <span class="image-block">
-                                    <a class="image-zoom" href="images/g8.jpg" rel="prettyPhoto[gallery]">
-
-                                        <img src="images/g8.jpg" class="img-responsive" alt="Conceit">
-                                        <div class="port-info">
-                                            <h5>View Project</h5>
-                                            <p>Add Some Description</p>
-                                        </div>
-
-                                    </a>
-                                </span>
-                            </div>
-                        </li>
-
-                        <div class="clearfix"></div>
-                    </ul>
-                    end portfolio-area 
-
-                </div>
-
-            </div>
-        </div>-->
+        <!--        <div class="banner_bottom proj">
+                    <div class="wrap_view">
+                        <h3 class="tittle-w3ls">Projects</h3>
+                        <div class="inner_sec">
+                            <ul class="portfolio-categ filter">
+                                <li class="port-filter all active">
+                                    <a href="#">All</a>
+                                </li>
+                                <li class="cat-item-1">
+                                    <a href="#" title="Category 1">Category 1</a>
+                                </li>
+                                <li class="cat-item-2">
+                                    <a href="#" title="Category 2">Category 2</a>
+                                </li>
+                                <li class="cat-item-3">
+                                    <a href="#" title="Category 3">Category 3</a>
+                                </li>
+                                <li class="cat-item-4">
+                                    <a href="#" title="Category 4">Category 4</a>
+                                </li>
+                            </ul>
+        
+        
+                            <ul class="portfolio-area">
+        
+                                <li class="portfolio-item2" data-id="id-0" data-type="cat-item-4">
+                                    <div>
+                                        <span class="image-block img-hover">
+                                            <a class="image-zoom" href="images/g1.jpg" rel="prettyPhoto[gallery]">
+        
+                                                <img src="images/g1.jpg" class="img-responsive" alt="Conceit">
+                                                <div class="port-info">
+                                                    <h5>View Project</h5>
+                                                    <p>Add Some Description</p>
+                                                </div>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </li>
+        
+        
+                                <li class="portfolio-item2" data-id="id-1" data-type="cat-item-2">
+                                    <div>
+                                        <span class="image-block">
+                                            <a class="image-zoom" href="images/g2.jpg" rel="prettyPhoto[gallery]">
+        
+                                                <img src="images/g2.jpg" class="img-responsive" alt="Conceit">
+                                                <div class="port-info">
+                                                    <h5>View Project</h5>
+                                                    <p>Add Some Description</p>
+                                                </div>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </li>
+        
+        
+                                <li class="portfolio-item2" data-id="id-2" data-type="cat-item-1">
+                                    <div>
+                                        <span class="image-block">
+                                            <a class="image-zoom" href="images/g3.jpg" rel="prettyPhoto[gallery]">
+        
+                                                <img src="images/g3.jpg" class="img-responsive" alt="Conceit">
+                                                <div class="port-info">
+                                                    <h5>View Project</h5>
+                                                    <p>Add Some Description</p>
+                                                </div>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </li>
+        
+        
+                                <li class="portfolio-item2" data-id="id-3" data-type="cat-item-4">
+                                    <div>
+                                        <span class="image-block">
+                                            <a class="image-zoom" href="images/g4.jpg" rel="prettyPhoto[gallery]">
+        
+                                                <img src="images/g4.jpg" class="img-responsive" alt="Conceit">
+                                                <div class="port-info">
+                                                    <h5>View Project</h5>
+                                                    <p>Add Some Description</p>
+                                                </div>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </li>
+        
+        
+                                <li class="portfolio-item2" data-id="id-4" data-type="cat-item-3">
+                                    <div>
+                                        <span class="image-block">
+                                            <a class="image-zoom" href="images/g5.jpg" rel="prettyPhoto[gallery]">
+        
+                                                <img src="images/g5.jpg" class="img-responsive" alt="Conceit">
+                                                <div class="port-info">
+                                                    <h5>View Project</h5>
+                                                    <p>Add Some Description</p>
+                                                </div>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </li>
+        
+        
+                                <li class="portfolio-item2" data-id="id-5" data-type="cat-item-2">
+                                    <div>
+                                        <span class="image-block">
+                                            <a class="image-zoom" href="images/g6.jpg" rel="prettyPhoto[gallery]">
+        
+                                                <img src="images/g6.jpg" class="img-responsive" alt="Conceit">
+                                                <div class="port-info">
+                                                    <h5>View Project</h5>
+                                                    <p>Add Some Description</p>
+                                                </div>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </li>
+        
+        
+                                <li class="portfolio-item2" data-id="id-6" data-type="cat-item-1">
+                                    <div>
+                                        <span class="image-block">
+                                            <a class="image-zoom" href="images/g7.jpg" rel="prettyPhoto[gallery]">
+        
+                                                <img src="images/g7.jpg" class="img-responsive" alt="Conceit">
+                                                <div class="port-info">
+                                                    <h5>View Project</h5>
+                                                    <p>Add Some Description</p>
+                                                </div>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </li>
+        
+        
+                                <li class="portfolio-item2" data-id="id-7" data-type="cat-item-1">
+                                    <div>
+                                        <span class="image-block">
+                                            <a class="image-zoom" href="images/g8.jpg" rel="prettyPhoto[gallery]">
+        
+                                                <img src="images/g8.jpg" class="img-responsive" alt="Conceit">
+                                                <div class="port-info">
+                                                    <h5>View Project</h5>
+                                                    <p>Add Some Description</p>
+                                                </div>
+        
+                                            </a>
+                                        </span>
+                                    </div>
+                                </li>
+        
+                                <div class="clearfix"></div>
+                            </ul>
+                            end portfolio-area 
+        
+                        </div>
+        
+                    </div>
+                </div>-->
 
         <!--//projects-->
         <!--/blog-->
-<!--        <div class="blog_sec">
-            <h3 class="tittle-w3ls">Latest Blogs</h3>
-            <div class="col-md-6 banner-btm-left">
-                <div class="banner-btm-top">
-                    <div class="banner-btm-inner a1">
-                        <div class="blog_date">
-
-                            <h4>Jan.05.2018</h4>
-
+        <!--        <div class="blog_sec">
+                    <h3 class="tittle-w3ls">Latest Blogs</h3>
+                    <div class="col-md-6 banner-btm-left">
+                        <div class="banner-btm-top">
+                            <div class="banner-btm-inner a1">
+                                <div class="blog_date">
+        
+                                    <h4>Jan.05.2018</h4>
+        
+                                </div>
+                                <h6><a href="single.html">Strategic Planning</a></h6>
+                                <p class="paragraph">Aenean orci erat, placerat id pulvinar nec, tincidunt vel eros.</p>
+                                <div class="clearfix"></div>
+                                <a href="single.html" class="blog-btn">Know More</a>
+                            </div>
+                            <div class="banner-btm-inner a2">
+        
+                            </div>
                         </div>
-                        <h6><a href="single.html">Strategic Planning</a></h6>
-                        <p class="paragraph">Aenean orci erat, placerat id pulvinar nec, tincidunt vel eros.</p>
-                        <div class="clearfix"></div>
-                        <a href="single.html" class="blog-btn">Know More</a>
-                    </div>
-                    <div class="banner-btm-inner a2">
-
-                    </div>
-                </div>
-                <div class="banner-btm-bottom">
-                    <div class="banner-btm-inner a3">
-
-                    </div>
-                    <div class="banner-btm-inner a4">
-                        <div class="blog_date">
-
-                            <h4>Jan.08.2018</h4>
-
+                        <div class="banner-btm-bottom">
+                            <div class="banner-btm-inner a3">
+        
+                            </div>
+                            <div class="banner-btm-inner a4">
+                                <div class="blog_date">
+        
+                                    <h4>Jan.08.2018</h4>
+        
+                                </div>
+                                <h6><a href="single.html">Strategic Planning</a></h6>
+                                <p class="paragraph">Aenean orci erat, placerat id pulvinar nec, tincidunt vel eros.</p>
+                                <div class="clearfix"></div>
+                                <a href="single.html" class="blog-btn">Know More</a>
+                            </div>
                         </div>
-                        <h6><a href="single.html">Strategic Planning</a></h6>
-                        <p class="paragraph">Aenean orci erat, placerat id pulvinar nec, tincidunt vel eros.</p>
-                        <div class="clearfix"></div>
-                        <a href="single.html" class="blog-btn">Know More</a>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6 banner-btm-left">
-                <div class="banner-btm-top">
-                    <div class="banner-btm-inner a1">
-                        <div class="blog_date">
-
-                            <h4>Jan.25.2018</h4>
-
+                    <div class="col-md-6 banner-btm-left">
+                        <div class="banner-btm-top">
+                            <div class="banner-btm-inner a1">
+                                <div class="blog_date">
+        
+                                    <h4>Jan.25.2018</h4>
+        
+                                </div>
+                                <h6><a href="single.html">Strategic Planning</a></h6>
+                                <p class="paragraph">Aenean orci erat, placerat id pulvinar nec, tincidunt vel eros.</p>
+                                <div class="clearfix"></div>
+                                <a href="single.html" class="blog-btn">Know More</a>
+                            </div>
+                            <div class="banner-btm-inner a5">
+        
+                            </div>
                         </div>
-                        <h6><a href="single.html">Strategic Planning</a></h6>
-                        <p class="paragraph">Aenean orci erat, placerat id pulvinar nec, tincidunt vel eros.</p>
-                        <div class="clearfix"></div>
-                        <a href="single.html" class="blog-btn">Know More</a>
-                    </div>
-                    <div class="banner-btm-inner a5">
-
-                    </div>
-                </div>
-                <div class="banner-btm-bottom">
-                    <div class="banner-btm-inner a6">
-
-                    </div>
-                    <div class="banner-btm-inner a4">
-                        <div class="blog_date">
-
-                            <h4>Jan.05.2018</h4>
-
+                        <div class="banner-btm-bottom">
+                            <div class="banner-btm-inner a6">
+        
+                            </div>
+                            <div class="banner-btm-inner a4">
+                                <div class="blog_date">
+        
+                                    <h4>Jan.05.2018</h4>
+        
+                                </div>
+                                <h6><a href="single.html">Strategic Planning</a></h6>
+                                <p class="paragraph">Aenean orci erat, placerat id pulvinar nec, tincidunt vel eros.</p>
+                                <div class="clearfix"></div>
+                                <a href="single.html" class="blog-btn">Know More</a>
+                            </div>
                         </div>
-                        <h6><a href="single.html">Strategic Planning</a></h6>
-                        <p class="paragraph">Aenean orci erat, placerat id pulvinar nec, tincidunt vel eros.</p>
-                        <div class="clearfix"></div>
-                        <a href="single.html" class="blog-btn">Know More</a>
                     </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>-->
+                    <div class="clearfix"></div>
+                </div>-->
 
         <!--//blog-->
         <!--/bottom-->
-<!--        <div class="banner_bottom">
-            <div class="container">
-                <h3 class="tittle-w3ls">Let’s Change How We Manage Business
-                </h3>
-                <div class="inner_sec_info_wthree_agile">
-                    <div class="help_full">
-
-                        <div class="col-md-6 banner_bottom_left">
-                            <h4>Entrepreneurs Get Their Act Together </h4>
-                            <p>Pellentesque convallis diam consequat magna vulputate malesuada. Cras a ornare elit. Nulla viverra pharetra sem, eget
-                                pulvinar neque pharetra ac. Lorem Ipsum convallis diam consequat magna vulputate malesuada. Cras a ornare elit. Nulla
-                                viverra pharetra sem, eget pulvinar neque pharetra ac.
-
-                            </p>
-                            <div class="ab_button">
-                                <a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.html" role="button">Read More </a>
+        <!--        <div class="banner_bottom">
+                    <div class="container">
+                        <h3 class="tittle-w3ls">Let’s Change How We Manage Business
+                        </h3>
+                        <div class="inner_sec_info_wthree_agile">
+                            <div class="help_full">
+        
+                                <div class="col-md-6 banner_bottom_left">
+                                    <h4>Entrepreneurs Get Their Act Together </h4>
+                                    <p>Pellentesque convallis diam consequat magna vulputate malesuada. Cras a ornare elit. Nulla viverra pharetra sem, eget
+                                        pulvinar neque pharetra ac. Lorem Ipsum convallis diam consequat magna vulputate malesuada. Cras a ornare elit. Nulla
+                                        viverra pharetra sem, eget pulvinar neque pharetra ac.
+        
+                                    </p>
+                                    <div class="ab_button">
+                                        <a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.html" role="button">Read More </a>
+                                    </div>
+        
+        
+                                </div>
+        
+                                <div class="col-md-6 banner_bottom_grid help">
+                                    <img src="images/banner_mid.jpg" alt=" " class="img-responsive">
+                                </div>
+                                <div class="clearfix"></div>
                             </div>
-
-
                         </div>
-
-                        <div class="col-md-6 banner_bottom_grid help">
-                            <img src="images/banner_mid.jpg" alt=" " class="img-responsive">
-                        </div>
-                        <div class="clearfix"></div>
                     </div>
-                </div>
-            </div>
-        </div>-->
+                </div>-->
         <!--//bottom-->
         <!--/testimonials-->
         <div class="tesimonials">
@@ -750,20 +754,20 @@
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
-<!--                        <div class="col-md-3 sign-gd flickr-post">
-                            <h4>Our <span>Works</span></h4>
-                            <ul>
-                                <li><a href="single.html"><img src="images/g1.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/g2.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/g3.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/g4.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/g5.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/g6.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/g7.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/g8.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/g4.jpg" alt=" " class="img-responsive" /></a></li>
-                            </ul>
-                        </div>-->
+                        <!--                        <div class="col-md-3 sign-gd flickr-post">
+                                                    <h4>Our <span>Works</span></h4>
+                                                    <ul>
+                                                        <li><a href="single.html"><img src="images/g1.jpg" alt=" " class="img-responsive" /></a></li>
+                                                        <li><a href="single.html"><img src="images/g2.jpg" alt=" " class="img-responsive" /></a></li>
+                                                        <li><a href="single.html"><img src="images/g3.jpg" alt=" " class="img-responsive" /></a></li>
+                                                        <li><a href="single.html"><img src="images/g4.jpg" alt=" " class="img-responsive" /></a></li>
+                                                        <li><a href="single.html"><img src="images/g5.jpg" alt=" " class="img-responsive" /></a></li>
+                                                        <li><a href="single.html"><img src="images/g6.jpg" alt=" " class="img-responsive" /></a></li>
+                                                        <li><a href="single.html"><img src="images/g7.jpg" alt=" " class="img-responsive" /></a></li>
+                                                        <li><a href="single.html"><img src="images/g8.jpg" alt=" " class="img-responsive" /></a></li>
+                                                        <li><a href="single.html"><img src="images/g4.jpg" alt=" " class="img-responsive" /></a></li>
+                                                    </ul>
+                                                </div>-->
                         <div class="col-md-8 sign-gd-two">
                             <h4>Contact <span>Information</span></h4>
                             <div class="address">
