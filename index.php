@@ -52,24 +52,24 @@
                             <span class="icon-bar"></span>
                         </button>
                         <div class="logo-w3layouts-agileits">
-                            <h1> <a class="navbar-brand" href="index.html"><i class="fa fa-clone" aria-hidden="true"></i> Conceit <span class="desc">For your Business</span></a></h1>
+                            <h1> <a class="navbar-brand" href="index.php"><i class="fa fa-clone" aria-hidden="true"></i> Conceit <span class="desc">For your Business</span></a></h1>
                         </div>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <div class="nav_right_top">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a class="request" href="contact.html">Send Request</a></li>
+                                <li><a class="request" href="#">Send Request</a></li>
 
                             </ul>
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="portfolio.html">Portfolio</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li class="active"><a href="index.php">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">Contact</a></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="portfolio.html">Projects</a></li>
+                                        <li><a href="#">Projects</a></li>
                                         <li><a href="404.html">Services</a></li>
 
 
@@ -713,7 +713,7 @@
         <div class="footer">
             <div class="footer_inner_info_w3ls_agileits">
                 <div class="col-md-4 footer-left">
-                    <h2><a href="index.html"><i class="fa fa-clone" aria-hidden="true"></i> Conceit </a></h2>
+                    <h2><a href="index.php"><i class="fa fa-clone" aria-hidden="true"></i> Conceit </a></h2>
                     <p>Lorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.</p>
                     <ul class="social-nav model-3d-0 footer-social social two">
                         <li>
@@ -747,7 +747,7 @@
                         <div class="col-md-4 sign-gd">
                             <h4>Latest <span>Info</span> </h4>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.php">Home</a></li>
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="404.html">Services</a></li>
                                 <li><a href="signin.html">Signin</a></li>
