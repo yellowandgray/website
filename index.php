@@ -506,10 +506,10 @@
 
                                     <div class="control-group">
                                         <div class="form-group">
-                                            <textarea class="form-control" placeholder="Message" name="message" id="message" minlength="5" maxlength="999" style="resize:none" required></textarea>
+                                            <textarea class="form-control" placeholder="Message" name="message" id="message" style="resize:none" required></textarea>
                                         </div>
-                                    </div> 	<br/>	 
-                                    <div id="success"> </div> <!-- For success/fail messages -->
+                                    </div>
+<!--                                    <div id="success"> </div>  For success/fail messages -->
                                     <button type="submit" class="btn btn-primary pull-right">Send</button><br />
                                 </form>
                             </div>
