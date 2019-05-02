@@ -56,7 +56,7 @@
                                                     <li class="scroll"><a href="#contact-us">Contact</a></li>                        
                                                 </ul>-->
                         <ul class="nav navbar-nav">
-                            <li class="scroll"><a href="#main-slider">Home</a></li> 
+                            <li class="scroll active"><a href="#main-slider">Home</a></li> 
                             <li class="scroll"><a href="#about">About Us</a></li>
                             <li class="scroll"><a href="#why">Why Enrich</a></li>
                             <li class="scroll dropdown"><a href="#">Courses <i class="fa fa-chevron-down"></i></a>
@@ -65,7 +65,7 @@
                                     <a href="#course">+1 State Board</a>
                                     <a href="#course">Class X State Board</a>
                                     <a href="#course">Class X CBSE Board</a>
-                                </div>
+                                </div>-->
                             </li>
                             <li class="scroll"><a href="#contact-us">Contact</a></li>                    
                         </ul>
@@ -490,23 +490,23 @@
                                 <form name="sentMessage" id="contactForm"> 
                                     <div class="control-group mb-5">
                                         <div class="controls">
-                                            <input type="text" class="form-control" placeholder="Full Name" id="name" required data-validation-required-message="Please enter your name" />
+                                            <input type="text" class="form-control" name="fname" placeholder="Full Name" id="name" required data-validation-required-message="Please enter your name" />
                                         </div>
                                     </div> 	
                                     <div class="control-group  mb-5">
                                         <div class="controls">
-                                            <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Please enter your email" />
+                                            <input type="email" class="form-control" name="email" placeholder="Email" id="email" required data-validation-required-message="Please enter your email" />
                                         </div>
                                     </div> 	
                                     <div class="control-group  mb-5">
                                         <div class="controls">
-                                            <input type="text" class="form-control" placeholder="Mobile Number" id="mobile" required data-validation-required-message="Please enter Mobile Number" />
+                                            <input type="text" class="form-control" name="contact" placeholder="Mobile Number" id="mobile" required data-validation-required-message="Please enter Mobile Number" />
                                         </div>
                                     </div> 	
 
                                     <div class="control-group">
                                         <div class="controls">
-                                            <textarea class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter your message" minlength="5" data-validation-minlength-message="Min 5 characters" maxlength="999" style="resize:none"></textarea>
+                                            <textarea class="form-control" placeholder="Message" name="message" id="message" required data-validation-required-message="Please enter your message" minlength="5" data-validation-minlength-message="Min 5 characters" maxlength="999" style="resize:none"></textarea>
                                         </div>
                                     </div> 	<br/>	 
                                     <div id="success"> </div> <!-- For success/fail messages -->
@@ -578,5 +578,6 @@
                 }
             }
         </script>
+        <script src="js/contact-form.js" type="text/javascript"></script>
     </body>
 </html>
