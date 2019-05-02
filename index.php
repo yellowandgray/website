@@ -487,7 +487,7 @@
                         <div class="col-sm-6 col-md-6">
                             <div class="contact-form wow fadeInDown">
 
-                                <form name="sentMessage" id="contactForm"  novalidate> 
+                                <form name="sentMessage" id="contactForm"> 
                                     <div class="control-group mb-5">
                                         <div class="controls">
                                             <input type="text" class="form-control" placeholder="Full Name" id="name" required data-validation-required-message="Please enter your name" />
