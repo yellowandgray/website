@@ -10,7 +10,7 @@ if ($_POST['fname']) {
 
     $email = $_REQUEST['email'];
 
-    $contact = $_REQUEST['contact'];
+    $mobile = $_REQUEST['mobile'];
 
     $message = $_REQUEST['message'];
 
@@ -52,7 +52,7 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Host = "sg3plcpnl0022.prod.sin3.secureserver.net";      // sets GMAIL as the SMTP server
+    $mail->Host = "mail.enrichkids.net";      // sets GMAIL as the SMTP server
 
 
 
@@ -114,7 +114,7 @@ if ($_POST['fname']) {
             <p style = "margin:0 0 16px">first Name: ' . $fname . '</p>
 
             <p style = "margin:0 0 16px">Email: ' . $email . '</p>
-            <p style = "margin:0 0 16px">Contact: ' . $contact . '</p>
+            <p style = "margin:0 0 16px">Contact: ' . $mobile . '</p>
             <p style = "margin:0 0 16px">Message: ' . $message . '</p>
             <p style = "margin:0 0 16px">Sent From Website</p></div>
             </td>
@@ -157,7 +157,7 @@ if ($_POST['fname']) {
 
     // More headers
 
-    $address = "admin@enrichkids.net";
+    $address = "projects@yellowandgray.com";
 
 
     $mail->AddAddress($address, "ENRICH ACADEMY");

@@ -16,6 +16,7 @@
         <link href="css/magnific-popup.css" rel="stylesheet">  
         <link href="css/gallery-1.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet"> 
+        <link href="css/sweetalert.css" rel="stylesheet" type="text/css"/>
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
@@ -489,24 +490,24 @@
 
                                 <form  class="form-contact" name="sentMessage" id="contactForm"  novalidate> 
                                     <div class="control-group mb-5">
-                                        <div class="controls">
-                                            <input type="text" class="form-control" name="fname" placeholder="Full Name" id="name" required data-validation-required-message="Please enter your name" />
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="fname" placeholder="Full Name" id="name" required />
                                         </div>
                                     </div> 	
                                     <div class="control-group  mb-5">
-                                        <div class="controls">
-                                            <input type="email" class="form-control" name="email" placeholder="Email" id="email" required data-validation-required-message="Please enter your email" />
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email" placeholder="Email" id="email" required />
                                         </div>
                                     </div> 	
                                     <div class="control-group  mb-5">
-                                        <div class="controls">
-                                            <input type="text" class="form-control" name="contact" placeholder="Mobile Number" id="mobile" required data-validation-required-message="Please enter Mobile Number" />
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="mobile" placeholder="Mobile Number" id="mobile" required />
                                         </div>
                                     </div> 	
 
                                     <div class="control-group">
-                                        <div class="controls">
-                                            <textarea class="form-control" placeholder="Message" name="message" id="message" required data-validation-required-message="Please enter your message" minlength="5" data-validation-minlength-message="Min 5 characters" maxlength="999" style="resize:none"></textarea>
+                                        <div class="form-group">
+                                            <textarea class="form-control" placeholder="Message" name="message" id="message" minlength="5" maxlength="999" style="resize:none" required></textarea>
                                         </div>
                                     </div> 	<br/>	 
                                     <div id="success"> </div> <!-- For success/fail messages -->
@@ -579,5 +580,6 @@
             }
         </script>
         <script src="js/contact-form.js" type="text/javascript"></script>
+        <script src="css/sweetalert.min.js" type="text/javascript"></script>
     </body>
 </html>
