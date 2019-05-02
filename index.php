@@ -66,7 +66,7 @@
                                     <a href="#course">+1 State Board</a>
                                     <a href="#course">Class X State Board</a>
                                     <a href="#course">Class X CBSE Board</a>
-                                </div>-->
+                                </div>
                             </li>
                             <li class="scroll"><a href="#contact-us">Contact</a></li>                    
                         </ul>
