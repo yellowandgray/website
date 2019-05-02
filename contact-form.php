@@ -68,7 +68,7 @@ if ($_POST['fname']) {
 
     $mail->IsHTML(true);
 
-    $mail->SetFrom('noreply@enrichacademy.com', 'ENRICH ACADEMY');
+    $mail->SetFrom('admin@enrichkids.net', 'ENRICH ACADEMY');
 
     $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
 
