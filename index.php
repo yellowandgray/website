@@ -487,8 +487,7 @@
                         </div>
                         <div class="col-sm-6 col-md-6">
                             <div class="contact-form wow fadeInDown">
-
-                                <form name="sentMessage" id="contactForm"> 
+                                <form class="form-contact" name="sentMessage" id="contactForm"> 
                                     <div class="control-group mb-5">
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="fname" placeholder="Full Name" id="name" required />
