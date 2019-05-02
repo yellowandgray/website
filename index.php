@@ -38,23 +38,36 @@
                     </div>
 
                     <div class="collapse navbar-collapse navbar-right">
+                        <!--                        <ul class="nav navbar-nav">
+                                                    <li class="scroll"><a href="#main-slider">Home</a></li> 
+                                                    <li class="scroll"><a href="#about">About Us</a></li>
+                                                    <li class="scroll"><a href="#why">Why Enrich</a></li>
+                                                    <li class="dropdown scroll"><a href="#course">Courses</a>
+                                                                                        <div class="dropdown-content">
+                                                                                            <a href="#course">+2 State Board</a>
+                                                                                            <a href="#course">+1 State Board</a>
+                                                                                            <a href="#course">Class X State Board</a>
+                                                                                            <a href="#course">Class X CBSE Board</a>
+                                                                                        </div>
+                                                    </li>
+                        
+                                                                                <li class="scroll"><a href="#our-team">Team</a></li>
+                                                                                <li class="scroll"><a href="#pricing">Pricing</a></li>
+                                                    <li class="scroll"><a href="#contact-us">Contact</a></li>                        
+                                                </ul>-->
                         <ul class="nav navbar-nav">
                             <li class="scroll active"><a href="#main-slider">Home</a></li> 
                             <li class="scroll"><a href="#about">About Us</a></li>
                             <li class="scroll"><a href="#why">Why Enrich</a></li>
-                            <li class="scroll">
-                                <a href="#">Courses</a>
-<!--                                <div class="dropdown-content">
+                            <li class="scroll dropdown"><a href="#">Courses <i class="fa fa-chevron-down"></i></a>
+                                <div class="dropdown-content">
                                     <a href="#course">+2 State Board</a>
                                     <a href="#course">+1 State Board</a>
                                     <a href="#course">Class X State Board</a>
                                     <a href="#course">Class X CBSE Board</a>
                                 </div>-->
                             </li>
-
-                            <!--                            <li class="scroll"><a href="#our-team">Team</a></li>
-                                                        <li class="scroll"><a href="#pricing">Pricing</a></li>-->
-                            <li class="scroll"><a href="#contact-us">Contact</a></li>                        
+                            <li class="scroll"><a href="#contact-us">Contact</a></li>                    
                         </ul>
                     </div>
                 </div><!--/.container-->
@@ -544,5 +557,26 @@
         <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script><!-- Gallery Popup -->
 
         <script src="js/custom-scripts.js"></script>
+        <script>
+            /* When the user clicks on the button, 
+             toggle between hiding and showing the dropdown content */
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+
+// Close the dropdown if the user clicks outside of it
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
     </body>
 </html>
