@@ -157,7 +157,7 @@ if ($_POST['fname']) {
 
     // More headers
 
-    $address = "projects@yellowandgray.com";
+    $address = "admin@enrichkids.net";
 
 
     $mail->AddAddress($address, "ENRICH ACADEMY");
