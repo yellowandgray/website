@@ -52,7 +52,8 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Host = "mail.enrichkids.net";      // sets GMAIL as the SMTP server
+    //$mail->Host = "mail.enrichkids.net";      // sets GMAIL as the SMTP server
+    $mail->Host = "mail.2dotask.com";      // sets GMAIL as the SMTP server
 
 
 
