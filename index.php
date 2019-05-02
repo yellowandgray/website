@@ -224,7 +224,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                         </div>
                     </div>
                 </section>
-                <section id="about_section" style="background-image: url(&quot;img/about_banner.jpg&quot;); background-size: cover">
+                <section id="about_section" style="background-image: url(&quot;img/about_banner-01.jpg&quot;); background-size: cover">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="padding-l-r-20">
@@ -473,7 +473,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 <div class="produts_listing">
                                     <div class="single-product clearfix left-product left-product">
                                         <div class="img-wraps">
-                                            <img width="736" height="552" src="img/services01.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="img/services01.jpg 736w, img/services01-300x225.jpg 300w" sizes="100vw">
+                                            <img width="736" height="552" src="img/services-01.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="img/services-01.jpg 736w, img/services-01-300x225.jpg 300w" sizes="100vw">
                                         </div>
                                         <div class="containt-wrap">
                                             <h3>Integrated Financial Service</h3>
