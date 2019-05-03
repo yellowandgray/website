@@ -221,6 +221,7 @@
                                         <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-left">Syllabus will be aimed to be completed by December</li>
                                         <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-left">Multiple Revision and Model exams will be provided during Jan and Feb</li>
                                         <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-left">Each class will be of 2 hours duration</li>
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-left">Creative questions and problem-solving approach</li>
                                     </ul>
                                 </div>  
                             </div>

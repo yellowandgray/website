@@ -1091,9 +1091,9 @@ img.img-responsive {
     }
 }
 @media screen and (min-width: 1029px)  {
-    #main-slider .slider-inner h2 {
+/*    #main-slider .slider-inner h2 {
         margin-top: -285px;
-    }
+    }*/
 }
 @media screen and (max-width: 1028px)  {
     #main-slider .slider-inner h2 {
