@@ -238,7 +238,7 @@ ul.nostyle i {
     overflow: hidden;
 }
 #main-slider .item {
-    height: 700px;
+    height: 600px;
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
@@ -1158,5 +1158,12 @@ img.img-responsive {
 @media (max-width: 991px) and (min-width: 768px) {
     .nav>li>a {
         padding: 10px 10px;
+    }
+}
+
+@media (min-width: 1200) and (max-width: 1440px) {
+    .owl-wrapper {
+        height: 768px !important;
+        width: 100% !important;
     }
 }
