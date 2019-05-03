@@ -1777,6 +1777,7 @@ input#clear_product {
 .thumline-img {
     display: block;
     overflow: hidden;
+    margin-top: 60px;
 }
 
 .thumline-img img {

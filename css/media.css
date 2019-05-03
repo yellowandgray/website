@@ -10,7 +10,7 @@
     }
     .about_right_content {
         padding-left: 80px;
-/*        height: 500px;*/
+        /*        height: 500px;*/
     }
     /*.inner_menu .sidebar-menu .hamburger {        transition: all .4s;        -webkit-transition: all .4s;        position: absolute;        right: -90px;        top: 39px;        width: 50px;        cursor: pointer;        z-index: 999;    }*/
     .sidebar-menu .hamburger.active {
@@ -232,7 +232,7 @@ screen and (height:1024px) {
 
     .who_we_content_section{height: auto !important; padding-top: 50px; padding-bottom: 50px;}
     .who_we_content{position: static; transform: none !important;}
-/*    .about_right_content{height: 950px !important;}*/
+    /*    .about_right_content{height: 950px !important;}*/
     .out_partner_section {padding-bottom: 7%;}
     .header_search_lang ul li:nth-child(2) {width: auto;}
     .header_search_lang ul li .search_btn input {position: absolute;right: 0;z-index: 1}
@@ -278,7 +278,7 @@ screen and (height:1024px) {
     .footer_box ul li a span img {line-height: 50px;width: 18px;}
     .footer_logo figure {width: 350px;margin: 0 auto;}
     .product-list-wrapper .col-md-3 {float: none !important;}
-    .products-content-main {padding-top: 80px;padding-bottom: 30px;}
+    .products-content-main {padding-top: 0px;padding-bottom: 30px;}
     .product-list-wrapper .row .list-wrapper ul.nav-tabs {height: 100%}
     .about_right_content {top: 50%;}
     .who_we_content {padding-left: 50px;padding-right: 50px}
@@ -306,7 +306,7 @@ screen and (height:1024px) {
     .our_partner_heading ul{width: 100%;margin-left: 0;}
     .our_team_partner{width: 100%;}
     .border-line {height: auto}
-/*    #about_section {padding: 0 0 0 0 !important;}*/
+    /*    #about_section {padding: 0 0 0 0 !important;}*/
     .padding-l-r-20 {padding-left: 0px !important;}
     .about_right_section {padding: 0px !important;}
     .about_us_btn3 {position: absolute !important; font-size: 14px !important; padding: 8px 10px !important;}
@@ -347,7 +347,7 @@ screen and (height:1024px) {
     .products-content-main figure .img-wrapper {max-width: 100%;}
     .products-content-main figure .img-wrapper {min-height: 300px;max-height: 300px;}
     .next-prev-btn {margin-left: 0;max-width: 100%;}
-/*    .products-content-main {padding: 30px 5px;}*/
+    /*    .products-content-main {padding: 30px 5px;}*/
     .header_social_icon {width: 50%;float: right;padding-top: 40px;}
     .header_search_lang {width: 20%;padding-top: 40px;}
     .header_about_logo {width: 30%;}
@@ -448,6 +448,7 @@ screen and (height:1024px) {
 
     .our_team_part{width: 100%;}
 
+
 }
 
 @media only screen and (max-width:480px) {
@@ -490,8 +491,17 @@ screen and (height:1024px) {
     .halal_jakim a figure{width: 100px !important;}
     .accrediation_logo ul li a p{font-size: 12px;}
     .heading_text p{font-size: 14px; line-height: 25px;}
+/*    .list-group-product .nav-tabs > li > a {
+        font-size: 14px
+    }*/
 
+}
 
+@media screen and (max-width: 991px) {
+    .list-group-product .nav-tabs > li > a {
+        padding: 17px 10px !important;
+        font-size: 14px !important;
+    }
 }
 
 
