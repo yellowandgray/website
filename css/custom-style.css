@@ -259,11 +259,11 @@ p,input,textarea,select,.marquee,span{font-family: 'Montserrat', sans-serif; col
     position: fixed;
     z-index: 999;
     top: 0;
-    left: -20%;
-    width: 20%;
+    left: -25%;
+    width: 25%;
     height: 100%;
     background: #1b1737;
-    transition: left 1s cubic-bezier(0.3, 0.96, 0.27, 0.99);
+    transition: left 1s 
 }
 
 .sidebar-container.active {

@@ -252,8 +252,8 @@ screen and (height:1024px) {
     .sidebar-menu .hamburger {transition: all .4s;-webkit-transition: all .4s;position: absolute;right: -75px;top: 9px;width: 50px;cursor: pointer;z-index: 999;}
     .banner_menu {width: 100%;position: fixed;top: 0;left: 0;height: auto !important;}
     #header-top {position: absolute;top: 50px;width: 100%;z-index: 1;}
-    .sidebar-container {position: fixed;z-index: 999;top: 0;left: -60%;width: 60%;height: 100%;background: #1b1737;transition: left 1s cubic-bezier(0.3, 0.96, 0.27, 0.99);}
-    .sidebar-menu .menu .menu-item a {font-size: 25px;}
+    .sidebar-container {position: fixed;z-index: 999;top: 0;left: -40%;width: 40%;height: 100%;background: #1b1737;transition: left 1s cubic-bezier(0.3, 0.96, 0.27, 0.99);}
+    .sidebar-menu .menu .menu-item a {font-size: 18px;}
     .logo-wrap {width: 150px;}
     .logo-wrap {margin-left: 0;}
     .banner_content figure img {width: 180px;}
@@ -494,10 +494,13 @@ screen and (height:1024px) {
 
 }
 
-@media only screen and ( max-width:170px) {}
 
 @media (min-width: 992px) and (max-width: 1285px) {
     .border-line {
         height: 690px;
+    }
+}
+@media (min-width: 320px) and (max-width: 605px) {
+    .sidebar-container {position: fixed;z-index: 999;top: 0;left: -60%;width: 60%;
     }
 }
