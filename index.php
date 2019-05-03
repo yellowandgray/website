@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<?php include 'head.php'; $page = home; ?>
+    <?php
+    include 'head.php';
+    $page = 'home';
+    ?>
     <body>
         <div class="super_container">
             <!-- Header -->
             <header class="header d-flex flex-row justify-content-end align-items-center">
                 <!-- Logo -->
                 <div class="logo_container mr-auto">
-                    <div class="logo">
-                        <a href="#"><span>z</span>zeta<span>.</span></a>
+                    <div class="logo text-center">
+                        <a href="#"><img src="images/logo.png" alt=""/></a>
                     </div>
                 </div>
                 <!-- Main Navigation -->
@@ -99,49 +102,9 @@
 
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. </p>
 
-                                            <div class="button discover_button">
+                                            <div>
 
-                                                <a href="#" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <!-- Slider Item -->
-
-                        <div class="owl-item main_slider_item">
-
-                            <div class="main_slider_item_bg" style="background-image:url(images/main_slider_1.jpg)"></div>
-
-                            <div class="main_slider_shapes"><img src="images/main_slider_shapes.png" alt="" style="width: 100% !important;"></div>
-
-                            <div class="container">
-
-                                <div class="row">
-
-                                    <div class="col slider_content_col">
-
-                                        <div class="main_slider_content">
-
-                                            <h1>Do you need</h1>
-
-                                            <h1>a <span>modern</span> website?</h1>
-
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. </p>
-
-                                            <div class="button discover_button">
-
-                                                <a href="#" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
+                                                <a href="#" class="text-center"><img src="images/video.png" alt="" class="center" ></a>
 
                                             </div>
 
@@ -161,7 +124,7 @@
 
                         <div class="owl-item main_slider_item">
 
-                            <div class="main_slider_item_bg" style="background-image:url(images/main_slider_1.jpg)"></div>
+                            <div class="main_slider_item_bg" style="background-image:url(images/main_slider_2.jpg)"></div>
 
                             <div class="main_slider_shapes"><img src="images/main_slider_shapes.png" alt="" style="width: 100% !important;"></div>
 
@@ -179,12 +142,61 @@
 
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. </p>
 
-                                            <div class="button discover_button">
+                                            <!--                                            <div class="button discover_button">
+                                            
+                                                                                            <a href="#" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
+                                            
+                                                                                        </div>-->
+                                            <div>
 
-                                                <a href="#" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
+                                                <a href="#" class="text-center"><img src="images/video.png" alt="" class="center"></a>
 
                                             </div>
 
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Slider Item -->
+
+                        <div class="owl-item main_slider_item">
+
+                            <div class="main_slider_item_bg" style="background-image:url(images/main_slider_3.jpg)"></div>
+
+                            <div class="main_slider_shapes"><img src="images/main_slider_shapes.png" alt="" style="width: 100% !important;"></div>
+
+                            <div class="container">
+
+                                <div class="row">
+
+                                    <div class="col slider_content_col">
+
+                                        <div class="main_slider_content">
+
+                                            <h1>Do you need</h1>
+
+                                            <h1>a <span>modern</span> website?</h1>
+
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. </p>
+
+                                            <!--                                            <div class="button discover_button">
+                                            
+                                                                                            <a href="#" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
+                                            
+                                                                                        </div>-->
+                                            <div>
+
+                                                <a href="#" class="text-center"><img src="images/video.png" alt="" class="center" ></a>
+
+                                            </div>
                                         </div>
 
                                     </div>
@@ -203,31 +215,31 @@
 
 
 
-                    <div class="main_slider_dots">
-
-                        <div class="container">
-
-                            <div class="row">
-
-                                <div class="col">
-
-                                    <ul id="main_slider_custom_dots" class="main_slider_custom_dots">
-
-                                        <li class="main_slider_custom_dot active">01.</li>
-
-                                        <li class="main_slider_custom_dot">02.</li>
-
-                                        <li class="main_slider_custom_dot">03.</li>
-
-                                    </ul>
-
-                                </div>
-
-                            </div>
-
-                        </div>		
-
-                    </div>
+                    <!--                    <div class="main_slider_dots">
+                    
+                                            <div class="container">
+                    
+                                                <div class="row">
+                    
+                                                    <div class="col">
+                    
+                                                        <ul id="main_slider_custom_dots" class="main_slider_custom_dots">
+                    
+                                                            <li class="main_slider_custom_dot active">01.</li>
+                    
+                                                            <li class="main_slider_custom_dot">02.</li>
+                    
+                                                            <li class="main_slider_custom_dot">03.</li>
+                    
+                                                        </ul>
+                    
+                                                    </div>
+                    
+                                                </div>
+                    
+                                            </div>		
+                    
+                                        </div>-->
 
 
 
@@ -301,13 +313,13 @@
 
                                 <div class="icon_container d-flex flex-column justify-content-end">
 
-                                    <img src="images/icon_1.svg" alt="">
+                                    <img src="images/png/doller.png" alt="">
 
                                 </div>
 
-                                <h3>modern design</h3>
+                                <h3>Money & Finance</h3>
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, quam tincidunt venen atis ultrices.</p>
+                                <p>Money – we spend our whole lives working for it but do not know where it goes or how to make it work for us. Maybe it’s time we figured it out?</p>
 
                             </div>
 
@@ -325,13 +337,13 @@
 
                                 <div class="icon_container d-flex flex-column justify-content-end">
 
-                                    <img src="images/icon_2.svg" alt="">
+                                    <img src="images/png/step.png" alt="">
 
                                 </div>
 
-                                <h3>easy to use</h3>
+                                <h3>Self-Development</h3>
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, quam tincidunt venen atis ultrices.</p>
+                                <p>Be it time, relationships, health or skill development there is always something we can learn to do better. Let’s get started!</p>
 
                             </div>
 
@@ -349,13 +361,13 @@
 
                                 <div class="icon_container d-flex flex-column justify-content-end">
 
-                                    <img src="images/icon_3.svg" alt="">
+                                    <img src="images/png/plane.png" alt="">
 
                                 </div>
 
-                                <h3>well documented</h3>
+                                <h3>Travel</h3>
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, quam tincidunt venen atis ultrices.</p>
+                                <p>Travel – everyone is talking about it. Why travel? How to travel? Where to travel to? Let’s find out! </br> &nbsp;</p>
 
                             </div>
 
@@ -482,9 +494,7 @@
                     <div class="row">
 
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
-
                             <h2>testimonials<span>z</span></h2>
-
                         </div>
 
                     </div>
@@ -513,37 +523,15 @@
 
                                         <div class="testimonials_content">
 
-                                            <div class="test_user_pic"><img src="images/test_user.jpg" alt="https://unsplash.com/@michaeldam"></div>
+                                            <div class="test_user_pic"><img src="images/testimonial/person-01.jpg" alt=""></div>
 
-                                            <div class="test_name">maria williams</div>
+                                            <div class="test_name">Paul Dermody</div>
 
-                                            <div class="test_title">Company CEO</div>
+                                            <!--                                            <div class="test_title">Company CEO</div>
+                                            
+                                                                                        <div class="test_quote">"</div>-->
 
-                                            <div class="test_quote">"</div>
-
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, olor sit amet, consectetur adipiscing eli quam tincidunt venen atis ultrices, est libero olor sit amet, consectetur adipiscing eli mattis ante.</p>
-
-                                        </div>
-
-                                    </div>
-
-
-
-                                    <!-- Testimonials Item -->
-
-                                    <div class="owl-item testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
-
-                                        <div class="testimonials_content">
-
-                                            <div class="test_user_pic"><img src="images/test_user.jpg" alt="https://unsplash.com/@michaeldam"></div>
-
-                                            <div class="test_name">maria williams</div>
-
-                                            <div class="test_title">Company CEO</div>
-
-                                            <div class="test_quote">"</div>
-
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, olor sit amet, consectetur adipiscing eli quam tincidunt venen atis ultrices, est libero olor sit amet, consectetur adipiscing eli mattis ante.</p>
+                                            <p>Cheryl Pinto has been my life coach for the past 5 months. I was working in the IT industry for 5 years and felt like I needed a change and pursue a passion I always had but never had the courage to follow. By accident I met Cheryl and we started working together. She has been very successful in her own career – she has walked the walk – corporate professional, high intensity work. So therefore she understood my world. She is very capable with her skills with NLP. Her general good nature and intelligence makes Cheryl very easy to work with. She is very smart. She drove me, pushed me in areas I probably wasn’t comfortable to go but I wanted to go. It’s been absolutely phenomenal. Now I am completely changing career and going on a new journey which I am so excited about. I’ve gone from being minorly depressed to majorly excited about the future. I cant thank Cheryl enough and I can’t recommend her enough. It’s difficult to make major changes without someone there to support you, to guide you and to push you. If you’re looking to make that sort of change or impact, then Cheryl is definitely one of the best I’ve worked with –I know, I’ve tried a few :) Good luck!</p>
 
                                         </div>
 
@@ -557,15 +545,37 @@
 
                                         <div class="testimonials_content">
 
-                                            <div class="test_user_pic"><img src="images/test_user.jpg" alt="https://unsplash.com/@michaeldam"></div>
+                                            <div class="test_user_pic"><img src="images/testimonial/person-02.jpg" alt=""></div>
 
-                                            <div class="test_name">maria williams</div>
+                                            <div class="test_name">Avil Pinto</div>
 
-                                            <div class="test_title">Company CEO</div>
+                                            <div class="test_title">Founder, Dubai Job Hunt</div>
 
                                             <div class="test_quote">"</div>
 
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, olor sit amet, consectetur adipiscing eli quam tincidunt venen atis ultrices, est libero olor sit amet, consectetur adipiscing eli mattis ante.</p>
+                                            <p>Today is just the 18th day since we began our coaching session. With just 2 sessions, falling short of words to describe the transformation that's taking place in my life. In such short time, i have explored & realized things which i was always struggling with! Wish I had known you before .. Thanks for guiding me to clean up my mind out of fears, worries, limiting beliefs and filling me with hope, confidence, clarity, goals and above all helping me understand myself and my purpose. I always believed that nothing comes easy in life, one needs luck on his side and influence of others. After meeting you, I feel life is so simple and everything is possible and achievable. You truly are God's gift to mankind. You have not only brought change within me but also in my family. Thank you very much !</p>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- Testimonials Item -->
+
+                                    <div class="owl-item testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
+
+                                        <div class="testimonials_content">
+
+                                            <div class="test_user_pic"><img src="images/testimonial/person-03.jpg" alt=""></div>
+
+                                            <div class="test_name">Kunal Bhatia</div>
+
+                                            <div class="test_title">Assistant Vice President- FX, Interest rates & Commodity Derivative Solutions</div>
+
+                                            <div class="test_quote">"</div>
+
+                                            <p>At the outset I looked at NLP with a lot of skepticism and it was only because I trusted Cheryl that I decided to give it a shot. She has the ability to make you believe and it comes very naturally to her. As sessions go by, she makes you comfortable enough to open facets of yourself which you wouldn't share with anyone. This enhances her understanding and empathy of you and enables her to perform the various NLP techniques with great effect. The clarity and pin-pointedness with which Cheryl helped my situation is something which has made me understand and manage myself better. I am a better-focused and more energized version of myself. There are obvious improvements in my speech, body language, mental state of being and most importantly i am a tad bit spiritually enlightened. Hand over your absolute 100% trust to her and she will go beyond what is required to help improve your life. She has the emotional and mental maturity as well as the talent and technique to use her NLP skills and understanding to help channel you in the right direction.</p>
 
                                         </div>
 
@@ -617,29 +627,28 @@
 
                 <!-- artist: https://unsplash.com/@nativemello -->
 
-                <div class="services_background prlx" style="background-image:url(images/services_background.jpg)"></div>
+                <div class="services_background prlx" style="background-image:url(images/main_slider_1.jpg)"></div>
 
-                <div class="services_shapes"><img src="images/services_shapes.png" alt=""></div>
+<!--                <div class="services_shapes"><img src="images/services_shapes.png" alt=""></div>-->
 
 
 
                 <div class="container">
-
+                    <div class="row pad-50">
+                        <h2 class="color-w">Types of Coaching Cherly Specializes in:</h2>
+                    </div>
                     <div class="row">
-
-
-
                         <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
 
-                            <div class="icon_container d-flex flex-column justify-content-end">
+                            <div class="icon_container d-flex flex-column justify-content-end center">
 
-                                <img src="images/icon_1.svg" alt="">
+                                <img src="images/types/Financial-Freedom.png" alt="" style=" width: 80px; height: 80px;">
 
                             </div>
 
-                            <h3>modern design</h3>
+                            <h3>Financial Freedom</h3>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum.</p>
+                            <p class="text-justify">If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income, if you find yourself drowning in the quagmire of credit card debts, if you wish to start saving more and building a retirement fund then get in touch with me now. I have been a banker for nearly 2 decades and have cracked the code.</p>
 
                         </div>
 
@@ -647,15 +656,15 @@
 
                         <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
 
-                            <div class="icon_container d-flex flex-column justify-content-end">
+                            <div class="icon_container d-flex flex-column justify-content-end center">
 
-                                <img src="images/icon_2.svg" alt="">
+                                <img src="images/types/Time-Management.png" alt="" style=" width: 80px; height: 80px;">
 
                             </div>
 
-                            <h3>easy to use</h3>
+                            <h3>Time Management</h3>
 
-                            <p>Dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, quam tincidunt.</p>
+                            <p class="text-justify">If you always find yourself wanting to do more, live more meaningfully, but are somehow unable to, then I will help shine the light on how you may manage your time and thus your life so that you live the life you want to live.</p>
 
                         </div>
 
@@ -663,15 +672,15 @@
 
                         <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
 
-                            <div class="icon_container d-flex flex-column justify-content-end">
+                            <div class="icon_container d-flex flex-column justify-content-end center">
 
-                                <img src="images/icon_3.svg" alt="">
+                                <img src="images/types/careerimage.png" alt="" style=" width: 80px; height: 80px;">
 
                             </div>
 
-                            <h3>well documented</h3>
+                            <h3>Career Progress</h3>
 
-                            <p>Adipiscing elit. Phasellus vestibulum, quam tincidunt venen atis ultrices.</p>
+                            <p class="text-justify">If you are in a job that does not light you up, or in a career that you once loved but now wish to change, or if you are not advancing in your career no matter what you do, then chat with me and learn how I raced through the corporate ladder over my 17 years of experience in the corporate world.</p>
 
                         </div>
 
@@ -679,15 +688,15 @@
 
                         <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
 
-                            <div class="icon_container d-flex flex-column justify-content-end">
+                            <div class="icon_container d-flex flex-column justify-content-end center">
 
-                                <img src="images/icon_4.svg" alt="">
+                                <img src="images/types/Trader-Coach.png" alt="" style=" width: 80px; height: 80px;">
 
                             </div>
 
-                            <h3>smart structure</h3>
+                            <h3>Trader Coach</h3>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum.</p>
+                            <p class="text-justify">If you are a trader in the financial markets and are unable to remain consistently profitable, if you cannot stick to your rules or deal with the psychological impact of trading, talk to me. I am a Professional Trader and have been through the same painful rite of passage emerging victorious</p>
 
                         </div>
 
@@ -695,31 +704,31 @@
 
                         <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
 
-                            <div class="icon_container d-flex flex-column justify-content-end">
+                            <div class="icon_container d-flex flex-column justify-content-end center">
 
-                                <img src="images/icon_5.svg" alt="">
+                                <img src="images/types/Transformational-Change.png" alt="" style=" width: 80px; height: 80px;">
 
                             </div>
 
-                            <h3>elements</h3>
+                            <h3>Transformational Change</h3>
 
-                            <p>Dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, quam tincidunt.</p>
+                            <p class="text-justify">If you have found yourself at a stage where you feel like it is ‘now time’ to make a large change that is likely to impact many facets of your life. If you wish to disrupt the status quo,follow your passion, live life to the fullest, then contact me right away. I will be honored to guide you along your path to your most fulfilling life.</p>
 
                         </div>
 
 
 
-                        <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+                        <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start text-center">
 
-                            <div class="icon_container d-flex flex-column justify-content-end">
+                            <div class="icon_container d-flex flex-column justify-content-end  center">
 
-                                <img src="images/icon_6.svg" alt="">
+                                <img src="images/types/Super-Women.png" alt="" style=" width: 80px; height: 80px;">
 
                             </div>
 
-                            <h3>bold colors</h3>
+                            <h3>Super Women</h3>
 
-                            <p>Adipiscing elit. Phasellus vestibulum, quam tincidunt venen atis ultrices.</p>
+                            <p class="text-justify">If you are an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress, learn how to ask for a raise or a promotion, be heard, grab a coffee with me. I have ‘been there, done that’ and am thrilled to help you learn the ropes.</p>
 
                         </div>
 
