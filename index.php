@@ -393,7 +393,7 @@
 
                 <div class="about_background prlx" style="background-image:url(images/about_background.jpg)"></div>
 
-                <div class="about_shapes"><img src="images/about_shapes.png" alt=""></div>
+                <div class="about_shapes"><img src="images/main_slider_2.jpg" alt=""></div>
 
 
 
@@ -403,7 +403,7 @@
 
                         <div class="col-lg-6 offset-lg-3 text-center section_title">
 
-                            <h2>about our project<span>z</span></h2>
+                            <h2>about our project</h2>
 
                         </div>
 
@@ -494,7 +494,7 @@
                     <div class="row">
 
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
-                            <h2>testimonials<span>z</span></h2>
+                            <h2>testimonials</h2>
                         </div>
 
                     </div>
@@ -531,8 +531,10 @@
                                             
                                                                                         <div class="test_quote">"</div>-->
 
-                                            <p>Cheryl Pinto has been my life coach for the past 5 months. I was working in the IT industry for 5 years and felt like I needed a change and pursue a passion I always had but never had the courage to follow. By accident I met Cheryl and we started working together. She has been very successful in her own career – she has walked the walk – corporate professional, high intensity work. So therefore she understood my world. She is very capable with her skills with NLP. Her general good nature and intelligence makes Cheryl very easy to work with. She is very smart. She drove me, pushed me in areas I probably wasn’t comfortable to go but I wanted to go. It’s been absolutely phenomenal. Now I am completely changing career and going on a new journey which I am so excited about. I’ve gone from being minorly depressed to majorly excited about the future. I cant thank Cheryl enough and I can’t recommend her enough. It’s difficult to make major changes without someone there to support you, to guide you and to push you. If you’re looking to make that sort of change or impact, then Cheryl is definitely one of the best I’ve worked with –I know, I’ve tried a few :) Good luck!</p>
-
+                                            <p>Cheryl Pinto has been my life coach for the past 5 months. I was working in the IT industry for 5 years and felt like I needed a change and pursue a passion...</p>
+                                            <div class="button discover_button center">
+                                                <a href="#" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                            </div>
                                         </div>
 
                                     </div>
@@ -553,8 +555,10 @@
 
                                             <div class="test_quote">"</div>
 
-                                            <p>Today is just the 18th day since we began our coaching session. With just 2 sessions, falling short of words to describe the transformation that's taking place in my life. In such short time, i have explored & realized things which i was always struggling with! Wish I had known you before .. Thanks for guiding me to clean up my mind out of fears, worries, limiting beliefs and filling me with hope, confidence, clarity, goals and above all helping me understand myself and my purpose. I always believed that nothing comes easy in life, one needs luck on his side and influence of others. After meeting you, I feel life is so simple and everything is possible and achievable. You truly are God's gift to mankind. You have not only brought change within me but also in my family. Thank you very much !</p>
-
+                                            <p>Today is just the 18th day since we began our coaching session. With just 2 sessions, falling short of words to describe the transformation that's...</p>
+                                            <div class="button discover_button center">
+                                                <a href="#" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                            </div>
                                         </div>
 
                                     </div>
@@ -575,8 +579,10 @@
 
                                             <div class="test_quote">"</div>
 
-                                            <p>At the outset I looked at NLP with a lot of skepticism and it was only because I trusted Cheryl that I decided to give it a shot. She has the ability to make you believe and it comes very naturally to her. As sessions go by, she makes you comfortable enough to open facets of yourself which you wouldn't share with anyone. This enhances her understanding and empathy of you and enables her to perform the various NLP techniques with great effect. The clarity and pin-pointedness with which Cheryl helped my situation is something which has made me understand and manage myself better. I am a better-focused and more energized version of myself. There are obvious improvements in my speech, body language, mental state of being and most importantly i am a tad bit spiritually enlightened. Hand over your absolute 100% trust to her and she will go beyond what is required to help improve your life. She has the emotional and mental maturity as well as the talent and technique to use her NLP skills and understanding to help channel you in the right direction.</p>
-
+                                            <p>At the outset I looked at NLP with a lot of skepticism and it was only because I trusted Cheryl that I decided to give it a shot. She has the ability...</p>
+                                            <div class="button discover_button center">
+                                                <a href="#" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                            </div>
                                         </div>
 
                                     </div>
