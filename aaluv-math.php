@@ -103,7 +103,7 @@
                             <i class="fas fa-check"></i><li class="text-justify">Individualized study projection.</li>
                             <i class="fas fa-check"></i><li class="text-justify">Enable students to become independent by positive mind-set and self – learning skills.</li>
                             <i class="fas fa-check"></i><li class="text-justify">Eliminates examination fear.</li>
-                            <i class="fas fa-check"></i><li class="text-justify">Aaluv Method of Learning develops academic ability , empowerment and ownerhip of their own learning.</li>
+                            <i class="fas fa-check"></i><li class="text-justify">Aaluv Method of Learning develops academic ability, empowerment and ownerhip of their own learning.</li>
                             <i class="fas fa-check"></i><li class="text-justify">increases their concentration, stamina and confidence.</li>
                             <i class="fas fa-check"></i><li class="text-justify">Unique assessment and individualized teaching method.</li>
                             <i class="fas fa-check"></i><li class="text-justify">Insist on attempting to work out the sums rather than ignoring them.</li>
