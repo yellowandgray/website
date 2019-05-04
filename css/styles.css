@@ -428,7 +428,7 @@ ul.nostyle i {
 .media.service-box:hover .pull-left > i {
     color: #121D29;
 }
-.carousel-caption{position: absolute;width: 100%;float: left;background: rgba(0, 0, 0, 0.18);margin: 0;left: 0;right: 0;bottom: 0;top: 0;height: 100%;}
+.carousel-caption{position: absolute;width: 100%;float: left;background: rgba(0, 0, 0, 0.15);margin: 0;left: 0;right: 0;bottom: 0;top: 0;height: 100%;}
 .carousel-content{
     position:absolute;
 
