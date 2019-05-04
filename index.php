@@ -23,7 +23,7 @@
         <![endif]-->
     </head> 
 
-    <body id="home">
+    <body>
 
         <header id="header">
              <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
