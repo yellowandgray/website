@@ -1,0 +1,80 @@
+.color-black {
+    color: #000 !important;
+}
+.text-cen {
+    text-align: center !important;
+    width: 100% !important;
+}
+.bg-pic {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-b {
+    background: #20b9ec;
+}
+.input-box {
+    padding: 0px 20px;
+}
+.sub-submit{
+    padding: 4px 20px;
+    background: #904cc3;
+    /*    border-radius: 20px;*/
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    /*box-shadow: 0px 0px 5px 3px #EEE;*/
+    border-style: none;
+}
+.sub-submit:hover {
+    transition: all 0.3s linear;
+    /* padding: 4px 32px; */
+    background: #ffffff;
+    border-radius: 0;
+    /* text-align: center; */
+    width: 100%;
+    color: #20b9ec;
+    box-shadow: 0px 0px 0px 0px #EEE;
+    border-style: none;
+}
+video#vid {
+    position: absolute; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+.overlay {
+    position: absolute;
+    /*    display: none;*/
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+.form-1 input 
+{
+    width: 100%;
+    padding: 0px 5px;
+    margin-bottom: 10%;
+}
+
+
+.bg-enquiry {
+    background: #00659c;
+}
+.req
+{
+    padding: 0px 0px 60px 5px !important;
+}
+input::placeholder {
+    color: #868e96 !important;
+    font-size: 13px !important;
+}
+
