@@ -92,7 +92,7 @@
                 </div>
                 <div class="row uppercase">
                     <div class="col-md-12 text-p wow fadeInUp">
-                        <p class="text-justify">Preparing children in problem solving ,creativity, Analytic thinking, collaboration, communication, ethics, action ,empathy ,tolerance every child needs to survive and succeed understanding.</p>
+                        <p class="text-justify">Preparing children in problem solving, creativity, Analytic thinking, collaboration, communication, ethics, action, empathy, tolerance every child needs to survive and succeed understanding.</p>
                     </div>
                 </div>
                 <div class="row padding-top-30">
@@ -231,7 +231,7 @@
                                         <h3 class="color-blue">Our Instructor</h3>
                                         <div class="list-align">
                                             <h4>AALUV Math Program Instructors are MASTERS AT GIVING HINTS AND NOT ANSWERS.</h4>
-                                            <i class="fas fa-check"></i><p class="text-justify"> Our instructors don’t just teach math, but the processes behind problem solving. We have individualized guidance, customized to the child’s learning progress. Our students learn at their own pace. This is hard to achieve with group-oriented teaching. The students learn to arrive at solutions on their own.</p>
+                                            <i class="fas fa-check"></i><p class="text-justify"> Our instructors don’t just teach math, but he teaches problem solving. We have individualized guidance, customized to the child’s learning progress. Our students learn at their own pace. This is hard to achieve with group-oriented teaching. The students learn to arrive at solutions on their own.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -340,7 +340,7 @@
                                                                 </li>-->
                                 <li class="text-justify">
                                     <div>
-                                        <h3 class="color-blue">Self Learning Proficiency</h3>
+                                        <h3 class="color-blue">Self Learning Process</h3>
 <!--                                        <img src="img/tab-img/learning-methods.jpg">-->
                                         <div class="list-align">
                                             <i class="fas fa-check"></i><p class="text-justify"> To forever inculcate in children the ability to self-learning, enhancing their learning skills is the first step.</p>

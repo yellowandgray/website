@@ -54,7 +54,7 @@
                     <div class="col-md-12 wow fadeInUp">
                         <h3 class="color-blue">Expanding Global Business</h3>
                         <h4 class="color-blue">The Global business is expanding</h4>
-                        <p class="text-justify">The Parent company <b>Aloha India</b>, is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-18 years. Since their existence in the last 17 years, they have trained more than 800 thousand students with 1300 centres across in india. Essentially, in these programs, the infinite potential of the human brain and its effective use is unveiled through the Scientific Brain Management Techniques.</p>
+                        <p class="text-justify">The Parent company <b>Aloha India</b>, is a Global Leader in educational field and conducts school activity program, which is specially designed for children in the age group of 4-18 years. Since their existence in the last 17 years and have trained more than 800,000 students with 1300 centres across in india. Essentially, in these programs, the infinite potential of the human brain and its effective use is unveiled through the Scientific Brain Management Techniques.</p>
                     </div>
                 </div>
               
@@ -84,7 +84,7 @@
                 <div class="row padding-top-30">
                     <div class="col-md-12 text-p wow fadeInUp">
                         <h3 class="color-blue">MISSION</h3>
-                        <p class="text-justify">To be recognized as Experts in the field of Innovative Education and as the leading authority in establishing Benchmarks and Standards. Furthermore, to unlock the innate aptitude of the human mind and cultivate knowledge through Math Classroom tutoring.</p>
+                        <p class="text-justify">To be recognized as Experts in the field of Innovative Education and as the leading authority in establishing Benchmarks and Standards. Furthermore, to unlock the innate aptitude of the human mind and cultivate knowledge base society through Math tutoring.</p>
                     </div>
                 </div>
             </div>
