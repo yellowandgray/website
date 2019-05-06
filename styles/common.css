@@ -206,11 +206,13 @@ input[type=submit]:hover {
 .sub-img {
     position: relative;
     margin-top: -91px;
-    outline-offset: 6px;
-    /* border: 1px solid; */
-    outline: 1px solid #06779c;
-    border-radius: 20px;
-    background: #f7f7f7;
+    /* outline-offset: 6px; */
+    border: 1px solid #fbfbfbed;
+    /* outline: 1px solid #ffffff; */
+    border-radius: 40px 0px;
+    background: #ececec96;
+    padding: 12px;
+    box-shadow: -1px -1px 8px 0px #8045ad;
 }
 
 
