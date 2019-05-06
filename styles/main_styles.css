@@ -95,7 +95,7 @@ p a
     display: inline;
     position: relative;
     color: inherit;
-    border-bottom: solid 1px #ffa07f;
+    /*border-bottom: solid 1px #ffa07f;*/
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
@@ -116,8 +116,8 @@ p a:active
 }
 p a:hover
 {
-    color: #FFFFFF;
-    background: #ffa07f;
+    color: #9c20b3;
+    /*background: #ffa07f;*/
 }
 p a:hover::after
 {
@@ -1004,7 +1004,7 @@ section
 }
 .section_title_dark h2::before
 {
-    background: #3DD5FC;
+    background: #9c20b3;
 }
 .testimonials_container
 {

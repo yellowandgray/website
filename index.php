@@ -238,16 +238,26 @@
             <section class="pad-50 bg-b">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-7">
-                            <h3 class="color-w"><strong><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla.</em></strong></h3>
-                        </div>
                         <div class="col-lg-3">
-                            <input type='email' name='email' placeholder="Your Email..." class="input-box">
+                            <img src="images/bg/cheryl-05.jpg" alt="" class="sub-img">
                         </div>
-                        <div class="col-lg-2">
-                            <button type='submit' class="sub-submit">subscribe</button>
+                        <div class="col-lg-9">
+                            <h3 class="color-w"><strong>JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</strong></h3>
+                            <h4 class="color-purple">Stay updated with articles, tools, updates from me.</h4>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <input type='text' name='name' placeholder="Your Name..." class="input-box">
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type='email' name='email' placeholder="Your Email..." class="input-box">
+                                </div>
+                                <div class="col-lg-4">
+                                    <button type='submit' class="sub-submit">subscribe</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </section>
             <!-- About -->
@@ -281,7 +291,7 @@
                     </div>
 
                 </div>
-                <div class="pad-10 margin-top-50 bg-p">
+                <div class="pad-20 margin-top-50 bg-p">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6">
