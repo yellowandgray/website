@@ -906,7 +906,7 @@ section
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #000;
     line-height: 1.35;
     margin-bottom: 80px;
 }
@@ -1134,7 +1134,7 @@ section
 .test_slider_nav i
 {
     font-size: 18px;
-    color: #ff4200;
+    color: #9c20b3;
 }
 .test_slider_nav_left
 {
