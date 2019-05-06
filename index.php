@@ -229,7 +229,7 @@
                 </div>
             </section>
             <!-- About -->
-            <div class="about prlx_parent" style="background-image:url(images/main_slider_2.jpg);background-repeat: no-repeat;">
+            <div class="about prlx_parent" style="background-image:url(images/main_slider_2.jpg);background-repeat: no-repeat;background-size: cover;">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title">
@@ -368,47 +368,59 @@
                         </div>
                     </div>
                     <div class="row pad-50">
-                        <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                <img src="images/types/Financial-Freedom.png" alt="">
+                        <div class="col-lg-4">
+                            <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                <div class="icon_container d-flex flex-column justify-content-end center">
+                                    <img src="images/types/Financial-Freedom.png" alt="">
+                                </div>
+                                <h3 class="text-cen">Financial Freedom</h3>
+                                <p class="text-justify">If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income, if you find yourself drowning in the quagmire of credit card debts, if you wish to start saving more and building a retirement fund then get in touch with me now. I have been a banker for nearly 2 decades and have cracked the code.</p>
                             </div>
-                            <h3 class="text-cen">Financial Freedom</h3>
-                            <p class="text-justify">If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income, if you find yourself drowning in the quagmire of credit card debts, if you wish to start saving more and building a retirement fund then get in touch with me now. I have been a banker for nearly 2 decades and have cracked the code.</p>
                         </div>
-                        <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                <img src="images/types/Time-Management.png" alt="">
+                        <div class="col-lg-4">
+                            <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                <div class="icon_container d-flex flex-column justify-content-end center">
+                                    <img src="images/types/Time-Management.png" alt="">
+                                </div>
+                                <h3 class="text-cen">Time Management</h3>
+                                <p class="text-justify">If you always find yourself wanting to do more, live more meaningfully, but are somehow unable to, then I will help shine the light on how you may manage your time and thus your life so that you live the life you want to live.</p>
                             </div>
-                            <h3 class="text-cen">Time Management</h3>
-                            <p class="text-justify">If you always find yourself wanting to do more, live more meaningfully, but are somehow unable to, then I will help shine the light on how you may manage your time and thus your life so that you live the life you want to live.</p>
                         </div>
-                        <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                <img src="images/types/careerimage.png" alt="">
+                        <div class="col-lg-4">
+                            <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                <div class="icon_container d-flex flex-column justify-content-end center">
+                                    <img src="images/types/careerimage.png" alt="">
+                                </div>
+                                <h3 class="text-cen">Career Progress</h3>
+                                <p class="text-justify">If you are in a job that does not light you up, or in a career that you once loved but now wish to change, or if you are not advancing in your career no matter what you do, then chat with me and learn how I raced through the corporate ladder over my 17 years of experience in the corporate world.</p>
                             </div>
-                            <h3 class="text-cen">Career Progress</h3>
-                            <p class="text-justify">If you are in a job that does not light you up, or in a career that you once loved but now wish to change, or if you are not advancing in your career no matter what you do, then chat with me and learn how I raced through the corporate ladder over my 17 years of experience in the corporate world.</p>
                         </div>
-                        <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                <img src="images/types/Trader-Coach.png" alt="">
+                        <div class="col-lg-4">
+                            <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                <div class="icon_container d-flex flex-column justify-content-end center">
+                                    <img src="images/types/Trader-Coach.png" alt="">
+                                </div>
+                                <h3 class="text-cen">Trader Coach</h3>
+                                <p class="text-justify">If you are a trader in the financial markets and are unable to remain consistently profitable, if you cannot stick to your rules or deal with the psychological impact of trading, talk to me. I am a Professional Trader and have been through the same painful rite of passage emerging victorious</p>
                             </div>
-                            <h3 class="text-cen">Trader Coach</h3>
-                            <p class="text-justify">If you are a trader in the financial markets and are unable to remain consistently profitable, if you cannot stick to your rules or deal with the psychological impact of trading, talk to me. I am a Professional Trader and have been through the same painful rite of passage emerging victorious</p>
                         </div>
-                        <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                <img src="images/types/Transformational-Change.png" alt="">
+                        <div class="col-lg-4">
+                            <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                <div class="icon_container d-flex flex-column justify-content-end center">
+                                    <img src="images/types/Transformational-Change.png" alt="">
+                                </div>
+                                <h3 class="text-cen">Transformational Change</h3>
+                                <p class="text-justify">If you have found yourself at a stage where you feel like it is ‘now time’ to make a large change that is likely to impact many facets of your life. If you wish to disrupt the status quo,follow your passion, live life to the fullest, then contact me right away. I will be honored to guide you along your path to your most fulfilling life.</p>
                             </div>
-                            <h3 class="text-cen">Transformational Change</h3>
-                            <p class="text-justify">If you have found yourself at a stage where you feel like it is ‘now time’ to make a large change that is likely to impact many facets of your life. If you wish to disrupt the status quo,follow your passion, live life to the fullest, then contact me right away. I will be honored to guide you along your path to your most fulfilling life.</p>
                         </div>
-                        <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start text-center">
-                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                <img src="images/types/Super-Women.png" alt="">
+                        <div class="col-lg-4">
+                            <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                <div class="icon_container d-flex flex-column justify-content-end center">
+                                    <img src="images/types/Super-Women.png" alt="">
+                                </div>
+                                <h3 class="text-cen">Super Women</h3>
+                                <p class="text-justify">If you are an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress, learn how to ask for a raise or a promotion, be heard, grab a coffee with me. I have ‘been there, done that’ and am thrilled to help you learn the ropes.</p>
                             </div>
-                            <h3 class="text-cen">Super Women</h3>
-                            <p class="text-justify">If you are an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress, learn how to ask for a raise or a promotion, be heard, grab a coffee with me. I have ‘been there, done that’ and am thrilled to help you learn the ropes.</p>
                         </div>
                     </div>
                     <!--                    <div class="row">
@@ -431,33 +443,41 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-3 service_item text-left d-flex flex-column align-items-start justify-content-start">
-                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                <img src="images/png/doller-01.png" alt="" style=" width: 80px; height: 80px;">
+                        <div class="col-lg-3">
+                            <div class="service_item text-left d-flex flex-column align-items-start justify-content-start box-1">
+                                <div class="icon_container d-flex flex-column justify-content-end center">
+                                    <img src="images/png/doller-01.png" alt="">
+                                </div>
+                                <h3 class=" color-black text-cen">Improve Finances</h3>
+                                <p class="text-cen color-black">Assessment & Saving</p>
                             </div>
-                            <h3 class=" color-black text-cen">Improve Finances</h3>
-                            <p class="text-cen color-black">Assessment & Saving</p>
                         </div>
-                        <div class="col-lg-3 service_item text-left d-flex flex-column align-items-start justify-content-start">
-                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                <img src="images/png/clock.png" alt="" style=" width: 80px; height: 80px;">
+                        <div class="col-lg-3">
+                            <div class="service_item text-left d-flex flex-column align-items-start justify-content-start box-1">
+                                <div class="icon_container d-flex flex-column justify-content-end center">
+                                    <img src="images/png/clock.png" alt="">
+                                </div>
+                                <h3 class=" color-black text-cen">Manage<br/> Time</h3>
+                                <p class="text-cen color-black">More Life & Living</p>
                             </div>
-                            <h3 class=" color-black text-cen">Manage Time</h3>
-                            <p class="text-cen color-black">More Life & Living</p>
                         </div>
-                        <div class="col-lg-3 service_item text-left d-flex flex-column align-items-start justify-content-start">
-                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                <img src="images/png/note.png" alt="" style=" width: 80px; height: 80px;">
+                        <div class="col-lg-3">
+                            <div class="service_item text-left d-flex flex-column align-items-start justify-content-start box-1">
+                                <div class="icon_container d-flex flex-column justify-content-end center">
+                                    <img src="images/png/note.png" alt="">
+                                </div>
+                                <h3 class=" color-black text-cen">Improve Discipline</h3>
+                                <p class="text-cen color-black">Life Control & Results</p>
                             </div>
-                            <h3 class=" color-black text-cen">Improve Discipline</h3>
-                            <p class="text-cen color-black">Life Control & Results</p>
                         </div>
-                        <div class="col-lg-3 service_item text-left d-flex flex-column align-items-start justify-content-start">
-                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                <img src="images/png/chat.png" alt="" style=" width: 80px; height: 80px;">
+                        <div class="col-lg-3">
+                            <div class="service_item text-left d-flex flex-column align-items-start justify-content-start box-1">
+                                <div class="icon_container d-flex flex-column justify-content-end center">
+                                    <img src="images/png/chat.png" alt="">
+                                </div>
+                                <h3 class=" color-black text-cen">Communication Skills</h3>
+                                <p class="text-cen color-black">Presentation & Relationships</p>
                             </div>
-                            <h3 class=" color-black text-cen">Communication Skills</h3>
-                            <p class="text-cen color-black">Presentation & Relationships</p>
                         </div>
                     </div>
                     <!--                <div class="row">
@@ -504,63 +524,53 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <form class="form-1">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <input type="text" name="fname" placeholder="Name"> 
-                                        <input type="email" name="email" placeholder="Email Address"> 
-                                        <input type="text" name="phone" placeholder="Phone Number"> 
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <input type="text" name="subject" placeholder="subject"> 
-
-                                        <input type="text" name="requirement" placeholder="Requirement" class="req"> 
-
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <button type='submit' class="sub-submit">submit</button>
-                                    </div>
+                                <input type="text" name="fname" placeholder="Name"> 
+                                <input type="email" name="email" placeholder="Email Address"> 
+                                <input type="text" name="phone" placeholder="Phone Number"> 
+                                <input type="text" name="subject" placeholder="subject"> 
+                                <textarea type="text" name="requirement" placeholder="Requirement" class="req"></textarea>
+                                <button type="submit" class="sub-submit">submit</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row footer_content d-flex flex-sm-row flex-column align-items-center">
-                    <div class="col-sm-6 cr text-sm-left text-center">
-                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed By <a href="http://www.yellowandgray.com/" target="_blank"> YG STUDIO</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                    </div>
-                    <div class="col-sm-6 text-sm-right text-center">
-                        <div class="footer_social_container">
-                            <ul class="footer_social">
-                                <li><a href="#"><i class="fab fa-pinterest trans_300"></i></a></li>
-                                <li><a href="#"><i class="fab fa-facebook-f trans_300"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter trans_300"></i></a></li>
-                                <li><a href="#"><i class="fab fa-dribbble trans_300"></i></a></li>
-                                <li><a href="#"><i class="fab fa-behance trans_300"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in trans_300"></i></a></li>
-                            </ul>
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row footer_content d-flex flex-sm-row flex-column align-items-center">
+                        <div class="col-sm-6 cr text-sm-left text-center">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed By <a href="http://www.yellowandgray.com/" target="_blank"> YG STUDIO</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </div>
+                        <div class="col-sm-6 text-sm-right text-center">
+                            <div class="footer_social_container">
+                                <ul class="footer_social">
+                                    <li><a href="#"><i class="fab fa-pinterest trans_300"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f trans_300"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter trans_300"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-dribbble trans_300"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-behance trans_300"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in trans_300"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-    </div>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="styles/bootstrap4/popper.js"></script>
-    <script src="styles/bootstrap4/bootstrap.min.js"></script>
-    <script src="plugins/greensock/TweenMax.min.js"></script>
-    <script src="plugins/greensock/TimelineMax.min.js"></script>
-    <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-    <script src="plugins/greensock/animation.gsap.min.js"></script>
-    <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-    <script src="plugins/progressbar/progressbar.min.js"></script>
-    <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-    <script src="plugins/easing/easing.js"></script>
-    <script src="js/custom.js"></script>
-</body>
+            </footer>
+        </div>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="styles/bootstrap4/popper.js"></script>
+        <script src="styles/bootstrap4/bootstrap.min.js"></script>
+        <script src="plugins/greensock/TweenMax.min.js"></script>
+        <script src="plugins/greensock/TimelineMax.min.js"></script>
+        <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+        <script src="plugins/greensock/animation.gsap.min.js"></script>
+        <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+        <script src="plugins/progressbar/progressbar.min.js"></script>
+        <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+        <script src="plugins/easing/easing.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
 </html>
