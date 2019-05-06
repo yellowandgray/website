@@ -13,4 +13,5 @@
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
     <link rel="icon" href="images/fav-logo.png" type="image/gif" sizes="16x16">
     <link href="styles/common.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/slider-1.css" rel="stylesheet" type="text/css"/>
 </head>
