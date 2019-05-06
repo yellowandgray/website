@@ -247,59 +247,34 @@
                         </div>
                     </div>
                     <div class="row">
-<!--                        <div class="col-lg-6">
-                            <img src='images/bg/cheryl-04.jpg' alt="">
-                        </div>-->
+                        <!--                        <div class="col-lg-6">
+                                                    <img src='images/bg/cheryl-04.jpg' alt="">
+                                                </div>-->
                         <div class="col-lg-6">
-                            <div class="about_text">
-                                <h3 class="color-w">Hi! I am Cheryl.</h3>
-                                <p><em>Inspire. Empower. Transform… My mantra.</em></p>
-                                <p>Dear friend, a warm welcome! I am a life-coach and a trader. I love life and everything & everybody that lives.</p>
-                                <p>My highs: being unorthodox and doing the impossible.</br>My addictions: traveling and learning.</p>
-                                <p>I write about big ideas and life-lessons from my experiences. I write about my travels around our magical planet and how it has changed my perception of our world.</p>
-                                <p>Some people call me crazy. Others say I have changed their lives. Come, join the tribe and decide.</p>
-<!--                            <img src="images/signiture.png" alt="">-->
+                            <div class="text-bg">
+                                <div class="about_text">
+                                    <h3 class="color-purple">Hi! I am Cheryl.</h3>
+                                    <p><span>Inspire. Empower. Transform… My mantra.</span></p>
+                                    <p>Dear friend, a warm welcome! I am a life-coach and a trader. I love life and everything & everybody that lives.
+                                    <ul class="list-1">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>My highs: being unorthodox and doing the impossible.</li>
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>My addictions: traveling and learning.</li>
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>I write about big ideas and life-lessons from my experiences. I write about my travels around our magical planet and how it has changed my perception of our world.</li>
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Some people call me crazy. Others say I have changed their lives. Come, join the tribe and decide.</li>
+                                    </ul>
+                                </div>
+
                             </div>
-                            <!--                        <div class="skills_container">
-                            
-                                                        <ul class="progress_bar_container col_12 clearfix">
-                            
-                                                            <li class="pb_item">
-                            
-                                                                <div id="skill_1_pbar" class="skill_bars" data-perc="0.85" data-name="skill_1_pbar"></div>
-                            
-                                                                <h5>management</h5>
-                            
-                                                            </li>
-                            
-                                                            <li class="pb_item">
-                            
-                                                                <div id="skill_2_pbar" class="skill_bars" data-perc="1" data-name="skill_2_pbar"></div>
-                            
-                                                                <h5>design</h5>
-                            
-                                                            </li>
-                            
-                                                            <li class="pb_item">
-                            
-                                                                <div id="skill_3_pbar" class="skill_bars" data-perc="0.75" data-name="skill_3_pbar"></div>
-                            
-                                                                <h5>projects</h5>
-                            
-                                                            </li>
-                            
-                                                            <li class="pb_item">
-                            
-                                                                <div id="skill_4_pbar" class="skill_bars" data-perc="0.95" data-name="skill_4_pbar"></div>
-                            
-                                                                <h5>inspiration</h5>
-                            
-                                                            </li>
-                            
-                                                        </ul>
-                            
-                                                    </div>-->
                         </div>
+                    </div>
+
+                </div>
+                <div class="row pad-10 margin-top-50 bg-p">
+                    <div class="col-lg-4">
+                        <button type='submit' class="sub-submit">Join The Community</button>
+                    </div>
+                    <div class="col-lg-8">
+                        <button type='submit' class="sub-submit">Book a 30-minute FREE coaching session</button>
                     </div>
                 </div>
             </div>

@@ -148,3 +148,43 @@ input[type=submit]:hover {
     padding: 20px;
     max-width: 50%;
 }
+.text-bg     {
+    background: #f5f5f599;
+    padding: 36px 31px;
+}
+.color-purple {
+    color: #9c20b3 !important;
+}
+.text-bg p{
+    color: #000 !important;
+}
+.text-bg h3{
+    font-size: 33px !important;
+}
+.text-bg span{
+    color: #00659c;
+}
+.list-1 li{
+    position: relative;
+    padding: 5px 0px 7px 27px;
+    margin-top: -36px;
+    color: #0b0b0b;
+    font-weight: 500;
+}
+.list-1 i{
+    
+    color: #9c20b3;
+    
+}
+.pad-10 {
+    padding: 10px 0px 10px 0px ;
+}
+.pad-t-50 {
+    padding: 50px 0px 0px 0px ;
+}
+.bg-p{
+    background: #9c20b3;
+}
+.margin-top-50{
+    margin-top: 50px;
+}

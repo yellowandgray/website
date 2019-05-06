@@ -880,7 +880,7 @@ section
 .about
 {
     padding-top: 120px;
-    padding-bottom: 120px;
+    /*padding-bottom: 120px;*/
 }
 .about_background
 {
@@ -940,7 +940,7 @@ section
     width: 111px;
     height: 2px;
     content: '';
-    background: #FFFFFF;
+    background: #9c20b3;
 }
 .about_text
 {
