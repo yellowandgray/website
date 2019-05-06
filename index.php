@@ -627,6 +627,10 @@
                         <input type="text" name="fname" placeholder="Name"> 
                         <input type="email" name="email" placeholder="Email Address"> 
                         <input type="text" name="contact" placeholder="Contact Number"> 
+                        <select name="How-do-contacted">
+                            <option value="Email">Email</option>
+                            <option value="Whatsapp">Whatsapp</option>
+                        </select>
                         <input type="text" name="subject" placeholder="subject"> 
                         <textarea type="text" name="requirement" placeholder="Requirement" class="req"></textarea>
                         <button type="submit" class="sub-submit">submit</button>
