@@ -16,14 +16,14 @@
 .input-box {
     padding: 0px 20px;
 }
-.sub-submit{
-    padding: 14px 0px;
-    background: #20b9ec;
+.sub-submit {
+    padding: 12px 0px;
+    background: #8045ad;
     border-radius: 4px;
     text-align: center;
-    /*width: 100%;*/
+    margin-top: 6px;
     color: #ffffff;
-    box-shadow: 3px 2px 12px 0px #c3c3c3;
+    box-shadow: 3px 2px 3px 0px #c3c3c3;
     border-style: none;
     cursor: pointer;
     width: 100%;
