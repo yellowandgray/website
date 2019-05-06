@@ -188,3 +188,7 @@ input[type=submit]:hover {
 .margin-top-50{
     margin-top: 50px;
 }
+
+.main_slider_shapes img {
+    border: 6px solid #ba59e7;
+}
