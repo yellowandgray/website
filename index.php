@@ -630,9 +630,10 @@
                             <option value="Email">Email</option>
                             <option value="Whatsapp">Whatsapp</option>
                         </select>
-                        <input type="text" name="subject" placeholder="subject"> 
                         <textarea type="text" name="requirement" placeholder="Requirement" class="req"></textarea>
-                        <button type="submit" class="sub-submit">submit</button>
+                        <div class="button discover_button">
+                            <a href="#" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
+                        </div>
                     </form>
                 </div>
             </div>
