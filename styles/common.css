@@ -188,6 +188,10 @@ input[type=submit]:hover {
 .margin-top-50{
     margin-top: 50px;
 }
+
+.main_slider_shapes img {
+    border: 6px solid #ba59e7;
+}
 .join
 {
     padding: 10px 27px;
@@ -195,4 +199,3 @@ input[type=submit]:hover {
     background: #20b9ec;
     border-style: none;
 }
-
