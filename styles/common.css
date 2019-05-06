@@ -281,7 +281,7 @@ input[type=submit]:hover {
 }
 .sub-submit-1 {
     padding: 12px 0px;
-    background: #8045ad;
+    background: #21b9ec;
     border-radius: 4px;
     text-align: center;
     margin-top: 6px;
@@ -289,7 +289,14 @@ input[type=submit]:hover {
     /* box-shadow: 3px 2px 3px 0px #c3c3c3; */
     border-style: none;
     cursor: pointer;
-    width: 100%;
+    width: 30%;
+    
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 40px;
+    text-transform: uppercase;
+    letter-spacing: 6.7px;
+
 }
 textarea::placeholder {
     color: #868e96 !important;

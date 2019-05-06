@@ -553,18 +553,16 @@
                         <div class="col-lg-6">
                             <form class="form-1">
                                 <div class="row">
-                                    <div class="col-lg-6">
-                                        <input type="text" name="fname" placeholder="Name"> 
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <input type="email" name="email" placeholder="Email Address">
+                                    <div class="col-lg-12">
+                                        <input type="text" name="fname" placeholder="Name" style="float: left"> 
+                                   
+                                        <input type="email" name="email" placeholder="Email Address" style="float: left">
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-12">
                                         <input type="text" name="phone" placeholder="Phone Number"> 
-                                    </div>
-                                    <div class="col-lg-6">
+                                    
                                         <input type="text" name="subject" placeholder="subject">
                                     </div>
                                 </div>
