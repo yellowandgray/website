@@ -243,7 +243,7 @@
                         </div>
                         <div class="col-lg-9">
                             <h3 class="color-w"><strong>JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</strong></h3>
-                            <h4 class="color-purple">Stay updated with articles, tools, updates from me.</h4>
+                            <h4><strong>Stay updated with articles, tools, updates from me.</strong></h4>
                             <div class="row">
                                 <div class="col-lg-4">
                                     <input type='text' name='name' placeholder="Your Name..." class="input-box">
