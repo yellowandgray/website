@@ -186,6 +186,11 @@
             <div class="features">
                 <div class="container">
                     <div class="row">
+                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
+                            <h2>My Specialisation Coaching</h2>
+                        </div>
+                    </div>
+                    <div class="row">
                         <!-- Features Item -->
                         <div class="col-lg-4">
                             <div class="features_item d-flex flex-column align-items-center justify-content-end text-center">
@@ -267,7 +272,7 @@
                                 <div class="col-lg-4">
                                     <input type='email' name='email' placeholder="Your Email..." class="input-box">
                                 </div>
-                                
+
                                 <div class="col-lg-4">
                                     <button type='submit' class="sub-submit">subscribe</button>
                                 </div>
@@ -555,14 +560,14 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <input type="text" name="fname" placeholder="Name" style="float: left"> 
-                                   
+
                                         <input type="email" name="email" placeholder="Email Address" style="float: left">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <input type="text" name="phone" placeholder="Phone Number"> 
-                                    
+
                                         <input type="text" name="subject" placeholder="subject">
                                     </div>
                                 </div>

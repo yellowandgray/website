@@ -208,7 +208,7 @@ input[type=submit]:hover {
     border-style: none;
 }
 .bg-p p{
-    margin: 0px !important;
+    margin: 10px !important;
     padding: 10px;
 }
 .sub-img {
@@ -227,6 +227,7 @@ input[type=submit]:hover {
     box-shadow: -1px 4px 15px 11px #eee;
     padding: 20px;
     height: 335px;
+    margin-bottom: 20px;
 }
 
 
@@ -303,4 +304,16 @@ input[type=submit]:hover {
 textarea::placeholder {
     color: #868e96 !important;
     font-size: 15px !important;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-dialog {
+        max-width: 100%;
+    }
+    .modal-content-1 {
+        width: 100%;
+    }
+    .modal-body-1 h2 {
+        font-size: 30px;
+    }
 }
