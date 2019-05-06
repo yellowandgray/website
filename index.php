@@ -269,20 +269,18 @@
                     </div>
 
                 </div>
-<!--                <div class="pad-10 margin-top-50 bg-p">
+                <div class="pad-10 margin-top-50 bg-p">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-12">
-                                <div class="join">
-                                    <p><a href="#" >Join The Community</a></p>
-                                </div>
-                                <div class="join">
-                                    <p><a href="#" >Book a 30-minute FREE coaching session</a></p>
-                                </div>
+                            <div class="col-lg-6">
+                                <p class="join text-center"><a href="#" >Join The Community</a></p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="join text-center"><a href="#" >Book a 30-minute FREE coaching session</a></p>
                             </div>
                         </div>
                     </div>
-                </div>-->
+                </div>
             </div>
             <!-- Testimonials -->
             <div class="testimonials">
