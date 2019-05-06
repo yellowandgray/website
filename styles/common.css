@@ -77,4 +77,6 @@ input::placeholder {
     color: #868e96 !important;
     font-size: 13px !important;
 }
-
+.features {
+    padding: 100px 0;
+}
