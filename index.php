@@ -189,48 +189,66 @@
                 <div class="container">
                     <div class="row">
                         <!-- Features Item -->
-                        <!--                        <div class="col-lg-4">
-                                                    <div class="features_item d-flex flex-column align-items-center justify-content-end text-center">
-                                                        <div class="icon_container d-flex flex-column justify-content-end">
-                                                            <img src="images/png/doller.png" alt="">
-                                                        </div>
-                                                        <h3>Money & Finance</h3>
-                                                        <p>Money – we spend our whole lives working for it but do not know where it goes or how to make it work for us. Maybe it’s time we figured it out?</p>
-                                                    </div>
-                                                </div>-->
+                        <div class="col-lg-4">
+                            <div class="features_item d-flex flex-column align-items-center justify-content-end text-center">
+                                <div class="icon_container d-flex flex-column justify-content-end">
+                                    <img src="images/slider/001.png" alt="">
+                                </div>
+                                <h3>Money & Finance</h3>
+                                <p>Money – we spend our whole lives working for it but do not know where it goes or how to make it work for us. Maybe it’s time we figured it out?</p>
+                            </div>
+                        </div>
                         <!-- Features Item -->
-                        <!--                        <div class="col-lg-4">
-                                                    <div class="features_item d-flex flex-column align-items-center justify-content-center text-center">
-                                                         <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> 
-                                                        <div class="icon_container d-flex flex-column justify-content-end">
-                                                            <img src="images/png/step.png" alt="">
-                                                        </div>
-                                                        <h3>Self-Development</h3>
-                                                        <p>Be it time, relationships, health or skill development there is always something we can learn to do better. Let’s get started!</p>
-                                                    </div>
-                                                </div>-->
+                        <div class="col-lg-4">
+                            <div class="features_item d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="icon_container d-flex flex-column justify-content-end">
+                                    <img src="images/slider/002.png" alt="">
+                                </div>
+                                <h3>Self-Development</h3>
+                                <p>Be it time, relationships, health or skill development there is always something we can learn to do better. Let’s get started!</p>
+                            </div>
+                        </div>
                         <!-- Features Item -->
-                        <!--                        <div class="col-lg-4">
-                                                    <div class="features_item d-flex flex-column align-items-center justify-content-center text-center">
-                                                         <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> 
-                                                        <div class="icon_container d-flex flex-column justify-content-end">
-                                                            <img src="images/png/plane.png" alt="">
-                                                        </div>
-                                                        <h3>Travel</h3>
-                                                        <p>Travel – everyone is talking about it. Why travel? How to travel? Where to travel to? Let’s find out! </br> &nbsp;</p>
-                                                    </div>
-                                                </div>-->
-
-                        <div class="rio-promos">
-                            <img src="http://maggiesadler.com/wp-content/uploads/2015/10/11189261_759116200870985_1595157767_n.jpg" />
-                            <img src="http://maggiesadler.com/wp-content/uploads/2015/10/10004088_1491055334449687_1187165020_n.jpg" />
-                            <img src="http://maggiesadler.com/wp-content/uploads/2015/10/10817863_856543214397968_517239188_n.jpg" />
-                            <img src="http://maggiesadler.com/wp-content/uploads/2015/10/10919749_326992714172441_299394464_n.jpg" />
-                            <img src="http://maggiesadler.com/wp-content/uploads/2015/10/10617007_939025979457209_6938406_n.jpg" />
-                            <img src="http://maggiesadler.com/wp-content/uploads/2015/10/1168617_1435408473368301_409182770_n.jpg" />
-                            <img src="http://maggiesadler.com/wp-content/uploads/2015/10/11189836_754178218029431_2102772742_n.jpg" />
-                            <img src="http://maggiesadler.com/wp-content/uploads/2015/10/10843869_1658219887738208_2033326788_n.jpg" />
-                            <img src="http://maggiesadler.com/wp-content/uploads/2015/10/1515054_1379051609022475_1394148610_n.jpg" />
+                        <div class="col-lg-4">
+                            <div class="features_item d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="icon_container d-flex flex-column justify-content-end">
+                                    <img src="images/slider/003.png" alt="">
+                                </div>
+                                <h3>Travel</h3>
+                                <p>Travel – everyone is talking about it. Why travel? How to travel? Where to travel to? Let’s find out! </br> &nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row margin-top-50">
+                        <!-- Features Item -->
+                        <div class="col-lg-4">
+                            <div class="features_item d-flex flex-column align-items-center justify-content-end text-center">
+                                <div class="icon_container d-flex flex-column justify-content-end">
+                                    <img src="images/slider/004.png" alt="">
+                                </div>
+                                <h3>Money & Finance</h3>
+                                <p>Money – we spend our whole lives working for it but do not know where it goes or how to make it work for us. Maybe it’s time we figured it out?</p>
+                            </div>
+                        </div>
+                        <!-- Features Item -->
+                        <div class="col-lg-4">
+                            <div class="features_item d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="icon_container d-flex flex-column justify-content-end">
+                                    <img src="images/slider/005.png" alt="">
+                                </div>
+                                <h3>Self-Development</h3>
+                                <p>Be it time, relationships, health or skill development there is always something we can learn to do better. Let’s get started!</p>
+                            </div>
+                        </div>
+                        <!-- Features Item -->
+                        <div class="col-lg-4">
+                            <div class="features_item d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="icon_container d-flex flex-column justify-content-end">
+                                    <img src="images/slider/006.png" alt="">
+                                </div>
+                                <h3>Travel</h3>
+                                <p>Travel – everyone is talking about it. Why travel? How to travel? Where to travel to? Let’s find out! </br> &nbsp;</p>
+                            </div>
                         </div>
                     </div>
                 </div>
