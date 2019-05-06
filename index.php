@@ -389,80 +389,80 @@
                 </div>
             </div>
             <!-- Services -->
-            <div class="services prlx_parent bg-pic" style="background-image: url(images/bg/bg-01.jpg);background-size: cover;">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
-                            <h2 class="color-w">Types of Cherly Coaching</h2>
-                        </div>
-                    </div>
-                    <div class="row pad-50">
-                        <div class="col-lg-4">
-                            <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
-                                <div class="icon_container d-flex flex-column justify-content-end center">
-                                    <img src="images/types/Financial-Freedom.png" alt="">
+            <!--            <div class="services prlx_parent bg-pic" style="background-image: url(images/bg/bg-01.jpg);background-size: cover;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
+                                        <h2 class="color-w">Types of Cherly Coaching</h2>
+                                    </div>
                                 </div>
-                                <h3 class="text-cen">Financial Freedom</h3>
-                                <p class="text-justify">If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income, if you find yourself drowning in the quagmire of credit card debts, if you wish to start saving more and building a retirement fund then get in touch with me now. I have been a banker for nearly 2 decades and have cracked the code.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
-                                <div class="icon_container d-flex flex-column justify-content-end center">
-                                    <img src="images/types/Time-Management.png" alt="">
+                                <div class="row pad-50">
+                                    <div class="col-lg-4">
+                                        <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                            <div class="icon_container d-flex flex-column justify-content-end center">
+                                                <img src="images/types/Financial-Freedom.png" alt="">
+                                            </div>
+                                            <h3 class="text-cen">Financial Freedom</h3>
+                                            <p class="text-justify">If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income, if you find yourself drowning in the quagmire of credit card debts, if you wish to start saving more and building a retirement fund then get in touch with me now. I have been a banker for nearly 2 decades and have cracked the code.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                            <div class="icon_container d-flex flex-column justify-content-end center">
+                                                <img src="images/types/Time-Management.png" alt="">
+                                            </div>
+                                            <h3 class="text-cen">Time Management</h3>
+                                            <p class="text-justify">If you always find yourself wanting to do more, live more meaningfully, but are somehow unable to, then I will help shine the light on how you may manage your time and thus your life so that you live the life you want to live.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                            <div class="icon_container d-flex flex-column justify-content-end center">
+                                                <img src="images/types/careerimage.png" alt="">
+                                            </div>
+                                            <h3 class="text-cen">Career Progress</h3>
+                                            <p class="text-justify">If you are in a job that does not light you up, or in a career that you once loved but now wish to change, or if you are not advancing in your career no matter what you do, then chat with me and learn how I raced through the corporate ladder over my 17 years of experience in the corporate world.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                            <div class="icon_container d-flex flex-column justify-content-end center">
+                                                <img src="images/types/Trader-Coach.png" alt="">
+                                            </div>
+                                            <h3 class="text-cen">Trader Coach</h3>
+                                            <p class="text-justify">If you are a trader in the financial markets and are unable to remain consistently profitable, if you cannot stick to your rules or deal with the psychological impact of trading, talk to me. I am a Professional Trader and have been through the same painful rite of passage emerging victorious</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                            <div class="icon_container d-flex flex-column justify-content-end center">
+                                                <img src="images/types/Transformational-Change.png" alt="">
+                                            </div>
+                                            <h3 class="text-cen">Transformational Change</h3>
+                                            <p class="text-justify">If you have found yourself at a stage where you feel like it is ‘now time’ to make a large change that is likely to impact many facets of your life. If you wish to disrupt the status quo,follow your passion, live life to the fullest, then contact me right away. I will be honored to guide you along your path to your most fulfilling life.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                            <div class="icon_container d-flex flex-column justify-content-end center">
+                                                <img src="images/types/Super-Women.png" alt="">
+                                            </div>
+                                            <h3 class="text-cen">Super Women</h3>
+                                            <p class="text-justify">If you are an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress, learn how to ask for a raise or a promotion, be heard, grab a coffee with me. I have ‘been there, done that’ and am thrilled to help you learn the ropes.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3 class="text-cen">Time Management</h3>
-                                <p class="text-justify">If you always find yourself wanting to do more, live more meaningfully, but are somehow unable to, then I will help shine the light on how you may manage your time and thus your life so that you live the life you want to live.</p>
+                                                    <div class="row">
+                                                                            <div class="col text-center">
+                                                                                <div class="button services_button">
+                                                                                    <a href="services.html" class="d-flex flex-row align-items-center justify-content-center">
+                                                                                        discover<img src="images/arrow_right.svg" alt="">
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
-                                <div class="icon_container d-flex flex-column justify-content-end center">
-                                    <img src="images/types/careerimage.png" alt="">
-                                </div>
-                                <h3 class="text-cen">Career Progress</h3>
-                                <p class="text-justify">If you are in a job that does not light you up, or in a career that you once loved but now wish to change, or if you are not advancing in your career no matter what you do, then chat with me and learn how I raced through the corporate ladder over my 17 years of experience in the corporate world.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
-                                <div class="icon_container d-flex flex-column justify-content-end center">
-                                    <img src="images/types/Trader-Coach.png" alt="">
-                                </div>
-                                <h3 class="text-cen">Trader Coach</h3>
-                                <p class="text-justify">If you are a trader in the financial markets and are unable to remain consistently profitable, if you cannot stick to your rules or deal with the psychological impact of trading, talk to me. I am a Professional Trader and have been through the same painful rite of passage emerging victorious</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
-                                <div class="icon_container d-flex flex-column justify-content-end center">
-                                    <img src="images/types/Transformational-Change.png" alt="">
-                                </div>
-                                <h3 class="text-cen">Transformational Change</h3>
-                                <p class="text-justify">If you have found yourself at a stage where you feel like it is ‘now time’ to make a large change that is likely to impact many facets of your life. If you wish to disrupt the status quo,follow your passion, live life to the fullest, then contact me right away. I will be honored to guide you along your path to your most fulfilling life.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
-                                <div class="icon_container d-flex flex-column justify-content-end center">
-                                    <img src="images/types/Super-Women.png" alt="">
-                                </div>
-                                <h3 class="text-cen">Super Women</h3>
-                                <p class="text-justify">If you are an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress, learn how to ask for a raise or a promotion, be heard, grab a coffee with me. I have ‘been there, done that’ and am thrilled to help you learn the ropes.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--                    <div class="row">
-                                                                <div class="col text-center">
-                                                                    <div class="button services_button">
-                                                                        <a href="services.html" class="d-flex flex-row align-items-center justify-content-center">
-                                                                            discover<img src="images/arrow_right.svg" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>-->
-                </div>
-            </div>
+                        </div>-->
             <!-- Clients -->
             <div class="clients">
                 <div class="container">
@@ -541,9 +541,9 @@
                 </div>
             </div>
             <!-- Contact -->
-            <div class="prlx_parent pad-50">
+            <div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;">
                 <!-- <div class="contact_background parallax-window" data-parallax="scroll" data-speed="0.7" data-image-src="images/contact_background.jpg"></div> -->
-                <div class="contact_background prlx bg-enquiry"></div>
+                <div class=" prlx bg-enquiry"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title contact_title">
@@ -553,14 +553,27 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <form class="form-1">
-                                <input type="text" name="fname" placeholder="Name"> 
-                                <input type="email" name="email" placeholder="Email Address"> 
-                                <input type="text" name="phone" placeholder="Phone Number"> 
-                                <input type="text" name="subject" placeholder="subject"> 
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <input type="text" name="fname" placeholder="Name"> 
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="email" name="email" placeholder="Email Address">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <input type="text" name="phone" placeholder="Phone Number"> 
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" name="subject" placeholder="subject">
+                                    </div>
+                                </div>
                                 <textarea type="text" name="requirement" placeholder="Requirement" class="req"></textarea>
-                                <button type="submit" class="sub-submit">submit</button>
+                                <button type="submit" class="sub-submit-1">submit</button>
                             </form>
                         </div>
+
                     </div>
                 </div>
             </div>
