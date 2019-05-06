@@ -17,14 +17,16 @@
     padding: 0px 20px;
 }
 .sub-submit{
-    padding: 4px 20px;
-    background: #904cc3;
-    /*    border-radius: 20px;*/
+    padding: 14px 0px;
+    background: #20b9ec;
+    border-radius: 4px;
     text-align: center;
-    width: 100%;
+    /*width: 100%;*/
     color: #ffffff;
-    /*box-shadow: 0px 0px 5px 3px #EEE;*/
+    box-shadow: 3px 2px 12px 0px #c3c3c3;
     border-style: none;
+    cursor: pointer;
+    width: 100%;
 }
 .sub-submit:hover {
     transition: all 0.3s linear;
@@ -32,18 +34,23 @@
     background: #ffffff;
     border-radius: 0;
     /* text-align: center; */
-    width: 100%;
     color: #20b9ec;
     box-shadow: 0px 0px 0px 0px #EEE;
     border-style: none;
 }
 video#vid {
-    position: absolute; right: 0; bottom: 0;
-    min-width: 100%; min-height: 100%;
-    width: auto; height: auto; z-index: -100;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
     background: url(polina.jpg) no-repeat;
     background-size: cover;
     margin: 0 auto;
+    top: 110px;
 }
 .overlay {
     position: absolute;
@@ -54,15 +61,9 @@ video#vid {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    /*    background-color: rgba(0,0,0,0.5);*/
     z-index: 2;
     cursor: pointer;
-}
-.form-1 input 
-{
-    width: 100%;
-    padding: 0px 5px;
-    margin-bottom: 10%;
 }
 
 
@@ -79,4 +80,43 @@ input::placeholder {
 }
 .features {
     padding: 100px 0;
+}
+
+.box {
+    padding: 20px;
+    background: #ffffff33;
+    box-shadow: 3px 4px 4px 0px #20b9ec;
+    height: 511px;
+}
+
+.box-1 {
+    box-shadow: 0 0 14px 9px #eee;
+    padding: 20px;
+    height: 250px;
+}
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=email], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
 }
