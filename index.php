@@ -9,7 +9,7 @@
         setTimeout(
                 function showModal() {
 
-                $('#myModal').modal('show');
+                    $('#myModal').modal('show');
                 }, 1000);
     </script>
     <body onload="showModal()">
@@ -311,10 +311,10 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6">
-                                <p class="join text-center"><div id="myBtn">Join The Community</div></p>
+                                <p class="join text-center"><span>Join The Community</span></p>
                             </div>
                             <div class="col-lg-6">
-                                <p class="join text-center"><a href="#" >Book a 30-minute FREE coaching session</a></p>
+                                <p class="join text-center"><span id="myBtn">Book a 30-minute FREE coaching session</span></p>
                             </div>
                         </div>
                     </div>
@@ -602,13 +602,23 @@
         <?php include 'onload-popup.php'; ?>
         <!-- The Modal -->
         <div id="myModal-1" class="modal-1">
-
             <!-- Modal content -->
             <div class="modal-content-1">
-                <span class="close-1">&times;</span>
-                <p>Some text in the Modal..</p>
+                <div class="modal-header-1">
+                    <span class="close-1">&times;</span>
+                    <h2 style="text-align: center">30-Minutes Free Coaching Session</h2>
+                </div>
+                <div class="modal-body">
+                    <form class="form-1">
+                        <input type="text" name="fname" placeholder="Name"> 
+                        <input type="email" name="email" placeholder="Email Address"> 
+                        <input type="text" name="contact" placeholder="Contact Number"> 
+                        <input type="text" name="subject" placeholder="subject"> 
+                        <textarea type="text" name="requirement" placeholder="Requirement" class="req"></textarea>
+                        <button type="submit" class="sub-submit">submit</button>
+                    </form>
+                </div>
             </div>
-
         </div>
         <script>
 // Get the modal
@@ -619,19 +629,19 @@
                                     var span = document.getElementsByClassName("close-1")[0];
 // When the user clicks the button, open the modal 
                                     btn.onclick = function () {
-                                    modal.style.display = "block";
+                                        modal.style.display = "block";
                                     }
 
 // When the user clicks on <span> (x), close the modal
                                     span.onclick = function () {
-                                    modal.style.display = "none";
+                                        modal.style.display = "none";
                                     }
 
 // When the user clicks anywhere outside of the modal, close it
                                     window.onclick = function (event) {
-                                    if (event.target == modal) {
-                                    modal.style.display = "none";
-                                    }
+                                        if (event.target == modal) {
+                                            modal.style.display = "none";
+                                        }
                                     }
         </script>
     </body>

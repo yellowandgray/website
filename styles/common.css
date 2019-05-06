@@ -227,7 +227,7 @@ input[type=submit]:hover {
 .modal-1 {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 1050; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -244,7 +244,7 @@ input[type=submit]:hover {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 50%;
 }
 
 /* The Close Button */
@@ -260,4 +260,16 @@ input[type=submit]:hover {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  color: white;
+}
+
+/* Modal Body */
+.modal-body-1 {padding: 2px 16px;}
+
+#myBtn {
+    cursor: pointer;
 }
