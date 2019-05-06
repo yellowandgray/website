@@ -1210,6 +1210,7 @@ section
 {
     padding-top: 192px;
     padding-bottom: 110px;
+    background:#f3fcff;
 }
 
 /*********************************
@@ -1351,16 +1352,29 @@ section
     padding: 50px 0px ;
 }
 .modal-body-1 h2 {
-    padding-top: 70px;
-    font-size: 35px;
-    color: #fff;
+    padding-top: 190px;
+    font-size: 45px;
+    color: #ffffff;
+    font-weight: 600;
 }
 .modal-body-1 h3 {
     font-size: 25px;
     color: #fff;
+    font-weight: 600;
 }
 .modal-body-1 p {
     font-size: 20px;
     color: #fff;
     font-style: italic;
+    font-weight: 600;
+}
+
+button.close {
+    float: right;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+/*    text-shadow: 0 1px 0 #fff;*/
+    opacity: 1;
 }

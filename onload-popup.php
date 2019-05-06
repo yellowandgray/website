@@ -1,5 +1,5 @@
 <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog" style="background:url(images/pop-up.jpg)no-repeat;background-size: cover;border: 4px solid #fff;">
         <!-- Modal content-->
         <div class="modal-onload-content">
             <div class="modal-header-1">
