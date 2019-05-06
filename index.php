@@ -269,7 +269,7 @@
                     </div>
 
                 </div>
-                <div class="pad-10 margin-top-50 bg-p">
+<!--                <div class="pad-10 margin-top-50 bg-p">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
@@ -282,7 +282,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
             <!-- Testimonials -->
             <div class="testimonials">
