@@ -622,16 +622,21 @@
                 </div>
                 <div class="modal-body">
                     <form class="form-1">
-                        <input type="text" name="fname" placeholder="Name"> 
-                        <input type="email" name="email" placeholder="Email Address"> 
-                        <input type="text" name="contact" placeholder="Contact Number"> 
+                        <label>Name</label>
+                        <input type="text" name="fname">
+                        <label>Email Address</label>
+                        <input type="email" name="email"> 
+                        <label>Contact Number</label>
+                        <input type="text" name="contact"> 
+                        <label>How do you want to be contacted</label>
                         <select name="How-do-contacted">
                             <option value="Email">Email</option>
                             <option value="Whatsapp">Whatsapp</option>
                         </select>
-                        <textarea type="text" name="requirement" placeholder="Requirement" class="req"></textarea>
+                        <label>My current challenge that I want to overcome</label>
+                        <textarea type="text" name="requirement" class="req"></textarea>
                         <div class="button discover_button">
-                            <a href="#" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
+                            <a href="#" class="d-flex flex-row align-items-center justify-content-center">Send<img src="images/arrow_right.svg" alt=""></a>
                         </div>
                     </form>
                 </div>

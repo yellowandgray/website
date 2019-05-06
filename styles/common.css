@@ -34,16 +34,16 @@
     text-transform: uppercase;
     letter-spacing: 6.7px;
 }
-.sub-submit:hover {
+/*.sub-submit:hover {
     transition: all 0.3s linear;
-    /* padding: 4px 32px; */
+     padding: 4px 32px; 
     background: #ffffff;
     border-radius: 0;
-    /* text-align: center; */
+     text-align: center; 
     color: #20b9ec;
     box-shadow: 0px 0px 0px 0px #EEE;
     border-style: none;
-}
+}*/
 video#vid {
     position: absolute;
     right: 0;
@@ -109,7 +109,8 @@ input[type=text], select, textarea {
     box-sizing: border-box; /* Make sure that padding and width stays in place */
     margin-top: 0px; /* Add a top margin */
     margin-bottom: 3px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    margin: 0 0 20px 0;
 }
 
 input[type=email], select, textarea {
@@ -120,7 +121,8 @@ input[type=email], select, textarea {
     box-sizing: border-box; /* Make sure that padding and width stays in place */
     margin-top: 0px; /* Add a top margin */
     margin-bottom: 3px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    margin: 0 0 20px 0;
 }
 
 input[type=submit]:hover {
@@ -290,7 +292,7 @@ input[type=submit]:hover {
     border-style: none;
     cursor: pointer;
     width: 30%;
-    
+
     font-size: 11px;
     font-weight: 300;
     line-height: 40px;
