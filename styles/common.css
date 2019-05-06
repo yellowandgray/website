@@ -120,3 +120,31 @@ input[type=email], select, textarea {
 input[type=submit]:hover {
     background-color: #45a049;
 }
+
+#popup_this {
+    top: 50%;
+    left: 50%;
+    text-align:center;
+    margin-top: -50px;
+    margin-left: -100px;
+    position: fixed;
+    background: #fff;
+    padding: 30px;
+}
+.b-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    color: #fff;
+    background: #ff0000;
+    padding: 5px 0px;
+    width: 35px;
+    height: 35px;
+}
+
+.modal-dialog {
+    background: #fff;
+    padding: 20px;
+    max-width: 50%;
+}

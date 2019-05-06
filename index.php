@@ -4,7 +4,17 @@
     include 'head.php';
     $page = 'home';
     ?>
-    <body>
+    <script>
+
+        setTimeout(
+                function showModal() {
+
+                    $('#myModal').modal('show');
+
+                }, 1000);
+
+    </script>
+    <body onload="showModal()">
         <div class="super_container">
             <!-- Header -->
             <header class="header d-flex flex-row justify-content-end align-items-center">
@@ -17,11 +27,12 @@
                 <!-- Main Navigation -->
                 <nav class="main_nav justify-self-end">
                     <ul class="nav_items">
-                        <li class="active"><a href="#"><span>home</span></a></li>
-                        <li><a href="services.html"><span>services</span></a></li>
-                        <li><a href="elements.html"><span>elements</span></a></li>
-                        <li><a href="blog.html"><span>blog</span></a></li>
-                        <li><a href="contact.html"><span>contact</span></a></li>
+                        <li class="active"><a href="#"><span>Blogs</span></a></li>
+                        <li><a href="#"><span>Resources</span></a></li>
+                        <li><a href="#"><span>Work With us</span></a></li>
+                        <li><a href="#"><span>Testimonials</span></a></li>
+                        <li><a href="#"><span>About Cheryl</span></a></li>
+                        <li><a href="#"><span>Contact</span></a></li>
                     </ul>
                 </nav>
                 <!-- Hamburger -->
@@ -36,10 +47,11 @@
                 <div class="fs_menu_shapes"><img src="images/menu_shapes.png" alt=""></div>
                 <nav class="fs_menu_nav">
                     <ul class="fs_menu_list">
-                        <li><a href="#"><span><span>H</span>Home</span></a></li>
-                        <li><a href="#"><span><span>S</span>Services</span></a></li>
-                        <li><a href="#"><span><span>E</span>Elements</span></a></li>
-                        <li><a href="#"><span><span>B</span>Blog</span></a></li>
+                        <li><a href="#"><span><span>B</span>Blogs</span></a></li>
+                        <li><a href="#"><span><span>R</span>Resources</span></a></li>
+                        <li><a href="#"><span><span>W</span>Work With us</span></a></li>
+                        <li><a href="#"><span><span>T</span>Testimonials</span></a></li>
+                        <li><a href="#"><span><span>A</span>About Cheryl</span></a></li>
                         <li><a href="#"><span><span>C</span>Contact</span></a></li>
                     </ul>
                 </nav>
@@ -570,5 +582,6 @@
         <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
         <script src="plugins/easing/easing.js"></script>
         <script src="js/custom.js"></script>
+        <?php include 'onload-popup.php'; ?>
     </body>
 </html>
