@@ -215,4 +215,8 @@ input[type=submit]:hover {
     box-shadow: -1px -1px 8px 0px #8045ad;
 }
 
-
+.features_item {
+    box-shadow: -1px 4px 15px 11px #eee;
+    padding: 20px;
+    height: 335px;
+}
