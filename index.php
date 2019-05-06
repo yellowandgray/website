@@ -267,6 +267,7 @@
                                 <div class="col-lg-4">
                                     <input type='email' name='email' placeholder="Your Email..." class="input-box">
                                 </div>
+                                
                                 <div class="col-lg-4">
                                     <button type='submit' class="sub-submit">subscribe</button>
                                 </div>

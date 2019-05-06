@@ -16,17 +16,23 @@
 .input-box {
     padding: 0px 20px;
 }
-.sub-submit {
-    padding: 12px 0px;
-    background: #8045ad;
+.sub-submit  {
+    padding: 0px 0px;
+    background: #00659c;
     border-radius: 4px;
     text-align: center;
-    margin-top: 6px;
+    /* margin-top: 6px; */
     color: #ffffff;
     box-shadow: 3px 2px 3px 0px #c3c3c3;
     border-style: none;
     cursor: pointer;
     width: 100%;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 45px;
+    text-transform: uppercase;
+    letter-spacing: 6.7px;
 }
 .sub-submit:hover {
     transition: all 0.3s linear;
@@ -76,7 +82,7 @@ video#vid {
 }
 input::placeholder {
     color: #868e96 !important;
-    font-size: 13px !important;
+    font-size: 15px !important;
 }
 .features {
     padding: 100px 0;
@@ -101,8 +107,8 @@ input[type=text], select, textarea {
     border: 1px solid #ccc; /* Gray border */
     /*border-radius: 4px;  Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 5px; /* Bottom margin */
+    margin-top: 0px; /* Add a top margin */
+    margin-bottom: 3px; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
@@ -112,8 +118,8 @@ input[type=email], select, textarea {
     border: 1px solid #ccc; /* Gray border */
     /*border-radius: 4px;  Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 5px; /* Bottom margin */
+    margin-top: 0px; /* Add a top margin */
+    margin-bottom: 3px; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
@@ -201,7 +207,7 @@ input[type=submit]:hover {
 }
 .bg-p p{
     margin: 0px !important;
-    padding: 4px;
+    padding: 10px;
 }
 .sub-img {
     position: relative;
@@ -225,46 +231,46 @@ input[type=submit]:hover {
 
 /* The Modal (background) */
 .modal-1 {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1050; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1050; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content-1 {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 50%;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
 }
 
 /* The Close Button */
 .close-1 {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .close-1:hover,
 .close-1:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .modal-header {
-  padding: 2px 16px;
-  color: white;
+    padding: 2px 16px;
+    color: white;
 }
 
 /* Modal Body */
@@ -272,4 +278,20 @@ input[type=submit]:hover {
 
 #myBtn {
     cursor: pointer;
+}
+.sub-submit-1 {
+    padding: 12px 0px;
+    background: #8045ad;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 6px;
+    color: #ffffff;
+    /* box-shadow: 3px 2px 3px 0px #c3c3c3; */
+    border-style: none;
+    cursor: pointer;
+    width: 100%;
+}
+textarea::placeholder {
+    color: #868e96 !important;
+    font-size: 15px !important;
 }
