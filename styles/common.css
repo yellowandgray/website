@@ -177,7 +177,7 @@ input[type=submit]:hover {
 
 }
 .pad-20 {
-    padding: 20px 0px 20px 0px ;
+    padding: 30px 0px 30px 0px;
 }
 .pad-t-50 {
     padding: 50px 0px 0px 0px ;
@@ -201,7 +201,7 @@ input[type=submit]:hover {
 }
 .bg-p p{
     margin: 0px !important;
-    padding: 2px;
+    padding: 4px;
 }
 .sub-img {
     position: relative;
