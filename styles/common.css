@@ -172,9 +172,9 @@ input[type=submit]:hover {
     font-weight: 500;
 }
 .list-1 i{
-    
+
     color: #9c20b3;
-    
+
 }
 .pad-10 {
     padding: 10px 0px 10px 0px ;
@@ -188,3 +188,11 @@ input[type=submit]:hover {
 .margin-top-50{
     margin-top: 50px;
 }
+.join
+{
+    padding: 10px 27px;
+    color: #fff;
+    background: #20b9ec;
+    border-style: none;
+}
+

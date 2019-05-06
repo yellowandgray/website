@@ -269,12 +269,16 @@
                     </div>
 
                 </div>
-                <div class="row pad-10 margin-top-50 bg-p">
-                    <div class="col-lg-4">
-                        <button type='submit' class="sub-submit">Join The Community</button>
-                    </div>
-                    <div class="col-lg-8">
-                        <button type='submit' class="sub-submit">Book a 30-minute FREE coaching session</button>
+                <div class="pad-10 margin-top-50 bg-p">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p><a href="#" class="join">Join The Community</a></p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p><a href="#" class="join">Book a 30-minute FREE coaching session</a></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
