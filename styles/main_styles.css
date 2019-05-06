@@ -132,7 +132,7 @@ p::selection
 {
     background: #8282ff;
 }
-h1{font-size: 72px;}
+h1{font-size: 50px;}
 h2{font-size: 30px;}
 h3{font-size: 18px;}
 h4{font-size: 14px;}
@@ -806,7 +806,7 @@ section
 }
 .main_slider_nav:hover i
 {
-    color: #ff4200;
+    color: #9830CD;;
 }
 
 /*********************************

@@ -65,14 +65,14 @@
                         <!-- Slider Item -->
                         <div class="owl-item main_slider_item">
                             <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_1.jpg)"></div>-->
-                            <!--<div class="main_slider_shapes"><img src="images/main_slider_shapes.png" alt="" style="width: 100% !important;"></div>-->
+                            <div class="main_slider_shapes"><img src="images/bg/cheryl-03.jpg" alt="" style="width: 100% !important;"></div>
                             <div class="container">
                                 <div class="row">
                                     <div class="col slider_content_col">
                                         <div class="main_slider_content">
-                                            <h1>Do you need</h1>
-                                            <h1>a <span>modern</span> website?</h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. </p>
+                                            <h1><span>Hi! I am Cheryl.</span></h1>
+                                            <!--<h1>a <span>modern</span> website?</h1>-->
+                                            <p>Inspire. Empower. Transform… My mantra.</p>
                                             <div class="button discover_button">
                                                 <a href="#" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
@@ -84,14 +84,13 @@
                         <!-- Slider Item -->
                         <div class="owl-item main_slider_item">
                             <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_2.jpg)"></div>-->
-                            <!--<div class="main_slider_shapes"><img src="images/main_slider_shapes.png" alt="" style="width: 100% !important;"></div>-->
+                            <div class="main_slider_shapes"><img src="images/bg/cheryl-01.jpg" alt="" style="width: 100% !important;"></div>
                             <div class="container">
                                 <div class="row">
                                     <div class="col slider_content_col">
                                         <div class="main_slider_content">
-                                            <h1>Do you need</h1>
-                                            <h1>a <span>modern</span> website?</h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. </p>
+                                            <h1><span>Unquenchable thirst for education and learning</span></h1>
+                                            <p>I am a certified NLP Master Practitioner and an Advanced Life Coach.</p>
                                             <div class="button discover_button">
                                                 <a href="#" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
@@ -103,14 +102,13 @@
                         <!-- Slider Item -->
                         <div class="owl-item main_slider_item">
                             <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_3.jpg)"></div>-->
-                            <!--<div class="main_slider_shapes"><img src="images/main_slider_shapes.png" alt="" style="width: 100% !important;"></div>-->
+                            <div class="main_slider_shapes"><img src="images/bg/cheryl-02.jpg" alt="" style="width: 100% !important;"></div>
                             <div class="container">
                                 <div class="row">
                                     <div class="col slider_content_col">
                                         <div class="main_slider_content">
-                                            <h1>Do you need</h1>
-                                            <h1>a <span>modern</span> website?</h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. </p>
+                                            <h1><span>Leaders taught me that truly nothing is impossible.</span></h1>
+                                            <p> I saw, first-hand, what a powerful vision, belief and perseverance can do.</p>
                                             <div class="button discover_button">
                                                 <a href="#" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
@@ -229,7 +227,7 @@
                 </div>
             </section>
             <!-- About -->
-            <div class="about prlx_parent" style="background-image:url(images/main_slider_2.jpg);background-repeat: no-repeat;background-size: cover;">
+            <div class="about prlx_parent" style="background-image:url(images/main_slider_03.jpg);background-repeat: no-repeat;background-size: cover;">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title">
@@ -237,9 +235,9 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-6">
-                            <img src='images/bg/test-01.jpg' alt="">
-                        </div>
+<!--                        <div class="col-lg-6">
+                            <img src='images/bg/cheryl-04.jpg' alt="">
+                        </div>-->
                         <div class="col-lg-6">
                             <div class="about_text">
                                 <h3 class="color-w">Hi! I am Cheryl.</h3>
