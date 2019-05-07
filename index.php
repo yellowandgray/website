@@ -125,7 +125,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item main_slider_item">
                             <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_3.jpg)"></div>-->
-                            <div class="main_slider_shapes"><img src="images/bg/cheryl-02.jpg" alt="" style="width: 100% !important;"></div>
+                            <div class="main_slider_shapes"><img src="images/slider-png/cheryl-01.png" alt="" style="width: 100% !important;"></div>
                             <div class="container">
                                 <div class="row">
                                     <div class="col slider_content_col">
