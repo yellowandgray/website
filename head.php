@@ -15,4 +15,5 @@
     <link href="styles/common.css" rel="stylesheet" type="text/css"/>
     <link href="styles/slider-1.css" rel="stylesheet" type="text/css"/>
     <link href="styles/infinite-slider.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/media-query.css" rel="stylesheet" type="text/css"/>
 </head>

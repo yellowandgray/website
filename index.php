@@ -212,13 +212,13 @@
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container box-2 d-flex flex-column">
                                     <h3 class="text-center">Financial Freedom</h3>
-                                    <video width="320" height="240" controls>
+                                    <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
                                     <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income...</p>
                                     <div class="text-center arrow-1">
-                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -232,13 +232,13 @@
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container box-2 d-flex flex-column">
                                     <h3 class="text-center">Time Management</h3>
-                                    <video width="320" height="240" controls>
+                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
                                     <p>If you always find yourself wanting to do more, live more meaningfully, but are somehow unable to...</p>
                                     <div class="text-center arrow-1">
-                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -252,13 +252,13 @@
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container box-2 d-flex flex-column">
                                     <h3 class="text-center">Career Progress</h3>
-                                    <video width="320" height="240" controls>
+                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
                                     <p>If you are in a job that does not light you up, or in a career that you once loved but now wish to change...</p>
                                     <div class="text-center arrow-1">
-                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -280,7 +280,7 @@
                                     </div>
                                     <p>If you are a trader in the financial markets and are unable to remain consistently profitable...</p>
                                     <div class="text-center arrow-1">
-                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -299,7 +299,7 @@
                                     </div>
                                     <p>If you have found yourself at a stage where you feel like it is ‘now time’ to make a large change that is likely to impact...</p>
                                     <div class="text-center arrow-1">
-                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -318,7 +318,7 @@
                                     </div>
                                     <p>If you are an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress...</p>
                                     <div class="text-center arrow-1">
-                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -542,76 +542,23 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
-                            <h2>I Want to Improve...</h2>
+                            <h2>Want You Like to Improve?</h2>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-3">
-                            <div class="service_item text-left d-flex flex-column align-items-start justify-content-start box-1">
-                                <div class="icon_container d-flex flex-column justify-content-end center">
-                                    <img src="images/png/doller-01.png" alt="">
-                                </div>
-                                <h3 class=" color-black text-cen">Improve Finances</h3>
-                                <p class="text-cen color-black">Assessment & Saving</p>
-                            </div>
+                        <div class="col-lg-4">
+                            <img src="images/bg/cheryl-07.jpg" alt=""/>
                         </div>
-                        <div class="col-lg-3">
-                            <div class="service_item text-left d-flex flex-column align-items-start justify-content-start box-1">
-                                <div class="icon_container d-flex flex-column justify-content-end center">
-                                    <img src="images/png/clock.png" alt="">
-                                </div>
-                                <h3 class=" color-black text-cen">Manage<br/> Time</h3>
-                                <p class="text-cen color-black">More Life & Living</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="service_item text-left d-flex flex-column align-items-start justify-content-start box-1">
-                                <div class="icon_container d-flex flex-column justify-content-end center">
-                                    <img src="images/png/note.png" alt="">
-                                </div>
-                                <h3 class=" color-black text-cen">Improve Discipline</h3>
-                                <p class="text-cen color-black">Life Control & Results</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="service_item text-left d-flex flex-column align-items-start justify-content-start box-1">
-                                <div class="icon_container d-flex flex-column justify-content-end center">
-                                    <img src="images/png/chat.png" alt="">
-                                </div>
-                                <h3 class=" color-black text-cen">Communication Skills</h3>
-                                <p class="text-cen color-black">Presentation & Relationships</p>
+                        <div class="col-lg-8">
+                            <div class="rio-promos">
+                                <img src="images/slider/007.png" alt="" />
+                                <img src="images/slider/008.png" alt="" />
+                                <img src="images/slider/009.png" alt="" />
+                                <img src="images/slider/010.png" alt="" />
                             </div>
                         </div>
                     </div>
-                    <!--                <div class="row">
-                    <div class="col">
-                    Clients Slider 
-                     <div class="clients_slider_container">
-                     <div class="owl-carousel owl-theme clients_slider">
-                    Slider Item 
-                    <div class="owl-item clients_item">
-                     <img src="images/client_1.png" alt="">
-                                                    </div>
-                                                     Slider Item 
-                                                   <div class="owl-item clients_item">
-                                                        <img src="images/client_2.png" alt="">
-                                                    </div>
-                                                    Slider Item 
-                                                   <div class="owl-item clients_item">
-                                                        <img src="images/client_3.png" alt="">
-                                                    </div>
-                                                     Slider Item 
-                                                   <div class="owl-item clients_item">
-                                                       <img src="images/client_4.png" alt="">
-                                                   </div>
-                                                    Slider Item 
-                                                   <div class="owl-item clients_item">
-                                                        <img src="images/client_5.png" alt="">
-                                                  </div>
-                                               </div>
-                                           </div>
-                                       </div>
-                                  </div>-->
+
                 </div>
             </div>
             <!-- Contact -->
@@ -749,21 +696,18 @@
                                 <p class="text-justify">Just an invitation - come and be a part of this wonderful community. I’ll be traveling the world, sharing my WOW-moments, delivering content to inspire you, sharing tools & tips to be more and live more. Don’t worry, I hate spam as much as you do. I promise to send you an email only once a month with awesome, relevant value for you.</p>
                             </div>
                         </div>
-                        <form>
+                        <form class="form-2">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-12">
                                     <label>Name</label>
                                     <input type="text" name="fname">
-                                </div>
-                                <div class="col-lg-4">
                                     <label>Email Address</label>
                                     <input type="email" name="email">
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="button discover_button margin-t-22">
-                                        <a href="#" class="d-flex flex-row align-items-center justify-content-center">Join<img src="images/arrow_right.svg" alt=""></a>
+                                    <div class="margin-t-28">
+                                        <button type="submit" class="button-1 font-16"><span>Join us!</span></button>
                                     </div>
                                 </div>
+
                             </div>
                         </form>
                     </div>
@@ -794,6 +738,7 @@
                 }
             }
         </script>
+        <script src="js/silk_slider.js" type="text/javascript"></script>
 
     </body>
 </html>
