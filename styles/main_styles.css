@@ -550,6 +550,7 @@ section
     padding-right: 63px;
     padding-top: 150px;
     text-align: right;
+    overflow: scroll;
 }
 .fs_menu_shapes
 {
