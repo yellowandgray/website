@@ -630,7 +630,7 @@
                     <h2 style="text-align: center">30-Minutes Free Coaching Session</h2>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form class="form-2">
                         <label>Name</label>
                         <input type="text" name="fname">
                         <label>Email Address</label>
