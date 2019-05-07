@@ -206,64 +206,52 @@
                     <div class="row">
                         <!-- Features Item -->
                         <div class="col-lg-4">
-                            <div class="features_item d-flex flex-column align-items-center justify-content-end text-center">
+                            <div class="features_item box-2 d-flex flex-column align-items-center justify-content-end text-center">
                                 <div class="icon_container d-flex flex-column justify-content-end">
                                     <img src="images/slider/001.png" alt="">
                                 </div>
-                                <h3>Money & Finance</h3>
-                                <p>Money – we spend our whole lives working for it but do not know where it goes or how to make it work for us. Maybe it’s time we figured it out?</p>
+                                <h3>Financial Freedom</h3>
+                                <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income, if you find yourself drowning in the quagmire of credit card debts, if you wish to start saving more and building a retirement fund then get in touch with me now. I have been a banker for nearly 2 decades and have cracked the code.</p>
                             </div>
                         </div>
                         <!-- Features Item -->
                         <div class="col-lg-4">
-                            <div class="features_item d-flex flex-column align-items-center justify-content-center text-center">
+                            <div class="features_item box-2 d-flex flex-column align-items-center justify-content-center text-center">
                                 <div class="icon_container d-flex flex-column justify-content-end">
                                     <img src="images/slider/002.png" alt="">
                                 </div>
-                                <h3>Self-Development</h3>
-                                <p>Be it time, relationships, health or skill development there is always something we can learn to do better. Let’s get started!</p>
+                                <h3>Time Management</h3>
+                                <p>If you always find yourself wanting to do more, live more meaningfully, but are somehow unable to, then I will help shine the light on how you may manage your time and thus your life so that you live the life you want to live.</p>
                             </div>
                         </div>
                         <!-- Features Item -->
                         <div class="col-lg-4">
-                            <div class="features_item d-flex flex-column align-items-center justify-content-center text-center">
+                            <div class="features_item box-2 d-flex flex-column align-items-center justify-content-center text-center">
                                 <div class="icon_container d-flex flex-column justify-content-end">
                                     <img src="images/slider/003.png" alt="">
                                 </div>
-                                <h3>Travel</h3>
-                                <p>Travel – everyone is talking about it. Why travel? How to travel? Where to travel to? Let’s find out! </br> &nbsp;</p>
+                                <h3>Career Progress</h3>
+                                <p>If you are in a job that does not light you up, or in a career that you once loved but now wish to change, or if you are not advancing in your career no matter what you do, then chat with me and learn how I raced through the corporate ladder over my 17 years of experience in the corporate world.</p>
                             </div>
                         </div>
                     </div>
                     <div class="row margin-top-50">
                         <!-- Features Item -->
                         <div class="col-lg-4">
-                            <div class="features_item d-flex flex-column align-items-center justify-content-end text-center">
-                                <div class="icon_container d-flex flex-column justify-content-end">
-                                    <img src="images/slider/004.png" alt="">
-                                </div>
-                                <h3>Money & Finance</h3>
-                                <p>Money – we spend our whole lives working for it but do not know where it goes or how to make it work for us. Maybe it’s time we figured it out?</p>
+                            <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
+                                <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/fQUfIgLCAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                         <!-- Features Item -->
                         <div class="col-lg-4">
-                            <div class="features_item d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="icon_container d-flex flex-column justify-content-end">
-                                    <img src="images/slider/005.png" alt="">
-                                </div>
-                                <h3>Self-Development</h3>
-                                <p>Be it time, relationships, health or skill development there is always something we can learn to do better. Let’s get started!</p>
+                            <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
+                                <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/u7NntUPBdkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                         <!-- Features Item -->
                         <div class="col-lg-4">
-                            <div class="features_item d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="icon_container d-flex flex-column justify-content-end">
-                                    <img src="images/slider/006.png" alt="">
-                                </div>
-                                <h3>Travel</h3>
-                                <p>Travel – everyone is talking about it. Why travel? How to travel? Where to travel to? Let’s find out! </br> &nbsp;</p>
+                            <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
+                                <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/QwooUQ-oAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
