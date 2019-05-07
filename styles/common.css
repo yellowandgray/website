@@ -166,7 +166,7 @@ input[type=submit]:hover {
 .text-bg p{
     color: #000 !important;
 }
-.text-bg h3{
+.text-bg h3{ 
     font-size: 33px !important;
 }
 .text-bg span{
