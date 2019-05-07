@@ -274,7 +274,7 @@
                                 </div>
 
                                 <div class="col-lg-4">
-                                    <button type="submit" class="button-2"><span>submit</span></button>
+                                    <button type="submit" class="button-2"><span>Submit</span></button>
                                 </div>
                             </div>
                         </div>
@@ -563,7 +563,7 @@
                                 <input type="text" name="phone" placeholder="Phone Number" required> 
                                 <input type="text" name="subject" placeholder="subject" required>
                                 <textarea type="text" name="requirement" placeholder="Requirement" class="req" required></textarea>
-                                <button type="submit" class="button-1"><span>submit</span></button>
+                                <button type="submit" class="button-1"><span>Submit</span></button>
                             </form>
                         </div>
                     </div>
