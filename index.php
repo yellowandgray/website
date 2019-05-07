@@ -580,6 +580,19 @@
                                 <img src="images/slider/009.png" alt="" />
                                 <img src="images/slider/010.png" alt="" />
                             </div>
+<!--                            <h2 class="color-w">JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</h2>
+                                <h4>Stay updated with articles, tools, updates from me.</h4>-->
+                            <div class="row" style="padding: 10px 0 20px;">
+                                <div class="col-lg-4">
+                                    <input type='text' name='name' placeholder="Your Name..." class="input-box">
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type='email' name='email' placeholder="Your Email..." class="input-box">
+                                </div>
+                                <div class="col-lg-4" style="text-align: center;">
+                                    <button type="submit" class="button-2"><span>Submit</span></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
