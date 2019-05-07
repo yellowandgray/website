@@ -317,3 +317,104 @@ textarea::placeholder {
         font-size: 30px;
     }
 }
+
+.subscribe h2 {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.subscribe h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #7af4ff;
+}
+
+.button-1 {
+    border-radius: 4px;
+    background-color: #20b9ec;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px 40px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button-1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button-1 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button-1:hover span {
+    padding-right: 25px;
+}
+
+.button-1:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.button-2 {
+    border-radius: 4px;
+    background-color: #9c20b3;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px 40px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+/*    margin: 5px;*/
+}
+
+.button-2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button-2 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button-2:hover span {
+    padding-right: 25px;
+}
+
+.button-2:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.form-1 {
+    padding: 20px;
+    background: #fff;
+}
+
+.form-1 h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}

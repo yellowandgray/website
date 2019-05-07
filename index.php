@@ -10,7 +10,7 @@
                 function showModal() {
 
                     $('#myModal').modal('show');
-                }, 1000);
+                }, 2000);
     </script>
     <body onload="showModal()">
         <div class="super_container">
@@ -262,8 +262,8 @@
                         <div class="col-lg-3">
                             <img src="images/bg/cheryl-05.jpg" alt="" class="sub-img">
                         </div>
-                        <div class="col-lg-9">
-                            <h3 class="color-w"><strong>JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</strong></h3>
+                        <div class="col-lg-9 subscribe">
+                            <h2 class="color-w">JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</h2>
                             <h4><strong>Stay updated with articles, tools, updates from me.</strong></h4>
                             <div class="row">
                                 <div class="col-lg-4">
@@ -274,7 +274,7 @@
                                 </div>
 
                                 <div class="col-lg-4">
-                                    <button type='submit' class="sub-submit">subscribe</button>
+                                    <button type="submit" class="button-2"><span>submit</span></button>
                                 </div>
                             </div>
                         </div>
@@ -316,11 +316,11 @@
                 <div class="pad-20 margin-top-50 bg-p">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <p class="join text-center"><span>Join The Community</span></p>
+                            <div class="col-lg-6 text-center">
+                                <button class="button-1"><span>Join The Community</span></button>
                             </div>
-                            <div class="col-lg-6">
-                                <p class="join text-center"><span id="myBtn">Book a 30-minute FREE coaching session</span></p>
+                            <div class="col-lg-6 text-center">
+                                <button class="button-1" id="myBtn"><span>Book a 30-minute FREE coaching session</span></button>
                             </div>
                         </div>
                     </div>
@@ -551,31 +551,21 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title contact_title">
-                            <h2>let's work together</h2>
+                            <h2 class="color-w">let's work together</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
                             <form class="form-1">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <input type="text" name="fname" placeholder="Name" style="float: left"> 
-
-                                        <input type="email" name="email" placeholder="Email Address" style="float: left">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <input type="text" name="phone" placeholder="Phone Number"> 
-
-                                        <input type="text" name="subject" placeholder="subject">
-                                    </div>
-                                </div>
-                                <textarea type="text" name="requirement" placeholder="Requirement" class="req"></textarea>
-                                <button type="submit" class="sub-submit-1">submit</button>
+                                <h2>Contact us</h2>
+                                <input type="text" name="fname" placeholder="Name" required > 
+                                <input type="email" name="email" placeholder="Email Address" required>
+                                <input type="text" name="phone" placeholder="Phone Number" required> 
+                                <input type="text" name="subject" placeholder="subject" required>
+                                <textarea type="text" name="requirement" placeholder="Requirement" class="req" required></textarea>
+                                <button type="submit" class="button-1"><span>submit</span></button>
                             </form>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -626,7 +616,7 @@
                     <h2 style="text-align: center">30-Minutes Free Coaching Session</h2>
                 </div>
                 <div class="modal-body">
-                    <form class="form-1">
+                    <form>
                         <label>Name</label>
                         <input type="text" name="fname">
                         <label>Email Address</label>
