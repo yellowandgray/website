@@ -197,9 +197,9 @@ input[type=submit]:hover {
     margin-top: 50px;
 }
 
-.main_slider_shapes img {
+/*.main_slider_shapes img {
     border: 6px solid #ba59e7;
-}
+}*/
 .join
 {
     padding: 10px 27px;
@@ -321,6 +321,14 @@ textarea::placeholder {
     }
     .modal-body-1 h2 {
         font-size: 30px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .nav_items li a {
+        padding-left: 4px;
+        padding-right: 4px;
+        letter-spacing: 1.5px;
     }
 }
 
