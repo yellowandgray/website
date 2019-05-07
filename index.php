@@ -40,7 +40,7 @@
                     <ul class="nav_items">
                         <li <!--class="active"-->><a href="#"><span>Blogs</span></a></li>
                         <li><a href="#"><span>Resources</span></a></li>
-                        <li><a href="#"><span>Work With us</span></a></li>
+                        <li><a href="#"><span>Work With me</span></a></li>
                         <li><a href="#"><span>Testimonials</span></a></li>
                         <li><a href="#"><span>About Cheryl</span></a></li>
                         <li><a href="#"><span>Contact</span></a></li>
@@ -60,7 +60,7 @@
                     <ul class="fs_menu_list">
                         <li><a href="#"><span><span>B</span>Blogs</span></a></li>
                         <li><a href="#"><span><span>R</span>Resources</span></a></li>
-                        <li><a href="#"><span><span>W</span>Work With us</span></a></li>
+                        <li><a href="#"><span><span>W</span>Work With me</span></a></li>
                         <li><a href="#"><span><span>T</span>Testimonials</span></a></li>
                         <li><a href="#"><span><span>A</span>About Cheryl</span></a></li>
                         <li><a href="#"><span><span>C</span>Contact</span></a></li>
@@ -663,9 +663,8 @@
                                         }
                                     }
         </script>
-        join pop up 
         <div id="myModal-2" class="modal-1">
-            Modal content 
+<!--            Modal content -->
             <div class="modal-content-1">
                 <div class="modal-header-1">
                     <span class="close-2">&times;</span>
@@ -681,7 +680,6 @@
                                 <p class="text-justify">Just an invitation - come and be a part of this wonderful community. I’ll be traveling the world, sharing my WOW-moments, delivering content to inspire you, sharing tools & tips to be more and live more. Don’t worry, I hate spam as much as you do. I promise to send you an email only once a month with awesome, relevant value for you.</p>
                             </div>
                         </div>
-
                         <form>
                             <div class="row">
                                 <div class="col-lg-4">
@@ -699,9 +697,7 @@
                                 </div>
                             </div>
                         </form>
-
                     </div>
-
                 </div>
             </div>
         </div>

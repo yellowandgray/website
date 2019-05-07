@@ -395,7 +395,7 @@ section
 .nav_items li
 {
     display: inline-block;
-/*    margin-left: 35px;*/
+    /*    margin-left: 35px;*/
     height: 100%;
 }
 .nav_items li a
@@ -1354,18 +1354,18 @@ section
     padding: 50px 0px ;
 }
 .modal-body-1 h2 {
-    padding-top: 190px;
-    font-size: 45px;
+    padding-top: 30px;
+    font-size: 35px;
     color: #ffffff;
     font-weight: 600;
 }
 .modal-body-1 h3 {
-    font-size: 25px;
+    font-size: 22px;
     color: #fff;
     font-weight: 600;
 }
 .modal-body-1 p {
-    font-size: 20px;
+    font-size: 16px;
     color: #fff;
     font-style: italic;
     font-weight: 600;
@@ -1377,6 +1377,6 @@ button.close {
     font-weight: 700;
     line-height: 1;
     color: #000;
-/*    text-shadow: 0 1px 0 #fff;*/
+    /*    text-shadow: 0 1px 0 #fff;*/
     opacity: 1;
 }

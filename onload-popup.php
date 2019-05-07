@@ -6,15 +6,13 @@
                 <span class="clo" onClick="PopUp('hide')" >&times;</span>
             </div>
             <div class="modal-body-1">
-                <h2 class="text-center">FOUR BREAKTHROUGHS</h2>
+                <h2>FOUR BREAKTHROUGHS</h2>
                 <h3>Free Access to Brendon's "Four Breakthroughs":</h3>
                 <p>Join 2 million subscribers! Get 4 new strategies every week on how to be more productive, confident, and happy.</p>
                 <form>
                     <input type="text" name="name" placeholder="First Name" />
                     <input type="email" name="email" placeholder="Email" />
-                    <div class="button discover_button">
-                        <a href="#" class="d-flex flex-row align-items-center justify-content-center">Get Access!<img src="images/arrow_right.svg" alt=""></a>
-                    </div>
+                    <button type="submit" class="button-1"><span>Get Access!</span></button>
                 </form>
             </div>
         </div>
