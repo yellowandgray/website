@@ -232,7 +232,7 @@ input[type=submit]:hover {
 }
 .box-3 {
     box-shadow: -1px 4px 15px 11px #eee;
-    padding: 20px;
+    /*padding: 20px;*/
     height: auto;
     margin-bottom: 20px;
 }
