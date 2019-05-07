@@ -618,7 +618,7 @@
                     <h2 style="text-align: center">30-Minutes Free Coaching Session</h2>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form class="form-2">
                         <label>Name</label>
                         <input type="text" name="fname">
                         <label>Email Address</label>
@@ -675,7 +675,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-4">
-
+                                <img src="images/bg/cheryl-07.jpg" alt="" class="img-2"/>
                             </div>
                             <div class="col-lg-8">
                                 <p class="text-justify">Just an invitation - come and be a part of this wonderful community. I’ll be traveling the world, sharing my WOW-moments, delivering content to inspire you, sharing tools & tips to be more and live more. Don’t worry, I hate spam as much as you do. I promise to send you an email only once a month with awesome, relevant value for you.</p>
@@ -693,8 +693,8 @@
                                     <input type="email" name="email">
                                 </div>
                                 <div class="col-lg-4">
-                                    <div class="button discover_button">
-                                        <a href="#" class="d-flex flex-row align-items-center justify-content-center margin-t-22">Join<img src="images/arrow_right.svg" alt=""></a>
+                                    <div class="button discover_button margin-t-22">
+                                        <a href="#" class="d-flex flex-row align-items-center justify-content-center">Join<img src="images/arrow_right.svg" alt=""></a>
                                     </div>
                                 </div>
                             </div>

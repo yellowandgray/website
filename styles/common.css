@@ -242,7 +242,7 @@ input[type=submit]:hover {
 .modal-1 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1050; /* Sit on top */
+    z-index: 99999; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -456,4 +456,36 @@ textarea::placeholder {
 
 .hamburger_container {
     z-index: 9999
+}
+.margin-t-22 {
+    margin-top: 22px !important;
+}
+.img-2  {
+    width: 100%;
+    height: auto;
+    padding: 3px;
+    background: #20b9ece0;
+    border: 1px solid #d2cbcb;
+    border-radius: 50%;
+}
+.close-2 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    top: -27px;
+}
+
+.close-2:hover,
+.close-2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.form-2 input{
+    margin: 0px 0px 0px 0px !important;
+}
+.form-2 textarea{
+    margin: 0px 0px 0px 0px !important;
 }
