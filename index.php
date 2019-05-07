@@ -60,7 +60,7 @@
                                 <div class="col-md-12" style="background: #00659c;">
                                     <div class="mega-menu-md-12" style="padding: 20px;">
                                         <h3>Want Cheryl to help you multiply your performance x25?</h3>
-                                        <button>Start Here</button>
+                                        <button type="submit" class="button-1"><span>Submit</span></button>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@
                     <ul class="fs_menu_list">
                         <li><a href="#"><span><span>B</span>Blogs</span></a></li>
                         <li><a href="#"><span><span>R</span>Resources</span></a></li>
-                        <li class="dropdown"><a href="#"><span><span>W</span>Work With me</span></a></li>
+                        <li><a href="#"><span><span>W</span>Work With me</span></a></li>
                         <li><a href="#"><span><span>T</span>Testimonials</span></a></li>
                         <li><a href="#"><span><span>A</span>About Cheryl</span></a></li>
                         <li><a href="#"><span><span>C</span>Contact</span></a></li>

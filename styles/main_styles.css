@@ -1434,14 +1434,14 @@ button.close {
     font-weight: 700;
 }
 
-.mega-menu-md-12 button {
+/*.mega-menu-md-12 button {
     background: #000;
     color: #fff;
     border: 1px solid #fff;
     padding: 5px 35px;
     border-radius: 5px;
     cursor: pointer;
-}
+}*/
 
 .dropdown-content ul li a:hover {
     color: #fff;
