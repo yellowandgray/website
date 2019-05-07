@@ -226,7 +226,7 @@ input[type=submit]:hover {
 .box-2 {
     box-shadow: -1px 4px 15px 11px #eee;
     padding: 20px;
-    height: 485px;
+    height: 424px;
     margin-bottom: 20px;
 }
 .box-3 {
@@ -334,7 +334,7 @@ textarea::placeholder {
 
 .subscribe h2 {
     font-size: 26px;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .subscribe h4 {
@@ -496,4 +496,19 @@ textarea::placeholder {
 }
 .form-2 textarea{
     margin: 0px 0px 0px 0px !important;
+}
+.img-b {
+    position: absolute;
+    top: -23px;
+    left: -11px;
+    z-index: 9;
+    width: 65px;
+    height: 65px;
+    border-radius: 0px 100px 100px 100px;
+    padding: 5px;
+    background: #21b9ec;
+}
+.arrow-1 i {
+    font-size: 20px;
+    color: #9c20b3;
 }

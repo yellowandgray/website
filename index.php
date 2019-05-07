@@ -206,8 +206,8 @@
                     <div class="row">
                         <!-- Features Item -->
                         <div class="col-lg-4">
-                            <div class="img-b">
-                                <img src="images/slider/001.png" alt="">
+                            <div>
+                                <img src="images/slider/001.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container box-2 d-flex flex-column">
@@ -216,9 +216,9 @@
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
-                                    <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income,</p>
+                                    <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income...</p>
                                     <div class="text-center arrow-1">
-                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                                     </div>
                                 </div>
                             </div>
@@ -226,42 +226,101 @@
 
                         <!-- Features Item -->
                         <div class="col-lg-4">
-                            <div class="features_item box-2 d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="icon_container d-flex flex-column justify-content-end">
-                                    <img src="images/slider/002.png" alt="">
+                            <div>
+                                <img src="images/slider/002.png" alt="" class="img-b">
+                            </div>
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container box-2 d-flex flex-column">
+                                    <h3 class="text-center">Time Management</h3>
+                                    <video width="320" height="240" controls>
+                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
+                                        Your browser does not support the <code>video</code> tag.
+                                    </video>
+                                    <p>If you always find yourself wanting to do more, live more meaningfully, but are somehow unable to...</p>
+                                    <div class="text-center arrow-1">
+                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                    </div>
                                 </div>
-                                <h3>Time Management</h3>
-                                <p>If you always find yourself wanting to do more, live more meaningfully, but are somehow unable to, then I will help shine the light on how you may manage your time and thus your life so that you live the life you want to live.</p>
                             </div>
                         </div>
+
                         <!-- Features Item -->
                         <div class="col-lg-4">
-                            <div class="features_item box-2 d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="icon_container d-flex flex-column justify-content-end">
-                                    <img src="images/slider/003.png" alt="">
+                            <div>
+                                <img src="images/slider/003.png" alt="" class="img-b">
+                            </div>
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container box-2 d-flex flex-column">
+                                    <h3 class="text-center">Career Progress</h3>
+                                    <video width="320" height="240" controls>
+                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
+                                        Your browser does not support the <code>video</code> tag.
+                                    </video>
+                                    <p>If you are in a job that does not light you up, or in a career that you once loved but now wish to change...</p>
+                                    <div class="text-center arrow-1">
+                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                    </div>
                                 </div>
-                                <h3>Career Progress</h3>
-                                <p>If you are in a job that does not light you up, or in a career that you once loved but now wish to change, or if you are not advancing in your career no matter what you do, then chat with me and learn how I raced through the corporate ladder over my 17 years of experience in the corporate world.</p>
                             </div>
                         </div>
+
+
                     </div>
                     <div class="row margin-top-50">
                         <!-- Features Item -->
                         <div class="col-lg-4">
-                            <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
-                                <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/fQUfIgLCAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div>
+                                <img src="images/slider/004.png" alt="" class="img-b">
+                            </div>
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container box-2 d-flex flex-column">
+                                    <h3 class="text-center">Trader Coach</h3>
+                                    <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
+                                        <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/fQUfIgLCAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <p>If you are a trader in the financial markets and are unable to remain consistently profitable...</p>
+                                    <div class="text-center arrow-1">
+                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                         <!-- Features Item -->
                         <div class="col-lg-4">
-                            <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
-                                <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/u7NntUPBdkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div>
+                                <img src="images/slider/005.png" alt="" class="img-b">
+                            </div>
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container box-2 d-flex flex-column">
+                                    <h3 class="text-center">Transformational Change</h3>
+                                    <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
+                                        <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/u7NntUPBdkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <p>If you have found yourself at a stage where you feel like it is ‘now time’ to make a large change that is likely to impact...</p>
+                                    <div class="text-center arrow-1">
+                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                         <!-- Features Item -->
                         <div class="col-lg-4">
-                            <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
-                                <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/QwooUQ-oAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div>
+                                <img src="images/slider/006.png" alt="" class="img-b">
+                            </div>
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container box-2 d-flex flex-column">
+                                    <h3 class="text-center">Super Women</h3>
+                                    <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
+                                        <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/QwooUQ-oAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <p>If you are an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress...</p>
+                                    <div class="text-center arrow-1">
+                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -275,7 +334,7 @@
                         </div>
                         <div class="col-lg-9 subscribe">
                             <h2 class="color-w">JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</h2>
-                            <h4><strong>Stay updated with articles, tools, updates from me.</strong></h4>
+                            <h4>Stay updated with articles, tools, updates from me.</h4>
                             <div class="row">
                                 <div class="col-lg-4">
                                     <input type='text' name='name' placeholder="Your Name..." class="input-box">
@@ -298,7 +357,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title">
-                            <h2>about</h2>
+                            <h2>about me</h2>
                         </div>
                     </div>
                     <div class="row">
