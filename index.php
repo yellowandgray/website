@@ -38,7 +38,7 @@
                 <!-- Main Navigation -->
                 <nav class="main_nav justify-self-end">
                     <ul class="nav_items">
-                        <li class="active"><a href="#"><span>Blogs</span></a></li>
+                        <li <!--class="active"-->><a href="#"><span>Blogs</span></a></li>
                         <li><a href="#"><span>Resources</span></a></li>
                         <li><a href="#"><span>Work With us</span></a></li>
                         <li><a href="#"><span>Testimonials</span></a></li>
