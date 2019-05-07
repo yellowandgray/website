@@ -390,7 +390,7 @@ section
 }
 .nav_items
 {
-    height: 100%;
+    height: 50%;
 }
 .nav_items li
 {
@@ -550,6 +550,7 @@ section
     padding-right: 63px;
     padding-top: 150px;
     text-align: right;
+    overflow: scroll;
 }
 .fs_menu_shapes
 {
@@ -569,6 +570,7 @@ section
 .fs_menu_list
 {
     display: inline-block;
+    margin-top: 20px;
 }
 .fs_menu_list li
 {
