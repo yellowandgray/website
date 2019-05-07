@@ -431,7 +431,7 @@ section
 }
 .nav_items li:hover a
 {
-/*    color: #40CEF6;*/
+    /*    color: #40CEF6;*/
     color: #ffffff;
 }
 
@@ -1211,9 +1211,9 @@ section
 
 .clients
 {
-    padding-top: 192px;
-    padding-bottom: 110px;
-    background:#f3fcff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #e0e9ec;
 }
 
 /*********************************
@@ -1304,7 +1304,7 @@ section
 
 .footer
 {
-    background: #111111;
+    background: #80358e;
 }
 .footer_content
 {
@@ -1332,7 +1332,7 @@ section
 .footer_social li i
 {
     font-size: 14px;
-    color: rgba(110,110,110,0.6);
+    color: rgb(255, 255, 255);
 }
 .footer_social li:hover i
 {

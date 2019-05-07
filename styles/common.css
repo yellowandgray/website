@@ -169,6 +169,8 @@ input[type=submit]:hover {
 }
 .text-bg h3{ 
     font-size: 33px !important;
+    color: #80358e  !important;
+    font-weight: 600;
 }
 .text-bg span{
     color: #00659c;
