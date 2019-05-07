@@ -206,14 +206,24 @@
                     <div class="row">
                         <!-- Features Item -->
                         <div class="col-lg-4">
-                            <div class="features_item box-2 d-flex flex-column align-items-center justify-content-end text-center">
-                                <div class="icon_container d-flex flex-column justify-content-end">
-                                    <img src="images/slider/001.png" alt="">
+                            <div class="img-b">
+                                <img src="images/slider/001.png" alt="">
+                            </div>
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container box-2 d-flex flex-column">
+                                    <h3 class="text-center">Financial Freedom</h3>
+                                    <video width="320" height="240" controls>
+                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
+                                        Your browser does not support the <code>video</code> tag.
+                                    </video>
+                                    <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income,</p>
+                                    <div class="text-center arrow-1">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </div>
                                 </div>
-                                <h3>Financial Freedom</h3>
-                                <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income, if you find yourself drowning in the quagmire of credit card debts, if you wish to start saving more and building a retirement fund then get in touch with me now. I have been a banker for nearly 2 decades and have cracked the code.</p>
                             </div>
                         </div>
+
                         <!-- Features Item -->
                         <div class="col-lg-4">
                             <div class="features_item box-2 d-flex flex-column align-items-center justify-content-center text-center">
@@ -640,23 +650,23 @@
             </div>
         </div>
         <script>
-// Get the modal
+                                    // Get the modal
                                     var modal = document.getElementById('myModal-1');
-// Get the button that opens the modal
+                                    // Get the button that opens the modal
                                     var btn = document.getElementById("myBtn");
-// Get the <span> element that closes the modal
+                                    // Get the <span> element that closes the modal
                                     var span = document.getElementsByClassName("close-1")[0];
-// When the user clicks the button, open the modal 
+                                    // When the user clicks the button, open the modal 
                                     btn.onclick = function () {
                                         modal.style.display = "block";
                                     }
 
-// When the user clicks on <span> (x), close the modal
+                                    // When the user clicks on <span> (x), close the modal
                                     span.onclick = function () {
                                         modal.style.display = "none";
                                     }
 
-// When the user clicks anywhere outside of the modal, close it
+                                    // When the user clicks anywhere outside of the modal, close it
                                     window.onclick = function (event) {
                                         if (event.target == modal) {
                                             modal.style.display = "none";
@@ -664,7 +674,7 @@
                                     }
         </script>
         <div id="myModal-2" class="modal-1">
-<!--            Modal content -->
+            <!--            Modal content -->
             <div class="modal-content-1">
                 <div class="modal-header-1">
                     <span class="close-2">&times;</span>
@@ -702,23 +712,23 @@
             </div>
         </div>
         <script>
-// Get the modal
+            // Get the modal
             var mode = document.getElementById('myModal-2');
-// Get the button that opens the modal
+            // Get the button that opens the modal
             var btnn = document.getElementById("myBtn-1");
-// Get the <span> element that closes the modal
+            // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close-2")[0];
-// When the user clicks the button, open the modal 
+            // When the user clicks the button, open the modal 
             btnn.onclick = function () {
                 mode.style.display = "block";
             }
 
-// When the user clicks on <span> (x), close the modal
+            // When the user clicks on <span> (x), close the modal
             span.onclick = function () {
                 mode.style.display = "none";
             }
 
-// When the user clicks anywhere outside of the modal, close it
+            // When the user clicks anywhere outside of the modal, close it
             window.onclick = function (event) {
                 if (event.target == mode) {
                     mode.style.display = "none";
