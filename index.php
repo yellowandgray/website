@@ -4,15 +4,28 @@
     include 'head.php';
     $page = 'home';
     ?>
-    <script>
+<!--    <script>
 
         setTimeout(
                 function showModal() {
 
                     $('#myModal').modal('show');
                 }, 2000);
+    </script>-->
+    <script type="text/javascript">
+        function PopUp(hideOrshow) {
+            if (hideOrshow == 'hide')
+                document.getElementById('ac-wrapper').style.display = "none";
+            else
+                document.getElementById('ac-wrapper').removeAttribute('style');
+        }
+        window.onload = function () {
+            setTimeout(function () {
+                PopUp('show');
+            }, 10000);
+        }
     </script>
-    <body onload="showModal()">
+    <body>
         <div class="super_container">
             <!-- Header -->
             <header class="header d-flex flex-row justify-content-end align-items-center">
@@ -607,6 +620,7 @@
         <script src="plugins/easing/easing.js"></script>
         <script src="js/custom.js"></script>
         <?php include 'onload-popup.php'; ?>
+       
         <!-- The Modal -->
         <div id="myModal-1" class="modal-1">
             <!-- Modal content -->
@@ -661,5 +675,6 @@
                                         }
                                     }
         </script>
+
     </body>
 </html>
