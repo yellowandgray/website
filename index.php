@@ -617,6 +617,7 @@
         <script src="plugins/easing/easing.js"></script>
         <script src="js/custom.js"></script>
         <?php include 'onload-popup.php'; ?>
+
         <!-- The Modal -->
         <div id="myModal-1" class="modal-1">
             <!-- Modal content -->
@@ -671,5 +672,6 @@
                                         }
                                     }
         </script>
+
     </body>
 </html>
