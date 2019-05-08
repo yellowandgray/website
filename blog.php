@@ -19,6 +19,8 @@
         <link href="styles/slider-1.css" rel="stylesheet" type="text/css"/>
         <link href="styles/infinite-slider.css" rel="stylesheet" type="text/css"/>
         <link href="styles/media-query.css" rel="stylesheet" type="text/css"/>
+        <link href="portfolio/layout.css" rel="stylesheet" type="text/css"/>
+        <link href="portfolio/normalize.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div class="super_container">
@@ -143,104 +145,365 @@
                                         </div>
                     
                                         <div style="clear:both;"></div> -->
-                    <div align="center">
-                        <button class="btn btn-default filter-button" data-filter="all">All</button>
-                        <button class="btn btn-default filter-button" data-filter="hdpe">HDPE Pipes</button>
-                        <button class="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
-                        <button class="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>
-                        <button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>
-                    </div>
+                    <ul id="filters" class="clearfix">
+                        <li><span class="filter active" data-filter=".app, .card, .icon, .logo1">All</span></li>
+                        <li><span class="filter" data-filter=".app">Improve Finances</span></li>
+                        <li><span class="filter" data-filter=".card">Manage Time</span></li>
+                        <li><span class="filter" data-filter=".icon">Improve Discipline</span></li>
+                        <li><span class="filter" data-filter=".logo1">Communication Skills</span></li>
+<!--                        <li><span class="filter" data-filter=".web">Web</span></li>-->
+                    </ul>
 
-                    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                    </div>
+                    <div id="portfoliolist">
 
-                    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-                        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                    </div>
+                        <div class="portfolio logo1" data-cat="logo1">
+                            <div class="portfolio-wrapper">				
+                                <img src="images/blog/001.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Logo</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>				
 
-                    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                    </div>
+                        <div class="portfolio app" data-cat="app">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/002.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">APP</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>		
 
-                    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                    </div>
+                        <div class="portfolio card" data-cat="card">
+                            <div class="portfolio-wrapper">						
+                                <img src="images/blog/003.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Web design</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>				
 
-                    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                    </div>
+                        <div class="portfolio card" data-cat="card">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/004.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Business card</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>	
 
-                    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                    </div>
+                        <div class="portfolio app" data-cat="app">
+                            <div class="portfolio-wrapper">
+                                <img src="images/blog/005.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">APP</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>			
 
-                    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                    </div>
+                        <div class="portfolio card" data-cat="card">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/006.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Business card</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>	
 
-                    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                    </div>
+                        <div class="portfolio card" data-cat="card">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/007.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Business card</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>	
 
-                    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                    </div>
+                        <div class="portfolio logo1" data-cat="logo1">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/008.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Logo</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>																																							
 
-                    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                    </div>
+                        <!--                        <div class="portfolio app" data-cat="app">
+                                                    <div class="portfolio-wrapper">			
+                                                        <img src="images/blog/009.jpg" alt="" />
+                                                        <div class="label">
+                                                            <div class="label-text">
+                                                                <a class="text-title">Graph Plotting</a>
+                                                                <span class="text-category">APP</span>
+                                                            </div>
+                                                            <div class="label-bg"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>														-->
 
-                    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                    </div>
+                        <div class="portfolio card" data-cat="card">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/010.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Business card</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>				
 
-                    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-                        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        <div class="portfolio logo1" data-cat="logo1">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/011.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Logo</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>																	
+
+                        <div class="portfolio logo1" data-cat="logo1">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/012.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Logo</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>													
+
+                        <div class="portfolio icon" data-cat="icon">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/013.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Icon</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>							
+
+                        <div class="portfolio icon" data-cat="icon">
+                            <div class="portfolio-wrapper">						
+                                <img src="images/blog/014.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Web design</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>																								
+
+                        <div class="portfolio icon" data-cat="icon">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/015.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Icon</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>				
+
+                        <div class="portfolio logo1" data-cat="logo1">
+                            <div class="portfolio-wrapper">						
+                                <img src="images/blog/016.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Web design</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>																	
+
+                        <div class="portfolio icon" data-cat="icon">
+                            <div class="portfolio-wrapper">
+                                <img src="images/blog/017.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Icon</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>																																																																
+
+                        <div class="portfolio icon" data-cat="icon">
+                            <div class="portfolio-wrapper">						
+                                <img src="images/blog/018.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Icon</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>			
+
+                        <div class="portfolio app" data-cat="app">
+                            <div class="portfolio-wrapper">						
+                                <img src="images/blog/019.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Web design</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>									
+
+                        <div class="portfolio logo1" data-cat="logo1">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/020.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Logo</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>																	
+
+                        <div class="portfolio logo1" data-cat="logo1">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/021.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+                                        <!--<span class="text-category">Logo</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>																												
+
+                        <div class="portfolio icon" data-cat="icon">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/022.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+<!--                                        <span class="text-category">Icon</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>																								
+
+                        <div class="portfolio card" data-cat="card">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/023.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+<!--                                        <span class="text-category">Business card</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>	
+
+                        <div class="portfolio logo1" data-cat="logo1">
+                            <div class="portfolio-wrapper">			
+                                <img src="images/blog/024.jpg" alt="" />
+                                <div class="label">
+                                    <div class="label-text">
+                                        <a class="text-title">Title</a>
+<!--                                        <span class="text-category">Logo</span>-->
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                            </div>
+                        </div>				
+
+
                     </div>
                 </div>
             </div>
             <!-- Footer -->
             <?php include 'footer.php'; ?>
-            <script>
-//                $(function () {
-//                    var selectedClass = "";
-//                    $(".fil-cat").click(function () {
-//                        selectedClass = $(this).attr("data-rel");
-//                        $("#portfolio").fadeTo(100, 0.1);
-//                        $("#portfolio div").not("." + selectedClass).fadeOut().removeClass('scale-anm');
-//                        setTimeout(function () {
-//                            $("." + selectedClass).fadeIn().addClass('scale-anm');
-//                            $("#portfolio").fadeTo(300, 1);
-//                        }, 300);
-//
-//                    });
-//                });
-                $(document).ready(function () {
+            <script src="portfolio/jquery.mixitup.min.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                $(function () {
 
-                    $(".filter-button").click(function () {
-                        var value = $(this).attr('data-filter');
+                    var filterList = {
 
-                        if (value == "all")
-                        {
-                            //$('.filter').removeClass('hidden');
-                            $('.filter').show('1000');
-                        } else
-                        {
-//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-                            $(".filter").not('.' + value).hide('3000');
-                            $('.filter').filter('.' + value).show('3000');
+                        init: function () {
+
+                            // MixItUp plugin
+                            // http://mixitup.io
+                            $('#portfoliolist').mixItUp({
+                                selectors: {
+                                    target: '.portfolio',
+                                    filter: '.filter'
+                                },
+                                load: {
+                                    filter: '.app, .card, .icon, .logo1'
+                                }
+                            });
 
                         }
-                    });
 
-                    if ($(".filter-button").removeClass("active")) {
-                        $(this).removeClass("active");
-                    }
-                    $(this).addClass("active");
+                    };
+
+                    // Run the show!
+                    filterList.init();
+
 
                 });
             </script>
+        </div>
     </body>
 </html>
