@@ -72,7 +72,7 @@
                 </nav>
                 <!-- Hamburger -->
                 <div class="hamburger_container">
-                    <span class="hamburger_text">Menu</span>
+                    <!--<span class="hamburger_text">Menu</span>-->
                     <span class="hamburger_icon"></span>
                 </div>
             </header>
