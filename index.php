@@ -50,7 +50,7 @@
             <!-- Hero Slider -->
             <div class="home">
                 <video autoplay loop poster="polina.jpg" id="vid" muted="muted">
-                    <source src="images/test.mp4" type="video/mp4">
+                    <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                 </video>  
                 <div class="overlay"></div>
                 <div class="hero_slider_container slider_prlx">
@@ -516,7 +516,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 box-6">
                             <img src="images/bg/cheryl-07.jpg" alt=""/>
                         </div>
                         <div class="col-lg-8">
@@ -551,7 +551,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title contact_title">
-                            <h2 class="color-w">let's work together</h2>
+                            <h2>let's work together</h2>
                         </div>
                     </div>
                     <div class="row">
