@@ -51,7 +51,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
-                            <h2>My Specialisation Coaching</h2>
+                            <h2>Current Blogs</h2>
                         </div>
                     </div>
                     <!--                    <div class="toolbar mb2 mt2">
