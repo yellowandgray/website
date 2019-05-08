@@ -116,7 +116,7 @@ p a:active
 }
 p a:hover
 {
-    color: #9c20b3;
+    color: yellow;
     /*background: #ffa07f;*/
 }
 p a:hover::after

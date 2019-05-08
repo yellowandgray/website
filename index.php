@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php
-    include 'head.php';
-    $page = 'home';
-    ?>
-<!--    <script>
-
-        setTimeout(
-                function showModal() {
-
-                    $('#myModal').modal('show');
-                }, 2000);
-    </script>-->
+    <head>
+        <title>Cheryl P Pinto</title>
+        <?php $page = 'home'; ?>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Zeta Template Project">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+        <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+        <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+        <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+        <link rel="icon" href="images/fav-logo.png" type="image/gif" sizes="16x16">
+        <link href="styles/common.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/slider-1.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/infinite-slider.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/media-query.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <!--    <script>
+    
+            setTimeout(
+                    function showModal() {
+    
+                        $('#myModal').modal('show');
+                    }, 2000);
+        </script>-->
     <script type="text/javascript">
         function PopUp(hideOrshow) {
             if (hideOrshow == 'hide')
@@ -95,11 +111,11 @@
                                             <li><a href="">Speaking Engagements</a></li>
                                         </ul>
                                     </div>
-<!--                                    <div class="col-md-6">
-                                        <div class="">
-                                            <img src="images/mega-menu.jpg" alt="" />
-                                        </div> 
-                                    </div>-->
+                                    <!--                                    <div class="col-md-6">
+                                                                            <div class="">
+                                                                                <img src="images/mega-menu.jpg" alt="" />
+                                                                            </div> 
+                                                                        </div>-->
                                 </div>
                                 <div class="col-md-12" style="background: #00659c;">
                                     <div class="mega-menu-md-12" style="padding: 20px;">
