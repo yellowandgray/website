@@ -539,7 +539,7 @@ section
     top: -100vh;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    /*height: 100vh;*/
     background: #FFFFFF;
     z-index: 19;
     -webkit-transition: all 1s 0s cubic-bezier(1,0,0,1);
@@ -580,7 +580,7 @@ section
 .fs_menu_list li a
 {
     display: inline-block;
-    font-size: 62px;
+    font-size: 19px;
     font-weight: 700;
     color: #171717;
     line-height: 1.4;
@@ -625,11 +625,11 @@ section
 {
     display: block;
     position: absolute;
-    bottom: 4px;
+    bottom: -2px;
     left: 0;
     width: 0%;
-    height: 3px;
-    background: #171717;
+    height: 2px;
+    background: #9c20b3;
     content: '';
     -webkit-transition: all 600ms cubic-bezier(.19,1,.22,1);
     -moz-transition: all 600ms cubic-bezier(.19,1,.22,1);
