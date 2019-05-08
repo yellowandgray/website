@@ -758,9 +758,7 @@
                                     <input type="email" name="email">
                                 </div>
                                 <div class="col-lg-12">
-                                    <div class="margin-t-28">
-                                        <button type="submit" class="button-1 font-16"><span class="color-w">Join us!</span></button>
-                                    </div>
+                                    <button type="submit" class="button-1 font-16"><span class="color-w">Join us!</span></button>
                                 </div>
                             </div>
                         </form>
