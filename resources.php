@@ -146,7 +146,7 @@
                 </div>
             </div>
 
-            <div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;">
+            <div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
                 <!-- <div class="contact_background parallax-window" data-parallax="scroll" data-speed="0.7" data-image-src="images/contact_background.jpg"></div> -->
                 <div class=" prlx bg-enquiry"></div>
                 <div class="container">
@@ -164,7 +164,7 @@
                                 <input type="text" name="phone" placeholder="Phone Number" required> 
                                 <input type="text" name="subject" placeholder="subject" required>
                                 <textarea type="text" name="requirement" placeholder="Requirement" class="req" required></textarea>
-                                <button type="submit" class="button-1"><span>Submit</span></button>
+                                <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
                             </form>
                         </div>
                     </div>

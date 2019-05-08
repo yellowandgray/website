@@ -654,7 +654,7 @@
                                 <input type="text" name="phone" placeholder="Phone Number" required> 
                                 <input type="text" name="subject" placeholder="subject" required>
                                 <textarea type="text" name="requirement" placeholder="Requirement" class="req" required></textarea>
-                                <button type="submit" class="button-1"><span>Submit</span></button>
+                                <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
                             </form>
                         </div>
                     </div>
