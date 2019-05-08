@@ -6,9 +6,9 @@
                 <span class="clo" onClick="PopUp('hide')" >&times;</span>
             </div>
             <div class="modal-body-1">
-                <h2>FOUR BREAKTHROUGHS</h2>
-                <h3>Free Access to Brendon's "Four Breakthroughs":</h3>
-                <p>Join 2 million subscribers! Get 4 new strategies every week on how to be more productive, confident, and happy.</p>
+                <h2>BIG TITLE COMES HERE</h2>
+                <h3>Medium words can be put here.</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
                 <form>
                     <input type="text" name="name" placeholder="First Name" />
                     <input type="email" name="email" placeholder="Email" />

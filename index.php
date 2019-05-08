@@ -60,7 +60,7 @@
                                 <div class="col-md-12" style="background: #00659c;">
                                     <div class="mega-menu-md-12" style="padding: 20px;">
                                         <h3>Want Cheryl to help you multiply your performance x25?</h3>
-                                        <button type="submit" class="button-1"><span>Submit</span></button>
+                                        <button type="submit" class="button-1"><span>Start Here</span></button>
                                     </div>
                                 </div>
                             </div>
@@ -580,6 +580,19 @@
                                 <img src="images/slider/009.png" alt="" />
                                 <img src="images/slider/010.png" alt="" />
                             </div>
+<!--                            <h2 class="color-w">JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</h2>
+                                <h4>Stay updated with articles, tools, updates from me.</h4>-->
+                            <div class="row" style="padding: 10px 0 20px;">
+                                <div class="col-lg-4">
+                                    <input type='text' name='name' placeholder="Your Name..." class="input-box">
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type='email' name='email' placeholder="Your Email..." class="input-box">
+                                </div>
+                                <div class="col-lg-4" style="text-align: center;">
+                                    <button type="submit" class="button-2"><span>Submit</span></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -615,7 +628,7 @@
                 <div class="container">
                     <div class="row footer_content d-flex flex-sm-row flex-column align-items-center">
                         <div class="col-sm-6 cr text-sm-left text-center">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            <p style="color: #fff;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed By <a href="http://www.yellowandgray.com/" target="_blank"> YG STUDIO</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                         </div>
