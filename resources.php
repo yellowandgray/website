@@ -93,85 +93,59 @@
                 </div>
             </section>
             <!-- About -->
-            <div class="about prlx_parent" style="background-image:url(images/main_slider_03.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
+            <!--<div class="about prlx_parent" style="background-image:url(images/main_slider_03.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">-->
+            <div class="about prlx_parent pad-50" >
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title">
-                            <h2>about me</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="text-bg">
-                                <div class="about_text">
-                                    <h3 class="color-purple">Hi! I am Cheryl.</h3>
-                                    <p><span>Inspire. Empower. Transform… My mantra.</span></p>
-                                    <p>Dear friend, a warm welcome! I am a life-coach and a trader. I love life and everything & everybody that lives.
-                                    <ul class="list-1">
-                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>My highs: being unorthodox and doing the impossible.</li>
-                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>My addictions: traveling and learning.</li>
-                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>I write about big ideas and life-lessons from my experiences. I write about my travels around our magical planet and how it has changed my perception of our world.</li>
-                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Some people call me crazy. Others say I have changed their lives. Come, join the tribe and decide.</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="pad-20 margin-top-50 bg-p">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 text-center">
-                                <button class="button-1" id="myBtn-1"><span>Join The Community</span></button>
-                            </div>
-                            <div class="col-lg-6 text-center">
-                                <button class="button-1" id="myBtn"><span>Book a 30-minute FREE coaching session</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Clients -->
-            <div class="clients">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
-                            <h2>What You Like to Improve?</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="images/bg/cheryl-07.jpg" alt=""/>
-                        </div>
                         <div class="col-lg-8">
-                            <div class="rio-promos">
-                                <img src="images/slider/007.png" alt="" />
-                                <img src="images/slider/008.png" alt="" />
-                                <img src="images/slider/009.png" alt="" />
-                                <img src="images/slider/010.png" alt="" />
+                            <h3 class="pad-20"><strong>HOW DOES COACHING HELP?</strong></h3>
+                            <ul class="list-1">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Coaching can help with virtually any aspect of someone’s life, whether it is in their personal or professional life.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">The coaching process takes on specific projects or personal goals by:</li>
+                                <ul class="sub-list">
+                                    <i class="fa fa-circle" aria-hidden="true"></i><li>analyzing the current situation</li>
+                                    <i class="fa fa-circle" aria-hidden="true"></i><li>identifying existing and potential challenges and</li>
+                                    <i class="fa fa-circle" aria-hidden="true"></i><li>devising a plan of action designed to achieve the desired outcome.</li>
+                                </ul>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Certified coaches, through their specific strategies and skills, help their clients think clearly and hence arrive at solutions that they are otherwise unable to see on their own. With the careful guidance of a coach, you can see the situation from a new perspective, which brings new answers and solutions. This is the key value that a coach brings.</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-lg-4">
+                            <div>
+                                <img src="images/slider/001.png" alt="" class="img-b">
                             </div>
-                            <!--                            <h2 class="color-w">JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</h2>
-                                                            <h4>Stay updated with articles, tools, updates from me.</h4>-->
-                            <div class="row" style="padding: 10px 0 20px;">
-                                <div class="col-lg-4">
-                                    <input type='text' name='name' placeholder="Your Name..." class="input-box">
-                                </div>
-                                <div class="col-lg-4">
-                                    <input type='email' name='email' placeholder="Your Email..." class="input-box">
-                                </div>
-                                <div class="col-lg-4" style="text-align: center;">
-                                    <button type="submit" class="button-2"><span>Submit</span></button>
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container box-4 d-flex flex-column">
+                                    <h3 class="text-center">Financial Freedom</h3>
+                                    <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
+                                        Your browser does not support the <code>video</code> tag.
+                                    </video>
+                                    <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income...</p>
+                                    <div class="text-center arrow-1">
+                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3 class="pad-20"><strong>WHY WORK WITH A LIFE COACH?</strong></h3>
+                            <ul class="list-1">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">People hire a life coach because they want to do even more tomorrow than they can do today.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">They want to improve their output and see more growth, and they want to do those things quickly and to the best of their ability.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">These people all identify a gap between where they are and where they want to be, and want help reaching their goals.</li>
+                            </ul>
+                            <h3 class="pad-20"><strong>WHY WOULD YOU WORK WITH A LIFE COACH?</strong></h3>
+                            <p class="text-justify">People hire a life coach because they want to do even more tomorrow than they can do today. They want to improve their output and see more growth, and they want to do those things quickly and to the best of their ability.</p>
+                            <p class="text-justify">All kinds of people use life coaches,including actors, business leaders, creatives, entrepreneurs, executives, home-makers, managers, professionals, small business owners and start-up owners. These people all identify a gap between where they are and where they want to be, and want help reaching their goals.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Contact -->
+
             <div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;">
                 <!-- <div class="contact_background parallax-window" data-parallax="scroll" data-speed="0.7" data-image-src="images/contact_background.jpg"></div> -->
                 <div class=" prlx bg-enquiry"></div>
@@ -183,7 +157,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
-                            <form class="form-1">
+                            <form class="text-bg">
                                 <h2>Contact us</h2>
                                 <input type="text" name="fname" placeholder="Name" required > 
                                 <input type="email" name="email" placeholder="Email Address" required>
