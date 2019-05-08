@@ -572,121 +572,122 @@
             <!-- Footer -->
             <?php include 'footer.php'; ?>
             <?php include 'onload-popup.php'; ?>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal-1" class="modal-1">
+            <!-- Modal content -->
+            <div class="modal-content-1">
+                <div class="modal-header-1">
+                    <span class="close-1">&times;</span>
+                    <h2 style="text-align: center">30-Minutes Free Coaching Session</h2>
+                </div>
+                <div class="modal-body">
+                    <form class="form-2">
+                        <label>Name</label>
+                        <input type="text" name="fname">
+                        <label>Email Address</label>
+                        <input type="email" name="email"> 
+                        <label>Contact Number</label>
+                        <input type="text" name="contact"> 
+                        <label>How do you want to be contacted</label>
+                        <select name="How-do-contacted">
+                            <option value="Email">Email</option>
+                            <option value="Whatsapp">Whatsapp</option>
+                        </select>
+                        <label>My current challenge that I want to overcome</label>
+                        <textarea type="text" name="requirement" class="req"></textarea>
+                        <div class="button discover_button">
+                            <a href="#" class="d-flex flex-row align-items-center justify-content-center">Send<img src="images/arrow_right.svg" alt=""></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById('myModal-1');
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close-1")[0];
+            // When the user clicks the button, open the modal 
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
 
-            <!-- The Modal -->
-            <div id="myModal-1" class="modal-1">
-                <!-- Modal content -->
-                <div class="modal-content-1">
-                    <div class="modal-header-1">
-                        <span class="close-1">&times;</span>
-                        <h2 style="text-align: center">30-Minutes Free Coaching Session</h2>
-                    </div>
-                    <div class="modal-body">
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <div id="myModal-2" class="modal-1">
+            <!--            Modal content -->
+            <div class="modal-content-1">
+                <div class="modal-header-1">
+                    <span class="close-2">&times;</span>
+                    <h2 style="text-align: center">Join The Community</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <img src="images/bg/cheryl-07.jpg" alt="" class="img-2"/>
+                            </div>
+                            <div class="col-lg-8">
+                                <p class="text-justify">Just an invitation - come and be a part of this wonderful community. I’ll be traveling the world, sharing my WOW-moments, delivering content to inspire you, sharing tools & tips to be more and live more. Don’t worry, I hate spam as much as you do. I promise to send you an email only once a month with awesome, relevant value for you.</p>
+                            </div>
+                        </div>
                         <form class="form-2">
-                            <label>Name</label>
-                            <input type="text" name="fname">
-                            <label>Email Address</label>
-                            <input type="email" name="email"> 
-                            <label>Contact Number</label>
-                            <input type="text" name="contact"> 
-                            <label>How do you want to be contacted</label>
-                            <select name="How-do-contacted">
-                                <option value="Email">Email</option>
-                                <option value="Whatsapp">Whatsapp</option>
-                            </select>
-                            <label>My current challenge that I want to overcome</label>
-                            <textarea type="text" name="requirement" class="req"></textarea>
-                            <div class="button discover_button">
-                                <a href="#" class="d-flex flex-row align-items-center justify-content-center">Send<img src="images/arrow_right.svg" alt=""></a>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label>Name</label>
+                                    <input type="text" name="fname">
+                                    <label>Email Address</label>
+                                    <input type="email" name="email">
+                                    <div class="margin-t-28">
+                                        <button type="submit" class="button-1 font-16"><span>Join us!</span></button>
+                                    </div>
+                                </div>
+
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <script>
-                // Get the modal
-                var modal = document.getElementById('myModal-1');
-                // Get the button that opens the modal
-                var btn = document.getElementById("myBtn");
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close-1")[0];
-                // When the user clicks the button, open the modal 
-                btn.onclick = function () {
-                    modal.style.display = "block";
-                }
+        </div>
+        <script>
+            // Get the modal
+            var mode = document.getElementById('myModal-2');
+            // Get the button that opens the modal
+            var btnn = document.getElementById("myBtn-1");
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close-2")[0];
+            // When the user clicks the button, open the modal 
+            btnn.onclick = function () {
+                mode.style.display = "block";
+            }
 
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function () {
-                    modal.style.display = "none";
-                }
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                mode.style.display = "none";
+            }
 
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function (event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                }
-            </script>
-            <div id="myModal-2" class="modal-1">
-                <!--            Modal content -->
-                <div class="modal-content-1">
-                    <div class="modal-header-1">
-                        <span class="close-2">&times;</span>
-                        <h2 style="text-align: center">Join The Community</h2>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <img src="images/bg/cheryl-07.jpg" alt="" class="img-2"/>
-                                </div>
-                                <div class="col-lg-8">
-                                    <p class="text-justify">Just an invitation - come and be a part of this wonderful community. I’ll be traveling the world, sharing my WOW-moments, delivering content to inspire you, sharing tools & tips to be more and live more. Don’t worry, I hate spam as much as you do. I promise to send you an email only once a month with awesome, relevant value for you.</p>
-                                </div>
-                            </div>
-                            <form class="form-2">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <label>Name</label>
-                                        <input type="text" name="fname">
-                                        <label>Email Address</label>
-                                        <input type="email" name="email">
-                                        <div class="margin-t-28">
-                                            <button type="submit" class="button-1 font-16"><span>Join us!</span></button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script>
-                // Get the modal
-                var mode = document.getElementById('myModal-2');
-                // Get the button that opens the modal
-                var btnn = document.getElementById("myBtn-1");
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close-2")[0];
-                // When the user clicks the button, open the modal 
-                btnn.onclick = function () {
-                    mode.style.display = "block";
-                }
-
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function () {
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == mode) {
                     mode.style.display = "none";
                 }
+            }
+        </script>
+        <script src="js/silk_slider.js" type="text/javascript"></script>
 
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function (event) {
-                    if (event.target == mode) {
-                        mode.style.display = "none";
-                    }
-                }
-            </script>
-            <script src="js/silk_slider.js" type="text/javascript"></script>
 
     </body>
 </html>
