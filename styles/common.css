@@ -894,3 +894,16 @@ textarea::placeholder {
     margin-bottom: 20px;
 }
 
+.mega-menu {
+    position: fixed;
+    top: 114px;
+    min-width: 50% !important;
+    left: 187px;
+    width: 66%;
+}
+
+.fs_menu_container-1 {
+
+    text-align:left !important; 
+
+}

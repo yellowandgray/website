@@ -78,28 +78,52 @@
             </header>
             <!-- Menu -->
             <div class="fs_menu_overlay"></div>
-            <div class="fs_menu_container">
+            <div class="fs_menu_container fs_menu_container-1">
                 <div class="fs_menu_shapes"><img src="images/menu_shapes.png" alt=""></div>
                 <nav class="fs_menu_nav">
                     <ul class="fs_menu_list">
-                        <li><a href="#"><span><span>B</span>Blogs</span></a></li>
-                        <li><a href="#"><span><span>R</span>Resources</span></a></li>
-                        <li><a href="#"><span><span>W</span>Work With me</span></a></li>
-                        <li><a href="#"><span><span>T</span>Testimonials</span></a></li>
-                        <li><a href="#"><span><span>A</span>About Cheryl</span></a></li>
-                        <li><a href="#"><span><span>C</span>Contact</span></a></li>
+                        <li><a href="#"><span>Blogs</span></a></li>
+                        <li><a href="#"><span>Resources</span></a></li>
+                        <li class="dropdown"><a href="#"><span>Work With me</span></a>
+                            <div class="dropdown-content mega-menu" style="background: url(images/mega-bg.jpg); background-repeat: no-repeat; background-size: cover" >
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ul>
+                                            <li><a href="">One-to-one Coaching</a></li>
+                                            <li><a href="">Group Coaching</a></li>
+                                            <li><a href="">Corporate Training</a></li>
+                                            <li><a href="">Speaking Engagements</a></li>
+                                        </ul>
+                                    </div>
+<!--                                    <div class="col-md-6">
+                                        <div class="">
+                                            <img src="images/mega-menu.jpg" alt="" />
+                                        </div> 
+                                    </div>-->
+                                </div>
+                                <div class="col-md-12" style="background: #00659c;">
+                                    <div class="mega-menu-md-12" style="padding: 20px;">
+                                        <h3>Want Cheryl to help you multiply your performance x25?</h3>
+                                        <button type="submit" class="button-1"><span>Start Here</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#"><span>Testimonials</span></a></li>
+                        <li><a href="#"><span>About Cheryl</span></a></li>
+                        <li><a href="#"><span>Contact</span></a></li>
                     </ul>
                 </nav>
-                <div class="fs_social_container d-flex flex-row justify-content-end align-items-center">
-                    <ul class="fs_social">
-                        <li><a href="#"><i class="fab fa-pinterest trans_300"></i></a></li>
-                        <li><a href="#"><i class="fab fa-facebook-f trans_300"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter trans_300"></i></a></li>
-                        <li><a href="#"><i class="fab fa-dribbble trans_300"></i></a></li>
-                        <li><a href="#"><i class="fab fa-behance trans_300"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in trans_300"></i></a></li>
-                    </ul>
-                </div>
+                <!--                <div class="fs_social_container d-flex flex-row justify-content-end align-items-center">
+                                    <ul class="fs_social">
+                                        <li><a href="#"><i class="fab fa-pinterest trans_300"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-facebook-f trans_300"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter trans_300"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-dribbble trans_300"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-behance trans_300"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in trans_300"></i></a></li>
+                                    </ul>
+                                </div>-->
             </div>
             <!-- Hero Slider -->
             <div class="home">
@@ -245,7 +269,7 @@
                                         <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
-                             </div>
+                            </div>
                         </div>
 
                         <!-- Features Item -->
@@ -580,8 +604,8 @@
                                 <img src="images/slider/009.png" alt="" />
                                 <img src="images/slider/010.png" alt="" />
                             </div>
-<!--                            <h2 class="color-w">JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</h2>
-                                <h4>Stay updated with articles, tools, updates from me.</h4>-->
+                            <!--                            <h2 class="color-w">JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</h2>
+                                                            <h4>Stay updated with articles, tools, updates from me.</h4>-->
                             <div class="row" style="padding: 10px 0 20px;">
                                 <div class="col-lg-4">
                                     <input type='text' name='name' placeholder="Your Name..." class="input-box">

@@ -7,3 +7,12 @@
         margin-bottom: 40px !important;
     }
 }
+@media only screen and (max-width: 479px){
+    .mega-menu {
+        position: fixed;
+        top: 213px !important;
+        min-width: 50% !important;
+        left: 21px !important;
+        width: 90% !important;
+    }
+}
