@@ -2,7 +2,7 @@
     <!-- Logo -->
     <div class="logo_container mr-auto">
         <div class="logo text-center">
-            <a href="#"><img src="images/logo.png" alt=""/></a>
+            <a href="index.php"><img src="images/logo.png" alt=""/></a>
         </div>
     </div>
     <!-- Main Navigation -->

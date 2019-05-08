@@ -962,6 +962,8 @@ textarea::placeholder {
     text-transform: uppercase;
     padding-left: 3px;
 }
+
+/*
 #portfolio {  
     margin: 1rem 0;
     -webkit-column-count: 3; 
@@ -986,11 +988,11 @@ textarea::placeholder {
 }
 
 .scale-anm {
-  transform: scale(1);
+    transform: scale(1);
 }
 
 
-/*p{ 
+p{ 
   padding:10px; 
   border-bottom: 1px #ccc dotted; 
   text-decoration: none; 
@@ -1005,14 +1007,14 @@ textarea::placeholder {
 p:hover { 
   cursor:pointer; 
   background: #333; 
-  color:#eee; }*/
+  color:#eee; }
 
 .tile img {
     max-width: 100%;
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
-  
+
 }
 
 .btn {
@@ -1034,16 +1036,91 @@ p:hover {
 }
 
 .btn:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .btn:focus {
-  outline: none;
-  border-color: var(--darken-2);
-  box-shadow: 0 0 0 3px var(--darken-3);
+    outline: none;
+    border-color: var(--darken-2);
+    box-shadow: 0 0 0 3px var(--darken-3);
 }
 
 ::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+    border: 0;
+    padding: 0;
+}
+
+.scale-anm {
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.45);
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    height: 360px;
+}
+
+.blog-title {
+    padding: 15px 22px;
+    height: 75px;
+    display: block !important;
+}
+
+.blog-title a{
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+}
+.blog-title a:hover {
+    text-decoration: underline;
+}*/
+
+.gallery-title
+{
+    font-size: 36px;
+    color: #42B32F;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #42B32F;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #42B32F;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #42B32F;
+    color: white;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
 }
