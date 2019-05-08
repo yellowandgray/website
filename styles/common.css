@@ -426,7 +426,8 @@ textarea::placeholder {
 
 .form-1 {
     padding: 20px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    border: 4px solid #fff;
 }
 
 .form-1 h2 {
