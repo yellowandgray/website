@@ -9,7 +9,7 @@
     <nav class="main_nav justify-self-end">
         <ul class="nav_items">
             <li <!--class="active"-->><a href="blog.php"><span>Blogs</span></a></li>
-            <li><a href="#"><span>Resources</span></a></li>
+            <li><a href="resources.php"><span>Resources</span></a></li>
             <li class="dropdown"><a href="#"><span>Work With me</span></a>
                 <div class="dropdown-content" style="background: url(images/mega-bg.jpg)">
                     <div class="row">
