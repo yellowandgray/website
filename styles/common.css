@@ -888,4 +888,10 @@ textarea::placeholder {
     opacity: .75;
     color: black;
 }
+.box-4 {
+    box-shadow: -1px 4px 15px 11px #eee;
+    padding: 20px;
+    height: 424px;
+    margin-bottom: 20px;
+}
 

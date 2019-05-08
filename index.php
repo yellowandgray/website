@@ -234,9 +234,9 @@
                                 <img src="images/slider/001.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-2 d-flex flex-column">
+                                <div class="icon_container box-4 d-flex flex-column">
                                     <h3 class="text-center">Financial Freedom</h3>
-                                    <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                    <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
@@ -245,7 +245,7 @@
                                         <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
-                            </div>
+                             </div>
                         </div>
 
                         <!-- Features Item -->
@@ -254,9 +254,9 @@
                                 <img src="images/slider/002.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-2 d-flex flex-column">
+                                <div class="icon_container box-4 d-flex flex-column">
                                     <h3 class="text-center">Time Management</h3>
-                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
@@ -274,9 +274,9 @@
                                 <img src="images/slider/003.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-2 d-flex flex-column">
+                                <div class="icon_container box-4 d-flex flex-column">
                                     <h3 class="text-center">Career Progress</h3>
-                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
@@ -297,10 +297,10 @@
                                 <img src="images/slider/004.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-2 d-flex flex-column">
+                                <div class="icon_container box-4 d-flex flex-column">
                                     <h3 class="text-center">Trader Coach</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
-                                        <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/fQUfIgLCAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/fQUfIgLCAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <p>If you are a trader in the financial markets and are unable to remain consistently profitable...</p>
                                     <div class="text-center arrow-1">
@@ -316,10 +316,10 @@
                                 <img src="images/slider/005.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-2 d-flex flex-column">
+                                <div class="icon_container box-4 d-flex flex-column">
                                     <h3 class="text-center">Transformational Change</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
-                                        <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/u7NntUPBdkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/u7NntUPBdkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <p>If you have found yourself at a stage where you feel like it is ‘now time’ to make a large change that is likely to impact...</p>
                                     <div class="text-center arrow-1">
@@ -335,10 +335,10 @@
                                 <img src="images/slider/006.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-2 d-flex flex-column">
+                                <div class="icon_container box-4 d-flex flex-column">
                                     <h3 class="text-center">Super Women</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
-                                        <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/QwooUQ-oAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/QwooUQ-oAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <p>If you are an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress...</p>
                                     <div class="text-center arrow-1">
