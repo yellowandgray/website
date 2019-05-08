@@ -644,18 +644,21 @@
                                 <p class="text-justify">Just an invitation - come and be a part of this wonderful community. I’ll be traveling the world, sharing my WOW-moments, delivering content to inspire you, sharing tools & tips to be more and live more. Don’t worry, I hate spam as much as you do. I promise to send you an email only once a month with awesome, relevant value for you.</p>
                             </div>
                         </div>
-                        <form class="form-2">
+                        <form class="text-bg">
                             <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-lg-6">
                                     <label>Name</label>
                                     <input type="text" name="fname">
+                                </div>
+                                <div class="col-lg-6">
                                     <label>Email Address</label>
                                     <input type="email" name="email">
+                                </div>
+                                <div class="col-lg-12">
                                     <div class="margin-t-28">
-                                        <button type="submit" class="button-1 font-16"><span>Join us!</span></button>
+                                        <button type="submit" class="button-1 font-16"><span class="color-w">Join us!</span></button>
                                     </div>
                                 </div>
-
                             </div>
                         </form>
                     </div>
