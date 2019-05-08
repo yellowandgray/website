@@ -73,7 +73,7 @@ body {
 }
 
 #filters li span.active {
-    background: #e95a44;
+    background: #00659c;
     color:#fff;
 }
 
@@ -117,7 +117,7 @@ body {
 }
 
 .portfolio .label-bg {
-    background: #e95a44;
+    background: #00659c;
     width: 100%;
     height:100%;
     position: absolute;
