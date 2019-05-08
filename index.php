@@ -647,7 +647,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
-                            <form class="form-1">
+                            <form class="text-bg">
                                 <h2>Contact us</h2>
                                 <input type="text" name="fname" placeholder="Name" required > 
                                 <input type="email" name="email" placeholder="Email Address" required>

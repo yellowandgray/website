@@ -179,7 +179,7 @@ input[type=submit]:hover {
     position: relative;
     padding: 5px 0px 7px 27px;
     margin-top: -36px;
-    color: #0b0b0b;
+    color: #6e6e6e;
     font-weight: 500;
 }
 .list-1 i{
@@ -1130,5 +1130,23 @@ p:hover {
     background: #20b9ec26;
     box-shadow: 0px 0px 10px 0px #afacac;
     width: 100%;
+}
+.bg-g {
+    background: #ccccccad;
+}
+.sub-list {
+   padding: 0px 0px 0px 65px;
+
+}
+.sub-list li {
+    position: relative;
+    padding: 5px 0px 7px 20px;
+    margin-top: -34px;
+    color: #6e6e6e;
+    font-weight: 500;
+}
+.sub-list  i {
+    color: #9c20b3;
+    font-size: 8px;
 }
 
