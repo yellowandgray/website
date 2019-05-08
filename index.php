@@ -44,103 +44,9 @@
     <body>
         <div class="super_container">
             <!-- Header -->
-            <header class="header d-flex flex-row justify-content-end align-items-center">
-                <!-- Logo -->
-                <div class="logo_container mr-auto">
-                    <div class="logo text-center">
-                        <a href="#"><img src="images/logo.png" alt=""/></a>
-                    </div>
-                </div>
-                <!-- Main Navigation -->
-                <nav class="main_nav justify-self-end">
-                    <ul class="nav_items">
-                        <li <!--class="active"-->><a href="#"><span>Blogs</span></a></li>
-                        <li><a href="#"><span>Resources</span></a></li>
-                        <li class="dropdown"><a href="#"><span>Work With me</span></a>
-                            <div class="dropdown-content" style="background: url(images/mega-bg.jpg)">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <ul>
-                                            <li><a href="">One-to-one Coaching</a></li>
-                                            <li><a href="">Group Coaching</a></li>
-                                            <li><a href="">Corporate Training</a></li>
-                                            <li><a href="">Speaking Engagements</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="">
-                                            <img src="images/mega-menu.jpg" alt="" />
-                                        </div> 
-                                    </div>
-                                </div>
-                                <div class="col-md-12" style="background: #00659c;">
-                                    <div class="mega-menu-md-12" style="padding: 20px;">
-                                        <h3>Want Cheryl to help you multiply your performance x25?</h3>
-                                        <button type="submit" class="button-1"><span>Start Here</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="#"><span>Testimonials</span></a></li>
-                        <li><a href="#"><span>About Cheryl</span></a></li>
-                        <li><a href="#"><span>Contact</span></a></li>
-                    </ul>
-                </nav>
-                <!-- Hamburger -->
-                <div class="hamburger_container">
-                    <!--<span class="hamburger_text">Menu</span>-->
-                    <span class="hamburger_icon"></span>
-                </div>
-            </header>
+            <?php include 'menu.php'; ?>
             <!-- Menu -->
-            <div class="fs_menu_overlay"></div>
-            <div class="fs_menu_container fs_menu_container-1">
-                <div class="fs_menu_shapes"><img src="images/menu_shapes.png" alt=""></div>
-                <nav class="fs_menu_nav">
-                    <ul class="fs_menu_list">
-                        <li><a href="#"><span>Blogs</span></a></li>
-                        <li><a href="#"><span>Resources</span></a></li>
-                        <li class="dropdown"><a href="#"><span>Work With me</span></a>
-                            <div class="dropdown-content mega-menu" style="background: url(images/mega-bg.jpg); background-repeat: no-repeat; background-size: cover" >
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <ul>
-                                            <li><a href="">One-to-one Coaching</a></li>
-                                            <li><a href="">Group Coaching</a></li>
-                                            <li><a href="">Corporate Training</a></li>
-                                            <li><a href="">Speaking Engagements</a></li>
-                                        </ul>
-                                    </div>
-                                    <!--                                    <div class="col-md-6">
-                                                                            <div class="">
-                                                                                <img src="images/mega-menu.jpg" alt="" />
-                                                                            </div> 
-                                                                        </div>-->
-                                </div>
-                                <div class="col-md-12" style="background: #00659c;">
-                                    <div class="mega-menu-md-12" style="padding: 20px;">
-                                        <h3>Want Cheryl to help you multiply your performance x25?</h3>
-                                        <button type="submit" class="button-1"><span>Start Here</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="#"><span>Testimonials</span></a></li>
-                        <li><a href="#"><span>About Cheryl</span></a></li>
-                        <li><a href="#"><span>Contact</span></a></li>
-                    </ul>
-                </nav>
-                <!--                <div class="fs_social_container d-flex flex-row justify-content-end align-items-center">
-                                    <ul class="fs_social">
-                                        <li><a href="#"><i class="fab fa-pinterest trans_300"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f trans_300"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter trans_300"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-dribbble trans_300"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-behance trans_300"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in trans_300"></i></a></li>
-                                    </ul>
-                                </div>-->
-            </div>
+            <?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
             <div class="home">
                 <video autoplay loop poster="polina.jpg" id="vid" muted="muted">
@@ -664,158 +570,123 @@
                 </div>
             </div>
             <!-- Footer -->
-            <footer class="footer">
-                <div class="container">
-                    <div class="row footer_content d-flex flex-sm-row flex-column align-items-center">
-                        <div class="col-sm-6 cr text-sm-left text-center">
-                            <p style="color: #fff;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed By <a href="http://www.yellowandgray.com/" target="_blank"> YG STUDIO</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                        </div>
-                        <div class="col-sm-6 text-sm-right text-center">
-                            <div class="footer_social_container">
-                                <ul class="footer_social">
-                                    <li><a href="#"><i class="fab fa-pinterest trans_300"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-facebook-f trans_300"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter trans_300"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-dribbble trans_300"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-behance trans_300"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in trans_300"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
+            <?php include 'footer.php'; ?>
+            <?php include 'onload-popup.php'; ?>
+
+            <!-- The Modal -->
+            <div id="myModal-1" class="modal-1">
+                <!-- Modal content -->
+                <div class="modal-content-1">
+                    <div class="modal-header-1">
+                        <span class="close-1">&times;</span>
+                        <h2 style="text-align: center">30-Minutes Free Coaching Session</h2>
                     </div>
-                </div>
-            </footer>
-        </div>
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="styles/bootstrap4/popper.js"></script>
-        <script src="styles/bootstrap4/bootstrap.min.js"></script>
-        <script src="plugins/greensock/TweenMax.min.js"></script>
-        <script src="plugins/greensock/TimelineMax.min.js"></script>
-        <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-        <script src="plugins/greensock/animation.gsap.min.js"></script>
-        <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-        <script src="plugins/progressbar/progressbar.min.js"></script>
-        <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-        <script src="plugins/easing/easing.js"></script>
-        <script src="js/custom.js"></script>
-        <?php include 'onload-popup.php'; ?>
-
-        <!-- The Modal -->
-        <div id="myModal-1" class="modal-1">
-            <!-- Modal content -->
-            <div class="modal-content-1">
-                <div class="modal-header-1">
-                    <span class="close-1">&times;</span>
-                    <h2 style="text-align: center">30-Minutes Free Coaching Session</h2>
-                </div>
-                <div class="modal-body">
-                    <form class="form-2">
-                        <label>Name</label>
-                        <input type="text" name="fname">
-                        <label>Email Address</label>
-                        <input type="email" name="email"> 
-                        <label>Contact Number</label>
-                        <input type="text" name="contact"> 
-                        <label>How do you want to be contacted</label>
-                        <select name="How-do-contacted">
-                            <option value="Email">Email</option>
-                            <option value="Whatsapp">Whatsapp</option>
-                        </select>
-                        <label>My current challenge that I want to overcome</label>
-                        <textarea type="text" name="requirement" class="req"></textarea>
-                        <div class="button discover_button">
-                            <a href="#" class="d-flex flex-row align-items-center justify-content-center">Send<img src="images/arrow_right.svg" alt=""></a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <script>
-                                    // Get the modal
-                                    var modal = document.getElementById('myModal-1');
-                                    // Get the button that opens the modal
-                                    var btn = document.getElementById("myBtn");
-                                    // Get the <span> element that closes the modal
-                                    var span = document.getElementsByClassName("close-1")[0];
-                                    // When the user clicks the button, open the modal 
-                                    btn.onclick = function () {
-                                        modal.style.display = "block";
-                                    }
-
-                                    // When the user clicks on <span> (x), close the modal
-                                    span.onclick = function () {
-                                        modal.style.display = "none";
-                                    }
-
-                                    // When the user clicks anywhere outside of the modal, close it
-                                    window.onclick = function (event) {
-                                        if (event.target == modal) {
-                                            modal.style.display = "none";
-                                        }
-                                    }
-        </script>
-        <div id="myModal-2" class="modal-1">
-            <!--            Modal content -->
-            <div class="modal-content-1">
-                <div class="modal-header-1">
-                    <span class="close-2">&times;</span>
-                    <h2 style="text-align: center">Join The Community</h2>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <img src="images/bg/cheryl-07.jpg" alt="" class="img-2"/>
-                            </div>
-                            <div class="col-lg-8">
-                                <p class="text-justify">Just an invitation - come and be a part of this wonderful community. I’ll be traveling the world, sharing my WOW-moments, delivering content to inspire you, sharing tools & tips to be more and live more. Don’t worry, I hate spam as much as you do. I promise to send you an email only once a month with awesome, relevant value for you.</p>
-                            </div>
-                        </div>
+                    <div class="modal-body">
                         <form class="form-2">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <label>Name</label>
-                                    <input type="text" name="fname">
-                                    <label>Email Address</label>
-                                    <input type="email" name="email">
-                                    <div class="margin-t-28">
-                                        <button type="submit" class="button-1 font-16"><span>Join us!</span></button>
-                                    </div>
-                                </div>
-
+                            <label>Name</label>
+                            <input type="text" name="fname">
+                            <label>Email Address</label>
+                            <input type="email" name="email"> 
+                            <label>Contact Number</label>
+                            <input type="text" name="contact"> 
+                            <label>How do you want to be contacted</label>
+                            <select name="How-do-contacted">
+                                <option value="Email">Email</option>
+                                <option value="Whatsapp">Whatsapp</option>
+                            </select>
+                            <label>My current challenge that I want to overcome</label>
+                            <textarea type="text" name="requirement" class="req"></textarea>
+                            <div class="button discover_button">
+                                <a href="#" class="d-flex flex-row align-items-center justify-content-center">Send<img src="images/arrow_right.svg" alt=""></a>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
-        <script>
-            // Get the modal
-            var mode = document.getElementById('myModal-2');
-            // Get the button that opens the modal
-            var btnn = document.getElementById("myBtn-1");
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close-2")[0];
-            // When the user clicks the button, open the modal 
-            btnn.onclick = function () {
-                mode.style.display = "block";
-            }
+            <script>
+                // Get the modal
+                var modal = document.getElementById('myModal-1');
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn");
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close-1")[0];
+                // When the user clicks the button, open the modal 
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                }
 
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function () {
-                mode.style.display = "none";
-            }
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
 
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function (event) {
-                if (event.target == mode) {
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+            <div id="myModal-2" class="modal-1">
+                <!--            Modal content -->
+                <div class="modal-content-1">
+                    <div class="modal-header-1">
+                        <span class="close-2">&times;</span>
+                        <h2 style="text-align: center">Join The Community</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <img src="images/bg/cheryl-07.jpg" alt="" class="img-2"/>
+                                </div>
+                                <div class="col-lg-8">
+                                    <p class="text-justify">Just an invitation - come and be a part of this wonderful community. I’ll be traveling the world, sharing my WOW-moments, delivering content to inspire you, sharing tools & tips to be more and live more. Don’t worry, I hate spam as much as you do. I promise to send you an email only once a month with awesome, relevant value for you.</p>
+                                </div>
+                            </div>
+                            <form class="form-2">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <label>Name</label>
+                                        <input type="text" name="fname">
+                                        <label>Email Address</label>
+                                        <input type="email" name="email">
+                                        <div class="margin-t-28">
+                                            <button type="submit" class="button-1 font-16"><span>Join us!</span></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                // Get the modal
+                var mode = document.getElementById('myModal-2');
+                // Get the button that opens the modal
+                var btnn = document.getElementById("myBtn-1");
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close-2")[0];
+                // When the user clicks the button, open the modal 
+                btnn.onclick = function () {
+                    mode.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
                     mode.style.display = "none";
                 }
-            }
-        </script>
-        <script src="js/silk_slider.js" type="text/javascript"></script>
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == mode) {
+                        mode.style.display = "none";
+                    }
+                }
+            </script>
+            <script src="js/silk_slider.js" type="text/javascript"></script>
 
     </body>
 </html>
