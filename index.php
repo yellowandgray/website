@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="google-site-verification" content="HDMzxAuH0OMbNH38ABMJhNnA852Gg6hM5IoiqxnBtXk" />
         <meta name="description" content="">
         <meta name="author" content="webthemez">
         <title>Enrich Academy</title>
