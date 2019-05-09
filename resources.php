@@ -72,35 +72,35 @@
                                     </div>
                                 </div>
                                 <div class="row audio-1 margin-t-22">
-                                    <h3>simply dummy text</h3>
+                                    <h3>Title Text Here</h3>
                                     <audio controls>
                                         <source src="audio/test-audio.mp3" type="audio/mpeg">
                                     </audio>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                 </div>
                                 <div class="row audio-1">
-                                    <h3>simply dummy text</h3>
+                                    <h3>Title Text Here</h3>
                                     <audio controls>
                                         <source src="audio/test-audio.mp3" type="audio/mpeg">
                                     </audio>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                 </div>
                                 <div class="row audio-1">
-                                    <h3>simply dummy text</h3>
+                                    <h3>Title Text Here</h3>
                                     <audio controls>
                                         <source src="audio/test-audio.mp3" type="audio/mpeg">
                                     </audio>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                 </div>
                                 <div class="row audio-1">
-                                    <h3>simply dummy text</h3>
+                                    <h3>Title Text Here</h3>
                                     <audio controls>
                                         <source src="audio/test-audio.mp3" type="audio/mpeg">
                                     </audio>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                 </div>
                                 <div class="row audio-1">
-                                    <h3>simply dummy text</h3>
+                                    <h3>Title Text Here</h3>
                                     <audio controls>
                                         <source src="audio/test-audio.mp3" type="audio/mpeg">
                                     </audio>
@@ -120,15 +120,12 @@
                                 <div class="col-lg-6 ">
                                     <div class="features_item  d-flex flex-column align-items-center">
                                         <div class="icon_container box-4 d-flex flex-column">
-                                            <h3 class="text-center">simply dummy text</h3>
-                                            <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                            <h3 class="text-center">Title Text Here</h3>
+                                            <video class=" video-res features_item d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="auto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                                 <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                                                 Your browser does not support the <code>video</code> tag.
                                             </video>
                                             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                            <div class="text-center arrow-1">
-                                                <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -137,15 +134,12 @@
                                 <div class="col-lg-6">
                                     <div class="features_item  d-flex flex-column align-items-center ">
                                         <div class="icon_container box-4 d-flex flex-column">
-                                            <h3 class="text-center">simply dummy text</h3>
-                                            <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                            <h3 class="text-center">Title Text Here</h3>
+                                            <video class="video-res features_item d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="auto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                                 <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
                                                 Your browser does not support the <code>video</code> tag.
                                             </video>
                                             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                            <div class="text-center arrow-1">
-                                                <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -155,15 +149,12 @@
                                 <div class="col-lg-6">
                                     <div class="features_item  d-flex flex-column align-items-center ">
                                         <div class="icon_container box-4 d-flex flex-column">
-                                            <h3 class="text-center">simply dummy text</h3>
-                                            <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                            <h3 class="text-center">Title Text Here</h3>
+                                            <video class=" video-res features_item d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="auto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                                 <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                                                 Your browser does not support the <code>video</code> tag.
                                             </video>
                                             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                            <div class="text-center arrow-1">
-                                                <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -172,15 +163,12 @@
                                 <div class="col-lg-6">
                                     <div class="features_item  d-flex flex-column align-items-center ">
                                         <div class="icon_container box-4 d-flex flex-column">
-                                            <h3 class="text-center">simply dummy text</h3>
-                                            <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                            <h3 class="text-center">Title Text Here</h3>
+                                            <video class="video-res features_item d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="auto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                                 <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
                                                 Your browser does not support the <code>video</code> tag.
                                             </video>
                                             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                            <div class="text-center arrow-1">
-                                                <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>

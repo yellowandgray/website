@@ -1486,6 +1486,52 @@ button.close {
 .type-coaching-box {
     box-shadow: -1px 4px 15px 11px #eee;
     padding: 20px;
-    height: 490px;
+    height: 520px;
     margin-bottom: 20px;
+}
+
+.type-coaching-box h3 {
+    height: 50px
+}
+
+.type-coaching-box p {
+    text-align: justify;
+}
+
+.table-1 {
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+}
+
+.table-1 th {
+    text-align: center;
+}
+
+.table-1 td, .table-1 th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table-1 tr:hover {
+    background: #eee;
+}
+
+.mega-menu-md-12 span a {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0px;
 }

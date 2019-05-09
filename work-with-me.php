@@ -112,7 +112,7 @@
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container type-coaching-box d-flex flex-column">
                                     <h3 class="text-center">Financial Freedom</h3>
-                                    <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
@@ -204,6 +204,51 @@
                                     <p>If you are an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress, learn how to ask for a raise or a promotion, be heard, grab a coffee with me. I have ‘been there, done that’ and am thrilled to help you learn the ropes.</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features" style="background: #eee">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
+                            <h2>How Does Life Coaching Work?</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ol>
+                                <li>This is usually done through <strong>face-to-face meetings</strong> that are usually structured over <strong>several sessions</strong> depending on what the <strong>objective</strong> of the coaching engagement is.</li>
+                                <li>If you are seeking clarity over a relatively simple situation, just three sessions may sometimes suffice. However, if you are seeking a <strong>life-transformational change,</strong> it may require a <strong>continued on-going engagement</strong> over <strong>months or even years.</strong></li>
+                                <li>Below is a general indication of the <strong>number of recommended sessions,</strong> depending on the <strong>objective of the coaching</strong> engagement:</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table-1">
+                                <thead>
+                                    <tr>
+                                        <th>WHAT YOU WANT</th>
+                                        <th>NO. OF SESSIONS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Change in one area of life. A choice. A development decision.</td>
+                                        <td>3 sessions</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A relatively large change spanning a couple of life areas. A difficult decision</td>
+                                        <td>6 sessions</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A life transformation, a shift. A dramatic revamp. <br/>A change that requires sustained, long-term implementation.</td>
+                                        <td>10 sessions</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
