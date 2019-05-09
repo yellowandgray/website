@@ -33,7 +33,7 @@
                 <div class="home_background prlx" style="background-image:url(images/blog_background.jpg)"></div>
                 <div class="services_page_shapes">
                     <video style="height:100%;float: right;" autoplay>
-                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
+                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                         Your browser does not support the <code>video</code> tag.
                     </video>
                 </div>
@@ -59,8 +59,9 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
-                            <form class="text-bg">
-                                <h2>Contact us</h2>
+                            <form class="text-bg-1">
+                                <h2 class="text-center">Contact us</h2>
+                                <hr>
                                 <p>I am here to help! I check each message and will respond to you personally.</p>
                                 <input type="text" name="fname" placeholder="Name" required > 
                                 <input type="email" name="email" placeholder="Email Address" required>
@@ -70,64 +71,23 @@
                                 <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
                             </form>
                         </div>
-                        <div class="col-lg-4 img-shadow">
-                            <img src="images/resource.jpg" alt=""/>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- About -->
-            <!--<div class="about prlx_parent" style="background-image:url(images/main_slider_03.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">-->
-            <div class="about prlx_parent pad-50" >
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <h3 class="pad-20"><strong>HOW DOES COACHING HELP?</strong></h3>
-                            <ul class="list-1">
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Coaching can help with virtually any aspect of someone’s life, whether it is in their personal or professional life.</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">The coaching process takes on specific projects or personal goals by:</li>
-                                <ul class="sub-list">
-                                    <i class="fa fa-circle" aria-hidden="true"></i><li>analyzing the current situation</li>
-                                    <i class="fa fa-circle" aria-hidden="true"></i><li>identifying existing and potential challenges and</li>
-                                    <i class="fa fa-circle" aria-hidden="true"></i><li>devising a plan of action designed to achieve the desired outcome.</li>
-                                </ul>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Certified coaches, through their specific strategies and skills, help their clients think clearly and hence arrive at solutions that they are otherwise unable to see on their own. With the careful guidance of a coach, you can see the situation from a new perspective, which brings new answers and solutions. This is the key value that a coach brings.</li>
-                            </ul>
-
-                        </div>
-                        <div class="col-lg-4">
-                            <div>
-                                <img src="images/slider/001.png" alt="" class="img-b">
+                        <div class="col-lg-6">
+                            <div class="contact-details">
+                                <h2 class="text-center">Say Hello!</h2>
+                                <hr>
+                                <p>Phone     : +971 50 79 89 121</p>
+                                <p>E-mail    : info@cherylppinto.com</p>
+                                <p>Website   : www.cherylppinto.com</p>
                             </div>
-                            <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-4 d-flex flex-column">
-                                    <h3 class="text-center">Financial Freedom</h3>
-                                    <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
-                                        Your browser does not support the <code>video</code> tag.
-                                    </video>
-                                    <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income...</p>
-                                    <div class="text-center arrow-1">
-                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
+                            <div class="contact-details">
+                                <h2 class="text-center">Joins Now!</h2>
+                                <hr>
+                                <input type="email" name="email" placeholder="E-mail address" />
+                                <button type="submit" class="button-1"><span class="color-w">Join</span></button>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h3 class="pad-20"><strong>WHY WORK WITH A LIFE COACH?</strong></h3>
-                            <ul class="list-1">
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">People hire a life coach because they want to do even more tomorrow than they can do today.</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">They want to improve their output and see more growth, and they want to do those things quickly and to the best of their ability.</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">These people all identify a gap between where they are and where they want to be, and want help reaching their goals.</li>
-                            </ul>
-                            <h3 class="pad-20"><strong>WHY WOULD YOU WORK WITH A LIFE COACH?</strong></h3>
-                            <p class="text-justify">People hire a life coach because they want to do even more tomorrow than they can do today. They want to improve their output and see more growth, and they want to do those things quickly and to the best of their ability.</p>
-                            <p class="text-justify">All kinds of people use life coaches,including actors, business leaders, creatives, entrepreneurs, executives, home-makers, managers, professionals, small business owners and start-up owners. These people all identify a gap between where they are and where they want to be, and want help reaching their goals.</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 
@@ -157,31 +117,6 @@
 
                 </div>
             </section>
-
-            <div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
-                <!-- <div class="contact_background parallax-window" data-parallax="scroll" data-speed="0.7" data-image-src="images/contact_background.jpg"></div> -->
-                <div class=" prlx bg-enquiry"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title contact_title">
-                            <h2 class="color-w">let's work together</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <form class="text-bg">
-                                <h2>Contact us</h2>
-                                <input type="text" name="fname" placeholder="Name" required > 
-                                <input type="email" name="email" placeholder="Email Address" required>
-                                <input type="text" name="phone" placeholder="Phone Number" required> 
-                                <input type="text" name="subject" placeholder="subject" required>
-                                <textarea type="text" name="requirement" placeholder="Requirement" class="req" required></textarea>
-                                <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- Footer -->
             <?php include 'footer.php'; ?>
     </body>

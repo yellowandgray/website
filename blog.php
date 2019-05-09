@@ -34,8 +34,8 @@
                 <!-- Parallax Background -->
                 <div class="home_background prlx" style="background-image:url(images/blog_background.jpg)"></div>
                 <div class="services_page_shapes">
-                    <video style="height:100%;float: right;" controls autoplay>
-                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
+                    <video style="height:100%;float: right;" autoplay>
+                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                         Your browser does not support the <code>video</code> tag.
                     </video>
                 </div>
@@ -59,97 +59,6 @@
                             <h2>Current Blogs</h2>
                         </div>
                     </div>
-                    <!--                    <div class="toolbar mb2 mt2">
-                                            <button class="btn fil-cat" href="" data-rel="all">All Blog Posts</button>
-                                            <button class="btn fil-cat" data-rel="web">Improve Finances</button>
-                                            <button class="btn fil-cat" data-rel="flyers">Manage Time</button>
-                                            <button class="btn fil-cat" data-rel="bcards">Improve Discipline</button>
-                                            <button class="btn fil-cat" data-rel="personal">Communication Skills</button>
-                                        </div> 
-                    
-                                        <div style="clear:both;"></div>   
-                                        <div id="portfolio">
-                                            <div class="tile scale-anm web all">
-                                                <img src="images/blog/001.jpg" alt="" />
-                                                <div class="blog-title" style="display: block;">
-                                                    <a href="#">First Blog Title</a>
-                                                </div>
-                                            </div>
-                                            <div class="tile scale-anm bcards all">
-                                                <img src="images/blog/002.jpg" alt="" />
-                                                <div class="blog-title" style="display: block;">
-                                                    <a href="#">First Blog Title</a>
-                                                </div>
-                                            </div>
-                                            <div class="tile scale-anm web all">
-                                                <img src="images/blog/003.jpg" alt="" />
-                                                <div class="blog-title" style="display: block;">
-                                                    <a href="#">First Blog Title</a>
-                                                </div>
-                                            </div>
-                                            <div class="tile scale-anm web all">
-                                                <img src="images/blog/004.jpg" alt="" />
-                                                <div class="blog-title" style="display: block;">
-                                                    <a href="#">First Blog Title</a>
-                                                </div>
-                                            </div>
-                                            <div class="tile scale-anm flyers all">
-                                                <img src="images/blog/005.jpg" alt="" />
-                                                <div class="blog-title" style="display: block;">
-                                                    <a href="#">First Blog Title</a>
-                                                </div>
-                                            </div>
-                                            <div class="tile scale-anm bcards all">
-                                                <img src="images/blog/006.jpg" alt="" />
-                                                <div class="blog-title" style="display: block;">
-                                                    <a href="#">First Blog Title</a>
-                                                </div>
-                                            </div>
-                                            <div class="tile scale-anm flyers all">
-                                                <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/jti-icons_08-300x172.jpg" alt="" />
-                                            </div>
-                                            <div class="tile scale-anm flyers all">
-                                                <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/transmission_01-300x300.jpg" alt="" />
-                                            </div>
-                                            <div class="tile scale-anm web all">
-                                                <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
-                                            </div>
-                                            <div class="tile scale-anm flyers all">
-                                                <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" /> 
-                                            </div>
-                                            <div class="tile scale-anm web all">
-                                                <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/the-ninetys-brand_02-300x300.jpg" alt="" />
-                                            </div>
-                                            <div class="tile scale-anm bcards all">
-                                                <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/15-dia_1092-1-300x300.jpg" alt="" />
-                                            </div>
-                                            <div class="tile scale-anm web all">
-                                                <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97190&w=350&h=190" alt="" /> 
-                                            </div>
-                                            <div class="tile scale-anm bcards all">
-                                                <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/emi_haze-300x201.jpg" alt="" />  
-                                            </div>
-                                            <div class="tile scale-anm web all">
-                                                <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/transmission_01-300x300.jpg" alt="" />
-                                            </div> 
-                                            <div class="tile scale-anm web all">
-                                                <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97190&w=350&h=190" alt="" />  
-                                            </div> 
-                                            <div class="tile scale-anm bcards all">     
-                                                <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
-                                            </div>
-                                            <div class="tile scale-anm personal all">     
-                                                <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
-                                            </div>
-                                            <div class="tile scale-anm personal all">     
-                                                <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
-                                            </div>
-                                            <div class="tile scale-anm personal all">     
-                                                <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
-                                            </div>
-                                        </div>
-                    
-                                        <div style="clear:both;"></div> -->
                     <ul id="filters" class="clearfix">
                         <li><span class="filter active" data-filter=".app, .card, .icon, .logo1">All</span></li>
                         <li><span class="filter" data-filter=".app">Improve Finances</span></li>
@@ -187,7 +96,7 @@
                             </div>
                         </div>		
 
-                        <div class="portfolio card" data-cat="card">
+                        <div class="portfolio app" data-cat="app">
                             <div class="portfolio-wrapper">						
                                 <img src="images/blog/003.jpg" alt="" />
                                 <div class="label">
@@ -213,7 +122,7 @@
                             </div>
                         </div>	
 
-                        <div class="portfolio app" data-cat="app">
+                        <div class="portfolio icon" data-cat="icon">
                             <div class="portfolio-wrapper">
                                 <img src="images/blog/005.jpg" alt="" />
                                 <div class="label">
@@ -252,39 +161,27 @@
                             </div>
                         </div>	
 
-                        <div class="portfolio logo1" data-cat="logo1">
+                        <div class="portfolio icon" data-cat="icon">
                             <div class="portfolio-wrapper">			
                                 <img src="images/blog/008.jpg" alt="" />
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-                                        <!--<span class="text-category">Logo</span>-->
+<!--                                        <span class="text-category">Logo</span>-->
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
                             </div>
-                        </div>																																							
+                        </div>
 
-                        <!--                        <div class="portfolio app" data-cat="app">
-                                                    <div class="portfolio-wrapper">			
-                                                        <img src="images/blog/009.jpg" alt="" />
-                                                        <div class="label">
-                                                            <div class="label-text">
-                                                                <a class="text-title">Graph Plotting</a>
-                                                                <span class="text-category">APP</span>
-                                                            </div>
-                                                            <div class="label-bg"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>														-->
-
-                        <div class="portfolio card" data-cat="card">
+                        <div class="portfolio app" data-cat="app">
                             <div class="portfolio-wrapper">			
-                                <img src="images/blog/010.jpg" alt="" />
+                                <img src="images/blog/015.jpg" alt="" />
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-                                        <!--<span class="text-category">Business card</span>-->
+                                        <span class="text-category">Business card</span>
+                                         <!--<span class="text-category">Logo</span>-->
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
@@ -330,13 +227,13 @@
                             </div>
                         </div>							
 
-                        <div class="portfolio icon" data-cat="icon">
+<!--                        <div class="portfolio icon" data-cat="icon">
                             <div class="portfolio-wrapper">						
                                 <img src="images/blog/014.jpg" alt="" />
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-                                        <!--<span class="text-category">Web design</span>-->
+                                        <span class="text-category">Web design</span>
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
@@ -349,7 +246,7 @@
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-                                        <!--<span class="text-category">Icon</span>-->
+                                        <span class="text-category">Icon</span>
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
@@ -362,7 +259,7 @@
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-                                        <!--<span class="text-category">Web design</span>-->
+                                        <span class="text-category">Web design</span>
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
@@ -375,7 +272,7 @@
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-                                        <!--<span class="text-category">Icon</span>-->
+                                        <span class="text-category">Icon</span>
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
@@ -388,7 +285,7 @@
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-                                        <!--<span class="text-category">Icon</span>-->
+                                        <span class="text-category">Icon</span>
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
@@ -401,7 +298,7 @@
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-                                        <!--<span class="text-category">Web design</span>-->
+                                        <span class="text-category">Web design</span>
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
@@ -414,7 +311,7 @@
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-                                        <!--<span class="text-category">Logo</span>-->
+                                        <span class="text-category">Logo</span>
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
@@ -427,7 +324,7 @@
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-                                        <!--<span class="text-category">Logo</span>-->
+                                        <span class="text-category">Logo</span>
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
@@ -440,7 +337,7 @@
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-<!--                                        <span class="text-category">Icon</span>-->
+                                        <span class="text-category">Icon</span>
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
@@ -453,7 +350,7 @@
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-<!--                                        <span class="text-category">Business card</span>-->
+                                        <span class="text-category">Business card</span>
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
@@ -466,12 +363,12 @@
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-<!--                                        <span class="text-category">Logo</span>-->
+                                        <span class="text-category">Logo</span>
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
                             </div>
-                        </div>				
+                        </div>				-->
 
 
                     </div>

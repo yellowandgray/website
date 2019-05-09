@@ -1224,3 +1224,15 @@ audio {
     font-size: 23px;
     font-weight: 600;
 }
+
+.text-bg-1 {
+    background: rgb(255, 255, 255);
+    padding: 36px 31px;
+    box-shadow: 0 0 20px 10px #eee;
+}
+
+.contact-details {
+    box-shadow: 0 0 20px 10px #eee;
+    padding: 36px 31px;
+    margin-bottom: 20px
+}
