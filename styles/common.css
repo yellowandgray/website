@@ -1178,6 +1178,7 @@ audio {
     margin-bottom: 10px;
     /* color: #b74242; */
     background: #f3f3f3;
+    width: 100%;
 }
 .audio h2:after
 {
@@ -1203,4 +1204,14 @@ audio {
 }
 .pad-f-video .d-flex {
     padding: 20px;
+}
+.audio-bg {
+    background:#e6e6e6;
+}
+.pad-f-15 {
+    padding:15px;
+}
+.text-size-1 h3{
+    font-size: 23px;
+    font-weight: 600;
 }
