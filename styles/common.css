@@ -1204,3 +1204,9 @@ audio {
 .pad-f-video .d-flex {
     padding: 20px;
 }
+.audio-bg {
+    background:#e6e6e6;
+}
+.pad-f-15 {
+    padding:15px;
+}
