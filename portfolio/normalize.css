@@ -65,24 +65,24 @@ audio:not([controls]) {
  *    user zoom.
  */
 
-html {
-    font-size: 100%; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-    -ms-text-size-adjust: 100%; /* 2 */
-}
+/*html {
+    font-size: 100%;  1 
+    -webkit-text-size-adjust: 100%;  2 
+    -ms-text-size-adjust: 100%;  2 
+}*/
 
 /*
  * Addresses `font-family` inconsistency between `textarea` and other form
  * elements.
  */
 
-html,
+/*html,
 button,
 input,
 select,
 textarea {
     font-family: sans-serif;
-}
+}*/
 
 /*
  * Addresses margins handled incorrectly in IE 6/7.
@@ -123,7 +123,7 @@ a:hover {
  * and Chrome.
  */
 
-h1 {
+/*h1 {
     font-size: 2.4em;
     margin: 0.67em 0;
 }
@@ -151,7 +151,7 @@ h5 {
 h6 {
     font-size: 0.75em;
     margin: 2.33em 0;
-}
+}*/
 
 /*
  * Addresses styling not present in IE 7/8/9, Safari 5, and Chrome.
@@ -283,12 +283,12 @@ sub {
  * Addresses margins set differently in IE 6/7.
  */
 
-dl,
+/*dl,
 menu,
 ol,
 ul {
     margin: 1em 0;
-}
+}*/
 
 dd {
     margin: 0 0 0 40px;
@@ -298,21 +298,21 @@ dd {
  * Addresses paddings set differently in IE 6/7.
  */
 
-menu,
+/*menu,
 ol,
 ul {
     padding: 0 0 0 20px;
-}
+}*/
 
 /*
  * Corrects list images handled incorrectly in IE 7.
  */
 
-nav ul,
+/*nav ul,
 nav ol {
     list-style: none;
     list-style-image: none;
-}
+}*/
 
 li {
 	margin-bottom:6px;
@@ -520,18 +520,18 @@ table {
    ========================================================================== */
 
 
-html,
+/*html,
 button,
 input,
 select,
 textarea {
     color: #222;
-}
+}*/
 
-body {
+/*body {
     font-size: 1em;
     line-height: 1.4;
-}
+}*/
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i

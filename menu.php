@@ -36,7 +36,7 @@
                 </div>
             </li>
             <li><a href="#"><span>Testimonials</span></a></li>
-            <li><a href="#"><span>About Cheryl</span></a></li>
+            <li><a href="about.php"><span>About Cheryl</span></a></li>
             <li><a href="#"><span>Contact</span></a></li>
         </ul>
     </nav>
