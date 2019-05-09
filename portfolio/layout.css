@@ -2,12 +2,12 @@ html {
     overflow-y: scroll;
 }
 
-body {
+/*body {
     font-family: Helvetica, Arial, Verdana;
     background: #efefef url('../img/ticks.png') repeat 0 0;
     margin:15px 0 0 0;
     font-size:12px;
-}
+}*/
 
 #info {
     -webkit-border-radius:5px;
@@ -43,7 +43,7 @@ body {
 }
 
 
-.container { 
+/*.container { 
     position: relative; 
     width: 960px; 
     margin: 0 auto; 
@@ -51,7 +51,7 @@ body {
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;	
-}
+}*/
 
 #filters {
     margin:1%;
