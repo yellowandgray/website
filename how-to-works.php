@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>Cheryl P Pinto</title>
-        <?php $page = 'resources'; ?>
+        <?php $page = 'how-work'; ?>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="Zeta Template Project">
@@ -37,8 +37,8 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="home_content">
-                                <h1>Resources</h1>
-                                <span>read the news</span>
+                                <h1>How to Works</h1>
+                                <span>Sub Title Comes Here</span>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -62,44 +62,18 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-8">
-                            <p class="text-justify">“He was my mentor, my teacher, my second father” – Michael Jordan on his coach Dean Smith</p>
-                            <p class="text-justify">Most of us are aware of sportspersons and athletes having coaches. We have heard of health coaches & coaches in our gyms. We also agree that these coaches have played an instrumental, oft times, a pivotal role in the success of their ‘coachees’.</p>
-                            <p class="text-justify">However, lesser known is the fact that nearly every successful person you know has had a coach. Oprah Winfrey,Steve Jobs,Bill Clinton, and even Barack Obama have all reported using coaches on a regular basis to advance in their careers.</p>
-                            <p class="text-justify">A Coach, be it for a professional athlete or a CEO, performs the same role. A life coach is someone professionally trained to help you maximize your full potential. To be world-class in anything you do, you need the accountability, guidance, enthusiastic support and objective perspective of a coach.</p>
+                            <p class="text-justify bold"><i>“He was my mentor, my teacher, my second father” – Michael Jordan on his coach Dean Smith</i></p>
+                            <p class="text-justify">Most of us are aware of <strong>sportspersons and athletes having coaches.</strong> We have heard of health coaches & coaches in our gyms. We also agree that <strong>these coaches have played an instrumental, oft times, a pivotal role in the success of their ‘coachees’.</strong></p>
+                            <p class="text-justify">However, lesser known is the fact <strong>that nearly every successful person you know has had a coach.</strong> Oprah Winfrey,Steve Jobs,Bill Clinton, and even Barack Obama have <a href="https://edition.cnn.com/2012/10/31/business/global-office-coaching/" target="blank" style="text-decoration: underline;">all reported</a> using coaches on a regular basis to advance in their careers.</p>
+                            <p class="text-justify"><strong>A Coach, be it for a professional athlete or a CEO, performs the same role.</strong> A life coach is <strong>someone professionally trained to help you maximize your full potential.</strong> To be <strong>world-class in anything you do,</strong> you need the <strong>accountability, guidance, enthusiastic support and objective perspective</strong> of a coach.</p>
                         </div>
-                        <div class="col-lg-4 box-5">
+                        <div class="col-lg-4 img-shadow">
                             <img src="images/resource.jpg" alt=""/>
                         </div>
                     </div>
 
                 </div>
             </div>
-            <section class="pad-50 bg-b">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/bg/cheryl-05.jpg" alt="" class="sub-img">
-                        </div>
-                        <div class="col-lg-9 subscribe">
-                            <h2 class="color-w">JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</h2>
-                            <h4>Stay updated with articles, tools, updates from me.</h4>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <input type='text' name='name' placeholder="Your Name..." class="input-box">
-                                </div>
-                                <div class="col-lg-4">
-                                    <input type='email' name='email' placeholder="Your Email..." class="input-box">
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <button type="submit" class="button-2"><span>Submit</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
             <!-- About -->
             <!--<div class="about prlx_parent" style="background-image:url(images/main_slider_03.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">-->
             <div class="about prlx_parent pad-50" >
@@ -153,6 +127,33 @@
                     </div>
                 </div>
             </div>
+
+            <section class="pad-50 bg-b">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="images/bg/cheryl-05.jpg" alt="" class="sub-img">
+                        </div>
+                        <div class="col-lg-9 subscribe">
+                            <h2 class="color-w">JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</h2>
+                            <h4>Stay updated with articles, tools, updates from me.</h4>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <input type='text' name='name' placeholder="Your Name..." class="input-box">
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type='email' name='email' placeholder="Your Email..." class="input-box">
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <button type="submit" class="button-2"><span>Submit</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
 
             <div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
                 <!-- <div class="contact_background parallax-window" data-parallax="scroll" data-speed="0.7" data-image-src="images/contact_background.jpg"></div> -->

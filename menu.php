@@ -8,14 +8,14 @@
     <!-- Main Navigation -->
     <nav class="main_nav justify-self-end">
         <ul class="nav_items">
-            <li <!--class="active"--><a href="blog.php"><span>Blogs</span></a></li>
+            <li><a href="how-to-works.php"><span>How to Work</span></a></li>
             <li><a href="resources.php"><span>Resources</span></a></li>
             <li class="dropdown"><a href="#"><span>Work With me</span></a>
                 <div class="dropdown-content" style="background: url(images/mega-bg.jpg)">
                     <div class="row">
                         <div class="col-md-6">
                             <ul>
-                                <li><a href="">One-to-one Coaching</a></li>
+                                <li><a href="work-with-me.php">One-to-one Coaching</a></li>
                                 <li><a href="">Group Coaching</a></li>
                                 <li><a href="">Corporate Training</a></li>
                                 <li><a href="">Speaking Engagements</a></li>
@@ -37,6 +37,7 @@
             </li>
             <li><a href="testimonials.php"><span>Testimonials</span></a></li>
             <li><a href="about.php"><span>About Cheryl</span></a></li>
+            <li><a href="blog.php"><span>Blogs</span></a></li>
             <li><a href="#"><span>Contact</span></a></li>
         </ul>
     </nav>

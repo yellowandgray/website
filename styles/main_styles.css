@@ -116,7 +116,7 @@ p a:active
 }
 p a:hover
 {
-    color: yellow;
+    color: #00659c;
     /*background: #ffa07f;*/
 }
 p a:hover::after
@@ -404,7 +404,7 @@ section
     font-weight: 600;
     text-transform: uppercase;
     color: #ffffff;
-    letter-spacing: 3.5px;
+    letter-spacing: 1.5px;
     height: 100%;
     display: -webkit-box;
     display: -moz-box;
@@ -911,7 +911,7 @@ section
     text-transform: uppercase;
     color: #000;
     line-height: 1.35;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 .section_title h2 span
 {
@@ -1456,4 +1456,36 @@ button.close {
     font-size: 20px;
     margin-bottom: 10px;
     font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.img-shadow img {
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+
+.method-coaching {
+    padding: 25px;
+    box-shadow: 0 0 20px 10px #eee;
+    margin-bottom: 20px;
+}
+
+.method-coaching h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.method-coaching img {
+    -webkit-filter: drop-shadow(5px 5px 5px #222 );
+    filter: drop-shadow(5px 5px 5px #222);
+    margin-bottom: 20px;
+}
+
+.type-coaching-box {
+    box-shadow: -1px 4px 15px 11px #eee;
+    padding: 20px;
+    height: 490px;
+    margin-bottom: 20px;
 }

@@ -41,6 +41,14 @@
                                 <span>A Little Bit About Me</span>
                             </div>
                         </div>
+                        <div class="col-lg-6">
+                            <div class="margin-top-50">
+                                <video height="240" controls autoplay>
+                                    <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
+                                    Your browser does not support the <code>video</code> tag.
+                                </video>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
