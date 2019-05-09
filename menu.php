@@ -8,7 +8,7 @@
     <!-- Main Navigation -->
     <nav class="main_nav justify-self-end">
         <ul class="nav_items">
-            <li><a href="how-to-works.php"><span>How to Work</span></a></li>
+            <li><a href="how-to-works.php"><span>How it Work</span></a></li>
             <li><a href="resources.php"><span>Resources</span></a></li>
             <li class="dropdown"><a href="#"><span>Work With me</span></a>
                 <div class="dropdown-content" style="background: url(images/mega-bg.jpg)">
@@ -38,7 +38,7 @@
             <li><a href="testimonials.php"><span>Testimonials</span></a></li>
             <li><a href="about.php"><span>About Cheryl</span></a></li>
             <li><a href="blog.php"><span>Blogs</span></a></li>
-            <li><a href="#"><span>Contact</span></a></li>
+            <li><a href="contact.php"><span>Contact</span></a></li>
         </ul>
     </nav>
     <!-- Hamburger -->

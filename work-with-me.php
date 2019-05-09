@@ -31,22 +31,19 @@
 
                 <!-- Parallax Background -->
                 <div class="home_background prlx" style="background-image:url(images/blog_background.jpg)"></div>
-                <div class="services_page_shapes" style="background-image:url(images/services_page_shapes.png)"></div>
+                <div class="services_page_shapes">
+                    <video style="height:100%;float: right;" autoplay>
+                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
+                        Your browser does not support the <code>video</code> tag.
+                    </video>
+                </div>
 
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="home_content">
-                                <h1>How to Works</h1>
+                                <h1>Work With Me</h1>
                                 <span>Sub Title Comes Here</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="margin-top-50">
-                                <video height="240" controls autoplay>
-                                    <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
-                                    Your browser does not support the <code>video</code> tag.
-                                </video>
                             </div>
                         </div>
                     </div>

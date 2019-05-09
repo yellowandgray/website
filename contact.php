@@ -42,8 +42,8 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="home_content">
-                                <h1>How it Works</h1>
-                                <span>Sub Title Comes Here</span>
+                                <h1>Contact</h1>
+                                <span>Get in touch me</span>
                             </div>
                         </div>
                     </div>
@@ -54,15 +54,21 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
-                            <h2>What is Coaching ?</h2>
+                            <h2>Get in Touch Me</h2>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-8">
-                            <p class="text-justify bold"><i>“He was my mentor, my teacher, my second father” – Michael Jordan on his coach Dean Smith</i></p>
-                            <p class="text-justify">Most of us are aware of <strong>sportspersons and athletes having coaches.</strong> We have heard of health coaches & coaches in our gyms. We also agree that <strong>these coaches have played an instrumental, oft times, a pivotal role in the success of their ‘coachees’.</strong></p>
-                            <p class="text-justify">However, lesser known is the fact <strong>that nearly every successful person you know has had a coach.</strong> Oprah Winfrey,Steve Jobs,Bill Clinton, and even Barack Obama have <a href="https://edition.cnn.com/2012/10/31/business/global-office-coaching/" target="blank" style="text-decoration: underline;">all reported</a> using coaches on a regular basis to advance in their careers.</p>
-                            <p class="text-justify"><strong>A Coach, be it for a professional athlete or a CEO, performs the same role.</strong> A life coach is <strong>someone professionally trained to help you maximize your full potential.</strong> To be <strong>world-class in anything you do,</strong> you need the <strong>accountability, guidance, enthusiastic support and objective perspective</strong> of a coach.</p>
+                        <div class="col-lg-6">
+                            <form class="text-bg">
+                                <h2>Contact us</h2>
+                                <p>I am here to help! I check each message and will respond to you personally.</p>
+                                <input type="text" name="fname" placeholder="Name" required > 
+                                <input type="email" name="email" placeholder="Email Address" required>
+                                <input type="text" name="phone" placeholder="Phone Number" required> 
+                                <input type="text" name="subject" placeholder="subject" required>
+                                <textarea type="text" name="requirement" placeholder="Requirement" class="req" required></textarea>
+                                <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
+                            </form>
                         </div>
                         <div class="col-lg-4 img-shadow">
                             <img src="images/resource.jpg" alt=""/>
@@ -178,20 +184,5 @@
             </div>
             <!-- Footer -->
             <?php include 'footer.php'; ?>
-            <script>
-                $(function () {
-                    var selectedClass = "";
-                    $(".fil-cat").click(function () {
-                        selectedClass = $(this).attr("data-rel");
-                        $("#portfolio").fadeTo(100, 0.1);
-                        $("#portfolio div").not("." + selectedClass).fadeOut().removeClass('scale-anm');
-                        setTimeout(function () {
-                            $("." + selectedClass).fadeIn().addClass('scale-anm');
-                            $("#portfolio").fadeTo(300, 1);
-                        }, 300);
-
-                    });
-                });
-            </script>
     </body>
 </html>

@@ -31,7 +31,12 @@
 
                 <!-- Parallax Background -->
                 <div class="home_background prlx" style="background-image:url(images/blog_background.jpg)"></div>
-                <div class="services_page_shapes" style="background-image:url(images/services_page_shapes.png)"></div>
+                <div class="services_page_shapes">
+                    <video style="height:100%;float: right;" autoplay>
+                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
+                        Your browser does not support the <code>video</code> tag.
+                    </video>
+                </div>
 
                 <div class="container">
                     <div class="row">
