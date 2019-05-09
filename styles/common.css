@@ -1155,6 +1155,9 @@ p:hover {
     box-shadow: 0px 0px 7px 0px #20b9ec;
     width: 200px;
     border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -99px;
 }
 .testimoni h4:after
 {
@@ -1165,4 +1168,39 @@ p:hover {
     content: '';
     background: #80358e;
     margin-top: 1px;
+    color: #20b9ec;
+}
+.testimoni h5
+{
+    color: #20b9ec;
+}
+audio {
+    margin-bottom: 10px;
+    /* color: #b74242; */
+    background: #f3f3f3;
+}
+.audio h2:after
+{
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    content: '';
+    background: #80358e;
+    margin-top: 1px;
+    color: #20b9ec;
+    left: 50%;
+    margin-left: -50px;
+}
+.audio .audio-1:after
+{
+    display: block;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background: #80358e;
+    margin: 10px 0px;
+}
+.pad-f-video .d-flex {
+    padding: 20px;
 }

@@ -49,18 +49,132 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
-                            <h2>What is Coaching ?</h2>
+                            <!--<h2>What is Coaching ?</h2>-->
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-8">
-                            <p class="text-justify">“He was my mentor, my teacher, my second father” – Michael Jordan on his coach Dean Smith</p>
-                            <p class="text-justify">Most of us are aware of sportspersons and athletes having coaches. We have heard of health coaches & coaches in our gyms. We also agree that these coaches have played an instrumental, oft times, a pivotal role in the success of their ‘coachees’.</p>
-                            <p class="text-justify">However, lesser known is the fact that nearly every successful person you know has had a coach. Oprah Winfrey,Steve Jobs,Bill Clinton, and even Barack Obama have all reported using coaches on a regular basis to advance in their careers.</p>
-                            <p class="text-justify">A Coach, be it for a professional athlete or a CEO, performs the same role. A life coach is someone professionally trained to help you maximize your full potential. To be world-class in anything you do, you need the accountability, guidance, enthusiastic support and objective perspective of a coach.</p>
+                        <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4  audio">
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <h2>Audio</h2>
+                                </div>
+                            </div>
+                            <div class="row audio-1 margin-t-22">
+                                <h3>simply dummy text</h3>
+                                <audio controls>
+                                    <source src="audio/test-audio.mp3" type="audio/mpeg">
+                                </audio>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                            <div class="row audio-1">
+                                <h3>simply dummy text</h3>
+                                <audio controls>
+                                    <source src="audio/test-audio.mp3" type="audio/mpeg">
+                                </audio>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                            <div class="row audio-1">
+                                <h3>simply dummy text</h3>
+                                <audio controls>
+                                    <source src="audio/test-audio.mp3" type="audio/mpeg">
+                                </audio>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                            <div class="row audio-1">
+                                <h3>simply dummy text</h3>
+                                <audio controls>
+                                    <source src="audio/test-audio.mp3" type="audio/mpeg">
+                                </audio>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                            <div class="row audio-1">
+                                <h3>simply dummy text</h3>
+                                <audio controls>
+                                    <source src="audio/test-audio.mp3" type="audio/mpeg">
+                                </audio>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
                         </div>
-                        <div class="col-lg-4 box-5">
-                            <img src="images/resource.jpg" alt=""/>
+
+                        <div class="col-lg-8 audio">
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <h2>Video</h2>
+                                </div>
+                            </div>
+                            <div class="row margin-t-22 pad-f-video">
+                                <!-- Features Item -->
+                                <div class="col-lg-6 ">
+                                    <div class="features_item  d-flex flex-column align-items-center">
+                                        <div class="icon_container box-4 d-flex flex-column">
+                                            <h3 class="text-center">simply dummy text</h3>
+                                            <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                                <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
+                                                Your browser does not support the <code>video</code> tag.
+                                            </video>
+                                            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                            <div class="text-center arrow-1">
+                                                <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Features Item -->
+                                <div class="col-lg-6">
+                                    <div class="features_item  d-flex flex-column align-items-center ">
+                                        <div class="icon_container box-4 d-flex flex-column">
+                                            <h3 class="text-center">simply dummy text</h3>
+                                            <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                                <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
+                                                Your browser does not support the <code>video</code> tag.
+                                            </video>
+                                            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                            <div class="text-center arrow-1">
+                                                <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row margin-t-22 pad-f-video">
+                                <!-- Features Item -->
+                                <div class="col-lg-6">
+                                    <div class="features_item  d-flex flex-column align-items-center ">
+                                        <div class="icon_container box-4 d-flex flex-column">
+                                            <h3 class="text-center">simply dummy text</h3>
+                                            <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                                <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
+                                                Your browser does not support the <code>video</code> tag.
+                                            </video>
+                                            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                            <div class="text-center arrow-1">
+                                                <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Features Item -->
+                                <div class="col-lg-6">
+                                    <div class="features_item  d-flex flex-column align-items-center ">
+                                        <div class="icon_container box-4 d-flex flex-column">
+                                            <h3 class="text-center">simply dummy text</h3>
+                                            <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                                <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
+                                                Your browser does not support the <code>video</code> tag.
+                                            </video>
+                                            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                            <div class="text-center arrow-1">
+                                                <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -92,59 +206,6 @@
 
                 </div>
             </section>
-            <!-- About -->
-            <!--<div class="about prlx_parent" style="background-image:url(images/main_slider_03.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">-->
-            <div class="about prlx_parent pad-50" >
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <h3 class="pad-20"><strong>HOW DOES COACHING HELP?</strong></h3>
-                            <ul class="list-1">
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Coaching can help with virtually any aspect of someone’s life, whether it is in their personal or professional life.</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">The coaching process takes on specific projects or personal goals by:</li>
-                                <ul class="sub-list">
-                                    <i class="fa fa-circle" aria-hidden="true"></i><li>analyzing the current situation</li>
-                                    <i class="fa fa-circle" aria-hidden="true"></i><li>identifying existing and potential challenges and</li>
-                                    <i class="fa fa-circle" aria-hidden="true"></i><li>devising a plan of action designed to achieve the desired outcome.</li>
-                                </ul>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Certified coaches, through their specific strategies and skills, help their clients think clearly and hence arrive at solutions that they are otherwise unable to see on their own. With the careful guidance of a coach, you can see the situation from a new perspective, which brings new answers and solutions. This is the key value that a coach brings.</li>
-                            </ul>
-
-                        </div>
-                        <div class="col-lg-4">
-                            <div>
-                                <img src="images/slider/001.png" alt="" class="img-b">
-                            </div>
-                            <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-4 d-flex flex-column">
-                                    <h3 class="text-center">Financial Freedom</h3>
-                                    <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
-                                        Your browser does not support the <code>video</code> tag.
-                                    </video>
-                                    <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income...</p>
-                                    <div class="text-center arrow-1">
-                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h3 class="pad-20"><strong>WHY WORK WITH A LIFE COACH?</strong></h3>
-                            <ul class="list-1">
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">People hire a life coach because they want to do even more tomorrow than they can do today.</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">They want to improve their output and see more growth, and they want to do those things quickly and to the best of their ability.</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">These people all identify a gap between where they are and where they want to be, and want help reaching their goals.</li>
-                            </ul>
-                            <h3 class="pad-20"><strong>WHY WOULD YOU WORK WITH A LIFE COACH?</strong></h3>
-                            <p class="text-justify">People hire a life coach because they want to do even more tomorrow than they can do today. They want to improve their output and see more growth, and they want to do those things quickly and to the best of their ability.</p>
-                            <p class="text-justify">All kinds of people use life coaches,including actors, business leaders, creatives, entrepreneurs, executives, home-makers, managers, professionals, small business owners and start-up owners. These people all identify a gap between where they are and where they want to be, and want help reaching their goals.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
                 <!-- <div class="contact_background parallax-window" data-parallax="scroll" data-speed="0.7" data-image-src="images/contact_background.jpg"></div> -->
