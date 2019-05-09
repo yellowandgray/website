@@ -38,7 +38,7 @@
                         <div class="col-lg-6">
                             <div class="home_content">
                                 <h1>Resources</h1>
-                                <span>read the news</span>
+                                <span>Sub Title Comes Here</span>
                             </div>
                         </div>
                         <div class="col-lg-6">
