@@ -8,7 +8,7 @@
     <!-- Main Navigation -->
     <nav class="main_nav justify-self-end">
         <ul class="nav_items">
-            <li <!--class="active"-->><a href="blog.php"><span>Blogs</span></a></li>
+            <li <!--class="active"--><a href="blog.php"><span>Blogs</span></a></li>
             <li><a href="resources.php"><span>Resources</span></a></li>
             <li class="dropdown"><a href="#"><span>Work With me</span></a>
                 <div class="dropdown-content" style="background: url(images/mega-bg.jpg)">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </li>
-            <li><a href="#"><span>Testimonials</span></a></li>
+            <li><a href="testimonials.php"><span>Testimonials</span></a></li>
             <li><a href="#"><span>About Cheryl</span></a></li>
             <li><a href="#"><span>Contact</span></a></li>
         </ul>
