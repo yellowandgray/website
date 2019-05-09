@@ -78,7 +78,7 @@
                             <h5>Assistant Vice President- FX, Interest rates & Commodity Derivative Solutions</h5>
                             <p class="text-justify">At the outset I looked at NLP with a lot of skepticism and it was only because I trusted Cheryl that I decided to give it a shot. She has the ability to make you believe and it comes very naturally to her. As sessions go by, she makes you comfortable enough to open facets of yourself which you wouldn't share with anyone. This enhances her understanding and empathy of you and enables her to perform the various NLP techniques with great effect. The clarity and pin-pointedness with which Cheryl helped my situation is something which has made me understand and manage myself better. I am a better-focused and more energized version of myself. There are obvious improvements in my speech, body language, mental state of being and most importantly i am a tad bit spiritually enlightened. Hand over your absolute 100% trust to her and she will go beyond what is required to help improve your life. She has the emotional and mental maturity as well as the talent and technique to use her NLP skills and understanding to help channel you in the right direction.</p>
                         </div>
-                        <div class="col-lg-4 box-7 text-center"">
+                        <div class="col-lg-4 box-7 text-center">
                             <img src="images/testimonial/testimonial-003.png" alt=""/>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                             <h5>Team Leader at a bank in Dubai</h5>
                             <p class="text-justify">Cheryl has been a friend, mentor and guide for me. I have worked with Cheryl over the past 14 months and I can term our engagement as a wonderful journey of discovering new things, acquiring new habits and learning how to utilize my 24 hours in the best way possible. The key thing I have learned working with Cheryl is how to replace my current habits with new better habits in a small and gradual manner. Now I am working towards setting new goals for myself and I feel more empowered to achieve them then ever before. I have realized that there is so much to achieve and best way to achieve your goals is to work with people who believe in you (like Cheryl).</p>
                         </div>
-                        <div class="col-lg-4 box-7 text-center"">
+                        <div class="col-lg-4 box-7 text-center">
                             <img src="images/testimonial/testimonial-004.png" alt=""/>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                             <h5>Associate Magazine Editor at The Gulf Today - Dar Al Khaleej</h5>
                             <p class="text-justify">Cheryl’s warm nature and genuine empathy for her clients are her biggest strengths. She is patient, listens well and is non-judgmental. Her vivacious disposition and a natural ability to put people at ease made me very comfortable. She also helped me shed a limiting belief I had about myself and motivated me to push the envelope regarding public speaking.I unhesitatingly recommend Cheryl to anyone who wishes to get a leg-up on any issue.</p>
                         </div>
-                        <div class="col-lg-4 box-7 text-center"">
+                        <div class="col-lg-4 box-7 text-center">
                             <img src="images/testimonial/testimonial-005.png" alt=""/>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                             <h5>Sales & Operations Manager at Technauto</h5>
                             <p class="text-justify">Cheryl has this contagious confidence in herself and the ability to build the same in you which makes you believe that you too can do it! After just a couple of coaching sessions with Cheryl, I feel more determined to work towards my goal and felt positive to achieve them. I started working on the points we discovered during our sessions in their specific directions. There is a happiness in my overall mood and behavior.</p>
                         </div>
-                        <div class="col-lg-4 box-7 text-center"">
+                        <div class="col-lg-4 box-7 text-center">
                             <img src="images/testimonial/testimonial-006.png" alt=""/>
                         </div>
                     </div>
@@ -118,7 +118,7 @@
                             <h5>Director of Talent Management at TSA Solutions</h5>
                             <p class="text-justify">Cheryl is smart, a fast-thinker and just asks the right question at the right time. After coaching with Cheryl, I felt energised and ready to face challenges with my chin up. If you are considering coaching with Cheryl, then be ready to discover yourself In a very dynamic conversation.</p>
                         </div>
-                        <div class="col-lg-4 box-7 text-center"">
+                        <div class="col-lg-4 box-7 text-center">
                             <img src="images/testimonial/testimonial-007.png" alt=""/>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                             <h5>Specialist at Novartis Oncology</h5>
                             <p class="text-justify">Cheryl is result oriented. She will push you to your limits to get the results you want. I was lost in what I wanted for my career. Cheryl helped me prioritize and see opportunities from a new, different perspective. If you want results and you have the willingness to explore your limits, hands down, Cheryl is the one.</p>
                         </div> 
-                        <div class="col-lg-4 box-7 text-center"">
+                        <div class="col-lg-4 box-7 text-center">
                             <img src="images/testimonial/testimonial-008.png" alt=""/>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                             <h5>Student at Murdoch University - Bsc. Computer Science and Bsc. Business Information Systems</h5>
                             <p class="text-justify">Cheryl has been my role model ever since I've met her. She's inspired me to better myself and improve my life by showing me it's possible. Her character and life is a testament to how anything is possible if you have a dream and you work hard for it. She's one of the most positive people I have ever met, even in my lowest low her optimism makes me believe I can do anything. She recognized my strengths and made them even stronger, most importantly she made me believe in myself. The only advice I have to give to someone who is considering being mentored by Cheryl is that they should do it. She will make a difference and you will be the better for it.</p>
                         </div>
-                        <div class="col-lg-4 box-7 text-center"">
+                        <div class="col-lg-4 box-7 text-center">
                             <img src="images/testimonial/testimonial-009.png" alt=""/>
                         </div>
                     </div>
@@ -148,7 +148,7 @@
                             <h5>Sales Manager at Azadea Group</h5>
                             <p class="text-justify">Cheryl has a number of strengths & abilities that make her a spectacular coach. Some of them are: persistence, helping me break through self-imposed barriers, obtaining clarity and goal-setting. She empowered me to achieve my full potential by improving my motivation levels and bringing in an unprecedented level of consistency in my actions. If you are looking for real change, look no further!</p>
                         </div>
-                        <div class="col-lg-4 box-7 text-center"">
+                        <div class="col-lg-4 box-7 text-center">
                             <img src="images/testimonial/testimonial-010.png" alt=""/>
                         </div>
                     </div>
