@@ -390,7 +390,7 @@ section
 }
 .nav_items
 {
-    height: 50%;
+    height: 100%;
 }
 .nav_items li
 {
@@ -1446,4 +1446,14 @@ button.close {
 .dropdown-content ul li a:hover {
     color: #fff;
     text-decoration: underline;
+}
+
+.testimoni h4 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.testimoni h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-style: italic;
 }
