@@ -25,7 +25,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6" style="z-index: 999;">
-                            <div class="home_content">
+                            <div class="home_content wow fadeInleft">
                                 <h1>How it Works</h1>
                                 <span>Sub Title Comes Here</span>
                             </div>
@@ -37,7 +37,7 @@
             <div class="features">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
+                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInleft">
                             <h2>What is Coaching ?</h2>
                         </div>
                     </div>
