@@ -26,7 +26,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6" style="z-index: 999;">
-                            <div class="home_content">
+                            <div class="home_content wow fadeInLeft">
                                 <h1>Blog</h1>
                                 <span>read the news</span>
                             </div>
@@ -38,16 +38,16 @@
             <div class="features">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
+                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
                             <h2>Current Blogs</h2>
                         </div>
                     </div>
                     <ul id="filters" class="clearfix">
-                        <li><span class="filter active" data-filter=".app, .card, .icon, .logo1">All</span></li>
-                        <li><span class="filter" data-filter=".app">Improve Finances</span></li>
-                        <li><span class="filter" data-filter=".card">Manage Time</span></li>
-                        <li><span class="filter" data-filter=".icon">Improve Discipline</span></li>
-                        <li><span class="filter" data-filter=".logo1">Communication Skills</span></li>
+                        <li><span class="filter active wow fadeInRight" data-filter=".app, .card, .icon, .logo1">All</span></li>
+                        <li><span class="filter wow fadeInRight" data-filter=".app">Improve Finances</span></li>
+                        <li><span class="filter wow fadeInRight" data-filter=".card">Manage Time</span></li>
+                        <li><span class="filter wow fadeInRight" data-filter=".icon">Improve Discipline</span></li>
+                        <li><span class="filter wow fadeInRight" data-filter=".logo1">Communication Skills</span></li>
 <!--                        <li><span class="filter" data-filter=".web">Web</span></li>-->
                     </ul>
 

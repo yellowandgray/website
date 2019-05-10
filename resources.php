@@ -16,7 +16,7 @@
                 <div class="home_background prlx bg-hide-1" style="background-image:url(images/blog_background-02.png); z-index: 9;"></div>
                 <div class="home_background prlx bg-hide" style="background-image:url(images/blog_background-03.png); z-index: 9;"></div>
                 <div class="services_page_shapes">
-                    <video style="height:100%;float: right;" controls autoplay>
+                    <video style="height:100%;float: right;" autoplay>
                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
                         Your browser does not support the <code>video</code> tag.
                     </video>
@@ -25,7 +25,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6" style="z-index: 999;">
-                            <div class="home_content">
+                            <div class="home_content wow fadeInLeft">
                                 <h1>Resources</h1>
                                 <span>Sub Title Comes Here</span>
                             </div>
@@ -36,13 +36,8 @@
             <!-- Features -->
             <div class="features">
                 <div class="container">
-                    <!--                    <div class="row">
-                                            <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
-                                                <h2>What is Coaching ?</h2>
-                                            </div>
-                                        </div>-->
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 wow fadeInUp">
                             <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                         </div>
                     </div>
@@ -50,40 +45,40 @@
                         <div class="col-lg-4  audio audio-bg">
                             <div class="pad-f-15">
                                 <div class="row">
-                                    <div class="col-lg-12 text-center">
+                                    <div class="col-lg-12 text-center wow fadeInDown">
                                         <h2>Audio</h2>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-12 audio-1 margin-t-22">
+                                    <div class="col-lg-12 audio-1 margin-t-22 wow fadeInUp">
                                         <h3>Title Text Here</h3>
                                         <audio controls>
                                             <source src="audio/test-audio.mp3" type="audio/mpeg">
                                         </audio>
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                     </div>
-                                    <div class="col-lg-12 audio-1">
+                                    <div class="col-lg-12 audio-1 wow fadeInUp">
                                         <h3>Title Text Here</h3>
                                         <audio controls>
                                             <source src="audio/test-audio.mp3" type="audio/mpeg">
                                         </audio>
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                     </div>
-                                    <div class="col-lg-12 audio-1">
+                                    <div class="col-lg-12 audio-1 wow fadeInUp">
                                         <h3>Title Text Here</h3>
                                         <audio controls>
                                             <source src="audio/test-audio.mp3" type="audio/mpeg">
                                         </audio>
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                     </div>
-                                    <div class="col-lg-12 audio-1">
+                                    <div class="col-lg-12 audio-1 wow fadeInUp">
                                         <h3>Title Text Here</h3>
                                         <audio controls>
                                             <source src="audio/test-audio.mp3" type="audio/mpeg">
                                         </audio>
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                     </div>
-                                    <div class="col-lg-12 audio-1">
+                                    <div class="col-lg-12 audio-1 wow fadeInUp">
                                         <h3>Title Text Here</h3>
                                         <audio controls>
                                             <source src="audio/test-audio.mp3" type="audio/mpeg">
@@ -95,13 +90,13 @@
                         </div>
                         <div class="col-lg-8 audio">
                             <div class="row">
-                                <div class="col-lg-12 text-center">
+                                <div class="col-lg-12 text-center wow fadeInDown">
                                     <h2>Video</h2>
                                 </div>
                             </div>
                             <div class="row margin-t-22 pad-f-video">
                                 <!-- Features Item -->
-                                <div class="col-lg-6 ">
+                                <div class="col-lg-6 wow fadeInUp">
                                     <div class="features_item  d-flex flex-column align-items-center">
                                         <div class="icon_container box-4 d-flex flex-column">
                                             <h3 class="text-center">Title Text Here</h3>
@@ -115,7 +110,7 @@
                                 </div>
 
                                 <!-- Features Item -->
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 wow fadeInUp">
                                     <div class="features_item  d-flex flex-column align-items-center ">
                                         <div class="icon_container box-4 d-flex flex-column">
                                             <h3 class="text-center">Title Text Here</h3>
@@ -130,7 +125,7 @@
                             </div>
                             <div class="row margin-t-22 pad-f-video">
                                 <!-- Features Item -->
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 wow fadeInUp">
                                     <div class="features_item  d-flex flex-column align-items-center ">
                                         <div class="icon_container box-4 d-flex flex-column">
                                             <h3 class="text-center">Title Text Here</h3>
@@ -144,7 +139,7 @@
                                 </div>
 
                                 <!-- Features Item -->
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 wow fadeInUp">
                                     <div class="features_item  d-flex flex-column align-items-center ">
                                         <div class="icon_container box-4 d-flex flex-column">
                                             <h3 class="text-center">Title Text Here</h3>

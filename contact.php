@@ -25,9 +25,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6" style="z-index: 999;">
-                            <div class="home_content">
+                            <div class="home_content wow fadeInLeft">
                                 <h1>Contact</h1>
-                                <span>Get in touch me</span>
+                                <span>Get in touch With</span>
                             </div>
                         </div>
                     </div>
@@ -37,13 +37,13 @@
             <div class="features">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
-                            <h2>Get in Touch Me</h2>
+                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
+                            <h2>Get in Touch With</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
-                            <form class="text-bg-1">
+                            <form class="text-bg-1 wow fadeInUp">
                                 <h2 class="text-center">Contact us</h2>
                                 <hr>
                                 <p>I am here to help! I check each message and will respond to you personally.</p>
@@ -56,15 +56,15 @@
                             </form>
                         </div>
                         <div class="col-lg-6">
-                            <div class="contact-details">
+                            <div class="contact-details wow fadeInUp">
                                 <h2 class="text-center">Say Hello!</h2>
                                 <hr>
                                 <p>Phone     : <a href="tel:+971-50-79-89-121">+971 50 79 89 121</a></p>
                                 <p>E-mail    : <a href="mailto:info@cherylppinto.com">info@cherylppinto.com</a></p>
                                 <p>Website   : www.cherylppinto.com</p>
                             </div>
-                            <div class="contact-details">
-                                <h2 class="text-center">Joins Now!</h2>
+                            <div class="contact-details wow fadeInUp">
+                                <h2 class="text-center">Join Now!</h2>
                                 <hr>
                                 <input type="email" name="email" placeholder="E-mail address" />
                                 <button type="submit" class="button-1"><span class="color-w">Join</span></button>

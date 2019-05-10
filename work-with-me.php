@@ -26,7 +26,7 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6" style="z-index: 999;">
+                        <div class="col-lg-6 wow fadeInLeft" style="z-index: 999;">
                             <div class="home_content">
                                 <h1>Work With Me</h1>
                                 <span>Sub Title Comes Here</span>
@@ -39,19 +39,19 @@
             <div class="features">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
+                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
                             <h2>Coaching Methods</h2>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp">
                             <div class="method-coaching">
                                 <h2>One to One Coaching</h2>
                                 <img src="images/method-coaching/001.jpg" alt="" />
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp">
                             <div class="method-coaching">
                                 <h2>Group Coaching</h2>
                                 <img src="images/method-coaching/002.jpg" alt="" />
@@ -60,14 +60,14 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp">
                             <div class="method-coaching">
                                 <h2>Corporate Training</h2>
                                 <img src="images/method-coaching/003.jpg" alt="" />
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp">
                             <div class="method-coaching">
                                 <h2>Speaking Engagements</h2>
                                 <img src="images/method-coaching/004.jpg" alt="" />
@@ -82,13 +82,13 @@
             <div class="features">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
+                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
                             <h2>Coaching Titles</h2>
                         </div>
                     </div>
                     <div class="row">
                         <!-- Features Item -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 wow fadeInUp">
                             <div>
                                 <img src="images/slider/001.png" alt="" class="img-b">
                             </div>
@@ -105,7 +105,7 @@
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 wow fadeInUp">
                             <div>
                                 <img src="images/slider/002.png" alt="" class="img-b">
                             </div>
@@ -122,7 +122,7 @@
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 wow fadeInUp">
                             <div>
                                 <img src="images/slider/003.png" alt="" class="img-b">
                             </div>
@@ -142,7 +142,7 @@
                     </div>
                     <div class="row margin-top-50">
                         <!-- Features Item -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 wow fadeInUp">
                             <div>
                                 <img src="images/slider/004.png" alt="" class="img-b">
                             </div>
@@ -158,7 +158,7 @@
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 wow fadeInUp">
                             <div>
                                 <img src="images/slider/005.png" alt="" class="img-b">
                             </div>
@@ -174,7 +174,7 @@
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 wow fadeInUp">
                             <div>
                                 <img src="images/slider/006.png" alt="" class="img-b">
                             </div>
@@ -195,12 +195,12 @@
             <div class="features" style="background: #eee">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
+                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
                             <h2>How Does Life Coaching Work?</h2>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 wow fadeInUp">
                             <ol>
                                 <li>This is usually done through <strong>face-to-face meetings</strong> that are usually structured over <strong>several sessions</strong> depending on what the <strong>objective</strong> of the coaching engagement is.</li>
                                 <li>If you are seeking clarity over a relatively simple situation, just three sessions may sometimes suffice. However, if you are seeking a <strong>life-transformational change,</strong> it may require a <strong>continued on-going engagement</strong> over <strong>months or even years.</strong></li>
@@ -210,10 +210,10 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
+                            <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
                                 <h2>WHAT YOU WANT</h2>
                             </div>
-                            <ul class="list-1">
+                            <ul class="list-1 wow fadeInUp">
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Change in one area of life. A choice. A development decision. - 3 sessions</li>
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i><li>A relatively large change spanning a couple of life areas. A difficult decision - 6 sessions</li>
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i><li>A life transformation, a shift. A dramatic revamp. A change that requires sustained, long-term implementation. - 10 sessions </li>
