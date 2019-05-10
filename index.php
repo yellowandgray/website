@@ -1,33 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Cheryl P Pinto</title>
-        <?php $page = 'home'; ?>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="Zeta Template Project">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-        <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-        <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-        <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-        <link rel="icon" href="images/fav-logo.png" type="image/gif" sizes="16x16">
-        <link href="styles/common.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/slider-1.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/infinite-slider.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/media-query.css" rel="stylesheet" type="text/css"/>
-    </head>
-    <!--    <script>
-    
-            setTimeout(
-                    function showModal() {
-    
-                        $('#myModal').modal('show');
-                    }, 2000);
-        </script>-->
+    <?php include 'head.php';
+    $page = 'home';
+    ?>
     <script type="text/javascript">
         function PopUp(hideOrshow) {
             if (hideOrshow == 'hide')
@@ -46,7 +21,7 @@
             <!-- Header -->
             <?php include 'menu.php'; ?>
             <!-- Menu -->
-            <?php include 'mobile-menu.php'; ?>
+<?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
             <div class="home">
                 <video autoplay loop poster="polina.jpg" id="vid" muted="muted">
@@ -112,31 +87,6 @@
                         </div>
                     </div>
                     <!-- Slider Dots -->
-                    <!--                    <div class="main_slider_dots">
-                    
-                                            <div class="container">
-                    
-                                                <div class="row">
-                    
-                                                    <div class="col">
-                    
-                                                        <ul id="main_slider_custom_dots" class="main_slider_custom_dots">
-                    
-                                                            <li class="main_slider_custom_dot active">01.</li>
-                    
-                                                            <li class="main_slider_custom_dot">02.</li>
-                    
-                                                            <li class="main_slider_custom_dot">03.</li>
-                    
-                                                        </ul>
-                    
-                                                    </div>
-                    
-                                                </div>
-                    
-                                            </div>		
-                    
-                                        </div>-->
                     <!-- Slider Dots -->
                     <div class="main_slider_nav_left main_slider_nav">
                         <i class="fas fa-chevron-left trans_300"></i>
@@ -146,25 +96,6 @@
                     </div>
                 </div>
             </div>
-            <!--            <div class="home_social_container d-flex flex-row justify-content-end align-items-center">
-            
-                            <ul class="home_social">
-            
-                                <li><a href="#"><i class="fab fa-pinterest trans_300"></i></a></li>
-            
-                                <li><a href="#"><i class="fab fa-facebook-f trans_300"></i></a></li>
-            
-                                <li><a href="#"><i class="fab fa-twitter trans_300"></i></a></li>
-            
-                                <li><a href="#"><i class="fab fa-dribbble trans_300"></i></a></li>
-            
-                                <li><a href="#"><i class="fab fa-behance trans_300"></i></a></li>
-            
-                                <li><a href="#"><i class="fab fa-linkedin-in trans_300"></i></a></li>
-            
-                            </ul>
-            
-                        </div>-->
             <!-- Features -->
             <div class="features">
                 <div class="container">
@@ -331,9 +262,6 @@
                         </div>
                     </div>
                     <div class="row">
-                        <!--                        <div class="col-lg-6">
-                                                    <img src='images/bg/cheryl-04.jpg' alt="">
-                                                </div>-->
                         <div class="col-lg-6">
                             <div class="text-bg">
                                 <div class="about_text">
@@ -524,80 +452,6 @@
                 </div>
             </div>
             <!-- Services -->
-            <!--            <div class="services prlx_parent bg-pic" style="background-image: url(images/bg/bg-01.jpg);background-size: cover;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
-                                        <h2 class="color-w">Types of Cherly Coaching</h2>
-                                    </div>
-                                </div>
-                                <div class="row pad-50">
-                                    <div class="col-lg-4">
-                                        <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
-                                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                                <img src="images/types/Financial-Freedom.png" alt="">
-                                            </div>
-                                            <h3 class="text-cen">Financial Freedom</h3>
-                                            <p class="text-justify">If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income, if you find yourself drowning in the quagmire of credit card debts, if you wish to start saving more and building a retirement fund then get in touch with me now. I have been a banker for nearly 2 decades and have cracked the code.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
-                                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                                <img src="images/types/Time-Management.png" alt="">
-                                            </div>
-                                            <h3 class="text-cen">Time Management</h3>
-                                            <p class="text-justify">If you always find yourself wanting to do more, live more meaningfully, but are somehow unable to, then I will help shine the light on how you may manage your time and thus your life so that you live the life you want to live.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
-                                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                                <img src="images/types/careerimage.png" alt="">
-                                            </div>
-                                            <h3 class="text-cen">Career Progress</h3>
-                                            <p class="text-justify">If you are in a job that does not light you up, or in a career that you once loved but now wish to change, or if you are not advancing in your career no matter what you do, then chat with me and learn how I raced through the corporate ladder over my 17 years of experience in the corporate world.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
-                                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                                <img src="images/types/Trader-Coach.png" alt="">
-                                            </div>
-                                            <h3 class="text-cen">Trader Coach</h3>
-                                            <p class="text-justify">If you are a trader in the financial markets and are unable to remain consistently profitable, if you cannot stick to your rules or deal with the psychological impact of trading, talk to me. I am a Professional Trader and have been through the same painful rite of passage emerging victorious</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
-                                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                                <img src="images/types/Transformational-Change.png" alt="">
-                                            </div>
-                                            <h3 class="text-cen">Transformational Change</h3>
-                                            <p class="text-justify">If you have found yourself at a stage where you feel like it is ‘now time’ to make a large change that is likely to impact many facets of your life. If you wish to disrupt the status quo,follow your passion, live life to the fullest, then contact me right away. I will be honored to guide you along your path to your most fulfilling life.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="box service_item text-left d-flex flex-column align-items-start justify-content-start">
-                                            <div class="icon_container d-flex flex-column justify-content-end center">
-                                                <img src="images/types/Super-Women.png" alt="">
-                                            </div>
-                                            <h3 class="text-cen">Super Women</h3>
-                                            <p class="text-justify">If you are an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress, learn how to ask for a raise or a promotion, be heard, grab a coffee with me. I have ‘been there, done that’ and am thrilled to help you learn the ropes.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                                    <div class="row">
-                                                                            <div class="col text-center">
-                                                                                <div class="button services_button">
-                                                                                    <a href="services.html" class="d-flex flex-row align-items-center justify-content-center">
-                                                                                        discover<img src="images/arrow_right.svg" alt="">
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                            </div>
-                        </div>-->
             <!-- Clients -->
             <div class="clients">
                 <div class="container">
@@ -612,13 +466,27 @@
                         </div>
                         <div class="col-lg-8">
                             <div class="rio-promos">
-                                <img src="images/slider/007.png" alt="" />
-                                <img src="images/slider/008.png" alt="" />
-                                <img src="images/slider/009.png" alt="" />
-                                <img src="images/slider/010.png" alt="" />
+                                <div>
+                                    <img src="images/png/chat.png" alt="" />
+                                    <h3>COMMUNICATION SKILLS</h3>
+                                    <P>Presentation & Relationships</P>
+                                </div>
+                                <div>
+                                    <img src="images/png/note.png" alt="" />
+                                    <h3>IMPROVE DISCIPLINE</h3>
+                                    <P>Life Control & Results</P>
+                                </div>
+                                <div>
+                                    <img src="images/png/clock.png" alt="" />
+                                    <h3>MANAGE TIME</h3>
+                                    <P>More Life & Living</P>
+                                </div>
+                                <div>
+                                    <img src="images/png/doller-01.png" alt="" />
+                                    <h3>IMPROVE FINANCES</h3>
+                                    <P>Assessment & Saving</P>
+                                </div>
                             </div>
-                            <!--                            <h2 class="color-w">JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</h2>
-                                                            <h4>Stay updated with articles, tools, updates from me.</h4>-->
                             <div class="row" style="padding: 10px 0 20px;">
                                 <div class="col-lg-4">
                                     <input type='text' name='name' placeholder="Your Name..." class="input-box">
@@ -637,7 +505,6 @@
             </div>
             <!-- Contact -->
             <div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
-                <!-- <div class="contact_background parallax-window" data-parallax="scroll" data-speed="0.7" data-image-src="images/contact_background.jpg"></div> -->
                 <div class=" prlx bg-enquiry"></div>
                 <div class="container">
                     <div class="row">
@@ -662,14 +529,11 @@
             </div>
             <!-- Footer -->
             <?php include 'footer.php'; ?>
-            <?php include 'onload-popup.php'; ?>
+<?php include 'onload-popup.php'; ?>
         </div>
         <!-- The Modal -->
         <?php include 'join-page.php'; ?>
-        <?php include '30-minute-free.php'; ?>
-        
+<?php include '30-minute-free.php'; ?>
         <script src="js/silk_slider.js" type="text/javascript"></script>
-
-
     </body>
 </html>

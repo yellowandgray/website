@@ -1,25 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Cheryl P Pinto</title>
-        <?php $page = 'how-work'; ?>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="Zeta Template Project">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-        <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-        <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-        <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-        <link rel="icon" href="images/fav-logo.png" type="image/gif" sizes="16x16">
-        <link href="styles/common.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/slider-1.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/infinite-slider.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/media-query.css" rel="stylesheet" type="text/css"/>
-    </head>
+        <?php include 'head.php'; $page = 'contact'; ?>
     <body>
         <div class="super_container">
             <!-- Header -->
@@ -75,8 +56,8 @@
                             <div class="contact-details">
                                 <h2 class="text-center">Say Hello!</h2>
                                 <hr>
-                                <p>Phone     : +971 50 79 89 121</p>
-                                <p>E-mail    : info@cherylppinto.com</p>
+                                <p>Phone     : <a href="tel:+971-50-79-89-121">+971 50 79 89 121</a></p>
+                                <p>E-mail    : <a href="mailto:info@cherylppinto.com">info@cherylppinto.com</a></p>
                                 <p>Website   : www.cherylppinto.com</p>
                             </div>
                             <div class="contact-details">

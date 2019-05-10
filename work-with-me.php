@@ -1,31 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Cheryl P Pinto</title>
-        <?php $page = 'work-with-us'; ?>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="Zeta Template Project">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-        <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-        <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-        <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-        <link rel="icon" href="images/fav-logo.png" type="image/gif" sizes="16x16">
-        <link href="styles/common.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/slider-1.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/infinite-slider.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/media-query.css" rel="stylesheet" type="text/css"/>
-    </head>
+    <?php include 'head.php';
+    $page = 'work-with-us'; ?>
     <body>
         <div class="super_container">
             <!-- Header -->
             <?php include 'menu.php'; ?>
             <!-- Menu -->
-            <?php include 'mobile-menu.php'; ?>
+<?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
             <div class="sub-bg prlx_parent">
 
@@ -97,7 +79,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
-                            <h2>Type Of Coaching</h2>
+                            <h2>Coaching Titles</h2>
                         </div>
                     </div>
                     <div class="row">
@@ -224,28 +206,14 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <table class="table-1">
-                                <thead>
-                                    <tr>
-                                        <th>WHAT YOU WANT</th>
-                                        <th>NO. OF SESSIONS</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Change in one area of life. A choice. A development decision.</td>
-                                        <td>3 sessions</td>
-                                    </tr>
-                                    <tr>
-                                        <td>A relatively large change spanning a couple of life areas. A difficult decision</td>
-                                        <td>6 sessions</td>
-                                    </tr>
-                                    <tr>
-                                        <td>A life transformation, a shift. A dramatic revamp. <br/>A change that requires sustained, long-term implementation.</td>
-                                        <td>10 sessions</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
+                                <h2>WHAT YOU WANT</h2>
+                            </div>
+                            <ul class="list-1">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Change in one area of life. A choice. A development decision. - 3 sessions</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>A relatively large change spanning a couple of life areas. A difficult decision - 6 sessions</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>A life transformation, a shift. A dramatic revamp. A change that requires sustained, long-term implementation. - 10 sessions </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -303,6 +271,6 @@
                 </div>
             </div>
             <!-- Footer -->
-            <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
     </body>
 </html>
