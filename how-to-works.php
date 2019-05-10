@@ -14,7 +14,7 @@
                 <div class="home_background prlx" style="background-image:url(images/blog_background.jpg)"></div>
                 <div class="services_page_shapes">
                     <video style="height:100%;float: right;" autoplay>
-                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
+                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                         Your browser does not support the <code>video</code> tag.
                     </video>
                 </div>
@@ -63,9 +63,9 @@
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Coaching can help with virtually any aspect of someone’s life, whether it is in their personal or professional life.</li>
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">The coaching process takes on specific projects or personal goals by:</li>
                                     <ul class="sub-list">
-                                        <i class="fa fa-circle" aria-hidden="true"></i><li>analyzing the current situation</li>
-                                        <i class="fa fa-circle" aria-hidden="true"></i><li>identifying existing and potential challenges and</li>
-                                        <i class="fa fa-circle" aria-hidden="true"></i><li>devising a plan of action designed to achieve the desired outcome.</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>analyzing the current situation</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>identifying existing and potential challenges and</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>devising a plan of action designed to achieve the desired outcome.</li>
                                     </ul>
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Certified coaches, through their specific strategies and skills, help their clients think clearly and hence arrive at solutions that they are otherwise unable to see on their own. With the careful guidance of a coach, you can see the situation from a new perspective, which brings new answers and solutions. This is the key value that a coach brings.</li>
                                 </ul>
@@ -110,32 +110,7 @@
                     </div>
                 </div>
             </div>
-            <section class="pad-50 bg-b">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/bg/cheryl-05.jpg" alt="" class="sub-img">
-                        </div>
-                        <div class="col-lg-9 subscribe">
-                            <h2 class="color-w">JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</h2>
-                            <h4>Stay updated with articles, tools, updates from me.</h4>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <input type='text' name='name' placeholder="Your Name..." class="input-box">
-                                </div>
-                                <div class="col-lg-4">
-                                    <input type='email' name='email' placeholder="Your Email..." class="input-box">
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <button type="submit" class="button-2"><span>Submit</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
+            <?php include 'join-our-community.php'; ?>
 
             <div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
                 <!-- <div class="contact_background parallax-window" data-parallax="scroll" data-speed="0.7" data-image-src="images/contact_background.jpg"></div> -->

@@ -141,6 +141,9 @@
 
                 </div>
             </div>
+            
+            <?php include 'join-our-community.php'; ?>
+            
             <div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
                 <!-- <div class="contact_background parallax-window" data-parallax="scroll" data-speed="0.7" data-image-src="images/contact_background.jpg"></div> -->
                 <div class=" prlx bg-enquiry"></div>
