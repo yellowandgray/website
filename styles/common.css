@@ -85,7 +85,7 @@ input::placeholder {
     font-size: 15px !important;
 }
 .features {
-    padding: 100px 0 50px;
+    padding: 45px 0 50px;
 }
 
 .box {
@@ -1253,4 +1253,10 @@ audio {
 }
 .height-435{
     height: 435px !important;
+}
+.coach-box {
+    box-shadow: -1px 4px 15px 11px #eee;
+    padding: 20px;
+    height: 400px;
+    margin-bottom: 20px;
 }
