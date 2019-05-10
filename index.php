@@ -180,7 +180,7 @@
                                 <img src="images/slider/001.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-4 d-flex flex-column">
+                                <div class="icon_container coach-box d-flex flex-column">
                                     <h3 class="text-center">Financial Freedom</h3>
                                     <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
@@ -200,7 +200,7 @@
                                 <img src="images/slider/002.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-4 d-flex flex-column">
+                                <div class="icon_container coach-box d-flex flex-column">
                                     <h3 class="text-center">Time Management</h3>
                                     <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
@@ -220,7 +220,7 @@
                                 <img src="images/slider/003.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-4 d-flex flex-column">
+                                <div class="icon_container coach-box d-flex flex-column">
                                     <h3 class="text-center">Career Progress</h3>
                                     <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
@@ -243,7 +243,7 @@
                                 <img src="images/slider/004.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-4 d-flex flex-column">
+                                <div class="icon_container coach-box d-flex flex-column">
                                     <h3 class="text-center">Trader Coach</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/fQUfIgLCAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -262,7 +262,7 @@
                                 <img src="images/slider/005.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-4 d-flex flex-column">
+                                <div class="icon_container coach-box d-flex flex-column">
                                     <h3 class="text-center">Transformational Change</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/u7NntUPBdkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -281,7 +281,7 @@
                                 <img src="images/slider/006.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-4 d-flex flex-column">
+                                <div class="icon_container coach-box d-flex flex-column">
                                     <h3 class="text-center">Super Women</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/QwooUQ-oAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -642,7 +642,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title contact_title">
-                            <h2>let's work together</h2>
+                            <h2 class="color-w">let's work together</h2>
                         </div>
                     </div>
                     <div class="row">

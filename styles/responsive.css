@@ -536,4 +536,10 @@
         margin-bottom: 30px;
     }
 }
+@media only screen and (max-width: 991px)
+{
+    .left-order {
+        order: 1 !important;
+    }
+}
 
