@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php include 'head.php';
-    $page = 'blog'; ?>
+    $page = 'blog';
+    ?>
     <body>
         <div class="super_container">
             <!-- Header -->
@@ -12,7 +13,9 @@
             <div class="sub-bg prlx_parent">
 
                 <!-- Parallax Background -->
-                <div class="home_background prlx" style="background-image:url(images/blog_background.jpg)"></div>
+                <div class="home_background prlx bg-show" style="background-image:url(images/blog_background-01.png); z-index: 9;"></div>
+                <div class="home_background prlx bg-hide-1" style="background-image:url(images/blog_background-02.png); z-index: 9;"></div>
+                <div class="home_background prlx bg-hide" style="background-image:url(images/blog_background-03.png); z-index: 9;"></div>
                 <div class="services_page_shapes">
                     <video style="height:100%;float: right;" autoplay>
                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
@@ -22,7 +25,7 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6" style="z-index: 999;">
                             <div class="home_content">
                                 <h1>Blog</h1>
                                 <span>read the news</span>
@@ -168,18 +171,18 @@
                             </div>
                         </div>				
 
-<!--                       <div class="portfolio logo1" data-cat="logo1">
-                            <div class="portfolio-wrapper">			
-                                <img src="images/blog/011.jpg" alt="" />
-                                <div class="label">
-                                    <div class="label-text">
-                                        <a class="text-title">Title</a>
-                                        <span class="text-category">Logo</span>
-                                    </div>
-                                    <div class="label-bg"></div>
-                                </div>
-                            </div>
-                        </div>																	-->
+                        <!--                       <div class="portfolio logo1" data-cat="logo1">
+                                                    <div class="portfolio-wrapper">			
+                                                        <img src="images/blog/011.jpg" alt="" />
+                                                        <div class="label">
+                                                            <div class="label-text">
+                                                                <a class="text-title">Title</a>
+                                                                <span class="text-category">Logo</span>
+                                                            </div>
+                                                            <div class="label-bg"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>																	-->
 
                         <!-- <div class="portfolio logo1" data-cat="logo1">
                             <div class="portfolio-wrapper">			
@@ -354,8 +357,8 @@
                 </div>
             </div>
 
-            <?php include 'join-our-community.php'; ?>
-            
+<?php include 'join-our-community.php'; ?>
+
             <!-- Footer -->
 <?php include 'footer.php'; ?>
             <script src="portfolio/jquery.mixitup.min.js" type="text/javascript"></script>

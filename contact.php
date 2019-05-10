@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-        <?php include 'head.php'; $page = 'contact'; ?>
+    <?php include 'head.php';
+    $page = 'contact'; ?>
     <body>
         <div class="super_container">
             <!-- Header -->
             <?php include 'menu.php'; ?>
             <!-- Menu -->
-            <?php include 'mobile-menu.php'; ?>
+<?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
             <div class="sub-bg prlx_parent">
 
                 <!-- Parallax Background -->
-                <div class="home_background prlx" style="background-image:url(images/blog_background.jpg)"></div>
+                <div class="home_background prlx bg-show" style="background-image:url(images/blog_background-01.png); z-index: 9;"></div>
+                <div class="home_background prlx bg-hide-1" style="background-image:url(images/blog_background-02.png); z-index: 9;"></div>
+                <div class="home_background prlx bg-hide" style="background-image:url(images/blog_background-03.png); z-index: 9;"></div>
                 <div class="services_page_shapes">
                     <video style="height:100%;float: right;" autoplay>
                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
@@ -21,7 +24,7 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6" style="z-index: 999;">
                             <div class="home_content">
                                 <h1>Contact</h1>
                                 <span>Get in touch me</span>
@@ -74,6 +77,6 @@
 
             <?php include 'join-our-community.php'; ?>
             <!-- Footer -->
-            <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
     </body>
 </html>
