@@ -542,4 +542,30 @@
         order: 1 !important;
     }
 }
+@media only screen and (max-width: 991px)
+{
+    .bg-show {
+        display: none !important;
+
+    }
+    .bg-hide {
+        display: block !important;
+
+    }
+    .bg-hide-1 {
+        display: none !important;
+
+    }
+}
+@media (min-width: 992px) and (max-width: 1210px)
+{
+    .bg-show {
+        display: none !important;
+
+    }
+    .bg-hide-1 {
+        display: block !important;
+
+    }
+}
 

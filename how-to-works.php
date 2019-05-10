@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-        <?php include 'head.php'; $page = 'how-work'; ?>
+    <?php include 'head.php';
+    $page = 'how-work'; ?>
     <body>
         <div class="super_container">
             <!-- Header -->
             <?php include 'menu.php'; ?>
             <!-- Menu -->
-            <?php include 'mobile-menu.php'; ?>
+<?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
             <div class="sub-bg prlx_parent">
 
                 <!-- Parallax Background -->
-                <div class="home_background prlx" style="background-image:url(images/blog_background.jpg)"></div>
+                <div class="home_background prlx bg-show" style="background-image:url(images/blog_background-01.png); z-index: 9;"></div>
+                <div class="home_background prlx bg-hide-1" style="background-image:url(images/blog_background-02.png); z-index: 9;"></div>
+                <div class="home_background prlx bg-hide" style="background-image:url(images/blog_background-03.png); z-index: 9;"></div>
                 <div class="services_page_shapes">
                     <video style="height:100%;float: right;" autoplay>
                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
@@ -21,7 +24,7 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 wow fadeInleft">
+                        <div class="col-lg-6" style="z-index: 999;">
                             <div class="home_content">
                                 <h1>How it Works</h1>
                                 <span>Sub Title Comes Here</span>
@@ -110,34 +113,11 @@
                     </div>
                 </div>
             </div>
-            <?php include 'join-our-community.php'; ?>
+<?php include 'join-our-community.php'; ?>
 
-            <div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
-                <!-- <div class="contact_background parallax-window" data-parallax="scroll" data-speed="0.7" data-image-src="images/contact_background.jpg"></div> -->
-                <div class=" prlx bg-enquiry"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title contact_title">
-                            <h2 class="color-w">let's work together</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <form class="text-bg">
-                                <h2>Contact us</h2>
-                                <input type="text" name="fname" placeholder="Name" required > 
-                                <input type="email" name="email" placeholder="Email Address" required>
-                                <input type="text" name="phone" placeholder="Phone Number" required> 
-                                <input type="text" name="subject" placeholder="subject" required>
-                                <textarea type="text" name="requirement" placeholder="Requirement" class="req" required></textarea>
-                                <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <?php include 'contact-page.php'; ?>
             <!-- Footer -->
-            <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
             <script>
                 $(function () {
                     var selectedClass = "";
