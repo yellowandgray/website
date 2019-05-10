@@ -1260,3 +1260,15 @@ audio {
     height: 400px;
     margin-bottom: 20px;
 }
+
+.popup-content {
+    width: 100%;
+    padding: 100px 0;
+    background: #eaeaea;
+    background: url(../images/bg/fixed-bg.jpg)no-repeat;
+    background-attachment: fixed;
+}
+
+.popup-content button {
+    padding: 20px 25px;
+}

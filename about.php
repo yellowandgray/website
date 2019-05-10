@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head.php';
+    <?php
+    include 'head.php';
     $page = 'about';
     ?>
     <body>
@@ -8,7 +9,7 @@
             <!-- Header -->
             <?php include 'menu.php'; ?>
             <!-- Menu -->
-<?php include 'mobile-menu.php'; ?>
+            <?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
             <div class="sub-bg prlx_parent">
 
@@ -58,43 +59,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="features">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 text-center section_title">
-                                <h2>WOULD THIS BLOG/ FOLLOWING ME BE OF VALUE TO YOU?</h2>
-                            </div>
-                        </div>
-                        <div class="row margin-t-22">
-                            <div class="col-lg-6">
-                                <h4><strong>Only if you have any of the following thoughts/ questions:</strong></h4>
-                                <ul class="list-1">
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li>I have no idea where my money goes. I always have nothing left over at the end of the month.</li>
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li>I am beginning my career and wish I had someone to guide me on the dos & don’ts.</li>
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li>How do I progress in my career</li>
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Is there somewhere I could go to gain some reliable information on traveling to (insert country you wish to travel to)?</li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <ul class="list-1">
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li>I wish I could communicate more effectively.</li>
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li>How can I overcome my fears and follow my dreams?</li>
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li>How do I stop existing and start living?</li>
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li>I want to leave the world a better place because I came this way. How do I do this?</li>
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Is there a purpose to my life? How do I find it?</li>
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li>I wish I had more time to (insert your hobby/ interest you wish to pursue).</li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
             </div>
-
-<?php include 'join-our-community.php'; ?>
-
-            <div class="pad-20 bg-p">
+            <div class="popup-content">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 text-center">
@@ -106,6 +72,42 @@
                     </div>
                 </div>
             </div>
+            <div class="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center section_title">
+                            <h2>WOULD THIS BLOG/ FOLLOWING ME BE OF VALUE TO YOU?</h2>
+                        </div>
+                    </div>
+                    <div class="row margin-t-22">
+                        <div class="col-lg-6">
+                            <h4><strong>Only if you have any of the following thoughts/ questions:</strong></h4>
+                            <ul class="list-1">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>I have no idea where my money goes. I always have nothing left over at the end of the month.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>I am beginning my career and wish I had someone to guide me on the dos & don’ts.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>How do I progress in my career</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Is there somewhere I could go to gain some reliable information on traveling to (insert country you wish to travel to)?</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="list-1">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>I wish I could communicate more effectively.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>How can I overcome my fears and follow my dreams?</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>How do I stop existing and start living?</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>I want to leave the world a better place because I came this way. How do I do this?</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Is there a purpose to my life? How do I find it?</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>I wish I had more time to (insert your hobby/ interest you wish to pursue).</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <?php include 'join-our-community.php'; ?>
+
             <div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
                 <!-- <div class="contact_background parallax-window" data-parallax="scroll" data-speed="0.7" data-image-src="images/contact_background.jpg"></div> -->
                 <div class=" prlx bg-enquiry"></div>
@@ -132,7 +134,8 @@
             </div>
             <!-- Footer -->
             <?php include 'footer.php'; ?>
-            <?php include 'join-page.php'; ?>
-<?php include '30-minute-free.php'; ?>
+        </div>
+        <?php include 'join-page.php'; ?>
+        <?php include '30-minute-free.php'; ?>
     </body>
 </html>
