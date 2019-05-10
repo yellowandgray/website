@@ -1498,7 +1498,7 @@ button.close {
     text-align: justify;
 }
 
-.table-1 {
+/*.table-1 {
     border-collapse: collapse;
     width: 100%;
     background: #fff;
@@ -1515,7 +1515,7 @@ button.close {
 
 .table-1 tr:hover {
     background: #eee;
-}
+}*/
 
 .mega-menu-md-12 span a {
     font-size: 12px;

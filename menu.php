@@ -8,9 +8,15 @@
     <!-- Main Navigation -->
     <nav class="main_nav justify-self-end">
         <ul class="nav_items">
-            <li><a href="how-to-works.php"><span>How it Work</span></a></li>
-            <li><a href="resources.php"><span>Resources</span></a></li>
-            <li class="dropdown"><a href="#"><span>Work With me</span></a>
+            <li class="<?php if ($page == 'how-work') {
+    echo 'active';
+} ?>"><a href="how-to-works.php"><span>How it Works</span></a></li>
+            <li class="<?php if ($page == 'resources') {
+    echo 'active';
+} ?>"><a href="resources.php"><span>Resources</span></a></li>
+            <li class="<?php if ($page == 'work-with-us') {
+    echo 'active';
+} ?> dropdown"><a href="work-with-me.php"><span>Work With me</span></a>
                 <div class="dropdown-content" style="background: url(images/mega-bg.jpg)">
                     <div class="row">
                         <div class="col-md-6">
@@ -35,10 +41,12 @@
                     </div>
                 </div>
             </li>
-            <li><a href="testimonials.php"><span>Testimonials</span></a></li>
-            <li><a href="about.php"><span>About Cheryl</span></a></li>
-            <li><a href="blog.php"><span>Blogs</span></a></li>
-            <li><a href="contact.php"><span>Contact</span></a></li>
+            <li class="<?php if ($page == 'testimonials') {
+    echo 'active';
+} ?>"><a href="testimonials.php"><span>Testimonials</span></a></li>
+            <li class="<?php if ($page == 'about') {echo 'active';} ?>"><a href="about.php"><span>About Cheryl</span></a></li>
+            <li class="<?php if ($page == 'blog') {echo 'active';} ?>"><a href="blog.php"><span>Blogs</span></a></li>
+            <li class="<?php if ($page == 'contact') {echo 'active';} ?>"><a href="contact.php"><span>Contact</span></a></li>
         </ul>
     </nav>
     <!-- Hamburger -->

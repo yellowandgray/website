@@ -69,12 +69,13 @@ html {
     text-decoration:none;
     color:#666;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 #filters li span.active {
-    background: #00659c;
+    background: #9c20b3;
     color:#fff;
+    border-radius: 4px;
 }
 
 

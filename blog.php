@@ -1,27 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Cheryl P Pinto</title>
-        <?php $page = 'home'; ?>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="Zeta Template Project">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-        <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-        <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-        <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-        <link rel="icon" href="images/fav-logo.png" type="image/gif" sizes="16x16">
-        <link href="styles/common.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/slider-1.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/infinite-slider.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/media-query.css" rel="stylesheet" type="text/css"/>
-        <link href="portfolio/layout.css" rel="stylesheet" type="text/css"/>
-        <link href="portfolio/normalize.css" rel="stylesheet" type="text/css"/>
-    </head>
+    <?php include 'head.php'; $page = 'blog'; ?>
     <body>
         <div class="super_container">
             <!-- Header -->
@@ -227,148 +206,148 @@
                             </div>
                         </div>							
 
-<!--                        <div class="portfolio icon" data-cat="icon">
-                            <div class="portfolio-wrapper">						
-                                <img src="images/blog/014.jpg" alt="" />
-                                <div class="label">
-                                    <div class="label-text">
-                                        <a class="text-title">Title</a>
-                                        <span class="text-category">Web design</span>
-                                    </div>
-                                    <div class="label-bg"></div>
-                                </div>
-                            </div>
-                        </div>																								
-
-                        <div class="portfolio icon" data-cat="icon">
-                            <div class="portfolio-wrapper">			
-                                <img src="images/blog/015.jpg" alt="" />
-                                <div class="label">
-                                    <div class="label-text">
-                                        <a class="text-title">Title</a>
-                                        <span class="text-category">Icon</span>
-                                    </div>
-                                    <div class="label-bg"></div>
-                                </div>
-                            </div>
-                        </div>				
-
-                        <div class="portfolio logo1" data-cat="logo1">
-                            <div class="portfolio-wrapper">						
-                                <img src="images/blog/016.jpg" alt="" />
-                                <div class="label">
-                                    <div class="label-text">
-                                        <a class="text-title">Title</a>
-                                        <span class="text-category">Web design</span>
-                                    </div>
-                                    <div class="label-bg"></div>
-                                </div>
-                            </div>
-                        </div>																	
-
-                        <div class="portfolio icon" data-cat="icon">
-                            <div class="portfolio-wrapper">
-                                <img src="images/blog/017.jpg" alt="" />
-                                <div class="label">
-                                    <div class="label-text">
-                                        <a class="text-title">Title</a>
-                                        <span class="text-category">Icon</span>
-                                    </div>
-                                    <div class="label-bg"></div>
-                                </div>
-                            </div>
-                        </div>																																																																
-
-                        <div class="portfolio icon" data-cat="icon">
-                            <div class="portfolio-wrapper">						
-                                <img src="images/blog/018.jpg" alt="" />
-                                <div class="label">
-                                    <div class="label-text">
-                                        <a class="text-title">Title</a>
-                                        <span class="text-category">Icon</span>
-                                    </div>
-                                    <div class="label-bg"></div>
-                                </div>
-                            </div>
-                        </div>			
-
-                        <div class="portfolio app" data-cat="app">
-                            <div class="portfolio-wrapper">						
-                                <img src="images/blog/019.jpg" alt="" />
-                                <div class="label">
-                                    <div class="label-text">
-                                        <a class="text-title">Title</a>
-                                        <span class="text-category">Web design</span>
-                                    </div>
-                                    <div class="label-bg"></div>
-                                </div>
-                            </div>
-                        </div>									
-
-                        <div class="portfolio logo1" data-cat="logo1">
-                            <div class="portfolio-wrapper">			
-                                <img src="images/blog/020.jpg" alt="" />
-                                <div class="label">
-                                    <div class="label-text">
-                                        <a class="text-title">Title</a>
-                                        <span class="text-category">Logo</span>
-                                    </div>
-                                    <div class="label-bg"></div>
-                                </div>
-                            </div>
-                        </div>																	
-
-                        <div class="portfolio logo1" data-cat="logo1">
-                            <div class="portfolio-wrapper">			
-                                <img src="images/blog/021.jpg" alt="" />
-                                <div class="label">
-                                    <div class="label-text">
-                                        <a class="text-title">Title</a>
-                                        <span class="text-category">Logo</span>
-                                    </div>
-                                    <div class="label-bg"></div>
-                                </div>
-                            </div>
-                        </div>																												
-
-                        <div class="portfolio icon" data-cat="icon">
-                            <div class="portfolio-wrapper">			
-                                <img src="images/blog/022.jpg" alt="" />
-                                <div class="label">
-                                    <div class="label-text">
-                                        <a class="text-title">Title</a>
-                                        <span class="text-category">Icon</span>
-                                    </div>
-                                    <div class="label-bg"></div>
-                                </div>
-                            </div>
-                        </div>																								
-
-                        <div class="portfolio card" data-cat="card">
-                            <div class="portfolio-wrapper">			
-                                <img src="images/blog/023.jpg" alt="" />
-                                <div class="label">
-                                    <div class="label-text">
-                                        <a class="text-title">Title</a>
-                                        <span class="text-category">Business card</span>
-                                    </div>
-                                    <div class="label-bg"></div>
-                                </div>
-                            </div>
-                        </div>	
-
-                        <div class="portfolio logo1" data-cat="logo1">
-                            <div class="portfolio-wrapper">			
-                                <img src="images/blog/024.jpg" alt="" />
-                                <div class="label">
-                                    <div class="label-text">
-                                        <a class="text-title">Title</a>
-                                        <span class="text-category">Logo</span>
-                                    </div>
-                                    <div class="label-bg"></div>
-                                </div>
-                            </div>
-                        </div>				-->
+                        <!--                        <div class="portfolio icon" data-cat="icon">
+                                                    <div class="portfolio-wrapper">						
+                                                        <img src="images/blog/014.jpg" alt="" />
+                                                        <div class="label">
+                                                            <div class="label-text">
+                                                                <a class="text-title">Title</a>
+                                                                <span class="text-category">Web design</span>
+                                                            </div>
+                                                            <div class="label-bg"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>																								
+                        
+                                                <div class="portfolio icon" data-cat="icon">
+                                                    <div class="portfolio-wrapper">			
+                                                        <img src="images/blog/015.jpg" alt="" />
+                                                        <div class="label">
+                                                            <div class="label-text">
+                                                                <a class="text-title">Title</a>
+                                                                <span class="text-category">Icon</span>
+                                                            </div>
+                                                            <div class="label-bg"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>				
+                        
+                                                <div class="portfolio logo1" data-cat="logo1">
+                                                    <div class="portfolio-wrapper">						
+                                                        <img src="images/blog/016.jpg" alt="" />
+                                                        <div class="label">
+                                                            <div class="label-text">
+                                                                <a class="text-title">Title</a>
+                                                                <span class="text-category">Web design</span>
+                                                            </div>
+                                                            <div class="label-bg"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>																	
+                        
+                                                <div class="portfolio icon" data-cat="icon">
+                                                    <div class="portfolio-wrapper">
+                                                        <img src="images/blog/017.jpg" alt="" />
+                                                        <div class="label">
+                                                            <div class="label-text">
+                                                                <a class="text-title">Title</a>
+                                                                <span class="text-category">Icon</span>
+                                                            </div>
+                                                            <div class="label-bg"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>																																																																
+                        
+                                                <div class="portfolio icon" data-cat="icon">
+                                                    <div class="portfolio-wrapper">						
+                                                        <img src="images/blog/018.jpg" alt="" />
+                                                        <div class="label">
+                                                            <div class="label-text">
+                                                                <a class="text-title">Title</a>
+                                                                <span class="text-category">Icon</span>
+                                                            </div>
+                                                            <div class="label-bg"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>			
+                        
+                                                <div class="portfolio app" data-cat="app">
+                                                    <div class="portfolio-wrapper">						
+                                                        <img src="images/blog/019.jpg" alt="" />
+                                                        <div class="label">
+                                                            <div class="label-text">
+                                                                <a class="text-title">Title</a>
+                                                                <span class="text-category">Web design</span>
+                                                            </div>
+                                                            <div class="label-bg"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>									
+                        
+                                                <div class="portfolio logo1" data-cat="logo1">
+                                                    <div class="portfolio-wrapper">			
+                                                        <img src="images/blog/020.jpg" alt="" />
+                                                        <div class="label">
+                                                            <div class="label-text">
+                                                                <a class="text-title">Title</a>
+                                                                <span class="text-category">Logo</span>
+                                                            </div>
+                                                            <div class="label-bg"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>																	
+                        
+                                                <div class="portfolio logo1" data-cat="logo1">
+                                                    <div class="portfolio-wrapper">			
+                                                        <img src="images/blog/021.jpg" alt="" />
+                                                        <div class="label">
+                                                            <div class="label-text">
+                                                                <a class="text-title">Title</a>
+                                                                <span class="text-category">Logo</span>
+                                                            </div>
+                                                            <div class="label-bg"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>																												
+                        
+                                                <div class="portfolio icon" data-cat="icon">
+                                                    <div class="portfolio-wrapper">			
+                                                        <img src="images/blog/022.jpg" alt="" />
+                                                        <div class="label">
+                                                            <div class="label-text">
+                                                                <a class="text-title">Title</a>
+                                                                <span class="text-category">Icon</span>
+                                                            </div>
+                                                            <div class="label-bg"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>																								
+                        
+                                                <div class="portfolio card" data-cat="card">
+                                                    <div class="portfolio-wrapper">			
+                                                        <img src="images/blog/023.jpg" alt="" />
+                                                        <div class="label">
+                                                            <div class="label-text">
+                                                                <a class="text-title">Title</a>
+                                                                <span class="text-category">Business card</span>
+                                                            </div>
+                                                            <div class="label-bg"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>	
+                        
+                                                <div class="portfolio logo1" data-cat="logo1">
+                                                    <div class="portfolio-wrapper">			
+                                                        <img src="images/blog/024.jpg" alt="" />
+                                                        <div class="label">
+                                                            <div class="label-text">
+                                                                <a class="text-title">Title</a>
+                                                                <span class="text-category">Logo</span>
+                                                            </div>
+                                                            <div class="label-bg"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>				-->
 
 
                     </div>
