@@ -70,61 +70,65 @@
                     </div>
 
                 </div>
-            </div>
-            <!-- About -->
-            <!--<div class="about prlx_parent" style="background-image:url(images/main_slider_03.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">-->
-            <div class="about prlx_parent pad-50" >
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <h3 class="pad-20"><strong>HOW DOES COACHING HELP?</strong></h3>
-                            <ul class="list-1">
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Coaching can help with virtually any aspect of someone’s life, whether it is in their personal or professional life.</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">The coaching process takes on specific projects or personal goals by:</li>
-                                <ul class="sub-list">
-                                    <i class="fa fa-circle" aria-hidden="true"></i><li>analyzing the current situation</li>
-                                    <i class="fa fa-circle" aria-hidden="true"></i><li>identifying existing and potential challenges and</li>
-                                    <i class="fa fa-circle" aria-hidden="true"></i><li>devising a plan of action designed to achieve the desired outcome.</li>
-                                </ul>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Certified coaches, through their specific strategies and skills, help their clients think clearly and hence arrive at solutions that they are otherwise unable to see on their own. With the careful guidance of a coach, you can see the situation from a new perspective, which brings new answers and solutions. This is the key value that a coach brings.</li>
-                            </ul>
 
-                        </div>
-                        <div class="col-lg-4">
-                            <div>
-                                <img src="images/slider/001.png" alt="" class="img-b">
+                <!-- About -->
+                <!--<div class="about prlx_parent" style="background-image:url(images/main_slider_03.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">-->
+                <div class="about prlx_parent pad-50" >
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <h3 class="pad-20"><strong>HOW DOES COACHING HELP?</strong></h3>
+                                <ul class="list-1">
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Coaching can help with virtually any aspect of someone’s life, whether it is in their personal or professional life.</li>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">The coaching process takes on specific projects or personal goals by:</li>
+                                    <ul class="sub-list">
+                                        <i class="fa fa-circle" aria-hidden="true"></i><li>analyzing the current situation</li>
+                                        <i class="fa fa-circle" aria-hidden="true"></i><li>identifying existing and potential challenges and</li>
+                                        <i class="fa fa-circle" aria-hidden="true"></i><li>devising a plan of action designed to achieve the desired outcome.</li>
+                                    </ul>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Certified coaches, through their specific strategies and skills, help their clients think clearly and hence arrive at solutions that they are otherwise unable to see on their own. With the careful guidance of a coach, you can see the situation from a new perspective, which brings new answers and solutions. This is the key value that a coach brings.</li>
+                                </ul>
+
                             </div>
-                            <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container box-4 d-flex flex-column">
-                                    <h3 class="text-center">Financial Freedom</h3>
-                                    <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
-                                        Your browser does not support the <code>video</code> tag.
-                                    </video>
-                                    <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income...</p>
-                                    <div class="text-center arrow-1">
-                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                            <div class="col-lg-4">
+                                <div>
+                                    <img src="images/slider/001.png" alt="" class="img-b">
+                                </div>
+                                <div class="features_item  d-flex flex-column align-items-center ">
+                                    <div class="icon_container box-4 height-435 d-flex flex-column">
+                                        <h3 class="text-center">Financial Freedom</h3>
+                                        <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                            <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
+                                            Your browser does not support the <code>video</code> tag.
+                                        </video>
+                                        <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income...</p>
+                                        <div class="text-center arrow-1">
+                                            <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h3 class="pad-20"><strong>WHY WORK WITH A LIFE COACH?</strong></h3>
-                            <ul class="list-1">
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">People hire a life coach because they want to do even more tomorrow than they can do today.</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">They want to improve their output and see more growth, and they want to do those things quickly and to the best of their ability.</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">These people all identify a gap between where they are and where they want to be, and want help reaching their goals.</li>
-                            </ul>
-                            <h3 class="pad-20"><strong>WHY WOULD YOU WORK WITH A LIFE COACH?</strong></h3>
-                            <p class="text-justify">People hire a life coach because they want to do even more tomorrow than they can do today. They want to improve their output and see more growth, and they want to do those things quickly and to the best of their ability.</p>
-                            <p class="text-justify">All kinds of people use life coaches,including actors, business leaders, creatives, entrepreneurs, executives, home-makers, managers, professionals, small business owners and start-up owners. These people all identify a gap between where they are and where they want to be, and want help reaching their goals.</p>
+                </div>
+                <div class=" prlx_parent" >
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h3 class="pad-20"><strong>WHY WORK WITH A LIFE COACH?</strong></h3>
+                                <ul class="list-1">
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">People hire a life coach because they want to do even more tomorrow than they can do today.</li>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">They want to improve their output and see more growth, and they want to do those things quickly and to the best of their ability.</li>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">These people all identify a gap between where they are and where they want to be, and want help reaching their goals.</li>
+                                </ul>
+                                <h3 class="pad-20"><strong>WHY WOULD YOU WORK WITH A LIFE COACH?</strong></h3>
+                                <p class="text-justify">People hire a life coach because they want to do even more tomorrow than they can do today. They want to improve their output and see more growth, and they want to do those things quickly and to the best of their ability.</p>
+                                <p class="text-justify">All kinds of people use life coaches,including actors, business leaders, creatives, entrepreneurs, executives, home-makers, managers, professionals, small business owners and start-up owners. These people all identify a gap between where they are and where they want to be, and want help reaching their goals.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <section class="pad-50 bg-b">
                 <div class="container">
                     <div class="row">
