@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head.php'; $page = 'blog'; ?>
+    <?php include 'head.php';
+    $page = 'blog'; ?>
     <body>
         <div class="super_container">
             <!-- Header -->
             <?php include 'menu.php'; ?>
             <!-- Menu -->
-            <?php include 'mobile-menu.php'; ?>
+<?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
             <div class="sub-bg prlx_parent">
 
@@ -14,7 +15,7 @@
                 <div class="home_background prlx" style="background-image:url(images/blog_background.jpg)"></div>
                 <div class="services_page_shapes">
                     <video style="height:100%;float: right;" autoplay>
-                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
+                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
                         Your browser does not support the <code>video</code> tag.
                     </video>
                 </div>
@@ -153,13 +154,13 @@
                             </div>
                         </div>
 
-                        <div class="portfolio app" data-cat="app">
+                        <div class="portfolio logo1" data-cat="logo1">
                             <div class="portfolio-wrapper">			
                                 <img src="images/blog/015.jpg" alt="" />
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-                                        <span class="text-category">Business card</span>
+<!--                                        <span class="text-category">Business card</span>-->
                                          <!--<span class="text-category">Logo</span>-->
                                     </div>
                                     <div class="label-bg"></div>
@@ -167,26 +168,26 @@
                             </div>
                         </div>				
 
-                        <div class="portfolio logo1" data-cat="logo1">
+<!--                       <div class="portfolio logo1" data-cat="logo1">
                             <div class="portfolio-wrapper">			
                                 <img src="images/blog/011.jpg" alt="" />
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-                                        <!--<span class="text-category">Logo</span>-->
+                                        <span class="text-category">Logo</span>
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
                             </div>
-                        </div>																	
+                        </div>																	-->
 
-                        <div class="portfolio logo1" data-cat="logo1">
+                        <!-- <div class="portfolio logo1" data-cat="logo1">
                             <div class="portfolio-wrapper">			
                                 <img src="images/blog/012.jpg" alt="" />
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-                                        <!--<span class="text-category">Logo</span>-->
+                                        <span class="text-category">Logo</span>
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
@@ -199,12 +200,12 @@
                                 <div class="label">
                                     <div class="label-text">
                                         <a class="text-title">Title</a>
-                                        <!--<span class="text-category">Icon</span>-->
+                                        <span class="text-category">Icon</span>
                                     </div>
                                     <div class="label-bg"></div>
                                 </div>
                             </div>
-                        </div>							
+                        </div>							-->
 
                         <!--                        <div class="portfolio icon" data-cat="icon">
                                                     <div class="portfolio-wrapper">						
@@ -349,39 +350,14 @@
                                                     </div>
                                                 </div>				-->
 
-
                     </div>
                 </div>
             </div>
 
-            <section class="pad-50 bg-b">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img src="images/bg/cheryl-05.jpg" alt="" class="sub-img">
-                        </div>
-                        <div class="col-lg-9 subscribe">
-                            <h2 class="color-w">JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</h2>
-                            <h4>Stay updated with articles, tools, updates from me.</h4>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <input type='text' name='name' placeholder="Your Name..." class="input-box">
-                                </div>
-                                <div class="col-lg-4">
-                                    <input type='email' name='email' placeholder="Your Email..." class="input-box">
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <button type="submit" class="button-2"><span>Submit</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
+            <?php include 'join-our-community.php'; ?>
+            
             <!-- Footer -->
-            <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
             <script src="portfolio/jquery.mixitup.min.js" type="text/javascript"></script>
             <script type="text/javascript">
                 $(function () {

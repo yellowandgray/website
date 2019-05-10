@@ -1171,7 +1171,7 @@ p:hover {
 }
 .sub-list  i {
     color: #9c20b3;
-    font-size: 8px;
+    font-size: 12px;
 }
 
 .box-7 img {
@@ -1259,4 +1259,16 @@ audio {
     padding: 20px;
     height: 400px;
     margin-bottom: 20px;
+}
+
+.popup-content {
+    width: 100%;
+    padding: 100px 0;
+    background: #eaeaea;
+    background: url(../images/bg/fixed-bg.jpg)no-repeat;
+    background-attachment: fixed;
+}
+
+.popup-content button {
+    padding: 20px 25px;
 }
