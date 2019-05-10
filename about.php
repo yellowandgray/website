@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-        <?php include 'head.php'; $page = 'about'; ?>
+    <?php include 'head.php';
+    $page = 'about'; ?>
     <body>
         <div class="super_container">
             <!-- Header -->
             <?php include 'menu.php'; ?>
             <!-- Menu -->
-            <?php include 'mobile-menu.php'; ?>
+<?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
             <div class="sub-bg prlx_parent">
 
                 <!-- Parallax Background -->
-                <div class="home_background prlx" style="background-image:url(images/blog_background.jpg)"></div>
+                <div class="home_background prlx bg-show" style="background-image:url(images/blog_background-01.png); z-index: 9;"></div>
+                <div class="home_background prlx  bg-hide" style="background-image:url(images/blog_background-02.png); z-index: 9;"></div>
                 <div class="services_page_shapes">
                     <video style="height:100%;float: right;" autoplay>
                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
@@ -21,7 +23,7 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6" style="z-index: 99;">
                             <div class="home_content">
                                 <h1>About Me</h1>
                                 <span>A Little Bit About Me</span>
@@ -89,72 +91,72 @@
 
                 </div>
             </div>
-                <section class="pad-50 bg-b">
+            <section class="pad-50 bg-b">
 
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <img src="images/bg/cheryl-05.jpg" alt="" class="sub-img">
-                            </div>
-                            <div class="col-lg-9 subscribe">
-                                <h2 class="color-w">JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</h2>
-                                <h4>Stay updated with articles, tools, updates from me.</h4>
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <input type='text' name='name' placeholder="Your Name..." class="input-box">
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <input type='email' name='email' placeholder="Your Email..." class="input-box">
-                                    </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="images/bg/cheryl-05.jpg" alt="" class="sub-img">
+                        </div>
+                        <div class="col-lg-9 subscribe">
+                            <h2 class="color-w">JOIN OUR COMMUNITY OF DREAMERS, ACHIEVERS & CREATORS</h2>
+                            <h4>Stay updated with articles, tools, updates from me.</h4>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <input type='text' name='name' placeholder="Your Name..." class="input-box">
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type='email' name='email' placeholder="Your Email..." class="input-box">
+                                </div>
 
-                                    <div class="col-lg-4">
-                                        <button type="submit" class="button-2"><span>Submit</span></button>
-                                    </div>
+                                <div class="col-lg-4">
+                                    <button type="submit" class="button-2"><span>Submit</span></button>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                    </div>
-                </section>
-                <div class="pad-20 bg-p">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 text-center">
-                                <button class="button-1" id="myBtn-1"><span>Join The Community</span></button>
-                            </div>
-                            <div class="col-lg-6 text-center">
-                                <button class="button-1" id="myBtn"><span>Book a 30-minute FREE coaching session</span></button>
-                            </div>
+                </div>
+            </section>
+            <div class="pad-20 bg-p">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 text-center">
+                            <button class="button-1" id="myBtn-1"><span>Join The Community</span></button>
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <button class="button-1" id="myBtn"><span>Book a 30-minute FREE coaching session</span></button>
                         </div>
                     </div>
                 </div>
-                <div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
-                    <!-- <div class="contact_background parallax-window" data-parallax="scroll" data-speed="0.7" data-image-src="images/contact_background.jpg"></div> -->
-                    <div class=" prlx bg-enquiry"></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 offset-lg-3 text-center section_title contact_title">
-                                <h2 class="color-w">let's work together</h2>
-                            </div>
+            </div>
+            <div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
+                <!-- <div class="contact_background parallax-window" data-parallax="scroll" data-speed="0.7" data-image-src="images/contact_background.jpg"></div> -->
+                <div class=" prlx bg-enquiry"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-3 text-center section_title contact_title">
+                            <h2 class="color-w">let's work together</h2>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <form class="text-bg">
-                                    <h2>Contact us</h2>
-                                    <input type="text" name="fname" placeholder="Name" required > 
-                                    <input type="email" name="email" placeholder="Email Address" required>
-                                    <input type="text" name="phone" placeholder="Phone Number" required> 
-                                    <input type="text" name="subject" placeholder="subject" required>
-                                    <textarea type="text" name="requirement" placeholder="Requirement" class="req" required></textarea>
-                                    <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
-                                </form>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <form class="text-bg">
+                                <h2>Contact us</h2>
+                                <input type="text" name="fname" placeholder="Name" required > 
+                                <input type="email" name="email" placeholder="Email Address" required>
+                                <input type="text" name="phone" placeholder="Phone Number" required> 
+                                <input type="text" name="subject" placeholder="subject" required>
+                                <textarea type="text" name="requirement" placeholder="Requirement" class="req" required></textarea>
+                                <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <!-- Footer -->
-                <?php include 'footer.php'; ?>
-                <?php include 'join-page.php'; ?>
-                <?php include '30-minute-free.php'; ?>
-                </body>
-                </html>
+            </div>
+            <!-- Footer -->
+            <?php include 'footer.php'; ?>
+            <?php include 'join-page.php'; ?>
+<?php include '30-minute-free.php'; ?>
+    </body>
+</html>

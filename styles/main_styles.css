@@ -461,7 +461,7 @@ section
     display: inline-block;
     width: 22px;
     height: 3px;
-    background: #171717;
+    background: #ffffff;
     margin-bottom: 4px;
 }
 .hamburger_icon::before,
@@ -472,7 +472,7 @@ section
     left: 0;
     width: 22px;
     height: 3px;
-    background: #171717;
+    background: #ffffff;
     content: '';
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
