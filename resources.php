@@ -131,7 +131,7 @@
                                     <div class="features_item  d-flex flex-column align-items-center ">
                                         <div class="icon_container box-4 d-flex flex-column">
                                             <h3 class="text-center">Title Text Here</h3>
-                                            <video class=" video-res features_item d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="auto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                            <video class="video-res features_item d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="auto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                                 <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                                                 Your browser does not support the <code>video</code> tag.
                                             </video>

@@ -18,4 +18,5 @@
     <link href="styles/media-query.css" rel="stylesheet" type="text/css"/>
     <link href="portfolio/layout.css" rel="stylesheet" type="text/css"/>
     <link href="portfolio/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/animate.css" rel="stylesheet" type="text/css"/>
 </head>

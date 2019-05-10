@@ -42,7 +42,7 @@
                                             <!--<h1>a <span>modern</span> website?</h1>-->
                                             <p>Inspire. Empower. Transform… My mantra.</p>
                                             <div class="button discover_button">
-                                                <a href="#" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
+                                                <a href="about.php" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -60,7 +60,7 @@
                                             <h1><span>Unquenchable thirst for education and learning</span></h1>
                                             <p>I am a certified NLP Master Practitioner and an Advanced Life Coach.</p>
                                             <div class="button discover_button">
-                                                <a href="#" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
+                                                <a href="about.php" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -78,7 +78,7 @@
                                             <h1><span>Leaders taught me that truly nothing is impossible.</span></h1>
                                             <p> I saw, first-hand, what a powerful vision, belief and perseverance can do.</p>
                                             <div class="button discover_button">
-                                                <a href="#" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
+                                                <a href="about.php" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -100,13 +100,13 @@
             <div class="features">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
+                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
                             <h2>My Specialisation Coaching</h2>
                         </div>
                     </div>
                     <div class="row">
                         <!-- Features Item -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 wow fadeInUp">
                             <div>
                                 <img src="images/slider/001.png" alt="" class="img-b">
                             </div>
@@ -119,14 +119,14 @@
                                     </video>
                                     <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income...</p>
                                     <div class="text-center arrow-1">
-                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                        <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 wow fadeInUp">
                             <div>
                                 <img src="images/slider/002.png" alt="" class="img-b">
                             </div>
@@ -139,14 +139,14 @@
                                     </video>
                                     <p>If you always find yourself wanting to do more, live more meaningfully, but are somehow unable to...</p>
                                     <div class="text-center arrow-1">
-                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                        <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 wow fadeInUp">
                             <div>
                                 <img src="images/slider/003.png" alt="" class="img-b">
                             </div>
@@ -159,17 +159,16 @@
                                     </video>
                                     <p>If you are in a job that does not light you up, or in a career that you once loved but now wish to change...</p>
                                     <div class="text-center arrow-1">
-                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                        <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-
                     </div>
                     <div class="row margin-top-50">
                         <!-- Features Item -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 wow fadeInUp">
                             <div>
                                 <img src="images/slider/004.png" alt="" class="img-b">
                             </div>
@@ -181,14 +180,14 @@
                                     </div>
                                     <p>If you are a trader in the financial markets and are unable to remain consistently profitable...</p>
                                     <div class="text-center arrow-1">
-                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                        <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 wow fadeInUp">
                             <div>
                                 <img src="images/slider/005.png" alt="" class="img-b">
                             </div>
@@ -200,14 +199,14 @@
                                     </div>
                                     <p>If you have found yourself at a stage where you feel like it is ‘now time’ to make a large change that is likely to impact...</p>
                                     <div class="text-center arrow-1">
-                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                        <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 wow fadeInUp">
                             <div>
                                 <img src="images/slider/006.png" alt="" class="img-b">
                             </div>
@@ -219,7 +218,7 @@
                                     </div>
                                     <p>If you are an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress...</p>
                                     <div class="text-center arrow-1">
-                                        <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                        <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -232,13 +231,13 @@
             <div class="about prlx_parent" style="background-image:url(images/main_slider_03.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title">
+                        <div class="col-lg-6 offset-lg-3 text-center section_title wow fadeInDown">
                             <h2>about me</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="text-bg">
+                            <div class="text-bg wow fadeInUp">
                                 <div class="about_text">
                                     <h3 class="color-purple">Hi! I am Cheryl.</h3>
                                     <p><span>Inspire. Empower. Transform… My mantra.</span></p>
@@ -259,10 +258,10 @@
                 <div class="pad-20 margin-top-50 bg-p">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6 text-center">
+                            <div class="col-lg-6 text-center  wow fadeInLeft">
                                 <button class="button-1" id="myBtn-1"><span>Join The Community</span></button>
                             </div>
-                            <div class="col-lg-6 text-center">
+                            <div class="col-lg-6 text-center wow fadeInRight">
                                 <button class="button-1" id="myBtn"><span>Book a 30-minute FREE coaching session</span></button>
                             </div>
                         </div>
@@ -273,12 +272,12 @@
             <div class="testimonials">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
+                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
                             <h2>testimonials</h2>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-10 offset-lg-1">
+                        <div class="col-lg-10 offset-lg-1 wow fadeInUp">
                             <div class="testimonials_container">
                                 <div class="testimonials_container_inner"></div>
                                 <!-- Testimonials Slider -->
@@ -417,10 +416,10 @@
                             </div>
                         </div>
                         <!-- Testimonials Slider Navigation -->
-                        <div class="test_slider_nav test_slider_nav_left d-flex flex-column justify-content-center align-items-center trans_200">
+                        <div class="test_slider_nav test_slider_nav_left d-flex flex-column justify-content-center align-items-center trans_200 wow fadeInLeft">
                             <i class="fas fa-chevron-left trans_200"></i>
                         </div>
-                        <div class="test_slider_nav test_slider_nav_right d-flex flex-column justify-content-center align-items-center trans_200">
+                        <div class="test_slider_nav test_slider_nav_right d-flex flex-column justify-content-center align-items-center trans_200 wow fadeInRight">
                             <i class="fas fa-chevron-right trans_200"></i>
                         </div>
                     </div>
@@ -431,15 +430,15 @@
             <div class="clients">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark">
+                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
                             <h2>What You Like to Improve?</h2>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4 box-6">
+                        <div class="col-lg-4 box-6 wow fadeInUp">
                             <img src="images/bg/cheryl-07.jpg" alt=""/>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 wow fadeInUp">
                             <div class="rio-promos">
                                 <div>
                                     <img src="images/png/chat.png" alt="" />
@@ -462,7 +461,7 @@
                                     <P>Assessment & Saving</P>
                                 </div>
                             </div>
-                            <div class="row" style="padding: 10px 0 20px;">
+                            <div class="row wow fadeInUp" style="padding: 10px 0 20px;">
                                 <div class="col-lg-4">
                                     <input type='text' name='name' placeholder="Your Name..." class="input-box">
                                 </div>

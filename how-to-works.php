@@ -21,7 +21,7 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInleft">
                             <div class="home_content">
                                 <h1>How it Works</h1>
                                 <span>Sub Title Comes Here</span>
