@@ -1236,3 +1236,6 @@ audio {
     padding: 36px 31px;
     margin-bottom: 20px
 }
+.height-435{
+    height: 435px !important;
+}

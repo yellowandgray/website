@@ -107,6 +107,7 @@
                     </div>
 
                 </div>
+            </div>
                 <section class="pad-50 bg-b">
 
                     <div class="container">

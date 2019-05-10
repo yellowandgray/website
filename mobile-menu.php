@@ -3,8 +3,8 @@
     <div class="fs_menu_shapes"><img src="images/menu_shapes.png" alt=""></div>
     <nav class="fs_menu_nav">
         <ul class="fs_menu_list">
-            <li><a href="#"><span>Blogs</span></a></li>
-            <li><a href="#"><span>Resources</span></a></li>
+            <li><a href="blog.php"><span>Blogs</span></a></li>
+            <li><a href="resources.php"><span>Resources</span></a></li>
             <li class="dropdown"><a href="#"><span>Work With me</span></a>
                 <div class="dropdown-content mega-menu" style="background: url(images/mega-bg.jpg); background-repeat: no-repeat; background-size: cover" >
                     <div class="row">
@@ -30,9 +30,9 @@
                     </div>
                 </div>
             </li>
-            <li><a href="#"><span>Testimonials</span></a></li>
-            <li><a href="#"><span>About Cheryl</span></a></li>
-            <li><a href="#"><span>Contact</span></a></li>
+            <li><a href="testimonials.php"><span>Testimonials</span></a></li>
+            <li><a href="about.php"><span>About Cheryl</span></a></li>
+            <li><a href="contact.php"><span>Contact</span></a></li>
         </ul>
     </nav>
     <!--                <div class="fs_social_container d-flex flex-row justify-content-end align-items-center">
