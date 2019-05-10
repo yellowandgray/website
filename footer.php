@@ -35,3 +35,8 @@
 <script src="plugins/easing/easing.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/silk_slider.js" type="text/javascript"></script>
+<script src="js/wow.js" type="text/javascript"></script>
+<script src="js/wow.min.js"></script>
+<script>
+          new WOW().init();
+</script>

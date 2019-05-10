@@ -1,4 +1,4 @@
-<section class="pad-50 bg-b">
+<section class="pad-50 bg-b wow fadeInUp">
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
