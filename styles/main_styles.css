@@ -1482,6 +1482,7 @@ button.close {
     -webkit-filter: drop-shadow(5px 5px 5px #222 );
     filter: drop-shadow(5px 5px 5px #222);
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .type-coaching-box {

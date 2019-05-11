@@ -9,12 +9,12 @@
             <div class="col-sm-6 text-sm-right text-center">
                 <div class="footer_social_container">
                     <ul class="footer_social">
-                        <li><a href="#"><i class="fab fa-pinterest trans_300"></i></a></li>
-                        <li><a href="#"><i class="fab fa-facebook-f trans_300"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter trans_300"></i></a></li>
-                        <li><a href="#"><i class="fab fa-dribbble trans_300"></i></a></li>
-                        <li><a href="#"><i class="fab fa-behance trans_300"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in trans_300"></i></a></li>
+                        <li><a href="https://www.facebook.com/Cherylppinto/" target="blank"><i class="fab fa-facebook-f trans_300"></i></a></li>
+                        <li><a href="https://www.instagram.com/cherylppinto/" target="blank"><i class="fab fa-instagram trans_300"></i></a></li>
+                        <li><a href="https://twitter.com/cherylppinto" target="blank"><i class="fab fa-twitter trans_300"></i></a></li>
+                        <li><a href="https://in.pinterest.com/cherylppinto/" target="blank"><i class="fab fa-pinterest trans_300"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/cherylppinto/" target="blank"><i class="fab fa-linkedin-in trans_300"></i></a></li>
+                        <li><a href="#" target="blank"><i class="fab fa-youtube trans_300"></i></a></li>
                     </ul>
                 </div>
             </div>

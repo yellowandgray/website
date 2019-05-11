@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4  audio audio-bg">
+                        <div class="col-lg-4  audio audio-bg margin-top-50">
                             <div class="pad-f-15">
                                 <div class="row">
                                     <div class="col-lg-12 text-center wow fadeInDown">
@@ -88,7 +88,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-8 audio">
+                        <div class="col-lg-8 audio margin-top-50">
                             <div class="row">
                                 <div class="col-lg-12 text-center wow fadeInDown">
                                     <h2>Video</h2>

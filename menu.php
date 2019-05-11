@@ -36,7 +36,7 @@
                     <div class="col-md-12" style="background: #00659c;">
                         <div class="mega-menu-md-12" style="padding: 20px;">
                             <h3>Want Cheryl to help you multiply your performance x25?</h3>
-                            <button type="submit" class="button-1"><span><a href="#">Start Here</a></span></button>
+                            <button type="submit" class="btn btn-primary"><a href="contact.php">Start Here</a></button>
                         </div>
                     </div>
                 </div>
