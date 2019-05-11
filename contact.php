@@ -47,11 +47,18 @@
                                 <h2 class="text-center">Contact us</h2>
                                 <hr>
                                 <p>I am here to help! I check each message and will respond to you personally.</p>
-                                <input type="text" name="fname" placeholder="Name" required > 
+                                <input type="text" name="fname" placeholder="First Name" required > 
+                                <input type="text" name="lname" placeholder="Last Name" required > 
                                 <input type="email" name="email" placeholder="Email Address" required>
                                 <input type="text" name="phone" placeholder="Phone Number" required> 
-                                <input type="text" name="subject" placeholder="subject" required>
-                                <textarea type="text" name="requirement" placeholder="Requirement" class="req" required></textarea>
+                                <label>How do you want to be contacted?</label>
+                                <select>
+                                    <option value="Email">Email</option>
+                                    <option value="Whatsapp">Whatsapp</option>
+                                </select>
+                                <br/>
+                                <textarea type="text" name="requirement" placeholder="How can I help you?" class="req" required></textarea>
+                                <textarea type="text" name="requirement" placeholder="Comment" class="req" required></textarea>
                                 <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
                             </form>
                         </div>
