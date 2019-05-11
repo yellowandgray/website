@@ -1,6 +1,6 @@
 <div class="fs_menu_overlay"></div>
-<div class="fs_menu_container fs_menu_container-1">
-    <div class="fs_menu_shapes"><img src="images/menu_shapes.png" alt=""></div>
+<div class="fs_menu_container fs_menu_container-1" style="background-image: url(images/mobile-menu-bg-01.png); background-repeat: no-repeat;width: 100%;">
+    <!--<div class="fs_menu_shapes"><img src="images/menu_shapes.png" alt=""></div>-->
     <nav class="fs_menu_nav">
         <ul class="fs_menu_list">
             <li><a href="how-to-works.php"><span>How it Works</span></a></li>
