@@ -568,4 +568,10 @@
 
     }
 }
+@media only screen and (max-width: 479px)
+{
+    .fs_menu_nav {
+        top: -22px !important;
+    }
+}
 
