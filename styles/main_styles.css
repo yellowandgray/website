@@ -423,7 +423,7 @@ section
 }
 .nav_items li.active a
 {
-    color: #40CEF6;
+    color: #9c20b3;
 }
 .nav_items li:hover
 {
@@ -432,7 +432,7 @@ section
 .nav_items li:hover a
 {
     /*    color: #40CEF6;*/
-    color: #ffffff;
+    color: #9c20b3;
 }
 
 /*********************************

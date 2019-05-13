@@ -9,7 +9,7 @@
             <!-- Header -->
             <?php include 'menu.php'; ?>
             <!-- Menu -->
-<?php include 'mobile-menu.php'; ?>
+            <?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
             <div class="sub-bg prlx_parent">
 
@@ -38,39 +38,47 @@
             <!-- Features -->
             <div class="features">
                 <div class="container">
+                    <!--                    <div class="row">
+                                            <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
+                                                <h2>Coaching Methods</h2>
+                                            </div>
+                                        </div>-->
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
-                            <h2>Coaching Methods</h2>
+                        <div class="col-lg-6 wow fadeInUp">
+                            <div class="method-coaching">
+                                <a href="#enquiry">
+                                    <h2>One to One Coaching</h2>
+                                    <img src="images/method-coaching/001.jpg" alt="" />
+                                </a>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeInUp">
+                            <div class="method-coaching">
+                                <a href="#enquiry">
+                                    <h2>Group Coaching</h2>
+                                    <img src="images/method-coaching/002.jpg" alt="" />
+                                </a>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 wow fadeInUp">
                             <div class="method-coaching">
-                                <h2>One to One Coaching</h2>
-                                <img src="images/method-coaching/001.jpg" alt="" />
+                                <a href="#enquiry">
+                                    <h2>Corporate Training</h2>
+                                    <img src="images/method-coaching/003.jpg" alt="" />
+                                </a>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                             </div>
                         </div>
                         <div class="col-lg-6 wow fadeInUp">
                             <div class="method-coaching">
-                                <h2>Group Coaching</h2>
-                                <img src="images/method-coaching/002.jpg" alt="" />
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 wow fadeInUp">
-                            <div class="method-coaching">
-                                <h2>Corporate Training</h2>
-                                <img src="images/method-coaching/003.jpg" alt="" />
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeInUp">
-                            <div class="method-coaching">
-                                <h2>Speaking Engagements</h2>
-                                <img src="images/method-coaching/004.jpg" alt="" />
+                                <a href="#enquiry">
+                                    <h2>Speaking Engagements</h2>
+                                    <img src="images/method-coaching/004.jpg" alt="" />
+                                </a>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                             </div>
                         </div>
@@ -227,6 +235,6 @@
 
             <?php include 'contact-page.php'; ?>
             <!-- Footer -->
-<?php include 'footer.php'; ?>
+            <?php include 'footer.php'; ?>
     </body>
 </html>

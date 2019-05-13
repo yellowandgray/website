@@ -304,7 +304,7 @@
                                 <button class="button-1" id="myBtn-1"><span>Join The Community</span></button>
                             </div>
                             <div class="col-lg-6 text-center wow fadeInRight">
-                                <button class="button-1" id="myBtn"><span>Book a 30-minute FREE coaching session</span></button>
+                                <button class="button-1" id="myBtn"><span>Apply to Coach with Cheryl</span></button>
                             </div>
                         </div>
                     </div>

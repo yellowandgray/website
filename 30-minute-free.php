@@ -3,7 +3,7 @@
             <div class="modal-content-1">
                 <div class="modal-header-1">
                     <span class="close-1">&times;</span>
-                    <h2 style="text-align: center">30-Minutes Free Coaching Session</h2>
+                    <h2 style="text-align: center">Apply to Coach with Cheryl</h2>
                 </div>
                 <div class="modal-body">
                     <form class="form-2">

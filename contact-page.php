@@ -1,4 +1,4 @@
-<div class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
+<div id="enquiry" class="prlx_parent pad-50" style="background-image:url(images/bg/cheryl-06.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
     <div class=" prlx bg-enquiry"></div>
     <div class="container">
         <div class="row">
@@ -9,12 +9,12 @@
         <div class="row">
             <div class="col-lg-6">
                 <form class="text-bg wow fadeInUp">
-                    <h2>Contact us</h2>
+                    <h2>Enquiry Form</h2>
                     <input type="text" name="fname" placeholder="Name" required > 
                     <input type="email" name="email" placeholder="Email Address" required>
                     <input type="text" name="phone" placeholder="Phone Number" required> 
-                    <input type="text" name="subject" placeholder="subject" required>
-                    <textarea type="text" name="requirement" placeholder="Requirement" class="req" required></textarea>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea type="text" name="requirement" placeholder="Area I want to make great" class="req" required></textarea>
                     <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
                 </form>
             </div>
