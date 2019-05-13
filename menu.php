@@ -17,7 +17,7 @@
             <li class="<?php if ($page == 'work-with-us') {
     echo 'active';
 } ?> dropdown"><a href="work-with-me.php"><span>Work With me</span></a>
-                <div class="dropdown-content" style="background: url(images/mega-bg.jpg)">
+                <div class="dropdown-content" style="display: block;">
                     <div class="row">
                         <div class="col-md-6">
                             <ul>
@@ -33,7 +33,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="col-md-12" style="background: #00659c;">
+                    <div class="col-md-12" style="background: #20b9ec;">
                         <div class="mega-menu-md-12" style="padding: 20px;">
                             <h3>Want Cheryl to help you multiply your performance x25?</h3>
                             <button type="submit" class="btn btn-primary"><a href="contact.php">Start Here</a></button>
