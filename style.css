@@ -1469,7 +1469,7 @@ ul {
 /*.home5 .rs-header .main-menu .rs-menu ul li a:hover,*/
 .home5 .rs-header .main-menu .rs-menu ul li.active a,
 .home5 .rs-header .main-menu .rs-menu ul li.current-menu-item > a {
-    color: #d2de28  !important;
+    color: #0eaa99 !important;
 }
 .home5 .rs-header .main-menu .nav-expander {
     font-size: 20px;

@@ -911,6 +911,6 @@ ul.nacc li p {
     border-radius: 10px;
     background: #f3f3f3;
 }
-.box-align {
-    padding: 10px 0px !important;
+.img-align {
+    vertical-align: top !important;
 }

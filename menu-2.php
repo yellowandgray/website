@@ -59,9 +59,9 @@
                             </div> -->
                             <a class="rs-menu-toggle"><i class="fa fa-bars"></i>Menu</a>
                             <nav class="rs-menu font">
-                               <ul class="nav-menu font-12 menu-border box-align">
+                               <ul class="nav-menu font-12 menu-border">
                                     <!-- Home -->
-                                    <li><a href="index.php" class="home">Home</a></li>
+                                     <li class="<?php if($page == 'home'){ echo 'active';} ?>"> <a href="index.php" class="home">Home</a></li>
                                      <li class="<?php if($page == 'why-franchise'){ echo 'active';} ?>"> <a href="whyus.php">Why Franchise AALUV Math?</a></li>
                                      <li class="<?php if($page == 'opportunities'){ echo 'active';} ?>"> <a href="requisites.php">Franchise Requisites</a></li>
                                      <li class="<?php if($page == 'next-step'){ echo 'active';} ?>"> <a href="next-step.php">Next steps</a></li>
