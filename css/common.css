@@ -907,7 +907,10 @@ ul.nacc li p {
     font-size: 11px !important;
 }
 .box-04 {
-        padding: 10px;
-        border-radius: 10px;
-        background: #f3f3f3;
-    }
+    padding: 10px;
+    border-radius: 10px;
+    background: #f3f3f3;
+}
+.box-align {
+    padding: 10px 0px !important;
+}

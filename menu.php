@@ -3,7 +3,7 @@
     <div class="rs-toolbar">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 col-8">
                     <div class="rs-toolbar-left top-toolbar">
                         <p>Welcome to Aaluv</p>
                         <!--                        <div class="welcome-message">
@@ -20,7 +20,7 @@
                                                 </div>-->
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-4">
                     <div class="rs-toolbar-right">
                         <div class="toolbar-share-icon">
                             <ul>
@@ -48,7 +48,7 @@
                 <div class="row margin-b-10">
                     <div class="col-md-3 width-20">
                         <div class="logo-area">
-                            <a href="index.php"><img src="images/logo2.png" alt="logo"></a>
+                            <a href="index.php"><img src="images/logo2.png" alt="logo" class="img-align"></a>
                         </div>
                     </div>
                     <div class="col-md-9 width-80">
@@ -60,20 +60,20 @@
                             <nav class="rs-menu font">
                                 <ul class="nav-menu">
                                     <!-- Home -->
-                                    <li class="current-menu-item current_page_item menu-item-has-children"> <a href="index.php" class="home">Home</a></li>
-                                    <li class="menu-item-has-children"> <a href="about.php">About Us</a></li>
+                                    <li class="current-menu-item current_page_item "> <a href="index.php" class="home">Home</a></li>
+                                    <li> <a href="about.php">About Us</a></li>
                                     <li class="menu-item-has-children"> <a href="#">PROGRAMS</a>
                                         <ul class="sub-menu">
                                             <li> <a href="aaluv-math.php">AALUV MATH</a></li>
                                             <li><a href="aaluv-robotics.php">AALUV ROBOTICS</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item-has-children"> <a href="happening.php">HAPPENINGS</a></li>
-                                    <li class="menu-item-has-children"> <a href="contact.php">LOCATE US</a></li>
+                                    <li> <a href="happening.php">HAPPENINGS</a></li>
+                                    <li> <a href="contact.php">LOCATE US</a></li>
                                     <!--                                <li class="menu-item-has-children"> <a href="#">Events</a></li>
                                                                     <li class="menu-item-has-children"> <a href="#">Blog</a></li>-->
                                     <li> <a href="franchise-opportunities.php">FRANCHISE OPPORTUNITIES</a></li>
-                                    <li class="menu-item-has-children <?php if($page == 'withus'){ echo 'active';} ?>"> <a href="#">GROW WITH US</a>
+                                    <li class="menu-item-has-children"> <a href="#">GROW WITH US</a>
                                         <ul class="sub-menu">
                                             <li> <a href="center-manager.php">CENTER MANAGER</a></li>
                                             <li> <a href="course-instructor.php">COURSE INSTRUCTOR</a></li>

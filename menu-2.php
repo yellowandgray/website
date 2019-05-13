@@ -3,7 +3,7 @@
     <div class="rs-toolbar">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 col-8">
                     <div class="rs-toolbar-left top-toolbar">
                         <p>Welcome to Aaluv</p>
                         <!--                        <div class="welcome-message">
@@ -20,7 +20,7 @@
                                                 </div>-->
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-4">
                     <div class="rs-toolbar-right">
                         <div class="toolbar-share-icon">
                             <ul>
@@ -59,12 +59,12 @@
                             </div> -->
                             <a class="rs-menu-toggle"><i class="fa fa-bars"></i>Menu</a>
                             <nav class="rs-menu font">
-                               <ul class="nav-menu font-12 menu-border">
+                               <ul class="nav-menu font-12 menu-border box-align">
                                     <!-- Home -->
-                                     <li class="menu-item-has-children <?php if($page == 'home'){ echo 'active';} ?>"> <a href="index.php" class="home">Home</a></li>
-                                     <li class="menu-item-has-children <?php if($page == 'why-franchise'){ echo 'active';} ?>"> <a href="whyus.php">Why Franchise AALUV Math?</a></li>
-                                     <li class="menu-item-has-children <?php if($page == 'opportunities'){ echo 'active';} ?>"> <a href="requisites.php">Franchise Requisites</a></li>
-                                     <li class="menu-item-has-children <?php if($page == 'next-step'){ echo 'active';} ?>"> <a href="next-step.php">Next steps</a></li>
+                                    <li><a href="index.php" class="home">Home</a></li>
+                                     <li class="<?php if($page == 'why-franchise'){ echo 'active';} ?>"> <a href="whyus.php">Why Franchise AALUV Math?</a></li>
+                                     <li class="<?php if($page == 'opportunities'){ echo 'active';} ?>"> <a href="requisites.php">Franchise Requisites</a></li>
+                                     <li class="<?php if($page == 'next-step'){ echo 'active';} ?>"> <a href="next-step.php">Next steps</a></li>
                                     <!--<li class="menu-item-has-children <?php if($page == 'next-step'){ echo 'active';} ?>"> <a href="#">Next steps</a></li>-->
                                     
                                 </ul>
