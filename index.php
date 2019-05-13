@@ -25,7 +25,7 @@
             <?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
             <div class="home">
-                <video autoplay loop poster="polina.jpg" id="vid" muted="muted">
+                <video autoplay loop poster="polina.jpg" id="vid" muted>
                     <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                 </video>  
                 <div class="overlay"></div>

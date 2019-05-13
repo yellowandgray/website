@@ -1410,7 +1410,7 @@ button.close {
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
     position: absolute;
-    width: 600px;
+    width: 500px;
     height: auto;
     text-align: left;
 }
@@ -1418,6 +1418,10 @@ button.close {
 .dropdown-content ul li {
     padding: 10px 15px 0;
     color: #000;
+}
+
+.dropdown-content ul li a {
+    color: #000 !important;
 }
 
 .dropdown-content ul {
