@@ -17,7 +17,7 @@
             <li class="<?php if ($page == 'work-with-us') {
     echo 'active';
 } ?> dropdown"><a href="work-with-me.php"><span>Work With me</span></a>
-                <div class="dropdown-content" style="display: block;">
+                <div class="dropdown-content">
                     <div class="row">
                         <div class="col-md-6">
                             <ul>
