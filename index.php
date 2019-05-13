@@ -34,17 +34,18 @@
                         <!-- Slider Item -->
                         <div class="owl-item main_slider_item">
                             <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_1.jpg)"></div>-->
-                            <div class="main_slider_shapes"><img src="images/slider-png/cheryl-02.png" alt="" style="width: 100% !important;"></div>
+                            <div class="main_slider_shapes"><img src="images/slider-png/banner-01.jpg" alt="" style="width: 100% !important;"></div>
                             <div class="container">
                                 <div class="row">
                                     <div class="col slider_content_col">
                                         <div class="main_slider_content">
-                                            <h1><span>Hi! I am Cheryl.</span></h1>
+                                            <h1><span>Tired of your doubts & fears holding you back?</span></h1>
+                                            <h1><span>Let us smash those limits and catapult you forward!</span></h1>
                                             <!--<h1>a <span>modern</span> website?</h1>-->
-                                            <p>Inspire. Empower. Transform… My mantra.</p>
-                                            <div class="button discover_button">
+                                            <!--<p>Inspire. Empower. Transform… My mantra.</p>-->
+<!--                                            <div class="button discover_button">
                                                 <a href="about.php" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </div>
@@ -53,16 +54,17 @@
                         <!-- Slider Item -->
                         <div class="owl-item main_slider_item">
                             <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_2.jpg)"></div>-->
-                            <div class="main_slider_shapes"><img src="images/slider-png/cheryl-03.png" alt="" style="width: 100% !important;"></div>
+                            <div class="main_slider_shapes"><img src="images/slider-png/banner-02.jpg" alt="" style="width: 100% !important;"></div>
                             <div class="container">
                                 <div class="row">
                                     <div class="col slider_content_col">
                                         <div class="main_slider_content">
-                                            <h1><span>Unquenchable thirst for education and learning</span></h1>
-                                            <p>I am a certified NLP Master Practitioner and an Advanced Life Coach.</p>
+                                            <h1><span>You KNOW that you can do & be so much more. But something holds you back?</span></h1>
+                                            <h1><span>Let’s work together so you can live the life you want to live. </span></h1>
+<!--                                                <p>I am a certified NLP Master Practitioner and an Advanced Life Coach.</p>
                                             <div class="button discover_button">
                                                 <a href="about.php" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </div>
@@ -71,16 +73,55 @@
                         <!-- Slider Item -->
                         <div class="owl-item main_slider_item">
                             <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_3.jpg)"></div>-->
-                            <div class="main_slider_shapes"><img src="images/slider-png/cheryl-01.png" alt="" style="width: 100% !important;"></div>
+                            <div class="main_slider_shapes"><img src="images/slider-png/banner-03.jpg" alt="" style="width: 100% !important;"></div>
                             <div class="container">
                                 <div class="row">
                                     <div class="col slider_content_col">
                                         <div class="main_slider_content">
-                                            <h1><span>Leaders taught me that truly nothing is impossible.</span></h1>
-                                            <p> I saw, first-hand, what a powerful vision, belief and perseverance can do.</p>
+                                            <h1><span>Want to move from confusion to clarity? From difficulties to opportunities? From fear to freedom? </span></h1>
+                                            <h1><span>You’ve only got one life. Let’s make sure it’s the greatest possible one! </span></h1>
+<!--                                            <p> I saw, first-hand, what a powerful vision, belief and perseverance can do.</p>
                                             <div class="button discover_button">
                                                 <a href="about.php" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
-                                            </div>
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item main_slider_item">
+                            <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_3.jpg)"></div>-->
+                            <div class="main_slider_shapes"><img src="images/slider-png/banner-04.jpg" alt="" style="width: 100% !important;"></div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col slider_content_col">
+                                        <div class="main_slider_content">
+                                            <h1><span>Of course, you can do it by yourself. </span></h1>
+                                            <h1><span>But having a Partner makes it so much easier & quicker. </span></h1>
+                                            <h1><span>Let’s work together so you may live the life you want. </span></h1>
+<!--                                            <p> I saw, first-hand, what a powerful vision, belief and perseverance can do.</p>
+                                            <div class="button discover_button">
+                                                <a href="about.php" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item main_slider_item">
+                            <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_3.jpg)"></div>-->
+                            <div class="main_slider_shapes"><img src="images/slider-png/banner-05.jpg" alt="" style="width: 100% !important;"></div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col slider_content_col">
+                                        <div class="main_slider_content">
+                                            <h1><span>What if you reach the top and realize you’ve climbed the wrong mountain? </span></h1>
+                                            <h1><span>Let’s work together and discover your true purpose, passion & path. </span></h1>
+                                            <h1><span>Here is to you having a life of no regrets! </span></h1>
+<!--                                            <p> I saw, first-hand, what a powerful vision, belief and perseverance can do.</p>
+                                            <div class="button discover_button">
+                                                <a href="about.php" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </div>
