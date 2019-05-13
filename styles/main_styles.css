@@ -1551,11 +1551,11 @@ button.close {
 }
 .fs_menu_nav {
     position: relative;
-    margin-left: -48px;
+    margin: 0 auto;
     top: -13px;
     height: 306px;
-    background: #20b9ecb3;
-    width: 261px;
+    background: #20b9ec;
+    width: 100%;
     padding: 15px 28px 0px 28px;
 }
 .main_slider_content::before 

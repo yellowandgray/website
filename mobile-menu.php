@@ -1,5 +1,5 @@
 <div class="fs_menu_overlay"></div>
-<div class="fs_menu_container fs_menu_container-1" style="background-image: url(images/mobile-menu-bg-01.png); background-repeat: no-repeat;width: 100%;">
+<div class="fs_menu_container fs_menu_container-1" style="width: 100%;">
     <!--<div class="fs_menu_shapes"><img src="images/menu_shapes.png" alt=""></div>-->
     <nav class="fs_menu_nav">
         <ul class="fs_menu_list">
