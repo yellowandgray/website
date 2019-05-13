@@ -16,10 +16,10 @@
                 <div class="home_background prlx bg-hide-1" style="background-image:url(images/blog_background-04.png);"></div>
                 <div class="home_background prlx bg-hide" style="background-image:url(images/blog_background-04.png);"></div>
                 <div class="services_page_shapes">
-                    <video style="height:100%;float: right;" autoplay>
+<!--                    <video style="height:100%;float: right;" autoplay>
                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                         Your browser does not support the <code>video</code> tag.
-                    </video>
+                    </video>-->
                 </div>
 
                 <div class="container">
