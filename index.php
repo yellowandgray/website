@@ -30,11 +30,11 @@
                 </video>  
                 <div class="overlay"></div>
                 <div class="hero_slider_container slider_prlx">
-                    <div class="owl-carousel owl-theme hero_slider">
+                    <div class="owl-carousel owl-theme hero_slider container-slide">
                         <!-- Slider Item -->
                         <div class="owl-item main_slider_item">
+                            <div class="main_slider_shapes"><img src="images/slider-png/banner-01.jpg" alt=""  style="width: 100% !important;"></div>
                             <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_1.jpg)"></div>-->
-                            <div class="main_slider_shapes"><img src="images/slider-png/banner-01.jpg" alt="" style="width: 100% !important;"></div>
                             <div class="container">
                                 <div class="row">
                                     <div class="col slider_content_col">
@@ -43,9 +43,9 @@
                                             <h1><span>Let us smash those limits and catapult you forward!</span></h1>
                                             <!--<h1>a <span>modern</span> website?</h1>-->
                                             <!--<p>Inspire. Empower. Transform… My mantra.</p>-->
-<!--                                            <div class="button discover_button">
-                                                <a href="about.php" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
-                                            </div>-->
+                                            <!--                                            <div class="button discover_button">
+                                                                                            <a href="about.php" class="d-flex flex-row align-items-center justify-content-center">discover<img src="images/arrow_right.svg" alt=""></a>
+                                                                                        </div>-->
                                         </div>
                                     </div>
                                 </div>
@@ -128,6 +128,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Slider Dots -->
                     <!-- Slider Dots -->
                     <div class="main_slider_nav_left main_slider_nav">
@@ -138,6 +139,7 @@
                     </div>
                 </div>
             </div>
+            <?php include 'join-our-community.php'; ?>
             <!-- Features -->
             <div class="features">
                 <div class="container">
@@ -268,7 +270,7 @@
                     </div>
                 </div>
             </div>
-            <?php include 'join-our-community.php'; ?>
+
             <!-- About -->
             <div class="about prlx_parent" style="background-image:url(images/main_slider_03.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">
                 <div class="container">
