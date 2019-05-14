@@ -578,7 +578,7 @@
 }
 @media only screen and (max-width: 900px){
     .main_slider_shapes {
-          display: none;
+        display: none;
     }
 }
 @media only screen and (max-width: 991px){
@@ -588,5 +588,10 @@
     .main_nav
     {
         display: none;
+    }
+}
+@media only screen and (max-width: 991px){
+    .fs_menu_nav {
+       top: 22px !important;
     }
 }
