@@ -60,7 +60,7 @@
                                 <br/>
 <!--                                <textarea type="text" name="requirement" placeholder="How can I help you?" class="req" required></textarea>-->
                                 <textarea type="text" name="requirement" placeholder="Comment" class="req" required></textarea>
-                                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                                <div class="g-recaptcha" data-sitekey="6Ld9YaMUAAAAAG1qHv8gS4Lj3QTKHfz2IcfBwBUJ"></div>
                                 <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
                             </form>
                         </div>
@@ -73,7 +73,7 @@
                                 <hr>
                                 <p>Phone     : <a href="tel:+971-50-79-89-121">+971 50 79 89 121</a></p>
                                 <p>E-mail    : <a href="mailto:info@cherylppinto.com">info@cherylppinto.com</a></p>
-                                <p>Website   : www.cherylppinto.com</p>
+                                <p>Website   : <a href="http://cherylppinto.com/">www.cherylppinto.com</a></p>
                             </div>
                             <!--                            <div class="contact-details wow fadeInUp">
                                                             <h2 class="text-center">Join Now!</h2>
