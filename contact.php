@@ -13,9 +13,7 @@
             <div class="sub-bg prlx_parent">
 
                 <!-- Parallax Background -->
-                <div class="home_background prlx bg-show" style="background-image:url(images/blog_background-04.png);"></div>
-                <div class="home_background prlx bg-hide-1" style="background-image:url(images/blog_background-04.png);"></div>
-                <div class="home_background prlx bg-hide" style="background-image:url(images/blog_background-04.png);"></div>
+               <div class="home_background prlx" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>
                 <div class="services_page_shapes">
                     <!--                    <video style="height:100%;float: right;" autoplay>
                                             <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head.php';
+    <?php
+    include 'head.php';
     $page = 'testimonials';
     ?>
     <body>
@@ -13,14 +14,12 @@
             <div class="sub-bg prlx_parent">
 
                 <!-- Parallax Background -->
-                <div class="home_background prlx bg-show" style="background-image:url(images/blog_background-01.png); z-index: 9;"></div>
-                <div class="home_background prlx bg-hide-1" style="background-image:url(images/blog_background-02.png); z-index: 9;"></div>
-                <div class="home_background prlx bg-hide" style="background-image:url(images/blog_background-03.png); z-index: 9;"></div>
+                <div class="home_background prlx" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>
                 <div class="services_page_shapes">
-<!--                    <video style="height:100%;float: right;" autoplay>
-                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
-                        Your browser does not support the <code>video</code> tag.
-                    </video>-->
+                    <!--                    <video style="height:100%;float: right;" autoplay>
+                                            <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
+                                            Your browser does not support the <code>video</code> tag.
+                                        </video>-->
                 </div>
 
                 <div class="container">
