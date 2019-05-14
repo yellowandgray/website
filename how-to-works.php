@@ -10,11 +10,11 @@
 <?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
             <div class="sub-bg prlx_parent">
-
                 <!-- Parallax Background -->
                 <div class="home_background prlx bg-show" style="background-image:url(images/blog_background-01.png); z-index: 9;"></div>
                 <div class="home_background prlx bg-hide-1" style="background-image:url(images/blog_background-02.png); z-index: 9;"></div>
                 <div class="home_background prlx bg-hide" style="background-image:url(images/blog_background-03.png); z-index: 9;"></div>
+                <div class="overlay1"></div>
                 <div class="services_page_shapes">
 <!--                    <video style="height:100%;float: right;" autoplay>
                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
@@ -49,7 +49,7 @@
                             <p class="text-justify"><strong>A Coach, be it for a professional athlete or a CEO, performs the same role.</strong> A life coach is <strong>someone professionally trained to help you maximize your full potential.</strong> To be <strong>world-class in anything you do,</strong> you need the <strong>accountability, guidance, enthusiastic support and objective perspective</strong> of a coach.</p>
                         </div>
                         <div class="col-lg-4 img-shadow wow fadeInRight">
-                            <img src="images/resource.jpg" alt=""/>
+                            <img src="images/resource.jpg" alt="" style="width: 100%;"/>
                         </div>
                     </div>
 
@@ -57,7 +57,7 @@
 
                 <!-- About -->
                 <!--<div class="about prlx_parent" style="background-image:url(images/main_slider_03.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">-->
-                <div class="about prlx_parent pad-50" >
+                <div class="prlx_parent pad-50" >
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-8 wow fadeInLeft">
@@ -78,17 +78,14 @@
                                 <div>
                                     <img src="images/slider/001.png" alt="" class="img-b">
                                 </div>
-                                <div class="features_item  d-flex flex-column align-items-center ">
-                                    <div class="icon_container box-4 height-435 d-flex flex-column">
+                                <div class="features_item box-4 d-flex flex-column align-items-center ">
+                                    <div class="icon_container d-flex flex-column">
                                         <h3 class="text-center">Financial Freedom</h3>
                                         <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                             <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                                             Your browser does not support the <code>video</code> tag.
                                         </video>
                                         <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income...</p>
-                                        <div class="text-center arrow-1">
-                                            <a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

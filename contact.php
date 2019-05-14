@@ -39,13 +39,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
-                            <h2>Get in Touch With</h2>
+                            <h2>Contact US</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
                             <form class="text-bg-1 wow fadeInUp contact-form">
-                                <h2 class="text-center">Contact us</h2>
+                                <h2 class="text-center">Contact Now</h2>
                                 <hr>
                                 <p>I am here to help! I check each message and will respond to you personally.</p>
                                 <input type="text" name="fname" placeholder="First Name" required > 

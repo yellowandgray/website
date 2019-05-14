@@ -72,6 +72,20 @@ video#vid {
     cursor: pointer;
 }
 
+.overlay1 {
+    position: absolute;
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(75, 168, 199);
+    z-index: 9;
+    cursor: pointer;
+}
+
 
 .bg-enquiry {
     background: #00659c;
@@ -153,6 +167,7 @@ input[type=submit]:hover {
     resize: vertical;
     margin: 0 0 20px 0;
     outline: none;
+    background: none;
 }
 
 .contact-form input[type=submit]:hover {
@@ -1301,6 +1316,7 @@ audio {
     padding: 20px;
     height: 400px;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .popup-content {
