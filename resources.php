@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head.php';
-    $page = 'resources'; ?>
+    <?php
+    include 'head.php';
+    $page = 'resources';
+    ?>
     <body>
         <div class="super_container">
             <!-- Header -->
             <?php include 'menu.php'; ?>
             <!-- Menu -->
-<?php include 'mobile-menu.php'; ?>
+            <?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
             <div class="sub-bg prlx_parent">
 
                 <!-- Parallax Background -->
                 <div class="home_background prlx bg-show" style="background-image:url(images/sub-banner-bg.jpg); z-index: 9;"></div>
-<!--                <div class="home_background prlx bg-hide-1" style="background-image:url(images/blog_background-02.png); z-index: 9;"></div>
-                <div class="home_background prlx bg-hide" style="background-image:url(images/blog_background-03.png); z-index: 9;"></div>-->
+                <div class="home_background prlx bg-hide-1" style="background-image:url(images/blog_background-02.png); z-index: 9;"></div>
+                <div class="home_background prlx bg-hide" style="background-image:url(images/blog_background-03.png); z-index: 9;"></div>
                 <div class="services_page_shapes">
-<!--                    <video style="height:100%;float: right;" autoplay>
-                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
-                        Your browser does not support the <code>video</code> tag.
-                    </video>-->
+                    <!--                    <video style="height:100%;float: right;" autoplay>
+                                            <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
+                                            Your browser does not support the <code>video</code> tag.
+                                        </video>-->
                 </div>
 
                 <div class="container">
@@ -156,11 +158,11 @@
                     </div>
                 </div>
             </div>
-<?php include 'join-our-community.php'; ?>
+            <?php include 'join-our-community.php'; ?>
 
             <?php include 'contact-page.php'; ?>
             <!-- Footer -->
-<?php include 'footer.php'; ?>
+            <?php include 'footer.php'; ?>
             <script>
                 $(function () {
                     var selectedClass = "";
