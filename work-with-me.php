@@ -138,7 +138,7 @@
                                 <div class="icon_container type-coaching-box d-flex flex-column">
                                     <h3 class="text-center">Career Progress</h3>
                                     <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
+                                        <source src="vedio/Rise Up - Pre Event Video.mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
                                     <p>If you are in a job that does not light you up, or in a career that you once loved but now wish to change, or if you are not advancing in your career no matter what you do, then chat with me and learn how I raced through the corporate ladder over my 17 years of experience in the corporate world.</p>

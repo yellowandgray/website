@@ -43,7 +43,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
-                            <form class="text-bg-1 wow fadeInUp">
+                            <form class="text-bg-1 wow fadeInUp contact-form">
                                 <h2 class="text-center">Contact us</h2>
                                 <hr>
                                 <p>I am here to help! I check each message and will respond to you personally.</p>
@@ -63,6 +63,9 @@
                             </form>
                         </div>
                         <div class="col-lg-6">
+                            <div class="contact-details-1 wow fadeInUp">
+                                <img src="images/contact-img.jpg" alt="" >
+                            </div>
                             <div class="contact-details wow fadeInUp">
                                 <h2 class="text-center">Say Hello!</h2>
                                 <hr>
@@ -70,12 +73,12 @@
                                 <p>E-mail    : <a href="mailto:info@cherylppinto.com">info@cherylppinto.com</a></p>
                                 <p>Website   : www.cherylppinto.com</p>
                             </div>
-                            <div class="contact-details wow fadeInUp">
+<!--                            <div class="contact-details wow fadeInUp">
                                 <h2 class="text-center">Join Now!</h2>
                                 <hr>
                                 <input type="email" name="email" placeholder="E-mail address" />
                                 <button type="submit" class="button-1"><span class="color-w">Join</span></button>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
 
