@@ -82,7 +82,7 @@ video#vid {
     right: 0;
     bottom: 0;
     background-color: rgb(75, 168, 199);
-    z-index: 9;
+    z-index: 999;
     cursor: pointer;
 }
 
