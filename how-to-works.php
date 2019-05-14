@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php include 'head.php';
-    $page = 'how-work'; ?>
+    $page = 'how-work';
+    ?>
     <body>
         <div class="super_container">
             <!-- Header -->
@@ -11,15 +12,13 @@
             <!-- Hero Slider -->
             <div class="sub-bg prlx_parent">
                 <!-- Parallax Background -->
-                <div class="home_background prlx bg-show" style="background-image:url(images/blog_background-01.png); z-index: 9;"></div>
-                <div class="home_background prlx bg-hide-1" style="background-image:url(images/blog_background-02.png); z-index: 9;"></div>
-                <div class="home_background prlx bg-hide" style="background-image:url(images/blog_background-03.png); z-index: 9;"></div>
+                <div class="home_background prlx" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>
                 <div class="overlay1"></div>
                 <div class="services_page_shapes">
-<!--                    <video style="height:100%;float: right;" autoplay>
-                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
-                        Your browser does not support the <code>video</code> tag.
-                    </video>-->
+                    <!--                    <video style="height:100%;float: right;" autoplay>
+                                            <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
+                                            Your browser does not support the <code>video</code> tag.
+                                        </video>-->
                 </div>
 
                 <div class="container">
@@ -29,6 +28,9 @@
                                 <h1>How it Works</h1>
                                 <span>Sub Title Comes Here</span>
                             </div>
+                        </div>
+                        <div class="col-lg-6" style="z-index: 999;">
+
                         </div>
                     </div>
                 </div>
@@ -110,9 +112,9 @@
                     </div>
                 </div>
             </div>
-<?php include 'join-our-community.php'; ?>
+            <?php include 'join-our-community.php'; ?>
 
-          <?php include 'contact-page.php'; ?>
+            <?php include 'contact-page.php'; ?>
             <!-- Footer -->
 <?php include 'footer.php'; ?>
             <script>

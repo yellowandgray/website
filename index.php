@@ -473,33 +473,37 @@
             <!-- Counter -->
             <div class="counter-section">
                 <div class="container">
-                    <div class="row">
+                    <div class="row" id="counter">
                         <div class="col-md-3">
                             <div class="counter col_fourth">
                                 <img src="images/counter-img/follow-sm.png" class="fa-2x" alt="">
-                                <h2 class="timer count-title count-number" data-to="3000" data-speed="1500"></h2>
+                                <!--<h2 class="timer count-title count-number" data-to="3000" data-speed="1500"></h2>-->
+                                <div class="counter-value timer count-title count-number" data-count="3000">1000</div>
                                 <p class="count-text ">Followers on SM</p>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="counter col_fourth">
                                 <img src="images/counter-img/reached-wrokshop.png" class="fa-2x" alt=""></i>
-                                <h2 class="timer count-title count-number" data-to="500" data-speed="1500"></h2>
+                                <!--<h2 class="timer count-title count-number" data-to="500" data-speed="1500"></h2>-->
+                                <div class="counter-value timer count-title count-number" data-count="500">50</div>
                                 <p class="count-text ">Reached via Trainings/ Workshops</p>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="counter col_fourth">
                                 <img src="images/counter-img/one-to-one.png" class="fa-2x" alt="">
-                                <h2 class="timer count-title count-number" data-to="200" data-speed="1500"></h2>
+                                <!--<h2 class="timer count-title count-number" data-to="200" data-speed="1500"></h2>-->
+                                <div class="counter-value timer count-title count-number" data-count="200">20</div>
                                 <p class="count-text ">1:1 Coaching Hours</p>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="counter col_fourth end">
                                 <img src="images/counter-img/visitors-website.png" class="fa-2x" alt="">
-                                <h2 class="timer count-title count-number" data-to="1000" data-speed="1500"></h2>
-                                <p class="count-text ">Visitors to Website</p>
+                                <!--<h2 class="timer count-title count-number" data-to="1000" data-speed="1500"></h2>-->
+                                <div class="counter-value timer count-title count-number" data-count="1000">100</div>
+                                <p class="count-text ">Other Topics</p>
                             </div>
                         </div>
                     </div>
@@ -618,6 +622,38 @@
         <?php include '30-minute-free.php'; ?>
         <script src="js/silk_slider.js" type="text/javascript"></script>
         <script type="text/javascript">
+        var a = 0;
+        $(window).scroll(function () {
+
+            var oTop = $('#counter').offset().top - window.innerHeight;
+            if (a == 0 && $(window).scrollTop() > oTop) {
+                $('.counter-value').each(function () {
+                    var $this = $(this),
+                            countTo = $this.attr('data-count');
+                    $({
+                        countNum: $this.text()
+                    }).animate({
+                        countNum: countTo
+                    },
+                            {
+
+                                duration: 2000,
+                                easing: 'swing',
+                                step: function () {
+                                    $this.text(Math.floor(this.countNum));
+                                },
+                                complete: function () {
+                                    $this.text(this.countNum);
+                                    //alert('finished');
+                                }
+
+                            });
+                });
+                a = 1;
+            }
+
+        });</script>
+<!--        <script type="text/javascript">
         (function ($) {
             $.fn.countTo = function (options) {
                 options = options || {};
@@ -716,6 +752,6 @@
                 $this.countTo(options);
             }
         });
-        </script>
+        </script>-->
     </body>
 </html>
