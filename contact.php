@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php include 'head.php';
-    $page = 'contact'; ?>
+    $page = 'contact';
+    ?>
     <body>
         <div class="super_container">
             <!-- Header -->
@@ -16,10 +17,10 @@
                 <div class="home_background prlx bg-hide-1" style="background-image:url(images/blog_background-04.png);"></div>
                 <div class="home_background prlx bg-hide" style="background-image:url(images/blog_background-04.png);"></div>
                 <div class="services_page_shapes">
-<!--                    <video style="height:100%;float: right;" autoplay>
-                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
-                        Your browser does not support the <code>video</code> tag.
-                    </video>-->
+                    <!--                    <video style="height:100%;float: right;" autoplay>
+                                            <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
+                                            Your browser does not support the <code>video</code> tag.
+                                        </video>-->
                 </div>
 
                 <div class="container">
@@ -57,8 +58,9 @@
                                     <option value="Whatsapp">Whatsapp</option>
                                 </select>
                                 <br/>
-                                <textarea type="text" name="requirement" placeholder="How can I help you?" class="req" required></textarea>
+<!--                                <textarea type="text" name="requirement" placeholder="How can I help you?" class="req" required></textarea>-->
                                 <textarea type="text" name="requirement" placeholder="Comment" class="req" required></textarea>
+                                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
                                 <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
                             </form>
                         </div>
@@ -73,12 +75,12 @@
                                 <p>E-mail    : <a href="mailto:info@cherylppinto.com">info@cherylppinto.com</a></p>
                                 <p>Website   : www.cherylppinto.com</p>
                             </div>
-<!--                            <div class="contact-details wow fadeInUp">
-                                <h2 class="text-center">Join Now!</h2>
-                                <hr>
-                                <input type="email" name="email" placeholder="E-mail address" />
-                                <button type="submit" class="button-1"><span class="color-w">Join</span></button>
-                            </div>-->
+                            <!--                            <div class="contact-details wow fadeInUp">
+                                                            <h2 class="text-center">Join Now!</h2>
+                                                            <hr>
+                                                            <input type="email" name="email" placeholder="E-mail address" />
+                                                            <button type="submit" class="button-1"><span class="color-w">Join</span></button>
+                                                        </div>-->
                         </div>
                     </div>
 

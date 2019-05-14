@@ -20,4 +20,5 @@
     <link href="portfolio/normalize.css" rel="stylesheet" type="text/css"/>
     <link href="styles/animate.css" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400i" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
