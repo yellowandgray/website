@@ -413,6 +413,7 @@
         -o-transform: translateY(-50%);
         transform: translateY(-50%);
         margin-top: 0px;
+        margin-left: -15px;
     }
     .slider_content_col
     {

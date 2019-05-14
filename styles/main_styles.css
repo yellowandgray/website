@@ -716,6 +716,7 @@ section
     width: 610px;
     height: 100%;
     margin-top: 240px;
+    margin-left: -50px;
 }
 .main_slider_content h1
 {
@@ -813,7 +814,7 @@ section
     font-size: 18px;
     /* top: -34%; */
     position: absolute;
-/*    margin-top: -107px;*/
+    /*    margin-top: -107px;*/
 }
 .main_slider_nav:hover i
 {
@@ -1579,4 +1580,33 @@ button.close {
     height: 3px;
     content: '';
     background: #21b9ec;
+}
+
+.apperance {
+    box-shadow: 0 0 20px 10px #eee;
+    padding: 30px 20px;
+    height: 620px;
+}
+
+.apperance h2 {
+    font-size: 25px;
+    text-align: center;
+    margin: 20px 0 0;
+    border-bottom: 1px solid #eee;
+    height: 65px;
+}
+.apperance h3 {
+    margin: 0;
+}
+.apperance span {
+    font-size: 11px;
+    text-align: center;
+    font-style: italic;
+}
+.apperance p {
+    text-align: justify;
+    margin: 0;
+}
+.apperance a {
+    color: #80358e;
 }

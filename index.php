@@ -557,6 +557,56 @@
 
                 </div>
             </div>
+            <div class="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
+                            <h2>Public Appearance</h2>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="apperance wow fadeInUp">
+                                <h2><a href="https://www.khaleejtimes.com/redefining-memory-skills-in-the-digital-age" target="blank">Redefining memory skills in the digital age</a></h2>
+                                <span>Filed on August 6, 2018</span>
+                                <img src="images/khaleej_times.png" alt="" style="width: 100%;"/>
+                                <p>"Neuro-linguistic programming (NLP) offers various tools to aid in improving memory by using the brain's ability for spatial, visual, auditory and kinesthetic storage and recall. One effective method has three steps. First, decide that you want to remember it. Then, pay close attention by writing it down. Finally, create an enchanting story with characters and a sequence of events. Make the story memorable by making it funny, exciting or even ridiculous. This will then help you to quickly recall the story and thus the information that you stored within it."</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="apperance wow fadeInUp">
+                                <h2><a href="http://magazines.toastmasters.org/article/HOW_TO/1261771/138995/article.html" target="blank">Toastmaster</a></h2>
+                                <span>January 2013</span>
+<!--                                <img src="images/khaleej_times.png" alt="" style="width: 100%;"/>-->
+                                <h3>HOW TO</h3>
+                                <span>Cheryl Pinto</span>
+                                <p>WHAT GETS SCHEDULED GETS DONE</p>
+                                <p>Take tangible steps to meet your goals.</p>
+                                <p>“When it is obvious that the goals cannot be reached, don’t adjust the goals, adjust the action steps.” -Confucius</p>
+                                <p>"Dream big” is a phrase we are all familiar with. It is a dogma preached by many at self-help seminars. Volumes have been written about it. However, the hoopla surrounding dreams has overshadowed an equally, if not more important, factor—action. It has been said that “an ounce of action is worth a ton of theory.” It is understandable why action is not everyone’s favorite topic of discussion—it involves work!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="apperance wow fadeInUp">
+                                <h2><a href="https://www.ivyexec.com/best-executive-mba-rankings/sp-jain-executive-mba-in-dubai-review" target="blank">SP Jain’s Features Alumni under IVY Exec</a></h2>
+<!--                                <span>Filed on August 6, 2018</span>-->
+<!--                                <img src="images/khaleej_times.png" alt="" style="width: 100%;"/>-->
+                                <h3 style="text-align: center;margin: 20px 0;">Featured Alumni</h3>
+                                <div class="row" style="background: #eee;padding: 10px 0">
+                                    <div class="col-md-4">
+                                        <img src="images/apperence-img.jpg" alt="" style="width: 100%" />
+                                    </div>
+                                    <div class="col-md-8" style="padding: 20px 0">
+                                        <h4>Cheryl P Pinto</h4>
+                                        <p>CEO & Managing Director, GrowPro Consultants</p>
+                                    </div>
+                                </div>
+                                <br/>
+                                <p>Cheryl P Pinto is the CEO & Managing Director of GrowPro Consultants where she works with individuals who are seeking to exponentially grow their professional performance. </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Contact -->
             <?php include 'contact-page.php'; ?>
             <!-- Footer -->

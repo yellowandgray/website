@@ -13,7 +13,7 @@
 } ?>"><a href="how-to-works.php"><span>How it Works</span></a></li>
             <li class="<?php if ($page == 'resources') {
     echo 'active';
-} ?>"><a href="resources.php"><span>Resources</span></a></li>
+} ?>"><a href="resources.php"><span>Free Resources</span></a></li>
             <li class="<?php if ($page == 'work-with-us') {
     echo 'active';
 } ?> dropdown"><a href="work-with-me.php"><span>Work With me</span></a>
