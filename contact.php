@@ -83,8 +83,10 @@
                                                         </div>-->
                         </div>
                     </div>
-
                 </div>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10913658.061977062!2d-110.67475651911568!3d54.7269841774671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0d03d337cc6ad9%3A0x9968b72aa2438fa5!2sCanada!5e0!3m2!1sen!2sin!4v1557815827847!5m2!1sen!2sin" height="400" frameborder="0" style="border:0;width: 100%;" allowfullscreen></iframe>
             </div>
 
             <?php include 'join-our-community.php'; ?>
