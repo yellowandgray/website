@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-lg-6" style="z-index: 999;">
                             <div class="home_content wow fadeInLeft">
-                                <h1>Resources</h1>
+                                <h1>Free Resources</h1>
                                 <span>Sub Title Comes Here</span>
                             </div>
                         </div>
