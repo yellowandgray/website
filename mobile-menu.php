@@ -4,7 +4,7 @@
     <nav class="fs_menu_nav">
         <ul class="fs_menu_list">
             <li><a href="how-to-works.php"><span>How it Works</span></a></li>
-            <li><a href="resources.php"><span>Resources</span></a></li>
+            <li><a href="resources.php"><span>Free Resources</span></a></li>
             <li class="dropdown"><a href="#"><span>Work With me</span></a>
                 <div class="dropdown-content mega-menu" style="background: url(images/mega-bg.jpg); background-repeat: no-repeat; background-size: cover" >
                     <div class="row">

@@ -12,7 +12,7 @@
             <!-- Hero Slider -->
             <div class="sub-bg prlx_parent">
                 <!-- Parallax Background -->
-                <div class="home_background prlx" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>
+                <div class="home_background" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>
                 <div class="overlay1"></div>
                 <div class="services_page_shapes">
                     <!--                    <video style="height:100%;float: right;" autoplay>

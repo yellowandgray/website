@@ -82,7 +82,7 @@ video#vid {
     right: 0;
     bottom: 0;
     background-color: rgb(75, 168, 199);
-    z-index: 9;
+    z-index: 999;
     cursor: pointer;
 }
 
@@ -99,7 +99,7 @@ input::placeholder {
     font-size: 15px !important;
 }
 .features {
-    padding: 50px 0 50px;
+    padding: 100px 0 50px;
 }
 
 .box {
@@ -140,6 +140,40 @@ input[type=email], select, textarea {
 }
 
 input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+#enquiry input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 6px; /* Some padding */
+    border: none;
+    border-bottom: 1px solid #000; /* Gray border */
+    /*border-radius: 4px;  Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 0px; /* Add a top margin */
+    margin-bottom: 3px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    margin: 0 0 20px 0;
+    background: none;
+    outline: none;
+}
+
+#enquiry input[type=email], select, textarea {
+    width: 100%; /* Full width */
+    padding: 6px; /* Some padding */  
+    border: none;
+    border-bottom: 1px solid #000; /* Gray border */
+    /*border-radius: 4px;  Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 0px; /* Add a top margin */
+    margin-bottom: 3px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    margin: 0 0 20px 0;
+    background: none;
+    outline: none;
+}
+
+#enquiry input[type=submit]:hover {
     background-color: #45a049;
 }
 

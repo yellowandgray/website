@@ -13,7 +13,7 @@
             <div class="sub-bg prlx_parent">
 
                 <!-- Parallax Background -->
-               <div class="home_background prlx" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>
+               <div class="home_background" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>
                 <div class="services_page_shapes">
                     <!--                    <video style="height:100%;float: right;" autoplay>
                                             <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
@@ -26,7 +26,7 @@
                         <div class="col-lg-6" style="z-index: 999;">
                             <div class="home_content wow fadeInLeft">
                                 <h1>Contact</h1>
-                                <span>Get in touch With</span>
+                                <span>Get in touch With Me</span>
                             </div>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
-                            <h2>Contact US</h2>
+                            <h2>Get in touch With Me</h2>
                         </div>
                     </div>
                     <div class="row">
@@ -67,11 +67,11 @@
                                 <img src="images/contact-img.jpg" alt="" >
                             </div>
                             <div class="contact-details wow fadeInUp">
-                                <h2 class="text-center">Say Hello!</h2>
-                                <hr>
-                                <p>Phone     : <a href="tel:+971-50-79-89-121">+971 50 79 89 121</a></p>
-                                <p>E-mail    : <a href="mailto:info@cherylppinto.com">info@cherylppinto.com</a></p>
-                                <p>Website   : <a href="http://cherylppinto.com/">www.cherylppinto.com</a></p>
+<!--                                <h2 class="text-center">Say Hello!</h2>
+                                <hr>-->
+                                <p><i class="fas fa-phone"></i> : <a href="tel:+971-50-79-89-121">+971 50 79 89 121</a></p>
+                                <p><i class="fas fa-envelope-square"></i> : <a href="mailto:info@cherylppinto.com">info@cherylppinto.com</a></p>
+                                <p><i class="fas fa-globe"></i> : <a href="http://cherylppinto.com/">www.cherylppinto.com</a></p>
                             </div>
                             <!--                            <div class="contact-details wow fadeInUp">
                                                             <h2 class="text-center">Join Now!</h2>
