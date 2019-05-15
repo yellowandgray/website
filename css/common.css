@@ -295,3 +295,28 @@
     transform: scale(1.3, 1.1); 
     border: 3px solid #eee;
 }
+
+
+.list-style {
+    list-style: none;
+}
+
+.list-style i {
+    color: #0643c4;
+    font-size: 1em;
+    margin: 0 10px;
+    position: absolute;
+}
+
+.list-style li {
+    padding-left: 35px;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.box {
+    box-shadow: 0 0 20px 10px #eee;
+    padding: 20px;
+    height: 350px;
+    margin-bottom: 20px;
+}
