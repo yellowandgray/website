@@ -678,253 +678,130 @@
                                                 <h2 class="title-txt text-center wow fadeInUp"> <span>IMAGESMART</span></h2>
                                                 <h4  class="text-center">DiCOM PACS (PICTURE ARCHIVING AND COMMUNICATION SYSTEM) APPLICATION</h4>
                                             </div>
+                                            <div class="col-md-12 latest-grid" style="margin-top: 20px;">
+                                                <div class="col-md-4 latest-grid">
+
+                                                </div>
+                                                <div class="col-md-4 latest-grid box-3">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <img src="images/healthcare/imagesmart-features/001.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <h4>SECURED LOGIN</h4>
+                                                            <ul class="list-style">
+                                                                <i class="fa fa-check"></i><li>User Access</li>
+                                                                <i class="fa fa-check"></i><li>Audit Trail</li>
+                                                                <i class="fa fa-check"></i><li>User Role Definition</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 latest-grid">
+
+                                                </div>
+                                            </div>
                                             <div class="col-md-12 latest-grid">
                                                 <div class="faq-left height-225 tab-1-height">
                                                     <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/001.png" alt="" />
+                                                        <div class="col-md-4 latest-grid box-3">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <img src="images/healthcare/imagesmart-features/002.png" alt="" />
+                                                                </div>
+                                                                <div class="col-md-9">
+                                                                    <h4>DICOM WORKLIST MANAGER (WEB ACCESS)</h4>
+                                                                    <ul class="list-style">
+                                                                        <i class="fa fa-check"></i><li>Image Smart DICOM Work list can also be accessed over Web/Internet.</li>
+                                                                        <i class="fa fa-check"></i><li>This allows the user to connect with the Rediology worklist from remote location.</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">Patient Registration</h4>
+                                                        <div class="col-md-4 latest-grid box-3">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <img src="images/healthcare/imagesmart-features/003.png" alt="" />
+                                                                </div>
+                                                                <div class="col-md-9">
+                                                                    <h4>DASHBOARD</h4>
+                                                                    <ul class="list-style">
+                                                                        <i class="fa fa-check"></i><li>Reporting Status Count</li>
+                                                                        <i class="fa fa-check"></i><li>DICOM BANK</li>
+                                                                        <i class="fa fa-check"></i><li>Rediologist Performance</li>
+                                                                        <i class="fa fa-check"></i><li>Count (Positive/Negative) Cases</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/002.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">OPD Management</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/003.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">IPD Management</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/004.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">Emergency Management</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/005.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">Nursing Station</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/006.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">Investigation/ Lab management</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/007.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">HR Management</h4>
+                                                        <div class="col-md-4 latest-grid box-3">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <img src="images/healthcare/imagesmart-features/004.png" alt="" />
+                                                                </div>
+                                                                <div class="col-md-9">
+                                                                    <h4>DICOM WORKLIST MANAGER (LOCAL NETWORK WORKSTATION)</h4>
+                                                                    <ul class="list-style">
+                                                                        <i class="fa fa-check"></i><li>Import and Export DiCOM Data</li>
+                                                                        <i class="fa fa-check"></i><li>Archive DiCOM Data</li>
+                                                                        <i class="fa fa-check"></i><li>DiCOM Search (Query)</li>
+                                                                        <i class="fa fa-check"></i><li>Smart Album</li>
+                                                                        <i class="fa fa-check"></i><li>View (Quick View, Tabular and Grid)</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/008.png" alt="" />
+                                                        <div class="col-md-4 latest-grid box-3">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <img src="images/healthcare/imagesmart-features/005.png" alt="" />
+                                                                </div>
+                                                                <div class="col-md-9">
+                                                                    <h4>DICOM VIEWER</h4>
+                                                                    <ul class="list-style">
+                                                                        <i class="fa fa-check"></i><li>Advanced Features DiCOM Viewer is an vital component of Image Smart Family.</li>
+                                                                        <i class="fa fa-check"></i><li>It is the primary tool for the Radiologist to study the DICOM Studies and analyze the medical condition of the patient.</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">Report Management</h4>
+                                                        <div class="col-md-4 latest-grid box-3">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <img src="images/healthcare/imagesmart-features/001=6.png" alt="" />
+                                                                </div>
+                                                                <div class="col-md-9">
+                                                                    <h4>DICOM REPORTING STATION</h4>
+                                                                    <ul class="list-style">
+                                                                        <i class="fa fa-check"></i><li>Template Based Reporting System Stored modality wise and test wise.</li>
+                                                                        <i class="fa fa-check"></i><li>Access to the template is defined by Radiologist. </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 latest-grid">
-                                                <div class="faq-left height-225 tab-1-height">
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/009.png" alt="" />
+                                                        <div class="col-md-4 latest-grid box-3">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <img src="images/healthcare/imagesmart-features/001.png" alt="" />
+                                                                </div>
+                                                                <div class="col-md-9">
+                                                                    <h4>CROSS PLATFORM DICOM VIEWER</h4>
+                                                                    <ul class="list-style">
+                                                                        <i class="fa fa-check"></i><li>Browser enabled DiCOM Viewer</li>
+                                                                        <i class="fa fa-check"></i><li>Tablet PC Compatible</li>
+                                                                        <i class="fa fa-check"></i><li>Smartphone Browser Compatible </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">Radiology Management</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/010.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">Operation Theatre Management</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/011.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">Blood Bank Management</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/012.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">Pharmacy Management</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/013.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">Electronic Medical Record</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/014.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">Diet and Kitchen</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/015.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">Store and Inventory Management</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/icons-features/016.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <h4 style="margin-top: 20px;">Appointment and Queue Management</h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="clearfix"> </div>
-                                            <div class="row" style="margin-top: 50px;">
-                                                <div class="col-md-12">
-                                                    <h3 class="title-txt text-center wow fadeInUp">
-                                                        <span>Back</span> Office Features
-                                                    </h3>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="box">
-                                                        <ul class="list-style">
-                                                            <i class="fa fa-check"></i><li>HR Management</li>
-                                                            <i class="fa fa-check"></i><li>Payroll Management</li>
-                                                            <i class="fa fa-check"></i><li>Accounts and Financial Management Store and Inventory Management CRM</li>
-                                                            <i class="fa fa-check"></i><li>Reception</li>
-                                                            <i class="fa fa-check"></i><li>Registration</li>
-                                                            <i class="fa fa-check"></i><li>Admission, Discharge and Transfer OPD Billing</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="box">
-                                                        <ul class="list-style">
-                                                            <i class="fa fa-check"></i><li>Ward Information System Administration</li>
-                                                            <i class="fa fa-check"></i><li>Security and Identity Management Marketing</li>
-                                                            <i class="fa fa-check"></i><li>Housekeeping</li>
-                                                            <i class="fa fa-check"></i><li>Biomedical Equipment Management Electronic Patient folder</li>
-                                                            <i class="fa fa-check"></i><li>Medical Records Management Human Resources</li>
-                                                            <i class="fa fa-check"></i><li>Payroll</li>
-                                                            <i class="fa fa-check"></i><li>Billing Systems</li>
-                                                            <i class="fa fa-check"></i><li>Accounts Receivables</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="box">
-                                                        <ul class="list-style">
-                                                            <i class="fa fa-check"></i><li>Package deal designer</li>
-                                                            <i class="fa fa-check"></i><li>Contract Management Cash-less Management</li>
-                                                            <i class="fa fa-check"></i><li>Telephone Exchange</li>
-                                                            <i class="fa fa-check"></i><li>SMS and Paging gateway Web interface</li>
-                                                            <i class="fa fa-check"></i><li>Tally interface</li>
-                                                            <i class="fa fa-check"></i><li>Finance accounting Material Management</li>
-                                                            <i class="fa fa-check"></i><li>Purchase (General and Pharmacy) Departments</li>
-                                                            <i class="fa fa-check"></i><li>Sub stores</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row" style="margin-top: 50px;">
-                                                <div class="col-md-12">
-                                                    <h3 class="title-txt text-center wow fadeInUp">
-                                                        <span>Support</span> Features
-                                                    </h3>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="box">
-                                                        <ul class="list-style">
-                                                            <i class="fa fa-check"></i><li>Inbuilt Dash Board/ Report Builder</li>
-                                                            <i class="fa fa-check"></i><li>Housekeeping Management</li>
-                                                            <i class="fa fa-check"></i><li>Enquiry and Appointment</li>
-                                                            <i class="fa fa-check"></i><li>CSSD</li>
-                                                            <i class="fa fa-check"></i><li>Diet and Kitchen</li>
-                                                            <i class="fa fa-check"></i><li>Linen and Laundry</li>
-                                                            <i class="fa fa-check"></i><li>Bio Medical Waste</li>
-                                                            <i class="fa fa-check"></i><li>Transportation</li>
-                                                            <i class="fa fa-check"></i><li>Ambulance Management</li>
-                                                            <i class="fa fa-check"></i><li>Operation Theatre</li>
-                                                            <i class="fa fa-check"></i><li>Phlebotomy</li>
-                                                            <i class="fa fa-check"></i><li>OPD Pharmacy</li>
-                                                            <i class="fa fa-check"></i><li>IPD Pharmacy</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="box">
-                                                        <ul class="list-style">
-                                                            <i class="fa fa-check"></i><li>MIS Reports</li>
-                                                            <i class="fa fa-check"></i><li>Food and Beverage</li>
-                                                            <i class="fa fa-check"></i><li>Diet and Nutrition</li>
-                                                            <i class="fa fa-check"></i><li>Health Plan</li>
-                                                            <i class="fa fa-check"></i><li>Cardiology Investigations</li>
-                                                            <i class="fa fa-check"></i><li>Rediology Information Systems</li>
-                                                            <i class="fa fa-check"></i><li>Cath Lab</li>
-                                                            <i class="fa fa-check"></i><li>Speciality</li>
-                                                            <i class="fa fa-check"></i><li>Blood Blank</li>
-                                                            <i class="fa fa-check"></i><li>Physician</li>
-                                                            <i class="fa fa-check"></i><li>Interface</li>
-                                                            <i class="fa fa-check"></i><li>Lab enquipment</li>
-                                                            <i class="fa fa-check"></i><li>Gas Monitoring</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="box">
-                                                        <ul class="list-style">
-                                                            <i class="fa fa-check"></i><li>PACS</li>
-                                                            <i class="fa fa-check"></i><li>Laboratory
-                                                                <ul>
-                                                                    <i class="fa fa-check"></i><li>Following the seven different specialty labs which the lab module can be configured to meet the requirements
-                                                                        <ul>
-                                                                            <i class="fa fa-check"></i><li>Biochemistry, Hematology, Microbiology, Serology, Cytology, Pathology, immuno hematology</li>
-                                                                        </ul>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="clearfix"> </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="profile">
                                     <div class="faqmain-info">
@@ -1030,10 +907,12 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
+
 
 
         <!--vertical tap-->
