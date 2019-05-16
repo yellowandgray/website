@@ -242,7 +242,7 @@
     cursor: pointer;
     transition: 0.3s;
     background: #026fbf;
-    margin-bottom: 5px;
+    /*margin-bottom: 5px;*/
     border-radius: 4px;
 }
 
@@ -255,8 +255,8 @@
 /* Create an active/current "tab button" class */
 .tab button.active {
     background-color: #ffffff;
-    color: #000;
-    border: 1px solid #000;
+    color: #ffffff;
+    /*border: 1px solid #000;*/
     font-weight: bold;
 }
 
@@ -317,21 +317,21 @@
 
 .box {
     box-shadow: 0 0 20px 10px #eee;
-    padding: 20px;
-    height: 400px;
-    margin-bottom: 20px;
+    padding: 20px 1px;
+    height: 417px;
+    margin-bottom: 10px;
 }
 .box-1 {
     box-shadow: 0 0 20px 10px #eee;
     padding: 20px;
-    height: 225px;
+    height: 175px;
     margin-bottom: 20px;
 }
 
 .box-1 img {
     margin-bottom: 15px;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    /*    height: 100px;*/
 }
 
 .oru-company img {
@@ -362,4 +362,78 @@
 
 .padding-tb-30 {
     padding: 30px 0;
+}
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 600px;
+}
+
+/* vertical tap-- Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: #026fbf;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #80b7df;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #af2788;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 600px;
+}
+#Features .row {
+    margin-bottom: 15px !important;
+}
+#Features img {
+    padding: 5px !important;
+    width: 50px !important;
+}
+.box-1 li{
+    text-align: center !important;
+    font-size: 14px !important;
+    padding-left: 0px !important;
+}
+h2.title-txt {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2em;
+    color: #000;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+h2.title-txt span {
+    color: #ff6566  !important;
+}
+.tap-2 li {
+    width: 16% !important;
+}
+.tap-2 li a {
+    font-size: 15px !important;
+    padding: 15px 0px !important;
+/*    height: 100px;*/
 }

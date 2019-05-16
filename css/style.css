@@ -900,8 +900,8 @@ div#team h3.title-txt span {
 .faq-info .nav-tabs li a:hover {
     opacity: 1;
     border: none;
-    color: #026fbf;
-    background: #ffffff;
+    color: #ffffff;
+    background: #ff6666;
 }
 
 #testi label,
