@@ -306,6 +306,7 @@
     font-size: 1em;
     margin: 0 10px;
     position: absolute;
+    padding: 4px 0 0 0;
 }
 
 .list-style li {
@@ -317,6 +318,48 @@
 .box {
     box-shadow: 0 0 20px 10px #eee;
     padding: 20px;
-    height: 350px;
+    height: 400px;
     margin-bottom: 20px;
+}
+.box-1 {
+    box-shadow: 0 0 20px 10px #eee;
+    padding: 20px;
+    height: 225px;
+    margin-bottom: 20px;
+}
+
+.box-1 img {
+    margin-bottom: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.oru-company img {
+    margin-bottom: 10px;
+}
+.oru-company p {
+    margin-bottom: 10px;
+}
+
+.oru-company h4 {
+    margin-bottom: 10px;
+}
+
+.border-h4 {
+    border: 1px solid #bc3c82;
+    border-radius: 6px;
+    width: 240px;
+    margin: 0 auto;
+    padding: 10px 0px;
+}
+
+.domain-expertise {
+    box-shadow: 0 0 20px 10px #eee;
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.padding-tb-30 {
+    padding: 30px 0;
 }

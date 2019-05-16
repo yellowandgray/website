@@ -48,7 +48,7 @@
                         <a href="#about" class="scroll">About</a>
                     </li>
                     <li class="item-101 hovernav">
-                        <a href="healthcare-solution.php" class="scroll">Healthcare Solution</a>
+                        <a href="healthcare-solution.php" class="scroll">Healthcare Solutions</a>
                     </li>
                     <li class="item-101 hovernav">
                         <a href="#services" class="scroll">Services</a>

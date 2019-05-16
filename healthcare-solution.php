@@ -13,7 +13,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="index.php"><img src="images/logo.png" alt="" title="" class="img-responsive"></a>
+                        <a href="index.php"><img src="images/healthcare/logo-healthcare.png" alt="" title="" class="img-responsive"></a>
                     </div>
                     <!-- navbar-header -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -25,7 +25,7 @@
                                 <a href="index.php#about" class="scroll">About</a>
                             </li>
                             <li class="item-101 hovernav">
-                                <a href="healthcare-solution.php" class="scroll">Healthcare Solution</a>
+                                <a href="healthcare-solution.php" class="scroll">Healthcare Solutions</a>
                             </li>
                             <li class="item-101 hovernav">
                                 <a href="index.php#services" class="scroll">Services</a>
@@ -60,28 +60,110 @@
         </div>
 
         <div class="banner" style="background: url(images/healthcare/healthcare-banner.jpg)no-repeat;">
-            <!--            <div class="banner-text">
-                            <div id="top" class="callbacks_container">
-                                <ul class="rslides" id="slider3">
-                                    <li>
-                                        <div class="banner-textagileinfo">
-                                            <div class="row">
-                                                <div class="col-md-12 text-center wow fadeInRightBig" data-wow-delay="0.2s">
-                                                    <img align="center" src="images/logo-01.png" class="img-width" alt="" style="padding: 10px;">
-                                                </div>
-                                                <div class="col-md-12 text-center wow fadeInRightBig" data-wow-delay="0.6s">
-                                                    <h6>ALIAS INNOVATION SDN BHD</h6>
-                                                    <h3>FUTURIZING INNOVATION</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>-->
             <div class="clearfix"></div>
         </div>
+
+        <div class="section about-section" style="background: url(images/healthcare/about/about-bg.jpg)no-repeat;background-size: cover;">
+            <div class="container">
+                <h3 class="title-txt text-center wow fadeInUp">
+                    <span>Our</span> Company
+                </h3>
+                <div class="row oru-company">
+                    <div class="col-md-7">
+                        <p>
+                            <strong class="color-pink">Alias Innovation</strong> 
+                            is a Technology Solutions Provider and Business Strategy Consulting company with collective industry experience of more than 
+                            <strong class="color-pink">100 years.</strong>
+                        </p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>With:</h4>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="images/healthcare/about/international-client.png" alt="" class="img-responsive"/>
+                            </div>
+                            <div class="col-md-9">
+                                <h4 class="color-pink bold">+130 LOCAL & INTERNATIONAL CLIENTS</h4>
+                                <P>From multiple industry vertical on an International Level and provide our services for demand leading edge software development skills.</P>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="images/healthcare/about/professional.png" alt="" class="img-responsive"/>
+                            </div>
+                            <div class="col-md-9">
+                                <h4 class="color-pink bold">+100 FULL TIME PROFESSIONALS</h4>
+                                <P>Distributed in our three development centers in Malaysia (Kuala Lumpur, Selangor), India(Chennai) and Philippines(Manila).</P>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="images/healthcare/about/about.jpg" alt="" class="img-responsive"/>
+                    </div>
+                </div>
+                <div class="padding-tb-30">
+                    <div class="row oru-company">
+                        <div class="col-md-12 margin-b-20">
+                            <h4 class="border-h4 text-center">OUR DOMAIN EXPERTISE</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="domain-expertise text-center">
+                                <img src="images/healthcare/about/001.png" alt="" />
+                                <p>CORPORATE</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="domain-expertise text-center">
+                                <img src="images/healthcare/about/002.png" alt="" />
+                                <p>CONTENT</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="domain-expertise text-center">
+                                <img src="images/healthcare/about/003.png" alt="" />
+                                <p>CREATIVE</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="domain-expertise text-center">
+                                <img src="images/healthcare/about/004.png" alt="" />
+                                <p>FINANCIAL</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="domain-expertise text-center">
+                                <img src="images/healthcare/about/005.png" alt="" />
+                                <p>INNOVATION</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="domain-expertise text-center">
+                                <img src="images/healthcare/about/006.png" alt="" />
+                                <p>TECHNOLOGY</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="padding-tb-30">
+                    <div class="row">
+                        <div class="col-md-12 text-center margin-tp-20">
+                            <p>Our international markets exposure has served us well in our line of work and we have made market space connectivity in these nations:</p>
+                            <img src="images/healthcare/about/flag-001.png" alt="" class="img-responsive"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="section">
+            <div class="container">
+                <div class="row">
+                    
+                </div>
+            </div>
+        </div>
+        
+<!--        <div class="section">
             <div class="container">
                 <h3 class="title-txt text-center wow fadeInUp">
                     <span>Our</span> Capabilities
@@ -89,7 +171,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="faq-info">
-                            <!-- Nav tabs -->
+                             Nav tabs 
                             <ul class="nav nav-tabs wow fadeInUp" role="tablist">
                                 <li role="presentation" class="active">
                                     <a href="#testi" aria-controls="testi" role="tab" data-toggle="tab">Core Features</a>
@@ -107,7 +189,7 @@
                                     <a href="#tab5" aria-controls="messages" role="tab" data-toggle="tab">System Screenshot</a>
                                 </li>
                             </ul>
-                            <!-- Tab panes -->
+                             Tab panes 
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active" id="testi">
                                     <div class="faqmain-info">
@@ -344,11 +426,15 @@
                                                     <div class="box">
                                                         <ul class="list-style">
                                                             <i class="fa fa-check"></i><li>PACS</li>
-                                                            <i class="fa fa-check"></i><li>Laboratory</li>
-                                                            <ul>
-                                                                <i class="fa fa-check"></i><li>Following the seven different specialty labs which the lab module can be configured to meet the requirements</li>
-                                                                <i class="fa fa-check"></i><li>Biochemistry, Hematology, Microbiology, Serology, Cytology, Pathology, immuno hematology</li>
-                                                            </ul>
+                                                            <i class="fa fa-check"></i><li>Laboratory
+                                                                <ul>
+                                                                    <i class="fa fa-check"></i><li>Following the seven different specialty labs which the lab module can be configured to meet the requirements
+                                                                        <ul>
+                                                                            <i class="fa fa-check"></i><li>Biochemistry, Hematology, Microbiology, Serology, Cytology, Pathology, immuno hematology</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -359,16 +445,89 @@
                                 <div role="tabpanel" class="tab-pane" id="profile">
                                     <div class="faqmain-info">
                                         <div class="faq-subinfo">
+                                            <img src="images/healthcare/functional-flow.png" alt="" />
+                                            <div class="clearfix"> </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="messages">
                                     <div class="faqmain-info">
                                         <div class="faq-subinfo">
-
+                                            <div class="col-md-12">
+                                                <h3 style="text-align: center;width: 500px;margin: 0 auto;font-size: 20px;vertical-align: bottom">
+                                                    <img src="images/healthcare/cloud-based-system/001.png" alt="" style="width: 15%;float: left;"/><strong style="font-size: 25px;">CLOUD BASED SYSTEM</strong> INTEGRATED <br/>WITH PACS & TELE MEDICINE SOLUTION
+                                                </h3>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="box-1">
+                                                        <center><img src="images/healthcare/cloud-based-system/002.png" alt="" /></center>
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li>Enables <strong>HUB and SPOKES</strong> model</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-1">
+                                                        <center><img src="images/healthcare/cloud-based-system/003.png" alt="" /></center>
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li>Enables <strong>Cross Platform</strong> Transactions</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-1">
+                                                        <center><img src="images/healthcare/cloud-based-system/004.png" alt="" /></center>
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li><strong>Reports </strong>for HOD</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-1">
+                                                        <center><img src="images/healthcare/cloud-based-system/005.png" alt="" /></center>
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li><strong>Certified </strong> Reliability</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="box-1">
+                                                        <center><img src="images/healthcare/cloud-based-system/005.png" alt="" /></center>
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li><strong>100% Web based</strong> system</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-1">
+                                                        <center><img src="images/healthcare/cloud-based-system/006.png" alt="" /></center>
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li><strong>Optimum Utilization</strong> of available resources</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-1">
+                                                        <center><img src="images/healthcare/cloud-based-system/007.png" alt="" /></center>
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li>Achieve <strong>Efficiency</strong></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-1">
+                                                        <center><img src="images/healthcare/cloud-based-system/008.png" alt="" /></center>
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li><strong>Mobile Communication </strong>Enabled</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="clearfix"> </div>
                                         </div>
-
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="tab4">
@@ -390,7 +549,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </body>
     <?php include 'footer.php'; ?>
 </html>
