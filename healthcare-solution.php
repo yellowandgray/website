@@ -320,9 +320,9 @@
                     <div id="Office" class="tabcontent">
                         <div class="row">
                             <div class="col-md-12" style="margin-top: 20px;">
-                                <h3 class="title-txt text-center wow fadeInUp">
+                                <h2 class="title-txt text-center wow fadeInUp">
                                     <span>Back</span> Office Features
-                                </h3>
+                                </h2>
                             </div>
                             <div class="col-md-4">
                                 <div class="box">
@@ -370,9 +370,9 @@
                     <div id="Support" class="tabcontent">
                         <div class="row" style="margin-top: 20px;">
                             <div class="col-md-12">
-                                <h3 class="title-txt text-center wow fadeInUp">
+                                <h2 class="title-txt text-center wow fadeInUp">
                                     <span>Support</span> Features
-                                </h3>
+                                </h2>
                             </div>
                             <div class="col-md-4">
                                 <div class="box">
@@ -524,13 +524,116 @@
                     </div>
 
                     <div id="Integration" class="tabcontent">
-                        <h3>Tokyo</h3>
-                        <p>Tokyo is the capital of Japan.</p>
+                        <div class="col-md-12"  style="margin-top: 20px;">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="box-1">
+                                        <center><img src="images/healthcare/smart-digital-integration/001.png" alt="" /></center>
+                                        <ul class="list-style">
+                                            <li><strong>Bio Metric </strong>Identification/ Verification (Iris/Fingerprint)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="box-1">
+                                        <center><img src="images/healthcare/smart-digital-integration/002.png" alt="" /></center>
+                                        <ul class="list-style">
+                                            <li><strong>Barcode- </strong>Reader and Printer</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="box-1">
+                                        <center><img src="images/healthcare/smart-digital-integration/003.png" alt="" /></center>
+                                        <ul class="list-style">
+                                            <li><strong>SMS & Email</strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="box-1">
+                                        <center><img src="images/healthcare/smart-digital-integration/004.png" alt="" /></center>
+                                        <ul class="list-style">
+                                            <li><strong>Radiology</strong> Modality</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="box-1">
+                                        <center><img src="images/healthcare/smart-digital-integration/005.png" alt="" /></center>
+                                        <ul class="list-style">
+                                            <li><strong>Smart Card </strong>e.g MyKad</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="box-1">
+                                        <center><img src="images/healthcare/smart-digital-integration/006.png" alt="" /></center>
+                                        <ul class="list-style">
+                                            <li><strong>Digital Pen</strong> (Incl. Handwritten Prescription Capture)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="box-1">
+                                        <center><img src="images/healthcare/smart-digital-integration/007.png" alt="" /></center>
+                                        <ul class="list-style">
+                                            <li><strong>Token Display</strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="box-1">
+                                        <center><img src="images/healthcare/smart-digital-integration/008.png" alt="" /></center>
+                                        <ul class="list-style">
+                                            <li><strong>Digital Vital Tracking Devices</strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="box-1">
+                                        <center><img src="images/healthcare/smart-digital-integration/009.png" alt="" /></center>
+                                        <ul class="list-style">
+                                            <li><strong>Web Camera</strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="box-1">
+                                        <center><img src="images/healthcare/smart-digital-integration/010.png" alt="" /></center>
+                                        <ul class="list-style">
+                                            <li><strong>Mobile Computing</strong> (IOS, Android, Windows)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="box-1">
+                                        <center><img src="images/healthcare/smart-digital-integration/011.png" alt="" /></center>
+                                        <ul class="list-style">
+                                            <li><strong>Lab Machine</strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="box-1">
+                                        <center><img src="images/healthcare/smart-digital-integration/012.png" alt="" /></center>
+                                        <ul class="list-style">
+                                            <li><strong>Dictaphone</strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
                     </div>
 
                     <div id="Screenshot" class="tabcontent">
-                        <h3>Tokyo</h3>
-                        <p>Tokyo is the capital of Japan.</p>
+                        <h3>Waiting For a Pictures.......</h3>
+                    
                     </div>
 
                 </div>
@@ -540,27 +643,30 @@
         <div class="section">
             <div class="container">
                 <h3 class="title-txt text-center wow fadeInUp">
-                    <span>Our</span> Capabilities
+                    <span>MADSEVA </span>Hospital Management System
                 </h3>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="faq-info">
 
-                            <ul class="nav nav-tabs wow fadeInUp" role="tablist">
+                            <ul class="nav nav-tabs wow fadeInUp tap-2" role="tablist">
                                 <li role="presentation" class="active">
-                                    <a href="#testi" aria-controls="testi" role="tab" data-toggle="tab">Core Features</a>
+                                    <a href="#testi" aria-controls="testi" role="tab" data-toggle="tab"><br>IMAGESMART<br>Dicom PACS Application</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Functional Flow</a>
+                                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><br>RADSEVA<br>Tele Radiology Application</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Benefits</a>
+                                    <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><br>ENDOSMART<br>Endoscopy System</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#tab4" aria-controls="messages" role="tab" data-toggle="tab">Smart Digital Integration</a>
+                                    <a href="#tab4" aria-controls="messages" role="tab" data-toggle="tab">H-SPA<br>Patient Diagnostics Application</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#tab5" aria-controls="messages" role="tab" data-toggle="tab">System Screenshot</a>
+                                    <a href="#tab5" aria-controls="messages" role="tab" data-toggle="tab">MIMS<br>Medical Institute Management System</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#tab5" aria-controls="messages" role="tab" data-toggle="tab">SONOSMART<br>Diagnostic Ultrasound System</a>
                                 </li>
                             </ul>
 

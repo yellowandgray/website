@@ -242,7 +242,7 @@
     cursor: pointer;
     transition: 0.3s;
     background: #026fbf;
-    margin-bottom: 5px;
+    /*margin-bottom: 5px;*/
     border-radius: 4px;
 }
 
@@ -368,7 +368,7 @@
     border: 1px solid #ccc;
     background-color: #f1f1f1;
     width: 30%;
-    height: 580px;
+    height: 600px;
 }
 
 /* vertical tap-- Style the buttons inside the tab */
@@ -384,6 +384,7 @@
     cursor: pointer;
     transition: 0.3s;
     font-size: 17px;
+    border-bottom: 1px solid #d4d4d4;
 }
 
 /* Change background color of buttons on hover */
@@ -403,7 +404,7 @@
     border: 1px solid #ccc;
     width: 70%;
     border-left: none;
-    height: 580px;
+    height: 600px;
 }
 #Features .row {
     margin-bottom: 15px !important;
@@ -416,4 +417,23 @@
     text-align: center !important;
     font-size: 14px !important;
     padding-left: 0px !important;
+}
+h2.title-txt {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2em;
+    color: #000;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+h2.title-txt span {
+    color: #ff6566  !important;
+}
+.tap-2 li {
+    width: 16% !important;
+}
+.tap-2 li a {
+    font-size: 15px !important;
+    padding: 15px 0px !important;
+/*    height: 100px;*/
 }
