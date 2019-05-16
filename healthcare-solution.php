@@ -633,7 +633,7 @@
 
                     <div id="Screenshot" class="tabcontent">
                         <h3>Waiting For a Pictures.......</h3>
-                    
+
                     </div>
 
                 </div>
@@ -674,7 +674,11 @@
                                 <div role="tabpanel" class="tab-pane active" id="testi">
                                     <div class="faqmain-info">
                                         <div class="faq-subinfo">
-                                            <div class="col-md-6 latest-grid">
+                                            <div class="col-md-12 latest-grid">
+                                                <h2 class="title-txt text-center wow fadeInUp"> <span>IMAGESMART</span></h2>
+                                                <h4  class="text-center">DiCOM PACS (PICTURE ARCHIVING AND COMMUNICATION SYSTEM) APPLICATION</h4>
+                                            </div>
+                                            <div class="col-md-12 latest-grid">
                                                 <div class="faq-left height-225 tab-1-height">
                                                     <div class="row">
                                                         <div class="col-md-3">

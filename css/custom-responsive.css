@@ -22,3 +22,8 @@
         padding: 3em 3em !important;
     }
 }
+@media (min-width: 320px) and (max-width: 991px) {
+    .tabcontent {
+        height: auto !important;
+    }
+}
