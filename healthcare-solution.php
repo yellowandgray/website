@@ -651,22 +651,22 @@
 
                             <ul class="nav nav-tabs wow fadeInUp tap-2" role="tablist">
                                 <li role="presentation" class="active">
-                                    <a href="#testi" aria-controls="testi" role="tab" data-toggle="tab"><br>IMAGESMART<br>Dicom PACS Application</a>
+                                    <a href="#testi" aria-controls="testi" role="tab" data-toggle="tab">IMAGESMART</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><br>RADSEVA<br>Tele Radiology Application</a>
+                                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">H-SPA</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><br>ENDOSMART<br>Endoscopy System</a>
+                                    <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">RADSEVA</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#tab4" aria-controls="messages" role="tab" data-toggle="tab">H-SPA<br>Patient Diagnostics Application</a>
+                                    <a href="#tab4" aria-controls="messages" role="tab" data-toggle="tab">MIMS</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#tab5" aria-controls="messages" role="tab" data-toggle="tab">MIMS<br>Medical Institute Management System</a>
+                                    <a href="#tab5" aria-controls="messages" role="tab" data-toggle="tab">ENDOSMART</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#tab5" aria-controls="messages" role="tab" data-toggle="tab">SONOSMART<br>Diagnostic Ultrasound System</a>
+                                    <a href="#tab5" aria-controls="messages" role="tab" data-toggle="tab">SONOSMART</a>
                                 </li>
                             </ul>
 
@@ -674,22 +674,27 @@
                                 <div role="tabpanel" class="tab-pane active" id="testi">
                                     <div class="faqmain-info">
                                         <div class="faq-subinfo">
-                                            <div class="col-md-12 latest-grid">
-                                                <h2 class="title-txt text-center wow fadeInUp"> <span>IMAGESMART</span></h2>
-                                                <h4 class="text-center">DiCOM PACS (PICTURE ARCHIVING AND COMMUNICATION SYSTEM) APPLICATION</h4>
-                                                <p class="text-center margin-t-10">Picture Archiving and Communication Systems (PACS) are a valuable tool for healthcare organizations, enabling physicians to quickly and easily share enterprise medical imaging reports electronically. Even as they become a standard platform at most facilities, their usefulness is growing as options such as a vendor neutral archive and other options are available.</p>
-                                            </div>
-                                            <div class="col-md-12 latest-grid" style="margin-top: 20px;">
-                                                <div class="col-md-4 latest-grid">
 
+                                            <div class="row">
+                                                <div class="col-md-12 latest-grid">
+                                                    <h2 class="title-txt text-center wow fadeInUp"> <span>IMAGESMART</span></h2>
+                                                    <h4 class="text-center">DiCOM PACS (PICTURE ARCHIVING AND COMMUNICATION SYSTEM) APPLICATION</h4>
+                                                    <p class="text-center margin-t-10">Picture Archiving and Communication Systems (PACS) are a valuable tool for healthcare organizations, enabling physicians to quickly and easily share enterprise medical imaging reports electronically. Even as they become a standard platform at most facilities, their usefulness is growing as options such as a vendor neutral archive and other options are available.</p>
                                                 </div>
-                                                <div class="col-md-4 latest-grid box-3">
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/imagesmart-features/001.png" alt="" />
+                                            </div>
+
+                                            <div class="row" style="margin-top: 40px;">
+                                                <div class="col-md-4 latest-grid">
+                                                    <div class="box-2">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <img src="images/healthcare/imagesmart-features/001.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <h4>SECURED LOGIN</h4>
+                                                            </div>
                                                         </div>
-                                                        <div class="col-md-9">
-                                                            <h4>SECURED LOGIN</h4>
+                                                        <div class="col-md-12">
                                                             <ul class="list-style">
                                                                 <i class="fa fa-check"></i><li>User Access</li>
                                                                 <i class="fa fa-check"></i><li>Audit Trail</li>
@@ -699,206 +704,827 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4 latest-grid">
-
+                                                    <div class="box-2">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <img src="images/healthcare/imagesmart-features/002.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <h4>DICOM WORKLIST MANAGER (WEB ACCESS)</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <ul class="list-style">
+                                                                <i class="fa fa-check"></i><li>Image Smart DICOM Work list can also be accessed over Web/Internet.</li>
+                                                                <i class="fa fa-check"></i><li>This allows the user to connect with the Rediology worklist from remote location.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 latest-grid">
+                                                    <div class="box-2">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <img src="images/healthcare/imagesmart-features/003.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <h4>DASHBOARD</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <ul class="list-style">
+                                                                <i class="fa fa-check"></i><li>Reporting Status Count</li>
+                                                                <i class="fa fa-check"></i><li>DICOM BANK</li>
+                                                                <i class="fa fa-check"></i><li>Rediologist Performance</li>
+                                                                <i class="fa fa-check"></i><li>Count (Positive/Negative) Cases</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12 latest-grid">
-                                                <div class="faq-left height-225 tab-1-height">
-                                                    <div class="row">
-                                                        <div class="col-md-4 latest-grid box-3">
-                                                            <div class="row">
-                                                                <div class="col-md-3">
-                                                                    <img src="images/healthcare/imagesmart-features/002.png" alt="" />
-                                                                </div>
-                                                                <div class="col-md-9">
-                                                                    <h4>DICOM WORKLIST MANAGER (WEB ACCESS)</h4>
-                                                                    <ul class="list-style">
-                                                                        <i class="fa fa-check"></i><li>Image Smart DICOM Work list can also be accessed over Web/Internet.</li>
-                                                                        <i class="fa fa-check"></i><li>This allows the user to connect with the Rediology worklist from remote location.</li>
-                                                                    </ul>
-                                                                </div>
+
+                                            <div class="row" style="margin-top: 40px;">
+                                                <div class="col-md-4 latest-grid">
+                                                    <div class="box-2">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <img src="images/healthcare/imagesmart-features/004.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <h4>DICOM WORKLIST MANAGER (LOCAL NETWORK WORKSTATION)</h4>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4 latest-grid box-3">
-                                                            <div class="row">
-                                                                <div class="col-md-3">
-                                                                    <img src="images/healthcare/imagesmart-features/003.png" alt="" />
-                                                                </div>
-                                                                <div class="col-md-9">
-                                                                    <h4>DASHBOARD</h4>
-                                                                    <ul class="list-style">
-                                                                        <i class="fa fa-check"></i><li>Reporting Status Count</li>
-                                                                        <i class="fa fa-check"></i><li>DICOM BANK</li>
-                                                                        <i class="fa fa-check"></i><li>Rediologist Performance</li>
-                                                                        <i class="fa fa-check"></i><li>Count (Positive/Negative) Cases</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4 latest-grid box-3">
-                                                            <div class="row">
-                                                                <div class="col-md-3">
-                                                                    <img src="images/healthcare/imagesmart-features/004.png" alt="" />
-                                                                </div>
-                                                                <div class="col-md-9">
-                                                                    <h4>DICOM WORKLIST MANAGER (LOCAL NETWORK WORKSTATION)</h4>
-                                                                    <ul class="list-style">
-                                                                        <i class="fa fa-check"></i><li>Import and Export DiCOM Data</li>
-                                                                        <i class="fa fa-check"></i><li>Archive DiCOM Data</li>
-                                                                        <i class="fa fa-check"></i><li>DiCOM Search (Query)</li>
-                                                                        <i class="fa fa-check"></i><li>Smart Album</li>
-                                                                        <i class="fa fa-check"></i><li>View (Quick View, Tabular and Grid)</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
+                                                        <div class="col-md-12">
+                                                            <ul class="list-style">
+                                                                <i class="fa fa-check"></i><li>Import and Export DiCOM Data</li>
+                                                                <i class="fa fa-check"></i><li>Archive DiCOM Data</li>
+                                                                <i class="fa fa-check"></i><li>DiCOM Search (Query)</li>
+                                                                <i class="fa fa-check"></i><li>Smart Album</li>
+                                                                <i class="fa fa-check"></i><li>View (Quick View, Tabular and Grid)</li>
+                                                            </ul>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-4 latest-grid box-3">
-                                                            <div class="row">
-                                                                <div class="col-md-3">
-                                                                    <img src="images/healthcare/imagesmart-features/005.png" alt="" />
-                                                                </div>
-                                                                <div class="col-md-9">
-                                                                    <h4>DICOM VIEWER</h4>
-                                                                    <ul class="list-style">
-                                                                        <i class="fa fa-check"></i><li>Advanced Features DiCOM Viewer is an vital component of Image Smart Family.</li>
-                                                                        <i class="fa fa-check"></i><li>It is the primary tool for the Radiologist to study the DICOM Studies and analyze the medical condition of the patient.</li>
-                                                                    </ul>
-                                                                </div>
+                                                </div>
+                                                <div class="col-md-4 latest-grid">
+                                                    <div class="box-2">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <img src="images/healthcare/imagesmart-features/005.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <h4>DICOM VIEWER</h4>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4 latest-grid box-3">
-                                                            <div class="row">
-                                                                <div class="col-md-3">
-                                                                    <img src="images/healthcare/imagesmart-features/001=6.png" alt="" />
-                                                                </div>
-                                                                <div class="col-md-9">
-                                                                    <h4>DICOM REPORTING STATION</h4>
-                                                                    <ul class="list-style">
-                                                                        <i class="fa fa-check"></i><li>Template Based Reporting System Stored modality wise and test wise.</li>
-                                                                        <i class="fa fa-check"></i><li>Access to the template is defined by Radiologist. </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4 latest-grid box-3">
-                                                            <div class="row">
-                                                                <div class="col-md-3">
-                                                                    <img src="images/healthcare/imagesmart-features/001.png" alt="" />
-                                                                </div>
-                                                                <div class="col-md-9">
-                                                                    <h4>CROSS PLATFORM DICOM VIEWER</h4>
-                                                                    <ul class="list-style">
-                                                                        <i class="fa fa-check"></i><li>Browser enabled DiCOM Viewer</li>
-                                                                        <i class="fa fa-check"></i><li>Tablet PC Compatible</li>
-                                                                        <i class="fa fa-check"></i><li>Smartphone Browser Compatible </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
+                                                        <div class="col-md-12">
+                                                            <ul class="list-style">
+                                                                <i class="fa fa-check"></i><li>Advanced Features DiCOM Viewer is an vital component of Image Smart Family.</li>
+                                                                <i class="fa fa-check"></i><li>It is the primary tool for the Radiologist to study the DICOM Studies and analyze the medical condition of the patient.</li>
+                                                            </ul>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="col-md-4 latest-grid">
+                                                    <div class="box-2">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <img src="images/healthcare/imagesmart-features/006.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <h4>DICOM REPORTING STATION</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <ul class="list-style">
+                                                                <i class="fa fa-check"></i><li>Template Based Reporting System Stored modality wise and test wise.</li>
+                                                                <i class="fa fa-check"></i><li>Access to the template is defined by Radiologist. </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row" style="margin-top: 40px;">
+                                                <div class="col-md-4 latest-grid">
+                                                    <div class="box-2">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <img src="images/healthcare/imagesmart-features/007.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <h4>CROSS PLATFORM DICOM VIEWER</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <ul class="list-style">
+                                                                <i class="fa fa-check"></i><li>Browser enabled DiCOM Viewer</li>
+                                                                <i class="fa fa-check"></i><li>Tablet PC Compatible</li>
+                                                                <i class="fa fa-check"></i><li>Smartphone Browser Compatible </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 latest-grid"></div>
+                                                <div class="col-md-4 latest-grid"></div>
+                                            </div>
+
+                                            <div class="row user-benifits">
+                                                <div class="col-md-12 text-center">
+                                                    <h2>BENEFITS TO THE END USER</h2>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <img src="images/healthcare/imagesmart-features/user-benifits.png" alt="" width="100%"/>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <ul class="list-style">
+                                                        <i class="fa fa-check"></i><li>Stable Workflow for DICOM Data with Patient Medical Record (EMR / EHR)</li>
+                                                        <i class="fa fa-check"></i><li>Authenticate Access to DICOM Data to Radiologist, Technician, Referring Physician and Surgeon.</li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="clearfix"> </div>
                                 </div>
+
                                 <div role="tabpanel" class="tab-pane" id="profile">
                                     <div class="faqmain-info">
                                         <div class="faq-subinfo">
-                                            <img src="images/healthcare/functional-flow.png" alt="" />
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h2 class="title-txt text-center wow fadeInUp"><span>H-SPA</span></h2>
+                                                    <h4 class="text-center">Patient Management System</h4>
+                                                    <p class="text-center margin-t-10">Multi-specialty module is a state of the art Hospital Information Management System(HIMS) which is comprehensive Enterprise wide software that covers all aspects of management and operations of medium and large hospitals. It Enables healthcare providers to improve the operational effectiveness, reduce costs, reduce medical errors and enhance delivery of quality care.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row h-spa" style="margin-top: 40px;">
+                                                <div class="col-md-6">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <img src="images/healthcare/h-spa-feature/001.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <p>Patient Management</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <img src="images/healthcare/h-spa-feature/002.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <p>Emergency Patient Management</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <img src="images/healthcare/h-spa-feature/003.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <p>Billing Management (OPD & IPD) & Insurance Management with E-Claims (OPD & IPD)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <img src="images/healthcare/h-spa-feature/004.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <p>EMR(OPD & IPD Clinical Data Management)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <img src="images/healthcare/h-spa-feature/005.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <p>Pathology Management</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <img src="images/healthcare/h-spa-feature/006.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <p>Radiology Management</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <img src="images/healthcare/h-spa-feature/007.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <p>Operation Theatre Management</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <img src="images/healthcare/h-spa-feature/008.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <p>Nursing Station Management</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <img src="images/healthcare/h-spa-feature/009.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <p>Inventory Management (General Stores)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <img src="images/healthcare/h-spa-feature/010.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <p>Pharmacy Management</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <img src="images/healthcare/h-spa-feature/011.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <p>Administration Management</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <img src="images/healthcare/h-spa-feature/012.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <p>MIS-Reports</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="margin-top: 50px">
+                                                <div class="col-md-12">
+                                                    <h2 class="title-txt text-center margin-t-10 wow fadeInUp"><span>SMART CARD</span></h2>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="smart-card-section">
+                                                        <h3>BRANDING</h3>
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li>Brand is a way of communicating what the organization stands for and what they have to offer to the world.</li>
+                                                            <i class="fa fa-check"></i><li>As such, it is important that the brand be communicated with consistency and accuracy.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="smart-card-section">
+                                                        <h3>PATIENT IDENTIFICATION</h3>
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li>Will help the Hospital to identify the Registered Patient</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="smart-card-section">
+                                                        <h3>CUSTOMER LOYALTY</h3>
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li>Customer loyalty can be said to have occurred if the Patient choose to use the Hospital for the particular Treatment, rather than going to another hospital</li>
+                                                            <i class="fa fa-check"></i><li>With Smart Card, Customers will exhibit customer loyalty over an extended period of time.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="smart-card-section">
+                                                        <h3>PAPERLESS ACCESS</h3>
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li>Patient Records will be Paperless</li>
+                                                            <i class="fa fa-check"></i><li>Hospital will Scan the Barcode for the PRN</li>
+                                                            <i class="fa fa-check"></i><li>Patient will Scan the QR Code to view his Medical Record</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <img src="images/healthcare/h-spa-feature/smart-card.png" alt="" width="100%" />
+                                                </div>
+                                            </div>
                                             <div class="clearfix"> </div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div role="tabpanel" class="tab-pane" id="messages">
                                     <div class="faqmain-info">
                                         <div class="faq-subinfo">
-                                            <div class="col-md-12">
-                                                <h3 style="text-align: center;width: 500px;margin: 0 auto;font-size: 20px;vertical-align: bottom">
-                                                    <img src="images/healthcare/cloud-based-system/001.png" alt="" style="width: 15%;float: left;"/><strong style="font-size: 25px;">CLOUD BASED SYSTEM</strong> INTEGRATED <br/>WITH PACS & TELE MEDICINE SOLUTION
-                                                </h3>
-                                            </div>
                                             <div class="row">
-                                                <div class="col-md-3">
-                                                    <div class="box-1">
-                                                        <center><img src="images/healthcare/cloud-based-system/002.png" alt="" /></center>
-                                                        <ul class="list-style">
-                                                            <i class="fa fa-check"></i><li>Enables <strong>HUB and SPOKES</strong> model</li>
-                                                        </ul>
-                                                    </div>
+                                                <div class="col-md-12">
+                                                    <h2 class="title-txt text-center wow fadeInUp"><span>RADSEVA</span></h2>
+                                                    <h4 class="text-center">TELE RADIOLOGY APPLICATION</h4>
+                                                    <p class="text-center margin-t-10">Radseva is the transmission of radiological patient images, such as X-Rays, CTs, MRIs, from one location to another for the purpose of interpretation and/or consultation.</p>
+                                                    <p class="text-center margin-t-10">Radseva improves patient care by allowing Radiologist to Provide services without actually having to be at the location of the patient. This is particularly important when a sub-specialist such as a MRI Radiologist, Neuro-radiologist, Pediatric Radiologist or Musculoskeletal Radiologist is needed, since these profesionals are generally only located in large metropolitan areas working during day time, Tele Radiology allows for trained specialist to be available 24/7</p>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <div class="box-1">
-                                                        <center><img src="images/healthcare/cloud-based-system/003.png" alt="" /></center>
-                                                        <ul class="list-style">
-                                                            <i class="fa fa-check"></i><li>Enables <strong>Cross Platform</strong> Transactions</li>
-                                                        </ul>
+                                            </div>
+                                            <div class="col-md-12" style="margin-top: 50px;">
+                                                <div class="row" style="margin-bottom: 30px;">
+                                                    <div class="col-md-2"></div>
+                                                    <div class="col-md-2">
+                                                        <img src="images/healthcare/cloud-based-system-1/001.png" alt=""/>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="box-1">
-                                                        <center><img src="images/healthcare/cloud-based-system/004.png" alt="" /></center>
-                                                        <ul class="list-style">
-                                                            <i class="fa fa-check"></i><li><strong>Reports </strong>for HOD</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="box-1">
-                                                        <center><img src="images/healthcare/cloud-based-system/005.png" alt="" /></center>
-                                                        <ul class="list-style">
-                                                            <i class="fa fa-check"></i><li><strong>Certified </strong> Reliability</li>
-                                                        </ul>
+                                                    <div class="col-md-7">
+                                                        <h2 class="text-left wow fadeInUp"><span>COULD BASED SYSTEM</span></h2>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-3">
                                                     <div class="box-1">
-                                                        <center><img src="images/healthcare/cloud-based-system/005.png" alt="" /></center>
+                                                        <center><img src="images/healthcare/cloud-based-system-1/002.png" alt="" /></center>
                                                         <ul class="list-style">
-                                                            <i class="fa fa-check"></i><li><strong>100% Web based</strong> system</li>
+                                                            <li>Enables <strong>HUB and SPOKES</strong> model</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="box-1">
-                                                        <center><img src="images/healthcare/cloud-based-system/006.png" alt="" /></center>
+                                                        <center><img src="images/healthcare/cloud-based-system-1/003.png" alt="" /></center>
                                                         <ul class="list-style">
-                                                            <i class="fa fa-check"></i><li><strong>Optimum Utilization</strong> of available resources</li>
+                                                            <li>Enables <strong>Cross Platform</strong> Transactions</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="box-1">
-                                                        <center><img src="images/healthcare/cloud-based-system/007.png" alt="" /></center>
+                                                        <center><img src="images/healthcare/cloud-based-system-1/004.png" alt="" /></center>
                                                         <ul class="list-style">
-                                                            <i class="fa fa-check"></i><li>Achieve <strong>Efficiency</strong></li>
+                                                            <li><strong>Reports </strong>for HOD</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="box-1">
-                                                        <center><img src="images/healthcare/cloud-based-system/008.png" alt="" /></center>
+                                                        <center><img src="images/healthcare/cloud-based-system-1/005.png" alt="" /></center>
                                                         <ul class="list-style">
-                                                            <i class="fa fa-check"></i><li><strong>Mobile Communication </strong>Enabled</li>
+                                                            <li><strong>Certified </strong> Reliability</li>
                                                         </ul>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="box-1">
+                                                        <center><img src="images/healthcare/cloud-based-system-1/005.png" alt="" /></center>
+                                                        <ul class="list-style">
+                                                            <li><strong>100% Web based</strong> system</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-1">
+                                                        <center><img src="images/healthcare/cloud-based-system-1/006.png" alt="" /></center>
+                                                        <ul class="list-style">
+                                                            <li><strong>Optimum Utilization</strong> of available resources</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-1">
+                                                        <center><img src="images/healthcare/cloud-based-system-1/007.png" alt="" /></center>
+                                                        <ul class="list-style">
+                                                            <li>Achieve <strong>Efficiency</strong></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-1">
+                                                        <center><img src="images/healthcare/cloud-based-system-1/008.png" alt="" /></center>
+                                                        <ul class="list-style">
+                                                            <li><strong>Mobile Communication </strong>Enabled</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12" style="margin-top: 40px;">
+                                                    <h2 class="title-txt text-center wow fadeInUp"> <span>CONCEPT</span></h2>
+                                                </div>
+                                                <div class="padding-tb-30">
+                                                    <img src="images/healthcare/radseva/concept.png" alt="" width="100%" />
                                                 </div>
                                             </div>
                                             <div class="clearfix"> </div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div role="tabpanel" class="tab-pane" id="tab4">
                                     <div class="faqmain-info">
                                         <div class="faq-subinfo">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h2 class="title-txt text-center wow fadeInUp"><span>MIMS</span></h2>
+                                                    <h4 class="text-center">MEDICAL INSTITUTE MANAGEMENT SYSTEM</h4>
+                                                    <p class="text-center margin-t-10">Medical Institute Management System software which is helpful for medical student as well as College Authorities. Our Application stores records of Students & Faculties Also. The Main Principle Behind this Software is easy to Supervision of Institute. This software can help us to explore all the activities happening inside the Medical College. It can handle Details of Student as well as Faculties, Finance, Human Resource, Attendance, Reports, Hostel Management, Data Management, Inventory, Transport etc.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="padding: 40px 0px;">
+                                                <div class="col-md-12">
+                                                    <h2 class="title-txt text-center wow fadeInUp"><span>SYSTEM FEATURES</span></h2>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/001.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Dashboard</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/002.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Applicant Registration</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/003.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Admission</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/004.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Student details</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/005.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Messages</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/006.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Manage Users</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/007.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Examinations</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/008.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Assignment, Task</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/009.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Timetable</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/010.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Attendance</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/011.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Settings</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/012.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Human Resources</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/013.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Hostel</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/014.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Finance</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/015.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Custom Imports</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/016.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Custom Report</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/017.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Export Data</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/018.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Data Management</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/019.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Discussion</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/020.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Polls</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/021.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Library</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/022.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Transport</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/023.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Inventory </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/024.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Manage News</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/025.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Event Creation</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/026.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Gallery</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/027.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Instant Fee</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="images/healthcare/system-features/028.png" alt="" />
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>Discipline</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="padding-tb-30">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <h2 class="title-txt text-center wow fadeInUp"><span>BENEFITS</span></h2>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li>Better utilization Management of Hostel, College inventory and Transport</li>
+                                                            <i class="fa fa-check"></i><li>News, Events ,Calendar ,Poll , Gallery & Announcements & Greetings</li>
+                                                            <i class="fa fa-check"></i><li>SMS / Email Alerts</li>
+                                                            <i class="fa fa-check"></i><li>Dash board based access for different stakeholder</li>
+                                                            <i class="fa fa-check"></i><li>Reduced printing and communication costs</li>
+                                                            <i class="fa fa-check"></i><li>Administrative Control</li>
+                                                            <i class="fa fa-check"></i><li>Closer tracking of class rooms/ Clinical/ Lab Attendance of Students and Faculty</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li>Better utilization of campus resources</li>
+                                                            <i class="fa fa-check"></i><li>Reduced printing & communication costs</li>
+                                                            <i class="fa fa-check"></i><li>SMS & e-mail alerts on exam schedule & results</li>
+                                                            <i class="fa fa-check"></i><li>Improved accountability & responsibility of stakeholders</li>
+                                                            <i class="fa fa-check"></i><li>Monitoring student attendance</li>
+                                                            <i class="fa fa-check"></i><li>Access to Student Information Record System</li>
+                                                            <i class="fa fa-check"></i><li>Efficient Workflow</li>
+                                                            <i class="fa fa-check"></i><li>Student Discipline Management</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="clearfix"> </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div role="tabpanel" class="tab-pane" id="tab5">
+                                    <div class="faqmain-info">
+                                        <div class="faq-subinfo">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h2 class="title-txt text-center wow fadeInUp"><span>ENDOSMART</span></h2>
+                                                    <h4 class="text-center">ENDOSCOPY SYSTEM</h4>
+                                                    <p class="text-center margin-t-10">A procedure in which specialized instruments are used by a doctor to view and operate on the internal organs and vessels of the body is known as Endoscopy. Without making big cuts / incisions, the process of Endoscopy allows the surgeon to see the problem areas inside the patient’s body. Endoscope is a medical instrument in which a camera attached to a flexible tube that allows the doctor to see. Either through the opening in the body such as mouth or through a small incision, a surgeon inserts an endoscope in the patient’s body. With the help of forceps also known as tongs and scissors on the endoscope a doctor can operate or remove tissues for biopsy.</p>
+                                                </div>
+                                            </div>
+                                            <div class="padding-tb-30">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <img src="images/healthcare/functionalities/001.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-9">
+                                                                <p>User Management</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <img src="images/healthcare/functionalities/002.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-9">
+                                                                <p>Study Management</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <img src="images/healthcare/functionalities/003.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-9">
+                                                                <p>Work List</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <img src="images/healthcare/functionalities/004.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-9">
+                                                                <p>Compare Studies</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <img src="images/healthcare/functionalities/005.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-9">
+                                                                <p>Image and Video Viewer</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <img src="images/healthcare/functionalities/006.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-9">
+                                                                <p>Series navigator</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <img src="images/healthcare/functionalities/007.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-9">
+                                                                <p>Key images</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <img src="images/healthcare/functionalities/008.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-9">
+                                                                <p>Cine Mode</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <img src="images/healthcare/functionalities/009.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-9">
+                                                                <p>Reporting</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <img src="images/healthcare/functionalities/010.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-9">
+                                                                <p>Archiving</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <img src="images/healthcare/functionalities/011.png" alt="" />
+                                                            </div>
+                                                            <div class="col-md-9">
+                                                                <p>Modality Support</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="padding-tb-30">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <h2 class="title-txt text-center wow fadeInUp"><span>KEY FEATURES</span></h2>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li>Video capturing in mp4 format</li>
+                                                            <i class="fa fa-check"></i><li>Default Video Compression, Video Size </li>
+                                                            <i class="fa fa-check"></i><li>High resolution, High quality, image and Cine loop capture </li>
+                                                            <i class="fa fa-check"></i><li>User can store thousands of images on computer </li>
+                                                            <i class="fa fa-check"></i><li>Video Playback, Capturing Image in different sizes</li>
+                                                            <i class="fa fa-check"></i><li>Dual Foot Switch for Multiple functions videos or both simultaneously Capture images from offline videos</li>
+                                                            <i class="fa fa-check"></i><li>Truly Dynamic Report in Every sense</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <ul class="list-style">
+                                                            <i class="fa fa-check"></i><li>Create Report in Your Own style</li>
+                                                            <i class="fa fa-check"></i><li>Capture Images </li>
+                                                            <i class="fa fa-check"></i><li>Audio Capturing</li>
+                                                            <i class="fa fa-check"></i><li>Facility While Recording (Start, Pause, & Resume)</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div role="tabpanel" class="tab-pane" id="tab5">
                                     <div class="faqmain-info">
                                         <div class="faq-subinfo">
@@ -906,6 +1532,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 

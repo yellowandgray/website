@@ -902,6 +902,7 @@ div#team h3.title-txt span {
     border: none;
     color: #ffffff;
     background: #ff6666;
+    cursor: pointer;
 }
 
 #testi label,
