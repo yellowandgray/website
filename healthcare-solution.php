@@ -666,7 +666,7 @@
                                     <a href="#tab5" aria-controls="messages" role="tab" data-toggle="tab">ENDOSMART</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#tab5" aria-controls="messages" role="tab" data-toggle="tab">SONOSMART</a>
+                                    <a href="#tab6" aria-controls="messages" role="tab" data-toggle="tab">SONOSMART</a>
                                 </li>
                             </ul>
 
@@ -1525,9 +1525,20 @@
                                     </div>
                                 </div>
 
-                                <div role="tabpanel" class="tab-pane" id="tab5">
+                                <div role="tabpanel" class="tab-pane" id="tab6">
                                     <div class="faqmain-info">
                                         <div class="faq-subinfo">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h2 class="title-txt text-center wow fadeInUp"><span>SONOSMART</span></h2>
+                                                    <h4 class="text-center">DIAGNOSTIC ULTRASOUND SYSTEM</h4>
+                                                </div>
+                                                <div class="padding-tb-30">
+                                                    <div class="col-md-12">
+                                                        <img src="images/healthcare/sonosmart/001.png" alt="" />
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="clearfix"> </div>
                                         </div>
                                     </div>
