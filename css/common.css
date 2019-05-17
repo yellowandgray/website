@@ -70,6 +70,21 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .box {
+        height: auto;
+    }
+    .box-1 {
+        height: auto;
+    }
+    .box-2 {
+        height: auto;
+    }
+    .box-3 {
+        height: auto;
+    }
+}
+
 .height-180 {
     height: 180px;
 }

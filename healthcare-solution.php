@@ -170,7 +170,7 @@
                         <button class="tablinks" onclick="openCity(event, 'Functional')">Functional Flow</button>
                         <button class="tablinks" onclick="openCity(event, 'Benefits')">Benefits</button>
                         <button class="tablinks" onclick="openCity(event, 'Integration')">Smart Digital Integration</button>
-                        <button class="tablinks" onclick="openCity(event, 'Screenshot')">System Screenshot</button>
+<!--                        <button class="tablinks" onclick="openCity(event, 'Screenshot')">System Screenshot</button>-->
                     </div>
 
                     <div id="Features" class="tabcontent">
@@ -444,9 +444,18 @@
                         <div class="faqmain-info">
                             <div class="faq-subinfo">
                                 <div class="col-md-12"  style="margin-top: 20px;">
-                                    <h3 style="text-align: center;width: 500px;margin: 0 auto;font-size: 20px;vertical-align: bottom">
-                                        <img src="images/healthcare/cloud-based-system/001.png" alt="" style="width: 15%;float: left;"/><strong style="font-size: 25px;">CLOUD BASED SYSTEM</strong> INTEGRATED <br/>WITH PACS & TELE MEDICINE SOLUTION
-                                    </h3>
+                                    <div class="row" style="margin-bottom: 30px;">
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-2">
+                                            <img src="images/healthcare/cloud-based-system/001.png" alt="" width="100%"/>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <h3 class="text-left wow fadeInUp"><strong style="font-size: 25px;">CLOUD BASED SYSTEM</strong> INTEGRATED <br/>WITH PACS & TELE MEDICINE SOLUTION</h3>
+                                        </div>
+                                    </div>
+<!--                                    <h3 style="text-align: center;width: 500px;margin: 0 auto;font-size: 20px;vertical-align: bottom">
+                                        <img src="images/healthcare/cloud-based-system/001.png" alt="" style="width: 15%;float: left;"/>
+                                    </h3>-->
                                 </div>
                                 <div class="col-md-12"  style="margin-top: 20px;">
                                     <div class="row">
@@ -1396,7 +1405,7 @@
                                                     <p class="text-center margin-t-10">A procedure in which specialized instruments are used by a doctor to view and operate on the internal organs and vessels of the body is known as Endoscopy. Without making big cuts / incisions, the process of Endoscopy allows the surgeon to see the problem areas inside the patient’s body. Endoscope is a medical instrument in which a camera attached to a flexible tube that allows the doctor to see. Either through the opening in the body such as mouth or through a small incision, a surgeon inserts an endoscope in the patient’s body. With the help of forceps also known as tongs and scissors on the endoscope a doctor can operate or remove tissues for biopsy.</p>
                                                 </div>
                                             </div>
-                                            <div class="padding-tb-30">
+                                            <div class="padding-tb-30 h-spa">
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="row">
@@ -1535,7 +1544,7 @@
                                                 </div>
                                                 <div class="padding-tb-30">
                                                     <div class="col-md-12">
-                                                        <img src="images/healthcare/sonosmart/001.png" alt="" />
+                                                        <img src="images/healthcare/sonosmart/001.png" alt="" width="100%" />
                                                     </div>
                                                 </div>
                                             </div>
