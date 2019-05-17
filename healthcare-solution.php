@@ -676,9 +676,10 @@
                                         <div class="faq-subinfo">
                                             <div class="col-md-12 latest-grid">
                                                 <h2 class="title-txt text-center wow fadeInUp"> <span>IMAGESMART</span></h2>
-                                                <h4  class="text-center">DiCOM PACS (PICTURE ARCHIVING AND COMMUNICATION SYSTEM) APPLICATION</h4>
+                                                <h4 class="text-center">DiCOM PACS (PICTURE ARCHIVING AND COMMUNICATION SYSTEM) APPLICATION</h4>
+                                                <p class="text-center margin-t-10">Picture Archiving and Communication Systems (PACS) are a valuable tool for healthcare organizations, enabling physicians to quickly and easily share enterprise medical imaging reports electronically. Even as they become a standard platform at most facilities, their usefulness is growing as options such as a vendor neutral archive and other options are available.</p>
                                             </div>
-                                            <div class="col-md-12 latest-grid">
+                                            <div class="col-md-6 latest-grid">
                                                 <div class="faq-left height-225 tab-1-height">
                                                     <div class="row">
                                                         <div class="col-md-3">
