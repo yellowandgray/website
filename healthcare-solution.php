@@ -92,7 +92,7 @@
                                 <img src="images/healthcare/about/professional.png" alt="" class="img-responsive"/>
                             </div>
                             <div class="col-md-9">
-                                <h4 class="color-pink bold">+100 FULL TIME PROFESSIONALS</h4>
+                                <h4 class="color-pink bold">100+ FULL TIME PROFESSIONALS</h4>
                                 <P>Distributed in our three development centers in Malaysia(Kuala Lumpur, Selangor), India(Chennai) and Philippines(Manila).</P>
                             </div>
                         </div>
@@ -358,6 +358,9 @@
                                         <i class="fa fa-check"></i><li>Reception</li>
                                         <i class="fa fa-check"></i><li>Registration</li>
                                         <i class="fa fa-check"></i><li>Admission, Discharge and Transfer OPD Billing</li>
+                                        <i class="fa fa-check"></i><li>Emergency</li>
+                                        <i class="fa fa-check"></i><li>IPD Billing</li>
+                                        <i class="fa fa-check"></i><li>Patient Billing</li>
                                     </ul>
                                 </div>
                             </div>
@@ -371,7 +374,7 @@
                                         <i class="fa fa-check"></i><li>Medical Records Management Human Resources</li>
                                         <i class="fa fa-check"></i><li>Payroll</li>
                                         <i class="fa fa-check"></i><li>Billing Systems</li>
-                                        <i class="fa fa-check"></i><li>Accounts Receivables</li>
+                                        <i class="fa fa-check"></i><li>Accounts receivables</li>
                                     </ul>
                                 </div>
                             </div>
@@ -422,17 +425,17 @@
                                 <div class="box">
                                     <ul class="list-style">
                                         <i class="fa fa-check"></i><li>MIS Reports</li>
-                                        <i class="fa fa-check"></i><li>Food and Beverage</li>
+                                        <i class="fa fa-check"></i><li>Food and Beverages</li>
                                         <i class="fa fa-check"></i><li>Diet and Nutrition</li>
                                         <i class="fa fa-check"></i><li>Health Plan</li>
                                         <i class="fa fa-check"></i><li>Cardiology Investigations</li>
-                                        <i class="fa fa-check"></i><li>Rediology Information Systems</li>
+                                        <i class="fa fa-check"></i><li>Radiology Information Systems</li>
                                         <i class="fa fa-check"></i><li>Cath Lab</li>
                                         <i class="fa fa-check"></i><li>Speciality</li>
                                         <i class="fa fa-check"></i><li>Blood Blank</li>
                                         <i class="fa fa-check"></i><li>Physician</li>
-                                        <i class="fa fa-check"></i><li>Interface</li>
-                                        <i class="fa fa-check"></i><li>Lab enquipment</li>
+                                        <i class="fa fa-check"></i><li>interface</li>
+                                        <i class="fa fa-check"></i><li>Lab equipment</li>
                                         <i class="fa fa-check"></i><li>Gas Monitoring</li>
                                     </ul>
                                 </div>
@@ -443,9 +446,12 @@
                                         <i class="fa fa-check"></i><li>PACS</li>
                                         <i class="fa fa-check"></i><li>Laboratory
                                             <ul>
-                                                <i class="fa fa-check"></i><li>Following the seven different specialty labs which the lab module can be configured to meet the requirements
+                                                <i class="fa fa-check"></i><li>Following are the seven different specialty labs for which the lab module can be configured to meet the requirements:
                                                     <ul>
-                                                        <i class="fa fa-check"></i><li>Biochemistry, Hematology, Microbiology, Serology, Cytology, Pathology, immuno hematology</li>
+                                                        <i class="fa fa-check"></i><li>Biochemistry, Hematology, </li>
+                                                        <i class="fa fa-check"></i><li>Microbiology, Serology, Cytology,</li>
+                                                        <i class="fa fa-check"></i><li>Pathology, Immuno hematology</li>
+
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -721,23 +727,23 @@
                 </h3>
                 <div class="row medseva margin-tp-20">
                     <div class="col-md-12">
-                        <h4>SOME OF OUR SUCCESSFUL IMPLEMENTATIONS</h4>
+                        <h4 class="text-center">SOME OF OUR SUCCESSFUL IMPLEMENTATIONS</h4>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-md-sm-6">
                                 <img src="images/healthcare/001.png" alt="" />
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-9 col-md-sm-6">
                                 <p>More than</p>
                                 <h4 class="color-pink"><strong>4,180</strong> BEDS</h4>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-md-sm-6">
                                 <img src="images/healthcare/002.png" alt="" />
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-9 col-md-sm-6">
                                 <h4 class="color-pink"><strong>1 Million</strong></h4>
                                 <p>Daily Electronic Records</p>
                             </div>
@@ -752,8 +758,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-
+                    <div class="col-md-7">
+                        <img src="images/healthcare/clients.jpg" alt="" style="width: 100%;"/>
                     </div>
                 </div>
                 <div class="row">
