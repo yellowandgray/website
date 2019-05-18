@@ -806,7 +806,7 @@
                                                 <div class="col-md-4 col-sm-6 latest-grid">
                                                     <div class="box-2">
                                                         <div class="row">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-4 text-center">
                                                                 <img src="images/healthcare/imagesmart-features/001.png" alt="" />
                                                             </div>
                                                             <div class="col-md-8">
@@ -827,7 +827,7 @@
                                                 <div class="col-md-4 col-sm-6 latest-grid">
                                                     <div class="box-2">
                                                         <div class="row">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-4 text-center">
                                                                 <img src="images/healthcare/imagesmart-features/002.png" alt="" />
                                                             </div>
                                                             <div class="col-md-8">
@@ -847,7 +847,7 @@
                                                 <div class="col-md-4 col-sm-6 latest-grid">
                                                     <div class="box-2">
                                                         <div class="row">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-4 text-center">
                                                                 <img src="images/healthcare/imagesmart-features/003.png" alt="" />
                                                             </div>
                                                             <div class="col-md-8">
@@ -869,7 +869,7 @@
                                                 <div class="col-md-4 col-sm-6 latest-grid">
                                                     <div class="box-2">
                                                         <div class="row">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-4 text-center">
                                                                 <img src="images/healthcare/imagesmart-features/004.png" alt="" />
                                                             </div>
                                                             <div class="col-md-8">
@@ -892,7 +892,7 @@
                                                 <div class="col-md-4 col-sm-6 latest-grid">
                                                     <div class="box-2">
                                                         <div class="row">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-4 text-center">
                                                                 <img src="images/healthcare/imagesmart-features/005.png" alt="" />
                                                             </div>
                                                             <div class="col-md-8">
@@ -912,7 +912,7 @@
                                                 <div class="col-md-4 col-sm-6 latest-grid">
                                                     <div class="box-2">
                                                         <div class="row">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-4 text-center">
                                                                 <img src="images/healthcare/imagesmart-features/006.png" alt="" />
                                                             </div>
                                                             <div class="col-md-8">
@@ -932,7 +932,7 @@
                                                 <div class="col-md-4  col-sm-6 latest-grid">
                                                     <div class="box-2">
                                                         <div class="row">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-4 text-center">
                                                                 <img src="images/healthcare/imagesmart-features/007.png" alt="" />
                                                             </div>
                                                             <div class="col-md-8">
