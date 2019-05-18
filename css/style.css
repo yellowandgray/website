@@ -2017,7 +2017,7 @@ p.footer-class a:hover {
         padding: 1em;
     }
     .latest-grid:first-child {
-        margin-bottom: 1em;
+        /*margin-bottom: 1em;*/
     }
     .faq-info .nav-tabs li a {
         padding: 10px 0;

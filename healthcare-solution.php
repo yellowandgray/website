@@ -88,7 +88,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3 img-responsive">
                                 <img src="images/healthcare/about/professional.png" alt="" class="img-responsive"/>
                             </div>
                             <div class="col-md-9">
@@ -97,8 +97,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5">
-                        <img src="images/healthcare/about/about.jpg" alt="" class="img-responsive"/>
+                    <div class="col-md-5 col-sm-12 col-xs-12">
+                        <img src="images/healthcare/about/about.jpg" alt="" class="img-responsive center-block"/>
                     </div>
                 </div>
                 <div class="padding-tb-30">
@@ -106,42 +106,20 @@
                         <div class="col-md-12 margin-b-20">
                             <h4 class="border-h4 text-center">OUR DOMAIN EXPERTISE</h4>
                         </div>
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="domain-expertise text-center">
-                                    <img src="images/healthcare/about/001.png" alt="" />
-                                    <p>CORPORATE</p>
-                                </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="domain-expertise text-center">
+                                <img src="images/healthcare/about/001.png" alt="" />
+                                <p>CORPORATE</p>
                             </div>
-                            <div class="col-md-2">
-                                <div class="domain-expertise text-center">
-                                    <img src="images/healthcare/about/002.png" alt="" />
-                                    <p>CONTENT</p>
-                                </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="domain-expertise text-center">
+                                <img src="images/healthcare/about/002.png" alt="" />
+                                <p>CONTENT</p>
                             </div>
-                            <div class="col-md-2">
-                                <div class="domain-expertise text-center">
-                                    <img src="images/healthcare/about/003.png" alt="" />
-                                    <p>CREATIVE</p>
-                                </div>
                             </div>
-                            <div class="col-md-2">
-                                <div class="domain-expertise text-center">
-                                    <img src="images/healthcare/about/004.png" alt="" />
-                                    <p>FINANCIAL</p>
-                                </div>
                             </div>
-                            <div class="col-md-2">
-                                <div class="domain-expertise text-center">
-                                    <img src="images/healthcare/about/005.png" alt="" />
-                                    <p>INNOVATION</p>
-                                </div>
                             </div>
-                            <div class="col-md-2">
-                                <div class="domain-expertise text-center">
-                                    <img src="images/healthcare/about/006.png" alt="" />
-                                    <p>TECHNOLOGY</p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -204,7 +182,7 @@
 
                     <div id="Features" class="tabcontent">
                         <div class="row">
-                            <div class="col-md-6 latest-grid">
+                            <div class="col-md-6 col-xs-6 col-sm-6 latest-grid">
                                 <div class="faq-left height-225 tab-1-height">
                                     <div class="row">
                                         <div class="col-md-3">
@@ -272,7 +250,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 latest-grid">
+                            <div class="col-md-6 col-xs-6 col-sm-6 latest-grid">
                                 <div class="faq-left height-225 tab-1-height">
                                     <div class="row">
                                         <div class="col-md-3">
@@ -472,13 +450,14 @@
                             <div class="faq-subinfo">
                                 <div class="col-md-12"  style="margin-top: 20px;">
                                     <div class="row" style="margin-bottom: 30px;">
-                                        <div class="col-md-2"></div>
-                                        <div class="col-md-2">
-                                            <img src="images/healthcare/cloud-based-system/001.png" alt="" width="100%"/>
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-4">
+                                            <div class="box-1  text-center">
+                                                <img src="images/healthcare/cloud-based-system/001.png" alt="" />
+                                                <h3 class="text-center wow fadeInUp"><strong style="font-size: 25px;">CLOUD BASED SYSTEM</strong> INTEGRATED <br/>WITH PACS & TELE MEDICINE SOLUTION</h3>
+                                            </div>
                                         </div>
-                                        <div class="col-md-7">
-                                            <h3 class="text-left wow fadeInUp"><strong style="font-size: 25px;">CLOUD BASED SYSTEM</strong> INTEGRATED <br/>WITH PACS & TELE MEDICINE SOLUTION</h3>
-                                        </div>
+                                        <div class="col-md-4"></div>
                                     </div>
                                     <!--                                    <h3 style="text-align: center;width: 500px;margin: 0 auto;font-size: 20px;vertical-align: bottom">
                                                                             <img src="images/healthcare/cloud-based-system/001.png" alt="" style="width: 15%;float: left;"/>
@@ -486,7 +465,7 @@
                                 </div>
                                 <div class="col-md-12"  style="margin-top: 20px;">
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
                                                 <center>
                                                     <img src="images/healthcare/cloud-based-system/002.png" alt="" />
@@ -496,7 +475,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
                                                 <center>
                                                     <img src="images/healthcare/cloud-based-system/003.png" alt="" />
@@ -506,7 +485,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
                                                 <center>
                                                     <img src="images/healthcare/cloud-based-system/004.png" alt="" />
@@ -516,7 +495,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
                                                 <center>
                                                     <img src="images/healthcare/cloud-based-system/005.png" alt="" />
@@ -528,7 +507,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
                                                 <center>
                                                     <img src="images/healthcare/cloud-based-system/005.png" alt="" />
@@ -538,7 +517,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
                                                 <center>
                                                     <img src="images/healthcare/cloud-based-system/006.png" alt="" />
@@ -548,7 +527,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
                                                 <center>
                                                     <img src="images/healthcare/cloud-based-system/007.png" alt="" />
@@ -558,7 +537,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
                                                 <center>
                                                     <img src="images/healthcare/cloud-based-system/008.png" alt="" />
@@ -578,7 +557,7 @@
                     <div id="Integration" class="tabcontent">
                         <div class="col-md-12"  style="margin-top: 20px;">
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
                                         <center>
                                             <img src="images/healthcare/smart-digital-integration/001.png" alt="" />
@@ -588,7 +567,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
                                         <center>
                                             <img src="images/healthcare/smart-digital-integration/002.png" alt="" />
@@ -598,7 +577,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
                                         <center>
                                             <img src="images/healthcare/smart-digital-integration/003.png" alt="" />
@@ -608,7 +587,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
                                         <center>
                                             <img src="images/healthcare/smart-digital-integration/004.png" alt="" />
@@ -620,7 +599,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
                                         <center>
                                             <img src="images/healthcare/smart-digital-integration/005.png" alt="" />
@@ -630,7 +609,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
                                         <center>
                                             <img src="images/healthcare/smart-digital-integration/006.png" alt="" />
@@ -640,7 +619,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
                                         <center>
                                             <img src="images/healthcare/smart-digital-integration/007.png" alt="" />
@@ -650,7 +629,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
                                         <center>
                                             <img src="images/healthcare/smart-digital-integration/008.png" alt="" />
@@ -662,7 +641,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
                                         <center>
                                             <img src="images/healthcare/smart-digital-integration/009.png" alt="" />
@@ -672,7 +651,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
                                         <center>
                                             <img src="images/healthcare/smart-digital-integration/010.png" alt="" />
@@ -682,7 +661,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
                                         <center>
                                             <img src="images/healthcare/smart-digital-integration/011.png" alt="" />
@@ -692,7 +671,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
                                         <center>
                                             <img src="images/healthcare/smart-digital-integration/012.png" alt="" />
@@ -757,7 +736,7 @@
                                             </div>
 
                                             <div class="row" style="margin-top: 40px;">
-                                                <div class="col-md-4 latest-grid">
+                                                <div class="col-md-4 col-sm-6 latest-grid">
                                                     <div class="box-2">
                                                         <div class="row">
                                                             <div class="col-md-4">
@@ -767,16 +746,18 @@
                                                                 <h4>SECURED LOGIN</h4>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-12">
-                                                            <ul class="list-style">
-                                                                <i class="fa fa-check"></i><li>User Access</li>
-                                                                <i class="fa fa-check"></i><li>Audit Trail</li>
-                                                                <i class="fa fa-check"></i><li>User Role Definition</li>
-                                                            </ul>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <ul class="list-style">
+                                                                    <i class="fa fa-check"></i><li>User Access</li>
+                                                                    <i class="fa fa-check"></i><li>Audit Trail</li>
+                                                                    <i class="fa fa-check"></i><li>User Role Definition</li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4 latest-grid">
+                                                <div class="col-md-4 col-sm-6 latest-grid">
                                                     <div class="box-2">
                                                         <div class="row">
                                                             <div class="col-md-4">
@@ -786,15 +767,17 @@
                                                                 <h4>DICOM WORKLIST MANAGER (WEB ACCESS)</h4>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-12">
-                                                            <ul class="list-style">
-                                                                <i class="fa fa-check"></i><li>Image Smart DICOM Work list can also be accessed over Web/Internet.</li>
-                                                                <i class="fa fa-check"></i><li>This allows the user to connect with the Rediology worklist from remote location.</li>
-                                                            </ul>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <ul class="list-style">
+                                                                    <i class="fa fa-check"></i><li>Image Smart DICOM Work list can also be accessed over Web/Internet.</li>
+                                                                    <i class="fa fa-check"></i><li>This allows the user to connect with the Rediology worklist from remote location.</li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4 latest-grid">
+                                                <div class="col-md-4 col-sm-6 latest-grid">
                                                     <div class="box-2">
                                                         <div class="row">
                                                             <div class="col-md-4">
@@ -804,20 +787,19 @@
                                                                 <h4>DASHBOARD</h4>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-12">
-                                                            <ul class="list-style">
-                                                                <i class="fa fa-check"></i><li>Reporting Status Count</li>
-                                                                <i class="fa fa-check"></i><li>DICOM BANK</li>
-                                                                <i class="fa fa-check"></i><li>Rediologist Performance</li>
-                                                                <i class="fa fa-check"></i><li>Count (Positive/Negative) Cases</li>
-                                                            </ul>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <ul class="list-style">
+                                                                    <i class="fa fa-check"></i><li>Reporting Status Count</li>
+                                                                    <i class="fa fa-check"></i><li>DICOM BANK</li>
+                                                                    <i class="fa fa-check"></i><li>Rediologist Performance</li>
+                                                                    <i class="fa fa-check"></i><li>Count (Positive/Negative) Cases</li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-
-                                            <div class="row" style="margin-top: 40px;">
-                                                <div class="col-md-4 latest-grid">
+                                                <div class="col-md-4 col-sm-6 latest-grid">
                                                     <div class="box-2">
                                                         <div class="row">
                                                             <div class="col-md-4">
@@ -827,18 +809,20 @@
                                                                 <h4>DICOM WORKLIST MANAGER (LOCAL NETWORK WORKSTATION)</h4>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-12">
-                                                            <ul class="list-style">
-                                                                <i class="fa fa-check"></i><li>Import and Export DiCOM Data</li>
-                                                                <i class="fa fa-check"></i><li>Archive DiCOM Data</li>
-                                                                <i class="fa fa-check"></i><li>DiCOM Search (Query)</li>
-                                                                <i class="fa fa-check"></i><li>Smart Album</li>
-                                                                <i class="fa fa-check"></i><li>View (Quick View, Tabular and Grid)</li>
-                                                            </ul>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <ul class="list-style">
+                                                                    <i class="fa fa-check"></i><li>Import and Export DiCOM Data</li>
+                                                                    <i class="fa fa-check"></i><li>Archive DiCOM Data</li>
+                                                                    <i class="fa fa-check"></i><li>DiCOM Search (Query)</li>
+                                                                    <i class="fa fa-check"></i><li>Smart Album</li>
+                                                                    <i class="fa fa-check"></i><li>View (Quick View, Tabular and Grid)</li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4 latest-grid">
+                                                <div class="col-md-4 col-sm-6 latest-grid">
                                                     <div class="box-2">
                                                         <div class="row">
                                                             <div class="col-md-4">
@@ -848,15 +832,17 @@
                                                                 <h4>DICOM VIEWER</h4>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-12">
-                                                            <ul class="list-style">
-                                                                <i class="fa fa-check"></i><li>Advanced Features DiCOM Viewer is an vital component of Image Smart Family.</li>
-                                                                <i class="fa fa-check"></i><li>It is the primary tool for the Radiologist to study the DICOM Studies and analyze the medical condition of the patient.</li>
-                                                            </ul>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <ul class="list-style">
+                                                                    <i class="fa fa-check"></i><li>Advanced Features DiCOM Viewer is an vital component of Image Smart Family.</li>
+                                                                    <i class="fa fa-check"></i><li>It is the primary tool for the Radiologist to study the DICOM Studies and analyze the medical condition of the patient.</li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4 latest-grid">
+                                                <div class="col-md-4 col-sm-6 latest-grid">
                                                     <div class="box-2">
                                                         <div class="row">
                                                             <div class="col-md-4">
@@ -866,18 +852,17 @@
                                                                 <h4>DICOM REPORTING STATION</h4>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-12">
-                                                            <ul class="list-style">
-                                                                <i class="fa fa-check"></i><li>Template Based Reporting System Stored modality wise and test wise.</li>
-                                                                <i class="fa fa-check"></i><li>Access to the template is defined by Radiologist. </li>
-                                                            </ul>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <ul class="list-style">
+                                                                    <i class="fa fa-check"></i><li>Template Based Reporting System Stored modality wise and test wise.</li>
+                                                                    <i class="fa fa-check"></i><li>Access to the template is defined by Radiologist. </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-
-                                            <div class="row" style="margin-top: 40px;">
-                                                <div class="col-md-4 latest-grid">
+                                                <div class="col-md-4  col-sm-6 latest-grid">
                                                     <div class="box-2">
                                                         <div class="row">
                                                             <div class="col-md-4">
@@ -887,17 +872,17 @@
                                                                 <h4>CROSS PLATFORM DICOM VIEWER</h4>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-12">
-                                                            <ul class="list-style">
-                                                                <i class="fa fa-check"></i><li>Browser enabled DiCOM Viewer</li>
-                                                                <i class="fa fa-check"></i><li>Tablet PC Compatible</li>
-                                                                <i class="fa fa-check"></i><li>Smartphone Browser Compatible </li>
-                                                            </ul>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <ul class="list-style">
+                                                                    <i class="fa fa-check"></i><li>Browser enabled DiCOM Viewer</li>
+                                                                    <i class="fa fa-check"></i><li>Tablet PC Compatible</li>
+                                                                    <i class="fa fa-check"></i><li>Smartphone Browser Compatible </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4 latest-grid"></div>
-                                                <div class="col-md-4 latest-grid"></div>
                                             </div>
 
                                             <div class="row user-benifits">
@@ -930,7 +915,7 @@
                                                 </div>
                                             </div>
                                             <div class="row h-spa" style="margin-top: 40px;">
-                                                <div class="col-md-6">
+                                                <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <div class="row">
                                                         <div class="col-md-3">
                                                             <img src="images/healthcare/h-spa-feature/001.png" alt="" />
@@ -980,7 +965,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <div class="row">
                                                         <div class="col-md-3">
                                                             <img src="images/healthcare/h-spa-feature/007.png" alt="" />
@@ -1649,3 +1634,8 @@
         <?php include 'footer.php'; ?>
     </body>
 </html>
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="domain-expertise text-center">
+                                <img src="images/healthcare/about/003.png" alt="" />
+                                <p>CREATIVE</p>
