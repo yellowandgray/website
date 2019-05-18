@@ -717,8 +717,45 @@
         <div class="section">
             <div class="container">
                 <h3 class="title-txt text-center wow fadeInUp">
-                    <span>MADSEVA </span>Hospital Management System
+                    <span>MEDSEVA </span>Hospital Management System
                 </h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>SOME OF OUR SUCCESSFUL IMPLEMENTATIONS</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="images/healthcare/001.png" alt="" />
+                            </div>
+                            <div class="col-md-9">
+                                <p>More than</p>
+                                <h4 class="color-pink"><strong>4,180</strong> BEDS</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="images/healthcare/002.png" alt="" />
+                            </div>
+                            <div class="col-md-9">
+                                <h4 class="color-pink"><strong>1 Million</strong></h4>
+                                <p>Daily Electronic Records</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="images/healthcare/003.png" alt="" />
+                            </div>
+                            <div class="col-md-9">
+                                <h4 class="color-pink"><strong>26 Million</strong></h4>
+                                <p>Electronic Health records</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="faq-info">
