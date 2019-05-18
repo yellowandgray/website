@@ -117,9 +117,29 @@
                                 <img src="images/healthcare/about/002.png" alt="" />
                                 <p>CONTENT</p>
                             </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="domain-expertise text-center">
+                                <img src="images/healthcare/about/003.png" alt="" />
+                                <p>CREATIVE</p>
                             </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="domain-expertise text-center">
+                                <img src="images/healthcare/about/004.png" alt="" />
+                                <p>FINANCIAL</p>
                             </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="domain-expertise text-center">
+                                <img src="images/healthcare/about/005.png" alt="" />
+                                <p>INNOVATION</p>
                             </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="domain-expertise text-center">
+                                <img src="images/healthcare/about/006.png" alt="" />
+                                <p>TECHNOLOGY</p>
                             </div>
                         </div>
                     </div>
@@ -135,7 +155,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" style="background: url(images/healthcare/background.jpg)no-repeat;background-size: cover;">
             <div class="container">
                 <div class="row">
                     <div class="padding-tb-30">
@@ -229,7 +249,7 @@
                                             <img src="images/healthcare/icons-features/006.png" alt="" />
                                         </div>
                                         <div class="col-md-9">
-                                            <h4 style="margin-top: 20px;">Investigation/ Lab management</h4>
+                                            <h4 style="margin-top: 20px;">Investigation/ Lab Management</h4>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -1634,8 +1654,3 @@
         <?php include 'footer.php'; ?>
     </body>
 </html>
-                        </div>
-                        <div class="col-md-2 col-sm-4">
-                            <div class="domain-expertise text-center">
-                                <img src="images/healthcare/about/003.png" alt="" />
-                                <p>CREATIVE</p>
