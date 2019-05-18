@@ -469,12 +469,12 @@
                         <div class="faqmain-info">
                             <div class="faq-subinfo">
                                 <div class="col-md-12"  style="margin-top: 20px;">
-                                    <div class="row" style="margin-bottom: 30px;">
+                                    <div class="row" style="margin-bottom: 15px;">
                                         <div class="col-md-4"></div>
                                         <div class="col-md-4">
                                             <div class="box-1  text-center">
                                                 <img src="images/healthcare/cloud-based-system/001.png" alt="" />
-                                                <h3 class="text-center wow fadeInUp"><strong style="font-size: 25px;">CLOUD BASED SYSTEM</strong> INTEGRATED <br/>WITH PACS & TELE MEDICINE SOLUTION</h3>
+                                                <h3 class="text-center wow fadeInUp" style="font-size: 14px;"><strong style="font-size: 14px;">CLOUD BASED SYSTEM</strong> INTEGRATED <br/>WITH PACS & TELE MEDICINE SOLUTION</h3>
                                             </div>
                                         </div>
                                         <div class="col-md-4"></div>
@@ -751,7 +751,7 @@
                                                 <div class="col-md-12 latest-grid">
                                                     <h2 class="title-txt text-center wow fadeInUp"> <span>IMAGESMART</span></h2>
                                                     <h4 class="text-center">DiCOM PACS (PICTURE ARCHIVING AND COMMUNICATION SYSTEM) APPLICATION</h4>
-                                                    <p class="text-center margin-t-10">Picture Archiving and Communication Systems (PACS) are a valuable tool for healthcare organizations, enabling physicians to quickly and easily share enterprise medical imaging reports electronically. Even as they become a standard platform at most facilities, their usefulness is growing as options such as a vendor neutral archive and other options are available.</p>
+                                                    <p class="text-justify margin-t-10">Picture Archiving and Communication Systems (PACS) are a valuable tool for healthcare organizations, enabling physicians to quickly and easily share enterprise medical imaging reports electronically. Even as they become a standard platform at most facilities, their usefulness is growing as options such as a vendor neutral archive and other options are available.</p>
                                                 </div>
                                             </div>
 
@@ -931,7 +931,7 @@
                                                 <div class="col-md-12">
                                                     <h2 class="title-txt text-center wow fadeInUp"><span>H-SPA</span></h2>
                                                     <h4 class="text-center">Patient Management System</h4>
-                                                    <p class="text-center margin-t-10">Multi-specialty module is a state of the art Hospital Information Management System(HIMS) which is comprehensive Enterprise wide software that covers all aspects of management and operations of medium and large hospitals. It Enables healthcare providers to improve the operational effectiveness, reduce costs, reduce medical errors and enhance delivery of quality care.</p>
+                                                    <p class="text-justify margin-t-10">Multi-specialty module is a state of the art Hospital Information Management System(HIMS) which is comprehensive Enterprise wide software that covers all aspects of management and operations of medium and large hospitals. It Enables healthcare providers to improve the operational effectiveness, reduce costs, reduce medical errors and enhance delivery of quality care.</p>
                                                 </div>
                                             </div>
                                             <div class="row" style="margin-top: 40px;">
@@ -1086,24 +1086,24 @@
                                                 <div class="col-md-12">
                                                     <h2 class="title-txt text-center wow fadeInUp"><span>RADSEVA</span></h2>
                                                     <h4 class="text-center">TELE RADIOLOGY APPLICATION</h4>
-                                                    <p class="text-center margin-t-10">Radseva is the transmission of radiological patient images, such as X-Rays, CTs, MRIs, from one location to another for the purpose of interpretation and/or consultation.</p>
-                                                    <p class="text-center margin-t-10">Radseva improves patient care by allowing Radiologist to Provide services without actually having to be at the location of the patient. This is particularly important when a sub-specialist such as a MRI Radiologist, Neuro-radiologist, Pediatric Radiologist or Musculoskeletal Radiologist is needed, since these profesionals are generally only located in large metropolitan areas working during day time, Tele Radiology allows for trained specialist to be available 24/7</p>
+                                                    <p class="text-justify margin-t-10">Radseva is the transmission of radiological patient images, such as X-Rays, CTs, MRIs, from one location to another for the purpose of interpretation and/or consultation.</p>
+                                                    <p class="text-justify margin-t-10">Radseva improves patient care by allowing Radiologist to Provide services without actually having to be at the location of the patient. This is particularly important when a sub-specialist such as a MRI Radiologist, Neuro-radiologist, Pediatric Radiologist or Musculoskeletal Radiologist is needed, since these profesionals are generally only located in large metropolitan areas working during day time, Tele Radiology allows for trained specialist to be available 24/7</p>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"  style="margin-top: 20px;">
-                                                <div class="row" style="margin-bottom: 30px;">
+                                                <div class="row" style="margin-bottom: 15px;">
                                                     <div class="col-md-4"></div>
                                                     <div class="col-md-4">
                                                         <div class="box-1  text-center">
                                                             <img src="images/healthcare/cloud-based-system-1/001.png" alt=""/>
-                                                            <h3 class="text-center wow fadeInUp"><strong style="font-size: 25px;">CLOUD BASED SYSTEM</strong></h3>
+                                                            <h3 class="text-center wow fadeInUp" style="font-size: 14px;"><strong style="font-size: 14px;">CLOUD BASED SYSTEM</strong></h3>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4"></div>
                                                 </div>
-                                           </div>
+                                            </div>
                                             <div class="row">
-                                                <div class="col-md-3">
+                                                <div class="col-md-3 col-sm-3">
                                                     <div class="box-1">
                                                         <center><img src="images/healthcare/cloud-based-system-1/002.png" alt="" /></center>
                                                         <ul class="list-style">
@@ -1111,7 +1111,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-3 col-sm-3">
                                                     <div class="box-1">
                                                         <center><img src="images/healthcare/cloud-based-system-1/003.png" alt="" /></center>
                                                         <ul class="list-style">
@@ -1119,7 +1119,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-3 col-sm-3">
                                                     <div class="box-1">
                                                         <center><img src="images/healthcare/cloud-based-system-1/004.png" alt="" /></center>
                                                         <ul class="list-style">
@@ -1127,7 +1127,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-3 col-sm-3">
                                                     <div class="box-1">
                                                         <center><img src="images/healthcare/cloud-based-system-1/005.png" alt="" /></center>
                                                         <ul class="list-style">
@@ -1135,9 +1135,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-3">
+                                                <div class="col-md-3 col-sm-3">
                                                     <div class="box-1">
                                                         <center><img src="images/healthcare/cloud-based-system-1/005.png" alt="" /></center>
                                                         <ul class="list-style">
@@ -1145,7 +1143,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-3 col-sm-3">
                                                     <div class="box-1">
                                                         <center><img src="images/healthcare/cloud-based-system-1/006.png" alt="" /></center>
                                                         <ul class="list-style">
@@ -1153,7 +1151,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-3 col-sm-3">
                                                     <div class="box-1">
                                                         <center><img src="images/healthcare/cloud-based-system-1/007.png" alt="" /></center>
                                                         <ul class="list-style">
@@ -1161,7 +1159,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-3 col-sm-3">
                                                     <div class="box-1">
                                                         <center><img src="images/healthcare/cloud-based-system-1/008.png" alt="" /></center>
                                                         <ul class="list-style">
@@ -1190,14 +1188,14 @@
                                                 <div class="col-md-12">
                                                     <h2 class="title-txt text-center wow fadeInUp"><span>MIMS</span></h2>
                                                     <h4 class="text-center">MEDICAL INSTITUTE MANAGEMENT SYSTEM</h4>
-                                                    <p class="text-center margin-t-10">Medical Institute Management System software which is helpful for medical student as well as College Authorities. Our Application stores records of Students & Faculties Also. The Main Principle Behind this Software is easy to Supervision of Institute. This software can help us to explore all the activities happening inside the Medical College. It can handle Details of Student as well as Faculties, Finance, Human Resource, Attendance, Reports, Hostel Management, Data Management, Inventory, Transport etc.</p>
+                                                    <p class="text-justify margin-t-10">Medical Institute Management System software which is helpful for medical student as well as College Authorities. Our Application stores records of Students & Faculties Also. The Main Principle Behind this Software is easy to Supervision of Institute. This software can help us to explore all the activities happening inside the Medical College. It can handle Details of Student as well as Faculties, Finance, Human Resource, Attendance, Reports, Hostel Management, Data Management, Inventory, Transport etc.</p>
                                                 </div>
                                             </div>
                                             <div class="row" style="padding: 40px 0px;">
                                                 <div class="col-md-12">
                                                     <h2 class="title-txt text-center wow fadeInUp"><span>SYSTEM FEATURES</span></h2>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 mims">
                                                     <div class="row">
                                                         <div class="col-md-2">
                                                             <img src="images/healthcare/system-features/001.png" alt="" />
@@ -1279,7 +1277,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 mims">
                                                     <div class="row">
                                                         <div class="col-md-2">
                                                             <img src="images/healthcare/system-features/011.png" alt="" />
@@ -1361,7 +1359,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 mims">
                                                     <div class="row">
                                                         <div class="col-md-2">
                                                             <img src="images/healthcare/system-features/021.png" alt="" />
@@ -1472,12 +1470,12 @@
                                                 <div class="col-md-12">
                                                     <h2 class="title-txt text-center wow fadeInUp"><span>ENDOSMART</span></h2>
                                                     <h4 class="text-center">ENDOSCOPY SYSTEM</h4>
-                                                    <p class="text-center margin-t-10">A procedure in which specialized instruments are used by a doctor to view and operate on the internal organs and vessels of the body is known as Endoscopy. Without making big cuts / incisions, the process of Endoscopy allows the surgeon to see the problem areas inside the patient’s body. Endoscope is a medical instrument in which a camera attached to a flexible tube that allows the doctor to see. Either through the opening in the body such as mouth or through a small incision, a surgeon inserts an endoscope in the patient’s body. With the help of forceps also known as tongs and scissors on the endoscope a doctor can operate or remove tissues for biopsy.</p>
+                                                    <p class="text-justify margin-t-10">A procedure in which specialized instruments are used by a doctor to view and operate on the internal organs and vessels of the body is known as Endoscopy. Without making big cuts / incisions, the process of Endoscopy allows the surgeon to see the problem areas inside the patient’s body. Endoscope is a medical instrument in which a camera attached to a flexible tube that allows the doctor to see. Either through the opening in the body such as mouth or through a small incision, a surgeon inserts an endoscope in the patient’s body. With the help of forceps also known as tongs and scissors on the endoscope a doctor can operate or remove tissues for biopsy.</p>
                                                 </div>
                                             </div>
                                             <div class="padding-tb-30 h-spa">
                                                 <div class="row">
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-6 col-sm-6 col-xs-6">
                                                         <div class="row">
                                                             <div class="col-md-3">
                                                                 <img src="images/healthcare/functionalities/001.png" alt="" />
@@ -1527,7 +1525,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-6 col-sm-6 col-xs-6">
                                                         <div class="row">
                                                             <div class="col-md-3">
                                                                 <img src="images/healthcare/functionalities/007.png" alt="" />

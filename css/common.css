@@ -502,10 +502,18 @@ h2.title-txt span {
     font-size: 24px;
 }
 
-.h-spa p {
+.h-spa p{
     display: table-cell;
     vertical-align: middle;
-    height: 100px;
+    height: 50px;
+}
+.h-spa img {
+    width: 60px;
+    height: 60px;
+}
+.h-spa .col-md-6 .row {
+    margin-bottom: 10px;
+    height: 110px;
 }
 
 .smart-card-section h3 {
@@ -518,4 +526,8 @@ h2.title-txt span {
 
 .padding-t-30 {
     padding-top: 30px;
+}
+.mims .row {
+    margin-bottom: 10px;
+    height: 100px
 }
