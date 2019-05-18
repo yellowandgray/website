@@ -451,7 +451,6 @@
                                                         <i class="fa fa-check"></i><li>Biochemistry, Hematology, </li>
                                                         <i class="fa fa-check"></i><li>Microbiology, Serology, Cytology,</li>
                                                         <i class="fa fa-check"></i><li>Pathology, Immuno hematology</li>
-
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -722,9 +721,7 @@
 
         <div class="section">
             <div class="container">
-                <h3 class="title-txt text-center wow fadeInUp">
-                    <span>MEDSEVA </span>Hospital Management System
-                </h3>
+                <h3 class="title-txt text-center wow fadeInUp">Success Stories and Reference</h3>
                 <div class="row medseva margin-tp-20">
                     <div class="col-md-12">
                         <h4 class="text-center">SOME OF OUR SUCCESSFUL IMPLEMENTATIONS</h4>
@@ -764,6 +761,13 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
+                        <h3 class="title-txt text-center wow fadeInUp">
+                            <span>MEDSEVA </span>Hospital Management System
+                        </h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
                         <div class="faq-info">
                             <ul class="nav nav-tabs wow fadeInUp tap-2" role="tablist">
                                 <li role="presentation" class="active">
@@ -793,8 +797,8 @@
                                             <div class="row">
                                                 <div class="col-md-12 latest-grid">
                                                     <h2 class="title-txt text-center wow fadeInUp"> <span>IMAGESMART</span></h2>
-                                                    <h4 class="text-center">DiCOM PACS (PICTURE ARCHIVING AND COMMUNICATION SYSTEM) APPLICATION</h4>
-                                                    <p class="text-justify margin-t-10">Picture Archiving and Communication Systems (PACS) are a valuable tool for healthcare organizations, enabling physicians to quickly and easily share enterprise medical imaging reports electronically. Even as they become a standard platform at most facilities, their usefulness is growing as options such as a vendor neutral archive and other options are available.</p>
+                                                    <h4 class="text-center">DiCOM PACS(PICTURE ARCHIVING AND COMMUNICATION SYSTEM) APPLICATION</h4>
+                                                    <p class="text-justify margin-t-10">Picture Archiving and Communication Systems (PACS) are a valuable tool for healthcare organizations, enabling physicians to quickly and easily share enterprise medical imaging reports electronically. Even as they become a standard platform at most facilities, their usefulness is growing as options such as a vendor neutral archive and other options are available.</p>
                                                 </div>
                                             </div>
 
@@ -833,8 +837,8 @@
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <ul class="list-style">
-                                                                    <i class="fa fa-check"></i><li>Image Smart DICOM Work list can also be accessed over Web/Internet.</li>
-                                                                    <i class="fa fa-check"></i><li>This allows the user to connect with the Rediology worklist from remote location.</li>
+                                                                    <i class="fa fa-check"></i><li>Image Smart DICOM Worklist can also be accessed over Web/Internet.</li>
+                                                                    <i class="fa fa-check"></i><li>This allows the user to connect with the Radiology worklist from remote location.</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -855,8 +859,8 @@
                                                                 <ul class="list-style">
                                                                     <i class="fa fa-check"></i><li>Reporting Status Count</li>
                                                                     <i class="fa fa-check"></i><li>DICOM BANK</li>
-                                                                    <i class="fa fa-check"></i><li>Rediologist Performance</li>
-                                                                    <i class="fa fa-check"></i><li>Count (Positive/Negative) Cases</li>
+                                                                    <i class="fa fa-check"></i><li>Radiologist Performance</li>
+                                                                    <i class="fa fa-check"></i><li>Count (Positive / Negative) Cases</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -918,8 +922,8 @@
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <ul class="list-style">
-                                                                    <i class="fa fa-check"></i><li>Template Based Reporting System Stored modality wise and test wise.</li>
-                                                                    <i class="fa fa-check"></i><li>Access to the template is defined by Radiologist. </li>
+                                                                    <i class="fa fa-check"></i><li>Template Based Reporting System stored modality wise and test wise.</li>
+                                                                    <i class="fa fa-check"></i><li>Access to the template is defined by Radiologist.</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -940,7 +944,7 @@
                                                                 <ul class="list-style">
                                                                     <i class="fa fa-check"></i><li>Browser enabled DiCOM Viewer</li>
                                                                     <i class="fa fa-check"></i><li>Tablet PC Compatible</li>
-                                                                    <i class="fa fa-check"></i><li>Smartphone Browser Compatible </li>
+                                                                    <i class="fa fa-check"></i><li>Smartphone Browser Compatible</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -1007,7 +1011,7 @@
                                                         <div class="col-md-12">
                                                             <div class="text-center">
                                                                 <img src="images/healthcare/h-spa-feature/004.png" alt="" />
-                                                                <p>EMR(OPD & IPD Clinical Data Management)</p>
+                                                                <p>EMR (OPD & IPD Clinical Data Management)</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1073,7 +1077,7 @@
                                                         <div class="col-md-12">
                                                             <div class="text-center">
                                                                 <img src="images/healthcare/h-spa-feature/012.png" alt="" />
-                                                                <p>MIS-Reports</p>
+                                                                <p>MIS – Reports</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1390,7 +1394,7 @@
                                                             <img src="images/healthcare/system-features/019.png" alt="" />
                                                         </div>
                                                         <div class="col-md-10">
-                                                            <p>Discussion</p>
+                                                            <p>Discussions</p>
                                                         </div>
                                                     </div>
                                                     <div class="row">
@@ -1622,9 +1626,9 @@
                                                     <div class="col-md-6">
                                                         <ul class="list-style">
                                                             <i class="fa fa-check"></i><li>Video capturing in mp4 format</li>
-                                                            <i class="fa fa-check"></i><li>Default Video Compression, Video Size </li>
-                                                            <i class="fa fa-check"></i><li>High resolution, High quality, image and Cine loop capture </li>
-                                                            <i class="fa fa-check"></i><li>User can store thousands of images on computer </li>
+                                                            <i class="fa fa-check"></i><li>Default Video Compression, Video Size</li>
+                                                            <i class="fa fa-check"></i><li>High resolution, High quality, image and Cine loop capture</li>
+                                                            <i class="fa fa-check"></i><li>User can store thousands of images on computer</li>
                                                             <i class="fa fa-check"></i><li>Video Playback, Capturing Image in different sizes</li>
                                                             <i class="fa fa-check"></i><li>Dual Foot Switch for Multiple functions videos or both simultaneously Capture images from offline videos</li>
                                                             <i class="fa fa-check"></i><li>Truly Dynamic Report in Every sense</li>
