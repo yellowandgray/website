@@ -659,7 +659,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <h5 class="color-pink">The Institue Of Asset Management</h5>
                                             <p>The IAM developed the Anatomy to provide an appreciation of asset management, for both experts and newcomers.</p><br/>
                                         </div>
-
                                     </div>
                                     <div class="col-md-6 latest-grid">
                                         <div class="faq-left faq-font">
