@@ -872,104 +872,104 @@
                                                     <p class="text-center margin-t-10">Multi-specialty module is a state of the art Hospital Information Management System(HIMS) which is comprehensive Enterprise wide software that covers all aspects of management and operations of medium and large hospitals. It Enables healthcare providers to improve the operational effectiveness, reduce costs, reduce medical errors and enhance delivery of quality care.</p>
                                                 </div>
                                             </div>
-                                            <div class="row h-spa" style="margin-top: 40px;">
+                                            <div class="row" style="margin-top: 40px;">
                                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/h-spa-feature/001.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <p>Patient Management</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/h-spa-feature/002.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <p>Emergency Patient Management</p>
+                                                        <div class="col-md-12">
+                                                            <div class="text-center">
+                                                                <img src="images/healthcare/h-spa-feature/001.png" alt="" />
+                                                                <p>Patient Management</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/h-spa-feature/003.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <p>Billing Management (OPD & IPD) & Insurance Management with E-Claims (OPD & IPD)</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/h-spa-feature/004.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <p>EMR(OPD & IPD Clinical Data Management)</p>
+                                                        <div class="col-md-12">
+                                                            <div class="text-center">
+                                                                <img src="images/healthcare/h-spa-feature/002.png" alt="" />
+                                                                <p>Emergency Patient Management</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/h-spa-feature/005.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <p>Pathology Management</p>
+                                                        <div class="col-md-12">
+                                                            <div class="text-center">
+                                                                <img src="images/healthcare/h-spa-feature/003.png" alt="" />
+                                                                <p>Billing Management (OPD & IPD) & Insurance Management with E-Claims (OPD & IPD)</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/h-spa-feature/006.png" alt="" />
+                                                        <div class="col-md-12">
+                                                            <div class="text-center">
+                                                                <img src="images/healthcare/h-spa-feature/004.png" alt="" />
+                                                                <p>EMR(OPD & IPD Clinical Data Management)</p>
+                                                            </div>
                                                         </div>
-                                                        <div class="col-md-9">
-                                                            <p>Radiology Management</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="text-center">
+                                                                <img src="images/healthcare/h-spa-feature/005.png" alt="" />
+                                                                <p>Pathology Management</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="text-center">
+                                                                <img src="images/healthcare/h-spa-feature/006.png" alt="" />
+                                                                <p>Radiology Management</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                                     <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/h-spa-feature/007.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <p>Operation Theatre Management</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/h-spa-feature/008.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <p>Nursing Station Management</p>
+                                                        <div class="col-md-12">
+                                                            <div class="text-center">
+                                                                <img src="images/healthcare/h-spa-feature/007.png" alt="" />
+                                                                <p>Operation Theatre Management</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/h-spa-feature/009.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <p>Inventory Management (General Stores)</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/h-spa-feature/010.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <p>Pharmacy Management</p>
+                                                        <div class="col-md-12">
+                                                            <div class="text-center">
+                                                                <img src="images/healthcare/h-spa-feature/008.png" alt="" />
+                                                                <p>Nursing Station Management</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/h-spa-feature/011.png" alt="" />
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <p>Administration Management</p>
+                                                        <div class="col-md-12">
+                                                            <div class="text-center">
+                                                                <img src="images/healthcare/h-spa-feature/009.png" alt="" />
+                                                                <p>Inventory Management (General Stores)</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-3">
-                                                            <img src="images/healthcare/h-spa-feature/012.png" alt="" />
+                                                        <div class="col-md-12">
+                                                            <div class="text-center">
+                                                                <img src="images/healthcare/h-spa-feature/010.png" alt="" />
+                                                                <p>Pharmacy Management</p>
+                                                            </div>
                                                         </div>
-                                                        <div class="col-md-9">
-                                                            <p>MIS-Reports</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="text-center">
+                                                                <img src="images/healthcare/h-spa-feature/011.png" alt="" />
+                                                                <p>Administration Management</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="text-center">
+                                                                <img src="images/healthcare/h-spa-feature/012.png" alt="" />
+                                                                <p>MIS-Reports</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1028,17 +1028,18 @@
                                                     <p class="text-center margin-t-10">Radseva improves patient care by allowing Radiologist to Provide services without actually having to be at the location of the patient. This is particularly important when a sub-specialist such as a MRI Radiologist, Neuro-radiologist, Pediatric Radiologist or Musculoskeletal Radiologist is needed, since these profesionals are generally only located in large metropolitan areas working during day time, Tele Radiology allows for trained specialist to be available 24/7</p>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12" style="margin-top: 50px;">
+                                            <div class="col-md-12"  style="margin-top: 20px;">
                                                 <div class="row" style="margin-bottom: 30px;">
-                                                    <div class="col-md-2"></div>
-                                                    <div class="col-md-2">
-                                                        <img src="images/healthcare/cloud-based-system-1/001.png" alt=""/>
+                                                    <div class="col-md-4"></div>
+                                                    <div class="col-md-4">
+                                                        <div class="box-1  text-center">
+                                                            <img src="images/healthcare/cloud-based-system-1/001.png" alt=""/>
+                                                            <h3 class="text-center wow fadeInUp"><strong style="font-size: 25px;">CLOUD BASED SYSTEM</strong></h3>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-md-7">
-                                                        <h2 class="text-left wow fadeInUp"><span>COULD BASED SYSTEM</span></h2>
-                                                    </div>
+                                                    <div class="col-md-4"></div>
                                                 </div>
-                                            </div>
+                                           </div>
                                             <div class="row">
                                                 <div class="col-md-3">
                                                     <div class="box-1">
