@@ -719,7 +719,7 @@
                 <h3 class="title-txt text-center wow fadeInUp">
                     <span>MEDSEVA </span>Hospital Management System
                 </h3>
-                <div class="row">
+                <div class="row medseva margin-tp-20">
                     <div class="col-md-12">
                         <h4>SOME OF OUR SUCCESSFUL IMPLEMENTATIONS</h4>
                     </div>
