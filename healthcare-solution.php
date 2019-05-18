@@ -84,7 +84,7 @@
                             </div>
                             <div class="col-md-9">
                                 <h4 class="color-pink bold">+130 LOCAL & INTERNATIONAL CLIENTS</h4>
-                                <P>From multiple industry vertical on an International Level and provide our services for demand leading edge software development skills.</P>
+                                <P>From multiple industry verticals on an International level and provide our services for demand leading edge software development skills.</P>
                             </div>
                         </div>
                         <div class="row">
@@ -93,7 +93,7 @@
                             </div>
                             <div class="col-md-9">
                                 <h4 class="color-pink bold">+100 FULL TIME PROFESSIONALS</h4>
-                                <P>Distributed in our three development centers in Malaysia (Kuala Lumpur, Selangor), India(Chennai) and Philippines(Manila).</P>
+                                <P>Distributed in our three development centers in Malaysia(Kuala Lumpur, Selangor), India(Chennai) and Philippines(Manila).</P>
                             </div>
                         </div>
                     </div>
@@ -155,7 +155,34 @@
             </div>
         </div>
 
-
+        <div class="section" style="background: url(images/healthcare/background.jpg)no-repeat;background-size: cover;">
+            <div class="container">
+                <div class="row">
+                    <div class="padding-tb-30">
+                        <p class="text-center margin-b-20">“WE ARE COMMITTED IN PROVIDING WORLD CLASS HEALTH CARE SOLUTIONS.”</p>
+                        <div class="col-md-12 padding-t-30">
+                            <h4>More than</h4>
+                            <h2 class="color-pink">100 Years</h2>
+                            <p>Of Collective Industry experience</p>
+                        </div>
+                        <div class="col-md-12 padding-t-30">
+                            <h4>Serving over</h4>
+                            <h2 class="color-pink">1,000 Health Care Professionals</h2>
+                            <p>Who work closely with us</p>
+                        </div>
+                        <div class="col-md-12 padding-t-30">
+                            <h4>Exceeding</h4>
+                            <h2 class="color-pink">50 International</h2>
+                            <p>Successful Hospital and HealthCare Implementations</p>
+                        </div>
+                        <div class="col-md-12 padding-t-30">
+                            <h4>Solution presence in over</h4>
+                            <h2 class="color-pink">8 Countries</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section class="section">
             <div class="container">
@@ -222,7 +249,7 @@
                                             <img src="images/healthcare/icons-features/006.png" alt="" />
                                         </div>
                                         <div class="col-md-9">
-                                            <h4 style="margin-top: 20px;">Investigation/ Lab management</h4>
+                                            <h4 style="margin-top: 20px;">Investigation/ Lab Management</h4>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -312,8 +339,6 @@
                                 </div>
                             </div>
                             <div class="clearfix"> </div>
-
-
                         </div>
                     </div>
 
@@ -462,7 +487,9 @@
                                     <div class="row">
                                         <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
-                                                <center><img src="images/healthcare/cloud-based-system/002.png" alt="" /></center>
+                                                <center>
+                                                    <img src="images/healthcare/cloud-based-system/002.png" alt="" />
+                                                </center>
                                                 <ul class="list-style">
                                                     <li>Enables <strong>HUB and SPOKES</strong> model</li>
                                                 </ul>
@@ -470,7 +497,9 @@
                                         </div>
                                         <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
-                                                <center><img src="images/healthcare/cloud-based-system/003.png" alt="" /></center>
+                                                <center>
+                                                    <img src="images/healthcare/cloud-based-system/003.png" alt="" />
+                                                </center>
                                                 <ul class="list-style">
                                                     <li>Enables <strong>Cross Platform</strong> Transactions</li>
                                                 </ul>
@@ -478,7 +507,9 @@
                                         </div>
                                         <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
-                                                <center><img src="images/healthcare/cloud-based-system/004.png" alt="" /></center>
+                                                <center>
+                                                    <img src="images/healthcare/cloud-based-system/004.png" alt="" />
+                                                </center>
                                                 <ul class="list-style">
                                                     <li><strong>Reports </strong>for HOD</li>
                                                 </ul>
@@ -486,7 +517,9 @@
                                         </div>
                                         <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
-                                                <center><img src="images/healthcare/cloud-based-system/005.png" alt="" /></center>
+                                                <center>
+                                                    <img src="images/healthcare/cloud-based-system/005.png" alt="" />
+                                                </center>
                                                 <ul class="list-style">
                                                     <li><strong>Certified </strong> Reliability</li>
                                                 </ul>
@@ -496,7 +529,9 @@
                                     <div class="row">
                                         <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
-                                                <center><img src="images/healthcare/cloud-based-system/005.png" alt="" /></center>
+                                                <center>
+                                                    <img src="images/healthcare/cloud-based-system/005.png" alt="" />
+                                                </center>
                                                 <ul class="list-style">
                                                     <li><strong>100% Web based</strong> system</li>
                                                 </ul>
@@ -504,7 +539,9 @@
                                         </div>
                                         <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
-                                                <center><img src="images/healthcare/cloud-based-system/006.png" alt="" /></center>
+                                                <center>
+                                                    <img src="images/healthcare/cloud-based-system/006.png" alt="" />
+                                                </center>
                                                 <ul class="list-style">
                                                     <li><strong>Optimum Utilization</strong> of available resources</li>
                                                 </ul>
@@ -512,7 +549,9 @@
                                         </div>
                                         <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
-                                                <center><img src="images/healthcare/cloud-based-system/007.png" alt="" /></center>
+                                                <center>
+                                                    <img src="images/healthcare/cloud-based-system/007.png" alt="" />
+                                                </center>
                                                 <ul class="list-style">
                                                     <li>Achieve <strong>Efficiency</strong></li>
                                                 </ul>
@@ -520,7 +559,9 @@
                                         </div>
                                         <div class="col-md-3 col-sm-3">
                                             <div class="box-1">
-                                                <center><img src="images/healthcare/cloud-based-system/008.png" alt="" /></center>
+                                                <center>
+                                                    <img src="images/healthcare/cloud-based-system/008.png" alt="" />
+                                                </center>
                                                 <ul class="list-style">
                                                     <li><strong>Mobile Communication </strong>Enabled</li>
                                                 </ul>
@@ -538,7 +579,9 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
-                                        <center><img src="images/healthcare/smart-digital-integration/001.png" alt="" /></center>
+                                        <center>
+                                            <img src="images/healthcare/smart-digital-integration/001.png" alt="" />
+                                        </center>
                                         <ul class="list-style">
                                             <li><strong>Bio Metric </strong>Identification/ Verification (Iris/Fingerprint)</li>
                                         </ul>
@@ -546,7 +589,9 @@
                                 </div>
                                 <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
-                                        <center><img src="images/healthcare/smart-digital-integration/002.png" alt="" /></center>
+                                        <center>
+                                            <img src="images/healthcare/smart-digital-integration/002.png" alt="" />
+                                        </center>
                                         <ul class="list-style">
                                             <li><strong>Barcode- </strong>Reader and Printer</li>
                                         </ul>
@@ -554,7 +599,9 @@
                                 </div>
                                 <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
-                                        <center><img src="images/healthcare/smart-digital-integration/003.png" alt="" /></center>
+                                        <center>
+                                            <img src="images/healthcare/smart-digital-integration/003.png" alt="" />
+                                        </center>
                                         <ul class="list-style">
                                             <li><strong>SMS & Email</strong></li>
                                         </ul>
@@ -562,7 +609,9 @@
                                 </div>
                                 <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
-                                        <center><img src="images/healthcare/smart-digital-integration/004.png" alt="" /></center>
+                                        <center>
+                                            <img src="images/healthcare/smart-digital-integration/004.png" alt="" />
+                                        </center>
                                         <ul class="list-style">
                                             <li><strong>Radiology</strong> Modality</li>
                                         </ul>
@@ -572,7 +621,9 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
-                                        <center><img src="images/healthcare/smart-digital-integration/005.png" alt="" /></center>
+                                        <center>
+                                            <img src="images/healthcare/smart-digital-integration/005.png" alt="" />
+                                        </center>
                                         <ul class="list-style">
                                             <li><strong>Smart Card </strong>e.g MyKad</li>
                                         </ul>
@@ -580,7 +631,9 @@
                                 </div>
                                 <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
-                                        <center><img src="images/healthcare/smart-digital-integration/006.png" alt="" /></center>
+                                        <center>
+                                            <img src="images/healthcare/smart-digital-integration/006.png" alt="" />
+                                        </center>
                                         <ul class="list-style">
                                             <li><strong>Digital Pen</strong> (Incl. Handwritten Prescription Capture)</li>
                                         </ul>
@@ -588,7 +641,9 @@
                                 </div>
                                 <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
-                                        <center><img src="images/healthcare/smart-digital-integration/007.png" alt="" /></center>
+                                        <center>
+                                            <img src="images/healthcare/smart-digital-integration/007.png" alt="" />
+                                        </center>
                                         <ul class="list-style">
                                             <li><strong>Token Display</strong></li>
                                         </ul>
@@ -596,7 +651,9 @@
                                 </div>
                                 <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
-                                        <center><img src="images/healthcare/smart-digital-integration/008.png" alt="" /></center>
+                                        <center>
+                                            <img src="images/healthcare/smart-digital-integration/008.png" alt="" />
+                                        </center>
                                         <ul class="list-style">
                                             <li><strong>Digital Vital Tracking Devices</strong></li>
                                         </ul>
@@ -606,7 +663,9 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
-                                        <center><img src="images/healthcare/smart-digital-integration/009.png" alt="" /></center>
+                                        <center>
+                                            <img src="images/healthcare/smart-digital-integration/009.png" alt="" />
+                                        </center>
                                         <ul class="list-style">
                                             <li><strong>Web Camera</strong></li>
                                         </ul>
@@ -614,7 +673,9 @@
                                 </div>
                                 <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
-                                        <center><img src="images/healthcare/smart-digital-integration/010.png" alt="" /></center>
+                                        <center>
+                                            <img src="images/healthcare/smart-digital-integration/010.png" alt="" />
+                                        </center>
                                         <ul class="list-style">
                                             <li><strong>Mobile Computing</strong> (IOS, Android, Windows)</li>
                                         </ul>
@@ -622,7 +683,9 @@
                                 </div>
                                 <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
-                                        <center><img src="images/healthcare/smart-digital-integration/011.png" alt="" /></center>
+                                        <center>
+                                            <img src="images/healthcare/smart-digital-integration/011.png" alt="" />
+                                        </center>
                                         <ul class="list-style">
                                             <li><strong>Lab Machine</strong></li>
                                         </ul>
@@ -630,7 +693,9 @@
                                 </div>
                                 <div class="col-md-3 col-sm-3">
                                     <div class="box-1">
-                                        <center><img src="images/healthcare/smart-digital-integration/012.png" alt="" /></center>
+                                        <center>
+                                            <img src="images/healthcare/smart-digital-integration/012.png" alt="" />
+                                        </center>
                                         <ul class="list-style">
                                             <li><strong>Dictaphone</strong></li>
                                         </ul>
@@ -643,7 +708,6 @@
 
                     <div id="Screenshot" class="tabcontent">
                         <h3>Waiting For a Pictures.......</h3>
-
                     </div>
 
                 </div>
@@ -658,7 +722,6 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="faq-info">
-
                             <ul class="nav nav-tabs wow fadeInUp tap-2" role="tablist">
                                 <li role="presentation" class="active">
                                     <a href="#testi" aria-controls="testi" role="tab" data-toggle="tab">IMAGESMART</a>
@@ -679,7 +742,6 @@
                                     <a href="#tab6" aria-controls="messages" role="tab" data-toggle="tab">SONOSMART</a>
                                 </li>
                             </ul>
-
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active" id="testi">
                                     <div class="faqmain-info">
@@ -1563,7 +1625,6 @@
 
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
