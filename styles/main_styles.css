@@ -400,7 +400,7 @@ section
 }
 .nav_items li a
 {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     color: #ffffff;
@@ -1507,7 +1507,8 @@ button.close {
 }
 
 .type-coaching-box h3 {
-    height: 50px
+    height: 50px;
+    padding-top: 20px;
 }
 
 .type-coaching-box p {

@@ -478,23 +478,23 @@
                             <div class="counter col_fourth">
                                 <img src="images/counter-img/follow-sm.png" class="fa-2x" alt="">
                                 <!--<h2 class="timer count-title count-number" data-to="3000" data-speed="1500"></h2>-->
-                                <div class="counter-value timer count-title count-number" data-count="3000">1000</div>
-                                <p class="count-text ">Followers on SM</p>
+                                <div class="counter-value timer count-title count-number" data-count="17">17</div>
+                                <p class="count-text ">Years of Corporate Experience</p>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="counter col_fourth">
                                 <img src="images/counter-img/reached-wrokshop.png" class="fa-2x" alt=""></i>
                                 <!--<h2 class="timer count-title count-number" data-to="500" data-speed="1500"></h2>-->
-                                <div class="counter-value timer count-title count-number" data-count="500">50</div>
-                                <p class="count-text ">Reached via Trainings/ Workshops</p>
+                                <div class="counter-value timer count-title count-number" data-count="500">500</div>
+                                <p class="count-text ">Reached via Trainings</p>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="counter col_fourth">
                                 <img src="images/counter-img/one-to-one.png" class="fa-2x" alt="">
                                 <!--<h2 class="timer count-title count-number" data-to="200" data-speed="1500"></h2>-->
-                                <div class="counter-value timer count-title count-number" data-count="200">20</div>
+                                <div class="counter-value timer count-title count-number" data-count="300">300</div>
                                 <p class="count-text ">1:1 Coaching Hours</p>
                             </div>
                         </div>
@@ -502,8 +502,8 @@
                             <div class="counter col_fourth end">
                                 <img src="images/counter-img/visitors-website.png" class="fa-2x" alt="">
                                 <!--<h2 class="timer count-title count-number" data-to="1000" data-speed="1500"></h2>-->
-                                <div class="counter-value timer count-title count-number" data-count="1000">100</div>
-                                <p class="count-text ">Other Topics</p>
+                                <div class="counter-value timer count-title count-number" data-count="3000">3000</div>
+                                <p class="count-text ">Followers on SM</p>
                             </div>
                         </div>
                     </div>
@@ -565,11 +565,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
-                            <h2>Public Appearance</h2>
+                            <h2>As Featured In</h2>
                         </div>
                         <div class="col-md-4">
                             <div class="apperance wow fadeInUp">
-                                <h2><a href="https://www.khaleejtimes.com/redefining-memory-skills-in-the-digital-age" target="blank">Redefining memory skills in the digital age</a></h2>
+                                <h2><a href="https://www.khaleejtimes.com/redefining-memory-skills-in-the-digital-age" target="blank">Khaleej Times</a></h2>
                                 <span>Filed on August 6, 2018</span>
                                 <img src="images/khaleej_times.png" alt="" style="width: 100%;"/>
                                 <p>"Neuro-linguistic programming (NLP) offers various tools to aid in improving memory by using the brain's ability for spatial, visual, auditory and kinesthetic storage and recall. One effective method has three steps. First, decide that you want to remember it. Then, pay close attention by writing it down. Finally, create an enchanting story with characters and a sequence of events. Make the story memorable by making it funny, exciting or even ridiculous. This will then help you to quickly recall the story and thus the information that you stored within it."</p>
@@ -577,7 +577,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="apperance wow fadeInUp">
-                                <h2><a href="http://magazines.toastmasters.org/article/HOW_TO/1261771/138995/article.html" target="blank">Toastmaster</a></h2>
+                                <h2><a href="http://magazines.toastmasters.org/article/HOW_TO/1261771/138995/article.html" target="blank">Toastmasters International Magazine</a></h2>
                                 <span>January 2013</span>
 <!--                                <img src="images/khaleej_times.png" alt="" style="width: 100%;"/>-->
                                 <h3>HOW TO</h3>
@@ -590,7 +590,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="apperance wow fadeInUp">
-                                <h2><a href="https://www.ivyexec.com/best-executive-mba-rankings/sp-jain-executive-mba-in-dubai-review" target="blank">SP Jain’s Features Alumni under IVY Exec</a></h2>
+                                <h2><a href="https://www.ivyexec.com/best-executive-mba-rankings/sp-jain-executive-mba-in-dubai-review" target="blank">SP Jain’s Featured IVY Exec Alumni</a></h2>
 <!--                                <span>Filed on August 6, 2018</span>-->
 <!--                                <img src="images/khaleej_times.png" alt="" style="width: 100%;"/>-->
                                 <h3 style="text-align: center;margin: 20px 0;">Featured Alumni</h3>
@@ -605,7 +605,6 @@
                                 </div>
                                 <br/>
                                 <p>Cheryl P Pinto is the CEO & Managing Director of GrowPro Consultants where she works with individuals who are seeking to exponentially grow their professional performance. </p>
-                                
                             </div>
                         </div>
                     </div>
@@ -636,17 +635,15 @@
                         countNum: countTo
                     },
                             {
-
                                 duration: 2000,
                                 easing: 'swing',
                                 step: function () {
-                                    $this.text(Math.floor(this.countNum));
+                                    $this.text(Math.floor(this.countNum) + '+');
                                 },
                                 complete: function () {
-                                    $this.text(this.countNum);
+                                    $this.text((this.countNum) + '+');
                                     //alert('finished');
                                 }
-
                             });
                 });
                 a = 1;

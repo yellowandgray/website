@@ -116,31 +116,65 @@ input::placeholder {
 }
 
 input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 6px; /* Some padding */  
-    border: 1px solid #ccc; /* Gray border */
-    /*border-radius: 4px;  Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 0px; /* Add a top margin */
-    margin-bottom: 3px; /* Bottom margin */
-    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    width: 100%;
+    padding: 6px;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    resize: vertical;
     margin: 0 0 20px 0;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: transparent;
 }
 
 input[type=email], select, textarea {
     width: 100%; /* Full width */
     padding: 6px; /* Some padding */  
-    border: 1px solid #ccc; /* Gray border */
+    border: none; /* Gray border */
     /*border-radius: 4px;  Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
     margin-top: 0px; /* Add a top margin */
     margin-bottom: 3px; /* Bottom margin */
     resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
     margin: 0 0 20px 0;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: transparent;
 }
 
 input[type=submit]:hover {
     background-color: #45a049;
+}
+
+.onload-popup-form input[type=text], select, textarea {
+    width: 100%;
+    padding: 6px;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    resize: vertical;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.onload-popup-form input[type=email], select, textarea {
+    width: 100%; /* Full width */
+    padding: 6px; /* Some padding */  
+    border: none; /* Gray border */
+    /*border-radius: 4px;  Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 0px; /* Add a top margin */
+    margin-bottom: 3px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
 }
 
 #enquiry input[type=text], select, textarea {
@@ -313,12 +347,11 @@ input[type=submit]:hover {
 }
 .box-3 {
     box-shadow: -1px 4px 15px 11px #eee;
-    /*padding: 20px;*/
+    /* padding: 20px; */
     height: auto;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
-
-
 
 /* The Modal (background) */
 .modal-1 {
@@ -1382,6 +1415,7 @@ audio {
     background: url(../images/counter-bg.jpg)no-repeat;
     background-attachment: fixed;
     background-position: bottom;
+    background-size: cover;
 }
 
 .col_fourth {
@@ -1395,9 +1429,9 @@ audio {
 /*.wrapper { width: 980px; margin: 30px auto; position: relative;}*/
 .counter {     
     background-color: #ffffff;
-    padding: 40px 50px;
+    padding: 40px 10px;
     border-radius: 5px;
-    height: 277px;
+    height: 280px;
     width: 100%;
 }
 .count-title {    
@@ -1421,4 +1455,18 @@ audio {
     display: table; 
     color: #4ad1e5;
     width: 100px;
+}
+
+.social-icon {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.social-icon li i {
+    font-size: 25px;
+    color: #000;
+}
+
+.social-icon li:hover i {
+    color: #20b9ec;
 }

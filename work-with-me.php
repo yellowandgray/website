@@ -92,7 +92,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
-                            <h2>Coaching Titles</h2>
+                            <h2>MASTER EVERY AREA OF YOUR LIFE</h2>
                         </div>
                     </div>
                     <div class="row">
@@ -120,7 +120,7 @@
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container type-coaching-box d-flex flex-column">
-                                    <h3 class="text-center">Time Management</h3>
+                                    <h3 class="text-center">Transformational Change</h3>
                                     <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
@@ -137,7 +137,7 @@
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container type-coaching-box d-flex flex-column">
-                                    <h3 class="text-center">Career Progress</h3>
+                                    <h3 class="text-center">Career Acceleration</h3>
                                     <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/Rise Up - Pre Event Video.mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
@@ -173,7 +173,7 @@
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container type-coaching-box d-flex flex-column">
-                                    <h3 class="text-center">Transformational Change</h3>
+                                    <h3 class="text-center">Life (Time) Management</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/u7NntUPBdkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
@@ -189,7 +189,7 @@
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container type-coaching-box d-flex flex-column">
-                                    <h3 class="text-center">Super Women</h3>
+                                    <h3 class="text-center">Wonder Woman</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/QwooUQ-oAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>

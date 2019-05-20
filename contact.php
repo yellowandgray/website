@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head.php';
+    <?php
+    include 'head.php';
     $page = 'contact';
     ?>
     <body>
@@ -8,12 +9,12 @@
             <!-- Header -->
             <?php include 'menu.php'; ?>
             <!-- Menu -->
-<?php include 'mobile-menu.php'; ?>
+            <?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
             <div class="sub-bg prlx_parent">
 
                 <!-- Parallax Background -->
-               <div class="home_background" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>
+                <div class="home_background" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>
                 <div class="services_page_shapes">
                     <!--                    <video style="height:100%;float: right;" autoplay>
                                             <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
@@ -67,18 +68,48 @@
                                 <img src="images/contact-img.jpg" alt="" >
                             </div>
                             <div class="contact-details wow fadeInUp">
-<!--                                <h2 class="text-center">Say Hello!</h2>
-                                <hr>-->
+                                <!--                                <h2 class="text-center">Say Hello!</h2>
+                                                                <hr>-->
                                 <p><i class="fas fa-phone"></i> : <a href="tel:+971-50-79-89-121">+971 50 79 89 121</a></p>
                                 <p><i class="fas fa-envelope-square"></i> : <a href="mailto:info@cherylppinto.com">info@cherylppinto.com</a></p>
                                 <p><i class="fas fa-globe"></i> : <a href="http://cherylppinto.com/">www.cherylppinto.com</a></p>
                             </div>
-                            <!--                            <div class="contact-details wow fadeInUp">
-                                                            <h2 class="text-center">Join Now!</h2>
-                                                            <hr>
-                                                            <input type="email" name="email" placeholder="E-mail address" />
-                                                            <button type="submit" class="button-1"><span class="color-w">Join</span></button>
-                                                        </div>-->
+                            <div class="contact-details wow fadeInUp">
+                                <p class="text-center">Stay connected with Cheryl daily -</p>
+                                <hr>
+                                <ul class="footer_social social-icon">
+                                    <li>
+                                        <a href="https://www.facebook.com/Cherylppinto/" target="blank">
+                                            <i class="fab fa-facebook-f trans_300"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/cherylppinto/" target="blank">
+                                            <i class="fab fa-instagram trans_300"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/cherylppinto" target="blank">
+                                            <i class="fab fa-twitter trans_300"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://in.pinterest.com/cherylppinto/" target="blank">
+                                            <i class="fab fa-pinterest trans_300"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/cherylppinto/" target="blank">
+                                            <i class="fab fa-linkedin-in trans_300"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="blank">
+                                            <i class="fab fa-youtube trans_300"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -89,6 +120,6 @@
 
             <?php include 'join-our-community.php'; ?>
             <!-- Footer -->
-<?php include 'footer.php'; ?>
+            <?php include 'footer.php'; ?>
     </body>
 </html>
