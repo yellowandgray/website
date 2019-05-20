@@ -444,6 +444,7 @@ textarea::placeholder {
         padding-left: 4px;
         padding-right: 4px;
         letter-spacing: 1.5px;
+        font-size: 12px;
     }
 }
 
@@ -607,12 +608,12 @@ textarea::placeholder {
     text-decoration: none;
     cursor: pointer;
 }
-.form-2 input{
+/*.form-2 input{
     margin: 0px 0px 0px 0px !important;
 }
 .form-2 textarea{
     margin: 0px 0px 0px 0px !important;
-}
+}*/
 .img-b {
     position: absolute;
     top: -23px;
@@ -1392,6 +1393,7 @@ audio {
     background: #eaeaea;
     background: url(../images/bg/fixed-bg.jpg)no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 .popup-content button {
@@ -1469,4 +1471,16 @@ audio {
 
 .social-icon li:hover i {
     color: #20b9ec;
+}
+
+.footer-p p{
+    font-size: 20px;
+}
+
+.footer-p i {
+    font-size: 22px;
+}
+
+.contact-details h3 {
+    font-size: 28px;
 }

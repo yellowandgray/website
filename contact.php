@@ -51,7 +51,7 @@
                                 <input type="text" name="lname" placeholder="Last Name" required > 
                                 <input type="email" name="email" placeholder="Email Address" required>
                                 <input type="text" name="phone" placeholder="Phone Number" required> 
-                                <label>How do you want to be contacted?</label>
+                                <label>How would you like to be contacted?</label>
                                 <select>
                                     <option value="Email">Email</option>
                                     <option value="Whatsapp">Whatsapp</option>
@@ -67,15 +67,15 @@
                             <div class="contact-details-1 wow fadeInUp">
                                 <img src="images/contact-img.jpg" alt="" >
                             </div>
-                            <div class="contact-details wow fadeInUp">
+                            <div class="contact-details footer-p wow fadeInUp">
                                 <!--                                <h2 class="text-center">Say Hello!</h2>
                                                                 <hr>-->
-                                <p><i class="fas fa-phone"></i> : <a href="tel:+971-50-79-89-121">+971 50 79 89 121</a></p>
+<!--                                <p><i class="fas fa-phone"></i> : <a href="tel:+971-50-79-89-121">+971 50 79 89 121</a></p>-->
                                 <p><i class="fas fa-envelope-square"></i> : <a href="mailto:info@cherylppinto.com">info@cherylppinto.com</a></p>
                                 <p><i class="fas fa-globe"></i> : <a href="http://cherylppinto.com/">www.cherylppinto.com</a></p>
                             </div>
                             <div class="contact-details wow fadeInUp">
-                                <p class="text-center">Stay connected with Cheryl daily -</p>
+                                <h3><strong>Stay connected with Cheryl daily</strong></h3>
                                 <hr>
                                 <ul class="footer_social social-icon">
                                     <li>

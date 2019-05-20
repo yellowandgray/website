@@ -435,6 +435,10 @@ section
     color: #9c20b3;
 }
 
+.dropdown-content ul li a {
+    font-size: 12px;
+}
+
 /*********************************
 3.3 Hamburger Menu
 *********************************/
@@ -1342,7 +1346,7 @@ section
 }
 .footer_social li i
 {
-    font-size: 14px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
 }
 .footer_social li:hover i
