@@ -332,14 +332,14 @@
 
 .box {
     box-shadow: 0 0 20px 10px #eee;
-    padding: 20px 1px;
-    height: 417px;
-    margin-bottom: 10px;
+    padding: 20px 10px;
+    height: 450px;
+    margin-bottom: 10px
 }
 .box-1 {
     box-shadow: 0 0 20px 10px #eee;
     padding: 20px;
-    height: 175px;
+    height: 200px;
     margin-bottom: 20px;
 }
 
@@ -381,8 +381,8 @@
 .tab {
     float: left;
     border: 1px solid #ccc;
-    background-color: #f1f1f1;
-    width: 30%;
+    background-color: transparent;
+    width: 25%;
     height: 632px;
 }
 
@@ -404,7 +404,7 @@
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #80b7df;
+    background-color: #af2788;
 }
 
 /* Create an active/current "tab button" class */
@@ -416,10 +416,10 @@
 .tabcontent {
     float: left;
     padding: 0px 12px;
-    border: 1px solid #ccc;
-    width: 70%;
+    /*    border: 1px solid #ccc;*/
+    width: 75%;
     border-left: none;
-    height: 632px;
+    /*    height: 632px;*/
 }
 #Features .row {
     margin-bottom: 15px !important;
@@ -539,4 +539,46 @@ h2.title-txt span {
 
 .medseva img {
     margin-bottom: 20px;
+}
+
+.box-4 {
+    box-shadow: 0px 10px 20px 10px #eee;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+.box-5 {
+    box-shadow: 0px 10px 20px 10px #eee;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+.box-5 h3 {
+    margin-top: 20px;
+    text-align: center;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 600;
+    vertical-align: middle;
+    display: block;
+    padding-top: 20px;
+}
+
+.height-auto {
+    height: auto;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.margin-tb-40 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.screen-shot-imagesmart h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 30px 0;
 }

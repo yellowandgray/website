@@ -197,13 +197,13 @@
                         <button class="tablinks" onclick="openCity(event, 'Functional')">Functional Flow</button>
                         <button class="tablinks" onclick="openCity(event, 'Benefits')">Benefits</button>
                         <button class="tablinks" onclick="openCity(event, 'Integration')">Smart Digital Integration</button>
-                        <!--                        <button class="tablinks" onclick="openCity(event, 'Screenshot')">System Screenshot</button>-->
+                        <button class="tablinks" onclick="openCity(event, 'Screenshot')">System Screenshot</button>
                     </div>
 
                     <div id="Features" class="tabcontent">
                         <div class="row">
                             <div class="col-md-6 col-xs-6 col-sm-6 latest-grid">
-                                <div class="faq-left height-225 tab-1-height">
+                                <div class="height-auto padding-20">
                                     <div class="row">
                                         <div class="col-md-3">
                                             <img src="images/healthcare/icons-features/001.png" alt="" />
@@ -271,7 +271,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 col-xs-6 col-sm-6 latest-grid">
-                                <div class="faq-left height-225 tab-1-height">
+                                <div class="height-auto padding-20">
                                     <div class="row">
                                         <div class="col-md-3">
                                             <img src="images/healthcare/icons-features/009.png" alt="" />
@@ -475,14 +475,14 @@
                             <div class="faq-subinfo">
                                 <div class="col-md-12"  style="margin-top: 20px;">
                                     <div class="row" style="margin-bottom: 15px;">
-                                        <div class="col-md-4"></div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-6">
                                             <div class="box-1  text-center">
                                                 <img src="images/healthcare/cloud-based-system/001.png" alt="" />
-                                                <h3 class="text-center wow fadeInUp" style="font-size: 14px;"><strong style="font-size: 14px;">CLOUD BASED SYSTEM</strong> INTEGRATED <br/>WITH PACS & TELE MEDICINE SOLUTION</h3>
+                                                <h3 class="text-center wow fadeInUp" style="font-size: 16px;"><strong style="font-size: 14px;">CLOUD BASED SYSTEM</strong> INTEGRATED <br/>WITH PACS & TELE MEDICINE SOLUTION</h3>
                                             </div>
                                         </div>
-                                        <div class="col-md-4"></div>
+                                        <div class="col-md-3"></div>
                                     </div>
                                     <!--                                    <h3 style="text-align: center;width: 500px;margin: 0 auto;font-size: 20px;vertical-align: bottom">
                                                                             <img src="images/healthcare/cloud-based-system/001.png" alt="" style="width: 15%;float: left;"/>
@@ -712,53 +712,102 @@
                     </div>
 
                     <div id="Screenshot" class="tabcontent">
-                        <h3>Waiting For a Pictures.......</h3>
+                        <div class="row">
+                            <div class="col-md-12" style="margin-top: 20px;">
+                                <h2 class="title-txt text-center wow fadeInUp">
+                                    <span>System</span> creenshot
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="row margin-tp-20">
+                            <div class="col-md-6">
+                                <div class="box-4">
+                                    <img src="images/healthcare/screenshot/our-capabilities/001.jpg" alt="" class="img-responsive" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="box-4">
+                                    <img src="images/healthcare/screenshot/our-capabilities/002.jpg" alt="" class="img-responsive" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row margin-tp-20">
+                            <div class="col-md-6">
+                                <div class="box-4">
+                                    <img src="images/healthcare/screenshot/our-capabilities/003.jpg" alt="" class="img-responsive" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="box-4">
+                                    <img src="images/healthcare/screenshot/our-capabilities/004.jpg" alt="" class="img-responsive" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row margin-tp-20">
+                            <div class="col-md-6">
+                                <div class="box-4">
+                                    <img src="images/healthcare/screenshot/our-capabilities/005.jpg" alt="" class="img-responsive" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="box-4">
+                                    <img src="images/healthcare/screenshot/our-capabilities/006.jpg" alt="" class="img-responsive" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <div class="section">
+        <div class="section" style="background: #eee">;
             <div class="container">
-                <h3 class="title-txt text-center wow fadeInUp">Success Stories and Reference</h3>
-                <div class="row medseva margin-tp-20">
-                    <div class="col-md-12">
+                <div class="row">
+                    <h3 class="title-txt text-center wow fadeInUp">Success Stories and Reference</h3>
+                </div>
+                <div class="row medseva margin-tb-40">
+                    <div class="col-md-12 margin-b-20">
                         <h4 class="text-center">SOME OF OUR SUCCESSFUL IMPLEMENTATIONS</h4>
                     </div>
                     <div class="col-md-5">
                         <div class="row">
-                            <div class="col-md-3 col-md-sm-6">
+                            <div class="col-md-3 col-sm-4">
                                 <img src="images/healthcare/001.png" alt="" />
                             </div>
-                            <div class="col-md-9 col-md-sm-6">
+                            <div class="col-md-9 col-sm-8">
                                 <p>More than</p>
                                 <h4 class="color-pink"><strong>4,180</strong> BEDS</h4>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3 col-md-sm-6">
+                            <div class="col-md-3 col-sm-4">
                                 <img src="images/healthcare/002.png" alt="" />
                             </div>
-                            <div class="col-md-9 col-md-sm-6">
+                            <div class="col-md-9 col-sm-8">
                                 <h4 class="color-pink"><strong>1 Million</strong></h4>
                                 <p>Daily Electronic Records</p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-sm-4">
                                 <img src="images/healthcare/003.png" alt="" />
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-9 col-sm-8">
                                 <h4 class="color-pink"><strong>26 Million</strong></h4>
                                 <p>Electronic Health records</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-sm-12">
                         <img src="images/healthcare/clients.jpg" alt="" style="width: 100%;"/>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <h3 class="title-txt text-center wow fadeInUp">
@@ -790,6 +839,7 @@
                                 </li>
                             </ul>
                             <div class="tab-content">
+
                                 <div role="tabpanel" class="tab-pane active" id="testi">
                                     <div class="faqmain-info">
                                         <div class="faq-subinfo">
@@ -966,6 +1016,43 @@
                                                     </ul>
                                                 </div>
                                             </div>
+
+                                            <div class="row margin-tp-20 screen-shot-imagesmart">
+                                                <div class="col-md-12 text-center">
+                                                    <h2>ADVANCED DICOM VIEWER FEATURES</h2>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/imagesmart/001.png" alt="" />
+                                                        <h3>MPR (Multi Planar Reconstruction)</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/imagesmart/002.png" alt="" />
+                                                        <h3>LUT & Inversion</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/imagesmart/003.png" alt="" />
+                                                        <h3>MIP (Maximum Intensity Projection)</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/imagesmart/004.png" alt="" />
+                                                        <h3>DiCOM Measurements</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/imagesmart/005.png" alt="" />
+                                                        <h3>3D VR</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                     <div class="clearfix"> </div>
@@ -1121,6 +1208,59 @@
                                                     <img src="images/healthcare/h-spa-feature/smart-card.png" alt="" width="100%" />
                                                 </div>
                                             </div>
+                                            <div class="row screen-shot-imagesmart" style="margin-top: 40px;">
+                                                <div class="col-md-12 text-center">
+                                                    <h2>FEATURES SCREENSHOTS</h2>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/h-spa/001.png" alt="" />
+                                                        <h3>LOGIN</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/h-spa/002.png" alt="" />
+                                                        <h3>HOME SCREEN</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/h-spa/003.png" alt="" />
+                                                        <h3>FUNCTIONS DASHBOARD</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/h-spa/004.png" alt="" />
+                                                        <h3>APPOINMENTS</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/h-spa/005.png" alt="" />
+                                                        <h3>REGISTRATION</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/h-spa/006.png" alt="" />
+                                                        <h3>SYSTEM GENERATED SMART CARD</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/h-spa/007.png" alt="" />
+                                                        <h3>OPD BILLING</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/h-spa/008.png" alt="" />
+                                                        <h3>QUEUE MANAGEMENT</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="clearfix"> </div>
                                         </div>
                                     </div>
@@ -1141,7 +1281,7 @@
                                                 <div class="row" style="margin-bottom: 15px;">
                                                     <div class="col-md-4"></div>
                                                     <div class="col-md-4">
-                                                        <div class="box-1  text-center">
+                                                        <div class="box-1 text-center">
                                                             <img src="images/healthcare/cloud-based-system-1/001.png" alt=""/>
                                                             <h3 class="text-center wow fadeInUp" style="font-size: 14px;"><strong style="font-size: 14px;">CLOUD BASED SYSTEM</strong></h3>
                                                         </div>
@@ -1221,6 +1361,82 @@
                                                 </div>
                                                 <div class="padding-tb-30">
                                                     <img src="images/healthcare/radseva/concept.png" alt="" width="100%" />
+                                                </div>
+                                            </div>
+                                            <div class="row screen-shot-imagesmart" style="margin-top: 40px;">
+                                                <div class="col-md-12 text-center">
+                                                    <h2>SYSTEM SCREENSHOTS</h2>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/redseva/001.png" alt="" />
+                                                        <h3>LOGIN</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/redseva/002.png" alt="" />
+                                                        <h3>DiCOM WORKLIST</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/redseva/003.png" alt="" />
+                                                        <h3>CLINICAL HISTORY</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/redseva/004.png" alt="" />
+                                                        <h3>ASSIGN STUDY TO RADIOLOGIST</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/redseva/005.png" alt="" />
+                                                        <h3>RADIOLOGIST WORKLIST</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/redseva/006.png" alt="" />
+                                                        <h3>DiCOM REPORTING CONSOLE</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/redseva/007.png" alt="" />
+                                                        <h3>EXPORT REPORT</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/redseva/008.png" alt="" />
+                                                        <h3>DiCOM VIEWER</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row screen-shot-imagesmart" style="margin-top: 40px;">
+                                                <div class="col-md-12 text-center">
+                                                    <h2>FEATURES SCREENSHOTS</h2>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/redseva/009.png" alt="" />
+                                                        <h3>USER MANAGEMENT (CONFIG)</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/redseva/010.png" alt="" />
+                                                        <h3>USER ROLE MANAGEMENT (CONFIG)</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/redseva/011.png" alt="" />
+                                                        <h3>USER ACCESS MANAGEMENT (CONFIG)</h3>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="clearfix"> </div>
@@ -1505,6 +1721,41 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="row screen-shot-imagesmart" style="margin-top: 40px;">
+                                                <div class="col-md-12 text-center">
+                                                    <h2>SYSTEM SCREENSHOTS</h2>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/mims/001.png" alt="" />
+                                                        <h3>LOGIN</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/mims/002.png" alt="" />
+                                                        <h3>HR SCREEN</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/mims/003.png" alt="" />
+                                                        <h3>EMPLOYEE SCREEN</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/mims/004.png" alt="" />
+                                                        <h3>STUDENT SCREEN</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/mims/005.png" alt="" />
+                                                        <h3>FINANCE SCREEN</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="clearfix"> </div>
                                         </div>
                                     </div>
@@ -1644,6 +1895,35 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="row screen-shot-imagesmart" style="margin-top: 40px;">
+                                                <div class="col-md-12 text-center">
+                                                    <h2>SYSTEM SCREENSHOTS</h2>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/endosmart/001.png" alt="" />
+                                                        <h3>LOGIN</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/endosmart/002.png" alt="" />
+                                                        <h3>DASHBOARD</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/endosmart/003.png" alt="" />
+                                                        <h3>PATIENT REGISTRATION</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="box-5">
+                                                        <img class="img-responsive" src="images/healthcare/screenshot/endosmart/004.png" alt="" />
+                                                        <h3>OPERATION RECORDING SCREEN</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="clearfix"> </div>
                                         </div>
                                     </div>
@@ -1657,9 +1937,45 @@
                                                     <h2 class="title-txt text-center wow fadeInUp"><span>SONOSMART</span></h2>
                                                     <h4 class="text-center">DIAGNOSTIC ULTRASOUND SYSTEM</h4>
                                                 </div>
-                                                <div class="padding-tb-30">
-                                                    <div class="col-md-12">
-                                                        <img src="images/healthcare/sonosmart/001.png" alt="" width="100%" />
+                                                <div class="row screen-shot-imagesmart" style="margin-top: 40px;">
+                                                    <div class="col-md-12 text-center">
+                                                        <h2>SYSTEM SCREENSHOTS</h2>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="box-5">
+                                                            <img class="img-responsive" src="images/healthcare/screenshot/sonomart/001.png" alt="" />
+                                                            <h3>LOGIN</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="box-5">
+                                                            <img class="img-responsive" src="images/healthcare/screenshot/sonomart/002.png" alt="" />
+                                                            <h3>DASHBOARD</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="box-5">
+                                                            <img class="img-responsive" src="images/healthcare/screenshot/sonomart/003.png" alt="" />
+                                                            <h3>PATIENT DASHBOARD</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="box-5">
+                                                            <img class="img-responsive" src="images/healthcare/screenshot/sonomart/004.png" alt="" />
+                                                            <h3>CAPTURED ULTRASOUND IMAGE</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="box-5">
+                                                            <img class="img-responsive" src="images/healthcare/screenshot/sonomart/005.png" alt="" />
+                                                            <h3>REPORT TEMPLATE</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="box-5">
+                                                            <img class="img-responsive" src="images/healthcare/screenshot/sonomart/006.png" alt="" />
+                                                            <h3>PRINTING OF FINAL REPORT FOR PATIENT</h3>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1697,6 +2013,6 @@
             document.getElementById("defaultOpen").click();
         </script>
         <!--vertical tap-->
-        <?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>        
     </body>
 </html>
