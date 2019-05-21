@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head.php';
+    <?php
+    include 'head.php';
     $page = 'how-work';
     ?>
     <body>
@@ -13,7 +14,7 @@
             <div class="sub-bg prlx_parent">
                 <!-- Parallax Background -->
                 <div class="home_background" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>
-                <div class="overlay1"></div>
+                <!--                <div class="overlay1"></div>-->
                 <div class="services_page_shapes">
                     <!--                    <video style="height:100%;float: right;" autoplay>
                                             <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
@@ -132,5 +133,6 @@
                     });
                 });
             </script>
+        </div>
     </body>
 </html>

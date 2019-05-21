@@ -1063,7 +1063,7 @@ textarea::placeholder {
 
 .sub-bg {
     width: 100%;
-    height: 386px;
+    height: 300px;
     /*    margin-top: 110px;*/
 }
 .prlx_parent {
@@ -1483,4 +1483,8 @@ audio {
 
 .contact-details h3 {
     font-size: 28px;
+}
+
+.color-pink {
+    color:#9c20b3;
 }

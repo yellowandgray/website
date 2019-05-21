@@ -11,33 +11,35 @@
             <!-- Menu -->
             <?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
-            <div class="sub-bg prlx_parent">
+            <div class="prlx_parent" style="height: 110px;background: #0091c1;width: 100%;">
 
                 <!-- Parallax Background -->
-                <div class="home_background" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>
-                <div class="services_page_shapes">
-                    <!--                    <video style="height:100%;float: right;" autoplay>
-                                            <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
-                                            Your browser does not support the <code>video</code> tag.
-                                        </video>-->
-                </div>
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6" style="z-index: 999;">
-                            <div class="home_content wow fadeInLeft">
-                                <h1>Free Resources</h1>
-                                <span>Sub Title Comes Here</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!--                <div class="home_background" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>-->
+                <!--                <div class="home_background"></div>-->
+                <!--                <div class="services_page_shapes">
+                                                        <video style="height:100%;float: right;" autoplay>
+                                                            <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
+                                                            Your browser does not support the <code>video</code> tag.
+                                                        </video>
+                                </div>
+                
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-6" style="z-index: 999;">
+                                            <div class="home_content wow fadeInLeft">
+                                                <h1>Free Resources</h1>
+                                                <span>Sub Title Comes Here</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
             </div>
             <!-- Features -->
             <div class="features">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12 wow fadeInUp">
+                        <div class="col-lg-12 text-center section_title section_title_dark wow fadeInDown">
+                            <h2>FREE RESOURCES</h2>
                             <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                         </div>
                     </div>

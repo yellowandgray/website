@@ -38,7 +38,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
-                            <h2>Get in touch With Me</h2>
+                            <h2>How may we help you?</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3><i class="fa fa-check color-pink"></i> To book a <strong class="color-pink">one-to-one Coaching session,</strong> please <button class="button-1"><span><a href="#" class="color-w">START HERE</a></span></button></h3>
+                            <br/>
+                            <h3><i class="fa fa-check color-pink"></i> For <strong class="color-pink">Interviews, Speaking Engagements or Corporate Trainings,</strong> please email <a href="mailto:cheryl@cherylppinto.com">Cheryl@cherylppinto.com</a></h3>
+                            <br/>
                         </div>
                     </div>
                     <div class="row">
@@ -46,13 +54,14 @@
                             <form class="text-bg-1 wow fadeInUp contact-form">
                                 <h2 class="text-center">Contact Now</h2>
                                 <hr>
-                                <p>I am here to help! I check each message and will respond to you personally.</p>
+                                <p class="text-center">For all other enquiries, please use the form below</p>
                                 <input type="text" name="fname" placeholder="First Name" required > 
                                 <input type="text" name="lname" placeholder="Last Name" required > 
                                 <input type="email" name="email" placeholder="Email Address" required>
                                 <input type="text" name="phone" placeholder="Phone Number" required> 
                                 <label>How would you like to be contacted?</label>
                                 <select>
+                                    <option value="Call">Call</option>
                                     <option value="Email">Email</option>
                                     <option value="Whatsapp">Whatsapp</option>
                                 </select>
@@ -121,5 +130,6 @@
             <?php include 'join-our-community.php'; ?>
             <!-- Footer -->
             <?php include 'footer.php'; ?>
+        </div>
     </body>
 </html>
