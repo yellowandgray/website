@@ -75,6 +75,14 @@
                                 <input type="checkbox" name="" value="I do not have any financial resources at all and I am going to keep the state of my life exactly as it is. "> I do not have any financial resources at all and I am going to keep the state of my life exactly as it is.
                                  <br/>
                                  <br/>
+                                 <label>How would you like us to connect back with you to schedule your call/ meeting with Cheryl P Pinto</label><br/>
+                                 <input type="checkbox" name="" value="Phone call"> Phone call <br/>
+                                <input type="checkbox" name="" value="WhatsApp "> WhatsApp <br/>
+                                <input type="checkbox" name="" value="Email "> Email<br/>
+                                <input type="checkbox" name="" value="Other (please specify) "> Other (please specify)<br/>
+                                <br/>
+                                <label>Finally, on a scale of 1 to 10, how passionately do you approach life? :</label>
+                                <input type="text" name="finally" />
                                 <div class="g-recaptcha" data-sitekey="6Ld9YaMUAAAAAG1qHv8gS4Lj3QTKHfz2IcfBwBUJ"></div>
                                 <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
                             </form>

@@ -10,7 +10,7 @@
         <ul class="nav_items">
             <li class="<?php if ($page == 'how-work') {
     echo 'active';
-} ?>"><a href="how-to-works.php"><span>How it Works</span></a></li>
+} ?>"><a href="how-it-works.php"><span>How it Works</span></a></li>
             <li class="<?php if ($page == 'resources') {
     echo 'active';
 } ?>"><a href="resources.php"><span>Free Resources</span></a></li>
