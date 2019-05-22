@@ -765,11 +765,9 @@
             <div class="container">
                 <div class="row">
                     <h3 class="title-txt text-center wow fadeInUp">Success Stories and Reference</h3>
+                    <h4 class="text-center">SOME OF OUR SUCCESSFUL IMPLEMENTATIONS</h4>
                 </div>
                 <div class="row medseva margin-tb-40">
-                    <div class="col-md-12 margin-b-20">
-                        <h4 class="text-center">SOME OF OUR SUCCESSFUL IMPLEMENTATIONS</h4>
-                    </div>
                     <div class="col-md-5">
                         <div class="row">
                             <div class="col-md-3 col-sm-4">
