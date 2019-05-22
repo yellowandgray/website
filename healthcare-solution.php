@@ -715,7 +715,7 @@
                         <div class="row">
                             <div class="col-md-12" style="margin-top: 20px;">
                                 <h2 class="title-txt text-center wow fadeInUp">
-                                    <span>System</span> creenshot
+                                    <span>System</span> Screenshot
                                 </h2>
                             </div>
                         </div>
@@ -1989,7 +1989,22 @@
             </div>
         </div>
 
-
+        <div class="section" style="background: #f3f3f3;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="title-txt text-center wow fadeInUp">
+                            <span>Business </span>Model
+                        </h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="images/healthcare/sonosmart/001.png" alt="" class="img-responsive" />
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!--vertical tap-->
         <script>
