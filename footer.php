@@ -7,8 +7,10 @@
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             </div>
             <div class="col-sm-6 text-sm-right text-center">
+                <p class="text-center"></p>
                 <div class="footer_social_container">
                     <ul class="footer_social">
+                        <li style="color: #fff">Stay connected with Cheryl daily...</li>
                         <li><a href="https://www.facebook.com/Cherylppinto/" target="blank"><i class="fab fa-facebook-f trans_300"></i></a></li>
                         <li><a href="https://www.instagram.com/cherylppinto/" target="blank"><i class="fab fa-instagram trans_300"></i></a></li>
                         <li><a href="https://twitter.com/cherylppinto" target="blank"><i class="fab fa-twitter trans_300"></i></a></li>
