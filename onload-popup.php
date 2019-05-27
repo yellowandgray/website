@@ -1,4 +1,4 @@
-<div id="ac-wrapper" style='display:none' >
+<div id="ac-wrapper" style='display:none' class="onload" >
     <div class="modal-dialog" class="md-modal md-effect-8" style="background:url(images/pop-up.jpg)no-repeat;background-size: cover;border: 4px solid #fff;">
         <!-- Modal content-->
         <div class="modal-onload-content">

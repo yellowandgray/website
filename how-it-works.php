@@ -9,32 +9,8 @@
             <!-- Header -->
             <?php include 'menu.php'; ?>
             <!-- Menu -->
-<?php include 'mobile-menu.php'; ?>
-            <!-- Hero Slider -->
-            <div class="sub-bg prlx_parent">
-                <!-- Parallax Background -->
-                <div class="home_background" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>
-                <!--                <div class="overlay1"></div>-->
-                <div class="services_page_shapes">
-                    <!--                    <video style="height:100%;float: right;" autoplay>
-                                            <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
-                                            Your browser does not support the <code>video</code> tag.
-                                        </video>-->
-                </div>
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6" style="z-index: 999;">
-                            <div class="home_content wow fadeInLeft">
-                                <h1>How it Works</h1>
-                                <span>Sub Title Comes Here</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-6" style="z-index: 999;">
-
-                        </div>
-                    </div>
-                </div>
+            <?php include 'mobile-menu.php'; ?>
+            <div class="prlx_parent" style="height: 110px;background: #3f1a56;width: 100%;">
             </div>
             <!-- Features -->
             <div class="features">
@@ -117,7 +93,7 @@
 
             <?php include 'contact-page.php'; ?>
             <!-- Footer -->
-<?php include 'footer.php'; ?>
+            <?php include 'footer.php'; ?>
             <script>
                 $(function () {
                     var selectedClass = "";

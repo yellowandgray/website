@@ -306,7 +306,8 @@
                                 <button class="button-1" id="myBtn-1"><span>Join The Community</span></button>
                             </div>
                             <div class="col-lg-6 text-center wow fadeInRight">
-                                <button class="button-1" id="myBtn"><span>Apply to Coach with Cheryl</span></button>
+                                <!--<button class="button-1" id="myBtn"><span>Apply to Coach with Cheryl</span></button>-->
+                                <button class="button-1"><span><a href="contact.php" class="color-w">Apply to Coach with Cheryl</a></span></button>
                             </div>
                         </div>
                     </div>
@@ -473,12 +474,12 @@
             <!-- Counter -->
             <div class="counter-section">
                 <div class="container">
-                    <div class="row" id="counter">
+                    <div class="row love_counter" id="counter">
                         <div class="col-md-3">
                             <div class="counter col_fourth">
                                 <img src="images/counter-img/follow-sm.png" class="fa-2x" alt="">
                                 <!--<h2 class="timer count-title count-number" data-to="3000" data-speed="1500"></h2>-->
-                                <div class="counter-value timer count-title count-number" data-count="17">17</div>
+                                <div class="love_count counter-value timer count-title count-number" data-count="17">17</div>
                                 <p class="count-text ">Years of Corporate Experience</p>
                             </div>
                         </div>
@@ -486,7 +487,7 @@
                             <div class="counter col_fourth">
                                 <img src="images/counter-img/reached-wrokshop.png" class="fa-2x" alt=""></i>
                                 <!--<h2 class="timer count-title count-number" data-to="500" data-speed="1500"></h2>-->
-                                <div class="counter-value timer count-title count-number" data-count="500">500</div>
+                                <div class="love_count counter-value timer count-title count-number" data-count="500">500</div>
                                 <p class="count-text ">Reached via Trainings</p>
                             </div>
                         </div>
@@ -494,7 +495,7 @@
                             <div class="counter col_fourth">
                                 <img src="images/counter-img/one-to-one.png" class="fa-2x" alt="">
                                 <!--<h2 class="timer count-title count-number" data-to="200" data-speed="1500"></h2>-->
-                                <div class="counter-value timer count-title count-number" data-count="300">300</div>
+                                <div class="love_count counter-value timer count-title count-number" data-count="300">300</div>
                                 <p class="count-text ">1:1 Coaching Hours</p>
                             </div>
                         </div>
@@ -502,7 +503,7 @@
                             <div class="counter col_fourth end">
                                 <img src="images/counter-img/visitors-website.png" class="fa-2x" alt="">
                                 <!--<h2 class="timer count-title count-number" data-to="1000" data-speed="1500"></h2>-->
-                                <div class="counter-value timer count-title count-number" data-count="3000">3000</div>
+                                <div class="love_count counter-value timer count-title count-number" data-count="3000">3000</div>
                                 <p class="count-text ">Followers on SM</p>
                             </div>
                         </div>
@@ -621,134 +622,125 @@
         <?php include '30-minute-free.php'; ?>
         <script src="js/silk_slider.js" type="text/javascript"></script>
         <script type="text/javascript">
-        var a = 0;
-        $(window).scroll(function () {
-
-            var oTop = $('#counter').offset().top - window.innerHeight;
-            if (a == 0 && $(window).scrollTop() > oTop) {
-                $('.counter-value').each(function () {
-                    var $this = $(this),
-                            countTo = $this.attr('data-count');
-                    $({
-                        countNum: $this.text()
-                    }).animate({
-                        countNum: countTo
-                    },
-                            {
-                                duration: 2000,
-                                easing: 'swing',
-                                step: function () {
-                                    $this.text(Math.floor(this.countNum) + '+');
-                                },
-                                complete: function () {
-                                    $this.text((this.countNum) + '+');
-                                    //alert('finished');
-                                }
-                            });
+        jQuery(window).scroll(startCounter);
+        function startCounter() {
+            var hT = jQuery('.love_counter').offset().top,
+                    hH = jQuery('.love_counter').outerHeight(),
+                    wH = jQuery(window).height();
+            if (jQuery(window).scrollTop() > hT + hH - wH) {
+                jQuery(window).off("scroll", startCounter);
+                jQuery('.love_count').each(function () {
+                    var $this = jQuery(this);
+                    jQuery({Counter: 0}).animate({Counter: $this.text()}, {
+                        duration: 1500,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.ceil(this.Counter) + '+');
+                        }
+                    });
                 });
-                a = 1;
             }
-
-        });</script>
+        }
+        </script>
 <!--        <script type="text/javascript">
-        (function ($) {
-            $.fn.countTo = function (options) {
-                options = options || {};
+    (function ($) {
+        $.fn.countTo = function (options) {
+            options = options || {};
 
-                return $(this).each(function () {
-                    // set options for current element
-                    var settings = $.extend({}, $.fn.countTo.defaults, {
-                        from: $(this).data('from'),
-                        to: $(this).data('to'),
-                        speed: $(this).data('speed'),
-                        refreshInterval: $(this).data('refresh-interval'),
-                        decimals: $(this).data('decimals')
-                    }, options);
+            return $(this).each(function () {
+                // set options for current element
+                var settings = $.extend({}, $.fn.countTo.defaults, {
+                    from: $(this).data('from'),
+                    to: $(this).data('to'),
+                    speed: $(this).data('speed'),
+                    refreshInterval: $(this).data('refresh-interval'),
+                    decimals: $(this).data('decimals')
+                }, options);
 
-                    // how many times to update the value, and how much to increment the value on each update
-                    var loops = Math.ceil(settings.speed / settings.refreshInterval),
-                            increment = (settings.to - settings.from) / loops;
+                // how many times to update the value, and how much to increment the value on each update
+                var loops = Math.ceil(settings.speed / settings.refreshInterval),
+                        increment = (settings.to - settings.from) / loops;
 
-                    // references & variables that will change with each update
-                    var self = this,
-                            $self = $(this),
-                            loopCount = 0,
-                            value = settings.from,
-                            data = $self.data('countTo') || {};
+                // references & variables that will change with each update
+                var self = this,
+                        $self = $(this),
+                        loopCount = 0,
+                        value = settings.from,
+                        data = $self.data('countTo') || {};
 
-                    $self.data('countTo', data);
+                $self.data('countTo', data);
 
-                    // if an existing interval can be found, clear it first
-                    if (data.interval) {
-                        clearInterval(data.interval);
-                    }
-                    data.interval = setInterval(updateTimer, settings.refreshInterval);
+                // if an existing interval can be found, clear it first
+                if (data.interval) {
+                    clearInterval(data.interval);
+                }
+                data.interval = setInterval(updateTimer, settings.refreshInterval);
 
-                    // initialize the element with the starting value
+                // initialize the element with the starting value
+                render(value);
+
+                function updateTimer() {
+                    value += increment;
+                    loopCount++;
+
                     render(value);
 
-                    function updateTimer() {
-                        value += increment;
-                        loopCount++;
-
-                        render(value);
-
-                        if (typeof (settings.onUpdate) == 'function') {
-                            settings.onUpdate.call(self, value);
-                        }
-
-                        if (loopCount >= loops) {
-                            // remove the interval
-                            $self.removeData('countTo');
-                            clearInterval(data.interval);
-                            value = settings.to;
-
-                            if (typeof (settings.onComplete) == 'function') {
-                                settings.onComplete.call(self, value);
-                            }
-                        }
+                    if (typeof (settings.onUpdate) == 'function') {
+                        settings.onUpdate.call(self, value);
                     }
 
-                    function render(value) {
-                        var formattedValue = settings.formatter.call(self, value, settings);
-                        $self.html(formattedValue);
+                    if (loopCount >= loops) {
+                        // remove the interval
+                        $self.removeData('countTo');
+                        clearInterval(data.interval);
+                        value = settings.to;
+
+                        if (typeof (settings.onComplete) == 'function') {
+                            settings.onComplete.call(self, value);
+                        }
                     }
-                });
-            };
+                }
 
-            $.fn.countTo.defaults = {
-                from: 0, // the number the element should start at
-                to: 0, // the number the element should end at
-                speed: 1000, // how long it should take to count between the target numbers
-                refreshInterval: 100, // how often the element should be updated
-                decimals: 0, // the number of decimal places to show
-                formatter: formatter, // handler for formatting the value before rendering
-                onUpdate: null, // callback method for every time the element is updated
-                onComplete: null       // callback method for when the element finishes updating
-            };
-
-            function formatter(value, settings) {
-                return value.toFixed(settings.decimals);
-            }
-        }(jQuery));
-
-        jQuery(function ($) {
-            // custom formatting example
-            $('.count-number').data('countToOptions', {
-                formatter: function (value, options) {
-                    return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                function render(value) {
+                    var formattedValue = settings.formatter.call(self, value, settings);
+                    $self.html(formattedValue);
                 }
             });
+        };
 
-            // start all the timers
-            $('.timer').each(count);
+        $.fn.countTo.defaults = {
+            from: 0, // the number the element should start at
+            to: 0, // the number the element should end at
+            speed: 1000, // how long it should take to count between the target numbers
+            refreshInterval: 100, // how often the element should be updated
+            decimals: 0, // the number of decimal places to show
+            formatter: formatter, // handler for formatting the value before rendering
+            onUpdate: null, // callback method for every time the element is updated
+            onComplete: null       // callback method for when the element finishes updating
+        };
 
-            function count(options) {
-                var $this = $(this);
-                options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-                $this.countTo(options);
+        function formatter(value, settings) {
+            return value.toFixed(settings.decimals);
+        }
+    }(jQuery));
+
+    jQuery(function ($) {
+        // custom formatting example
+        $('.count-number').data('countToOptions', {
+            formatter: function (value, options) {
+                return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
             }
         });
-        </script>-->
+
+        // start all the timers
+        $('.timer').each(count);
+
+        function count(options) {
+            var $this = $(this);
+            options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+            $this.countTo(options);
+        }
+    });
+    </script>-->
     </body>
 </html>
