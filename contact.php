@@ -18,7 +18,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
-                            <h2>How may we help you?</h2>
+                            <h2>Welcome. How may we help you?</h2>
                         </div>
                     </div>
                     <div class="row">
@@ -52,7 +52,7 @@
                             </form>
                         </div>
                         <div class="col-lg-6">
-                            <div class="contact-details-1 wow fadeInUp">
+                            <div class="contact-details-1 wow fadeInRight">
                                 <img src="images/contact-img.jpg" alt="" >
                             </div>
                             <div class="contact-details footer-p wow fadeInUp">

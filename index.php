@@ -546,7 +546,7 @@
                                     <P>Assessment & Saving</P>
                                 </div>
                             </div>
-                            <div class="row wow fadeInUp" style="padding: 10px 0 20px;">
+                            <div class="row wow fadeInUp improve" style="padding: 10px 0 20px;">
                                 <div class="col-lg-4">
                                     <input type='text' name='name' placeholder="Your Name..." class="input-box">
                                 </div>

@@ -124,7 +124,7 @@ input[type=text], select, textarea {
     margin-bottom: 3px;
     resize: vertical;
     margin: 0 0 20px 0;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
     outline: none;
     background: transparent;
 }
@@ -139,7 +139,7 @@ input[type=email], select, textarea {
     margin-bottom: 3px; /* Bottom margin */
     resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
     margin: 0 0 20px 0;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
     outline: none;
     background: transparent;
 }
@@ -1361,7 +1361,7 @@ audio {
 
 .contact-details {
     box-shadow: 0 0 20px 10px #eee;
-    padding: 36px 31px;
+    padding: 24px 31px;
     margin-bottom: 20px
 }
 
@@ -1474,7 +1474,7 @@ audio {
 }
 
 .footer-p p{
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .footer-p i {
@@ -1497,4 +1497,7 @@ audio {
 }
 .onload ::placeholder {
     color: #fff !important;
+}
+.improve ::placeholder {
+    color: #000 !important;
 }
