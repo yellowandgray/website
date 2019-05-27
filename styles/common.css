@@ -92,7 +92,7 @@ video#vid {
 }
 .req
 {
-    padding: 0px 0px 60px 5px !important;
+    padding: 0px 0px 0px 5px !important;
 }
 input::placeholder {
     color: #868e96 !important;

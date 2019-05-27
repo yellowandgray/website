@@ -19,11 +19,11 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <label>Name</label>
-                            <input type="text" name="fname">
+                            <input type="text" name="fname" style="border-bottom: 1px solid #000;">
                         </div>
                         <div class="col-lg-6">
                             <label>Email Address</label>
-                            <input type="email" name="email">
+                            <input type="email" name="email" style="border-bottom: 1px solid #000;">
                         </div>
                         <div class="col-lg-12">
                             <button type="submit" class="button-1 font-16"><span class="color-w">Join us!</span></button>
