@@ -6,21 +6,7 @@
             <?php include 'menu.php'; ?>
             <!-- Menu -->
             <?php include 'mobile-menu.php'; ?>
-            <div class="sub-bg prlx_parent">
-
-                <!-- Parallax Background -->
-                <div class="home_background" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>
-                <div class="services_page_shapes"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6" style="z-index: 999;">
-                            <div class="home_content wow fadeInLeft">
-<!--                                <h1>Contact</h1>
-                                <span>Get in touch With Me</span>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="prlx_parent" style="height: 110px;background: #3f1a56;width: 100%;">
             </div>
 
             <div class="features">
@@ -73,10 +59,10 @@
                                 <input type="checkbox" name="" value="Have the financial resources to invest in transforming myself "> Have the financial resources to invest in transforming myself <br/>
                                 <input type="checkbox" name="" value="Have access to the financial resources to invest in transforming myself. "> Have access to the financial resources to invest in transforming myself. <br/>
                                 <input type="checkbox" name="" value="I do not have any financial resources at all and I am going to keep the state of my life exactly as it is. "> I do not have any financial resources at all and I am going to keep the state of my life exactly as it is.
-                                 <br/>
-                                 <br/>
-                                 <label>How would you like us to connect back with you to schedule your call/ meeting with Cheryl P Pinto</label><br/>
-                                 <input type="checkbox" name="" value="Phone call"> Phone call <br/>
+                                <br/>
+                                <br/>
+                                <label>How would you like us to connect back with you to schedule your call/ meeting with Cheryl P Pinto</label><br/>
+                                <input type="checkbox" name="" value="Phone call"> Phone call <br/>
                                 <input type="checkbox" name="" value="WhatsApp "> WhatsApp <br/>
                                 <input type="checkbox" name="" value="Email "> Email<br/>
                                 <input type="checkbox" name="" value="Other (please specify) "> Other (please specify)<br/>
