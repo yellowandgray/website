@@ -25,6 +25,7 @@
                             <div class="col-md-6">
                                 <label>How do you want to be contacted</label>
                                 <select name="How-do-contacted">
+                                    <option value="Call">Call</option>
                                     <option value="Email">Email</option>
                                     <option value="Whatsapp">Whatsapp</option>
                                 </select>
