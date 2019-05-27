@@ -10,8 +10,12 @@
                 <h3>Medium words can be put here.</h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
                 <form class="onload-popup-form">
-                    <input type="text" name="name" placeholder="First Name" required />
-                    <input type="email" name="email" placeholder="Email" required />
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="First Name" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required />
+                    </div>
                     <button type="submit" class="button-1"><span>Get Access!</span></button>
                 </form>
             </div>
