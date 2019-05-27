@@ -24,8 +24,8 @@
                             <li class="item-101 hovernav">
                                 <a href="index.php#about" class="scroll">About</a>
                             </li>
-                            <li class="item-101 hovernav">
-                                <a href="healthcare-solution.php" class="scroll">Healthcare Solutions</a>
+                            <li class="item-101 hovernav active">
+                                <a href="healthcare-solution.php" class="scroll" style="color: #026fbf;">Healthcare Solutions</a>
                             </li>
                             <li class="item-101 hovernav">
                                 <a href="index.php#services" class="scroll">Services</a>

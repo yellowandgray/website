@@ -893,7 +893,7 @@ div#team h3.title-txt span {
     display: inline-block;
     float: none;
     width: 19%;
-    background: #026fbf;
+    background: #00b0f0;
 }
 
 .faq-info .nav-tabs li.active a,
@@ -901,7 +901,7 @@ div#team h3.title-txt span {
     opacity: 1;
     border: none;
     color: #ffffff;
-    background: #ff6666;
+    background: #aa0092;
     cursor: pointer;
 }
 

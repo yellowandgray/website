@@ -1102,7 +1102,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <ul class="address">
                             <span class="fa fa-map-marker" aria-hidden="true"></span>
                             <li>
-                                Penthouse, 16-1, Level 16 Mz5,<br/> Wisma UOA Damansara II,<br/> No. 6, Changkat Semantan,<br/> Damansara Heights,<br/> 50490 Kuala Lumpur, Malaysia
+                                No. 16-10, Penthouse,<br/> Menara Infiniti, Jalan SS6/3,<br/> 47301 Petaling Jaya,<br/> Selangor.<br/>
                             </li>
                             <span class="fa fa-envelope" aria-hidden="true"></span>
                             <li>
@@ -1110,7 +1110,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </li>
                             <span class="fa fa-phone" aria-hidden="true"></span>
                             <li>
-                                +603 2011 9877
+                                +6019 277 2077(Hotline)
                             </li>
                         </ul>
                     </div>
