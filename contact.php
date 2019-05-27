@@ -52,9 +52,8 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <form class="text-bg-1 wow fadeInUp contact-form">
-                                <h2 class="text-center">Contact Now</h2>
+                                <h3 class="text-center">For all other enquiries, please use the form below</h3>
                                 <hr>
-                                <p class="text-center">For all other enquiries, please use the form below</p>
                                 <input type="text" name="fname" placeholder="First Name" required > 
                                 <input type="text" name="lname" placeholder="Last Name" required > 
                                 <input type="email" name="email" placeholder="Email Address" required>
@@ -84,7 +83,7 @@
                                 <p><i class="fas fa-globe"></i> : <a href="http://cherylppinto.com/">www.cherylppinto.com</a></p>
                             </div>
                             <div class="contact-details wow fadeInUp">
-                                <h3><strong>Stay connected with Cheryl daily</strong></h3>
+                                <h4 class="font-20"><i>Stay connected with Cheryl daily</i></h4>
                                 <hr>
                                 <ul class="footer_social social-icon">
                                     <li>

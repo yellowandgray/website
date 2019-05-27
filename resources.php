@@ -11,7 +11,7 @@
             <!-- Menu -->
             <?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
-            <div class="prlx_parent" style="height: 110px;background: #0091c1;width: 100%;">
+            <div class="prlx_parent" style="height: 110px;background: #3f1a56;width: 100%;">
 
                 <!-- Parallax Background -->
                 <!--                <div class="home_background" style="background-image:url(images/blog_background-01.png); z-index: 999;"></div>-->
