@@ -1,14 +1,14 @@
 <?php
 
-if ($_POST['fname']) {
-    $fname = $_REQUEST['fname'];
+if ($_POST['name']) {
+    $name = $_REQUEST['name'];
     $email = $_REQUEST['email'];
-    $mobile = $_REQUEST['phone'];
+//    $mobile = $_REQUEST['mobile'];
 //    $no_children = $_REQUEST['no_children'];
 //    $preffred_classes = $_REQUEST['preffred_classes'];
 //    $social_media = $_REQUEST['social_media'];
-    $subject = $_REQUEST['subject'];
-    $message = $_REQUEST['requirement'];
+//    $subject = $_REQUEST['subject'];
+//    $message = $_REQUEST['message'];
     error_reporting(E_STRICT);
 
     require_once('PHPMailer/class.phpmailer.php');
@@ -78,11 +78,8 @@ if ($_POST['fname']) {
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
             <h3 style = "margin:0 0 16px; text-align:center;">Enquiry Form Details.</h3>
-            <p style = "margin:0 0 16px">Name: ' . $fname . '</p>
+            <p style = "margin:0 0 16px">Name: ' . $name . '</p>
             <p style = "margin:0 0 16px">Email: ' . $email . '</p>
-            <p style = "margin:0 0 16px">Mobile: ' . $mobile . '</p>
-            <p style = "margin:0 0 16px">Subject: ' . $subject . '</p>
-            <p style = "margin:0 0 16px">Message: ' . $message . '</p>
             <p style="margin:0 0 16px">Sent From Website</p></div>
             </td>
             </tr>

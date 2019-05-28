@@ -2,12 +2,13 @@
 
 if ($_POST['fname']) {
     $fname = $_REQUEST['fname'];
+    $lname = $_REQUEST['lname'];
     $email = $_REQUEST['email'];
     $mobile = $_REQUEST['phone'];
-//    $no_children = $_REQUEST['no_children'];
+    $no_children = $_REQUEST['no_children'];
 //    $preffred_classes = $_REQUEST['preffred_classes'];
 //    $social_media = $_REQUEST['social_media'];
-    $subject = $_REQUEST['subject'];
+//    $subject = $_REQUEST['subject'];
     $message = $_REQUEST['requirement'];
     error_reporting(E_STRICT);
 
@@ -79,10 +80,11 @@ if ($_POST['fname']) {
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
             <h3 style = "margin:0 0 16px; text-align:center;">Enquiry Form Details.</h3>
             <p style = "margin:0 0 16px">Name: ' . $fname . '</p>
+            <p style = "margin:0 0 16px">Name: ' . $lname . '</p>
             <p style = "margin:0 0 16px">Email: ' . $email . '</p>
-            <p style = "margin:0 0 16px">Mobile: ' . $mobile . '</p>
-            <p style = "margin:0 0 16px">Subject: ' . $subject . '</p>
-            <p style = "margin:0 0 16px">Message: ' . $message . '</p>
+            <p style = "margin:0 0 16px">Email: ' . $mobile . '</p>
+            <p style = "margin:0 0 16px">Email: ' . $no_children . '</p>
+            <p style = "margin:0 0 16px">Email: ' . $message . '</p>
             <p style="margin:0 0 16px">Sent From Website</p></div>
             </td>
             </tr>

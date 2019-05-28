@@ -79,12 +79,12 @@ if ($_POST['fname']) {
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
             <h3 style = "margin:0 0 16px; text-align:center;">Enquiry Form Details.</h3>
-            <p style = "margin:0 0 16px">Name: ' . $fname . '</p>
-            <p style = "margin:0 0 16px">Name: ' . $lname . '</p>
+            <p style = "margin:0 0 16px">First Name: ' . $fname . '</p>
+            <p style = "margin:0 0 16px">Last Name: ' . $lname . '</p>
             <p style = "margin:0 0 16px">Email: ' . $email . '</p>
-            <p style = "margin:0 0 16px">Email: ' . $mobile . '</p>
-            <p style = "margin:0 0 16px">Email: ' . $no_children . '</p>
-            <p style = "margin:0 0 16px">Email: ' . $message . '</p>
+            <p style = "margin:0 0 16px">Mobile: ' . $mobile . '</p>
+            <p style = "margin:0 0 16px">How would you like to be contacted?: ' . $no_children . '</p>
+            <p style = "margin:0 0 16px">Message: ' . $message . '</p>
             <p style="margin:0 0 16px">Sent From Website</p></div>
             </td>
             </tr>

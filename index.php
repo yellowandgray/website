@@ -547,14 +547,20 @@
                                 </div>
                             </div>
                             <div class="row wow fadeInUp improve" style="padding: 10px 0 20px;">
-                                <div class="col-lg-4">
-                                    <input type='text' name='name' placeholder="Your Name..." class="input-box">
-                                </div>
-                                <div class="col-lg-4">
-                                    <input type='email' name='email' placeholder="Your Email..." class="input-box">
-                                </div>
-                                <div class="col-lg-4" style="text-align: center;">
-                                    <button type="submit" class="button-2"><span>Submit</span></button>
+                                <div class="col-12">
+                                    <form class="improve-form">
+                                        <div class="row">
+                                            <div class="col-lg-4 form-group">
+                                                <input type='text' name='name' placeholder="Your Name..." class="input-box">
+                                            </div>
+                                            <div class="col-lg-4 form-group">
+                                                <input type='email' name='email' placeholder="Your Email..." class="input-box">
+                                            </div>
+                                            <div class="col-lg-4 form-group" style="text-align: center;">
+                                                <button type="submit" class="button-2"><span>Submit</span></button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

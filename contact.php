@@ -31,7 +31,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
-                            <form class="text-bg-1 wow fadeInUp contact-form">
+                            <form class="text-bg-1 wow fadeInUp contact-form contact">
                                 <h3 class="text-center">For all other enquiries, please use the form below</h3>
                                 <hr>
                                 <div class="form-group">
