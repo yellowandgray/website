@@ -1501,3 +1501,6 @@ audio {
 .improve ::placeholder {
     color: #000 !important;
 }
+.contact-form input{
+        margin: 0 0 0px 0 !important;
+}

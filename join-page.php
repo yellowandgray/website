@@ -15,17 +15,17 @@
                         <p class="text-justify">Just an invitation - come and be a part of this wonderful community. I’ll be traveling the world, sharing my WOW-moments, delivering content to inspire you, sharing tools & tips to be more and live more. Don’t worry, I hate spam as much as you do. I promise to send you an email only once a month with awesome, relevant value for you.</p>
                     </div>
                 </div>
-                <form class="text-bg">
+                <form class="text-bg join-form">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 form-group">
                             <label>Name</label>
-                            <input type="text" name="fname" style="border-bottom: 1px solid #000;">
+                            <input type="text" name="name" style="border-bottom: 1px solid #000;">
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 form-group">
                             <label>Email Address</label>
                             <input type="email" name="email" style="border-bottom: 1px solid #000;">
                         </div>
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 form-group">
                             <button type="submit" class="button-1 font-16"><span class="color-w">Join us!</span></button>
                         </div>
                     </div>

@@ -34,21 +34,35 @@
                             <form class="text-bg-1 wow fadeInUp contact-form">
                                 <h3 class="text-center">For all other enquiries, please use the form below</h3>
                                 <hr>
-                                <input type="text" name="fname" placeholder="First Name" required > 
-                                <input type="text" name="lname" placeholder="Last Name" required > 
-                                <input type="email" name="email" placeholder="Email Address" required>
-                                <input type="text" name="phone" placeholder="Phone Number" required> 
-                                <label>How would you like to be contacted?</label>
-                                <select>
-                                    <option value="Call">Call</option>
-                                    <option value="Email">Email</option>
-                                    <option value="Whatsapp">Whatsapp</option>
-                                </select>
+                                <div class="form-group">
+                                    <input type="text" name="fname" placeholder="First Name" required >
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="lname" placeholder="Last Name" required > 
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Email Address" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="phone" placeholder="Phone Number" required> 
+                                </div>
+                                <div class="form-group">
+                                    <label>How would you like to be contacted?</label>
+                                    <select  name="no_children">
+                                        <option value="Call">Call</option>
+                                        <option value="Email">Email</option>
+                                        <option value="Whatsapp">Whatsapp</option>
+                                    </select>
+                                </div>
                                 <br/>
-<!--                                <textarea type="text" name="requirement" placeholder="How can I help you?" class="req" required></textarea>-->
-                                <textarea type="text" name="requirement" placeholder="Comment" class="req" required></textarea>
+                                <!--                                <textarea type="text" name="requirement" placeholder="How can I help you?" class="req" required></textarea>-->
+                                <div class="form-group">
+                                    <textarea type="text" name="requirement" placeholder="Comment" class="req" required></textarea>
+                                </div>
                                 <div class="g-recaptcha" data-sitekey="6Ld9YaMUAAAAAG1qHv8gS4Lj3QTKHfz2IcfBwBUJ"></div>
-                                <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
+                                <div class="form-group">
+                                    <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
+                                </div>
                             </form>
                         </div>
                         <div class="col-lg-6">

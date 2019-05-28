@@ -8,13 +8,23 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <form class="text-bg wow fadeInUp">
+                <form class="text-bg wow fadeInUp enquiry-form">
                     <h2>Enquiry Form</h2>
-                    <input type="text" name="fname" placeholder="Name" required > 
-                    <input type="email" name="email" placeholder="Email Address" required>
-                    <input type="text" name="phone" placeholder="Phone Number" required> 
-                    <input type="text" name="subject" placeholder="Subject" required>
-                    <textarea type="text" name="requirement" placeholder="Area I want to make great" class="req" required></textarea>
+                    <div class="form-group">
+                        <input type="text" name="fname" placeholder="Name" required > 
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" placeholder="Phone Number" required> 
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea type="text" name="requirement" placeholder="Area I want to make great" class="req" required></textarea>
+                    </div>
                     <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
                 </form>
             </div>
