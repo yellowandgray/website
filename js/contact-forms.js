@@ -328,7 +328,7 @@ jQuery(document).ready(function ($) {
                 if (msg == 'OK') {
                     $("#sendmessage").addClass("show");
                     $("#errormessage").removeClass("show");
-                    $('.contact').find("input, textarea").val("");
+                    $('.subscribe-form').find("input, textarea").val("");
                     swal("Success", "Thank you, We will contact you soon!", 'success');
                 } else {
                     $("#sendmessage").removeClass("show");
