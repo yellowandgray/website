@@ -321,7 +321,7 @@ jQuery(document).ready(function ($) {
         $.ajax({
             type: "POST",
             dataType: 'json',
-            url: "subscribe-form.php",
+            url: "join-our-community-form.php",
             data: str,
             success: function (msg) {
                 // alert(msg);
