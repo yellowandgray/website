@@ -215,7 +215,7 @@ jQuery(document).ready(function ($) {
                 if (msg == 'OK') {
                     $("#sendmessage").addClass("show");
                     $("#errormessage").removeClass("show");
-                    $('.contact').find("input, textarea").val("");
+                    $('.onload-popup-form').find("input, textarea").val("");
                     swal("Success", "Thank you, We will contact you soon!", 'success');
                 } else {
                     $("#sendmessage").removeClass("show");
@@ -441,7 +441,7 @@ jQuery(document).ready(function ($) {
                 if (msg == 'OK') {
                     $("#sendmessage").addClass("show");
                     $("#errormessage").removeClass("show");
-                    $('.contact').find("input, textarea").val("");
+                    $('.join-form').find("input, textarea").val("");
                     swal("Success", "Thank you, We will contact you soon!", 'success');
                 } else {
                     $("#sendmessage").removeClass("show");
@@ -554,7 +554,7 @@ jQuery(document).ready(function ($) {
                 if (msg == 'OK') {
                     $("#sendmessage").addClass("show");
                     $("#errormessage").removeClass("show");
-                    $('.contact').find("input, textarea").val("");
+                    $('.improve-form').find("input, textarea").val("");
                     swal("Success", "Thank you, We will contact you soon!", 'success');
                 } else {
                     $("#sendmessage").removeClass("show");
@@ -667,7 +667,7 @@ jQuery(document).ready(function ($) {
                 if (msg == 'OK') {
                     $("#sendmessage").addClass("show");
                     $("#errormessage").removeClass("show");
-                    $('.contact').find("input, textarea").val("");
+                    $('.enquiry-form').find("input, textarea").val("");
                     swal("Success", "Thank you, We will contact you soon!", 'success');
                 } else {
                     $("#sendmessage").removeClass("show");
@@ -780,7 +780,7 @@ jQuery(document).ready(function ($) {
                 if (msg == 'OK') {
                     $("#sendmessage").addClass("show");
                     $("#errormessage").removeClass("show");
-                    $('.form-control').find("input, textarea").val("");
+                    $('.starthere-form').find("input, textarea").val("");
                     swal("Success", "Thank you, We will contact you soon!", 'success');
                 } else {
                     $("#sendmessage").removeClass("show");

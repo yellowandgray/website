@@ -30,13 +30,13 @@ if ($_POST['fname']) {
 
     $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
 
-    $mail->Host = "box975.bluehost.com";      // sets GMAIL as the SMTP server
+    $mail->Host = "mail.2dotask.com";      // sets GMAIL as the SMTP server
 
     $mail->Port = 465;                   // set the SMTP port for the GMAIL server
 
-    $mail->Username = "noreply@cherylppinto.com";  // GMAIL username
+    $mail->Username = "noreply@2dotask.com";  // GMAIL username
 
-    $mail->Password = "Admin@cheryl";            // GMAIL password
+    $mail->Password = "Admin@2dotask";            // GMAIL password
     $mail->IsHTML(true);
     $mail->SetFrom('noreply@cherylppinto.com', 'CHERYLPPINTO');
     $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
