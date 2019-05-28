@@ -22,7 +22,7 @@
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <label>Last Name</label>
-                                        <input type="email" name="lname" required> 
+                                        <input type="text" name="lname" required> 
                                     </div>
                                 </div>
                                 <div class="row">
@@ -32,7 +32,7 @@
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <label>Business Name</label>
-                                        <input type="email" name="business-name" required> 
+                                        <input type="text" name="business-name" required> 
                                     </div>
                                 </div>
                                 <div class="form-group">

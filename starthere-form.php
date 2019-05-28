@@ -3,13 +3,23 @@
 if ($_POST['fname']) {
     $fname = $_REQUEST['fname'];
     $lname = $_REQUEST['lname'];
+    $linkdin = $_REQUEST['linkdin'];
+    $business_name = $_REQUEST['business-name'];
+    $business_url = $_REQUEST['business-url'];
     $email = $_REQUEST['email'];
     $mobile = $_REQUEST['phone'];
-    $no_children = $_REQUEST['no_children'];
+    $their_full_name = $_REQUEST['their-full-name'];
+    $about_cheryle = $_REQUEST['about-cheryl'];
+    $about_current = $_REQUEST['about-current'];
+    $challenges = $_REQUEST['challenges'];
+    $about_life = $_REQUEST['about-life'];
+    $quickly = $_REQUEST['quickly'];
+    $specifically = $_REQUEST['specifically'];
+    //$no_children = $_REQUEST['no_children'];
 //    $preffred_classes = $_REQUEST['preffred_classes'];
 //    $social_media = $_REQUEST['social_media'];
 //    $subject = $_REQUEST['subject'];
-    $message = $_REQUEST['requirement'];
+//    $message = $_REQUEST['requirement'];
     error_reporting(E_STRICT);
 
     require_once('PHPMailer/class.phpmailer.php');
@@ -30,13 +40,13 @@ if ($_POST['fname']) {
 
     $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
 
-    $mail->Host = "box975.bluehost.com";      // sets GMAIL as the SMTP server
+    $mail->Host = "mail.2dotask.com";      // sets GMAIL as the SMTP server
 
     $mail->Port = 465;                   // set the SMTP port for the GMAIL server
 
-    $mail->Username = "noreply@cherylppinto.com";  // GMAIL username
+    $mail->Username = "noreply@2dotask.com";  // GMAIL username
 
-    $mail->Password = "Admin@cheryl";            // GMAIL password
+    $mail->Password = "Admin@2dotask";            // GMAIL password
     $mail->IsHTML(true);
     $mail->SetFrom('noreply@cherylppinto.com', 'CHERYLPPINTO');
     $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
@@ -81,10 +91,18 @@ if ($_POST['fname']) {
             <h3 style = "margin:0 0 16px; text-align:center;">Enquiry Form Details.</h3>
             <p style = "margin:0 0 16px">Name: ' . $fname . '</p>
             <p style = "margin:0 0 16px">Name: ' . $lname . '</p>
+            <p style = "margin:0 0 16px">Name: ' . $linkdin . '</p>
+            <p style = "margin:0 0 16px">Name: ' . $business_name . '</p>
+            <p style = "margin:0 0 16px">Name: ' . $business_url . '</p>
             <p style = "margin:0 0 16px">Email: ' . $email . '</p>
             <p style = "margin:0 0 16px">Email: ' . $mobile . '</p>
-            <p style = "margin:0 0 16px">Email: ' . $no_children . '</p>
-            <p style = "margin:0 0 16px">Email: ' . $message . '</p>
+            <p style = "margin:0 0 16px">Email: ' . $their_full_name . '</p>
+            <p style = "margin:0 0 16px">Email: ' . $about_cheryle . '</p>
+            <p style = "margin:0 0 16px">Email: ' . $about_current . '</p>
+            <p style = "margin:0 0 16px">Email: ' . $challenges . '</p>
+            <p style = "margin:0 0 16px">Email: ' . $about_life . '</p>
+            <p style = "margin:0 0 16px">Email: ' . $quickly . '</p>
+            <p style = "margin:0 0 16px">Email: ' . $specifically . '</p>
             <p style="margin:0 0 16px">Sent From Website</p></div>
             </td>
             </tr>
@@ -120,7 +138,7 @@ if ($_POST['fname']) {
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $mail->Body = $message;
     // More headers
-    $address = "info@cherylppinto.com";
+    $address = "projects@yellowandgray.com";
     $mail->AddAddress($address, "CHERYLPPINTO");
 //    $mail->AddCC('npschoolkkl@gmail.com', 'ALIAS');
 //    $mail->AddCC('arrchanac@gmail.com', 'ALIAS');

@@ -773,14 +773,14 @@ jQuery(document).ready(function ($) {
         $.ajax({
             type: "POST",
             dataType: 'json',
-            url: "enquiry-form.php",
+            url: "starthere-form.php",
             data: str,
             success: function (msg) {
                 // alert(msg);
                 if (msg == 'OK') {
                     $("#sendmessage").addClass("show");
                     $("#errormessage").removeClass("show");
-                    $('.contact').find("input, textarea").val("");
+                    $('.form-control').find("input, textarea").val("");
                     swal("Success", "Thank you, We will contact you soon!", 'success');
                 } else {
                     $("#sendmessage").removeClass("show");

@@ -40,6 +40,7 @@
 <script src="js/wow.js" type="text/javascript"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/contact-forms.js" type="text/javascript"></script>
+<script src="js/sweetalert.min.js" type="text/javascript"></script>
 <script>
           new WOW().init();
 </script>
