@@ -31,39 +31,41 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
-                            <form class="text-bg-1 wow fadeInUp contact-form contact">
-                                <h3 class="text-center">For all other enquiries, please use the form below</h3>
-                                <hr>
-                                <div class="form-group">
-                                    <input type="text" name="fname" placeholder="First Name" required >
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="lname" placeholder="Last Name" required > 
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" name="email" placeholder="Email Address" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="phone" placeholder="Phone Number" required> 
-                                </div>
-                                <div class="form-group">
-                                    <label>How would you like to be contacted?</label>
-                                    <select  name="no_children">
-                                        <option value="Call">Call</option>
-                                        <option value="Email">Email</option>
-                                        <option value="Whatsapp">Whatsapp</option>
-                                    </select>
-                                </div>
-                                <br/>
-                                <!--                                <textarea type="text" name="requirement" placeholder="How can I help you?" class="req" required></textarea>-->
-                                <div class="form-group">
-                                    <textarea type="text" name="requirement" placeholder="Comment" class="req" required></textarea>
-                                </div>
-                                <div class="g-recaptcha" data-sitekey="6Ld9YaMUAAAAAG1qHv8gS4Lj3QTKHfz2IcfBwBUJ"></div>
-                                <div class="form-group">
-                                    <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
-                                </div>
-                            </form>
+                            <div class="contact-form">
+                                <form class="contact text-bg-1 wow fadeInUp">
+                                    <h3 class="text-center">For all other enquiries, please use the form below</h3>
+                                    <hr>
+                                    <div class="form-group">
+                                        <input type="text" name="fname" placeholder="First Name" required >
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="lname" placeholder="Last Name" required > 
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" placeholder="Email Address" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="phone" placeholder="Phone Number" required> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label>How would you like to be contacted?</label>
+                                        <select  name="no_children">
+                                            <option value="Call">Call</option>
+                                            <option value="Email">Email</option>
+                                            <option value="Whatsapp">Whatsapp</option>
+                                        </select>
+                                    </div>
+                                    <br/>
+                                    <!--                                <textarea type="text" name="requirement" placeholder="How can I help you?" class="req" required></textarea>-->
+                                    <div class="form-group">
+                                        <textarea type="text" name="requirement" placeholder="Comment" class="req" required></textarea>
+                                    </div>
+                                    <div class="g-recaptcha" data-sitekey="6Ld9YaMUAAAAAG1qHv8gS4Lj3QTKHfz2IcfBwBUJ"></div>
+                                    <div class="form-group">
+                                        <button type="submit" class="button-1"><span class="color-w">Submit</span></button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="contact-details-1 con-img wow fadeInRight">

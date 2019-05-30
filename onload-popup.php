@@ -16,9 +16,7 @@
                     <div class="form-group">
                         <input type="email" name="email" placeholder="Email" required />
                     </div>
-                    <div class="form-group">
-                        <button type="submit" class="button-1"><span>Get Access!</span></button>
-                    </div>
+                    <button type="submit" class="button-1"><span>Get Access!</span></button>
                 </form>
             </div>
         </div>

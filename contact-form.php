@@ -6,9 +6,6 @@ if ($_POST['fname']) {
     $email = $_REQUEST['email'];
     $mobile = $_REQUEST['phone'];
     $no_children = $_REQUEST['no_children'];
-//    $preffred_classes = $_REQUEST['preffred_classes'];
-//    $social_media = $_REQUEST['social_media'];
-//    $subject = $_REQUEST['subject'];
     $message = $_REQUEST['requirement'];
     error_reporting(E_STRICT);
 

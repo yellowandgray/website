@@ -4,9 +4,6 @@ if ($_POST['fname']) {
     $fname = $_REQUEST['fname'];
     $email = $_REQUEST['email'];
     $mobile = $_REQUEST['phone'];
-//    $no_children = $_REQUEST['no_children'];
-//    $preffred_classes = $_REQUEST['preffred_classes'];
-//    $social_media = $_REQUEST['social_media'];
     $subject = $_REQUEST['subject'];
     $message = $_REQUEST['requirement'];
     error_reporting(E_STRICT);
@@ -118,7 +115,7 @@ if ($_POST['fname']) {
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $mail->Body = $message;
     // More headers
-    $address = "info@cherylppinto.com";
+    $address = "projects@yellowandgray.com";
     $mail->AddAddress($address, "CHERYLPPINTO");
 //    $mail->AddCC('npschoolkkl@gmail.com', 'ALIAS');
 //    $mail->AddCC('arrchanac@gmail.com', 'ALIAS');
