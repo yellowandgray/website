@@ -66,7 +66,7 @@
                             </form>
                         </div>
                         <div class="col-lg-6">
-                            <div class="contact-details-1 wow fadeInRight">
+                            <div class="contact-details-1 con-img wow fadeInRight">
                                 <img src="images/contact-img.jpg" alt="" >
                             </div>
                             <div class="contact-details footer-p wow fadeInUp">

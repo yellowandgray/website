@@ -599,3 +599,9 @@
         height: 600px;
     }
 }
+@media (min-width: 992px) and (max-width: 1199px)
+{
+    .con-img {
+        margin-bottom: 100px !important;
+    }
+}
