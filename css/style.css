@@ -438,7 +438,7 @@ legend {
 }
 
 .stats-info {
-    padding: 0 2em 23em;
+    padding: 0 2em 15em;
 }
 
 a.abtlink {
@@ -1847,7 +1847,7 @@ p.footer-class a:hover {
         width: 88%;
     }
     .stats-info {
-        padding: 0 0em 25em;
+        padding: 0 0em 15em;
     }
     .abt-pos {
         top: 10%;
@@ -1993,7 +1993,7 @@ p.footer-class a:hover {
         width: 85%;
     }
     .stats-info {
-        padding: 0 0em 42em;
+        padding: 0 0em 32em;
     }
     .abt-pos {
         top: 7%;
@@ -2461,7 +2461,7 @@ p.footer-class a:hover {
         width: auto;
     }
     .stats-info {
-        padding: 0 0em 40em;
+        padding: 0 0em 36em;
     }
     .services-left h4 {
         font-size: 1.3em;
@@ -2694,7 +2694,7 @@ p.footer-class a:hover {
         margin: 0;
     }
     .stats-info {
-        padding: 0 0em 44em;
+        padding: 0 0em 36em;
     }
     .abt-pos {
         top: 7%;
