@@ -1109,8 +1109,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <a href="mailto:example@email.com"> info@alias-innovation.com</a>
                             </li>
                             <span class="fa fa-phone" aria-hidden="true"></span>
-                            <li>+6037 662 7601<br/>
-                                +6019 277 2077 (Hotline)
+                            <li>+603 7662 7601<br/>
+                                +601 9277 2077 (Hotline)
                             </li>
                         </ul>
                     </div>
