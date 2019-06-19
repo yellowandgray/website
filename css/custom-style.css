@@ -854,7 +854,7 @@ a.mobile-social {
     min-height: 450px;
     position: relative;
     position: absolute;
-    top: 42%;
+    top: 34%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
 }
