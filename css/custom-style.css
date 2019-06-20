@@ -864,9 +864,9 @@ a.mobile-social {
     object-fit: cover;
     object-position: 50% 50%;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
-    height: 100%;
+    height: auto;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
 }
@@ -2090,9 +2090,13 @@ input#clear_product {
 }
 
 #tab4 .products-content-main figure .img-wrapper img {
-    top: 38% !important;
+    top: 53% !important;
 }
 
 #tab7 .products-content-main figure .img-wrapper img {
     top: 38% !important;
+}
+
+#tab8 .products-content-main figure .img-wrapper img {
+    top: 52% !important;
 }
