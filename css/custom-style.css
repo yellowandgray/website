@@ -2061,7 +2061,7 @@ input#clear_product {
 }
 @media (min-width: 1024px) and (max-width: 1400px) {
     .products-content-main figure .img-wrapper img {
-        top: 46% !important;
+        top: 36% !important;
     }
     #tab4 .products-content-main figure .img-wrapper img {
         top: 36% !important;
