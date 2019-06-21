@@ -441,8 +441,11 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                                         $sub_cats = $db->selectAllWithWhere('sub_categories', 'category_id=' . $row['ID']);
                                                                         foreach ($sub_cats as $sub) {
                                                                             ?>
+                                                                        <div class="sub-category">
                                                                             <img src="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" alt="image" data-normal="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" data-hover="<?php echo IMG_BASE_URL . $sub['hover_icon']; ?>"onmouseout="mouseOut(this)" onmouseenter="mouseEnter(this)" onclick="renderSubCategory(<?php echo $sub['ID']; ?>);" />
-                                                                        <?php } ?>
+                                                                            <div class="sub-cat-title"><?php echo $sub['title']; ?></div>
+                                                                        </div>
+                                                                                <?php } ?>
                                                                     </div>
                                                                 </div>
                                                             </div>
