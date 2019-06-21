@@ -864,7 +864,7 @@ a.mobile-social {
     object-fit: cover;
     object-position: 50% 50%;
     position: absolute;
-    top: 60%;
+    top: 56%;
     left: 50%;
     height: auto;
     transform: translate(-50%, -50%);
@@ -2044,16 +2044,16 @@ input#clear_product {
 }
 
 #tab4 .products-content-main figure .img-wrapper img {
-    top: 53% !important;
+    top: 43% !important;
 }
 
 #tab7 .products-content-main figure .img-wrapper img {
-    top: 38% !important;
+    top: 44% !important;
 }
 
-#tab8 .products-content-main figure .img-wrapper img {
+/*#tab8 .products-content-main figure .img-wrapper img {
     top: 52% !important;
-}
+}*/
 
 @media (min-width: 1000px) and (max-width: 1300px) {
     .content-margin {
@@ -2062,13 +2062,25 @@ input#clear_product {
 }
 @media (min-width: 1024px) and (max-width: 1400px) {
     .products-content-main figure .img-wrapper img {
-        top: 36% !important;
+        top: 25% !important;
     }
     #tab4 .products-content-main figure .img-wrapper img {
-        top: 36% !important;
+        top: 10% !important;
+    }
+    #tab5 .products-content-main figure .img-wrapper img {
+        top: 40% !important;
+    }
+    #tab7 .products-content-main figure .img-wrapper img {
+        top: 25% !important;
     }
     #tab8 .products-content-main figure .img-wrapper img {
-        top: 36% !important;
+        top: 25% !important;
+    }
+    #tab9 .products-content-main figure .img-wrapper img {
+        top: 40% !important;
+    }
+    #tab10 .products-content-main figure .img-wrapper img {
+        top: 40% !important;
     }
 }
 
