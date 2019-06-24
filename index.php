@@ -1,25 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Mirrored from colorlib.com/preview/theme/selling/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jun 2019 09:23:48 GMT -->
-        <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-
-        <title>Selling &mdash; Website by Colorlib</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
-        <link rel="stylesheet" href="fonts/icomoon/style.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/jquery-ui.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-        <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-        <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-        <link rel="stylesheet" href="css/aos.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+    <?php include 'head.php'; ?>
     <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div class="site-wrap">
             <div class="site-mobile-menu site-navbar-target">
@@ -30,50 +11,8 @@
                 </div>
                 <div class="site-mobile-menu-body"></div>
             </div>
-            <div class="top-bar py-3 bg-light" id="home-section">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-6 text-left">
-                            <ul class="social-media">
-                                <li><a href="#" class=""><span class="icon-facebook"></span></a></li>
-                                <li><a href="#" class=""><span class="icon-twitter"></span></a></li>
-                                <li><a href="#" class=""><span class="icon-instagram"></span></a></li>
-                                <li><a href="#" class=""><span class="icon-linkedin"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="col-6">
-                            <p class="mb-0 float-right">
-                                <span class="mr-3"><a href="tel://#"> <span class="icon-phone mr-2" style="position: relative; top: 2px;"></span><span class="d-none d-lg-inline-block text-black">(+1) 234 5678 9101</span></a></span>
-                                <span><a href="#"><span class="icon-envelope mr-2" style="position: relative; top: 2px;"></span><span class="d-none d-lg-inline-block text-black"><span class="__cf_email__" data-cfemail="d7a4bfb8a797aeb8a2a5b3b8bab6beb9f9b4b8ba">[email&#160;protected]</span></span></a></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target" role="banner">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-6 col-xl-2">
-                            <h1 class="mb-0 site-logo"><a href="index.php" class="text-black mb-0"><img src="images/logo.png" alt="" ><!--<span class="text-primary">.</span>--> </a></h1>
-                        </div>
-                        <div class="col-12 col-md-10 d-none d-xl-block">
-                            <nav class="site-navigation position-relative text-right" role="navigation">
-                                <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                                    <li><a href="#home-section" class="nav-link">Home</a></li>
-                                    <li><a href="#products-section" class="nav-link">Products</a></li>
-                                    <li><a href="#about-section" class="nav-link">About Us</a></li>
-                                    <li><a href="#special-section" class="nav-link">Special</a></li>
-                                    <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
-                                    <li><a href="#blog-section" class="nav-link">Blog</a></li>
-                                    <li><a href="#contact-section" class="nav-link">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
-                    </div>
-                </div>
-            </header>
-            <div class="site-blocks-cover overlay" style="background-image: url(images/hero_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+            <?php include 'menu.php'; ?>
+            <div class="site-blocks-cover overlay" style="background: url(images/hero_2.jpg)" data-aos="fade" data-stellar-background-ratio="0.5">
                 <div class="container">
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
@@ -85,6 +24,177 @@
                                         <a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 mb-lg-0 mb-2 d-block d-sm-inline-block">Shop Now</a>
                                         <a href="#" class="btn btn-white py-3 px-5 rounded-0 d-block d-sm-inline-block">Club Membership</a>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="features-area site-section">
+                <div class="container">
+                    <div class="row features-inner">
+
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="single-features">
+                                <div class="f-icon">
+                                    <img src="images/features/f-icon1.png" alt="">
+                                </div>
+                                <h6>Free Delivery</h6>
+                                <p>Free Shipping on all order</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="single-features">
+                                <div class="f-icon">
+                                    <img src="images/features/f-icon2.png" alt="">
+                                </div>
+                                <h6>Return Policy</h6>
+                                <p>Free Shipping on all order</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="single-features">
+                                <div class="f-icon">
+                                    <img src="images/features/f-icon3.png" alt="">
+                                </div>
+                                <h6>24/7 Support</h6>
+                                <p>Free Shipping on all order</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="single-features">
+                                <div class="f-icon">
+                                    <img src="images/features/f-icon4.png" alt="">
+                                </div>
+                                <h6>Secure Payment</h6>
+                                <p>Free Shipping on all order</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div id="features" class="site-section bg-light">
+                <div class="container">
+                    <div class="row mb-5 justify-content-center">
+                        <div class="col-md-6 text-center">
+                            <h3 class="section-sub-title">Awesome Products</h3>
+                            <h2 class="section-title mb-3">Featured Products</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum natus excepturi fuga ullam accusantium vel ut eveniet aut consequatur laboriosam ipsam.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white py-4 mb-4">
+                        <div class="row mx-4 my-4 product-item-2 align-items-start">
+                            <div class="col-md-6 mb-5 mb-md-0">
+                                <img src="images/model_1_bg.jpg" alt="Image" class="img-fluid">
+                            </div>
+                            <div class="col-md-5 ml-auto product-title-wrap">
+                                <span class="number">01.</span>
+                                <h3 class="text-black mb-4 font-weight-bold">About This Product</h3>
+                                <p class="mb-4">Et tempora id nostrum saepe amet doloribus deserunt totam officiis cupiditate asperiores quasi accusantium voluptatum dolorem quae sapiente voluptatem ratione odio iure blanditiis earum fuga molestiae alias dicta perferendis inventore!</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus soluta assumenda sed optio, error at?</p>
+                                <div class="mb-4">
+                                    <h3 class="text-black font-weight-bold h5">Price:</h3>
+                                    <div class="price"><del class="mr-2">$269.00</del> $69.00</div>
+                                </div>
+                                <p>
+                                    <a href="#" class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">View Details</a>
+                                    <a href="#" class="btn btn-black rounded-0 d-block d-lg-inline-block">Add To Cart</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white py-4">
+                        <div class="row mx-4 my-4 product-item-2 align-items-start">
+                            <div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
+                                <img src="images/product_1_bg.jpg" alt="Image" class="img-fluid">
+                            </div>
+                            <div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1">
+                                <span class="number">02.</span>
+                                <h3 class="text-black mb-4 font-weight-bold">About This Product</h3>
+                                <p class="mb-4">Et tempora id nostrum saepe amet doloribus deserunt totam officiis cupiditate asperiores quasi accusantium voluptatum dolorem quae sapiente voluptatem ratione odio iure blanditiis earum fuga molestiae alias dicta perferendis inventore!</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus soluta assumenda sed optio, error at?</p>
+                                <div class="mb-4">
+                                    <h3 class="text-black font-weight-bold h5">Price:</h3>
+                                    <div class="price"><del class="mr-2">$269.00</del> $69.00</div>
+                                </div>
+                                <p>
+                                    <a href="#" class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">View Details</a>
+                                    <a href="#" class="btn btn-black rounded-0 d-block d-lg-inline-block">Add To Cart</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-section bg-light" id="services-section">
+                <div class="container">
+                    <div class="row mb-5">
+                        <div class="col-12 text-center">
+                            <h3 class="section-sub-title">Our Services</h3>
+                            <h2 class="section-title mb-3">Spacification</h2>
+                        </div>
+                    </div>
+                    <div class="row align-items-stretch">
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+                            <div class="unit-4 d-flex">
+                                <div class="unit-4-icon mr-4"><span class="text-primary icon-pie_chart"></span></div>
+                                <div>
+                                    <h3>Business Consulting</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                                    <p><a href="#">Learn More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="unit-4 d-flex">
+                                <div class="unit-4-icon mr-4"><span class="text-primary icon-backspace"></span></div>
+                                <div>
+                                    <h3>Market Analysis</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                                    <p><a href="#">Learn More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="unit-4 d-flex">
+                                <div class="unit-4-icon mr-4"><span class="text-primary icon-av_timer"></span></div>
+                                <div>
+                                    <h3>User Monitoring</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                                    <p><a href="#">Learn More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="unit-4 d-flex">
+                                <div class="unit-4-icon mr-4"><span class="text-primary icon-beenhere"></span></div>
+                                <div>
+                                    <h3>Seller Consulting</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                                    <p><a href="#">Learn More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
+                            <div class="unit-4 d-flex">
+                                <div class="unit-4-icon mr-4"><span class="text-primary icon-business_center"></span></div>
+                                <div>
+                                    <h3>Financial Investment</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                                    <p><a href="#">Learn More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
+                            <div class="unit-4 d-flex">
+                                <div class="unit-4-icon mr-4"><span class="text-primary icon-cloud_done"></span></div>
+                                <div>
+                                    <h3>Financial Management</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                                    <p><a href="#">Learn More</a></p>
                                 </div>
                             </div>
                         </div>
@@ -232,59 +342,7 @@
                     </div>
                 </div>
             </div>
-            <div class="site-section bg-light">
-                <div class="container">
-                    <div class="row mb-5 justify-content-center">
-                        <div class="col-md-6 text-center">
-                            <h3 class="section-sub-title">Awesome Products</h3>
-                            <h2 class="section-title mb-3">Featured Products</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum natus excepturi fuga ullam accusantium vel ut eveniet aut consequatur laboriosam ipsam.</p>
-                        </div>
-                    </div>
-                    <div class="bg-white py-4 mb-4">
-                        <div class="row mx-4 my-4 product-item-2 align-items-start">
-                            <div class="col-md-6 mb-5 mb-md-0">
-                                <img src="images/model_1_bg.jpg" alt="Image" class="img-fluid">
-                            </div>
-                            <div class="col-md-5 ml-auto product-title-wrap">
-                                <span class="number">01.</span>
-                                <h3 class="text-black mb-4 font-weight-bold">About This Product</h3>
-                                <p class="mb-4">Et tempora id nostrum saepe amet doloribus deserunt totam officiis cupiditate asperiores quasi accusantium voluptatum dolorem quae sapiente voluptatem ratione odio iure blanditiis earum fuga molestiae alias dicta perferendis inventore!</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus soluta assumenda sed optio, error at?</p>
-                                <div class="mb-4">
-                                    <h3 class="text-black font-weight-bold h5">Price:</h3>
-                                    <div class="price"><del class="mr-2">$269.00</del> $69.00</div>
-                                </div>
-                                <p>
-                                    <a href="#" class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">View Details</a>
-                                    <a href="#" class="btn btn-black rounded-0 d-block d-lg-inline-block">Add To Cart</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white py-4">
-                        <div class="row mx-4 my-4 product-item-2 align-items-start">
-                            <div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
-                                <img src="images/product_1_bg.jpg" alt="Image" class="img-fluid">
-                            </div>
-                            <div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1">
-                                <span class="number">02.</span>
-                                <h3 class="text-black mb-4 font-weight-bold">About This Product</h3>
-                                <p class="mb-4">Et tempora id nostrum saepe amet doloribus deserunt totam officiis cupiditate asperiores quasi accusantium voluptatum dolorem quae sapiente voluptatem ratione odio iure blanditiis earum fuga molestiae alias dicta perferendis inventore!</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus soluta assumenda sed optio, error at?</p>
-                                <div class="mb-4">
-                                    <h3 class="text-black font-weight-bold h5">Price:</h3>
-                                    <div class="price"><del class="mr-2">$269.00</del> $69.00</div>
-                                </div>
-                                <p>
-                                    <a href="#" class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">View Details</a>
-                                    <a href="#" class="btn btn-black rounded-0 d-block d-lg-inline-block">Add To Cart</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div class="site-section" id="about-section">
                 <div class="container">
                     <div class="row align-items-lg-center">
@@ -367,78 +425,6 @@
                             <p class="mb-5 lead">Repudiandae nostrum natus excepturi fuga ullam accusantium vel ut eveniet aut consequatur laboriosam ipsam.</p>
                             <div id="date-countdown" class="mb-5"></div>
                             <p><a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 mb-lg-0 mb-2 d-block d-sm-inline-block">Shop Now</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="site-section bg-light" id="services-section">
-                <div class="container">
-                    <div class="row mb-5">
-                        <div class="col-12 text-center">
-                            <h3 class="section-sub-title">Our Services</h3>
-                            <h2 class="section-title mb-3">We Offer Services</h2>
-                        </div>
-                    </div>
-                    <div class="row align-items-stretch">
-                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-                            <div class="unit-4 d-flex">
-                                <div class="unit-4-icon mr-4"><span class="text-primary icon-pie_chart"></span></div>
-                                <div>
-                                    <h3>Business Consulting</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                    <p><a href="#">Learn More</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="unit-4 d-flex">
-                                <div class="unit-4-icon mr-4"><span class="text-primary icon-backspace"></span></div>
-                                <div>
-                                    <h3>Market Analysis</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                    <p><a href="#">Learn More</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="unit-4 d-flex">
-                                <div class="unit-4-icon mr-4"><span class="text-primary icon-av_timer"></span></div>
-                                <div>
-                                    <h3>User Monitoring</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                    <p><a href="#">Learn More</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
-                            <div class="unit-4 d-flex">
-                                <div class="unit-4-icon mr-4"><span class="text-primary icon-beenhere"></span></div>
-                                <div>
-                                    <h3>Seller Consulting</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                    <p><a href="#">Learn More</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
-                            <div class="unit-4 d-flex">
-                                <div class="unit-4-icon mr-4"><span class="text-primary icon-business_center"></span></div>
-                                <div>
-                                    <h3>Financial Investment</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                    <p><a href="#">Learn More</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
-                            <div class="unit-4 d-flex">
-                                <div class="unit-4-icon mr-4"><span class="text-primary icon-cloud_done"></span></div>
-                                <div>
-                                    <h3>Financial Management</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                    <p><a href="#">Learn More</a></p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -588,75 +574,77 @@
                     </div>
                 </div>
             </div>
-            <footer class="site-footer bg-white">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <h2 class="footer-heading mb-4">About Us</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
-                                </div>
-                                <div class="col-md-3 ">
-                                    <h2 class="footer-heading mb-4">Quick Links</h2>
-                                    <ul class="list-unstyled">
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Testimonials</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-4">
-                                    <h2 class="footer-heading mb-4">Follow Us</h2>
-                                    <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                                    <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                                    <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                                    <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 ml-auto">
-                            <h2 class="footer-heading mb-4">Featured Product</h2>
-                            <a href="#"><img src="images/product_1_bg.jpg" alt="Image" class="img-fluid mb-3"></a>
-                            <h4 class="h5">Leather Brown Shoe</h4>
-                            <strong class="text-black mb-3 d-inline-block">$60.00</strong>
-                            <p><a href="#" class="btn btn-black rounded-0">Add to Cart</a></p>
-                        </div>
-                    </div>
-                    <div class="row pt-5 mt-5 text-center">
-                        <div class="col-md-12">
-                            <div class="border-top pt-5">
-                                <p>Copyright &copy; All rights reserved | Designed by <a href="http://www.yellowandgray.com" target="_blank">YG Studio.</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <?php include 'footer.php'; ?>
         </div> 
-        <script src="js/jquery-3.3.1.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
-        <script src="js/jquery-migrate-3.0.1.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
-        <script src="js/jquery-ui.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
-        <script src="js/popper.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
-        <script src="js/bootstrap.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
-        <script src="js/owl.carousel.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
-        <script src="js/jquery.stellar.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
-        <script src="js/jquery.countdown.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
-        <script src="js/bootstrap-datepicker.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
-        <script src="js/jquery.easing.1.3.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
-        <script src="js/aos.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
-        <script src="js/jquery.fancybox.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
-        <script src="js/jquery.sticky.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
-        <script src="js/main.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
-        <script type="e2a221d74d84c6429e413eb3-text/javascript">
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+    </body>
+    <?php include 'login-popup.php'; ?>
+    <?php include 'forgot-password.php'; ?>
+    <script src="js/jquery-3.3.1.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script src="js/jquery-ui.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script src="js/popper.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script src="js/owl.carousel.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script src="js/jquery.stellar.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script src="js/jquery.countdown.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script src="js/bootstrap-datepicker.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script src="js/jquery.easing.1.3.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script src="js/aos.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script src="js/jquery.fancybox.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script src="js/jquery.sticky.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script src="js/main.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
 
-            gtag('config', 'UA-23581568-13');
-        </script>
-        <script src="js/rocket-loader.min.js" data-cf-settings="e2a221d74d84c6429e413eb3-|49" defer=""></script></body>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script type="e2a221d74d84c6429e413eb3-text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'UA-23581568-13');
+    </script>
+    <script src="js/rocket-loader.min.js" data-cf-settings="e2a221d74d84c6429e413eb3-|49" defer=""></script>
+    <script>
+// Get the modal
+        var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                keyboard: false;
+            }
+        };
+// Get the modal
+        var modal1 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+                keyboard: false;
+            }
+            return (event.target == modal)
+            modal.style.display = "hide";
+        };
+
+    </script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
     <!-- Mirrored from colorlib.com/preview/theme/selling/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jun 2019 09:23:56 GMT -->
 </html>

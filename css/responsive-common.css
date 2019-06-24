@@ -1,0 +1,12 @@
+@media (min-width: 320px) and (max-width: 425px) {
+    .tab button {
+        width: 100%;
+        margin: 0;
+    }
+    .modal-content {
+        width: 100%
+    }
+    .tab {
+        height: 80px;
+    }
+}
