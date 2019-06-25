@@ -33,7 +33,7 @@
                 <p><a href="#" class="btn btn-black rounded-0">Add to Cart</a></p>
             </div>
         </div>
-        <div class="row pt-5 mt-5 text-center">
+        <div class="row pt-5 text-center">
             <div class="col-md-12">
                 <div class="border-top pt-5">
                     <p>Copyright &copy; All rights reserved | Designed by <a href="http://www.yellowandgray.com" target="_blank">YG Studio.</a></p>

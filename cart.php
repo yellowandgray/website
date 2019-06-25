@@ -45,8 +45,7 @@
                                         <td>Bogorchid Black</td>
                                         <td><p><input type="hidden" value="200" class="price">Rs.1887</p></td>
                                         <td>
-                                            <input type="hidden" name="mode" value="PinRequest" />
-                                            <select name="tot_pin_requested" onchange="calculateAmount(this.value)" required>
+                                            <select name="tot_pin_requested" onchange="calculateAmount(this.value)" required style="margin-bottom: 20px;">
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -58,7 +57,8 @@
                                                 <option value="9">9</option>
                                             </select>
                                         </td>
-                                        <td>Rs. <input class="w3-input w3-border" name="tot_amount" id="tot_amount" type="text" readonly style="background: transparent;border: none"></td>
+                                        <td>Rs. 1887</td>
+<!--                                        <td align="top"><span style="margin-bottom: 20px">Rs. <input class="w3-input w3-border" name="tot_amount" id="tot_amount" type="text" readonly style="background: transparent;border: none"></span></td>-->
                                         <td><span class="icon-cancel"></span></td>
                                     </tr>
                                 </tbody>
