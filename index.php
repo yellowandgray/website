@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head.php'; ?>
+    <?php $page = 'home'; include 'head.php'; ?>
     <body>
         <!-- Preloader Starts -->
         <div class="preloader">

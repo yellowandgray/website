@@ -77,3 +77,15 @@ footer {
     color: #974091 !important;
     border-bottom: 1px solid #0076d1;
 }
+.pad-20 {
+    padding: 30px 0px 0px 0px ;
+}
+.pad-20 p{
+   text-align: center;
+}
+.pad-t-70 {
+    padding-top: 70px;
+}
+.text-justify {
+    text-align: justify;
+}
