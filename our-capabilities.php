@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>Our Capabilities</h1>
-                        <p><a href="index.php">Home</a> <span>|</span>Departments</p>
+                        <p><a href="index.php">Home</a> <span>|</span>Our Capabilities</p>
                     </div>
                 </div>
             </div>
