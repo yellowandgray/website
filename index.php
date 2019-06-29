@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php $page = 'home'; include 'head.php'; ?>
+    <?php $page = 'home';
+    include 'head.php'; ?>
     <body>
         <!-- Preloader Starts -->
         <div class="preloader">
@@ -9,7 +10,7 @@
         <!-- Preloader End -->
 
         <!-- Header Area Starts -->
-        <?php include 'head-menu.php' ; ?>
+<?php include 'head-menu.php'; ?>
         <!-- Header Area End -->
 
         <!-- Banner Area Starts -->
@@ -96,7 +97,6 @@
                     <div class="col-lg-6 offset-lg-3">
                         <div class="section-top text-center">
                             <h2>HOSPITAL MANAGEMENT SYSTEM</h2>
-                            <p>Green above he cattle god saw day multiply under fill in the cattle fowl a all, living, tree word link available in the service for subdue fruit.</p>
                         </div>
                     </div>
                 </div>
@@ -282,7 +282,7 @@
             </div>
         </section>
 
-        <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
         <!-- Footer Area End -->
 
 
