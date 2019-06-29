@@ -177,7 +177,7 @@
         <!-- Department Area Starts -->
 
         <!-- Patient Area Starts -->
-        <section class="patient-area section-padding" style="background: url(assets/images/about/about-002.jpg)">
+        <section class="patient-area section-padding" >
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3">

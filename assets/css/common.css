@@ -81,11 +81,109 @@ footer {
     padding: 30px 0px 0px 0px ;
 }
 .pad-20 p{
-   text-align: center;
+    text-align: center;
 }
 .pad-t-70 {
     padding-top: 70px;
 }
 .text-justify {
     text-align: justify;
+}
+.core-img img {
+    background: #af2788;
+    border-radius: 50%;
+    padding: 5px !important;
+    width: 40px !important;
+    margin-bottom: 35px !important;
+}
+.core-text { 
+    margin-top: 10px;
+}
+.core-text p{ 
+    padding: 0px 0px 0px 10px;
+
+}
+.pad-a-10 {
+    padding: 10px;
+}
+.list-align li {
+    position: relative;
+    top: -21px;
+    padding: 0px 0px 0px 20px;
+    color: #fff;
+}
+.list-align i {
+    color: #ff6e6e;
+
+}
+.bg-white {
+    background: #fff !important;
+}
+.color-w {
+    color: #fff;
+}
+.benefits-img img {
+    /* background: #ffffff; */
+    border-radius: 50%;
+    padding: 5px !important;
+    width: 80px !important;
+    /*    margin-bottom: 20px !important;*/
+}
+.box-1{
+    border: 1px solid #eee;
+    padding: 11px;
+    margin-bottom: 10px;
+    /* box-shadow: 2px 1px 0px 0px #eee; */
+    background: #8a8a8c59;
+}
+.box-1:hover{
+    padding: 11px;
+    margin-bottom: 10px;
+    box-shadow: 1px 0px 9px 1px #e4e4e4;
+    background: #0085d3d9;
+    transition: 1 linear solid;
+    transition: all 0.3s linear;
+    transform: scale(1.02);
+    color: #fff;
+}
+.box-1 .core-text p{
+    padding: 18px 0px 0px 21px;
+}
+.box-1 .core-text p span{
+    color: #fb6868;
+}
+.box-1:hover .core-text p span{
+    color: #fff;
+}
+.smart-img img  {
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 5px !important;
+    width: 40px !important;
+    margin-bottom: 35px !important;
+}
+.smart .core-text {
+    color: #fff;
+}
+@media  (min-width: 768px) and (max-width: 991px) {
+    .smart-img {
+        text-align: center;
+    }
+    .smart {
+        height: 200px;
+        /* border: 1px solid #eee; */
+        margin: 0px 0px 10px 0px;
+        padding: 21px;
+        background: #42424285;
+    }
+    .smart .core-text {
+        text-align: center;
+    }
+    .smart-img img {
+        margin-bottom: 0px !important; 
+    }
+    .smart:hover {
+        background: #ff7272;
+        transform: scale(1.03);
+    }
 }
