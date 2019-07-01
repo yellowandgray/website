@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Page Title -->
-    <title>Alias</title>
+    <title>Medikal - Healthcare</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/x-icon.png" type="image/x-icon">

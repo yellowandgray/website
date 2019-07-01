@@ -118,7 +118,7 @@
                                 <div class="slide-img">
                                     <img src="assets/images/about/002.png" alt="" class="img-responsive" class="img-fluid">
                                     <div class="hover-state">
-                                        <a href="departments.html"><i class="fa fa-stethoscope"></i></a>
+                                        <a href="#"><i class="fa fa-stethoscope"></i></a>
                                     </div>
                                 </div>
                                 <div class="single-department item-padding text-center">
@@ -129,7 +129,7 @@
                                 <div class="slide-img">
                                     <img src="assets/images/about/003.png" alt="" class="img-responsive" class="img-fluid">
                                     <div class="hover-state">
-                                        <a href="departments.html"><i class="fa fa-stethoscope"></i></a>
+                                        <a href="#"><i class="fa fa-stethoscope"></i></a>
                                     </div>
                                 </div>
                                 <div class="single-department item-padding text-center">
@@ -140,7 +140,7 @@
                                 <div class="slide-img">
                                     <img src="assets/images/about/004.png" alt="" class="img-responsive" class="img-fluid">
                                     <div class="hover-state">
-                                        <a href="departments.html"><i class="fa fa-stethoscope"></i></a>
+                                        <a href="#"><i class="fa fa-stethoscope"></i></a>
                                     </div>
                                 </div>
                                 <div class="single-department item-padding text-center">
@@ -151,7 +151,7 @@
                                 <div class="slide-img">
                                     <img src="assets/images/about/005.png" alt="" class="img-responsive" class="img-fluid">
                                     <div class="hover-state">
-                                        <a href="departments.html"><i class="fa fa-stethoscope"></i></a>
+                                        <a href="#"><i class="fa fa-stethoscope"></i></a>
                                     </div>
                                 </div>
                                 <div class="single-department item-padding text-center">
@@ -162,7 +162,7 @@
                                 <div class="slide-img">
                                     <img src="assets/images/about/006.png" alt="" class="img-responsive" class="img-fluid">
                                     <div class="hover-state">
-                                        <a href="departments.html"><i class="fa fa-stethoscope"></i></a>
+                                        <a href="#"><i class="fa fa-stethoscope"></i></a>
                                     </div>
                                 </div>
                                 <div class="single-department item-padding text-center">
