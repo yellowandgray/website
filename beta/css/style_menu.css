@@ -165,7 +165,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .colorlib-nav ul li a {
     position: relative;
     font-size: 14px;
-    padding: 12px 12px;
+    padding: 12px 10px;
     font-weight: 700;
     color: rgba(0, 0, 0, 0.4);
     -webkit-transition: 0.5s;

@@ -107,7 +107,6 @@
                         echo 'active';
                     }
                     ?>"><a href="index.php">Home</a></li>
-                    
                     <li class="dropdown <?php
                     if ($page == 'about') {
                         echo 'active';
@@ -121,19 +120,16 @@
                             <li class="text-left"><a href="advisory-board.php" class="margin-left-10">Advisory Board</a></li>
                         </ul>
                     </li>
-                    
                     <li class="<?php
                     if ($page == 'chateau') {
                         echo 'active';
                     }
                     ?>"><a href="chateau-francais.php">Château Français</a></li>
-                    
                     <li class="<?php
                     if ($page == 'way-work') {
                         echo 'active';
                     }
                     ?>"><a href="way-we-work.php">The way we work</a></li>
-                    
                     <li class="<?php
                     if ($page == 'programs-offered') {
                         echo 'active';
@@ -144,19 +140,16 @@
                         echo 'active';
                     }
                     ?>"><a href="#">Testimonials</a></li>-->
-                    
                     <li class="<?php
                     if ($page == 'make-different') {
                         echo 'active';
                     }
                     ?>"><a href="what-makes-different.php">What makes us different</a></li>
-                    
                     <li class="<?php
-                    if ($page == 'contact') {
+                    if ($page == 'make-different') {
                         echo 'active';
                     }
                     ?>"><a href="contact.php">Contact</a></li>
-                    
                     <li class="<?php
                     if ($page == 'contact') {
                         echo 'active';

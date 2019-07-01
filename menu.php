@@ -21,7 +21,7 @@
                     </ul>
                     <p class="btn-apply"><a href="index.php#enquiry">Enquire Now</a></p> |
                     <!--<p class="btn-apply"><a href="">News & Events</a></p>-->
-                    <p class="btn-apply"><a href="">News & Events</a></p>
+                    <p class="btn-apply"><a href="news-events.php">News & Events</a></p>
                 </div>
             </div>
         </div>
