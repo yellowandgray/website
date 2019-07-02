@@ -138,13 +138,13 @@ input:focus,textarea:focus{outline:none}
 @media (min-width: 992px) and (max-width: 1199.98px){.patient-area .appointment-form:before{right:-20%}}@media (min-width: 768px) and (max-width: 991.98px){.patient-area .appointment-form:before{position:inherit}}@media (min-width: 576px) and (max-width: 767.98px){.patient-area .appointment-form:before{position:inherit}}@media (max-width: 575.98px){.patient-area .appointment-form:before{position:inherit}}
 .patient-area .appointment-form:after{
     content:'';
- position:absolute;
- top:0;
- left:0;
- width:100%;
- height:100%;
- background-image:linear-gradient(to top right, rgba(21,228,253,0.9), rgba(36,76,253,0.9));
- z-index:-1
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image:linear-gradient(to top right, rgba(21,228,253,0.9), rgba(36,76,253,0.9));
+    z-index:-1
 }
 .patient-area .appointment-form h3{font-size:24px !important;color:#fff !important}
 .specialist-area{background:#f9f9fd}
@@ -160,7 +160,18 @@ input:focus,textarea:focus{outline:none}
 .specialist-area .doctor-icon li a{color:#777;-webkit-transition:.3s;-moz-transition:.3s;-o-transition:.3s;transition:.3s}
 .specialist-area .doctor-icon li a:hover{color:#244cfd}
 .hotline-area{color:#fff;background-image:url("../images/hotline-bg.jpg");background-repeat:no-repeat;background-position:center;background-size:cover;position:relative;z-index:1}
-.hotline-area:after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(to top right, rgba(188, 56, 129, 0.79), rgba(3, 125, 209, 0.8));z-index:-1}.hotline-area h2{color:#fff}.hotline-area span{font-size:56px;font-family:"Roboto",sans-serif;font-weight:900}@media (min-width: 576px) and (max-width: 767.98px){.hotline-area span{font-size:45px}}@media (max-width: 575.98px){.hotline-area span{font-size:45px}}
+.hotline-area:after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: #5b5b5bbd;
+    /*background-image:linear-gradient(to top right, rgba(188, 56, 129, 0.79), rgba(3, 125, 209, 0.8));*/
+    z-index:-1
+}
+.hotline-area h2{color:#fff}.hotline-area span{font-size:56px;font-family:"Roboto",sans-serif;font-weight:900}@media (min-width: 576px) and (max-width: 767.98px){.hotline-area span{font-size:45px}}@media (max-width: 575.98px){.hotline-area span{font-size:45px}}
 .news-area .news-date{color:#fff;background:#244cfd;padding:12px 30px;display:inline-block;position:relative;top:-25px;left:30px}
 .news-area h3 a{color:#222;-webkit-transition:.3s;-moz-transition:.3s;-o-transition:.3s;transition:.3s}
 @media (min-width: 576px) and (max-width: 767.98px){.news-area img{width:100%}}
