@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php $page = 'home';
-    include 'head.php'; ?>
+    <?php
+    $page = 'home';
+    include 'head.php';
+    ?>
     <body>
         <!-- Preloader Starts -->
         <div class="preloader">
@@ -10,7 +12,7 @@
         <!-- Preloader End -->
 
         <!-- Header Area Starts -->
-<?php include 'head-menu.php'; ?>
+        <?php include 'head-menu.php'; ?>
         <!-- Header Area End -->
 
         <!-- Banner Area Starts -->
@@ -75,7 +77,7 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="welcome-text mt-5 mt-lg-0">
-                            <h2>WELCOME TO OUR COMPANY</h2>
+                            <h2>WELCOME TO Medikal Healthcare</h2>
                             <p class="pt-3 justify">Alias Innovation is a Technology Solutions Provider and Business Strategy Consulting company with collective industry experience of more than 100 years.</p>
                             <h3>With:</h3>
                             <h4>+130 LOCAL & INTERNATIONAL CLIENTS</h4>
@@ -189,11 +191,11 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="img-pad">
-                            <img src="assets/images/about/about-003.jpg" alt="">
+                        <div class="mad-img">
+                            <img src="assets/images/about/about-003.jpg" alt="" >
                         </div>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 tab-1-width">
 
                         <div class="tab">
                             <button class="tablinks" onclick="openCity(event, 'imagesmart')" id="defaultOpen">IMAGESMART</button>
@@ -208,6 +210,7 @@
                             <h3>IMAGESMART</h3>
                             <p>DiCOM PACS(PICTURE ARCHIVING AND COMMUNICATION SYSTEM) APPLICATION</p>
                             <p>Picture Archiving and Communication Systems (PACS) are a valuable tool for healthcare organizations, enabling physicians to quickly and easily share enterprise medical imaging reports electronically. Even as they become a standard platform at most facilities, their usefulness is growing as options such as a vendor neutral archive and other options are available.</p>
+                            <a href="med-imagesmart.php" class="template-btn mt-3">learn more</a>
                         </div>
 
                         <div id="radseva" class="tabcontent tab-text">
@@ -215,6 +218,7 @@
                             <h3>H-SPA</h3>
                             <p>Patient Management System</p>
                             <p>Multi-specialty module is a state of the art Hospital Information Management System(HIMS) which is comprehensive Enterprise wide software that covers all aspects of management and operations of medium and large hospitals. It Enables healthcare providers to improve the operational effectiveness, reduce costs, reduce medical errors and enhance delivery of quality care.</p>
+                            <a href="med-radseva.php" class="template-btn mt-3">learn more</a>
                         </div>
 
                         <div id="endosmart" class="tabcontent tab-text">
@@ -223,23 +227,27 @@
                             <p>TELE RADIOLOGY APPLICATION</p>
                             <p>Radseva is the transmission of radiological patient images, such as X-Rays, CTs, MRIs, from one location to another for the purpose of interpretation and/or consultation.</p>
                             <p>Radseva improves patient care by allowing Radiologist to Provide services without actually having to be at the location of the patient. This is particularly important when a sub-specialist such as a MRI Radiologist, Neuro-radiologist, Pediatric Radiologist or Musculoskeletal Radiologist is needed, since these profesionals are generally only located in large metropolitan areas working during day time, Tele Radiology allows for trained specialist to be available 24/7</p>
+                            <a href="#" class="template-btn mt-3">learn more</a>
                         </div>
                         <div id="h-spa" class="tabcontent tab-text">
                             <img src="assets/images/medseva/004.jpg" alt="" class="img-responsive" class="img-responsive">
                             <h3>MIMS</h3>
                             <p>MEDICAL INSTITUTE MANAGEMENT SYSTEM</p>
                             <p>Medical Institute Management System software which is helpful for medical student as well as College Authorities. Our Application stores records of Students & Faculties Also. The Main Principle Behind this Software is easy to Supervision of Institute. This software can help us to explore all the activities happening inside the Medical College. It can handle Details of Student as well as Faculties, Finance, Human Resource, Attendance, Reports, Hostel Management, Data Management, Inventory, Transport etc. </p>
+                            <a href="#" class="template-btn mt-3">learn more</a>
                         </div>
                         <div id="mims" class="tabcontent tab-text">
                             <img src="assets/images/medseva/005.jpg" alt="" class="img-responsive" class="img-responsive">
                             <h3>ENDOSMART</h3>
                             <p>ENDOSCOPY SYSTEM</p>
                             <p>A procedure in which specialized instruments are used by a doctor to view and operate on the internal organs and vessels of the body is known as Endoscopy. Without making big cuts / incisions, the process of Endoscopy allows the surgeon to see the problem areas inside the patient’s body. Endoscope is a medical instrument in which a camera attached to a flexible tube that allows the doctor to see. Either through the opening in the body such as mouth or through a small incision, a surgeon inserts an endoscope in the patient’s body. With the help of forceps also known as tongs and scissors on the endoscope a doctor can operate or remove tissues for biopsy.</p>
+                            <a href="#" class="template-btn mt-3">learn more</a>
                         </div>
                         <div id="sonosmart" class="tabcontent tab-text">
                             <img src="assets/images/medseva/006.jpg" alt="" class="img-responsive" class="img-responsive">
                             <h3>SONOSMART</h3>
                             <p>DIAGNOSTIC ULTRASOUND SYSTEM</p>
+                            <a href="#" class="template-btn mt-3">learn more</a>
                         </div>
 
 
@@ -282,7 +290,7 @@
             </div>
         </section>
 
-<?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
         <!-- Footer Area End -->
 
 

@@ -41,7 +41,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-3">
                         <div class=" pad-a-10 mt-4 mt-md-0">
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/001.png" alt=""/>
                                 </div>
@@ -49,7 +49,7 @@
                                     <p>Patient Registration</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/002.png" alt=""/>
                                 </div>
@@ -57,7 +57,7 @@
                                     <p>OPD Management</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/016.png" alt=""/>
                                 </div>
@@ -65,7 +65,7 @@
                                     <p>Appointment and Queue Management</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/003.png" alt=""/>
                                 </div>
@@ -77,7 +77,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3">
                         <div class=" pad-a-10 mt-4 mt-md-0">
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/005.png" alt=""/>
                                 </div>
@@ -85,7 +85,7 @@
                                     <p>Nursing Station</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/006.png" alt=""/>
                                 </div>
@@ -93,7 +93,7 @@
                                     <p>Investigation/ Lab Management</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/007.png" alt=""/>
                                 </div>
@@ -101,7 +101,7 @@
                                     <p>HR Management</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/008.png" alt=""/>
                                 </div>
@@ -113,7 +113,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3">
                         <div class="pad-a-10 mt-4 mt-md-0">
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/009.png" alt=""/>
                                 </div>
@@ -121,7 +121,7 @@
                                     <p>Radiology Management</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/010.png" alt=""/>
                                 </div>
@@ -129,7 +129,7 @@
                                     <p>Operation Theatre Management</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/011.png" alt=""/>
                                 </div>
@@ -137,7 +137,7 @@
                                     <p>Blood Bank Management</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/012.png" alt=""/>
                                 </div>
@@ -149,7 +149,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3">
                         <div class="pad-a-10 mt-4 mt-md-0">
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/013.png" alt=""/>
                                 </div>
@@ -157,7 +157,7 @@
                                     <p>Electronic Medical Record</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/014.png" alt=""/>
                                 </div>
@@ -165,7 +165,7 @@
                                     <p>Diet and Kitchen</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/015.png" alt=""/>
                                 </div>
@@ -173,7 +173,7 @@
                                     <p>Store and Inventory Management</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row smart-1">
                                 <div class="col-lg-2 core-img">
                                     <img src="assets/images/core-features/004.png" alt=""/>
                                 </div>
@@ -268,7 +268,7 @@
                                     <img src="assets/images/cloud-based-system/001.png" alt=""/>
                                 </div>
                                 <div class="col-lg-12 core-text text-center">
-                                    <p><span>CLOUD BASED SYSTEM</span> INTEGRATED WITH PACS & TELE MEDICINE SOLUTION</p>
+                                    <h4><span>CLOUD BASED SYSTEM</span> INTEGRATED WITH PACS & TELE MEDICINE SOLUTION</h4>
                                 </div>
                             </div>
                         </div>
@@ -487,7 +487,7 @@
                         <div class="department-slider owl-carousel">
                             <div class="single-slide">
                                 <div class="slide-img">
-                                    <img src="assets/images/scr-shot/001.png" alt="" class="img-fluid">
+                                    <img src="assets/images/scr-shot/001.png" alt="" class="img-responsive">
                                     <div class="hover-state">
                                         <!--<a href="#"><i class="fa fa-stethoscope"></i></a>-->
                                     </div>
@@ -495,7 +495,7 @@
                             </div>
                             <div class="single-slide">
                                 <div class="slide-img">
-                                    <img src="assets/images/scr-shot/002.png" alt="" class="img-fluid">
+                                    <img src="assets/images/scr-shot/002.png" alt="" class="img-responsive">
                                     <div class="hover-state">
                                         <!--<a href="departments.html"><i class="fa fa-stethoscope"></i></a>-->
                                     </div>
@@ -503,7 +503,7 @@
                             </div>
                             <div class="single-slide">
                                 <div class="slide-img">
-                                    <img src="assets/images/scr-shot/003.png" alt="" class="img-fluid">
+                                    <img src="assets/images/scr-shot/003.png" alt="" class="img-responsive">
                                     <div class="hover-state">
                                         <!--<a href="departments.html"><i class="fa fa-stethoscope"></i></a>-->
                                     </div>
@@ -511,7 +511,7 @@
                             </div>
                             <div class="single-slide">
                                 <div class="slide-img">
-                                    <img src="assets/images/scr-shot/004.png" alt="" class="img-fluid">
+                                    <img src="assets/images/scr-shot/004.png" alt="" class="img-responsive">
                                     <div class="hover-state">
                                         <!--<a href="departments.html"><i class="fa fa-stethoscope"></i></a>-->
                                     </div>
@@ -519,7 +519,7 @@
                             </div>
                             <div class="single-slide">
                                 <div class="slide-img">
-                                    <img src="assets/images/scr-shot/005.png" alt="" class="img-fluid">
+                                    <img src="assets/images/scr-shot/005.png" alt="" class="img-responsive">
                                     <div class="hover-state">
                                         <!--<a href="departments.html"><i class="fa fa-stethoscope"></i></a>-->
                                     </div>
@@ -527,7 +527,7 @@
                             </div>
                             <div class="single-slide">
                                 <div class="slide-img">
-                                    <img src="assets/images/scr-shot/006.png" alt="" class="img-fluid">
+                                    <img src="assets/images/scr-shot/006.png" alt="" class="img-responsive">
                                     <div class="hover-state">
                                         <!--<a href="departments.html"><i class="fa fa-stethoscope"></i></a>-->
                                     </div>

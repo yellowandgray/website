@@ -11,7 +11,7 @@
                         <li class="btn <?php if ($page == 'home') { echo 'active';}?>""><a href="index.php">Home</a></li>
                         <li class="btn <?php if ($page == 'about') { echo 'active';}?>"><a href="about.php">our company</a></li>
                         <li class="btn <?php if ($page == 'capabilities') { echo 'active';}?>""><a href="our-capabilities.php">our capabilities</a></li>
-                        <li class="btn <?php if ($page == 'story') { echo 'active';}?>""><a href="#">success stories & reference</a></li>
+                        <li class="btn <?php if ($page == 'story') { echo 'active';}?>""><a href="story.php">success stories & reference</a></li>
                         <li class="btn <?php if ($page == 'contact') { echo 'active';}?>""><a href="#">Contact</a></li>			          				          
                     </ul>
                 </nav><!-- #nav-menu-container -->		    		

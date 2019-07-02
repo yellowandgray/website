@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 align-self-center">
-                        <div class="">
+                        <div class="welcome-img">
                             <img src="assets/images/doctor.jpg" alt="">
                         </div>
                     </div>
