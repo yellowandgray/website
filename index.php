@@ -72,17 +72,15 @@
                             <ul>
                                 <li>
                                     <div class="feature-box-info">
-                                        <h4>Unlimited Features</h4>
-                                        <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod </p>
+                                        <h4>Christian News</h4>
                                     </div>
                                     <div class="feature-box-icon">
-                                        <i class="icofont icofont-brush"></i>
+                                        <i class="icofont icofont-news"></i>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="feature-box-info">
-                                        <h4>Responsive Design</h4>
-                                        <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod </p>
+                                        <h4>Member log in to local church</h4>
                                     </div>
                                     <div class="feature-box-icon">
                                         <i class="icofont icofont-computer"></i>
@@ -90,8 +88,7 @@
                                 </li>
                                 <li>
                                     <div class="feature-box-info">
-                                        <h4>Well Documented</h4>
-                                        <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod </p>
+                                        <h4>Church information</h4>
                                     </div>
                                     <div class="feature-box-icon">
                                         <i class="icofont icofont-law-document"></i>
@@ -99,11 +96,34 @@
                                 </li>
                                 <li>
                                     <div class="feature-box-info">
-                                        <h4>Full Free Chat</h4>
-                                        <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod </p>
+                                        <h4>Church posts</h4>
                                     </div>
                                     <div class="feature-box-icon">
-                                        <i class="icofont icofont-heart-beat"></i>
+                                        <i class="icofont icofont-newspaper"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-info">
+                                        <h4>Member posts</h4>
+                                    </div>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-newspaper"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-info">
+                                        <h4>Fellowships</h4>
+                                    </div>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-brand-myspace"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-info">
+                                        <h4>Support</h4>
+                                    </div>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-speech-comments"></i>
                                     </div>
                                 </li>
                             </ul>
@@ -113,44 +133,67 @@
                         <div class="single-feature-box text-center">
                             <img src="assets/img/feature.png" alt="feature">
                         </div>
+                        <div class="single-showcase-box-1">
+                            <a href="#" class="appao-btn appao-btn2">Read More</a>
+                        </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="single-feature-box text-lg-left text-center">
                             <ul>
                                 <li>
                                     <div class="feature-box-icon">
-                                        <i class="icofont icofont-eye"></i>
+                                        <i class="icofont icofont-pay"></i>
                                     </div>
                                     <div class="feature-box-info">
-                                        <h4>Retina ready</h4>
-                                        <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod </p>
+                                        <h4>Pay</h4>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="feature-box-icon">
-                                        <i class="icofont icofont-sun-alt"></i>
+                                        <i class="icofont icofont-brand-myspace"></i>
                                     </div>
                                     <div class="feature-box-info">
-                                        <h4>High Resolution</h4>
-                                        <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod </p>
+                                        <h4>Counselling</h4>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="feature-box-icon">
-                                        <i class="icofont icofont-code-alt"></i>
+                                        <i class="icofont icofont-megaphone-alt"></i>
                                     </div>
                                     <div class="feature-box-info">
-                                        <h4>Clean Codes</h4>
-                                        <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod </p>
+                                        <h4>Emergency </h4>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="feature-box-icon">
-                                        <i class="icofont icofont-headphone-alt"></i>
+                                        <i class="icofont icofont-contrast"></i>
                                     </div>
                                     <div class="feature-box-info">
-                                        <h4>Helping Supports</h4>
-                                        <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod </p>
+                                        <h4>Live</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-cart"></i>
+                                    </div>
+                                    <div class="feature-box-info">
+                                        <h4>Shop</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-book-alt"></i>
+                                    </div>
+                                    <div class="feature-box-info">
+                                        <h4>Bible</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-notepad"></i>
+                                    </div>
+                                    <div class="feature-box-info">
+                                        <h4>Notes</h4>
                                     </div>
                                 </li>
                             </ul>
@@ -660,7 +703,7 @@
         </section>-->
         <!-- blog section end -->
         <!-- google map area start -->
-<!--        <div class="google-map"></div>-->
+        <!--        <div class="google-map"></div>-->
         <!-- google map area end -->
         <!-- footer section start -->
         <footer class="footer" id="contact">
@@ -682,8 +725,18 @@
                     <div class="col-lg-6">
                         <div class="contact-address">
                             <h4>Address</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
                             <ul>
+                                <li>
+                                    <div class="contact-address-icon">
+                                        <i class="icofont icofont-address-book"></i>
+                                    </div>
+                                    <div class="add-text contact-address-info">
+                                        <p>NO.12, Durga Colony,</p>
+                                        <p>4th Cross Street, Sembakkam,</p>
+                                        <p>Chennai-600073.</p>
+                                    </div>
+                                </li>
                                 <li>
                                     <div class="contact-address-icon">
                                         <i class="icofont icofont-headphone-alt"></i>
