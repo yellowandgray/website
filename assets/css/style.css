@@ -1516,3 +1516,23 @@ h4.post-title a {
 .sticky .logo a .logo-1 {
     display: block;
 }
+
+.sub-list-1 li {
+    margin-bottom: 0px !important;
+    text-align: left !important;
+    list-style-type: upper-roman;
+}
+.sub-list{
+    text-align: left !important;
+}
+.add-text p {
+    margin-bottom: 0px !important;
+    padding-top: 0px !important;
+}
+.single-showcase-box-1 {
+    padding: 40px 0 40px;
+    text-align: center;
+}
+.single-showcase-box-1 .appao-btn2 {
+    background-image: linear-gradient(to right, #a1acd9 1%,#4e6eee 24%,#2751f6 67%,#abb4d7 100%);
+}
