@@ -447,6 +447,7 @@ input::-webkit-input-placeholder {
 .single-about-box {
     padding: 25px;
     transition: all 0.4s;
+    height: 500px;
 }
 .single-about-box i::before {
     color: #0074da;
@@ -1535,4 +1536,16 @@ h4.post-title a {
 }
 .single-showcase-box-1 .appao-btn2 {
     background-image: linear-gradient(to right, #a1acd9 1%,#4e6eee 24%,#2751f6 67%,#abb4d7 100%);
+}
+
+.icofont-ui-check::before {
+    font-size: 15px !important;
+    position: absolute;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px;
 }

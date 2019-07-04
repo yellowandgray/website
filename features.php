@@ -67,55 +67,55 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="single-about-box">
-                            <i class="icofont icofont-ruler-pencil"></i>
+                            <i class="icofont icofont-news"></i>
                             <h4>Christian News</h4>
                             <ul class="text-left">
-                                <li>International Christian headlines</li>
-                                <li>National</li>
-                                <li>Local</li>
-                                <li>From the holy land</li>
-                                <li>Church news</li>
-                                <li>trending Christian viral videos – music- testimonies etc</li>
+                                <i class="icofont icofont-ui-check"></i><li>International Christian headlines</li>
+                                <i class="icofont icofont-ui-check"></i><li>National</li>
+                                <i class="icofont icofont-ui-check"></i><li>Local</li>
+                                <i class="icofont icofont-ui-check"></i><li>From the holy land</li>
+                                <i class="icofont icofont-ui-check"></i><li>Church news</li>
+                                <i class="icofont icofont-ui-check"></i><li>trending Christian viral videos – music- testimonies etc</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box active">
+                        <div class="single-about-box">
                             <i class="icofont icofont-computer"></i>
                             <h4>Member log in to local church</h4>
                             <ul class="text-left">
-                                <li>Log in to the local church page with your unique member ID and password</li>
+                                <i class="icofont icofont-ui-check"></i><li>Log in to the local church page with your unique member ID and password</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="single-about-box">
-                            <i class="icofont icofont-headphone-alt"></i>
+                            <i class="icofont icofont-law-document"></i>
                             <h4>Church information</h4>
                             <ul class="text-left">
-                                <li>Access information about your local church</li>
-                                <li>Conception and history of the church</li>
-                                <li>Church doctrine</li>
-                                <li>Church Pastor</li>
-                                <li>Church elders/Committee members</li>
-                                <li>Contact information</li>
-                                <li>Ministries of the church</li>
-                                <li>Projects  undertaken by the church</li>
-                                <li>church calendar</li>
-                                <li>gallery</li>
+                                <i class="icofont icofont-ui-check"></i><li>Access information about your local church</li>
+                                <i class="icofont icofont-ui-check"></i><li>Conception and history of the church</li>
+                                <i class="icofont icofont-ui-check"></i><li>Church doctrine</li>
+                                <i class="icofont icofont-ui-check"></i><li>Church Pastor</li>
+                                <i class="icofont icofont-ui-check"></i><li>Church elders/Committee members</li>
+                                <i class="icofont icofont-ui-check"></i><li>Contact information</li>
+                                <i class="icofont icofont-ui-check"></i><li>Ministries of the church</li>
+                                <i class="icofont icofont-ui-check"></i><li>Projects  undertaken by the church</li>
+                                <i class="icofont icofont-ui-check"></i><li>church calendar</li>
+                                <i class="icofont icofont-ui-check"></i><li>gallery</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="single-about-box">
-                            <i class="icofont icofont-headphone-alt"></i>
+                            <i class="icofont icofont-newspaper"></i>
                             <h4>Church posts</h4>
                             <ul class="text-left">
-                                <li>local church news</li>
-                                <li>birthdays, wedding anniversaries, deaths and other special occasions of church members</li>
-                                <li>events organised by the church or supported or suggested by the church</li>
-                                <li>extensive Archive of media – pastor’s sermons, bible studies, concerts, programmes etc.</li>
-                                <li>Pastor’s special address to the church members etc – daily basis or weekly basis</li>
+                                <i class="icofont icofont-ui-check"></i><li>local church news</li>
+                                <i class="icofont icofont-ui-check"></i><li>birthdays, wedding anniversaries, deaths and other special occasions of church members</li>
+                                <i class="icofont icofont-ui-check"></i><li>events organised by the church or supported or suggested by the church</li>
+                                <i class="icofont icofont-ui-check"></i><li>extensive Archive of media – pastor’s sermons, bible studies, concerts, programmes etc.</li>
+                                <i class="icofont icofont-ui-check"></i><li>Pastor’s special address to the church members etc – daily basis or weekly basis</li>
                             </ul>
                         </div>
                     </div>
@@ -123,57 +123,57 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="single-about-box">
-                            <i class="icofont icofont-ruler-pencil"></i>
+                            <i class="icofont icofont-newspaper"></i>
                             <h4>Member posts</h4>
                             <ul class="text-left">
-                                <li>Directory of all church members with the details of their family members which is updated regularly – yearly</li>
-                                <li>Social profile with a spiritual aspect of each member</li>
-                                <li>Request for prayer</li>
-                                <li>Sharing personal testimony</li>
-                                <li>Sharing special word from God</li>
-                                <li>Sharing a special personal news</li>
-                                <li>Other</li>
+                                <i class="icofont icofont-ui-check"></i><li>Directory of all church members with the details of their family members which is updated regularly – yearly</li>
+                                <i class="icofont icofont-ui-check"></i><li>Social profile with a spiritual aspect of each member</li>
+                                <i class="icofont icofont-ui-check"></i><li>Request for prayer</li>
+                                <i class="icofont icofont-ui-check"></i><li>Sharing personal testimony</li>
+                                <i class="icofont icofont-ui-check"></i><li>Sharing special word from God</li>
+                                <i class="icofont icofont-ui-check"></i><li>Sharing a special personal news</li>
+                                <i class="icofont icofont-ui-check"></i><li>Other</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box active">
-                            <i class="icofont icofont-computer"></i>
+                        <div class="single-about-box">
+                            <i class="icofont icofont-brand-myspace"></i>
                             <h4>Fellowships</h4>
                             <ul class="text-left">
-                                <li>Information regarding the various fellowships/ house groups/ cell groups etc</li>
-                                <li>when the groups meet – how long is the meeting for</li>
-                                <li>what the  groups do – past and present and future projects</li>
-                                <li>where the groups meet – location and address</li>
-                                <li>contact person and contact information</li>
-                                <li>gallery</li>
+                                <i class="icofont icofont-ui-check"></i><li>Information regarding the various fellowships/ house groups/ cell groups etc</li>
+                                <i class="icofont icofont-ui-check"></i><li>when the groups meet – how long is the meeting for</li>
+                                <i class="icofont icofont-ui-check"></i><li>what the  groups do – past and present and future projects</li>
+                                <i class="icofont icofont-ui-check"></i><li>where the groups meet – location and address</li>
+                                <i class="icofont icofont-ui-check"></i><li>contact person and contact information</li>
+                                <i class="icofont icofont-ui-check"></i><li>gallery</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="single-about-box">
-                            <i class="icofont icofont-headphone-alt"></i>
+                            <i class="icofont icofont-speech-comments"></i>
                             <h4>Support</h4>
                             <ul class="text-left">
-                                <li>24x7 chat /email for those with questions or doubts regarding church and church matters.</li>
-                                <li>Other technical issues</li>
-                                <li>FAQ</li>
+                                <i class="icofont icofont-ui-check"></i><li>24x7 chat /email for those with questions or doubts regarding church and church matters.</li>
+                                <i class="icofont icofont-ui-check"></i><li>Other technical issues</li>
+                                <i class="icofont icofont-ui-check"></i><li>FAQ</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="single-about-box">
-                            <i class="icofont icofont-headphone-alt"></i>
+                            <i class="icofont icofont-pay"></i>
                             <h4>Pay</h4>
                             <ul class="text-left">
-                                <li>Link from the specific project will be directed here to a payment gateway</li>
-                                <li>List of the projects that need financial support</li>
-                                <li>Options to pay 
+                                <i class="icofont icofont-ui-check"></i><li>Link from the specific project will be directed here to a payment gateway</li>
+                                <i class="icofont icofont-ui-check"></i><li>List of the projects that need financial support</li>
+                                <i class="icofont icofont-ui-check"></i><li>Options to pay 
                                     <ul>
-                                        <li>Tithe</li>
-                                        <li>Offerings – thanksgiving etc</li>
-                                        <li>Alms – charity </li>
-                                        <li>Other donations</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Tithe</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Offerings – thanksgiving etc</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Alms – charity </li>
+                                        <i class="icofont icofont-ui-check"></i><li>Other donations</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -183,36 +183,36 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="single-about-box">
-                            <i class="icofont icofont-ruler-pencil"></i>
+                            <i class="icofont icofont-brand-myspace"></i>
                             <h4>Counselling</h4>
                             <ul class="text-left">
-                                <li>contact information for church appointed and church approved counsellors in various fields who will handle sessions with confidentiality and real time support in matters of
+                                <i class="icofont icofont-ui-check"></i><li>contact information for church appointed and church approved counsellors in various fields who will handle sessions with confidentiality and real time support in matters of
                                     <ul>
-                                        <li>Sexual issues.</li>
-                                        <li>Relationships in marriage</li>
-                                        <li>Relationships in family</li>
-                                        <li>Friends at school/office etc</li>
-                                        <li>Academic and career based </li>
-                                        <li>business and work related</li>
-                                        <li>Other</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Sexual issues.</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Relationships in marriage</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Relationships in family</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Friends at school/office etc</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Academic and career based </li>
+                                        <i class="icofont icofont-ui-check"></i><li>business and work related</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Other</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box active">
-                            <i class="icofont icofont-computer"></i>
+                        <div class="single-about-box">
+                            <i class="icofont icofont-megaphone-alt"></i>
                             <h4>Emergency</h4>
                             <ul class="text-left">
-                                <li>i.	When you press this icon with a long touch you activate the emergency signal which reaches out to professionals (doctors from your church) and social volunteers (youth adults and other volunteers from your church) who will immediately step in to help you in times ofay
+                                <i class="icofont icofont-ui-check"></i><li>When you press this icon with a long touch you activate the emergency signal which reaches out to professionals (doctors from your church) and social volunteers (youth adults and other volunteers from your church) who will immediately step in to help you in times ofay
                                     <ul>
-                                        <li>Health emergencies</li>
-                                        <li>Accidents</li>
-                                        <li>Fire</li>
-                                        <li>Crime</li>
-                                        <li>Abuse</li>
-                                        <li>Etc.</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Health emergencies</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Accidents</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Fire</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Crime</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Abuse</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Etc.</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -220,24 +220,24 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="single-about-box">
-                            <i class="icofont icofont-headphone-alt"></i>
+                            <i class="icofont icofont-contrast"></i>
                             <h4>Live</h4>
                             <ul class="text-left">
-                                <li>Live church services</li>
-                                <li>Live church programmes like concerts, conventions, workshops etc</li>
-                                <li>Live online offerings – during church services</li>
+                                <i class="icofont icofont-ui-check"></i><li>Live church services</li>
+                                <i class="icofont icofont-ui-check"></i><li>Live church programmes like concerts, conventions, workshops etc</li>
+                                <i class="icofont icofont-ui-check"></i><li>Live online offerings – during church services</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="single-about-box">
-                            <i class="icofont icofont-headphone-alt"></i>
+                            <i class="icofont icofont-cart"></i>
                             <h4>Shop</h4>
                             <p>Access your church book store/ Shop - from the click of a button on your smart phone at discounted prices</p>
                             <ul class="text-left">
-                                <li>bibles</li>
-                                <li>Christian books</li>
-                                <li>Christian articles and gift items</li>
+                                <i class="icofont icofont-ui-check"></i><li>bibles</li>
+                                <i class="icofont icofont-ui-check"></i><li>Christian books</li>
+                                <i class="icofont icofont-ui-check"></i><li>Christian articles and gift items</li>
                             </ul>
                         </div>
                     </div>
@@ -245,57 +245,38 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="single-about-box">
-                            <i class="icofont icofont-ruler-pencil"></i>
+                            <i class="icofont icofont-book-alt"></i>
                             <h4>Bible</h4>
                             <ul class="text-left">
-                                <li>like to the church approved mobile applications and WebPages for
+                                <i class="icofont icofont-ui-check"></i><li>like to the church approved mobile applications and WebPages for
                                     <ul>
-                                        <li>Bible,</li>
-                                        <li>Bible commentary,</li>
-                                        <li>bible resources</li>
-                                        <li>Etc</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Bible,</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Bible commentary,</li>
+                                        <i class="icofont icofont-ui-check"></i><li>bible resources</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Etc</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box active">
-                            <i class="icofont icofont-computer"></i>
+                        <div class="single-about-box">
+                            <i class="icofont icofont-notepad"></i>
                             <h4>Notes</h4>
                             <ul class="text-left">
-                                <li>A mobile friendly page to note down personal notes during
+                                <i class="icofont icofont-ui-check"></i><li>A mobile friendly page to note down personal notes during
                                     <ul>
-                                        <li>Sermon</li>
-                                        <li>Personal quiet time</li>
-                                        <li>Etc.</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Sermon</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Personal quiet time</li>
+                                        <i class="icofont icofont-ui-check"></i><li>Etc.</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box">
-                            <i class="icofont icofont-headphone-alt"></i>
-                            <h4>Live</h4>
-                            <ul class="text-left">
-                                <li>Live church services</li>
-                                <li>Live church programmes like concerts, conventions, workshops etc</li>
-                                <li>Live online offerings – during church services</li>
-                            </ul>
-                        </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box">
-                            <i class="icofont icofont-headphone-alt"></i>
-                            <h4>Shop</h4>
-                            <p>Access your church book store/ Shop - from the click of a button on your smart phone at discounted prices</p>
-                            <ul class="text-left">
-                                <li>bibles</li>
-                                <li>Christian books</li>
-                                <li>Christian articles and gift items</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
