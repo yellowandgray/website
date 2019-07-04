@@ -861,14 +861,14 @@ a.mobile-social {
 
 .products-content-main figure .img-wrapper img {
     width: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
+    /* object-fit: cover; */
+    /* object-position: 50% 50%; */
     position: absolute;
-    top: 56%;
+    /* top: 61%; */
     left: 50%;
-    height: auto;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+    height: 480px;
+    transform: translate(-50%, 4%);
+    -webkit-transform: translate(-50%, -4%);
 }
 
 .inner-contant {
@@ -2044,7 +2044,7 @@ input#clear_product {
 }
 
 #tab4 .products-content-main figure .img-wrapper img {
-    top: 43% !important;
+    top: -12% !important;
 }
 
 #tab7 .products-content-main figure .img-wrapper img {
