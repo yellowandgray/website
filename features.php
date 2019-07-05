@@ -54,7 +54,7 @@
             </div>
         </section><!-- hero area end -->
         <!-- about section start -->
-        <section class="about-area ptb-90">
+        <section class="about-area ptb-90 feature-list">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">

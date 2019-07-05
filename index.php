@@ -134,7 +134,7 @@
                             <img src="assets/img/feature.png" alt="feature">
                         </div>
                         <div class="single-showcase-box-1" style="text-align: center;margin-top: 50px;">
-                            <a href="features.php" class="appao-btn appao-btn2">Read More</a>
+                            <a href="features" class="appao-btn appao-btn2">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4">

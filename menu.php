@@ -3,8 +3,8 @@
         <div class="row flexbox-center">
             <div class="col-lg-2 col-md-3 col-6">
                 <div class="logo">
-                    <a href="#home"><img src="assets/img/logo.png" alt="logo" /></a>
-                    <a href="#home"><img class="logo-1" src="assets/img/logo1.png" alt="logo" /></a>
+                    <a href="index"><img src="assets/img/logo.png" alt="logo" /></a>
+                    <a href="index"><img class="logo-1" src="assets/img/logo1.png" alt="logo" /></a>
                 </div>
             </div>
             <div class="col-lg-10 col-md-9 col-6">

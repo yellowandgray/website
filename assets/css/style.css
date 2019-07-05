@@ -1571,3 +1571,7 @@ ul li {
     position: relative;
     padding-left: 12px;
 }
+.feature-list ul li {
+    position: relative;
+    padding-left: 20px;
+}
