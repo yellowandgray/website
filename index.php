@@ -71,7 +71,7 @@
                         <div class="single-feature-box text-lg-right text-center">
                             <ul>
                                 <li>
-                                    <div class="feature-box-info">
+                                    <div id="myBtn" class="feature-box-info">
                                         <h4>Christian News</h4>
                                     </div>
                                     <div class="feature-box-icon">
@@ -79,7 +79,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="feature-box-info">
+                                    <div id="myBtn1" class="feature-box-info">
                                         <h4>Member log in to local church</h4>
                                     </div>
                                     <div class="feature-box-icon">
@@ -795,6 +795,41 @@
         <a href="#" class="scrollToTop">
             <i class="icofont icofont-arrow-up"></i>
         </a>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <ul class="text-left">
+                    <li>International Christian headlines</li>
+                    <li>National</li>
+                    <li>Local</li>
+                    <li>From the holy land</li>
+                    <li>Church news</li>
+                    <li>trending Christian viral videos – music- testimonies etc</li>
+                </ul>
+            </div>
+
+        </div>
+        <div id="myModal1" class="modal1">
+
+            <!-- Modal content -->
+            <div class="modal-content1">
+                <span class="close">&times;</span>
+                <h2>Test</h2>
+                <ul class="text-left">
+                    <li>International Christian headlines</li>
+                    <li>National</li>
+                    <li>Local</li>
+                    <li>From the holy land</li>
+                    <li>Church news</li>
+                    <li>trending Christian viral videos – music- testimonies etc</li>
+                </ul>
+            </div>
+
+        </div>
         <!--        <div class="switcher-area" id="switch-style">
                     <div class="display-table">
                         <div class="display-tablecell">
@@ -847,5 +882,59 @@
         <script src="assets/js/switcher.js"></script>
         <!-- main JS -->
         <script src="assets/js/main.js"></script>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+
+// When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+// When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+           
+    
+    // Get the modal
+            var modal1 = document.getElementById("myModal1");
+
+// Get the button that opens the modal
+            var btn1 = document.getElementById("myBtn1");
+
+// Get the <span> element that closes the modal
+            var span1 = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+            btn1.onclick = function () {
+                modal.style.display = "block";
+            }
+
+// When the user clicks on <span> (x), close the modal
+            span1.onclick = function () {
+                modal1.style.display = "none";
+            }
+
+// When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
     </body>
 </html>
