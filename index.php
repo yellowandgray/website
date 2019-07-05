@@ -13,8 +13,8 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="hero-area-content">
-                            <h1>It’s all about Promoting your Business</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+                            <h1>Christlink</h1>
+                            <p>A mobile application providing a safe and secure platform for Christians to be enriched by one another within the support of the Local church and the global community of believers. </p>
                             <a href="#" class="appao-btn">Google Play</a>
                             <a href="#" class="appao-btn">App Store</a>
                         </div>
@@ -33,31 +33,31 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="sec-title">
-                            <h2>About Prantokon<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                            <h2>About Christlink<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
+                            <p> A vast cyberspace wherein the church leaders are better equipped to shepherd their church congregation thereby facilitating healthy spiritual growth. </p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="single-about-box">
-                            <i class="icofont icofont-ruler-pencil"></i>
-                            <h4>Responsive Design</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+                            <i class="icofont icofont-cubes"></i>
+                            <h4>Opportunity</h4>
+                            <p>An opportunity for the community of believers to be able to express Christian virtues of sharing and caring at times of emergency and need.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="single-about-box active">
-                            <i class="icofont icofont-computer"></i>
-                            <h4>Fast Performance</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+                            <i class="icofont icofont-cart-alt"></i>
+                            <h4>Store</h4>
+                            <p>A store house of precious Audio Video and other formats of Christian media useful across the age levels and socio ethnic backgrounds.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="single-about-box">
-                            <i class="icofont icofont-headphone-alt"></i>
-                            <h4>Cross Platfrom</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+                            <i class="icofont icofont-newspaper"></i>
+                            <h4>Business and Logistical needs</h4>
+                            <p>A one stop solution for all your business and logistical needs at the time of birth, death, weddings, baptisms, confirmations, prayer meetings and thanksgivings etc. </p>
                         </div>
                     </div>
                 </div>
@@ -210,7 +210,6 @@
                     <div class="col-lg-12">
                         <div class="sec-title">
                             <h2>Screenshot<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
                         </div>
                     </div>
                 </div>
@@ -342,7 +341,6 @@
                     <div class="col-lg-12">
                         <div class="sec-title">
                             <h2>Showcase<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
                         </div>
                     </div>
                 </div>
@@ -492,8 +490,8 @@
                                 </div>
                             </div>
                             <div class="team-member-info">
-                                <a href="#"><h4>John Deo</h4></a>
-                                <p>Web Developer</p>
+                                <a href="#"><h4>Joshua</h4></a>
+                                <!--<p>Web Developer</p>-->
                             </div>
                         </div>
                     </div>
@@ -513,8 +511,8 @@
                                 </div>
                             </div>
                             <div class="team-member-info">
-                                <a href="#"><h4>Sharon Garcia</h4></a>
-                                <p>UX Designer</p>
+                                <a href="#"><h4>Kumar </h4></a>
+                                <!--<p>UX Designer</p>-->
                             </div>
                         </div>
                     </div>
@@ -534,8 +532,8 @@
                                 </div>
                             </div>
                             <div class="team-member-info">
-                                <a href="#"><h4>Elijah Henderson</h4></a>
-                                <p>UX Designer</p>
+                                <a href="#"><h4>enoch Joshua</h4></a>
+                                <!--<p>UX Designer</p>-->
                             </div>
                         </div>
                     </div>
@@ -556,7 +554,7 @@
                             </div>
                             <div class="team-member-info">
                                 <a href="#"><h4>Sharon Garcia</h4></a>
-                                <p>UX Designer</p>
+                                <!--<p>UX Designer</p>-->
                             </div>
                         </div>
                     </div>

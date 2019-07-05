@@ -1114,6 +1114,7 @@ h4.post-title a {
     margin-bottom: 40px;
     margin-top: -80px;
     border: 1px solid #ddd;
+    height: 455px;
 }
 .contact-form input,
 .contact-form textarea,
@@ -1568,5 +1569,5 @@ h4.post-title a {
 
 ul li {
     position: relative;
-    padding-left: 20px;
+    padding-left: 12px;
 }
