@@ -66,7 +66,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3">
-                        <div class="single-about-box">
+                        <div class="single-about-box-1">
                             <i class="icofont icofont-news"></i>
                             <h4>Christian News</h4>
                             <ul class="text-left">
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box">
+                        <div class="single-about-box-1">
                             <i class="icofont icofont-computer"></i>
                             <h4>Member log in to local church</h4>
                             <ul class="text-left">
@@ -89,7 +89,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box">
+                        <div class="single-about-box-1">
                             <i class="icofont icofont-law-document"></i>
                             <h4>Church information</h4>
                             <ul class="text-left">
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box">
+                        <div class="single-about-box-1">
                             <i class="icofont icofont-newspaper"></i>
                             <h4>Church posts</h4>
                             <ul class="text-left">
@@ -122,7 +122,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3">
-                        <div class="single-about-box">
+                        <div class="single-about-box-1">
                             <i class="icofont icofont-newspaper"></i>
                             <h4>Member posts</h4>
                             <ul class="text-left">
@@ -137,7 +137,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box">
+                        <div class="single-about-box-1">
                             <i class="icofont icofont-brand-myspace"></i>
                             <h4>Fellowships</h4>
                             <ul class="text-left">
@@ -151,7 +151,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box">
+                        <div class="single-about-box-1">
                             <i class="icofont icofont-speech-comments"></i>
                             <h4>Support</h4>
                             <ul class="text-left">
@@ -162,7 +162,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box">
+                        <div class="single-about-box-1">
                             <i class="icofont icofont-pay"></i>
                             <h4>Pay</h4>
                             <ul class="text-left">
@@ -182,7 +182,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3">
-                        <div class="single-about-box">
+                        <div class="single-about-box-1">
                             <i class="icofont icofont-brand-myspace"></i>
                             <h4>Counselling</h4>
                             <ul class="text-left">
@@ -201,7 +201,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box">
+                        <div class="single-about-box-1">
                             <i class="icofont icofont-megaphone-alt"></i>
                             <h4>Emergency</h4>
                             <ul class="text-left">
@@ -219,7 +219,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box">
+                        <div class="single-about-box-1">
                             <i class="icofont icofont-contrast"></i>
                             <h4>Live</h4>
                             <ul class="text-left">
@@ -230,7 +230,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box">
+                        <div class="single-about-box-1">
                             <i class="icofont icofont-cart"></i>
                             <h4>Shop</h4>
                             <p>Access your church book store/ Shop - from the click of a button on your smart phone at discounted prices</p>
@@ -244,7 +244,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3">
-                        <div class="single-about-box">
+                        <div class="single-about-box-1">
                             <i class="icofont icofont-book-alt"></i>
                             <h4>Bible</h4>
                             <ul class="text-left">
@@ -260,7 +260,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-about-box">
+                        <div class="single-about-box-1">
                             <i class="icofont icofont-notepad"></i>
                             <h4>Notes</h4>
                             <ul class="text-left">
