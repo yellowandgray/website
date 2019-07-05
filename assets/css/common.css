@@ -15,7 +15,7 @@
     border: 1px solid #ccc;
     background-color: #2594dd;
     width: 30%;
-    height: 530px;
+    height: 570px;
 }
 
 .tab button  {
@@ -46,7 +46,7 @@
     border: 1px solid #ccc;
     width: 70%;
     border-left: none;
-    height: 530px;
+    height: 570px;
     background: #2594dd85; 
 }
 /*--- tap ---*/
@@ -348,4 +348,23 @@ footer {
 }
 .list-align-2 i {
     color: #00b0f0;
+}
+@media screen and (max-width: 991px){
+    .dis-p-0 {
+        display: none;
+    }
+    .dis-p {
+        display:block;
+    }
+}
+@media screen and (min-width: 992px){
+    .dis-p-0 {
+        display: block;
+    }
+    .dis-p {
+        display:none;
+    }
+}
+.h3-o h3 {
+    color: #ff6f6f;
 }

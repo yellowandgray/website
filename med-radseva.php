@@ -20,8 +20,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Our Capabilities</h1>
-                        <p><a href="index.php">Home</a> <span>|</span>Our Capabilities</p>
+                        <h1>Radseva</h1>
+                        <p><a href="index.php">Home</a> <span>|</span>Radseva</p>
                     </div>
                 </div>
             </div>
@@ -254,7 +254,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <img src="assets/images/functional-flow.png" alt="" class="img-responsive"/>
+                        <img src="assets/images/recovered.png" alt="" class="img-responsive"/>
                     </div>
                 </div>
             </div>

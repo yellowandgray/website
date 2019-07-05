@@ -16,13 +16,12 @@
         <!-- Header Area End -->
 
         <!-- Banner Area Starts -->
-        <section class="banner-area">
+      <section class="banner-area other-page">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5">
-                        <div>
-                            <img src="assets/images/banner-001.png" alt="" class="img-responsive"> 
-                        </div>
+                    <div class="col-lg-12">
+                        <h1>Imagesmart</h1>
+                        <p><a href="index.php">Home</a> <span>|</span>Imagesmart</p>
                     </div>
                 </div>
             </div>

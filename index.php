@@ -214,35 +214,35 @@
                         </div>
 
                         <div id="radseva" class="tabcontent tab-text">
-                            <img src="assets/images/medseva/002.jpg" alt="" class="img-responsive" class="img-responsive">
-                            <h3>H-SPA</h3>
-                            <p>Patient Management System</p>
-                            <p>Multi-specialty module is a state of the art Hospital Information Management System(HIMS) which is comprehensive Enterprise wide software that covers all aspects of management and operations of medium and large hospitals. It Enables healthcare providers to improve the operational effectiveness, reduce costs, reduce medical errors and enhance delivery of quality care.</p>
-                            <a href="med-radseva.php" class="template-btn mt-3">learn more</a>
-                        </div>
-
-                        <div id="endosmart" class="tabcontent tab-text">
                             <img src="assets/images/medseva/003.jpg" alt="" class="img-responsive" class="img-responsive">
                             <h3>RADSEVA</h3>
                             <p>TELE RADIOLOGY APPLICATION</p>
                             <p>Radseva is the transmission of radiological patient images, such as X-Rays, CTs, MRIs, from one location to another for the purpose of interpretation and/or consultation.</p>
                             <p>Radseva improves patient care by allowing Radiologist to Provide services without actually having to be at the location of the patient. This is particularly important when a sub-specialist such as a MRI Radiologist, Neuro-radiologist, Pediatric Radiologist or Musculoskeletal Radiologist is needed, since these profesionals are generally only located in large metropolitan areas working during day time, Tele Radiology allows for trained specialist to be available 24/7</p>
-                            <a href="#" class="template-btn mt-3">learn more</a>
+                            <a href="med-radseva.php" class="template-btn mt-3">learn more</a>
+                        </div>
+                        <div id="endosmart" class="tabcontent tab-text">
+                            <img src="assets/images/medseva/005.jpg" alt="" class="img-responsive" class="img-responsive">
+                            <h3>ENDOSMART</h3>
+                            <p>ENDOSCOPY SYSTEM</p>
+                            <p>A procedure in which specialized instruments are used by a doctor to view and operate on the internal organs and vessels of the body is known as Endoscopy. Without making big cuts / incisions, the process of Endoscopy allows the surgeon to see the problem areas inside the patient’s body. Endoscope is a medical instrument in which a camera attached to a flexible tube that allows the doctor to see. Either through the opening in the body such as mouth or through a small incision, a surgeon inserts an endoscope in the patient’s body. With the help of forceps also known as tongs and scissors on the endoscope a doctor can operate or remove tissues for biopsy.</p>
+                            <a href="med-endosmart.php" class="template-btn mt-3">learn more</a>
                         </div>
                         <div id="h-spa" class="tabcontent tab-text">
+                            <img src="assets/images/medseva/002.jpg" alt="" class="img-responsive" class="img-responsive">
+                            <h3>H-SPA</h3>
+                            <p>Patient Management System</p>
+                            <p>Multi-specialty module is a state of the art Hospital Information Management System(HIMS) which is comprehensive Enterprise wide software that covers all aspects of management and operations of medium and large hospitals. It Enables healthcare providers to improve the operational effectiveness, reduce costs, reduce medical errors and enhance delivery of quality care.</p>
+                            <a href="med-h-spa.php" class="template-btn mt-3">learn more</a>
+                        </div>
+                        <div id="mims" class="tabcontent tab-text">
                             <img src="assets/images/medseva/004.jpg" alt="" class="img-responsive" class="img-responsive">
                             <h3>MIMS</h3>
                             <p>MEDICAL INSTITUTE MANAGEMENT SYSTEM</p>
                             <p>Medical Institute Management System software which is helpful for medical student as well as College Authorities. Our Application stores records of Students & Faculties Also. The Main Principle Behind this Software is easy to Supervision of Institute. This software can help us to explore all the activities happening inside the Medical College. It can handle Details of Student as well as Faculties, Finance, Human Resource, Attendance, Reports, Hostel Management, Data Management, Inventory, Transport etc. </p>
                             <a href="#" class="template-btn mt-3">learn more</a>
                         </div>
-                        <div id="mims" class="tabcontent tab-text">
-                            <img src="assets/images/medseva/005.jpg" alt="" class="img-responsive" class="img-responsive">
-                            <h3>ENDOSMART</h3>
-                            <p>ENDOSCOPY SYSTEM</p>
-                            <p>A procedure in which specialized instruments are used by a doctor to view and operate on the internal organs and vessels of the body is known as Endoscopy. Without making big cuts / incisions, the process of Endoscopy allows the surgeon to see the problem areas inside the patient’s body. Endoscope is a medical instrument in which a camera attached to a flexible tube that allows the doctor to see. Either through the opening in the body such as mouth or through a small incision, a surgeon inserts an endoscope in the patient’s body. With the help of forceps also known as tongs and scissors on the endoscope a doctor can operate or remove tissues for biopsy.</p>
-                            <a href="#" class="template-btn mt-3">learn more</a>
-                        </div>
+
                         <div id="sonosmart" class="tabcontent tab-text">
                             <img src="assets/images/medseva/006.jpg" alt="" class="img-responsive" class="img-responsive">
                             <h3>SONOSMART</h3>
