@@ -79,7 +79,7 @@
         <section class="feature-area ptb-90" id="feature">
             <div class="container">
                 <div class="sec-title">
-                    <h2>About Christlink<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
+                    <h2>App Features<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
                     <p> A vast cyberspace wherein the church leaders are better equipped to shepherd their church congregation thereby facilitating healthy spiritual growth. </p>
                 </div>
                 <div class="row flexbox-center">
