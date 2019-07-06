@@ -1,0 +1,1139 @@
+<!DOCTYPE HTML>
+<html lang="zxx">
+    <?php include 'head.php'; ?>
+    <body data-spy="scroll" data-target=".header" data-offset="50">
+        <!-- Page loader -->
+        <div id="preloader"></div>
+        <!-- header section start -->
+        <?php include 'menu.php'; ?>
+        <!-- header section end -->
+        <!-- hero area start -->
+        <section class="hero-area" id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="hero-area-content">
+                            <h1>Christlink</h1>
+                            <p>A mobile application providing a safe and secure platform for Christians to be enriched by one another within the support of the Local church and the global community of believers. </p>
+                            <a href="#" class="appao-btn">Google Play</a>
+                            <a href="#" class="appao-btn">App Store</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="hand-mockup text-lg-left text-center">
+                            <img src="assets/img/hand-mockup.png" alt="Hand Mockup" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- hero area end -->
+        <!-- about section start -->
+        <section class="about-area ptb-90" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sec-title">
+                            <h2>About Christlink<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
+                            <p> A vast cyberspace wherein the church leaders are better equipped to shepherd their church congregation thereby facilitating healthy spiritual growth. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="single-about-box">
+                            <i class="icofont icofont-cubes"></i>
+                            <h4>Opportunity</h4>
+                            <p>An opportunity for the community of believers to be able to express Christian virtues of sharing and caring at times of emergency and need.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-about-box active">
+                            <i class="icofont icofont-cart-alt"></i>
+                            <h4>Store</h4>
+                            <p>A store house of precious Audio Video and other formats of Christian media useful across the age levels and socio ethnic backgrounds.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-about-box">
+                            <i class="icofont icofont-newspaper"></i>
+                            <h4>Business and Logistical needs</h4>
+                            <p>A one stop solution for all your business and logistical needs at the time of birth, death, weddings, baptisms, confirmations, prayer meetings and thanksgivings etc. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- about section end -->
+        <section class="ptb-90">
+            <div class="container">
+                <div class="sec-title">
+                    <h2>Connecting Chart<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="assets/img/connecting-chart.jpg" alt="connecting Chart" style="width: 100%"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- feature section start -->
+        <section class="feature-area ptb-90" id="feature">
+            <div class="container">
+                <div class="sec-title">
+                    <h2>About Christlink<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
+                    <p> A vast cyberspace wherein the church leaders are better equipped to shepherd their church congregation thereby facilitating healthy spiritual growth. </p>
+                </div>
+                <div class="row flexbox-center">
+                    <div class="col-lg-3">
+                        <div class="single-feature-box text-lg-right text-center">
+                            <ul>
+                                <li>
+                                    <div class="feature-box-info" data-toggle="popover" title="Christian News" data-placement="bottom" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; International Christian headlines</li><i class='icofont icofont-ui-check'></i><li> &nbsp; National</li><i class='icofont icofont-ui-check'></i><li> &nbsp; From the holy land</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Church news</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Trending Christian viral videos – music- testimonies etc</li></ul>">
+                                        <h4>Christian News</h4>
+                                    </div>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-news"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Member log in to local church" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; Log in to the local church page with your unique member ID and password</li></ul>">
+                                        <h4>Member log in to local church</h4>
+                                    </div>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-computer"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Church information" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; Access information about your local church</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Conception and history of the church </li><i class='icofont icofont-ui-check'></i><li> &nbsp; Church doctrine </li><i class='icofont icofont-ui-check'></i><li> &nbsp; Church Pastor </li><i class='icofont icofont-ui-check'></i><li> &nbsp; Church elders/Committee members </li><i class='icofont icofont-ui-check'></i><li> &nbsp; Contact information </li><i class='icofont icofont-ui-check'></i><li> &nbsp; Ministries of the church </li><i class='icofont icofont-ui-check'></i><li> &nbsp; Projects undertaken by the church </li><i class='icofont icofont-ui-check'></i><li> &nbsp; church calendar </li><i class='icofont icofont-ui-check'></i><li> &nbsp; gallery </li></ul>">
+                                        <h4>Church information</h4>
+                                    </div>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-law-document"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Church posts" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; local church news</li><i class='icofont icofont-ui-check'></i><li> &nbsp; birthdays, wedding anniversaries, deaths and other special occasions of church members</li><i class='icofont icofont-ui-check'></i><li> &nbsp; events organised by the church or supported or suggested by the church </li><i class='icofont icofont-ui-check'></i><li> &nbsp; extensive Archive of media – pastor’s sermons, bible studies, concerts, programmes etc. </li><i class='icofont icofont-ui-check'></i><li> &nbsp; Pastor’s special address to the church members etc – daily basis or weekly basis </li></ul>">
+                                        <h4>Church posts</h4>
+                                    </div>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-newspaper"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Member posts" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; Directory of all church members with the details of their family members which is updated regularly – yearly</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Social profile with a spiritual aspect of each member</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Request for prayer</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Sharing personal testimony</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Sharing special word from God</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Sharing a special personal news</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Other</li></ul>">
+                                        <h4>Member posts</h4>
+                                    </div>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-newspaper"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Fellowships" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; Information regarding the various fellowships/ house groups/ cell groups etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp; when the groups meet – how long is the meeting for</li><i class='icofont icofont-ui-check'></i><li> &nbsp; what the  groups do – past and present and future projects</li><i class='icofont icofont-ui-check'></i><li> &nbsp; where the groups meet – location and address</li><i class='icofont icofont-ui-check'></i><li> &nbsp; contact person and contact information</li><i class='icofont icofont-ui-check'></i><li> &nbsp; gallery</li></ul>">
+                                        <h4>Fellowships</h4>
+                                    </div>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-brand-myspace"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Support" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; 24x7 chat /email for those with questions or doubts regarding church and church matters.</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Other technical issues</li><i class='icofont icofont-ui-check'></i><li> &nbsp; FAQ</li></ul>">
+                                        <h4>Support</h4>
+                                    </div>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-speech-comments"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-feature-box text-center">
+                            <section class="customer-logos slider">
+                                <div class="slide"><img src="assets/img/main-page-image/christlink-slider/001.png" alt="slider-1"></div>
+                                <div class="slide"><img src="assets/img/main-page-image/christlink-slider/002.png" alt="slider-2"></div>
+                                <div class="slide"><img src="assets/img/main-page-image/christlink-slider/003.png" alt="slider-3"></div>
+                                <div class="slide"><img src="assets/img/main-page-image/christlink-slider/004.png" alt="slider-4"></div>
+                                <div class="slide"><img src="assets/img/main-page-image/christlink-slider/005.png" alt="slider-5"></div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="single-feature-box text-lg-left text-center">
+                            <ul>
+                                <li>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-pay"></i>
+                                    </div>
+                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Pay" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; Link from the specific project will be directed here to a payment gateway</li><i class='icofont icofont-ui-check'></i><li> &nbsp; List of the projects that need financial support</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Options to pay <ul><i class='icofont icofont-ui-check'></i><li> &nbsp; Tithe</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Offerings – thanksgiving etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Alms – charity </li><i class='icofont icofont-ui-check'></i><li> &nbsp; Other donations</li></ul></li></ul>">
+                                        <h4>Pay</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-brand-myspace"></i>
+                                    </div>
+                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Counselling" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; Contact information for church appointed and church approved counsellors in various fields who will handle sessions with confidentiality and real time support in matters of <ul><i class='icofont icofont-ui-check'></i><li> &nbsp; Sexual issues.</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Relationships in marriage</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Relationships in family</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Friends at school/office etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Academic and career based </li><i class='icofont icofont-ui-check'></i><li> &nbsp; business and work related</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Other</li></ul></li></ul>">
+                                        <h4>Counselling</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-megaphone-alt"></i>
+                                    </div>
+                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom"  title="Emergency" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; When you press this icon with a long touch you activate the emergency signal which reaches out to professionals (doctors from your church) and social volunteers (youth adults and other volunteers from your church) who will immediately step in to help you in times ofay<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; Health emergencies</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Accidents</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Fire</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Crime</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Abuse</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Etc.</li></ul></li></ul>">
+                                        <h4>Emergency </h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-contrast"></i>
+                                    </div>
+                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Live" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; Live church services</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Live church programmes like concerts, conventions, workshops etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Live online offerings – during church services</li></ul>">
+                                        <h4>Live</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-cart"></i>
+                                    </div>
+                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Shop" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; Bibles</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Christian books</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Christian articles and gift items</li></ul>">
+                                        <h4>Shop</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-book-alt"></i>
+                                    </div>
+                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Bible" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; like to the church approved mobile applications and WebPages for<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; Bible,</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Bible commentary,</li><i class='icofont icofont-ui-check'></i><li> &nbsp; bible resources</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Etc</li></ul></li></ul>">
+                                        <h4>Bible</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-box-icon">
+                                        <i class="icofont icofont-notepad"></i>
+                                    </div>
+                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Notes" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; like to the church approved mobile applications and WebPages for<ul><i class='icofont icofont-ui-check'></i><li> &nbsp; Bible,</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Bible commentary,</li><i class='icofont icofont-ui-check'></i><li> &nbsp; bible resources</li><i class='icofont icofont-ui-check'></i><li> &nbsp; Etc</li></ul></li></ul>">
+                                        <h4>Notes</h4>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- feature section end -->
+
+        <!-- screenshots section start -->
+        <section class="screenshots-area ptb-90" id="screenshot">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sec-title">
+                            <h2>Screenshot<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <section class="customer-logos slider">
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-md-6 padding-top-40">
+                                        <h4>Christian News</h4>
+                                        <br/>
+                                        <ul class="text-left">
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; International Christian headlines</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; National</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Local</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; From the holy land</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Church news</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; trending Christian viral videos – music- testimonies etc</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="assets/img/main-page-image/christlink-slider/001.png" alt="slider-1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-md-6 padding-top-40">
+                                        <h4>Member log in to local church</h4>
+                                        <br/>
+                                        <ul class="text-left">
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Log in to the local church page with your unique member ID and password</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="assets/img/main-page-image/christlink-slider/002.png" alt="slider-2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-md-6 padding-top-40">
+                                        <h4>Church information</h4>
+                                        <br/>
+                                        <ul class="text-left">
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Access information about your local church</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Conception and history of the church</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Church doctrine</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Church Pastor</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Church elders/Committee members</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Contact information</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Ministries of the church</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Projects  undertaken by the church</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; church calendar</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; gallery</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="assets/img/main-page-image/christlink-slider/003.png" alt="slider-3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-md-6 padding-top-40">
+                                        <h4>Church posts</h4>
+                                        <br/>
+                                        <ul class="text-left">
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; local church news</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; birthdays, wedding anniversaries, deaths and other special occasions of church members</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; events organised by the church or supported or suggested by the church</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; extensive Archive of media – pastor’s sermons, bible studies, concerts, programmes etc.</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Pastor’s special address to the church members etc – daily basis or weekly basis</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="assets/img/main-page-image/christlink-slider/004.png" alt="slider-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-md-6 padding-top-40">
+                                        <h4>Member posts</h4>
+                                        <br/>
+                                        <ul class="text-left">
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Directory of all church members with the details of their family members which is updated regularly – yearly</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Social profile with a spiritual aspect of each member</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Request for prayer</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Sharing personal testimony</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Sharing special word from God</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Sharing a special personal news</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Other</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="assets/img/main-page-image/christlink-slider/005.png" alt="slider-5">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-md-6 padding-top-40">
+                                        <h4>Fellowships</h4>
+                                        <br/>
+                                        <ul>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Information regarding the various fellowships/ house groups/ cell groups etc</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; when the groups meet – how long is the meeting for</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; what the  groups do – past and present and future projects</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; where the groups meet – location and address</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; contact person and contact information</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; gallery</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="assets/img/main-page-image/christlink-slider/005.png" alt="slider-5">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-md-6 padding-top-40">
+                                        <h4>Support</h4>
+                                        <br/>
+                                        <ul>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; 24x7 chat /email for those with questions or doubts regarding church and church matters.</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Other technical issues</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; FAQ</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="assets/img/main-page-image/christlink-slider/005.png" alt="slider-5">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-md-6 padding-top-40">
+                                        <h4>Pay</h4>
+                                        <br/>
+                                        <ul>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Link from the specific project will be directed here to a payment gateway</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; List of the projects that need financial support</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Options to pay 
+                                                <ul>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Tithe</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Offerings – thanksgiving etc</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Alms – charity </li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Other donations</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="assets/img/main-page-image/christlink-slider/005.png" alt="slider-5">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-md-6 padding-top-40">
+                                        <h4>Counselling</h4>
+                                        <br/>
+                                        <ul>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; contact information for church appointed and church approved counsellors in various fields who will handle sessions with confidentiality and real time support in matters of
+                                                <ul>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Sexual issues.</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Relationships in marriage</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Relationships in family</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Friends at school/office etc</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Academic and career based </li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; business and work related</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Other</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="assets/img/main-page-image/christlink-slider/005.png" alt="slider-5">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-md-6 padding-top-40">
+                                        <h4>Emergency</h4>
+                                        <br/>
+                                        <ul>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; When you press this icon with a long touch you activate the emergency signal which reaches out to professionals (doctors from your church) and social volunteers (youth adults and other volunteers from your church) who will immediately step in to help you in times ofay
+                                                <ul>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Health emergencies</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Accidents</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Fire</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Crime</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Abuse</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Etc.</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="assets/img/main-page-image/christlink-slider/005.png" alt="slider-5">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-md-6 padding-top-40">
+                                        <h4>Live</h4>
+                                        <br/>
+                                        <ul>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Live church services</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Live church programmes like concerts, conventions, workshops etc</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Live online offerings – during church services</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="assets/img/main-page-image/christlink-slider/005.png" alt="slider-5">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-md-6 padding-top-40">
+                                        <h4>Shop</h4>
+                                        <br/>
+                                        <p>Access your church book store/ Shop - from the click of a button on your smart phone at discounted prices</p>
+                                        <ul>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Bibles</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Christian books</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; Christian articles and gift items</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="assets/img/main-page-image/christlink-slider/005.png" alt="slider-5">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-md-6 padding-top-40">
+                                        <h4>Bible</h4>
+                                        <br/>
+                                        <ul>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; like to the church approved mobile applications and WebPages for
+                                                <ul>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Bible,</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Bible commentary,</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; bible resources</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Etc</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="assets/img/main-page-image/christlink-slider/005.png" alt="slider-5">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-md-6 padding-top-40">
+                                        <h4>Notes</h4>
+                                        <br/>
+                                        <ul class="text-left">
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; A mobile friendly page to note down personal notes during
+                                                <ul>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Sermon</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Personal quiet time</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Etc.</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="assets/img/main-page-image/christlink-slider/005.png" alt="slider-5">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section><!-- screenshots section end -->
+        <!-- pricing section start -->
+<!--        <section class="pricing-area ptb-90" id="pricing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sec-title">
+                            <h2>Our Pricing Plan<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="single-pricing-box">
+                            <div class="pricing-top">
+                                <h4>Basic</h4>
+                                <p>Suitable for Freelancer</p>
+                            </div>
+                            <div class="price">
+                                <h1><span>$</span>99</h1>
+                                <p>Basic</p>
+                            </div>
+                            <div class="price-details">
+                                <ul>
+                                    <li>Email Marketing</li>
+                                    <li>Email Builder</li>
+                                    <li>Client Testing</li>
+                                    <li>Multiple Email Support</li>
+                                    <li>Email Read Receipent</li>
+                                    <li>2 User Free</li>
+                                </ul>
+                                <a class="appao-btn" href="#">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-pricing-box">
+                            <div class="pricing-top">
+                                <h4>Pro</h4>
+                                <p>Suitable for Freelancer</p>
+                            </div>
+                            <div class="price">
+                                <h1><span>$</span>199</h1>
+                                <p>Basic</p>
+                            </div>
+                            <div class="price-details">
+                                <ul>
+                                    <li>Email Marketing</li>
+                                    <li>Email Builder</li>
+                                    <li>Client Testing</li>
+                                    <li>Multiple Email Support</li>
+                                    <li>Email Read Receipent</li>
+                                    <li>2 User Free</li>
+                                </ul>
+                                <a class="appao-btn" href="#">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-pricing-box">
+                            <div class="pricing-top">
+                                <h4>Ultimate</h4>
+                                <p>Suitable for Freelancer</p>
+                            </div>
+                            <div class="price">
+                                <h1><span>$</span>299</h1>
+                                <p>Basic</p>
+                            </div>
+                            <div class="price-details">
+                                <ul>
+                                    <li>Email Marketing</li>
+                                    <li>Email Builder</li>
+                                    <li>Client Testing</li>
+                                    <li>Multiple Email Support</li>
+                                    <li>Email Read Receipent</li>
+                                    <li>2 User Free</li>
+                                </ul>
+                                <a class="appao-btn" href="#">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+        <!-- pricing section end -->
+        <!-- video section start -->
+        <section class="video-area ptb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="video-popup">
+                            <a href="https://www.youtube.com/watch?v=jSjGCVGEu4E&feature=youtu.be" class="popup-youtube"><i class="icofont icofont-ui-play"></i></a>
+                            <h1>Watch Video Demo</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- video section end -->
+        <!-- showcase section start -->
+        <section class="showcase-area ptb-90" id="mobile">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sec-title">
+                            <h2>Showcase<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row flexbox-center">
+                    <div class="col-lg-6">
+                        <div class="single-showcase-box">
+                            <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim nostrud exercitation ullamco laboris nisi ut aliquip </p>
+                            <a href="#" class="appao-btn appao-btn2">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-showcase-box">
+                            <img src="assets/img/showcase.png" alt="showcase">
+                        </div>
+                    </div>
+                </div>
+                <div class="row flexbox-center">
+                    <div class="col-lg-6">
+                        <div class="single-showcase-box">
+                            <img src="assets/img/showcase2.png" alt="showcase">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-showcase-box">
+                            <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim nostrud exercitation ullamco laboris nisi ut aliquip </p>
+                            <a href="#" class="appao-btn appao-btn2">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- showcase section end -->
+        <!-- download section start -->
+        <section class="download-area ptb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sec-title">
+                            <h2>Download Available<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul>
+                            <li>
+                                <a href="#" class="download-btn flexbox-center">
+                                    <div class="download-btn-icon">
+                                        <i class="icofont icofont-brand-android-robot"></i>
+                                    </div>
+                                    <div class="download-btn-text">
+                                        <p>Available on</p>
+                                        <h4>Android Store</h4>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="download-btn flexbox-center">
+                                    <div class="download-btn-icon">
+                                        <i class="icofont icofont-brand-apple"></i>
+                                    </div>
+                                    <div class="download-btn-text">
+                                        <p>Available on</p>
+                                        <h4>Apple Store</h4>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="download-btn flexbox-center">
+                                    <div class="download-btn-icon">
+                                        <i class="icofont icofont-brand-windows"></i>
+                                    </div>
+                                    <div class="download-btn-text">
+                                        <p>Available on</p>
+                                        <h4>Windows Store</h4>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section><!-- download section end -->
+        <!-- counter section start -->
+<!--        <section class="counter-area ptb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-counter-box">
+                            <i class="icofont icofont-heart-alt"></i>
+                            <h1><span class="counter">9798</span></h1>
+                            <p>Happy Client</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-counter-box">
+                            <i class="icofont icofont-protect"></i>
+                            <h1><span class="counter">9798</span></h1>
+                            <p>Completed Project</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-counter-box">
+                            <i class="icofont icofont-download-alt"></i>
+                            <h1><span class="counter">979</span>K</h1>
+                            <p>Apps Download</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-counter-box">
+                            <i class="icofont icofont-trophy"></i>
+                            <h1><span class="counter">250</span></h1>
+                            <p>Our Award</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+        <!-- counter section end -->
+        <!-- team section start -->
+        <section class="team-area ptb-90" id="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sec-title">
+                            <h2>Meet Our Team<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-team-member">
+                            <div class="team-member-img">
+                                <img src="assets/img/team/team1.jpg" alt="team">
+                                <div class="team-member-icon">
+                                    <div class="display-table">
+                                        <div class="display-tablecell">
+                                            <a href="#"><i class="icofont icofont-social-facebook"></i></a>
+                                            <a href="#"><i class="icofont icofont-social-twitter"></i></a>
+                                            <a href="#"><i class="icofont icofont-brand-linkedin"></i></a>
+                                            <a href="#"><i class="icofont icofont-social-pinterest"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-member-info">
+                                <a href="#"><h4>Joshua Clements</h4></a>
+                                <!--<p>Web Developer</p>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-team-member">
+                            <div class="team-member-img">
+                                <img src="assets/img/team/team2.jpg" alt="team">
+                                <div class="team-member-icon">
+                                    <div class="display-table">
+                                        <div class="display-tablecell">
+                                            <a href="#"><i class="icofont icofont-social-facebook"></i></a>
+                                            <a href="#"><i class="icofont icofont-social-twitter"></i></a>
+                                            <a href="#"><i class="icofont icofont-brand-linkedin"></i></a>
+                                            <a href="#"><i class="icofont icofont-social-pinterest"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-member-info">
+                                <a href="#"><h4>Kumar </h4></a>
+                                <!--<p>UX Designer</p>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-team-member">
+                            <div class="team-member-img">
+                                <img src="assets/img/team/team3.jpg" alt="team">
+                                <div class="team-member-icon">
+                                    <div class="display-table">
+                                        <div class="display-tablecell">
+                                            <a href="#"><i class="icofont icofont-social-facebook"></i></a>
+                                            <a href="#"><i class="icofont icofont-social-twitter"></i></a>
+                                            <a href="#"><i class="icofont icofont-brand-linkedin"></i></a>
+                                            <a href="#"><i class="icofont icofont-social-pinterest"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-member-info">
+                                <a href="#"><h4>enoch Joshua</h4></a>
+                                <!--<p>UX Designer</p>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-team-member">
+                            <div class="team-member-img">
+                                <img src="assets/img/team/team4.jpg" alt="team">
+                                <div class="team-member-icon">
+                                    <div class="display-table">
+                                        <div class="display-tablecell">
+                                            <a href="#"><i class="icofont icofont-social-facebook"></i></a>
+                                            <a href="#"><i class="icofont icofont-social-twitter"></i></a>
+                                            <a href="#"><i class="icofont icofont-brand-linkedin"></i></a>
+                                            <a href="#"><i class="icofont icofont-social-pinterest"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-member-info">
+                                <a href="#"><h4>Sharon Garcia</h4></a>
+                                <!--<p>UX Designer</p>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- team section end -->
+
+        <!-- testimonial section start -->
+        <section class="testimonial-area ptb-90" style="background: #eee;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sec-title">
+                            <h2>Testimonials<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="testimonial-wrap">
+                            <div class="single-testimonial-box">
+                                <div class="author-img">
+                                    <img src="assets/img/author/author1.jpg" alt="author" />
+                                </div>
+                                <h5>Mary Balogh</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in </p>
+                                <div class="author-rating">
+                                    <i class="icofont icofont-star"></i>
+                                    <i class="icofont icofont-star"></i>
+                                    <i class="icofont icofont-star"></i>
+                                    <i class="icofont icofont-star"></i>
+                                    <i class="icofont icofont-star"></i>
+                                </div>
+                            </div>
+                            <div class="single-testimonial-box">
+                                <div class="author-img">
+                                    <img src="assets/img/author/author2.jpg" alt="author" />
+                                </div>
+                                <h5>Mary Balogh</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in </p>
+                                <div class="author-rating">
+                                    <i class="icofont icofont-star"></i>
+                                    <i class="icofont icofont-star"></i>
+                                    <i class="icofont icofont-star"></i>
+                                    <i class="icofont icofont-star"></i>
+                                    <i class="icofont icofont-star"></i>
+                                </div>
+                            </div>
+                            <div class="single-testimonial-box">
+                                <div class="author-img">
+                                    <img src="assets/img/author/author2.jpg" alt="author" />
+                                </div>
+                                <h5>Mary Balogh</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in </p>
+                                <div class="author-rating">
+                                    <i class="icofont icofont-star"></i>
+                                    <i class="icofont icofont-star"></i>
+                                    <i class="icofont icofont-star"></i>
+                                    <i class="icofont icofont-star"></i>
+                                    <i class="icofont icofont-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-thumb">
+                            <div class="thumb-prev">
+                                <div class="author-img">
+                                    <img src="assets/img/author/author2.jpg" alt="author" />
+                                </div>
+                            </div>
+                            <div class="thumb-next">
+                                <div class="author-img">
+                                    <img src="assets/img/author/author2.jpg" alt="author" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- testimonial section end -->
+
+        <!-- blog section start -->
+<!--        <section class="blog-area ptb-90" id="blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sec-title">
+                            <h2>Our Latest Blog<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-post">
+                            <div class="post-thumbnail">
+                                <a href="blog.html"><img src="assets/img/blog/blog1.jpg" alt="blog"></a>
+                            </div>
+                            <div class="post-details">
+                                <div class="post-author">
+                                    <a href="blog.html"><i class="icofont icofont-user"></i>John</a>
+                                    <a href="blog.html"><i class="icofont icofont-speech-comments"></i>Comments</a>
+                                    <a href="blog.html"><i class="icofont icofont-calendar"></i>21 Feb 2018</a>
+                                </div>
+                                <h4 class="post-title"><a href="blog.html">Lorem ipsum dolor sit</a></h4>
+                                <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-post">
+                            <div class="post-thumbnail">
+                                <a href="blog.html"><img src="assets/img/blog/blog2.jpg" alt="blog"></a>
+                            </div>
+                            <div class="post-details">
+                                <div class="post-author">
+                                    <a href="blog.html"><i class="icofont icofont-user"></i>John</a>
+                                    <a href="blog.html"><i class="icofont icofont-speech-comments"></i>Comments</a>
+                                    <a href="blog.html"><i class="icofont icofont-calendar"></i>21 Feb 2018</a>
+                                </div>
+                                <h4 class="post-title"><a href="blog.html">Lorem ipsum dolor sit</a></h4>
+                                <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-md-none d-lg-block">
+                        <div class="single-post">
+                            <div class="post-thumbnail">
+                                <a href="blog.html"><img src="assets/img/blog/blog3.jpg" alt="blog"></a>
+                            </div>
+                            <div class="post-details">
+                                <div class="post-author">
+                                    <a href="blog.html"><i class="icofont icofont-user"></i>John</a>
+                                    <a href="blog.html"><i class="icofont icofont-speech-comments"></i>Comments</a>
+                                    <a href="blog.html"><i class="icofont icofont-calendar"></i>21 Feb 2018</a>
+                                </div>
+                                <h4 class="post-title"><a href="blog.html">Lorem ipsum dolor sit</a></h4>
+                                <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+        <!-- blog section end -->
+        <!-- google map area start -->
+        <!--        <div class="google-map"></div>-->
+        <!-- google map area end -->
+        <!-- footer section start -->
+        <footer class="footer" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="contact-form">
+                            <h4>Get in Touch</h4>
+                            <p class="form-message"></p>
+                            <form id="contact-form" action="#" method="POST">
+                                <input type="text" name="name" placeholder="Enter Your Name">
+                                <input type="email" name="email" placeholder="Enter Your Email">
+                                <input type="text" name="subject" placeholder="Your Subject">
+                                <textarea placeholder="Messege" name="message"></textarea>
+                                <button type="submit" name="submit">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contact-address">
+                            <h4>Address</h4>
+
+                            <ul>
+                                <li>
+                                    <div class="contact-address-icon">
+                                        <i class="icofont icofont-address-book"></i>
+                                    </div>
+                                    <div class="add-text contact-address-info">
+                                        <p>NO.12, Durga Colony,</p>
+                                        <p>4th Cross Street, Sembakkam,</p>
+                                        <p>Chennai-600073.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contact-address-icon">
+                                        <i class="icofont icofont-headphone-alt"></i>
+                                    </div>
+                                    <div class="contact-address-info">
+                                        <a href="callto:#">+91 99625 52423</a>
+                                        <a href="callto:#">+91 98406 51865</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contact-address-icon">
+                                        <i class="icofont icofont-envelope"></i>
+                                    </div>
+                                    <div class="contact-address-info">
+                                        <a href="mailto:#">Jsoftbd87gmail.com</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contact-address-icon">
+                                        <i class="icofont icofont-web"></i>
+                                    </div>
+                                    <div class="contact-address-info">
+                                        <a href="www.jsoftbd.com">www.jsoftbd.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Your email address here">
+                                <button type="submit">Subcribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright-area">
+                            <ul>
+                                <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+                                <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
+                                <li><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
+                                <li><a href="#"><i class="icofont icofont-social-pinterest"></i></a></li>
+                                <li><a href="#"><i class="icofont icofont-social-google-plus"></i></a></li>
+                            </ul>
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                &copy; Copyright Chrisconn | All rights reserved | Designed By <a href="http://www.yellowandgray.com/" target="_blank">YG Studio.</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- footer section end -->
+        <a href="#" class="scrollToTop">
+            <i class="icofont icofont-arrow-up"></i>
+        </a>
+
+        <!-- jquery main JS -->
+        <script src="assets/js/jquery.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Slick nav JS -->
+        <script src="assets/js/jquery.slicknav.min.js"></script>
+        <!-- Slick JS -->
+        <script src="assets/js/slick.min.js"></script>
+        <!-- owl carousel JS -->
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <!-- Popup JS -->
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <!-- Counter JS -->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!-- Counterup waypoints JS -->
+        <script src="assets/js/waypoints.min.js"></script>
+        <!-- YTPlayer JS -->
+        <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
+        <!-- jQuery Easing JS -->
+        <script src="assets/js/jquery.easing.1.3.js"></script>
+        <!-- Gmap JS -->
+        <script src="assets/js/gmap3.min.js"></script>
+        <!-- Google map api -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnKyOpsNq-vWYtrwayN3BkF3b4k3O9A_A"></script>
+        <!-- Custom map JS -->
+        <script src="assets/js/custom-map.js"></script>
+        <!-- WOW JS -->
+        <script src="assets/js/wow-1.3.0.min.js"></script>
+        <!-- Switcher JS -->
+        <script src="assets/js/switcher.js"></script>
+        <!-- main JS -->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                $('.customer-logos').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: false,
+                    responsive: [{
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }, {
+                            breakpoint: 520,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }]
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="popover"]').popover();
+            });
+        </script>
+    </body>
+</html>

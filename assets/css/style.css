@@ -160,11 +160,11 @@ textarea:focus {
 .sec-title {
     text-align: center;
     max-width: 400px;
-    margin: 0 auto 40px;
+    margin: 0 auto 0px;
 }
 .sec-title h2 {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
     position: relative;
     top: -6px;
 }
@@ -214,7 +214,7 @@ textarea:focus {
     padding: 100px 0;
 }
 .ptb-90 {
-    padding: 90px 0;
+    padding: 50px 0;
 }
 .owl-nav div {
     position: absolute;
@@ -456,7 +456,8 @@ input::-webkit-input-placeholder {
 }
 .single-about-box.active,
 .single-about-box:hover {
-    box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #000;
+    background: #00000038;
 }
 .single-about-box.active i::before ,
 .single-about-box:hover i::before {
