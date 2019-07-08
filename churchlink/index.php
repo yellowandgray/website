@@ -375,7 +375,7 @@
             </div>
         </footer><!-- footer section end -->
         <div class="open-button"><p>Goto</p>
-            <a href="../Christlink/index"><img src="assets/img/chris-link-logo.png" alt="Church Link" /></a>
+            <a href="../christlink/index"><img src="assets/img/chris-link-logo.png" alt="Church Link" /></a>
         </div>
 
         <a href="#" class="scrollToTop">
