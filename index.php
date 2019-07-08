@@ -29,11 +29,19 @@
                             <div class="sec-title">
                                 <h2><a href="index"><img src="assets/img/churchlink-logo.png" alt="logo" /></a><span class="sec-title-border"><span></span><span></span><span></span></span></h2>
                             </div>
-                            <section class="customer-logos slider">
-                                <div class="slide"><img src="assets/img/main-page-image/churchlink-slider/001.png" alt="slider-1"></div>
-                                <div class="slide"><img src="assets/img/main-page-image/churchlink-slider/002.png" alt="slider-2"></div>
-                                <div class="slide"><img src="assets/img/main-page-image/churchlink-slider/003.png" alt="slider-3"></div>
-                                <div class="slide"><img src="assets/img/main-page-image/churchlink-slider/004.png" alt="slider-4"></div>
+                            <section class="customer-logos slider church-link-img">
+                                <div class="slide">
+                                    <img src="assets/img/main-page-image/churchlink-slider/001.jpg" alt="slider-1">
+                                </div>
+                                <div class="slide">
+                                    <img src="assets/img/main-page-image/churchlink-slider/002.jpg" alt="slider-2">
+                                </div>
+                                <div class="slide">
+                                    <img src="assets/img/main-page-image/churchlink-slider/003.jpg" alt="slider-3">
+                                </div>
+                                <div class="slide">
+                                    <img src="assets/img/main-page-image/churchlink-slider/004.jpg" alt="slider-4">
+                                </div>
                             </section>
                             <p>A web application providing a safe and secure connection between the church and the members. This web application enables the church to have a complete control and manage the entire activities.</p>
                             <a href="churchlink/index" class="appao-btn appao-btn2">See More</a>

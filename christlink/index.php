@@ -801,7 +801,7 @@
                 </div>
             </div>
         </footer><!-- footer section end -->
-        <div class="open-button">Goto <br/>
+        <div class="open-button"><p>Goto</p>
             <a href="../churchlink/index"><img src="assets/img/church-link-logo.png" alt="Church Link" /></a>
         </div>
 
