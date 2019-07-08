@@ -14,11 +14,10 @@
                         <li><a class="nav-link active" href="#home">Home</a></li>
                         <li><a class="nav-link active" href="#about">About</a></li>
                         <li><a class="nav-link" href="#feature">Feature</a></li>
-                        <li><a class="nav-link" href="#screenshot">Screenshot</a></li>
                         <li><a class="nav-link" href="#team">Team</a></li>
 <!--                        <li><a class="nav-link" href="#blog">Blog</a></li>-->
                         <li><a class="nav-link" href="#contact">Contact Us</a></li>
-                        <li><a class="appao-btn" href="#">Download</a></li>
+<!--                        <li><a class="appao-btn" href="#">Download</a></li>-->
                     </ul>
                 </div>
             </div>

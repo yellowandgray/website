@@ -76,7 +76,7 @@
             </div>
         </section>
         <!-- feature section start -->
-        <section class="feature-area ptb-90" id="feature">
+        <section class="feature-area ptb-90" id="app-glance">
             <div class="container">
                 <div class="sec-title">
                     <h2>App at a Glance<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
@@ -223,7 +223,7 @@
         </section><!-- feature section end -->
 
         <!-- screenshots section start -->
-        <section class="screenshots-area ptb-90" id="screenshot">
+        <section class="screenshots-area ptb-90" id="feature">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -802,7 +802,7 @@
             </div>
         </footer><!-- footer section end -->
         <div class="open-button">Goto <br/>
-            <a href=""><img src="assets/img/church-link-logo.png" alt="Church Link" /></a>
+            <a href="../churchlink/index"><img src="assets/img/church-link-logo.png" alt="Church Link" /></a>
         </div>
 
         <a href="#" class="scrollToTop">

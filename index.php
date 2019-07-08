@@ -36,7 +36,7 @@
                                 <div class="slide"><img src="assets/img/main-page-image/churchlink-slider/004.png" alt="slider-4"></div>
                             </section>
                             <p>A web application providing a safe and secure connection between the church and the members. This web application enables the church to have a complete control and manage the entire activities.</p>
-                            <a href="#" class="appao-btn appao-btn2">See More</a>
+                            <a href="churchlink/index" class="appao-btn appao-btn2">See More</a>
                         </div>
                     </div>
                 </div>

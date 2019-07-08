@@ -138,6 +138,20 @@
     color: #2f93fa;
 }
 
+.customer-logos h4 {
+    color: #fff;
+}
+
+.customer-logos ul li {
+    color: #fff;
+}
+
+.customer-logos .box {
+    padding: 20px;
+    box-shadow: 0px 0px 0px 0px #eee;
+    background: #fff;
+}
+
 .open-button {
     box-shadow: 0px 5px 20px 0px #eee;
     color: black;
@@ -158,4 +172,9 @@
     background: #fff;
     text-align: center;
     padding: 8px;
+}
+
+.open-button p {
+    font-size: 14px;
+    font-style: italic;
 }

@@ -114,19 +114,19 @@
     display: none;
 }
 
-#feature .sec-title h2 {
+#app-glance .sec-title h2 {
     color: #fff;
 }
 
-#feature .sec-title p {
+#app-glance .sec-title p {
     color: #fff;
 }
 
-#feature .sec-title h2 .sec-title-border {
+#app-glance .sec-title h2 .sec-title-border {
     border-top: 2px solid #fff;
 }
 
-#feature .sec-title h2 .sec-title-border span::before {
+#app-glance .sec-title h2 .sec-title-border span::before {
     background: #fff;
 }
 
@@ -158,4 +158,9 @@
     background: #fff;
     text-align: center;
     padding: 8px;
+}
+
+.open-button p {
+    font-size: 14px;
+    font-style: italic;
 }
