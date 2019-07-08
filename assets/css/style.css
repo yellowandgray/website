@@ -214,7 +214,7 @@ textarea:focus {
     padding: 100px 0;
 }
 .ptb-90 {
-    padding: 50px 0;
+    padding: 40px 0;
 }
 .owl-nav div {
     position: absolute;
@@ -283,18 +283,20 @@ textarea:focus {
     color: #666;
 }
 .appao-btn2 {
-    border: 1px solid transparent;
+    border: 1px solid #333;
+    background: transparent;
+    background-image: none;
+    color: #333;
     border-radius: 25px;
+
+}
+.appao-btn2:hover {
+    border: 1px solid transparent;
+    color: #ffffff;
     background: #000529; /* Old browsers */
     background-image: -moz-linear-gradient(left, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%); /* FF3.6-15 */
     background-image: -webkit-linear-gradient(left, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%); /* Chrome10-25,Safari5.1-6 */
     background-image: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
-}
-.appao-btn2:hover {
-    border: 1px solid #000529;
-    background: transparent;
-    background-image: none;
-    color: #000529;
 }
 .flexbox-center {
     display: -moz-flex;
@@ -457,7 +459,7 @@ input::-webkit-input-placeholder {
 .single-about-box.active,
 .single-about-box:hover {
     box-shadow: 0 0 5px #000;
-    background: #00000038;
+    background: rgba(255, 255, 255, 0.5)
 }
 .single-about-box.active i::before ,
 .single-about-box:hover i::before {

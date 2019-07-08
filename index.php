@@ -5,7 +5,7 @@
         <!-- Page loader -->
         <div id="preloader"></div>
         <!-- about section start -->
-        <section class="about-area ptb-90" style="background-image: url(assets/img/login-background.jpg);">
+        <section class="about-area ptb-90" style="background-image: url(assets/img/login-background.jpg);background-size: cover;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
@@ -35,7 +35,7 @@
                                 <div class="slide"><img src="assets/img/main-page-image/churchlink-slider/003.png" alt="slider-3"></div>
                                 <div class="slide"><img src="assets/img/main-page-image/churchlink-slider/004.png" alt="slider-4"></div>
                             </section>
-                            <p>A mobile application providing a safe and secure platform for Christians to be enriched by one another within the support of the Local church and the global community of believers.</p>
+                            <p>A web application providing a safe and secure connection between the church and the members. This web application enables the church to have a complete control and manage the entire activities.</p>
                             <a href="#" class="appao-btn appao-btn2">See More</a>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     autoplay: true,
-                    autoplaySpeed: 1500,
+                    autoplaySpeed: 4000,
                     arrows: false,
                     dots: false,
                     pauseOnHover: false,
