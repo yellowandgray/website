@@ -650,6 +650,7 @@
                         </div>
                     </div>
                     <div class="col-lg-5">
+                        <center><img src="assets/img/church-logo.png" alt="" style="margin-top: -50px;" ></center>
                         <div class="hand-mockup text-lg-left text-center">
                             <img src="assets/img/hand-mockup-1.png" alt="Hand Mockup" />
                         </div>
