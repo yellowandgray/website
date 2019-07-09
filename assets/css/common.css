@@ -1,85 +1,3 @@
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#myBtn {
-    cursor: pointer
-}
-/* The Modal (background) */
-.modal1 {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content1 {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#myBtn1 {
-    cursor: pointer
-}
 
 .slick-slide {
     margin: 0px 20px;
@@ -196,11 +114,497 @@
     display: none;
 }
 
-.single-about-box p {
-    color: #333;
+#app-glance .sec-title h2 {
+    color: #fff;
 }
 
-.church-link-img img {
-    margin: 113px 0;
-    border: 5px solid #fff;
+#app-glance .sec-title p {
+    color: #fff;
+}
+
+#app-glance .sec-title h2 .sec-title-border {
+    border-top: 2px solid #fff;
+}
+
+#app-glance .sec-title h2 .sec-title-border span::before {
+    background: #fff;
+}
+
+.padding-top-40 {
+    padding-top: 40px;
+}
+
+.customer-logos ul i {
+    color: #2f93fa;
+}
+
+/*.open-button {
+    box-shadow: 0px 5px 20px 0px #eee;
+    color: black;
+    padding: 0px 0;
+    border: none;
+    cursor: pointer;
+     opacity: 0.8; 
+    position: fixed;
+    top: 70px;
+    right: 0px;
+    width: 168px;
+    font-size: 22px;
+     transform: rotate(-90deg); 
+    z-index: 999;
+    border-bottom-left-radius: 10px !important;
+    border-top-left-radius: 10px !important;
+    height: 90px;
+    background: #fff;
+    text-align: center;
+    padding: 8px;
+}
+
+.open-button p {
+    font-size: 14px;
+    font-style: italic;
+}*/
+
+/*.sticky li .appao-btn {
+    background: #fff;
+}*/
+
+.slick-prev {
+    width: 20px;
+    position: absolute;
+    bottom: 50%;
+    right: 40px;
+    cursor: pointer;
+}
+
+.slick-next {
+    width: 20px;
+    position: absolute;
+    top: 41%;
+    left: -40px;
+    cursor: pointer;
+}
+
+
+/* text-based popup styling */
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 25px;
+    width: auto;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+
+
+
+
+/* 
+
+====== Zoom effect ======
+
+*/
+.mfp-zoom-in {
+
+    /* start state */
+    .mfp-with-anim {
+        opacity: 0;
+        transition: all 0.2s ease-in-out; 
+        transform: scale(0.8); 
+    }
+
+    &.mfp-bg {
+        opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+
+    /* animate in */
+    &.mfp-ready {
+        .mfp-with-anim {
+            opacity: 1;
+            transform: scale(1); 
+        }
+        &.mfp-bg {
+            opacity: 0.8;
+        }
+    }
+
+    /* animate out */
+    &.mfp-removing {
+
+        .mfp-with-anim {
+            transform: scale(0.8); 
+            opacity: 0;
+        }
+        &.mfp-bg {
+            opacity: 0;
+        }
+
+    }
+
+}
+
+
+/* 
+
+====== Newspaper effect ======
+
+*/
+.mfp-newspaper {
+
+    /* start state */
+    .mfp-with-anim {
+        opacity: 0;
+        -webkit-transition: all 0.2s ease-in-out; 
+        transition: all 0.5s;
+
+        transform: scale(0) rotate(500deg);
+    }
+
+    &.mfp-bg {
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    /* animate in */
+    &.mfp-ready {
+        .mfp-with-anim {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+        &.mfp-bg {
+            opacity: 0.8;
+        }
+    }
+
+    /* animate out */
+    &.mfp-removing {
+
+        .mfp-with-anim {
+            transform: scale(0) rotate(500deg);
+            opacity: 0;
+        }
+        &.mfp-bg {
+            opacity: 0;
+        }
+
+    }
+
+}
+
+
+
+/* 
+
+====== Move-horizontal effect ======
+
+*/
+.mfp-move-horizontal {
+
+    /* start state */
+    .mfp-with-anim {
+        opacity: 0;
+        transition: all 0.3s;
+
+        transform: translateX(-50px);
+    }
+
+    &.mfp-bg {
+        opacity: 0;
+        transition: all 0.3s;
+    }
+
+    /* animate in */
+    &.mfp-ready {
+        .mfp-with-anim {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        &.mfp-bg {
+            opacity: 0.8;
+        }
+    }
+
+    /* animate out */
+    &.mfp-removing {
+
+        .mfp-with-anim {
+            transform: translateX(50px);
+            opacity: 0;
+        }
+        &.mfp-bg {
+            opacity: 0;
+        }
+
+    }
+
+}
+
+
+/* 
+
+====== Move-from-top effect ======
+
+*/
+.mfp-move-from-top {
+
+    .mfp-content {
+        vertical-align:top; 
+    }
+
+    /* start state */
+    .mfp-with-anim {
+        opacity: 0;
+        transition: all 0.2s;
+
+        transform: translateY(-100px);
+    }
+
+    &.mfp-bg {
+        opacity: 0;
+        transition: all 0.2s;
+    }
+
+    /* animate in */
+    &.mfp-ready {
+        .mfp-with-anim {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        &.mfp-bg {
+            opacity: 0.8;
+        }
+    }
+
+    /* animate out */
+    &.mfp-removing {
+
+        .mfp-with-anim {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+        &.mfp-bg {
+            opacity: 0;
+        }
+
+    }
+
+}
+
+
+/* 
+
+====== 3d unfold ======
+
+*/
+.mfp-3d-unfold {
+
+
+    .mfp-content {
+        perspective: 2000px; 
+    }
+
+    /* start state */
+    .mfp-with-anim {
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        transform-style: preserve-3d;
+        transform: rotateY(-60deg);
+    }
+
+
+    &.mfp-bg {
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    /* animate in */
+    &.mfp-ready {
+        .mfp-with-anim {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+        &.mfp-bg {
+            opacity: 0.8;
+        }
+    }
+
+    /* animate out */
+    &.mfp-removing {
+
+        .mfp-with-anim {
+            transform: rotateY(60deg);
+            opacity: 0;
+        }
+        &.mfp-bg {
+            opacity: 0;
+        }
+
+    }
+
+}
+
+
+
+
+/* 
+
+====== Zoom-out effect ======
+
+*/
+.mfp-zoom-out {
+
+    /* start state */
+    .mfp-with-anim {
+        opacity: 0;
+        transition: all 0.3s ease-in-out; 
+        transform: scale(1.3); 
+    }
+
+    &.mfp-bg {
+        opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+
+    /* animate in */
+    &.mfp-ready {
+        .mfp-with-anim {
+            opacity: 1;
+            transform: scale(1); 
+        }
+        &.mfp-bg {
+            opacity: 0.8;
+        }
+    }
+
+    /* animate out */
+    &.mfp-removing {
+
+        .mfp-with-anim {
+            transform: scale(1.3); 
+            opacity: 0;
+        }
+        &.mfp-bg {
+            opacity: 0;
+        }
+
+    }
+
+}
+
+
+
+/* 
+
+====== "Hinge" close effect ======
+
+*/
+
+@keyframes hinge {
+    0% { transform: rotate(0); transform-origin: top left; animation-timing-function: ease-in-out; }	
+    20%, 60% { transform: rotate(80deg); transform-origin: top left; animation-timing-function: ease-in-out; }	
+    40% { transform: rotate(60deg); transform-origin: top left; animation-timing-function: ease-in-out; }	
+    80% { transform: rotate(60deg) translateY(0); opacity: 1; transform-origin: top left; animation-timing-function: ease-in-out; }	
+    100% { transform: translateY(700px); opacity: 0; }
+}
+
+.hinge {
+    animation-duration: 1s;
+    animation-name: hinge;
+}
+.mfp-with-fade {
+    /*   before-open state*/
+    .mfp-content,
+    &.mfp-bg {
+        opacity: 0;
+        transition: opacity .5s ease-out;
+    }
+    /*  // open state*/
+    &.mfp-ready {
+        .mfp-content {
+            opacity: 1; 
+        }
+        &.mfp-bg {
+            opacity: 0.8; /* // background opacity*/
+        }
+    }
+
+    /*  // closed state*/
+    &.mfp-removing {
+        &.mfp-bg {
+            opacity: 0;
+        }
+    }
+}
+
+
+
+
+
+
+/* preview styles */
+
+.links {
+    ul {
+
+    }
+    li {
+        margin-bottom: 5px; 
+    }
+}
+
+.bottom-text {
+    margin-top: 40px;
+    border-top: 2px solid #CCC;
+    p {
+        max-width: 650px; 
+    }
+}
+
+#church-feature .sec-title h2 {
+    color: #fff;
+}
+
+#church-feature .sec-title p {
+    color: #fff;
+}
+
+#church-feature .sec-title .sec-title-border {
+    border-top: 2px solid #fff;
+}
+
+#church-feature .sec-title h2 .sec-title-border span::before {
+    background: #fff;
+}
+
+#church-feature h4 {
+    color: #fff;
+}
+
+#church-feature ul li {
+    color: #fff;
+}
+
+.customer-logos-2 .box {
+    padding: 20px;
+    box-shadow: 0px 0px 0px 0px #eee;
+    background: #fff;
+}
+
+.customer-logos-2 ul i {
+    color: #2f93fa;
+}
+
+.margin-buttom-20 {
+    margin-bottom: 20px;
+}
+
+.church-logo {
+    margin-left:25px;
+    margin-right: 20px;
+}
+
+.text-left li {
+    padding-left: 20px;
 }

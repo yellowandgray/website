@@ -144,6 +144,12 @@
         margin: 45px auto 0;
         max-width: 400px;
     }
+    .slick-next {
+        left: -20px !important;
+    }
+    .slick-prev {
+        right: 0 !important;
+    }
 }
 @media only screen and (max-width: 767px){
     .hero-area-content {
@@ -219,6 +225,16 @@
     }
     .hero-area.breadcrumb-area {
         padding: 100px 0 70px;
+    }
+    .slick-next {
+        display: none !important;
+    }
+    .slick-prev {
+        display: none !important;
+    }
+    .open-button {
+        width: 150px !important;
+        height: 85px !important;
     }
 }
 @media only screen and (max-width: 576px){
