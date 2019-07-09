@@ -1000,8 +1000,9 @@
 
         <div id="test-popup" class="white-popup mfp-with-anim mfp-hide">
             <h3 style="text-align: center;">Joshua Clements</h3>
+            <center><i>Founder and CEO</i></center>
             <br/>
-            <p>Founder and CEO – The concept and design of the Christlink App was  birthed out of a deep desire to serve God and help the Church and bring together the global community of Christians. Joshua Clements a post graduate in Business Administration from Chrarles Sturt University,  has over 25 years in the corporate world as an expert in Human Resource, business networking and People Management. Combining his passion for God and his God given ability to work for the people of God he was driven to convert his vision into a blessed reality</p>
+            <p>The concept and design of the Christlink App was  birthed out of a deep desire to serve God and help the Church and bring together the global community of Christians. Joshua Clements a post graduate in Business Administration from Chrarles Sturt University,  has over 25 years in the corporate world as an expert in Human Resource, business networking and People Management. Combining his passion for God and his God given ability to work for the people of God he was driven to convert his vision into a blessed reality</p>
         </div>
 
         <a href="#" class="scrollToTop">
