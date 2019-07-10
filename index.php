@@ -207,7 +207,7 @@
                                     <div class="col-md-7 padding-top-40">
                                         <h4>Fellowships</h4>
                                         <br/>
-                                        <ul>
+                                        <ul class="text-left">
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; Information regarding the various fellowships/ house groups/ cell groups etc</li>
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; when the groups meet – how long is the meeting for</li>
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; what the  groups do – past and present and future projects</li>
@@ -226,7 +226,7 @@
                                     <div class="col-md-7 padding-top-40 margin-buttom-20">
                                         <h4>Support</h4>
                                         <br/>
-                                        <ul>
+                                        <ul class="text-left">
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; 24x7 chat /email for those with questions or doubts regarding church and church matters.</li>
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; Other technical issues</li>
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; FAQ</li>
@@ -242,7 +242,7 @@
                                     <div class="col-md-7 padding-top-40 margin-buttom-20">
                                         <h4>Pay</h4>
                                         <br/>
-                                        <ul>
+                                        <ul class="text-left">
                                             <li>Link from the specific project will be directed here to a payment gateway</li>
                                             <li>List of the projects that need financial support</li>
                                             <li>Options to pay 
@@ -265,7 +265,7 @@
                                     <div class="col-md-7 padding-top-40 margin-buttom-20">
                                         <h4>Counselling</h4>
                                         <br/>
-                                        <ul>
+                                        <ul class="text-left">
                                             <li>Contact information for church appointed and church approved counsellors in various fields who will handle sessions with confidentiality and real time support in matters of
                                                 <ul>
                                                     <i class='icofont icofont-ui-check'></i><li> &nbsp; Sexual issues.</li>
@@ -289,7 +289,7 @@
                                     <div class="col-md-7 padding-top-40 margin-buttom-20">
                                         <h4>Emergency</h4>
                                         <br/>
-                                        <ul>
+                                        <ul class="text-left">
                                             <li>When you press this icon with a long touch you activate the emergency signal which reaches out to professionals (doctors from your church) and social volunteers (youth adults and other volunteers from your church) who will immediately step in to help you in times ofay
                                                 <ul>
                                                     <i class='icofont icofont-ui-check'></i><li> &nbsp; Health emergencies</li>
@@ -312,7 +312,7 @@
                                     <div class="col-md-7 padding-top-40 margin-buttom-20">
                                         <h4>Live</h4>
                                         <br/>
-                                        <ul>
+                                        <ul class="text-left">
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; Live church services</li>
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; Live church programmes like concerts, conventions, workshops etc</li>
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; Live online offerings – during church services</li>
@@ -329,7 +329,7 @@
                                         <h4>Shop</h4>
                                         <br/>
                                         <p>Access your church book store/ Shop - from the click of a button on your smart phone at discounted prices</p>
-                                        <ul>
+                                        <ul class="text-left">
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; Bibles</li>
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; Christian books</li>
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; Christian articles and gift items</li>
@@ -345,7 +345,7 @@
                                     <div class="col-md-7 padding-top-40 margin-buttom-20">
                                         <h4>Bible</h4>
                                         <br/>
-                                        <ul>
+                                        <ul class="text-left">
                                             <li>like to the church approved mobile applications and WebPages for
                                                 <ul>
                                                     <i class='icofont icofont-ui-check'></i><li> &nbsp; Bible,</li>
