@@ -131,9 +131,6 @@
         font-size: 16px;
         line-height: 30px;
     }
-    .products-content-main figure figcaption {
-        max-width: 445px !important;
-    }
 }
 
 @media screen and (width: 1440px),
@@ -146,6 +143,113 @@ screen and (height:900px) {
         padding: 0 30px;
     }
 }
+
+@media only screen and (min-width: 991px) and (max-width:1024px) {
+    .products-content-main figure .img-wrapper img {
+        top: -33% !important;
+    }
+    #tab2 .products-content-main figure .img-wrapper img {
+        top: -48% !important;
+    }
+    #tab4 .products-content-main figure .img-wrapper img {
+        top: -63% !important;
+    }
+    #tab7 .products-content-main figure .img-wrapper img {
+        top: -48% !important;
+    }
+    #tab8 .products-content-main figure .img-wrapper img {
+        top: -48% !important;
+    }
+    .products-content-main figure figcaption {
+        max-width: 425px !important;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width:1199px) {
+    .products-content-main figure .img-wrapper img {
+        top: -40% !important;
+    }
+    #tab2 .products-content-main figure .img-wrapper img {
+        top: -62% !important;
+    }
+    #tab4 .products-content-main figure .img-wrapper img {
+        top: -83% !important;
+    }
+    #tab7 .products-content-main figure .img-wrapper img {
+        top: -62% !important;
+    }
+    #tab8 .products-content-main figure .img-wrapper img {
+        top: -62% !important;
+    }
+    .products-content-main figure figcaption {
+        max-width: 430px !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width:1366px) {
+    .products-content-main figure .img-wrapper img {
+        top: -14% !important;
+    }
+    #tab2 .products-content-main figure .img-wrapper img {
+        top: -30% !important;
+    }
+    #tab4 .products-content-main figure .img-wrapper img {
+        top: -30% !important;
+    }
+    #tab7 .products-content-main figure .img-wrapper img {
+        top: -30% !important;
+    }
+    #tab8 .products-content-main figure .img-wrapper img {
+        top: -30% !important;
+    }
+    .products-content-main figure figcaption {
+        max-width: 540px !important;
+    }
+    #tab11 .products-content-main figure figcaption {
+        max-width: 570px !important;
+    }
+}
+@media only screen and (min-width: 1367px) and (max-width:1400px) {
+    .products-content-main figure .img-wrapper img {
+        top: -10% !important;
+    }
+    #tab2 .products-content-main figure .img-wrapper img {
+        top: 10% !important;
+    }
+    #tab4 .products-content-main figure .img-wrapper img {
+        top: -70px !important;
+    }
+    #tab7 .products-content-main figure .img-wrapper img {
+        top: -20% !important;
+    }
+    #tab8 .products-content-main figure .img-wrapper img {
+        top: -20% !important;
+    }
+    .products-content-main figure figcaption {
+        max-width: 555px !important;
+    }
+}
+@media only screen and (min-width: 1401px) and (max-width:1440px) {
+    .products-content-main figure .img-wrapper img {
+        top: 4% !important;
+    }
+    #tab2 .products-content-main figure .img-wrapper img {
+        top: 2% !important;
+    }
+    #tab4 .products-content-main figure .img-wrapper img {
+        top: -20px !important;
+    }
+    #tab7 .products-content-main figure .img-wrapper img {
+        top: -5% !important;
+    }
+    #tab8 .products-content-main figure .img-wrapper img {
+        top: -11% !important;
+    }
+    .products-content-main figure figcaption {
+        max-width: 480px !important;
+    }
+}
+
 
 @media screen and (width: 1280px),
 screen and (height:1024px) {
@@ -491,9 +595,9 @@ screen and (height:1024px) {
     .halal_jakim a figure{width: 100px !important;}
     .accrediation_logo ul li a p{font-size: 12px;}
     .heading_text p{font-size: 14px; line-height: 25px;}
-/*    .list-group-product .nav-tabs > li > a {
-        font-size: 14px
-    }*/
+    /*    .list-group-product .nav-tabs > li > a {
+            font-size: 14px
+        }*/
 
 }
 
