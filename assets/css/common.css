@@ -192,7 +192,7 @@
     background: #FFF;
     padding: 25px;
     width: auto;
-    max-width: 550px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -607,4 +607,20 @@
 
 .text-left li {
     padding-left: 20px;
+}
+
+.sticky .church-logo-color {
+    display: none;
+}
+
+.curch-logo-color-1 {
+    display: none;
+}
+
+.sticky .curch-logo-color-1 {
+    display: block;
+}
+
+.sticky .mainmenu {
+    margin-top: -25px;
 }
