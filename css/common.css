@@ -1,0 +1,105 @@
+.sf-menu a {
+    color:#6f6f6f !important;
+    padding: 4px 14px !important;
+    font-weight: 600 !important;
+    margin-top: 32px;
+    letter-spacing: 1px;
+
+}
+.sf-menu a:hover, .sf-menu a:focus, .sf-menu a.active {
+    background: #019dd9 !important;
+    color: #fff !important;
+}
+
+.sf-menu, .sf-menu * {
+    margin: 0;
+    padding: 2px !important;
+    list-style: none;
+}
+.about-font p {
+    color: #fff !important;
+}
+.about-font .about-child p {
+    text-align: justify;
+}
+
+.about-font h2 {
+    color: #fff !important;
+    padding-top: 40px;
+}
+.about-font h3 {
+    color: #b6ff59  !important;
+}
+.services {
+    margin-bottom: 4.5em;
+    padding: 70px 25px 25px 25px;
+    border: 2px solid #ecececeb;
+    position: relative;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+}
+.video-eft {
+    margin-bottom: 4.5em;
+    padding: 70px 25px 25px 25px;
+    border: none;
+    position: relative;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+
+}
+#fh5co-hero {
+    min-height: 700px !important;
+}
+.pad-70{
+    padding: 70px 0px;
+}
+.testimony h3 {
+    color: rgb(139, 198, 64);
+    font-weight: 400;
+    margin: 0 0 30px 0;
+}
+.pad-t-70 {
+    padding: 70px 0px 0px 0px ;
+}
+.fh5co-counters h2{
+    padding: 115px 0px 0px 0px;
+}
+.testimony:hover {
+    box-shadow: 2px -2px 4px 0px #8c8989;
+    border-radius: 20px;
+    transition: all linear .2s;
+    background: rgba(238, 238, 238, 0.12941176470588237);
+}
+.bg-design img {
+    box-shadow: 0px 0px 11px 9px #efefef;
+}
+.bg-design img:hover {
+    transform: scale(1.02);
+    transition: all linear 0.1s;
+}
+.sec-head h2 {
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 50px;
+    font-size: 40px !Important;
+}
+.sec-head-w h2 {
+    font-weight: 600;
+    color: #fff;
+}
+.pad-b-40 {
+    padding-bottom: 40px;
+}
+.fh5co-parallax2 {
+    padding-top: 0px !important; 
+    height: inherit !important;
+}
+p, ul, ol {
+    margin-bottom: 1.5em;
+    font-size: 17px !important;
+    color: #848484;
+    font-weight: 300;
+    font-family: "Open Sans", Arial, serif;
+}
