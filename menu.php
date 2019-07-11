@@ -16,15 +16,15 @@
                         <li><a class="nav-link" href="#feature">Features</a></li>
                         <li><a class="nav-link" href="#screenshot">Screenshots</a></li>
                         <li><a class="nav-link" href="#team">Team</a></li>
-                        <!--                        <li><a class="nav-link" href="#blog">Blog</a></li>-->
+<!--                        <li><a class="nav-link" href="#blog">Blog</a></li>-->
                         <li><a class="nav-link" href="#contact">Contact Us</a></li>
-                        <li><a class="church-logo" href="#church-home">
+                        <li class="church-img">
+                            <a class="church-logo" href="#church-home">
                                 <img class="church-logo-color" src="assets/img/church-link-logo.png" alt="churchlink">
                                 <img class="curch-logo-color-1" src="assets/img/church-link-logo-1.png" alt="churchlink">
                             </a>
                         </li>
                         <li><a class="appao-btn" href="#">Download</a></li>
-
                     </ul>
                 </div>
             </div>

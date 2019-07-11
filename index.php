@@ -402,7 +402,7 @@
                         <div class="single-feature-box text-lg-right text-center">
                             <ul>
                                 <li>
-                                    <div class="feature-box-info" data-toggle="popover" title="Christian News" data-placement="bottom" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i> <li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; International christian headlines</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; National</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From the holy land</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Church news</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trending christian viral videos – music - testimonies etc..</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" title="Christian News" data-container="body" data-placement="left" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i> <li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; International christian headlines</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; National</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From the holy land</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Church news</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trending christian viral videos – music - testimonies etc..</li></ul>">
                                         <h4>Christian News</h4>
                                     </div>
                                     <div class="feature-box-icon">
@@ -410,7 +410,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Member Log in to Local Church" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i> <li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Log in to the local church page with your unique member ID and password</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="left" title="Member Log in to Local Church" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i> <li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Log in to the local church page with your unique member ID and password</li></ul>">
                                         <h4>Member log in to Local Church</h4>
                                     </div>
                                     <div class="feature-box-icon">
@@ -418,7 +418,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Church Information" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Access information about your local church</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conception and history of the church </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Church doctrine </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Church pastor </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Church elders/committee members </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contact information </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ministries of the church </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Projects undertaken by the church </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Church calendar </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gallery </li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="left" title="Church Information" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Access information about your local church</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conception and history of the church </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Church doctrine </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Church pastor </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Church elders/committee members </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contact information </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ministries of the church </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Projects undertaken by the church </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Church calendar </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gallery </li></ul>">
                                         <h4>Church Information</h4>
                                     </div>
                                     <div class="feature-box-icon">
@@ -426,7 +426,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Church Posts" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Local church news</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Birthdays, wedding anniversaries, deaths and other special occasions of church members</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Events organised by the church or supported or suggested by the church </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Extensive archive of media – pastor’s sermons, bible studies, concerts, programmes etc. </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pastor’s special address to the church members etc – daily basis or weekly basis </li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="left" title="Church Posts" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Local church news</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Birthdays, wedding anniversaries, deaths and other special occasions of church members</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Events organised by the church or supported or suggested by the church </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Extensive archive of media – pastor’s sermons, bible studies, concerts, programmes etc. </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pastor’s special address to the church members etc – daily basis or weekly basis </li></ul>">
                                         <h4>Church Posts</h4>
                                     </div>
                                     <div class="feature-box-icon">
@@ -434,7 +434,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Member Posts" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Directory of all church members with the details of their family members which is updated regularly – yearly</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Social profile with a spiritual aspect of each member</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Request for prayer</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sharing personal testimony</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sharing special word from god</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sharing a special personal News</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="left" title="Member Posts" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Directory of all church members with the details of their family members which is updated regularly – yearly</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Social profile with a spiritual aspect of each member</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Request for prayer</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sharing personal testimony</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sharing special word from god</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sharing a special personal News</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other</li></ul>">
                                         <h4>Member Posts</h4>
                                     </div>
                                     <div class="feature-box-icon">
@@ -442,7 +442,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Fellowships" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Information regarding the various fellowships/ house groups/ cell groups etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When the groups meet – how long is the meeting for</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; What the  groups do – past and present and future projects</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Where the groups meet – location and address</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contact person and contact information</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gallery</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="left" title="Fellowships" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Information regarding the various fellowships/ house groups/ cell groups etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When the groups meet – how long is the meeting for</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; What the  groups do – past and present and future projects</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Where the groups meet – location and address</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contact person and contact information</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gallery</li></ul>">
                                         <h4>Fellowships</h4>
                                     </div>
                                     <div class="feature-box-icon">
@@ -450,7 +450,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Support" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24x7 chat /email for those with questions or doubts regarding church and church matters.</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other technical issues</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FAQ</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="left" title="Support" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24x7 chat /email for those with questions or doubts regarding church and church matters.</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other technical issues</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FAQ</li></ul>">
                                         <h4>Support</h4>
                                     </div>
                                     <div class="feature-box-icon">
@@ -478,7 +478,7 @@
                                     <div class="feature-box-icon">
                                         <i class="icofont icofont-pay"></i>
                                     </div>
-                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Pay" data-html="true" data-content="<p>Link from the specific project will be directed here to a payment gateway</p><p>List of the projects that need financial support</p><p>Options to pay</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tithe</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Offerings – thanksgiving etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alms – charity </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other donations</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="right" title="Pay" data-html="true" data-content="<p>Link from the specific project will be directed here to a payment gateway</p><p>List of the projects that need financial support</p><p>Options to pay</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tithe</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Offerings – thanksgiving etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alms – charity </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other donations</li></ul>">
                                         <h4>Pay</h4>
                                     </div>
                                 </li>
@@ -486,7 +486,7 @@
                                     <div class="feature-box-icon">
                                         <i class="icofont icofont-brand-myspace"></i>
                                     </div>
-                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Counselling" data-html="true" data-content="<p>Contact information for church appointed and church approved counsellors in various fields who will handle sessions with confidentiality and real time support in matters of</p> <ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sexual issues.</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Relationships in marriage</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Relationships in family</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Friends at school/office etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Academic and career based </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Business and work related</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="right" title="Counselling" data-html="true" data-content="<p>Contact information for church appointed and church approved counsellors in various fields who will handle sessions with confidentiality and real time support in matters of</p> <ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sexual issues.</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Relationships in marriage</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Relationships in family</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Friends at school/office etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Academic and career based </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Business and work related</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other</li></ul>">
                                         <h4>Counselling</h4>
                                     </div>
                                 </li>
@@ -494,7 +494,7 @@
                                     <div class="feature-box-icon">
                                         <i class="icofont icofont-megaphone-alt"></i>
                                     </div>
-                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom"  title="Emergency" data-html="true" data-content="<p>When you press this icon with a long touch you activate the emergency signal which reaches out to professionals (doctors from your church) and social volunteers (youth adults and other volunteers from your church) who will immediately step in to help you in times of</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Health emergencies</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Accidents</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fire</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crime</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Abuse</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Etc.</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="right"  title="Emergency" data-html="true" data-content="<p>When you press this icon with a long touch you activate the emergency signal which reaches out to professionals (doctors from your church) and social volunteers (youth adults and other volunteers from your church) who will immediately step in to help you in times of</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Health emergencies</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Accidents</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fire</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crime</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Abuse</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Etc.</li></ul>">
                                         <h4>Emergency </h4>
                                     </div>
                                 </li>
@@ -502,7 +502,7 @@
                                     <div class="feature-box-icon">
                                         <i class="icofont icofont-contrast"></i>
                                     </div>
-                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Live" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Live church services</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Live church programmes like concerts, conventions, workshops etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Live online offerings – during church services</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="right" title="Live" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Live church services</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Live church programmes like concerts, conventions, workshops etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Live online offerings – during church services</li></ul>">
                                         <h4>Live</h4>
                                     </div>
                                 </li>
@@ -510,7 +510,7 @@
                                     <div class="feature-box-icon">
                                         <i class="icofont icofont-cart"></i>
                                     </div>
-                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Shop" data-html="true" data-content="<p>Shop – Access your church book store/ Shop - from the click of a button on your smart phone at discounted prices</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bibles</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Christian books</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Christian articles and gift items</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="right" title="Shop" data-html="true" data-content="<p>Shop – Access your church book store/ Shop - from the click of a button on your smart phone at discounted prices</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bibles</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Christian books</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Christian articles and gift items</li></ul>">
                                         <h4>Shop</h4>
                                     </div>
                                 </li>
@@ -518,7 +518,7 @@
                                     <div class="feature-box-icon">
                                         <i class="icofont icofont-book-alt"></i>
                                     </div>
-                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Bible" data-html="true" data-content="<p>like to the church approved mobile applications and WebPages for</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bible,</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bible commentary,</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bible resources</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Etc</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="right" title="Bible" data-html="true" data-content="<p>like to the church approved mobile applications and WebPages for</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bible,</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bible commentary,</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bible resources</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Etc</li></ul>">
                                         <h4>Bible</h4>
                                     </div>
                                 </li>
@@ -526,7 +526,7 @@
                                     <div class="feature-box-icon">
                                         <i class="icofont icofont-notepad"></i>
                                     </div>
-                                    <div class="feature-box-info" data-toggle="popover" data-placement="bottom" title="Notes" data-html="true" data-content="<p>A mobile friendly page to note down personal notes during</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sermon,</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Personal quiet time</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Etc.</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="right" title="Notes" data-html="true" data-content="<p>A mobile friendly page to note down personal notes during</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sermon,</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Personal quiet time</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Etc.</li></ul>">
                                         <h4>Notes</h4>
                                     </div>
                                 </li>
@@ -707,7 +707,7 @@
             <div class="container">
                 <div class="sec-title">
                     <h2>Web App Features<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
-                    <p> A vast cyberspace wherein the church leaders are better equipped to shepherd their church congregation thereby facilitating healthy spiritual growth. </p>
+                    <p>A web application to equip and empower church authorities like the pastors and the church administration to effectively utilise the latest IT tools and technologies in church management system.</p>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
@@ -1142,8 +1142,23 @@
 
         </script>
         <script>
-            $(document).ready(function () {
-                $('[data-toggle="popover"]').popover();
+            // Code goes here
+
+
+            $(".pop").popover({trigger: "manual", html: true, animation: false})
+                    .on("mouseenter", function () {
+                        var _this = this;
+                        $(this).popover("show");
+                        $(".popover").on("mouseleave", function () {
+                            $(_this).popover('hide');
+                        });
+                    }).on("mouseleave", function () {
+                var _this = this;
+                setTimeout(function () {
+                    if (!$(".popover:hover").length) {
+                        $(_this).popover("hide");
+                    }
+                }, 300);
             });
         </script>
     </body>

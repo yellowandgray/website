@@ -619,8 +619,14 @@
 
 .sticky .curch-logo-color-1 {
     display: block;
+    margin-bottom: -25px;
+    position: relative;
 }
 
-.sticky .mainmenu {
-    margin-top: -25px;
+.church-img a:hover {
+    border: 1px solid transparent !important;
+}
+
+.church-img a:focus {
+    outline: none !important;
 }
