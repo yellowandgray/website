@@ -413,6 +413,8 @@ p,input,textarea,select,.marquee,span{font-family: 'Montserrat', sans-serif; col
     position: fixed;
     top: 0;
     left: 0;
+    max-width: 768px;
+    height: 100%
 }
 
 .banner_sticky {
@@ -854,9 +856,9 @@ a.mobile-social {
     min-height: 450px;
     position: relative;
     position: absolute;
-    top: 34%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+    top: 0%;
+/*    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);*/
 }
 
 .products-content-main figure .img-wrapper img {
@@ -864,11 +866,11 @@ a.mobile-social {
     /* object-fit: cover; */
     /* object-position: 50% 50%; */
     position: absolute;
-    /* top: 61%; */
-    left: 50%;
-    height: 480px;
-    transform: translate(-50%, 4%);
-    -webkit-transform: translate(-50%, -4%);
+    top: 0%;
+/*    left: 50%;*/
+    height: auto;
+/*    transform: translate(-50%, 4%);
+    -webkit-transform: translate(-50%, -4%);*/
 }
 
 .inner-contant {
@@ -1855,15 +1857,17 @@ input#clear_product {
 
 /* Popup box BEGIN */
 .hover_bkgr_fricc{
-    /*    background:rgba(0,0,0,.4);*/
-    cursor:pointer;
-    display:none;
-    height:100%;
-    position:fixed;
-    text-align:center;
-    top:0;
-    width:96%;
-    z-index:10000;
+    /* background: rgba(0,0,0,.4); */
+    cursor: pointer;
+    display: none;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    max-width: 1920px;
+    left: 25px;
 }
 .hover_bkgr_fricc .helper{
     display:inline-block;
@@ -1921,15 +1925,17 @@ input#clear_product {
 
 /* Popup box BEGIN */
 .hover_bkgr_fricc1{
-    /*    background:rgba(0,0,0,.4);*/
-    cursor:pointer;
-    display:none;
-    height:100%;
-    position:fixed;
-    text-align:center;
-    top:0;
-    width:96%;
-    z-index:10000;
+    /* background: rgba(0,0,0,.4); */
+    cursor: pointer;
+    display: none;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    max-width: 1920px;
+    left: 25px;
 }
 .hover_bkgr_fricc1 .helper1{
     display:inline-block;
@@ -2024,11 +2030,11 @@ input#clear_product {
     padding: 15px 70px;
     color: #fff;
     font-size: 18px;
-    position: sticky;
+    /*    position: absolute;*/
     /* bottom: -24px; */
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
+    /*    left: 50%;*/
+    /*    transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);*/
     cursor: pointer;
     display: inline-block;
     margin: 10px 0 10px 0;

@@ -81,9 +81,9 @@ $categories = $db->selectAllWithoutWhere('categories');
             <!-- /header -->
             <!-- content start -->
             <div class="contain content">
-                <section id="main-banner" class="container-fluid" style="height: 756px;">
+                <section id="main-banner" class="container-fluid">
                     <!--                    <div class="row"></div>-->
-                    <div class="banner_menu clearfix banner_sticky" style="height: 756px;">
+                    <div class="banner_menu clearfix banner_sticky">
                         <div class="sidebar-container">
                             <div class="sidebar-menu">
                                 <div id="hamburger" class="hamburger">
@@ -441,11 +441,11 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                                         $sub_cats = $db->selectAllWithWhere('sub_categories', 'category_id=' . $row['ID']);
                                                                         foreach ($sub_cats as $sub) {
                                                                             ?>
-                                                                        <div class="sub-category">
-                                                                            <img src="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" alt="image" data-normal="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" data-hover="<?php echo IMG_BASE_URL . $sub['hover_icon']; ?>"onmouseout="mouseOut(this)" onmouseenter="mouseEnter(this)" onclick="renderSubCategory(<?php echo $sub['ID']; ?>);" />
-                                                                            <div class="sub-cat-title"><?php echo $sub['title']; ?></div>
-                                                                        </div>
-                                                                                <?php } ?>
+                                                                            <div class="sub-category">
+                                                                                <img src="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" alt="image" data-normal="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" data-hover="<?php echo IMG_BASE_URL . $sub['hover_icon']; ?>"onmouseout="mouseOut(this)" onmouseenter="mouseEnter(this)" onclick="renderSubCategory(<?php echo $sub['ID']; ?>);" />
+                                                                                <div class="sub-cat-title"><?php echo $sub['title']; ?></div>
+                                                                            </div>
+                                                                        <?php } ?>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -837,7 +837,7 @@ $categories = $db->selectAllWithoutWhere('categories');
 <!--                                                    <span></span>-->
                                                     <img src="img/web1.png" alt="" title="">
                                                     <p>www.macworldinc.com</p>
-                                                </a><p><a href="#">                                        </a>
+                                                </a><p><a href="#"></a>
                                                 </p>
                                             </li>
                                         </ul>
