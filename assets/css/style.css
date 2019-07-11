@@ -361,7 +361,7 @@ input::-webkit-input-placeholder {
     background: #000529; /* Old browsers */
     background: -moz-linear-gradient(left, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #cecece 1%,#cecece 24%,#0a3bfe 67%,#496af3 100%);
+    background: linear-gradient(to right, #cecece 1%,#cecece 24%,#90a4f7 67%,#496af3 100%);
 }
 .header.sticky {
     padding: 10px 0;

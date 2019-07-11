@@ -42,7 +42,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="single-about-box">
+                        <div class="single-about-box active">
                             <i class="icofont icofont-cubes"></i>
                             <h4>Opportunity</h4>
                             <p>An opportunity for the community of believers to be able to express Christian virtues of sharing and caring at times of emergency and need.</p>
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="single-about-box">
+                        <div class="single-about-box active">
                             <i class="icofont icofont-newspaper"></i>
                             <h4>Business and Logistical needs</h4>
                             <p>A one stop solution for all your business and logistical needs at the time of birth, death, weddings, baptisms, confirmations, prayer meetings and thanksgivings etc. </p>
@@ -207,6 +207,7 @@
                                     <div class="col-md-7 padding-top-40">
                                         <h4>Fellowships</h4>
                                         <br/>
+                                        <p>Fellowships can be created based on the church's requirement such as Youth Fellowship, Sunday School, Women Fellowship, Men Fellowship, Bible Study, Life Group, etc.</p>
                                         <ul class="text-left">
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; Information regarding the various fellowships/ house groups/ cell groups etc</li>
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; when the groups meet – how long is the meeting for</li>
@@ -266,7 +267,7 @@
                                         <h4>Counselling</h4>
                                         <br/>
                                         <ul class="text-left">
-                                            <li>Contact information for church appointed and church approved counsellors in various fields who will handle sessions with confidentiality and real time support in matters of
+                                            <li>Contact information of church appointed and church approved counsellors in various fields who will handle sessions with confidentiality and real time support in matters of
                                                 <ul>
                                                     <i class='icofont icofont-ui-check'></i><li> &nbsp; Sexual issues.</li>
                                                     <i class='icofont icofont-ui-check'></i><li> &nbsp; Relationships in marriage</li>
@@ -333,6 +334,7 @@
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; Bibles</li>
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; Christian books</li>
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; Christian articles and gift items</li>
+                                            <i class='icofont icofont-ui-check'></i><li> &nbsp; CD's / DVD's and Music</li>
                                         </ul>
                                     </div>
                                     <div class="col-md-5 margin-buttom-20">
@@ -346,11 +348,11 @@
                                         <h4>Bible</h4>
                                         <br/>
                                         <ul class="text-left">
-                                            <li>like to the church approved mobile applications and WebPages for
+                                            <li>linked to the church approved mobile applications and WebPages for
                                                 <ul>
-                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Bible,</li>
-                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Bible commentary,</li>
-                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; bible resources</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Bible</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Bible Commentary</li>
+                                                    <i class='icofont icofont-ui-check'></i><li> &nbsp; Bible Resources</li>
                                                     <i class='icofont icofont-ui-check'></i><li> &nbsp; Etc</li>
                                                 </ul>
                                             </li>
@@ -442,7 +444,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="left" title="Fellowships" data-html="true" data-content="<ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Information regarding the various fellowships/ house groups/ cell groups etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When the groups meet – how long is the meeting for</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; What the  groups do – past and present and future projects</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Where the groups meet – location and address</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contact person and contact information</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gallery</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="left" title="Fellowships" data-html="true" data-content="<p>Fellowships can be created based on the church's requirement such as Youth Fellowship, Sunday School, Women Fellowship, Men Fellowship, Bible Study, Life Group, etc.</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Information regarding the various fellowships/ house groups/ cell groups etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When the groups meet – how long is the meeting for</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; What the  groups do – past and present and future projects</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Where the groups meet – location and address</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contact person and contact information</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gallery</li></ul>">
                                         <h4>Fellowships</h4>
                                     </div>
                                     <div class="feature-box-icon">
@@ -486,7 +488,7 @@
                                     <div class="feature-box-icon">
                                         <i class="icofont icofont-brand-myspace"></i>
                                     </div>
-                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="right" title="Counselling" data-html="true" data-content="<p>Contact information for church appointed and church approved counsellors in various fields who will handle sessions with confidentiality and real time support in matters of</p> <ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sexual issues.</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Relationships in marriage</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Relationships in family</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Friends at school/office etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Academic and career based </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Business and work related</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="right" title="Counselling" data-html="true" data-content="<p>Contact information of church appointed and church approved counsellors in various fields who will handle sessions with confidentiality and real time support in matters of</p> <ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sexual issues.</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Relationships in marriage</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Relationships in family</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Friends at school/office etc</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Academic and career based </li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Business and work related</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other</li></ul>">
                                         <h4>Counselling</h4>
                                     </div>
                                 </li>
@@ -510,7 +512,7 @@
                                     <div class="feature-box-icon">
                                         <i class="icofont icofont-cart"></i>
                                     </div>
-                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="right" title="Shop" data-html="true" data-content="<p>Shop – Access your church book store/ Shop - from the click of a button on your smart phone at discounted prices</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bibles</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Christian books</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Christian articles and gift items</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="right" title="Shop" data-html="true" data-content="<p>Shop – Access your church book store/ Shop - from the click of a button on your smart phone at discounted prices</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bibles</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Christian books</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Christian articles and gift items</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CD's / DVD's and Music</li></ul>">
                                         <h4>Shop</h4>
                                     </div>
                                 </li>
@@ -518,7 +520,7 @@
                                     <div class="feature-box-icon">
                                         <i class="icofont icofont-book-alt"></i>
                                     </div>
-                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="right" title="Bible" data-html="true" data-content="<p>like to the church approved mobile applications and WebPages for</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bible,</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bible commentary,</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bible resources</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Etc</li></ul>">
+                                    <div class="feature-box-info pop" data-toggle="popover" data-container="body" data-placement="right" title="Bible" data-html="true" data-content="<p>linked to the church approved mobile applications and WebPages for</p><ul><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bible</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bible Commentary</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bible Resources</li><i class='icofont icofont-ui-check'></i><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Etc</li></ul>">
                                         <h4>Bible</h4>
                                     </div>
                                 </li>
