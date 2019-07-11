@@ -672,8 +672,8 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="single-about-box">
-                            <i class="icofont icofont-cubes"></i>
+                        <div class="single-about-box active">
+                            <i class="icofont icofont-database"></i>
                             <h4>Real Time Database</h4>
                             <br/>
                             <p>The exhaustive database of all church members and their family members with details of their family structure, work dynamics, age and special dates, church affiliations etc.</p>
@@ -684,14 +684,14 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="single-about-box active">
-                            <i class="icofont icofont-cart-alt"></i>
+                            <i class="icofont icofont-tools"></i>
                             <h4>The Church Leader’s (Pastor’s) Tool</h4>
                             <p>Web technology that aids and stores the church leader (pastor) to better shepherd the congregation by giving him the relevant information at the appropriate time. It also provides a secure and vast storage for all his resources, past sermons, testimonies etc at one place with easy access.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="single-about-box">
-                            <i class="icofont icofont-newspaper"></i>
+                        <div class="single-about-box active">
+                            <i class="icofont icofont-data"></i>
                             <h4>Church Management System</h4>
                             <br/>
                             <p>Layers of data from various excel sheets can be overlaid to produce a meaningful relational database incorporating spatial economic aspects of the church and congregational needs. It would simplify the process to plan a Christmas carol singing route or the schedule of the pastor’s house visitation.</p>
@@ -943,7 +943,7 @@
                                     </div>
                                     <div class="contact-address-info">
                                         <a href="callto:#">+91 99625 52423</a>
-                                        <a href="callto:#">+91 98406 51865</a>
+<!--                                        <a href="callto:#">+91 98406 51865</a>-->
                                     </div>
                                 </li>
                                 <li>
@@ -952,7 +952,7 @@
                                     </div>
                                     <div class="contact-address-info">
                                         <a href="mailto:joshuva.clements@gmail.com">joshua.clements@gmail.com</a>
-                                        <a href="mailto:kgunalan@gmail.com">kgunalan@gmail.com</a>
+<!--                                        <a href="mailto:kgunalan@gmail.com">kgunalan@gmail.com</a>-->
                                     </div>
                                 </li>
                                 <!--                                <li>
@@ -980,13 +980,13 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="copyright-area">
-                            <ul>
+<!--                            <ul>
                                 <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
                                 <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
                                 <li><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
                                 <li><a href="#"><i class="icofont icofont-social-pinterest"></i></a></li>
                                 <li><a href="#"><i class="icofont icofont-social-google-plus"></i></a></li>
-                            </ul>
+                            </ul>-->
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 &copy; Copyright Christlink | All rights reserved | Designed By <a href="http://www.yellowandgray.com/" target="_blank">YG Studio.</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </p>

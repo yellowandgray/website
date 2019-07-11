@@ -460,7 +460,7 @@ input::-webkit-input-placeholder {
 }
 .single-about-box.active i::before ,
 .single-about-box:hover i::before {
-    color: #000;
+    color: #0074da;
 }
 .single-about-box h4 {
     margin: 25px 0 15px;
