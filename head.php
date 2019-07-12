@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link href="assets/css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/silk-sld.css" rel="stylesheet" type="text/css"/>
     <title>SJ-VARIED</title>
     
 

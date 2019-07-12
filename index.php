@@ -77,17 +77,16 @@
             <div class="slider stick-dots">
                 <div class="slide">
                     <div class="slide__img">
-                        <img src="" alt="" data-lazy="assets/img/bg/banner_bg.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+                        <img src="" alt="" data-lazy="assets/img/bg/banner_bg.jpg"  class="full-image animated img-responsive" data-animation-in="zoomInImage"/>
                     </div>
                     <div class="slide__content">
                         <h1>
-                            We use advanced technology solutions to generate green energy from waste.
-                        </h1>
+                            We use advanced technology solutions to generate green energy from waste.</h1>
                     </div>
                 </div>
                 <div class="slide">
                     <div class="slide__img">
-                        <img src="" alt="" data-lazy="assets/img/bg/banner_bg.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+                        <img src="" alt="" data-lazy="assets/img/bg/banner_bg.jpg" class="full-image animated img-responsive" data-animation-in="zoomInImage"/>
                     </div>
                     <div class="slide__content">
                         <h1>
