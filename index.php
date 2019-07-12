@@ -81,9 +81,9 @@ $categories = $db->selectAllWithoutWhere('categories');
             <!-- /header -->
             <!-- content start -->
             <div class="contain content">
-                <section id="main-banner" class="container-fluid">
+                <section id="main-banner" class="container-fluid" style="height: 756px;">
                     <!--                    <div class="row"></div>-->
-                    <div class="banner_menu clearfix banner_sticky">
+                    <div class="banner_menu clearfix banner_sticky" style="height: 756px;">
                         <div class="sidebar-container">
                             <div class="sidebar-menu">
                                 <div id="hamburger" class="hamburger">
@@ -138,55 +138,55 @@ $categories = $db->selectAllWithoutWhere('categories');
                             <h2>Futurizing Manufacturing <br/>and <br/>Commodities Commerce Globally </h2>
                         </div>
                     </div>
-                    <div class="sroll_down" style="display: block;"><a href="#">Scroll Down</a></div>
+                    <div class="sroll_down"><a href="#">Scroll Down</a></div>
                     <div class="row">
-                        <ul id="sb-slider" class="sb-slider" style="height: 756px; max-width: 2000px; overflow: hidden;">
-                            <li style="height: 756px; display: none;" class="">
+                        <ul id="sb-slider" class="sb-slider">
+                            <li>
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/malaysia.jpg&quot;);">
-                                    <img src="img/malaysia.jpg" alt="image1" style="display: none;">
+                                    <img src="img/malaysia.jpg" alt="image1">
                                 </a>
                             </li>
-                            <li style="height: 756px; display: none;" class="">
+                            <li>
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/indonesia.jpg&quot;);">
-                                    <img src="img/indonesia.jpg" alt="image1" style="display: none;">
+                                    <img src="img/indonesia.jpg" alt="image1">
                                 </a>
                             </li>
-                            <li style="height: 756px; display: none;" class="">
+                            <li class="">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/nigerya.jpg&quot;);">
-                                    <img src="img/nigerya.jpg" alt="image1" style="display: none;">
+                                    <img src="img/nigerya.jpg" alt="image1">
                                 </a>
                             </li>
-                            <li style="height: 756px; display: block;" class="sb-current">
+                            <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/benin.jpg&quot;);">
-                                    <img src="img/benin.jpg" alt="image1" style="display: none;"></a>
+                                    <img src="img/benin.jpg" alt="image1"></a>
                             </li>
-                            <li style="height: 756px; display: block;" class="sb-current">
+                            <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/guinea.jpg&quot;);">
-                                    <img src="img/guinea.jpg" alt="image1" style="display: none;"></a>
+                                    <img src="img/guinea.jpg" alt="image1"></a>
                             </li>
-                            <li style="height: 756px; display: block;" class="sb-current">
+                            <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/egypt.jpg&quot;);">
-                                    <img src="img/egypt.jpg" alt="image1" style="display: none;"></a>
+                                    <img src="img/egypt.jpg" alt="image1"></a>
                             </li>
-                            <li style="height: 756px; display: block;" class="sb-current">
+                            <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/india.jpg&quot;);">
-                                    <img src="img/india.jpg" alt="image1" style="display: none;"></a>
+                                    <img src="img/india.jpg" alt="image1"></a>
                             </li>
-                            <li style="height: 756px; display: block;" class="sb-current">
+                            <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/uae.jpg&quot;);">
-                                    <img src="img/uae.jpg" alt="image1" style="display: none;"></a>
+                                    <img src="img/uae.jpg" alt="image1"></a>
                             </li>
-                            <li style="height: 756px; display: block;" class="sb-current">
+                            <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/tanzania.jpg&quot;);">
-                                    <img src="img/tanzania.jpg" alt="image1" style="display: none;"></a>
+                                    <img src="img/tanzania.jpg" alt="image1"></a>
                             </li>
-                            <li style="height: 756px; display: block;" class="sb-current">
+                            <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/singapore.jpg&quot;);">
-                                    <img src="img/singapore.jpg" alt="image1" style="display: none;"></a>
+                                    <img src="img/singapore.jpg" alt="image1"></a>
                             </li>
-                            <li style="height: 756px; display: block;" class="sb-current">
+                            <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/ivory-coast.jpg&quot;);">
-                                    <img src="img/ivory-coast.jpg" alt="image1" style="display: none;"></a>
+                                    <img src="img/ivory-coast.jpg" alt="image1"></a>
                             </li>
                         </ul>
                     </div>
@@ -436,21 +436,22 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                                             </figure>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-12 col-sm-12 thumline-img">
-                                                                        <?php
-                                                                        $sub_cats = $db->selectAllWithWhere('sub_categories', 'category_id=' . $row['ID']);
-                                                                        foreach ($sub_cats as $sub) {
-                                                                            ?>
-                                                                            <div class="sub-category">
-                                                                                <img src="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" alt="image" data-normal="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" data-hover="<?php echo IMG_BASE_URL . $sub['hover_icon']; ?>"onmouseout="mouseOut(this)" onmouseenter="mouseEnter(this)" onclick="renderSubCategory(<?php echo $sub['ID']; ?>);" />
-                                                                                <div class="sub-cat-title"><?php echo $sub['title']; ?></div>
-                                                                            </div>
-                                                                        <?php } ?>
-                                                                    </div>
                                                                 </div>
+
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 thumline-img">
+                                                    <?php
+                                                    $sub_cats = $db->selectAllWithWhere('sub_categories', 'category_id=' . $row['ID']);
+                                                    foreach ($sub_cats as $sub) {
+                                                        ?>
+                                                        <div class="sub-category">
+                                                            <img src="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" alt="image" data-normal="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" data-hover="<?php echo IMG_BASE_URL . $sub['hover_icon']; ?>"onmouseout="mouseOut(this)" onmouseenter="mouseEnter(this)" onclick="renderSubCategory(<?php echo $sub['ID']; ?>);" />
+                                                            <div class="sub-cat-title"><?php echo $sub['title']; ?></div>
+                                                        </div>
+                                                    <?php } ?>
                                                 </div>
                                             </div>
                                             <?php
@@ -837,7 +838,7 @@ $categories = $db->selectAllWithoutWhere('categories');
 <!--                                                    <span></span>-->
                                                     <img src="img/web1.png" alt="" title="">
                                                     <p>www.macworldinc.com</p>
-                                                </a><p><a href="#"></a>
+                                                </a><p><a href="#">                                        </a>
                                                 </p>
                                             </li>
                                         </ul>

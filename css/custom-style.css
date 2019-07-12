@@ -857,8 +857,8 @@ a.mobile-social {
     position: relative;
     position: absolute;
     top: 0%;
-/*    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);*/
+    /*    transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);*/
 }
 
 .products-content-main figure .img-wrapper img {
@@ -867,10 +867,10 @@ a.mobile-social {
     /* object-position: 50% 50%; */
     position: absolute;
     top: 0%;
-/*    left: 50%;*/
+    /*    left: 50%;*/
     height: auto;
-/*    transform: translate(-50%, 4%);
-    -webkit-transform: translate(-50%, -4%);*/
+    /*    transform: translate(-50%, 4%);
+        -webkit-transform: translate(-50%, -4%);*/
 }
 
 .inner-contant {
@@ -889,7 +889,7 @@ a.mobile-social {
     text-align: left;
     position: relative;
     z-index: 1;
-    min-height: 480px !important;
+    /*    min-height: 480px !important;*/
 }
 
 .products-content-main figure figcaption p {
@@ -1718,7 +1718,7 @@ footer {
 .accreditation_box{display: inline-block;width: 48%;vertical-align: top; margin: 10px;}
 .accreditation_box .accreditation_box_img img{width: 400px;}
 .accreditation_box .accreditation_box_img{height: 250px;}
-.accreditation_box .containt-wrap{width: 100%; margin-left: 0; margin-top: 40px ;height: 350px;}
+.accreditation_box .containt-wrap{width: 100%; margin-left: 0; margin-top: 40px ;height: 400px;}
 
 .our_team_part .team_member{ height: 350px; width: 100%; }
 .our_team_part .team_member img{width: 100%;height: 100%; object-fit: cover;}
@@ -1867,7 +1867,7 @@ input#clear_product {
     width: 100%;
     z-index: 10000;
     max-width: 1920px;
-    left: 25px;
+    left: 0;
 }
 .hover_bkgr_fricc .helper{
     display:inline-block;
@@ -1935,7 +1935,7 @@ input#clear_product {
     width: 100%;
     z-index: 10000;
     max-width: 1920px;
-    left: 25px;
+    left: 0px;
 }
 .hover_bkgr_fricc1 .helper1{
     display:inline-block;
