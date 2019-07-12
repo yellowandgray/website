@@ -204,7 +204,7 @@
                                                         <i class="ti-world"></i>
                                                     </div>
                                                     <div class="service-inner-content media-body">
-                                                        <h4>Tittle-1</h4>
+                                                        <h4>Title-1</h4>
                                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                                     </div>
                                                 </div>
@@ -215,7 +215,7 @@
                                                         <i class="ti-cloud"></i>
                                                     </div>
                                                     <div class="service-inner-content media-body">
-                                                        <h4>Tittle-2</h4>
+                                                        <h4>Title-2</h4>
                                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                                     </div>
                                                 </div>
@@ -233,7 +233,7 @@
                                                         <i class="ti-world"></i>
                                                     </div>
                                                     <div class="service-inner-content media-body">
-                                                        <h4>Tittle-3</h4>
+                                                        <h4>Title-3</h4>
                                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                                     </div>
                                                 </div>
@@ -244,7 +244,7 @@
                                                         <i class="ti-server"></i>
                                                     </div>
                                                     <div class="service-inner-content media-body">
-                                                        <h4>Tittle-4</h4>
+                                                        <h4>Title-4</h4>
                                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                                     </div>
                                                 </div>
@@ -341,21 +341,21 @@
                     <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
                         <div class="web-service-block">
                             <i class="ti-light-bulb"></i>
-                            <h3>Tittle-1</h3>
+                            <h3>Title-1</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
                         <div class="web-service-block">
                             <i class="ti-desktop"></i>
-                            <h3>Tittle-2</h3>
+                            <h3>Title-2</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
                         <div class="web-service-block">
                             <i class="ti-announcement"></i>
-                            <h3>Tittle-3</h3>
+                            <h3>Title-3</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
                     </div>
@@ -363,21 +363,21 @@
                     <div class="col-lg-4 col-sm-6 col-md-6 ">
                         <div class="web-service-block">
                             <i class="ti-layers-alt"></i>
-                            <h3>Tittle-4</h3>
+                            <h3>Title-4</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-md-6 ">
                         <div class="web-service-block">
                             <i class="ti-mobile"></i>
-                            <h3>Tittle-5</h3>
+                            <h3>Title-5</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-md-6 ">
                         <div class="web-service-block">
                             <i class="ti-settings"></i>
-                            <h3>Tittle-6</h3>
+                            <h3>Title-6</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
                     </div>
@@ -412,7 +412,7 @@
                                 <div class="blog-content">
                                     <!--<h6> 17 October 2018</h6>-->
                                     <a href="#">
-                                        <h3 class="card-title">Tittle-1</h3>
+                                        <h3 class="card-title">Title-1</h3>
                                     </a>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
                                     <a href="#" class="read-more">Read More</a>
@@ -430,7 +430,7 @@
                                 <div class="blog-content">
                                     <!--<h6> 17 October 2018</h6>-->
                                     <a href="#">
-                                        <h3 class="card-title">Tittle-1</h3>
+                                        <h3 class="card-title">Title-1</h3>
                                     </a>
 
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
@@ -449,7 +449,7 @@
                                 <div class="blog-content">
                                     <!--<h6> 17 October 2018</h6>-->
                                     <a href="#">
-                                        <h3 class="card-title">Tittle-3</h3>
+                                        <h3 class="card-title">Title-3</h3>
                                     </a>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
                                     <a href="#" class="read-more">Read More</a>

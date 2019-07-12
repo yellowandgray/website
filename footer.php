@@ -57,7 +57,7 @@
         <div class="row text-right pt-5">
             <div class="col-lg-12">
                 <!-- Copyright -->
-                <p class="footer-copy ">
+                <p class="footer-copy" style="text-align: left;">
                     &copy; Copyright <span class="current-year"></span> All rights reserved. Created By <a href="http://www.yellowandgray.com/">YGSTUDIO</a>
                 </p>
             </div>
