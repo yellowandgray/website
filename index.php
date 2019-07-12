@@ -70,7 +70,7 @@
         <section class="ptb-90" style="background: url(assets/img/chart-bg.jpg)no-repeat;">
             <div class="container">
                 <div class="sec-title">
-                    <h2>Connecting Chart<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
+                    <h2>Interlinking<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
