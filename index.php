@@ -143,57 +143,57 @@ $categories = $db->selectAllWithoutWhere('categories');
                         <ul id="sb-slider" class="sb-slider">
                             <li>
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/malaysia.jpg&quot;);">
-                                    <img src="img/malaysia.jpg" data-mobile="img/indonesia.jpg" alt="image1" />
+                                    <img src="img/malaysia.jpg" data-mobile="img/mobile-slider-img/001.jpg" alt="image1" />
                                 </a>
                             </li>
                             <li>
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/indonesia.jpg&quot;);">
-                                    <img src="img/indonesia.jpg" data-mobile="img/indonesia.jpg" alt="image1" />
+                                    <img src="img/indonesia.jpg" data-mobile="img/mobile-slider-img/002.jpg" alt="image1" />
                                 </a>
                             </li>
                             <li class="">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/nigerya.jpg&quot;);">
-                                    <img src="img/nigerya.jpg" data-mobile="img/indonesia.jpg" alt="image1" />
+                                    <img src="img/nigerya.jpg" data-mobile="img/mobile-slider-img/003.jpg" alt="image1" />
                                 </a>
                             </li>
                             <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/benin.jpg&quot;);">
-                                    <img src="img/benin.jpg" data-mobile="img/indonesia.jpg" alt="image1" />
+                                    <img src="img/benin.jpg" data-mobile="img/mobile-slider-img/004.jpg" alt="image1" />
                                 </a>
                             </li>
                             <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/guinea.jpg&quot;);">
-                                    <img src="img/guinea.jpg" alt="image1" data-mobile="img/indonesia.jpg" />
+                                    <img src="img/guinea.jpg" alt="image1" data-mobile="img/mobile-slider-img/005.jpg" />
                                 </a>
                             </li>
                             <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/egypt.jpg&quot;);">
-                                    <img src="img/egypt.jpg" alt="image1" data-mobile="img/indonesia.jpg" />
+                                    <img src="img/egypt.jpg" alt="image1" data-mobile="img/mobile-slider-img/006.jpg" />
                                 </a>
                             </li>
                             <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/india.jpg&quot;);">
-                                    <img src="img/india.jpg" alt="image1" data-mobile="img/indonesia.jpg" />
+                                    <img src="img/india.jpg" alt="image1" data-mobile="img/mobile-slider-img/007.jpg" />
                                 </a>
                             </li>
                             <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/uae.jpg&quot;);">
-                                    <img src="img/uae.jpg" alt="image1" data-mobile="img/indonesia.jpg" />
+                                    <img src="img/uae.jpg" alt="image1" data-mobile="img/mobile-slider-img/008.jpg" />
                                 </a>
                             </li>
                             <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/tanzania.jpg&quot;);">
-                                    <img src="img/tanzania.jpg" alt="image1" data-mobile="img/indonesia.jpg" />
+                                    <img src="img/tanzania.jpg" alt="image1" data-mobile="img/mobile-slider-img/009.jpg" />
                                 </a>
                             </li>
                             <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/singapore.jpg&quot;);">
-                                    <img src="img/singapore.jpg" alt="image1" data-mobile="img/indonesia.jpg" />
+                                    <img src="img/singapore.jpg" alt="image1" data-mobile="img/mobile-slider-img/010.jpg" />
                                 </a>
                             </li>
                             <li class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/ivory-coast.jpg&quot;);">
-                                    <img src="img/ivory-coast.jpg" alt="image1" data-mobile="img/indonesia.jpg" />
+                                    <img src="img/ivory-coast.jpg" alt="image1" data-mobile="img/mobile-slider-img/011.jpg" />
                                 </a>
                             </li>
                         </ul>
