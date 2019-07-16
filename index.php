@@ -140,7 +140,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                     </div>
                     <div class="sroll_down"><a href="#">Scroll Down</a></div>
                     <div class="row" id="web_banner">
-                        <ul id="sb-slider" class="sb-slider">
+                        <ul id="sb-slider" class="">
                             <li>
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/malaysia.jpg&quot;);">
                                     <img src="img/malaysia.jpg" alt="image1" />
