@@ -29,7 +29,7 @@
                 <!--About Txt Video Start-->
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
                     <div class="container">
-                        <h4 class="margin-bottom-0 text-center">Kamarajar's Educational Development Day</h4> 
+                        <h2 class="margin-bottom-0 text-center">Kamarajar's Educational Development Day</h2> 
 <!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
 <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
                         <div class="row events-margin padding-bottom-30">
@@ -37,64 +37,64 @@
                                 <img src="images/events/kamarajar-birthday/kamarajar-img.jpg" alt=""/>
                             </div>
                             <div class="col-md-6 event-justify">
-                                <p>Tree planting Program is a learning Opportunity to get our Children involved in the environment and towards Conservation of Natural resources. There are studies suggesting that students are better able to concentrate, complete tasks, and follow directions after playing in natural things and also an increased discipline in students can be achieved through increased exposure to nature.</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="row events-margin">
                                     <div class="col-md-4">
-                                        <img src="images/events/events-invitation.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        <img src="images/events/kamarajar-birthday/001.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="images/events/event-img-12.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        <img src="images/events/kamarajar-birthday/002.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="images/events/event-img-39.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                </div>
-                                <div class="row events-margin">
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-14.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-44.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-30.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        <img src="images/events/kamarajar-birthday/003.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                 </div>
                                 <div class="row events-margin">
                                     <div class="col-md-4">
-                                        <img src="images/events/event-img-08.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        <img src="images/events/kamarajar-birthday/004.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="images/events/event-img-09.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        <img src="images/events/kamarajar-birthday/005.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="images/events/event-img-31.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                </div>
-                                <div class="row events-margin">
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-32.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-33.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/events/event-img-13.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        <img src="images/events/kamarajar-birthday/006.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                 </div>
                                 <div class="row events-margin">
                                     <div class="col-md-4">
-                                        <img src="images/events/event-img-18.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        <img src="images/events/kamarajar-birthday/008.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="images/events/event-img-36.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        <img src="images/events/kamarajar-birthday/009.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="images/events/event-img-42.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        <img src="images/events/kamarajar-birthday/010.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                </div>
+                                <div class="row events-margin">
+                                    <div class="col-md-4">
+                                        <img src="images/events/kamarajar-birthday/011.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/kamarajar-birthday/012.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/kamarajar-birthday/013.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                </div>
+                                <div class="row events-margin">
+                                    <div class="col-md-4">
+                                        <img src="images/events/kamarajar-birthday/015.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/kamarajar-birthday/017.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/kamarajar-birthday/018.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                 </div>
                                 <!--                                <div class="row events-margin">
@@ -108,7 +108,7 @@
                                                                                                             <img src="images/events/event-img-49.jpg" alt="Events" title="Events-ENPEE International School" />
                                                                                                         </div>
                                                                 </div>-->
-                                <div class="row events-margin">
+<!--                                <div class="row events-margin">
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-26.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
@@ -118,7 +118,7 @@
                                     <div class="col-md-4">
                                         <img src="images/events/event-img-28.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
-                                </div>
+                                </div>-->
 
                             </div>
                         </div>
