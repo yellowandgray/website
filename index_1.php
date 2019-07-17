@@ -11,7 +11,7 @@ $categories = $db->selectAllWithoutWhere('categories');
         <title>:: MAC WORLD ::</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- favicon -->
-        <link rel="icon" href="img/favicon.png" type="image/gif" sizes="16x16">
+        <link rel="icon" href="img-1/favicon.png" type="image/gif" sizes="16x16">
         <!-- google -->
         <link href="css/css" rel="stylesheet">
         <!-- linked css -->
@@ -48,7 +48,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                     <div class="logo-wrap">
                                         <h1>
                                             <a href="#main-banner" title="">
-                                                <img class="img-responsive" src="img/logo-top-1.png" alt="" title="MAC WORLD">
+                                                <img class="img-responsive" src="img-1/logo-top-1.png" alt="" title="MAC WORLD">
                                             </a>
                                         </h1>
                                     </div>
@@ -158,11 +158,11 @@ $categories = $db->selectAllWithoutWhere('categories');
                             </li>
                             <li style="height: 756px; display: block;" class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/benin.jpg&quot;);">
-                                    <img src="img/benin.jpg" alt="image1" style="display: none;"></a>
+                                    <img src="img-1/benin.jpg" alt="image1" style="display: none;"></a>
                             </li>
                             <li style="height: 756px; display: block;" class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/guinea.jpg&quot;);">
-                                    <img src="img/guinea.jpg" alt="image1" style="display: none;"></a>
+                                    <img src="img-1/guinea.jpg" alt="image1" style="display: none;"></a>
                             </li>
                             <li style="height: 756px; display: block;" class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/egypt.jpg&quot;);">
@@ -174,15 +174,15 @@ $categories = $db->selectAllWithoutWhere('categories');
                             </li>
                             <li style="height: 756px; display: block;" class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/uae.jpg&quot;);">
-                                    <img src="img/uae.jpg" alt="image1" style="display: none;"></a>
+                                    <img src="img-1/uae.jpg" alt="image1" style="display: none;"></a>
                             </li>
                             <li style="height: 756px; display: block;" class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/tanzania.jpg&quot;);">
-                                    <img src="img/tanzania.jpg" alt="image1" style="display: none;"></a>
+                                    <img src="img-1/tanzania.jpg" alt="image1" style="display: none;"></a>
                             </li>
                             <li style="height: 756px; display: block;" class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/singapore.jpg&quot;);">
-                                    <img src="img/singapore.jpg" alt="image1" style="display: none;"></a>
+                                    <img src="img-1/singapore.jpg" alt="image1" style="display: none;"></a>
                             </li>
                             <li style="height: 756px; display: block;" class="sb-current">
                                 <a href="#" target="_blank" rel="noopener" style="height: 756px; background-image: url(&quot;img/ivory-coast.jpg&quot;);">
@@ -203,7 +203,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                         }
                     });
                 </script>
-                <section id="our_journey" class="container-fluid back_main internation_house_section" style="background-image: url(img/ecport_house.png);">
+                <section id="our_journey" class="container-fluid back_main internation_house_section" style="background-image: url(img-1/ecport_house.png);">
                     <div class="row">
                         <div class="back_img"> 
                             <img src="img/ecport_house-1.png" alt="" title="" style="display: none;"> 
@@ -344,7 +344,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                         </div>
                     </div>
                 </section>
-                <section class="container-fluid" id="team_section" style="background: url(img/what-we-do-bg.jpg) no-repeat;background-size: cover">
+                <section class="container-fluid" id="team_section" style="background: url(img-1/what-we-do-bg.jpg) no-repeat;background-size: cover">
                     <div class="row">
                         <div class="container">
 
@@ -352,7 +352,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 <h3 class="text-center">What We Do</h3>
                                 <p class="justified-align">MAC WORLD is an ISO 9001:2015 certified company which exports products and services to over 65 countries. The company is continuously penetrating new markets, opening and accessing new opportunities. Since its inception in 2001, MAC WORLD is in the business of manufacturing and trading Palm Oil, Palm Derivatives, its by-products and agro commodities.</p>
                                 <p class="justified-align">Being pioneers of Palm Oil export in Malaysia, in the recent years, MAC WORLD has further diversified into major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide. MAC WORLD Group have established several brands in the International market like </p>
-                                <p class="text-center"><img class="brand-img margin-lf-20" src="img/goldstar.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/goldfry.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/goldfat.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/mrmac.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/golden-farm.jpg" alt="image" /></p>
+                                <p class="text-center"><img class="brand-img margin-lf-20" src="img/goldstar.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img-1/goldfry.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/goldfat.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/mrmac.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img-1/golden-farm.jpg" alt="image" /></p>
                                 <p class="justified-align">for its range of cooking oil, confectionery fats, vegetable ghee, tomato paste and dairy based products such as sweetened condensed milk, evaporated milk, skim milk powder, fat filled milk powder etc. MAC WORLD has become a one stop shop in Malaysia for palm oil derivatives, oleo chemicals, confectionery fats and agro commodities for customers worldwide.</p>
                                 <p class="justified-align">Driven by the commitment to ensure that high quality products are being offered at competitive pricing by using the expertise and experience to serve the dynamic needs of customers.  MAC WORLD ensures that its values and principles are upheld at all times.</p>
         <!--                                <div class="team-images-set"><img src="img/team.jpg" alt=""></div>-->
@@ -473,7 +473,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 <div class="produts_listing">
                                     <div class="single-product clearfix left-product left-product">
                                         <div class="img-wraps">
-                                            <img width="736" height="552" src="img/services01.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="img/services01.jpg 736w, img/services01-300x225.jpg 300w" sizes="100vw">
+                                            <img width="736" height="552" src="img-1/services01.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="img/services01.jpg 736w, img/services01-300x225.jpg 300w" sizes="100vw">
                                         </div>
                                         <div class="containt-wrap">
                                             <h3>Integrated Financial Service</h3>
@@ -497,7 +497,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 <div class="produts_listing clearfix">
                                     <div class="single-product clearfix accreditation_box">
                                         <div class="accreditation_box_img text-center">
-                                            <img src="img/accrediation.png">
+                                            <img src="img-1/accrediation.png">
                                         </div>
                                         <div class="containt-wrap">
                                             <p class="justified-align">As a member of the Roundtable on Sustainable Palm Oil, MAC WORLD demonstrate that its palm oil is sustainable.<br/><br/>Through this certification, we ensure that we are not associated directly or indirectly with any kind of deforestation and loss of critical habitat. Our palm oil is produced responsibly to take care of these ecosystems and their future.</p>
@@ -505,7 +505,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                     </div>
                                     <div class="single-product clearfix accreditation_box">
                                         <div class="accreditation_box_img text-center">
-                                            <img src="img/lrukas-1.jpg">
+                                            <img src="img-1/lrukas-1.jpg">
                                         </div>
                                         <div class="containt-wrap">
                                             <p class="justified-align">ISO 9001:2015 sets out the criteria for a quality management system with the capability of complete traceability of the cargo we have supplied. This standard is based on a number of quality management principles including a strong customer focus, the motivation and implication of top management, the process approach and continual improvement. Using ISO 9001:2015 helps ensure that customers get consistent, good quality products and services, which in turn brings good business opportunities.</p>
@@ -646,25 +646,25 @@ $categories = $db->selectAllWithoutWhere('categories');
 
                                         <div class="slider">
                                             <div class="slide">
-                                                <img src="img/insurance/insurance-1.png" alt="" />
+                                                <img src="img-1/insurance/insurance-1.png" alt="" />
                                             </div>
                                             <div class="slide">
                                                 <img src="img/insurance/insurance-2.png" alt="" />
                                             </div>
                                             <div class="slide">
-                                                <img src="img/insurance/insurance-3.jpg" alt="" />
+                                                <img src="img-1/insurance/insurance-3.jpg" alt="" />
                                             </div>
                                             <div class="slide">
                                                 <img src="img/insurance/insurance-4.png" alt="" />
                                             </div>
                                             <div class="slide">
-                                                <img src="img/insurance/insurance-5.png" alt="" />
+                                                <img src="img-1/insurance/insurance-5.png" alt="" />
                                             </div>
                                             <div class="slide">
                                                 <img src="img/insurance/insurance-6.jpg" alt="" />
                                             </div>
                                             <div class="slide">
-                                                <img src="img/insurance/insurance-7.png" alt="" />
+                                                <img src="img-1/insurance/insurance-7.png" alt="" />
                                             </div>
                                             <div class="slide">
                                                 <img src="img/insurance/insurance-8.png" alt="" />
@@ -790,9 +790,9 @@ $categories = $db->selectAllWithoutWhere('categories');
                     </div>
                 </section>
                 <!-- footer start -->
-                <footer class="container-fluid back_main" id="contact_section" style="background-image: url(img/footer_image.png);">
+                <footer class="container-fluid back_main" id="contact_section" style="background-image: url(img-1/footer_image.png);">
                     <div class="row">
-                        <div class="back_img"> <img src="img/footer_image.png" alt="" title="" style="display: none;"> </div>
+                        <div class="back_img"> <img src="img-1/footer_image.png" alt="" title="" style="display: none;"> </div>
                         <div class="container">
                             <div class="footer_content">
                                 <h3>Contact Us</h3>
@@ -832,7 +832,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                             <li>
                                                 <a href="#"> 
 <!--                                                    <span></span>-->
-                                                    <img src="img/web1.png" alt="" title="">
+                                                    <img src="img-1/web1.png" alt="" title="">
                                                     <p>www.macworldinc.com</p>
                                                 </a><p><a href="#">                                        </a>
                                                 </p>
@@ -870,7 +870,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                             </div>
                         </div>
                         <div class="container-fluid padding-rl-0">
-                            <img src="img/team-members.jpg" alt="image" class="img-responsive" style="width: 100%">
+                            <img src="img-1/team-members.jpg" alt="image" class="img-responsive" style="width: 100%">
                             <div class="footer_logo text-center">
                                 <a href="#">
                                     <figure> <img class="img-responsive" src="img/footer_logo.png" alt="" title=""> </figure>
