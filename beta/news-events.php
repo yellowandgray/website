@@ -29,7 +29,109 @@
                 <!--About Txt Video Start-->
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
                     <div class="container">
-                        <h2 class="margin-bottom-0 text-center">UPCOMING EVENTS</h2> 
+                        <h4 class="margin-bottom-0 text-center">Kamarajar's Educational Development Day</h4> 
+<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                        <div class="row events-margin padding-bottom-30">
+                            <div class="col-md-6">
+                                <img src="images/events/kamarajar-birthday/kamarajar-img.jpg" alt=""/>
+                            </div>
+                            <div class="col-md-6 event-justify">
+                                <p>Tree planting Program is a learning Opportunity to get our Children involved in the environment and towards Conservation of Natural resources. There are studies suggesting that students are better able to concentrate, complete tasks, and follow directions after playing in natural things and also an increased discipline in students can be achieved through increased exposure to nature.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row events-margin">
+                                    <div class="col-md-4">
+                                        <img src="images/events/events-invitation.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-12.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-39.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                </div>
+                                <div class="row events-margin">
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-14.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-44.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-30.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                </div>
+                                <div class="row events-margin">
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-08.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-09.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-31.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                </div>
+                                <div class="row events-margin">
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-32.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-33.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-13.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                </div>
+                                <div class="row events-margin">
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-18.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-36.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-42.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                </div>
+                                <!--                                <div class="row events-margin">
+                                                                                                        <div class="col-md-4">
+                                                                                                            <img src="images/events/event-img-44.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                                                        </div>
+                                                                     <div class="col-md-4">
+                                                                        <img src="images/events/event-img-45.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                    </div>
+                                                                                                        <div class="col-md-4">
+                                                                                                            <img src="images/events/event-img-49.jpg" alt="Events" title="Events-ENPEE International School" />
+                                                                                                        </div>
+                                                                </div>-->
+                                <div class="row events-margin">
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-26.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-27.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/event-img-28.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--About Txt Video End-->
+            </section>
+            <!--About End--> 
+            <!--About Start-->
+            <section class="wf100 about">
+                <!--About Txt Video Start-->
+                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                    <div class="container">
                         <h4 class="margin-bottom-0 text-center">GO GREEN KARAIKAL – A Green Initiative by ENPEE International School</h4> 
                         <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>
 <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
