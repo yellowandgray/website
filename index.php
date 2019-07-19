@@ -861,7 +861,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <div class="single-team-member">
+                        <div class="single-team-member" id="inline-popups-1">
                             <div class="team-member-img">
                                 <img src="assets/img/team/team3.jpg" alt="team">
                                 <div class="team-member-icon">
@@ -876,8 +876,8 @@
                                 </div>
                             </div>
                             <div class="team-member-info">
-                                <a href="#"><h4>Enoch Joshua</h4></a>
-                                <p>Designation</p>
+                                <a href="#popup-test" data-effect="mfp-zoom-in"><h4>Enoch Joshua</h4></a>
+                                <p>Director - Media and Sales</p>
                             </div>
                         </div>
                     </div>
@@ -1010,6 +1010,12 @@
             <br/>
             <p>The concept and design of the Christlink App was  birthed out of a deep desire to serve God and help the Church and bring together the global community of Christians. <br/>Joshua Clements a post graduate in Business Administration from Chrarles Sturt University,  has over 25 years in the corporate world as an expert in Human Resource, business networking and People Management. Combining his passion for God and his God given ability to work for the people of God he was driven to convert his vision into a blessed reality</p>
         </div>
+        <div id="popup-test" class="white-popup mfp-with-anim mfp-hide">
+            <h3 style="text-align: center;">Enoch Joshua</h3>
+            <center><i>Director - Media and Sales</i></center>
+            <br/>
+            <p>Media and Sales comes with two decades of experience in Music production and Media. He has created and produced numerous music albums, music videos, concerts and more for popular musicians across genres. He also serves as a Media Consultant and Board Member of many illustrious organisations, and has successfully charted a growth trajectory in all areas of his portfolio of Brand, Media, Sales and Music.<br/>He is also well-versed in the art of photography and cinematography, culminating in hit music videos. A musician himself, with in-depth knowledge of varied musical instruments and the art of creation of music and production, he knows and understands the many facets of industry making him an asset to the Company.</p>
+        </div>
 
         <a href="#" class="scrollToTop">
             <i class="icofont icofont-arrow-up"></i>
@@ -1099,6 +1105,19 @@
 
             // Inline popups
             $('#inline-popups').magnificPopup({
+                delegate: 'a',
+                removalDelay: 500, //delay removal by X to allow out-animation
+                callbacks: {
+                    beforeOpen: function () {
+                        this.st.mainClass = this.st.el.attr('data-effect');
+                    }
+                },
+                midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+            });
+
+
+            // Inline popups
+            $('#inline-popups-1').magnificPopup({
                 delegate: 'a',
                 removalDelay: 500, //delay removal by X to allow out-animation
                 callbacks: {
