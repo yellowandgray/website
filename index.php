@@ -1014,7 +1014,7 @@
             <h3 style="text-align: center;">Enoch Joshua</h3>
             <center><i>Director - Media and Sales</i></center>
             <br/>
-            <p>Media and Sales comes with two decades of experience in Music production and Media. He has created and produced numerous music albums, music videos, concerts and more for popular musicians across genres. He also serves as a Media Consultant and Board Member of many illustrious organisations, and has successfully charted a growth trajectory in all areas of his portfolio of Brand, Media, Sales and Music.<br/>He is also well-versed in the art of photography and cinematography, culminating in hit music videos. A musician himself, with in-depth knowledge of varied musical instruments and the art of creation of music and production, he knows and understands the many facets of industry making him an asset to the Company.</p>
+            <p>He comes with two decades of experience in Music production and Media. He has created and produced numerous music albums, music videos, concerts and more for popular musicians across genres. He also serves as a Media Consultant and Board Member of many illustrious organisations, and has successfully charted a growth trajectory in all areas of his portfolio of Brand, Media, Sales and Music.<br/>He is also well-versed in the art of photography and cinematography, culminating in hit music videos. A musician himself, with in-depth knowledge of varied musical instruments and the art of creation of music and production, he knows and understands the many facets of industry making him an asset to the Company.</p>
         </div>
 
         <a href="#" class="scrollToTop">
