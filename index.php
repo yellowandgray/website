@@ -871,6 +871,9 @@
                                             <a href="#"><i class="icofont icofont-social-twitter"></i></a>
                                             <a href="#"><i class="icofont icofont-brand-linkedin"></i></a>
                                             <a href="#"><i class="icofont icofont-social-pinterest"></i></a>
+                                            <br/>
+                                            <br/>
+                                            <a href="#popup-test" data-effect="mfp-zoom-in" style="width: 100px"><p>See More</p></a>
                                         </div>
                                     </div>
                                 </div>
@@ -945,7 +948,7 @@
                                     </div>
                                     <div class="contact-address-info">
                                         <a href="callto:#">+91 99625 52423</a>
-<!--                                        <a href="callto:#">+91 98406 51865</a>-->
+                                        <!--                                        <a href="callto:#">+91 98406 51865</a>-->
                                     </div>
                                 </li>
                                 <li>
@@ -954,7 +957,7 @@
                                     </div>
                                     <div class="contact-address-info">
                                         <a href="mailto:joshuva.clements@gmail.com">joshua.clements@gmail.com</a>
-<!--                                        <a href="mailto:kgunalan@gmail.com">kgunalan@gmail.com</a>-->
+                                        <!--                                        <a href="mailto:kgunalan@gmail.com">kgunalan@gmail.com</a>-->
                                     </div>
                                 </li>
                                 <!--                                <li>
@@ -982,13 +985,13 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="copyright-area">
-<!--                            <ul>
-                                <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-pinterest"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-google-plus"></i></a></li>
-                            </ul>-->
+                            <!--                            <ul>
+                                                            <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+                                                            <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
+                                                            <li><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
+                                                            <li><a href="#"><i class="icofont icofont-social-pinterest"></i></a></li>
+                                                            <li><a href="#"><i class="icofont icofont-social-google-plus"></i></a></li>
+                                                        </ul>-->
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 &copy; Copyright Christlink | All rights reserved | Designed By <a href="http://www.yellowandgray.com/" target="_blank">YG Studio.</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </p>
