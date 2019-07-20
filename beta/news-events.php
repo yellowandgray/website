@@ -100,7 +100,7 @@
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
                     <div class="container">
                         <h4 class="margin-bottom-0 text-center">GO GREEN KARAIKAL – A Green Initiative by ENPEE International School</h4> 
-                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>
+                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in ENPEE School premises)</center>
 <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
                         <div class="row events-margin padding-bottom-30">
                             <div class="col-md-6">
