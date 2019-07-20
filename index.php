@@ -207,7 +207,7 @@
                                     <div class="col-md-7 padding-top-40">
                                         <h4>Fellowships</h4>
                                         <br/>
-                                        <p>Fellowships can be created based on the church's requirement such as Youth Fellowship, Sunday School, Women Fellowship, Men Fellowship, Bible Study, Life Group, etc.</p>
+                                        <p>Fellowships can be created based on the church's requirement such as Youth, Sunday School, Women, Men, Bible Study, Life Group, etc.</p>
                                         <ul class="text-left">
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; Information regarding the various fellowships/ house groups/ cell groups etc</li>
                                             <i class='icofont icofont-ui-check'></i><li> &nbsp; when the groups meet – how long is the meeting for</li>
