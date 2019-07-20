@@ -84,7 +84,7 @@
                                         <img src="images/events/kamarajar-birthday/017.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="images/events/kamarajar-birthday/018.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -195,6 +195,9 @@
                                     </div>
                                     <div class="col-md-4">
                                         <img src="images/events/go-green/023.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/events/kamarajar-birthday/018.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                 </div>
                             </div>
