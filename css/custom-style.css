@@ -50,6 +50,7 @@ p,input,textarea,select,.marquee,span{font-family: 'Montserrat', sans-serif; col
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     width: 100%;
+    z-index: 9;
 }
 
 .banner_content h2 {
