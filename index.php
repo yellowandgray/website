@@ -116,6 +116,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 </ul>
                             </div>
                         </div>
+                        
                         <ul class="nav_menu clearfix">
                             <li class="email-margin-b"><a href="#">Email</a></li>
                             <li><a href="#">LinkedIN</a></li>
