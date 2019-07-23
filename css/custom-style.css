@@ -45,7 +45,7 @@ p,input,textarea,select,.marquee,span{font-family: 'Montserrat', sans-serif; col
 */
 .banner_content {
     position: absolute;
-    top: 50%;
+    top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
