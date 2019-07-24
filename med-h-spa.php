@@ -157,7 +157,7 @@
             </div>
         </section>
         <!-- Feature Area End -->
-        <section class="feature-area section-padding department-area " style="background: url(assets/images/banner-bg-02.jpg)">
+        <section class="feature-area section-padding department-area " style="background: url(assets/images/banner-bg-02.jpg); background-size: cover;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3">
