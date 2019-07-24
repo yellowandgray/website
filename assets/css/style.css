@@ -520,3 +520,9 @@ h6{font-size:14px}
 .section-top2{margin-bottom:80px}
 .section-top2 span{color:#244cfd}
 .item-padding{padding:40px 20px}
+.contact-form form .left input{
+    border: 1px solid #eee !important;
+}
+.contact-form form .right textarea{
+    border: 1px solid #eee !important;
+}
