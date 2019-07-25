@@ -1131,23 +1131,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </li>
                                             </ul>
                                         </div>-->
-<!--                    <div class="contact-g1 wow fadeInUp">
-                        <h6>INDIA OFFICE</h6>
-                        <ul class="address">
-                            <span class="fa fa-map-marker" aria-hidden="true"></span>
-                            <li>
-                                12, Durga Colony,<br/> 4th Cross Street,<br/> Sembakkam,<br/> Chennai 600073<br/> Tamil Nadu State, India.
-                            </li>
-                            <span class="fa fa-envelope" aria-hidden="true"></span>
-                            <li>
-                                <a href="mailto:example@email.com"> info@alias-innovation.com</a>
-                            </li>
-                            <span class="fa fa-phone" aria-hidden="true"></span>
-                            <li>
-                                +91 98404 70876
-                            </li>
-                        </ul>
-                    </div>-->
+                    <!--                    <div class="contact-g1 wow fadeInUp">
+                                            <h6>INDIA OFFICE</h6>
+                                            <ul class="address">
+                                                <span class="fa fa-map-marker" aria-hidden="true"></span>
+                                                <li>
+                                                    12, Durga Colony,<br/> 4th Cross Street,<br/> Sembakkam,<br/> Chennai 600073<br/> Tamil Nadu State, India.
+                                                </li>
+                                                <span class="fa fa-envelope" aria-hidden="true"></span>
+                                                <li>
+                                                    <a href="mailto:example@email.com"> info@alias-innovation.com</a>
+                                                </li>
+                                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                                <li>
+                                                    +91 98404 70876
+                                                </li>
+                                            </ul>
+                                        </div>-->
                     <div class="padding-tb-20">
                         <h6 class="color-white">Follow us</h6>
                         <div class="address-grid">
