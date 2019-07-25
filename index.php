@@ -1131,7 +1131,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </li>
                                             </ul>
                                         </div>-->
-                    <div class="contact-g1 wow fadeInUp">
+<!--                    <div class="contact-g1 wow fadeInUp">
                         <h6>INDIA OFFICE</h6>
                         <ul class="address">
                             <span class="fa fa-map-marker" aria-hidden="true"></span>
@@ -1147,7 +1147,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 +91 98404 70876
                             </li>
                         </ul>
-                    </div>
+                    </div>-->
                     <div class="padding-tb-20">
                         <h6 class="color-white">Follow us</h6>
                         <div class="address-grid">
