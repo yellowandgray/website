@@ -240,7 +240,7 @@
                             <h3>MIMS</h3>
                             <p>MEDICAL INSTITUTE MANAGEMENT SYSTEM</p>
                             <p>Medical Institute Management System software which is helpful for medical student as well as College Authorities. Our Application stores records of Students & Faculties Also. The Main Principle Behind this Software is easy to Supervision of Institute. This software can help us to explore all the activities happening inside the Medical College. It can handle Details of Student as well as Faculties, Finance, Human Resource, Attendance, Reports, Hostel Management, Data Management, Inventory, Transport etc. </p>
-                            <a href="#" class="template-btn mt-3">learn more</a>
+                            <a href="med-mims.php" class="template-btn mt-3">learn more</a>
                         </div>
 
                         <div id="sonosmart" class="tabcontent tab-text">
