@@ -19,4 +19,5 @@
     <link rel="stylesheet" href="assets/css/linearicons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="assets/css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/sweetalert.css" rel="stylesheet" type="text/css"/>
 </head>

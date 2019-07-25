@@ -308,10 +308,10 @@ input:focus,textarea:focus{outline:none}
 .into-icon i{font-size:20px;color:#244cfd;margin-right:20px}
 .contact-form form .left,.commentform-area form .left{width:48%;float:left;overflow:hidden;margin-right:4%}
 @media (max-width: 575.98px){.contact-form form .left,.commentform-area form .left{width:100%;float:none}}
-.contact-form form .left input,.commentform-area form .left input{width:100%;border:1px solid #f9f9f9;padding:12px 20px;margin-bottom:20px}
+.contact-form form .left input,.commentform-area form .left input{width:100%;padding:12px 20px;margin-bottom:20px}
 .contact-form form .right,.commentform-area form .right{width:48%;overflow:hidden}
 @media (max-width: 575.98px){.contact-form form .right,.commentform-area form .right{width:100%;float:none}}
-.contact-form form .right textarea,.commentform-area form .right textarea{width:100%;border:1px solid #f9f9f9;padding:12px 20px}
+.contact-form form .right textarea,.commentform-area form .right textarea{width:100%;padding:12px 20px;height:136px;}
 .contact-form form button,.commentform-area form button{margin-top:20px;float:right;border:none}@media (max-width: 575.98px){.contact-form form button,.commentform-area form button{float:left}}
 .mb-20{margin-bottom:20px}.mb-30{margin-bottom:30px}
 .sample-text-area{padding:100px 0px}
@@ -520,9 +520,3 @@ h6{font-size:14px}
 .section-top2{margin-bottom:80px}
 .section-top2 span{color:#244cfd}
 .item-padding{padding:40px 20px}
-.contact-form form .left input{
-    border: 1px solid #eee !important;
-}
-.contact-form form .right textarea{
-    border: 1px solid #eee !important;
-}
