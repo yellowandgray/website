@@ -15,7 +15,7 @@
     border: 1px solid #ccc;
     background-color: #2594dd;
     width: 30%;
-    height: 570px;
+    height: 600px;
 }
 
 .tab button  {
@@ -46,7 +46,7 @@
     border: 1px solid #ccc;
     width: 70%;
     border-left: none;
-    height: 570px;
+    height: 600px;
     background: #2594dd85; 
 }
 /*--- tap ---*/
@@ -217,10 +217,10 @@ footer {
 }
 @media  (max-width: 767px) and (min-width: 260px) {
     .tabcontent {
-        height: 590px;
+        height: 600px;
     }
     .tab {
-        height: 590px;
+        height: 600px;
     }
 }
 @media  (max-width: 769px) and (min-width: 370px) {
