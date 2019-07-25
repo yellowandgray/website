@@ -77,20 +77,26 @@
                             </div>
                             <div class="info-text">
                                 <h3>info@alias-innovation.com</h3>
-                             </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-9">
-                        <form action="#">
+                        <form role="form" class="contact">
                             <div class="left form-border">
-                                <input type="text" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" required>
-                                <input type="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" required>
-                                <input type="text" placeholder="Enter subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'" required>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" name="name"required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" name="email"required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'"  name="subject"required>
+                                </div>
                             </div>
-                            <div class="right">
-                                <textarea name="message" cols="20" rows="7"  placeholder="Enter Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" required></textarea>
+                            <div class="right form-group">
+                                <textarea class="form-group"  name="message" cols="20" rows="7"  placeholder="Enter Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" name="message" required></textarea>
                             </div>
-                            <button type="submit" class="template-btn">subscribe now</button>
+                            <input type="submit" value="Submit" class="template-btn">
                         </form>
                     </div>
                 </div>
@@ -115,6 +121,8 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I"></script>
         <script src="assets/js/vendor/gmaps.min.js"></script>
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/contactform.js" type="text/javascript"></script>
+        <script src="assets/js/sweetalert.min.js" type="text/javascript"></script>
 
 
 
