@@ -247,7 +247,7 @@
                             <img src="assets/images/medseva/006.jpg" alt="" class="img-responsive" class="img-responsive">
                             <h3>SONOSMART</h3>
                             <p>DIAGNOSTIC ULTRASOUND SYSTEM</p>
-                            <a href="#" class="template-btn mt-3">learn more</a>
+                            <a href="med-sonosmart.php" class="template-btn mt-3">learn more</a>
                         </div>
 
 
