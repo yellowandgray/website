@@ -212,7 +212,7 @@ footer {
 }
 @media  (min-width: 320px) and (max-width: 471px) {
     .tab-text {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 @media  (max-width: 767px) and (min-width: 260px) {
