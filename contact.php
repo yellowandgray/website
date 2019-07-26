@@ -69,7 +69,7 @@
                                 <i class="fa fa-envelope-o"></i>
                             </div>
                             <div class="info-text">
-                                <p>info@alias-innovation.com</p>
+                                <p>info@medikal.com.my</p>
                             </div>
                         </div>
                     </div>
