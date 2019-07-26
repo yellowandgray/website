@@ -54,10 +54,10 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="social-icons">
                                 <ul>
-                                    <li><a href="https://www.facebook.com/AliasInnovation/"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://www.facebook.com/AliasInnovation/" target="blank"><i class="fa fa-facebook"></i></a></li>
+<!--                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>-->
+                                    <li><a href="https://www.linkedin.com/company/alias-innovation-sdn-bhd" target="blank"><i class="fa fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
                         </div>

@@ -33,8 +33,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.997825985159!2d101.61424631470493!3d3.0952363543450017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4bc8a054a701%3A0x60671c5f314125b8!2sAlias+Innovation+Sdn+Bhd!5e0!3m2!1sen!2sin!4v1564034857216!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 450px;" allowfullscreen></iframe>
-                    </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991.9773236995009!2d101.59917513348941!3d3.106698749717239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4c1bc6bd9e2b%3A0xfee2b25a6f1a8f8f!2sMenara+Infiniti!5e0!3m2!1sen!2sin!4v1564127885261!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 450px;" allowfullscreen></iframe>
+                   </div>
                 </div>
             </div>
         </section>
