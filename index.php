@@ -1164,7 +1164,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <span class="fa fa-linkedin" aria-hidden="true"></span>
                                     </a>
                                 </li>
-                                <li>
+<!--                                <li>
                                     <a href="#" class="s-icondribbble">
                                         <span class="fa fa-dribbble" aria-hidden="true"></span>
                                     </a>
@@ -1173,7 +1173,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <a href="#" class="s-iconbehance">
                                         <span class="fa fa-behance" aria-hidden="true"></span>
                                     </a>
-                                </li>
+                                </li>-->
                             </ul>
                         </div>
                     </div>
