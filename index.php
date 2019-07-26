@@ -1160,7 +1160,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="s-icontwitter">
+                                    <a href="https://www.linkedin.com/company/alias-innovation-sdn-bhd" class="s-icontwitter">
                                         <span class="fa fa-linkedin" aria-hidden="true"></span>
                                     </a>
                                 </li>
