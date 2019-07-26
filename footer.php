@@ -47,17 +47,17 @@
                         <div class="col-lg-8 col-md-6 m-top-10">
                             <span>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                &copy;2019 All rights reserved | Designed  by <a href="https://colorlib.com" target="_blank"> YG Studio</a>
+                                &copy;2019 Alias Innovation Sdn Bhd
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </span>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="social-icons">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://www.facebook.com/AliasInnovation/"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                     <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
                         </div>

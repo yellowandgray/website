@@ -60,8 +60,8 @@
                                 <i class="fa fa-phone"></i>
                             </div>
                             <div class="info-text">
-                                <h3>+603 7662 7601</h3>
-                                <h3>+6019 277 2077 (Hotline)</h3>
+                                <p>+603 7662 7601</p>
+                                <p>+6019 277 2077 (Hotline)</p>
                             </div>
                         </div>
                         <div class="d-flex">
@@ -69,7 +69,7 @@
                                 <i class="fa fa-envelope-o"></i>
                             </div>
                             <div class="info-text">
-                                <h3>info@alias-innovation.com</h3>
+                                <p>info@alias-innovation.com</p>
                             </div>
                         </div>
                     </div>
