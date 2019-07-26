@@ -1161,7 +1161,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </li>
                                 <li>
                                     <a href="#" class="s-icontwitter">
-                                        <span class="fa fa-twitter" aria-hidden="true"></span>
+                                        <span class="fa fa-linkedin" aria-hidden="true"></span>
                                     </a>
                                 </li>
                                 <li>
