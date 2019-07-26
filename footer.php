@@ -1,5 +1,5 @@
 <!-- copy right -->
-<p class="footer-class">©Alias Innovation Sdn Bhd</p>
+<p class="footer-class">©2019 Alias Innovation Sdn Bhd</p>
 <!-- //copy right -->
 <!-- bootstrap-pop-up for login and register -->
 <div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
