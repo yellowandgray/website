@@ -843,12 +843,12 @@
                                 <div class="team-member-icon">
                                     <div class="display-table">
                                         <div class="display-tablecell">
-                                            <a href="#"><i class="icofont icofont-social-facebook"></i></a>
+<!--                                            <a href="#"><i class="icofont icofont-social-facebook"></i></a>
                                             <a href="#"><i class="icofont icofont-social-twitter"></i></a>
                                             <a href="#"><i class="icofont icofont-brand-linkedin"></i></a>
                                             <a href="#"><i class="icofont icofont-social-pinterest"></i></a>
                                             <br/>
-                                            <br/>
+                                            <br/>-->
                                             <a href="#test-popup" data-effect="mfp-zoom-in" style="width: 100px"><p>See More</p></a>
                                         </div>
                                     </div>
@@ -867,12 +867,12 @@
                                 <div class="team-member-icon">
                                     <div class="display-table">
                                         <div class="display-tablecell">
-                                            <a href="#"><i class="icofont icofont-social-facebook"></i></a>
+<!--                                            <a href="#"><i class="icofont icofont-social-facebook"></i></a>
                                             <a href="#"><i class="icofont icofont-social-twitter"></i></a>
                                             <a href="#"><i class="icofont icofont-brand-linkedin"></i></a>
-                                            <a href="#"><i class="icofont icofont-social-pinterest"></i></a>
-                                            <br/>
-                                            <br/>
+                                            <a href="#"><i class="icofont icofont-social-pinterest"></i></a>-->
+<!--                                            <br/>
+                                            <br/>-->
                                             <a href="#popup-test" data-effect="mfp-zoom-in" style="width: 100px"><p>See More</p></a>
                                         </div>
                                     </div>
