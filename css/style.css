@@ -305,9 +305,11 @@ h1, h2, h3, h4, h5,
 .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
 .site-navbar .site-navigation .site-menu .active {
-    color: #f16821;
+    /*    color: #f16821;*/
+    color: #fff;
     display: inline-block;
-    padding: 5px 20px; }
+    padding: 5px 20px;
+    background: #000;}
 .site-navbar .site-navigation .site-menu a {
     text-decoration: none !important;
     display: inline-block; }
@@ -319,7 +321,8 @@ h1, h2, h3, h4, h5,
     display: inline-block;
     text-decoration: none !important; }
 .site-navbar .site-navigation .site-menu > li > a:hover {
-    color: #f16821; }
+    /*    color: #f16821;*/
+    color: #9c9c9c; }
 .site-navbar .site-navigation .site-menu .has-children {
     position: relative; }
 .site-navbar .site-navigation .site-menu .has-children > a {
@@ -1502,7 +1505,7 @@ h1, h2, h3, h4, h5,
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #151572;
+    background: #000000;
     position: relative; }
 .social-media li a span {
     position: absolute;

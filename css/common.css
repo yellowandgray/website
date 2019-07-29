@@ -328,3 +328,8 @@ span.psw {
         transform: scale(1); } }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.social-icon a {
+    color: #000;
+}
