@@ -51,8 +51,8 @@
                                 <i class="fa fa-home"></i>
                             </div>
                             <div class="info-text">
-                                <h3>Selangor</h3>
-                                <p>No. 16-10, Penthouse,</br>Menara Infiniti,</br>Jalan SS6/3,</br>47301 Petaling Jaya,</p>
+                                <p>Selangor</p>
+                                <p>No. 16-10, Penthouse,</br>Menara Infiniti,</br>Jalan SS6/3,</br>47301 Petaling Jaya,</br>malaysia.</p>
                             </div>
                         </div>
                         <div class="d-flex">
@@ -69,7 +69,7 @@
                                 <i class="fa fa-envelope-o"></i>
                             </div>
                             <div class="info-text">
-                                <p>info@medikal.com.my</p>
+                                <p>info@alias-innovation.com</p>
                             </div>
                         </div>
                     </div>
