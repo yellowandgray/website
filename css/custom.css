@@ -1766,7 +1766,7 @@ section.services-area ul li.active:after {
 /***************  Urgent Causes  *****************/
 
 .urgent-causes {
-    background: url(../images/urgentcause.png) no-repeat center center #000;
+    background: url(../images/home/urgentcause.png) no-repeat center center #000;
     background-size: cover;
 }
 .section-title-2 h5 {
@@ -1875,8 +1875,8 @@ section.services-area ul li.active:after {
     margin: 0px;
 }
 .radio-boxes input[type=radio].css-radio+label.css-label:hover {
-    background: #FFAA12 !important;
-    border-color: #0099ff !important;
+    background: #ffaa12 !important;
+    border-color: #fbfbfb !important;
     color: #fff;
 }
 .radio-boxes input[type=radio].css-radio:checked+label.css-label {
@@ -2172,7 +2172,7 @@ header .navbar-toggler {
 /*****************  WHY Ecova  ****************/
 
 .why-ecova {
-    background: url(../images/whybg.jpg) no-repeat;
+    background: url(../images/home/whybg.jpg) no-repeat;
     padding: 65px 0 65px;
     background-size: cover;
     text-align: center;
@@ -2280,7 +2280,7 @@ header .navbar-toggler {
     opacity: 0;
 }
 .product-box:hover .pro-txt h6 a {
-    color: #74a83d;
+    color: #ffb112;
 }
 .pro-thumb a {
     position: absolute;
@@ -6791,4 +6791,10 @@ section.wf100.p80.fcampaigns {
 }
 .cus:hover {
     background-color: #FFAA12 !important;
+}
+.width-2 {
+    width: 260px !important;
+}
+.inner-header-01 {
+    background: url(../images/blue/008.jpg) no-repeat !important;
 }

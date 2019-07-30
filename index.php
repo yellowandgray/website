@@ -34,7 +34,7 @@
                             <a href="#" class="active color-b">Find Out More</a> <a href="#">Join us Now</a> 
                         </div>
                     </div>
-                    <img src="images/h1-slide3.jpg" alt=""> 
+                    <img src="images/home/h1-slide3.jpg" alt=""> 
                 </div>
                 <div class="item">
                     <div class="slider-caption h2slider">
@@ -45,7 +45,7 @@
                             <a href="#" class="active color-b">Find Out More</a> <a href="#">Join us Now</a> 
                         </div>
                     </div>
-                    <img src="images/h1-slide4.jpg" alt=""> 
+                    <img src="images/home/h1-slide4.jpg" alt=""> 
                 </div>
                 <div class="item">
                     <div class="slider-caption h2slider">
@@ -56,7 +56,7 @@
                             <a href="#" class="active color-b">Find Out More</a> <a href="#">Join us Now</a> 
                         </div>
                     </div>
-                    <img src="images/h1-slide1.jpg" alt=""> 
+                    <img src="images/home/h1-slide1.jpg" alt=""> 
                 </div>
                 <div class="item">
                     <div class="slider-caption h2slider">
@@ -67,7 +67,7 @@
                             <a href="#" class="active color-b">Find Out More</a> <a href="#">Join us Now</a> 
                         </div>
                     </div>
-                    <img src="images/h1-slide2.jpg" alt=""> 
+                    <img src="images/home/h1-slide2.jpg" alt=""> 
                 </div>
             </section>
             <!--Slider End--> 
@@ -78,7 +78,7 @@
                         <!--box  start-->
                         <li>
                             <div class="sinfo">
-                                <img src="images/sericon1.png" alt="">
+                                <img src="images/home/sericon1.png" alt="">
                                 <h6>Simulation</h6>
                                 <p>content-1</p>
                             </div>
@@ -87,7 +87,7 @@
                         <!--box  start-->
                         <li>
                             <div class="sinfo">
-                                <img src="images/sericon2.png" alt="">
+                                <img src="images/home/sericon2.png" alt="">
                                 <h6>Learning</h6>
                                 <p>content-2</p>
                             </div>
@@ -96,7 +96,7 @@
                         <!--box  start-->
                         <li>
                             <div class="sinfo">
-                                <img src="images/sericon3.png" alt="">
+                                <img src="images/home/sericon3.png" alt="">
                                 <h6>Training</h6>
                                 <p>content-3</p>
                             </div>
@@ -105,7 +105,7 @@
                         <!--box  start-->
                         <li class="sinfo">
                             <div class="sinfo">
-                                <img src="images/sericon4.png" alt="">
+                                <img src="images/home/sericon4.png" alt="">
                                 <h6>Artificial Training</h6>
                                 <p>content-4</p>
                             </div>
@@ -114,7 +114,7 @@
                         <!--box  start-->
                         <li>
                             <div class="sinfo">
-                                <img src="images/sericon5.png" alt="">
+                                <img src="images/home/sericon5.png" alt="">
                                 <h6>Robotics</h6>
                                 <p>content-5</p>
                             </div>
@@ -129,7 +129,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-5">
-                            <div class="video-img">  <img src="images/h2about.jpg" alt=""> </div>
+                            <div class="video-img">  <img src="images/home/h2about.jpg" alt=""> </div>
                         </div>
                         <div class="col-md-7">
                             <div class="h2-about-txt">
@@ -227,7 +227,7 @@
                                         <!--Pro Box-->
                                         <div class="item">
                                             <div class="pro-box">
-                                                <img src="images/current-pro3.jpg" alt="">
+                                                <img src="images/home/current-pro3.jpg" alt="">
                                                 <h5>Simulation</h5>
                                                 <div class="pro-hover">
                                                     <h6>Simulation</h6>
@@ -240,7 +240,7 @@
                                         <!--Pro Box-->
                                         <div class="item">
                                             <div class="pro-box">
-                                                <img src="images/current-pro1.jpg" alt="">
+                                                <img src="images/home/current-pro1.jpg" alt="">
                                                 <h5>Video Wall</h5>
                                                 <div class="pro-hover">
                                                     <h6>Video Wall</h6>
@@ -253,7 +253,7 @@
                                         <!--Pro Box-->
                                         <div class="item">
                                             <div class="pro-box">
-                                                <img src="images/current-pro2.jpg" alt="">
+                                                <img src="images/home/current-pro2.jpg" alt="">
                                                 <h5>Support</h5>
                                                 <div class="pro-hover">
                                                     <h6>Support</h6>
@@ -266,7 +266,7 @@
                                         <!--Pro Box-->
                                         <div class="item">
                                             <div class="pro-box">
-                                                <img src="images/current-pro4.jpg" alt="">
+                                                <img src="images/home/current-pro4.jpg" alt="">
                                                 <h5>Experiential Learning</h5>
                                                 <div class="pro-hover">
                                                     <h6>Experiential Learning</h6>
@@ -299,7 +299,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="blog-post-large">
-                                <div class="post-thumb"><img src="images/h2news1.jpg" alt=""></div>
+                                <div class="post-thumb"><img src="images/home/h2news1.jpg" alt=""></div>
                                 <div class="post-txt">
                                     <!--                                    <ul class="post-meta">
                                                                             <li><i class="fas fa-calendar-alt"></i> 29 September, 2018</li>
@@ -313,7 +313,7 @@
                         <div class="col-md-6">
                             <!--Blog Small Post Start-->
                             <div class="blog-small-post">
-                                <div class="post-thumb"> <img src="images/h2news2.jpg" alt=""> </div>
+                                <div class="post-thumb"> <img src="images/home/h2news2.jpg" alt=""> </div>
                                 <div class="post-txt">
                                     <!--<span class="pdate"> <i class="fas fa-calendar-alt"></i> 29 September, 2018</span>-->
                                     <h5><a href="#">Full Day Training</a></h5>
@@ -324,7 +324,7 @@
                             <!--Blog Small Post End--> 
                             <!--Blog Small Post Start-->
                             <div class="blog-small-post">
-                                <div class="post-thumb"><img src="images/h2news3.jpg" alt=""> </div>
+                                <div class="post-thumb"><img src="images/home/h2news3.jpg" alt=""> </div>
                                 <div class="post-txt">
                                     <!--<span class="pdate"> <i class="fas fa-calendar-alt"></i> 29 September, 2018</span>-->
                                     <h5><a href="#">Customized Training</a></h5>
@@ -354,7 +354,7 @@
                         <!--Pro Box Start-->
                         <div class="col-md-3 col-sm-6">
                             <div class="product-box">
-                                <div class="pro-thumb"> <a href="#">See More</a> <img src="images/pro1.jpg" alt=""></div>
+                                <div class="pro-thumb"> <a href="#">See More</a> <img src="images/home/pro1.jpg" alt=""></div>
                                 <div class="pro-txt">
                                     <h6><a href="#">External Training</a></h6>
                                 </div>
@@ -364,7 +364,7 @@
                         <!--Pro Box Start-->
                         <div class="col-md-3 col-sm-6">
                             <div class="product-box">
-                                <div class="pro-thumb"> <a href="#">See More</a> <img src="images/pro2.jpg" alt=""></div>
+                                <div class="pro-thumb"> <a href="#">See More</a> <img src="images/home/pro2.jpg" alt=""></div>
                                 <div class="pro-txt">
                                     <h6><a href="#">Brainstorm Sessions</a></h6>
                                 </div>
@@ -374,7 +374,7 @@
                         <!--Pro Box Start-->
                         <div class="col-md-3 col-sm-6">
                             <div class="product-box">
-                                <div class="pro-thumb"> <a href="#">See More</a> <img src="images/pro3.jpg" alt=""></div>
+                                <div class="pro-thumb"> <a href="#">See More</a> <img src="images/home/pro3.jpg" alt=""></div>
                                 <div class="pro-txt">
                                     <h6><a href="#">Field Visits</a></h6>
                                 </div>
@@ -384,7 +384,7 @@
                         <!--Pro Box Start-->
                         <div class="col-md-3 col-sm-6">
                             <div class="product-box">
-                                <div class="pro-thumb"> <a href="#">See More</a> <img src="images/pro4.jpg" alt=""></div>
+                                <div class="pro-thumb"> <a href="#">See More</a> <img src="images/home/pro4.jpg" alt=""></div>
                                 <div class="pro-txt">
                                     <h6><a href="#">Others</a></h6>
                                 </div>
@@ -412,13 +412,13 @@
 
 <!--            <div class="instagram">
                 <ul>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/insta1.jpg" alt=""> </li>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/insta2.jpg" alt=""> </li>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/insta3.jpg" alt=""> </li>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/insta4.jpg" alt=""> </li>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/insta5.jpg" alt=""> </li>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/insta6.jpg" alt=""> </li>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/insta7.jpg" alt=""> </li>
+                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta1.jpg" alt=""> </li>
+                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta2.jpg" alt=""> </li>
+                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta3.jpg" alt=""> </li>
+                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta4.jpg" alt=""> </li>
+                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta5.jpg" alt=""> </li>
+                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta6.jpg" alt=""> </li>
+                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta7.jpg" alt=""> </li>
                 </ul>
             </div>-->
         </section>
