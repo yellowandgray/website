@@ -50,7 +50,7 @@
                                 <i class="fa fa-home"></i>
                             </div>
                             <div class="info-text">
-                                <p>Selangor,</br> No. 16-10, Penthouse,</br>Menara Infiniti, Jalan SS6/3,</br>47301 Petaling Jaya,</br>malaysia.</p>
+                                <p>Alias Innovation Sdn Bhd,</br> No. 16-10, Penthouse,</br>Menara Infiniti, Jalan SS6/3,</br>47301 Petaling Jaya,</br>Selangor, Malaysia.</p>
                             </div>
                         </div>
                         <div class="d-flex">
