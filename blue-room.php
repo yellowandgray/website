@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="about-video-img"> <img src="images/green-pic/001.jpg" alt=""> </div>
+                                <div class="about-video-img"> <img src="images/blue/0001.jpg" alt=""> </div>
                             </div>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                                             <!--Pro Box-->
                                             <div class="item">
                                                 <div class="pro-box">
-                                                    <img src="images/green-pic/001.jpg" alt="">
+                                                    <img src="images/blue/001.jpg" alt="">
                                                     <h5>External training</h5>
                                                     <div class="pro-hover">
                                                         <h6>External Training</h6>
