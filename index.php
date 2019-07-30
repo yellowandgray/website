@@ -1102,7 +1102,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <ul class="address">
                             <span class="fa fa-map-marker" aria-hidden="true"></span>
                             <li>
-                                No. 16-10, Penthouse,<br/> Menara Infiniti, Jalan SS6/3,<br/> 47301 Petaling Jaya,<br/> Selangor.<br/>
+                                Alias Innovation Sdn Bhd,<br/>No. 16-10, Penthouse,<br/> Menara Infiniti, Jalan SS6/3,<br/> 47301 Petaling Jaya,<br/> Selangor, Malaysia<br/>
                             </li>
                             <span class="fa fa-envelope" aria-hidden="true"></span>
                             <li>
