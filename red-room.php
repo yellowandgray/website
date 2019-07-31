@@ -24,7 +24,7 @@
             <?php include'head.php'; ?>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header">
+            <section class="wf100 p100 inner-header inner-header-03">
                 <div class="container">
                     <h1>Red Room</h1>
                     <ul>
@@ -44,14 +44,14 @@
                             <div class="col-lg-6">
                                 <div class="about-text">
                                     <h5>Command & Support</h5>
-                                    <h2>Simulations</h2>
+                                    <h2 class="color-blue">Simulations</h2>
                                     <p class="text-justify"><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</strong></p>
                                     <p class="text-justify">when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.  </p>
                                     <a href="#">Contact Us</a> 
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="about-video-img"> <img src="images/aboutimg.jpg" alt=""> </div>
+                                <div class="about-video-img"> <img src="images/red/001.jpg" alt=""> </div>
                             </div>
                         </div>
                     </div>
@@ -62,9 +62,9 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="section-title-2">
-                                    <h5></h5>
-                                    <h2>Red Room Services</h2>
+                                <div class="about-text">
+                                    <h5>Red Room </h5>
+                                    <h2 class="color-blue">Services & Features</h2>
                                 </div>
                                 <!--eco History Start-->
                                 <div class="eco-history">
@@ -108,55 +108,55 @@
                 </div>
                 <!--Our Success Story End--> 
                 <!--Why you Need to Choose Ecova Start-->
-                <div class="choose-ecova wf100 p80">
+                <div class="choose-ecova choose-eco wf100 p80">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="section-title-2">
+                                <div class="about-text">
                                     <h5>Simulation</h5>
-                                    <h2>Courses in Red Room</h2>
+                                    <h2 class="color-blue">Courses in Red Room</h2>
                                 </div>
                                 <div class="row">
                                     <div class="col-4">
                                         <div class="eco-box">
-                                            <span class="econ-icon"><i class="fas fa-brain"></i></span>
+                                            <span class="econ-icon color-blue"><i class="fas fa-brain"></i></span>
                                             <h5>Artificial Intelligence</h5>
-                                            <p> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
+                                            <p class="text-justify"> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="eco-box">
-                                            <span class="econ-icon"><i class="fas fa-database"></i></span>
+                                            <span class="econ-icon color-blue"><i class="fas fa-database"></i></span>
                                             <h5>Big Data</h5>
-                                            <p> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
+                                            <p class="text-justify">Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="eco-box">
-                                            <span class="econ-icon"><i class="fas fa-network-wired"></i></span>
+                                            <span class="econ-icon color-blue"><i class="fas fa-network-wired"></i></span>
                                             <h5>Internet of Things (IOT)</h5>
-                                            <p> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
+                                            <p class="text-justify"> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="eco-box">
-                                            <span class="econ-icon"><i class="fas fa-cubes"></i></span>
+                                            <span class="econ-icon color-blue"><i class="fas fa-cubes"></i></span>
                                             <h5> 3D Printing </h5>
-                                            <p> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
+                                            <p class="text-justify"> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="eco-box">
-                                            <span class="econ-icon"> <i class="fas fa-robot"></i></span>
+                                            <span class="econ-icon color-blue"> <i class="fas fa-robot"></i></span>
                                             <h5> Robatics </h5>
-                                            <p> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
+                                            <p class="text-justify"> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="eco-box">
-                                            <span class="econ-icon"> <i class="fas fa-align-left"></i></span>
+                                            <span class="econ-icon color-blue"> <i class="fas fa-align-left"></i></span>
                                             <h5>Others </h5>
-                                            <p> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
+                                            <p class="text-justify"> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -168,22 +168,7 @@
                 <!--Why you Need to Choose Ecova End--> 
                 <!--Testimonials End--> 
                 <!--Partner Logos Section Start-->
-                <div class="partner-logos wf100">
-                    <div class="container">
-                        <div id="partner-logos" class="owl-carousel owl-theme">
-                            <div class="item"><img src="images/plogo1.png" alt=""></div>
-                            <div class="item"><img src="images/plogo2.png" alt=""></div>
-                            <div class="item"><img src="images/plogo3.png" alt=""></div>
-                            <div class="item"><img src="images/plogo4.png" alt=""></div>
-                            <div class="item"><img src="images/plogo5.png" alt=""></div>
-                            <div class="item"><img src="images/plogo1.png" alt=""></div>
-                            <div class="item"><img src="images/plogo2.png" alt=""></div>
-                            <div class="item"><img src="images/plogo3.png" alt=""></div>
-                            <div class="item"><img src="images/plogo4.png" alt=""></div>
-                            <div class="item"><img src="images/plogo5.png" alt=""></div>
-                        </div>
-                    </div>
-                </div>
+
                 <!--Partner Logos Section End--> 
             </section>
             <!--About End--> 

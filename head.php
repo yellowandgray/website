@@ -1,5 +1,21 @@
 <header class="header-style-2">
-    <div class="col-md-12">
+    <div class="topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 top">
+                    <p><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> info@projectnextdoor.com</a></p>
+                    <p><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> +91 00 0000 0000</a></p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="topbar-social">
+                        <li class="social-links"> <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-linkedin-in"></i></li>
+                        <!--<li> <a class="acclink" href="#"><i class="far fa-user-circle"></i> My Account</a> </li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 header-style-3"  id='navbar'>
         <div class="row">
             <div class="col-md-10">
                 <nav class="navbar navbar-expand-lg">
@@ -33,10 +49,18 @@
                 </nav>
             </div>
             <div class="col-md-2 col-sm-2">
-                <form class="search-form">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                    <button class="sbtn" type="submit"><i class="fas fa-search"></i></button>
-                </form>
+
+                <button class="sbtn" id="myBtn"><i class="fas fa-search"></i></button>
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <input type='text' placeholder="Search here..."><button class="sbtn" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </div>

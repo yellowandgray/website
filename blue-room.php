@@ -44,7 +44,7 @@
                             <div class="col-lg-6">
                                 <div class="about-text">
                                     <h5>Blue Room</h5>
-                                    <h2>Space For Rent</h2>
+                                    <h2 class="color-blue">Space For Rent</h2>
                                     <p class="text-justify"><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</strong></p>
                                     <p class="text-justify">when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.  </p>
                                     <a href="#">Contact Us</a> 
@@ -64,7 +64,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="section-title-2">
-                                    <h2>Features</h2>
+                                    <h2 class="color-blue">Features</h2>
                                 </div>
                             </div>
                         </div>
@@ -141,7 +141,7 @@
                             <div class="col-lg-12">
                                 <div class="section-title-2">
                                     <h5></h5>
-                                    <h2>Time Sessions</h2>
+                                    <h2 class="color-blue">Time Sessions</h2>
                                 </div>
                                 <!--eco History Start-->
                                 <div class="eco-history">
@@ -199,9 +199,10 @@
                                     <!--Blog Post Start-->
                                     <div class="blog-post">
                                         <div class="blog-txt">
-                                            <h3><a href="#">Innovative  Space</a></h3>
+                                            <div class="section-title-2">
+                                                <h2 class="color-blue">Innovative  Space</h2>
+                                            </div>
                                             <p class="text-justify"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-
                                         </div>
                                         <div class="blog-slider">
                                             <div id="bslider" class="owl-carousel owl-theme">
@@ -220,7 +221,7 @@
                     </div>
                 </section>
                 <!--Partner Logos Section Start-->
-             
+
                 <!--Partner Logos Section End--> 
             </section>
             <!--About End--> 

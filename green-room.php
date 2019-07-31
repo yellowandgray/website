@@ -24,13 +24,13 @@
             <?php include'head.php'; ?>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header">
+            <section class="wf100 p100 inner-header inner-header-02">
                 <div class="container">
-                    <h1>Red Room</h1>
+                    <h1>Green Room</h1>
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Services</a></li>
-                        <li><a href="#">Red Room</a></li>
+                        <li><a href="#">Green Room</a></li>
                     </ul>
                 </div>
             </section>
@@ -43,15 +43,15 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="about-text">
-                                    <h5>Command & Support</h5>
-                                    <h2>SimulationS</h2>
+                                    <h5>Knowledge & Empowerment</h5>
+                                    <h2 class="color-blue">Offline & Online Learning</h2>
                                     <p class="text-justify"><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</strong></p>
                                     <p class="text-justify">when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.  </p>
                                     <a href="#">Contact Us</a> 
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="about-video-img"> <img src="images/aboutimg.jpg" alt=""> </div>
+                                <div class="about-video-img"> <img src="images/green/001.jpg" alt=""> </div>
                             </div>
                         </div>
                     </div>
@@ -62,9 +62,9 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="section-title-2">
+                                <div class="about-text">
                                     <h5></h5>
-                                    <h2>Red Room Services</h2>
+                                    <h2 class="color-blue">Training Sessions</h2>
                                 </div>
                                 <!--eco History Start-->
                                 <div class="eco-history">
@@ -72,30 +72,25 @@
                                         <div class="timeline">
                                             <div>
                                                 <div class="row">
-                                                    <div class=" col-3">
-                                                        <div class="timeline-box width-2">
-                                                            <h6>Video Wall</h6>
+                                                    <div class=" col-4">
+                                                        <div class="timeline-box width-360">
+                                                            <h6>Bite Sized training</h6>
                                                             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  </p>
                                                         </div>
                                                     </div>
-                                                    <div class=" col-3">
-                                                        <div class="timeline-box width-2">
-                                                            <h6>Support</h6>
+                                                    <div class=" col-4">
+                                                        <div class="timeline-box width-360">
+                                                            <h6>Full days Training</h6>
                                                             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                                                         </div>
                                                     </div>
-                                                    <div class=" col-3">
-                                                        <div class="timeline-box width-2">
-                                                            <h6>Simulation</h6>
+                                                    <div class=" col-4">
+                                                        <div class="timeline-box width-360">
+                                                            <h6>Customized Training</h6>
                                                             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
                                                         </div>
                                                     </div>
-                                                    <div class=" col-3">
-                                                        <div class="timeline-box width-2">
-                                                            <h6>Experiential Training</h6>
-                                                            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -107,88 +102,124 @@
                     </div>
                 </div>
                 <!--Our Success Story End--> 
+                <section class="services-area margin-t-0 wf100 pad-tb-70 urgent-causes">
+                    <div class="container">
+                        <ul>
+                            <!--box  start-->
+                            <li>
+                                <div class="sinfo">
+                                    <img src="images/home/sericon1.png" alt="">
+                                    <h6>Entrepreneurship</h6>
+                                    <p>content-1</p>
+                                </div>
+                            </li>
+                            <!--box  end--> 
+                            <!--box  start-->
+                            <li>
+                                <div class="sinfo">
+                                    <img src="images/home/sericon2.png" alt="">
+                                    <h6>Management</h6>
+                                    <p>content-2</p>
+                                </div>
+                            </li>
+                            <!--box  end--> 
+                            <!--box  start-->
+                            <li>
+                                <div class="sinfo">
+                                    <img src="images/home/sericon3.png" alt="">
+                                    <h6>strategic Planing</h6>
+                                    <p>content-3</p>
+                                </div>
+                            </li>
+                            <!--box  end--> 
+                            <!--box  start-->
+                            <li>
+                                <div class="sinfo">
+                                    <img src="images/home/sericon4.png" alt="">
+                                    <h6>Technical & Soft Skills</h6>
+                                    <p>content-4</p>
+                                </div>
+                            </li>
+                            <!--box  end--> 
+                            <!--box  start-->
+                            <li>
+                                <div class="sinfo">
+                                    <img src="images/home/sericon5.png" alt="">
+                                    <h6>Vocational</h6>
+                                    <p>content-5</p>
+                                </div>
+                            </li>
+                            <!--box  end-->
+                        </ul>
+                    </div>
+                </section>
                 <!--Why you Need to Choose Ecova Start-->
-                <div class="choose-ecova wf100 p80">
+                <div class="choose-ecova choose-eco wf100 p80">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="section-title-2">
-                                    <h5>Simulation</h5>
-                                    <h2>Courses in Red Room</h2>
+                                <div class="about-text">
+                                    <h5>Green Room</h5>
+                                    <h2 class="color-blue">Training Features</h2>
                                 </div>
                                 <div class="row">
                                     <div class="col-4">
                                         <div class="eco-box">
-                                            <span class="econ-icon"><i class="fas fa-brain"></i></span>
-                                            <h5>Artificial Intelligence</h5>
-                                            <p> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
+                                            <span class="econ-icon"><i class="fas fa-lightbulb color-blue"></i></span>
+                                            <h5>Ideas & Pondok Serves</h5>
+                                            <p class="text-justify"> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="eco-box">
-                                            <span class="econ-icon"><i class="fas fa-database"></i></span>
-                                            <h5>Big Data</h5>
-                                            <p> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
+                                            <span class="econ-icon"><i class="fas fa-leaf color-blue"></i></span>
+                                            <h5>Idea Nators</h5>
+                                            <p class="text-justify"> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="eco-box">
-                                            <span class="econ-icon"><i class="fas fa-network-wired"></i></span>
-                                            <h5>Internet of Things (IOT)</h5>
-                                            <p> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
+                                            <span class="econ-icon"><i class="fas fa-network-wired color-blue"></i></span>
+                                            <h5>S.U.M.O</h5>
+                                            <p class="text-justify"> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="eco-box">
-                                            <span class="econ-icon"><i class="fas fa-cubes"></i></span>
-                                            <h5> 3D Printing </h5>
-                                            <p> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
+                                            <span class="econ-icon"><i class="fas fa-comments color-blue"></i></span>
+                                            <h5>B.M & English contact Delivery</h5>
+                                            <p class="text-justify"> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="eco-box">
-                                            <span class="econ-icon"> <i class="fas fa-robot"></i></span>
-                                            <h5> Robatics </h5>
-                                            <p> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
+                                            <span class="econ-icon"><i class="fas fa-chalkboard color-blue"></i></span>
+                                            <h5> Offline Learning </h5>
+                                            <p class="text-justify"> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="eco-box">
-                                            <span class="econ-icon"> <i class="fas fa-align-left"></i></span>
-                                            <h5>Others </h5>
-                                            <p> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
+                                            <span class="econ-icon"><i class="fas fa-laptop-code color-blue"></i></span>
+                                            <h5>Online learning </h5>
+                                            <p class="text-justify"> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                          
+
                         </div>
                     </div>
                 </div>
                 <!--Why you Need to Choose Ecova End--> 
                 <!--Testimonials End--> 
                 <!--Partner Logos Section Start-->
-                <div class="partner-logos wf100">
-                    <div class="container">
-                        <div id="partner-logos" class="owl-carousel owl-theme">
-                            <div class="item"><img src="images/plogo1.png" alt=""></div>
-                            <div class="item"><img src="images/plogo2.png" alt=""></div>
-                            <div class="item"><img src="images/plogo3.png" alt=""></div>
-                            <div class="item"><img src="images/plogo4.png" alt=""></div>
-                            <div class="item"><img src="images/plogo5.png" alt=""></div>
-                            <div class="item"><img src="images/plogo1.png" alt=""></div>
-                            <div class="item"><img src="images/plogo2.png" alt=""></div>
-                            <div class="item"><img src="images/plogo3.png" alt=""></div>
-                            <div class="item"><img src="images/plogo4.png" alt=""></div>
-                            <div class="item"><img src="images/plogo5.png" alt=""></div>
-                        </div>
-                    </div>
-                </div>
+
                 <!--Partner Logos Section End--> 
             </section>
             <!--About End--> 
             <!--Footer Start-->
-          <?php include'footer.php'; ?>            <!--Footer End--> 
+            <?php include'footer.php'; ?>            <!--Footer End--> 
         </div>
         <!--   JS Files Start  --> 
         <script src="js/jquery-3.3.1.min.js"></script> 

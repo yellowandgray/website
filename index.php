@@ -158,6 +158,7 @@
                             <p>The most unique and immersive experience where public sector and private sector converges</p>
 
                         </div>
+
                         <div class="col-md-6">
                             <div class="donation-amount">
                                 <h5>Simulation</h5>
@@ -212,7 +213,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="section-title-2">
+                            <div class="section-title-2 red">
                                 <h5 class="color-orange">Command and Support</h5>
                                 <h2>Red Room</h2>
                             </div>
@@ -281,6 +282,11 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-12 seemore">
+                            <a class="aboutus color-b" href="#">See More</a>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!--Current Projects End--> 
@@ -289,7 +295,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="section-title-2">
+                            <div class="section-title-2 green">
                                 <h5 class="color-orange">Knowledge & Empowerment</h5>
                                 <h2>Green Room</h2>
                             </div>
@@ -343,8 +349,8 @@
             <section class="online-shop wf100 p80">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="section-title-2 ">
+                        <div class="col-md-6">
+                            <div class="section-title-2 blue ">
                                 <h5 class="color-orange">Space for Rent</h5>
                                 <h2>Blue Room</h2>
                             </div>
@@ -354,7 +360,7 @@
                         <!--Pro Box Start-->
                         <div class="col-md-3 col-sm-6">
                             <div class="product-box">
-                                <div class="pro-thumb"> <a href="#">See More</a> <img src="images/home/pro1.jpg" alt=""></div>
+                                <div class="pro-thumb"><img src="images/home/pro1.jpg" alt=""></div>
                                 <div class="pro-txt">
                                     <h6><a href="#">External Training</a></h6>
                                 </div>
@@ -364,7 +370,7 @@
                         <!--Pro Box Start-->
                         <div class="col-md-3 col-sm-6">
                             <div class="product-box">
-                                <div class="pro-thumb"> <a href="#">See More</a> <img src="images/home/pro2.jpg" alt=""></div>
+                                <div class="pro-thumb"><img src="images/home/pro2.jpg" alt=""></div>
                                 <div class="pro-txt">
                                     <h6><a href="#">Brainstorm Sessions</a></h6>
                                 </div>
@@ -374,7 +380,7 @@
                         <!--Pro Box Start-->
                         <div class="col-md-3 col-sm-6">
                             <div class="product-box">
-                                <div class="pro-thumb"> <a href="#">See More</a> <img src="images/home/pro3.jpg" alt=""></div>
+                                <div class="pro-thumb"><img src="images/home/pro3.jpg" alt=""></div>
                                 <div class="pro-txt">
                                     <h6><a href="#">Field Visits</a></h6>
                                 </div>
@@ -384,13 +390,18 @@
                         <!--Pro Box Start-->
                         <div class="col-md-3 col-sm-6">
                             <div class="product-box">
-                                <div class="pro-thumb"> <a href="#">See More</a> <img src="images/home/pro4.jpg" alt=""></div>
+                                <div class="pro-thumb"><img src="images/home/pro4.jpg" alt=""></div>
                                 <div class="pro-txt">
                                     <h6><a href="#">Others</a></h6>
                                 </div>
                             </div>
                         </div>
                         <!--Pro Box End--> 
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 seemore">
+                            <a class="aboutus color-b" href="#">See More</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -399,10 +410,31 @@
             <section class="why-ecova wf100">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-8 pad-t-145">
                             <h1> Membership / Subscription</h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                            <a href="#" class="cus">Signup to Join us</a> 
+                            <!--<a href="#" class="cus">Signup to Join us</a>--> 
+                        </div>
+                        <div class="col-lg-4 choose-ecova" >
+                            <div class="volunteer-form">
+                                <div class="section-title">
+                                    <h3>Join us Now</h3>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <input type="text" class="form-control" placeholder="Your Name" aria-label="Your Name">
+                                    </li>
+                                    <li>
+                                        <input type="text" class="form-control" placeholder="Email Address" aria-label="Email Address">
+                                    </li>
+                                    <li>
+                                        <input type="text" class="form-control" placeholder="Contact" aria-label="Contact">
+                                    </li>
+                                    <li>
+                                        <input type="submit" class="fsubmit" value="Signup to Join us">
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -410,17 +442,17 @@
             <!--Why Ecova + Facts End--> 
             <!--InstaGram Start-->
 
-<!--            <div class="instagram">
-                <ul>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta1.jpg" alt=""> </li>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta2.jpg" alt=""> </li>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta3.jpg" alt=""> </li>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta4.jpg" alt=""> </li>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta5.jpg" alt=""> </li>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta6.jpg" alt=""> </li>
-                    <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta7.jpg" alt=""> </li>
-                </ul>
-            </div>-->
+            <!--            <div class="instagram">
+                            <ul>
+                                <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta1.jpg" alt=""> </li>
+                                <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta2.jpg" alt=""> </li>
+                                <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta3.jpg" alt=""> </li>
+                                <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta4.jpg" alt=""> </li>
+                                <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta5.jpg" alt=""> </li>
+                                <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta6.jpg" alt=""> </li>
+                                <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta7.jpg" alt=""> </li>
+                            </ul>
+                        </div>-->
         </section>
         <!--InstaGram End--> 
         <!--Footer Start-->
@@ -436,5 +468,41 @@
     <script src="js/jquery.prettyPhoto.js"></script> 
     <script src="js/isotope.min.js"></script> 
     <script src="js/custom.js"></script>
+    <!--popup-->
+    <script>
+
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <!-- top nav fixed on based scroll -->
+    <script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbar").style.top = "0";
+
+
+            } else {
+                document.getElementById("navbar").style.top = "50px";
+
+            }
+        }
+    </script>
 </body>
 </html>
