@@ -1206,6 +1206,7 @@ marquee {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 .events-margin iframe {
@@ -1244,4 +1245,14 @@ marquee {
 
 .list-style-none li ul {
     list-style-type: none;
+}
+
+.event-img-margin {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.event-img-margin p {
+   text-align: center;
+   color: #000;
 }

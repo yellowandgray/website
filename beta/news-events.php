@@ -34,11 +34,11 @@
 <!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
 <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
                         <div class="row events-margin padding-bottom-30">
-                            <div class="col-md-6">
-                                <img src="images/events/kamarajar-birthday/kamarajar-img.jpg" alt=""/>
-                            </div>
-                            <div class="col-md-6 event-justify">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <div class="col-md-12">
+                                <div class="event-img-margin">
+                                    <img src="images/events/kamarajar-birthday/kamarajar-img.jpg" alt=""/>
+                                    <p>Kamarajar Birthday Celebrated as Education Development Day. Students showcasing their talents at ENPEE International School.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
@@ -84,7 +84,7 @@
                                         <img src="images/events/kamarajar-birthday/017.jpg" alt="Events" title="Events-ENPEE International School" />
                                     </div>
                                     <div class="col-md-4">
-                                        
+
                                     </div>
                                 </div>
                             </div>
