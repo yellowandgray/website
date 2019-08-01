@@ -6949,3 +6949,7 @@ section.wf100.p80.fcampaigns {
 .pad-t-145 {
     padding-top: 145px;
 }
+.linear {
+    transition: all 1s linear 1s;
+}
+

@@ -175,14 +175,6 @@
             <!--Footer Start-->
           <?php include'footer.php'; ?>            <!--Footer End--> 
         </div>
-        <!--   JS Files Start  --> 
-        <script src="js/jquery-3.3.1.min.js"></script> 
-        <script src="js/jquery-migrate-1.4.1.min.js"></script> 
-        <script src="js/popper.min.js"></script> 
-        <script src="js/bootstrap.min.js"></script> 
-        <script src="js/owl.carousel.min.js"></script> 
-        <script src="js/jquery.prettyPhoto.js"></script> 
-        <script src="js/slick.min.js"></script> 
-        <script src="js/custom.js"></script>
+    
     </body>
 </html>

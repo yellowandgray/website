@@ -25,7 +25,7 @@
                     </div>
                     <!--Footer Widget End--> 
                 </div>
-               
+
             </div>
         </div>
     </div>
@@ -40,3 +40,48 @@
         </div>
     </div>
 </footer>
+
+<script src="js/jquery-3.3.1.min.js"></script> 
+<script src="js/jquery-migrate-1.4.1.min.js"></script> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/owl.carousel.min.js"></script> 
+<script src="js/jquery.prettyPhoto.js"></script> 
+<script src="js/isotope.min.js"></script> 
+<script src="js/custom.js"></script>
+<!--popup-->
+<script>
+
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<!-- top nav fixed on based scroll -->
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("navbar").style.top = "0";
+
+
+        } else {
+            document.getElementById("navbar").style.top = "50px";
+
+        }
+    }
+</script>

@@ -48,7 +48,7 @@
                     </div>
                 </nav>
             </div>
-            <div class="col-md-2 col-sm-2">
+            <div class="col-md-2 col-sm-2 linear">
 
                 <button class="sbtn" id="myBtn"><i class="fas fa-search"></i></button>
                 <div id="myModal" class="modal">
