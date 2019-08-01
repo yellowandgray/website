@@ -31,6 +31,7 @@
                             <strong>One stop innovation<span> & Knowledge Hub</span></strong>
                             <h1>Certified Trainers</h1>
                             <p><strong>HRDF</strong> Registered</p>
+                            <br/>
                             <a href="#" class="active color-b">Find Out More</a> <a href="#">Join us Now</a> 
                         </div>
                     </div>
@@ -42,6 +43,7 @@
                             <strong>Simulation</strong>
                             <h1>Industry 4.0 Hub</h1>
                             <p><strong>AI, Big Data,</strong> IOT, 3D Printing, Robotics</p>
+                            <br/>
                             <a href="#" class="active color-b">Find Out More</a> <a href="#">Join us Now</a> 
                         </div>
                     </div>
@@ -214,7 +216,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="section-title-2 red">
-                                <h5 class="color-orange">Command and Support</h5>
+                                <h5 class="color-pink">Command and Support</h5>
                                 <h2>Red Room</h2>
                             </div>
                         </div>
@@ -296,7 +298,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="section-title-2 green">
-                                <h5 class="color-orange">Knowledge & Empowerment</h5>
+                                <h5 class="color-pink">Knowledge & Empowerment</h5>
                                 <h2>Green Room</h2>
                             </div>
                         </div>
@@ -351,7 +353,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="section-title-2 blue ">
-                                <h5 class="color-orange">Space for Rent</h5>
+                                <h5 class="color-pink">Space for Rent</h5>
                                 <h2>Blue Room</h2>
                             </div>
                         </div>
@@ -460,6 +462,6 @@
         <!--Footer End--> 
     </div>
     <!--   JS Files Start  --> 
-    
+
 </body>
 </html>

@@ -411,10 +411,7 @@ Home Page Content Start
     margin-right: 15px;
     box-shadow: 0 8px 15px rgba(0,0,0,.07);
 }
-.slider-caption a.active:hover {
-    background: #fff;
-    color: #6ea53b;
-}
+
 .slider-caption a.active, .slider-caption a:hover {
     color: #fff;
     background: #6ea53b;
@@ -453,8 +450,12 @@ Home Page Content Start
     font-weight: 600;
 }
 .slider-caption.h2slider a.active, .slider-caption.h2slider a:hover {
-    background: #0b9eca !important;
-    color: #fff;
+    background: #314b4c  !important;
+    color: #fff !important;
+}
+.slider-caption a.active:hover {
+    background: #ff756a !important;
+    color: #000;
 }
 .slider-caption.h3slider {
     text-align: center;
@@ -1472,7 +1473,7 @@ Home Page 2 Start
     font-family: 'Roboto', sans-serif;
 }
 header.header-style-2 {
-    background: #0b9eca;
+    background: #314b4c;
 }
 header.header-style-2 .navbar {
     padding: 0px;
@@ -1573,7 +1574,7 @@ a.cart-icon:hover, a.search-icon:hover {
 }
 .header-style-2 .navbar-expand-lg .navbar-nav .nav-link {
     padding: 22px;
-    color: #0b9eca;
+    color: #314b4c;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 500;
@@ -1636,7 +1637,7 @@ section.services-area ul li:after {
     left: 0;
     width: 100%;
     height: 0;
-    background: #FFAA12 !important;
+    background: #ff756a !important;
     content: "";
     border-radius: 5px;
     opacity: 0;
@@ -1646,7 +1647,7 @@ section.services-area ul li:hover:after {
     opacity: 1;
 }
 section.services-area ul li.active p, section.services-area ul li.active h6, .services-area ul li:hover p, .services-area ul li:hover h6 {
-    color: #fff;
+    color: #ffffff;
 }
 section.services-area ul li.active:after {
     height: 250px;
@@ -1746,12 +1747,12 @@ section.services-area ul li.active:after {
     color: #66bb6a;
 }
 .h2-about-txt h3 {
-    color: #FFAA12 !important;
+    color: #ff756a !important;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 .h2-about-txt h2 {
-    color: #222222;
+    color: #314b4c;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     margin: 15px 0;
@@ -1875,7 +1876,7 @@ section.services-area ul li.active:after {
     margin: 0px;
 }
 .radio-boxes input[type=radio].css-radio+label.css-label:hover {
-    background: #0b9eca !important;
+    background: #ff756a !important;
     border-color: #fbfbfb !important;
     color: #fff;
 }
@@ -1983,7 +1984,7 @@ li.form-submit button:hover {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 12px;
-    color: #ffaa12 !important;
+    color: #314b4c !important;
 }
 .pro-box:hover h5 {
     opacity: 0;
@@ -2132,14 +2133,14 @@ li.form-submit button:hover {
     margin: 0 0 3px;
 }
 .rm {
-    color:#0b9eca !important;
+    color:#ff756a !important;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 600;
 }
 .blog-small-post:hover .post-txt h5 a {
-    color: #ffaa12 !important;
+    color: #314b4c !important;
 }
 .rm:hover {
     color: #222;
@@ -2280,7 +2281,7 @@ header .navbar-toggler {
     opacity: 0;
 }
 .product-box:hover .pro-txt h6 a {
-    color: #ffb112;
+    color: #ff796a;
 }
 .pro-thumb a {
     position: absolute;
@@ -6098,7 +6099,7 @@ About Us Page
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
-    background: #66bb6a;
+    background: #314b4c;
 }
 .choose-ecova .section-title-2 h2 {
     margin: 0 0 30px;
@@ -6762,7 +6763,7 @@ Search Overlay End
     font-family: 'Roboto Condensed', sans-serif;
 }
 .newsletter input[type=submit]:hover, a.lm:hover, .add-2-cart input[type="submit"]:hover, a.view:hover, .side-search button:hover, .choose-ecova .volunteer-form input.fsubmit:hover, #search .btn:hover, .aboutus:hover {
-    background: #1b5e20;
+    background: #ff796a !important;
     color: #fff;
 }
 .pro-hover a:hover {
@@ -6785,10 +6786,10 @@ section.wf100.p80.fcampaigns {
     background-color: #FFAA12 !important;
 }
 .color-b {
-    background-color:#0b9eca !important;
+    background-color:#314b4c !important;
 }
-.color-orange {
-    color: #FFAA12 !important;
+.color-pink {
+    color: #ff756a !important;
 }
 .cus:hover {
     background-color: #FFAA12 !important;
@@ -6817,7 +6818,7 @@ section.wf100.p80.fcampaigns {
 
 }
 .color-green {
-    color: #66bb6a !important;
+    color: #314b4c !important;
 
 }
 .margin-t-0 {
@@ -6828,8 +6829,8 @@ section.wf100.p80.fcampaigns {
 }
 
 .header-style-2 .dropdown-menu a:hover, .header-style-1 .dropdown-menu a:hover {
-    color: #ffaa12 !important;
-    background: #004b62 !important
+    color: #f1c1bd !important;
+    background: #314b4c !important
 }
 .eco-box:hover .econ-icon{
     background: #FFAA12 !important;
@@ -6938,7 +6939,7 @@ section.wf100.p80.fcampaigns {
     margin-top: 15px;
 }
 #navbar {
-    background: #fff;
+    background: #dfdade;
     position: fixed;
     top: 50px;
     width: 100%;
