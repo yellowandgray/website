@@ -1,0 +1,390 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 45px;
+    color: #ff9999;
+    display: block;
+    transition: 0.3s;
+    font-weight: 700;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #ff9999a1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.menu-nav {
+    font-size:30px;
+    cursor:pointer;
+    float: right;
+    color: #fff;
+}
+
+header {
+    /*    position: fixed;*/
+    z-index: 900;
+    /*    display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;*/
+    width: 100%;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 22px;
+    padding-right: 22px;
+    -ms-flex-pack: center;
+    /*    background-color: #fff;
+        box-shadow: 0 0 10px 0 #eee;*/
+}
+
+.logo {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*
+.logo img {
+    width: 100%;
+}*/
+
+.banner-section {
+    width: 100%;
+    /*    padding-top: 90px;*/
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-text {
+    padding-top: 20%;
+}
+
+.banner-text h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+.banner-text h3 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.7rem;
+}
+
+.banner-text P {
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.button {
+    border-radius: 4px;
+    background-color: #ff9999;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 25px;;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.banner-text a {
+    color: #fff;
+}
+
+.section-padding {
+    padding: 8rem 0;
+}
+
+.header-style-1 h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.header-style-1 p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.felx-small-text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.underline-text {
+    width: auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn-custom {
+    background: #000;
+    border: 0px;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 53px;
+    padding: 20px 40px;
+    margin: 0 16px 0 0;
+    transition: all 0.5s;
+}
+
+.btn-custom:hover {
+    border: 1px solid #000;
+    background: transparent;
+    text-decoration: none;
+    color: #000;
+    transition: 0.5s;
+}
+
+.slideshow {
+    position: relative;
+    /*    z-index: 1;*/
+    height: 100%;
+    max-width: 700px;
+    margin: 90px auto 0;
+
+    * {
+        outline: none;
+    }
+
+    .slider {
+        box-shadow: 0 20px 50px -25px rgba(0, 0, 0, 1);
+    }
+
+    .slider-track {
+        transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+    }
+
+    .item {
+        height: 100%;
+        position: relative;
+        z-index: 1;
+
+        img {
+            width: 100%;
+            transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+            transform: scale(1.2);
+        }
+
+        &.slick-active img {
+            transform: scale(1);
+        }
+    }
+}
+
+.slick-list {
+    border: 5px solid #fff;
+}
+
+.box-1 {
+    background: url(../img/bg/img-1.jpg);
+    background-size: cover;
+    transition: transform 0.5s;
+    padding: 142px 0px;
+    cursor: pointer;
+}
+
+.box-padding {
+    padding: 35px;
+    margin: 50px;
+    background: #fff;
+}
+
+.box-padding h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #000;
+    text-align: center;
+}
+
+.text-hover {
+    display: none;
+    font-size: 34px;
+    font-weight: 300;
+}
+
+.box-1:hover {
+    padding: 138px 0px;
+}
+
+.box-1:hover .box-padding {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+
+.box-1:hover .box-padding h1 {
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    padding: 20px 10px;
+}
+
+.box-1:hover .text-hover {
+    display: block;
+    position: relative;
+    right: 0px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.box-2 {
+    background: url(../img/bg/img-2.jpg);
+    background-size: cover;
+    transition: transform 0.5s;
+    padding: 142px 0px;
+    cursor: pointer;
+}
+
+.box-2:hover {
+    padding: 138px 0px;
+}
+
+.box-2:hover .box-padding {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+
+.box-2:hover .box-padding h1 {
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    padding: 20px 10px;
+}
+
+.box-2:hover .text-hover {
+    display: block;
+    position: relative;
+    right: 0px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.box-3 {
+    background: url(../img/bg/img-3.jpg);
+    background-size: cover;
+    transition: transform 0.5s;
+    padding: 142px 0px;
+    cursor: pointer;
+}
+
+
+.box-3:hover {
+    padding: 138px 0px;
+}
+
+.box-3:hover .box-padding {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+
+.box-3:hover .box-padding h1 {
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    padding: 20px 10px;
+}
+
+.box-3:hover .text-hover {
+    display: block;
+    position: relative;
+    right: 0px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: italic;
+}
