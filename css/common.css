@@ -333,3 +333,56 @@ span.psw {
 .social-icon a {
     color: #000;
 }
+
+.carousel {
+    padding-top: 105px;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 600px;
+}
+
+.carousel-item video {
+    width: 100%;
+}
+
+.carousel-caption  {
+    position: absolute;
+    /*    right: 15%; */
+    top: 20%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: left; 
+}
+
+
+.site-blocks-cover h2 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: #fff;
+    font-weight: 900;
+} 
+.site-blocks-cover p {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 300
+}
+
+.product-title-wrap h3 {
+    font-size: 1.3rem;
+}
+
+.about-us p {
+    text-align: justify;
+}
+
+.text-primary {
+    color: #000000 !important;
+}

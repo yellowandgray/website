@@ -12,24 +12,82 @@
                 <div class="site-mobile-menu-body"></div>
             </div>
             <?php include 'menu.php'; ?>
-            <div class="site-blocks-cover overlay" style="background: url(images/hero_2.jpg)" data-aos="fade" data-stellar-background-ratio="0.5">
-                <div class="container">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
-                            <div class="row mb-4">
-                                <div class="col-md-7">
-                                    <h1>Shop With Us</h1>
-                                    <p class="mb-5 lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam assumenda ea quo cupiditate facere deleniti fuga officia.</p>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <video autoplay muted loop id="myVideo">
+                            <source src="images/video/life-cycle-of-a mosquito.mp4" type="video/mp4">
+                        </video>
+                        <div class="carousel-caption d-md-block">
+                            <div class="container">
+                                <div class="site-blocks-cover">
+                                    <h2>Non Toxic > Effective > Tangible</h2>
+                                    <p>World’s first Pheromones based mosquito trapping device.</p>
                                     <div>
                                         <a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 mb-lg-0 mb-2 d-block d-sm-inline-block">Shop Now</a>
-                                        <a href="#" class="btn btn-white py-3 px-5 rounded-0 d-block d-sm-inline-block">Club Membership</a>
+                                        <a href="#" class="btn btn-white py-3 px-5 rounded-0 d-block d-sm-inline-block">Membership</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/slider/slider-1.jpg" data-color="firebrick" alt="Second Image">
+                        <div class="carousel-caption d-md-block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div class="site-blocks-cover">
+                                            <h2>Attracts -> Catches -> Kills</h2>
+                                            <p>World’s first baby’s life protecting product preventing children from mosquito bite and their borne diseases.</p>
+                                            <div>
+                                                <a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 mb-lg-0 mb-2 d-block d-sm-inline-block">Shop Now</a>
+                                                <a href="#" class="btn btn-white py-3 px-5 rounded-0 d-block d-sm-inline-block">Membership</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/slider/slider-2.jpg" data-color="violet" alt="Third Image">
+                        <div class="carousel-caption d-md-block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div class="site-blocks-cover">
+                                            <h2>R&D TEST & EXPERIMENTS</h2>
+                                            <p>We have been in the Research and development test, experiments for more than twelve years.</p>
+                                            <div>
+                                                <a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 mb-lg-0 mb-2 d-block d-sm-inline-block">Shop Now</a>
+                                                <a href="#" class="btn btn-white py-3 px-5 rounded-0 d-block d-sm-inline-block">Membership</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Controls -->
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
+            <!-- end of "#banner" -->
             <section class="features-area site-section">
                 <div class="container">
                     <div class="row features-inner">
@@ -39,8 +97,8 @@
                                 <div class="f-icon">
                                     <img src="images/features/f-icon1.png" alt="">
                                 </div>
-                                <h6>Free Delivery</h6>
-                                <p>Free Shipping on all order</p>
+                                <h6>EGO-FRIENDLY</h6>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
                             </div>
                         </div>
 
@@ -49,8 +107,8 @@
                                 <div class="f-icon">
                                     <img src="images/features/f-icon2.png" alt="">
                                 </div>
-                                <h6>Return Policy</h6>
-                                <p>Free Shipping on all order</p>
+                                <h6>NON-TOXIC</h6>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
                             </div>
                         </div>
 
@@ -59,8 +117,8 @@
                                 <div class="f-icon">
                                     <img src="images/features/f-icon3.png" alt="">
                                 </div>
-                                <h6>24/7 Support</h6>
-                                <p>Free Shipping on all order</p>
+                                <h6>EFFECTIVE</h6>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
                             </div>
                         </div>
 
@@ -69,8 +127,8 @@
                                 <div class="f-icon">
                                     <img src="images/features/f-icon4.png" alt="">
                                 </div>
-                                <h6>Secure Payment</h6>
-                                <p>Free Shipping on all order</p>
+                                <h6>TANGIBLE</h6>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
                             </div>
                         </div>
                     </div>
@@ -79,25 +137,26 @@
             <div id="features" class="site-section bg-light">
                 <div class="container">
                     <div class="row mb-5 justify-content-center">
-                        <div class="col-md-6 text-center">
-                            <h3 class="section-sub-title">Awesome Products</h3>
-                            <h2 class="section-title mb-3">Featured Products</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum natus excepturi fuga ullam accusantium vel ut eveniet aut consequatur laboriosam ipsam.</p>
+                        <div class="col-md-8 text-center">
+                            <h3 class="section-sub-title">Awesome Devices</h3>
+                            <h2 class="section-title mb-3">Advanced Science and Technologies</h2>
+                            <p>RUSEODOR PRIVATE LIMITED is committed to applying science and technologies to improve the health and well-being of our society members at every stage of life. Our mosquito trapping devices are NON-TOXIC, EFFECTIVE & TANGIBLE.</p>
                         </div>
                     </div>
                     <div class="bg-white py-4 mb-4">
                         <div class="row mx-4 my-4 product-item-2 align-items-start">
                             <div class="col-md-6 mb-5 mb-md-0">
-                                <img src="images/model_1_bg.jpg" alt="Image" class="img-fluid">
+                                <img src="images/product/ruseodor-product-1.jpg" alt="Image" class="img-fluid">
                             </div>
                             <div class="col-md-5 ml-auto product-title-wrap">
                                 <span class="number">01.</span>
-                                <h3 class="text-black mb-4 font-weight-bold">About This Product</h3>
-                                <p class="mb-4">Et tempora id nostrum saepe amet doloribus deserunt totam officiis cupiditate asperiores quasi accusantium voluptatum dolorem quae sapiente voluptatem ratione odio iure blanditiis earum fuga molestiae alias dicta perferendis inventore!</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus soluta assumenda sed optio, error at?</p>
+                                <h3 class="text-black mb-4 font-weight-bold">DMT (DENGUE MOSQUITO TRAP)</h3>
+                                <p>“DMT” Dengue Mosquito Trap  is a  midsize device suitable for both indoor &outdoor use</p>
+                                <p>It operates in DC 12Volt current and in-built battery with a backup of 6 hours.</p>
+                                <p>A unique propeller three blades fan is accommodated inside the device which sucks  mosquitoes along with the air without any deviation in aerodynamics</p>
                                 <div class="mb-4">
                                     <h3 class="text-black font-weight-bold h5">Price:</h3>
-                                    <div class="price"><del class="mr-2">$269.00</del> $69.00</div>
+                                    <div class="price"><div class="mr-2">₹ 2,800/- All Features Enabled</div> ₹ 1,800/- Normal</div>
                                 </div>
                                 <p>
                                     <a href="#" class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">View Details</a>
@@ -106,19 +165,43 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white py-4">
+                    <div class="bg-white py-4 mb-4">
                         <div class="row mx-4 my-4 product-item-2 align-items-start">
                             <div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
-                                <img src="images/product_1_bg.jpg" alt="Image" class="img-fluid">
+                                <img src="images/product/ruseodor-product-2.jpg" alt="Image" class="img-fluid">
                             </div>
                             <div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1">
                                 <span class="number">02.</span>
-                                <h3 class="text-black mb-4 font-weight-bold">About This Product</h3>
-                                <p class="mb-4">Et tempora id nostrum saepe amet doloribus deserunt totam officiis cupiditate asperiores quasi accusantium voluptatum dolorem quae sapiente voluptatem ratione odio iure blanditiis earum fuga molestiae alias dicta perferendis inventore!</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus soluta assumenda sed optio, error at?</p>
+                                <h3 class="text-black mb-4 font-weight-bold">RUSEODOR-PREYZAP</h3>
+                                <p>“PREYZAP” Premium category device with  advanced sensing technology of  maintaining HUMAN AMBIENT TEMPRATURE (36.5–37.5 °C (97.7–99.5 °F)).</p>
+                                <p>It operates in DC 12V current and in-built battery with an backup of 6hours</p>
+                                <p>It has provision for  fitting two liquid bottles inside which operates and emits the pheromones vapours at same time.</p>
                                 <div class="mb-4">
                                     <h3 class="text-black font-weight-bold h5">Price:</h3>
-                                    <div class="price"><del class="mr-2">$269.00</del> $69.00</div>
+                                    <div class="price"><del class="mr-2">₹ 21,000</del> ₹ 20,000</div>
+                                </div>
+                                <p>
+                                    <a href="#" class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">View Details</a>
+                                    <a href="#" class="btn btn-black rounded-0 d-block d-lg-inline-block">Add To Cart</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white py-4 mb-4">
+                        <div class="row mx-4 my-4 product-item-2 align-items-start">
+                            <div class="col-md-6 mb-5 mb-md-0">
+                                <img src="images/product/ruseodor-product-3.jpg" alt="Image" class="img-fluid">
+                            </div>
+                            <div class="col-md-5 ml-auto product-title-wrap">
+                                <span class="number">03.</span>
+                                <h3 class="text-black mb-4 font-weight-bold">RUSEODOR-MOSLAY</h3>
+                                <p>“MOSLAY” is a midsize device  compatible for both outdoor & indoor use</p>
+                                <p>It operates in DC 12V current</p>
+                                <p>It has an unique aesthetic physical feature of docleg,</p>
+                                <p>It is a square model with SMD LED on three sides with an arm holding the pheromones container</p>
+                                <div class="mb-4">
+                                    <h3 class="text-black font-weight-bold h5">Price:</h3>
+                                    <div class="price"><del class="mr-2">₹ 0,000/-</del> ₹ 0,000/-</div>
                                 </div>
                                 <p>
                                     <a href="#" class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">View Details</a>
@@ -133,8 +216,8 @@
                 <div class="container">
                     <div class="row mb-5">
                         <div class="col-12 text-center">
-                            <h3 class="section-sub-title">Our Services</h3>
-                            <h2 class="section-title mb-3">Spacification</h2>
+                            <h3 class="section-sub-title">How We Differ</h3>
+                            <h2 class="section-title mb-3">Specificant Feature's</h2>
                         </div>
                     </div>
                     <div class="row align-items-stretch">
@@ -142,9 +225,9 @@
                             <div class="unit-4 d-flex">
                                 <div class="unit-4-icon mr-4"><span class="text-primary icon-pie_chart"></span></div>
                                 <div>
-                                    <h3>Business Consulting</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                    <p><a href="#">Learn More</a></p>
+                                    <h3>NON-TOXIC</h3>
+                                    <p>DMT’s chemical content is completely non-toxic which is highly safe and secure.</p>
+<!--                                    <p><a href="#">Learn More</a></p>-->
                                 </div>
                             </div>
                         </div>
@@ -152,9 +235,9 @@
                             <div class="unit-4 d-flex">
                                 <div class="unit-4-icon mr-4"><span class="text-primary icon-backspace"></span></div>
                                 <div>
-                                    <h3>Market Analysis</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                    <p><a href="#">Learn More</a></p>
+                                    <h3>EFFECTIVE</h3>
+                                    <p>Our device performance are highly effective in trapping and killing mosquitos.</p>
+<!--                                    <p><a href="#">Learn More</a></p>-->
                                 </div>
                             </div>
                         </div>
@@ -162,9 +245,9 @@
                             <div class="unit-4 d-flex">
                                 <div class="unit-4-icon mr-4"><span class="text-primary icon-av_timer"></span></div>
                                 <div>
-                                    <h3>User Monitoring</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                    <p><a href="#">Learn More</a></p>
+                                    <h3>TANGIBLE</h3>
+                                    <p>Unlike other devices, here we can identify the number of mosquitos being killed.</p>
+<!--                                    <p><a href="#">Learn More</a></p>-->
                                 </div>
                             </div>
                         </div>
@@ -172,9 +255,9 @@
                             <div class="unit-4 d-flex">
                                 <div class="unit-4-icon mr-4"><span class="text-primary icon-beenhere"></span></div>
                                 <div>
-                                    <h3>Seller Consulting</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                    <p><a href="#">Learn More</a></p>
+                                    <h3>Pheromone Based</h3>
+                                    <p>Ours is the world’s first pheromone based mosquito trapping device.</p>
+<!--                                    <p><a href="#">Learn More</a></p>-->
                                 </div>
                             </div>
                         </div>
@@ -182,9 +265,9 @@
                             <div class="unit-4 d-flex">
                                 <div class="unit-4-icon mr-4"><span class="text-primary icon-business_center"></span></div>
                                 <div>
-                                    <h3>Financial Investment</h3>
+                                    <h3>Never repels</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                    <p><a href="#">Learn More</a></p>
+<!--                                    <p><a href="#">Learn More</a></p>-->
                                 </div>
                             </div>
                         </div>
@@ -192,9 +275,9 @@
                             <div class="unit-4 d-flex">
                                 <div class="unit-4-icon mr-4"><span class="text-primary icon-cloud_done"></span></div>
                                 <div>
-                                    <h3>Financial Management</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                    <p><a href="#">Learn More</a></p>
+                                    <h3>Improves Immunity</h3>
+                                    <p>The liquid vapors not only kill the mosquitoes it improves the human immune system when inhaled.</p>
+<!--                                    <p><a href="#">Learn More</a></p>-->
                                 </div>
                             </div>
                         </div>
@@ -205,12 +288,48 @@
                 <div class="container">
                     <div class="row mb-5 justify-content-center">
                         <div class="col-md-6 text-center">
-                            <h3 class="section-sub-title">Popular Products</h3>
+                            <h3 class="section-sub-title">Product Snapshot</h3>
                             <h2 class="section-title mb-3">Our Products</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum natus excepturi fuga ullam accusantium vel ut eveniet aut consequatur laboriosam ipsam.</p>
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col-md-12">
+                            <section class="customer-logos slider">
+                                <div class="slide product-item">
+                                    <figure>
+                                        <img src="images/model_1_bg.jpg" alt="Image" class="img-fluid">
+                                    </figure>
+                                </div>
+                                <div class="slide product-item">
+                                    <figure>
+                                        <img src="images/model_2_bg.jpg" alt="Image" class="img-fluid">
+                                    </figure>
+                                </div>
+                                <div class="slide product-item">
+                                    <figure>
+                                        <img src="images/model_3_bg.jpg" alt="Image" class="img-fluid">
+                                    </figure>
+                                </div>
+                                <div class="slide product-item">
+                                    <figure>
+                                        <img src="images/model_4_bg.jpg" alt="Image" class="img-fluid">
+                                    </figure>
+                                </div>
+                                <div class="slide product-item">
+                                    <figure>
+                                        <img src="images/model_5_bg.jpg" alt="Image" class="img-fluid">
+                                    </figure>
+                                </div>
+                                <div class="slide product-item">
+                                    <figure>
+                                        <img src="images/product_1_bg.jpg" alt="Image" class="img-fluid">
+                                    </figure>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+<!--                    <div class="row">
                         <div class="col-lg-4 col-md-6 mb-5">
                             <div class="product-item">
                                 <figure>
@@ -325,7 +444,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="site-blocks-cover inner-page-cover overlay get-notification" style="background-image: url(images/hero_2.jpg); background-attachment: fixed;" data-aos="fade">
@@ -337,7 +456,7 @@
                                 <input type="text" class="form-control rounded-0" placeholder="Enter your email address">
                                 <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="Subscribe">
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi veniam doloremque ducimus tempora.</p>
+                            <p>Dear user please subscribe with us for getting notification on each updates.</p>
                         </form>
                     </div>
                 </div>
@@ -349,14 +468,15 @@
                         <div class="col-md-8 mb-5 mb-lg-0 position-relative">
                             <img src="images/about_1.jpg" class="img-fluid" alt="Image">
                             <div class="experience">
-                                <span class="year">Trusted Merchant</span>
-                                <span class="caption">for 50 years</span>
+                                <span class="year">Ruseodor Private Limited</span>
+                                <span class="caption">Product development, plastics and chemicals.</span>
                             </div>
                         </div>
-                        <div class="col-md-3 ml-auto">
-                            <h3 class="section-sub-title">Merchant Company</h3>
+                        <div class="col-md-3 ml-auto about-us">
+                            <h3 class="section-sub-title">Ruseodor Private Limited</h3>
                             <h2 class="section-title mb-3">About Us</h2>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui fuga ipsa, repellat blanditiis nihil, consectetur. Consequuntur eum inventore, rem maxime, nisi excepturi ipsam libero ratione adipisci alias eius vero vel!</p>
+                            <p class="mb-4">RUSEODOR PRIVATE LIMITED is a developing organization involved in providing healthcare products to customer for their safe, secure, healthy and happy life, protecting their family and children especially from mosquito borne diseases.</p>
+                            <p class="mb-4">RUSEODOR professionals have global technical exposure in Product development, Plastics and chemicals.</p>
                             <p><a href="#" class="btn btn-black btn-black--hover rounded-0">Learn More</a></p>
                         </div>
                     </div>
@@ -594,6 +714,10 @@
     <script src="js/jquery.fancybox.min.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
     <script src="js/jquery.sticky.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
     <script src="js/main.js" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="e2a221d74d84c6429e413eb3-text/javascript"></script>
     <script type="e2a221d74d84c6429e413eb3-text/javascript">
@@ -645,6 +769,36 @@
         }
         // Get the element with id="defaultOpen" and click on it
         document.getElementById("defaultOpen").click();
+    </script>
+    <script>
+        $('.carousel').carousel({
+            interval: 6000,
+            pause: "false"
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.customer-logos').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    }, {
+                        breakpoint: 520,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    }]
+            });
+        });
     </script>
     <!-- Mirrored from colorlib.com/preview/theme/selling/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jun 2019 09:23:56 GMT -->
 </html>

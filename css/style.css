@@ -1,6 +1,6 @@
 /* Base */
 body {
-    line-height: 1.7;
+    line-height: 1.5;
     color: gray;
     font-weight: 400;
     font-size: 1rem; }
@@ -1654,7 +1654,8 @@ h1, h2, h3, h4, h5,
     color: #adb5bd;
     letter-spacing: .2em;
     text-transform: uppercase;
-    font-weight: 700; }
+    font-weight: 700;
+    line-height: 1.5;}
 
 .section-title {
     color: #000;
@@ -1793,7 +1794,7 @@ h1, h2, h3, h4, h5,
     color: #e9ecef;
     position: absolute;
     line-height: 0;
-    top: 40px;
+    top: 10px;
     z-index: -1; }
 @media (max-width: 991.98px) {
     .product-item-2 .number {
