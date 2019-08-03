@@ -1,0 +1,241 @@
+.header-contact li {
+    color: #ffffff;
+}
+ul.topbar-social {
+    padding: 6px;
+}
+.rm {
+    color: #737373 !important;
+}
+.rm:hover {
+    color: #035c40 !important;
+}
+.navrow .navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: #fff !important;
+
+}
+.img-radius img{
+    border-radius: 25px;
+    box-shadow: 8px -7px 14px 0px #dadada;
+}
+.footer-copyr a {
+    color: #fff;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #e4e4e4;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+.h3footer ul.quick-links li a:hover {
+    color: #b8ffe9;
+    font-size: 16px;
+}
+.pro-hover a {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    color: #035c40;
+}
+.pro-hover a:hover {
+    color: #737373;
+}
+.quick button{
+    padding: 1px;
+    background-color: #015c40;
+    width: 187px;
+    font-size: 27px;
+    color: #fff;
+    /* width: 139px; */
+    height: 56px;
+    position: fixed;
+    right: -66px;
+    text-align: center;
+    transform: rotate(90deg);
+    top: 50%;
+    z-index: 999;
+    transition:  0.5s all linear;
+}
+
+.quick:hover button{
+    color: #035c40;
+    background-color: #fff;
+}
+@media (min-width: 768px) {
+    .col-md-2 {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+.col-md-2 img {
+    width: 100%;
+}
+/*popup form*/
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    /*opacity: 0.8;*/
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 15%;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9999;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    /*border: none;*/
+    background: #ffffff;
+}
+.form-container  textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    /*border: none;*/
+    background: #ffffff;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: #035c40;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: #737373;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+.form-container .btn-1 {
+    /* background-color: #035c40; */
+    color: white;
+    /* padding: 16px 20px; */
+    border: none;
+    cursor: pointer;
+    /* width: 100%; */
+    margin-bottom: 10px;
+    opacity: 0.8;
+    position: absolute;
+    top: 15px;
+    right: 6px;
+}
+.effect-p {
+    text-align: center;
+    background-color: #f7f7f7d9;
+    padding: 10px;
+    color: #015c40;
+    margin-bottom: 0px;
+    font-weight: 600;
+    position: relative;
+    top: -44px;
+    transition: 0.5s all linear;
+}
+.news-block:hover .effect-p {
+    text-align: center;
+    background-color: #015c40;
+    padding: 10px;
+    color: #ffffff;
+    margin-bottom: 0px;
+    font-weight: 600;
+    position: relative;
+    top: -44px;
+}
+.news-block:hover .news-thumb a {
+    opacity: 1;
+    left: 0;
+    /* vertical-align: middle; */
+    top: -25%;
+}
+.pad-t-80{
+    padding-top: 80px;
+}
+.volbox-2 a{
+    color: #035c40;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+}
+.pad-t-40{
+    padding-top: 40px;
+}
+.volbox-3 a {
+    color: #ffffff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    background: #737373;
+    padding: 10px 30px;
+    transition: 0.4s all linear;
+}
+.volbox-3:hover a {
+    color: #737373;
+    background: #e1e1e1;
+
+}
+.color-w{
+    color: #fff !important;
+}
+.team-box:hover:after {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0, 0, 0, 0.01) 100%);
+
+}
+.team-box:after {
+    transition: .5s all linear;   
+}
+@media (max-width: 1200px) and (min-width: 992px){
+    .our-core-projects .h3-stitle, .h3-about img {
+        width: 240%; 
+        height: auto;
+        text-align: left;
+    }
+
+}
+
