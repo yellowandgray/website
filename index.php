@@ -16,6 +16,7 @@
         <link href="css/prettyPhoto.css" rel="stylesheet">
         <link href="css/all.min.css" rel="stylesheet">
         <link href="css/common.css" rel="stylesheet" type="text/css"/>
+        
         <!-- CSS FILES End -->
     </head>
     <body>
@@ -24,6 +25,7 @@
             <?php include'head.php'; ?>
             <!--Header End--> 
             <!--Slider Start-->
+           
             <section id="home-slider" class="owl-carousel owl-theme wf100">
                 <div class="item">
                     <div class="slider-caption h3slider">
