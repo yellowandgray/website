@@ -3,6 +3,23 @@ html {
     height: 100%;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 body {
     width: 100%;
     height: 100%;
@@ -16,15 +33,15 @@ body {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     overflow-x: hidden;
     transition: 0.5s;
 }
 
 .overlay-content {
     position: relative;
-    top: 25%;
+    top: 10%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
@@ -33,7 +50,7 @@ body {
 .overlay a {
     padding: 8px;
     text-decoration: none;
-    font-size: 45px;
+    font-size: 20px;
     color: #ff9999;
     display: block;
     transition: 0.3s;
@@ -48,7 +65,7 @@ body {
     position: absolute;
     top: 20px;
     right: 45px;
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .menu-nav {
@@ -159,7 +176,7 @@ header {
 }
 
 .section-padding {
-    padding: 8rem 0;
+    padding: 6rem 0;
 }
 
 .header-style-1 h1 {
@@ -224,9 +241,88 @@ header {
     transition: 0.5s;
 }
 
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    border: 6px solid #fff;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #ff9999;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+a:not([href]):not([tabindex]) {
+    color: #fff;
+}
+
+/*
 .slideshow {
     position: relative;
-    /*    z-index: 1;*/
+        z-index: 1;
     height: 100%;
     max-width: 700px;
     margin: 90px auto 0;
@@ -262,20 +358,51 @@ header {
 
 .slick-list {
     border: 5px solid #fff;
+}*/
+
+.content-overlay {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 100%;
+    width: 93%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    margin: 0 auto;
+}
+
+.box-1:hover .content-overlay{
+    opacity: 1;
+}
+
+.box-2:hover .content-overlay{
+    opacity: 1;
+}
+
+.box-3:hover .content-overlay{
+    opacity: 1;
 }
 
 .box-1 {
     background: url(../img/bg/img-1.jpg);
     background-size: cover;
-    transition: transform 0.5s;
+    /* transition: transform 0.5s; */
     padding: 142px 0px;
     cursor: pointer;
+    height: 506px;
 }
 
 .box-padding {
-    padding: 35px;
-    margin: 50px;
-    background: #fff;
+    position: relative;
+    padding: 38px;
+    margin: 51px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: 0.3s all linear;
 }
 
 .box-padding h1 {
@@ -283,108 +410,355 @@ header {
     font-weight: 800;
     color: #000;
     text-align: center;
+    transition: 0.3s all linear;
 }
 
 .text-hover {
     display: none;
     font-size: 34px;
     font-weight: 300;
+    transition: 0.3s all linear;
 }
 
 .box-1:hover {
-    padding: 138px 0px;
+    padding: 136px 0px;
+}
+
+.box-1:hover:after {
+    background: #000;
 }
 
 .box-1:hover .box-padding {
     padding: 0;
-    margin: 0;
+    margin: 4px;
     background: transparent;
+    position: relative;
+    margin-top: 0px;
+    transition: 0.3s all linear;
 }
 
 .box-1:hover .box-padding h1 {
     color: #fff;
     position: absolute;
-    top: 0%;
-    padding: 20px 10px;
+    padding: 0px 10px;
+    bottom: 50%;
 }
 
 .box-1:hover .text-hover {
     display: block;
     position: relative;
-    right: 0px;
+    left: 15px;
     color: #fff;
     font-size: 35px;
     font-weight: 400;
     font-style: italic;
+    transition: 0.3s all linear;
+}
+
+.box-1:hover .door-img {
+    display: block;
+    float: right;
+    padding: 50px 0 0 0;
+    right: 19px;
+    position: absolute;
+    bottom: -155px;
+}
+
+.door-img {
+    display: none
+}
+
+.door-img a {
+    color: #fff;
 }
 
 .box-2 {
     background: url(../img/bg/img-2.jpg);
     background-size: cover;
-    transition: transform 0.5s;
+    /* transition: transform 0.5s; */
     padding: 142px 0px;
     cursor: pointer;
+    height: 506px;
 }
 
+
 .box-2:hover {
-    padding: 138px 0px;
+    padding: 136px 0px;
 }
 
 .box-2:hover .box-padding {
     padding: 0;
-    margin: 0;
+    margin: 4px;
     background: transparent;
+    position: relative;
+    margin-top: 0px;
+    transition: 0.3s all linear;
 }
 
 .box-2:hover .box-padding h1 {
     color: #fff;
     position: absolute;
-    top: 0%;
-    padding: 20px 10px;
+    padding: 0px 10px;
+    bottom: 50%;
 }
 
 .box-2:hover .text-hover {
     display: block;
     position: relative;
-    right: 0px;
+    left: 15px;
     color: #fff;
     font-size: 35px;
     font-weight: 400;
     font-style: italic;
+    transition: 0.3s all linear;
+}
+
+.box-2:hover .door-img {
+    display: block;
+    float: right;
+    padding: 50px 0 0 0;
+    right: 19px;
+    position: absolute;
+    bottom: -155px;
 }
 
 .box-3 {
     background: url(../img/bg/img-3.jpg);
     background-size: cover;
-    transition: transform 0.5s;
+    /* transition: transform 0.5s; */
     padding: 142px 0px;
     cursor: pointer;
+    height: 506px;
 }
 
-
 .box-3:hover {
-    padding: 138px 0px;
+    padding: 136px 0px;
 }
 
 .box-3:hover .box-padding {
     padding: 0;
-    margin: 0;
+    margin: 4px;
     background: transparent;
+    position: relative;
+    margin-top: 0px;
+    transition: 0.3s all linear;
 }
 
 .box-3:hover .box-padding h1 {
     color: #fff;
     position: absolute;
-    top: 0%;
-    padding: 20px 10px;
+    padding: 0px 10px;
+    bottom: 50%;
 }
 
 .box-3:hover .text-hover {
     display: block;
     position: relative;
-    right: 0px;
+    left: 15px;
     color: #fff;
     font-size: 35px;
     font-weight: 400;
     font-style: italic;
+    transition: 0.3s all linear;
 }
+
+.box-3:hover .door-img {
+    display: block;
+    float: right;
+    padding: 50px 0 0 0;
+    right: 19px;
+    position: absolute;
+    bottom: -155px;
+}
+
+
+.booking-form {
+    background: #fff;
+    padding: 50px 0;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.booking-form .row {
+    margin: 0px 20px;
+}
+
+.booking-form .form-group {
+    /*    margin-top: 20px;*/
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.booking-form input {
+    margin: 20px 10px;
+    padding: 10px 5px;
+}
+
+.header-style-2 h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    color: #fff;
+}
+
+.button-group {
+    margin: 20px 0;
+}
+
+.button-group a {
+    position: relative;
+    /* background-color: #4CAF50; */
+    border: none;
+    /*    font-size: 28px;*/
+    color: #FFFFFF;
+    padding: 10px 28px;
+    /* width: 200px; */
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 0 0 15px;
+}
+
+.button-group a:after {
+    content: "";
+    /*    background: #90EE90;*/
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button-group a:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.date-select {
+    margin: 30px 0px 30px 10px;
+}
+
+.date-select strong {
+    font-size: 20px;
+}
+
+.date-select p {
+    font-size: 18px;
+}
+
+ul.social-media { 
+    list-style: none;
+    float: right;
+    margin: 20px 0;
+}
+
+.social-media li {
+    display: inline-block;
+    background-color: #eee;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+ul.social-media a {
+    color: #f99999;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    height: 50px;
+    width: 50px;   
+}
+
+ul.social-media a:hover, ul a:active {
+    color: #fff;
+    background: #f99999;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+ul.social-media a svg {
+    font-size: 22px !important;
+}
+
+.contact-address svg {
+    position: absolute;
+    font-size: 25px;
+    color: #ff9999;
+}
+
+.contact-address p {
+    /*    position: absolute;*/
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+footer {
+    padding: 20px 0;
+    background: #066;
+}
+
+footer p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #000;
+}
+
+.slick-dots li button:before {
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    content: '';
+    background: #ff9999;
+    border-radius: 50px;
+    text-align: center;
+    opacity: .25;
+    color: #000;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.contact-bg {
+    background: #fff;
+    padding: 40px 20px;
+    height: 400px;
+}
+
+.btn-cancel {
+    color: #fff;
+    background: #066;
+}
+
+.btn-ok {
+    color: #fff;
+    background: #ff9999;
+}
+
