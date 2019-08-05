@@ -25,7 +25,6 @@
             <?php include'head.php'; ?>
             <!--Header End--> 
             <!--Slider Start-->
-           
             <section id="home-slider" class="owl-carousel owl-theme wf100">
                 <div class="item">
                     <div class="slider-caption h3slider">
