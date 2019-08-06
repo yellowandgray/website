@@ -239,3 +239,6 @@ ul.topbar-social {
 
 }
 
+.event-post .event-txt {
+    text-align: justify;
+}
