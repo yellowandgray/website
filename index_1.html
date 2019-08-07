@@ -10,46 +10,46 @@
         <link href="css/all.min.css" rel="stylesheet" type="text/css"/>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" type="text/css"/>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/animate.css" rel="stylesheet" type="text/css"/>
+        <link href="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js" rel="stylesheet" type="text/css"/>
         <link href="css/examples.css" rel="stylesheet" type="text/css"/>
         <link href="css/fullpage.css" rel="stylesheet" type="text/css"/>
         <link href="css/pickmeup.css" rel="stylesheet" type="text/css"/>
         <link href="css/demo.css" rel="stylesheet" type="text/css"/>
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
-        
-        <script>
-            new WOW().init();
-        </script>
     </head>
     <body>
         <div id="fullpage">
             <main id="section0" class="section banner-section" style="background: url(img/banner-bg.jpg);">
-                <header style="background: #2f4d4b">
-                    <div class="logo">
-                        <img class="logo-size" src="img/logo.png" alt="Project Next Door Logo" />
-                        <span class="menu-nav" onclick="openNav()"><img src="img/menu-bar.png" /></span>
-                    </div>
-                    <?php include 'menu.php'; ?>
-                </header>
                 <div class="overlay"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="banner-h1">
-                                <h1>ONE STOP INNOVATION<br/> AND KNOWLEDGE HUB.</h1>
-                            </div>
+                <header>
+                    <div id="myNav" class="overlay">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="overlay-content">
+                            <a href="#banner">Home</a>
+                            <a href="#services">Services</a>
+                            <a href="#gallery">Gallery</a>
+                            <a href="#faq">FAQ's</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
                         </div>
+                    </div>
+                    <span class="menu-nav" onclick="openNav()">&#9776;</span>
+                    <div class="logo">
+                        <img src="img/logo.png" alt="Project Next Door Logo" />
+                    </div>
+                </header>
+                <div class="container padding-top-80">
+                    <div class="row">
                         <div class="col-md-2 banner-text">
                             <!--                            <h1>TAGLINE.</h1>-->
                         </div>
                         <div class="col-md-8">
-
                             <div class="SlickCarousel">
                                 <!-- Item -->
                                 <div class="ProductBlock">
                                     <div class="Content">
                                         <div class="img-fill">
-                                            <img src="img/banner.jpg" alt="banner-1" class="img-responsive">
+                                            <img src="img/banner.jpg" alt="banner-1">
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                                 <div class="ProductBlock">
                                     <div class="Content">
                                         <div class="img-fill">
-                                            <img src="img/banner-1.jpg" alt="banner-2" class="img-responsive">
+                                            <img src="img/banner-1.jpg" alt="banner-2">
                                         </div>
                                     </div>
                                 </div>
@@ -67,37 +67,21 @@
                                 <div class="ProductBlock">
                                     <div class="Content">
                                         <div class="img-fill">
-                                            <img src="img/banner-2.jpg" alt="banner-3" class="img-responsive">
+                                            <img src="img/banner-2.jpg" alt="banner-3">
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item -->
                             </div>
                             <!-- Carousel Container -->
-                            <div class="text-center"><a href="#" class="btn btn-custom-1">Find out more.</a></div>
                         </div>
-                    </div>
-                    <div id="circle">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                        <defs>
-                        <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
-                        </defs>
-                        <circle cx="150" cy="100" r="75" fill="none"/>
-                        <g>
-                        <use xlink:href="#circlePath" fill="none"/>
-                        <text fill="#e7aca6">
-                        <textPath xlink:href="#circlePath">P r o j e c t &nbsp; N e x t &nbsp; D o o r &nbsp;</textPath>
-                        </text>
-                        </g>
-                        </svg>
                     </div>
                 </div>
             </main>
-            <section id="about" class="section section-padding about-section">
+            <section id="section1" class="section section-padding about-section">
                 <div class="container">
                     <div class="header-style-1">
                         <h1>About Project Next Door</h1>
-    <!--                    <p>test</p>-->
                     </div>
                     <div class="row">
                         <div class="col-md-4">
@@ -109,7 +93,7 @@
                                 <div class="text-hover">
                                     <p>A brief<br/> introduction <br/>of this<br/> area.</p>
                                     <div class="door-img">
-                                        <img src="img/door.png" alt="" /><p style="font-size: 15px"><a href="experiential.php">Find Out More</a></p>
+                                        <img src="img/door.png" alt="" /><p style="font-size: 15px"><a href="#">Find Out More</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +107,7 @@
                                 <div class="text-hover">
                                     <p>A brief<br/> introduction <br/>of this<br/> area.</p>
                                     <div class="door-img">
-                                        <img src="img/door.png" alt="" /><p style="font-size: 15px"><a href="empowering.php">Find Out More</a></p>
+                                        <img src="img/door.png" alt="" /><p style="font-size: 15px"><a href="#">Find Out More</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -145,17 +129,17 @@
                     </div>
                 </div>
             </section>
-            <section id="services" class="section " style="background: url(img/bg-calendar.png)no-repeat;background-position: top;">
+            <section id="section2" class="section about-section" style="background: url(img/bg-calendar.png)no-repeat;background-position: top;padding: 30px;">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="booking-form wow bounceInUp" style="margin-top: 100px;">
+                            <div class="booking-form" style="margin-top: 100px;">
                                 <h1 class="text-center">Book Your Space</h1>
                                 <form id="contact" action="" method="post">
                                     <div class="row">
-                                        <!--                                        <div class="form-group" style="display: none;">
-                                                                                    <input type="text" name="name" placeholder="NAME" required />
-                                                                                </div>-->
+                                        <div class="form-group" style="display: none;">
+                                            <input type="text" name="name" placeholder="NAME" required />
+                                        </div>
                                         <div class="form-group">
                                             <input type="text" name="name" placeholder="NAME" required />
                                         </div>
@@ -167,7 +151,14 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <img src="img/time-date.jpg" alt="date time" class="img-responsive" />
+                                        <div class="form-group">
+
+                                        </div>
+                                        <div class="form-group">
+                                            <article>
+                                                <div class="two-calendars"></div>
+                                            </article>
+                                        </div>
                                     </div>
                                     <div class="row">
                                         <div class="date-select">
@@ -201,24 +192,74 @@
                     </div>
                 </div>
             </section>
-           
-            <section id="contact" class="section section-padding about-section" style="background: #eee;">
+            <section id="section3" class="section gallery" style="background: #eee;">
                 <div class="container">
-                    <div class="header-style-1 text-center">
-                        <h1>Contact Us</h1>
+                    <div class="row">
+                        <div class="header-style-1 text-center">
+                            <h1>Gallery</h1>
+                        </div>
+                        <section id="photogrid">
+                            <a href="#img1" class="imgbox boxborder box1" id="box1"><div class="boxtitle"><p>Room- 001</p></div></a>
+                            <a href="#img2" class="imgbox boxborder box2" id="box2"><div class="boxtitle"><p>Room- 002</p></div></a>
+                            <a href="#img3" class="imgbox boxborder box3" id="box3"><div class="boxtitle"><p>Room- 003</p></div></a>
+                            <a href="#img4" class="imgbox boxborder box4" id="box4"><div class="boxtitle"><p>Room- 004</p></div></a>
+                            <a href="#img5" class="imgbox boxborder box5" id="box5"><div class="boxtitle"><p>Room- 005</p></div></a>
+                            <a href="#img6" class="imgbox boxborder box6" id="box6"><div class="boxtitle"><p>Room- 006</p></div></a>
+                            <a href="#img7" class="imgbox boxborder box7" id="box7"><div class="boxtitle"><p>Room- 007</p></div></a>
+                            <a href="#img8" class="imgbox boxborder box8" id="box8"><div class="boxtitle"><p>Room- 008</p></div></a>
+                            <a href="#img9" class="imgbox boxborder box9" id="box9"><div class="boxtitle"><p>Room- 009</p></div></a>
+                            <a href="#img10" class="imgbox boxborder box10" id="box10"><div class="boxtitle"><p>Room- 010</p></div></a>
+                            <a href="#img11" class="imgbox boxborder box11" id="box11"><div class="boxtitle"><p>Room- 011</p></div></a>
+                            <a href="#img12" class="imgbox boxborder box12" id="box12"><div class="boxtitle"><p>Room- 012</p></div></a>
+
+
+                            <!--Lightbox Images are hidden and will display as full-page overlays -->
+
+                            <!--                            <a href="#box1" class="lightbox" id="img1">
+                                                            <img src="img/gallery/gallery-001.jpg"></a>
+                                                        <a href="#box2" class="lightbox" id="img2">
+                                                            <img src="img/gallery/gallery-002.jpg"></a>
+                                                        <a href="#box3" class="lightbox" id="img3">
+                                                            <img src="img/gallery/gallery-003.jpg"></a>
+                                                        <a href="#box4" class="lightbox" id="img4">
+                                                            <img src="img/gallery/gallery-004.jpg"></a>
+                                                        <a href="#box5" class="lightbox" id="img5">
+                                                            <img src="img/gallery/gallery-005.jpg"></a>
+                                                        <a href="#box6" class="lightbox" id="img6">
+                                                            <img src="img/gallery/gallery-006.jpg"></a>
+                                                        <a href="#box7" class="lightbox" id="img7">
+                                                            <img src="img/gallery/gallery-007.jpg"></a>
+                                                        <a href="#box8" class="lightbox" id="img8">
+                                                            <img src="img/gallery/gallery-008.jpg"></a>
+                                                        <a href="#box9" class="lightbox" id="img9">
+                                                            <img src="img/gallery/gallery-009.jpg"></a>
+                                                        <a href="#box10" class="lightbox" id="img10">
+                                                            <img src="img/gallery/gallery-010.jpg"></a>
+                                                        <a href="#box11" class="lightbox" id="img11">
+                                                            <img src="img/gallery/gallery-011.jpg"></a>
+                                                        <a href="#box12" class="lightbox" id="img12">
+                                                            <img src="img/gallery/gallery-012.jpg"></a>-->
+
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <section id="section4" class="section section-padding about-section" style="background: #eee;">
+                <div class="container">
+                    <div class="header-style-1">
                     </div>
                     <div class="row">
                         <div class="col-md-8">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 400px;" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 600px;" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                         <div class="col-md-4">
                             <div class="contact-bg">
                                 <!--                            <h3>Contact Address</h3>-->
                                 <div class="contact-address">
                                     <i class="fa fa-map-marker-alt"></i>
-                                    <p>Project Next Door, No. 16-05, Penthouse, menara Infiniti, Jalan SS6/3, 47301 Petaling Jaya, Selangor, Malaysia.</p><br/>
+                                    <p>Project Next Door, No. 16-05, Penthouse, menara Infiniti, Jalan SS6/3, 47301 Petaling Jaya, Selangor, Malaysia.</p>
                                     <i class="fa fa-envelope"></i>
-                                    <p><a href="#">email@mywebsite.com</a></p><br/>
+                                    <p><a href="#">email@mywebsite.com</a></p>
                                     <i class="fa fa-phone-alt"></i>
                                     <p><a href="#">+630 7662 7601</a></p>
                                 </div>
@@ -237,31 +278,47 @@
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="js/jquery.plugin.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
-
     <script src="js/banner.js" type="text/javascript"></script>
     <script src="js/menu.js" type="text/javascript"></script>
     <script src="js/all.min.js" type="text/javascript"></script>
     <script src="js/fontawesome.min.js" type="text/javascript"></script>
-<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>-->
-    <script src="js/slick.js" type="text/javascript"></script>
-<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js" type="text/javascript"></script>-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js" type="text/javascript"></script>
     <script src="js/fullpage.js" type="text/javascript"></script>
-
-<!--    <script src="js/examples.js" type="text/javascript"></script>-->
-<!--    <script src="js/jquery-ui.js" type="text/javascript"></script>-->
-<!--    <script src="js/pickmeup.js" type="text/javascript"></script>-->
-<!--    <script src="js/demo.js" type="text/javascript"></script>-->
-<!--    <script src="js/wow.js" type="text/javascript"></script>-->
+    <script src="js/examples.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.js" type="text/javascript"></script>
+    <script src="js/pickmeup.js" type="text/javascript"></script>
+    <script src="js/demo.js" type="text/javascript"></script>
+    <script src="js/wow.js" type="text/javascript"></script>
     <script type="text/javascript">
-                            var myFullpage = new fullpage('#fullpage', {
-                                //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-                                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-                                menu: '#menu',
-                                lazyLoad: true
-                            });
+                        var myFullpage = new fullpage('#fullpage', {
+                            //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+                            //anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                            menu: '#menu',
+                            //lazyLoad: true
+                        });
     </script>
-<!--    <script src="js/wow-js.js" type="text/javascript"></script>
-    <script src="js/wow.js" type="text/javascript"></script>-->
+    <script>
+        new WOW().init();
+    </script>
+<!--    <script>
+        function openNav() {
+            if (window.matchMedia("(max-width: 500px)").matches) {
+                document.getElementById("mySidenav").style.width = "100vw";
+                document.getElementById("main").style.marginRight = "499px";
+                /* The viewport is less than, or equal to, 700 pixels wide */
+            } else {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginRight = "250px";
+                /* The viewport is greater than 700 pixels wide */
+            }
 
+        }
 
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginRight = "0";
+        }
+    </script>-->
 </html>

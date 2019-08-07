@@ -1,304 +1,467 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="images/favicon.png">
         <title>Project Next Door</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
-        <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/all.min.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/pickmeup.css" rel="stylesheet" type="text/css"/>
-        <link href="css/demo.css" rel="stylesheet" type="text/css"/>
-        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <!-- CSS FILES START -->
+        <link href="css/custom.css" rel="stylesheet">
+        <link href="css/color.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+        <link href="css/owl.carousel.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/prettyPhoto.css" rel="stylesheet">
+        <link href="css/all.min.css" rel="stylesheet">
+        <!-- CSS FILES End -->
     </head>
     <body>
-        <main id="banner" class="banner-section" style="background: #006666;">
-            <header>
-                <div id="myNav" class="overlay">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <div class="overlay-content">
-                        <a href="#banner">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#services">Services</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                </div>
-                <span class="menu-nav" onclick="openNav()">&#9776;</span>
-                <div class="logo">
-                    <img src="img/logo.png" alt="Project Next Door Logo" />
-                </div>
-            </header>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 banner-text">
-                        <!--                        <h3>One Stop Innovation & Knowledge</h3>-->
-                        <h1>TAGLINE.</h1>
-<!--                        <p>HRDF Registered</p>-->
-                        <!--                        <div class="">
-                                                    <a href="#" type="button" class="button"><span>Find Out More</span></a>
-                                                    <a href="#" type="button" class="button"><span>Join Us Now</span></a>
-                                                </div>-->
-                    </div>
-                    <div class="col-md-8">
-                        <!-- Slideshow container -->
-                        <div class="slideshow-container">
+        <div class="wrapper home2">
+            <!--Header Start-->
 
-                            <!-- Full-width images with number and caption text -->
-                            <div class="mySlides fade">
-                                <!--                                <div class="numbertext">1 / 3</div>-->
-                                <img src="img/banner.jpg" style="width:100%">
-                                <!--                                <div class="text">Caption Text</div>-->
-                            </div>
-
-                            <div class="mySlides fade">
-                                <!--                                <div class="numbertext">2 / 3</div>-->
-                                <img src="img/banner-1.jpg" style="width:100%">
-                                <!--                                <div class="text">Caption Two</div>-->
-                            </div>
-
-                            <div class="mySlides fade">
-                                <!--                                <div class="numbertext">3 / 3</div>-->
-                                <img src="img/banner-2.jpg" style="width:100%">
-                                <!--                                <div class="text">Caption Three</div>-->
-                            </div>
-
-                            <!-- Next and previous buttons -->
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <?php include 'head.php'; ?>
+            <!--Header End--> 
+            <!--Slider Start-->
+            <section id="home-slider" class="owl-carousel owl-theme wf100">
+                <div class="item">
+                    <div class="slider-caption h2slider">
+                        <div class="container">
+                            <strong>One stop innovation<span> & Knowledge Hub</span></strong>
+                            <h1>Certified Trainers</h1>
+                            <p><strong>HRDF</strong> Registered</p>
+                            <br/>
+                            <a href="#" class="active color-b">Find Out More</a> <a href="#">Join us Now</a> 
                         </div>
-                        <br>
-
-                        <!-- The dots/circles -->
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)"></span> 
-                            <span class="dot" onclick="currentSlide(2)"></span> 
-                            <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    <img src="images/home/h1-slide3.jpg" alt=""> 
+                </div>
+                <div class="item">
+                    <div class="slider-caption h2slider">
+                        <div class="container">
+                            <strong>Simulation</strong>
+                            <h1>Industry 4.0 Hub</h1>
+                            <p><strong>AI, Big Data,</strong> IOT, 3D Printing, Robotics</p>
+                            <br/>
+                            <a href="#" class="active color-b">Find Out More</a> <a href="#">Join us Now</a> 
                         </div>
-
-                        <!--                        <div id="slidy-container">
-                                                    <figure id="slidy">
-                                                        <img src="" alt="banner" >
-                                                        <img src="img/banner-1.jpg" alt="banner" >
-                                                        <img src="img/banner-2.jpg" alt="banner" >
-                                                    </figure>
-                                                </div>-->
+                    </div>
+                    <img src="images/home/h1-slide4.jpg" alt=""> 
+                </div>
+                <div class="item">
+                    <div class="slider-caption h2slider">
+                        <div class="container">
+                            <strong>Offline<span> & Online Training</span></strong>
+                            <h1>Knowledge & Empowerment</h1>
+                            <p><strong>Bite Sized Training,</strong> Full Days Training, Customized Training</p>
+                            <a href="#" class="active color-b">Find Out More</a> <a href="#">Join us Now</a> 
+                        </div>
+                    </div>
+                    <img src="images/home/h1-slide1.jpg" alt=""> 
+                </div>
+                <div class="item">
+                    <div class="slider-caption h2slider">
+                        <div class="container">
+                            <strong>Space<span> For Rent</span></strong>
+                            <h1>Innovative Space</h1>
+                            <p><strong></strong>External Training, Brainstorm Training, Field Visits, Others</p>
+                            <a href="#" class="active color-b">Find Out More</a> <a href="#">Join us Now</a> 
+                        </div>
+                    </div>
+                    <img src="images/home/h1-slide2.jpg" alt=""> 
+                </div>
+            </section>
+            <!--Slider End--> 
+            <!--Service Area Start-->
+            <section class="services-area wf100">
+                <div class="container">
+                    <ul>
+                        <!--box  start-->
+                        <li>
+                            <div class="sinfo">
+                                <img src="images/home/sericon1.png" alt="">
+                                <h6>Simulation</h6>
+                                <p>content-1</p>
+                            </div>
+                        </li>
+                        <!--box  end--> 
+                        <!--box  start-->
+                        <li>
+                            <div class="sinfo">
+                                <img src="images/home/sericon2.png" alt="">
+                                <h6>Learning</h6>
+                                <p>content-2</p>
+                            </div>
+                        </li>
+                        <!--box  end--> 
+                        <!--box  start-->
+                        <li>
+                            <div class="sinfo">
+                                <img src="images/home/sericon3.png" alt="">
+                                <h6>Training</h6>
+                                <p>content-3</p>
+                            </div>
+                        </li>
+                        <!--box  end--> 
+                        <!--box  start-->
+                        <li class="sinfo">
+                            <div class="sinfo">
+                                <img src="images/home/sericon4.png" alt="">
+                                <h6>Artificial Training</h6>
+                                <p>content-4</p>
+                            </div>
+                        </li>
+                        <!--box  end--> 
+                        <!--box  start-->
+                        <li>
+                            <div class="sinfo">
+                                <img src="images/home/sericon5.png" alt="">
+                                <h6>Robotics</h6>
+                                <p>content-5</p>
+                            </div>
+                        </li>
+                        <!--box  end-->
+                    </ul>
+                </div>
+            </section>
+            <!--Service Area End--> 
+            <!--About Section Start-->
+            <section class="home2-about wf100 p100 gallery">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="video-img">  <img src="images/home/h2about.jpg" alt=""> </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="h2-about-txt">
+                                <h3>About Project Next Door</h3>
+                                <h2>Type and scrambled it to make a type specimen book.</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                <a class="aboutus color-b" href="#">More About us</a> 
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </main>
-        <section id="about" class="section-padding about-section">
-            <div class="container">
-                <div class="header-style-1">
-                    <h1>About Project Next Door</h1>
-<!--                    <p>test</p>-->
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="box-1">
-                            <div class="content-overlay"></div>
-                            <div class="box-padding">
-                                <h1 class="text-1">Experiential</h1>
+            </section>
+            <!--About Section End--> 
+            <!--Urgent Causes Start-->
+            <section class="urgent-causes wf100 p80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="section-title-2 white">
+                                <h2>VISION</h2>
                             </div>
-                            <div class="text-hover">
-                                <p>A brief<br/> introduction <br/>of this<br/> area.</p>
-                                <div class="door-img">
-                                    <img src="img/door.png" alt="" /><p style="font-size: 15px"><a href="#">Find Out More</a></p>
+                            <p>One Stop Innovation & Knowledge Hub</p>
+                            <div class="section-title-2 white">
+                                <h2>BHAG</h2>
+                            </div>
+                            <p>The most unique and immersive experience where public sector and private sector converges</p>
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="donation-amount">
+                                <h5>Simulation</h5>
+                                <form>
+                                    <ul class="radio-boxes">
+                                        <li>
+                                            <div class="radio custom">
+                                                <input name="donation" id="d1" type="radio" class="css-radio">
+                                                <label for="d1" class="css-label">AI</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio custom">
+                                                <input name="donation" id="d2" type="radio" class="css-radio">
+                                                <label for="d2" class="css-label">Big Data</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio custom">
+                                                <input name="donation" id="d3" type="radio" class="css-radio">
+                                                <label for="d3" class="css-label">IOT</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio custom">
+                                                <input name="donation" id="d4" type="radio" class="css-radio">
+                                                <label for="d4" class="css-label">3D Printing</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio custom">
+                                                <input name="donation" id="d5" type="radio" class="css-radio">
+                                                <label for="d5" class="css-label">Robotics</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio custom">
+                                                <input name="donation" id="d6" type="radio" class="css-radio">
+                                                <label for="d6" class="css-label">Others</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Urgent Causes End--> 
+            <!--Current Projects Start-->
+            <section class="wf100 p80 current-projects">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="section-title-2 red">
+                                <h5 class="color-pink">Command and Support</h5>
+                                <h2>Red Room</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="tab-content" id="myTabContent">
+                                <!--WildLife Slider Start-->
+                                <div class="tab-pane fade show active" id="wildlife" role="tabpanel" aria-labelledby="wildlife-tab">
+                                    <div class="cpro-slider owl-carousel owl-theme">
+                                        <!--Pro Box-->
+                                        <div class="item">
+                                            <div class="pro-box">
+                                                <img src="images/home/current-pro3.jpg" alt="">
+                                                <h5>Simulation</h5>
+                                                <div class="pro-hover">
+                                                    <h6>Simulation</h6>
+                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                    <a href="#">Read More</a> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Pro Box End--> 
+                                        <!--Pro Box-->
+                                        <div class="item">
+                                            <div class="pro-box">
+                                                <img src="images/home/current-pro1.jpg" alt="">
+                                                <h5>Video Wall</h5>
+                                                <div class="pro-hover">
+                                                    <h6>Video Wall</h6>
+                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                    <a href="#">Read More</a> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Pro Box End--> 
+                                        <!--Pro Box-->
+                                        <div class="item">
+                                            <div class="pro-box">
+                                                <img src="images/home/current-pro2.jpg" alt="">
+                                                <h5>Support</h5>
+                                                <div class="pro-hover">
+                                                    <h6>Support</h6>
+                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                    <a href="#">Read More</a> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Pro Box End--> 
+                                        <!--Pro Box-->
+                                        <div class="item">
+                                            <div class="pro-box">
+                                                <img src="images/home/current-pro4.jpg" alt="">
+                                                <h5>Experiential Learning</h5>
+                                                <div class="pro-hover">
+                                                    <h6>Experiential Learning</h6>
+                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                    <a href="#">Read More</a> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 seemore">
+                            <a class="aboutus color-b" href="#">See More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Current Projects End--> 
+            <!--News & Articles Start-->
+            <section class="h2-news wf100 p80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="section-title-2 green">
+                                <h5 class="color-pink">Knowledge & Empowerment</h5>
+                                <h2>Green Room</h2>
+                            </div>
+                        </div>
+                        <!--<div class="col-md-6"> <a href="#" class="view-more">View More News</a> </div>-->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="blog-post-large">
+                                <div class="post-thumb"><img src="images/home/h2news1.jpg" alt=""></div>
+                                <div class="post-txt">
+                                    <!--                                    <ul class="post-meta">
+                                                                            <li><i class="fas fa-calendar-alt"></i> 29 September, 2018</li>
+                                                                            <li><i class="fas fa-comments"></i> 134 Comments</li>
+                                                                        </ul>-->
+                                    <h5><a href="#">Bite Sized Training</a></h5>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-2">
-                            <div class="content-overlay"></div>
-                            <div class="box-padding">
-                                <h1>Empowering</h1>
-                            </div>
-                            <div class="text-hover">
-                                <p>A brief<br/> introduction <br/>of this<br/> area.</p>
-                                <div class="door-img">
-                                    <img src="img/door.png" alt="" /><p style="font-size: 15px"><a href="#">Find Out More</a></p>
+                        <div class="col-md-6">
+                            <!--Blog Small Post Start-->
+                            <div class="blog-small-post">
+                                <div class="post-thumb"> <img src="images/home/h2news2.jpg" alt=""> </div>
+                                <div class="post-txt">
+                                    <!--<span class="pdate"> <i class="fas fa-calendar-alt"></i> 29 September, 2018</span>-->
+                                    <h5><a href="#">Full Day Training</a></h5>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <a href="#" class="rm">Read More</a> 
                                 </div>
+                            </div>
+                            <!--Blog Small Post End--> 
+                            <!--Blog Small Post Start-->
+                            <div class="blog-small-post">
+                                <div class="post-thumb"><img src="images/home/h2news3.jpg" alt=""> </div>
+                                <div class="post-txt">
+                                    <!--<span class="pdate"> <i class="fas fa-calendar-alt"></i> 29 September, 2018</span>-->
+                                    <h5><a href="#">Customized Training</a></h5>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <a href="#" class="rm">Read More</a> 
+                                </div>
+                            </div>
+                            <!--Blog Small Post End--> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--News & Articles End--> 
+
+            <!--Online Products Start-->
+            <section class="online-shop wf100 p80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="section-title-2 blue ">
+                                <h5 class="color-pink">Space for Rent</h5>
+                                <h2>Blue Room</h2>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="box-3">
-                            <div class="content-overlay"></div>
-                            <div class="box-padding">
-                                <h1>Engaging</h1>
-                            </div>
-                            <div class="text-hover">
-                                <p>A brief<br/> introduction <br/>of this<br/> area.</p>
-                                <div class="door-img">
-                                    <img src="img/door.png" alt="" /><p style="font-size: 15px"><a href="#">Find Out More</a></p>
+                    <div class="row">
+                        <!--Pro Box Start-->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-box">
+                                <div class="pro-thumb"><img src="images/home/pro1.jpg" alt=""></div>
+                                <div class="pro-txt">
+                                    <h6><a href="#">External Training</a></h6>
                                 </div>
+                            </div>
+                        </div>
+                        <!--Pro Box End--> 
+                        <!--Pro Box Start-->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-box">
+                                <div class="pro-thumb"><img src="images/home/pro2.jpg" alt=""></div>
+                                <div class="pro-txt">
+                                    <h6><a href="#">Brainstorm Sessions</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Pro Box End--> 
+                        <!--Pro Box Start-->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-box">
+                                <div class="pro-thumb"><img src="images/home/pro3.jpg" alt=""></div>
+                                <div class="pro-txt">
+                                    <h6><a href="#">Field Visits</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Pro Box End--> 
+                        <!--Pro Box Start-->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-box">
+                                <div class="pro-thumb"><img src="images/home/pro4.jpg" alt=""></div>
+                                <div class="pro-txt">
+                                    <h6><a href="#">Others</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Pro Box End--> 
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 seemore">
+                            <a class="aboutus color-b" href="#">See More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Online Products End--> 
+            <!--Why Ecova + Facts Start-->
+            <section class="why-ecova wf100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 pad-t-145">
+                            <h1> Membership / Subscription</h1>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                            <!--<a href="#" class="cus">Signup to Join us</a>--> 
+                        </div>
+                        <div class="col-lg-4 choose-ecova" >
+                            <div class="volunteer-form">
+                                <div class="section-title">
+                                    <h3>Join us Now</h3>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <input type="text" class="form-control" placeholder="Your Name" aria-label="Your Name">
+                                    </li>
+                                    <li>
+                                        <input type="text" class="form-control" placeholder="Email Address" aria-label="Email Address">
+                                    </li>
+                                    <li>
+                                        <input type="text" class="form-control" placeholder="Contact" aria-label="Contact">
+                                    </li>
+                                    <li>
+                                        <input type="submit" class="fsubmit" value="Signup to Join us">
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <!--Why Ecova + Facts End--> 
+            <!--InstaGram Start-->
+
+            <!--            <div class="instagram">
+                            <ul>
+                                <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta1.jpg" alt=""> </li>
+                                <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta2.jpg" alt=""> </li>
+                                <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta3.jpg" alt=""> </li>
+                                <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta4.jpg" alt=""> </li>
+                                <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta5.jpg" alt=""> </li>
+                                <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta6.jpg" alt=""> </li>
+                                <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="images/home/insta7.jpg" alt=""> </li>
+                            </ul>
+                        </div>-->
         </section>
-        <section id="services" class="about-section " style="background: url(img/bg-calendar.png)no-repeat;background-position: top;padding: 30px;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="booking-form" style="margin-top: 100px;">
-                            <h1 class="text-center">Book Your Space</h1>
-                            <form id="contact" action="" method="post">
-                                <div class="row">
-                                    <div class="form-group" style="display: none;">
-                                        <input type="text" name="name" placeholder="NAME" required />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="name" placeholder="NAME" required />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" name="email" placeholder="EMAIL" required />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="number" placeholder="MOBILE NUMBER" required />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <article>
-                                            <div class="one-calendars"></div>
-                                        </article>
-                                    </div>
-                                    <div class="form-group">
-                                        <article>
-                                            <div class="two-calendars"></div>
-                                        </article>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="date-select">
-                                        <p><strong>SELECTED: </strong> 4/08/2019, 12:45pm to 12/08/2019</p>
-                                    </div>
-                                    <div class="button-group">
-                                        <a href="#" class="btn btn-cancel">Cancel</a>
-                                        <a href="#" class="btn btn-ok">Add</a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <ul class="social-media">
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="section-padding about-section" style="background: #eee;">
-            <div class="container">
-                <div class="header-style-1">
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 400px;" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="contact-bg">
-<!--                            <h3>Contact Address</h3>-->
-                            <div class="contact-address">
-                                <i class="fa fa-map-marker-alt"></i>
-                                <p>Project Next Door, No. 16-05, Penthouse, menara Infiniti, Jalan SS6/3, 47301 Petaling Jaya, Selangor, Malaysia.</p>
-                                <i class="fa fa-envelope"></i>
-                                <p><a href="#">email@mywebsite.com</a></p>
-                                <i class="fa fa-phone-alt"></i>
-                                <p><a href="#">+630 7662 7601</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer>
-            <div class="text-center">
-                <p>&copy; 2019 Allright Reserved | Project Next Door | Privacy Policy</p>
-            </div>
-        </footer>
-    </body>
-    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script src="js/jquery.plugin.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/all.min.js" type="text/javascript"></script>
-    <script src="js/fontawesome.min.js" type="text/javascript"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui.js" type="text/javascript"></script>
-    <script src="js/pickmeup.js" type="text/javascript"></script>
-    <script src="js/demo.js" type="text/javascript"></script>
-    <script>
-                                function openNav() {
-                                    document.getElementById("myNav").style.width = "20%";
-                                }
+        <!--InstaGram End--> 
+        <!--Footer Start-->
+        <?php include 'footer.php'; ?>
+        <!--Footer End--> 
+    </div>
+    <!--   JS Files Start  --> 
 
-                                function closeNav() {
-                                    document.getElementById("myNav").style.width = "0%";
-                                }
-    </script>
-    <script>
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1
-            }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 2000); // Change image every 2 seconds
-        }
-    </script>
-    <script>
-        webshim.setOptions('forms-ext', {
-            replaceUI: 'auto',
-            types: 'date',
-            date: {
-                startView: 2,
-                inlinePicker: true,
-                classes: 'hide-inputbtns'
-            }
-        });
-        webshim.setOptions('forms', {
-            lazyCustomMessages: true
-        });
-//start polyfilling
-        webshim.polyfill('forms forms-ext');
-
-//only last example using format display
-        $(function () {
-            $('.format-date').each(function () {
-                var $display = $('.date-display', this);
-                $(this).on('change', function (e) {
-                    //webshim.format will automatically format date to according to webshim.activeLang or the browsers locale
-                    var localizedDate = webshim.format.date($.prop(e.target, 'value'));
-                    $display.html(localizedDate);
-                });
-            });
-        });
-    </script>
+</body>
 </html>

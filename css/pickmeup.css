@@ -5,13 +5,16 @@
 .pickmeup.pmu-hidden{display:none}
 .pickmeup .pmu-instance{    
     display: inline-block;
-    height: 15em;
+    height: 25.5em;
     padding: .5em;
     text-align: center;
     width: 29em;
 }
 .pickmeup .pmu-instance .pmu-button{color:#000;cursor:pointer;outline:none;text-decoration:none}
-.pickmeup .pmu-instance .pmu-today{background:#17384d;color:#88c5eb}
+.pickmeup .pmu-instance .pmu-today{
+    background: #006666;
+    color: #ffffff;
+}
 .pickmeup .pmu-instance .pmu-button:hover{background:#ff9999;color:#ffffff}
 .pickmeup .pmu-instance .pmu-not-in-month{color:#666}
 .pickmeup .pmu-instance .pmu-disabled,.pickmeup .pmu-instance .pmu-disabled:hover{color:#333;cursor:default}
