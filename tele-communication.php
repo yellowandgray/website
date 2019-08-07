@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="en">
-    <?php $page = 'home';
+    <?php
+    $page = 'home';
     include 'head.php';
     ?>
     <body>
+        <script src="https://isotope.metafizzy.co/v1/jquery.isotope.min.js"></script>
         <div class="wrapper">
             <!--Header Start-->
-<?php include 'menu.php'; ?>
+            <?php include 'menu.php'; ?>
             <div id="search">
                 <button type="button" class="close">×</button>
                 <form class="search-overlay-form">
@@ -18,23 +20,62 @@
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header">
                 <div class="container">
-                    <h1>Events</h1>
+                    <h1>Telecommunication</h1>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#"> Events </a></li>
-                        <li><a href="#">Events Grid</a></li>
+                        <li><a href="#"> Products </a></li>
+                        <li><a href="#">Telecommunication</a></li>
                     </ul>
                 </div>
             </section>
+
             <!--Inner Header End--> 
+
+            <section class="wf100 p80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="portfolioFilter clearfix">
+                                <a href="#" data-filter=".optical_fiber" class="current">Optical Fiber</a>
+                                <a href="#" data-filter=".fiber_cable">Fiber Cable</a>
+                                <a href="#" data-filter=".copper_cable">Copper Cable</a>
+                                <a href="#" data-filter=".cable_splicing_connectors">Cable Splicing Connectors</a>
+                                <a href="#" data-filter=".tools">Tools</a>
+                            </div>
+                        </div>
+                        <div class="portfolioContainer">
+
+                            <div class="optical_fiber objects">
+                                
+                            </div>
+
+                            <div class="fibercable places">
+                                <img src="" alt="">
+                            </div>
+
+                            <div class="copper_cable food">
+                                <img src="" alt="">
+                            </div>
+
+                            <div class="cable_splicing_connectors drawings">
+                                <img src="" alt="">
+                            </div>
+
+                            <div class="tools">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!--Causes Start-->
             <section class="wf100 p80 events">
                 <div class="event-posts">
                     <div class="container">
-                        <h2>Optical Fiber</h2><br>
+                        <h4>Optical Fiber</h4><br>
                         <div class="row">
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/STC-HCF.jpg" alt="">
@@ -48,7 +89,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/STC-HCS.jpg" alt="">
@@ -64,7 +105,7 @@
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/STC-HTF.jpg" alt="">
@@ -80,7 +121,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/STC-HTM.jpg" alt="">
@@ -96,7 +137,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/STC-HTL.jpg" alt="">
@@ -110,7 +151,7 @@
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/STC-DTM.jpg" alt="">
@@ -124,7 +165,7 @@
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/STC-HTA.jpg" alt="">
@@ -137,7 +178,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/STC-HMD.jpg" alt="">
@@ -151,7 +192,7 @@
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/STC-TAP.jpg" alt="">
@@ -165,7 +206,7 @@
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/ST-OTP-AN.jpg" alt="">
@@ -181,7 +222,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/ST-OTP-A.jpg" alt="">
@@ -195,7 +236,7 @@
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/OTP-D.jpg" alt="">
@@ -209,7 +250,7 @@
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/OTP-B.jpg" alt="">
@@ -225,7 +266,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/OTP-C.jpg" alt="">
@@ -248,10 +289,10 @@
             <section class="wf100 p80 events">
                 <div class="event-posts">
                     <div class="container">
-                        <h2>Fiber Cable</h2><br>
+                        <h4>Fiber Cable</h4><br>
                         <div class="row">
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/Duct-Fiber-Optic-Cable.jpg" alt="">
@@ -265,11 +306,11 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/Direct-Burial-Cables.jpg" alt="">
-                                        
+
                                     </div>
                                     <div class="event-txt">
                                         <h5><a href="#">Direct Burial Cables</a></h5>
@@ -279,26 +320,25 @@
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/Aerial-Cables.jpg" alt="">
-                                        
+
                                     </div>
                                     <div class="event-txt">
                                         <h5><a href="#">Aerial Cables</a></h5>
-
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/Indoor-Optical-Fiber-Cables_1.jpg" alt="">
-                                        
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/Indoor-Optical-Fiber-Cables.jpg" alt="">
                                     </div>
+
                                     <div class="event-txt">
                                         <h5><a href="#">Indoor Optical Fiber Cables</a></h5>
 
@@ -307,35 +347,35 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/Single-Mode-Optical-Fiber-Cables.jpg" alt="">
 
                                     </div>
                                     <div class="event-txt">
-                                        <h5><a href="#">Single Mode Optical Fiber Cables</a></h5>
+                                        <h5><a href="#">Singlemode optic fiber cable</a></h5>
 
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/Multimode-Fiber-Optic-Cable.jpg" alt="">
 
                                     </div>
                                     <div class="event-txt">
-                                        <h5><a href="#">Multimode-Fiber-Optic-Cable</a></h5>
+                                        <h5><a href="#">Multimode fiber optic cable</a></h5>
 
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/Central-Loose-Tube-Design.jpg" alt="">
@@ -348,7 +388,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/Multi-Loose-Tube-Design.jpg" alt="">
@@ -362,7 +402,7 @@
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/Armored-Fiber-Optic-Cable.jpg" alt="">
@@ -376,30 +416,31 @@
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/Armoured-Direct-Burial-Optical-Fiber-Cables.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/Armoured-Direct-Burial-Optical-Fiber-Cables2.jpg" alt="">
                                         <ul class="post-meta">
 
                                         </ul>
                                     </div>
                                     <div class="event-txt">
-                                        <h5><a href="#">Armoured Direct Burial Optical Fiber Cables</a></h5>
+                                        <h5>
+                                            <a href="#">Armoured direct burial optical fiber cable</a></h5>
 
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/optical-fiber/Armoured-Direct-Burial-Optical-Fiber-Cables1.jpg" alt="">
 
                                     </div>
                                     <div class="event-txt">
-                                        <h5><a href="#">Armoured Direct Burial Optical Fiber Cables</a></h5>
+                                        <h5><a href="#">Armoured direct burial optical fiber cables</a></h5>
 
                                     </div>
                                 </div>
@@ -414,10 +455,10 @@
             <section class="wf100 p80 events">
                 <div class="event-posts">
                     <div class="container">
-                        <h2>Copper Cable</h2><br>
+                        <h4>Copper Cable</h4><br>
                         <div class="row">
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/Jelly-Filled-unarmoured-Cable(Duct).jpg" alt="">
@@ -431,7 +472,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/Jelly-Filled-armoured-Cable(Direct-Burial).jpg" alt="">
@@ -444,7 +485,7 @@
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/Overhead-aerial-cable.jpg" alt="">
@@ -465,12 +506,12 @@
             <section class="wf100 p80 events">
                 <div class="event-posts">
                     <div class="container">
-                        <h1>Cable Splicing Connectors</h1><br>
-                        <h3>Discrete Wire Connectors</h3>
+                        <h3>Cable Splicing Connectors</h3><br>
+                        <h4>Discrete Wire Connectors</h4>
                         <br/>
                         <div class="row">
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UY-C.jpg" alt="">
@@ -486,7 +527,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UY-P.jpg" alt="">
@@ -498,14 +539,14 @@
                                         <h5>
                                             <a href="#">Part No: UY P</a>
                                         </h5>
-                                        <span> Feature:Similar to UY C,but made of polypropylene,for solvent resistance most economical.</span>             
+                                        <span> Feature: Similar to UY C,but made of polypropylene,for solvent resistance most economical.</span>             
 
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/8A.jpg" alt="">
@@ -525,7 +566,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UY2-P.jpg" alt="">
@@ -541,7 +582,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UY-PD.jpg" alt="">
@@ -557,7 +598,7 @@
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UY2-C.jpg" alt="">
@@ -567,7 +608,7 @@
                                         <h5>
                                             <a href="#">Part No: UY2 C</a>
                                         </h5>
-                                        <span>Feature:New version of UY2 P, made of Polycarbonate plastic, 2 wire, full wire range and filled with sealant.</span>
+                                        <span>Feature: New version of UY2 P, made of Polycarbonate plastic, 2 wire, full wire range and filled with sealant.</span>
 
 
                                     </div>
@@ -575,7 +616,7 @@
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UC-C.jpg" alt="">
@@ -584,13 +625,13 @@
                                         <h5>
                                             <a href="#">Part No: UC C</a>
                                         </h5>
-                                        <span> Feature:Pre-filled connector with sealant The conductors are held rigidly in place with a plastic blade</span>
+                                        <span> Feature: Pre-filled connector with sealant The conductors are held rigidly in place with a plastic blade</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UR-C.jpg" alt="">
@@ -605,7 +646,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UR2-P.jpg" alt="">
@@ -620,7 +661,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UR2-PD.jpg" alt="">
@@ -635,7 +676,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UR2-C.jpg" alt="">
@@ -650,7 +691,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UB-C.jpg" alt="">
@@ -659,13 +700,13 @@
                                         <h5>
                                             <a href="#">Part No: UB C</a>
                                         </h5>
-                                        <span> Feature:Tapping connector, with pre-crimp feature, for transfer without service interruption. Filled version.</span>
+                                        <span> Feature: Tapping connector, with pre-crimp feature, for transfer without service interruption. Filled version.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UB-D.jpg" alt="">
@@ -680,7 +721,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UB2-P.jpg" alt="">
@@ -695,7 +736,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UB2-PD.jpg" alt="">
@@ -710,7 +751,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UG-C.jpg" alt="">
@@ -725,10 +766,10 @@
                             </div>
                         </div>
                         <!--Blog Post End-->
-                        <h3>In Line And Drop Wire Connectors</h3><br>
+                        <h4>In Line And Drop Wire Connectors</h4><br>
                         <div class="row">
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/11A.jpg" alt="">
@@ -736,13 +777,13 @@
                                     </div>
                                     <div class="event-txt">
                                         <h5><a href="#">Part No: 11A</a></h5>
-                                        <span class="text-justify">Feature:Make-before-break jelly fi lled packing connector. Full compliance to British Telecom specifications LN565C. Featuring double contact and integrated cutoff blade. Suited for maintaining and improving of existing network without service interruption.</span>
+                                        <span class="text-justify">Feature: Make-before-break jelly fi lled packing connector. Full compliance to British Telecom specifications LN565C. Featuring double contact and integrated cutoff blade. Suited for maintaining and improving of existing network without service interruption.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UY4-C.jpg" alt="">
@@ -751,13 +792,13 @@
                                         <h5>
                                             <a href="#">Part No:UY4 C</a>
                                         </h5>
-                                        <span>Feature:In line splice full pair wire connectors, made from Polycarbonate. The UY4 C connectors permits repeated re-entry, 20 times or more, without reducing the performance of the joints, leading to substantial reduction of repair or rework cost.</span>
+                                        <span>Feature: In line splice full pair wire connectors, made from Polycarbonate. The UY4 C connectors permits repeated re-entry, 20 times or more, without reducing the performance of the joints, leading to substantial reduction of repair or rework cost.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UY4-CD.jpg" alt="">
@@ -772,7 +813,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UY4-CT.jpg" alt="">
@@ -781,13 +822,13 @@
                                         <h5>
                                             <a href="#">Part No:UY4 CT</a>
                                         </h5>
-                                        <span>Feature:The tapping covers made of durable Polycarbonate plastic enhances the application range of UY4 C or UY4 CD connectors for bridge or tap splicing.</span>
+                                        <span>Feature: The tapping covers made of durable Polycarbonate plastic enhances the application range of UY4 C or UY4 CD connectors for bridge or tap splicing.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UY4-CT1.jpg" alt="">
@@ -797,13 +838,13 @@
                                         <h5>
                                             <a href="#">Part No:UY4 CT</a>
                                         </h5>
-                                        <span>Feature:In line full pair drop wire connectors,made from polycarbonate,the clear transparent body and cover offers visual inspection of wire positioning before crimping.</span>
+                                        <span>Feature: In line full pair drop wire connectors,made from polycarbonate,the clear transparent body and cover offers visual inspection of wire positioning before crimping.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UD4-C1.jpg" alt="">
@@ -813,13 +854,13 @@
                                         <h5>
                                             <a href="#">Part No:UD4 C1</a>
                                         </h5>
-                                        <span>Feature:In line full pair drop wire connectors, made from Polycarbonate. The clear transparent body and cover offers visual inspection of wire positioning before crimping</span>
+                                        <span>Feature: In line full pair drop wire connectors, made from Polycarbonate. The clear transparent body and cover offers visual inspection of wire positioning before crimping</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UD4-C1-Black.jpg" alt="">
@@ -834,7 +875,7 @@
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UD4-C2.jpg" alt="">
@@ -843,13 +884,13 @@
                                         <h5>
                                             <a href="#">Part No:UD4 C2</a>
                                         </h5>
-                                        <span>Feature:In line full pair drop wire connectors, made from Polycarbonate. Robustly designed the connector has superior mechanical properties</span>
+                                        <span>Feature: In line full pair drop wire connectors, made from Polycarbonate. Robustly designed the connector has superior mechanical properties</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UD4-C3.jpg" alt="">
@@ -858,13 +899,13 @@
                                         <h5>
                                             <a href="#">Part No:UD4 C3</a>
                                         </h5>
-                                        <span>Feature:In line full pair drop wire connectors, made from Polycarbonate. Robustly designed the connectors has superior mechanical properties.</span>
+                                        <span>Feature: In line full pair drop wire connectors, made from Polycarbonate. Robustly designed the connectors has superior mechanical properties.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UD4-C4.jpg" alt="">
@@ -873,13 +914,13 @@
                                         <h5>
                                             <a href="#">Part No:UD4 C4</a>
                                         </h5>
-                                        <span>Feature:In line full pair drop wire connectors, made from Polycarbonate. Robustly designed the connectors has superior mechanical properties.</span>
+                                        <span>Feature: In line full pair drop wire connectors, made from Polycarbonate. Robustly designed the connectors has superior mechanical properties.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UD4-C5.jpg" alt="">
@@ -888,14 +929,14 @@
                                         <h5>
                                             <a href="#">Part No:UD4 C5</a>
                                         </h5>
-                                        <span>Feature:UD4 C5 with cable boot full pair drop wire connectors. Robustly designed the connectors has superior mechanical properties.</span>
+                                        <span>Feature: UD4 C5 with cable boot full pair drop wire connectors. Robustly designed the connectors has superior mechanical properties.</span>
 
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UD2-P.jpg" alt="">
@@ -904,7 +945,7 @@
                                         <h5>
                                             <a href="#">Part No:UD2-P</a>
                                         </h5>
-                                        <span>Feature:UD series drop wire connector for termination of secondary telephone network. Manufactured using fl ame retardant glass filled Polypropylene plastic.</span>
+                                        <span>Feature: UD series drop wire connector for termination of secondary telephone network. Manufactured using fl ame retardant glass filled Polypropylene plastic.</span>
                                     </div>
                                 </div>
                             </div>
@@ -918,11 +959,11 @@
             <section class="wf100 p80 events">
                 <div class="event-posts">
                     <div class="container">
-                        <h1>Modular Splicing Connectors</h1><br>
-                        <h3>10 Pair</h3><br>
+                        <h3>Modular Splicing Connectors</h3><br>
+                        <h4>10 Pair</h4><br>
                         <div class="row">
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-SD.jpg" alt="">
@@ -932,13 +973,13 @@
                                         <h5>
                                             <a href="#">Part No:10 SD</a>
                                         </h5>
-                                        <span>Feature:Dry connector. Basic confi guration for straight tap splicing.</span>
+                                        <span>Feature: Dry connector. Basic confi guration for straight tap splicing.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-SD-T.jpg" alt="">
@@ -946,18 +987,19 @@
 
                                         </ul>
                                     </div>
+
                                     <div class="event-txt">
                                         <h5>
                                             <a href="#">Part No:10 SD-T*</a>
                                         </h5>
-                                        <span>Feature:Same as 10 SD but featuring a transparent cover and base.</span>
+                                        <span>Feature: Same as 10 SD but featuring a transparent cover and base.</span>
 
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-SF.jpg" alt="">
@@ -969,13 +1011,13 @@
                                         <h5>
                                             <a href="#">Part No:10 SF</a>
                                         </h5>
-                                        <span>Feature:Pre filled with sealant for extreme humid environments. No need for sealant box. Reduces cost and splice bundles.</span>
+                                        <span>Feature: Pre filled with sealant for extreme humid environments. No need for sealant box. Reduces cost and splice bundles.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-SF-T.jpg" alt="">
@@ -984,13 +1026,13 @@
                                         <h5>
                                             <a href="#">Part No:10 SF-T</a>
                                         </h5>
-                                        <span>Feature:Same as 10 SF but with the added benefit of a transparent cover and base.</span>
+                                        <span>Feature: Same as 10 SF but with the added benefit of a transparent cover and base.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-SX.jpg" alt="">
@@ -1000,13 +1042,13 @@
                                         <h5>
                                             <a href="#">Part No:10 SX</a>
                                         </h5>
-                                        <span>Feature:For use in buried, underground or aerial jointing where resistance to water and high humidity is critical. Consist of 10 SD connector, 10 SB sealant box and applicator tool.</span>
+                                        <span>Feature: For use in buried, underground or aerial jointing where resistance to water and high humidity is critical. Consist of 10 SD connector, 10 SB sealant box and applicator tool.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-SX-T.jpg" alt="">
@@ -1016,14 +1058,14 @@
                                         <h5>
                                             <a href="#">Part No:10 SX-T</a>
                                         </h5>
-                                        <span>Feature:Same as 10 SX but featuring a transparent cover and base</span>
+                                        <span>Feature: Same as 10 SX but featuring a transparent cover and base</span>
 
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-HD.jpg" alt="">
@@ -1032,13 +1074,13 @@
                                         <h5>
                                             <a href="#">Part No:10 HD</a>
                                         </h5>
-                                        <span>Feature:For half tap splicing and without cut-off blades on bottom side. Electrical continuity is maintained in the through wires. Note sealant box use is not possible with half tap splicing modules.</span>
+                                        <span>Feature: For half tap splicing and without cut-off blades on bottom side. Electrical continuity is maintained in the through wires. Note sealant box use is not possible with half tap splicing modules.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-HD-T.jpg" alt="">
@@ -1047,13 +1089,13 @@
                                         <h5>
                                             <a href="#">Part No:10 HD-T</a>
                                         </h5>
-                                        <span>Feature:As 10 HD but with transparent base and cover</span>
+                                        <span>Feature: As 10 HD but with transparent base and cover</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-HF.jpg" alt="">
@@ -1062,13 +1104,13 @@
                                         <h5>
                                             <a href="#">Part No:10 HF</a>
                                         </h5>
-                                        <span>Feature:As 10 HD but pre-fi lled with sealant for extreme humid environments.</span>
+                                        <span>Feature: As 10 HD but pre-fi lled with sealant for extreme humid environments.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-HF-T.jpg" alt="">
@@ -1077,13 +1119,13 @@
                                         <h5>
                                             <a href="#">Part No:10 HF-T</a>
                                         </h5>
-                                        <span>Feature:As per 10 HF but with transparent base and cover.</span>
+                                        <span>Feature: As per 10 HF but with transparent base and cover.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-PD.jpg" alt="">
@@ -1092,13 +1134,13 @@
                                         <h5>
                                             <a href="#">Part No:10 PD</a>
                                         </h5>
-                                        <span>Feature:A bridging connector used for plugging or bridging applications. The connector can be mated with the 10 SD or 10 PD-T for transfer or rearrangement.</span>
+                                        <span>Feature: A bridging connector used for plugging or bridging applications. The connector can be mated with the 10 SD or 10 PD-T for transfer or rearrangement.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-PD-T.jpg" alt="">
@@ -1107,13 +1149,13 @@
                                         <h5>
                                             <a href="#">Part No:10 PD-T</a>
                                         </h5>
-                                        <span>Feature:As per 10 PD but with transparent cover.</span>
+                                        <span>Feature: As per 10 PD but with transparent cover.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-PF.jpg" alt="">
@@ -1122,13 +1164,13 @@
                                         <h5>
                                             <a href="#">Part No:10 PF</a>
                                         </h5>
-                                        <span>Feature:As 10 PD but pre-filled with sealant for extreme humid environments.</span>
+                                        <span>Feature: As 10 PD but pre-filled with sealant for extreme humid environments.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-PF-T.jpg" alt="">
@@ -1137,13 +1179,13 @@
                                         <h5>
                                             <a href="#">Part No:10 PF-T</a>
                                         </h5>
-                                        <span>Feature:As 10 PF but with transparent cover.</span>
+                                        <span>Feature: As 10 PF but with transparent cover.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-SB.jpg" alt="">
@@ -1152,13 +1194,13 @@
                                         <h5>
                                             <a href="#">Part No:10 SB</a>
                                         </h5>
-                                        <span>Feature:Filled with water resistant sealant for application to 10 SD & 10 SD-T straight tap connector. An application tool facilitates installation.</span>
+                                        <span>Feature: Filled with water resistant sealant for application to 10 SD & 10 SD-T straight tap connector. An application tool facilitates installation.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-PB-1.jpg" alt="">
@@ -1167,12 +1209,12 @@
                                         <h5>
                                             <a href="#">Part No:10 PB-1</a>
                                         </h5>
-                                        <span>Feature:Sealant boxes that are available for 10 pair pluggable connectors. 1 denotes for one 10 SD.
+                                        <span>Feature: Sealant boxes that are available for 10 pair pluggable connectors. 1 denotes for one 10 SD.
                                         </span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/10-PB-2.jpg" alt="">
@@ -1181,17 +1223,17 @@
                                         <h5>
                                             <a href="#">Part No:10 PB-2</a>
                                         </h5>
-                                        <span>Feature:As above but for two 10 SD.
+                                        <span>Feature: As above but for two 10 SD.
                                         </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!--Blog Post End-->
-                        <h3>25 Pair</h3><br>
+                        <h4>25 Pair</h4><br>
                         <div class="row">
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-SD.jpg" alt="">
@@ -1201,13 +1243,13 @@
                                         <h5>
                                             <a href="#">Part No:25 SD</a>
                                         </h5>
-                                        <span>Feature:Dry connector. Basic confi guration for straight tap splicing.</span>
+                                        <span>Feature: Dry connector. Basic confi guration for straight tap splicing.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-SD-TH.jpg" alt="">
@@ -1219,13 +1261,13 @@
                                         <h5>
                                             <a href="#">Part No:25 SD-TH*</a>
                                         </h5>
-                                        <span>Feature:Similar to above but featuring a transparent cover and base and holes permitting in-line testing.</span>
+                                        <span>Feature: Similar to above but featuring a transparent cover and base and holes permitting in-line testing.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-SF.jpg" alt="">
@@ -1237,13 +1279,13 @@
                                         <h5>
                                             <a href="#">Part No:25 SF</a>
                                         </h5>
-                                        <span>Feature:Pre filled with sealant for extreme humid environments. No need for sealant box. Reduces cost and splice bundles.</span>
+                                        <span>Feature: Pre filled with sealant for extreme humid environments. No need for sealant box. Reduces cost and splice bundles.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-SF-T.jpg" alt="">
@@ -1255,13 +1297,13 @@
                                         <h5>
                                             <a href="#">Part No:25 SF-T*</a>
                                         </h5>
-                                        <span>Feature:As above but with the added benefi t of a transparent cover and base.</span>
+                                        <span>Feature: As above but with the added benefi t of a transparent cover and base.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-SX.jpg" alt="">
@@ -1271,13 +1313,13 @@
                                         <h5>
                                             <a href="#">Part No:25 SX</a>
                                         </h5>
-                                        <span>Feature:For use in buried, underground or aerial jointing where resistance to water and high humidity is critical. Consist of 25 SD-T connector, 25 SB sealant box and applicator tool.</span>
+                                        <span>Feature: For use in buried, underground or aerial jointing where resistance to water and high humidity is critical. Consist of 25 SD-T connector, 25 SB sealant box and applicator tool.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-SX-1.jpg" alt="">
@@ -1287,13 +1329,13 @@
                                         <h5>
                                             <a href="#">Part No:25 SX</a>
                                         </h5>
-                                        <span>Feature:For use in buried, underground or aerial jointing where resistance to water and high humidity is critical. Consist of 25 SD-T connector, 25 SB sealant box and applicator tool.</span>
+                                        <span>Feature: For use in buried, underground or aerial jointing where resistance to water and high humidity is critical. Consist of 25 SD-T connector, 25 SB sealant box and applicator tool.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End--> 
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-HD.jpg" alt="">
@@ -1302,13 +1344,13 @@
                                         <h5>
                                             <a href="#">Part No:25 HD</a>
                                         </h5>
-                                        <span>Feature:For half tap splicing and without cut-off blades on bottom side. Electrical continuity is maintained in the through wires. Note sealant box use is not possible with half tap splicing modules.</span>
+                                        <span>Feature: For half tap splicing and without cut-off blades on bottom side. Electrical continuity is maintained in the through wires. Note sealant box use is not possible with half tap splicing modules.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-HD-T.jpg" alt="">
@@ -1317,13 +1359,13 @@
                                         <h5>
                                             <a href="#">Part No:25 HD-T</a>
                                         </h5>
-                                        <span>Feature:As 25HD but with transparent base and cover.</span>
+                                        <span>Feature: As 25HD but with transparent base and cover.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-HF.jpg" alt="">
@@ -1332,13 +1374,13 @@
                                         <h5>
                                             <a href="#">Part No:25 HF</a>
                                         </h5>
-                                        <span>Feature:As 25 HD but pre-filled with sealant for extreme humid environments.</span>
+                                        <span>Feature: As 25 HD but pre-filled with sealant for extreme humid environments.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-HF-T.jpg" alt="">
@@ -1347,13 +1389,13 @@
                                         <h5>
                                             <a href="#">Part No:25 HF-T</a>
                                         </h5>
-                                        <span>Feature:As per 25 HF but with transparent base and cover.</span>
+                                        <span>Feature: As per 25 HF but with transparent base and cover.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-PD.jpg" alt="">
@@ -1362,13 +1404,13 @@
                                         <h5>
                                             <a href="#">Part No:25 PD</a>
                                         </h5>
-                                        <span>Feature:A bridging connector used for plugging or bridging applications. The connector can be mated with the 25 SD or 25 PD-T for transfer or rearrangement.</span>
+                                        <span>Feature: A bridging connector used for plugging or bridging applications. The connector can be mated with the 25 SD or 25 PD-T for transfer or rearrangement.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-PD-T.jpg" alt="">
@@ -1377,13 +1419,13 @@
                                         <h5>
                                             <a href="#">Part No:25 PD-T</a>
                                         </h5>
-                                        <span>Feature:As per 25 PD but with transparent cover.</span>
+                                        <span>Feature: As per 25 PD but with transparent cover.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-PF.jpg" alt="">
@@ -1392,13 +1434,13 @@
                                         <h5>
                                             <a href="#">Part No:25 PF</a>
                                         </h5>
-                                        <span>Feature:As 25 PD but pre-filled with sealant for extreme humid environments.</span>
+                                        <span>Feature: As 25 PD but pre-filled with sealant for extreme humid environments.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-PF-T.jpg" alt="">
@@ -1407,13 +1449,13 @@
                                         <h5>
                                             <a href="#">Part No:25 PF-T</a>
                                         </h5>
-                                        <span>Feature:As 25 PD but pre-filled with sealant for extreme humid environments.</span>
+                                        <span>Feature: As 25 PD but pre-filled with sealant for extreme humid environments.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-SB.jpg" alt="">
@@ -1422,13 +1464,13 @@
                                         <h5>
                                             <a href="#">Part No:25 SB</a>
                                         </h5>
-                                        <span>Feature:Filled with water resistant sealant for application to 25 SD & 25 SD-T straight tap connector. An application tool facilitates installation.</span>
+                                        <span>Feature: Filled with water resistant sealant for application to 25 SD & 25 SD-T straight tap connector. An application tool facilitates installation.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-PB-1.jpg" alt="">
@@ -1437,13 +1479,13 @@
                                         <h5>
                                             <a href="#">Part No:25 SB</a>
                                         </h5>
-                                        <span>Feature:Filled with water resistant sealant for application to 25 SD & 25 SD-T straight tap connector. An application tool facilitates installation.</span>
+                                        <span>Feature: Filled with water resistant sealant for application to 25 SD & 25 SD-T straight tap connector. An application tool facilitates installation.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-PB-2.jpg" alt="">
@@ -1452,13 +1494,13 @@
                                         <h5>
                                             <a href="#">Part No:25 PB-2</a>
                                         </h5>
-                                        <span>Feature:As above but for two 25 SD.</span>
+                                        <span>Feature: As above but for two 25 SD.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/25-PB-3.jpg" alt="">
@@ -1467,62 +1509,92 @@
                                         <h5>
                                             <a href="#">Part No:25 PB-3</a>
                                         </h5>
-                                        <span>Feature:As above but for three 25 SD.</span>
+                                        <span>Feature: As above but for three 25 SD.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Blog Post End-->
+                        <h4>Tools</h4><br><br>
+                        <div class="row">
+                            <!--Blog Post Start-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="event-post">
+                                    <div class="event-thumb">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UD4C1,-UD4C2,-UD4C3,-UD4C4-and-UD4C5.jpg" alt="">
+
+                                    </div>
+                                    <div class="event-txt">
+                                        <h5>
+                                            <a href="#"></a>
+                                        </h5>
+                                        <span>Crimping Plier for Dropwire Connectors:
+                                            UD4C1, UD4C2, UD4C3, UD4C4 and UD4C5</span>
                                     </div>
                                 </div>
                             </div>
                             <!--Blog Post End-->
-                            <h3>Tools</h3><br><br>
-                            <div class="row">
-                                <!--Blog Post Start-->
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="event-post">
-                                        <div class="event-thumb">
-                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/UD4C1,-UD4C2,-UD4C3,-UD4C4-and-UD4C5.jpg" alt="">
+                            <!--Blog Post Start-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="event-post">
+                                    <div class="event-thumb">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/Connectors-and-UD2P-Dropwire-Connectors.jpg" alt="">
+                                        <ul class="post-meta">
 
-                                        </div>
-                                        <div class="event-txt">
-                                            <h5>
-                                                <a href="#"></a>
-                                            </h5>
-                                            <span>Crimping Plier for Dropwire Connectors:
-                                                UD4C1, UD4C2, UD4C3, UD4C4 and UD4C5</span>
-                                        </div>
+                                        </ul>
+                                    </div>
+                                    <div class="event-txt">
+                                        <h5>
+                                            <a href="#"></a>
+                                        </h5>
+                                        <span>Crimping plier for all discrete wire connectors and UD2P dropwire connectors.</span>
                                     </div>
                                 </div>
-                                <!--Blog Post End-->
-                                <!--Blog Post Start-->
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="event-post">
-                                        <div class="event-thumb">
-                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/copper-cable/Connectors-and-UD2P-Dropwire-Connectors.jpg" alt="">
-                                            <ul class="post-meta">
-
-                                            </ul>
-                                        </div>
-                                        <div class="event-txt">
-                                            <h5>
-                                                <a href="#"></a>
-                                            </h5>
-                                            <span>Crimping plier for all discrete wire connectors and UD2P dropwire connectors.</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Blog Post End--> 
-
-
                             </div>
+                            <!--Blog Post End--> 
+
 
                         </div>
+
                     </div>
                 </div>
-            </section>
-
-
-            <!--Causes End--> 
-
         </div>
-        <!--Partner Logos Section End--> 
+    </section>
+
+
+    <!--Causes End--> 
+
+</div>
+<!--Partner Logos Section End--> 
 <?php include'footer.php'; ?>
-    </body>
+<script type="text/javascript">
+    $(window).load(function () {
+        var $container = $('.portfolioContainer');
+        $container.isotope({
+            filter: '*',
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+
+        $('.portfolioFilter a').click(function () {
+            $('.portfolioFilter .current').removeClass('current');
+            $(this).addClass('current');
+
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+            return false;
+        });
+    });
+</script>
+</body>
 </html>

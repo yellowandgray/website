@@ -74,7 +74,7 @@
                                 <img src="images/home/002.png" alt="">
                                 <h5>Telecommunications</h5>
                                 <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                <a href="#">See More</a> 
+                                <a href="tele-communication.php">See More</a> 
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
@@ -98,7 +98,7 @@
                                 <img src="images/home/005.png" alt="">
                                 <h5>Metal</h5>
                                 <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                <a href="#">See More</a>
+                                <a href="metal.php">See More</a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
@@ -445,9 +445,9 @@
                             <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/home/023.jpg" alt="">
-                                    <h5>Rebar in Coil</h5>
+                                    <h5>Compact Coil</h5>
                                     <div class="pro-hover">
-                                        <h6>Rebar in Coil</h6>
+                                        <h6>Compact Coil</h6>
                                         <p> <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></p>
                                         <a href="#">Read More</a> 
                                     </div>
