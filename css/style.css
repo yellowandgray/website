@@ -1238,7 +1238,7 @@ footer{
 .service-section h1 {
     font-size: 75px;
     font-weight: 700;
-    color: #4a7c7c;
+    color: #ffffff;
 }
 
 .services-text {
@@ -1261,10 +1261,10 @@ footer{
     padding: 20px 0;
 }
 
-.service-1-h4 {
+/*.service-1-h4 {
     padding: 40px 0;
     margin-top: 25%;
-}
+}*/
 
 .service-1-h4 h4 {
     font-size: 40px;
@@ -1345,3 +1345,22 @@ footer{
     cursor: pointer;
 }
 
+
+.bg-services {
+    background: #fff;
+    padding: 40px 250px;
+    margin-bottom: 20px;
+}
+
+.section-h1 h1 {
+    padding: 195px 0;
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+
+}
+
+.section-h1 {
+    background: url(../img/bg-1.jpg)no-repeat;
+    background-position: center;
+}
