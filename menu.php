@@ -3,9 +3,9 @@
     <div class="overlay-content">
         <a href="index.php">Home</a>
         <a href="experiential.php">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#faq">FAQ's</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#">Gallery</a>
+        <a href="#">FAQ's</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
     </div>
 </div>

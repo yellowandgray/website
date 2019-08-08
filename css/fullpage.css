@@ -39,7 +39,7 @@ html.fp-enabled,
     transition: all 0.3s ease-out;
 }
 .fp-section.fp-table, .fp-slide.fp-table {
-    display: table;
+    display: flex;
     table-layout:fixed;
     width: 100%;
 }

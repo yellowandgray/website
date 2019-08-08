@@ -1871,7 +1871,7 @@
             // using JS to animate
             else{
                 var scrollSettings = getScrollSettings(v.dtop);
-                FP.test.top = -v.dtop + 'px';
+                FP.test.top = -v.dtop + '0px';
 
                 scrollTo(scrollSettings.element, scrollSettings.options, options.scrollingSpeed, function(){
                     if(options.scrollBar){
@@ -1937,7 +1937,7 @@
             v.wrapAroundElements = v.activeSection;
 
             // Recalculate animation variables
-            v.dtop = v.element.offsetTop;
+            v.dtop = v.element.Top;
             v.yMovement = getYmovement(v.element);
 
             return v;

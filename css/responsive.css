@@ -11,3 +11,19 @@
         width: 100% !important;
     }
 }
+
+@media screen and (max-width: 1440px) {
+    #circle svg {
+        height: 400px !important;
+    }
+    #myNav.overlay {
+        padding-right: 10px !important;
+        right: -12px !important;
+    }
+    .banner-h1 h1 {
+        top: 110px !important;
+    }
+    .mt-5 {
+        margin-top: -7% !important;
+    }
+}
