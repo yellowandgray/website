@@ -267,7 +267,7 @@ ul.topbar-social {
 }
 
 .event-post .event-txt span  {
-    font-size:12px;
+    font-size: 16px;
     
 }
 
@@ -326,4 +326,32 @@ img {
   -webkit-transition-property: -webkit-transform, opacity;
   -moz-transition-property: -moz-transform, opacity;
   transition-property: transform, opacity;
+}
+
+.event-post .event-thumb{
+    
+    margin-bottom: -5px;
+    margin-left: -3px;
+    margin-top: -3px;
+    margin-right:-3px;
+}
+
+.event-thumb {
+    width: 102%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.technical-facts {
+    padding: 130px 20px;
+}
+
+.technical-facts h5 {
+    font-size: 25px;
+}
+
+.facts{
+    padding: 100px 20px;
+    font-size: 20px;
 }

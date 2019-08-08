@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
-    <?php $page = 'home'; include 'head.php'; ?>
+    <?php $page = 'home';
+    include 'head.php'; ?>
     <body>
         <div class="wrapper home3">
             <!--Header Start-->
-            <?php include'menu.php'; ?>
+<?php include'menu.php'; ?>
             <!--Header End--> 
             <!--Slider Start-->
             <section id="home-slider" class="owl-carousel owl-theme wf100">
@@ -125,10 +126,10 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="col-md-6"> <img src="images/home/027.png" alt=""> </div>
+                            <img src="images/home/027.png" alt="">
                         </div>
                         <div class="col-md-4">
-                            <div class="col-md-6 img-radius"> <img src="images/home/026.jpg" alt=""> </div>
+                            <div class="img-radius"> <img src="images/home/026.jpg" alt=""> </div>
                         </div>
 
                     </div>
@@ -480,7 +481,7 @@
             </section>
 
             <!--Partner Logos Section End--> 
-            <?php include'footer.php'; ?>
+<?php include'footer.php'; ?>
 
     </body>
 </html>
