@@ -1,3 +1,45 @@
+@import url(//db.onlinewebfonts.com/c/18263f6ee9b3ccf934a8535d488959eb?family=Quicksand+Dash);
+@import url(//db.onlinewebfonts.com/c/c9f309b3d47969ecac64a77a6c672594?family=Nexa+Bold);
+@import url(//db.onlinewebfonts.com/c/ee1c62326ab59c0683247d7a66322c8b?family=DashNess);
+@font-face {
+    font-family: "Quicksand Dash";
+    src: url("fonts/lips/dash/18263f6ee9b3ccf934a8535d488959eb.eot");
+    src: url("fonts/lips/dash/18263f6ee9b3ccf934a8535d488959eb-1.eot?#iefix") format("embedded-opentype"),
+        url("fonts/lips/dash/18263f6ee9b3ccf934a8535d488959eb.woff2") format("woff2"),
+        url("fonts/lips/dash/18263f6ee9b3ccf934a8535d488959eb.woff") format("woff"),
+        url("fonts/lips/dash/18263f6ee9b3ccf934a8535d488959eb.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/18263f6ee9b3ccf934a8535d488959eb.svg#Quicksand Dash") format("svg");
+}
+
+@font-face {font-family: "Quicksand";
+            src: url("fonts/lips/quick-sand/80a67466fb37bc4635b24d6c33aa62e3.eot"); /* IE9*/
+            src: url("fonts/lips/quick-sand/80a67466fb37bc4635b24d6c33aa62e3-1.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+                url("fonts/lips/quick-sand/80a67466fb37bc4635b24d6c33aa62e3.woff2") format("woff2"), /* chrome firefox */
+                url("fonts/lips/quick-sand/80a67466fb37bc4635b24d6c33aa62e3.woff") format("woff"), /* chrome firefox */
+                url("fonts/lips/quick-sand/80a67466fb37bc4635b24d6c33aa62e3.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+                url("http://db.onlinewebfonts.com/t/80a67466fb37bc4635b24d6c33aa62e3.svg#Quicksand") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {
+    font-family: "Nexa Bold";
+    src: url("fonts/lips/next-bold/c9f309b3d47969ecac64a77a6c672594.eot");
+    src: url("fonts/lips/next-bold/c9f309b3d47969ecac64a77a6c672594.eot?#iefix") format("embedded-opentype"),
+        url("fonts/lips/next-bold/c9f309b3d47969ecac64a77a6c672594.woff2") format("woff2"),
+        url("fonts/lips/next-bold/c9f309b3d47969ecac64a77a6c672594.woff") format("woff"),
+        url("fonts/lips/next-bold/c9f309b3d47969ecac64a77a6c672594.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/c9f309b3d47969ecac64a77a6c672594.svg#Nexa Bold") format("svg");
+}
+
+@font-face {font-family: "DashNess";
+            src: url("fonts/lips/desh-ness/ee1c62326ab59c0683247d7a66322c8b.eot");
+            src: url("fonts/lips/desh-ness/ee1c62326ab59c0683247d7a66322c8b.eot?#iefix") format("embedded-opentype"),
+                url("fonts/lips/desh-ness/ee1c62326ab59c0683247d7a66322c8b.woff2") format("woff2"),
+                url("fonts/lips/desh-ness/ee1c62326ab59c0683247d7a66322c8b.woff") format("woff"),
+                url("fonts/lips/desh-ness/ee1c62326ab59c0683247d7a66322c8b.ttf") format("truetype"),
+                url("//db.onlinewebfonts.com/t/ee1c62326ab59c0683247d7a66322c8b.svg#DashNess") format("svg");
+}
+
+
 html {
     width: 100%;
     height: 100%;
@@ -23,11 +65,19 @@ a:hover {
 body {
     width: 100%;
     height: 100%;
-    font-family: 'Blinker', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    font-family: 'Blinker', sans-serif;
+#circle text textpath {
+    font-family: "DashNess", sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Nexa Bold';
+    font-weight: 600;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
 }
 
 .overlay {
@@ -54,7 +104,7 @@ h1, h2, h3, h4, h5, h6, p {
 .overlay a {
     padding: 0 28px 0 0;
     text-decoration: none;
-    font-size: 50px;
+    font-size: 40px;
     color: #e7aca6;
     display: block;
     transition: 0.3s;
@@ -440,7 +490,7 @@ header {
 .content-overlay {
     background: rgba(0,0,0,0.7);
     position: absolute;
-    height: 100%;
+    height: 95%;
     width: 93%;
     left: 0;
     top: 0;
@@ -457,7 +507,7 @@ header {
     opacity: 1;
 }
 
-.box-2:hover .content-overlay{
+.box:hover .content-overlay{
     opacity: 1;
 }
 
@@ -466,8 +516,6 @@ header {
 }
 
 .box-1 {
-    background: url(../img/bg/img-1.jpg);
-    background-size: cover;
     /* transition: transform 0.5s; */
     padding: 142px 0px;
     cursor: pointer;
@@ -477,7 +525,7 @@ header {
 .box-padding {
     position: relative;
     padding: 38px;
-    margin: 51px;
+    margin: 30px auto;
     background: rgba(255, 255, 255, 0.8);
     transition: 0.3s all linear;
 }
@@ -498,56 +546,6 @@ header {
     transition: 0.3s all linear;
 }
 
-.box-1:hover {
-    padding: 136px 0px;
-}
-
-.box-1:hover:after {
-    background: #000;
-}
-
-.box-1:hover .box-padding {
-    padding: 0;
-    margin: 4px;
-    background: transparent;
-    position: relative;
-    margin-top: 0px;
-    transition: 0.3s all linear;
-}
-
-.box-1:hover .box-padding h1 {
-    color: #fff;
-    position: absolute;
-    padding: 0px 10px;
-    bottom: 50%;
-    text-transform: uppercase;
-    font-size: 50px;
-}
-
-.box-1:hover .text-hover {
-    display: block;
-    position: relative;
-    left: 15px;
-    color: #fff;
-    font-size: 35px;
-    font-weight: 400;
-    font-style: italic;
-    transition: 0.3s all linear;
-}
-
-.box-1:hover .door-img {
-    display: block;
-    float: right;
-    padding: 50px 0 0 0;
-    right: 19px;
-    position: absolute;
-    bottom: -155px;
-}
-
-.box-1:hover a {
-    color: #fff;
-}
-
 .door-img {
     display: none
 }
@@ -556,21 +554,20 @@ header {
     color: #fff;
 }
 
-.box-2 {
-    background: url(../img/bg/img-2.jpg);
-    background-size: cover;
+.box {
     /* transition: transform 0.5s; */
     padding: 142px 0px;
     cursor: pointer;
     height: 506px;
+    margin-bottom: 30px;
 }
 
 
-.box-2:hover {
+.box:hover {
     padding: 136px 0px;
 }
 
-.box-2:hover .box-padding {
+.box:hover .box-padding {
     padding: 0;
     margin: 4px;
     background: transparent;
@@ -579,16 +576,16 @@ header {
     transition: 0.3s all linear;
 }
 
-.box-2:hover .box-padding h1 {
+.box:hover .box-padding h1 {
     color: #fff;
     position: absolute;
     padding: 0px 10px;
     bottom: 50%;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 45px
 }
 
-.box-2:hover .text-hover {
+.box:hover .text-hover {
     display: block;
     position: relative;
     left: 15px;
@@ -600,7 +597,7 @@ header {
     text-align: left;
 }
 
-.box-2:hover .door-img {
+.box:hover .door-img {
     display: block;
     float: right;
     padding: 50px 0 0 0;
@@ -610,66 +607,9 @@ header {
 }
 
 
-.box-2:hover a {
+.box:hover a {
     color: #fff;
 }
-
-
-.box-3 {
-    background: url(../img/bg/img-3.jpg);
-    background-size: cover;
-    /* transition: transform 0.5s; */
-    padding: 142px 0px;
-    cursor: pointer;
-    height: 506px;
-}
-
-.box-3:hover {
-    padding: 136px 0px;
-}
-
-.box-3:hover .box-padding {
-    padding: 0;
-    margin: 4px;
-    background: transparent;
-    position: relative;
-    margin-top: 0px;
-    transition: 0.3s all linear;
-}
-
-.box-3:hover .box-padding h1 {
-    color: #fff;
-    position: absolute;
-    padding: 0px 10px;
-    bottom: 50%;
-    text-transform: uppercase;
-    font-size: 50px;
-}
-
-.box-3:hover .text-hover {
-    display: block;
-    position: relative;
-    left: 15px;
-    color: #fff;
-    font-size: 35px;
-    font-weight: 400;
-    font-style: italic;
-    transition: 0.3s all linear;
-}
-
-.box-3:hover .door-img {
-    display: block;
-    float: right;
-    padding: 50px 0 0 0;
-    right: 19px;
-    position: absolute;
-    bottom: -155px;
-}
-
-.box-3:hover a {
-    color: #fff;
-}
-
 
 .booking-form {
     background: #fff;
@@ -693,6 +633,7 @@ header {
 .booking-form input {
     margin: 20px 10px;
     padding: 10px 5px;
+    width: 335px;
 }
 
 .header-style-2 h1 {
@@ -1155,12 +1096,12 @@ footer{
 .banner-h1 h1 {
     position: absolute;
     z-index: 1050;
-    font-size: 88px;
+    font-size: 20px;
     font-weight: 500;
     color: #fff;
-    text-align: center;
-    top: 210px;
-    left: 100px;
+    /*    text-align: center;*/
+    top: 0;
+    left: 0;
     letter-spacing: 6px;
     font-style: italic;
     line-height: 1;
@@ -1312,11 +1253,9 @@ footer{
     line-height: 1;
 }
 
-.empowering-text {
-    margin-top: 40px;
-}
-.empowering-text-1 {
-    margin-top: 40px;
+.table-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .table-section h5 a {
@@ -1348,8 +1287,15 @@ footer{
 
 .bg-services {
     background: #fff;
-    padding: 40px 250px;
+    padding: 40px 30px;
     margin-bottom: 20px;
+    margin-top: 40px;
+    height: 480px;
+}
+
+.bg-services p {
+    font-size: 25px;
+    line-height: 30px;
 }
 
 .section-h1 h1 {
@@ -1363,4 +1309,165 @@ footer{
 .section-h1 {
     background: url(../img/bg-1.jpg)no-repeat;
     background-position: center;
+}
+
+.float-text {
+    float: right;
+}
+
+.calendar-section .row {
+    margin-right: 0;
+}
+
+.calendar-bg-section {
+    background: #fff;
+    width: 50%;
+    padding: 5% 0;
+}
+
+.calendar-bg-section h2 {
+    margin: 20px 0;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.calendar-bg1-section {
+    float: right;
+    background: #e7aca6;
+    width: 50%;
+    padding: 5% 0px 0% 0px;
+}
+
+.calendar-inner-bg {
+    background: url(../img/bg-1.jpg)no-repeat;
+    height: 440px;
+    /*    margin: 0 225px;*/
+    background-position: right;
+    /*    width: 532px;*/
+}
+
+.calendar-inner-bg h2 {
+    padding: 25px 0;
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+.home-calendar .pmu-instance {
+    width: 29em;
+}
+
+.calendar-text-section {
+    position: relative;
+    top: -75%;
+}
+
+.calendar-text-section h2 {
+    position: absolute;
+    left: 8%;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.calendar-text-section p {
+    position: relative;
+    top: 60px;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 9%;
+}
+
+.b-header-site-lf-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -15.5rem;
+    height: 45rem;
+    width: 16rem;
+}
+
+.b-header-site-lf-area .scroll-indicator {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.vertical-cell {
+    position: absolute;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.vertical--bottom .vertical-cell {
+    bottom: 0;
+}
+
+.dash {
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    -moz-align-items: center;
+    align-items: center;
+    -ms-flex-pack: start;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.b-header-site-lf-area .scroll-indicator .dash-line {
+    -moz-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 16.875rem;
+}
+
+.ready .visible-on-screen .dash-text {
+    transition-delay: .3125s;
+    opacity: 1;
+    transform: none;
+}
+
+.dash-text {
+    color: #fff;
+    font-size: 25px
+}
+
+.booking-form select {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.time .row {
+    margin: 0;
+}
+
+.time select {
+    width: 48%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.time input[type="checkbox"] {
+    /*    position: absolute;*/
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
 }

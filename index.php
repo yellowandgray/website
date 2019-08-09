@@ -3,23 +3,19 @@
     <head>
         <title>Project Next Door</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Blinker:100,200,300,400,600,700,800,900&display=swap" rel="stylesheet">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
         <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/all.min.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/slick-theme-min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/slick.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/animate.css" rel="stylesheet" type="text/css"/>
         <link href="css/examples.css" rel="stylesheet" type="text/css"/>
         <!--        <link href="css/fullpage.css" rel="stylesheet" type="text/css"/>-->
         <link href="css/pickmeup.css" rel="stylesheet" type="text/css"/>
         <!--        <link href="css/demo.css" rel="stylesheet" type="text/css"/>-->
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
-
-        <script>
-            new WOW().init();
-        </script>
     </head>
     <body>
         <main class="section banner-section" style="background: url(img/banner-bg.jpg);height: 100%;padding-bottom: 40px;">
@@ -33,17 +29,25 @@
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="banner-h1">
-                            <h1>ONE STOP INNOVATION<br/> AND KNOWLEDGE HUB.</h1>
+                    <div class="col-md-2">
+                        <div class="b-header-site-lf-area">
+                            <div class="scroll-indicator scroll-indicator--dark">
+
+
+                                <div class="vertical vertical--bottom" style="height: 875px;">
+                                    <div class="vertical-cell" style="transform-origin: 65.625px 65.625px; height: 131.25px; width: 875px; transform: rotate(-90deg);">
+
+                                        <div class="dash dash--dark dash--normal">
+                                            <div class="dash-line"></div>
+                                            <div class="dash-text">Scroll down</div>
+                                        </div></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-2">
-                        <!--                            <h1>TAGLINE.</h1>-->
-                    </div>
-                    <div class="col-md-8">
+                    <div class="col-md-7">
 
-                        <div class="SlickCarousel">
+                        <div class="SlickCarousel wow fadeInDown">
                             <!-- Item -->
                             <div class="ProductBlock">
                                 <div class="Content">
@@ -73,7 +77,10 @@
                             <!-- Item -->
                         </div>
                         <!-- Carousel Container -->
-                        <a href="#" class="btn btn-custom-1"><i class="fas fa-arrow-right"></i> Find out more.</a>
+                        <a href="#" class="btn btn-custom-1 wow fadeInUp"><i class="fas fa-arrow-right"></i> Find out more.</a>
+                    </div>
+                    <div class="col-md-3 banner-h1">
+                        <h1 class="wow fadeInUp">WHERE IMAGINEERS ARE BORN</h1>
                     </div>
                 </div>
                 <div id="circle">
@@ -85,7 +92,7 @@
                     <g>
                     <use xlink:href="#circlePath" fill="none"/>
                     <text fill="#e7aca6">
-                    <textPath xlink:href="#circlePath">P r o j e c t &nbsp; N e x t &nbsp; D o o r &nbsp;</textPath>
+                    <textPath xlink:href="#circlePath">p r o j e c t &nbsp; n e x t &nbsp; d o o r &nbsp;</textPath>
                     </text>
                     </g>
                     </svg>
@@ -98,8 +105,8 @@
                     <h1 class="text-center">About Project Next Door</h1>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="box-2">
+                    <div class="col-md-4 wow fadeInLeft">
+                        <div class="box" style="background: url(img/bg/img-2.jpg);background-size: cover;">
                             <div class="content-overlay"></div>
                             <a href="empowering.php">
                                 <div class="box-padding">
@@ -114,8 +121,8 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="box-3">
+                    <div class="col-md-4 wow zoomIn">
+                        <div class="box" style="background: url(img/bg/img-3.jpg);background-size: cover;">
                             <div class="content-overlay"></div>
                             <a href="#">
                                 <div class="box-padding">
@@ -130,8 +137,8 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="box-1">
+                    <div class="col-md-4 wow fadeInRight">
+                        <div class="box" style="background: url(img/bg/img-1.jpg);background-size: cover;">
                             <div class="content-overlay"></div>
                             <a href="experiential.php">
                                 <div class="box-padding">
@@ -154,25 +161,25 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="booking-form wow bounceInUp" style="margin-top: 100px;">
-                            <h1 class="text-center">Book Your Space</h1>
+                            <h1 class="text-center wow bounceInDown">Book Your Space</h1>
                             <form id="contact" action="" method="post">
                                 <div class="row">
                                     <!--                                        <div class="form-group" style="display: none;">
                                                                                 <input type="text" name="name" placeholder="NAME" required />
                                                                             </div>-->
-                                    <div class="form-group">
+                                    <div class="form-group wow bounceInLeft">
                                         <input type="text" name="name" placeholder="NAME" required style='display: none;'/>
                                         <input type="text" name="name" placeholder="NAME" required />
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group wow bounceInLeft">
                                         <input type="email" name="email" placeholder="EMAIL" required />
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group wow bounceInLeft">
                                         <input type="text" name="number" placeholder="MOBILE NUMBER" required />
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 table-section">
+                                    <div class="col-md-6 table-section wow fadeInRight">
                                         <h5>DECEMBER 27-JANUARY 19 
                                             <a>
                                                 <i class="fas fa-angle-left cw"></i>
@@ -181,37 +188,80 @@
                                                 <i class="fas fa-angle-right cw"></i>
                                             </a> 
                                         </h5>
-
+                                        <label>I'M INTERESTED IN</label>
+                                        <select class="ui dropdown">
+                                            <option value="">Please Select</option>
+                                            <option value="Office & Enterprise Solutions">Office & Enterprise Solutions</option>
+                                            <option value="Events & Meeting Room Solutions">Events & Meeting Room Solutions</option>
+                                            <option value="Hot Desk & Reserved Desk">Hot Desk & Reserved Desk</option>
+                                            <option value="Virtual Office Solutions">Virtual Office Solutions</option>
+                                            <option value="Others">Others</option>
+                                        </select>
+                                        <div class="time">
+                                            <div class="row">
+                                                <select class="ui dropdown">
+                                                    <option>Hours</option>
+                                                    <option value="01">01</option>
+                                                    <option value="02">02</option>
+                                                    <option value="03">03</option>
+                                                    <option value="04">04</option>
+                                                    <option value="05">05</option>
+                                                    <option value="06">06</option>
+                                                    <option value="07">07</option>
+                                                    <option value="08">08</option>
+                                                    <option value="09">09</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                                <select class="ui dropdown">
+                                                    <option>Minutes</option>
+                                                    <option value="05">05</option>
+                                                    <option value="12">10</option>
+                                                    <option value="13">15</option>
+                                                    <option value="24">20</option>
+                                                    <option value="25">25</option>
+                                                    <option value="30">30</option>
+                                                    <option value="35">35</option>
+                                                    <option value="40">40</option>
+                                                    <option value="45">45</option>
+                                                    <option value="50">50</option>
+                                                    <option value="55">55</option>
+                                                    <option value="60">60</option>
+                                                </select>
+                                            </div>
+                                            <div class="row">
+                                                <div class="date-select">
+                                                    <p><input type='checkbox' name='checkbox' /><strong> SELECTED: </strong> 4/08/2019, 12:45pm to 12/08/2019</p>
+                                                </div>
+                                                <div class="button-group">
+                                                    <a href="#" class="btn btn-cancel">Cancel</a>
+                                                    <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-ok">Add</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <article>
+                                    <div class="col-md-6 wow fadeInLeft">
+                                        <article class="home-calendar">
                                             <div class="single"></div>
                                         </article>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="date-select">
-                                        <p><strong>SELECTED: </strong> 4/08/2019, 12:45pm to 12/08/2019</p>
-                                    </div>
-                                    <div class="button-group">
-                                        <a href="#" class="btn btn-cancel">Cancel</a>
-                                        <a href="#" class="btn btn-ok">Add</a>
-                                    </div>
-                                </div>
+
                             </form>
                         </div>
                         <ul class="social-media">
-                            <li>
+                            <li class="wow fadeInleft">
                                 <a href="#">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </li>
-                            <li>
+                            <li class="wow fadeInleft">
                                 <a href="#">
                                     <i class="fab fa-youtube"></i>
                                 </a>
                             </li>
-                            <li>
+                            <li class="wow fadeInleft">
                                 <a href="#">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
@@ -227,10 +277,10 @@
                     <h1>Contact Us</h1>
                 </div>
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-8 wow fadeInLeft">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 400px;" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 wow fadeInRight">
                         <div class="contact-bg">
                             <h3>Address</h3>
                             <br/>
@@ -253,6 +303,26 @@
             </div>
         </footer>
     </body>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thank You!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Thank you for Booking with us. Our team will get in touch with you shortly.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="js/jquery.plugin.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
@@ -260,16 +330,22 @@
     <script src="js/banner.js" type="text/javascript"></script>
     <script src="js/menu.js" type="text/javascript"></script>
     <script src="js/all.min.js" type="text/javascript"></script>
-    <script src="js/fontawesome.min.js" type="text/javascript"></script>
-<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>-->
     <script src="js/slick.js" type="text/javascript"></script>
-<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js" type="text/javascript"></script>-->
-<!--    <script src="js/fullpage.js" type="text/javascript"></script>-->
-
-<!--    <script src="js/examples.js" type="text/javascript"></script>-->
-<!--    <script src="js/jquery-ui.js" type="text/javascript"></script>-->
     <script src="js/pickmeup.js" type="text/javascript"></script>
     <script src="js/demo.js" type="text/javascript"></script>
+    <script src="js/wow-js.js" type="text/javascript"></script>
+    <script src="js/wow.js" type="text/javascript"></script>
+    <script type="text/javascript">
+                        $('#myModal').on('shown.bs.modal', function () {
+                            $('#myInput').trigger('focus')
+                        })
+    </script>
+<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js" type="text/javascript"></script>-->
+<!--    <script src="js/fullpage.js" type="text/javascript"></script>-->
+<!--    <script src="js/examples.js" type="text/javascript"></script>-->
+<!--    <script src="js/jquery-ui.js" type="text/javascript"></script>-->
+<!--    <script src="js/fontawesome.min.js" type="text/javascript"></script>-->
+<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>-->
 <!--    <script type="text/javascript">
                             var myFullpage = new fullpage('#fullpage', {
                                 //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
@@ -278,7 +354,4 @@
                                 lazyLoad: true
                             });
     </script>-->
-    <script src="js/wow.js" type="text/javascript"></script>
-
-
 </html>

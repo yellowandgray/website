@@ -5,10 +5,56 @@
         font-size: 40px;
         top: 15px;
         right: 35px;
-    }
-    
+    } 
     #myNav.overlay {
         width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 450px) { 
+
+    .pickmeup {
+        width: 100%;
+    }
+    .booking-form input {
+        width: 100% !important;
+    }
+    .home-calendar .pmu-instance {
+        width: 100% !important;
+    }
+    .logo img.logo-size {
+        width: 70% !important;
+    }
+    .banner-h1 h1 {
+        top: -285px !important;
+    }
+    .banner-section .SlickCarousel {
+        margin-top: 100px !important;
+    }
+    .calendar-bg-section {
+        width: 100% !important;
+    }
+    .calendar-bg1-section {
+        width: 100% !important;
+    }
+    
+    #circle {
+        display: none !important;
+    }
+    
+    .pmu-instance {
+        width: 100% !important;
+    }
+    
+    .calendar-bg1-section {
+        padding: 24% 0px 5% 0px !important;
+    }
+    .calendar-text-section p {
+        top: 125px !important;
+        left: 0 !important;
+    }
+    h1, h2, h3 {
+        font-size: 30px !important;
     }
 }
 
@@ -20,9 +66,9 @@
         padding-right: 10px !important;
         right: -12px !important;
     }
-    .banner-h1 h1 {
-        top: 110px !important;
-    }
+    /*    .banner-h1 h1 {
+            top: 110px !important;
+        }*/
     .mt-5 {
         margin-top: -7% !important;
     }
