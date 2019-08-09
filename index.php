@@ -24,7 +24,7 @@
                         <div class="container">
                             <strong>content-2</strong>
                             <h1>Industry Safety Products</h1>
-                            <a href="#">Find Out More</a>
+                            <a href="industrial-safetyproducts.php">Find Out More</a>
                         </div>
                     </div>
                     <img src="images/banner/004.jpg" alt=""> 
@@ -91,7 +91,7 @@
                                 <img src="images/home/004.png" alt="">
                                 <h5>Safety Products</h5>
                                 <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                <a href="#">See More</a>
+                                <a href="industrial-safetyproducts.php">See More</a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
@@ -222,7 +222,7 @@
                     <div class="row pad-t-40">
                         <div class="col-md-12">
                             <div class="volbox-3 text-center">
-                                <a href="#">See More</a>
+                                <a href="tele-communication.php">See More</a>
                             </div>
                         </div>
                     </div>
@@ -298,7 +298,7 @@
                                                 <img src="images/home/014.jpg" alt=""></div>
                                             <div class="event-txt">
                                                 <h4><a href="#">Safety Shoe</a></h4>
-                                                <a class="rm" href="#">Read More</a> 
+                                                <a class="rm" href="industrial-safetyproducts.php">Read More</a> 
                                             </div>
                                         </div>
                                     </div>
@@ -472,7 +472,7 @@
                         <div class="row pad-t-40">
                             <div class="col-md-12">
                                 <div class="volbox-3 text-center">
-                                    <a href="#">See More</a>
+                                    <a href="metal.php">See More</a>
                                 </div>
                             </div>
                         </div>

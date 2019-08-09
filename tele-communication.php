@@ -18,7 +18,7 @@
             </div>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header">
+            <section class="wf100 p100 inner-header" style="background: url(images/optical-fiber/fiber.jpg) no-repeat;">
                 <div class="container">
                     <h1>Telecommunication</h1>
                     <ul>
