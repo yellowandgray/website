@@ -1,5 +1,10 @@
 function openNav() {
-    document.getElementById("myNav").style.width = "20%";
+    var width = window.innerWidth;
+    if (width > 991) {
+        document.getElementById("myNav").style.width = "30%";
+    } else {
+        document.getElementById("myNav").style.width = "100%";
+    }
 }
 
 function closeNav() {

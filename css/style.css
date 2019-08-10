@@ -1,45 +1,3 @@
-@import url(//db.onlinewebfonts.com/c/18263f6ee9b3ccf934a8535d488959eb?family=Quicksand+Dash);
-@import url(//db.onlinewebfonts.com/c/c9f309b3d47969ecac64a77a6c672594?family=Nexa+Bold);
-@import url(//db.onlinewebfonts.com/c/ee1c62326ab59c0683247d7a66322c8b?family=DashNess);
-@font-face {
-    font-family: "Quicksand Dash";
-    src: url("fonts/lips/dash/18263f6ee9b3ccf934a8535d488959eb.eot");
-    src: url("fonts/lips/dash/18263f6ee9b3ccf934a8535d488959eb-1.eot?#iefix") format("embedded-opentype"),
-        url("fonts/lips/dash/18263f6ee9b3ccf934a8535d488959eb.woff2") format("woff2"),
-        url("fonts/lips/dash/18263f6ee9b3ccf934a8535d488959eb.woff") format("woff"),
-        url("fonts/lips/dash/18263f6ee9b3ccf934a8535d488959eb.ttf") format("truetype"),
-        url("//db.onlinewebfonts.com/t/18263f6ee9b3ccf934a8535d488959eb.svg#Quicksand Dash") format("svg");
-}
-
-@font-face {font-family: "Quicksand";
-            src: url("fonts/lips/quick-sand/80a67466fb37bc4635b24d6c33aa62e3.eot"); /* IE9*/
-            src: url("fonts/lips/quick-sand/80a67466fb37bc4635b24d6c33aa62e3-1.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-                url("fonts/lips/quick-sand/80a67466fb37bc4635b24d6c33aa62e3.woff2") format("woff2"), /* chrome firefox */
-                url("fonts/lips/quick-sand/80a67466fb37bc4635b24d6c33aa62e3.woff") format("woff"), /* chrome firefox */
-                url("fonts/lips/quick-sand/80a67466fb37bc4635b24d6c33aa62e3.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
-                url("http://db.onlinewebfonts.com/t/80a67466fb37bc4635b24d6c33aa62e3.svg#Quicksand") format("svg"); /* iOS 4.1- */
-}
-
-@font-face {
-    font-family: "Nexa Bold";
-    src: url("fonts/lips/next-bold/c9f309b3d47969ecac64a77a6c672594.eot");
-    src: url("fonts/lips/next-bold/c9f309b3d47969ecac64a77a6c672594.eot?#iefix") format("embedded-opentype"),
-        url("fonts/lips/next-bold/c9f309b3d47969ecac64a77a6c672594.woff2") format("woff2"),
-        url("fonts/lips/next-bold/c9f309b3d47969ecac64a77a6c672594.woff") format("woff"),
-        url("fonts/lips/next-bold/c9f309b3d47969ecac64a77a6c672594.ttf") format("truetype"),
-        url("//db.onlinewebfonts.com/t/c9f309b3d47969ecac64a77a6c672594.svg#Nexa Bold") format("svg");
-}
-
-@font-face {font-family: "DashNess";
-            src: url("fonts/lips/desh-ness/ee1c62326ab59c0683247d7a66322c8b.eot");
-            src: url("fonts/lips/desh-ness/ee1c62326ab59c0683247d7a66322c8b.eot?#iefix") format("embedded-opentype"),
-                url("fonts/lips/desh-ness/ee1c62326ab59c0683247d7a66322c8b.woff2") format("woff2"),
-                url("fonts/lips/desh-ness/ee1c62326ab59c0683247d7a66322c8b.woff") format("woff"),
-                url("fonts/lips/desh-ness/ee1c62326ab59c0683247d7a66322c8b.ttf") format("truetype"),
-                url("//db.onlinewebfonts.com/t/ee1c62326ab59c0683247d7a66322c8b.svg#DashNess") format("svg");
-}
-
-
 html {
     width: 100%;
     height: 100%;
@@ -65,10 +23,11 @@ a:hover {
 body {
     width: 100%;
     height: 100%;
+    font-family: "TeXGyreAdventor-Regular";
 }
 
 #circle text textpath {
-    font-family: "DashNess", sans-serif;
+    font-family: "DashNess"
 }
 
 h1, h2, h3, h4 {
@@ -76,9 +35,6 @@ h1, h2, h3, h4 {
     font-weight: 600;
 }
 
-p {
-    font-family: 'Quicksand', sans-serif;
-}
 
 .overlay {
     height: 100%;
@@ -624,14 +580,14 @@ header {
 }
 
 .booking-form .form-group {
-    /*    margin-top: 20px;*/
+    margin-top: 20px;
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
 }
 
 .booking-form input {
-    margin: 20px 10px;
+    margin: 20px 0px;
     padding: 10px 5px;
     width: 335px;
 }
@@ -664,7 +620,7 @@ header {
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
-    margin: 0 0 0 15px;
+    /*    margin: 0 0 0 15px;*/
 }
 
 .button-group a:after {
@@ -687,13 +643,13 @@ header {
     transition: 0s
 }
 
-.date-select {
+/*.date-select {
     margin: 30px 0px 30px 10px;
-}
+}*/
 
-.date-select strong {
+/*.date-select strong {
     font-size: 20px;
-}
+}*/
 
 .date-select p {
     font-size: 18px;
@@ -795,6 +751,7 @@ footer p {
     background: #fff;
     padding: 40px 20px;
     height: 400px;
+    margin-bottom: 20px;
     /*    box-shadow: 6px 4px 10px 6px #eee;*/
 }
 
@@ -1198,7 +1155,7 @@ footer{
 }
 
 .service-h4 {
-    max-width: 500px;
+    /*    max-width: 500px;*/
     padding: 20px 0;
 }
 
@@ -1210,6 +1167,7 @@ footer{
 .service-1-h4 h4 {
     font-size: 40px;
     font-weight: 300;
+    padding: 20px 10px;
 }
 
 .service-h4 h4 {
@@ -1295,7 +1253,7 @@ footer{
 
 .bg-services p {
     font-size: 25px;
-    line-height: 30px;
+    line-height: 40px;
 }
 
 .section-h1 h1 {
@@ -1356,7 +1314,7 @@ footer{
 }
 
 .home-calendar .pmu-instance {
-    width: 29em;
+    width: 31em;
 }
 
 .calendar-text-section {
@@ -1378,6 +1336,7 @@ footer{
     font-size: 20px;
     color: #fff;
     padding-left: 9%;
+    width: 600px;
 }
 
 .b-header-site-lf-area {
@@ -1441,12 +1400,13 @@ footer{
 
 .dash-text {
     color: #fff;
-    font-size: 25px
+    font-size: 10px;
+    letter-spacing: 5px;
 }
 
 .booking-form select {
     width: 100%;
-    margin-top: 20px;
+    /*    margin-top: 20px;*/
     margin-bottom: 20px;
     padding: 10px;
 }
@@ -1456,18 +1416,29 @@ footer{
 }
 
 .time select {
-    width: 48%;
+    width: 32.6%;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     padding: 10px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+    outline: none;
 }
 
 .time input[type="checkbox"] {
     /*    position: absolute;*/
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 13px;
+    width: 12px;
     background-color: #eee;
+    margin: 0;
+}
+
+.circle-2 {
+    top: 45%;
+    left: 0;
+    width: auto;
 }

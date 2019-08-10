@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Project Next Door</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/style.css" rel="stylesheet" type="text/css"/>
-
-        <script>
-            new WOW().init();
-        </script>
-    </head>
+    <?php include 'head.php'; ?>
     <body>
         <header style="background: #2f4d4b;">
             <div class="logo">
-                <a href="index.php"><img src="img/back-arrow.png" alt="backarrow" /></a>
+                <a href="index.php"><img class="back-arrow" src="img/back-arrow.png" alt="backarrow" /></a>
+                <img class="logo-size" src="img/logo.png" alt="Project Next Door Logo" />
                 <span class="menu-nav" onclick="openNav()"><img src="img/menu-bar.png" /></span>
             </div>
             <?php include 'menu.php'; ?>
         </header>
+        <section class="ptb50" style="background: url(img/bg/empower-bg-1.jpg)no-repeat;background-size: cover;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="service-section wow fadeInLeft">
+                            <h1>EXPERIENTIAL LEARNING</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="services-text wow fadeInRight">
+                            <h2>EXECUTE. <br/>NOW. <br/> FUTURE. </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="ptb50">
             <div class="container">
                 <div class="row" style="background: url(img/bg/service-banner-bg-1.png)no-repeat;padding: 20px 0px;">
                     <div class="col-md-12">
-                        <div class="service-section">
-                            <h1>EXPERIENTIAL LEARNING</h1>
-                        </div>
-                        <div class="services-text">
-                            <h2>EXECUTE. <br/>NOW. <br/> FUTURE. </h2>
-                        </div>
-
                         <div class="service-h4">
-                            <h4>SIMULATION ROOM<br/> COMMAND & SUPPORT HUB<br/> INDUSTRY 4.0 HUB<br/> INTERNET OF THINGS<br/> BIG DATA</h4>
+                            <h4>SIMULATION ROOM COMMAND & SUPPORT HUB INDUSTRY 4.0 HUB INTERNET OF THINGS BIG DATA</h4>
                         </div>
                     </div>
                 </div>
@@ -56,13 +53,13 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8 wow fadeInUp">
                         <div class="SlickCarousel">
                             <!-- Item -->
                             <div class="ProductBlock">
                                 <div class="Content">
                                     <div class="img-fill">
-                                        <img src="img/banner.jpg" alt="banner-1" class="img-responsive" style="height: auto;">
+                                        <img src="img/empoer-slide/001.jpg" alt="banner-1" class="img-responsive" style="height: auto;">
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +68,7 @@
                             <div class="ProductBlock">
                                 <div class="Content">
                                     <div class="img-fill">
-                                        <img src="img/banner-1.jpg" alt="banner-2" class="img-responsive" style="height: auto;">
+                                        <img src="img/empoer-slide/002.jpg" alt="banner-2" class="img-responsive" style="height: auto;">
                                     </div>
                                 </div>
                             </div>
@@ -80,29 +77,12 @@
                             <div class="ProductBlock">
                                 <div class="Content">
                                     <div class="img-fill">
-                                        <img src="img/banner-2.jpg" alt="banner-3" class="img-responsive" style="height: auto;">
+                                        <img src="img/empoer-slide/003.jpg" alt="banner-3" class="img-responsive" style="height: auto;">
                                     </div>
                                 </div>
                             </div>
                             <!-- Item -->
                         </div>
-                        <ul class="social-media">
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>

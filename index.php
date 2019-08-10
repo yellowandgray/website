@@ -1,24 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Project Next Door</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
-        <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/all.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/slick-theme-min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/slick.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/animate.css" rel="stylesheet" type="text/css"/>
-        <link href="css/examples.css" rel="stylesheet" type="text/css"/>
-        <!--        <link href="css/fullpage.css" rel="stylesheet" type="text/css"/>-->
-        <link href="css/pickmeup.css" rel="stylesheet" type="text/css"/>
-        <!--        <link href="css/demo.css" rel="stylesheet" type="text/css"/>-->
-        <link href="css/style.css" rel="stylesheet" type="text/css"/>
-    </head>
+    <?php include 'head.php'; ?>
     <body>
-        <main class="section banner-section" style="background: url(img/banner-bg.jpg);height: 100%;padding-bottom: 40px;">
+        <main class="section banner-section" style="background: url(img/banner-bg.jpg);height: 100%;padding-bottom: 40px;background-size: cover;">
             <header style="background: #2f4d4b">
                 <div class="logo">
                     <img class="logo-size" src="img/logo.png" alt="Project Next Door Logo" />
@@ -99,7 +83,7 @@
                 </div>
             </div>
         </main>
-        <section id="section1" class="section ptb50 section-padding about-section" style="background: url(img/bg/01.jpg)no-repeat;">
+        <section id="section1" class="section ptb50 section-padding about-section" style="background: #d5cbcc;">
             <div class="container">
                 <div class="header-style-1 wow fadeInDown">
                     <h1 class="text-center">About Project Next Door</h1>
@@ -180,7 +164,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 table-section wow fadeInRight">
-                                        <h5>DECEMBER 27-JANUARY 19 
+                                        <h5 style="line-height: 40px;">DECEMBER 27-JANUARY 19 
                                             <a>
                                                 <i class="fas fa-angle-left cw"></i>
                                             </a>
@@ -188,18 +172,17 @@
                                                 <i class="fas fa-angle-right cw"></i>
                                             </a> 
                                         </h5>
-                                        <label>I'M INTERESTED IN</label>
-                                        <select class="ui dropdown">
-                                            <option value="">Please Select</option>
-                                            <option value="Office & Enterprise Solutions">Office & Enterprise Solutions</option>
-                                            <option value="Events & Meeting Room Solutions">Events & Meeting Room Solutions</option>
-                                            <option value="Hot Desk & Reserved Desk">Hot Desk & Reserved Desk</option>
-                                            <option value="Virtual Office Solutions">Virtual Office Solutions</option>
-                                            <option value="Others">Others</option>
-                                        </select>
+                                        <div class="form-group">
+                                            <label>I'M INTERESTED IN</label>
+                                            <select class="ui dropdown">
+                                                <option value="">Please Select</option>
+                                                <option value="Rent our Space">Rent our Space</option>
+                                                <option value="Book a Training Session">Book a Training Session</option>
+                                            </select>
+                                        </div>
                                         <div class="time">
                                             <div class="row">
-                                                <select class="ui dropdown">
+                                                <select class="ui dropdown" style="margin-right: 10px;">
                                                     <option>Hours</option>
                                                     <option value="01">01</option>
                                                     <option value="02">02</option>
@@ -229,15 +212,17 @@
                                                     <option value="55">55</option>
                                                     <option value="60">60</option>
                                                 </select>
+                                                <select class="ui dropdown">
+                                                    <option value="AM">AM</option>
+                                                    <option value="PM">PM</option>
+                                                </select>
                                             </div>
-                                            <div class="row">
-                                                <div class="date-select">
-                                                    <p><input type='checkbox' name='checkbox' /><strong> SELECTED: </strong> 4/08/2019, 12:45pm to 12/08/2019</p>
-                                                </div>
-                                                <div class="button-group">
-                                                    <a href="#" class="btn btn-cancel">Cancel</a>
-                                                    <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-ok">Add</a>
-                                                </div>
+                                            <div class="date-select">
+                                                <p><input type='checkbox' name='checkbox' /><strong> SELECTED: </strong> 4/08/2019, 12:45PM.</p>
+                                            </div>
+                                            <div class="button-group">
+                                                <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-cancel">Add</a>
+                                                <a href="#" class="btn btn-ok">Cancel</a>
                                             </div>
                                         </div>
                                     </div>
@@ -247,7 +232,6 @@
                                         </article>
                                     </div>
                                 </div>
-
                             </form>
                         </div>
                         <ul class="social-media">
@@ -271,13 +255,13 @@
                 </div>
             </div>
         </section>
-        <section id="section3" class="section section-padding ptb50 about-section" style="background: url(img/bg/03.jpg)no-repeat;">
+        <section id="section3" class="section section-padding ptb50 about-section" style="background: url(img/bg/03.jpg)no-repeat;background-size: cover;">
             <div class="container">
                 <div class="header-style-1 text-center">
                     <h1>Contact Us</h1>
                 </div>
                 <div class="row">
-                    <div class="col-md-8 wow fadeInLeft">
+                    <div class="col-md-4 wow fadeInLeft">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 400px;" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                     <div class="col-md-4 wow fadeInRight">
@@ -288,10 +272,15 @@
                                 <i class="fa fa-map-marker-alt"></i>
                                 <p> Project Next Door, No. 16-05, Penthouse, menara Infiniti, Jalan SS6/3, 47301 Petaling Jaya, Selangor, Malaysia.</p><br/>
                                 <i class="fa fa-envelope"></i>
-                                <p><a href="#"> email@mywebsite.com</a></p><br/>
+                                <p><a href="#">&nbsp; email@mywebsite.com</a></p><br/>
                                 <i class="fa fa-phone-alt"></i>
-                                <p><a href="#"> +630 7662 7601</a></p>
+                                <p><a href="#">&nbsp; +630 7662 7601</a></p>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInRight">
+                        <div class="contact-img">
+                            <img src="img/contact-img.jpg" alt="contact-img" />
                         </div>
                     </div>
                 </div>
@@ -308,13 +297,13 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Thank You!</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Thank you for Booking with us.</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Thank you for Booking with us. Our team will get in touch with you shortly.</p>
+                    <p><i>Our team will get in touch with you shortly.</i></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

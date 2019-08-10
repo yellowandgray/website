@@ -26,7 +26,9 @@
         width: 70% !important;
     }
     .banner-h1 h1 {
-        top: -285px !important;
+        /*        top: -285px !important;*/
+        font-size: 20px !important;
+        text-align: center !important;
     }
     .banner-section .SlickCarousel {
         margin-top: 100px !important;
@@ -37,26 +39,182 @@
     .calendar-bg1-section {
         width: 100% !important;
     }
-    
+
     #circle {
         display: none !important;
     }
-    
+
     .pmu-instance {
         width: 100% !important;
     }
-    
+
     .calendar-bg1-section {
         padding: 24% 0px 5% 0px !important;
     }
     .calendar-text-section p {
-        top: 125px !important;
+        /*        top: 125px !important;*/
         left: 0 !important;
     }
+    .calendar-bg-section article {
+        margin: 0 15px !important;
+    }
     h1, h2, h3 {
-        font-size: 30px !important;
+        font-size: 26px !important;
+    }
+    .btn-custom-1 {
+        padding: 15px 30px !important;
+        font-size: 14px !important;
+    }
+    .back-arrow {
+        width: 15% !important;
+        margin-left: -20px !important;
+    }
+    /*    .calendar-section .row {
+            margin-right: 15px !important;
+            margin-left: 15px !important;
+        }*/
+    .pickmeup .pmu-instance .pmu-day-of-week *, .pickmeup .pmu-instance .pmu-days * {
+        width: 14.28% !important;
+    }
+    .bg-services {
+        height: 620px !important;
+    }
+    .calendar-text-section p {
+        width: 100% !important;
+    }
+    .time select {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .date-select p {
+        font-size: 18px !important;
+        text-align: center !important;
+    }
+    .booking-form .form-group {
+        margin-top: 0 !important;
+    }
+    .booking-form input {
+        margin-top: 10px !important;
     }
 }
+
+
+@media screen and (max-width: 767px) {
+    .pickmeup {
+        width: 100% !important;
+    }
+    .home-calendar .pmu-instance {
+        width: 100% !important;
+    }
+    .time select {
+        width: 100% !important;
+    }
+    .booking-form input {
+        width: 100% !important;
+    }
+    .box-padding h1 {
+        font-size: 1.3rem !important;
+    }
+    .service-1-h4 h4 {
+        text-align: center !important;
+    }
+    .pickmeup .pmu-instance .pmu-day-of-week *, .pickmeup .pmu-instance .pmu-days * {
+        width: 37px !important;
+    }
+    .contact-bg {
+        height: auto !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .pickmeup {
+        width: 100% !important;
+    }
+    .home-calendar .pmu-instance {
+        width: 100% !important;
+    }
+    .time select {
+        width: 100% !important;
+    }
+    .booking-form input {
+        width: 100% !important;
+    }
+    .box-padding h1 {
+        font-size: 1.5rem !important;
+    }
+    .contact-bg {
+        padding: 40px 10px !important;
+        height: auto !important;
+    }
+    .contact-address p {
+        font-size: 15px !important;
+    }
+    #circle svg {
+        right: 0 !important;
+    }
+    .home-calendar .pmu-instance {
+        width: 100% !important
+    }
+    .pickmeup .pmu-instance .pmu-day-of-week *, .pickmeup .pmu-instance .pmu-days * {
+        width: 37px !important;
+    }
+    .contact-bg {
+        height: 400px !important;
+    }
+    .contact-img {
+        height: 400px !important;
+        display: table-cell;
+        vertical-align: middle;
+        background: #fff;
+    }
+    .contact-img img {
+        width: 100% !important;
+    }
+    .contact-bg {
+        height: 400px !important;
+    }
+    #circle {
+        display: none !important;
+    }
+    .pickmeup .pmu-instance {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .pickmeup {
+        width: 100% !important;
+    }
+    .home-calendar .pmu-instance {
+        width: 100% !important;
+    }
+    .time select {
+        width: 100% !important;
+    }
+    .booking-form input {
+        width: 100% !important;
+    }
+    .box-padding h1 {
+        font-size: 1.5rem !important;
+    }
+    /*    .contact-bg {
+            height: auto !important;
+        }*/
+    /*    #circle svg {
+            right: 0 !important;
+        }*/
+    .home-calendar .pmu-instance {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .contact-img img {
+        width: 100% !important;
+    }
+    /*    .logo img.logo-size {
+            width: 20% !important;
+        }*/
+}
+
 
 @media screen and (max-width: 1440px) {
     #circle svg {
@@ -71,5 +229,21 @@
         }*/
     .mt-5 {
         margin-top: -7% !important;
+    }
+}
+
+/* CUSTOM RESPONSIVE */
+@media (min-width: 525px) and (max-width: 767px) {
+    .booking-form input {
+        width: 442px !important;
+    }
+    .logo img.logo-size {
+        width: 50% !important;
+    }
+    #circle svg {
+        right: 0 !important;
+    }
+    .logo img.logo-size {
+        width: 20% !important;
     }
 }
