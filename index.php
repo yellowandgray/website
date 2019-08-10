@@ -86,7 +86,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="video-popup">
-                            <a href="https://www.youtube.com/watch?v=jSjGCVGEu4E&feature=youtu.be" class="popup-youtube"><i class="icofont icofont-ui-play"></i></a>
+                            <a href="assets/video/JoshuapresentationVersion1.mp4" class="popup-youtube"><i class="icofont icofont-ui-play"></i></a>
                             <h1>Watch Video Demo</h1>
                         </div>
                     </div>
