@@ -356,3 +356,47 @@ img {
     font-size: 20px;
 }
 
+.Table
+    {
+        display: table;
+    }
+    .Title
+    {
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+    }
+    .Heading
+    {
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+    }
+    .Row
+    {
+        display: table-row;
+    }
+    .Cell
+    {
+       display: table-cell;
+       border: 1px solid #000;
+       border-width: thin;
+       padding-left: 5px;
+       padding-right: 5px;
+       padding-top: 10px;
+       padding-bottom: 0px !important;
+       margin: 0;
+    }
+    
+    .renewable-energy span{
+        
+        font-size: 19px;
+    }
+    
+    .renewable-energy ul li{
+        
+        font-size: 19px;
+    }
+    
+    

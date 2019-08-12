@@ -37,7 +37,7 @@
                      <!--Project box Start-->
                      <div class="col-md-4 col-sm-6">
                       <div class="pro-box">
-                          <img src="images/metal/billett.jpg" alt="">
+                          <img src="images/metal/Billet.jpg" alt="">
                            <h5>Billet</h5>
                            <div class="pro-hover">
                               <h6>Billet</h6>
@@ -49,7 +49,7 @@
                      <!--Project box Start-->
                      <div class="col-md-4 col-sm-6">
                         <div class="pro-box">
-                            <img src="images/metal/Reinforcing-Bar.jpg" alt="">
+                            <img src="images/metal/Reinforcingbar.jpg" alt="">
                            <h5>Rebar</h5>
                            <div class="pro-hover">
                               <h6>Rebar</h6>
@@ -61,7 +61,7 @@
                      <!--Project box Start-->
                      <div class="col-md-4 col-sm-6">
                         <div class="pro-box">
-                            <img src="images/metal/Rebar-in-coil.jpg" alt="">
+                            <img src="images/metal/Rebarcoil.jpg" alt="">
                            <h5>Rebar In Coil</h5>
                            <div class="pro-hover">
                               <h6>Rebar In Coil</h6>
@@ -73,7 +73,7 @@
                      <!--Project box Start-->
                      <div class="col-md-4 col-sm-6">
                         <div class="pro-box">
-                            <img src="images/metal/Wire-rod.jpg" alt="">
+                            <img src="images/metal/wirerod.jpg" alt="">
                            <h5>Wire Rod</h5>
                            <div class="pro-hover">
                               <h6>Wire Rod</h6>
@@ -85,7 +85,7 @@
                      <!--Project box Start-->
                      <div class="col-md-4 col-sm-6">
                         <div class="pro-box">
-                            <img src="images/metal/compact-coil.jpg" alt="">
+                            <img src="images/metal/compactcoil.jpg" alt="">
                             <h5>Compact Coil</h5>
                            <div class="pro-hover">
                               <h6>Compact Coil</h6>
