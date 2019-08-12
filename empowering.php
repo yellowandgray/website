@@ -1,77 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Project Next Door</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
-        <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/all.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/slick-theme-min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/slick.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/animate.css" rel="stylesheet" type="text/css"/>
-        <link href="css/examples.css" rel="stylesheet" type="text/css"/>
-        <!--        <link href="css/fullpage.css" rel="stylesheet" type="text/css"/>-->
-        <link href="css/pickmeup.css" rel="stylesheet" type="text/css"/>
-        <!--        <link href="css/demo.css" rel="stylesheet" type="text/css"/>-->
-        <link href="css/style.css" rel="stylesheet" type="text/css"/>
-        <style>
-            @font-face {font-family: "Nexa Bold";
-                        src: url("fonts/lips/nexa-bold/c9f309b3d47969ecac64a77a6c672594.eot"); /* IE9*/
-                        src: url("fonts/lips/nexa-bold/c9f309b3d47969ecac64a77a6c672594.eot") format("embedded-opentype"), /* IE6-IE8 */
-                            url("fonts/lips/nexa-bold/c9f309b3d47969ecac64a77a6c672594.woff2") format("woff2"), /* chrome、firefox */
-                            url("fonts/lips/nexa-bold/c9f309b3d47969ecac64a77a6c672594.woff") format("woff"), /* chrome、firefox */
-                            url("fonts/lips/nexa-bold/c9f309b3d47969ecac64a77a6c672594.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-                            url("fonts/lips/nexa-bold/c9f309b3d47969ecac64a77a6c672594.svg") format("svg"); /* iOS 4.1- */
-            }
-            @font-face {font-family: "DashNess";
-                        src: url("fonts/lips/dash-ness/ee1c62326ab59c0683247d7a66322c8b.eot"); /* IE9*/
-                        src: url("fonts/lips/dash-ness/ee1c62326ab59c0683247d7a66322c8b.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-                            url("fonts/lips/dash-ness/ee1c62326ab59c0683247d7a66322c8b.woff2") format("woff2"), /* chrome、firefox */
-                            url("fonts/lips/dash-ness/ee1c62326ab59c0683247d7a66322c8b.woff") format("woff"), /* chrome、firefox */
-                            url("fonts/lips/dash-ness/ee1c62326ab59c0683247d7a66322c8b.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-                            url("fonts/lips/dash-ness/ee1c62326ab59c0683247d7a66322c8b.svg#DashNess") format("svg"); /* iOS 4.1- */
-            }
-            @font-face {font-family: "Quicksandlight";
-                        src: url("fonts/lips/quick-sand/QuicksandLight-Regular.eot"); /* IE9*/
-                        src: url("fonts/lips/quick-sand/QuicksandLight-Regular.otf") format("embedded-opentype"), /* IE6-IE8 */
-                            url("fonts/lips/quick-sand/QuicksandLight-Regular.ttf") format("woff2"), /* chrome、firefox */
-                            url("fonts/lips/quick-sand/QuicksandLight-Regular.woff") format("woff"), /* chrome、firefox */
-                            url("fonts/lips/quick-sand/QuicksandLight-Regular.woff2") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-                            url("fonts/lips/quick-sand/QuicksandLight-Regular.svg#DashNess") format("svg"); /* iOS 4.1- */
-            }
-            @font-face {
-                font-family: 'TeXGyreAdventor-Regular';
-                src: local('TeXGyreAdventor-Regular'), url('fonts/lips/tex-gyre/texgyreadventor-regular.woff') format('woff');
-            }
-
-
-            @font-face {
-                font-family: 'TeXGyreAdventor-Italic';
-                src: local('TeXGyreAdventor-Italic'), url('fonts/lips/tex-gyre/texgyreadventor-italic.woff') format('woff');
-            }
-
-
-            @font-face {
-                font-family: 'TeXGyreAdventor-Bold';
-                font-style: normal;
-                font-weight: normal;
-                src: local('TeXGyreAdventor-Bold'), url('fonts/lips/tex-gyre/texgyreadventor-bold.woff') format('woff');
-            }
-
-
-            @font-face {
-                font-family: 'TeXGyreAdventor-BoldItalic';
-                font-style: normal;
-                font-weight: normal;
-                src: local('TeXGyreAdventor-BoldItalic'), url('fonts/lips/tex-gyre/texgyreadventor-bolditalic.woff') format('woff');
-            }
-        </style>
-        <script>
-            new WOW().init();
-        </script>
-    </head>
+    <?php include 'head.php'; ?>
     <body>
         <header style="background: #2f4d4b;">
             <div class="logo">
@@ -104,7 +33,7 @@
                     <div class="service-1-h4 wow fadeInDown">
                         <h4>You need experts you can always turn to for<br/> guidance. And that's what we're about.</h4>
                     </div>
-                    <div class="col-md-8 wow fadeInUp">
+                    <div class="col-md-8 wow fadeInLeft">
                         <div class="SlickCarousel">
                             <!-- Item -->
                             <div class="ProductBlock">
@@ -161,29 +90,29 @@
                 <h1 class="text-center wow fadeInDown">SERVICES</h1>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="bg-services wow fadeInRight">
-                            <p class="wow bounceInLeft" data-wow-delay="0.1s">BITE SIZED TRAINING</p>
-                            <p class="wow bounceInLeft" data-wow-delay="0.2s">FULL SIZED TRAINING</p>
-                            <p class="wow bounceInLeft" data-wow-delay="0.3s">CUSTOMIZED TRAINING</p>
-                            <p class="wow bounceInLeft" data-wow-delay="0.4s">IDEAS @ PONDOK</p>
-                            <p class="wow bounceInLeft" data-wow-delay="0.5s">IDEANATORS</p>
-                            <p class="wow bounceInLeft" data-wow-delay="0.6s">S.U.M.O</p>
-                            <p class="wow bounceInLeft" data-wow-delay="0.7s">BUSINESS MANAGEMENT & ENGLISH</p>
-                            <p class="wow bounceInLeft" data-wow-delay="0.8s">CONTENT DELIVERY</p>
-                            <p class="wow bounceInLeft" data-wow-delay="0.9s">ENTREPRENEURSHIP</p>
+                        <div class="bg-services wow fadeInLeft">
+                            <p class="wow fadeInLeft" data-wow-delay="0.1s">BITE SIZED TRAINING</p>
+                            <p class="wow fadeInLeft" data-wow-delay="0.2s">FULL SIZED TRAINING</p>
+                            <p class="wow fadeInLefts" data-wow-delay="0.3s">CUSTOMIZED TRAINING</p>
+                            <p class="wow fadeInLeft" data-wow-delay="0.4s">IDEAS @ PONDOK</p>
+                            <p class="wow fadeInLeft" data-wow-delay="0.5s">IDEANATORS</p>
+                            <p class="wow fadeInLeft" data-wow-delay="0.6s">S.U.M.O</p>
+                            <p class="wow fadeInLeft" data-wow-delay="0.7s">BUSINESS MANAGEMENT & ENGLISH</p>
+                            <p class="wow fadeInLeft" data-wow-delay="0.8s">CONTENT DELIVERY</p>
+                            <p class="wow fadeInLeft" data-wow-delay="0.9s">ENTREPRENEURSHIP</p>
                         </div>
                     </div> 
                     <div class="col-md-6">
-                        <div class="bg-services wow fadeInLeft">
+                        <div class="bg-services wow fadeInRight">
                             <div class="float-text">
-                                <p class="wow bounceInRight" data-wow-delay="0.1s">MANAGEMENT</p>
-                                <p class="wow bounceInRight" data-wow-delay="0.2s">STRATEGIC PLANNING</p>
-                                <p class="wow bounceInRight" data-wow-delay="0.3s">STRATEGIC PLANNING</p>
-                                <p class="wow bounceInRight" data-wow-delay="0.4s">TECHNICAL SKILLS</p>
-                                <p class="wow bounceInRight" data-wow-delay="0.5s">SOFT SKILLS</p>
-                                <p class="wow bounceInRight" data-wow-delay="0.6s">IN HOUSE TRAINING</p>
-                                <p class="wow bounceInRight" data-wow-delay="0.7s">PUBLIC PROGRAMS</p>
-                                <p class="wow bounceInRight" data-wow-delay="0.8s">BUSINESS COACHING</p>
+                                <p class="wow fadeInRight" data-wow-delay="0.1s">MANAGEMENT</p>
+                                <p class="wow fadeInRight" data-wow-delay="0.2s">STRATEGIC PLANNING</p>
+                                <p class="wow fadeInRight" data-wow-delay="0.3s">STRATEGIC PLANNING</p>
+                                <p class="wow fadeInRight" data-wow-delay="0.4s">TECHNICAL SKILLS</p>
+                                <p class="wow fadeInRight" data-wow-delay="0.5s">SOFT SKILLS</p>
+                                <p class="wow fadeInRight" data-wow-delay="0.6s">IN HOUSE TRAINING</p>
+                                <p class="wow fadeInRight" data-wow-delay="0.7s">PUBLIC PROGRAMS</p>
+                                <p class="wow fadeInRight" data-wow-delay="0.8s">BUSINESS COACHING</p>
                             </div>
                         </div>
                     </div>
@@ -224,21 +153,24 @@
                                         </div>
                                     </div>
                                 </div>-->
+            </div>
         </section>
         <section class="calendar-section">
-            <div class="row">
-                <div class="calendar-bg-section">
-                    <h2>UPCOMING TRAININGS</h2>
-                    <article style="text-align: center;">
-                        <div class="single"></div>
-                    </article>
-                </div>
-                <div class="calendar-bg1-section">
-                    <div class="calendar-inner-bg"></div>
-                    <div class="calendar-text-section">
-                        <h2>What is Lorem Ipsum?</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="calendar-bg-section">
+                        <h2 class="wow fadeInDown">UPCOMING TRAININGS</h2>
+                        <article class="wow fadeInLeft" style="text-align: center;">
+                            <div class="single"></div>
+                        </article>
+                    </div>
+                    <div class="calendar-bg1-section">
+                        <div class="calendar-inner-bg wow fadeInRight"></div>
+                        <div class="calendar-text-section wow fadeInRight" data-wow-delay="0.2s">
+                            <h2>What is Lorem Ipsum?</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
                     </div>
                 </div>
             </div>

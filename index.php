@@ -2,7 +2,7 @@
 <html>
     <?php include 'head.php'; ?>
     <body>
-        <main class="section banner-section" style="background: url(img/banner-bg.jpg);height: 100%;padding-bottom: 40px;background-size: cover;">
+        <main class="banner-section" style="background: url(img/banner-bg.jpg);height: 100%;padding-bottom: 40px;background-size: cover;">
             <header style="background: #2f4d4b">
                 <div class="logo">
                     <img class="logo-size" src="img/logo.png" alt="Project Next Door Logo" />
@@ -83,7 +83,7 @@
                 </div>
             </div>
         </main>
-        <section id="section1" class="section ptb50 section-padding about-section" style="background: #d5cbcc;">
+        <section class="ptb50 section-padding about-section" style="background: #d5cbcc;">
             <div class="container">
                 <div class="header-style-1 wow fadeInDown">
                     <h1 class="text-center">About Project Next Door</h1>
@@ -93,7 +93,7 @@
                         <div class="box" style="background: url(img/bg/img-2.jpg);background-size: cover;">
                             <div class="content-overlay"></div>
                             <a href="empowering.php">
-                                <div class="box-padding">
+                                <div class="box-padding wow fadeInDown">
                                     <h1>Empowering</h1>
                                 </div>
                                 <div class="text-hover">
@@ -109,7 +109,7 @@
                         <div class="box" style="background: url(img/bg/img-3.jpg);background-size: cover;">
                             <div class="content-overlay"></div>
                             <a href="#">
-                                <div class="box-padding">
+                                <div class="box-padding wow fadeInDown">
                                     <h1>Engaging</h1>
                                 </div>
                                 <div class="text-hover">
@@ -125,8 +125,8 @@
                         <div class="box" style="background: url(img/bg/img-1.jpg);background-size: cover;">
                             <div class="content-overlay"></div>
                             <a href="experiential.php">
-                                <div class="box-padding">
-                                    <h1 class="text-1">Experiential</h1>
+                                <div class="box-padding wow fadeInDown">
+                                    <h1>Experiential</h1>
                                 </div>
                                 <div class="text-hover">
                                     <p>A brief<br/> introduction <br/>of this<br/> area.</p>
@@ -140,30 +140,30 @@
                 </div>
             </div>
         </section>
-        <section id="section2" class="section ptb50 " style="background: url(img/bg/02.jpg)no-repeat;background-size: cover;">
+        <section class="ptb50" style="background: url(img/bg/02.jpg)no-repeat;background-size: cover;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="booking-form wow bounceInUp" style="margin-top: 100px;">
-                            <h1 class="text-center wow bounceInDown">Book Your Space</h1>
+                        <div class="booking-form wow fadeInDown" style="margin-top: 100px;">
+                            <h1 class="text-center wow fadeInDown" data-wow-delay="0.3s">Book Your Space</h1>
                             <form id="contact" action="" method="post">
                                 <div class="row">
                                     <!--                                        <div class="form-group" style="display: none;">
                                                                                 <input type="text" name="name" placeholder="NAME" required />
                                                                             </div>-->
-                                    <div class="form-group wow bounceInLeft">
+                                    <div class="form-group wow fadeInDown">
                                         <input type="text" name="name" placeholder="NAME" required style='display: none;'/>
                                         <input type="text" name="name" placeholder="NAME" required />
                                     </div>
-                                    <div class="form-group wow bounceInLeft">
+                                    <div class="form-group wow fadeInDown">
                                         <input type="email" name="email" placeholder="EMAIL" required />
                                     </div>
-                                    <div class="form-group wow bounceInLeft">
+                                    <div class="form-group wow fadeInDown">
                                         <input type="text" name="number" placeholder="MOBILE NUMBER" required />
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 table-section wow fadeInRight">
+                                    <div class="col-md-6 table-section wow fadeInLeft" data-wow-delay="0.4s">
                                         <h5 style="line-height: 40px;">DECEMBER 27-JANUARY 19 
                                             <a>
                                                 <i class="fas fa-angle-left cw"></i>
@@ -226,8 +226,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 wow fadeInLeft">
-                                        <article class="home-calendar">
+                                    <div class="col-md-6">
+                                        <article class="home-calendar wow fadeInRight" data-wow-delay="0.3s">
                                             <div class="single"></div>
                                         </article>
                                     </div>
@@ -255,42 +255,7 @@
                 </div>
             </div>
         </section>
-        <section id="section3" class="section section-padding ptb50 about-section" style="background: url(img/bg/03.jpg)no-repeat;background-size: cover;">
-            <div class="container">
-                <div class="header-style-1 text-center">
-                    <h1>Contact Us</h1>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 wow fadeInLeft">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 400px;" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
-                    <div class="col-md-4 wow fadeInRight">
-                        <div class="contact-bg">
-                            <h3>Address</h3>
-                            <br/>
-                            <div class="contact-address">
-                                <i class="fa fa-map-marker-alt"></i>
-                                <p> Project Next Door, No. 16-05, Penthouse, menara Infiniti, Jalan SS6/3, 47301 Petaling Jaya, Selangor, Malaysia.</p><br/>
-                                <i class="fa fa-envelope"></i>
-                                <p><a href="#">&nbsp; email@mywebsite.com</a></p><br/>
-                                <i class="fa fa-phone-alt"></i>
-                                <p><a href="#">&nbsp; +630 7662 7601</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 wow fadeInRight">
-                        <div class="contact-img">
-                            <img src="img/contact-img.jpg" alt="contact-img" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer id="section4" class="section">
-            <div class="text-center">
-                <p>&copy; 2019 All Right Reserved | Project Next Door | Privacy Policy</p>
-            </div>
-        </footer>
+        <?php include 'footer.php'; ?>
     </body>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -312,35 +277,5 @@
             </div>
         </div>
     </div>
-    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script src="js/jquery.plugin.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-
-    <script src="js/banner.js" type="text/javascript"></script>
-    <script src="js/menu.js" type="text/javascript"></script>
-    <script src="js/all.min.js" type="text/javascript"></script>
-    <script src="js/slick.js" type="text/javascript"></script>
-    <script src="js/pickmeup.js" type="text/javascript"></script>
-    <script src="js/demo.js" type="text/javascript"></script>
-    <script src="js/wow-js.js" type="text/javascript"></script>
-    <script src="js/wow.js" type="text/javascript"></script>
-    <script type="text/javascript">
-                        $('#myModal').on('shown.bs.modal', function () {
-                            $('#myInput').trigger('focus')
-                        })
-    </script>
-<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js" type="text/javascript"></script>-->
-<!--    <script src="js/fullpage.js" type="text/javascript"></script>-->
-<!--    <script src="js/examples.js" type="text/javascript"></script>-->
-<!--    <script src="js/jquery-ui.js" type="text/javascript"></script>-->
-<!--    <script src="js/fontawesome.min.js" type="text/javascript"></script>-->
-<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>-->
-<!--    <script type="text/javascript">
-                            var myFullpage = new fullpage('#fullpage', {
-                                //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-                                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-                                menu: '#menu',
-                                lazyLoad: true
-                            });
-    </script>-->
+    <?php include 'js-files.php'; ?>
 </html>

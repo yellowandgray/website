@@ -88,6 +88,8 @@ h1, h2, h3, h4 {
     float: right;
     color: #fff;
     margin-top: 20px;
+    position: absolute;
+    right: 10px;
 }
 
 header {
@@ -703,8 +705,9 @@ ul.social-media a svg {
 
 footer {
     padding: 20px 0;
-    background: #066;
-    height: 100px !important;
+    background: #4a7c7c;
+    /* height: 100px !important; */
+    text-align: center;
 }
 
 footer .fp-tableCell {
@@ -968,14 +971,6 @@ a.imgbox{
     max-width: 80%;
     max-height: 80%;
     border: solid 2px grey;
-}
-
-footer{
-    padding: 40px 0px 10px 0px;
-    color: grey;
-    background: #4a7c7c;
-    text-align: center;
-    width: 100%;
 }
 
 .img-responsive {
@@ -1271,10 +1266,6 @@ footer{
 
 .float-text {
     float: right;
-}
-
-.calendar-section .row {
-    margin-right: 0;
 }
 
 .calendar-bg-section {

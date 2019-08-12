@@ -29,7 +29,7 @@
 .pickmeup .pmu-instance .pmu-day-of-week *,.pickmeup .pmu-instance .pmu-days *{
     display: inline-block;
     line-height: 3em;
-    width: 68px;
+    width: 66px;
     margin: 0 auto;
 }
 .pickmeup .pmu-instance .pmu-day-of-week *{line-height:1.8em}

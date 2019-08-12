@@ -67,7 +67,8 @@
     }
     .back-arrow {
         width: 15% !important;
-        margin-left: -20px !important;
+        position: relative;
+        left: -35px;
     }
     /*    .calendar-section .row {
             margin-right: 15px !important;
@@ -220,10 +221,10 @@
     #circle svg {
         height: 400px !important;
     }
-    #myNav.overlay {
-        padding-right: 10px !important;
-        right: -12px !important;
-    }
+    /*    #myNav.overlay {
+            padding-right: 10px !important;
+            right: -12px !important;
+        }*/
     /*    .banner-h1 h1 {
             top: 110px !important;
         }*/
