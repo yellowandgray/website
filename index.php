@@ -83,7 +83,7 @@
                                 <img src="images/home/003.png" alt="">
                                 <h5>Renewable Energy</h5>
                                 <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                <a href="#">See More</a> 
+                                <a href="renewable-energy.php">See More</a> 
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
@@ -279,7 +279,7 @@
                             <div class="row pad-t-40">
                                 <div class="col-md-12">
                                     <div class="volbox-3 text-center">
-                                        <a href="#">See More</a>
+                                        <a href="renewable-energy.php">See More</a>
                                     </div>
                                 </div>
                             </div>

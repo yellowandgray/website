@@ -17,7 +17,7 @@
             </div>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header" style="background: url(images/metal/001.jpg) no-repeat;">
+            <section class="wf100 p100 inner-header" style="background: url(images/renewable-energy/Untitled-2.jpg) no-repeat;">
                 <div class="container">
                     <h1>Renewable Energy</h1>
                     <ul>
@@ -28,8 +28,26 @@
                 </div>
             </section>
             <!--Inner Header End--> 
-            <!--Causes Start-->
+            
             <section class="wf100 p80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="portfolioFilter clearfix">
+                                <a href="#" data-filter="*" class="current">All Categories</a>
+                                <a href="#" data-filter=".dc_junction">DC Junction Boxes Photovoltaic</a>
+                                <a href="#" data-filter=".data_logger">Data Logger</a>
+                                <a href="#" data-filter=".dc_dc">DC DC Converter</a>
+                                <a href="#" data-filter=".hot_moulded">Hot Moulded GRP</a>
+                                <a href="#" data-filter=".photo_voltaic">Photo Voltaic Connectors & Junction Boxes</a>
+                                <a href="#" data-filter=".string_card">String Card</a>
+                                <a href="#" data-filter=".wire_less">Wireless Transceiver Module.</a>
+                            </div>
+                        </div>
+                        <div class="portfolioContainer">
+
+                            <div class="dc_junction">
+                                <section class="wf100 p80">
                 <div class="container">
 
                     <div class="row">
@@ -89,8 +107,10 @@
                      </div>
                 </div>
             </section>
-            
-            <section class="wf100 p80">
+          </div>
+
+                            <div class="data_logger">
+                                <section class="wf100 p80">
                 <div class="container">
                     
                     <div class="row">
@@ -157,90 +177,10 @@
                     </div>
                 </div>
             </section>
-            
-            <section class="wf100 p80">
-                <div class="container">
+           </div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="renewable-energy">
-                             <h3>OPERATING PRINCIPLE</h3>
-                            <span>S-LOG is a monitoring and controlling solution for solar power plants.it operates on the principle of collecting data through communication ports like RS485 and Ethernet by using the transfer media as wired or wireless.The collected data is processed to generate the required parameters and in the required formats.Also it stores all the essential logs for future reference and sends to the cloud based portal for remote access and monitoring.</span>
-                        </div>
-                    </div>
-                    </div><br>
-                    
-                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="renewable-energy">
-                                <span>It has three operating modes:</span><br>
-                                <ul>
-                                    <li>Monitoring-Remote and Local</li>
-                                    <li>Feed In management-controlling</li>
-                                    <li>Operation With DG.</li>
-                                </ul>
-                        </div>
-                     </div>
-                     </div><br>
-                     
-                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="renewable-energy">
-                             <h3>MONITORING -REMOTE AND LOCAL</h3>
-                            <span>S-LOG collects the data from its connected devices(we can monitor the solar power plant at every stage from strings to transformer and load)and sends it to remote and cloud based portal as well as stores it locally.Local monitoring pages are inside the devices and customers can monitor the data locally with specified IP time uploading this data on the internet by using this controller(if internet is provided by client).Hence you can monitor the complete data set remotely form anywhere,anytime when internet connection is available.Also you can download the same whenever required.S-LOG monitors pv power plant locally and remotely at each stage of power plant.Data Logger and Ethernet gateway is inbuilt.This collects all raw data from PV solar power plant transforms it into informative graphs and charts.These graphs are available locally and on portal.It makes performance analysis and fault diagnosis and fault diagnosis very easier.</span>
-                        </div>
-                    </div>
-                    </div><br>
-                     
-                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="renewable-energy">
-                                <h5>Parameters considered for monitoring are:</h5>
-                                <ul>
-                                    <li>Solar-Power,daily energy,total energy,voltage,current, PF, monthly and yearly energy,weather sensor details,PR,CUF,etc.</li>
-                                    <li>GRID and DG - V,I,PF,power energy etc.</li>
-                                    <li>Graphical,Tabular both views are available on portal with download options.</li>
-                                    <li>Daily alert messgaes and mails of generation data.</li>
-                                </ul><br>
-                                <span>So this will help a lot to keep in touch with the system when we are at remote location.</span>
-                            </div>
-                        </div>
-                     </div><br>
-                     
-                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="renewable-energy">
-                                <h3>FEED IN MANAGEMENT</h3><br>
-                                <h5>OPERATION:</h5><br>
-                             <span>S-LOG limits solar generation according to the customer load requirements. To do so,it calculates requirements through interfaced solar,load and grid energy meters and converters this requirements into set points.Then converts set-point values into control commands and send to the inverters.This happens continously and as and when the solar is generating excess power,the controller sends the control signal to curtail the power generation from solar inverters,which reduces the overall plant generation to prevent back feeding.S-LOG controls the power generation from 1% to 100% as per the load requirement.</span>
-                        </div>
-                    </div>
-                    </div><br>
-                    
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="renewable-energy">
-                                <h3>OPERATION WITH DG</h3><br>
-                                <span>With the help of this controller we can run solar system with DG(diesel generator)by maintaining spinning of DG at about 25-30%.To do so our controller is continously monitoring solar,DG and load calculations are made into the device to generate the control signal.This control signal is passed to the inverters connected to ti to curtail output power accordingly and as per the load and DG requirement.This happens continously Inside the controller to acheive the optimization of solar power and run the DG smoothly with ths solar.</span>
-                        </div>
-                    </div>
-                    </div><br>
-                    
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="renewable-energy">
-                                <span>Two main functions when using with DG:</span><br>
-                                <ul>
-                                    <li>Maintain spinning reserve at about 25-30% when load is less and solar power is excess.</li>
-                                    <li>To monitor the solar,DG and load parameters closely to provide alerts,logs,analysis and reports as and when required.</li>
-                                </ul>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-              </section>
-            
-            <section class="wf100 p80">
+                            <div class="dc_dc">
+                                <section class="wf100 p80">
                 <div class="container">
 
                     <div class="row">
@@ -354,9 +294,9 @@
                     </div>
                 </div><br>
                     </section>
-                    
-            
-            <section class="wf100 p80">
+           </div>
+                            <div class="hot_moulded">
+                                <section class="wf100 p80">
                 <div class="container">
 
                     <div class="row">
@@ -402,13 +342,12 @@
                             <img src="images/renewable-energy/combister.png" alt="" />
                         </div>
                      </div><br>
-
-
-
                 </div>
               </section>
-            
-            <section class="wf100 p80">
+             </div>
+
+                            <div class="photo_voltaic">
+                                <section class="wf100 p80">
                 <div class="container">
 
                     <div class="row">
@@ -620,13 +559,19 @@
                         <div class="col-md-12">
                             <img src="images/renewable-energy/possibilities1.jpg" alt="" />
                         </div>
-                     </div><br>
-                     
+                     </div>
+                </div><br>
+            </section>       
+           </div>
+                                        <div class="string_card">
+                                            <section class="wf100 p80">
+                <div class="container">
                      <div class="row">
                         <div class="col-md-12">
                             <div class="renewable-energy">
-                                <h3>STRING MONITORING CARDS WITH GREATER ACCURACY AND RELIABLE DATA TRANSFER</h3><br>
-                                <h5>Unique features of data buffering AVOIDING DATA LOSSES and additional wireless devices(CSC)</h5>
+                                <h3>STRING CARD</h3><br>
+                                <h5>STRING MONITORING CARDS WITH GREATER ACCURACY AND RELIABLE DATA TRANSFER</h5><br>
+                                <h6>Unique features of data buffering AVOIDING DATA LOSSES and additional wireless devices(CSC)</h6>
                         </div>
                     </div>
                     </div><br>
@@ -675,6 +620,7 @@
                     </div>
                     </div><br>
                     
+                    
                     <div class="row">
                         <div class="col-md-12">
                             <div class="renewable-energy">
@@ -688,7 +634,13 @@
                           </div>
                         </div><br><br>
                     </div>
-                    
+                      </div>
+              </section>
+              </div>
+                                            
+                                            <div class="wire_less">
+                                            <section class="wf100 p80">
+                <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="renewable-energy">
@@ -773,17 +725,47 @@ LoRa Technology modulation also provides significant advantages in both blocking
                             </ul>
                             </div>
                         </div>
-                    </div><br>
-                    
-                    
-                </div>
-              </section>
-            
-            
+                    </div>
+                </div><br>
+                    </section>
+              </div>
         </div>
+         </div>
+          </div>
+        </div>
+                                                       
         <!--Causes End--> 
 
         <!--Partner Logos Section End--> 
         <?php include'footer.php'; ?>
+        <script type="text/javascript">
+    $(window).load(function () {
+        var $container = $('.portfolioContainer');
+        $container.isotope({
+            filter: '*',
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+
+        $('.portfolioFilter a').click(function () {
+            $('.portfolioFilter .current').removeClass('current');
+            $(this).addClass('current');
+
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+            return false;
+        });
+    });
+</script>
     </body>
 </html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

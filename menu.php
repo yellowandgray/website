@@ -32,10 +32,10 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Products </a>
                                     <ul class="dropdown-menu" >
-                                        <li><a href="#">Telecommunications</a> </li>
-                                        <li><a href="#">Renewable Energy</a> </li>
-                                        <li><a href="#">Industry Safety Products</a> </li>
-                                        <li><a href="#">Metal</a> </li>
+                                        <li><a href="tele-communication.php">Telecommunications</a> </li>
+                                        <li><a href="renewable-energy.php">Renewable Energy</a> </li>
+                                        <li><a href="industrial-safetyproducts.php">Industry Safety Products</a> </li>
+                                        <li><a href="metal.php">Metal</a> </li>
                                         <li><a href="#">Cable Tray</a> </li>
                                         <!--                                            <li><a href="projects.html">Telecommunications</a> </li>
                                                                                     <li><a href="projects-grid.html">Renewable Energy</a> </li>
