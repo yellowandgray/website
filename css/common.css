@@ -400,3 +400,7 @@ img {
     font-size: 19px;
 }
 
+.legacy-trust span{
+    font-size: 15px;
+    font-weight: bold;
+}

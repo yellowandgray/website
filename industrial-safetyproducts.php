@@ -545,6 +545,11 @@
         </div>
     </div>
                 </div><br>
+            </div>
+                </section>
+                           <section class="wf100 p80">
+            <div class="container">
+               
                                 <div class="row">
                     <h3>COMMERICAL ADVANTGAE </h3>
                 </div><br>
@@ -629,246 +634,178 @@
         </div>
     </div>
                 </div><br>
-                <div class="row">
-                    <h3>PERFORMANCE AND TECHNICAL FEATURES</h3>
-                </div><br>
                 
-                <div class="Table">
-   
-    <div class="Heading">
-        <div class="Cell">
-            <span>IMAGE</span>
+                <div class="row">
+                        <div class="col-md-12">
+                            <div class="legacy-trust">
+                                <h3>PERFORMANCE AND TECHNICAL FEATURES</h3>
+                            </div>
+                        </div>
+                </div><br>
+                    
+                         <div class="row">
+                        <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Antistatic</h5>
+                            <img src="images/safety-products/001.jpg" alt="" /><span>Shoe having electrical resistance between 100K Oms to 1000M Ohms</span>
+                        </div>
+                    </div>
+                             
+                             <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Water resistant</h5>
+                            <img src="images/safety-products/002.jpg" alt="" /><span>As per the latest standards</span>
+                        </div>
+                    </div>
+                         </div>
+                
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Feather Light</h5>
+                            <img src="images/safety-products/003.jpg" alt="" /><span>PU sole provides optimum comfort and reduces fatigue.</span>
+                        </div>
+                    </div>
+                             
+                             <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Antiskid</h5>
+                            <img src="images/safety-products/004.jpg" alt="" /><span>Slip resistance as per latest industry standards</span>
+                        </div>
+                    </div>
+                         </div>
+                
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Electrical Insulation</h5>
+                            <img src="images/safety-products/005.jpg" alt="" /><span>Footwear(EIF/HVI) resistant to high voltage.</span>
+                        </div>
+                    </div>
+                             
+                             <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Toe Cap</h5>
+                            <img src="images/safety-products/006.jpg" alt="" /><span>High quality steel/fibre toe to withstand energy upto 200J.</span></span>
+                        </div>
+                    </div>
+                         </div>
+                
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Shock Absorber</h5>
+                            <img src="images/safety-products/007.jpg" alt="" /><span>Being a PU sole,it absorbs the shocks/jerks during work.</span>
+                        </div>
+                    </div>
+                             
+                             <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Mono/Dual Density</h5>
+                            <img src="images/safety-products/008.jpg" alt="" /><span>PU/PU, PU/TPU,PU RUBBER.</span>
+                        </div>
+                    </div>
+                         </div>
+                
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Abrasian Resistant</h5>
+                            <img src="images/safety-products/009.jpg" alt="" /><span>Being a PU outsole,the abrasion resistance is much better than other common outsole materials.</span>
+                        </div>
+                    </div>
+                             
+                             <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>All Terrain/Weather Shoe </h5>
+                            <img src="images/safety-products/010.jpg" alt="" /><span>Shoe is customized as per requirement</span>
+                        </div>
+                    </div>
+                         </div>
+                
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>ESD</h5>
+                            <img src="images/safety-products/011.jpg" alt="" /><span>Safety shoe with electrical resistance ranging from 100k Ohms to 100m Ohms</span>
+                        </div>
+                    </div>
+                             
+                             <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Genuine Leather</h5>
+                            <img src="images/safety-products/013.jpg" alt="" /><span>Din/Non Din made by inhouse tannery.</span>
+                        </div>
+                    </div>
+                         </div>
+                
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Oil/Acid resistant</h5>
+                            <img src="images/safety-products/014.jpg" alt="" /><span>Outsole offers protection on work surface prone to oil spills sole is oil and acid resistant</span>
+                        </div>
+                    </div>
+                             
+                             <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Heat resistant</h5>
+                            <img src="images/safety-products/015.jpg" alt="" /><span>specially designed light weight rubber outsole withstands temperatures upto 300 degree c</span>
+                        </div>
+                    </div>
+                         </div>
+                
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Penetration Resistant</h5>
+                            <img src="images/safety-products/016.jpg" alt="" /><span>PWithstands nail penetration upto 1100N by providing steel/Kevlar midsole.</span>
+                        </div>
+                    </div>
+                             
+                             <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Fabric</h5>
+                            <img src="images/safety-products/017.jpg" alt="" /><span>Superior quality fabric not only enhances the look and comfort,but can also be customized for water repellent property</span>
+                        </div>
+                    </div>
+                         </div>
+                
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>100% Metal free</h5>
+                            <img src="images/safety-products/019.jpg" alt="" /><span>Footwear entirely made of metal free components which are light weight and do not set off security alarms.</span>
+                        </div>
+                    </div>
+                             
+                             <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Cold Protection</h5>
+                            <img src="images/safety-products/020.jpg" alt="" /><span>Footwear specially designed and produced to ensure perfect thermal comfort for the wearers in low temperature.</span>
+                        </div>
+                    </div>
+                         </div>
+                
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Ankle Protection</h5>
+                            <img src="images/safety-products/021.jpg" alt="" /><span>Footwear protecting ankle against accident impacts</span>
+                        </div>
+                    </div>
+                             
+                             <div class="col-md-6">
+                            <div class="legacy-trust">
+                            <h5>Metatarsal Protection</h5>
+                            <img src="images/safety-products/002.jpg" alt="" /><span>Footwear against metatarsal protection upto 100J impact which protects the instep against the accident fall of heavy objects. </span>
+                        </div>
+                    </div>
+                         </div>
+            
+            </div>
+        </section>
         </div>
-        <div class="Cell">
-            <span>NAME</span>
-        </div>
-        <div class="Cell">
-            <p>FEATURES</p>
-        </div>
-    </div>
-    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery1.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Antistatic</span>
-        </div>
-        <div class="Cell">
-            <span>Shoe having electrical resistance between 100k Ohms to 1000 M Ohms.</span>
-        </div>
-    </div>
-    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery2.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Water Resistant</span>
-        </div>
-        <div class="Cell">
-            <span>As Per the latest standards </span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery3.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Feather Light</span>
-        </div>
-        <div class="Cell">
-            <span>PU sole provides optimum comfort and reduces fatigue.</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-           <img src="images/performance-features/agallery4.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Antiskid</span>
-        </div>
-        <div class="Cell">
-            <span>Slip resistance as per latest industry standards.</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery5.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Electrical Insulation</span>
-        </div>
-        <div class="Cell">
-            <span>Footwear (EIF)/(HVI) Resistant to high voltage</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery6.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Toe Cap</span>
-        </div>
-        <div class="Cell">
-            <span>High Quality steel/fiber toe to withstand energy upto 200j</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery7.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Shock Absorber</span>
-        </div>
-        <div class="Cell">
-            <span>Being a PU sole,it absorbs the shocks/jerks during work</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery8.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Mono/Dual Density</span>
-        </div>
-        <div class="Cell">
-            <span>PU/PU,PU/TPU,PU RUBBER</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery9.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Abrasion Resistant</span>
-        </div>
-        <div class="Cell">
-            <span>Being a PU outsole,the abrasion resistance is much better than other common outsole materials.</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery10.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>All Terrain/Weather Shoe</span>
-        </div>
-        <div class="Cell">
-            <span>Shoe is Customized as per requirements.</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery11.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>ESD</span>
-        </div>
-        <div class="Cell">
-            <span>Safety shoe with electrical resistance ranging from 100k Ohms to 100M Ohms</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery12.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Genuine Leather</span>
-        </div>
-        <div class="Cell">
-            <span>Din/Non Din made by inhouse tannery.</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery13.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Oil/Acid Resistant</span>
-        </div>
-        <div class="Cell">
-            <span>Outsole offers protection on work surface prone to oil spills.Sole is oil and acid resistant.</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery14.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Heat Resistant</span>
-        </div>
-        <div class="Cell">
-            <span>Specially designed light weight rubber outsole withstands temperature upto 300 degree c.</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery15.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Penetration Resistant</span>
-        </div>
-        <div class="Cell">
-            <span>Withstands nail penetration upto 1100N byprovidingSteel/kevlar(Non metal) midsole</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery16.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Fabric</span>
-        </div>
-        <div class="Cell">
-            <span>Superior quality fabric not only enhances the look and comfort,but can also be customized for water repellent property.</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery17.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>100% Metal Free</span>
-        </div>
-        <div class="Cell">
-            <span>Footwear entirely made of metal free components which are light weight and do not set off security alarms</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery18.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Cold Protection</span>
-        </div>
-        <div class="Cell">
-            <span>Footwear specially designed and produced to ensure perfect thermal comfort for the wearers in low temperatures.</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery19.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Ankle Protection</span>
-        </div>
-        <div class="Cell">
-            <span>Footwear protecting ankle against accident impacts</span>
-        </div>
-    </div>
-                    <div class="Row">
-        <div class="Cell">
-            <img src="images/performance-features/agallery20.jpg" alt="">
-        </div>
-        <div class="Cell">
-            <span>Metatarsal Protection</span>
-        </div>
-        <div class="Cell">
-            <span>Footwear against metatarsal protection upto 100jimpact which protect the instep against the accident fall of heavy objects.</span>
-        </div>
-    </div>
- </div> 
-  </section>
-</div>
     
         
           
