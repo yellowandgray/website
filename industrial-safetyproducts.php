@@ -647,14 +647,14 @@
                         <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Antistatic</h5>
-                            <img src="images/safety-products/001.jpg" alt="" /><span>Shoe having electrical resistance between 100K Oms to 1000M Ohms</span>
+                            <img src="images/safety-products/001.png" alt="" /><span>Shoe having electrical resistance between 100K Oms to 1000M Ohms</span>
                         </div>
                     </div>
                              
                              <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Water resistant</h5>
-                            <img src="images/safety-products/002.jpg" alt="" /><span>As per the latest standards</span>
+                            <img src="images/safety-products/002.png" alt="" /><span>As per the latest standards</span>
                         </div>
                     </div>
                          </div>
@@ -663,14 +663,14 @@
                         <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Feather Light</h5>
-                            <img src="images/safety-products/003.jpg" alt="" /><span>PU sole provides optimum comfort and reduces fatigue.</span>
+                            <img src="images/safety-products/003.png" alt="" /><span>PU sole provides optimum comfort and reduces fatigue.</span>
                         </div>
                     </div>
                              
                              <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Antiskid</h5>
-                            <img src="images/safety-products/004.jpg" alt="" /><span>Slip resistance as per latest industry standards</span>
+                            <img src="images/safety-products/004.png" alt="" /><span>Slip resistance as per latest industry standards</span>
                         </div>
                     </div>
                          </div>
@@ -679,14 +679,14 @@
                         <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Electrical Insulation</h5>
-                            <img src="images/safety-products/005.jpg" alt="" /><span>Footwear(EIF/HVI) resistant to high voltage.</span>
+                            <img src="images/safety-products/005.png" alt="" /><span>Footwear(EIF/HVI) resistant to high voltage.</span>
                         </div>
                     </div>
                              
                              <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Toe Cap</h5>
-                            <img src="images/safety-products/006.jpg" alt="" /><span>High quality steel/fibre toe to withstand energy upto 200J.</span></span>
+                            <img src="images/safety-products/006.png" alt="" /><span>High quality steel/fibre toe to withstand energy upto 200J.</span></span>
                         </div>
                     </div>
                          </div>
@@ -695,14 +695,14 @@
                         <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Shock Absorber</h5>
-                            <img src="images/safety-products/007.jpg" alt="" /><span>Being a PU sole,it absorbs the shocks/jerks during work.</span>
+                            <img src="images/safety-products/007.png" alt="" /><span>Being a PU sole,it absorbs the shocks/jerks during work.</span>
                         </div>
                     </div>
                              
                              <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Mono/Dual Density</h5>
-                            <img src="images/safety-products/008.jpg" alt="" /><span>PU/PU, PU/TPU,PU RUBBER.</span>
+                            <img src="images/safety-products/008.png" alt="" /><span>PU/PU, PU/TPU,PU RUBBER.</span>
                         </div>
                     </div>
                          </div>
@@ -711,14 +711,14 @@
                         <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Abrasian Resistant</h5>
-                            <img src="images/safety-products/009.jpg" alt="" /><span>Being a PU outsole,the abrasion resistance is much better than other common outsole materials.</span>
+                            <img src="images/safety-products/009.png" alt="" /><span>Being a PU outsole,the abrasion resistance is much better than other common outsole materials.</span>
                         </div>
                     </div>
                              
                              <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>All Terrain/Weather Shoe </h5>
-                            <img src="images/safety-products/010.jpg" alt="" /><span>Shoe is customized as per requirement</span>
+                            <img src="images/safety-products/010.png" alt="" /><span>Shoe is customized as per requirement</span>
                         </div>
                     </div>
                          </div>
@@ -727,14 +727,14 @@
                         <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>ESD</h5>
-                            <img src="images/safety-products/011.jpg" alt="" /><span>Safety shoe with electrical resistance ranging from 100k Ohms to 100m Ohms</span>
+                            <img src="images/safety-products/011.png" alt="" /><span>Safety shoe with electrical resistance ranging from 100k Ohms to 100m Ohms</span>
                         </div>
                     </div>
                              
                              <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Genuine Leather</h5>
-                            <img src="images/safety-products/013.jpg" alt="" /><span>Din/Non Din made by inhouse tannery.</span>
+                            <img src="images/safety-products/013.png" alt="" /><span>Din/Non Din made by inhouse tannery.</span>
                         </div>
                     </div>
                          </div>
@@ -743,14 +743,14 @@
                         <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Oil/Acid resistant</h5>
-                            <img src="images/safety-products/014.jpg" alt="" /><span>Outsole offers protection on work surface prone to oil spills sole is oil and acid resistant</span>
+                            <img src="images/safety-products/014.png" alt="" /><span>Outsole offers protection on work surface prone to oil spills sole is oil and acid resistant</span>
                         </div>
                     </div>
                              
                              <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Heat resistant</h5>
-                            <img src="images/safety-products/015.jpg" alt="" /><span>specially designed light weight rubber outsole withstands temperatures upto 300 degree c</span>
+                            <img src="images/safety-products/015.png" alt="" /><span>specially designed light weight rubber outsole withstands temperatures upto 300 degree c</span>
                         </div>
                     </div>
                          </div>
@@ -759,14 +759,14 @@
                         <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Penetration Resistant</h5>
-                            <img src="images/safety-products/016.jpg" alt="" /><span>PWithstands nail penetration upto 1100N by providing steel/Kevlar midsole.</span>
+                            <img src="images/safety-products/016.png" alt="" /><span>PWithstands nail penetration upto 1100N by providing steel/Kevlar midsole.</span>
                         </div>
                     </div>
                              
                              <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Fabric</h5>
-                            <img src="images/safety-products/017.jpg" alt="" /><span>Superior quality fabric not only enhances the look and comfort,but can also be customized for water repellent property</span>
+                            <img src="images/safety-products/017.png" alt="" /><span>Superior quality fabric not only enhances the look and comfort,but can also be customized for water repellent property</span>
                         </div>
                     </div>
                          </div>
@@ -775,14 +775,14 @@
                         <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>100% Metal free</h5>
-                            <img src="images/safety-products/019.jpg" alt="" /><span>Footwear entirely made of metal free components which are light weight and do not set off security alarms.</span>
+                            <img src="images/safety-products/019.png" alt="" /><span>Footwear entirely made of metal free components which are light weight and do not set off security alarms.</span>
                         </div>
                     </div>
                              
                              <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Cold Protection</h5>
-                            <img src="images/safety-products/020.jpg" alt="" /><span>Footwear specially designed and produced to ensure perfect thermal comfort for the wearers in low temperature.</span>
+                            <img src="images/safety-products/020.png" alt="" /><span>Footwear specially designed and produced to ensure perfect thermal comfort for the wearers in low temperature.</span>
                         </div>
                     </div>
                          </div>
@@ -791,14 +791,14 @@
                         <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Ankle Protection</h5>
-                            <img src="images/safety-products/021.jpg" alt="" /><span>Footwear protecting ankle against accident impacts</span>
+                            <img src="images/safety-products/021.png" alt="" /><span>Footwear protecting ankle against accident impacts</span>
                         </div>
                     </div>
                              
                              <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Metatarsal Protection</h5>
-                            <img src="images/safety-products/022.jpg" alt="" /><span>Footwear against metatarsal protection upto 100J impact which protects the instep against the accident fall of heavy objects. </span>
+                            <img src="images/safety-products/022.png" alt="" /><span>Footwear against metatarsal protection upto 100J impact which protects the instep against the accident fall of heavy objects. </span>
                         </div>
                     </div>
                          </div>
