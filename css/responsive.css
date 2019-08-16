@@ -19,7 +19,7 @@
         font-size: 35px;
     }
     .p-90 {
-        padding-top: 98px !important;
+        padding-top: 87px !important;
     }
     .hover-box-shadow .contact p {
         left: 30px !important;
@@ -43,6 +43,9 @@
     }
     .sticky .navbar {
         padding: 0 20px;
+    }
+    .contact-bg {
+        padding: 25px;
     }
 }
 
@@ -82,5 +85,12 @@
     }
     .banner-text h1 span {
         font-size: 70px !important;
+    }
+}
+
+@media (min-width: 461px) and (max-width: 767px) {
+    .p-0 {
+        padding-top: 110px !important;
+        padding: 0;
     }
 }

@@ -840,7 +840,7 @@ input.queries::placeholder {
 /*menu bar stricky*/
 
 .head {
-    padding: 10px 16px;
+/*    padding: 10px 16px;*/
     color: #f1f1f1;
     z-index: 999;
     transition: 0.3s all linear;
