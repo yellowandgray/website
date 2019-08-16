@@ -19,7 +19,7 @@
         font-size: 35px;
     }
     .p-90 {
-        padding-top: 90px !important;
+        padding-top: 98px !important;
     }
     .hover-box-shadow .contact p {
         left: 30px !important;
@@ -31,12 +31,18 @@
         width: 100% !important;
     }
     #toggle {
-        right: 0 !important;
-        top: -20px !important;
+        right: 0px !important;
+        top: 0px !important;
     }
     #menu {
         top: 72px !important;
         right: -32px !important;
+    }
+    .logo {
+        width: 80%;
+    }
+    .sticky .navbar {
+        padding: 0 20px;
     }
 }
 
@@ -51,9 +57,30 @@
     }
 }
 
-@media (min-width: 576px) {
-    .modal-dialog {
-        max-width: 500px;
-        margin: 1.75rem auto;
+@media screen and (max-width: 700px){
+    .box{
+        width: 70%;
+    }
+    .popup{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .box{
+        width: 80%;
+    }
+    .popup{
+        width: 80%;
+    }
+}
+
+@media (min-width: 461px) and (max-width: 768px) {
+    .banner-text h1 {
+        font-size: 70px !important;
+        top: 40% !important;
+    }
+    .banner-text h1 span {
+        font-size: 70px !important;
     }
 }

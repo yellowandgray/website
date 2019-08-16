@@ -495,10 +495,11 @@ select{
     min-height: 375px;
     position: relative;
     background: #dfdade;
-    /*    background: url(https://i.ibb.co/PTJDkgb/testimonials.jpg);*/
+    background: url(../img/testimonial-bg.jpg);
     padding-top: 50px;
     padding-bottom: 50px;
-    background-position: center;
+    background-attachment: fixed;
+    /*    background-position: center;*/
     background-size: cover;
 }
 #testimonial4 .carousel-inner:hover{
@@ -670,7 +671,7 @@ select{
 }
 
 .checked {
-    color: yellow;
+    color: orange;
 }
 
 /*.testimoial .divider.divider-bottom {
@@ -730,18 +731,18 @@ input.queries::placeholder {
 .banner-text h1 {
     line-height: 0.7;
     position: absolute;
-    top: 25%;
+    top: 40%;
     left: 5%;
     color: #e7aca6;
     opacity: 1;
     letter-spacing: 20px;
-    font-size: 120px;
+    font-size: 100px;
     font-family: 'Antonio Regular';
 }
 
 .banner-text h1 span {
     font-family: "Smithen Regular";
-    font-size: 150px;
+    font-size: 110px;
     color: #fff;
 }
 
@@ -750,7 +751,7 @@ input.queries::placeholder {
     height: 100%;
     position: absolute;
     top: 0;
-    background: #4a7c7cb8;
+    background: rgba(74, 124, 124, 0.89);
 }
 
 /* Gallery Css */
@@ -843,6 +844,7 @@ input.queries::placeholder {
     color: #f1f1f1;
     z-index: 999;
     transition: 0.3s all linear;
+    background: #4a7c7c;
 }
 
 .content {
@@ -853,12 +855,16 @@ input.queries::placeholder {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #4a7c7c;
+    background: #00000080;
     padding: 0;
 }
 
 .sticky + .content {
     padding-top: 102px;
+}
+
+.sticky .navbar {
+    padding: 0;
 }
 
 
@@ -937,10 +943,123 @@ input.queries::placeholder {
     display: block;
 }
 
-.nav-link {
+/*.nav-link {
     text-transform: uppercase;
-}
+}*/
 
 .dropdown-item {
     text-transform: uppercase;
+}
+
+/* POPUP CSS */
+
+.box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+}
+
+.button {
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid blue;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.button:hover {
+    background: blue;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1050;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h5 {
+    margin-top: 10px;
+    color: #333;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+.popup .close {
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup .close:hover {
+    color: #06D85F;
+}
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+    font-style: italic;
+}
+
+.popup hr{
+    margin: 0;
+}
+
+.contact-bg {
+    background: url(../img/contact-bg.jpg)no-repeat;
+    background-size: cover;
+    height: 346px;
+    padding: 50px;
+    transition: all .2s ease-in-out;
+}
+
+.contact-bg:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .09);
+    transform: translateY(-.5rem);
+    /*    background: transparent !important;*/
+    border: 1px solid #4a7c7c;
+    transition: all .2s ease-in-out;
+}
+
+.contact-bg svg {
+    position: absolute;
+    margin: 4px 0 0 0;
+}
+
+.contact-bg p {
+    padding-left: 25px;
+    font-size: 20px;
+}
+
+.logo {
+    width: 100%;
 }

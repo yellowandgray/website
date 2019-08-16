@@ -9,26 +9,26 @@
             <div class="loading-animation"></div>
         </div>
         <?php include 'menu.php'; ?>
-        <section class="p-0 p-90 border-top border-bottom row no-gutters" style="background: #4a7c7c;">
+        <section class="p-0 p-90 border-top border-bottom row no-gutters">
             <div class="col-lg-12 col-xl-12">
                 <div class="d-flex align-items-center">
                     <div class="d-lg-flex flex-column flex-fill controls-hover" data-flickity='{ "imagesLoaded": true, "wrapAround":true, "pageDots":false, "autoPlay":true }'>
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-1.jpg" alt="Image">
                             <div class="banner-text">
-                                <h1>WHERE <span>Imagineers</span> ARE BORN</h1>
+                                <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
                             </div>
                         </div>
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-2.jpg" alt="Image">
                             <div class="banner-text">
-                                <h1>WHERE <span>Imagineers</span> ARE BORN</h1>
+                                <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
                             </div>
                         </div>
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-3.jpg" alt="Image">
                             <div class="banner-text">
-                                <h1>WHERE <span>Imagineers</span> ARE BORN</h1>
+                                <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
                             </div>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7">
-                        <h2 class="display-4">Book Your Space</h2>
+                        <h2 class="display-4">Book Now!</h2>
                     </div>
                 </div>
                 <div class="row align-items-center justify-content-around">
@@ -195,7 +195,7 @@
                                                 <p><input type='checkbox' name='checkbox' /><strong> SELECTED: </strong> 4/08/2019, 12:45PM.</p>
                                             </div>
                                             <div class="button-group">
-                                                <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-ok">Add</a>
+                                                <a href="#popup1" class="btn btn-ok">Add</a>
                                                 <a href="#" class="btn btn-cancel">Cancel</a>
                                             </div>
                                         </div>
@@ -223,10 +223,10 @@
                     <div class="col-xl-12 col-lg-12">
                         <div class="row justify-content-center">
                             <div class="col-md-6 mb-3 mb-md-4" data-aos="fade-up" data-aos-delay="20">
-                                <div class="card card-body bg-white min-vh-md-30 hover-box-shadow">
+                                <div class="card card-body contact-bg min-vh-md-30">
                                     <div class="flex-fill contact">
                                         <!--                                        <h4 class="h3">Address</h4>-->
-                                        <i class="fas fa-map-marker-alt icon icon-xs bg-white" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse, Menara Infiniti, Jalan SS6/3, 47301 Petaling Jaya, Selangor, Malaysia.</p>
+                                        <i class="fas fa-map-marker-alt icon icon-xs bg-white" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
                                         <i class="far fa-envelope icon icon-xs bg-white" data-inject-svg></i><p> <a href="#" style="color: #fff;"> email@mywebsite.com</a></p>
                                         <i class="fas fa-phone-alt icon icon-xs bg-white" data-inject-svg></i><p><a href="#" style="color: #fff;"> +630 7662 7601</a></p>
                                     </div>
@@ -423,6 +423,14 @@
         <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
             <i class="fas fa-arrow-up icon bg-white" data-inject-svg></i>
         </a>
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h5>Thankyou for Booking with us.</h5>
+                <a class="close" href="#">×</a>
+                <hr>
+                <div class="content">Our team will get in touch with you shortly.</div>
+            </div>
+        </div>
         <!-- Required vendor scripts (Do not remove) -->
         <script type="text/javascript" src="assets/js/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/popper.min.js"></script>
@@ -533,20 +541,20 @@
         <script>
             var theToggle = document.getElementById('toggle');
 
-// based on Todd Motto functions
-// https://toddmotto.com/labs/reusable-js/
+            // based on Todd Motto functions
+            // https://toddmotto.com/labs/reusable-js/
 
-// hasClass
+            // hasClass
             function hasClass(elem, className) {
                 return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
             }
-// addClass
+            // addClass
             function addClass(elem, className) {
                 if (!hasClass(elem, className)) {
                     elem.className += ' ' + className;
                 }
             }
-// removeClass
+            // removeClass
             function removeClass(elem, className) {
                 var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
                 if (hasClass(elem, className)) {
@@ -556,7 +564,7 @@
                     elem.className = newClass.replace(/^\s+|\s+$/g, '');
                 }
             }
-// toggleClass
+            // toggleClass
             function toggleClass(elem, className) {
                 var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, " ") + ' ';
                 if (hasClass(elem, className)) {
