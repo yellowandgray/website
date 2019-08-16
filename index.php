@@ -518,7 +518,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                         ?>
                                                         <div class="sub-category">
                                                             <img src="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" alt="image" data-normal="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" data-hover="<?php echo IMG_BASE_URL . $sub['hover_icon']; ?>"onmouseout="mouseOut(this)" onmouseenter="mouseEnter(this)" onclick="renderSubCategory(<?php echo $sub['ID']; ?>);" />
-                                                            <div class="sub-cat-title"><?php echo $sub['title']; ?></div>
+                                                            <div class="sub-cat-title"><strong><?php echo $sub['title']; ?></strong></div>
                                                         </div>
                                                     <?php } ?>
                                                 </div>
