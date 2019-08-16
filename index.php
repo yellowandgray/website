@@ -98,7 +98,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                             <li class="menu-item"><a href="#our_journey" data-content="OUR JOURNEY">OUR JOURNEY</a></li>
                                             <li class="menu-item"><a href="#about_section" data-content="WHO WE ARE">WHO WE ARE</a></li>
                                             <li class="menu-item"><a href="#team_section" data-content="WHAT WE DO">WHAT WE DO</a></li>
-                                            <li class="menu-item"><a href="#explor_product" data-content="PRODUCTS">PRODUCTS</a></li>
+                                            <li class="menu-item"><a id="explore_click" href="#explor_product" data-content="PRODUCTS">PRODUCTS</a></li>
                                             <li class="menu-item"><a href="#service_section" data-content="SERVICES">SERVICES</a></li>
                                             <li class="menu-item"><a href="#accreditation_section" data-content="ACCREDITATION">ACCREDITATION</a></li>
                                             <li class="menu-item"><a href="#ourpartner" data-content="OUR PARTNERS">OUR PARTNERS</a></li>
@@ -116,7 +116,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <ul class="nav_menu clearfix">
                             <li class="email-margin-b"><a href="#">Email</a></li>
                             <li><a href="#">LinkedIN</a></li>
@@ -460,8 +460,8 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                         $first = false;
                                                     }
                                                     ?>
-                                                    <li class="<?php echo $cls; ?>">
-                                                        <a onclick="renderCategory(<?php echo $row['ID']; ?>);" href="#tab<?php echo $row['ID']; ?>" data-toggle = "tab"><?php echo $row['name']; ?></a>
+                                                    <li id="tab_list<?php echo $row['ID']; ?>" class="<?php echo $cls; ?>">
+                                                        <a onclick="renderCategory(<?php echo $row['ID']; ?>);"><?php echo $row['name']; ?></a>
                                                     </li>
                                                     <?php
                                                 }
@@ -481,6 +481,8 @@ $categories = $db->selectAllWithoutWhere('categories');
                                             if ($first == true) {
                                                 $cls = 'active';
                                                 $first = false;
+                                            } else {
+                                                $cls = 'hidden';
                                             }
                                             ?>
                                             <div class="tab-pane <?php echo $cls; ?>" id="tab<?php echo $row['ID']; ?>">
@@ -505,7 +507,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                                         </div>
                                                                     </div>
                                                                 </div>
-
                                                             </div>
                                                         </div>
                                                     </div>
@@ -894,7 +895,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 </a>
                                                 <p><a href="#"></a></p></li>
                                             <li>
-                                                <a href="#"> 
+                                                <a href="mailto: products@macworldinc.com"> 
 <!--                                                    <span></span>-->
                                                     <img src="img/mail1.png" alt="" title="">
                                                     <p>products@macworldinc.com</p>
@@ -1447,8 +1448,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 }, 3000);
                                 Page.init();
                         });</script>
-
-
             <script type="text/javascript">
                                 jQuery(document).ready(function($) {
 
@@ -1464,8 +1463,6 @@ $categories = $db->selectAllWithoutWhere('categories');
 
                         })
             </script>
-
-
             <script type="text/javascript">
                                 $(document).ready(function() {
                         var gturl = window.location.href;
@@ -1478,7 +1475,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                         }, 500);
                         }
                         });</script>
-
             <script type="text/javascript">
                                 $('.banner-product-slider').owlCarousel({
                         center: true,
@@ -1497,8 +1493,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                                         }
                                 }
                         });</script>
-
-
             <script>
                                 (function($){
                                 $(window).on("load", function(){
@@ -1509,7 +1503,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 });
                                 });
                                 })(jQuery);</script>
-
             <script type="text/javascript">
                                 jQuery(document).ready(function() {
                         jQuery(".language_select").change(function(){
@@ -1518,7 +1511,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 window.location.href = lang_url;
                         });
                         });</script>
-
             <script type="text/javascript">
                                 window.onload = function(){
                                 $('.slider').slick({
@@ -1553,7 +1545,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 });
                                 };
             </script>
-
             <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
             <symbol id="icon-behance" viewBox="0 0 37 32">
@@ -1709,10 +1700,6 @@ $categories = $db->selectAllWithoutWhere('categories');
             </symbol>
             </defs>
             </svg>
-
-
-
-
         </div>
     </body>
 </html>

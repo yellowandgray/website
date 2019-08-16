@@ -15,6 +15,12 @@ function renderCategory(id) {
             $('#category_name_' + id).html(result.result.data.name);
             $('#category_image_' + id).attr('src', IMG_BASE_URL + result.result.data.image);
             $('#category_description_' + id).html(result.result.data.description);
+            $('#explor_product .tab-pane').addClass('hidden').removeClass('active');
+            $('#tab' + id).removeClass('hidden').addClass('active');
+            $('.list-group-product li').removeClass('active');
+            $('#tab_list' + id).addClass('active');
+            $('#explore_click').trigger('click');
+            $('.sidebar-container, .hamburger').removeClass('active');
         }
     });
 }
@@ -26,6 +32,8 @@ function renderSubCategory(id) {
             $('#category_name_' + result.result.data.category_id).html(result.result.data.title);
             $('#category_image_' + result.result.data.category_id).attr('src', IMG_BASE_URL + result.result.data.image);
             $('#category_description_' + result.result.data.category_id).html(result.result.data.description);
+            $('#explore_click').trigger('click');
+            $('.sidebar-container, .hamburger').removeClass('active');
         }
     });
 }

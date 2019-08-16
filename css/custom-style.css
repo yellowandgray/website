@@ -1,6 +1,6 @@
 body {margin: 0;height: 100%;}
 html {width: 100%;min-height: 100%;box-shadow: none !important;position: relative;}
-a,a:link {-webkit-transition: 0.10s ease;-moz-transition: 0.10s ease;transition: 0.10s ease;text-transform: capitalize;}
+a,a:link {-webkit-transition: 0.10s ease;-moz-transition: 0.10s ease;transition: 0.10s ease;}
 a,a:hover {text-decoration: none;transition: .3s ease;}
 a:focus {outline: 0 none;text-decoration: none;}
 .left {float: left;}
@@ -845,7 +845,7 @@ a.mobile-social {
     padding-bottom: 0px;
 }
 
-#tab1 .products-content-main {
+.products-content-main {
     padding: 0;
 }
 
@@ -2149,4 +2149,8 @@ input#clear_product {
 .sub-cat-title {
     font-size: 11px;
     height: 160px;
+}
+
+.hidden {
+    display: none;
 }
