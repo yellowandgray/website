@@ -36,7 +36,6 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="portfolioFilter clearfix">
-                                <a href="#" data-filter="*" class="current">All Categories</a>
                                 <a href="#" data-filter=".optical-fiber">Optical Fiber</a>
                                 <a href="#" data-filter=".fiber_cable">Fiber Cable</a>
                                 <a href="#" data-filter=".copper_cable">Copper Cable</a>

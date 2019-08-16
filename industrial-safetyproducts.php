@@ -798,7 +798,7 @@
                              <div class="col-md-6">
                             <div class="legacy-trust">
                             <h5>Metatarsal Protection</h5>
-                            <img src="images/safety-products/002.jpg" alt="" /><span>Footwear against metatarsal protection upto 100J impact which protects the instep against the accident fall of heavy objects. </span>
+                            <img src="images/safety-products/022.jpg" alt="" /><span>Footwear against metatarsal protection upto 100J impact which protects the instep against the accident fall of heavy objects. </span>
                         </div>
                     </div>
                          </div>
