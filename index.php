@@ -297,7 +297,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                         <div class="row">
                             <div class="padding-l-r-20">
                                 <div class="col-md-3">
-                                    <h3>Who We Are</h3>
+                                    <h3>Who <br/>We <br/>Are</h3>
                                     <p style="font-size: 23px"><strong>Expertise <br/>Reliability <br/>Entrepreneurial Spirit</strong></p>
                                 </div>
                                 <div class="col-md-9">
@@ -1515,7 +1515,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 window.onload = function(){
                                 $('.slider').slick({
                                 autoplay:true,
-                                        autoplaySpeed:9000,
+                                        autoplaySpeed:2000,
                                         arrows:true,
                                         prevArrow:'',
                                         nextArrow:'',
