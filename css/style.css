@@ -103,8 +103,8 @@ select{
     overflow: hidden;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     padding: 20px;
-}
 
+}
 .ui-datepicker-header {
     height: 50px;
     line-height: 50px;
@@ -840,7 +840,7 @@ input.queries::placeholder {
 /*menu bar stricky*/
 
 .head {
-/*    padding: 10px 16px;*/
+    /*    padding: 10px 16px;*/
     color: #f1f1f1;
     z-index: 999;
     transition: 0.3s all linear;
@@ -1062,4 +1062,31 @@ input.queries::placeholder {
 
 .logo {
     width: 100%;
+}
+
+.subpage .head {
+    background: #eee0 !important;
+}
+.subpage .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #00000080 !important;
+    padding: 0;
+}
+
+.empower svg {
+    font-size: 45px;
+    margin-right: 10px;
+    color:#e7aca6;
+    
+}
+
+.empower{
+    text-align: right;
+    margin-right: -113px;
+}
+
+.l-25    {
+    left: 23%;
 }
