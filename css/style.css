@@ -347,7 +347,7 @@ select{
 
 .booking-form input {
     margin: 20px 0px;
-    padding: 10px 5px;
+    padding: 5px 5px;
     width: 355px;
 }
 
@@ -1079,7 +1079,7 @@ input.queries::placeholder {
     font-size: 45px;
     margin-right: 10px;
     color:#e7aca6;
-    
+
 }
 
 .empower{
