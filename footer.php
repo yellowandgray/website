@@ -129,8 +129,8 @@
 <script type="text/javascript" src="assets/js/popper.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.js"></script>
 <script src="js/jquery-ui.js" type="text/javascript"></script>
+<!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
 
-<!-- 
          This appears in the demo only.  This script ensures our demo countdowns are always showing a date in the future 
          by altering the date before the countdown is initialized 
 -->

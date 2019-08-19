@@ -13,7 +13,7 @@
                             <div class="row dropdown-menu">
                                 <div class="col-auto" data-dropdown-content>
                                     <div class="dropdown-grid-menu">
-                                        <a href="#" class="dropdown-item fade-page">EMPOWERING</a>
+                                        <a href="empowering.php" class="dropdown-item fade-page">EMPOWERING</a>
                                         <a href="#" class="dropdown-item fade-page">ENGAGING</a>
                                         <a href="#" class="dropdown-item fade-page">EXPERIENTIAL</a>
                                     </div>
