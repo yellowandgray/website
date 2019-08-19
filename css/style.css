@@ -1079,7 +1079,7 @@ input.queries::placeholder {
     font-size: 45px;
     margin-right: 10px;
     color:#e7aca6;
-    
+
 }
 
 .empower{
@@ -1090,3 +1090,36 @@ input.queries::placeholder {
 .l-25    {
     left: 23%;
 }
+
+.kinds ul{
+    list-style-type: none;
+
+}
+.kinds ul li{
+    position: relative;
+    top: -39px;
+    left: 84px;
+}
+
+.training ul{
+    list-style-type:none;
+}
+
+.training ul li{
+    position: relative;
+    top: -39px;
+    left: 84px;
+}
+
+.pnd ul{
+    list-style-type: none;
+}
+
+.pnd ul li{
+    position: relative;
+    top: -30px;
+    left: 84px;
+}
+
+
+

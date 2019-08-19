@@ -37,7 +37,7 @@
                         <h2>What we provide and offer at the Project Next Dooe are something that allows its guest to stretch their imagination while enjoying location has to offer.</h2>
                     </div>
                     <div class="col-md-9 col-lg-6 col-xl-5" data-aos="fade-in">
-                        <img src="assets/img/Untitled-2.jpg" alt="Image" class="img-fluid rounded shadow">
+                        <img src="assets/img/Untitled-3.jpg" alt="Image" class="img-fluid rounded shadow">
                     </div>
                 </div>
             </div>
@@ -45,26 +45,35 @@
         <section class="pt-0 o-hidden">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <h2 class="h1">SERVICES</h2>
+                    <div class="col-md-12 ideal-list">
+                        <h2 class="h1">IDEAL FOR</h2>
                         <ul>
-                            <li>Bite Sized Training</li>
-                            <li>Full Sized Training</li>
-                            <li>Customized Training</li>
-                            <li>Ideas@Pondok</li>
-                            <li>Idenators</li>
-                            <li>S.U.M.O</li>
-                            <li>Business Management & English.</li>
-                            <li>Content Delivery</li>
+                            <li>MEETING & CONFERENCES</li>
+                            <li>TRAINING & WORKSHOPS</li>
+                            <li>INTERACTIVE CLASSES</li>
+                            <li>TEAMBUILDING AND OFFSITE ACTIVITIES</li>
+                            <li>CREATIVE BRAINSTORMING SESSIONS</li>
+                            <li>PRODUCT LAUNCH</li>
+                            <li>KICKOFF MEETINGS</li>
+                            <li>SEMINAR & NETWORKING</li>
+                            <li>PRIVATE PREVIEWS</li>
+                            <li>CREATIVE SPACE and more.</li>
                         </ul>
-                    </div> 
-                    <div class="col-md-6">
-                        <h2 class="h1">ENTREPRENEURSHIP</h2>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2 class="h1">AMENITIES</h2>
+                         <img src="assets/img/Untitled-4.jpg" alt="Image" class="img-fluid rounded shadow">
+                    </div>
+                    
+                    <div class="col-md-4 amenities">
                         <ul>
-                            <li>Management</li>
-                            <li>Strategic Planning</li>
-                            <li>Technical Skills</li>
-                            <li>Soft Skills</li>
+                            <li>Gym</li>
+                            <li>Gamesroom</li>
+                            <li>Skygarden</li>
+                            <li>Barbecue pit</li>
+                            <li>Infinity Pool</li>
                         </ul>
                     </div>
                 </div>
