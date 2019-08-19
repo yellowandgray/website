@@ -1789,10 +1789,10 @@ input#clear_product {
     height: auto;
     display: inline-block;
     float: left;
-    /* padding-right: 10px; */
+    margin-right: 10px;
     cursor: pointer;
-    /* padding-bottom: 10px; */
-    /* padding-top: 10px; */
+    margin-bottom: 10px;
+    margin-top: 10px;
     border-radius: 10px;
     border: 1px solid #b4903a;
 }
@@ -1812,6 +1812,12 @@ input#clear_product {
     }
     .slick-track {
         height: auto!important;
+    }
+    .pdf-download img {
+        width: 15% !important;
+    }
+    .padding-lr-25 {
+        padding: 0 15px !important;
     }
 }
 
@@ -2162,3 +2168,14 @@ input#clear_product {
     display: none;
 }
 
+.pdf-download img {
+    float: left;
+    position: relative;
+    bottom: 8px;
+    width: 8%;
+}
+
+
+.padding-lr-25 {
+    padding: 0 25px;
+}

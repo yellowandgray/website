@@ -297,7 +297,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                         <div class="row">
                             <div class="padding-l-r-20">
                                 <div class="col-md-3">
-                                    <h3>Who We Are</h3>
+                                    <h3>Who <br/>We <br/>Are</h3>
                                     <p style="font-size: 23px"><strong>Expertise <br/>Reliability <br/>Entrepreneurial Spirit</strong></p>
                                 </div>
                                 <div class="col-md-9">
@@ -501,7 +501,8 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                                                     <div class="inner-contant">
                                                                                         <h3 id="category_name_<?php echo $row['ID']; ?>"><?php echo $row['name']; ?></h3>
                                                                                         <p id="category_description_<?php echo $row['ID']; ?>"><?php echo $row['description']; ?></p>
-                                                                                        <a href="#"><img src="img/pdf.png" alt="pdf download icon"> Product Specification</a>
+                                                                                        <br/>
+                                                                                        <a href="#" class="pdf-download"><img src="img/pdf.png" alt="pdf download icon"> Product Specification</a>
                                                                                     </div>
                                                                                 </figcaption>
                                                                             </figure>
@@ -680,31 +681,31 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 <div class="tab-content">
                                     <div id="menu1" class="tab-pane fade in active padding-t-50">
                                         <div class="slider">
-                                            <div>
+                                            <div class="padding-lr-25">
                                                 <img src="img/banking/banking-1.jpg" alt="" />
                                             </div>
-                                            <div>
+                                            <div class="padding-lr-25">
                                                 <img src="img/banking/banking-2.png" alt="" />
                                             </div>
-                                            <div>
+                                            <div class="padding-lr-25">
                                                 <img src="img/banking/banking-3.jpg" alt="" />
                                             </div>
-                                            <div>
+                                            <div class="padding-lr-25">
                                                 <img src="img/banking/banking-4.jpg" alt="" />
                                             </div>
-                                            <div>
+                                            <div class="padding-lr-25">
                                                 <img src="img/banking/banking-5.jpg" alt="" />
                                             </div>
-                                            <div>
+                                            <div class="padding-lr-25">
                                                 <img src="img/banking/banking-6.jpg" alt="" />
                                             </div>
-                                            <div>
+                                            <div class="padding-lr-25">
                                                 <img src="img/banking/banking-7.jpg" alt="" />
                                             </div>
-                                            <div>
+                                            <div class="padding-lr-25">
                                                 <img src="img/banking/banking-8.png" alt="" />
                                             </div>
-                                            <div>
+                                            <div class="padding-lr-25">
                                                 <img src="img/banking/banking-9.png" alt="" />
                                             </div>
                                         </div>
@@ -719,28 +720,28 @@ $categories = $db->selectAllWithoutWhere('categories');
                                     <div id="menu2" class="tab-pane fade in padding-t-50">
 
                                         <div class="slider">
-                                            <div class="slide">
+                                            <div class="slide padding-lr-25">
                                                 <img src="img/insurance/insurance-1.png" alt="" />
                                             </div>
-                                            <div class="slide">
+                                            <div class="slide padding-lr-25">
                                                 <img src="img/insurance/insurance-2.png" alt="" />
                                             </div>
-                                            <div class="slide">
+                                            <div class="slide padding-lr-25">
                                                 <img src="img/insurance/insurance-3.jpg" alt="" />
                                             </div>
-                                            <div class="slide">
+                                            <div class="slide padding-lr-25">
                                                 <img src="img/insurance/insurance-4.png" alt="" />
                                             </div>
-                                            <div class="slide">
+                                            <div class="slide padding-lr-25">
                                                 <img src="img/insurance/insurance-5.png" alt="" />
                                             </div>
-                                            <div class="slide">
+                                            <div class="slide padding-lr-25">
                                                 <img src="img/insurance/insurance-6.jpg" alt="" />
                                             </div>
-                                            <div class="slide">
+                                            <div class="slide padding-lr-25">
                                                 <img src="img/insurance/insurance-7.png" alt="" />
                                             </div>
-                                            <div class="slide">
+                                            <div class="slide padding-lr-25">
                                                 <img src="img/insurance/insurance-8.png" alt="" />
                                             </div>
                                         </div>
@@ -754,7 +755,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                     </div>
                                     <div id="menu3" class="tab-pane fade in padding-t-50">
                                         <div>
-                                            <div class="" style="text-align: center">
+                                            <div class="" style="text-align: center; padding: 20px;">
                                                 <img src="img/technology/technology.png" alt=""/>
                                             </div>
                                         </div>
@@ -1516,7 +1517,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 window.onload = function(){
                                 $('.slider').slick({
                                 autoplay:true,
-                                        autoplaySpeed:9000,
+                                        autoplaySpeed:2000,
                                         arrows:true,
                                         prevArrow:'',
                                         nextArrow:'',
