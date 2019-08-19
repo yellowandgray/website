@@ -37,7 +37,7 @@
     }
     #menu {
         top: 72px !important;
-        right: -32px !important;
+/*        right: -32px !important;*/
     }
     .logo {
         width: 80%;
@@ -83,6 +83,9 @@
     .time select {
         width: 100% !important;
         margin-bottom: 20px !important;
+    }
+    .dropdown-item {
+        color: #ffffff;
     }
 }
 
