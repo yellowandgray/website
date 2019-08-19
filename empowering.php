@@ -20,7 +20,7 @@
                     <div class="row justify-content-center text-center">
                         <div class="col-md-9 col-lg-8 col-xl-7">
                             <h1 class="display-3">EMPOWERING KNOWLEDGE <mark data-aos="highlight-text" data-aos-delay="250"></mark></h1>
-                            <p class="lead mb-0">BE WITH THE RIGHT PARTNERS </p>
+                            <p class="lead mb-0">Project Next Door provides you with the intense course of study which aims not only to expand intellectual horizons but also provide education that unlocks human intellectual potential.</p>
                         </div>
                     </div>
                 </div>
@@ -30,44 +30,75 @@
                 <div class="divider divider-bottom bg-white"></div>
             </section>
         </div>
-        <section>
-            <div class="container">
-                <div class="row align-items-center justify-content-around text-center text-lg-left">
-                    <div class="col-md-9 col-lg-6 col-xl-5 mb-4 mb-md-5 mb-lg-0" data-aos="fade-in">
-                        <h2>You need experts you can always turn to for guidance</h2>
-                    </div>
-                    <div class="col-md-9 col-lg-6 col-xl-5" data-aos="fade-in">
-                        <img src="assets/img/Untitled-2.jpg" alt="Image" class="img-fluid rounded shadow">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="pt-0 o-hidden">
+        
+        <section class="wf100 p80">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <h2 class="h1">SERVICES</h2>
+                    <div class="col-md-12 kinds">
+                        <h3>TRAINING PROGRAMS</h3>
                         <ul>
-                            <li>Bite Sized Training</li>
-                            <li>Full Sized Training</li>
-                            <li>Customized Training</li>
-                            <li>Ideas@Pondok</li>
-                            <li>Idenators</li>
-                            <li>S.U.M.O</li>
-                            <li>Business Management & English.</li>
-                            <li>Content Delivery</li>
-                        </ul>
-                    </div> 
-                    <div class="col-md-6">
-                        <h2 class="h1">ENTREPRENEURSHIP</h2>
-                        <ul>
-                            <li>Management</li>
-                            <li>Strategic Planning</li>
-                            <li>Technical Skills</li>
-                            <li>Soft Skills</li>
+                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>Business Management</li>
+                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>English Content Delivery</li>
+                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>Entrepreneurship</li>
+                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>Management</li>
+                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>Strategic Planning</li>
+                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>Technical Skills</li>
+                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>Ideanators</li>
+                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>S.U.M.O</li>
+                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>Ideas@Pondok</li>
                         </ul>
                     </div>
-                </div>
+                </div><br>
+                
+                <div class="row">
+                    <div class="col-md-12 training">
+                        <h3>KIND OF TRAININGS</h3>
+                        <ul>
+                            <img src="assets/img/Untitled-7.png" alt="Image" class="img-fluid rounded"><li>Bite Sized Trainings</li>
+                            <img src="assets/img/Untitled-7.png" alt="Image" class="img-fluid rounded"><li>Full Sized Trainings</li>
+                            <img src="assets/img/Untitled-7.png" alt="Image" class="img-fluid rounded"><li>Public Programs</li>
+                            <img src="assets/img/Untitled-7.png" alt="Image" class="img-fluid rounded"><li>Customized Trainings</li>
+                            <img src="assets/img/Untitled-7.png" alt="Image" class="img-fluid rounded"><li>Business Coaching</li>
+                        </ul>
+                    </div>
+                </div><br>
+                
+                <div class="row">
+                    <div class="col-md-12 training">
+                        <h3>TRAINING TOPIC CATEGORIES</h3>
+                        <ul>
+                            <img src="assets/img/Untitled-8.png" alt="Image" class="img-fluid rounded"><li>Business/ Entreprenuership</li>
+                            <img src="assets/img/Untitled-9.png" alt="Image" class="img-fluid rounded"><li>Financial</li>
+                            <img src="assets/img/Untitled-10.png" alt="Image" class="img-fluid rounded"><li>Technology</li>
+                            <img src="assets/img/Untitled-11.png" alt="Image" class="img-fluid rounded"><li>Healthcare</li>
+                            <img src="assets/img/Untitled-12.png" alt="Image" class="img-fluid rounded"><li>Content</li>
+                            <img src="assets/img/Untitled-13.png" alt="Image" class="img-fluid rounded"><li>Multimedia</li>
+                            <img src="assets/img/Untitled-14.png" alt="Image" class="img-fluid rounded"><li>Industry 4.0</li>
+                            <img src="assets/img/Untitled-15.png" alt="Image" class="img-fluid rounded"><li>Soft Skills</li>
+                            <img src="assets/img/Untitled-16.png" alt="Image" class="img-fluid rounded"><li>Customized</li>
+
+                        </ul>
+                    </div>
+                </div><br>
+                
+                <div class="row">
+                    <div class="col-md-12 pnd">
+                        <h3>PND TRAINING SESSION INCLUSIONS</h3><br>
+                        <ul>
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                            <li>Full and Half Day Training Sessions Available.</li>
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                            <li>Unlimited High Speed Wifi Connection</li>
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                            <li>Usage of LED TV</li>
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                            <li>Amenities Available.</li>
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                            <li>Inclusive of Breakfast/Lunch/Dinner/Snacks</li>
+
+                        </ul>
+                    </div>
+                </div><br>
             </div>
         </section>
         <section class="bg-primary-3 text-white pt-0">

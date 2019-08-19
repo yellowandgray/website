@@ -1256,3 +1256,35 @@ input.queries::placeholder {
     opacity: 0; 
     pointer-events: none; 
 }
+.kinds ul{
+    list-style-type: none;
+
+}
+.kinds ul li{
+    position: relative;
+    top: -39px;
+    left: 84px;
+}
+
+.training ul{
+    list-style-type:none;
+}
+
+.training ul li{
+    position: relative;
+    top: -39px;
+    left: 84px;
+}
+
+.pnd ul{
+    list-style-type: none;
+}
+
+.pnd ul li{
+    position: relative;
+    top: -30px;
+    left: 84px;
+}
+
+
+
