@@ -845,7 +845,7 @@ input.queries::placeholder {
 .head {
     /*    padding: 10px 16px;*/
     color: #f1f1f1;
-    z-index: 1;
+    z-index: 2;
     transition: 0.3s all linear;
     background: #4a7c7c;
 }
@@ -1247,9 +1247,9 @@ input.queries::placeholder {
     left: 0px;  
     width: 100%; 
     height: 100vh; 
-    background-color: #0A0A0A; 
+    background-color: #4a7c7c; 
     transition: all 0.3s ease; 
-    z-index: 2; 
+    z-index: 999; 
 }
 
 .pageLoad.off {

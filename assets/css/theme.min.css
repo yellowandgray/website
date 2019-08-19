@@ -430,7 +430,7 @@ h2 {
 
 .h3,
 h3 {
-   text-align: left;
+    text-align: left;
     font-size: 35px;
 }
 
@@ -508,6 +508,7 @@ h6 {
     font-size: 2.5rem;
     font-weight: 300;
     line-height: 1;
+    text-align: center;
 }
 
 @media (max-width:1200px) {
@@ -1155,7 +1156,7 @@ pre code {
     .col-md-12 {
         flex: 0 0 100%;
         max-width: 100%
-            
+
     }
     .order-md-first {
         order: -1

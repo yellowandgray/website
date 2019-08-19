@@ -11,9 +11,9 @@
         <div class="pageLoad">
             <div class="inner">
                 <div><img src="img/load.png"></div>
-                <div><img src="img/load.png"></div> 
+<!--                <div><img src="img/load.png"></div> 
                 <div><img src="img/load.png"></div>
-                <div><img src="img/load.png"></div>
+                <div><img src="img/load.png"></div>-->
             </div> 
         </div>
         <?php include 'menu.php'; ?>
