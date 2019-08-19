@@ -501,6 +501,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                                                     <div class="inner-contant">
                                                                                         <h3 id="category_name_<?php echo $row['ID']; ?>"><?php echo $row['name']; ?></h3>
                                                                                         <p id="category_description_<?php echo $row['ID']; ?>"><?php echo $row['description']; ?></p>
+                                                                                        <a href="#"><img src="img/pdf.png" alt="pdf download icon"> Product Specification</a>
                                                                                     </div>
                                                                                 </figcaption>
                                                                             </figure>
@@ -517,8 +518,8 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                     foreach ($sub_cats as $sub) {
                                                         ?>
                                                         <div class="sub-category">
-                                                            <img src="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" alt="image" data-normal="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" data-hover="<?php echo IMG_BASE_URL . $sub['hover_icon']; ?>"onmouseout="mouseOut(this)" onmouseenter="mouseEnter(this)" onclick="renderSubCategory(<?php echo $sub['ID']; ?>);" />
-                                                            <div class="sub-cat-title"><?php echo $sub['title']; ?></div>
+                                                            <img src="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>" alt="image" data-normal="<?php echo IMG_BASE_URL . $sub['normal_icon']; ?>"  onclick="renderSubCategory(<?php echo $sub['ID']; ?>);" />
+                                                            <div class="sub-cat-title"><strong><?php echo $sub['title']; ?></strong></div>
                                                         </div>
                                                     <?php } ?>
                                                 </div>
