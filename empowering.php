@@ -16,12 +16,11 @@
 
         <div class="bg-primary-3 o-hidden" data-overlay>
             <section class="text-white pb-0">
-                <div class="container pb-5">
+                <div class="container pb-5 pt-5">
                     <div class="row justify-content-center text-center">
                         <div class="col-md-9 col-lg-8 col-xl-7">
                             <h1 class="display-3">EMPOWERING KNOWLEDGE <mark data-aos="highlight-text" data-aos-delay="250"></mark></h1>
                             <p class="lead mb-0">BE WITH THE RIGHT PARTNERS </p>
-
                         </div>
                     </div>
                 </div>
@@ -78,7 +77,7 @@
                     <div class="col-md-9 col-lg-8 col-xl-7">
                         <h3 class="display-4">UPCOMING TRAININGS</h3>
                         <div class="col-md-6 mb-3 mb-md-4 l-25">
-                                <div id="datepicker" class="calendar"></div> 
+                            <div id="datepicker" class="calendar"></div> 
                         </div>  
                         <div class="empower">
                             <i class="fab fa-instagram"></i><i class="fab fa-youtube"></i><i class="fab fa-facebook"></i>
@@ -109,7 +108,7 @@
                 </div>
             </div>
         </section>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 300px;" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 300px;" frameborder="0" style="border:0" allowfullscreen></iframe>
 
         <section class="bg-light">
             <div class="container">
