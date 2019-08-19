@@ -5,8 +5,16 @@
     <?php include 'head.php'; ?>
 
     <body>
-        <div class="loader">
-            <div class="loading-animation"></div>
+        <!--        <div class="loader">
+                    <div class="loading-animation"></div>
+                </div>-->
+        <div class="pageLoad">
+            <div class="inner">
+                <div><img src="img/load.png"></div>
+                <div><img src="img/load.png"></div> 
+                <div><img src="img/load.png"></div>
+                <div><img src="img/load.png"></div>
+            </div> 
         </div>
         <?php include 'menu.php'; ?>
         <section class="p-0 p-90 border-top border-bottom row no-gutters">
@@ -15,19 +23,19 @@
                     <div class="d-lg-flex flex-column flex-fill controls-hover" data-flickity='{ "imagesLoaded": true, "wrapAround":true, "pageDots":false, "autoPlay":true }'>
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-1.jpg" alt="Image">
-                            <div class="banner-text">
+                            <div class="banner-text wow fadeInDown">
                                 <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
                             </div>
                         </div>
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-2.jpg" alt="Image">
-                            <div class="banner-text">
+                            <div class="banner-text wow fadeInDown">
                                 <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
                             </div>
                         </div>
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-3.jpg" alt="Image">
-                            <div class="banner-text">
+                            <div class="banner-text wow fadeInDown">
                                 <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
                             </div>
                         </div>
@@ -50,7 +58,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-0">
-                        <div class="card h-100 hover-box-shadow">
+                        <div class="card h-100 hover-box-shadow wow fadeInLeft">
                             <div class="d-block bg-gradient rounded-top">
                                 <img class="card-img-top hover-fade-out" src="img/about/about-04.jpg" alt="Image accompanying Circle testimonial">
                             </div>
@@ -62,7 +70,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-0">
-                        <div class="card h-100 hover-box-shadow">
+                        <div class="card h-100 hover-box-shadow wow fadeInDown">
                             <div class="d-block bg-gradient rounded-top">
                                 <img class="card-img-top hover-fade-out" src="img/about/about-02.jpg" alt="Image accompanying Treva testimonial">
                             </div>
@@ -74,7 +82,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-0">
-                        <div class="card h-100 hover-box-shadow">
+                        <div class="card h-100 hover-box-shadow wow fadeInRight">
                             <div class="d-block bg-gradient rounded-top">
                                 <img class="card-img-top hover-fade-out" src="img/about/about-01.jpg" alt="Image accompanying Kanba testimonial">
                             </div>
@@ -91,7 +99,7 @@
         <section>
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
-                    <div class="col-md-9 col-lg-8 col-xl-7">
+                    <div class="col-md-9 col-lg-8 col-xl-7 wow fadeInDown">
                         <!--                        <h3 class="display-4">About <mark data-aos="highlight-text" data-aos-delay="300">Project Next Door</mark></h3>-->
                         <h3 class="display-4">Gallery</h3>
                         <!--                        <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>-->
@@ -100,24 +108,24 @@
             </div>
             <div class="grid">
 
-                <div class="item" style="background-image: url(img/gallery/command-support.png)">
+                <div class="item wow fadeInLeft" style="background-image: url(img/gallery/command-support.png)">
                     <div class="img-overlay"></div>
                     <h3>Command & Support</h3>
                 </div>
 
-                <div class="item item1" style="background-image: url(img/gallery/training.png)">
+                <div class="item item1 wow fadeInRight" style="background-image: url(img/gallery/training.png)">
                     <div class="img-overlay"></div>
                     <h3>Training</h3>
                 </div>
 
                 <!--            <div class="item" style="background-image: url(https://images.unsplash.com/photo-1488572384981-eac03dfeb6b9?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=)"></div>-->
 
-                <div class="item item1" style="background-image: url(img/gallery/rental-space.png)">
+                <div class="item item1 wow fadeInRight" style="background-image: url(img/gallery/rental-space.png)">
                     <div class="img-overlay"></div>
                     <h3>Rental Space</h3>
                 </div>
 
-                <div class="item item1" style="background-image: url(img/gallery/amenities.png)">
+                <div class="item item1 wow fadeInLeft" style="background-image: url(img/gallery/amenities.png)">
                     <div class="img-overlay"></div>
                     <h3>Amenities</h3>
                 </div>
@@ -126,14 +134,14 @@
         <section class="bg-light o-hidden">
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
-                    <div class="col-md-9 col-lg-8 col-xl-7">
+                    <div class="col-md-9 col-lg-8 col-xl-7 wow fadeInDown">
                         <h2 class="display-4">Book Now!</h2>
                     </div>
                 </div>
                 <div class="row align-items-center justify-content-around">
-                    <div class="col-md-12 col-lg-12 col-xl-12 mt-4 mt-md-5 mt-lg-0" style="background: #fff;">
+                    <div class="col-md-12 col-lg-12 col-xl-12 mt-4 mt-md-5 mt-lg-0 wow fadeInDown" style="background: #fff;">
                         <div class="row justify-content-center booking-form-box" style="padding: 20px;">
-                            <div class="col-md-12 mb-3 mb-md-4" data-aos="fade-up" data-aos-delay="10">
+                            <div class="col-md-12 mb-3 mb-md-4" data-aos="fade-down" data-aos-delay="10">
                                 <from action="" class="booking-form">
                                     <div class="form-group">
                                         <input type="text" placeholder="Name" required />
@@ -142,7 +150,11 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 mb-3 mb-md-4">
-                                            <h5 style="line-height: 40px;">DECEMBER 27-JANUARY 19 
+                                            <h5 class="br-icon-1" style="line-height: 40px;">DECEMBER 27-JANUARY 19
+                                                <a><i class="fas fa-chevron-left"></i></a>
+                                                <a><i class="fas fa-chevron-right"></i></a> 
+                                            </h5>
+                                            <h5 class="br-icon-2" style="line-height: 40px;">DECEMBER 27-JANUARY 19 <br/>
                                                 <a><i class="fas fa-chevron-left"></i></a>
                                                 <a><i class="fas fa-chevron-right"></i></a> 
                                             </h5>
@@ -215,11 +227,11 @@
             <div class="divider divider-top transform-flip-x bg-white"></div>
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
-                    <div class="col-md-9 col-lg-8 col-xl-7">
+                    <div class="col-md-9 col-lg-8 col-xl-7 wow fadeInDown">
                         <h3 class="display-4">Contact Us</h3>
                     </div>
                 </div>
-                <div class="row justify-content-center">
+                <div class="row justify-content-center wow fadeInDown">
                     <div class="col-xl-12 col-lg-12">
                         <div class="row justify-content-center">
                             <div class="col-md-6 mb-3 mb-md-4" data-aos="fade-up" data-aos-delay="20">
@@ -227,8 +239,8 @@
                                     <div class="flex-fill contact">
                                         <!--                                        <h4 class="h3">Address</h4>-->
                                         <i class="fas fa-map-marker-alt icon icon-xs bg-white" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
-                                        <i class="far fa-envelope icon icon-xs bg-white" data-inject-svg></i><p> <a href="#" style="color: #fff;"> email@mywebsite.com</a></p>
-                                        <i class="fas fa-phone-alt icon icon-xs bg-white" data-inject-svg></i><p><a href="#" style="color: #fff;"> +630 7662 7601</a></p>
+                                        <i class="far fa-envelope icon icon-xs bg-white" data-inject-svg></i><p> <a href="#" style="color: #fff;">email@mywebsite.com</a></p>
+                                        <i class="fas fa-phone-alt icon icon-xs bg-white" data-inject-svg></i><p><a href="#" style="color: #fff;">+630 7662 7601</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -238,10 +250,10 @@
                 </div>
             </div>
         </section>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 300px;" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe class="wow fadeInDown" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 300px;" frameborder="0" style="border:0" allowfullscreen></iframe>
         <section class="testimonial text-center">
             <div class="container">
-                <div class="heading white-heading">
+                <div class="heading white-heading wow fadeInDown">
                     Testimonials
                 </div>
                 <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
@@ -293,7 +305,7 @@
             </div>
             <div class="divider divider-bottom bg-primary-3 mt-5" style="top: 50px;"></div>
         </section>
-     <?php include'footer.php' ; ?>
+        <?php include'footer.php'; ?>
         <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
             <i class="fas fa-arrow-up icon bg-white" data-inject-svg></i>
         </a>
@@ -306,7 +318,7 @@
             </div>
         </div>
         <!-- Required vendor scripts (Do not remove) -->
-        
+
 
     </body>
 

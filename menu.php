@@ -1,6 +1,6 @@
 <div class="navbar-container head" id="myHeader">
     <nav class="navbar navbar-expand-lg navbar-light" data-sticky="top">
-        <div class="container">
+<!--        <div class="container">-->
             <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="index.php">
                 <img alt="Jumpstart" src="img/logo.png" class="logo">
             </a>
@@ -56,6 +56,6 @@
 
                 </ul>
             </div>
-        </div>
+<!--        </div>-->
     </nav>
 </div>

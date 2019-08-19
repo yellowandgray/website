@@ -275,7 +275,8 @@ select {
 }
 
 select {
-    word-wrap: normal
+    word-wrap: normal;
+    font-weight: 300;
 }
 
 [type=button],
@@ -396,9 +397,9 @@ h4,
 h5,
 h6 {
     margin-bottom: 1rem;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.2;
-    color: #2c3038
+    color: #2c3038;
 }
 
 .h1,
@@ -501,9 +502,9 @@ h6 {
 }
 
 .display-4 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1;
 }
 
 @media (max-width:1200px) {
@@ -2446,7 +2447,7 @@ textarea.form-control.is-invalid {
 
 .btn {
     display: inline-block;
-    font-weight: 700;
+    /*    font-weight: 700;*/
     color: #555a64;
     text-align: center;
     vertical-align: middle;
@@ -2477,7 +2478,7 @@ textarea.form-control.is-invalid {
 .btn.focus,
 .btn:focus {
     outline: 0;
-/*    box-shadow: 0 0 0 0.2rem rgb(231, 172, 166);*/
+    /*    box-shadow: 0 0 0 0.2rem rgb(231, 172, 166);*/
 }
 
 .btn.disabled,
@@ -3543,12 +3544,12 @@ input[type=submit].btn-block {
     width: 100%;
     padding: .25rem 1.5rem;
     clear: both;
-    font-weight: 600;
-    color: rgba(85, 90, 100, .6);
+    font-weight: 400;
+    color: rgb(85, 90, 100);
     text-align: inherit;
     white-space: nowrap;
     background-color: transparent;
-    border: 0
+    border: 0;
 }
 
 .dropdown-item:focus,
@@ -4379,7 +4380,8 @@ input[type=submit].btn-block {
 
 .nav-link {
     display: block;
-    padding: .5rem 1rem
+    padding: .5rem 1rem;
+    font-weight: 400;
 }
 
 .nav-link:focus,
@@ -10687,7 +10689,7 @@ a.card {
 }
 
 .dropdown-item {
-    font-weight: 700;
+    /*    font-weight: 700;*/
     transition: all .2s ease-in-out
 }
 
@@ -11012,7 +11014,8 @@ footer {
 
 .navbar {
     z-index: 1020;
-    width: 100%
+    width: 100%;
+    padding: 0 40px;
 }
 
 .navbar[data-overlay] {
@@ -11069,7 +11072,7 @@ footer {
 
 @media (min-width:1200px) {
     .navbar-nav>.nav-item {
-        font-size: 1.25rem
+        font-size: 1rem
     }
 }
 

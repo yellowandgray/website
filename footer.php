@@ -1,7 +1,7 @@
 <footer class="bg-primary-3 text-white links-white pb-4 footer-1">
     <div class="container">
         <div class="row">
-            <div class="col mt-4 mt-md-0 mt-lg-5 mt-xl-0">
+            <div class="col mt-4 mt-md-0 mt-lg-5 mt-xl-0 order-lg-4 order-xl-3 wow fadeInDown">
                 <h5>Upcoming Events</h5>
                 <ul class="list-unstyled d-flex flex-wrap">
                     <li class="col-12 col-lg-6 col-xl-12 px-0">
@@ -28,11 +28,11 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-xl-4 mr-xl-5 col-md-3">
+            <div class="col-xl-auto mr-xl-5 col-md-3 wow fadeInDown">
                 <h5>Pages</h5>
                 <ul class="nav flex-row flex-md-column pages">
                     <div class="row">
-                        <div class="col-md-6 border-right border-left">
+                        <div class="col-md-6">
                             <li class="nav-item mr-3 mr-md-0">
                                 <a href="#" class="nav-link fade-page px-0 py-2">Home</a>
                             </li>
@@ -45,8 +45,6 @@
                             <li class="nav-item mr-3 mr-md-0">
                                 <a href="#" class="nav-link fade-page px-0 py-2">Book Now</a>
                             </li>
-                        </div>
-                        <div class="col-md-6 border-right">
                             <li class="nav-item mr-3 mr-md-0">
                                 <a href="#" class="nav-link fade-page px-0 py-2">FAQ'S</a>
                             </li>
@@ -57,12 +55,30 @@
                                 <a href="#" class="nav-link fade-page px-0 py-2">Contact</a>
                             </li>
                         </div>
-
                     </div>
 
                 </ul>
             </div>
-            <div class="col-lg-4 mt-2 mt-md-5 mt-lg-0 order-lg-3 order-xl-4">
+            <div class="col-xl-auto mr-xl-5 col-md-3 mb-4 mb-md-0 wow fadeInDown">
+                <h5>Services</h5>
+                <ul class="nav flex-row flex-md-column pages">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <li class="nav-item mr-3 mr-md-0">
+                                <a href="#" class="nav-link fade-page px-0 py-2">Empowering</a>
+                            </li>
+                            <li class="nav-item mr-3 mr-md-0">
+                                <a href="#" class="nav-link fade-page px-0 py-2">Experiential</a>
+                            </li>
+                            <li class="nav-item mr-3 mr-md-0">
+                                <a href="#" class="nav-link fade-page px-0 py-2">Engaging</a>
+                            </li>
+                        </div>
+                    </div>
+
+                </ul>
+            </div>
+            <div class="col-lg-4 mt-2 mt-md-5 mt-lg-0 order-lg-3 order-xl-4 wow fadeInDown">
                 <h5>Get In Touch</h5>
                 <div class="card card-body bg-white">
                     <h6 style='margin-bottom: 0'>Hello Project Next Door,</h6>
@@ -129,7 +145,7 @@
 <script type="text/javascript" src="assets/js/popper.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.js"></script>
 <script src="js/jquery-ui.js" type="text/javascript"></script>
-<!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
+<!-- AOS (Animate On Scroll - animates elements into view while scrolling down)
 
          This appears in the demo only.  This script ensures our demo countdowns are always showing a date in the future 
          by altering the date before the countdown is initialized 
@@ -186,6 +202,7 @@
 <script type="text/javascript" src="assets/js/theme.js"></script>
 <!-- This script appears only on the demo.  It is used to delay unnecessary image loading until after the main page content is loaded. -->
 <script src="js/text-animation.js" type="text/javascript"></script>
+<script src="js/wow.js" type="text/javascript"></script>
 <script type="text/javascript">
     window.addEventListener("load", function () {
         setTimeout(function () {
@@ -274,4 +291,38 @@
         toggleClass(this, 'on');
         return false;
     }
+</script>
+<script>
+    wow = new WOW(
+            {
+                animateClass: 'animated',
+                offset: 100,
+                callback: function (box) {
+                    console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+                }
+            }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function () {
+        var section = document.createElement('section');
+        section.className = 'section--purple wow fadeInDown';
+        this.parentNode.insertBefore(section, this);
+    };
+</script>
+<script>
+    setTimeout(function () {
+        $('.inner div').addClass('done');
+
+        setTimeout(function () {
+            $('.inner div').addClass('page');
+
+            setTimeout(function () {
+                $('.pageLoad').addClass('off');
+
+                $('body, html').addClass('on');
+
+
+            }, 500)
+        }, 500)
+    }, 1500)
 </script>

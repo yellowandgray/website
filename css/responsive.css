@@ -37,7 +37,7 @@
     }
     #menu {
         top: 72px !important;
-/*        right: -32px !important;*/
+        /*        right: -32px !important;*/
     }
     .logo {
         width: 80%;
@@ -47,6 +47,18 @@
     }
     .contact-bg {
         padding: 25px;
+    }
+    .head {
+        padding: 10px 16px;
+    }
+    .br-icon-2 {
+        display: block;
+    }
+    .br-icon-1 {
+        display: none;
+    }
+    .booking-form input {
+        margin: 10px 0px !important;
     }
 }
 
