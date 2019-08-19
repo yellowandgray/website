@@ -20,7 +20,7 @@
                     <div class="row justify-content-center text-center">
                         <div class="col-md-9 col-lg-8 col-xl-7">
                             <h1 class="display-3">EMPOWERING KNOWLEDGE <mark data-aos="highlight-text" data-aos-delay="250"></mark></h1>
-                            <p>Project Next Door provides you with the intense course of study which aims not only to expand intellectual horizons but also provide education that unlocks human intellectual potential.</p>
+                            <p class="lead mb-0">Project Next Door provides you with the intense course of study which aims not only to expand intellectual horizons but also provide education that unlocks human intellectual potential.</p>
                         </div>
                     </div>
                 </div>
