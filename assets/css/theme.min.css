@@ -13143,8 +13143,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 @media (min-width:992px) {
     .avatar.avatar-xl {
-        width: 10.5rem;
-        height: 10.5rem
+        width: 8rem;
+        height: 8rem
     }
     .avatar-group.avatar-group-lg>li:not(:last-child) {
         margin-right: -2rem

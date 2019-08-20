@@ -7,8 +7,13 @@
     <?php include 'head.php'; ?>
 
     <body class="subpage">
-        <div class="loader">
-            <div class="loading-animation"></div>
+        <div class="pageLoad">
+            <div class="inner">
+                <div><img src="img/load.png"></div>
+<!--                <div><img src="img/load.png"></div> 
+                <div><img src="img/load.png"></div>
+                <div><img src="img/load.png"></div>-->
+            </div> 
         </div>
 
 
@@ -17,203 +22,204 @@
         <div class="bg-primary-3 o-hidden" data-overlay style='background: url(img/empower-bg.jpg)no-repeat;'>
             <section class="text-white pb-0">
                 <div class="container pb-5 pt-5">
-                    <div class="row justify-content-center text-center">
+<!--                    <div class="row justify-content-center text-center">
                         <div class="col-md-9 col-lg-8 col-xl-7">
                             <h1 class="display-3">EMPOWERING KNOWLEDGE <mark data-aos="highlight-text" data-aos-delay="250"></mark></h1>
                             <p class="lead mb-0">Project Next Door provides you with the intense course of study which aims not only to expand intellectual horizons but also provide education that unlocks human intellectual potential.</p>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
-                <div class="position-absolute w-50 h-100 top left" data-jarallax-element="100 50">
+                <div class="position-absolute w-50 h1-100 top left" data-jarallax-element="100 50">
                     <div class="blob blob-4 bg-gradient w-100 h-100 top left"></div>
                 </div>
                 <div class="divider divider-bottom bg-white"></div>
             </section>
         </div>
-        
-        <section class="wf100 p80">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 kinds">
-                        <h3>TRAINING PROGRAMS</h3>
-                        <ul>
-                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>Business Management</li>
-                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>English Content Delivery</li>
-                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>Entrepreneurship</li>
-                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>Management</li>
-                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>Strategic Planning</li>
-                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>Technical Skills</li>
-                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>Ideanators</li>
-                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>S.U.M.O</li>
-                            <img src="assets/img/Untitled-4.png" alt="Image" class="img-fluid rounded "><li>Ideas@Pondok</li>
-                        </ul>
-                    </div>
-                </div><br>
-                
-                <div class="row">
-                    <div class="col-md-12 training">
-                        <h3>KIND OF TRAININGS</h3>
-                        <ul>
-                            <img src="assets/img/Untitled-7.png" alt="Image" class="img-fluid rounded"><li>Bite Sized Trainings</li>
-                            <img src="assets/img/Untitled-7.png" alt="Image" class="img-fluid rounded"><li>Full Sized Trainings</li>
-                            <img src="assets/img/Untitled-7.png" alt="Image" class="img-fluid rounded"><li>Public Programs</li>
-                            <img src="assets/img/Untitled-7.png" alt="Image" class="img-fluid rounded"><li>Customized Trainings</li>
-                            <img src="assets/img/Untitled-7.png" alt="Image" class="img-fluid rounded"><li>Business Coaching</li>
-                        </ul>
-                    </div>
-                </div><br>
-                
-                <div class="row">
-                    <div class="col-md-12 training">
-                        <h3>TRAINING TOPIC CATEGORIES</h3>
-                        <ul>
-                            <img src="assets/img/Untitled-8.png" alt="Image" class="img-fluid rounded"><li>Business/ Entreprenuership</li>
-                            <img src="assets/img/Untitled-9.png" alt="Image" class="img-fluid rounded"><li>Financial</li>
-                            <img src="assets/img/Untitled-10.png" alt="Image" class="img-fluid rounded"><li>Technology</li>
-                            <img src="assets/img/Untitled-11.png" alt="Image" class="img-fluid rounded"><li>Healthcare</li>
-                            <img src="assets/img/Untitled-12.png" alt="Image" class="img-fluid rounded"><li>Content</li>
-                            <img src="assets/img/Untitled-13.png" alt="Image" class="img-fluid rounded"><li>Multimedia</li>
-                            <img src="assets/img/Untitled-14.png" alt="Image" class="img-fluid rounded"><li>Industry 4.0</li>
-                            <img src="assets/img/Untitled-15.png" alt="Image" class="img-fluid rounded"><li>Soft Skills</li>
-                            <img src="assets/img/Untitled-16.png" alt="Image" class="img-fluid rounded"><li>Customized</li>
 
-                        </ul>
-                    </div>
-                </div><br>
-                
-                <div class="row">
-                    <div class="col-md-12 pnd">
-                        <h3>PND TRAINING SESSION INCLUSIONS</h3><br>
-                        <ul>
-                            <i class="fa fa-check" aria-hidden="true"></i>
-                            <li>Full and Half Day Training Sessions Available.</li>
-                            <i class="fa fa-check" aria-hidden="true"></i>
-                            <li>Unlimited High Speed Wifi Connection</li>
-                            <i class="fa fa-check" aria-hidden="true"></i>
-                            <li>Usage of LED TV</li>
-                            <i class="fa fa-check" aria-hidden="true"></i>
-                            <li>Amenities Available.</li>
-                            <i class="fa fa-check" aria-hidden="true"></i>
-                            <li>Inclusive of Breakfast/Lunch/Dinner/Snacks</li>
-
-                        </ul>
-                    </div>
-                </div><br>
-            </div>
-        </section>
-        <section class="bg-primary-3 text-white pt-0">
-            <div class="divider divider-top transform-flip-x bg-white"></div>
-            <div class="container">
-                <div class="row section-title justify-content-center text-center">
-                    <div class="col-md-9 col-lg-8 col-xl-7">
-                        <h3 class="display-4">UPCOMING TRAININGS</h3>
-                        <div class="col-md-6 mb-3 mb-md-4 l-25">
-                            <div id="datepicker" class="calendar"></div> 
-                        </div>  
-                        <div class="empower">
-                            <i class="fab fa-instagram"></i><i class="fab fa-youtube"></i><i class="fab fa-facebook"></i>
+        <div class="o-hidden" data-overlay>
+            <section class="pb-0">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
+                        <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos="fade-left" data-aos-delay="250">
+                            <h1 class="display-3">EMPOWERING KNOWLEDGE<mark data-aos="highlight-text" data-aos-delay="500"></mark></h1>
+                            <p class="lead">
+                                Project Next Door provides you with the intense course of study which aims not only to expand intellectual horizons but also provide education that unlocks human intellectual potential                            </p>
+                            <a href="#" class="lead"></a>
+                        </div>
+                        <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos="fade-right">
+                            <img src="assets/img/about-1.jpg" alt="Image" class="rounded img-fluid shadow-lg">
                         </div>
                     </div>
                 </div>
+                <div class="position-absolute w-50 h-100 top right" data-jarallax-element="50">
+                    <div class="blob bg-primary opacity-20 w-100 h-100 top left"></div>
+                </div>
+                <div class="divider divider-bottom bg-primary-3"></div>
+            </section>
+        </div>
+        <section>
+            <div class="container">
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7">
-                        <h3 class="display-4">Contact Us</h3>
+                        <h3 class="display-4">TRAINING PROGRAMS</h3>
+                        <div class="lead"></div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-xl-12 col-lg-12">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6 mb-3 mb-md-4" data-aos="fade-up" data-aos-delay="20">
-                                <div class="card card-body contact-bg min-vh-md-30">
-                                    <div class="flex-fill contact">
-                                        <!--                                        <h4 class="h3">Address</h4>-->
-                                        <i class="fas fa-map-marker-alt icon icon-xs bg-white" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
-                                        <i class="far fa-envelope icon icon-xs bg-white" data-inject-svg></i><p> <a href="#" style="color: #fff;"> email@mywebsite.com</a></p>
-                                        <i class="fas fa-phone-alt icon icon-xs bg-white" data-inject-svg></i><p><a href="#" style="color: #fff;"> +630 7662 7601</a></p>
-                                    </div>
+                    <div class="col-xl-10 col-lg-11">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 text-center mb-5">
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="img/training/001.png" alt="Joshua Lapinsky profile image" class="avatar avatar-xl mb-4">
+                                    <h5 class="mb-2">Business Management</h5>
                                 </div>
                             </div>
-
+                            <div class="col-sm-6 col-md-4 text-center mb-5">
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="img/training/002.png" alt="Glenda Spence profile image" class="avatar avatar-xl mb-4">
+                                    <h5 class="mb-2">English Content Delivery</h5>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 text-center mb-5">
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="img/training/003.png" alt="Michael Trossino profile image" class="avatar avatar-xl mb-4">
+                                    <h5 class="mb-2">Entrepreneurship</h5>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 text-center mb-5">
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="img/training/004.png"" alt="Patrik Janssen profile image" class="avatar avatar-xl mb-4">
+                                    <h5 class="mb-2">Management</h5>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 text-center mb-5">
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="img/training/005.png" alt="Mirembe Nkrumah profile image" class="avatar avatar-xl mb-4">
+                                    <h5 class="mb-2">Strategic Planning</h5>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 text-center mb-5">
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="img/training/006.png" alt="Karina Messopine profile image" class="avatar avatar-xl mb-4">
+                                    <h5 class="mb-2">Technical Skills</h5>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 text-center mb-5">
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="img/training/007.png" alt="Karina Messopine profile image" class="avatar avatar-xl mb-4">
+                                    <h5 class="mb-2">Idenators</h5>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 text-center mb-5">
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="img/training/008.png" alt="Karina Messopine profile image" class="avatar avatar-xl mb-4">
+                                    <h5 class="mb-2">S.U.M.O</h5>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 text-center mb-5">
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="img/training/009.png" alt="Karina Messopine profile image" class="avatar avatar-xl mb-4">
+                                    <h5 class="mb-2">Ideas@Pondok</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 300px;" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-        <section class="bg-light">
+        <section class="bg-primary-3 text-white">
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7">
-                        <h3 class="display-4">Less work, <mark data-aos="highlight-text" data-aos-delay="250">more flow.</mark></h3>
-                        <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>
+                        <h3 class="display-4">TRAINING TOPIC CATEGORIES</h3>
+                        <div class="lead"></div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col">
-                        <ul class="avatar-group avatar-group-lg flex-wrap justify-content-center">
-                            <li>
-                                <img src="assets/img/avatars/male-1.jpg" alt="Joshua Lapinsky profile image" class="avatar avatar-xl">
-                            </li>
-                            <li>
-                                <img src="assets/img/avatars/female-1.jpg" alt="Glenda Spence profile image" class="avatar avatar-xl">
-                            </li>
-                            <li>
-                                <img src="assets/img/avatars/male-2.jpg" alt="Michael Trossino profile image" class="avatar avatar-xl">
-                            </li>
-                            <li>
-                                <img src="assets/img/avatars/male-3.jpg" alt="Patrik Janssen profile image" class="avatar avatar-xl">
-                            </li>
-                            <li>
-                                <img src="assets/img/avatars/female-2.jpg" alt="Mirembe Nkrumah profile image" class="avatar avatar-xl">
-                            </li>
-                        </ul>
+            </div>
+            <div class="o-hidden">
+                <div class="highlight-selected" data-flickity='{ "imagesLoaded": true, "wrapAround":true }'>
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                        <img class="img-fluid rounded" src="assets/img/blog/thumb-3.jpg" alt="blog.3.image">
+                        <h5>Business/ Entreprenuership</h5>
                     </div>
-                </div>
-                <div class="row justify-content-center mt-4 mt-md-5">
-                    <div class="col-auto">
-                        <div class="alert bg-secondary">Interested in joining the team? <a href="#">View Careers</a>
-                        </div>
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                        <img class="img-fluid rounded" src="assets/img/blog/thumb-4.jpg" alt="blog.4.image">
+                        <h5>Financial</h5>
+                    </div>
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                        <img class="img-fluid rounded" src="assets/img/blog/thumb-5.jpg" alt="blog.5.image">
+                        <h5>Technology</h5>
+                    </div>
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                        <img class="img-fluid rounded" src="assets/img/blog/thumb-8.jpg" alt="blog.6.image">
+                        <h5>Healthcare</h5>
+                    </div>
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                        <img class="img-fluid rounded" src="assets/img/blog/thumb-6.jpg" alt="blog.7.image">
+                        <h5>Content</h5>
+                    </div>
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                        <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
+                        <h5>Multimedia</h5>
+                    </div>
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                        <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
+                        <h5>Industry 4.0</h5>
+                    </div>
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                        <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
+                        <h5>Soft Skills</h5>
+                    </div>
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                        <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
+                        <h5>Customized</h5>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="pb-0">
-            <div class="container">
-                <div class="row section-title justify-content-center text-center">
-                    <div class="col-md-9 col-lg-8 col-xl-7">
-                        <h3 class="display-4">As seen in...</h3>
-                        <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>
-                    </div>
+
+        <section class="p-0 bg-light row no-gutters">
+            <div class="col-lg-5 bg-primary-4">
+                <div class="training">
+                    <h3>KIND OF TRAININGS</h3>
+                    <ul>
+                        <li>Bite Sized Trainings</li>
+                        <li>Full Sized Trainings</li>
+                        <li>Public Programs</li>
+                        <li>Customized Trainings</li>
+                        <li>Business Coaching</li>
+                    </ul>
                 </div>
-                <div class="row justify-content-center text-center">
-                    <div class="col-sm-8 col-md-4 mb-5 mb-lg-0">
-                        <div class="card card-body bg-secondary mb-4">
-                            <img src="assets/img/logos/brand/kyan.svg" alt="Kyan company logo" class="opacity-50 my-4 my-lg-5">
-                        </div>
-                        <div class="px-xl-4">
-                            &ldquo;A polished product from a solid performer in the brutal and ever-changing SaaS landscape.&rdquo;
-                        </div>
-                    </div>
-                    <div class="col-sm-8 col-md-4 mb-5 mb-lg-0">
-                        <div class="card card-body bg-secondary mb-4">
-                            <img src="assets/img/logos/brand/goldline.svg" alt="Goldline company logo" class="opacity-50 my-4 my-lg-5">
-                        </div>
-                        <div class="px-xl-4">
-                            &ldquo;It's clear that the team at Jumpstart have been listening to their customers.&rdquo;
-                        </div>
-                    </div>
-                    <div class="col-sm-8 col-md-4 mb-5 mb-lg-0">
-                        <div class="card card-body bg-secondary mb-4">
-                            <img src="assets/img/logos/brand/aven.svg" alt="Aven company logo" class="opacity-50 my-4 my-lg-5">
-                        </div>
-                        <div class="px-xl-4">
-                            &ldquo;The future is looking bright for this punky young startup. One to watch for sure.&rdquo;
-                        </div>
-                    </div>
-                </div>
+                <div class="divider divider-side bg-light d-none d-lg-block"></div>
             </div>
-            <div class="divider divider-bottom bg-primary-3"></div>
+            <div class="col-lg-7 col-xl-6">
+                <section class='pad-45'>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col col-md-10 col-xl-9 session pnd">
+                                <h3>PND TRAINING SESSION INCLUSIONS</h3>
+                                <div class="row ">
+                                    <ul>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <li>Full and Half Day Training Sessions Available.</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <li>Unlimited High Speed Wifi Connection</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <li>Usage of LED TV</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <li>Amenities Available.</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <li>Inclusive of Breakfast/Lunch/Dinner/Snacks</li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </section>
 
 
