@@ -22,7 +22,7 @@
                         </div>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link nav-item">GALLERY</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link nav-item">BOOK NOW</a></li>
+                    <li class="nav-item bg-button"><a href="#" class="nav-link nav-item">BOOK NOW</a></li>
                     <li class="nav-item"><a href="#" class="nav-link nav-item">FAQs</a></li>
                     <li class="nav-item"><a href="#" class="nav-link nav-item">ABOUT</a></li>
                     <li class="nav-item"><a href="#" class="nav-link nav-item">CONTACT</a></li>

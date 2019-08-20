@@ -1286,5 +1286,13 @@ input.queries::placeholder {
     left: 84px;
 }
 
+.bg-button {
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #e7aca6;
+}
 
+.bg-button a {
+    color: #4a7c7c !important;
+}
 
