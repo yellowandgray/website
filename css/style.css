@@ -1270,10 +1270,16 @@ input.queries::placeholder {
     list-style-type:none;
 }
 
-.training ul li{
-    position: relative;
-    top: -39px;
-    left: 84px;
+.training ul li {
+    padding: 9px 10px;
+    /* background: #4f828205; */
+    /* margin-right: 188px; */
+    margin-left: -38px;
+    /* border-bottom: 1px solid #000; */
+    text-align: center;
+    width: 73.4%;
+    font-size: 29px;
+    color: #4a7c7c;
 }
 
 .pnd ul{
@@ -1284,6 +1290,8 @@ input.queries::placeholder {
     position: relative;
     top: -30px;
     left: 84px;
+    color: #000000 !important;
+    font-size: 15px !important;
 }
 
 .bg-button {
@@ -1291,8 +1299,47 @@ input.queries::placeholder {
     border-radius: 4px;
     border: 1px solid #e7aca6;
 }
+.pnd{
+    padding: 10px 20px 0px 15px;
 
 .bg-button a {
     color: #4a7c7c !important;
 }
 
+    height: 658px;
+    margin-bottom: 20px;
+    color: #2c91a2;
+}
+
+.for ul{
+    list-style-type:none;
+}
+
+.for ul li{
+    position: relative;
+    top: -30px;
+    left: 84px;
+}
+
+.training {
+    transform: rotate(-90deg);
+    top: -31px;
+    left: -176px;
+}
+.training h3 {
+    width: 69.5%;
+    background: #EEE;
+    text-align: center;
+    font-weight: 700;
+}
+
+.session{
+    height:auto !important;
+}
+.carousel-cell    h5 {
+    padding: 9px;
+    position: relative;
+    font-size: 2.25rem;
+    top: -59px;
+    background:#00000091;
+}

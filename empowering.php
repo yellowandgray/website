@@ -14,7 +14,7 @@
 
         <?php include 'menu.php'; ?>
 
-        <div class="bg-primary-3 o-hidden" data-overlay>
+        <div class="bg-primary-3 o-hidden" data-overlay style='background: url(img/empower-bg.jpg)no-repeat;'>
             <section class="text-white pb-0">
                 <div class="container pb-5 pt-5">
                     <div class="row justify-content-center text-center">
