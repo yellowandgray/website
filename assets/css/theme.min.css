@@ -121,7 +121,8 @@ dl,
 ol,
 ul {
     margin-top: 0;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
+
 }
 
 ol ol,
@@ -6996,8 +6997,14 @@ button.bg-primary-2:hover {
 }
 
 .bg-primary-3 {
-    background-color: #4a7c7c!important
+    background-color: #4a7c7c;
+    background-size: cover;
 }
+
+.bg-primary-4{
+    background-color:#dfdade;
+}
+
 
 a.bg-primary-3:focus,
 a.bg-primary-3:hover,
@@ -10641,7 +10648,7 @@ a.card {
 }
 
 .bg-gradient {
-    background: linear-gradient(to right, #2568ef, #ff564f)!important
+    background: linear-gradient(to right, #e7aca6 , #dfdade)!important
 }
 
 .bg-primary-alt {
@@ -11175,6 +11182,9 @@ section {
     section {
         padding: 7.5rem 0
     }
+    
+    section .pad-45{
+        padding:4.5rem 0;
 }
 
 .section-title {
