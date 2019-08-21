@@ -30,11 +30,14 @@ $categories = $db->selectAllWithoutWhere('categories');
         <!-- plugin close -->
         <link href="css/custom-style.css" rel="stylesheet" type="text/css"/>
         <link href="css/media.css" rel="stylesheet" type="text/css"/>
+        <link href="css/easy-autocomplete.css" rel="stylesheet" type="text/css"/>
+        <link href="css/easy-autocomplete.themes.css" rel="stylesheet" type="text/css"/>
         <!-- linked css closed-->
         <script src="js/modernizr.custom.46884.js" type="text/javascript"></script>
         <script src="js/jquery.js" type="text/javascript"></script>
         <script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
         <script src="js/script.js" type="text/javascript"></script>
+        <script src="js/isInViewport.jquery.min.js" type="text/javascript"></script>
     </head>
     <body class="home page-template-default page page-id-5 twentyseventeen-front-page has-header-image page-two-column colors-light" style="">
         <div id="page">
@@ -61,8 +64,8 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <option value="">select 1</option>
                                                 <option value="">select 2</option>
                                             </select> -->
-                                            <input style="float: left;" class="d-inline-flex search-product" type="search" name="search_input" placeholder="Search product" value="">
-                                            <input type="submit" name="submit" value="" class="submit_search_form">
+                                            <input style="float: left;" id="product" class="d-inline-flex search-product" type="search" name="search_input" placeholder="Search product" value="">
+<!--                                            <input type="submit" name="submit" value="" class="submit_search_form">-->
                                         </form>
                                         <div href="#" class="language_flag select_language text-center" style="display: inline-block;">
                                             <select class="language_select">
@@ -118,10 +121,10 @@ $categories = $db->selectAllWithoutWhere('categories');
                         </div>
 
                         <ul class="nav_menu clearfix">
-                            <li class="email-margin-b"><a href="#">Email</a></li>
-                            <li><a href="#">LinkedIN</a></li>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Instagram</a></li>
+                            <li class="email-margin-b"><a href="mailto:products@macworldinc.com">Email</a></li>
+                            <li><a href="https://www.linkedin.com/company/mac-world-industries-sdn-bhd" target="blank">LinkedIN</a></li>
+                            <!--                            <li><a href="#">Facebook</a></li>
+                                                        <li><a href="#">Instagram</a></li>-->
                             <li class="mobile-language search-panel-right">
                                 <div class="language_flag select_language text-center" style="display: inline-block;">
                                     <select class="language_select">
@@ -328,7 +331,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                         });
                     });
                 </script>
-                <section class="about_right_section">
+                <section class="about_right_section" id="about_right_section">
                     <div class="container">
                         <div class="row">
                             <a class="about_us_btn2 trigger_popup_fricc">Join our Team</a>
@@ -478,11 +481,17 @@ $categories = $db->selectAllWithoutWhere('categories');
                                         $first = true;
                                         foreach ($categories as $row) {
                                             $cls = '';
+                                            $spec = '';
                                             if ($first == true) {
                                                 $cls = 'active';
                                                 $first = false;
                                             } else {
                                                 $cls = 'hidden';
+                                            }
+                                            if (isset($row['manual']) && $row['manual'] != '') {
+                                                $spec = '';
+                                            } else {
+                                                $spec = 'hidden';
                                             }
                                             ?>
                                             <div class="tab-pane <?php echo $cls; ?>" id="tab<?php echo $row['ID']; ?>">
@@ -502,7 +511,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                                                         <h3 id="category_name_<?php echo $row['ID']; ?>"><?php echo $row['name']; ?></h3>
                                                                                         <p id="category_description_<?php echo $row['ID']; ?>"><?php echo $row['description']; ?></p>
                                                                                         <br/>
-                                                                                        <a href="#" class="pdf-download"><img src="img/pdf.png" alt="pdf download icon"> Product Specification</a>
+                                                                                        <a href="<?php echo IMG_BASE_URL . $row['manual']; ?>" class="pdf-download <?php echo $spec; ?>" target="_blank" id="category_spec_<?php echo $row['ID']; ?>"><img src="img/pdf.png" alt="pdf download icon" /> Product Specification</a>
                                                                                     </div>
                                                                                 </figcaption>
                                                                             </figure>
@@ -983,6 +992,7 @@ $categories = $db->selectAllWithoutWhere('categories');
 
             <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
             <script src="js/jquery.mCustomScrollbar.js" type="text/javascript"></script>
+            <script src="js/jquery.easy-autocomplete.js" type="text/javascript"></script>
             <script type="text/javascript">
                     $(window).on("scroll", function () {
                         var scrollHeight = $(document).height();
@@ -995,7 +1005,57 @@ $categories = $db->selectAllWithoutWhere('categories');
                     });
             </script>
             <script type="text/javascript">
-
+                var sections_ids = ['main-banner', 'our_journey', 'about_section', 'about_right_section', 'team_section', 'explor_product', 'service_section', 'accreditation_section', 'ourpartner', 'map_indigate_section', 'contact_section'];
+                $('#main-banner').isInViewport(function (status) {
+                    if (status === 'entered') {
+                        $('.sroll_down a').attr('href', '#our_journey');
+                    }
+                });
+                $('#our_journey').isInViewport(function (status) {
+                    if (status === 'entered') {
+                        $('.sroll_down a').attr('href', '#about_section');
+                    }
+                });
+                $('#about_section').isInViewport(function (status) {
+                    if (status === 'entered') {
+                        $('.sroll_down a').attr('href', '#about_right_section');
+                    }
+                });
+                $('#about_right_section').isInViewport(function (status) {
+                    if (status === 'entered') {
+                        $('.sroll_down a').attr('href', '#team_section');
+                    }
+                });
+                $('#team_section').isInViewport(function (status) {
+                    if (status === 'entered') {
+                        $('.sroll_down a').attr('href', '#explor_product');
+                    }
+                });
+                $('#explor_product').isInViewport(function (status) {
+                    if (status === 'entered') {
+                        $('.sroll_down a').attr('href', '#service_section');
+                    }
+                });
+                $('#service_section').isInViewport(function (status) {
+                    if (status === 'entered') {
+                        $('.sroll_down a').attr('href', '#accreditation_section');
+                    }
+                });
+                $('#accreditation_section').isInViewport(function (status) {
+                    if (status === 'entered') {
+                        $('.sroll_down a').attr('href', '#ourpartner');
+                    }
+                });
+                $('#ourpartner').isInViewport(function (status) {
+                    if (status === 'entered') {
+                        $('.sroll_down a').attr('href', '#map_indigate_section');
+                    }
+                });
+                $('#map_indigate_section').isInViewport(function (status) {
+                    if (status === 'entered') {
+                        $('.sroll_down a').attr('href', '#contact_section');
+                    }
+                });
                 var header_height = $(".header-top").height();
 
                 // for scroll down
@@ -1021,14 +1081,18 @@ $categories = $db->selectAllWithoutWhere('categories');
                     }
                 });
 
-                /*// for scroll down
-                 var target = $(window).height();
-                 $('.sroll_down a[href^="#"]').on('click', function(event) {
-                 
-                 $('html, body').stop().animate({
-                 scrollTop: target.offset().top - header_height + 55
-                 }, 1000);
-                 });*/
+                // for scroll down
+                var target = $(window).height();
+                $('.sroll_down a[href^="#"]').on('click', function (event) {
+                    var href = $.trim((this.href).split('#')[1]);
+                    var header = 0;
+                    if (href !== 'main-banner') {
+                        header = 95;
+                    }
+                    $('html, body').stop().animate({
+                        scrollTop: $('#' + href).offset().top - header
+                    }, 1000);
+                });
 
 
                 // The resize function
@@ -1040,7 +1104,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                         'width': vwidth
                     });
                 }
-                ;
 
                 // The scroll-up function
                 function scrollUp() {
@@ -1049,7 +1112,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                         scrollTop: (Math.ceil($(window).scrollTop() / vheight) - 1) * vheight
                     }, 500);
                 }
-                ;
 
                 // The scroll-down function
                 function scrollDown() {
@@ -1058,7 +1120,6 @@ $categories = $db->selectAllWithoutWhere('categories');
                         scrollTop: (Math.floor($(window).scrollTop() / vheight) + 1) * vheight
                     }, 500);
                 }
-                ;
 
                 // Do stuff when document is ready
                 $(document).ready(function () {
@@ -1067,10 +1128,10 @@ $categories = $db->selectAllWithoutWhere('categories');
                     resize();
 
                     // Click to Scroll DOWN Functions
-                    $('.sroll_down a').click(function (event) {
-                        scrollDown();
-                        event.preventDefault();
-                    });
+                    /*$('.sroll_down a').click(function (event) {
+                     scrollDown();
+                     event.preventDefault();
+                     });*/
                     // Click to Scroll UP Functions
                     $('.scroll-prev').click(function (event) {
                         scrollUp();
@@ -1512,7 +1573,8 @@ $categories = $db->selectAllWithoutWhere('categories');
                                 var lang_url = window.location.origin + window.location.pathname + '/?lang=' + lang;
                                 window.location.href = lang_url;
                         });
-                        });</script>
+                        });
+            </script>
             <script type="text/javascript">
                                 window.onload = function(){
                                 $('.slider').slick({
@@ -1546,6 +1608,21 @@ $categories = $db->selectAllWithoutWhere('categories');
                                         ]
                                 });
                                 };
+            </script>
+            <script type="text/javascript">
+                                //Search Product
+                                var options = {
+
+                                url: "product/product.json",
+                                        getValue: "name",
+                                        list: {
+                                        match: {
+                                        enabled: true
+                                        }
+                                        },
+                                        theme: "square"
+                                };
+                                $("#product").easyAutocomplete(options);
             </script>
             <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>

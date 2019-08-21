@@ -37,6 +37,9 @@
                         </td>
                         <td>{{row.description}}</td>
                         <td>
+                            <a ng-href="{{row.manual| image_url}}" target="_blank">
+                                <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                            </a>
                             <a ng-click="openForm('sub_categories', 'sub_categories', 'Sub Category', row.ID);" class="pointer">
                                 <i class="fa fa-pencil" aria-hidden="true"></i>
                             </a>
@@ -54,63 +57,70 @@
 <script type="text/ng-template" id="sub_categories.html">
     <div class="modal-header">
     <h4 class="modal-title" id="modal-title">
-    Sub Category
-     <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
-    <span aria-hidden="true">&times;</span>
-    </button>
+        Sub Category
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel();"> 
+            <span aria-hidden="true">&times;</span>
+        </button>
     </h4>
-    </div>
-    <div class="modal-body" id="modal-body">
+</div>
+<div class="modal-body" id="modal-body">
     <form name="popupForm" ng-submit="submitForm();">
-    <div class="row">
-    <div class="col-md-6">
-    <div class="form-group">
-    <label for="category_id" class="cols-sm-2 control-label">Category</label>
-    <select class="form-control" name="category_id" ng-model="form.category_id" id="category_id" autofocus>
-        <option value="{{row.ID}}" ng-repeat="row in $root.dropdown_categories">{{row.name}}</option>
-    </select>
-    </div>
-    </div>
-    <div class="col-md-6">
-    <div class="form-group">
-    <label for="title" class="cols-sm-2 control-label">Title</label>
-    <input class="form-control" type="text" name="title" ng-model="form.title" id="title" required />
-    </div>
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-md-4">
-    <div class="form-group">
-    <label for="image" class="cols-sm-2 control-label">Image</label>
-    <input class="form-control" type="file" name="image" ng-model="image" id="image" accept="image/*" onchange="angular.element(this).scope().uploadImage(this.files, 'image');" />
-    </div>
-    </div>
-    <div class="col-md-4">
-    <div class="form-group">
-    <label for="normal_icon" class="cols-sm-2 control-label">Normal Icon</label>
-    <input class="form-control" type="file" name="normal_icon" ng-model="image2" id="normal_icon" accept="image/*" onchange="angular.element(this).scope().uploadImage(this.files, 'normal_icon');" />
-    </div>
-    </div>
-    <div class="col-md-4">
-    <div class="form-group">
-    <label for="hover_icon" class="cols-sm-2 control-label">Hover Icon</label>
-    <input class="form-control" type="file" name="hover_icon" ng-model="image3" id="hover_icon" accept="image/*" onchange="angular.element(this).scope().uploadImage(this.files, 'hover_icon');" />
-    </div>
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-md-12">
-    <div class="form-group">
-    <label for="description" class="cols-sm-2 control-label">Description</label>
-    <textarea rows="3" ng-model="form.description" name="description" class="form-control" id="description"></textarea>
-    </div>
-    </div>
-    </div>
-    <div class="form-group" style="text-align: right;">
-    <button ng-disabled="!popupForm.$valid" type="submit" class="btn btn-primary">Save</button>
-    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
-    </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="category_id" class="cols-sm-2 control-label">Category</label>
+                    <select class="form-control" name="category_id" ng-model="form.category_id" id="category_id" autofocus>
+                        <option value="{{row.ID}}" ng-repeat="row in $root.dropdown_categories">{{row.name}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="title" class="cols-sm-2 control-label">Title</label>
+                    <input class="form-control" type="text" name="title" ng-model="form.title" id="title" required />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="image" class="cols-sm-2 control-label">Image</label>
+                    <input class="form-control" type="file" name="image" ng-model="image" id="image" accept="image/*" onchange="angular.element(this).scope().uploadImage(this.files, 'image');" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="normal_icon" class="cols-sm-2 control-label">Normal Icon</label>
+                    <input class="form-control" type="file" name="normal_icon" ng-model="image2" id="normal_icon" accept="image/*" onchange="angular.element(this).scope().uploadImage(this.files, 'normal_icon');" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="hover_icon" class="cols-sm-2 control-label">Hover Icon</label>
+                    <input class="form-control" type="file" name="hover_icon" ng-model="image3" id="hover_icon" accept="image/*" onchange="angular.element(this).scope().uploadImage(this.files, 'hover_icon');" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="description" class="cols-sm-2 control-label">Description</label>
+                    <textarea rows="3" ng-model="form.description" name="description" class="form-control" id="description"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="manual" class="cols-sm-2 control-label">Manual</label>
+                    <input class="form-control" type="file" name="manual" ng-model="document" id="manual" accept="application/pdf" onchange="angular.element(this).scope().uploadImage(this.files, 'manual');" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group" style="text-align: right;">
+            <button ng-disabled="!popupForm.$valid" type="submit" class="btn btn-primary">Save</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
     </form>
-    </div>
-    </div>
+</div>
 </script>

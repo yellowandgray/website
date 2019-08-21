@@ -1,4 +1,4 @@
-app.controller('CategoriesController', function ($scope, $rootScope, userDetail, $http, apiPath, $location, handset, $uibModal, predefined, $timeout, DTOptionsBuilder, DTColumnDefBuilder) {
+app.controller('CategoriesController', function ($scope, $rootScope, $http, apiPath, handset, $uibModal, predefined, $timeout, DTOptionsBuilder, DTColumnDefBuilder) {
     $rootScope.title = 'categories';
     $rootScope.pagetitle = 'Categories';
     $scope.data = [];

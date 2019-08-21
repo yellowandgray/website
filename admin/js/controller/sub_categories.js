@@ -1,4 +1,4 @@
-app.controller('SubCategoriesController', function ($scope, $rootScope, userDetail, $http, apiPath, $location, handset, $uibModal, predefined, $timeout, DTOptionsBuilder, DTColumnDefBuilder, categories) {
+app.controller('SubCategoriesController', function ($scope, $rootScope, $http, apiPath, handset, $uibModal, predefined, $timeout, DTOptionsBuilder, DTColumnDefBuilder, categories) {
     $rootScope.title = 'sub_categories';
     $rootScope.pagetitle = 'Sub Categories';
     $rootScope.dropdown_categories = categories;
