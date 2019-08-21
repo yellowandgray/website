@@ -204,18 +204,30 @@
 
         <section class="p-0 bg-light row no-gutters">
             <div class="col-lg-5 bg-primary-4">
-                <div class="training">
-                    <h3>KIND OF TRAININGS</h3>
-                    <ul>
-                        <li>Bite Sized Trainings</li>
-                        <li>Full Sized Trainings</li>
-                        <li>Public Programs</li>
-                        <li>Customized Trainings</li>
-                        <li>Business Coaching</li>
-                    </ul>
-                </div>
+
+                <section class='pad-45'>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col col-md-10 col-xl-9 session pnd">
+                                <h3>KIND OF TRAININGS</h3>
+                                <div class="row ">
+                                    <ul>
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>Bite Sized Trainings</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i> <li>Full Sized Trainings</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>Public Programs</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i><li>Customized Trainings</li>
+                                        <i class="fa fa-check" aria-hidden="true"></i> <li>Business Coaching</li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <div class="divider divider-side bg-light d-none d-lg-block"></div>
             </div>
+
             <div class="col-lg-7 col-xl-6">
                 <section class='pad-45'>
                     <div class="container">

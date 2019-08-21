@@ -432,7 +432,7 @@ h2 {
 .h3,
 h3 {
     text-align: left;
-    font-size: 35px;
+    font-size: 34px;
 }
 
 @media (max-width:1200px) {
@@ -7002,7 +7002,7 @@ button.bg-primary-2:hover {
 }
 
 .bg-primary-4{
-    background-color:#dfdade;
+    background-color:#efefef;
 }
 
 
