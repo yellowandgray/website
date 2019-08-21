@@ -1354,3 +1354,7 @@ input.queries::placeholder {
 .h1-100 {
     height: 500px !important;
 }
+.div-gradient{
+    z-index: 1;
+    transform: translate3d(-127.594px, 24.812px, 0px) !important;
+}

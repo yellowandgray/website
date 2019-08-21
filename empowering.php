@@ -29,7 +29,7 @@
                         </div>
                     </div>-->
                 </div>
-                <div class="position-absolute w-50 h1-100 top left" data-jarallax-element="100 50">
+                <div class="div-gradient position-absolute w-50 h1-100 top left" data-jarallax-element="100 50">
                     <div class="blob blob-4 bg-gradient w-100 h-100 top left"></div>
                 </div>
                 <div class="divider divider-bottom bg-white"></div>
