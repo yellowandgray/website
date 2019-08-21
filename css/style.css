@@ -1344,12 +1344,13 @@ input.queries::placeholder {
     height:auto !important;
 }
 .carousel-cell    h5 {
-    padding: 9px;
+    padding: 36px 0px;
     position: relative;
-    font-size: 2.25rem;
-    top: -59px;
-    background:#00000091;
+    font-size: 20px;
+    top: -96px;
+    background: #21212191;
 }
+
 
 .h1-100 {
     height: 500px !important;
