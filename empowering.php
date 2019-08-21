@@ -40,13 +40,13 @@
             <section class="pb-0">
                 <div class="container">
                     <div class="row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
-                        <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos="fade-left" data-aos-delay="250">
+                        <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos-delay="200" data-aos-offset="500" data-aos-once="false" data-aos="fade-left">
                             <h1 class="display-3">EMPOWERING KNOWLEDGE<mark data-aos="highlight-text" data-aos-delay="500"></mark></h1>
                             <p class="lead">
                                 Project Next Door provides you with the intense course of study which aims not only to expand intellectual horizons but also provide education that unlocks human intellectual potential                            </p>
                             <a href="#" class="lead"></a>
                         </div>
-                        <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos="fade-right">
+                        <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos-delay="200" data-aos-offset="500" data-aos-once="false" data-aos="fade-up">
                             <img src="img/teaching.png" alt="Image" class="rounded rounded-image img-fluid shadow-lg">
                         </div>
                     </div>
@@ -245,7 +245,7 @@
         <section class="p-0 bg-light row no-gutters">
             <div class="col-lg-5 bg-primary-4">
 
-                <section class='pad-45'>
+                <section class='pad-45' data-aos-delay="200" data-aos-offset="500" data-aos-once="false" data-aos="fade-left">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col col-md-10 col-xl-9 session pnd">
@@ -268,7 +268,7 @@
                 <div class="divider divider-side bg-light d-none d-lg-block"></div>
             </div>
 
-            <div class="col-lg-7 col-xl-6">
+            <div class="col-lg-7 col-xl-6" data-aos-delay="200" data-aos-offset="500" data-aos-once="false" data-aos="fade-right">
                 <section class='pad-45'>
                     <div class="container">
                         <div class="row justify-content-center">

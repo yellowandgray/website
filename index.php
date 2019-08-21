@@ -280,8 +280,8 @@
             </div>
         </section>
 
-        <section class="bg-primary-3 pt-0 text-white">
-            <div class="divider divider-top transform-flip-x bg-white"></div>
+        <section class="bg-primary-3 pt-90 text-white">
+<!--            <div class="divider divider-top transform-flip-x bg-white"></div>-->
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7 wow fadeInDown">
