@@ -32,7 +32,7 @@
                 <div class="div-gradient position-absolute w-50 h1-100 top left" data-jarallax-element="100 50">
                     <div class="blob blob-4 bg-gradient w-100 h-100 top left"></div>
                 </div>
-                <div class="divider divider-banner divider-bottom bg-white"></div>
+                <div class="divider divider-banner divider-bottom"></div>
             </section>
         </div>
 
@@ -68,138 +68,178 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="100">
-                        <div class="mx-xl-4">
-                            <img src="assets/img/logos/product/kyan.svg" alt="Kyan logo" class="mb-4">
+                        <div class="mx-xl-4 bg-box">
+                            <img src="img/training-management/001.png" alt="Kyan logo" class="mb-4">
                             <h5>Business Management</h5>
-                            <p>
+<!--                            <p>
                                 Volantis vitae unuch sed velit sodales. Sandor imperdiet proin fermentum leo vel Hodor.
-                            </p>
+                            </p>-->
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="200">
-                        <div class="mx-xl-4">
+                        <div class="mx-xl-4 bg-box">
                             <img src="assets/img/logos/product/atica.svg" alt="Atica logo" class="mb-4">
                             <h5>English Content Delivery</h5>
-                            <p>
+<!--                            <p>
                                 Vel fringilla est ullamcorper eget. Eunuch pulvinar sapien et Loras ullamcorper Melisandre.
-                            </p>
+                            </p>-->
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="300">
-                        <div class="mx-xl-4">
-                            <img src="assets/img/logos/product/treva.svg" alt="Treva logo" class="mb-4">
+                        <div class="mx-xl-4 bg-box">
+                            <img src="img/training-management/002.png" alt="Treva logo" class="mb-4">
                             <h5>Entrepreneurship</h5>
-                            <p>
+<!--                            <p>
                                 Consectetur libero imp faucibus nisl tincidunt. Sansa tellus mauris a diam maecenas sed.
-                            </p>
+                            </p>-->
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="400">
-                        <div class="mx-xl-4">
-                            <img src="assets/img/logos/product/kanba.svg" alt="Kanba logo" class="mb-4">
+                        <div class="mx-xl-4 bg-box">
+                            <img src="img/training-management/003.png" alt="Kanba logo" class="mb-4">
                             <h5>Management</h5>
-                            <p>
+<!--                            <p>
                                 Sed arcu Jon odio Oberyn lacinia at quis. Brienne fermentum vel porta Jon pulvinar neque.
-                            </p>
+                            </p>-->
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="500">
-                        <div class="mx-xl-4">
-                            <img src="assets/img/logos/product/tvit.svg" alt="Tvit logo" class="mb-4">
+                        <div class="mx-xl-4 bg-box">
+                            <img src="img/training-management/004.png" alt="Tvit logo" class="mb-4">
                             <h5>Strategic Planning</h5>
-                            <p>
+<!--                            <p>
                                 Podrick in massa tempor nec feugiat nisl pretium. Consectetur imp faucibus nisl tincidunt.
-                            </p>
+                            </p>-->
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="600">
-                        <div class="mx-xl-4">
-                            <img src="assets/img/logos/product/aven.svg" alt="Aven logo" class="mb-4">
+                        <div class="mx-xl-4 bg-box">
+                            <img src="img/training-management/005.png" alt="Aven logo" class="mb-4">
                             <h5>Technical Skills</h5>
-                            <p>
+<!--                            <p>
                                 Braavos pellentesque nec nam aliquami sem et. In Olenna siglitis fermentum et sollicitudin ac.
-                            </p>
+                            </p>-->
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="600">
-                        <div class="mx-xl-4">
-                            <img src="assets/img/logos/product/aven.svg" alt="Aven logo" class="mb-4">
+                        <div class="mx-xl-4 bg-box">
+                            <img src="img/training-management/008.png" alt="Aven logo" class="mb-4">
                             <h5>Idenators</h5>
-                            <p>
+<!--                            <p>
                                 Braavos pellentesque nec nam aliquami sem et. In Olenna siglitis fermentum et sollicitudin ac.
-                            </p>
+                            </p>-->
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="600">
-                        <div class="mx-xl-4">
-                            <img src="assets/img/logos/product/aven.svg" alt="Aven logo" class="mb-4">
+                        <div class="mx-xl-4 bg-box">
+                            <img src="img/training-management/009.png" alt="Aven logo" class="mb-4">
                             <h5>S.U.M.O</h5>
-                            <p>
+<!--                            <p>
                                 Braavos pellentesque nec nam aliquami sem et. In Olenna siglitis fermentum et sollicitudin ac.
-                            </p>
+                            </p>-->
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="600">
-                        <div class="mx-xl-4">
-                            <img src="assets/img/logos/product/aven.svg" alt="Aven logo" class="mb-4">
+                        <div class="mx-xl-4 bg-box">
+                            <img src="img/training-management/006.png" alt="Aven logo" class="mb-4">
                             <h5>Ideas@Pondok</h5>
-                            <p>
+<!--                            <p>
                                 Braavos pellentesque nec nam aliquami sem et. In Olenna siglitis fermentum et sollicitudin ac.
-                            </p>
+                            </p>-->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="bg-primary-3 text-white">
+        <section class="bg-primary-3 text-white ptp-3">
+            <div class="divider divider-custom-1 bg-primary-3"></div>
             <div class="container">
-                <div class="row section-title justify-content-center text-center">
+                <div class="row justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7">
                         <h3 class="display-4">TRAINING TOPIC CATEGORIES</h3>
                         <div class="lead"></div>
                     </div>
                 </div>
             </div>
-            <div class="o-hidden">
-                <div class="highlight-selected" data-flickity='{ "imagesLoaded": true, "wrapAround":true }'>
-                    <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
-                        <img class="img-fluid rounded" src="assets/img/blog/thumb-3.jpg" alt="blog.3.image">
-                        <h5>Business/ Entreprenuership</h5>
-                    </div>
-                    <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
-                        <img class="img-fluid rounded" src="assets/img/blog/thumb-4.jpg" alt="blog.4.image">
-                        <h5>Financial</h5>
-                    </div>
-                    <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
-                        <img class="img-fluid rounded" src="assets/img/blog/thumb-5.jpg" alt="blog.5.image">
-                        <h5>Technology</h5>
-                    </div>
-                    <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
-                        <img class="img-fluid rounded" src="assets/img/blog/thumb-8.jpg" alt="blog.6.image">
-                        <h5>Healthcare</h5>
-                    </div>
-                    <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
-                        <img class="img-fluid rounded" src="assets/img/blog/thumb-6.jpg" alt="blog.7.image">
-                        <h5>Content</h5>
-                    </div>
-                    <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
-                        <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
-                        <h5>Multimedia</h5>
-                    </div>
-                    <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
-                        <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
-                        <h5>Industry 4.0</h5>
-                    </div>
-                    <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
-                        <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
-                        <h5>Soft Skills</h5>
-                    </div>
-                    <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
-                        <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
-                        <h5>Customized</h5>
-                    </div>
+            <div class="slider">
+                <div class="training-topic-h5">
+                    <img src="https://www.maggiesadler.com/wp-content/uploads/2015/10/10004088_1491055334449687_1187165020_n.jpg" />
+                    <h5 style="bottom: 88px">Business/ Entreprenuership</h5>
+                </div>
+                <div class="training-topic-h5">
+                    <img src="https://www.maggiesadler.com/wp-content/uploads/2015/10/10817863_856543214397968_517239188_n.jpg" />
+                    <h5>Financial</h5>
+                </div>
+                <div class="training-topic-h5">
+                    <img src="https://www.maggiesadler.com/wp-content/uploads/2015/10/10919749_326992714172441_299394464_n.jpg" />
+                    <h5>Technology</h5>
+                </div>
+                <div class="training-topic-h5">
+                    <img src="https://www.maggiesadler.com/wp-content/uploads/2015/10/10617007_939025979457209_6938406_n.jpg" />
+                    <h5>Healthcare</h5>
+                </div>
+                <div class="training-topic-h5">
+                    <img src="https://www.maggiesadler.com/wp-content/uploads/2015/10/1168617_1435408473368301_409182770_n.jpg" />
+                    <h5>Content</h5>
+                </div>
+                <div class="training-topic-h5">
+                    <img src="https://www.maggiesadler.com/wp-content/uploads/2015/10/11189836_754178218029431_2102772742_n.jpg" />
+                    <h5>Multimedia</h5>
+                </div>
+                <div class="training-topic-h5">
+                    <img src="https://www.maggiesadler.com/wp-content/uploads/2015/10/10843869_1658219887738208_2033326788_n.jpg" />
+                    <h5>Industry 4.0</h5>
+                </div>
+                <div class="training-topic-h5">
+                    <img src="https://www.maggiesadler.com/wp-content/uploads/2015/10/1515054_1379051609022475_1394148610_n.jpg" />
+                    <h5>Soft Skills</h5>
+                </div>
+                <div class="training-topic-h5">
+                    <img src="https://www.maggiesadler.com/wp-content/uploads/2015/10/1515054_1379051609022475_1394148610_n.jpg" />
+                    <h5>Customized</h5>
                 </div>
             </div>
+            <!--            <div class="o-hidden">
+                            <div class="highlight-selected" data-flickity='{ "imagesLoaded": true, "wrapAround":true }'>
+                                <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
+                                    <img class="img-fluid rounded" src="assets/img/blog/thumb-3.jpg" alt="blog.3.image">
+                                    <h5>Business/ Entreprenuership</h5>
+                                </div>
+                                <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
+                                    <img class="img-fluid rounded" src="assets/img/blog/thumb-4.jpg" alt="blog.4.image">
+                                    <h5>Financial</h5>
+                                </div>
+                                <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
+                                    <img class="img-fluid rounded" src="assets/img/blog/thumb-5.jpg" alt="blog.5.image">
+                                    <h5>Technology</h5>
+                                </div>
+                                <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
+                                    <img class="img-fluid rounded" src="assets/img/blog/thumb-8.jpg" alt="blog.6.image">
+                                    <h5>Healthcare</h5>
+                                </div>
+                                <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
+                                    <img class="img-fluid rounded" src="assets/img/blog/thumb-6.jpg" alt="blog.7.image">
+                                    <h5>Content</h5>
+                                </div>
+                                <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
+                                    <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
+                                    <h5>Multimedia</h5>
+                                </div>
+                                <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
+                                    <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
+                                    <h5>Industry 4.0</h5>
+                                </div>
+                                <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
+                                    <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
+                                    <h5>Soft Skills</h5>
+                                </div>
+                                <div class="carousal-hover carousel-cell text-center col-9 col-md-7 col-lg-3">
+                                    <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
+                                    <h5>Customized</h5>
+                                </div>
+                            </div>
+                        </div>-->
+
         </section>
 
         <section class="p-0 bg-light row no-gutters">
@@ -263,7 +303,36 @@
         </a>
         <!-- Required vendor scripts (Do not remove) -->
         <?php include'footer.php'; ?>
-
+        <script src="js/slick.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                $('.slider').slick({
+                    dots: false,
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    autoplaySpeed: 1500,
+                    arrows: true,
+                    responsive: [{
+                            breakpoint: 600,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 400,
+                            settings: {
+                                arrows: false,
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }]
+                });
+            });
+        </script>
     </body>
 
 

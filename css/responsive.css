@@ -60,6 +60,19 @@
     .booking-form input {
         margin: 10px 0px !important;
     }
+    .banner-lg {
+        display: none;
+    }
+    .banner {
+        display: block !important;
+        padding-top: 90px;
+    }
+    .banner li .slick-slide {
+        margin: 0 !important;
+    }
+    .bannerSlider .slide__text {
+        width: 0 !important;
+    }
 }
 
 @media screen and (min-width: 991px) {

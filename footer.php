@@ -111,31 +111,31 @@
             </div>
             <div class="col-auto mt-3 mt-lg-0">
                 <ul class="list-unstyled d-flex mb-0">
-                    <li class="mx-3">
+<!--                    <li class="mx-3">
                         <a href="#" class="hover-fade-out">
                             <img src="assets/img/icons/social/dribbble.svg" alt="Dribbble" class="icon icon-xs bg-white" data-inject-svg>
                         </a>
-                    </li>
+                    </li>-->
                     <li class="mx-3">
                         <a href="#" class="hover-fade-out">
                             <img src="assets/img/icons/social/twitter.svg" alt="Twitter" class="icon icon-xs bg-white" data-inject-svg>
                         </a>
                     </li>
-                    <li class="mx-3">
+<!--                    <li class="mx-3">
                         <a href="#" class="hover-fade-out">
                             <img src="assets/img/icons/social/github.svg" alt="Github" class="icon icon-xs bg-white" data-inject-svg>
                         </a>
-                    </li>
+                    </li>-->
                     <li class="mx-3">
                         <a href="#" class="hover-fade-out">
                             <img src="assets/img/icons/social/facebook.svg" alt="Facebook" class="icon icon-xs bg-white" data-inject-svg>
                         </a>
                     </li>
-                    <li class="mx-3">
+<!--                    <li class="mx-3">
                         <a href="#" class="hover-fade-out">
                             <img src="assets/img/icons/social/google.svg" alt="Google" class="icon icon-xs bg-white" data-inject-svg>
                         </a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>

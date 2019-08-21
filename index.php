@@ -8,34 +8,34 @@
         <!--        <div class="loader">
                     <div class="loading-animation"></div>
                 </div>-->
-        <div class="pageLoad">
-            <div class="inner">
-                <div><img src="img/load.png"></div>
-<!--                <div><img src="img/load.png"></div> 
-                <div><img src="img/load.png"></div>
-                <div><img src="img/load.png"></div>-->
-            </div> 
-        </div>
+        <!--        <div class="pageLoad">
+                    <div class="inner">
+                        <div><img src="img/load.png"></div>
+                        <div><img src="img/load.png"></div> 
+                        <div><img src="img/load.png"></div>
+                        <div><img src="img/load.png"></div>
+                    </div> 
+                </div>-->
         <?php include 'menu.php'; ?>
-        <section class="p-0 p-90 border-top border-bottom row no-gutters">
+        <section class="p-0 p-90 border-top border-bottom row no-gutters banner-lg">
             <div class="col-lg-12 col-xl-12">
                 <div class="d-flex align-items-center">
                     <div class="d-lg-flex flex-column flex-fill controls-hover" data-flickity='{ "imagesLoaded": true, "wrapAround":true, "pageDots":false, "autoPlay":true }'>
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-1.jpg" alt="Image">
-                            <div class="banner-text wow fadeInDown">
+                            <div class="banner-text">
                                 <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
                             </div>
                         </div>
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-2.jpg" alt="Image">
-                            <div class="banner-text wow fadeInDown">
+                            <div class="banner-text">
                                 <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
                             </div>
                         </div>
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-3.jpg" alt="Image">
-                            <div class="banner-text wow fadeInDown">
+                            <div class="banner-text">
                                 <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
                             </div>
                         </div>
@@ -47,6 +47,63 @@
             
                         </div>-->
         </section>
+
+        <!-- Mobile Banner -->
+        <div class="banner">
+            <div class="row fullwidth">
+                <div class="col-md-12">
+                    <ul class="bannerSlider">
+                        <!--  1. slide  -->
+                        <li class="slide">
+                            <a href="#">
+                                <div class="slide__text banner-text">
+                                    <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
+                                </div>
+                                <div class="slide__image">
+                                    <img src="img/slider/banner-1.jpg" alt="" />
+                                </div>
+                            </a>
+                        </li>
+                        <!--  2. slide  -->
+                        <li class="slide">
+                            <a href="#">
+                                <div class="slide__text banner-text">
+                                    <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
+                                </div>
+                                <div class="slide__image">
+                                    <img src="img/slider/banner-2.jpg" alt="" />
+                                </div>
+                            </a>
+                        </li>
+                        <!--  3. slide  -->
+                        <li class="slide">
+                            <a href="#">
+                                <div class="slide__text banner-text">
+                                    <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
+                                </div>
+                                <div class="slide__image">
+                                    <img src="img/slider/banner-3.jpg" alt="" />
+                                </div>
+                            </a>
+                        </li>
+                        <!--  4. slide  -->
+<!--                        <li class="slide">
+                            <a href="#">
+                                <div class="slide__text">
+                                    <h2>Coming soon.</h2>
+                                </div>
+                                <div class="slide__image">
+                                    <img src="https://unsplash.it/1500/602?random" alt="" />
+                                </div>
+                            </a>
+                        </li>-->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Banner -->
+
         <section class="bg-gray">
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
@@ -306,6 +363,20 @@
             <div class="divider divider-bottom bg-primary-3 mt-5" style="top: 50px;"></div>
         </section>
         <?php include'footer.php'; ?>
+        <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            //banner slider
+            $(".bannerSlider").slick({
+                dots: false,
+                autoplay: true,
+                infinite: true,
+                dots: true,
+                slidesToShow: 1,
+                slideswToScroll: 1,
+                arrows: false
+            });
+        </script>
         <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
             <i class="fas fa-arrow-up icon bg-white" data-inject-svg></i>
         </a>
