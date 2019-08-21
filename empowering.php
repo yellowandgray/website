@@ -139,39 +139,39 @@
             </div>
             <div class="o-hidden">
                 <div class="highlight-selected" data-flickity='{ "imagesLoaded": true, "wrapAround":true }'>
-                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-3">
                         <img class="img-fluid rounded" src="assets/img/blog/thumb-3.jpg" alt="blog.3.image">
                         <h5>Business/ Entreprenuership</h5>
                     </div>
-                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-3">
                         <img class="img-fluid rounded" src="assets/img/blog/thumb-4.jpg" alt="blog.4.image">
                         <h5>Financial</h5>
                     </div>
-                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-3">
                         <img class="img-fluid rounded" src="assets/img/blog/thumb-5.jpg" alt="blog.5.image">
                         <h5>Technology</h5>
                     </div>
-                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-3">
                         <img class="img-fluid rounded" src="assets/img/blog/thumb-8.jpg" alt="blog.6.image">
                         <h5>Healthcare</h5>
                     </div>
-                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-3">
                         <img class="img-fluid rounded" src="assets/img/blog/thumb-6.jpg" alt="blog.7.image">
                         <h5>Content</h5>
                     </div>
-                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-3">
                         <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
                         <h5>Multimedia</h5>
                     </div>
-                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-3">
                         <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
                         <h5>Industry 4.0</h5>
                     </div>
-                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-3">
                         <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
                         <h5>Soft Skills</h5>
                     </div>
-                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-5">
+                    <div class="carousel-cell text-center col-9 col-md-7 col-lg-3">
                         <img class="img-fluid rounded" src="assets/img/blog/thumb-7.jpg" alt="blog.8.image">
                         <h5>Customized</h5>
                     </div>
