@@ -19,7 +19,7 @@
 
         <?php include 'menu.php'; ?>
 
-        <div class="bg-primary-3 o-hidden" data-overlay style='background: url(img/empower-bg.jpg)no-repeat;'>
+        <div class="bg-primary-3 o-hidden" data-overlay  style='background: url(img/empower-bg.jpg)no-repeat; height:200px'>
             <section class="text-white pb-0">
                 <div class="container pb-5 pt-5">
                     <!--                    <div class="row justify-content-center text-center">
@@ -32,7 +32,7 @@
                 <div class="div-gradient position-absolute w-50 h1-100 top left" data-jarallax-element="100 50">
                     <div class="blob blob-4 bg-gradient w-100 h-100 top left"></div>
                 </div>
-                <div class="divider divider-bottom bg-white"></div>
+                <div class="divider divider-banner divider-bottom bg-white"></div>
             </section>
         </div>
 
@@ -47,7 +47,7 @@
                             <a href="#" class="lead"></a>
                         </div>
                         <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos="fade-right">
-                            <img src="assets/img/about-1.jpg" alt="Image" class="rounded img-fluid shadow-lg">
+                            <img src="img/teaching.png" alt="Image" class="rounded rounded-image img-fluid shadow-lg">
                         </div>
                     </div>
                 </div>

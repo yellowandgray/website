@@ -11,3 +11,11 @@
     background: #fff;
     color: #4a7c7c;
 }
+
+.divider.divider-banner{
+    top:-132px;
+}
+
+.rounded.rounded-image{
+    border-radius:50%!important;
+}
