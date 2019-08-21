@@ -1,3 +1,13 @@
 .pt-5 {
     padding-top: 5rem;
 }
+.carousal-hover:hover {
+    position: absolute;
+    left: 0%;
+    transform: translateY(10px);
+    transition: 0.3s all linear;
+}
+.carousal-hover:hover h5 {
+    background: #fff;
+    color: #4a7c7c;
+}
