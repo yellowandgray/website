@@ -40,13 +40,13 @@
             <section class="pb-0">
                 <div class="container">
                     <div class="row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
-                        <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos-delay="200" data-aos-offset="500" data-aos-once="false" data-aos="fade-left">
+                        <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos="fade-left">
                             <h1 class="display-3">EMPOWERING KNOWLEDGE<mark data-aos="highlight-text" data-aos-delay="500"></mark></h1>
                             <p class="lead">
                                 Project Next Door provides you with the intense course of study which aims not only to expand intellectual horizons but also provide education that unlocks human intellectual potential                            </p>
                             <a href="#" class="lead"></a>
                         </div>
-                        <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos-delay="200" data-aos-offset="500" data-aos-once="false" data-aos="fade-up">
+                        <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos="fade-up">
                             <img src="img/teaching.png" alt="Image" class="rounded rounded-image img-fluid shadow-lg">
                         </div>
                     </div>
@@ -58,7 +58,7 @@
             </section>
         </div>
 
-        <section>
+        <section class="bg-cream">
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7">
@@ -312,7 +312,7 @@
                     speed: 500,
                     slidesToShow: 6,
                     slidesToScroll: 1,
-                    autoplay: false,
+                    autoplay: true,
                     autoplaySpeed: 1500,
                     arrows: true,
                     responsive: [{
