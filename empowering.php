@@ -72,6 +72,8 @@
                             <img src="img/training-management/001.png" alt="Kyan logo" class="mb-4">
                             <h5>Business Management</h5>
 <!--                            <p>
+
+
                                 Volantis vitae unuch sed velit sodales. Sandor imperdiet proin fermentum leo vel Hodor.
                             </p>-->
                         </div>
