@@ -28,35 +28,30 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-xl-auto mr-xl-5 col-md-3 wow fadeInDown">
+            <div class="col-xl-auto mr-xl-5 col-md-3 wow fadeInDown page-footer">
                 <h5>Pages</h5>
                 <ul class="nav flex-row flex-md-column pages">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <li class="nav-item mr-3 mr-md-0">
-                                <a href="#" class="nav-link fade-page px-0 py-2">Home</a>
-                            </li>
-                            <li class="nav-item mr-3 mr-md-0">
-                                <a href="#" class="nav-link fade-page px-0 py-2">Services</a>
-                            </li>
-                            <li class="nav-item mr-3 mr-md-0">
-                                <a href="#" class="nav-link fade-page px-0 py-2">Gallery</a>
-                            </li>
-                            <li class="nav-item mr-3 mr-md-0">
-                                <a href="#" class="nav-link fade-page px-0 py-2">Book Now</a>
-                            </li>
-                            <li class="nav-item mr-3 mr-md-0">
-                                <a href="#" class="nav-link fade-page px-0 py-2">FAQ'S</a>
-                            </li>
-                            <li class="nav-item mr-3 mr-md-0">
-                                <a href="#" class="nav-link fade-page px-0 py-2">About</a>
-                            </li>
-                            <li class="nav-item mr-3 mr-md-0">
-                                <a href="#" class="nav-link fade-page px-0 py-2">Contact</a>
-                            </li>
-                        </div>
-                    </div>
-
+                    <li class="nav-item mr-3 mr-md-0">
+                        <a href="#" class="nav-link fade-page px-0 py-2">Home</a>
+                    </li>
+                    <li class="nav-item mr-3 mr-md-0">
+                        <a href="#" class="nav-link fade-page px-0 py-2">Services</a>
+                    </li>
+                    <li class="nav-item mr-3 mr-md-0">
+                        <a href="#" class="nav-link fade-page px-0 py-2">Gallery</a>
+                    </li>
+                    <li class="nav-item mr-3 mr-md-0">
+                        <a href="#" class="nav-link fade-page px-0 py-2">Book Now</a>
+                    </li>
+                    <li class="nav-item mr-3 mr-md-0">
+                        <a href="#" class="nav-link fade-page px-0 py-2">FAQs</a>
+                    </li>
+                    <li class="nav-item mr-3 mr-md-0">
+                        <a href="#" class="nav-link fade-page px-0 py-2">About</a>
+                    </li>
+                    <li class="nav-item mr-3 mr-md-0">
+                        <a href="#" class="nav-link fade-page px-0 py-2">Contact</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-xl-auto mr-xl-5 col-md-3 mb-4 mb-md-0 wow fadeInDown">
@@ -111,31 +106,31 @@
             </div>
             <div class="col-auto mt-3 mt-lg-0">
                 <ul class="list-unstyled d-flex mb-0">
-<!--                    <li class="mx-3">
-                        <a href="#" class="hover-fade-out">
-                            <img src="assets/img/icons/social/dribbble.svg" alt="Dribbble" class="icon icon-xs bg-white" data-inject-svg>
-                        </a>
-                    </li>-->
+                    <!--                    <li class="mx-3">
+                                            <a href="#" class="hover-fade-out">
+                                                <img src="assets/img/icons/social/dribbble.svg" alt="Dribbble" class="icon icon-xs bg-white" data-inject-svg>
+                                            </a>
+                                        </li>-->
                     <li class="mx-3">
                         <a href="#" class="hover-fade-out">
                             <img src="assets/img/icons/social/twitter.svg" alt="Twitter" class="icon icon-xs bg-white" data-inject-svg>
                         </a>
                     </li>
-<!--                    <li class="mx-3">
-                        <a href="#" class="hover-fade-out">
-                            <img src="assets/img/icons/social/github.svg" alt="Github" class="icon icon-xs bg-white" data-inject-svg>
-                        </a>
-                    </li>-->
+                    <!--                    <li class="mx-3">
+                                            <a href="#" class="hover-fade-out">
+                                                <img src="assets/img/icons/social/github.svg" alt="Github" class="icon icon-xs bg-white" data-inject-svg>
+                                            </a>
+                                        </li>-->
                     <li class="mx-3">
                         <a href="#" class="hover-fade-out">
                             <img src="assets/img/icons/social/facebook.svg" alt="Facebook" class="icon icon-xs bg-white" data-inject-svg>
                         </a>
                     </li>
-<!--                    <li class="mx-3">
-                        <a href="#" class="hover-fade-out">
-                            <img src="assets/img/icons/social/google.svg" alt="Google" class="icon icon-xs bg-white" data-inject-svg>
-                        </a>
-                    </li>-->
+                    <!--                    <li class="mx-3">
+                                            <a href="#" class="hover-fade-out">
+                                                <img src="assets/img/icons/social/google.svg" alt="Google" class="icon icon-xs bg-white" data-inject-svg>
+                                            </a>
+                                        </li>-->
                 </ul>
             </div>
         </div>

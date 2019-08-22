@@ -7016,7 +7016,7 @@ button.bg-primary-3:hover {
 
 .bg-white {
     background-color: #e7aca6 !important;
-/*    opacity:.2;*/
+    /*    opacity:.2;*/
 }
 
 .bg-green {
@@ -13261,7 +13261,7 @@ section {
         position: relative;
         height: 5vw;
         pointer-events: none;
-        -webkit-mask-image: url("data:image/svg+xml;utf8,%3csvg viewBox='0 0 100 90' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3e%3cpath d='M0,0 C16.6666667,66 33.3333333,98 50,98 C66.6666667,98 83.3333333,66 100,0 L100,100 L0,100 L0,0 Z' fill='%23fff'/%3e%3c/svg%3e");
+        -webkit-mask-image: url("data:image/svg+xml;utf8,%3csvg viewBox='0 0 100 100' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3e%3cpath d='M0,0 C16.6666667,66 33.3333333,98 50,98 C66.6666667,98 83.3333333,66 100,0 L100,100 L0,100 L0,0 Z' fill='%23fff'/%3e%3c/svg%3e");
         mask-image: url("data:image/svg+xml;utf8,%3csvg viewBox='0 0 100 100' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3e%3cpath d='M0,0 C16.6666667,66 33.3333333,98 50,98 C66.6666667,98 83.3333333,66 100,0 L100,100 L0,100 L0,0 Z' fill='%23fff'/%3e%3c/svg%3e");
         -webkit-mask-size: 100% 101%;
         mask-size: 100% 101%;
@@ -13292,7 +13292,7 @@ section {
     .divider.divider-bottom {
         top: 1px
     }
-    
+
 
     .divider.divider-top {
         bottom: 1px
@@ -15348,7 +15348,8 @@ section {
         transition: all .2s ease-in-out;
         display: flex;
         align-items: center;
-        justify-content: center
+        justify-content: center;
+        z-index: 2;
     }
 
     .flickity-prev-next-button:after {

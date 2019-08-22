@@ -302,6 +302,11 @@ select{
 
 /* Fade In CSS END */
 
+.hover-box-shadow:hover {
+    background: #4a7c7c;
+/*    transition: all 1s ease-in-out;*/
+}
+
 .hover-box-shadow:hover h3 {
     color: #fff;
 }
@@ -664,10 +669,10 @@ select{
     font-size: 22px;
     font-weight: 300;
 }
-
+/*
 .testimonial .carousel {
     padding-bottom:50px;
-}
+}*/
 .testimonial .carousel-control-next-icon, .testimonial .carousel-control-prev-icon {
     width: 35px;
     height: 35px;
@@ -732,13 +737,13 @@ input.queries::placeholder {
 }
 
 .banner-text h1 {
-    line-height: 0.7;
+    line-height: 2;
     position: absolute;
-    top: 40%;
-    left: 5%;
+    top: 37%;
+    left: 33%;
     color: #e7aca6;
     opacity: 1;
-    letter-spacing: 20px;
+    letter-spacing: -6px;
     font-size: 100px;
     font-family: 'Antonio Regular';
 }
@@ -747,6 +752,22 @@ input.queries::placeholder {
     font-family: "Smithen Regular";
     font-size: 110px;
     color: #fff;
+    letter-spacing: 3px;
+    position: absolute;
+    left: -35px;
+    bottom: 52px;
+}
+
+.banner-text h2 {
+    line-height: 0.7;
+    position: absolute;
+    top: 30%;
+    left: 33%;
+    color: #e7aca6;
+    opacity: 1;
+    letter-spacing: 15px;
+    font-size: 100px;
+    font-family: 'Antonio Regular';
 }
 
 .banner-text {
@@ -754,7 +775,8 @@ input.queries::placeholder {
     height: 100%;
     position: absolute;
     top: 0;
-    background: rgba(74, 124, 124, 0.89);
+    background: rgba(39, 70, 70, 0.89);
+    left: 7%;
 }
 
 /* Gallery Css */
@@ -859,7 +881,7 @@ input.queries::placeholder {
     top: 0;
     width: 100%;
     background: #00000080;
-    padding: 0;
+    padding: 0 5px;
 }
 
 .sticky + .content {
@@ -1304,13 +1326,25 @@ input.queries::placeholder {
 }
 
 .bg-button {
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+
+.bg-button:hover {
     background: #fff;
     border-radius: 4px;
-    border: 1px solid #e7aca6;
+    /*    border: 1px solid #fff;*/
 }
+
 .bg-button a {
+    color: #fff !important;
+}
+
+.bg-button:hover a {
     color: #4a7c7c !important;
 }
+
 .pnd{
     padding: 10px 20px 0px 15px;
     height: 658px;
@@ -1329,14 +1363,14 @@ input.queries::placeholder {
 }
 
 .training {
-   
+
     top: 77px;
     left: -17px;
     position:relative;
 }
 .training h3 {
     width: 70%;
-   /* background: #EEE;*/
+    /* background: #EEE;*/
     text-align: center;
     /* font-weight: 700; */
     position: relative;

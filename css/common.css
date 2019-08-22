@@ -39,7 +39,7 @@
 .training-topic-h5 h5 {
     position: relative;
     text-align: center;
-    bottom: 65px;
+    bottom: 64px;
     color: #fff;
     background: #000000ad;
     padding: 20px;
@@ -56,7 +56,41 @@
     background: #4a7c7c !important;
 }
 
+.divider.divider-custom-2 {
+    bottom: 80px;
+    background: #f7f9fc !important;
+}
 
+.divider.divider-custom-3 {
+    top: 80px;
+    background: #4a7c7c !important;
+}
+
+
+.divider.divider-custom-4 {
+    bottom: 50px;
+    background: #faeeed !important;
+}
+
+.footer-1 h5 {
+    color: #fff;
+}
+
+.footer-1 h6 {
+    color: #fff;
+}
+
+.footer-1 .text-muted {
+    color: rgba(255, 255, 255, 0.67)!important
+}
+
+.footer-1 a {
+    color: rgba(255, 255, 255, .7);
+}
+
+.footer-1 a:hover {
+    color: rgba(255, 255, 255, 1);
+}
 
 /* Mobile Banner Css */
 
@@ -65,30 +99,41 @@
 }
 
 ul.bannerSlider{
-  padding-left:0;
+    padding-left:0;
 }
 .bannerSlider{
-	height: auto;
-        margin: 0 !important;
+    height: auto;
+    margin: 0 !important;
 }
+
+.fullwidth {
+    width: 100%;
+    margin: 0;
+}
+
+.pm-0 {
+    padding: 0;
+    margin: 0;
+}
+
 .bannerSlider .slide__image::before{
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 450px;
-	background: rgba(33,33,33,.7);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    background: rgba(33,33,33,.7);
 }
 .bannerSlider .slick-slide {
-	position: relative;
-        margin: 0px !important;
+    position: relative;
+    margin: 0px !important;
 }
 .bannerSlider .slide__image img {
-	width: 100%;
-	height: 450px;
-	object-fit:cover;
+    width: 100%;
+    height: 450px;
+    object-fit:cover;
 }
 img.slide__image__top-position {
-	object-position:center bottom;
+    object-position:center bottom;
 }
 .bannerSlider .slide__text {
     position: absolute;
@@ -96,16 +141,246 @@ img.slide__image__top-position {
     text-align: center;
     width: 100%;
     top: 50%;
-  	transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 /*.bannerSlider .slide__text h2 {
-	font-size: 48px;
-	font-weight: 100;
+        font-size: 48px;
+        font-weight: 100;
 
-	color: #fff;
+        color: #fff;
 }*/
 /* Mobile Banner Css */
 
 .bg-cream {
     background: #faeeed!important;
+}
+
+.margin-b-40 {
+    margin-bottom: 40px !important;
+}
+
+.pt-75 {
+    padding-top: 75px !important;
+}
+
+.pt-25 {
+    padding-top: 25px;
+}
+
+.ptb-80 {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+}
+
+.pb-40 {
+    padding-bottom: 40px;
+}
+
+.tensorsite-group__inner {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: -15px auto;
+}
+
+/*.tensorsite-group--3up .tensorsite-block, .tensorsite-group--3up .tensorsite-card, .tensorsite-group--3up-small .tensorsite-block, .tensorsite-group--3up-small .tensorsite-card, .tensorsite-group--3up-short .tensorsite-block, .tensorsite-group--3up-short .tensorsite-card, .tensorsite-group--row .tensorsite-block, .tensorsite-group--row .tensorsite-card {
+    flex-basis: calc(100% / 3 - 30px);
+    flex-shrink: 0;
+    max-width: calc(100% / 3 - 30px);
+}*/
+
+.tensorsite-card {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 36px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 0; */
+    /* flex-shrink: 1; */
+    /* flex-basis: calc(100% / 3 - 30px); */
+    /* max-width: calc(100% / 3 - 30px); */
+    margin: 15px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition: box-shadow .2s linear,opacity .2s linear;
+}
+
+.tensorsite-card__href {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.tensorsite-card--clip .tensorsite-content__image-wrapper {
+    height: 64%;
+    position: absolute;
+    width: 100%;
+}
+
+.tensorsite-card .tensorsite-content__image-wrapper {
+    border-bottom: solid 1px #dadada;
+    background-color: #fbfcfc;
+    overflow: hidden;
+    position: relative;
+}
+
+.tensorsite-content__image-wrapper {
+    position: relative;
+}
+
+.tensorsite-card .tensorsite-content__image-wrapper img {
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    transition: -webkit-transform .5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: transform .5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: transform .5s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform .5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    will-change: transform;
+}
+
+.tensorsite-content__image {
+    border-radius: 10px 10px 0 0;
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.tensorsite-card--clip .tensorsite-content {
+    /*    margin-top: 40%;
+        padding-top: 17%;*/
+    z-index: 1;
+    padding: 15px 20px;
+}
+
+.tensorsite-card .tensorsite-content--under-image::before {
+    top: -1px;
+}
+
+.tensorsite-card .tensorsite-content::before {
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    content: '';
+    height: 102%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .2s linear;
+    width: 102%;
+}
+
+.tensorsite-content a:not(.tensorsite-content__button), .tensorsite-content div {
+    transition: color .2s linear;
+}
+
+.tensorsite-content__clip-bg {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.tensorsite-content__clip-shape {
+    margin-left: -1px;
+    width: 102%;
+    height: 100%;
+    margin-top: 2px;
+}
+
+.tensorsite-content__clip-shape path {
+    transition: fill .2s linear;
+}
+
+.tensorsite-content__clip-bg::after {
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+    content: '';
+    display: block;
+    flex: 1 0 auto;
+    margin-top: -2px;
+    transition: background .2s linear;
+    width: 100%;
+}
+
+.tensorsite-card .tensorsite-content .tensorsite-content__subtitle, .tensorsite-card .tensorsite-content .tensorsite-content__title, .tensorsite-card .tensorsite-content .tensorsite-content__description, .tensorsite-card .tensorsite-content .tensorsite-content__cta-wrapper, .tensorsite-card .tensorsite-content ul {
+    position: relative;
+}
+
+.tensorsite-card--clip .tensorsite-content__subtitle {
+    color: #ff6f00;
+    /*    max-width: 42%;*/
+    /*    padding: 0 20px;*/
+}
+
+.tensorsite-content p {
+    margin: 0;
+}
+
+.tensorsite-content__description:last-child {
+    margin-bottom: 0;
+}
+
+.tensorsite-card .tensorsite-content__description {
+    font-size: 14px;
+    line-height: 22px;
+    /*    padding: 0 20px;*/
+}
+
+.tensorsite-content a:not(.tensorsite-content__button), .tensorsite-content div {
+    transition: color .2s linear;
+}
+
+.tensorsite-content__description {
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-bottom: 8px;
+}
+
+.tensorsite-content__subtitle {
+    font-family: "Roboto",sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.tensorsite-content div {
+    transition: color .2s linear;
+}
+
+.tensorsite-content__subtitle {
+    font-size: 14px;
+    line-height: 22px;
+    align-items: center;
+    color: #8e96a3;
+    display: flex;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.tensorsite-card--clip .tensorsite-content__title {
+    font-family: "Google Sans",sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    max-width: 81%;
+    /*    padding: 0 20px;*/
+}
+
+.tensorsite-content p {
+    margin: 0;
 }

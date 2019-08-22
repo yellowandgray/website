@@ -8,15 +8,29 @@
     .ui-datepicker-calendar td {
         padding: 0 !important;
     }
+    .banner-text h2 {
+        line-height: 0;
+        top: 35%;
+        left: 8%;
+        font-size: 40px;
+        letter-spacing: 10px;
+    }
     .banner-text h1 {
-        line-height: 0.7;
-        top: 25%;
-        left: 20%;
-        letter-spacing: 20px;
-        font-size: 28px;
+        line-height: 0.5;
+        top: 46%;
+        left: 12px;
+        letter-spacing: 0px;
+        font-size: 40px;
     }
     .banner-text h1 span {
-        font-size: 35px;
+        font-size: 50px;
+        font-family: "Smithen Regular";
+        /*        font-size: 110px;*/
+        color: #fff;
+        letter-spacing: 1px;
+        position: absolute;
+        right: -30px;
+        bottom: 21px;
     }
     .p-90 {
         padding-top: 87px !important;
@@ -73,6 +87,18 @@
     .bannerSlider .slide__text {
         width: 0 !important;
     }
+    .section-title .display-4 {
+        margin-bottom: 40px;
+    }
+    .contact-bg .pt-25 {
+        padding-top: 40px !important;
+    }
+    .page-footer {
+        text-align: center !important;
+    }
+    .tensorsite-content__clip-shape {
+        margin-top: -8px !important;
+    }
 }
 
 @media screen and (min-width: 991px) {
@@ -91,6 +117,9 @@
     }
     .training ul li {
         padding: 10px !important;
+    }
+    .tensorsite-content__clip-shape {
+        margin-top: 60px !important;
     }
 }
 

@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="en">
     <!-- Mirrored from jumpstart.mediumra.re/landing-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Aug 2019 11:10:29 GMT -->
-    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+    <!-- Added by HTTrack -->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <!-- /Added by HTTrack -->
     <?php include 'head.php'; ?>
 
     <body>
@@ -17,28 +19,63 @@
                     </div> 
                 </div>-->
         <?php include 'menu.php'; ?>
-        <section class="p-0 p-90 border-top border-bottom row no-gutters banner-lg">
+        <section class="p-0 pt-75 border-top border-bottom row no-gutters banner-lg">
+            <!--            <div class="col-lg-7 col-xl-6">
+                            <div class="container min-vh-lg-80 d-flex align-items-center">
+                                <div class="row justify-content-center">
+                                    <div class="col col-md-10 col-xl-9 text-center text-lg-left">
+                                        <section>
+                                            <div data-aos="fade-right">
+                                                <h1 class="display-3"><mark data-aos="highlight-text" data-aos-delay="200">Save time</mark> with Jumpstart</h1>
+                                                <p class="lead">
+                                                    Berspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                                                </p>
+                                            </div>
+                                            <div class="d-flex flex-column flex-sm-row mt-4 mt-md-5 justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="300">
+                                                <a href="#" class="btn btn-primary btn-lg mx-sm-2 mx-lg-0 mr-lg-2 my-1 my-sm-0">Explore Layouts</a>
+                                                <a href="https://themeforest.net/item/jumpstart-app-and-software-template/24207799" class="btn btn-outline-primary btn-lg mx-sm-2 mx-lg-0 mr-lg-2 my-1 my-sm-0">Purchase</a>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+            <!--            <div class="col-lg-5 col-xl-6 d-lg-flex flex-lg-column">
+                            <div class="divider divider-side transform-flip-y bg-white d-none d-lg-block"></div>
+                            <div class="d-lg-flex flex-column flex-fill controls-hover" data-flickity='{ "imagesLoaded": true, "wrapAround":true, "pageDots":false, "autoPlay":true }'>
+                                <div class="carousel-cell text-center">
+                                    <img class="img-fluid" src="img/slider/banner-1.jpg" alt="Image">
+                                </div>
+                                <div class="carousel-cell text-center">
+                                    <img class="img-fluid" src="img/slider/banner-2.jpg" alt="Image">
+                                </div>
+                                <div class="carousel-cell text-center">
+                                    <img class="img-fluid" src="img/slider/banner-3.jpg" alt="Image">
+                                </div>
+                            </div>
+                        </div>-->
             <div class="col-lg-12 col-xl-12">
                 <div class="d-flex align-items-center">
                     <div class="d-lg-flex flex-column flex-fill controls-hover" data-flickity='{ "imagesLoaded": true, "wrapAround":true, "pageDots":false, "autoPlay":true }'>
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-1.jpg" alt="Image">
-                            <div class="banner-text">
-                                <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
-                            </div>
                         </div>
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-2.jpg" alt="Image">
-                            <div class="banner-text">
-                                <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
-                            </div>
+                            <!--                            <div class="banner-text">
+                                                            <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
+                                                        </div>-->
                         </div>
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-3.jpg" alt="Image">
-                            <div class="banner-text">
-                                <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
-                            </div>
+                            <!--                            <div class="banner-text">
+                                                            <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
+                                                        </div>-->
                         </div>
+                    </div>
+                    <div class="banner-text">
+                        <h2>WHERE</h2>
+                        <h1><span>Imagineers</span> ARE BORN</h1>
                     </div>
                 </div>
             </div>
@@ -51,14 +88,14 @@
         <!-- Mobile Banner -->
         <div class="banner">
             <div class="row fullwidth">
-                <div class="col-md-12">
+                <div class="col-md-12 pm-0">
                     <ul class="bannerSlider">
                         <!--  1. slide  -->
                         <li class="slide">
                             <a href="#">
-                                <div class="slide__text banner-text">
-                                    <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
-                                </div>
+                                <!--                                <div class="slide__text banner-text">
+                                                                    <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
+                                                                </div>-->
                                 <div class="slide__image">
                                     <img src="img/slider/banner-1.jpg" alt="" />
                                 </div>
@@ -67,9 +104,9 @@
                         <!--  2. slide  -->
                         <li class="slide">
                             <a href="#">
-                                <div class="slide__text banner-text">
-                                    <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
-                                </div>
+                                <!--                                <div class="slide__text banner-text">
+                                                                    <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
+                                                                </div>-->
                                 <div class="slide__image">
                                     <img src="img/slider/banner-2.jpg" alt="" />
                                 </div>
@@ -78,39 +115,122 @@
                         <!--  3. slide  -->
                         <li class="slide">
                             <a href="#">
-                                <div class="slide__text banner-text">
-                                    <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
-                                </div>
+                                <!--                                <div class="slide__text banner-text">
+                                                                    <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
+                                                                </div>-->
                                 <div class="slide__image">
                                     <img src="img/slider/banner-3.jpg" alt="" />
                                 </div>
                             </a>
                         </li>
                         <!--  4. slide  -->
-<!--                        <li class="slide">
-                            <a href="#">
-                                <div class="slide__text">
-                                    <h2>Coming soon.</h2>
-                                </div>
-                                <div class="slide__image">
-                                    <img src="https://unsplash.it/1500/602?random" alt="" />
-                                </div>
-                            </a>
-                        </li>-->
+                        <!--                        <li class="slide">
+                                                    <a href="#">
+                                                        <div class="slide__text">
+                                                            <h2>Coming soon.</h2>
+                                                        </div>
+                                                        <div class="slide__image">
+                                                            <img src="https://unsplash.it/1500/602?random" alt="" />
+                                                        </div>
+                                                    </a>
+                                                </li>-->
 
                     </ul>
+                    <div class="slide__text banner-text">
+                        <h2>WHERE</h2>
+                        <h1><span>Imagineers</span>ARE BORN</h1>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Mobile Banner -->
 
-        <section class="bg-gray">
+        <section class="tensorsite-group tensorsite-group--3up bg-gray ptb-80 ">
             <div class="container">
-                <div class="row section-title justify-content-center text-center">
+                <div class="row justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7">
                         <!--                        <h3 class="display-4">About <mark data-aos="highlight-text" data-aos-delay="300">Project Next Door</mark></h3>-->
-                        <h3 class="display-4">About Project Next Door</h3>
+                        <h3 class="display-4 pb-40">About Project Next Door</h3>
                         <!--                        <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="tensorsite-container ">
+                        <div class="tensorsite-group__inner">
+                            <div class="col-md-4">
+                                <div class="tensorsite-card tensorsite-card--clip">
+                                    <a class="tensorsite-card__href" aria-label="Your first neural network" href="#"></a>
+                                    <div class="tensorsite-content__image-wrapper">
+                                        <img class="tensorsite-content__image" src="img/about/about-04.jpg" alt="">
+                                    </div>
+                                    <div class="tensorsite-content  tensorsite-content--under-image">
+                                        <div class="tensorsite-content__clip-bg">
+                                            <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
+                                        </div>
+                                        <div class="tensorsite-content__subtitle ">For beginners</div>
+                                        <div class="tensorsite-content__title  ">
+                                            EMPOWERING
+                                        </div>
+                                        <div class="tensorsite-content__description">
+                                            <p>A brief introduction of this area.</p>     
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tensorsite-card tensorsite-card--clip">
+                                    <a class="tensorsite-card__href" aria-label="Your first neural network" href="#"></a>
+                                    <div class="tensorsite-content__image-wrapper">
+                                        <img class="tensorsite-content__image" src="img/about/about-02.jpg" alt="">
+                                    </div>
+                                    <div class="tensorsite-content  tensorsite-content--under-image">
+                                        <div class="tensorsite-content__clip-bg">
+                                            <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
+                                        </div>
+                                        <div class="tensorsite-content__subtitle ">For beginners</div>
+                                        <div class="tensorsite-content__title  ">
+                                            EXPERIENTIAL
+                                        </div>
+                                        <div class="tensorsite-content__description">
+                                            <p>A brief introduction of this area.</p>     
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="tensorsite-card tensorsite-card--clip">
+                                    <a class="tensorsite-card__href" aria-label="Your first neural network" href="#"></a>
+                                    <div class="tensorsite-content__image-wrapper">
+                                        <img class="tensorsite-content__image" src="img/about/about-01.jpg" alt="">
+                                    </div>
+                                    <div class="tensorsite-content  tensorsite-content--under-image">
+                                        <div class="tensorsite-content__clip-bg">
+                                            <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
+                                        </div>
+                                        <div class="tensorsite-content__subtitle ">For beginners</div>
+                                        <div class="tensorsite-content__title  ">
+                                            ENGAGING
+                                        </div>
+                                        <div class="tensorsite-content__description">
+                                            <p>A brief introduction of this area.</p>     
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tensorsite-group__divider"></div>
+                </div>
+            </div>
+        </section>
+
+<!--        <section class="bg-gray ptb-80">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-9 col-lg-8 col-xl-7">
+                                                <h3 class="display-4">About <mark data-aos="highlight-text" data-aos-delay="300">Project Next Door</mark></h3>
+                        <h3 class="display-4 pb-40">About Project Next Door</h3>
+                                                <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>
                     </div>
                 </div>
                 <div class="row">
@@ -152,8 +272,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section>
+        </section>-->
+        <section class="ptb-80">
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7 wow fadeInDown">
@@ -188,7 +308,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg-light o-hidden">
+        <section class="bg-light o-hidden ptb-80">
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7 wow fadeInDown">
@@ -278,14 +398,15 @@
                     </div>
                 </div>
             </div>
+
         </section>
 
-        <section class="bg-primary-3 pt-90 text-white">
-<!--            <div class="divider divider-top transform-flip-x bg-white"></div>-->
+        <section class="bg-primary-3 ptb-80 text-white">
+            <div class="divider divider-custom-2 transform-flip-x"></div>
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7 wow fadeInDown">
-                        <h3 class="display-4">Contact Us</h3>
+                        <h3 class="display-4 text-white">Contact Us</h3>
                     </div>
                 </div>
                 <div class="row justify-content-center wow fadeInDown">
@@ -293,9 +414,9 @@
                         <div class="row justify-content-center">
                             <div class="col-md-6 mb-3 mb-md-4" data-aos="fade-up" data-aos-delay="20">
                                 <div class="card card-body contact-bg min-vh-md-30">
-                                    <div class="flex-fill contact">
+                                    <div class="flex-fill contact pt-25">
                                         <!--                                        <h4 class="h3">Address</h4>-->
-                                        <i class="fas fa-map-marker-alt icon icon-xs bg-white" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
+                                        <i class="fas fa-map-marker-alt icon icon-xs" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
                                         <i class="far fa-envelope icon icon-xs bg-white" data-inject-svg></i><p> <a href="#" style="color: #fff;">email@mywebsite.com</a></p>
                                         <i class="fas fa-phone-alt icon icon-xs bg-white" data-inject-svg></i><p><a href="#" style="color: #fff;">+630 7662 7601</a></p>
                                     </div>
@@ -308,10 +429,12 @@
             </div>
         </section>
         <iframe class="wow fadeInDown" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 300px;" frameborder="0" style="border:0" allowfullscreen></iframe>
-        <section class="testimonial text-center">
+        <section class="testimonial text-center ptb-80">
             <div class="container">
-                <div class="heading white-heading wow fadeInDown">
-                    Testimonials
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-9 col-lg-8 col-xl-7 wow fadeInDown">
+                        <h2 class="display-4">Testimonials</h2>
+                    </div>
                 </div>
                 <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
                     <div class="carousel-inner" role="listbox">
@@ -360,7 +483,8 @@
                     </a>
                 </div>
             </div>
-            <div class="divider divider-bottom bg-primary-3 mt-5" style="top: 50px;"></div>
+            <div class="divider divider-custom-3"></div>
+            <!--            <div class="divider divider-bottom bg-primary-3 mt-5" style="top: 50px;"></div>-->
         </section>
         <?php include'footer.php'; ?>
         <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" type="text/javascript"></script>
@@ -368,8 +492,7 @@
         <script type="text/javascript">
             //banner slider
             $(".bannerSlider").slick({
-                dots: false,
-                autoplay: true,
+                autoplay: false,
                 infinite: true,
                 dots: true,
                 slidesToShow: 1,
