@@ -10,14 +10,14 @@
     }
     .banner-text h2 {
         line-height: 0;
-        top: 35%;
+        top: 30%;
         left: 8%;
         font-size: 40px;
         letter-spacing: 10px;
     }
     .banner-text h1 {
         line-height: 0.5;
-        top: 46%;
+        top: 53%;
         left: 12px;
         letter-spacing: 0px;
         font-size: 40px;
@@ -46,12 +46,14 @@
         width: 100% !important;
     }
     #toggle {
-        right: 0px !important;
+        right: 20px !important;
         top: 0px !important;
     }
     #menu {
-        top: 72px !important;
+        top: 64px !important;
         /*        right: -32px !important;*/
+        right: -16px !important;
+        width: 111% !important;
     }
     .logo {
         width: 80%;
@@ -79,7 +81,8 @@
     }
     .banner {
         display: block !important;
-        padding-top: 90px;
+        padding-top: 74px;
+        height: 230px;
     }
     .banner li .slick-slide {
         margin: 0 !important;
@@ -91,24 +94,52 @@
         margin-bottom: 40px;
     }
     .contact-bg .pt-25 {
-        padding-top: 40px !important;
+        padding-top: 15px !important;
     }
     .page-footer {
-        text-align: center !important;
+        margin-bottom: 20px !important;
     }
     .tensorsite-content__clip-shape {
         margin-top: -8px !important;
     }
+    .bg-position {
+        background-position: right !important;
+    }
+    .banner-text {
+        height: 50% !important;
+    }
+    .tensorsite-card--clip .tensorsite-content__image-wrapper {
+        height: 206px !important;
+    }
+    .tensorsite-content__clip-shape {
+        margin-top: -3px !important;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .slider img {
+        width: 100% !important;
+    }
+    .training-topic-h5 h5 {
+        width: 100% !important;
+    }
+    button.slick-prev {
+        display: none !important;
+    }
+    button.slick-next {
+        display: none !important;
+    }
 }
 
 @media screen and (min-width: 991px) {
-    #toggle {
-        display: none;
-    }
+
 }
 @media screen and (max-width: 991px) {
     #navigation-menu {
-        display: none;
+        display: none !important;
+    }
+    #toggle {
+        display: block !important;
     }
 }
 @media screen and (max-width: 767px) {
@@ -118,9 +149,9 @@
     .training ul li {
         padding: 10px !important;
     }
-    .tensorsite-content__clip-shape {
-        margin-top: 60px !important;
-    }
+    /*    .tensorsite-content__clip-shape {
+            margin-top: -19px !important;
+        }*/
 }
 
 @media screen and (max-width: 700px){
@@ -148,6 +179,18 @@
     }
     .dropdown-item {
         color: #ffffff;
+    }
+    .bg-gradient {
+        display: none !important;
+    }
+    .mark, mark {
+        display: none !important;
+    }
+    .banner {
+        display: block !important;
+    }
+    .banner-lg {
+        display: none !important;
     }
 }
 

@@ -7,9 +7,11 @@
     <?php include 'head.php'; ?>
 
     <body>
-        <!--        <div class="loader">
-                    <div class="loading-animation"></div>
-                </div>-->
+        <div class="loader">
+            <div class="bg-green text-center">
+                <img class="loading-animation" src="img/load.png">
+            </div>
+        </div>
         <!--        <div class="pageLoad">
                     <div class="inner">
                         <div><img src="img/load.png"></div>
@@ -157,7 +159,7 @@
                 <div class="row">
                     <div class="tensorsite-container ">
                         <div class="tensorsite-group__inner">
-                            <div class="col-md-4">
+                            <div class="col-md-4" data-aos-delay="200" data-aos="fade-right">
                                 <div class="tensorsite-card tensorsite-card--clip">
                                     <a class="tensorsite-card__href" aria-label="Your first neural network" href="#"></a>
                                     <div class="tensorsite-content__image-wrapper">
@@ -165,9 +167,9 @@
                                     </div>
                                     <div class="tensorsite-content  tensorsite-content--under-image">
                                         <div class="tensorsite-content__clip-bg">
-                                            <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
+                                            <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-                                        <div class="tensorsite-content__subtitle ">For beginners</div>
+                                        <div class="tensorsite-content__subtitle ">Small Text Comes Here</div>
                                         <div class="tensorsite-content__title  ">
                                             EMPOWERING
                                         </div>
@@ -177,7 +179,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4" data-aos-delay="200" data-aos="fade-up">
                                 <div class="tensorsite-card tensorsite-card--clip">
                                     <a class="tensorsite-card__href" aria-label="Your first neural network" href="#"></a>
                                     <div class="tensorsite-content__image-wrapper">
@@ -185,9 +187,9 @@
                                     </div>
                                     <div class="tensorsite-content  tensorsite-content--under-image">
                                         <div class="tensorsite-content__clip-bg">
-                                            <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
+                                            <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-                                        <div class="tensorsite-content__subtitle ">For beginners</div>
+                                        <div class="tensorsite-content__subtitle ">Small Text Comes Here</div>
                                         <div class="tensorsite-content__title  ">
                                             EXPERIENTIAL
                                         </div>
@@ -197,7 +199,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4" data-aos-delay="200" data-aos="fade-left">
                                 <div class="tensorsite-card tensorsite-card--clip">
                                     <a class="tensorsite-card__href" aria-label="Your first neural network" href="#"></a>
                                     <div class="tensorsite-content__image-wrapper">
@@ -205,9 +207,9 @@
                                     </div>
                                     <div class="tensorsite-content  tensorsite-content--under-image">
                                         <div class="tensorsite-content__clip-bg">
-                                            <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
+                                            <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-                                        <div class="tensorsite-content__subtitle ">For beginners</div>
+                                        <div class="tensorsite-content__subtitle ">Small Text Comes Here</div>
                                         <div class="tensorsite-content__title  ">
                                             ENGAGING
                                         </div>
@@ -417,8 +419,8 @@
                                     <div class="flex-fill contact pt-25">
                                         <!--                                        <h4 class="h3">Address</h4>-->
                                         <i class="fas fa-map-marker-alt icon icon-xs" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
-                                        <i class="far fa-envelope icon icon-xs bg-white" data-inject-svg></i><p> <a href="#" style="color: #fff;">email@mywebsite.com</a></p>
-                                        <i class="fas fa-phone-alt icon icon-xs bg-white" data-inject-svg></i><p><a href="#" style="color: #fff;">+630 7662 7601</a></p>
+                                        <i class="far fa-envelope icon icon-xs" data-inject-svg></i><p> <a href="#" style="color: #fff;">email@mywebsite.com</a></p>
+                                        <i class="fas fa-phone-alt icon icon-xs" data-inject-svg></i><p><a href="#" style="color: #fff;">+630 7662 7601</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -492,7 +494,7 @@
         <script type="text/javascript">
             //banner slider
             $(".bannerSlider").slick({
-                autoplay: false,
+                autoplay: true,
                 infinite: true,
                 dots: true,
                 slidesToShow: 1,

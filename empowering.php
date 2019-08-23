@@ -3,23 +3,15 @@
 
 
     <!-- Mirrored from jumpstart.mediumra.re/company-about-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Aug 2019 11:11:15 GMT -->
-    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+    <!-- Added by HTTrack -->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <!-- /Added by HTTrack -->
     <?php include 'head.php'; ?>
 
     <body class="subpage">
-        <div class="pageLoad">
-            <div class="inner">
-                <div><img src="img/load.png"></div>
-<!--                <div><img src="img/load.png"></div> 
-                <div><img src="img/load.png"></div>
-                <div><img src="img/load.png"></div>-->
-            </div> 
-        </div>
-
-
         <?php include 'menu.php'; ?>
 
-        <div class="bg-primary-3 o-hidden" data-overlay  style='background: url(img/empower-bg.jpg)no-repeat; height:200px'>
+        <div class="bg-primary-3 o-hidden bg-position" data-overlay  style='background: url(img/empower-bg.jpg)no-repeat; height:200px'>
             <section class="text-white pb-0">
                 <div class="container pb-5 pt-5">
                     <!--                    <div class="row justify-content-center text-center">
@@ -158,18 +150,18 @@
             <div class="container">
                 <div class="row justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7">
-                        <h3 class="display-4 pb-40">TRAINING PROGRAMS</h3>
+                        <h3 class="display-4 pb-40 color-white">TRAINING PROGRAMS</h3>
                         <div class="lead"></div>
                     </div>
                 </div>
             </div>
             <div class="slider">
                 <div class="training-topic-h5">
-                    <img src="img/training/management.jpg" />
+                    <img src="img/training/business management.jpg" />
                     <h5>Business Management</h5>
                 </div>
                 <div class="training-topic-h5">
-                    <img src="img/training/content.jpg" />
+                    <img src="img/training/english-content.jpg" />
                     <h5>English Content Delivery</h5>
                 </div>
                 <div class="training-topic-h5">
@@ -181,7 +173,7 @@
                     <h5>Management</h5>
                 </div>
                 <div class="training-topic-h5">
-                    <img src="img/training/technical-skill.jpg" />
+                    <img src="img/training/technical-skills.jpg" />
                     <h5>Technical Skills</h5>
                 </div>
                 <div class="training-topic-h5">
@@ -189,7 +181,7 @@
                     <h5>Strategic Planning</h5>
                 </div>
                 <div class="training-topic-h5">
-                    <img src="img/training/ideanator.jpg" />
+                    <img src="img/training/ideanators.jpg" />
                     <h5>Ideanators</h5>
                 </div>
                 <div class="training-topic-h5">
@@ -321,7 +313,8 @@
                             breakpoint: 600,
                             settings: {
                                 slidesToShow: 2,
-                                slidesToScroll: 1
+                                slidesToScroll: 1,
+                                arrows: false,
                             }
                         },
                         {

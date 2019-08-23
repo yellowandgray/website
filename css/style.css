@@ -304,7 +304,7 @@ select{
 
 .hover-box-shadow:hover {
     background: #4a7c7c;
-/*    transition: all 1s ease-in-out;*/
+    /*    transition: all 1s ease-in-out;*/
 }
 
 .hover-box-shadow:hover h3 {
@@ -865,7 +865,7 @@ input.queries::placeholder {
 /*menu bar stricky*/
 
 .head {
-    /*    padding: 10px 16px;*/
+    padding: 10px 10px;
     color: #f1f1f1;
     z-index: 2;
     transition: 0.3s all linear;
@@ -895,10 +895,10 @@ input.queries::placeholder {
 
 /* Important styles */
 #toggle {
-    display: block;
+    display: none;
     width: 28px;
-    height: 30px;
-    margin: 30px auto 10px;
+    /* height: 30px; */
+    margin: 30px auto 0px;
     /* text-align: right; */
     position: absolute;
     right: 0%;
@@ -923,7 +923,7 @@ input.queries::placeholder {
 #toggle span:after,
 #toggle span:before {
     width: 100%;
-    height: 5px;
+    height: 2px;
     background-color: #fff;
     transition: all 0.3s;
     backface-visibility: hidden;
@@ -1104,7 +1104,7 @@ input.queries::placeholder {
     top: 0;
     width: 100%;
     background: #00000080 !important;
-    padding: 0;
+    padding: 0 20px;
 }
 
 .empower svg {

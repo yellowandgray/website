@@ -1,3 +1,8 @@
+<div class="loader">
+    <div class="bg-green text-center">
+        <img class="loading-animation" src="img/load.png">
+    </div>
+</div>
 <div class="navbar-container head" id="myHeader">
     <nav class="navbar navbar-expand-lg navbar-light" data-sticky="top">
         <!--        <div class="container">-->
@@ -39,7 +44,7 @@
                         <div class="row dropdown-menu">
                             <div class="col-auto" data-dropdown-content>
                                 <div class="dropdown-grid-menu">
-                                    <a href="#" class="dropdown-item fade-page">EMPOWERING</a>
+                                    <a href="empowering.php" class="dropdown-item fade-page">EMPOWERING</a>
                                     <a href="#" class="dropdown-item fade-page">ENGAGING</a>
                                     <a href="#" class="dropdown-item fade-page">EXPERIENTIAL</a>
                                 </div>

@@ -113,7 +113,7 @@
                                         </li>-->
                     <li class="mx-3">
                         <a href="#" class="hover-fade-out">
-                            <img src="assets/img/icons/social/twitter.svg" alt="Twitter" class="icon icon-xs bg-white" data-inject-svg>
+                            <img src="assets/img/icons/social/twitter.svg" alt="Twitter" class="icon icon-xs color-white">
                         </a>
                     </li>
                     <!--                    <li class="mx-3">
@@ -123,7 +123,7 @@
                                         </li>-->
                     <li class="mx-3">
                         <a href="#" class="hover-fade-out">
-                            <img src="assets/img/icons/social/facebook.svg" alt="Facebook" class="icon icon-xs bg-white" data-inject-svg>
+                            <img src="assets/img/icons/social/facebook.svg" alt="Facebook" class="icon icon-xs color-white">
                         </a>
                     </li>
                     <!--                    <li class="mx-3">
@@ -304,7 +304,7 @@
         this.parentNode.insertBefore(section, this);
     };
 </script>
-<script>
+<!--<script>
     setTimeout(function () {
         $('.inner div').addClass('done');
 
@@ -320,4 +320,4 @@
             }, 500)
         }, 500)
     }, 1500)
-</script>
+</script>-->
