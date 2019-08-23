@@ -631,11 +631,36 @@ body, html.on {
     left: 0px;
     top: 0px;
 }
-.portfolioContainer .optical-fiber {
+.portfolioContainer .fiber_cable {
     position: initial !important;
     left: 0px;
     top: 0px;
 }
 
+.portfolioContainer .copper_cable {
+    position: initial !important;
+    left: 0px;
+    top: 0px;
+}
+
+.portfolioContainer .cable_splicing_connectors {
+    position: initial !important;
+    left: 0px;
+    top: 0px;
+}
+
+
+
+.portfolioContainer .Modular{
+    position: initial !important;
+    left: 0px;
+    top: 0px;
+}
+
+.portfolioContainer .tools{
+    position: initial !important;
+    left: 0px;
+    top: 0px;
+}
 
 
