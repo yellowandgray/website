@@ -623,44 +623,6 @@ body, html.on {
     background:none;
     height: 100%;
 } 
-.portfolioContainer .pro-box:after{
-    background: none;
+.portfolioContainer {
+    width: 100%;
 }
-.portfolioContainer .optical-fiber {
-    position: initial !important;
-    left: 0px;
-    top: 0px;
-}
-.portfolioContainer .fiber_cable {
-    position: initial !important;
-    left: 0px;
-    top: 0px;
-}
-
-.portfolioContainer .copper_cable {
-    position: initial !important;
-    left: 0px;
-    top: 0px;
-}
-
-.portfolioContainer .cable_splicing_connectors {
-    position: initial !important;
-    left: 0px;
-    top: 0px;
-}
-
-
-
-.portfolioContainer .Modular{
-    position: initial !important;
-    left: 0px;
-    top: 0px;
-}
-
-.portfolioContainer .tools{
-    position: initial !important;
-    left: 0px;
-    top: 0px;
-}
-
-
