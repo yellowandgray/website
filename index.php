@@ -1,11 +1,21 @@
 <!doctype html>
 <html lang="en">
-    <?php $page = 'home';
-    include 'head.php'; ?>
+ <?php
+    $page = 'home';
+    include 'head.php';
+    ?>
     <body>
+        <div class="pageLoad">
+            <div class="inner">
+                <div><img src="images/home/001.png" alt=""></div>
+                <div><img src="images/home/001.png" alt=""></div> 
+                <div><img src="images/home/001.png" alt=""></div>
+                <div><img src="images/home/001.png" alt=""></div>
+            </div> 
+        </div>
         <div class="wrapper home3">
             <!--Header Start-->
-<?php include'menu.php'; ?>
+            <?php include'menu.php'; ?>
             <!--Header End--> 
             <!--Slider Start-->
             <section id="home-slider" class="owl-carousel owl-theme wf100">
@@ -481,7 +491,7 @@
             </section>
 
             <!--Partner Logos Section End--> 
-<?php include'footer.php'; ?>
+            <?php include'footer.php'; ?>
 
     </body>
 </html>

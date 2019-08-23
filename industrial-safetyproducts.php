@@ -30,7 +30,7 @@
                     
                     <div class="row">
                         <div class="col-md-12">
-                          <h5>FINEST STANDARD IN SAFETY SHOES</h5>
+                          <h3>FINEST STANDARD IN SAFETY SHOES</h3>
                     </div>
                     </div>
                     
@@ -38,37 +38,41 @@
                         <div class="col-md-12">
                             <img src="images/safety-products/commando.jpg" alt="" />  
                         </div>
-                    </div><br><br>
+                    </div><br> <br>
 
                     <div class="row">
                         <div class="col-md-12">
+                            <div class="legacy-trust">
                             <h3>A TRADITION OF EXCELLENCE</h3>
-                            <span>VPN COMMODITIES Pte Ltd Singapore is a well-established certified organization active in manufacturing & trading business of different kinds of safely footwear.The company has a strong quality base that is being continously developed to acheive a higher level of perfection in design and workmanship.The empahsis since the very beginning has been to offer "great product at great prices."</span>>
-                        </div>
+                            <span>VPN COMMODITIES Pte Ltd Singapore is a well-established certified organization active in manufacturing & trading business of different kinds of safely footwear.The company has a strong quality base that is being continously developed to acheive a higher level of perfection in design and workmanship.The empahsis since the very beginning has been to offer "great product at great prices."</span>
+                            </div>
+                            </div>
                     </div><br>
                     <div class="row">
                         <div class="col-md-12">
+                            <div class="legacy-trust">
                             <h3>OUR MOTTO</h3>
                             <span>"TO exceed customer expectations through Innovation,Continous Improvement,Quality,Cost and Delivery".</span>
-                        </div>
+                            </div>
+                            </div>
                     </div><br>
                     
                     <div class="row">
                         <div class="col-md-8">
                             <div class="legacy-trust">
-                                <h5>A LEGACY OF TRUST</h5>
+                                <h3>A LEGACY OF TRUST</h3>
                                 <span>'COMMANDO' Safety Gear,from the house of VPN, is one of the most trusted safety industrial shoe brands in Singapore made on Direct Injection Process on Desma Machines from Germany.'COMMANDO' is certified by EU NORMS(EN ISO 20345:2011)from PFI Germany/Intertek UK. It has become a part of contemporary work culture in Aviation,Chemical Industry,Construction Business,Defence Services,Heavy Engineering,Hotels,Mining in National and International markets.</span>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <img src="images/safety-products/trust.jpg" alt="" />
+                            <img src="images/safety-products/Untitled-1.jpg" alt="" />
                         </div>
-                    </div>
+                    </div><br>
                     
                     <div class="row">
                         <div class="col-md-8">
                             <div class="legacy-trust">
-                                <h5>A CAPABILITY TO CUSTOMIZE</h5>
+                                <h3>A CAPABILITY TO CUSTOMIZE</h3>
                                 <span>VPN has not only its own unique styling but also has the capability to react to special market requirements & can customize shoes as per the specification of the customer at a very competitive price and on time. With a firm commitment and belief,we can create products matching your interests.</span>
                             </div>
                         </div>
@@ -79,10 +83,12 @@
                     
                     <div class="row">
                         <div class="col-md-12">
-                          <h5>A RANGE FOR DIVERSE SEGMENTS</h5>
+                            <div class="legacy-trust">
+                          <h3>A RANGE FOR DIVERSE SEGMENTS</h3>
                            <span>Our Commando Safety Gear catres to diverse requirements of people in different areas of activity...airports,chemical industry,construction business,defence services,heavy engineering,hotel,mining or railways...ensuring they go about their business with absolute safety and confidence.</span>
-                         </div>
-                    </div>
+                            </div>
+                            </div>
+                    </div><br>
                     
                     <div class="row">
                         <div class="col-md-12">

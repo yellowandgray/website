@@ -91,3 +91,21 @@
         document.getElementById("myForm").style.display = "none";
     }
 </script>
+<!--loadingpage-->
+<script>
+    setTimeout(function () {
+        $('.inner div').addClass('done');
+
+        setTimeout(function () {
+            $('.inner div').addClass('page');
+
+            setTimeout(function () {
+                $('.pageLoad').addClass('off');
+
+                $('body, html').addClass('on');
+
+
+            }, 1000)
+        }, 1000)
+    }, 1500)
+</script>
