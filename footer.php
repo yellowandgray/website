@@ -136,6 +136,9 @@
         </div>
     </div>
 </footer>
+<a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
+    <i class="fas fa-arrow-up icon bg-white" data-inject-svg></i>
+</a>
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/popper.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.js"></script>

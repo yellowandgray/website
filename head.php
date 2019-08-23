@@ -1,5 +1,7 @@
 <head>
-
+    <!-- Added by HTTrack -->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <!-- /Added by HTTrack -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52115242-17"></script>
     <script>
@@ -17,7 +19,7 @@
     <meta name="description" content="Bootstrap HTML template and UI kit by Medium Rare">
     <!-- Begin loading animation -->
     <style>
-        
+
     </style>
     <script type="text/javascript">
         window.addEventListener("load", function () {

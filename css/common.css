@@ -17,8 +17,17 @@
     background: #faeeed;
 }
 
-.rounded.rounded-image{
+.divider.divider-custom-5 {
+    top: -132px;
+    background: #faeeed;
+}
+
+.rounded.rounded-image {
     border-radius:50%!important;
+}
+
+.sub-banner {
+    background-size: cover !important;
 }
 
 .bg-box {
@@ -295,7 +304,7 @@ img.slide__image__top-position {
     margin-left: -1px;
     width: 102%;
     height: 100%;
-    margin-top: 15px;
+    margin-top: -4px;
 }
 
 .tensorsite-content__clip-shape path {
@@ -468,4 +477,8 @@ body.loaded>div.loader {
 
 .color-green {
     fill: rgba(74, 124, 124, 0.45);
+}
+
+.training-topic-h5.mr-0 h5 {
+    margin: 0 !important;
 }

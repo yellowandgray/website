@@ -1347,7 +1347,7 @@ input.queries::placeholder {
 
 .pnd{
     padding: 10px 20px 0px 15px;
-    height: 658px;
+/*    height: 658px;*/
     margin-bottom: 20px;
     color: #2c91a2;
 }

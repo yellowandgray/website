@@ -11,7 +11,7 @@
     <body class="subpage">
         <?php include 'menu.php'; ?>
 
-        <div class="bg-primary-3 o-hidden bg-position" data-overlay  style='background: url(img/empower-bg.jpg)no-repeat; height:200px'>
+        <div class="bg-primary-3 o-hidden bg-position sub-banner" data-overlay  style='background: url(img/empower-bg.jpg)no-repeat; height:200px'>
             <section class="text-white pb-0">
                 <div class="container pb-5 pt-5">
                     <!--                    <div class="row justify-content-center text-center">
@@ -292,9 +292,9 @@
         </section>
 
 
-        <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
+<!--        <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
             <img src="assets/img/icons/interface/icon-arrow-up.svg" alt="Icon" class="icon bg-white" data-inject-svg>
-        </a>
+        </a>-->
         <!-- Required vendor scripts (Do not remove) -->
         <?php include'footer.php'; ?>
         <script src="js/slick.js" type="text/javascript"></script>

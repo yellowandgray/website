@@ -19,7 +19,7 @@
                             <div class="col-auto" data-dropdown-content>
                                 <div class="dropdown-grid-menu">
                                     <a href="empowering.php" class="dropdown-item fade-page">EMPOWERING</a>
-                                    <a href="#" class="dropdown-item fade-page">ENGAGING</a>
+                                    <a href="engaging.php" class="dropdown-item fade-page">ENGAGING</a>
                                     <a href="#" class="dropdown-item fade-page">EXPERIENTIAL</a>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                             <div class="col-auto" data-dropdown-content>
                                 <div class="dropdown-grid-menu">
                                     <a href="empowering.php" class="dropdown-item fade-page">EMPOWERING</a>
-                                    <a href="#" class="dropdown-item fade-page">ENGAGING</a>
+                                    <a href="engaging.php" class="dropdown-item fade-page">ENGAGING</a>
                                     <a href="#" class="dropdown-item fade-page">EXPERIENTIAL</a>
                                 </div>
                             </div>

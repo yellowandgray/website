@@ -169,12 +169,12 @@
                                         <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-                                        <div class="tensorsite-content__subtitle ">Small Text Comes Here</div>
+                                        <div class="tensorsite-content__subtitle ">Training</div>
                                         <div class="tensorsite-content__title  ">
                                             EMPOWERING
                                         </div>
                                         <div class="tensorsite-content__description">
-                                            <p>A brief introduction of this area.</p>     
+                                            <p>Project Next Door provides you education that unlocks human intellectual potential.</p>     
                                         </div>
                                     </div>
                                 </div>
@@ -189,12 +189,12 @@
                                         <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-                                        <div class="tensorsite-content__subtitle ">Small Text Comes Here</div>
+                                        <div class="tensorsite-content__subtitle ">Modern Coaching</div>
                                         <div class="tensorsite-content__title  ">
                                             EXPERIENTIAL
                                         </div>
                                         <div class="tensorsite-content__description">
-                                            <p>A brief introduction of this area.</p>     
+                                            <p>Productive environment makes you feel open and sociable.</p>     
                                         </div>
                                     </div>
                                 </div>
@@ -214,7 +214,7 @@
                                             ENGAGING
                                         </div>
                                         <div class="tensorsite-content__description">
-                                            <p>A brief introduction of this area.</p>     
+                                            <p>We're simplifying the process of revolutionary learning for everone.</p>     
                                         </div>
                                     </div>
                                 </div>
@@ -502,9 +502,7 @@
                 arrows: false
             });
         </script>
-        <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
-            <i class="fas fa-arrow-up icon bg-white" data-inject-svg></i>
-        </a>
+        
         <div id="popup1" class="overlay">
             <div class="popup">
                 <h5>Thankyou for Booking with us.</h5>
