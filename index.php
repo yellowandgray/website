@@ -15,7 +15,7 @@
         </div>
         <div class="wrapper home3">
             <!--Header Start-->
-            <?php include'menu.php'; ?>
+            <?php include'menu.php'; ?> 
             <!--Header End--> 
             <!--Slider Start-->
             <section id="home-slider" class="owl-carousel owl-theme wf100">
@@ -43,6 +43,7 @@
                     <div class="slider-caption h3slider">
                         <div class="container">
                             <strong>We are not only selling Products but also Trust </strong>
+                           
                             <h1>Metal & Cable Tray</h1>
                             <a href="#">Find Out More</a>
                         </div>
