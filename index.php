@@ -2,6 +2,14 @@
 include 'admin/include/common.php';
 $db = new Common();
 $categories = $db->selectAllWithoutWhere('categories');
+$sub_categories = $db->selectAllWithoutWhere('sub_categories');
+$autocomplete = array();
+foreach ($categories as $row) {
+    array_push($autocomplete, array('name' => $row['name'], 'code' => $row['ID'], 'category_id' => $row['ID'], 'type' => 'category'));
+}
+foreach ($sub_categories as $row) {
+    array_push($autocomplete, array('name' => $row['title'], 'code' => $row['ID'], 'category_id' => $row['category_id'], 'type' => 'sub_category'));
+}
 ?>
 <!DOCTYPE html>
 <html lang="en" style="" class=" js csstransforms csstransforms3d csstransitions">
@@ -64,7 +72,7 @@ $categories = $db->selectAllWithoutWhere('categories');
                                                 <option value="">select 1</option>
                                                 <option value="">select 2</option>
                                             </select> -->
-                                            <input style="float: left;" id="product" class="d-inline-flex search-product" type="search" name="search_input" placeholder="Search product" value="">
+                                            <input style="float: left;" id="product" class="d-inline-flex search-product" type="search" name="search_input" placeholder="Search product" value="" />
 <!--                                            <input type="submit" name="submit" value="" class="submit_search_form">-->
                                         </form>
                                         <div href="#" class="language_flag select_language text-center" style="display: inline-block;">
@@ -1611,14 +1619,38 @@ $categories = $db->selectAllWithoutWhere('categories');
             </script>
             <script type="text/javascript">
                                 //Search Product
+                                var autocomplete_data = <?php echo json_encode($autocomplete); ?>;
                                 var options = {
 
-                                url: "product/product.json",
-                                        getValue: "name",
+                                data: autocomplete_data,
+                                        getValue: function(element) {
+                                        return element.name;
+                                        },
                                         list: {
                                         match: {
                                         enabled: true
-                                        }
+                                        },
+                                                onClickEvent: function() {
+                                                var selected_id = $("#product").getSelectedItemData().code;
+                                                var selected_cat_id = $("#product").getSelectedItemData().category_id;
+                                                        var selected_category = $("#product").getSelectedItemData().type;
+                                                        if (selected_category === 'category') {
+                                                renderCategory(selected_id);
+                                                        $('html, body').stop().animate({
+                                                scrollTop: $('#explor_product').offset().top - 95
+                                                }, 1000);
+                                                }
+                                                if (selected_category === 'sub_category') {
+                                                $('#explor_product .tab-pane').addClass('hidden').removeClass('active');
+                                                        $('#tab' + selected_cat_id).removeClass('hidden').addClass('active');
+                                                        $('.list-group-product li').removeClass('active');
+                                                        $('#tab_list' + selected_cat_id).addClass('active');
+                                                        renderSubCategory(selected_id);
+                                                        $('html, body').stop().animate({
+                                                scrollTop: $('#explor_product').offset().top - 95
+                                                }, 1000);
+                                                }
+                                                }
                                         },
                                         theme: "square"
                                 };
