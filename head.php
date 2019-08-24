@@ -17,6 +17,7 @@
     <title>Project Next Door</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bootstrap HTML template and UI kit by Medium Rare">
+    <link rel="icon" href="img/favicon.png" type="image/gif">
     <!-- Begin loading animation -->
     <style>
 

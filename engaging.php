@@ -3,9 +3,6 @@
     <!-- Mirrored from jumpstart.mediumra.re/company-about-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Aug 2019 11:11:15 GMT -->
     <?php include 'head.php'; ?>
     <body class="subpage">
-        <div class="loader">
-            <div class="loading-animation"></div>
-        </div>
         <?php include 'menu.php'; ?>
         <div class="bg-primary-3 o-hidden bg-position sub-banner" data-overlay  style='background: url(img/empower-bg.jpg)no-repeat; height:200px'>
             <section class="text-white pb-0">
@@ -30,7 +27,7 @@
                         <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos="fade-left">
                             <h1 class="display-3">ENGAGING ACTIVITIES<mark data-aos="highlight-text" data-aos-delay="500"></mark></h1>
                             <p class="lead">Productive environment makes you feel open and sociable. Our room provides and creates a feeling of earthiness and sophistication. Modern environment and flexible customization, all at a cost effective price.</p>
-                            <a href="#" class="lead"></a>
+                             <center><a href="#" class="bg-button btn-1">BOOK NOW</a></center>
                         </div>
                         <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos="fade-up">
                             <img src="img/engaging/title-img.jpg" alt="Image" class="rounded rounded-image img-fluid shadow-lg">
@@ -227,86 +224,55 @@
                 </div>
             </div>
         </section>
-        <section class="p-0 bg-light row no-gutters">
-
-            <div class="col-lg-5 bg-primary-4">
-                <section class='pad-45' data-aos-delay="200" data-aos-offset="500" data-aos-once="false" data-aos="fade-left">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col col-md-10 col-xl-9 session pnd">
-                                <h3>PND SPACE RENTAL INCLUSIONS</h3>
-                                <div class="row">
-                                    <ul>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Unlimited High Speed Wifi Connection</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Usage of LED Touchscreen TV</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Full and Half day space rentals available</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Amenities Available</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Usage of Chairs and Tables</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Adjustment to desired chairs and tables arrangment</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+        <section class="ptb-80 bg-light pnd-rental">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-9 col-lg-8 col-xl-7">
+                        <h3 class="display-4 pb-40">PND SPACE RENTAL INCLUSIONS</h3>
+                        <div class="lead"></div>
                     </div>
-                </section>
-                <div class="divider divider-side bg-light d-none d-lg-block"></div>
-            </div>
-
-            <div class="col-lg-7 col-xl-6" data-aos-delay="200" data-aos-offset="500" data-aos-once="false" data-aos="fade-right">
-                <section class='pad-45'>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col col-md-10 col-xl-9 session pnd">
-                                <h3></h3>
-                                <div class="row ">
-                                    <ul>
-
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Breakfast / Lunch / Dinner / Snacks</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Gym available</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Infinity Pool Available</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Barbecue Area</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Usage of Gamesroom</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i><li>Sauna available</li>
-
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4" data-aos-delay="200" data-aos="fade-right">
+                        <i class="fa fa-wifi"></i><p> Unlimited High Speed Wifi Connection</p>
+                        <i class="fa fa-tv"></i><p> Usage of LED Touchscreen TV</p>
+                        <i class="far fa-calendar-check"></i><p> Full and Half day space rentals available</p>
+                        <i class="fas fa-table-tennis"></i><p> Amenities Available</p>
                     </div>
-                </section>
+                    <div class="col-md-4" data-aos-delay="200" data-aos="fade-right">
+                        <i class="fas fa-chair"></i><p> Usage of Chairs and Tables</p>
+                        <i class="fas fa-chair"></i><p> Adjustment to desired chairs and tables arrangement</p>
+                        <i class="fas fa-utensils"></i><p> Breakfast / Lunch / Dinner / Snacks</p>
+                        <i class="fas fa-dumbbell"></i><p> Gym available</p>
+                    </div>
+                    <div class="col-md-4" data-aos-delay="200" data-aos="fade-right">
+                        <i class="fas fa-swimming-pool"></i><p> Infinity Pool Available</p>
+                        <i class="fas fa-utensils"></i><p> Barbecue Area</p>
+                        <i class="fas fa-chess-pawn"></i><p> Usage of Gamesroom</p>
+                        <i class="fas fa-chess-pawn"></i><p> Sauna available</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="bg-primary-3 text-white ptb-80">
-            <!--            <div class="divider divider-top transform-flip-x bg-white"></div>-->
+        <section class="bg-primary-3 ptb-80 text-white">
+                        <div class="divider divider-custom-12"></div>
             <div class="container">
-                <!--            <div class="row section-title justify-content-center text-center">
-                                <div class="col-md-9 col-lg-8 col-xl-7">
-                                    <h3 class="display-4">UPCOMING TRAININGS</h3>
-                                    <div class="col-md-6 mb-3 mb-md-4 l-25">
-                                        <div id="datepicker" class="calendar"></div> 
-                                    </div>  
-                                    <div class="empower">
-                                        <i class="fab fa-instagram"></i><i class="fab fa-youtube"></i><i class="fab fa-facebook"></i>
-                                    </div>
-                                </div>
-                            </div>-->
                 <div class="row section-title justify-content-center text-center">
-                    <div class="col-md-9 col-lg-8 col-xl-7">
-                        <h3 class="display-4">Contact Us</h3>
+                    <div class="col-md-9 col-lg-8 col-xl-7 wow fadeInDown">
+                        <h3 class="display-4 text-white">Contact Us</h3>
                     </div>
                 </div>
-                <div class="row justify-content-center">
+                <div class="row justify-content-center wow fadeInDown">
                     <div class="col-xl-12 col-lg-12">
                         <div class="row justify-content-center">
                             <div class="col-md-6 mb-3 mb-md-4" data-aos="fade-up" data-aos-delay="20">
                                 <div class="card card-body contact-bg min-vh-md-30">
-                                    <div class="flex-fill contact">
+                                    <div class="flex-fill contact pt-25">
                                         <!--                                        <h4 class="h3">Address</h4>-->
-                                        <i class="fas fa-map-marker-alt icon icon-xs bg-white" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
-                                        <i class="far fa-envelope icon icon-xs bg-white" data-inject-svg></i><p> <a href="#" style="color: #fff;"> email@mywebsite.com</a></p>
-                                        <i class="fas fa-phone-alt icon icon-xs bg-white" data-inject-svg></i><p><a href="#" style="color: #fff;"> +630 7662 7601</a></p>
+                                        <i class="fas fa-map-marker-alt icon icon-xs" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
+                                        <i class="far fa-envelope icon icon-xs" data-inject-svg></i><p> <a href="#" style="color: #fff;">email@mywebsite.com</a></p>
+                                        <i class="fas fa-phone-alt icon icon-xs" data-inject-svg></i><p><a href="#" style="color: #fff;">+630 7662 7601</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -354,9 +320,9 @@
             </div>
             <div class="divider divider-bottom bg-primary-3"></div>
         </section>-->
-<!--        <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
-            <img src="assets/img/icons/interface/icon-arrow-up.svg" alt="Icon" class="icon bg-white" data-inject-svg>
-        </a>-->
+        <!--        <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
+                    <img src="assets/img/icons/interface/icon-arrow-up.svg" alt="Icon" class="icon bg-white" data-inject-svg>
+                </a>-->
         <!-- Required vendor scripts (Do not remove) -->
         <?php include'footer.php'; ?>
         <script src="js/slick.js" type="text/javascript"></script>

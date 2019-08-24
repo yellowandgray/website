@@ -34,9 +34,8 @@
                     <div class="row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
                         <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos="fade-left">
                             <h1 class="display-3">EMPOWERING KNOWLEDGE<mark data-aos="highlight-text" data-aos-delay="500"></mark></h1>
-                            <p class="lead">
-                                Project Next Door provides you with the intense course of study which aims not only to expand intellectual horizons but also provide education that unlocks human intellectual potential                            </p>
-                            <a href="#" class="lead"></a>
+                            <p class="lead">Project Next Door provides you with the intense course of study which aims not only to expand intellectual horizons but also provide education that unlocks human intellectual potential.</p>
+                            <center><a href="#" class="bg-button btn-1">BOOK NOW</a></center>
                         </div>
                         <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos="fade-up">
                             <img src="img/teaching.png" alt="Image" class="rounded rounded-image img-fluid shadow-lg">
@@ -270,15 +269,15 @@
                                 <h3>PND TRAINING SESSION INCLUSIONS</h3>
                                 <div class="row ">
                                     <ul>
-                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fa fa-home" aria-hidden="true"></i>
                                         <li>Full and Half Day Training Sessions Available.</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fa fa-wifi"></i>
                                         <li>Unlimited High Speed Wifi Connection</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fa fa-tv" aria-hidden="true"></i>
                                         <li>Usage of LED TV</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fas fa-table-tennis"></i>
                                         <li>Amenities Available.</li>
-                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fas fa-utensils"></i>
                                         <li>Inclusive of Breakfast/Lunch/Dinner/Snacks</li>
 
                                     </ul>
@@ -292,9 +291,9 @@
         </section>
 
 
-<!--        <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
-            <img src="assets/img/icons/interface/icon-arrow-up.svg" alt="Icon" class="icon bg-white" data-inject-svg>
-        </a>-->
+        <!--        <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
+                    <img src="assets/img/icons/interface/icon-arrow-up.svg" alt="Icon" class="icon bg-white" data-inject-svg>
+                </a>-->
         <!-- Required vendor scripts (Do not remove) -->
         <?php include'footer.php'; ?>
         <script src="js/slick.js" type="text/javascript"></script>

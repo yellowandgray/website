@@ -20,16 +20,16 @@
                                 <div class="dropdown-grid-menu">
                                     <a href="empowering.php" class="dropdown-item fade-page">EMPOWERING</a>
                                     <a href="engaging.php" class="dropdown-item fade-page">ENGAGING</a>
-                                    <a href="#" class="dropdown-item fade-page">EXPERIENTIAL</a>
+                                    <a href="experiential.php" class="dropdown-item fade-page">EXPERIENTIAL</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="nav-item"><a href="#" class="nav-link nav-item">GALLERY</a></li>
-                <li class="nav-item"><a href="#" class="nav-link nav-item">FAQs</a></li>
+                <li class="nav-item"><a href="gallery.php" class="nav-link nav-item">GALLERY</a></li>
+                <li class="nav-item"><a href="faq.php" class="nav-link nav-item">FAQs</a></li>
                 <li class="nav-item"><a href="#" class="nav-link nav-item">ABOUT</a></li>
-                <li class="nav-item"><a href="#" class="nav-link nav-item">CONTACT</a></li>
+                <li class="nav-item"><a href="contact.php" class="nav-link nav-item">CONTACT</a></li>
                 <li class="nav-item bg-button"><a href="#" class="nav-link nav-item">BOOK NOW</a></li>
             </ul>
         </div>
@@ -46,16 +46,16 @@
                                 <div class="dropdown-grid-menu">
                                     <a href="empowering.php" class="dropdown-item fade-page">EMPOWERING</a>
                                     <a href="engaging.php" class="dropdown-item fade-page">ENGAGING</a>
-                                    <a href="#" class="dropdown-item fade-page">EXPERIENTIAL</a>
+                                    <a href="experiential.php" class="dropdown-item fade-page">EXPERIENTIAL</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li><a href="#" class="nav-link nav-item">GALLERY</a></li>
-                <li><a href="#" class="nav-link nav-item">FAQs</a></li>
+                <li><a href="gallery.php" class="nav-link nav-item">GALLERY</a></li>
+                <li><a href="faq.php" class="nav-link nav-item">FAQs</a></li>
                 <li><a href="#" class="nav-link nav-item">ABOUT</a></li>
-                <li><a href="#" class="nav-link nav-item">CONTACT</a></li>
+                <li><a href="contact.php" class="nav-link nav-item">CONTACT</a></li>
                 <li class="bg-button"><a href="#" class="nav-link nav-item">BOOK NOW</a></li>
 
             </ul>
