@@ -451,7 +451,7 @@ foreach ($sub_categories as $row) {
                         </div>
                     </div>
                 </section>
-                <section class="container-fluid light-gray-bg" id="explor_product">
+                <section class="container-fluid light-gray-bg">
                     <div class="row">
                         <div class="product-list-wrapper clearfix">
                             <div class="col-md-3 col-sm-12 pull-right right_blue_product_list">
@@ -482,7 +482,7 @@ foreach ($sub_categories as $row) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-9 col-sm-12 matchHeight">
+                            <div class="col-md-9 col-sm-12 matchHeight" id="explor_product">
                                 <div class="row">
                                     <div class="tab-content tab-content-product">
                                         <?php
@@ -1630,7 +1630,7 @@ foreach ($sub_categories as $row) {
                                         match: {
                                         enabled: true
                                         },
-                                                onClickEvent: function() {
+                                                onChooseEvent: function() {
                                                 var selected_id = $("#product").getSelectedItemData().code;
                                                 var selected_cat_id = $("#product").getSelectedItemData().category_id;
                                                         var selected_category = $("#product").getSelectedItemData().type;
