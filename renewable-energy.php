@@ -60,48 +60,36 @@
 
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <img src="images/renewable-energy/dc-converter.jpg" alt=""  class="img-responsive"/>  
+                                            <img src="images/renewable-energy/dc-converter.jpg" alt=""/>  
                                         </div>
                                     </div><br>
 
                                     <div class="row">
-                                        <div class="col-md-8">
-                                            <div class="renewable-energy">
-                                                <h5>CONFIRMS</h5>
-                                                <span>IEC 61439-1,NF C 15-100,NF EN 61439-1, NF EN 50521, NF EN 61643-11, NF EN 60269, UTE C32-502</span>
+                                        <div class="col-md-4">
+                                            <div class="img-1 renewable-energy text-center">
+                                                <div>
+                                                    <img src="images/renewable-energy/confirms.png" alt=""/>
+                                                </div>
+                                                <div>
+                                                    <h5>CONFIRMS</h5>
+                                                    <span>IEC 61439-1,NF C 15-100,NF EN 61439-1, NF EN 50521, NF EN 61643-11, NF EN 60269, UTE C32-502</span>
+                                                </div>
                                             </div>
                                         </div>
-
                                         <div class="col-md-4">
-                                            <img src="images/renewable-energy/confirms.jpg" alt="" class="img-responsive"/>
-                                        </div>
-                                    </div><br>
-
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <div class="renewable-energy">
+                                            <div class="img-1 renewable-energy text-center">
+                                                <img src="images/renewable-energy/resistant.png" alt="" />
                                                 <h5>WEATHER RESISTANT</h5>
                                                 <span>Armored polyester box with Fiberglass, resistant to harsh weather and UV</span>
                                             </div>
                                         </div>
-
                                         <div class="col-md-4">
-                                            <img src="images/renewable-energy/weather-resistant.jpg" alt="" />
+                                            <div class="img-1 renewable-energy text-center">
+                                                <img src="images/renewable-energy/degree.png" alt="" />
+                                                <h5>DEGREE OF PROTECTION </h5>
+                                                <span>IP 66 (IP55 large format) & IK 10</span></div>
                                         </div>
                                     </div><br>
-
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <div class="renewable-energy">
-                                                <h5>DEGREE OF PROTECTION </h5>
-                                                <span>IP 66 (IP55 large format) & IK 10</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <img src="images/renewable-energy/degree-of-protection.jpg" alt="" />
-                                        </div>
-                                    </div>
                                 </div>
                             </section>
                         </div>
@@ -572,13 +560,13 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="renewable-energy">
-                                                <img src="images/renewable-energy/string1.jpg"  alt="" />
+                                                <img src="images/renewable-energy/string1.jpg"  alt="" class="img-responsive"/>
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <div class="renewable-energy">
-                                                <img src="images/renewable-energy/string2.jpg"  alt="" />
+                                                <img src="images/renewable-energy/string2.jpg"  alt="" class="img-responsive"/>
                                             </div>
                                         </div>
                                     </div><br>
@@ -619,13 +607,12 @@
                                             <div class="renewable-energy">
                                                 <span>String monitoring in solar power plant has become a useful tool to dig inside for fault analysis and diagnosis.Also string current and voltage monitoring in real time reduces the failure time and efficiency of O & M team.overvoltage and fuse blown alarm indicates and SPD,breaker status can be interfaced and monitored through SCADA by using Modbus.As SMB helps to increase the performance of solar power plant, reliable data transfer is very crucial. We are buffering the data if communication link is failed and transferring again once link is established. This enables us to avoid data loss. Our wireless solution is also unique where we are using low power, long range modules with proprietary transmission mechanism. </span>
                                             </div><br>
-
-                                            <div class="col-md-12">
-                                                <div class="renewable-energy">
-                                                    <img src="images/renewable-energy/schematic.jpg"  alt="" />
-                                                </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="renewable-energy" style="text-align: -webkit-center;">
+                                                <img src="images/renewable-energy/schematic.jpg"  alt="" class="img-responsive"/>
                                             </div>
-                                        </div><br><br>
+                                        </div>
                                     </div>
                                 </div>
                             </section>
