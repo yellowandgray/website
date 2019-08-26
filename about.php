@@ -18,7 +18,7 @@
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header" style="background: url(images/renewable-energy/Untitled-2.jpg) no-repeat;">
                 <div class="container">
-                    <h1>Renewable Energy</h1>
+                    <h1>About Us</h1>
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#"> Products </a></li>
@@ -35,11 +35,11 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="about-text">
-                                    <h5>We are Taking Small Steps to Make</h5>
-                                    <h2>Earth Better Planet</h2>
-                                    <p><strong>One of the serious issues faced by our modern world is environmental pollution, and it is one the most significant challenges that the world is facing in our day.</strong></p>
-                                    <p>Environmental pollution has existed for centuries. But, it began to be a severe issue following the industrial revolution in the 19th century. Pollution generally takes place when pollutants pollute the natural surroundings and it can bring about changes that affect our everyday lifestyles unfavorably. </p>
-                                    <a href="#">Contact Us</a> 
+                                    <h5>About</h5>
+                                    <h2>VPN COMMODITIES</h2>
+                                    <p class="text-justify">VPN COMMODITIES is a reputed global service provider in the field of Copper and Fiber Products in the Telecom Sector and in the field of Low Voltage Electrical products. Having its base in India, Germany and USA, the firm has carved a niche through the support of its valuable clients. Backed by a team of experts from engineering manufacturing, trading and sourcing, the firm offers cost effective solutions and caters the needs of the client in mentioned domains.</p>
+                                <h5>Our Moto</h5>
+                                <p>“To exceed customer expectations through Innovation, Continuous Improvement in People & Products, Quality, Cost and Delivery”.</p>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -72,25 +72,32 @@
                                                 <div class="row about-h">
                                                     <div class=" col-4">
                                                         <div class="timeline-box">
-                                                            <h6>We Started</h6>
-                                                            <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>
+                                                            <h6 align="center">Vision</h6>
+                                                            <ul>
+                                                                <li>To facilitate Telecom and Energy Based Companies by offering reliable network connectivity.</li>
+                                                                <li>To conserve natural resources through solutions from renewable energy sectors.</li>
+                                                                <li>To save energy, time and money by serving as sourcing hub besides providing best solutions for packaging and logistic needs of clients.</li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                     <div class=" col-4">
                                                         <div class="timeline-box">
-                                                            <h6>Results of Hardwork</h6>
-                                                            <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>
+                                                            <h6 align="center">Mission</h6>
+                                                            <p> Yellow And Green aims to serve more than 50 telecom and energy companies worldwide.</p>
                                                         </div>
                                                     </div>
                                                     <div class=" col-4">
                                                         <div class="timeline-box">
-                                                            <h6>Project </h6>
-                                                            <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>
+                                                            <h6 align="center">Goal</h6>
+                                                            <ul>
+                                                                <li>To be the most successful professional operator for all stake holders within the industry.</li>
+                                                                <li>Yellow And Green has ambitions to introduce new products in the field of Sound, Image, Data, Connectivity, and Energy Flow.</li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                         </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <!--Political History End--> 
@@ -100,154 +107,29 @@
                 </div>
                 <!--Our Success Story End--> 
                 <!--Why you Need to Choose Ecova Start-->
-                <div class="choose-ecova wf100 p80">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="section-title-2">
-                                    <h5>Why you Need to</h5>
-                                    <h2>Choose Ecova</h2>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="eco-box">
-                                            <span class="econ-icon"><i class="far fa-handshake"></i></span>
-                                            <h5> Become a Volunteer </h5>
-                                            <p> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="eco-box">
-                                            <span class="econ-icon"><i class="far fa-money-bill-alt"></i></span>
-                                            <h5> Send Donation </h5>
-                                            <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id. </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="eco-box">
-                                            <span class="econ-icon"><i class="fas fa-heart"></i></span>
-                                            <h5> Affective Causes </h5>
-                                            <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="eco-box">
-                                            <span class="econ-icon"> <i class="fas fa-coffee"></i> </span>
-                                            <h5> Fund Raising </h5>
-                                            <p>Who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="volunteer-form">
-                                    <div class="section-title">
-                                        <h3>Join us Now</h3>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <input type="text" class="form-control" placeholder="Your Name" aria-label="Your Name">
-                                        </li>
-                                        <li>
-                                            <input type="text" class="form-control" placeholder="Email Address" aria-label="Email Address">
-                                        </li>
-                                        <li>
-                                            <input type="text" class="form-control" placeholder="Contact" aria-label="Contact">
-                                        </li>
-                                        <li>
-                                            <input type="submit" class="fsubmit" value="Signup to Join us">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Why you Need to Choose Ecova End--> 
+                                <!--Why you Need to Choose Ecova End--> 
                 <!--Testimonials Start-->
-                <section class="testimonials-section bg-white wf100 p80">
+                <section class="wf100 p80">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="section-title-2 text-center">
-                                    <h5>Testimonials</h5>
-                                    <h2>What People Says</h2>
-                                </div>
-                                <div id="testimonials" class="owl-carousel owl-theme">
-                                    <!--testimonials box start-->
-                                    <div class="item">
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using lorem sum is that it has a more or less normal distribution.</p>
-                                        <div class="tuser"> <img src="images/tuser1.jpg" alt=""> <strong>Danny Scotten</strong> Florida Partner </div>
-                                    </div>
-                                    <!--testimonials box End--> 
-                                    <!--testimonials box start-->
-                                    <div class="item">
-                                        <p>As opposed to using 'Content here, content here', making it look like readable English. Many Desktop and Web Pages are using lorem ipsum.</p>
-                                        <div class="tuser"> <img src="images/tuser2.jpg" alt=""> <strong>Richardson</strong> Florida Partner </div>
-                                    </div>
-                                    <!--testimonials box End--> 
-                                    <!--testimonials box start-->
-                                    <div class="item">
-                                        <p>It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
-                                        <div class="tuser"> <img src="images/tuser3.jpg" alt=""> <strong>Anna Lillian</strong> Florida Partner </div>
-                                    </div>
-                                    <!--testimonials box End--> 
-                                    <!--testimonials box start-->
-                                    <div class="item">
-                                        <p>Those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain.</p>
-                                        <div class="tuser"> <img src="images/tuser1.jpg" alt=""> <strong>Danny Scotten</strong> Florida Partner </div>
-                                    </div>
-                                    <!--testimonials box End--> 
-                                    <!--testimonials box start-->
-                                    <div class="item">
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using lorem sum is that it has a more or less normal distribution.</p>
-                                        <div class="tuser"> <img src="images/tuser1.jpg" alt=""> <strong>Danny Scotten</strong> Florida Partner </div>
-                                    </div>
-                                    <!--testimonials box End--> 
-                                    <!--testimonials box start-->
-                                    <div class="item">
-                                        <p>As opposed to using 'Content here, content here', making it look like readable English. Many Desktop and Web Pages are using lorem ipsum.</p>
-                                        <div class="tuser"> <img src="images/tuser2.jpg" alt=""> <strong>Richardson</strong> Florida Partner </div>
-                                    </div>
-                                    <!--testimonials box End--> 
-                                    <!--testimonials box start-->
-                                    <div class="item">
-                                        <p>It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
-                                        <div class="tuser"> <img src="images/tuser3.jpg" alt=""> <strong>Anna Lillian</strong> Florida Partner </div>
-                                    </div>
-                                    <!--testimonials box End--> 
-                                    <!--testimonials box start-->
-                                    <div class="item">
-                                        <p>Those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain.</p>
-                                        <div class="tuser"> <img src="images/tuser1.jpg" alt=""> <strong>Danny Scotten</strong> Florida Partner </div>
-                                    </div>
-                                    <!--testimonials box End--> 
-                                    <!--testimonials box start-->
-                                    <div class="item">
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using lorem sum is that it has a more or less normal distribution.</p>
-                                        <div class="tuser"> <img src="images/tuser1.jpg" alt=""> <strong>Danny Scotten</strong> Florida Partner </div>
-                                    </div>
-                                    <!--testimonials box End--> 
-                                    <!--testimonials box start-->
-                                    <div class="item">
-                                        <p>As opposed to using 'Content here, content here', making it look like readable English. Many Desktop and Web Pages are using lorem ipsum.</p>
-                                        <div class="tuser"> <img src="images/tuser2.jpg" alt=""> <strong>Richardson</strong> Florida Partner </div>
-                                    </div>
-                                    <!--testimonials box End--> 
-                                    <!--testimonials box start-->
-                                    <div class="item">
-                                        <p>It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
-                                        <div class="tuser"> <img src="images/tuser3.jpg" alt=""> <strong>Anna Lillian</strong> Florida Partner </div>
-                                    </div>
-                                    <!--testimonials box End--> 
-                                    <!--testimonials box start-->
-                                    <div class="item">
-                                        <p>Those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain.</p>
-                                        <div class="tuser"> <img src="images/tuser1.jpg" alt=""> <strong>Danny Scotten</strong> Florida Partner </div>
-                                    </div>
-                                    <!--testimonials box End--> 
-                                </div>
+                            <div class="col-lg-6">
+                                <h6 align="center">Solutions</h6>
+                                <ul>
+                                    <li>Providing Solutions for Communication and Energy Network for Reliable Connectivity</li>
+                                    <li>Renewable Energy Resource Equipment</li>
+                                    <li>Providing End to End Sourcing Solutions</li>
+                                    <li>Packaging and Logistic & Benefit Scheme Solutions</li>
+                                </ul>
                             </div>
+                            
+                            <div class="col-lg-6">
+                                <h6 align="center">What Vpn Commodities Specializes in?</h6>
+                                <ul>
+                                    <li>Vpn Commodities are global players and their work involves management of data, image and flow distribution in cooperation with all the operators and suppliers of interconnected services globally.</li>
+                                    <li>We specialize in supply of quality products for copper outside Plant Networks, Fiber Optic outside plant networks, in building, civil engineering, LV products, Solar Products (PV Modules, Batteries, Inverters and etc…), for a clients from Telecom Operators, Distribution Networks, Power Utilities, Private Operators, Integrators, Distributors and Private Market.</li>
+                                </ul>
+                            </div>
+                            
                         </div>
                     </div>
                 </section>
