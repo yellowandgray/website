@@ -66,7 +66,7 @@
                                         <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-<!--                                        <div class="tensorsite-content__subtitle ">Training</div>-->
+                                        <!--                                        <div class="tensorsite-content__subtitle ">Training</div>-->
                                         <div class="tensorsite-content__title  ">
                                             SIMULATION ROOM
                                         </div>
@@ -86,7 +86,7 @@
                                         <div class="tensorsite-content__clip-bg margin-t-20" >
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-<!--                                        <div class="tensorsite-content__subtitle ">Modern Coaching</div>-->
+                                        <!--                                        <div class="tensorsite-content__subtitle ">Modern Coaching</div>-->
                                         <div class="tensorsite-content__title  ">
                                             COMMAND AND SUPPORT HUB
                                         </div>
@@ -106,7 +106,7 @@
                                         <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-<!--                                        <div class="tensorsite-content__subtitle ">Small Text Comes Here</div>-->
+                                        <!--                                        <div class="tensorsite-content__subtitle ">Small Text Comes Here</div>-->
                                         <div class="tensorsite-content__title  ">
                                             INDUSTRY 4.0
                                         </div>
@@ -126,7 +126,7 @@
                                         <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-<!--                                        <div class="tensorsite-content__subtitle ">Small Text Comes Here</div>-->
+                                        <!--                                        <div class="tensorsite-content__subtitle ">Small Text Comes Here</div>-->
                                         <div class="tensorsite-content__title  ">
                                             IINTERNET OF THINGS
                                         </div>
@@ -146,7 +146,6 @@
                                         <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-S
                                         <div class="tensorsite-content__title  ">
                                             BIG DATA
                                         </div>
@@ -161,28 +160,28 @@ S
                     <div class="tensorsite-group__divider"></div>
                 </div>
             </div>
-<!--            <div class="slider">
-                <div class="training-topic-h5 mr-0">
-                    <img src="img/experiential/simulation.jpg" />
-                    <h5>Simulation Room</h5>
-                </div>
-                <div class="training-topic-h5 mr-0">
-                    <img src="img/experiential/support-hub.jpg" />
-                    <h5>Command and Support Hub</h5>
-                </div>
-                <div class="training-topic-h5 mr-0">
-                    <img src="img/experiential/industry-4.0.jpg" />
-                    <h5>Industry 4.0</h5>
-                </div>
-                <div class="training-topic-h5 mr-0">
-                    <img src="img/experiential/internet-thing.jpg" />
-                    <h5>Internet of Things</h5>
-                </div>
-                <div class="training-topic-h5 mr-0">
-                    <img src="img/experiential/big-data.jpg" />
-                    <h5>Big Data</h5>
-                </div>
-            </div>-->
+            <!--            <div class="slider">
+                            <div class="training-topic-h5 mr-0">
+                                <img src="img/experiential/simulation.jpg" />
+                                <h5>Simulation Room</h5>
+                            </div>
+                            <div class="training-topic-h5 mr-0">
+                                <img src="img/experiential/support-hub.jpg" />
+                                <h5>Command and Support Hub</h5>
+                            </div>
+                            <div class="training-topic-h5 mr-0">
+                                <img src="img/experiential/industry-4.0.jpg" />
+                                <h5>Industry 4.0</h5>
+                            </div>
+                            <div class="training-topic-h5 mr-0">
+                                <img src="img/experiential/internet-thing.jpg" />
+                                <h5>Internet of Things</h5>
+                            </div>
+                            <div class="training-topic-h5 mr-0">
+                                <img src="img/experiential/big-data.jpg" />
+                                <h5>Big Data</h5>
+                            </div>
+                        </div>-->
         </section>
 
         <section class="bg-primary-3 text-white ptb-80">

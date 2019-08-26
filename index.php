@@ -209,7 +209,7 @@
                                         <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-                                        <div class="tensorsite-content__subtitle ">Small Text Comes Here</div>
+                                        <div class="tensorsite-content__subtitle ">Creative Space</div>
                                         <div class="tensorsite-content__title  ">
                                             ENGAGING
                                         </div>
@@ -310,7 +310,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg-light o-hidden ptb-80">
+        <section id="book-now" class="bg-light o-hidden ptb-80">
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7 wow fadeInDown">

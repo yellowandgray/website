@@ -28,9 +28,9 @@
                 </li>
                 <li class="nav-item"><a href="gallery.php" class="nav-link nav-item">GALLERY</a></li>
                 <li class="nav-item"><a href="faq.php" class="nav-link nav-item">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link nav-item">ABOUT</a></li>
+                <li class="nav-item"><a href="about.php" class="nav-link nav-item">ABOUT</a></li>
                 <li class="nav-item"><a href="contact.php" class="nav-link nav-item">CONTACT</a></li>
-                <li class="nav-item bg-button"><a href="#" class="nav-link nav-item">BOOK NOW</a></li>
+                <li class="nav-item bg-button"><a href="index.php#book-now" class="nav-link nav-item">BOOK NOW</a></li>
             </ul>
         </div>
         <a href="#menu" id="toggle"><span></span></a>
@@ -54,9 +54,9 @@
                 </li>
                 <li><a href="gallery.php" class="nav-link nav-item">GALLERY</a></li>
                 <li><a href="faq.php" class="nav-link nav-item">FAQs</a></li>
-                <li><a href="#" class="nav-link nav-item">ABOUT</a></li>
+                <li><a href="about.php" class="nav-link nav-item">ABOUT</a></li>
                 <li><a href="contact.php" class="nav-link nav-item">CONTACT</a></li>
-                <li class="bg-button"><a href="#" class="nav-link nav-item">BOOK NOW</a></li>
+                <li class="bg-button"><a href="index.php#book-now" class="nav-link nav-item">BOOK NOW</a></li>
 
             </ul>
         </div>

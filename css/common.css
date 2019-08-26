@@ -121,6 +121,20 @@
     background: #ffffff !important;
 }
 
+.divider.divider-custom-14 {
+    bottom: 80px;
+    background: #ffffff !important;
+}
+
+.divider.divider-custom-15 {
+    top: 80px;
+    background: #4a7c7c !important;
+}
+
+.divider.divider-custom-16 {
+    top: 80px;
+    background: #f7f9fc !important;
+}
 
 .footer-1 h5 {
     color: #fff;
@@ -661,4 +675,70 @@ body.loaded>div.loader {
     box-shadow: 0 0 15px 6px #eee;
     padding: 20px 20px;
     margin: 0 25px 25px 0 !important;
+}
+
+.card.bg-white div {
+    text-align: left;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.font-size-div {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.table-alignment td {
+    padding: 10px 0;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.table-alignment th {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 30%;
+    text-align: left;
+    vertical-align: top;
+}
+
+.img-margin img {
+    margin-bottom: 20px;
+}
+
+.img-margin h4 {
+    font-size: 22px;
+}
+
+.para p {
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.para svg {
+    color: #4a7c7c;
+}
+
+.about-project-next-door-section h3 {
+    color: #fff !important;
+}
+
+.about-project-next-door-section svg {
+    color: #fff !important;
+}
+
+.about-project-next-door-section div {
+    color: #fff !important;
+}
+
+.facilites .card-body {
+    padding: 1.25rem !important;
+}
+
+.facilites .card-body h3 {
+    font-weight: 300;
+    text-align: center;
 }

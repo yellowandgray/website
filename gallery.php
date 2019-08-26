@@ -29,8 +29,8 @@
                     <div class="row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
                         <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos="fade-left">
                             <h1 class="display-3">GALLERY<mark data-aos="highlight-text" data-aos-delay="500"></mark></h1>
-<!--                            <p class="lead">Productive environment makes you feel open and sociable. Our room provides and creates a feeling of earthiness and sophistication. Modern environment and flexible customization, all at a cost effective price.</p>
-                            <a href="#" class="lead"></a>-->
+                            <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                            <a href="#" class="lead"></a>
                         </div>
                         <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos="fade-up">
                             <img src="img/gallery-title.jpg" alt="Image" class="rounded rounded-image img-fluid shadow-lg">
@@ -48,7 +48,7 @@
             <div class="container-fluid">
                 <div class="row justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7">
-                        <h3 class="display-4 pb-40">GALLERY</h3>
+                        <h3 class="display-4 pb-40">Ultra Modern Facilities</h3>
                         <div class="lead"></div>
                     </div>
                 </div>

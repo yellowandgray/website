@@ -111,6 +111,12 @@
     .tensorsite-content__clip-shape {
         margin-top: -54px !important;
     }
+    .who-we-are img {
+        width: 100% !important;
+    }
+    .table-alignment td {
+        font-size: 15px !important;
+    }
 }
 
 @media (min-width: 390px) and (max-width: 599px) {
