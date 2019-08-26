@@ -132,6 +132,7 @@
     .tensorsite-content__clip-shape {
         margin-top: -79px !important;
     }
+
 }
 
 @media screen and (max-width: 599px) {
@@ -216,10 +217,10 @@
     .tensorsite-card--clip .tensorsite-content__image-wrapper {
         height: 150px !important;
     }
-/*    #toggle {
-        right: 0 !important;
-        top: 15px !important;
-    }*/
+    /*    #toggle {
+            right: 0 !important;
+            top: 15px !important;
+        }*/
 }
 
 @media (min-width: 461px) and (max-width: 768px) {
@@ -229,6 +230,9 @@
     }
     .banner-text h1 span {
         font-size: 70px !important;
+    }
+    .img-bg-cream p {
+        font-size: 18px;
     }
 }
 

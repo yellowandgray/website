@@ -195,7 +195,7 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4 mb-3 mb-md-4">
                         <div class="card h-100 hover-box-shadow">
-                            <a href="#" class="d-block bg-gradient rounded-top">
+                            <a href="#" class="d-block rounded-top">
                                 <img class="card-img-top hover-fade-out" src="img/about/facilities-001.jpg" alt="blog.4.image">
                             </a>
                             <div class="card-body">
@@ -208,7 +208,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4 mb-3 mb-md-4">
                         <div class="card h-100 hover-box-shadow">
-                            <a href="#" class="d-block bg-gradient rounded-top">
+                            <a href="#" class="d-block rounded-top">
                                 <img class="card-img-top hover-fade-out" src="img/about/facilities-002.jpg" alt="blog.5.image">
                             </a>
                             <div class="card-body">
@@ -221,7 +221,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4 mb-3 mb-md-4">
                         <div class="card h-100 hover-box-shadow">
-                            <a href="#" class="d-block bg-gradient rounded-top">
+                            <a href="#" class="d-block rounded-top">
                                 <img class="card-img-top hover-fade-out" src="img/about/facilities-003.jpg" alt="blog.6.image">
                             </a>
                             <div class="card-body">
@@ -235,7 +235,7 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4 mb-3 mb-md-4">
                         <div class="card h-100 hover-box-shadow">
-                            <a href="#" class="d-block bg-gradient rounded-top">
+                            <a href="#" class="d-block rounded-top">
                                 <img class="card-img-top hover-fade-out" src="img/about/facilities-004.jpg" alt="blog.4.image">
                             </a>
                             <div class="card-body">
@@ -247,7 +247,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4 mb-3 mb-md-4">
                         <div class="card h-100 hover-box-shadow">
-                            <a href="#" class="d-block bg-gradient rounded-top">
+                            <a href="#" class="d-block rounded-top">
                                 <img class="card-img-top hover-fade-out" src="img/about/facilities-005.jpg" alt="blog.5.image">
                             </a>
                             <div class="card-body">
@@ -259,7 +259,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4 mb-3 mb-md-4">
                         <div class="card h-100 hover-box-shadow">
-                            <a href="#" class="d-block bg-gradient rounded-top">
+                            <a href="#" class="d-block rounded-top">
                                 <img class="card-img-top hover-fade-out" src="img/about/facilities-006.jpg" alt="blog.6.image">
                             </a>
                             <div class="card-body">

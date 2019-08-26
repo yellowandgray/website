@@ -702,6 +702,7 @@ body.loaded>div.loader {
     width: 30%;
     text-align: left;
     vertical-align: top;
+    color: #4a7c7c;
 }
 
 .img-margin img {
