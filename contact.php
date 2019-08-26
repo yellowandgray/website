@@ -143,7 +143,7 @@
                 </section>
             </div>
         </section>
-        <section class="row no-gutters p-0">
+<!--        <section class="row no-gutters p-0">
             <div class="col-lg-6">
                 <section>
                     <div class="container">
@@ -175,13 +175,13 @@
                 <div class="divider divider-side d-none d-lg-block transform-flip-y"></div>
 
             </div>
-        </section>
-        <section class="bg-light pb-0">
+        </section>-->
+<!--        <section class="bg-light pb-0">
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7">
                         <h3 class="display-4">Get in touch with us</h3>
-                        <!--                        <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>-->
+                                                <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
@@ -243,7 +243,7 @@
                                     </div>
                                     <div class="d-flex justify-content-end">
                                         <button class="btn btn-primary btn-loading" type="submit" data-loading-text="Sending">
-                                            <!-- Icon for loading animation -->
+                                             Icon for loading animation 
                                             <svg class="icon bg-white" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                             <title>Icon For Loading</title>
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -264,7 +264,7 @@
                 </div>
             </div>
             <div class="divider divider-custom-11"></div>
-        </section>
+        </section>-->
         <?php include'footer.php'; ?>
     </body>
 </html>
