@@ -19,5 +19,6 @@
     <link href="css/protfil.css" rel="stylesheet" type="text/css"/>
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <!-- CSS FILES End -->
-
+    <link href="css/wow/wow.animate.css" rel="stylesheet" type="text/css"/>
+    <link href="css/wow/wow.min.css" rel="stylesheet" type="text/css"/>
 </head>

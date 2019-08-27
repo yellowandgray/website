@@ -66,6 +66,7 @@
 <script src="js/jquery.prettyPhoto.js"></script> 
 <script src="js/isotope.min.js"></script> 
 <script src="js/custom.js"></script>
+<script src="js/wow.js" type="text/javascript"></script>
 <script>
     window.onscroll = function () {
         myFunction()

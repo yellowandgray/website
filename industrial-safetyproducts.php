@@ -5,7 +5,7 @@
     include 'head.php';
     ?>
     <body>
-        <div class="wrapper">
+        <div class="wrapper industry">
             <!--Header Start-->
             <?php include'menu.php'; ?>
             <div id="search">
@@ -47,7 +47,7 @@
                         <div class="col-md-12">
                             <div class="legacy-trust">
                                 <h3>A TRADITION OF EXCELLENCE</h3>
-                                <span>VPN COMMODITIES Pte Ltd Singapore is a well-established certified organization active in manufacturing & trading business of different kinds of safely footwear.The company has a strong quality base that is being continously developed to acheive a higher level of perfection in design and workmanship.The empahsis since the very beginning has been to offer "great product at great prices."</span>
+                                <p class="text-justify">VPN COMMODITIES Pte Ltd Singapore is a well-established certified organization active in manufacturing & trading business of different kinds of safely footwear.The company has a strong quality base that is being continously developed to acheive a higher level of perfection in design and workmanship.The empahsis since the very beginning has been to offer "great product at great prices."</p>
                             </div>
                         </div>
                     </div><br>
@@ -55,7 +55,7 @@
                         <div class="col-md-12">
                             <div class="legacy-trust">
                                 <h3>OUR MOTTO</h3>
-                                <span>"TO exceed customer expectations through Innovation,Continous Improvement,Quality,Cost and Delivery".</span>
+                                <p class="text-justify">"TO exceed customer expectations through Innovation,Continous Improvement,Quality,Cost and Delivery".</p>
                             </div>
                         </div>
                     </div><br>
@@ -64,10 +64,10 @@
                         <div class="col-md-8">
                             <div class="legacy-trust">
                                 <h3>A LEGACY OF TRUST</h3>
-                                <span>'COMMANDO' Safety Gear,from the house of VPN, is one of the most trusted safety industrial shoe brands in Singapore made on Direct Injection Process on Desma Machines from Germany.'COMMANDO' is certified by EU NORMS(EN ISO 20345:2011)from PFI Germany/Intertek UK. It has become a part of contemporary work culture in Aviation,Chemical Industry,Construction Business,Defence Services,Heavy Engineering,Hotels,Mining in National and International markets.</span>
+                                <p class="text-justify">'COMMANDO' Safety Gear,from the house of VPN, is one of the most trusted safety industrial shoe brands in Singapore made on Direct Injection Process on Desma Machines from Germany.'COMMANDO' is certified by EU NORMS(EN ISO 20345:2011)from PFI Germany/Intertek UK. It has become a part of contemporary work culture in Aviation,Chemical Industry,Construction Business,Defence Services,Heavy Engineering,Hotels,Mining in National and International markets.</p>
                             </div>
                         </div><br>
-                        <div class="col-md-4">
+                        <div class="col-md-4 img-2">
                             <img src="images/safety-products/Untitled-1.jpg" alt=""  class="img-responsive" style="top:10px; position:relative;"/>
                         </div>
                     </div><br>
@@ -76,10 +76,10 @@
                         <div class="col-md-8">
                             <div class="legacy-trust">
                                 <h3>A CAPABILITY TO CUSTOMIZE</h3>
-                                <span>VPN has not only its own unique styling but also has the capability to react to special market requirements & can customize shoes as per the specification of the customer at a very competitive price and on time. With a firm commitment and belief,we can create products matching your interests.</span>
+                                <p class="text-justify">VPN has not only its own unique styling but also has the capability to react to special market requirements & can customize shoes as per the specification of the customer at a very competitive price and on time. With a firm commitment and belief,we can create products matching your interests.</p>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 img-2">
                             <img src="images/safety-products/capability-to-customize.jpg" alt="" class="img-responsive" />
                         </div>
                     </div><br>
@@ -88,7 +88,7 @@
                         <div class="col-md-12">
                             <div class="legacy-trust">
                                 <h3>A RANGE FOR DIVERSE SEGMENTS</h3>
-                                <span>Our Commando Safety Gear catres to diverse requirements of people in different areas of activity...airports,chemical industry,construction business,defence services,heavy engineering,hotel,mining or railways...ensuring they go about their business with absolute safety and confidence.</span>
+                                <p class="text-justify">Our Commando Safety Gear catres to diverse requirements of people in different areas of activity...airports,chemical industry,construction business,defence services,heavy engineering,hotel,mining or railways...ensuring they go about their business with absolute safety and confidence.</p>
                             </div>
                         </div>
                     </div><br>
@@ -103,19 +103,19 @@
 
             <!--Blog Post End-->
             <!--Blog Post End-->
-            <section class="wf100 p80 projects">
+            <section class="wf100 p80 projects shoe">
                 <div class="projects-grid-two">
                     <div class="container">
-                        <h4 align="left">Product Range</h4>
+                        <h3 align="left">PRODUCT RANGE</h3>
                         <div class="row">
                             <!--Project box Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/safety-products/shoee1.jpg" alt="" class="img-responsive">
                                     <h5>EN ISO 20345:2011</h5>
                                     <div class="pro-hover">
                                         <h6>ART NO  - COMMANDO-123</h6>
-                                        <span><br>ART NO.   - COMMANDO-123<br>
+                                        <p class="text-justify"><br>ART NO.   - COMMANDO-123<br>
                                             STANDARD  - S1P<br>
                                             UPPER     - Buff Barton<br>
                                             COLOUR    - Black/Ten<br>
@@ -125,20 +125,20 @@
                                             INSOLE    - EVA Kevlar<br>
                                             SOLE      - Double/Single Density
 
-                                        </span>
+                                        </p>
 
                                     </div>
                                 </div>
                             </div>
                             <!--Project box End-->
                             <!--Project box Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/safety-products/shoee2.jpg" alt="" class="img-responsive">
                                     <h5>EN ISO 20345:2011</h5>
                                     <div class="pro-hover">
                                         <h6>ART NO - COMMANDO-320</h6>
-                                        <span><br>ART NO.   - COMMANDO-123<br>
+                                        <p class="text-justify"><br>ART NO.   - COMMANDO-123<br>
                                             STANDARD  - S1P<br>
                                             UPPER     - Buff Barton<br>
                                             COLOUR    - Black<br>
@@ -148,19 +148,19 @@
                                             INSOLE    - Kevlar<br>
                                             SOLE      - Double/Single Density
 
-                                        </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <!--Project box End--> 
                             <!--Project box Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/safety-products/shoe3.jpg" alt="" class="img-responsive">
                                     <h5>EN ISO 20345:2011</h5>
                                     <div class="pro-hover">
                                         <h6>ART NO.   - COMMANDO-320</h6>
-                                        <span><br>ART NO.   - COMMANDO-320<br>
+                                        <p class="text-justify"><br>ART NO.   - COMMANDO-320<br>
                                             STANDARD  - S1P<br>
                                             UPPER     - Buff Barton<br>
                                             COLOUR    - Brown<br>
@@ -170,19 +170,19 @@
                                             INSOLE    - Kevlar<br>
                                             SOLE      - Double/Single Density
 
-                                        </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <!--Project box End--> 
                             <!--Project box Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/safety-products/shoee4.jpg" alt="" class="img-responsive">
                                     <h5>EN ISO 20345:2011</h5>
                                     <div class="pro-hover">
                                         <h6>ART NO - COMMANDO-334</h6>
-                                        <span><br>ART NO.   - COMMANDO-334<br>
+                                        <p class="text-justify"><br>ART NO.   - COMMANDO-334<br>
                                             STANDARD  - S1P<br>
                                             UPPER     - Buff Barton<br>
                                             COLOUR    - Black/Ten<br>
@@ -192,19 +192,19 @@
                                             INSOLE    - Kevlar<br>
                                             SOLE      - Double/Single Density
 
-                                        </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <!--Project box End--> 
                             <!--Project box Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/safety-products/shoee5.jpg" alt="" class="img-responsive">
                                     <h5>EN ISO 20345:2011</h5>
                                     <div class="pro-hover">
                                         <h6>ART NO - COMMANDO-01</h6>
-                                        <span><br>ART NO.   - COMMANDO-01<br>
+                                        <p class="text-justify"><br>ART NO.   - COMMANDO-01<br>
                                             STANDARD  - S1P<br>
                                             UPPER     - Buff Barton<br>
                                             COLOUR    - Black<br>
@@ -214,19 +214,19 @@
                                             INSOLE    - Kevlar<br>
                                             SOLE      - Double/Single Density
 
-                                        </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <!--Project box End--> 
                             <!--Project box Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/safety-products/shoe6.jpg" alt="" class="img-responsive">
                                     <h5>EN ISO 20345:2011</h5>
                                     <div class="pro-hover">
                                         <h6>ART NO.   - COMMANDO-333</h6>
-                                        <span><br>ART NO.   - COMMANDO-333<br>
+                                        <p class="text-justify"><br>ART NO.   - COMMANDO-333<br>
                                             STANDARD  - S1P<br>
                                             UPPER     - Buff Barton<br>
                                             COLOUR    - Ten<br>
@@ -236,19 +236,19 @@
                                             INSOLE    - Kevlar<br>
                                             SOLE      - Double/Single Density
 
-                                        </span> 
+                                        </p> 
                                     </div>
                                 </div>
                             </div>
                             <!--Project box End--> 
                             <!--Project box Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/safety-products/shoee7.jpg" alt="" class="img-responsive">
                                     <h5>EN ISO 20345:2011</h5>
                                     <div class="pro-hover">
                                         <h6>ART NO - COMMANDO-319</h6>
-                                        <span><br>ART NO.   - COMMANDO-319<br>
+                                        <p class="text-justify"><br>ART NO.   - COMMANDO-319<br>
                                             STANDARD  - S1P<br>
                                             UPPER     - Buff Barton<br>
                                             COLOUR    - Black/Ten<br>
@@ -258,19 +258,19 @@
                                             INSOLE    - EVA Kevlar<br>
                                             SOLE      - Double/Single Density
 
-                                        </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <!--Project box End--> 
                             <!--Project box Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/safety-products/shoee8.jpg" alt="" class="img-responsive">
                                     <h5>EN ISO 20345:2011</h5>
                                     <div class="pro-hover">
                                         <h6>ART NO.   - COMMANDO-319</h6>
-                                        <span><br>ART NO.   - COMMANDO-319<br>
+                                        <p class="text-justify"><br>ART NO.   - COMMANDO-319<br>
                                             STANDARD  - S1P<br>
                                             UPPER     - Buff Barton<br>
                                             COLOUR    - Brown<br>
@@ -280,19 +280,19 @@
                                             INSOLE    - Kevlar<br>
                                             SOLE      - Double/Single Density
 
-                                        </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <!--Project box End--> 
                             <!--Project box Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/safety-products/shoe9.jpg" alt="" class="img-responsive">
                                     <h5>EN ISO 20345:2011</h5>
                                     <div class="pro-hover">
                                         <h6>ART NO - COMMANDO-331</h6>
-                                        <span><br>ART NO.   - COMMANDO-331<br>
+                                        <p class="text-justify"><br>ART NO.   - COMMANDO-331<br>
                                             STANDARD  - S1P<br>
                                             UPPER     - Buff Barton<br>
                                             COLOUR    - Black<br>
@@ -302,19 +302,19 @@
                                             INSOLE    - Kevlar<br>
                                             SOLE      - Double/Single Density
 
-                                        </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <!--Project box End--> 
                             <!--Project box Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/safety-products/shoee10.jpg" alt="" class="img-responsive">
                                     <h5>EN ISO 20345:2011</h5>
                                     <div class="pro-hover">
                                         <h6>ART NO - COMMANDO-332</h6>
-                                        <span><br>ART NO.   - COMMANDO-332<br>
+                                        <p class="text-justify"><br>ART NO.   - COMMANDO-332<br>
                                             STANDARD  - S1P<br>
                                             UPPER     - Buff Barton<br>
                                             COLOUR    - Black<br>
@@ -324,19 +324,19 @@
                                             INSOLE    - Kevlar<br>
                                             SOLE      - Double/Single Density
 
-                                        </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <!--Project box End--> 
                             <!--Project box Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/safety-products/shoee11.jpg" alt="" class="img-responsive">
                                     <h5>EN ISO 20345:2011</h5>
                                     <div class="pro-hover">
                                         <h6>ART NO.   - COMMANDO-332</h6>
-                                        <span><br>ART NO.   - COMMANDO-332<br>
+                                        <p class="text-justify"><br>ART NO.   - COMMANDO-332<br>
                                             STANDARD  - S1P<br>
                                             UPPER     - Buff Barton<br>
                                             COLOUR    - Black/White/Brown<br>
@@ -346,19 +346,19 @@
                                             INSOLE    - Kevlar<br>
                                             SOLE      - Double/Single Density
 
-                                        </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <!--Project box End--> 
                             <!--Project box Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/safety-products/shoe12.jpg" alt="" class="img-responsive">
                                     <h5>EN ISO 20345:2011</h5>
                                     <div class="pro-hover">
                                         <h6>ART NO.   - COMMANDO-02</h6>
-                                        <span><br>ART NO.   - COMMANDO-02<br>
+                                        <p class="text-justify"><br>ART NO.   - COMMANDO-02<br>
                                             STANDARD  - S1P<br>
                                             UPPER     - Buff Barton<br>
                                             COLOUR    - Ten<br>
@@ -368,19 +368,19 @@
                                             INSOLE    - Kevlar<br>
                                             SOLE      - Double/Single Density
 
-                                        </span> 
+                                        </p> 
                                     </div>
                                 </div>
                             </div>
                             <!--Project box End--> 
                             <!--Project box Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/safety-products/shoe13.jpg" alt="" class="img-responsive">
                                     <h5>EN ISO 20345:2011</h5>
                                     <div class="pro-hover">
                                         <h6>ART NO.   - GLADSTONE</h6>
-                                        <span><br>ART NO.   - GLADSTONE<br>
+                                        <p class="text-justify"><br>ART NO.   - GLADSTONE<br>
                                             STANDARD  - S1P<br>
                                             UPPER     - Buff Barton<br>
                                             COLOUR    - Black/Grey<br>
@@ -390,19 +390,19 @@
                                             INSOLE    - Kevlar<br>
                                             SOLE      - Double/Single Density
 
-                                        </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <!--Project box End--> 
                             <!--Project box Start-->
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="pro-box">
                                     <img src="images/safety-products/shoe14.jpg" alt="" class="img-responsive">
                                     <h5>EN ISO 20345:2011</h5>
                                     <div class="pro-hover">
                                         <h6>ART NO.   - PERTH</h6>
-                                        <span><br>ART NO.   - PERTH<br>
+                                        <p class="text-justify"><br>ART NO.   - PERTH<br>
                                             STANDARD  - S1P<br>
                                             UPPER     - Buff Barton<br>
                                             COLOUR    - Black<br>
@@ -412,7 +412,7 @@
                                             INSOLE    - Kevlar<br>
                                             SOLE      - Double/Single Density
 
-                                        </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -429,7 +429,7 @@
                     <div class="row">
                         <h3 style="margin-left:11px;">TECHNICAL ADVANTAGE</h3>
                     </div><br>
-                    <table style="width:100%">
+                    <table style="width:100%" class="table-1">
                         <tr>
                             <th>CATEGORY</th>
                             <th>FEATURES</th> 
@@ -491,49 +491,53 @@
             </section>
             <section class="wf100 p80">
                 <div class="container">
-
                     <div class="row">
-                        <h3>COMMERICAL ADVANTGAE </h3>
-                    </div><br>
+                        <div class="col-md-12">
+                            <h3>COMMERICAL ADVANTGAE </h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table style="width:100%" class="table-1">
+                                <tr>
+                                    <th>CATEGORY</th>
+                                    <th>FEATURES</th> 
+                                    <th>ADVANTAGES</th>
+                                </tr>
+                                <tr>
+                                    <td>Reliability</td>
+                                    <td>Organised sector company</td>
+                                    <td>Bearing the ISO 9001-2008 tag lends consistency of credibility to the product.</td>
+                                </tr>
+                                <tr>
+                                    <td>Infrastructure</td>
+                                    <td>State-of-the-art infrastructure among the best in the world.</td>
+                                    <td>Supported by six state-of-the-art plants in-house tabbery,full fledged testing laboratory,highly skilled manpower,ERP/SAP system in operation.</td>
+                                </tr>
+                                <tr>
+                                    <td>Customization</td>
+                                    <td>Customer friendly organisation.</td>
+                                    <td>Customer needs are tailor made for bulk requirement.</td>
+                                </tr>
+                                <tr>
+                                    <td>After Sales Services</td>
+                                    <td>Channel partners are located in different parts of the globe.</td>
+                                    <td>To provide customer service at their door step,enhancing the supply and after sale services.</td>
+                                </tr>
+                                <tr>
+                                    <td>Supply Chain Management</td>
+                                    <td>Customer Satisfication.</td>
+                                    <td>Improves transparency,timely delivery and eliminates stockouts at the customer warehouse by using supply chain management tools.</td>
+                                </tr>
+                                <tr>
+                                    <td>Pricing</td>
+                                    <td>Resonable and affordable prices. Value for Money</td>
+                                    <td>Our valued customers happily and willingly pay for the product.Price does not matter against the safety of human life.</td>
+                                </tr>
+                            </table>
 
-                    <table style="width:100%">
-                        <tr>
-                            <th>CATEGORY</th>
-                            <th>FEATURES</th> 
-                            <th>ADVANTAGES</th>
-                        </tr>
-                        <tr>
-                            <td>Reliability</td>
-                            <td>Organised sector company</td>
-                            <td>Bearing the ISO 9001-2008 tag lends consistency of credibility to the product.</td>
-                        </tr>
-                        <tr>
-                            <td>Infrastructure</td>
-                            <td>State-of-the-art infrastructure among the best in the world.</td>
-                            <td>Supported by six state-of-the-art plants in-house tabbery,full fledged testing laboratory,highly skilled manpower,ERP/SAP system in operation.</td>
-                        </tr>
-                        <tr>
-                            <td>Customization</td>
-                            <td>Customer friendly organisation.</td>
-                            <td>Customer needs are tailor made for bulk requirement.</td>
-                        </tr>
-                        <tr>
-                            <td>After Sales Services</td>
-                            <td>Channel partners are located in different parts of the globe.</td>
-                            <td>To provide customer service at their door step,enhancing the supply and after sale services.</td>
-                        </tr>
-                        <tr>
-                            <td>Supply Chain Management</td>
-                            <td>Customer Satisfication.</td>
-                            <td>Improves transparency,timely delivery and eliminates stockouts at the customer warehouse by using supply chain management tools.</td>
-                        </tr>
-                        <tr>
-                            <td>Pricing</td>
-                            <td>Resonable and affordable prices. Value for Money</td>
-                            <td>Our valued customers happily and willingly pay for the product.Price does not matter against the safety of human life.</td>
-                        </tr>
-                    </table>
-
+                        </div>
+                    </div>
 
                     <div class="row">
                         <div class="col-md-12">
@@ -545,160 +549,221 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Antistatic</h5>
-                                <img src="images/safety-products/001.png" alt="" /><span>Shoe having electrical resistance between 100K Oms to 1000M Ohms</span>
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/001.png" alt="" />
+                                <div class="safety-text">
+                                    <h5>Antistatic</h5>
+                                    <p class="text-justify">Shoe having electrical resistance between 100K Oms to 1000M Ohms</p>
+                                </div>   
+
                             </div>
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Water resistant</h5>
-                                <img src="images/safety-products/002.png" alt="" /><span>As per the latest standards</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Feather Light</h5>
-                                <img src="images/safety-products/003.png" alt="" /><span>PU sole provides optimum comfort and reduces fatigue.</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Antiskid</h5>
-                                <img src="images/safety-products/004.png" alt="" /><span>Slip resistance as per latest industry standards</span>
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/002.png" alt="" />
+                                <div class="safety-text">                                   
+                                    <h5>Water resistant</h5>
+                                    <p class="text-justify">As per the latest standards</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Electrical Insulation</h5>
-                                <img src="images/safety-products/005.png" alt="" /><span>Footwear(EIF/HVI) resistant to high voltage.</span>
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/003.png" alt="" />
+                                <div class="safety-text">                                    
+                                    <h5>Feather Light</h5>
+                                    <p class="text-justify">PU sole provides optimum comfort and reduces fatigue.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Toe Cap</h5>
-                                <img src="images/safety-products/006.png" alt="" /><span>High quality steel/fibre toe to withstand energy upto 200J.</span></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Shock Absorber</h5>
-                                <img src="images/safety-products/007.png" alt="" /><span>Being a PU sole,it absorbs the shocks/jerks during work.</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Mono/Dual Density</h5>
-                                <img src="images/safety-products/008.png" alt="" /><span>PU/PU, PU/TPU,PU RUBBER.</span>
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/004.png" alt="" />
+                                <div class="safety-text">                                    
+                                    <h5>Antiskid</h5>
+                                    <p class="text-justify">Slip resistance as per latest industry standards</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Abrasian Resistant</h5>
-                                <img src="images/safety-products/009.png" alt="" /><span>Being a PU outsole,the abrasion resistance is much better than other common outsole materials.</span>
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/005.png" alt="" />
+                                <div class="safety-text">                                    
+                                    <h5>Electrical Insulation</h5>
+                                    <p class="text-justify">Footwear(EIF/HVI) resistant to high voltage.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>All Terrain/Weather Shoe </h5>
-                                <img src="images/safety-products/010.png" alt="" /><span>Shoe is customized as per requirement</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>ESD</h5>
-                                <img src="images/safety-products/011.png" alt="" /><span>Safety shoe with electrical resistance ranging from 100k Ohms to 100m Ohms</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Genuine Leather</h5>
-                                <img src="images/safety-products/013.png" alt="" /><span>Din/Non Din made by inhouse tannery.</span>
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/006.png" alt="" />
+                                <div class="safety-text">                                    
+                                    <h5>Toe Cap</h5>
+                                    <p class="text-justify">High quality steel/fibre toe to withstand energy upto 200J.</p></p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Oil/Acid resistant</h5>
-                                <img src="images/safety-products/014.png" alt="" /><span>Outsole offers protection on work surface prone to oil spills sole is oil and acid resistant</span>
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/007.png" alt="" />
+                                <div class="safety-text">                                   
+                                    <h5>Shock Absorber</h5>
+                                    <p class="text-justify">Being a PU sole,it absorbs the shocks/jerks during work.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Heat resistant</h5>
-                                <img src="images/safety-products/015.png" alt="" /><span>specially designed light weight rubber outsole withstands temperatures upto 300 degree c</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Penetration Resistant</h5>
-                                <img src="images/safety-products/016.png" alt="" /><span>PWithstands nail penetration upto 1100N by providing steel/Kevlar midsole.</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Fabric</h5>
-                                <img src="images/safety-products/017.png" alt="" /><span>Superior quality fabric not only enhances the look and comfort,but can also be customized for water repellent property</span>
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/008.png" alt="" />
+                                <div class="safety-text">                                   
+                                    <h5>Mono/Dual Density</h5>
+                                    <p class="text-justify">PU/PU, PU/TPU,PU RUBBER.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>100% Metal free</h5>
-                                <img src="images/safety-products/019.png" alt="" /><span>Footwear entirely made of metal free components which are light weight and do not set off security alarms.</span>
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/009.png" alt="" />
+                                <div class="safety-text">                                  
+                                    <h5>Abrasian Resistant</h5>
+                                    <p class="text-justify">Being a PU outsole,the abrasion resistance is much better than other common outsole materials.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Cold Protection</h5>
-                                <img src="images/safety-products/020.png" alt="" /><span>Footwear specially designed and produced to ensure perfect thermal comfort for the wearers in low temperature.</span>
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/010.png" alt="" />
+                                <div class="safety-text">                                   
+                                    <h5>All Terrain/Weather Shoe </h5>
+                                    <p class="text-justify">Shoe is customized as per requirement</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Ankle Protection</h5>
-                                <img src="images/safety-products/021.png" alt="" /><span>Footwear protecting ankle against accident impacts</span>
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/011.png" alt="" />
+                                <div class="safety-text">                                  
+                                    <h5>ESD</h5>
+                                    <p class="text-justify">Safety shoe with electrical resistance ranging from 100k Ohms to 100m Ohms</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust">
-                                <h5>Metatarsal Protection</h5>
-                                <img src="images/safety-products/022.png" alt="" /><span>Footwear against metatarsal protection upto 100J impact which protects the instep against the accident fall of heavy objects. </span>
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/013.png" alt="" />
+                                <div class="safety-text">                                   
+                                    <h5>Genuine Leather</h5>
+                                    <p class="text-justify">Din/Non Din made by inhouse tannery.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/014.png" alt="" />
+                                <div class="safety-text">                                  
+                                    <h5>Oil/Acid resistant</h5>
+                                    <p class="text-justify">Outsole offers protection on work surface prone to oil spills sole is oil and acid resistant</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/015.png" alt="" />
+                                <div class="safety-text">                                    
+                                    <h5>Heat resistant</h5>
+                                    <p class="text-justify">specially designed light weight rubber outsole withstands temperatures upto 300 degree c</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/016.png" alt="" />
+                                <div class="safety-text">                                    
+                                    <h5>Penetration Resistant</h5>
+                                    <p class="text-justify">PWithstands nail penetration upto 1100N by providing steel/Kevlar midsole.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/017.png" alt="" />
+                                <div class="safety-text">                                    
+                                    <h5>Fabric</h5>
+                                    <p class="text-justify">Superior quality fabric not only enhances the look and comfort,but can also be customized for water repellent property</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/019.png" alt="" />
+                                <div class="safety-text">                                   
+                                    <h5>100% Metal free</h5>
+                                    <p class="text-justify">Footwear entirely made of metal free components which are light weight and do not set off security alarms.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/020.png" alt="" />
+                                <div class="safety-text">                                  
+                                    <h5>Cold Protection</h5>
+                                    <p class="text-justify">Footwear specially designed and produced to ensure perfect thermal comfort for the wearers in low temperature.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/021.png" alt="" />
+                                <div class="safety-text">                                  
+                                    <h5>Ankle Protection</h5>
+                                    <p class="text-justify">Footwear protecting ankle against accident impacts</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="legacy-trust img-5">
+                                <img src="images/safety-products/022.png" alt="" />
+                                <div class="safety-text">                                   
+                                    <h5>Metatarsal Protection</h5>
+                                    <p class="text-justify">Footwear against metatarsal protection upto 100J impact which protects the instep against the accident fall of heavy objects. </p>
+                                </div>
                             </div>
                         </div>
                     </div>
