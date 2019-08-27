@@ -484,7 +484,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UY-C.jpg" alt="">
+                                                                <img src="images/copper-cable/01.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -502,7 +502,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UY-P.jpg" alt="">
+                                                                <img src="images/copper-cable/02.jpg" alt="">
                                                                 <ul class="post-meta">
 
                                                                 </ul>
@@ -523,7 +523,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/8A.jpg" alt="">
+                                                                <img src="images/copper-cable/03.jpg" alt="">
                                                                 <ul class="post-meta">
 
                                                                 </ul>
@@ -544,7 +544,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UY2-P.jpg" alt="">
+                                                                <img src="images/copper-cable/04.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -562,7 +562,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UY-PD.jpg" alt="">
+                                                                <img src="images/copper-cable/05.JPG" alt="">
 
                                                             </div>
                                                             <div class="event-txt">
@@ -581,7 +581,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UY2-C.jpg" alt="">
+                                                                <img src="images/copper-cable/06.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -600,7 +600,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UC-C.jpg" alt="">
+                                                                <img src="images/copper-cable/07.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -618,7 +618,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UR-C.jpg" alt="">
+                                                                <img src="images/copper-cable/08.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -636,7 +636,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UR2-P.jpg" alt="">
+                                                                <img src="images/copper-cable/09.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -654,7 +654,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UR2-PD.jpg" alt="">
+                                                                <img src="images/copper-cable/010.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -672,7 +672,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UR2-C.jpg" alt="">
+                                                                <img src="images/copper-cable/011.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -690,7 +690,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UB-C.jpg" alt="">
+                                                                <img src="images/copper-cable/012.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -708,7 +708,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UB-D.jpg" alt="">
+                                                                <img src="images/copper-cable/013.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -762,7 +762,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UG-C.jpg" alt="">
+                                                                <img src="images/copper-cable/014.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -783,7 +783,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/11A.jpg" alt="">
+                                                                <img src="images/copper-cable/015.jpg" alt="">
 
                                                             </div>
                                                             <div class="event-txt">
@@ -800,7 +800,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UY4-C.jpg" alt="">
+                                                                <img src="images/copper-cable/016.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -818,7 +818,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UY4-CD.jpg" alt="">
+                                                                <img src="images/copper-cable/017.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -836,7 +836,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UY4-CT.jpg" alt="">
+                                                                <img src="images/copper-cable/018.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -854,7 +854,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UY4-CT1.jpg" alt="">
+                                                                <img src="images/copper-cable/027.jpg" alt="">
 
                                                             </div>
                                                             <div class="event-txt">
@@ -873,7 +873,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UD4-C1.jpg" alt="">
+                                                                <img src="images/copper-cable/020.jpg" alt="">
 
                                                             </div>
                                                             <div class="event-txt">
@@ -892,7 +892,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UD4-C1-Black.jpg" alt="">
+                                                                <img src="images/copper-cable/021.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -910,7 +910,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UD4-C2.jpg" alt="">
+                                                                <img src="images/copper-cable/022.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -928,7 +928,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UD4-C3.jpg" alt="">
+                                                                <img src="images/copper-cable/023.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -946,7 +946,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UD4-C4.jpg" alt="">
+                                                                <img src="images/copper-cable/024.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -964,7 +964,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UD4-C5.jpg" alt="">
+                                                                <img src="images/copper-cable/025.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
@@ -982,7 +982,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post pro-box">
                                                             <div class="event-thumb">
-                                                                <img src="images/copper-cable/UD2-P.jpg" alt="">
+                                                                <img src="images/copper-cable/026.jpg" alt="">
                                                             </div>
                                                             <div class="event-txt">
                                                                 <h5>
