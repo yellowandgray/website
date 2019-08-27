@@ -80,7 +80,7 @@
             <!--Service Area Start-->
             <section class="donation-join wf100">
                 <div class="container">
-                    <div class="row">
+                    <div class="row front-div">
                         <div class="col-md-2 col-sm-6">
                             <div class="volbox">
                                 <img src="images/home/002.png" alt="">

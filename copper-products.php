@@ -19,11 +19,11 @@
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header" style="background: url(images/cable-tray/banner-bg-001.jpg) no-repeat;">
                 <div class="container">
-                    <h1>Events</h1>
+                    <h1>Strut Channel & Cable Tray</h1>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#"> Events </a></li>
-                        <li><a href="#">Events Grid</a></li>
+                        <li><a href="#"> Products</a></li>
+                        <li><a href="#">Strut Channel & Cable Tray</a></li>
                     </ul>
                 </div>
             </section>

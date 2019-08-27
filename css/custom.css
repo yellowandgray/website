@@ -155,10 +155,10 @@ body h2 {
     font-size: 40px;
 }
 body h3 {
-    font-size: 29px;
+    font-size: 20px;
 }
 body h4 {
-    font-size: 28px;
+    font-size: 17px;
 }
 body h5 {
     font-size: 17px;
@@ -2759,7 +2759,7 @@ button.sbtn:hover {
 .donation-join {
     margin-top: -50px;
     position: relative;
-    z-index: 99;
+    z-index: 9;
 }
 .donation-join .container {
     background: #fff;
