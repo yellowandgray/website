@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
- <?php
+    <?php
     $page = 'home';
     include 'head.php';
     ?>
@@ -43,7 +43,7 @@
                     <div class="slider-caption h3slider">
                         <div class="container">
                             <strong>We are not only selling Products but also Trust </strong>
-                           
+
                             <h1>Metal & Cable Tray</h1>
                             <a href="#">Find Out More</a>
                         </div>
@@ -81,7 +81,7 @@
             <section class="donation-join wf100">
                 <div class="container">
                     <div class="row front-div">
-                        <div class="col-md-2 col-sm-6">
+                        <div class="col-md-2 col-sm-6 wow bounceInUp">
                             <div class="volbox">
                                 <img src="images/home/002.png" alt="">
                                 <h5>Telecommunications</h5>
@@ -89,7 +89,7 @@
                                 <a href="tele-communication.php">See More</a> 
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-6">
+                        <div class="col-md-2 col-sm-6 wow bounceInUp">
                             <div class="volbox nob">
                                 <img src="images/home/031.JPG" alt="">
                                 <h5>Metal</h5>
@@ -97,7 +97,7 @@
                                 <a href="metal.php">See More</a> 
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-6">
+                        <div class="col-md-2 col-sm-6 wow bounceInUp">
                             <div class="volbox nob">
                                 <img src="images/home/003.png" alt="">
                                 <h5>Renewable Energy</h5>
@@ -105,7 +105,7 @@
                                 <a href="renewable-energy.php">See More</a>
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-6">
+                        <div class="col-md-2 col-sm-6 wow bounceInUp">
                             <div class="volbox nob">
                                 <img src="images/home/005.png" alt="">
                                 <h5>Strut Channel & Cable Tray</h5>
@@ -113,7 +113,7 @@
                                 <a href="#">See More</a>
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-6">
+                        <div class="col-md-2 col-sm-6 wow bounceInUp">
                             <div class="volbox nob">
                                 <img src="images/home/004.png" alt="">
                                 <h5>Safety Shoes</h5>
@@ -129,7 +129,7 @@
             <section class="h3-about wf100 p80">
                 <div class="container">
                     <div class="row pad-t-80">
-                        <div class="col-md-4">
+                        <div class="col-md-4 wow bounceInLeft">
                             <div class="h3-aboutxt volbox-2">
                                 <h1>About<span> VPN Commodities</span></h1>
                                 <p class="text-justify"> VPN Commodities is a reputed global service provider in the field of Copper and Fiber Products in the Telecom Sector and in the field of Low Voltage Electrical products. Having its base in India, Germany and USA, the firm has carved a niche through the support of its valuable clients. Backed by a team of experts from engineering manufacturing, trading and sourcing, the firm offers cost effective solutions and caters the needs of the client in mentioned domains.</p>
@@ -139,10 +139,9 @@
                         <div class="col-md-4">
                             <img src="images/home/027.png" alt="">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4  wow bounceInRight">
                             <div class="img-radius"> <img src="images/home/026.jpg" alt=""> </div>
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -162,7 +161,7 @@
                         <div class="col-md-12">
                             <div id="core-projects-slider" class="owl-carousel owl-theme">
                                 <!--Project Box Start-->
-                                <div class="item">
+                                <div class="item wow fadeInDown">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
                                             <a href="#"><i class="fas fa-link"></i></a>
@@ -172,19 +171,20 @@
                                 </div>
                                 <!--Project Box End--> 
                                 <!--Project Box Start-->
-
-                                <div class="ocp-box">
-                                    <div class="ocp-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a>
-                                        <img src="images/home/007.png" alt=""></div>
-                                    <h5> <a href="#">Fiber Cable</a> 
-                                    </h5>
+                                <div class="item wow fadeInDown">
+                                    <div class="ocp-box">
+                                        <div class="ocp-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a>
+                                            <img src="images/home/007.png" alt=""></div>
+                                        <h5> <a href="#">Fiber Cable</a> 
+                                        </h5>
+                                    </div>
                                 </div>
 
 
                                 <!--Project Box End--> 
                                 <!--Project Box Start-->
-                                <div class="item">
+                                <div class="item wow fadeInDown">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
                                             <a href="#"><i class="fas fa-link"></i></a>
@@ -195,7 +195,7 @@
                                 </div>
                                 <!--Project Box End--> 
                                 <!--Project Box Start-->
-                                <div class="item">
+                                <div class="item wow fadeInDown">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
                                             <a href="#"><i class="fas fa-link"></i></a>
@@ -206,7 +206,7 @@
                                 </div>
                                 <!--Project Box End--> 
                                 <!--Project Box Start-->
-                                <div class="item">
+                                <div class="item wow fadeInDown">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
                                             <a href="#"><i class="fas fa-link"></i></a>
@@ -217,7 +217,7 @@
                                 </div>
                                 <!--Project Box End--> 
                                 <!--Project Box Start-->
-                                <div class="item">
+                                <div class="item wow fadeInDown">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
                                             <a href="#"><i class="fas fa-link"></i></a>
@@ -250,14 +250,14 @@
                             <div>
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6 news-block">
-                                        <div class="news-thumb height">
+                                        <div class="news-thumb height wow fadeInDown">
                                             <a href="#"><i class="fas fa-link"></i></a>
                                             <img src="images/home/012.jpg" alt="">
                                             <p class="effect-p">Minipol, Maxipol & Combiester</p>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6 news-block">
-                                        <div class="news-thumb">
+                                        <div class="news-thumb wow fadeInDown">
                                             <a href="#"><i class="fas fa-link"></i></a>
                                             <img src="images/home/030.jpg" alt="">
                                             <p class="effect-p">Connectors and Junction Box</p>
@@ -270,14 +270,14 @@
                             <div>
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6 news-block">
-                                        <div class="news-thumb">
+                                        <div class="news-thumb wow fadeInDown">
                                             <a href="#"><i class="fas fa-link"></i></a>
                                             <img src="images/home/029.jpg" alt="">
                                             <p class="effect-p">DC-DC Converter</p>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6 news-block">
-                                        <div class="news-thumb">
+                                        <div class="news-thumb wow fadeInDown">
                                             <a href="#"><i class="fas fa-link"></i></a>
                                             <img src="images/home/028.jpg" alt="">
                                             <p class="effect-p">Combiner Box</p>
@@ -303,7 +303,7 @@
                                 <div id="h3-events" class="owl-carousel owl-theme">
                                     <!--Event box Start-->
                                     <div class="item">
-                                        <div class="event-box">
+                                        <div class="event-box wow fadeInDown">
                                             <div class="event-thumb">
                                                 <a href="#"><i class="fas fa-link"></i></a>
                                                 <img src="images/home/014.jpg" alt=""></div>
@@ -366,8 +366,8 @@
                     </div>
                     <div class="row">
                         <!--Team Box Start-->
-                        <div class="col-md-4 col-sm-4">
-                            <div class="team-box">
+                        <div class="col-md-4 col-sm-4 ">
+                            <div class="team-box wow fadeInDown">
                                 <img src="images/home/015.jpg" alt="">
                                 <div class="team-info">
                                     <h3>Wire mesh cable tray</h3>
@@ -379,7 +379,7 @@
                         <!--Team Box Start--> 
                         <!--Team Box Start-->
                         <div class="col-md-4 col-sm-4">
-                            <div class="team-box">
+                            <div class="team-box wow fadeInDown">
                                 <img src="images/home/016.jpg" alt="">
                                 <div class="team-info">
                                     <h3>Frp cable tray </h3>
@@ -391,7 +391,7 @@
                         <!--Team Box Start--> 
                         <!--Team Box Start-->
                         <div class="col-md-4 col-sm-4">
-                            <div class="team-box">
+                            <div class="team-box wow fadeInDown">
                                 <img src="images/home/017.jpg" alt="">
                                 <div class="team-info">
                                     <h3>Accessories</h3>
@@ -429,7 +429,7 @@
                         <div class="row">
                             <!--Project box Start-->
                             <div class="col-md-3 col-sm-6">
-                                <div class="pro-box">
+                                <div class="pro-box wow fadeInDown">
                                     <img src="images/home/021.jpg" alt="">
                                     <h5>Billet</h5>
                                     <div class="pro-hover">
@@ -442,7 +442,7 @@
                             <!--Project box End-->
                             <!--Project box Start-->
                             <div class="col-md-3 col-sm-6">
-                                <div class="pro-box">
+                                <div class="pro-box wow fadeInDown">
                                     <img src="images/home/022.jpg" alt="">
                                     <h5>Reinforcing Bars</h5>
                                     <div class="pro-hover">
@@ -455,7 +455,7 @@
                             <!--Project box End--> 
                             <!--Project box Start-->
                             <div class="col-md-3 col-sm-6">
-                                <div class="pro-box">
+                                <div class="pro-box wow fadeInDown">
                                     <img src="images/home/023.jpg" alt="">
                                     <h5>Compact Coil</h5>
                                     <div class="pro-hover">
@@ -468,7 +468,7 @@
                             <!--Project box End--> 
                             <!--Project box Start-->
                             <div class="col-md-3 col-sm-6">
-                                <div class="pro-box">
+                                <div class="pro-box wow fadeInDown">
                                     <img src="images/home/024.jpg" alt="">
                                     <h5>Wire Bar</h5>
                                     <div class="pro-hover">
