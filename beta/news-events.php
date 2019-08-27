@@ -35,7 +35,7 @@
                         <div class="row events-margin padding-bottom-30">
                             <div class="col-md-12">
                                 <div class="event-img-margin">
-                                    <img src="images/white/001.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    <img src="images/independence/001.jpg" alt="Events" title="Events-ENPEE International School" />
                                     <p>Independence day Celebrations at ENPEE INTERNATIONAL SCHOOL, Karaikal Flag hoisting: Tri colour flag was hoisted by our chief guest, Indian Coast Guard deputy commandant Mr. Dheena Dhayalan, assisted by our head boy, G.N. Akshay Our students showcased their various talents Parents, Grand parents and other special invitees attended in large numbers and graced the occasion #ENPEE #ENPEEInternational #CBSESchool #Karaikal #IndependenceDay</p>
                                 </div>
                             </div>
