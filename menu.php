@@ -27,7 +27,7 @@
                             <ul class="navbar-nav mr-auto">
 
                                 <li class="nav-item"> <a class="nav-link" href="index.php">Home</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="about.php">About</a> </li>
                                 <!--<li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>-->
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Products </a>

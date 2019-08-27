@@ -5,7 +5,7 @@
     include 'head.php';
     ?>
     <body>
-        <div class="wrapper">
+        <div class="wrapper industry">
             <!--Header Start-->
             <?php include 'menu.php'; ?>
             <div id="search">
@@ -69,7 +69,7 @@
                                                 </div>
                                                 <div>
                                                     <h5>CONFIRMS</h5>
-                                                    <p class="text-justify">IEC 61439-1,NF C 15-100,NF EN 61439-1, NF EN 50521, NF EN 61643-11, NF EN 60269, UTE C32-502</p>
+                                                    <p class="text-center">IEC 61439-1,NF C 15-100,NF EN 61439-1, NF EN 50521, NF EN 61643-11, NF EN 60269, UTE C32-502</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -519,14 +519,14 @@
                                         </div>
                                     </div><br>
 
-                                    <div class="row img-2">
-                                        <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6 img-2">
                                             <div class="renewable-energy">
                                                 <img src="images/renewable-energy/string1.jpg"  alt="" class="img-responsive"/>
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 img-2">
                                             <div class="renewable-energy">
                                                 <img src="images/renewable-energy/string2.jpg"  alt="" class="img-responsive"/>
                                             </div>
@@ -593,7 +593,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="renewable-energy">
-                                                <h3>Product Description</h3>
+                                                <h4>Product Description</h4>
                                                 <p class="text-justify">Low-Power consumption and long range LoRa Technology transceiver module provides an easy to use wireless data transfer. The advanced command interface offers rapid time to market. It integrates RF, a baseband controller, command application, programming interface (API) processor, making it a complete long range solution. This module is suitable for simple long range sensor and wireless applications with an external host MCU.
                                                     LoRa Technology RF modulation provides long range spread spectrum communication with high interference immunity. Using LoRa Technology modulation technique, it can achieve a receiver sensitivity of -146 dBm
                                                     The high sensitivity combined with the integrated +18.5 dBm output power amplifier yields industry leading link budget, which makes it optimal for applications requiring extended range and robustness.
@@ -605,7 +605,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="renewable-energy">
-                                                <h3>Applications</h3>
+                                                <h4>Applications</h4>
                                             </div>
                                         </div>
                                     </div><br>
