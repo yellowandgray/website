@@ -1,3 +1,17 @@
+@media (min-width: 320px) and (max-width: 395px) {
+    .banner-text h2 {
+        font-size: 30px !important;
+    }
+    .banner-text span {
+        font-size: 30px !important;
+        top: 26% !important;
+    }
+    .banner-text h1 {
+        top: 48% !important;
+        font-size: 30px !important;
+    }
+}
+
 @media screen and (max-width: 460px) {
     .sticky {
         display: block;
@@ -278,7 +292,7 @@
         letter-spacing: 5px;
         position: absolute;
         left: 10% !important;
-        top: 40% !important;
+        top: 30% !important;
         z-index: 1;
     }
     .banner-text h1 {
@@ -304,6 +318,6 @@
 @media (min-width: 1221px) and (max-width: 1500px) {
     .banner-text span {
         left: 16% !important;
-/*        top: 35% !important;*/
+        /*        top: 35% !important;*/
     }
 }
