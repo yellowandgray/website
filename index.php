@@ -85,39 +85,39 @@
                             <div class="volbox">
                                 <img src="images/home/002.png" alt="">
                                 <h5>Telecommunications</h5>
-                                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                <p class="text-justify">Vpn Commodities offers a complete range of products for wiring and connecting subscribers across the entire telecom network. Vpn commodities has applied its expertise to ensure quality connections and protection in inclement weather over time.</p>
                                 <a href="tele-communication.php">See More</a> 
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-6">
+                            <div class="volbox nob">
+                                <img src="images/home/031.JPG" alt="">
+                                <h5>Metal</h5>
+                                <p class="text-justify">Vpn Commodities metals products are supplied under the Vpn commodities brand through hadeed, a fully owned manufacturing affiliate of the company. As a leader in the Gulf region for steel production and manufacturing, Vpn Commodities produces high-quality metals, and has played a vital role in the construction and industrialization of some of the world's fastest growing economies.</p>
+                                <a href="renewable-energy.php">See More</a> 
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
                             <div class="volbox nob">
                                 <img src="images/home/003.png" alt="">
                                 <h5>Renewable Energy</h5>
-                                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                <a href="renewable-energy.php">See More</a> 
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="volbox nob">
-                                <img src="images/home/004.png" alt="">
-                                <h5>Safety Products</h5>
-                                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                <p class="text-justify">Vpn Commodities designs equipment for photovoltaic networks, including energy conversion, production metering and consumption, and for connecting the energy distribution network.</p>
                                 <a href="industrial-safetyproducts.php">See More</a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
                             <div class="volbox nob">
                                 <img src="images/home/005.png" alt="">
-                                <h5>Metal</h5>
-                                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                <h5>Strut Channel & Cable Tray</h5>
+                                <p class="text-justify">Wire Mesh Cable Tray, Cable trunking, Cable ladder, Wireway, Strut channel and accessories. Our Products Can Be Widely Used In Construction, Energy, Electricity, Plant.</p>
                                 <a href="metal.php">See More</a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
                             <div class="volbox nob">
-                                <img src="images/home/0005.png" alt="">
-                                <h5>Cable Tray</h5>
-                                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                <img src="images/home/004.png" alt="">
+                                <h5>Safety Shoes</h5>
+                                <p class="text-justify">Vpn Commodities Pte Ltd Singapore is a well-established certified organization active in manufacturing & trading business of different kinds of safely footwear.The company has a strong quality base that is being continously developed to acheive a higher level of perfection in design and workmanship.The empahsis since the very beginning has been to offer "great product at great prices."</p>
                                 <a href="#">See More</a>
                             </div>
                         </div>
