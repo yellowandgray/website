@@ -63,9 +63,9 @@
                                         <img class="tensorsite-content__image" src="img/experiential/simulation.jpg" alt="">
                                     </div>
                                     <div class="tensorsite-content  tensorsite-content--under-image">
-                                        <div class="tensorsite-content__clip-bg">
+<!--                                        <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
-                                        </div>
+                                        </div>-->
                                         <!--                                        <div class="tensorsite-content__subtitle ">Training</div>-->
                                         <div class="tensorsite-content__title  ">
                                             SIMULATION ROOM
@@ -83,9 +83,9 @@
                                         <img class="tensorsite-content__image" src="img/experiential/support-hub.jpg" alt="">
                                     </div>
                                     <div class="tensorsite-content  tensorsite-content--under-image">
-                                        <div class="tensorsite-content__clip-bg margin-t-20" >
+<!--                                        <div class="tensorsite-content__clip-bg margin-t-20" >
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
-                                        </div>
+                                        </div>-->
                                         <!--                                        <div class="tensorsite-content__subtitle ">Modern Coaching</div>-->
                                         <div class="tensorsite-content__title  ">
                                             COMMAND AND SUPPORT HUB
@@ -103,9 +103,9 @@
                                         <img class="tensorsite-content__image" src="img/experiential/industry-4.0.jpg" alt="">
                                     </div>
                                     <div class="tensorsite-content  tensorsite-content--under-image">
-                                        <div class="tensorsite-content__clip-bg">
+<!--                                        <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
-                                        </div>
+                                        </div>-->
                                         <!--                                        <div class="tensorsite-content__subtitle ">Small Text Comes Here</div>-->
                                         <div class="tensorsite-content__title  ">
                                             INDUSTRY 4.0
@@ -123,9 +123,9 @@
                                         <img class="tensorsite-content__image" src="img/experiential/big-data.jpg" alt="">
                                     </div>
                                     <div class="tensorsite-content  tensorsite-content--under-image">
-                                        <div class="tensorsite-content__clip-bg">
+<!--                                        <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
-                                        </div>
+                                        </div>-->
                                         <!--                                        <div class="tensorsite-content__subtitle ">Small Text Comes Here</div>-->
                                         <div class="tensorsite-content__title  ">
                                             IINTERNET OF THINGS
@@ -143,9 +143,9 @@
                                         <img class="tensorsite-content__image" src="img/about/about-01.jpg" alt="">
                                     </div>
                                     <div class="tensorsite-content  tensorsite-content--under-image">
-                                        <div class="tensorsite-content__clip-bg">
+<!--                                        <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
-                                        </div>
+                                        </div>-->
                                         <div class="tensorsite-content__title  ">
                                             BIG DATA
                                         </div>

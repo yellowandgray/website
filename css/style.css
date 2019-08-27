@@ -738,45 +738,45 @@ input.queries::placeholder {
 
 .banner-text h1 {
     line-height: 2;
-    position: absolute;
-    top: 37%;
-    left: 10%;
+    position: relative;
+    top: 20%;
+    text-align: center;
     color: #e7aca6;
     opacity: 1;
-    letter-spacing: -6px;
+    letter-spacing: 0;
     font-size: 100px;
     font-family: 'Antonio Regular';
 }
 
-.banner-text h1 span {
+.banner-text span {
     font-family: "Smithen Regular";
-    font-size: 110px;
+    font-size: 90px;
     color: #fff;
-    letter-spacing: 3px;
+    letter-spacing: 8px;
     position: absolute;
-    left: -30px;
-    bottom: 52px;
+    left: 20%;
+    top: 32%;
+    z-index: 1;
 }
 
 .banner-text h2 {
-    line-height: 0.7;
-    position: absolute;
-    top: 30%;
-    left: 10%;
+    position: relative;
+    top: 25%;
     color: #e7aca6;
-    opacity: 1;
     letter-spacing: 15px;
     font-size: 100px;
     font-family: 'Antonio Regular';
+    margin: 0;
+    text-align: center;
 }
 
 .banner-text {
-    width: 50%;
+    width: 35%;
     height: 100%;
     position: absolute;
     top: 0;
     background: rgba(39, 70, 70, 0.89);
-    left: 7%;
+    /*    left: 7%;*/
 }
 
 /* Gallery Css */

@@ -11,26 +11,24 @@
     .banner-text h2 {
         line-height: 0;
         top: 30%;
-        left: 8%;
+        text-align: center;
         font-size: 40px;
-        letter-spacing: 10px;
+        letter-spacing: 0;
     }
     .banner-text h1 {
         line-height: 0.5;
-        top: 53%;
-        left: 12px;
+        top: 55%;
         letter-spacing: 0px;
         font-size: 40px;
     }
-    .banner-text h1 span {
-        font-size: 50px;
+    .banner-text span {
+        font-size: 40px;
         font-family: "Smithen Regular";
-        /*        font-size: 110px;*/
         color: #fff;
         letter-spacing: 1px;
         position: absolute;
-        right: -30px;
-        bottom: 21px;
+        left: 8%;
+        top: 25%;
     }
     .p-90 {
         padding-top: 87px !important;
@@ -128,6 +126,10 @@
     }
 }
 
+@media (min-width: 461px) and (max-width: 670px) {
+
+}
+
 @media (min-width: 599px) and (max-width: 767px) {
     .tensorsite-content__clip-shape {
         margin-top: -79px !important;
@@ -150,9 +152,6 @@
     }
 }
 
-@media screen and (min-width: 991px) {
-
-}
 @media screen and (max-width: 991px) {
     #navigation-menu {
         display: none !important;
@@ -225,16 +224,26 @@
 
 @media (min-width: 461px) and (max-width: 768px) {
     .banner-text h1 {
-        font-size: 70px !important;
-        top: 40% !important;
+        font-size: 55px !important;
+        top: 22% !important;
     }
-    .banner-text h1 span {
-        font-size: 70px !important;
+    .banner-text h2 {
+        font-size: 50px !important;
+    }
+    .banner-text span {
+        font-size: 55px !important;
+        left: 25px;
+        top: 30%;
+        letter-spacing: 5px;
+    }
+    .banner-text {
+        margin-top: 50px !important;
     }
     .img-bg-cream p {
         font-size: 18px;
     }
 }
+
 
 
 
@@ -245,5 +254,56 @@
     }
     #menu {
         top: 95px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    ul.bannerSlider {
+        margin-top: 97px !important;
+        margin-bottom: 0 !important;
+    }
+    .banner-text h2 {
+        position: relative;
+        top: 25%;
+        color: #e7aca6;
+        font-size: 100px;
+        font-family: 'Antonio Regular';
+        margin: 0;
+        text-align: center;
+    }
+    .banner-text span {
+        font-family: "Smithen Regular";
+        font-size: 81px;
+        color: #fff;
+        letter-spacing: 5px;
+        position: absolute;
+        left: 10% !important;
+        top: 40% !important;
+        z-index: 1;
+    }
+    .banner-text h1 {
+        line-height: 2;
+        position: relative;
+        top: 20%;
+        text-align: center;
+        color: #e7aca6;
+        opacity: 1;
+        letter-spacing: 0;
+        font-size: 100px;
+        font-family: 'Antonio Regular';
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1220px) {
+    .banner-text span {
+        left: 10% !important;
+        top: 35% !important;
+    }
+}
+
+@media (min-width: 1221px) and (max-width: 1500px) {
+    .banner-text span {
+        left: 16% !important;
+/*        top: 35% !important;*/
     }
 }

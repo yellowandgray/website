@@ -147,7 +147,7 @@
                     <div class="col-md-12 text-left para">
                         <p><i class="fas fa-check"></i> Professional Trainer certified by HRDF after succesfully completing TTT Certification Programme.</p>
                         <p><i class="fas fa-check"></i> Trainers with knowledge and practical experience to make a difference in your work environment.</p>
-                        <p><i class="fas fa-check"></i> Our trainers are constantly reviewing and improving our training techniques to help our participants learn beeter and faster.</p>
+                        <p><i class="fas fa-check"></i> Our trainers are constantly reviewing and improving our training techniques to help our participants learn better and faster.</p>
                     </div>
                 </div>
             </div>

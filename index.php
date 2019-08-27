@@ -77,7 +77,8 @@
                     </div>
                     <div class="banner-text">
                         <h2>WHERE</h2>
-                        <h1><span>Imagineers</span> ARE BORN</h1>
+                        <span>Imagineers</span>
+                        <h1>ARE BORN</h1>
                     </div>
                 </div>
             </div>
@@ -140,7 +141,8 @@
                     </ul>
                     <div class="slide__text banner-text">
                         <h2>WHERE</h2>
-                        <h1><span>Imagineers</span>ARE BORN</h1>
+                        <span>Imagineers</span>
+                        <h1>ARE BORN</h1>
                     </div>
                 </div>
             </div>
@@ -502,7 +504,7 @@
                 arrows: false
             });
         </script>
-        
+
         <div id="popup1" class="overlay">
             <div class="popup">
                 <h5>Thankyou for Booking with us.</h5>
