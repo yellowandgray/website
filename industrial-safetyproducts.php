@@ -38,13 +38,13 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 wow bounceInLeft">
                             <img src="images/safety-products/commando.jpg" alt="" class="img-responsive" />  
                         </div>
                     </div><br> <br>
 
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 wow bounceInLeft">
                             <div class="legacy-trust">
                                 <h3>A TRADITION OF EXCELLENCE</h3>
                                 <p class="text-justify">VPN COMMODITIES Pte Ltd Singapore is a well-established certified organization active in manufacturing & trading business of different kinds of safely footwear.The company has a strong quality base that is being continously developed to acheive a higher level of perfection in design and workmanship.The empahsis since the very beginning has been to offer "great product at great prices."</p>
@@ -53,7 +53,7 @@
                     </div><br>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="legacy-trust">
+                            <div class="legacy-trust wow bounceInLeft">
                                 <h3>OUR MOTTO</h3>
                                 <p class="text-justify">"TO exceed customer expectations through Innovation,Continous Improvement,Quality,Cost and Delivery".</p>
                             </div>
@@ -62,31 +62,31 @@
 
                     <div class="row">
                         <div class="col-md-8">
-                            <div class="legacy-trust">
+                            <div class="legacy-trust wow fadeInLeft">
                                 <h3>A LEGACY OF TRUST</h3>
                                 <p class="text-justify">'COMMANDO' Safety Gear,from the house of VPN, is one of the most trusted safety industrial shoe brands in Singapore made on Direct Injection Process on Desma Machines from Germany.'COMMANDO' is certified by EU NORMS(EN ISO 20345:2011)from PFI Germany/Intertek UK. It has become a part of contemporary work culture in Aviation,Chemical Industry,Construction Business,Defence Services,Heavy Engineering,Hotels,Mining in National and International markets.</p>
                             </div>
                         </div><br>
-                        <div class="col-md-4 img-2">
+                        <div class="col-md-4 img-2 wow fadeInRight">
                             <img src="images/safety-products/Untitled-1.jpg" alt=""  class="img-responsive" style="top:10px; position:relative;"/>
                         </div>
                     </div><br>
 
                     <div class="row">
                         <div class="col-md-8">
-                            <div class="legacy-trust">
+                            <div class="legacy-trust wow fadeInLeft">
                                 <h3>A CAPABILITY TO CUSTOMIZE</h3>
                                 <p class="text-justify">VPN has not only its own unique styling but also has the capability to react to special market requirements & can customize shoes as per the specification of the customer at a very competitive price and on time. With a firm commitment and belief,we can create products matching your interests.</p>
                             </div>
                         </div>
-                        <div class="col-md-4 img-2">
+                        <div class="col-md-4 img-2 fadeInRight">
                             <img src="images/safety-products/capability-to-customize.jpg" alt="" class="img-responsive" />
                         </div>
                     </div><br>
 
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="legacy-trust">
+                            <div class="legacy-trust wow bounceInLeft">
                                 <h3>A RANGE FOR DIVERSE SEGMENTS</h3>
                                 <p class="text-justify">Our Commando Safety Gear catres to diverse requirements of people in different areas of activity...airports,chemical industry,construction business,defence services,heavy engineering,hotel,mining or railways...ensuring they go about their business with absolute safety and confidence.</p>
                             </div>
@@ -94,7 +94,7 @@
                     </div><br>
 
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 wow bounceInUp">
                             <img src="images/safety-products/range-of-diverse-segments1.jpg" alt=""  class="img-responsive"/>  
                         </div>
                     </div>
@@ -105,7 +105,7 @@
             <!--Blog Post End-->
             <section class="wf100 p80 projects shoe">
                 <div class="projects-grid-two">
-                    <div class="container">
+                    <div class="container wow bounceInLeft">
                         <h3 align="left">PRODUCT RANGE</h3>
                         <div class="row">
                             <!--Project box Start-->
@@ -425,7 +425,7 @@
 
 
             <section class="wf100 p80">
-                <div class="container">
+                <div class="container wow bounceInLeft">
                     <div class="row">
                         <h3 style="margin-left:11px;">TECHNICAL ADVANTAGE</h3>
                     </div><br>
@@ -490,7 +490,7 @@
                 </div>
             </section>
             <section class="wf100 p80">
-                <div class="container">
+                <div class="container wow bounceInRight">
                     <div class="row">
                         <div class="col-md-12">
                             <h3>COMMERICAL ADVANTGAE </h3>
@@ -549,7 +549,7 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInLeft">
                                 <img src="images/safety-products/001.png" alt="" />
                                 <div class="safety-text">
                                     <h5>Antistatic</h5>
@@ -560,7 +560,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInRight">
                                 <img src="images/safety-products/002.png" alt="" />
                                 <div class="safety-text">                                   
                                     <h5>Water resistant</h5>
@@ -572,7 +572,7 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInLeft">
                                 <img src="images/safety-products/003.png" alt="" />
                                 <div class="safety-text">                                    
                                     <h5>Feather Light</h5>
@@ -582,7 +582,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInRight">
                                 <img src="images/safety-products/004.png" alt="" />
                                 <div class="safety-text">                                    
                                     <h5>Antiskid</h5>
@@ -594,7 +594,7 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInLeft">
                                 <img src="images/safety-products/005.png" alt="" />
                                 <div class="safety-text">                                    
                                     <h5>Electrical Insulation</h5>
@@ -604,7 +604,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInRight">
                                 <img src="images/safety-products/006.png" alt="" />
                                 <div class="safety-text">                                    
                                     <h5>Toe Cap</h5>
@@ -616,7 +616,7 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInLeft">
                                 <img src="images/safety-products/007.png" alt="" />
                                 <div class="safety-text">                                   
                                     <h5>Shock Absorber</h5>
@@ -626,7 +626,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInRight">
                                 <img src="images/safety-products/008.png" alt="" />
                                 <div class="safety-text">                                   
                                     <h5>Mono/Dual Density</h5>
@@ -638,7 +638,7 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInLeft">
                                 <img src="images/safety-products/009.png" alt="" />
                                 <div class="safety-text">                                  
                                     <h5>Abrasian Resistant</h5>
@@ -648,7 +648,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInRight">
                                 <img src="images/safety-products/010.png" alt="" />
                                 <div class="safety-text">                                   
                                     <h5>All Terrain/Weather Shoe </h5>
@@ -660,7 +660,7 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInLeft">
                                 <img src="images/safety-products/011.png" alt="" />
                                 <div class="safety-text">                                  
                                     <h5>ESD</h5>
@@ -670,7 +670,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInRight">
                                 <img src="images/safety-products/013.png" alt="" />
                                 <div class="safety-text">                                   
                                     <h5>Genuine Leather</h5>
@@ -682,7 +682,7 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInLeft">
                                 <img src="images/safety-products/014.png" alt="" />
                                 <div class="safety-text">                                  
                                     <h5>Oil/Acid resistant</h5>
@@ -692,7 +692,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInRight">
                                 <img src="images/safety-products/015.png" alt="" />
                                 <div class="safety-text">                                    
                                     <h5>Heat resistant</h5>
@@ -704,7 +704,7 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInLeft">
                                 <img src="images/safety-products/016.png" alt="" />
                                 <div class="safety-text">                                    
                                     <h5>Penetration Resistant</h5>
@@ -714,7 +714,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInRight">
                                 <img src="images/safety-products/017.png" alt="" />
                                 <div class="safety-text">                                    
                                     <h5>Fabric</h5>
@@ -726,7 +726,7 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInLeft">
                                 <img src="images/safety-products/019.png" alt="" />
                                 <div class="safety-text">                                   
                                     <h5>100% Metal free</h5>
@@ -736,7 +736,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInRight">
                                 <img src="images/safety-products/020.png" alt="" />
                                 <div class="safety-text">                                  
                                     <h5>Cold Protection</h5>
@@ -748,7 +748,7 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInLeft">
                                 <img src="images/safety-products/021.png" alt="" />
                                 <div class="safety-text">                                  
                                     <h5>Ankle Protection</h5>
@@ -758,7 +758,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="legacy-trust img-5">
+                            <div class="legacy-trust img-5 wow bounceInRight">
                                 <img src="images/safety-products/022.png" alt="" />
                                 <div class="safety-text">                                   
                                     <h5>Metatarsal Protection</h5>
