@@ -331,16 +331,14 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 mb-3 mb-md-4">
-                                            <h5 class="br-icon-1" style="line-height: 40px;">DECEMBER 27-JANUARY 19
-                                                <a><i class="fas fa-chevron-left"></i></a>
-                                                <a><i class="fas fa-chevron-right"></i></a> 
-                                            </h5>
-                                            <h5 class="br-icon-2" style="line-height: 40px;">DECEMBER 27-JANUARY 19 <br/>
-                                                <a><i class="fas fa-chevron-left"></i></a>
-                                                <a><i class="fas fa-chevron-right"></i></a> 
-                                            </h5>
-                                            <label>I'M INTERESTED IN</label>
-                                            <br/>
+                                            <!--                                            <h5 class="br-icon-1" style="line-height: 40px;">DECEMBER 27-JANUARY 19
+                                                                                            <a><i class="fas fa-chevron-left"></i></a>
+                                                                                            <a><i class="fas fa-chevron-right"></i></a> 
+                                                                                        </h5>
+                                                                                        <h5 class="br-icon-2" style="line-height: 40px;">DECEMBER 27-JANUARY 19 <br/>
+                                                                                            <a><i class="fas fa-chevron-left"></i></a>
+                                                                                            <a><i class="fas fa-chevron-right"></i></a> 
+                                                                                        </h5>-->
                                             <select name="" class="w-100">
                                                 <option value="">Please Select</option>
                                                 <option value="Rent our Space">Rent our Space</option>
@@ -348,41 +346,25 @@
                                             </select>
                                             <br/>
                                             <br/>
-                                            <div class="form-group time">
-                                                <select>
-                                                    <option>Hours</option>
-                                                    <option value="01">01</option>
-                                                    <option value="02">02</option>
-                                                    <option value="03">03</option>
-                                                    <option value="04">04</option>
-                                                    <option value="05">05</option>
-                                                    <option value="06">06</option>
-                                                    <option value="07">07</option>
-                                                    <option value="08">08</option>
-                                                    <option value="09">09</option>
-                                                    <option value="10">10</option>
-                                                    <option value="11">11</option>
-                                                    <option value="12">12</option>
-                                                </select>
-                                                <select>
-                                                    <option>Minutes</option>
-                                                    <option value="05">05</option>
-                                                    <option value="12">10</option>
-                                                    <option value="13">15</option>
-                                                    <option value="24">20</option>
-                                                    <option value="25">25</option>
-                                                    <option value="30">30</option>
-                                                    <option value="35">35</option>
-                                                    <option value="40">40</option>
-                                                    <option value="45">45</option>
-                                                    <option value="50">50</option>
-                                                    <option value="55">55</option>
-                                                    <option value="60">60</option>
-                                                </select>
-                                                <select>
-                                                    <option value="AM">AM</option>
-                                                    <option value="PM">PM</option>
-                                                </select>
+                                            <div id="time" class="form-group time">
+                                                <label>Aug 28/2019 &nbsp;</label>
+                                                <div class="input-group clockpicker">
+                                                    <input type="text" class="form-control" value="18:00">
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-time"></span>
+                                                    </span>
+                                                </div>
+                                                                                <!--                                                <pre class="hljs-pre">
+                                                                                                                                    <code class="html">&lt;div class="input-group clockpicker"&gt;
+                                                                                                                                            &lt;input type="text" class="form-control" value="09:30"&gt;
+                                                                                                                                            &lt;span class="input-group-addon"&gt;
+                                                                                                                                                    &lt;span class="glyphicon glyphicon-time"&gt;&lt;/span&gt;
+                                                                                                                                            &lt;/span&gt;
+                                                                                                                                    &lt;/div&gt;
+                                                                                                                                    &lt;script type="text/javascript"&gt;
+                                                                                                                                    $('.clockpicker').clockpicker();
+                                                                                                                                    &lt;/script&gt;</code>
+                                                                                                                                </pre>-->
                                             </div>
                                             <div class="date-select">
                                                 <p><input type='checkbox' name='checkbox' /><strong> SELECTED: </strong> 4/08/2019, 12:45PM.</p>
@@ -393,7 +375,19 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3 mb-md-4">
-                                            <div id="datepicker" class="calendar"></div>
+                                            <div mbsc-form>
+                                                <div class="mbsc-grid">
+                                                    <div class="mbsc-row">
+                                                        <div class="mbsc-col-sm-12 mbsc-col-md-12">
+                                                            <div class="mbsc-form-group">
+                                                                <!--                            <div class="mbsc-form-group-title">Multi-day</div>-->
+                                                                <div id="demo-multi-day"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn" id="timeButton">Select Date</button>
                                         </div>
                                     </div>
                                 </from>
@@ -444,7 +438,7 @@
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <div class="testimonial4_slide">
-<!--                                <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />-->
+    <!--                                <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />-->
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
                                 <h4>Client 1</h4>
                                 <span class="fa fa-star checked"></span>
@@ -468,7 +462,7 @@
                         </div>
                         <div class="carousel-item">
                             <div class="testimonial4_slide">
-<!--                                <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />-->
+    <!--                                <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />-->
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
                                 <h4>Client 3</h4>
                                 <span class="fa fa-star checked"></span>
@@ -504,7 +498,72 @@
                 arrows: false
             });
         </script>
+        <script type="text/javascript">
+            mobiscroll.settings = {
+                lang: 'en', // Specify language like: lang: 'pl' or omit setting to use default
+                theme: 'ios'                     // Specify theme like: theme: 'ios' or omit setting to use default
+            };
 
+            mobiscroll.calendar('#demo-multi-day', {
+                display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
+                select: 'multiple'               // More info about select: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-select
+            });
+
+            mobiscroll.calendar('#demo-max-days', {
+                display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
+                select: 5, // More info about select: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-select
+                headerText: 'Pick up to 5 days'  // More info about headerText: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-headerText
+            });
+
+            mobiscroll.calendar('#demo-counter', {
+                display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
+                select: 'multiple', // More info about select: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-select
+                counter: true                    // More info about counter: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-counter
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("#timeButton").click(function () {
+                    $("#time").toggle();
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $('.clockpicker').clockpicker()
+                    .find('input').change(function () {
+                console.log(this.value);
+            });
+            var input = $('#single-input').clockpicker({
+                placement: 'bottom',
+                align: 'left',
+                autoclose: true,
+                'default': 'now',
+                donetext: 'Done'
+            });
+
+
+            // Manually toggle to the minutes view
+            $('#check-minutes').click(function (e) {
+                // Have to stop propagation here
+                e.stopPropagation();
+                input.clockpicker('show')
+                        .clockpicker('toggleView', 'minutes');
+            });
+            if (/mobile/i.test(navigator.userAgent)) {
+                $('input').prop('readOnly', true);
+            }
+        </script>
+        <script type="text/javascript">
+            hljs.configure({tabReplace: '    '});
+            hljs.initHighlightingOnLoad();
+        </script>
+<!--        <script type="text/javascript">
+            $('.clockpicker').clockpicker({
+                placement: 'top',
+                align: 'left',
+
+            });
+        </script>-->
         <div id="popup1" class="overlay">
             <div class="popup">
                 <h5>Thankyou for Booking with us.</h5>

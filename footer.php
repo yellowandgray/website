@@ -201,6 +201,9 @@
 <!-- This script appears only on the demo.  It is used to delay unnecessary image loading until after the main page content is loaded. -->
 <script src="js/text-animation.js" type="text/javascript"></script>
 <script src="js/wow.js" type="text/javascript"></script>
+<script src="js/mobiscroll.javascript.min.js" type="text/javascript"></script>
+<script src="js/bootstrap-clockpicker.min.js" type="text/javascript"></script>
+<script src="js/highlight.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     window.addEventListener("load", function () {
         setTimeout(function () {
@@ -221,11 +224,11 @@
         return false;
     });
 </script>
-<script type="text/javascript">
+<!--<script type="text/javascript">
     $(function () {
         $("#datepicker").datepicker({firstDay: 1});
     });
-</script>
+</script>-->
 <script src="js/fontawesome.min.js" type="text/javascript"></script>
 <script src="js/all.min.js" type="text/javascript"></script>
 

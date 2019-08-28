@@ -795,3 +795,13 @@ body.loaded>div.loader {
 .tensorsite-card:hover .tensorsite-content__description p {
     color: #fff;
 }
+
+#time {
+    display: none;
+}
+
+#timeButton {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
