@@ -492,7 +492,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 img-2">
-                                            <div class="renewable-energy">
+                                            <div class="renewable-energy wow fadeInUp">
                                                 <h3>POSSIBILITIES PV FIELD INSTALLATIONS</h3><br>
                                                 <p class="text-justify">This second example shows a CJB 4 Rail Junction Box 5 with a CSC Plug in connector.</P>
                                                 <div class="img-2-pad-t">
@@ -510,7 +510,7 @@
                             <section class="wf100 p80">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 wow bounceInLeft">
                                             <div class="renewable-energy">
                                                 <h3>STRING CARD</h3><br>
                                                 <h5>STRING MONITORING CARDS WITH GREATER ACCURACY AND RELIABLE DATA TRANSFER</h5><br>
@@ -520,13 +520,13 @@
                                     </div><br>
 
                                     <div class="row">
-                                        <div class="col-md-6 img-2">
+                                        <div class="col-md-6 img-2 wow fadeInLeft">
                                             <div class="renewable-energy">
                                                 <img src="images/renewable-energy/string1.jpg"  alt="" class="img-responsive"/>
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6 img-2">
+                                        <div class="col-md-6 img-2 wow fadeInLeft">
                                             <div class="renewable-energy">
                                                 <img src="images/renewable-energy/string2.jpg"  alt="" class="img-responsive"/>
                                             </div>
@@ -534,7 +534,7 @@
                                     </div><br>
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 wow bounceInLeft">
                                             <div class="renewable-energy">
                                                 <h3>FEATURES</h3><br>
                                                 <ul class="data-list">
@@ -565,12 +565,12 @@
 
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 wow bounceInLeft">
                                             <div class="renewable-energy">
                                                 <p class="text-justify">String monitoring in solar power plant has become a useful tool to dig inside for fault analysis and diagnosis.Also string current and voltage monitoring in real time reduces the failure time and efficiency of O & M team.overvoltage and fuse blown alarm indicates and SPD,breaker status can be interfaced and monitored through SCADA by using Modbus.As SMB helps to increase the performance of solar power plant, reliable data transfer is very crucial. We are buffering the data if communication link is failed and transferring again once link is established. This enables us to avoid data loss. Our wireless solution is also unique where we are using low power, long range modules with proprietary transmission mechanism. </p>
                                             </div><br>
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 wow bounceInLeft">
                                             <div class="renewable-energy" style="text-align: -webkit-center;">
                                                 <img src="images/renewable-energy/schematic.jpg"  alt="" class="img-responsive"/>
                                             </div>
@@ -591,7 +591,7 @@
                                     </div><br>
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 wow bounceInLeft">
                                             <div class="renewable-energy">
                                                 <h4>Product Description</h4>
                                                 <p class="text-justify">Low-Power consumption and long range LoRa Technology transceiver module provides an easy to use wireless data transfer. The advanced command interface offers rapid time to market. It integrates RF, a baseband controller, command application, programming interface (API) processor, making it a complete long range solution. This module is suitable for simple long range sensor and wireless applications with an external host MCU.
