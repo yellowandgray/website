@@ -314,7 +314,7 @@ Inner Header Start
 *********************************/
 
 .inner-header {
-    
+
 }
 .inner-header h1 {
     color: #fff;
@@ -3987,7 +3987,7 @@ Event Thumbs Start
     width: 100%;
     height: 100%;
     content: "";
-    
+
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0 ); /* IE6-9 */
 }
 .event-post .event-txt h5 {
@@ -5855,12 +5855,12 @@ About Us Page
     padding: 40px 0 80px;
 }
 .story-title-bg {
-    background: url(../images/storybg.jpg) no-repeat;
+    /*background: url(../images/storybg.jpg) no-repeat;*/
     background-size: cover;
     width: 100%;
     float: left;
     position: relative;
-    padding: 88px 67px;
+    padding: 0px 33px;
 }
 .story-title-bg strong {
     color: #fff;
@@ -5893,7 +5893,7 @@ About Us Page
     top: -10px;
     bottom: 0;
     right: 0;
-    background: rgba(102,187,106,.70);
+    /*background: url(../images/storybg.jpg) no-repeat;;*/
     content: "";
 }
 .timeline {

@@ -17,11 +17,11 @@
             </div>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header" style="background: url(images/metal/001.jpg) no-repeat;">
+            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/004.jpg) no-repeat; background-size: cover;">
                 <div class="container">
                     <h1>Metal</h1>
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="#"> Products </a></li>
                         <li><a href="#">Metal</a></li>
                     </ul>
@@ -30,73 +30,73 @@
             <!--Inner Header End--> 
             <!--Causes Start-->
             <section class="wf100 p80 projects">
-            <div class="projects-grid-two">
-               <div class="container">
-                   <h4>Product Range</h4>
-                  <div class="row">
-                     <!--Project box Start-->
-                     <div class="col-md-4 col-sm-6">
-                      <div class="pro-box">
-                          <img src="images/metal/Billet.jpg" alt="">
-                           <h5>Billet</h5>
-                           <div class="pro-hover">
-                              <h6>Billet</h6>
-                              <span>Billets are the raw material for producing long-steel products. They are produced in various grades and standards based on customer requirements.</span>
+                <div class="projects-grid-two">
+                    <div class="container">
+                        <h4>Product Range</h4>
+                        <div class="row">
+                            <!--Project box Start-->
+                            <div class="col-md-4 col-sm-6">
+                                <div class="pro-box">
+                                    <img src="images/metal/Billet.jpg" alt="">
+                                    <h5>Billet</h5>
+                                    <div class="pro-hover">
+                                        <h6>Billet</h6>
+                                        <span>Billets are the raw material for producing long-steel products. They are produced in various grades and standards based on customer requirements.</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                     </div>
-                     <!--Project box End-->
-                     <!--Project box Start-->
-                     <div class="col-md-4 col-sm-6">
-                        <div class="pro-box">
-                            <img src="images/metal/Reinforcingbar.jpg" alt="">
-                           <h5>Rebar</h5>
-                           <div class="pro-hover">
-                              <h6>Rebar</h6>
-                              <span>Concrete reinforcing bars (rebars) represent the majority of SABIC’S production. They are made according to international standards.</span>
+                            <!--Project box End-->
+                            <!--Project box Start-->
+                            <div class="col-md-4 col-sm-6">
+                                <div class="pro-box">
+                                    <img src="images/metal/Reinforcingbar.jpg" alt="">
+                                    <h5>Rebar</h5>
+                                    <div class="pro-hover">
+                                        <h6>Rebar</h6>
+                                        <span>Concrete reinforcing bars (rebars) represent the majority of SABIC’S production. They are made according to international standards.</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                     </div>
-                     <!--Project box End--> 
-                     <!--Project box Start-->
-                     <div class="col-md-4 col-sm-6">
-                        <div class="pro-box">
-                            <img src="images/metal/Rebarcoil.jpg" alt="">
-                           <h5>Rebar In Coil</h5>
-                           <div class="pro-hover">
-                              <h6>Rebar In Coil</h6>
-                              <span>Rebar in coil is further processed by downstream cut and bend operations and straightening lines to produce shapes and straight bars for construction. Plain coils are used for reinforcing concrete pipes by cut and bend facilities.</span>
+                            <!--Project box End--> 
+                            <!--Project box Start-->
+                            <div class="col-md-4 col-sm-6">
+                                <div class="pro-box">
+                                    <img src="images/metal/Rebarcoil.jpg" alt="">
+                                    <h5>Rebar In Coil</h5>
+                                    <div class="pro-hover">
+                                        <h6>Rebar In Coil</h6>
+                                        <span>Rebar in coil is further processed by downstream cut and bend operations and straightening lines to produce shapes and straight bars for construction. Plain coils are used for reinforcing concrete pipes by cut and bend facilities.</span>
+                                    </div>
+                                </div>
                             </div>
+                            <!--Project box End--> 
+                            <!--Project box Start-->
+                            <div class="col-md-4 col-sm-6">
+                                <div class="pro-box">
+                                    <img src="images/metal/wirerod.jpg" alt="">
+                                    <h5>Wire Rod</h5>
+                                    <div class="pro-hover">
+                                        <h6>Wire Rod</h6>
+                                        <Span>Drawing grade wire rods are used by downstream industries to produce mesh, nails, hangers, screws, barbed wires, fencing mesh, binding wires, etc. Mesh grade wire rods are used for downstream cold indentation process to make cold deformed bars for construction.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Project box End--> 
+                            <!--Project box Start-->
+                            <div class="col-md-4 col-sm-6">
+                                <div class="pro-box">
+                                    <img src="images/metal/compactcoil.jpg" alt="">
+                                    <h5>Compact Coil</h5>
+                                    <div class="pro-hover">
+                                        <h6>Compact Coil</h6>
+                                        <span>Cold deformed compact coil is processed by downstream cut and bend operations and straightening lines to produce straight bars and welded fabric. Weight range is from three to five tons.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Project box End--> 
                         </div>
-                     </div>
-                     <!--Project box End--> 
-                     <!--Project box Start-->
-                     <div class="col-md-4 col-sm-6">
-                        <div class="pro-box">
-                            <img src="images/metal/wirerod.jpg" alt="">
-                           <h5>Wire Rod</h5>
-                           <div class="pro-hover">
-                              <h6>Wire Rod</h6>
-                              <Span>Drawing grade wire rods are used by downstream industries to produce mesh, nails, hangers, screws, barbed wires, fencing mesh, binding wires, etc. Mesh grade wire rods are used for downstream cold indentation process to make cold deformed bars for construction.</span>
-                          </div>
-                        </div>
-                     </div>
-                     <!--Project box End--> 
-                     <!--Project box Start-->
-                     <div class="col-md-4 col-sm-6">
-                        <div class="pro-box">
-                            <img src="images/metal/compactcoil.jpg" alt="">
-                            <h5>Compact Coil</h5>
-                           <div class="pro-hover">
-                              <h6>Compact Coil</h6>
-                              <span>Cold deformed compact coil is processed by downstream cut and bend operations and straightening lines to produce straight bars and welded fabric. Weight range is from three to five tons.</span>
-                         </div>
-                        </div>
-                     </div>
-                     <!--Project box End--> 
-             </div>
-            </div>
-         </section>
+                    </div>
+            </section>
 
             <section class="wf100 p80">
                 <div class="container">
@@ -126,46 +126,46 @@
                         </div>
                         <div class="col-md-4 text-left">
                             <div class="facts">
-                            <ul>
-                                <li>Hot Billet With low C and Min Content</li>
-                                <li>Hot Rolling</li>
-                                <li>Quenching</li>
-                                <li>Self-tempering</li>
-                                <li>Air-cooling</li>
-                            </ul>
-                        </div>
+                                <ul>
+                                    <li>Hot Billet With low C and Min Content</li>
+                                    <li>Hot Rolling</li>
+                                    <li>Quenching</li>
+                                    <li>Self-tempering</li>
+                                    <li>Air-cooling</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-md-12">
                             <h3>SABIC steel properties</h3>
-                          <p>The precise process control adopted at HADEED results in clean steel with very low content of undesirable residual elements, higher yield strength, good ductility and better bending properties of the steel bar. The lower carbon equivalent values used in SABIC Quenched Steel Rebars also make them readily weldable, particularly for the applications requiring low heat input like tack welding</p>
+                            <p>The precise process control adopted at HADEED results in clean steel with very low content of undesirable residual elements, higher yield strength, good ductility and better bending properties of the steel bar. The lower carbon equivalent values used in SABIC Quenched Steel Rebars also make them readily weldable, particularly for the applications requiring low heat input like tack welding</p>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-md-12">
-                          <img src="images/technical-facts/005.jpg" alt="" />  
+                            <img src="images/technical-facts/005.jpg" alt="" />  
                         </div>
                     </div>
                 </div>
             </section>
-            
+
             <section class="wf100 p80">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                        <h3>TECHNOLOGY & INNOVATION </h3>
-                        <h4>A MUST TO STAY AHEAD</h4>
-                        <p>SABIC maintains a market-leading position by keeping up-to-date with global advances in technology. To keep high standards, we regularly carry out independent studies to inspect and maintain the excellence of our products, evaluate the manufacturing processes, and develop new products according to market requirements.</p>
-                      </div>  
+                            <h3>TECHNOLOGY & INNOVATION </h3>
+                            <h4>A MUST TO STAY AHEAD</h4>
+                            <p>SABIC maintains a market-leading position by keeping up-to-date with global advances in technology. To keep high standards, we regularly carry out independent studies to inspect and maintain the excellence of our products, evaluate the manufacturing processes, and develop new products according to market requirements.</p>
+                        </div>  
                     </div>
-                
-                
-                <div class="row">
+
+
+                    <div class="row">
                         <div class="col-md-12">
-                          <img src="images/technical-facts/006.jpg" alt="" />  
+                            <img src="images/technical-facts/006.jpg" alt="" />  
                         </div>
                     </div>
                     <br>
@@ -173,18 +173,18 @@
                         <div class="col-md-12">
                             <h3>TECHNOLOGY AND INNOVATION</h3><br>
                             <p>SABIC Technology Center in Al Jubail has dedicated research facilities for steel product development, process optimization, product quality improvement, energy conservation, sustainability and by-product utilization.
-                               Using the latest physical and computer-based simulation tools, it carries out studies for metallurgical process mapping, developing microstructure-property relationships and process improvement.</p>
+                                Using the latest physical and computer-based simulation tools, it carries out studies for metallurgical process mapping, developing microstructure-property relationships and process improvement.</p>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-md-12">
-                          <img src="images/technical-facts/007.jpg" alt="" />  
+                            <img src="images/technical-facts/007.jpg" alt="" />  
                         </div>
                     </div>
-                    </div>
+                </div>
             </section>
-            
+
 
         </div>
         <!--Causes End--> 
