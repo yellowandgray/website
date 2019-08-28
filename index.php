@@ -331,6 +331,30 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 mb-3 mb-md-4">
+                                            <label>I'M INTERESTED</label>
+                                            <select name="" class="w-100">
+                                                <option value="">Please Select</option>
+                                                <option value="Rent our Space">Rent our Space</option>
+                                                <option value="Book a Training Session">Book a Training Session</option>
+                                            </select>
+                                            <br/>
+                                            <br/>
+                                            <div mbsc-form>
+                                                <div class="mbsc-grid">
+                                                    <div class="mbsc-row">
+                                                        <div class="mbsc-col-sm-12 mbsc-col-md-12">
+                                                            <div class="mbsc-form-group">
+                                                                <!--                            <div class="mbsc-form-group-title">Multi-day</div>-->
+                                                                <div id="demo-multi-day"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <button class="btn btn-ok" id="timeButton">Select Date</button>
+                                        </div>
+                                        <div class="col-md-6 mb-3 mb-md-4">
                                             <!--                                            <h5 class="br-icon-1" style="line-height: 40px;">DECEMBER 27-JANUARY 19
                                                                                             <a><i class="fas fa-chevron-left"></i></a>
                                                                                             <a><i class="fas fa-chevron-right"></i></a> 
@@ -339,13 +363,6 @@
                                                                                             <a><i class="fas fa-chevron-left"></i></a>
                                                                                             <a><i class="fas fa-chevron-right"></i></a> 
                                                                                         </h5>-->
-                                            <select name="" class="w-100">
-                                                <option value="">Please Select</option>
-                                                <option value="Rent our Space">Rent our Space</option>
-                                                <option value="Book a Training Session">Book a Training Session</option>
-                                            </select>
-                                            <br/>
-                                            <br/>
                                             <div id="time" class="form-group time">
                                                 <label>Aug 28/2019 &nbsp;</label>
                                                 <div class="input-group clockpicker">
@@ -373,21 +390,6 @@
                                                 <a href="#popup1" class="btn btn-ok">Add</a>
                                                 <a href="#" class="btn btn-cancel">Cancel</a>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6 mb-3 mb-md-4">
-                                            <div mbsc-form>
-                                                <div class="mbsc-grid">
-                                                    <div class="mbsc-row">
-                                                        <div class="mbsc-col-sm-12 mbsc-col-md-12">
-                                                            <div class="mbsc-form-group">
-                                                                <!--                            <div class="mbsc-form-group-title">Multi-day</div>-->
-                                                                <div id="demo-multi-day"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button class="btn" id="timeButton">Select Date</button>
                                         </div>
                                     </div>
                                 </from>
