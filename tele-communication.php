@@ -18,14 +18,18 @@
             </div>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header" style="background: url(images/optical-fiber/Untitled-1.jpg) no-repeat;">
+            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/001.jpg) no-repeat; background-size: cover;">
                 <div class="container">
-                    <h1>Telecommunication</h1>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#"> Products </a></li>
-                        <li><a href="#">Telecommunication</a></li>
-                    </ul>
+                    <div class="row">
+                        <div class="coi-md-4">
+                            <h1>Telecommunication</h1>
+                            <ul>
+                                <li><a href="index.php">Home</a></li>
+                                <li><a href="#"> Products </a></li>
+                                <li><a href="#">Telecommunication</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
 

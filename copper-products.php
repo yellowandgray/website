@@ -17,7 +17,7 @@
             </div>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header" style="background: url(images/cable-tray/banner-bg-001.jpg) no-repeat;">
+            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/002.jpg) no-repeat; background-size: cover;">
                 <div class="container">
                     <h1>Strut Channel & Cable Tray</h1>
                     <ul>

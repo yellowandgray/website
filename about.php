@@ -16,13 +16,13 @@
             </div>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header" style="background: url(images/renewable-energy/Untitled-2.jpg) no-repeat;">
+           <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/003.jpg) no-repeat; background-size: cover;">
                 <div class="container">
                     <h1>About Us</h1>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#"> Products </a></li>
-                        <li><a href="#">Renewable Energy</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="#"> About Us </a></li>
+                        
                     </ul>
                 </div>
             </section>

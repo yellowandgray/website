@@ -17,13 +17,13 @@
             </div>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header" style="background: url(images/renewable-energy/Untitled-2.jpg) no-repeat;">
+            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/001.jpg) no-repeat; background-size: cover;">
                 <div class="container">
                     <h1>Renewable Energy</h1>
-                    <ul class="data-list">
-                        <i class="fa fa-hand-o-right" aria-hidden="true"></i><li><a href="#">Home</a></li>
-                        <i class="fa fa-hand-o-right" aria-hidden="true"></i><li><a href="#"> Products </a></li>
-                        <i class="fa fa-hand-o-right" aria-hidden="true"></i><li><a href="#">Renewable Energy</a></li>
+                    <ul>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="#"> Products </a></li>
+                        <li><a href="#">Renewable Energy</a></li>
                     </ul>
                 </div>
             </section>

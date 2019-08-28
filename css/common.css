@@ -964,14 +964,15 @@ body, html.on {
 
 }
 .timeline-box-1 {
-
     background: #f7f7f7;
     border: 1px solid #eeeeee;
     border-radius: 5px;
     padding: 10px 20px;
     margin-bottom: 5px;
     transition: 0.3s all ease-in;
+    box-shadow: 0px 0px 11px 0px #dadada;
 }
+
 .about-h p{
     font-size: 16px;
 }
@@ -993,10 +994,9 @@ body, html.on {
     box-shadow: 0px 0px 0px 0px #bdb9b9;
     background: #f7f7f7;
     height: 290px;
-    offset: 1px solid #000;
     outline: 1px solid #e4e4e4d4;
     outline-offset: 8px; 
-    transition: 0.4s all ease-in-out;
+    transition: 0.3s all ease-in-out;
 
 }
 
@@ -1024,16 +1024,20 @@ body, html.on {
     border: 1px solid #eeeeee;
     border-radius: 5px;
     box-shadow: 0px 0px 20px 2px #eee;
-    padding: 10px 20px;
     outline: 1px solid #035d41;
-    margin-bottom: 5px;
-    transform: rotateX(-20deg);
+    transform: translateY(-10px);
 }
 .box-1:hover h3 {
     color: #035d41;
-    
+
 }
-.box-1:hover ul li {
- font-size: 15px;
-    
+.head-text{
+    position: absolute;
+    top: 240px;
+    left: 100px;
+}
+
+.banner img{
+    width: 100%;
+    margin-top: -94px;
 }
