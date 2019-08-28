@@ -24,7 +24,7 @@
                         <div class="container">
                             <strong>We are not only selling Products but also Trust </strong>
                             <h1>Telecommunications</h1>
-                            <a href="#">Find Out More</a>
+                            <a href="tele-communication.php">Find Out More</a>
                         </div>
                     </div>
                     <img src="images/banner/003.jpg" alt=""> 
@@ -45,7 +45,7 @@
                             <strong>We are not only selling Products but also Trust </strong>
 
                             <h1>Metal & Cable Tray</h1>
-                            <a href="#">Find Out More</a>
+                            <a href="metal.php">Find Out More</a>
                         </div>
                     </div>
                     <img src="images/banner/002.jpg" alt=""> 
@@ -55,7 +55,7 @@
                         <div class="container">
                             <strong>We are not only selling Products but also Trust </strong>
                             <h1>Renewable Energy</h1>
-                            <a href="#">Find Out More</a>
+                            <a href="renewable-energy.php">Find Out More</a>
                         </div>
                     </div>
                     <img src="images/banner/001.jpg" alt=""> 
@@ -110,7 +110,7 @@
                                 <img src="images/home/005.png" alt="">
                                 <h5>Strut Channel & Cable Tray</h5>
                                 <p class="text-justify">Wire Mesh Cable Tray, Cable trunking, Cable ladder, Wireway, Strut channel and accessories. Our Products Can Be Widely Used In Construction, Energy, Electricity, Plant.</p>
-                                <a href="#">See More</a>
+                                <a href="cable-tray.php">See More</a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6 wow bounceInUp">
@@ -133,7 +133,7 @@
                             <div class="h3-aboutxt volbox-2">
                                 <h1>About<span> VPN Commodities</span></h1>
                                 <p class="text-justify"> VPN Commodities is a reputed global service provider in the field of Copper and Fiber Products in the Telecom Sector and in the field of Low Voltage Electrical products. Having its base in India, Germany and USA, the firm has carved a niche through the support of its valuable clients. Backed by a team of experts from engineering manufacturing, trading and sourcing, the firm offers cost effective solutions and caters the needs of the client in mentioned domains.</p>
-                                <a href="#">See More</a>
+                                <a href="about.php">See More</a>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -164,7 +164,6 @@
                                 <div class="item wow fadeInDown">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
-                                            <a href="#"><i class="fas fa-link"></i></a>
                                             <img src="images/home/006.png" alt=""></div>
                                         <h5> <a href="#">Rack & Cabinet</a> </h5>
                                     </div>
@@ -174,7 +173,6 @@
                                 <div class="item wow fadeInDown">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
-                                            <a href="#"><i class="fas fa-link"></i></a>
                                             <img src="images/home/007.png" alt=""></div>
                                         <h5> <a href="#">Fiber Cable</a> 
                                         </h5>
@@ -187,7 +185,6 @@
                                 <div class="item wow fadeInDown">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
-                                            <a href="#"><i class="fas fa-link"></i></a>
                                             <img src="images/home/008.png" alt=""></div>
                                         <h5> <a href="#">Copper cable </a> 
                                         </h5>
@@ -198,7 +195,6 @@
                                 <div class="item wow fadeInDown">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
-                                            <a href="#"><i class="fas fa-link"></i></a>
                                             <img src="images/home/009.png" alt=""></div>
                                         <h5> <a href="#">Copper Products </a> 
                                         </h5>
@@ -209,7 +205,6 @@
                                 <div class="item wow fadeInDown">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
-                                            <a href="#"><i class="fas fa-link"></i></a>
                                             <img src="images/home/010.png" alt=""></div>
                                         <h5> <a href="#">Rope </a> 
                                         </h5>
@@ -220,7 +215,6 @@
                                 <div class="item wow fadeInDown">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
-                                            <a href="#"><i class="fas fa-link"></i></a>
                                             <img src="images/home/011.png" alt=""></div>
                                         <h5> <a href="#">FRP & GRP</a> 
                                         </h5>
@@ -307,7 +301,7 @@
                                             <div class="event-thumb">
                                                 <a href="#"><i class="fas fa-link"></i></a>
                                                 <img src="images/home/014.jpg" alt=""></div>
-                                            <div class="event-txt">
+                                            <div class="event-txt shoe">
                                                 <h4><a href="#">Safety Shoe</a></h4>
                                                 <a class="rm" href="industrial-safetyproducts.php">Read More</a> 
                                             </div>
