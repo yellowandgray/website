@@ -1,0 +1,353 @@
+h3{
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600;
+}
+p{
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 12px;
+}
+
+
+.head {
+    background: #fff;
+    padding: 10px 0px 10px 0px;
+    border-bottom: 5px solid #ed1c24;
+    /*    outline: 2px dashed grey;
+        outline-offset: 3px;*/
+}
+.logo {
+    text-align: center;
+}
+.logo img {
+    width: 20%;
+}
+.login {
+    text-align: right;
+    padding: 18px 0px 0px 0px;
+}
+.login img {    
+    width: 7%;
+    /*padding: 36px 10px 0px 0px;*/
+}
+.login h5 {    
+    float: right;
+    color: #ed1c24;
+    padding: 10px 0px 0px 0px;
+}
+.pad-tb-30 {
+    padding: 30px 0px 30px 0px;
+}
+.img-responsive {
+    width: 100%;
+    height: auto;
+}
+.pad-t-30 {
+    padding: 30px 0px 0px 0px;
+}
+.box {
+    position: absolute;
+    top: 160px;
+    width: 100%;
+    opacity: 0.8;
+}
+.box h3  {
+    top: -160px;
+    position: relative;
+    padding: 0px 0px 0px 10px;
+    color: #000;
+}
+
+.box  span {
+    font-size: 90px;
+    position: relative;
+    top: 22px;
+    color: #ed1c24;
+}
+.box:hover h3 {
+    transform: scaleY(1.1);
+    transition: 0.2s all linear;
+}
+footer{
+    background: #ed1c24;
+    padding: 15px;
+}
+footer p{
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    color: #e0e0e0;
+
+}
+footer p img {
+    width: 120px !important;
+}
+
+.about h3 {
+    width: 63%;
+    top: 206px;
+    position: absolute;
+    padding: 6px 1px 6px 10px;
+    color: #ffffff;
+    /*background-color: #fffffffa;*/
+
+}
+.about .curve {
+    position: absolute;
+    top: 202px;
+}
+.news h3 {
+    width: 70%;
+    top: 206px;
+    position: absolute;
+    padding: 6px 1px 6px 10px;
+    color: #000000;
+    background-color: #fffffffa;
+    left: 77px;
+    border-radius: 15px 15px 15px 15px;
+    text-align: center;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.img:hover img {
+    transition: 0.3s all linear;
+    transform: scale(1.02);
+}
+
+video{
+    width: 100%;
+    height: auto;
+}
+.menu img {
+    width: 7%;
+    padding: 22px 0px 0px 0px;
+}
+.search img {
+    width: 7%;
+}
+.login img:first-child {
+    margin: 5px 50px 0px 0px;
+}
+.cc i {
+    position: absolute;
+    top: 12px;
+    color: #fff;
+
+}
+.cc p {
+    padding: 0px 0px 0px 25px;
+    color: #fff;
+    font-weight: 600;
+}
+.cc {
+    padding: 30px 0px 30px 0px;
+}
+.cc-bg {
+    padding: 10px;
+    background: #ed1c24;
+    width: 75%;
+    transition: all ease-in .2s;
+}
+.cc-bg p::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 28px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0px 19px 29px;
+    border-color: #a5abbd00 #000000cf #eeeeee12 #ed1c24;
+    -webkit-transition: all ease-in .4s;
+    transition: all ease-in .2s;
+}
+
+.newses h5{
+    padding: 10px 0px ;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+.box-1{
+    box-shadow: 3px 3px 13px 4px #dcd7d7;
+}
+.box-1-text {
+    padding: 0px 10px 10px;
+}
+
+.box-link a{
+    background: #ed1c24;
+    padding: 10px !important;
+    width: 34%;
+    color: #fff;
+    font-weight: 600;
+}
+.box-link-news p{
+    background: #ed1c24;
+    padding: 20px 15px 20px 10px !important;
+    width: 40%;
+    font-size: 20px;
+}
+.box-link-news p a{
+    font-weight: 600;
+    color: #fff;
+}
+.box-link-news {
+    position: relative;
+    bottom: 100px;
+}
+.box-link{
+    margin-top: 30px;
+}
+.box-2 {
+    /*padding: 20px;*/
+}
+.text-1{
+    float: right;
+    position: relative;
+    left: -35px;
+}
+.img-adj {
+    padding: 6px 0px 0px 0px;
+}
+.box-3{
+    padding: 20px;
+    background: #eee;
+    box-shadow: -1px 1px 13px 4px #d2d2d2;
+}
+
+
+.ad-title{
+    position: absolute;
+    bottom: 20%;
+    width: 50%;
+}
+
+.box-link-news-1 p{
+    background: #fff;
+    padding: 10px 15px 10px 10px !important;
+
+}
+.box-link-news-1 p a{
+    font-weight: 600;
+    color: #ed1c24;
+}
+.box-link-news-1{
+    position: absolute;
+    bottom: 25%;
+    width: 50%;
+}
+.box-link-news-1 p::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -27px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 39px 27px 0px 0px;
+    border-color: #fff #00000000 #eeeeee12;
+    -webkit-transition: all ease-in .4s;
+    transition: all ease-in .2s;
+}
+.box-link-news p::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    /* right: -61px; */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 71px 27px 0px 0px;
+    border-color: #ed1c24 #00000000 #eeeeee12;
+    left: 40%;
+    -webkit-transition: all ease-in .4s;
+    transition: all ease-in .2s;
+}
+.ad .box-link-news {
+    /* bottom: 14%; */
+    top: -72px;
+}
+
+section{
+    padding: 30px 0px 0px 0px ;
+}
+.partners img{
+    padding: 0px 30px 20px 0px;
+    width: 15%;
+}
+.cc-bg:hover {
+
+    background: #404040;
+} 
+.cc-bg:hover p, .cc-bg:hover i {
+    color: #fff;
+
+}
+.cc-bg:hover  p::before{
+    border-color: #a5abbd00 #ed1c24 #eeeeee12 #404040;
+}
+
+.newses .cc i {
+    position: absolute;
+    top: 51px;
+    color: #ffffff;
+    right: 75px;
+}
+.newses a {
+    padding: 10px 25px 10px 10px !important;
+}
+
+.box-link:hover a {
+    background: #404040;
+    transition: all ease-in .2s;
+}
+
+.club p{
+    background: #ed1c24;
+    padding: 10px 0px 10px 10px !important;
+    width: 50%;
+    font-size: 12px;
+}
+.club p a{
+    font-weight: 600;
+    color: #fff;
+}
+.club {
+    position: relative;
+    bottom: 150px;
+}
+.club p::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    /* right: -61px; */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 40px 27px 0px 0px;
+    border-color: #ed1c24 #00000000 #eeeeee12;
+    left: 50%;
+    -webkit-transition: all ease-in .4s;
+    transition: all ease-in .2s;
+
+}
+.event p{
+    background: #ed1c24;
+    padding: 10px 0px 10px 10px !important;
+    width: 100px;
+    font-size: 12px;
+}
+.event p a{
+    font-weight: 600;
+    color: #fff;
+}
+.event {
+    position: absolute;
+    bottom: -20px;
+    left: 255px;
+}
