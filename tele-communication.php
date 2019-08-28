@@ -42,6 +42,7 @@
                                 <a href="#" data-filter=".cable_splicing_connectors">Cable Splicing Connectors</a>
                                 <a href="#" data-filter=".Modular">Modular splicing connectors</a>
                                 <a href="#" data-filter=".ropes">Ropes</a>
+                                <a href="#" data-filter=".covers">Covers</a>
                                 <!--                                <a href="#" data-filter=".tools">Tools</a>
                                                             </div>-->
                             </div>
@@ -1730,6 +1731,55 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <!--Blog Post End-->
+                                                    <!--Blog Post Start-->
+
+                                                    <!--Blog Post End--> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                </div>
+                                        
+                                        <div class="covers wow fadeInUp">
+                                    <section class="wf100 p80 events">
+                                        <div class="event-posts">
+                                            <div class="container">
+                                                <h4>Covers</h4><br>
+                                                <div class="row">
+                                                    <!--Blog Post Start-->
+                                                    <div class="col-md-3 col-sm-6">
+                                                        <div class="event-post">
+                                                            <div class="event-thumb">
+                                                                <img src="images/covers/001.jpg" alt="">
+
+                                                            </div>
+                                                            <div class="event-txt">
+                                                                <h5 align="center"><a href="#">GRP/FRP Manhole Covers(Type 4 covers with frame)</a></h5>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Blog Post End-->
+                                                    <!--Blog Post Start-->
+                                                    <div class="col-md-3 col-sm-6">
+                                                        <div class="event-post">
+                                                            <div class="event-thumb">
+                                                                <img src="images/covers/001.jpg" alt="">
+                                                                <ul class="post-meta">
+
+                                                                </ul>
+                                                            </div>
+                                                            <div class="event-txt">
+                                                                <h5 align="center"><a href="#">GRP/FRP Manhole Covers(Type 6 covers with frsme)</a></h5>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Blog Post End--> 
+                                                    <!--Blog Post Start-->
+                                                    
                                                     <!--Blog Post End-->
                                                     <!--Blog Post Start-->
 

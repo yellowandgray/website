@@ -48,7 +48,7 @@
                             <section class="wf100 p80">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-md-8">
+                                        <div class="col-md-8 wow fadeInLeft">
                                             <div class="renewable-energy">
                                                 <h3>DC JUNCTION BOXES PHOTOVOLTAIC(DCBJ)1050-1500 VDC</h3><br>
                                                 <h5>Coffrets de jonction continu Photovoltaiques(DCBJ)1050-1500 VDC</h5><br>
@@ -56,12 +56,12 @@
                                                 <p class="text-justify">These junction boxes provide 15A –30A fuse protection. The passage of the strings is carried out using Photovoltaic connectors of (a pair of female and male connectors accompanies the requirement). The connection to the inverter is provided for a 2x120 sqmm² cable up to 10 strings, and beyond for two 300 sqmm² cables.</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 img-2">
+                                        <div class="col-md-4 img-2 wow fadeInRight">
                                             <img src="images/renewable-energy/dc-converter.jpg" alt="" class="img-responsive"/>  
                                         </div>
                                     </div>
                                     <br/>
-                                    <div class="row">
+                                    <div class="row wow bounceInLeft">
                                         <div class="col-md-4">
                                             <div class="img-1 renewable-energy text-center">
                                                 <div>
@@ -95,7 +95,7 @@
                                 <div class="container">
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 wow bounceInLeft">
                                             <div class="renewable-energy">
                                                 <h3>DATA LOGGER</h3><br>
                                                 <h4>S-Log(Monitoring and controlling with AI) </h4>
@@ -105,7 +105,7 @@
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 wow fadeInLeft">
                                             <div class="renewable-energy">
                                                 <h3>UNIQUE FEATURES</h3><br>
                                                 <ul class="data-list">
@@ -122,13 +122,13 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 img-2">
+                                        <div class="col-md-6 img-2 wow fadeInRight">
                                             <img src="images/renewable-energy/S-LOG.jpg" alt="" class="img-responsive"/>  
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 wow fadeInLeft">
                                             <div class="renewable-energy">
                                                 <h3>ATTRIBUTES</h3><br>
                                                 <div class="row">
@@ -143,7 +143,7 @@
 
                                                         </ul>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-6 wow fadeInRight">
                                                         <ul class="data-list">
                                                             <i class="fa fa-hand-o-right" aria-hidden="true"></i><li>Compatibility with maximum devices on all network and protocols.</li>
                                                             <i class="fa fa-hand-o-right" aria-hidden="true"></i><li>Customized and effective end to end solutions.</li>
@@ -169,7 +169,7 @@
                                 <div class="container">
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 wow bounceInLeft">
                                             <div class="renewable-energy">
                                                 <h3>DC-DC CONVERTER</h3><br>
                                                 <h4>I CONTROL-IN-PV -LDC-</h4>
@@ -178,7 +178,7 @@
                                         </div>
                                     </div><br>
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 wow fadeInLeft">
                                             <div class="renewable-energy">
                                                 <h3>BENEFITS OF THE RANGE</h3><br>
                                                 <ul class="data-list">
@@ -195,7 +195,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 img-2">
+                                        <div class="col-md-6 img-2 wow fadeInRight">
                                             <h5>DC-DC Converter with low voltage lockout facility with input voltage range (170 VDC to 1000 VDC).</h5>
                                             <img src="images/renewable-energy/dc-dc.jpg" alt=""class="img-responsive"/> 
 
@@ -203,7 +203,7 @@
                                     </div><br>
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 wow bounceInLeft">
                                             <div class="renewable-energy">
                                                 <h3>I CONTROL-IN-PV - DC-DC Converter</h3><br>
                                                 <span>Specifically designed for Renewable applications to cater the most variable input voltage range of 100-1000VDC maintaining high efficiency and reliability in its class under variable environmental conditions. It can be used in a variety of application like SMBs (String Monitoring Boxes), Solar water pumps, Solar trackers, High voltage inverters and many more to achieve stable and reliable output voltage.</span>
@@ -211,7 +211,7 @@
                                         </div>
                                     </div><br>
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 wow fadeInLeft">
                                             <div class="renewable-energy">
                                                 <h3>BENEFITS OF THE RANGE</h3><br>
                                                 <ul class="data-list">
@@ -227,7 +227,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 img-2">
+                                        <div class="col-md-6 img-2 wow fadeInRight">
                                             <h5>DC-DC Converter with maximum efficiency and wide input voltage range (100 VDC to 1000 VDC).</h5>
                                             <img src="images/renewable-energy/dc-dc-converter2.jpg" alt=""class="img-responsive"/> 
 
@@ -235,7 +235,7 @@
                                     </div><br>
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 bounceInLeft">
                                             <div class="renewable-energy">
                                                 <h3>I CONTROL-IN-PV - DC-DC Converter</h3><br>
                                                 <span class="text-justify">Specifically designed for Renewable applications to cater the most variable input voltage range of 200-1500VDC maintaining high efficiency and reliability in its class under variable environmental conditions. It can be used in a variety of application like SMBs (String Monitoring Boxes), Solar water pumps, Solar trackers, High voltage inverters and many more to achieve stable and reliable output voltage.</span>
@@ -243,7 +243,7 @@
                                         </div>
                                     </div><br>
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 wow fadeInLeft">
                                             <div class="renewable-energy">
                                                 <h3>BENEFITS OF THE RANGE</h3><br>
                                                 <ul class="data-list">
@@ -259,7 +259,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 img-2">
+                                        <div class="col-md-6 img-2 wow fadeInRight">
                                             <h5>DC-DC Converter with maximum efficiency and wide input voltage range (200 VDC to 1500 VDC).</h5>
                                             <img src="images/renewable-energy/dc-dc-converter3.jpg" alt=""class="img-responsive"/> 
 
@@ -282,7 +282,7 @@
                                     </div><br>
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 wow fadeInUp">
                                             <img src="images/renewable-energy/minipol.jpg" alt="" class="img-responsive"/>
                                         </div>
                                     </div><br>
@@ -296,7 +296,7 @@
                                     </div><br>
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 wow fadeInUp">
                                             <img src="images/renewable-energy/maxipol.jpg" alt="" class="img-responsive"/>
                                         </div>
                                     </div><br>
@@ -311,7 +311,7 @@
                                     </div><br>
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 wow fadeInUp">
                                             <img src="images/renewable-energy/combister.png" alt="" class="img-responsive"/>
                                         </div>
                                     </div><br>
@@ -331,7 +331,7 @@
                                     </div><br>
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 wow bounceInLeft">
                                             <div class="renewable-energy">
                                                 <span class="text-justify">Photovoltaic connectors used to connect strings of panels to be easily constructed by pushing the connectors from adjacent panels together by hand,with a range of 2.5 sq.mm - 6 sq.mm cables.</span>
                                             </div>
@@ -340,13 +340,13 @@
 
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div class="renewable-energy img-4">
+                                            <div class="renewable-energy img-4 wow fadeInLeft">
                                                 <img src="images/renewable-energy/approval.png"  alt=""/><span>Approvals in accordance to IEC 62852:2014</span>
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
-                                            <div class="renewable-energy img-4">
+                                            <div class="renewable-energy img-4 wow fadeInLeft">
                                                 <img src="images/renewable-energy/voltage.png"  alt=""/><span>Voltage 1000 VDC 1500 VDC (TUV)</span>
                                             </div>
                                         </div>
@@ -354,13 +354,13 @@
 
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div class="renewable-energy img-4">
+                                            <div class="renewable-energy img-4 wow fadeInLeft">
                                                 <img src="images/renewable-energy/resistant-01.png"  alt=""/><span>Resistant to weather conditions (IP 68)</span>
                                             </div>
                                         </div> 
 
                                         <div class="col-md-6">
-                                            <div class="renewable-energy img-4">
+                                            <div class="renewable-energy img-4 wow fadeInRight">
                                                 <img src="images/renewable-energy/safety.png"  alt=""/><span>Safety class II</span>
                                             </div>
                                         </div>
@@ -368,49 +368,49 @@
 
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div class="renewable-energy img-4">
+                                            <div class="renewable-energy img-4 wow fadeInRight">
                                                 <img src="images/renewable-energy/uv.png"  alt="" /><span>UV protected</span>
                                             </div>
                                         </div> 
 
                                         <div class="col-md-6">
-                                            <div class="renewable-energy img-4">
+                                            <div class="renewable-energy img-4 wow fadeInRight">
                                                 <img src="images/renewable-energy/lock.png"  alt=""/><span>Locking device NEC 2014</span>
                                             </div>
                                         </div>
                                     </div><br><br>
 
                                     <div class="row">
-                                        <div class="col-md-8">
+                                        <div class="col-md-8 wow fadeInLeft">
                                             <div class="renewable-energy">
                                                 <h3>PLUG IN CONNECTOR</h3><br>
                                                 <p class="text-justify">Plug in Connector are single-contact electrical connectors commonly used for connecting solar panels. It allow strings of panels to be easily constructed by pushing the connectors from adjacent panels together by hand, but require a tool to disconnect them to ensure they do not accidentally disconnect when the cables are pulled.</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 img-2">
+                                        <div class="col-md-4 img-2 wow fadeInRight">
                                             <img src="images/renewable-energy/plug-in.jpg" alt="" class="img-responsive"/>
                                         </div>
                                     </div><br>
 
                                     <div class="row">
-                                        <div class="col-md-8">
+                                        <div class="col-md-8 wow bounceInLeft">
                                             <div class="renewable-energy">
                                                 <h3>PANEL CONNECTOR</h3><br>
                                                 <p class="text-justify">Panel Connector are single-contact electrical connectors commonly used for connecting solar panels with combiner boxes. It allow strings of panels to be easily connected to combiner box by pushing the connectors from panels together by hand, but require a tool to disconnect them to ensure they do not accidentally disconnect when the cables are pulled</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 img-2">
+                                        <div class="col-md-4 img-2 wow fadeInRight">
                                             <img src="images/renewable-energy/panel.jpg" alt="" class="img-responsive"/>
                                         </div>
                                     </div><br>
                                     <div class="row">
-                                        <div class="col-md-8">
+                                        <div class="col-md-8 wow bounceInLeft">
                                             <div class="renewable-energy">
                                                 <h3>BRANCH CONNECTORS (MALE & FEMALE)</h3><br>
                                                 <p class="text-justify">Branch connector are developed to facilitate parallel connections of male or female straight connectors depending on on-site applications. The branch connector has three branches, two for inputs either male or female and one for output either male or female. The branch connector is easy to connect and disconnect, thus it is easy to use.</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 img-2">
+                                        <div class="col-md-4 img-2 wow fadeInLeft">
                                             <img src="images/renewable-energy/branch-connectors1.jpg" alt="" class="img-responsive"/>
                                         </div>
                                     </div><br>
@@ -423,7 +423,7 @@
                                     </div><br>
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 wow bounceInLeft">
                                             <div class="renewable-energy">
                                                 <span class="text-justify">The junction box is an enclosure on the module where the PV strings are electrically connected, with a range of 2.5 sq.mm - 6 sq.mm cables.</span>
                                             </div>
@@ -432,13 +432,13 @@
 
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div class="renewable-energy img-4">
+                                            <div class="renewable-energy img-4 wow fadeInLeft">
                                                 <img src="images/renewable-energy/approval.png"  alt="" /><span>Approvals in accordance to IEC 62790:2014</span>
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
-                                            <div class="renewable-energy img-4">
+                                            <div class="renewable-energy img-4 wow fadeInLeft">
                                                 <img src="images/renewable-energy/voltage.png"  alt="" /><span>Voltage 1000 VDC 1500 VDC (TUV)</span>
                                             </div>
                                         </div>
@@ -446,13 +446,13 @@
 
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div class="renewable-energy img-4">
+                                            <div class="renewable-energy img-4 wow fadeInLeft">
                                                 <img src="images/renewable-energy/resistant-01.png"  alt="" /><span>Resistant to weather conditions (IP 68)</span>
                                             </div>
                                         </div> 
 
                                         <div class="col-md-6">
-                                            <div class="renewable-energy img-4">
+                                            <div class="renewable-energy img-4 wow fadeInRight">
                                                 <img src="images/renewable-energy/safety.png"  alt="" /><span>Safety class II</span>
                                             </div>
                                         </div>
@@ -460,31 +460,31 @@
 
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div class="renewable-energy img-4">
+                                            <div class="renewable-energy img-4 wow fadeInRight">
                                                 <img src="images/renewable-energy/non-hygroscopic.png"  alt="" /><span>Non hygroscopic</span>
                                             </div>
                                         </div> 
 
                                         <div class="col-md-6">
-                                            <div class="renewable-energy img-4">
+                                            <div class="renewable-energy img-4 wow fadeInRight">
                                                 <img src="images/renewable-energy/connection.png"  alt="" /><span>Connection alternatives(1.soldering 2.clamping)</span>
                                             </div>
                                         </div>
                                     </div><br><br>
 
                                     <div class="row">
-                                        <div class="col-md-8">
+                                        <div class="col-md-8 wow bounceInLeft">
                                             <div class="renewable-energy">
                                                 <h3>MODULE JUNCTION BOXES</h3><br>
                                                 <p class="text-justify">Photovoltaic junction boxes provide the first interface to the power from solar module towards the grid. A junction box with its bypass diodes keeps the power flow unilateral preventing any reverse feed in low light situations.</span>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 img-2">
+                                        <div class="col-md-4 img-2 wow fadeInRight">
                                             <img src="images/renewable-energy/module.jpg" alt="" class="img-responsive"/>
                                         </div>
                                     </div><br>
                                     <div class="row">
-                                        <div class="col-md-6 img-2">
+                                        <div class="col-md-6 img-2 wow fadeInUp">
                                             <div class="renewable-energy">
                                                 <h3>POSSIBILITIES PV FIELD INSTALLATIONS</h3><br>
                                                 <p class="text-justify">This example shows a CSC plug in connector system 1 with a CJB 2 rail Junction Box 2 in association with a CSC branch connector system 3 and feed through to a solar combiner box 6 with CSC panel connector system 4 .</p>
