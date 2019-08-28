@@ -36,7 +36,7 @@
                                         <li><a href="renewable-energy.php">Renewable Energy</a> </li>
                                         <li><a href="industrial-safetyproducts.php">Industry Safety Products</a> </li>
                                         <li><a href="metal.php">Metal</a> </li>
-                                        <li><a href="copper-products.php">Cable Tray</a> </li>
+                                        <li><a href="cable-tray.php">Cable Tray</a> </li>
                                         <!--                                            <li><a href="projects.html">Telecommunications</a> </li>
                                                                                     <li><a href="projects-grid.html">Renewable Energy</a> </li>
                                                                                     <li><a href="projects-grid-two.html">Industry Safety Products</a> </li>
