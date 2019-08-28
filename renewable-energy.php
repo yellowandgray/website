@@ -17,7 +17,7 @@
             </div>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/001.jpg) no-repeat; background-size: cover;">
+            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/006.jpg) no-repeat; background-size: cover;">
                 <div class="container">
                     <h1>Renewable Energy</h1>
                     <ul>

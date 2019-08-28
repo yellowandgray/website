@@ -5,7 +5,7 @@
     include 'head.php';
     ?>
     <body>
-        <div class="wrapper">
+        <div class="wrapper metal">
             <!--Header Start-->
             <?php include 'menu.php'; ?>
             <div id="search">
@@ -32,7 +32,7 @@
             <section class="wf100 p80 projects">
                 <div class="projects-grid-two">
                     <div class="container">
-                        <h4>Product Range</h4>
+                        <h3>PRODUCT RANGE</h3>
                         <div class="row">
                             <!--Project box Start-->
                             <div class="col-md-4 col-sm-6">
@@ -53,7 +53,7 @@
                                     <h5>Rebar</h5>
                                     <div class="pro-hover">
                                         <h6>Rebar</h6>
-                                        <span>Concrete reinforcing bars (rebars) represent the majority of SABIC’S production. They are made according to international standards.</span>
+                                        <span>Concrete reinforcing bars (rebars) represent the majority of VPN Commodities’S production. They are made according to international standards.</span>
                                     </div>
                                 </div>
                             </div>
@@ -98,57 +98,60 @@
                     </div>
             </section>
 
-            <section class="wf100 p80">
+            <section class="wf100 p80 projects">
                 <div class="container">
-
                     <div class="row">
                         <div class="col-md-12">
-                            <h3>Technical Facts</h3>
+                            <h3>TECHNICAL FACTS</h3>
                             <h4>The Quenching Process</h4>
-                            <p>SABIC steel rebars are produced through a bar quenching process, where the properties are attained by regulating the microstructure of the steel giving better rebar ductility and good weldability.</p>
+                            <p>VPN Commodities steel rebars are produced through a bar quenching process, where the properties are attained by regulating the microstructure of the steel giving better rebar ductility and good weldability.</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="technical-facts">
-                                <h5>Bar Quenching Process</h5>
+                        <div class="col-md-12">
+                            <h5>Bar Quenching Process</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <div class="img-6">
+                                <img src="images/technical-facts/001.jpg" alt="" class="img-responsive"/>
                             </div>
                         </div>
-                        <div class="col-md-8 text-center">
-                            <p>Quenched rebar cross section</p>
-                            <img src="images/technical-facts/001.jpg" alt="" />
-                            <p>Thin & Compact Surface Mill Scale</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <img src="images/technical-facts/003.jpg" alt="" />
-                        </div>
-                        <div class="col-md-4 text-left">
-                            <div class="facts">
-                                <ul>
-                                    <li>Hot Billet With low C and Min Content</li>
-                                    <li>Hot Rolling</li>
-                                    <li>Quenching</li>
-                                    <li>Self-tempering</li>
-                                    <li>Air-cooling</li>
-                                </ul>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="img-6">
+                                    <div class="col-md-6">
+                                        <img src="images/technical-facts/003.jpg" alt="" class="img-responsive"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="met-list">
+                                            <ul class="">
+                                                <i class="fa fa-circle" aria-hidden="true"></i><li>Hot Billet With low C and Min Content</li>
+                                                <i class="fa fa-circle" aria-hidden="true"></i><li>Hot Rolling</li>
+                                                <i class="fa fa-circle" aria-hidden="true"></i><li>Quenching</li>
+                                                <i class="fa fa-circle" aria-hidden="true"></i><li>Self-tempering</li>
+                                                <i class="fa fa-circle" aria-hidden="true"></i><li>Air-cooling</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h3>SABIC steel properties</h3>
-                            <p>The precise process control adopted at HADEED results in clean steel with very low content of undesirable residual elements, higher yield strength, good ductility and better bending properties of the steel bar. The lower carbon equivalent values used in SABIC Quenched Steel Rebars also make them readily weldable, particularly for the applications requiring low heat input like tack welding</p>
+                    <div class="row p80">
+                        <div class="col-md-6">
+                            <h3>VPN Commodities steel properties</h3>
+                            <p class="text-justify">The precise process control adopted at HADEED results in clean steel with very low content of undesirable residual elements, higher yield strength, good ductility and better bending properties of the steel bar. The lower carbon equivalent values used in VPN Commodities Quenched Steel Rebars also make them readily weldable, particularly for the applications requiring low heat input like tack welding</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-6">
+                                <img src="images/technical-facts/005.jpg" alt="" />  
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="images/technical-facts/005.jpg" alt="" />  
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -158,28 +161,32 @@
                         <div class="col-md-12">
                             <h3>TECHNOLOGY & INNOVATION </h3>
                             <h4>A MUST TO STAY AHEAD</h4>
-                            <p>SABIC maintains a market-leading position by keeping up-to-date with global advances in technology. To keep high standards, we regularly carry out independent studies to inspect and maintain the excellence of our products, evaluate the manufacturing processes, and develop new products according to market requirements.</p>
+                            <p class="text-justify">VPN Commodities maintains a market-leading position by keeping up-to-date with global advances in technology. To keep high standards, we regularly carry out independent studies to inspect and maintain the excellence of our products, evaluate the manufacturing processes, and develop new products according to market requirements.</p>
                         </div>  
                     </div>
 
 
                     <div class="row">
                         <div class="col-md-12">
-                            <img src="images/technical-facts/006.jpg" alt="" />  
+                            <div class="img-6">
+                                <img src="images/technical-facts/006.jpg" alt="" />  
+                            </div>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-md-12">
                             <h3>TECHNOLOGY AND INNOVATION</h3><br>
-                            <p>SABIC Technology Center in Al Jubail has dedicated research facilities for steel product development, process optimization, product quality improvement, energy conservation, sustainability and by-product utilization.
+                            <p class="text-justify">VPN Commodities Technology Center in Al Jubail has dedicated research facilities for steel product development, process optimization, product quality improvement, energy conservation, sustainability and by-product utilization.
                                 Using the latest physical and computer-based simulation tools, it carries out studies for metallurgical process mapping, developing microstructure-property relationships and process improvement.</p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-12">
-                            <img src="images/technical-facts/007.jpg" alt="" />  
+                            <div class="img-6">
+                                <img src="images/technical-facts/007.jpg" alt="" />  
+                            </div>
                         </div>
                     </div>
                 </div>
