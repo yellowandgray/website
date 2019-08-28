@@ -35,7 +35,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="portfolioFilter clearfix">
+                            <div class="portfolioFilter clearfix wow fadeInUp">
                                 <a href="#" data-filter=".optical-fiber">Optical Fiber</a>
                                 <a href="#" data-filter=".fiber_cable">Fiber Cable</a>
                                 <a href="#" data-filter=".copper_cable">Copper Cable</a>
@@ -47,7 +47,7 @@
                             </div>
                             <div class="portfolioContainer">
 
-                                <div class="optical-fiber">
+                                <div class="optical-fiber wow fadeInUp ">
                                     <section class="wf100 p80 events">
                                         <div class="event-posts">
                                             <div class="container">
@@ -266,7 +266,7 @@
                                     </section>
                                 </div>
 
-                                <div class="fiber_cable">
+                                <div class="fiber_cable wow fadeInUp">
                                     <section class="wf100 p80 events">
                                         <div class="event-posts">
                                             <div class="container">
@@ -418,7 +418,7 @@
                                     </section>
                                 </div>
 
-                                <div class="copper_cable">
+                                <div class="copper_cable wow fadeInUp">
                                     <section class="wf100 p80 events">
                                         <div class="event-posts">
                                             <div class="container">
@@ -472,7 +472,7 @@
                                     </section>
                                 </div>
 
-                                <div class="cable_splicing_connectors">
+                                <div class="cable_splicing_connectors wow fadeInUp">
                                     <section class="wf100 p80 events">
                                         <div class="event-posts">
                                             <div class="container">
@@ -1003,7 +1003,7 @@
                                     </section>
                                 </div>
 
-                                <div class="Modular">
+                                <div class="Modular wow fadeInUp">
                                     <section class="wf100 p80 events">
                                         <div class="event-posts">
                                             <div class="container">
@@ -1658,7 +1658,9 @@
 
                                     <!--Blog Post End--> 
                                 </div>
-                                        <div class="ropes">
+
+
+                                <div class="ropes wow fadeInUp">
                                     <section class="wf100 p80 events">
                                         <div class="event-posts">
                                             <div class="container">
@@ -1730,13 +1732,13 @@
                                                     </div>
                                                     <!--Blog Post End-->
                                                     <!--Blog Post Start-->
-                                                    
+
                                                     <!--Blog Post End--> 
                                                 </div>
                                             </div>
                                         </div>
                                     </section>
-                                            
+
                                 </div>
                             </div>
                         </div>

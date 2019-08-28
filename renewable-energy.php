@@ -610,7 +610,7 @@
                                         </div>
                                     </div><br>
 
-                                    <div class="row">
+                                    <div class="row wow bounceInLeft">
                                         <div class="col-md-1">
                                         </div>
                                         <div class="col-md-2">

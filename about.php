@@ -33,7 +33,7 @@
                 <div class="about-video-section wf100">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 wow bounceInLeft">
                                 <div class="about-text">
                                     <h5>About</h5>
                                     <h2>VPN COMMODITIES</h2>
@@ -42,7 +42,7 @@
                                 <p>“To exceed customer expectations through Innovation, Continuous Improvement in People & Products, Quality, Cost and Delivery”.</p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 wow bounceInLeft">
                                 <div class="about-video-img"><img src="images/aboutimg.jpg" alt=""> </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-4">
-                                <div class="story-title-bg"> <strong class="t1">ecova.</strong> <strong class="t2">20+</strong> <strong class="t3">Years of
+                                <div class="story-title-bg"> <strong class="t1">VPN</strong> <strong class="t2">20+</strong> <strong class="t3">Years of
                                         Services</strong> 
                                 </div>
                             </div>
