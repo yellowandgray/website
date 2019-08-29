@@ -27,6 +27,7 @@
                 </div>
             </section>
             <!--Inner Header End--> 
+            <?php include 'enquiry.php'; ?>
             <!--Blog Start-->
             <section class="wf100 p80 team pad-t-80 pad-b-80">
                 <div class="team-details">

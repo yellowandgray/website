@@ -28,6 +28,7 @@
                 </div>
             </section>
             <!--Inner Header End--> 
+            <?php include 'enquiry.php'; ?>
             <section class="wf100 p80">
                 <div class="container">
 

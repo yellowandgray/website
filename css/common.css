@@ -57,7 +57,7 @@ ul.topbar-social {
     right: -66px;
     text-align: center;
     transform: rotate(90deg);
-    top: 50%;
+    top: 62%;
     z-index:99;
     transition:  0.5s all linear;
 }
