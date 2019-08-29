@@ -1291,7 +1291,7 @@ ul.flinks li a:hover, ul.flinks li.active a {
     height: auto;
     display: inline-block;
     -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    filter: none;
     opacity: .7;
 }
 .partner-logos .owl-item.active.center img, .partner-logos .owl-carousel .owl-item img:hover {
