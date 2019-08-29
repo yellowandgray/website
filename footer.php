@@ -102,11 +102,11 @@
 </script>
 <script>
     function openForm() {
-        document.getElementById("myForm").style.display = "block";
+        document.getElementById("contact-form").style.display = "block";
     }
 
     function closeForm() {
-        document.getElementById("myForm").style.display = "none";
+        document.getElementById("contact-form").style.display = "none";
     }
 </script>
 <!--loadingpage-->

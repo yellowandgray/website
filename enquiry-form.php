@@ -9,8 +9,6 @@ if ($_POST['fname']) {
     $email = $_REQUEST['email'];
 
     $phone = $_REQUEST['phone'];
-    
-    $subject = $_REQUEST['subject'];
 
     $message = $_REQUEST['message'];
 
@@ -114,7 +112,6 @@ if ($_POST['fname']) {
             <p style = "margin:0 0 16px">first Name: ' . $fname . '</p>
            <p style = "margin:0 0 16px">Email: ' . $email . '</p>
             <p style = "margin:0 0 16px">Contact: ' . $phone . '</p>
-            <p style = "margin:0 0 16px">Subject: ' . $subject . '</p>
             <p style = "margin:0 0 16px">Message: ' . $message . '</p>
             <p style = "margin:0 0 16px">Sent From Website</p></div>
             </td>
