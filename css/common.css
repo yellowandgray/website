@@ -755,11 +755,11 @@ body, html.on {
     color:#035c40;
 }
 .img-2 img{
-    transition: 0.2s all linear;
+    transition: 0.1s all linear;
     opacity: 1;
 }
 .img-2:hover img {
-    box-shadow: 0px 0px 3px 1px #696969;
+    box-shadow: 0px 0px 3px 1px #00573a;
     transform: scale(1.02);
     opacity: 0.9;
 }
@@ -1105,12 +1105,23 @@ body, html.on {
     font-size: 16px;
 }
 
-
-.active a {
+.menu-1 .active  a {
     color: #035c40 !important;
     font-weight: 600;
+}
+
+.menu-1 .active ul a {
+    color: #949494 !important;
+    
 }
 .team .section-title h2{
     color: #035c40;
     padding-bottom: 40px;
+}
+.covers .event-post h5 {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    line-height: 25px;
 }

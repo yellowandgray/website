@@ -1777,7 +1777,7 @@
                                                                 </ul>
                                                             </div>
                                                             <div class="event-txt">
-                                                                <h5 align="center"><a href="#">GRP/FRP Manhole Covers(Type 6 covers with frsme)</a></h5>
+                                                                <h5 align="center"><a href="#">GRP/FRP Manhole Covers(Type 6 covers with frame)</a></h5>
 
                                                             </div>
                                                         </div>

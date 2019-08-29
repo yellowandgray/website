@@ -1,4 +1,4 @@
-<header class="header-style-3 wf100">
+<header class="header-style-3 wf100 menu-1">
 
     <div class="topbar">
         <div class="container">
@@ -47,7 +47,7 @@
                                         <li><a href="tele-communication.php">Telecommunications</a> </li>
                                         <li><a href="renewable-energy.php">Renewable Energy</a> </li>
                                         <li><a href="industrial-safetyproducts.php">Safety Shoes</a> </li>
-                                        <li><a href="metal.php">Metal</a> </li>
+                                        <!--<li><a href="metal.php">Metal</a> </li>-->
                                         <li><a href="cable-tray.php">Strut Channel & Cable Tray</a> </li>
                                         <!--                                            <li><a href="projects.html">Telecommunications</a> </li>
                                                                                     <li><a href="projects-grid.html">Renewable Energy</a> </li>
