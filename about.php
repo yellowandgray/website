@@ -1,6 +1,6 @@
 <!doctype html><html lang="en">
     <?php
-    $page = 'home';
+    $page = 'about';
     include 'head.php';
     ?>
     <body>

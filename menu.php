@@ -26,17 +26,29 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
 
-                                <li class="nav-item"> <a class="nav-link" href="index.php">Home</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="about.php">About</a> </li>
+                                <li class="nav-item <?php
+                                if ($page == 'home') {
+                                    echo 'active';
+                                }
+                                ?>"> <a class="nav-link" href="index.php">Home</a> </li>
+                                <li class="nav-item <?php
+                                if ($page == 'about') {
+                                    echo 'active';
+                                }
+                                ?>"> <a class="nav-link" href="about.php">About</a> </li>
                                 <!--<li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>-->
-                                <li class="nav-item dropdown">
+                                <li class="nav-item dropdown <?php
+                                if ($page == 'products') {
+                                    echo 'active';
+                                }
+                                ?>">
                                     <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Products </a>
                                     <ul class="dropdown-menu" >
                                         <li><a href="tele-communication.php">Telecommunications</a> </li>
                                         <li><a href="renewable-energy.php">Renewable Energy</a> </li>
                                         <li><a href="industrial-safetyproducts.php">Industry Safety Products</a> </li>
                                         <li><a href="metal.php">Metal</a> </li>
-                                        <li><a href="cable-tray.php">Cable Tray</a> </li>
+                                        <li><a href="cable-tray.php">Strut Channel & Cable Tray</a> </li>
                                         <!--                                            <li><a href="projects.html">Telecommunications</a> </li>
                                                                                     <li><a href="projects-grid.html">Renewable Energy</a> </li>
                                                                                     <li><a href="projects-grid-two.html">Industry Safety Products</a> </li>
@@ -44,11 +56,18 @@
                                                                                     <li><a href="projects-details.html">Cable Tray</a> </li>-->
                                     </ul>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href=""  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Our Partners</a>
-                                </li>
-                                <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
-<!--                                <li class="nav-item"> <a class="nav-link" href="contact-one.html">Contact</a> </li>-->
+
+                                <li class="nav-item <?php
+                                if ($page == 'partners') {
+                                    echo 'active';
+                                }
+                                ?>"> <a class="nav-link" href="partners.php">Our Partners</a> </li>
+                                <li class="nav-item <?php
+                                if ($page == 'contact') {
+                                    echo 'active';
+                                }
+                                ?>"> <a class="nav-link" href="contact.php">Contact</a> </li>
+                                <!--                                <li class="nav-item"> <a class="nav-link" href="contact-one.html">Contact</a> </li>-->
 
                             </ul>
                         </div>

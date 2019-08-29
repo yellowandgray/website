@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <?php
-    $page = 'home';
+    $page = 'partners';
     include 'head.php';
     ?>
     <body>
@@ -19,11 +19,10 @@
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/003.jpg) no-repeat; background-size: cover;">
                 <div class="container">
-                    <h1>About Us</h1>
+                    <h1>Our Partners</h1>
                     <ul>
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="#"> About Us </a></li>
-
+                        <li><a href="#"> Our Partners </a></li>
                     </ul>
                 </div>
             </section>
@@ -33,13 +32,22 @@
                 <div class="team-details">
                     <div class="container">
                         <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <!--title start-->
+                                <div class="section-title">
+                                    <h2>Our Partners</h2>
+                                </div>
+                                <!--title end--> 
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-5">
                                 <div class="team-large-img"> <img src="images/partners/001.jpg" alt=""> </div>
                             </div>
                             <div class="col-md-7">
                                 <div class="team-details-txt">
                                     <h2>SABIC</h2>
-                                    <strong class="trank">Project Coordinator</strong>
+                                    <strong class="trank">Organization</strong>
                                     <p class="text-justify">SABIC is composed of four strategic business units – Petrochemicals, Specialties, Agri-Nutrients, and Metals – each headed by an Executive Vice President.</p>
                                     <p class="text-justify">The Chairman of SABIC is Dr. Abdulaziz Saleh Aljarbou. Vice-Chairman and Chief Executive Officer, Yousef Abdullah Al-Benyan, leads the global management team. The company is overseen by a Board of Directors taken from government and the private sector.</p>
                                 </div>
@@ -47,19 +55,9 @@
                         </div>
                     </div>
                 </div>
-
             </section>
             <section class="agallery gallery wf100 p80">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <!--title start-->
-                            <div class="section-title">
-                                <h2>Our Partners</h2>
-                            </div>
-                            <!--title end--> 
-                        </div>
-                    </div>
                     <div class="partner-logos wf100 mb80">
                         <div class="container">
                             <div id="partner-logos" class="owl-carousel owl-theme">

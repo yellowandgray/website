@@ -1104,3 +1104,13 @@ body, html.on {
 .metal p{
     font-size: 16px;
 }
+
+
+.active a {
+    color: #035c40 !important;
+    font-weight: 600;
+}
+.team .section-title h2{
+    color: #035c40;
+    padding-bottom: 40px;
+}

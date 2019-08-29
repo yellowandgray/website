@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <?php
-    $page = 'home';
+    $page = 'contact';
     include 'head.php';
     ?>
     <body>
@@ -19,10 +19,10 @@
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/003.jpg) no-repeat; background-size: cover;">
                 <div class="container">
-                    <h1>About Us</h1>
+                    <h1>Contact Us</h1>
                     <ul>
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="#"> About Us </a></li>
+                        <li><a href="#"> Contact Us </a></li>
 
                     </ul>
                 </div>

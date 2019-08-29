@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <?php
-    $page = 'home';
+    $page = 'products';
     include 'head.php';
     ?>
     <body>
