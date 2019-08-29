@@ -62,16 +62,11 @@
                     <div class="partner-logos wf100 mb80">
                         <div class="container">
                             <div id="partner-logos" class="owl-carousel owl-theme">
-                                <div class="item"><img src="images/plogo1.png" alt=""></div>
-                                <div class="item"><img src="images/plogo2.png" alt=""></div>
-                                <div class="item"><img src="images/plogo3.png" alt=""></div>
-                                <div class="item"><img src="images/plogo4.png" alt=""></div>
-                                <div class="item"><img src="images/plogo5.png" alt=""></div>
-                                <div class="item"><img src="images/plogo1.png" alt=""></div>
-                                <div class="item"><img src="images/plogo2.png" alt=""></div>
-                                <div class="item"><img src="images/plogo3.png" alt=""></div>
-                                <div class="item"><img src="images/plogo4.png" alt=""></div>
-                                <div class="item"><img src="images/plogo5.png" alt=""></div>
+                                <div class="item"><img src="images/partners/01.png" alt=""></div>
+                                <div class="item"><img src="images/partners/02.png" alt=""></div>
+                                <div class="item"><img src="images/partners/03.png" alt=""></div>
+                                <div class="item"><img src="images/partners/04.png" alt=""></div>
+                                <div class="item"><img src="images/partners/05.png" alt=""></div>
                             </div>
                         </div>
                     </div>
