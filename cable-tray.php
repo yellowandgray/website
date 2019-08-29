@@ -29,6 +29,7 @@
             </section>
 
             <!--Inner Header End--> 
+              <?php include 'enquiry.php'; ?>
             <!--Causes Start-->
             <section class="wf100 p80 events">
                 <div class="event-posts">

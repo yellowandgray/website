@@ -16,6 +16,7 @@
                 </form>
             </div>
             <!--Header End-->
+            <?php include 'enquiry.php'; ?>
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/006.jpg) no-repeat; background-size: cover;">
                 <div class="container">

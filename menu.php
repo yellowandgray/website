@@ -46,7 +46,7 @@
                                     <ul class="dropdown-menu" >
                                         <li><a href="tele-communication.php">Telecommunications</a> </li>
                                         <li><a href="renewable-energy.php">Renewable Energy</a> </li>
-                                        <li><a href="industrial-safetyproducts.php">Industry Safety Products</a> </li>
+                                        <li><a href="industrial-safetyproducts.php">Safety Shoes</a> </li>
                                         <li><a href="metal.php">Metal</a> </li>
                                         <li><a href="cable-tray.php">Strut Channel & Cable Tray</a> </li>
                                         <!--                                            <li><a href="projects.html">Telecommunications</a> </li>

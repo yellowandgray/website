@@ -28,6 +28,7 @@
                 </div>
             </section>
             <!--Inner Header End--> 
+              <?php include 'enquiry.php'; ?>
             <!--Contact Start-->
             <section class="contact-page wf100 p80 pad-t-80">
                 <div class="container">

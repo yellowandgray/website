@@ -17,6 +17,7 @@
                 </form>
             </div>
             <!--Header End-->
+            <?php include 'enquiry.php'; ?>
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/001.jpg) no-repeat; background-size: cover;">
                 <div class="container">
@@ -1745,8 +1746,8 @@
                                     </section>
 
                                 </div>
-                                        
-                                        <div class="covers wow fadeInUp">
+
+                                <div class="covers wow fadeInUp">
                                     <section class="wf100 p80 events">
                                         <div class="event-posts">
                                             <div class="container">
@@ -1783,7 +1784,7 @@
                                                     </div>
                                                     <!--Blog Post End--> 
                                                     <!--Blog Post Start-->
-                                                    
+
                                                     <!--Blog Post End-->
                                                     <!--Blog Post Start-->
 
