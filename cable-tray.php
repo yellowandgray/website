@@ -17,7 +17,7 @@
             </div>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/002.jpg) no-repeat; background-size: cover;">
+            <section class="wf100 p100 inner-header strut" style="background: url(images/sub-banner/002.jpg) no-repeat; background-size: cover;">
                 <div class="container">
                     <h1>Strut Channel & Cable Tray</h1>
                     <ul>
@@ -33,9 +33,10 @@
             <!--Causes Start-->
 
             <section class="wf100 p80 events">
-                <div class="event-posts">
+                <div class="event-posts wow bounceInLeft">
                     <div class="container">
-                        <h2>Strut Channel</h2>
+                        <div class="strut">
+                        <h3>Strut Channel</h3><br>
                         <div class="row">
                             <!--Blog Post Start-->
                             <div class="col-md-4 col-sm-6">
@@ -80,12 +81,14 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </section>
 
             <section class="wf100 p80 events">
-                <div class="event-posts">
+                <div class="event-posts wow bounceInRight">
                     <div class="container">
-                        <h2>Cable Tray</h2><br>
+                        <div class="strut">
+                        <h3>Cable Tray</h3><br>
 
                         <div class="row">
                             <!--Blog Post Start-->
@@ -131,13 +134,15 @@
                         </div>
                     </div>
                 </div>
+                </div>>
             </section>
             <!--Causes End--> 
             <!--Causes Start-->
             <section class="wf100 p80 events">
-                <div class="event-posts">
+                <div class="event-posts wow bounceInLeft">
                     <div class="container">
-                        <h2>Ladder Tray</h2><br/>
+                        <div class="strut">
+                        <h3>Ladder Tray</h3><br/>
                         <div class="row">
                             <!--Blog Post Start-->
                             <div class="col-md-4 col-sm-6">
@@ -181,13 +186,15 @@
                             <!--Blog Post End-->
                         </div>
                     </div>      
-                </div>      
+                </div>  
+                </div>
             </section>
 
             <section class="wf100 p80 events">
-                <div class="event-posts">
+                <div class="event-posts wow bounceInLeft">
                     <div class="container">
-                        <h2>Cable Ldder</h2>
+                        <div class="strut">
+                        <h3>Cable Ldder</h3><br>
                         <div class="row">
                             <!--Blog Post Start-->
                             <div class="col-md-4 col-sm-6">
@@ -232,13 +239,15 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </section>
 
             <!--Causes End--> 
             <section class="wf100 p80 events">
-                <div class="event-posts">
+                <div class="event-posts wow bounceInRight">
                     <div class="container">
-                        <h2>Wire Mesh Cable Tray</h2>
+                        <div class="strut">
+                        <h3>Wire Mesh Cable Tray</h3><br>
                         <div class="row">
                             <!--Blog Post Start-->
                             <div class="col-md-4 col-sm-6">
@@ -283,12 +292,14 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </section>
 
             <section class="wf100 p80 events">
-                <div class="event-posts">
+                <div class="event-posts wow bounceInLeft">
                     <div class="container">
-                        <h2>Wireway</h2>
+                        <div class="strut">
+                        <h3>Wireway</h3><br>
                         <div class="row">
                             <!--Blog Post Start-->
                             <div class="col-md-4 col-sm-6">
@@ -333,12 +344,14 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </section>
 
             <section class="wf100 p80 events">
-                <div class="event-posts">
+                <div class="event-posts wow bounceInRight">
                     <div class="container">
-                        <h2>Cable Trunking</h2>
+                        <div class="strut">
+                        <h3>Cable Trunking</h3><br>
                         <div class="row">
                             <!--Blog Post Start-->
                             <div class="col-md-4 col-sm-6">
@@ -383,12 +396,14 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </section>
 
             <section class="wf100 p80 events">
-                <div class="event-posts">
+                <div class="event-posts wow bounceInLeft">
                     <div class="container">
-                        <h2>FRP Cable Tray</h2>
+                        <div class="strut">
+                        <h3>FRP Cable Tray</h3><br>
                         <div class="row">
                             <!--Blog Post Start-->
                             <div class="col-md-4 col-sm-6">
@@ -432,6 +447,7 @@
                             <!--Blog Post End-->
                         </div>
                     </div>
+                </div>
                 </div>
             </section>
 

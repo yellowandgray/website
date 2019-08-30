@@ -1170,3 +1170,11 @@ body, html.on {
        background-position: center !important;
     }
 }
+
+.strut h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: #035c40;
+
+}
+
