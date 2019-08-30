@@ -1169,7 +1169,7 @@ body, html.on {
 }
 @media (max-width: 1280px) and (min-width: 320px){
     .inner-header {
-        background-position: center !important;
+        /*background-position: center !important;*/
     }
 }
 .quick button {
