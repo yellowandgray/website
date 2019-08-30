@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer__addr">
         <h1 class="footer__logo"><img src="img/logo.png" alt="" /></h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
 
         <!--        <address>
                     &nbsp;5534 Somewhere In. The World 22193-10212<br>

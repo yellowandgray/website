@@ -16,6 +16,7 @@
     .discover-slider-content {top: -111px !important;}
     .bg-1 {top: 85px !important;}
     .video-bg-banner .video-overlay {height: 100% !important;}
+    .footer__logo img {width: 100% !important;}
 }
 
 @media screen and (max-height: 600px) {
