@@ -21,7 +21,8 @@
                     </ul>
                     <p class="btn-apply"><a href="index.php#enquiry">Enquire Now</a></p> |
                     <!--<p class="btn-apply"><a href="">News & Events</a></p>-->
-                    <p class="btn-apply"><a href="news-events.php"> <img src="images/event.gif" alt=""/></a></p>
+                    <p class="btn-apply"><a href="news-events.php"><img src="images/event.gif" alt=""/></a></p>
+                    
                 </div>
             </div>
         </div>
@@ -69,6 +70,11 @@
                             echo 'active';
                         }
                         ?>"><a href="programs-offered.php">Programs offered</a></li>
+<!--                        <li class="<?php
+                        if ($page == 'testimonials') {
+                            echo 'active';
+                        }
+                        ?>"><a href="#">Testimonials</a></li>-->
                         <li class="<?php
                         if ($page == 'make-different') {
                             echo 'active';
@@ -83,7 +89,7 @@
                         if ($page == 'career') {
                             echo 'active';
                         }
-                        ?>"><a href="career.php">Career</a></li>
+                        ?>"><a href="career.php">Careers</a></li>
 <!--                        <li class="btn-cta"><a href="#"><span>Free Trial</span></a></li>-->
                     </ul>
                 </div>
@@ -130,13 +136,18 @@
                         echo 'active';
                     }
                     ?>"><a href="programs-offered.php">Programs offered</a></li>
+<!--                    <li class="<?php
+                    if ($page == 'testimonials') {
+                        echo 'active';
+                    }
+                    ?>"><a href="#">Testimonials</a></li>-->
                     <li class="<?php
                     if ($page == 'make-different') {
                         echo 'active';
                     }
                     ?>"><a href="what-makes-different.php">What makes us different</a></li>
                     <li class="<?php
-                    if ($page == 'contact') {
+                    if ($page == 'make-different') {
                         echo 'active';
                     }
                     ?>"><a href="contact.php">Contact</a></li>
@@ -144,7 +155,7 @@
                     if ($page == 'contact') {
                         echo 'active';
                     }
-                    ?>"><a href="career.php">Career</a></li>
+                    ?>"><a href="career.php">Careers</a></li>
 <!--                        <li class="btn-cta"><a href="#"><span>Free Trial</span></a></li>-->
                 </ul>
             </div>
@@ -159,5 +170,5 @@
     <div class="col-md-4">
         <div class="boder-2"></div>
     </div>
-    <marquee><a href="http://enpeekkl.com/images/download/ENPEE-School-Flyer-ENG&TAM-2019.pdf" target="blank">Admissions open for PreKG to STD V. Contact our City Office at Old No 79, MOHIDEEN PALLI STREET, OPPOSITE: AXIS BANK  & LATHAA SUPER MARKET, KARAIKAL 609 602. Call 04368 265 265.</a></marquee>
+    <marquee><a href="http://enpeekkl.com/images/download/ENPEE-School-Flyer-ENG&TAM-2019.pdf" target="blank">ENPEE International School, Château Français, ENPEE Enclave, 241/2, Puthakudy Village, Vadamattam Main Road, Nedungadu Panchayat, Karaikal – 609609. U.T of Puducherry.</a></marquee>
 </nav>
