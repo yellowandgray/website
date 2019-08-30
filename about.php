@@ -34,7 +34,7 @@
                 <div class="about-video-section wf100">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6 wow fadeInLeft">
+                            <div class="col-lg-6 col-md-6 wow fadeInLeft">
                                 <div class="about-text">
                                     <h5>About</h5>
                                     <h2>VPN COMMODITIES</h2>
@@ -43,7 +43,7 @@
                                     <p class="text-justify">“To exceed customer expectations through Innovation, Continuous Improvement in People & Products, Quality, Cost and Delivery”.</p>
                                 </div>
                             </div>
-                            <div class="col-lg-6 wow fadeInRight">
+                            <div class="col-lg-6 col-md-6 wow fadeInRight">
                                 <div class="about-img"><img src="images/aboutimg.jpg" alt=""> </div>
                             </div>
                         </div>
@@ -54,14 +54,14 @@
                 <div class="our-success-story wf100">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-4 wow fadeInLeft">
+                            <div class="col-lg-4 col-md-4 wow fadeInLeft">
                                 <div class="story-title-bg"> 
                                     <img src="images/storybg.jpg" alt="">
 <!--                                    <strong class="t1">VPN</strong> <strong class="t2">20+</strong> <strong class="t3">Years of
                                         Services</strong> -->
                                 </div>
                             </div>
-                            <div class="col-lg-8">
+                            <div class="col-lg-8 col-md-8">
                                 <!--eco History Start-->
                                 <div class="eco-history">
                                     <div class="timeline-slider">
@@ -132,7 +132,7 @@
             <section class="wf100 our-success-story">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-6">
                             <div class="box-1 wow fadeInLeft">
                                 <h3 align="center">Solutions</h3>
                                 <ul class="data-list">
@@ -143,7 +143,7 @@
                                 </ul>  
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-6">
                             <div class="box-1 wow fadeInRight">
                                 <h3 align="center">What Vpn Commodities Specializes in?</h3>
                                 <ul class="data-list">

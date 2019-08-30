@@ -667,6 +667,7 @@ body, html.on {
     box-shadow: 0px 0px 0px 0px #d2d1d1;
     height: 220px;
     background: #efefef;
+    margin-bottom: 10px;
 }
 .about-h .timeline-box {
     height: 363px;
@@ -699,6 +700,7 @@ body, html.on {
 {
     box-shadow: 0px 0px 5px 2px #e0e0e0;
     padding: 5px;
+    margin-bottom: 10px;
 }
 .renewable-energy p {
     font-size: 16px;
@@ -736,6 +738,7 @@ body, html.on {
     background: #035c40;
     height: 120px;
     transition: 0.1s all linear;
+    margin-bottom: 10px;
 
 }
 
@@ -972,7 +975,7 @@ body, html.on {
     border: 1px solid #eeeeee;
     border-radius: 5px;
     padding: 10px 20px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     transition: 0.3s all ease-in;
     box-shadow: 0px 0px 11px 0px #dadada;
 }
@@ -1015,7 +1018,7 @@ body, html.on {
     background: #ffffff;
     border: 1px solid #eeeeee;
     border-radius: 5px;
-    box-shadow: 0px 0px 20px 2px #eee;
+    box-shadow: 0px 0px 0px 2px #035d41;
     padding: 10px 20px;
     margin-bottom: 5px;
     transform: rotateX(20deg);
@@ -1112,7 +1115,7 @@ body, html.on {
 
 .menu-1 .active ul a {
     color: #949494 !important;
-    
+
 }
 .team .section-title h2{
     color: #035c40;
@@ -1124,4 +1127,46 @@ body, html.on {
     text-align: center;
     margin: 0px 0px 0px 0px;
     line-height: 25px;
+}
+.about-video-section {
+    padding: 0px 0 0px;
+}
+@media (max-width: 575px) and (min-width: 280px){
+    body h3 {
+        font-size: 19px;
+    }
+}
+@media (max-width: 575px) and (min-width: 280px){
+    .img-3 {
+        height: 135px;
+    }
+}
+.renewable-energy-1 button:hover {
+    color: #ffffff !important;
+}
+@media (max-width: 991px) and (min-width: 768px){
+    .green-box h5 {
+        font-size: 12px;
+    }
+    .img-3 {
+        height: 100px;
+    }
+}
+@media (max-width: 767px) and (min-width: 320px){
+    .img-3 {
+        height: auto;
+        width: 50%;
+        position: relative;
+        left: 30%;
+    }
+}
+@media (max-width: 470px) and (min-width: 320px){
+    .table-1 td{
+        font-size: 8px;
+    }
+}
+@media (max-width: 1280px) and (min-width: 320px){
+    .inner-header {
+       background-position: center !important;
+    }
 }

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <!--Footer Widget Start-->
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-6 col-xs-6">
                 <div class="footer-widget">
                     <h3>About VPN</h3>
                     <p> When you embrace eco awareness as a part of your daily life, you can defintiely think about the Environment business.</p>
@@ -13,15 +13,15 @@
             </div>
             <!--Footer Widget End--> 
             <!--Footer Widget Start-->
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-6 col-xs-6">
                 <div class="footer-widget">
                     <h3>Menu</h3>
                     <ul class="quick-links">
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Home</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> About Us</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Products</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Our Partners</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Contact </a></li>
+                        <li><a href="index.php"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="about.php"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="tele-communication.php"><i class="fas fa-angle-right"></i> Products</a></li>
+                        <li><a href="partners.php"><i class="fas fa-angle-right"></i> Our Partners</a></li>
+                        <li><a href="contact.php"><i class="fas fa-angle-right"></i> Contact </a></li>
                     </ul>
                 </div>
             </div>

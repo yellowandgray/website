@@ -21,7 +21,7 @@
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/001.jpg) no-repeat; background-size: cover;">
                 <div class="container">
-                    <div class="row">
+                    <div class="row sub-banner">
                         <div class="coi-md-4">
                             <h1>Telecommunication</h1>
                             <ul>
