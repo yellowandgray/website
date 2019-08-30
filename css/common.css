@@ -1179,3 +1179,11 @@ body, html.on {
     0% { color: white; }
     100% { color: #035c40; }
 }
+
+.strut h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: #035c40;
+
+}
+
