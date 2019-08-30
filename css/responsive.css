@@ -119,11 +119,11 @@
     }
 }
 
-@media (min-width: 1465px) and (max-width: 1842px) { 
+/*@media (min-width: 1750px) and (max-width: 1842px) { 
     .discover-slider-content {
         top: -140px !important; 
     }
-}
+}*/
 
 @media (min-width: 1843px) and (max-width: 2560px) {
     .discover-slider-content {
