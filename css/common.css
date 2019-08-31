@@ -1187,3 +1187,9 @@ body, html.on {
 
 }
 
+header .navbar-toggler {
+    width: 25%;
+    background: none !important;
+    color: #035c40;
+
+}
