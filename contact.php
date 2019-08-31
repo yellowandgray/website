@@ -28,7 +28,7 @@
                 </div>
             </section>
             <!--Inner Header End--> 
-              <?php include 'enquiry.php'; ?>
+            <?php include 'enquiry.php'; ?>
             <!--Contact Start-->
             <section class="contact-page wf100 p80 pad-t-80">
                 <div class="container">
@@ -66,36 +66,33 @@
                     </div>
                 </div>
                 <div class="container contact-info">
-                    <div class="row contact">
-                        <div class="col-md-12 contact-1">
-                            <h3>Contact Information</h3>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="">
+                                <h3>Contact Information</h3>
+                            </div>
                         </div>
-                        <!--Contact Info Start-->
-                        <div class="col-md-4 contact-1">
-                            <div class="c-info">
+                        <div class="col-md-12 contact">
+                            <div class="c-info contact-1">
                                 <h6>Address:</h6>
                                 <p> NO.1, North Bridge Road, #07-10 High Street Center, Singapore</p>
                             </div>
-                        </div>
-                        <!--Contact Info End--> 
-                        <!--Contact Info Start-->
-                        <div class="col-md-4 contact-1">
-                            <div class="c-info">
+                            <!--Contact Info End--> 
+                            <!--Contact Info Start-->
+                            <div class="c-info  contact-1">
                                 <h6>Contact:</h6>
                                 <p><strong>Phone:</strong> +65 9481 9943</p>
                                 <p><strong>Fax:</strong> +65 6338 9174</p>
                             </div>
-                        </div>
-                        <!--Contact Info End--> 
-                        <!--Contact Info Start-->
-                        <div class="col-md-4 contact-1">
-                            <div class="c-info">
+                            <!--Contact Info End--> 
+                            <!--Contact Info Start-->
+                            <div class="c-info  contact-1">
                                 <h6>For More Information:</h6>
                                 <p><strong>Email:</strong>sales@vpnc.com </p>
                                 <p></p>
                             </div>
+                            <!--Contact Info End--> 
                         </div>
-                        <!--Contact Info End--> 
                     </div>
                 </div>
             </section>

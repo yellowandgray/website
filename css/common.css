@@ -1284,14 +1284,23 @@ header .navbar-toggler {
 
 }
 
+
+@media (max-width:1920px) and (min-width:650px){
+
+    .contact {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    .contact .contact-1{
+        flex-basis:31% !important;
+    }
+}
 .contact {
-    display: flex !important;
+    display: flex;
+    flex-direction: column;
 }
-.contact .contact-1:first-child {
-    flex: 100%;
-}
-.contact .contact-1{
-    flex: 1;
-    align-items: center;
-}
+
+
 
