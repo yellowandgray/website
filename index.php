@@ -114,11 +114,14 @@
                                 <a href="about.php">See More</a>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <img src="images/home/027.png" alt="">
+                        <div class="col-md-4 about-item">
+                            <div class="pic">
+                                <img src="images/home/027.png" alt="">
+                            </div>
+
                         </div>
-                        <div class="col-md-4  wow bounceInRight">
-                            <div class="img-radius"> <img src="images/home/026.jpg" alt=""> </div>
+                        <div class="col-md-4 about-item wow bounceInRight">
+                            <div class="img-radius pic"> <img src="images/home/026.jpg" alt=""> </div>
                         </div>
                     </div>
                 </div>
@@ -139,7 +142,7 @@
                         <div class="col-md-12">
                             <div id="core-projects-slider" class="owl-carousel owl-theme">
                                 <!--Project Box Start-->
-                                <div class="item wow fadeInDown">
+                                <div class="item wow fadeInDown  tel-item">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
                                             <img src="images/home/006.png" alt=""></div>
@@ -149,7 +152,7 @@
                                 </div>
                                 <!--Project Box End--> 
                                 <!--Project Box Start-->
-                                <div class="item wow fadeInDown">
+                                <div class="item wow fadeInDown tel-item">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
                                             <img src="images/home/007.png" alt=""></div>
@@ -162,7 +165,7 @@
 
                                 <!--Project Box End--> 
                                 <!--Project Box Start-->
-                                <div class="item wow fadeInDown">
+                                <div class="item wow fadeInDown tel-item">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
                                             <img src="images/home/008.png" alt=""></div>
@@ -173,7 +176,7 @@
                                 </div>
                                 <!--Project Box End--> 
                                 <!--Project Box Start-->
-                                <div class="item wow fadeInDown">
+                                <div class="item wow fadeInDown tel-item">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
                                             <img src="images/home/009.png" alt=""></div>
@@ -184,7 +187,7 @@
                                 </div>
                                 <!--Project Box End--> 
                                 <!--Project Box Start-->
-                                <div class="item wow fadeInDown">
+                                <div class="item wow fadeInDown tel-item">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
                                             <img src="images/home/010.png" alt=""></div>
@@ -195,7 +198,7 @@
                                 </div>
                                 <!--Project Box End--> 
                                 <!--Project Box Start-->
-                                <div class="item wow fadeInDown">
+                                <div class="item wow fadeInDown tel-item">
                                     <div class="ocp-box">
                                         <div class="ocp-thumb">
                                             <img src="images/home/011.png" alt=""></div>
@@ -236,7 +239,7 @@
                                     </div>
                                     <div class="col-md-6 col-sm-6 news-block">
                                         <div class="news-thumb wow fadeInDown">
-                                             <a href="renewable-energy.php"><i class="fas fa-link"></i></a>
+                                            <a href="renewable-energy.php"><i class="fas fa-link"></i></a>
                                             <img src="images/home/030.jpg" alt="">
                                             <p class="effect-p">Connectors and Junction Box</p>
                                         </div>
@@ -249,14 +252,14 @@
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6 news-block">
                                         <div class="news-thumb wow fadeInDown">
-                                             <a href="renewable-energy.php"><i class="fas fa-link"></i></a>
+                                            <a href="renewable-energy.php"><i class="fas fa-link"></i></a>
                                             <img src="images/home/029.jpg" alt="">
                                             <p class="effect-p">DC-DC Converter</p>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6 news-block">
                                         <div class="news-thumb wow fadeInDown">
-                                             <a href="renewable-energy.php"><i class="fas fa-link"></i></a>
+                                            <a href="renewable-energy.php"><i class="fas fa-link"></i></a>
                                             <img src="images/home/028.jpg" alt="">
                                             <p class="effect-p">Combiner Box</p>
                                             <p></p>
@@ -328,7 +331,7 @@
                             <!--Events End--> 
                         </div>
                     </div>
-
+                </div>
             </section>
             <!--News and Events End--> 
             <!--Team Section Start-->
