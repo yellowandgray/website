@@ -66,33 +66,33 @@
                     </div>
                 </div>
                 <div class="container contact-info">
-                    <div class="row">
-                        <div class="col-md-12">
+                    <div class="row contact">
+                        <div class="col-md-12 contact-1">
                             <h3>Contact Information</h3>
                         </div>
                         <!--Contact Info Start-->
-                        <div class="col-md-4">
+                        <div class="col-md-4 contact-1">
                             <div class="c-info">
                                 <h6>Address:</h6>
-                                <p> 4700 Millenia Blvd # 175, Orlando, FL 32839, USA </p>
+                                <p> NO.1, North Bridge Road, #07-10 High Street Center, Singapore</p>
                             </div>
                         </div>
                         <!--Contact Info End--> 
                         <!--Contact Info Start-->
-                        <div class="col-md-4">
+                        <div class="col-md-4 contact-1">
                             <div class="c-info">
                                 <h6>Contact:</h6>
-                                <p><strong>Phone:</strong> +1 321 2345 678-9</p>
-                                <p><strong>Fax:</strong> +1 321 2345 876-7</p>
+                                <p><strong>Phone:</strong> +65 9481 9943</p>
+                                <p><strong>Fax:</strong> +65 6338 9174</p>
                             </div>
                         </div>
                         <!--Contact Info End--> 
                         <!--Contact Info Start-->
-                        <div class="col-md-4">
+                        <div class="col-md-4 contact-1">
                             <div class="c-info">
                                 <h6>For More Information:</h6>
-                                <p><strong>Email:</strong> info@ecova.com</p>
-                                <p>contact@ecova.com</p>
+                                <p><strong>Email:</strong>sales@vpnc.com </p>
+                                <p></p>
                             </div>
                         </div>
                         <!--Contact Info End--> 

@@ -1251,7 +1251,7 @@ body, html.on {
         display: flex;
     }
     .tel-item .ocp-box{
-       margin: 0 auto;
+        margin: 0 auto;
     }
 
 }
@@ -1276,9 +1276,22 @@ body, html.on {
 
 }
 
+
 header .navbar-toggler {
     width: 25%;
     background: none !important;
     color: #035c40;
 
 }
+
+.contact {
+    display: flex !important;
+}
+.contact .contact-1:first-child {
+    flex: 100%;
+}
+.contact .contact-1{
+    flex: 1;
+    align-items: center;
+}
+
