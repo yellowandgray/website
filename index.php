@@ -344,7 +344,7 @@
                     </div>
                     <div class="row">
                         <!--Team Box Start-->
-                        <div class="col-md-4 col-sm-4 ">
+                        <div class="col-md-4 col-sm-4 cable-item ">
                             <div class="team-box wow fadeInDown">
                                 <img src="images/home/015.jpg" alt="">
                                 <div class="team-info">
@@ -355,7 +355,7 @@
                         </div>
                         <!--Team Box Start--> 
                         <!--Team Box Start-->
-                        <div class="col-md-4 col-sm-4">
+                        <div class="col-md-4 col-sm-4 cable-item">
                             <div class="team-box wow fadeInDown">
                                 <img src="images/home/016.jpg" alt="">
                                 <div class="team-info">
@@ -366,7 +366,7 @@
                         </div>
                         <!--Team Box Start--> 
                         <!--Team Box Start-->
-                        <div class="col-md-4 col-sm-4">
+                        <div class="col-md-4 col-sm-4 cable-item">
                             <div class="team-box wow fadeInDown">
                                 <img src="images/home/017.jpg" alt="">
                                 <div class="team-info">
