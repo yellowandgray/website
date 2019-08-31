@@ -42,7 +42,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/019.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/019.jpg" alt="" class="img-responsive">
 
                                     </div>
                                     <!--                                    <div class="event-txt">
@@ -56,7 +56,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/020.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/020.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
@@ -69,7 +69,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/021.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/021.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Overhead aerial cable</a></h5>
@@ -95,7 +95,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/001.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/001.jpg" alt="" class="img-responsive">
 
                                     </div>
                                     <!--                                    <div class="event-txt">
@@ -109,7 +109,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/002.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/002.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
@@ -122,7 +122,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/003.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/003.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Overhead aerial cable</a></h5>
@@ -148,7 +148,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/004.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/004.jpg" alt="" class="img-responsive">
 
                                     </div>
                                     <!--                                    <div class="event-txt">
@@ -162,7 +162,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/005.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/005.jpg" alt="" class="img-responsive"> 
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
@@ -175,7 +175,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/006.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/006.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Overhead aerial cable</a></h5>
@@ -200,7 +200,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/007.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/007.jpg" alt="" class="img-responsive">
 
                                     </div>
                                     <!--                                    <div class="event-txt">
@@ -214,7 +214,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/008.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/008.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
@@ -227,7 +227,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/009.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/009.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Overhead aerial cable</a></h5>
@@ -253,7 +253,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/010.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/010.jpg" alt="" class="img-responsive">
 
                                     </div>
                                     <!--                                    <div class="event-txt">
@@ -267,7 +267,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/011.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/011.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
@@ -280,7 +280,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/012.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/012.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Overhead aerial cable</a></h5>
@@ -305,7 +305,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/013.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/013.jpg" alt="" class="img-responsive">
 
                                     </div>
                                     <!--                                    <div class="event-txt">
@@ -319,7 +319,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/014.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/014.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
@@ -332,7 +332,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/015.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/015.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Overhead aerial cable</a></h5>
@@ -357,7 +357,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/016.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/016.jpg" alt="" class="img-responsive">
 
                                     </div>
                                     <!--                                    <div class="event-txt">
@@ -371,7 +371,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/017.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/017.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
@@ -384,7 +384,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/018.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/018.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Overhead aerial cable</a></h5>
@@ -409,7 +409,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/022.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/022.jpg" alt="" class="img-responsive">
 
                                     </div>
                                     <!--                                    <div class="event-txt">
@@ -423,7 +423,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/023.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/023.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
@@ -436,7 +436,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="event-post">
                                     <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/024.jpg" alt="">
+                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/024.jpg" alt="" class="img-responsive">
                                     </div>
                                     <!--                                    <div class="event-txt">
                                                                             <h5><a href="#">Overhead aerial cable</a></h5>
