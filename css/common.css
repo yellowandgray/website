@@ -1246,6 +1246,35 @@ body, html.on {
     }
 
 }
+@media (max-width: 599px) and (min-width: 320px) {
+    .tel-item {
+        display: flex;
+    }
+    .tel-item .ocp-box{
+       margin: 0 auto;
+    }
+
+}
+@media (max-width: 599px) and (min-width: 320px) {
+    .about-item {
+        display: flex !important;
+    }
+    .about-item .pic {
+        width: 60% !important;
+        margin: 0 auto 20px auto !important;
+    }
+
+}
+@media (max-width: 575px) and (min-width: 320px) {
+    .news-block {
+        display: flex !important;
+    }
+    .news-block .news-thumb {
+        width: 60% !important;
+        margin: 0 auto 20px auto !important;
+    }
+
+}
 
 header .navbar-toggler {
     width: 25%;
