@@ -801,7 +801,17 @@ body.loaded>div.loader {
 }
 
 #timeButton {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.time-viewer {
+    height: 540px;
+}
+
+#time_container {
+    /* overflow: scroll; */
+    height: auto;
+    overflow-x: hidden;
 }

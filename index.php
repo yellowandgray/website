@@ -1,9 +1,6 @@
 <!doctype html>
 <html lang="en">
-    <!-- Mirrored from jumpstart.mediumra.re/landing-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Aug 2019 11:10:29 GMT -->
-    <!-- Added by HTTrack -->
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <!-- /Added by HTTrack -->
     <?php include 'head.php'; ?>
 
     <body>
@@ -354,6 +351,7 @@
                                             <br/>
                                             <button class="btn btn-ok" id="timeButton">Select Date</button>
                                         </div>
+                                        <!--<div class="col-md-6 mb-3 mb-md-4 time-viewer">-->
                                         <div class="col-md-6 mb-3 mb-md-4">
                                             <!--                                            <h5 class="br-icon-1" style="line-height: 40px;">DECEMBER 27-JANUARY 19
                                                                                             <a><i class="fas fa-chevron-left"></i></a>
@@ -363,29 +361,10 @@
                                                                                             <a><i class="fas fa-chevron-left"></i></a>
                                                                                             <a><i class="fas fa-chevron-right"></i></a> 
                                                                                         </h5>-->
-                                            <div id="time" class="form-group time">
-                                                <label>Aug 28/2019 &nbsp;</label>
-                                                <div class="input-group clockpicker">
-                                                    <input type="text" class="form-control" value="18:00">
-                                                    <span class="input-group-addon">
-                                                        <span class="glyphicon glyphicon-time"></span>
-                                                    </span>
-                                                </div>
-                                                                                <!--                                                <pre class="hljs-pre">
-                                                                                                                                    <code class="html">&lt;div class="input-group clockpicker"&gt;
-                                                                                                                                            &lt;input type="text" class="form-control" value="09:30"&gt;
-                                                                                                                                            &lt;span class="input-group-addon"&gt;
-                                                                                                                                                    &lt;span class="glyphicon glyphicon-time"&gt;&lt;/span&gt;
-                                                                                                                                            &lt;/span&gt;
-                                                                                                                                    &lt;/div&gt;
-                                                                                                                                    &lt;script type="text/javascript"&gt;
-                                                                                                                                    $('.clockpicker').clockpicker();
-                                                                                                                                    &lt;/script&gt;</code>
-                                                                                                                                </pre>-->
-                                            </div>
-                                            <div class="date-select">
+                                            <div id="time_container"></div>
+                                            <!--<div class="date-select">
                                                 <p><input type='checkbox' name='checkbox' /><strong> SELECTED: </strong> 4/08/2019, 12:45PM.</p>
-                                            </div>
+                                            </div>-->
                                             <div class="button-group">
                                                 <a href="#popup1" class="btn btn-ok">Add</a>
                                                 <a href="#" class="btn btn-cancel">Cancel</a>
@@ -503,69 +482,52 @@
         <script type="text/javascript">
             mobiscroll.settings = {
                 lang: 'en', // Specify language like: lang: 'pl' or omit setting to use default
-                theme: 'ios'                     // Specify theme like: theme: 'ios' or omit setting to use default
+                theme: 'ios' // Specify theme like: theme: 'ios' or omit setting to use default
             };
 
-            mobiscroll.calendar('#demo-multi-day', {
-                display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
-                select: 'multiple'               // More info about select: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-select
-            });
-
-            mobiscroll.calendar('#demo-max-days', {
-                display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
-                select: 5, // More info about select: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-select
-                headerText: 'Pick up to 5 days'  // More info about headerText: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-headerText
-            });
-
-            mobiscroll.calendar('#demo-counter', {
+            var calendarInstance = mobiscroll.calendar('#demo-multi-day', {
                 display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
                 select: 'multiple', // More info about select: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-select
-                counter: true                    // More info about counter: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-counter
+                headerText: 'Select Date'
             });
+
+//            mobiscroll.calendar('#demo-max-days', {
+//                display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
+//                select: 5, // More info about select: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-select
+//                // headerText: 'Pick up to 5 days'  // More info about headerText: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-headerText
+//            });
+
+//            mobiscroll.calendar('#demo-counter', {
+//                display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
+//                select: 'multiple', // More info about select: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-select
+//                counter: true                    // More info about counter: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-counter
+//            });
         </script>
         <script>
             $(document).ready(function () {
                 $("#timeButton").click(function () {
-                    $("#time").toggle();
+                    var selected_dates = calendarInstance.getVal();
+                    $('#time_container').empty();
+                    $.each(selected_dates, function (key, val) {
+                        var date = new Date(val);
+                        var day = date.getDate();
+                        var month = date.getMonth();
+                        var month_name = date.getMonth();
+                        var year = date.getFullYear();
+                        var month_name = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                        var div = '<div class="form-group time"><label>' + month_name[month] + ' ' + day + '/' + year + ' &nbsp;</label><div class="input-group clockpicker" data-align="top" data-autoclose="true"><input type="time" class="form-control" value="13:14"><span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span></div></div>';
+                        $('#time_container').append(div);
+                    });
                 });
             });
         </script>
         <script type="text/javascript">
-            $('.clockpicker').clockpicker()
-                    .find('input').change(function () {
-                console.log(this.value);
-            });
-            var input = $('#single-input').clockpicker({
-                placement: 'bottom',
-                align: 'left',
-                autoclose: true,
-                'default': 'now',
-                donetext: 'Done'
-            });
-
-
-            // Manually toggle to the minutes view
-            $('#check-minutes').click(function (e) {
-                // Have to stop propagation here
-                e.stopPropagation();
-                input.clockpicker('show')
-                        .clockpicker('toggleView', 'minutes');
-            });
-            if (/mobile/i.test(navigator.userAgent)) {
-                $('input').prop('readOnly', true);
-            }
+            $('.clockpicker').clockpicker();
         </script>
         <script type="text/javascript">
             hljs.configure({tabReplace: '    '});
             hljs.initHighlightingOnLoad();
         </script>
-<!--        <script type="text/javascript">
-            $('.clockpicker').clockpicker({
-                placement: 'top',
-                align: 'left',
-
-            });
-        </script>-->
         <div id="popup1" class="overlay">
             <div class="popup">
                 <h5>Thankyou for Booking with us.</h5>
@@ -574,11 +536,5 @@
                 <div class="content">Our team will get in touch with you shortly.</div>
             </div>
         </div>
-        <!-- Required vendor scripts (Do not remove) -->
-
-
     </body>
-
-
-    <!-- Mirrored from jumpstart.mediumra.re/landing-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Aug 2019 11:10:58 GMT -->
 </html>
