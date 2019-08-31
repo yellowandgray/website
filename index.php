@@ -515,7 +515,7 @@
                         var month_name = date.getMonth();
                         var year = date.getFullYear();
                         var month_name = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-                        var div = '<div class="form-group time"><label>' + month_name[month] + ' ' + day + '/' + year + ' &nbsp;</label><div class="input-group clockpicker" data-align="top" data-autoclose="true"><input type="time" class="form-control" value="13:14"><span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span></div></div>';
+                        var div = '<div class="form-group time"><div class="input-group clockpicker" data-align="top" data-autoclose="true"><label>' + month_name[month] + ' ' + day + '/' + year + '&nbsp;: &nbsp;</label><input type="time" class="form-control" value="13:14"><span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span></div></div>';
                         $('#time_container').append(div);
                     });
                 });
