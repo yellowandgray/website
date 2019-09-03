@@ -15,7 +15,7 @@
 
             <div class="header-login">
                 <span class="search-bg"><i class="fa fa-search"></i></span>
-                <span class="login-button"><i class="fa fa-user"></i> Login</span>
+                <a href="login.php"><span class="login-button"><i class="fa fa-user"></i> Login</span></a>
             </div>
             <div class="mobile-header-login">
                 <i class="fa fa-search"></i>

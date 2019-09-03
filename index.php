@@ -267,6 +267,7 @@
                 </div>
             </div>
         </section>
+      
         <section class="attachment-bg"></section>
             <?php include 'footer.php'; ?>
     </body>
