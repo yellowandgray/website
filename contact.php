@@ -60,7 +60,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="google-map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15555.994296236835!2d80.1675912197754!3d12.907812900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x68c349a2637da354!2sYellow%20and%20Gray!5e0!3m2!1sen!2sin!4v1567058504566!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8070936222825!2d103.84724451482474!3d1.2900142621239516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a0958fa7c5%3A0xdb448acbe7279ed4!2s1%20North%20Bridge%20Rd%2C%20High%20Street%20Centre%2C%20Singapore%20179094!5e0!3m2!1sen!2sin!4v1567488918512!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                             </div>
                         </div>
                     </div>
