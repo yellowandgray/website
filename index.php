@@ -11,6 +11,7 @@
         <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/ninja-slider.css" rel="stylesheet" type="text/css"/>
         <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
         <link href="css/slick-slider.css" rel="stylesheet" type="text/css"/>
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
@@ -36,6 +37,9 @@
             <div class="video-overlay"></div>
         </section>
         <section class="bg-1">
+            <div class="container-fluid text-center">
+                <span>DISCOVER</span>
+            </div>
             <div class="container">
                 <h1>DISCOVER</h1>
                 <div class="row">
@@ -177,7 +181,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1>PHOTOS</h1>
-                        <img src="img/photo/image-photos.png" alt="" style="width: 100%"/>
+                        <img src="img/photo/image-photos.png" onclick="lightbox()" class="popup-img" alt=""/>
                     </div>
                 </div>
             </div>
@@ -273,7 +277,71 @@
             </div>
         </section>
 
-        <section class="attachment-bg"></section>
-            <?php include 'footer.php'; ?>
+        <section class="attachment-bg">
+            <div class="container-fulied">
+                <img src="img/attachment-bg.jpg" alt="" style="width: 100%" />
+            </div>
+        </section>
+        <?php include 'footer.php'; ?>
+        <script src="js/ninja-slider.js" type="text/javascript"></script>
+        <div style="display:none;">
+            <div id="ninja-slider">
+                <div class="slider-inner">
+                    <ul>
+                        <li>
+                            <a class="ns-img" href="img/photo/image-photos.png"></a>
+                            <div class="caption">
+                                <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
+                                <!--                                <h3>Dummy Caption 1</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan purus.</p>-->
+                            </div>
+                        </li>
+                        <li>
+                            <a class="ns-img" href="img/photo/image-photos.png"></a>
+                            <div class="caption">
+                                <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="ns-img" style="background-image:url(img/photo/image-photos.png);"></span>
+                            <div class="caption">
+                                <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="ns-img" href="img/photo/image-photos.png"></a>
+                            <div class="caption">
+                                <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="ns-img" href="img/photo/image-photos.png"></a>
+                            <div class="caption">
+                                <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+                            function lightbox(idx) {
+                                //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+                                var ninjaSldr = document.getElementById("ninja-slider");
+                                ninjaSldr.parentNode.style.display = "block";
+
+                                nslider.init(idx);
+
+                                var fsBtn = document.getElementById("fsBtn");
+                                fsBtn.click();
+                            }
+
+                            function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+                                if (isFullscreen) {
+                                    ninjaSldr.parentNode.style.display = "none";
+                                }
+                            }
+        </script>
     </body>
 </html>
