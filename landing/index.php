@@ -27,25 +27,67 @@
     </head>
     <body>
         <section class="header">
-            <div class="container">
+            <div class="container" style="background: url(img/body-bg.jpg)no-repeat;background-size: cover;padding: 20px;">
                 <div class="row">
                     <a href="index.php" class="logo"><img src='img/logo.png' alt=''></a>
                     <div class="header-login">
-                        <a href="login.php"><span class="login-button"><i class="fa fa-user"></i> Login</span></a>
+                        <a href="../login.php"><span class="login-button"><i class="fa fa-user"></i> Login</span></a>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
                         <img src="img/image-05.png" alt="" style="width: 100%;" />
                     </div>
                     <div class="col-md-6 bg-text">
-                        <span>TWO WHEELS</span>
+                        <h2>TWO WHEELS</h2>
+                        <h1>TWO<br/> WHEELS</h1>
+                        <a href="../index.php" class="engine-button" onclick="document.getElementById('engineON').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON" alt="" /></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 bg-four-text">
+                        <h2>FOUR WHEELS</h2>
+                        <h1>FOUR<br/> WHEELS</h1>
+                        <a href="../index.php" class="engine-button" onclick="document.getElementById('engineON1').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON1" alt="" /></a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/image-06.png" alt="" style="width: 100%;" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 text-center dummy-text">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/image/002.png" alt="" />
+                        <a href="#" class="cross-btn"><span>ABOUT US</span></a>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="img/image/004.png" alt="" />
+                        <a href="#" class="cross-btn"><span>NEWS & UPDATES</span></a>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="img/image/003.png" alt="" />
+                        <a href="#" class="cross-btn"><span>JOIN A CLUB</span></a>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="img/image/001.png" alt="" />
+                        <a href="#" class="cross-btn"><span>SHOP NOW!</span></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="img/attachment-bg.jpg" alt="" style="width: 100%;margin: 20px 0;">
                     </div>
                 </div>
             </div>
         </section>
 
-        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-        <script src="js/bootstrap.js" type="text/javascript"></script>
+        <?php include 'footer.php'; ?>
     </body>
 </html>
