@@ -30,8 +30,6 @@
     </head>
     <body>
         <?php include 'menu.php'; ?>
-        <?php include 'mega-menu.php'; ?>
-        
         <section class="video-bg-banner">
             <video autoplay muted loop id="myVideo">
                 <source src="video/video-bike.mp4" type="video/mp4">

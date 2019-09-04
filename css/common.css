@@ -603,8 +603,9 @@ button {
     float: left;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-    width: 30%;
-    height: 300px;
+    width: 40%;
+    height: 600px;
+
 }
 
 /* Style the buttons inside the tab */
@@ -650,7 +651,8 @@ button {
     float: left;
     padding: 0px 12px;
     border: 1px solid #ccc;
-    width: 70%;
+    width: 60%;
     border-left: none;
-    height: 300px;
+    height: 600px;
+
 }

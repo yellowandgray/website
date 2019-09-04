@@ -8,22 +8,50 @@
                 <div class="container">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <div class="tab">
-                        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
-                        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-                        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+                        <button class="tablinks" onclick="openCity(event, 'News')" id="defaultOpen">News</button>
+                        <button class="tablinks" onclick="openCity(event, 'Release')">Press Release</button>
+                        <button class="tablinks" onclick="openCity(event, 'Clubs')">Find Clubs</button>
+                        <button class="tablinks" onclick="openCity(event, 'Member')">Be A Member</button>
+                        <button class="tablinks" onclick="openCity(event, 'Events')">Events</button>
+                        <button class="tablinks" onclick="openCity(event, 'About')">About Us</button>
+                        <h5>FOLLOW US</h5>
+                        <ul class="nav__ul">
+                            <li class="i-con">
+                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div id="London" class="tabcontent">
+
+                    <div id="News" class="tabcontent">
                         <h3>London</h3>
                         <p>London is the capital city of England.</p>
                     </div>
 
-                    <div id="Paris" class="tabcontent">
+                    <div id="Release" class="tabcontent">
                         <h3>Paris</h3>
                         <p>Paris is the capital of France.</p> 
                     </div>
 
-                    <div id="Tokyo" class="tabcontent">
+                    <div id="Clubs" class="tabcontent">
+                        <h3>Tokyo</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+
+                    <div id="Member" class="tabcontent">
+                        <h3>Tokyo</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+
+                    <div id="Events" class="tabcontent">
+                        <h3>Tokyo</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+
+                    <div id="About" class="tabcontent">
                         <h3>Tokyo</h3>
                         <p>Tokyo is the capital of Japan.</p>
                     </div>
