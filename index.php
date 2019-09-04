@@ -289,7 +289,7 @@
                 <div class="slider-inner">
                     <ul>
                         <li>
-                            <a class="ns-img" href="img/photo/image-photos.png"></a>
+                            <a class="ns-img" href="img/video/001.jpg"></a>
                             <div class="caption">
                                 <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
                                 <!--                                <h3>Dummy Caption 1</h3>
@@ -297,25 +297,25 @@
                             </div>
                         </li>
                         <li>
-                            <a class="ns-img" href="img/photo/image-photos.png"></a>
+                            <a class="ns-img" href="img/video/002.jpg"></a>
                             <div class="caption">
                                 <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
                             </div>
                         </li>
                         <li>
-                            <span class="ns-img" style="background-image:url(img/photo/image-photos.png);"></span>
+                            <span class="ns-img" style="background-image:url(img/video/005.jpg);"></span>
                             <div class="caption">
                                 <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
                             </div>
                         </li>
                         <li>
-                            <a class="ns-img" href="img/photo/image-photos.png"></a>
+                            <a class="ns-img" href="img/video/003.jpg"></a>
                             <div class="caption">
                                 <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
                             </div>
                         </li>
                         <li>
-                            <a class="ns-img" href="img/photo/image-photos.png"></a>
+                            <a class="ns-img" href="img/video/004.jpg"></a>
                             <div class="caption">
                                 <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
                             </div>
