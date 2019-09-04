@@ -1,9 +1,9 @@
 <footer class="footer">
     <div class="footer-sec">
-        <div class="fooetr-1">
+        <div class="footer-section fooetr-1">
             <img src="img/footer-logo.png" alt=""/>
         </div>
-        <div class="fooetr-2">
+        <div class="footer-section fooetr-2">
             <ul class="footer__nav">
                 <li class="nav__item">
                     <h2 class="nav__title">PAGES</h2>
@@ -30,7 +30,7 @@
                 </li>
             </ul>
         </div>
-        <div class="fooetr-3">
+        <div class="footer-section  fooetr-3">
             <ul class="footer__nav">
                 <li class="nav__item">
                     <h2 class="nav__title">ABOUT US</h2>
@@ -57,7 +57,7 @@
                 </li>
             </ul>
         </div>
-        <div class="fooetr-4">
+        <div class="footer-section fooetr-4">
             <ul class="footer__nav">
                 <li class="nav__item">
                     <h2 class="nav__title">CAREERS</h2>
@@ -84,7 +84,7 @@
                 </li>
             </ul>
         </div>
-        <div class="fooetr-5">
+        <div class="footer-section fooetr-5">
             <ul class="footer__nav">
                 <li class="nav__item">
                     <h2 class="nav__title">ALWAYS GET IN TOUCH</h2>
