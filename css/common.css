@@ -160,8 +160,9 @@
 .fooetr-5 input  {
     background-color: #6f6f6f;
     border: none;
-    border-radius: 18px 18px 18px 18px;
+    border-radius: 18px 0px 0px 18px;
     padding: 5px 100px 5px 22px;
+    outline: none;
 
 }
 .fooetr-5 ::placeholder {
@@ -170,10 +171,12 @@
 .fooetr-5 button {
     background-color: #ed1c24;
     border: none;
-    border-radius: 20px;
+    border-radius: 0px 18px 18px 0;
     color: #fff;
+    padding: 5px 25px 5px 25px;
     position: relative;
-    right: 75px;
+    right: 4px;
+    outline: none;
 }
 .fooetr-5 .i-con {
     padding: 10px 30px;

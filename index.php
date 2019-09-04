@@ -226,6 +226,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="row social-media-post-section">
+                    <div class="col-md-4">
+                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FBikeRaceByTopFreeGames%2Fposts%2F1509211869182434&width=500" width="500" height="465" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="partners-section">
@@ -267,7 +272,7 @@
                 </div>
             </div>
         </section>
-      
+
         <section class="attachment-bg"></section>
             <?php include 'footer.php'; ?>
     </body>

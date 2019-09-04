@@ -2,6 +2,7 @@
 .slider {
     /*    max-width: 1000px;*/
     margin: 0 auto;
+    outline: none;
 }
 .slick-slide {
     margin: 0 15px;
@@ -98,7 +99,7 @@ button.slick-prev, button.slick-prev:hover {
     position: relative;
     top: 0;
     left: 100px;
-
+    outline: none;
     display: block;
 }
 .slick-track:before,
