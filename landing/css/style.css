@@ -46,7 +46,7 @@ body {
 
 .bg-text span {
     font-size: 75px;
-    font-family: "VenusRising";
+    font-family: "VenusRising", sans-serif;
     color: #fff;
     opacity: 0.2;
     text-align: right;
