@@ -99,16 +99,18 @@
 .login-sec {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 
 }
 .login-sec-1 {
-    flex: 50%;
+    flex-basis: 35%;
     padding: 75px 10px;
 }
 
 .login-sec-2 {
-    flex: 50%;
+    flex-basis: 35%;
     align-items: center;
+    background: #fff;
 }
 .bg-img h5 {
     color: #fff;
@@ -245,10 +247,10 @@ button {
 .img-tt img{
     width: 15%;
 }
-.img-t img{
+.img-t img {
     position: relative;
-    top: -44px;
-    left: 90px;
+    top: -58px;
+    left: 80px;
 }
 .member-tt h3 {
     text-align: center;
@@ -452,4 +454,147 @@ button {
     .nav__title {
         font-size: 14px;
     }
+}
+@media (max-width:991px) and (min-width:768px){
+    .mem-flex p{
+        font-size: 13px;
+    }
+    .member-box {
+        padding: 10px 10px;
+    }
+    .img-t img {
+        position: relative;
+        top: -55px;
+        left: 43px;
+    }
+}
+@media (max-width:1199px) and (min-width:992px){
+    .img-t img {
+        position: relative;
+        top: -58px;
+        left: 49px;
+    }
+
+}
+
+.mem-flex {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.mem-flex-item {
+    flex-basis: 30%;
+}
+@media (max-width:768px) and (min-width:320px){
+    .mem-flex-item {
+        flex-basis: 100%;
+        margin: 20px 10px;
+    }
+    .img-t img {
+        position: relative;
+        top: -58px;
+        left: 171px;
+    }
+
+}
+@media (max-width:526px) and (min-width:320px){
+    .img-t img {
+        position: relative;
+        top: -58px;
+        left: 71px;
+    }
+
+}
+@media (max-width:364px) and (min-width:320px){
+    .fooetr-5 .i-con {
+        padding: 10px 1px 0px 59px;
+    }
+
+}
+@media (max-width:1045px) and (min-width:911px){
+    .fooetr-5 .i-con i {
+        font-size: 23px;
+        padding-right: 13px;
+        color: #6f6f6f;
+    }
+
+}
+@media (max-width:1199px) and (min-width:992px){
+    .login i {
+        position: relative;
+        top: 0px;
+        right: -24px;
+        color: #ed1c24;
+    }
+
+}
+@media (max-width:991px) and (min-width:768px){
+    .login {
+        padding: 75px 10px;
+    }
+    .login-sec {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+    .login-sec-1 {
+        flex-basis: 50%;
+        padding: 75px 10px;
+    }
+    .login-sec-2 {
+        flex-basis: 50%;
+        align-items: center;
+        background: #fff;
+    }
+
+}
+@media (max-width:767px) and (min-width:320px){
+
+    .login-sec-1 {
+        padding: 59px 10px;
+    }
+    .login-sec-2 {
+        align-items: center;
+        background: #fff;
+    }
+    .login-sec-2 h3 {
+        font-size: 19px;
+    }
+    .login input {
+        margin-bottom: 10px;
+        border: none;
+        background: #eee;
+        padding: 5px;
+        border-radius: 15px 15px 15px 15px;
+        width: 80%;
+        text-align: center;
+    }
+    .login {
+        padding: 121px 10px 0px 10px;
+    }
+
+}
+@media (max-width:510px) and (min-width:320px){
+
+    .login-sec {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .login-sec-1 {
+        flex-basis: 100%;
+        padding: 59px 10px;
+    }
+    .login-sec-2 {
+        flex-basis: 100%;
+        align-items: center;
+        background: #fff;
+    }
+    .login {
+        padding: 40px 10px 40px 10px;
+    }
+
+
 }
