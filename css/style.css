@@ -166,11 +166,28 @@ body {
 
 .bg-1 {
     background: url(../img/bg-1.jpg)no-repeat;
-    /* height: 100%; */
-    /*    padding-bottom: 50px;*/
+    height: 678px;
+    /* padding-bottom: 50px; */
     position: relative;
     z-index: 2;
     background-size: cover;
+}
+
+.bg-1 .container {
+    position: relative;
+    bottom: 285px;
+}
+
+.bg-1 .slick-slider {
+    position: relative;
+    bottom: 270px;
+}
+
+.bg-1 span {
+    font-size: 202px;
+    font-family: "VenusRising";
+    color: #808080;
+    opacity: 0.5;
 }
 
 .bg-1 h1 {
@@ -526,10 +543,10 @@ body {
 }
 
 .attachment-bg {
-    background: url(../img/attachment-bg.jpg)no-repeat;
-    /*    background-attachment: fixed;*/
+/*    background: url(../img/attachment-bg.jpg)no-repeat;
+        background-attachment: fixed;
     background-size: cover;
-    height: 330px;
+    height: 330px;*/
 }
 
 /* Footer Section CSS */
@@ -675,9 +692,19 @@ body {
 
 .social-media-post-section {
     margin-top: 40px;
-/*    margin-bottom: 40px;*/
+    /*    margin-bottom: 40px;*/
 }
 
 .social-media-post-section iframe {
+    width: 100%;
+}
+
+/*.photo-section img{
+    width:179px;
+    cursor:pointer;
+}*/
+
+.photo-section .popup-img {
+    cursor: pointer;
     width: 100%;
 }
