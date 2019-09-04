@@ -319,13 +319,16 @@ button {
         text-align: center;
     }
     .fooetr-2{
-        flex-basis: 24% !important;
+        flex:1 !important;
+        padding: 0px 0px 0px 40px;
     }
     .fooetr-3{
-        flex-basis: 24% !important;
+        flex:1 !important;
+        padding: 0px 0px 0px 40px;
     }
     .fooetr-4{
-        flex-basis: 24% !important;
+        flex:1 !important;
+        padding: 0px 0px 0px 40px;
     }
     .fooetr-5{
         flex-basis: 100% !important;
@@ -336,6 +339,7 @@ button {
         /*flex-direction: row;*/
         flex-wrap: wrap;
         justify-content: space-around;
+
     }
     .fooetr-5 button {
         background-color: #ed1c24;
@@ -388,5 +392,64 @@ button {
 @media screen and (min-width: 40.375em){
     .footer {
         padding: 3em 1em 0em; 
+    }
+}
+@media (max-width:991px) and (min-width:768px){
+    .red-l {
+        background-color: #ed1c24;
+        width: 60%;
+        height: 2px;
+        position: relative;
+        left: 137px;
+        margin-bottom: 40px;
+    }
+}
+@media (max-width:767px) and (min-width:500px){
+    .red-l {
+        background-color: #ed1c24;
+        width: 60%;
+        height: 2px;
+        position: relative;
+        left: 97px;
+        margin-bottom: 40px;
+    }
+    .member-tt h3 {
+        text-align: center;
+        letter-spacing: 8px;
+        font-size: 27px;
+        padding: 40px 0px 0px 0px;
+    }
+    .nav__title {
+        font-size: 18px;
+    }
+}
+@media (max-width:499px) and (min-width:320px){
+    .red-l {
+        display: none;
+    }
+    .member-tt h3 {
+        text-align: center;
+        letter-spacing: 8px;
+        font-size: 27px;
+        padding: 40px 0px 0px 0px;
+    }
+    .nav__title {
+        font-size: 14px;
+    }
+}
+@media (max-width:434px) and (min-width:320px){
+    .fooetr-2{
+        flex:1 !important;
+        padding: 0px 0px 0px 0px;
+    }
+    .fooetr-3{
+        flex:1 !important;
+        padding: 0px 0px 0px 0px;
+    }.fooetr-4{
+        flex:1 !important;
+        padding: 0px 0px 0px 0px;
+    }
+    .nav__title {
+        font-size: 14px;
     }
 }
