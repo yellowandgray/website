@@ -45,13 +45,14 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #000000;
     display: block;
     transition: 0.3s;
+    width: 200px;
 }
 
 .sidenav a:hover {
-    color: #ffffff;
+    color: #000000;
 }
 
 .sidenav .closebtn {
@@ -543,10 +544,10 @@ body {
 }
 
 .attachment-bg {
-/*    background: url(../img/attachment-bg.jpg)no-repeat;
-        background-attachment: fixed;
-    background-size: cover;
-    height: 330px;*/
+    /*    background: url(../img/attachment-bg.jpg)no-repeat;
+            background-attachment: fixed;
+        background-size: cover;
+        height: 330px;*/
 }
 
 /* Footer Section CSS */
@@ -707,4 +708,24 @@ body {
 .photo-section .popup-img {
     cursor: pointer;
     width: 100%;
+}
+
+#mySidenav ul li {
+    list-style: none;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #ff5a5a;
+    padding-left: 8px;
+    float: left;
+    position: relative;
+    bottom: 40px;
+    left: 200px;
+    width: 80%;
+    transition: 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
