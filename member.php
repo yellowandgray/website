@@ -31,7 +31,7 @@
         <section class="login-pad" style="background-image:url(img/member/member-01.jpg); background-repeat:no-repeat; background-size: cover;">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="member-text">
                             <h5>WHAT DO</h5>
                             <h3>MEMBERS GET?</h3>
@@ -64,8 +64,8 @@
                         <div class="red-l"></div>
                     </div>
                     <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-4">
+                        <div class="row mem-flex">
+                            <div class="mem-flex-item">
                                 <div class="member-box">
                                     <div class="img-t">
                                         <img src="img/member/001.png" alt=""/>
@@ -85,7 +85,7 @@
                                     <h5 class="text-center">Club Name</h5>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="mem-flex-item">
                                 <div class="member-box">
                                     <div class="img-t">
                                         <img src="img/member/002.png" alt=""/>
@@ -105,7 +105,7 @@
                                     <h5 class="text-center">Club Name</h5>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="mem-flex-item">
                                 <div class="member-box">
                                     <div class="img-t">
                                         <img src="img/member/003.png" alt=""/>

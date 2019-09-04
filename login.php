@@ -30,7 +30,7 @@
         <?php include 'menu.php'; ?>
         <section class="login-pad">
             <div class="container">
-                <div class="login-sec  bg-white">
+                <div class="login-sec">
                     <div class="login-sec-1" style="background-image:url(img/login-pic.jpg)">
                         <div class="bg-img text-center">
                             <img src="img/login-001.png" alt=""/>
