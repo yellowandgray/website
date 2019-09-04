@@ -47,7 +47,7 @@
                                 <img src="img/member/Group 78@2x.png" alt=""/><li>Be part of monthly contest and exciting giveaway</li>
                             </ul>
                             <div class="mem-sign">
-                                <p><a href="#">SIGN UP</a></p>
+                                <p><a href="login.php">SIGN UP</a></p>
                             </div>
 
                         </div>

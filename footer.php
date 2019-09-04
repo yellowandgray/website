@@ -108,14 +108,14 @@
         </div>
     </div>
 
-<!--    <div class="legal">
-        <p>&copy; 2019 TOOWHEEl. All Right Reserved</p>
-        <span class="legal__links">
-            <a href="#">Privacy Policy</a>
-            <span></span>
-            <a href="#">Terms of Use</a>
-        </span>
-    </div>-->
+    <!--    <div class="legal">
+            <p>&copy; 2019 TOOWHEEl. All Right Reserved</p>
+            <span class="legal__links">
+                <a href="#">Privacy Policy</a>
+                <span></span>
+                <a href="#">Terms of Use</a>
+            </span>
+        </div>-->
 </footer>
 <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
@@ -129,4 +129,24 @@
         document.getElementById("mySidenav").style.width = "0";
     }
 </script>
+<!--mega-menu-->
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+// Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+
 
