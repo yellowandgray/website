@@ -145,7 +145,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
-                            <h2>My Specialisation Coaching</h2>
+                            <h2>MASTER EVERY AREA OF YOUR LIFE</h2>
                         </div>
                     </div>
                     <div class="row">
@@ -161,7 +161,7 @@
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
-                                    <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income...</p>
+                                    <p>Do you now wish to stop working for money and have money work for you? Do you often get to the end of the month and wonder where your money has gone? Are you drowning in the quagmire of credit card debts and know that something needs to change? Then get in touch with me now. I have been a banker for nearly 2 decades, have cracked the code and am waiting to show you how you too, can become finanically free. </p>
                                     <div class="text-center arrow-1">
                                         <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
@@ -176,12 +176,12 @@
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container coach-box d-flex flex-column">
-                                    <h3 class="text-center">Time Management</h3>
+                                    <h3 class="text-center">Life Control</h3>
                                     <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
-                                    <p>If you always find yourself wanting to do more, live more meaningfully, but are somehow unable to...</p>
+                                    <p>Do you find yourself wanting to do more, live more meaningfully, give back to the world, but just haven't been able to? Connect with me and we will shine the light on how you may manage your time and thus your life so that you live the life you want to live.</p>
                                     <div class="text-center arrow-1">
                                         <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
@@ -196,12 +196,12 @@
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container coach-box d-flex flex-column">
-                                    <h3 class="text-center">Career Progress</h3>
+                                    <h3 class="text-center">Career Mastery</h3>
                                     <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
-                                    <p>If you are in a job that does not light you up, or in a career that you once loved but now wish to change...</p>
+                                    <p>Are you in a job that does not light you up, or in a career that you once loved but now wish to change? Or do you find yourself unable to advance in your career no matter what you do? Then chat with me and we will discover how you too can race through the corporate ladder.</p>
                                     <div class="text-center arrow-1">
                                         <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
@@ -218,11 +218,11 @@
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container coach-box d-flex flex-column">
-                                    <h3 class="text-center">Trader Coach</h3>
+                                    <h3 class="text-center">Professional Trader</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/fQUfIgLCAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
-                                    <p>If you are a trader in the financial markets and are unable to remain consistently profitable...</p>
+                                    <p>Are you a trader in the financial markets and are unable to remain consistently profitable? Perhaps you cannot stick to your rules or deal with the psychological impact of trading? Talk to me - I trade Forex and Futures markets - I have been through the same painful rite of passage and emerged victorious. </p>
                                     <div class="text-center arrow-1">
                                         <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
@@ -237,11 +237,11 @@
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container coach-box d-flex flex-column">
-                                    <h3 class="text-center">Transformational Change</h3>
+                                    <h3 class="text-center">Life reboot</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/u7NntUPBdkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
-                                    <p>If you have found yourself at a stage where you feel like it is ‘now time’ to make a large change that is likely to impact...</p>
+                                    <p>Are you at a stage where you feel like it is ‘now time’ to make a large change? Do you feel that there "there has to be more than this" and want to radically catapult all areas of your life? If you wish to disrupt the status quo,follow your passion, live life to the fullest, then contact me right away. I will be honored to guide you along your path to your most fulfilling life.</p>
                                     <div class="text-center arrow-1">
                                         <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
@@ -256,11 +256,11 @@
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container coach-box d-flex flex-column">
-                                    <h3 class="text-center">Super Women</h3>
+                                    <h3 class="text-center">Woman Of Wonder</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/QwooUQ-oAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
-                                    <p>If you are an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress...</p>
+                                    <p>Are you an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress? Do you want it to be easier to ask for a raise or a promotion or be heard? Then grab a coffee with me! I have ‘been there, done that’ and am thrilled to help you learn the ropes. Let's do this, sister! </p>
                                     <div class="text-center arrow-1">
                                         <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                     </div>
@@ -276,7 +276,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title wow fadeInDown">
-                            <h2>about me</h2>
+                            <h2>ABOUT CHERYL</h2>
                         </div>
                     </div>
                     <div class="row">
@@ -287,10 +287,13 @@
                                     <p><span>Inspire. Empower. Transform… My mantra.</span></p>
                                     <p>Dear friend, a warm welcome! I am a life-coach and a trader. I love life and everything & everybody that lives.
                                     <ul class="list-1">
-                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>My highs: being unorthodox and doing the impossible.</li>
-                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>My addictions: traveling and learning.</li>
-                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>I write about big ideas and life-lessons from my experiences. I write about my travels around our magical planet and how it has changed my perception of our world.</li>
-                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Some people call me crazy. Others say I have changed their lives. Come, join the tribe and decide.</li>
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Cheryl Pinto is the CEO of GrowPro Consultants, where the #1 objective is to help people to Learn, Earn & Prosper. </li>
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>She is the author of the upcoming book From Fear to Freedom - Master your Money & your Mind.</li>
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>She has been trained by Tony Robbins (yes, she walked on fire!), holds two Masters degrees and is a Harvard alumni. </li>
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Through her work, she helps people to unlearn old patterns / habits and embrace a completely new version of themselves. </li>
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Her private coaching clients have reported remarkable life transformations in all areas of their lives. Be it getting out of the rat-race & launching successful new businesses or throwing away anti-depressants or getting into the best shape of their lives, the list is varied & vast.</li>
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Through her workshops and Masterminds, she shares her secrets on how you may quickly achieve career success and financial freedom. </li>
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li>She has touched thousands of lives with her work and says the journey has only just begun. Her goal is to touch the lives of 2 million people by 2022. Will you help her?</li>
                                     </ul>
                                 </div>
 

@@ -16,15 +16,21 @@
             <div class="features">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
+                        <div class="col-lg-6 coaching offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
+                            <p class="text-justify">Where there was Confusion,now Clarity.</p>
+                            <p class="text-justify">Where there were Doubts,now Opportunities.</p>
+                            <p class="text-justify">Where once the Victims,now the Victors.</p>
+                            <p class="text-justify">Where there was Fear,now Freedom.</p>
+                            <p class="text-justify">If this is a change that you could have in your life,then Coaching is for you.</p>
+                            <p class="text-right" style="font-style:italic; font-weight:bolder">Cheryl P Pinto.</p><br>
                             <h2>What is Coaching ?</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-8 wow fadeInLeft">
-                            <p class="text-justify bold"><i>“He was my mentor, my teacher, my second father” – Michael Jordan on his coach Dean Smith</i></p>
-                            <p class="text-justify">Most of us are aware of <strong>sportspersons and athletes having coaches.</strong> We have heard of health coaches & coaches in our gyms. We also agree that <strong>these coaches have played an instrumental, oft times, a pivotal role in the success of their ‘coachees’.</strong></p>
-                            <p class="text-justify">However, lesser known is the fact <strong>that nearly every successful person you know has had a coach.</strong> Oprah Winfrey,Steve Jobs,Bill Clinton, and even Barack Obama have <a href="https://edition.cnn.com/2012/10/31/business/global-office-coaching/" target="blank" style="text-decoration: underline;">all reported</a> using coaches on a regular basis to advance in their careers.</p>
+                            <p class="text-justify bold"><i>“What a Coach does is shaves decades into days”. – Cheryl P Pinto</i></p>
+                            <p class="text-justify">Most of us are aware of <strong>sports persons and athletes having coaches.</strong> We have heard of health coaches & coaches in our gyms. We also agree that <strong>these coaches have played an instrumental, oft times, a pivotal role in the success of their ‘coachees’.</strong></p>
+                            <p class="text-justify">However, lesser known is the fact <strong>that nearly every successful person you know has had a coach.</strong> Oprah Winfrey, Steve Jobs, Bill Clinton, and even Barack Obama have <a href="https://edition.cnn.com/2012/10/31/business/global-office-coaching/" target="blank" style="text-decoration: underline;">all reported</a> using coaches on a regular basis to advance in their careers.</p>
                             <p class="text-justify"><strong>A Coach, be it for a professional athlete or a CEO, performs the same role.</strong> A life coach is <strong>someone professionally trained to help you maximize your full potential.</strong> To be <strong>world-class in anything you do,</strong> you need the <strong>accountability, guidance, enthusiastic support and objective perspective</strong> of a coach.</p>
                         </div>
                         <div class="col-lg-4 img-shadow wow fadeInRight">
@@ -75,15 +81,16 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 wow fadeInUp">
-                                <h3 class="pad-20"><strong>WHY WORK WITH A LIFE COACH?</strong></h3>
-                                <ul class="list-1">
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">People hire a life coach because they want to do even more tomorrow than they can do today.</li>
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">They want to improve their output and see more growth, and they want to do those things quickly and to the best of their ability.</li>
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">These people all identify a gap between where they are and where they want to be, and want help reaching their goals.</li>
-                                </ul>
                                 <h3 class="pad-20"><strong>WHY WOULD YOU WORK WITH A LIFE COACH?</strong></h3>
-                                <p class="text-justify">People hire a life coach because they want to do even more tomorrow than they can do today. They want to improve their output and see more growth, and they want to do those things quickly and to the best of their ability.</p>
-                                <p class="text-justify">All kinds of people use life coaches,including actors, business leaders, creatives, entrepreneurs, executives, home-makers, managers, professionals, small business owners and start-up owners. These people all identify a gap between where they are and where they want to be, and want help reaching their goals.</p>
+                                <ul class="list-1">
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Can you imagine not having to go to school or University and having to learn everything on your own? How long would that have you taken? You will achieve your goals,with or without a Coach.Having a Coach will just get you there much,much faster.</li>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Do you know you can do, be and have so much more but 'something' stops you?</li>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Do you feel stuck? Does fear hold you back from doing that which you so dearly want to do?</li>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Are you done with the rat-race and ready to break out of the mould?</li>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Do you want to contribute more to our beautiful world by taking your light out to the world?</li>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">If you've answered yes to any of these questions,then working with a Life Coach will bring you the clarity,direction and courage you seek.</li>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">If you feel inspired to connect with Cheryl for Coaching,then contact us <a href="https://yellowandgray.com/cherylppinto/contact.php" target="blank" style="text-decoration: underline;">here</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>

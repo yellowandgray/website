@@ -16,7 +16,7 @@
                         <li><a href="https://twitter.com/cherylppinto" target="blank"><i class="fab fa-twitter trans_300"></i></a></li>
                         <li><a href="https://in.pinterest.com/cherylppinto/" target="blank"><i class="fab fa-pinterest trans_300"></i></a></li>
                         <li><a href="https://www.linkedin.com/in/cherylppinto/" target="blank"><i class="fab fa-linkedin-in trans_300"></i></a></li>
-                        <li><a href="#" target="blank"><i class="fab fa-youtube trans_300"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC_RvcECAMTKuOcVfIU93Dwg?view_as=subscriber" target="blank"><i class="fab fa-youtube trans_300"></i></a></li>
                     </ul>
                 </div>
             </div>

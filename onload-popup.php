@@ -6,9 +6,10 @@
                 <span class="clo" onClick="PopUp('hide')" >&times;</span>
             </div>
             <div class="modal-body-1">
-                <h2>BIG TITLE COMES HERE</h2>
-                <h3>Medium words can be put here.</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+                <h2>FINANCIAL FREEDOM</h2><br>
+                <p>Do you know how much you need to be FREE? Do you agree it is important to have a goal before you can hit it? </p>
+                <p>What if you learnt that you could be Financially Free much sooner than you could ever imagine?</p>
+                <p>To learn how, download my 3-step mini-course and Financial Freedom calculator. Enter your email address here and you will receive access right away!</p>
                 <form class="onload-popup-form">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="First Name" required />
