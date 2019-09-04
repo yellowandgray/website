@@ -6,12 +6,21 @@
             </span>
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
+                <ul>
+                    <li>
+                        <a href="#">About <span class="dropdown-toggle"></span></a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li>Test</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </div>
-            <img src='img/logo.png' class="logo" alt=''>
+            <a href="index.php" class="logo"><img src='img/logo.png' alt=''></a>
 
             <div class="header-login">
                 <span class="search-bg"><i class="fa fa-search"></i></span>
