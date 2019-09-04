@@ -7,13 +7,13 @@
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <ul>
-                    <li>
+                    <li class="dropdown">
                         <a href="#">About <span class="dropdown-toggle"></span></a>
-                        <div class="dropdown-menu">
+<!--                        <div class="dropdown-content">
                             <ul>
                                 <li>Test</li>
                             </ul>
-                        </div>
+                        </div>-->
                     </li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Clients</a></li>
