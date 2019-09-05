@@ -45,37 +45,37 @@
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/001.jpg" alt=""/>
-                                    <center><a class="btn btn-primary">DISCOVER</a></center>
+                                    <center><a href="news.php" class="btn btn-primary">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/002.jpg" alt=""/>
-                                    <center><a class="btn btn-primary">DISCOVER</a></center>
+                                    <center><a href="news.php" class="btn btn-primary">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/003.jpg" alt=""/>
-                                    <center><a class="btn btn-primary">DISCOVER</a></center>
+                                    <center><a href="news.php" class="btn btn-primary">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/004.jpg" alt=""/>
-                                    <center><a class="btn btn-primary">DISCOVER</a></center>
+                                    <center><a href="news.php" class="btn btn-primary">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/004.jpg" alt=""/>
-                                    <center><a class="btn btn-primary">DISCOVER</a></center>
+                                    <center><a href="news.php" class="btn btn-primary">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/003.jpg" alt=""/>
-                                    <center><a class="btn btn-primary">DISCOVER</a></center>
+                                    <center><a href="news.php" class="btn btn-primary">DISCOVER</a></center>
                                 </div>
                             </div>
 
