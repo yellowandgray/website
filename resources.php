@@ -101,11 +101,8 @@
                                 <div class="col-lg-6 wow fadeInUp">
                                     <div class="features_item  d-flex flex-column align-items-center">
                                         <div class="icon_container box-4 d-flex flex-column">
-                                            <h3 class="text-center">Title Text Here</h3>
-                                            <video class=" video-res features_item d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="auto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                                <source src="vedio/Rise Up - Pre Event Video 2.mp4" type="video/mp4">
-                                                Your browser does not support the <code>video</code> tag.
-                                            </video>
+                                            <h3 class="text-center">Do You Need a Crisis or can Everyone benefit from Coaching.</h3>
+                                            <iframe width="330" height="191" src="https://www.youtube.com/embed/Rq7harxrjsc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                                         </div>
                                     </div>
@@ -115,11 +112,8 @@
                                 <div class="col-lg-6 wow fadeInUp">
                                     <div class="features_item  d-flex flex-column align-items-center ">
                                         <div class="icon_container box-4 d-flex flex-column">
-                                            <h3 class="text-center">Title Text Here</h3>
-                                            <video class="video-res features_item d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="auto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                                <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
-                                                Your browser does not support the <code>video</code> tag.
-                                            </video>
+                                            <h3 class="text-center">What Is The Difference Between Psychiatry & Coaching?</h3>
+                                           <iframe width="330" height="191" src="https://www.youtube.com/embed/QtdJVjmrA2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                                         </div>
                                     </div>
@@ -130,11 +124,8 @@
                                 <div class="col-lg-6 wow fadeInUp">
                                     <div class="features_item  d-flex flex-column align-items-center ">
                                         <div class="icon_container box-4 d-flex flex-column">
-                                            <h3 class="text-center">Title Text Here</h3>
-                                            <video class="video-res features_item d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="auto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                                <source src="vedio/Rise Up - Pre Event Video.mp4" type="video/mp4">
-                                                Your browser does not support the <code>video</code> tag.
-                                            </video>
+                                            <h3 class="text-center">Life Coaching is broad.Which are do you specialize in?</h3>
+                                            <iframe width="330" height="191" src="https://www.youtube.com/embed/16XkwShcNLo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                                         </div>
                                     </div>
@@ -144,11 +135,8 @@
                                 <div class="col-lg-6 wow fadeInUp">
                                     <div class="features_item  d-flex flex-column align-items-center ">
                                         <div class="icon_container box-4 d-flex flex-column">
-                                            <h3 class="text-center">Title Text Here</h3>
-                                            <video class="video-res features_item d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="auto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                                <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (2).mp4" type="video/mp4">
-                                                Your browser does not support the <code>video</code> tag.
-                                            </video>
+                                            <h3 class="text-center">How are Coaching Session Structured?</h3>
+                                            <iframe width="330" height="191" src="https://www.youtube.com/embed/bZTbAff40Lc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                                         </div>
                                     </div>

@@ -50,19 +50,25 @@
                         <div class="col-lg-6 wow fadeInUp">
                             <div class="method-coaching">
                                 <a href="#enquiry">
-                                    <h2>One to One Coaching</h2>
+                                    <h2>Private Coaching</h2>
                                     <img src="images/method-coaching/001.jpg" alt="" />
                                 </a>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                                <p>This is for you if you are looking for dedicated, laser focus on an area of your life that you wish to make great. Cheryl thrives on working with clients who want nothing but the best - both, for themselves and from her. Here, the engagement will span from 3-12 months, with direct daily access to Cheryl. If you are looking for real, life transforming, permanent change, then this is what you are looking for.</p>
+                            <button type="submit" class="button-2"><span>Coach With Cheryl</span></button>
                             </div>
                         </div>
                         <div class="col-lg-6 wow fadeInUp">
                             <div class="method-coaching">
                                 <a href="#enquiry">
-                                    <h2>Group Coaching</h2>
+                                    <h2>Workshops and Mastermind Circles</h2>
                                     <img src="images/method-coaching/002.jpg" alt="" />
                                 </a>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                                <p>Are you looking to experience the energy and knowledge Cheryl brings, but in a group setting? This is for you if you would like to learn and build a network of other likeminded, strong, supportive partners who will champion your progress, then this is for you! Whilst the workshops are organized at a physical location, the MasterMinds are online. Mastermind groups are restricted to keep the focus and ensure everyone gets equal attention. We usually have workshops and Masterminds in the following topics: </p>
+                                <ul>
+                                    <li><strong>Money Masters</strong></li>
+                                    <li><strong>Cracking the Career Code</strong></li>
+                                    <li><strong>Rise-Up: Women for Women</strong></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -73,7 +79,7 @@
                                     <h2>Corporate Training</h2>
                                     <img src="images/method-coaching/003.jpg" alt="" />
                                 </a>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                           <p>Cheryl has delivered Corporate trainings in corporates such as Oracle, National Paints. The topics she has trained on include Sales Mastery, Function of Treasury in a multi-national corporation, Operations Management, etc.<a href="#enquiry" style="text-decoration: underline;">here</a></p>
                             </div>
                         </div>
                         <div class="col-lg-6 wow fadeInUp">
@@ -82,7 +88,7 @@
                                     <h2>Speaking Engagements</h2>
                                     <img src="images/method-coaching/004.jpg" alt="" />
                                 </a>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                                <p>Cheryl has given keynote speeches at Universities such as SP Jain School of Global Management, Skyline University. She has also addressed church groups on topics such as Financial Discipline and Keys to Career Success.<a href="#enquiry" target="blank" style="text-decoration: underline;">here</a></p>
                             </div>
                         </div>
                     </div>
@@ -207,27 +213,32 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
-                            <h2>How Does Life Coaching Work?</h2>
+                            <h2>HOW DOES PRIVATE COACHING WITH CHERYL WORK?</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 wow fadeInUp">
-                            <ol>
-                                <li>This is usually done through <strong>face-to-face meetings</strong> that are usually structured over <strong>several sessions</strong> depending on what the <strong>objective</strong> of the coaching engagement is.</li>
-                                <li>If you are seeking clarity over a relatively simple situation, just three sessions may sometimes suffice. However, if you are seeking a <strong>life-transformational change,</strong> it may require a <strong>continued on-going engagement</strong> over <strong>months or even years.</strong></li>
-                                <li>Below is a general indication of the <strong>number of recommended sessions,</strong> depending on the <strong>objective of the coaching</strong> engagement:</li>
-                            </ol>
+                            <ul class="list-1 wow fadeInUp">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Private Coaching is usually done through face-to-face meetings or Skype. The structure is usually agreed mutually, however, will span from 3 - 12 months, depending on what the objective of the coaching engagement is.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>If you are seeking to transform a single area of your life (finances/ career/ health), a three-month engagement may suffice. However, if you are seeking a life-transformational change, it may require a continued on-going engagement over six months or even years.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Your Partnership with Cheryl will begin with an initial 2-hour Deep Discovery session where you will uncover what you truly want, what held you back and begin discovering the path to get you where you want to be.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Every subsequent session will be for 2-hours, every alternate week. Cheryl strongly believes that a 2-hour session allows for true depth, clarity and discovery to be made.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>By the end of your initial Partnership, you will of course, have the option to continue by extending your Partnership.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>To request to Coach with Cheryl, please click <a href="#enquiry" target="blank" style="text-decoration: underline;">here</a></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
-                                <h2>WHAT YOU WANT</h2>
+                                <h2>HOW DO ONLINE MASTERMINDS WORK?</h2>
                             </div>
                             <ul class="list-1 wow fadeInUp">
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Change in one area of life. A choice. A development decision. - 3 sessions</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>A relatively large change spanning a couple of life areas. A difficult decision - 6 sessions</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>A life transformation, a shift. A dramatic revamp. A change that requires sustained, long-term implementation. - 10 sessions </li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>These Masterminds are held online on Zoom, with 2-hour sessions held every two weeks.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>The Mastermind usually runs for a span of 8 weeks.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>In each session, there will be a lesson for the first 1-hour, which will be led by Cheryl. In the next hour, the participants will interact, share and engage with each other (structured interaction - guidelines provided at the Mastermind).</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Usually each participant will have a "Buddy" - a partner from within the Group. Your Buddy will be your accountability partner and both of you will keep each other motivated by holding yourselves responsible to your commitments! This has one of the most surprisingly positive results :) And you will usually make a really good friend for life!</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>To join one of the Masterminds, please click here (please give them a form where they can choose which Mastermind they want to join and their email address + Mobile Number)</li>
                             </ul>
                         </div>
                     </div>

@@ -79,7 +79,8 @@
                                 <p><i class="fas fa-globe"></i> : <a href="http://cherylppinto.com/">www.cherylppinto.com</a></p>
                             </div>
                             <div class="contact-details wow fadeInUp">
-                                <h4 class="font-20"><i>Stay connected with Cheryl daily</i></h4>
+                                <h4 class="font-20"><i>Don't keep us a SECRET, share with your family and friends!</i></h4><br>
+                                <h4 class="font-20"><i>Choose your way to stay connected – click your favorite icon below and let’s connect, share and grow!</i></h4>
                                 <hr>
                                 <ul class="footer_social social-icon">
                                     <li>
@@ -108,7 +109,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" target="blank">
+                                        <a href="https://www.youtube.com/channel/UC_RvcECAMTKuOcVfIU93Dwg?view_as=subscriber" target="blank">
                                             <i class="fab fa-youtube trans_300"></i>
                                         </a>
                                     </li>
