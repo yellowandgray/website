@@ -820,3 +820,102 @@ body {
     color: #6c6c6c;
     opacity: 1;
 }
+
+.press-release {
+    padding: 80px 0;
+}
+
+.press-release h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #f92121;
+    padding-top: 20px;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+.press-release-content img {
+    position: absolute;
+    width: 30px;
+    padding-top: 20px;
+}
+
+.press-release-content h4 {
+    padding: 20px 0 20px 50px;
+}
+
+.press-download-button {
+    background: red;
+    padding: 10px 25px;
+    margin-top: 32px;
+    margin-left: 30%;
+    position: relative;
+    bottom: 20px;
+}
+
+.press-download-button:hover {
+    background: white;
+    color: red;
+    border: 1px solid red;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.press-release-content .row {
+    border-top: 2px solid #000;
+}
+
+.border-bottom1 {
+    border-bottom: 2px solid #000;
+}
+
+.padding-top-108 {
+    padding-top: 108px;
+}
+
+
+.events-content {
+    background: #fff;
+    box-shadow: 0 0 15px 2px #eee;
+    position: relative;
+    top: -100px;
+    padding: 40px 0;
+}
+
+.events-main-content {
+    padding: 0 40px;
+}
+
+.events-main-content h2 {
+    padding: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: red;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.clr-white {
+    color: #fff;
+}
+
+.events-upcoming {
+    background: #fff;
+    box-shadow: 0 0 20px 10px #eee;
+}
+
+.events-upcoming img {
+    width: 100%;
+    padding: 5px 5px 0;
+}
+
+.events-upcoming-content {
+    padding: 10px 12px;
+}
+
+.events-upcoming-content h4 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.events-upcoming-content p {
+    font-size: 14px;
+}
