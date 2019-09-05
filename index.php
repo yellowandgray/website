@@ -12,6 +12,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/ninja-slider.css" rel="stylesheet" type="text/css"/>
+        <link href="css/magnific-popup.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
         <link href="css/slick-slider.css" rel="stylesheet" type="text/css"/>
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
@@ -43,7 +44,7 @@
             <div class="container">
                 <h1>DISCOVER</h1>
                 <div class="row">
-                    <div class="tag-box">
+                    <div class="tag-box active">
                         <p>125 CC</p>
                     </div>
                     <div class="tag-box">
@@ -59,6 +60,7 @@
                     <div class="discover-slider">
                         <img src="img/slider/slider-001.png" alt=""/>
                         <div class="discover-slider-content">
+                            <p class="clb-bg">CLUB NAME</p>
                             <h2>TITLE HERE</h2>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
                             <center><a class="btn btn-primary">DISCOVER</a></center>
@@ -67,6 +69,7 @@
                     <div class="discover-slider">
                         <img src="img/slider/slider-002.png" alt=""/>
                         <div class="discover-slider-content">
+                            <p class="clb-bg">CLUB NAME</p>
                             <h2>TITLE HERE</h2>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
                             <center><a class="btn btn-primary">DISCOVER</a></center>
@@ -75,6 +78,7 @@
                     <div class="discover-slider">
                         <img src="img/slider/slider-003.png" alt=""/>
                         <div class="discover-slider-content">
+                             <p class="clb-bg">CLUB NAME</p>
                             <h2>TITLE HERE</h2>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
                             <center><a class="btn btn-primary">DISCOVER</a></center>
@@ -83,6 +87,7 @@
                     <div class="discover-slider">
                         <img src="img/slider/slider-004.png" alt=""/>
                         <div class="discover-slider-content">
+                             <p class="clb-bg">CLUB NAME</p>
                             <h2>TITLE HERE</h2>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
                             <center><a class="btn btn-primary">DISCOVER</a></center>
@@ -91,6 +96,7 @@
                     <div class="discover-slider">
                         <img src="img/slider/slider-005.png" alt=""/>
                         <div class="discover-slider-content">
+                             <p class="clb-bg">CLUB NAME</p>
                             <h2>TITLE HERE</h2>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
                             <center><a class="btn btn-primary">DISCOVER</a></center>
@@ -99,6 +105,7 @@
                     <div class="discover-slider">
                         <img src="img/slider/slider-005.png" alt=""/>
                         <div class="discover-slider-content">
+                             <p class="clb-bg">CLUB NAME</p>
                             <h2>TITLE HERE</h2>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
                             <center><a class="btn btn-primary">DISCOVER</a></center>
@@ -107,6 +114,7 @@
                     <div class="discover-slider">
                         <img src="img/slider/slider-005.png" alt=""/>
                         <div class="discover-slider-content">
+                             <p class="clb-bg">CLUB NAME</p>
                             <h2>TITLE HERE</h2>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
                             <center><a class="btn btn-primary">DISCOVER</a></center>
@@ -191,38 +199,61 @@
                 <div class="flex-row">
                     <h1>VIDEOS</h1>
                 </div>
-                <div class="row video-section ">
-                    <div class="col-md-4">
-                        <div class=""><img src="img/video/001.jpg" alt="" style="width: 100%" /></div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class=""><img src="img/video/002.jpg" alt="" style="width: 100%" /></div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class=""><img src="img/video/003.jpg" alt="" style="width: 100%" /></div>
-                    </div>
-                    <!--                </div>
-                                    <div class="row">-->
-                    <div class="col-md-4">
-                        <div class=""><img src="img/video/004.jpg" alt="" style="width: 100%" /></div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class=""><img src="img/video/005.jpg" alt="" style="width: 100%" /></div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class=""><img src="img/video/006.jpg" alt="" style="width: 100%" /></div>
-                    </div>
+                <div class="home-gallery video-section">
+
+                    <a href="img/video/001.jpg" class="image">
+                        <img src="img/video/001.jpg" alt="">
+                    </a>
+
+                    <a href="img/video/002.jpg" class="image">
+                        <img src="img/video/002.jpg" alt="">
+                    </a>
+
+                    <a href="img/video/003.jpg" class="image">
+                        <img src="img/video/003.jpg" alt="">
+                    </a>
+
+                    <a href="img/video/004.jpg" class="image">
+                        <img src="img/video/004.jpg" alt="">
+                    </a>
+
+                    <a href="img/video/005.jpg" class="image">
+                        <img src="img/video/005.jpg" alt="">
+                    </a>
+
+                    <a href="img/video/006.jpg" class="image">
+                        <img src="img/video/006.jpg" alt="">
+                    </a>
+
+                    <a href="img/video/007.jpg" class="image">
+                        <img src="img/video/007.jpg" alt="">
+                    </a>
+
+                    <a href="img/video/008.jpg" class="image">
+                        <img src="img/video/008.jpg" alt="">
+                    </a>
                 </div>
+                <!--                <div class="row video-section ">
+                                    <img src="img/video/001.jpg" alt="" style="width: 100%" />
+                                    <img src="img/video/002.jpg" alt="" style="width: 100%" />
+                                    <img src="img/video/003.jpg" alt="" style="width: 100%" />
+                                </div>
+                                <div class="row video-section ">
+                                    <img src="img/video/004.jpg" alt="" style="width: 100%" />
+                                    <img src="img/video/005.jpg" alt="" style="width: 100%" />
+                                    <img src="img/video/006.jpg" alt="" style="width: 100%" />
+                                </div>-->
             </div>
         </section>
         <section class="ptb-80 social-media-section">
             <div class="container">
+                <div class="social-bg text-center"><span>SOCIAL MEDIA</span></div>
                 <div class="row">
                     <div class="col-md-12">      
                         <h2>TOOWHEEL MOTORSPROT NETWORK</h2>
                     </div>
                     <div class="col-md-12">                       
-                        <div class="row margin-top-30">
+                        <div class="row margin-top-30 social-icon">
                             <span class="fb"><img src="img/social-icons/fb.jpg"/></span>
                             <span class="yt"><img src="img/social-icons/yt.png"/></span>
                             <span class="twitter"><img src="img/social-icons/twitter.png"/></span>
@@ -232,7 +263,7 @@
                 </div>
                 <div class="row social-media-post-section">
                     <div class="col-md-4">
-                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FBikeRaceByTopFreeGames%2Fposts%2F1509211869182434&width=500" width="500" height="465" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+<!--                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FBikeRaceByTopFreeGames%2Fposts%2F1509211869182434&width=500" width="500" height="465" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>-->
                     </div>
                 </div>
             </div>
@@ -278,7 +309,7 @@
         </section>
 
         <section class="attachment-bg">
-            <div class="container-fulied">
+            <div class="container-fluid">
                 <img src="img/attachment-bg.jpg" alt="" style="width: 100%" />
             </div>
         </section>
@@ -325,23 +356,33 @@
                 </div>
             </div>
         </div>
+        <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
         <script>
-            function lightbox(idx) {
-                //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
-                var ninjaSldr = document.getElementById("ninja-slider");
-                ninjaSldr.parentNode.style.display = "block";
+                            function lightbox(idx) {
+                                //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+                                var ninjaSldr = document.getElementById("ninja-slider");
+                                ninjaSldr.parentNode.style.display = "block";
 
-                nslider.init(idx);
+                                nslider.init(idx);
 
-                var fsBtn = document.getElementById("fsBtn");
-                fsBtn.click();
-            }
+                                var fsBtn = document.getElementById("fsBtn");
+                                fsBtn.click();
+                            }
 
-            function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
-                if (isFullscreen) {
-                    ninjaSldr.parentNode.style.display = "none";
+                            function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+                                if (isFullscreen) {
+                                    ninjaSldr.parentNode.style.display = "none";
+                                }
+                            }
+        </script>
+        <script>
+            $(".home-gallery").magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
                 }
-            }
+            });
         </script>
     </body>
 </html>

@@ -22,6 +22,9 @@
     .bg-1 span {font-size: 50px !important;}
     .bg-1 .container {bottom: 0px !important;}
     .bg-1 .slick-slider {bottom: 0px !important;}
+    .social-media-section .social-bg span {font-size: 35px !important;}
+    .social-media-section h2 {font-size: 11px !important;bottom: 70px !important;}
+    .social-icon {bottom: 90px !important;}
 }
 
 @media screen and (max-height: 600px) {

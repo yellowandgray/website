@@ -101,8 +101,18 @@
             <a href="index.php" class="logo"><img src='img/logo.png' alt=''></a>
 
             <div class="header-login">
-                <span class="search-bg"><i class="fa fa-search"></i></span>
-                <a href="login.php"><span class="login-button"><i class="fa fa-user"></i> Login</span></a>
+                <div class="float-left margin-left-10">
+                    <a href="#">
+                        <i class="fa fa-search search-bg"></i>
+                        <p>Search </p>
+                    </a>
+                </div>
+                <div class="float-left margin-left-10">
+                    <a href="login.php">
+                        <i class="fa fa-sign-in search-bg"></i>
+                        <p> Login</p>
+                    </a>
+                </div>
             </div>
             <div class="mobile-header-login">
                 <i class="fa fa-search"></i>
