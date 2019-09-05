@@ -16,8 +16,10 @@ foreach ($sub_categories as $row) {
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        <title>:: MAC WORLD ::</title>
+        <title>MAC WORLD | Delivering Globally Reliable and world class products and services</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="MAC WORLD is an entrepreneurial driven entity delivering Globally Reliable and world class products and services consistently for almost 20 years. This ambitious spirit has permeated throughout the Eco System and Value chain of the organization, contributing towards a holistic and dynamic workplace environment and leading the group and its associated companies to successfully enter new markets and secure long term customers.">
+        <meta name="keywords" content="palm oil, olein, palm stearin, oils & fats, shortening, oleo chemicals, Confectionery, Glycerin, Ghee, Condensed milk, Palm, Coconut, Canned food, Cattle feed, Flour, Grains, Nuts, dried Ginger, Vegetable oil">
         <!-- favicon -->
         <link rel="icon" href="img/favicon.png" type="image/gif" sizes="16x16">
         <!-- google -->
@@ -40,12 +42,14 @@ foreach ($sub_categories as $row) {
         <link href="css/media.css" rel="stylesheet" type="text/css"/>
         <link href="css/easy-autocomplete.css" rel="stylesheet" type="text/css"/>
         <link href="css/easy-autocomplete.themes.css" rel="stylesheet" type="text/css"/>
+        <!--        <link href="css/sweetalert.css" rel="stylesheet" type="text/css"/>-->
         <!-- linked css closed-->
         <script src="js/modernizr.custom.46884.js" type="text/javascript"></script>
         <script src="js/jquery.js" type="text/javascript"></script>
         <script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
         <script src="js/script.js" type="text/javascript"></script>
         <script src="js/isInViewport.jquery.min.js" type="text/javascript"></script>
+
     </head>
     <body class="home page-template-default page page-id-5 twentyseventeen-front-page has-header-image page-two-column colors-light" style="">
         <div id="page">
@@ -75,13 +79,14 @@ foreach ($sub_categories as $row) {
                                             <input style="float: left;" id="product" class="d-inline-flex search-product" type="search" name="search_input" placeholder="Search product" value="" />
 <!--                                            <input type="submit" name="submit" value="" class="submit_search_form">-->
                                         </form>
-                                        <div href="#" class="language_flag select_language text-center" style="display: inline-block;">
-                                            <select class="language_select">
-                                                <option value="en" selected="">En</option>
-                                                <option value="fr">Fr</option>
-                                                <option value="ar">Ar</option>
-                                            </select>
-                                        </div>
+                                        <div id="google_translate_element"></div>
+                                        <!--                                        <div href="#" class="language_flag select_language text-center" style="display: inline-block;">
+                                                                                    <select class="language_select">
+                                                                                        <option value="en" selected="">En</option>
+                                                                                        <option value="fr">Fr</option>
+                                                                                        <option value="ar">Ar</option>
+                                                                                    </select>
+                                                                                </div>-->
                                     </div>
                                 </div>
                             </div>
@@ -338,6 +343,13 @@ foreach ($sub_categories as $row) {
                             $('.hover_bkgr_fricc').hide();
                         });
                     });
+//                    function formSubmit() {
+//                        if ($.trim($('#join_team_name').val()) === '') {
+//                            alert('Name required');
+//                            return false;
+//                        }
+//                        return false;
+//                    }
                 </script>
                 <section class="about_right_section" id="about_right_section">
                     <div class="container">
@@ -350,16 +362,17 @@ foreach ($sub_categories as $row) {
                                     <h5>Join our Team</h5>
                                     <br/>
                                     <from>
-                                        <input type="text" name="name" class="form-control" placeholder="Name" />
+                                        <input type="text" name="name" id="join_team_name" class="form-control" placeholder="Name" required="required"/>
                                         <br/>
-                                        <input type="email" name="email" class="form-control" placeholder="Email" />
+                                        <input type="email" name="email" class="form-control" placeholder="Email" required/>
                                         <br/>
-                                        <input type="text" name="contact" pattern="[0-9]{10}" class="form-control" placeholder="Contact Number" />
+                                        <input type="text" name="contact" pattern="[0-9]{10}" class="form-control" placeholder="Contact Number" required/>
                                         <br/>
-                                        <textarea row="4" type="text" name="message" class="form-control" placeholder="Leave Comments"></textarea>
+                                        <textarea row="4" type="text" name="message" class="form-control" placeholder="Leave Comments" required></textarea>
                                         <p style="float:left;color:#555;font-size: 14px;margin: 10px 0 0;">Upload CV</p> <input type="file" name="upload" class="form-control" accept="image/pdf*">
                                         <br/>
-                                        <a href="#" class="about_us_btn">Submit</a>
+                                        <br/>
+                                        <input type="submit" class="about_us_btn" value="Submit" onclick="return formSubmit();" />
                                     </from>
                                 </div>
                             </div>
@@ -1001,6 +1014,8 @@ foreach ($sub_categories as $row) {
             <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
             <script src="js/jquery.mCustomScrollbar.js" type="text/javascript"></script>
             <script src="js/jquery.easy-autocomplete.js" type="text/javascript"></script>
+<!--            <script src="js/sweetalert.min.js" type="text/javascript"></script>
+            <script src="js/contactform.js" type="text/javascript"></script>-->
             <script type="text/javascript">
                     $(window).on("scroll", function () {
                         var scrollHeight = $(document).height();
@@ -1459,7 +1474,7 @@ foreach ($sub_categories as $row) {
                     }); /*$('video').each((i,v) => v.play());*/
                 });
             </script>
-            <script type="text/javascript">
+<!--            <script type="text/javascript">
                 $(function() {
                 var Page = (function() {
                 var $navArrows = $('#nav-arrows').hide(),
@@ -1475,187 +1490,194 @@ foreach ($sub_categories as $row) {
                         init = function() {
                         initEvents();
                         },
-                        initEvents = function() { // add navigation events                          $navArrows.children( ':first' ).on( 'click', function() {                               slicebox.next();                                return false;                           } );                            $navArrows.children( ':last' ).on( 'click', function() {                                                                slicebox.previous();                                return false;                           } );                        };                      return { init : init };             })();               setInterval(function(){                     $('#nav-arrows a').trigger('click');                }, 5000);               Page.init();            });
-            </script>
+                }};
+            </script>-->
             <script type="text/javascript">
-                        $(function() {
+                $(function () {
 
-                        var Page = (function() {
+                    var Page = (function () {
 
                         var $navArrows = $('#nav-arrows').hide(),
                                 $shadow = $('#shadow').hide(),
                                 slicebox = $('#sb-slider').slicebox({
-                        onReady : function() {
+                            onReady: function () {
 
-                        $navArrows.show();
+                                $navArrows.show();
                                 $shadow.show();
-                        },
-                                orientation : 'r',
-                                cuboidsRandom : true,
-                                disperseFactor : 30
+                            },
+                            orientation: 'r',
+                            cuboidsRandom: true,
+                            disperseFactor: 30
                         }),
-                                init = function() {
+                                init = function () {
 
-                                initEvents();
+                                    initEvents();
                                 },
-                                initEvents = function() {
+                                initEvents = function () {
 
-                                // add navigation events
-                                $navArrows.children(':first').on('click', function() {
+                                    // add navigation events
+                                    $navArrows.children(':first').on('click', function () {
 
-                                slicebox.next();
+                                        slicebox.next();
                                         return false;
-                                });
-                                        $navArrows.children(':last').on('click', function() {
+                                    });
+                                    $navArrows.children(':last').on('click', function () {
 
-                                slicebox.previous();
+                                        slicebox.previous();
                                         return false;
-                                });
+                                    });
                                 };
-                                return { init : init };
-                        })();
-                                setInterval(function(){
-                                $('#nav-arrows a').trigger('click');
-                                }, 3000);
-                                Page.init();
-                        });</script>
+                        return {init: init};
+                    })();
+                    setInterval(function () {
+                        $('#nav-arrows a').trigger('click');
+                    }, 3000);
+                    Page.init();
+                });</script>
             <script type="text/javascript">
-                                jQuery(document).ready(function($) {
+                jQuery(document).ready(function ($) {
 
-                        $(".menu li").on('click', function() {
+                    $(".menu li").on('click', function () {
                         hamb.trigger("click");
-                        })
+                    })
 
-                                var hamb = $('#hamburger'), sidebarContainer = $('.sidebar-container'); hamb.on('click', function() {
+                    var hamb = $('#hamburger'), sidebarContainer = $('.sidebar-container');
+                    hamb.on('click', function () {
                         $(this).toggleClass('active');
-                                sidebarContainer.toggleClass('active');
-                        })
+                        sidebarContainer.toggleClass('active');
+                    })
 
 
-                        })
+                })
             </script>
             <script type="text/javascript">
-                                $(document).ready(function() {
-                        var gturl = window.location.href;
-                                var winheight = $(window).height();
-                                var arr = gturl.split('#');
-                                var scrid = "#" + arr[1];
-                                if (arr[1]) {
+                $(document).ready(function () {
+                    var gturl = window.location.href;
+                    var winheight = $(window).height();
+                    var arr = gturl.split('#');
+                    var scrid = "#" + arr[1];
+                    if (arr[1]) {
                         $('html, body').animate({
-                        scrollTop: $(scrid).offset().top + 0
+                            scrollTop: $(scrid).offset().top + 0
                         }, 500);
+                    }
+                });</script>
+            <script type="text/javascript">
+                $('.banner-product-slider').owlCarousel({
+                    center: true,
+                    items: 2,
+                    loop: true,
+                    margin: 10,
+                    autoplay: true,
+                    nav: true,
+                    navText: ['<img src="images/slider_arrrow1.png" alt=""/>', '<img src="images/slider_arrrow2.png" alt=""/>'],
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        768: {
+                            items: 3
                         }
-                        });</script>
-            <script type="text/javascript">
-                                $('.banner-product-slider').owlCarousel({
-                        center: true,
-                                items:2,
-                                loop:true,
-                                margin:10,
-                                autoplay:true,
-                                nav:true,
-                                navText:['<img src="images/slider_arrrow1.png" alt=""/>', '<img src="images/slider_arrrow2.png" alt=""/>'],
-                                responsive:{
-                                0:{
-                                items:1
-                                },
-                                        768:{
-                                        items:3
-                                        }
-                                }
-                        });</script>
+                    }
+                });</script>
             <script>
-                                (function($){
-                                $(window).on("load", function(){
+                (function ($) {
+                    $(window).on("load", function () {
 
-                                $(".about_right_content").mCustomScrollbar({
-                                setHeight:600,
-                                        theme:"dark-3"
-                                });
-                                });
-                                })(jQuery);</script>
+                        $(".about_right_content").mCustomScrollbar({
+                            setHeight: 600,
+                            theme: "dark-3"
+                        });
+                    });
+                })(jQuery);</script>
             <script type="text/javascript">
-                                jQuery(document).ready(function() {
-                        jQuery(".language_select").change(function(){
+                jQuery(document).ready(function () {
+                    jQuery(".language_select").change(function () {
                         var lang = jQuery(this).val();
-                                var lang_url = window.location.origin + window.location.pathname + '/?lang=' + lang;
-                                window.location.href = lang_url;
-                        });
-                        });
+                        var lang_url = window.location.origin + window.location.pathname + '/?lang=' + lang;
+                        window.location.href = lang_url;
+                    });
+                });
             </script>
             <script type="text/javascript">
-                                window.onload = function(){
-                                $('.slider').slick({
-                                autoplay:true,
-                                        autoplaySpeed:2000,
-                                        arrows:true,
-                                        prevArrow:'',
-                                        nextArrow:'',
-                                        centerMode:true,
-                                        slidesToShow:4,
-                                        slidesToScroll:1,
-                                        responsive: [
-                                        {
-                                        breakpoint: 768,
-                                                settings: {
-                                                arrows: false,
-                                                        centerMode: true,
-                                                        centerPadding: '40px',
-                                                        slidesToShow: 3
-                                                }
-                                        },
-                                        {
-                                        breakpoint: 480,
-                                                settings: {
-                                                arrows: false,
-                                                        centerMode: true,
-                                                        centerPadding: '40px',
-                                                        slidesToShow: 1
-                                                }
-                                        }
-                                        ]
-                                });
-                                };
+                window.onload = function () {
+                    $('.slider').slick({
+                        autoplay: true,
+                        autoplaySpeed: 2000,
+                        arrows: true,
+                        prevArrow: '',
+                        nextArrow: '',
+                        centerMode: true,
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        responsive: [
+                            {
+                                breakpoint: 768,
+                                settings: {
+                                    arrows: false,
+                                    centerMode: true,
+                                    centerPadding: '40px',
+                                    slidesToShow: 3
+                                }
+                            },
+                            {
+                                breakpoint: 480,
+                                settings: {
+                                    arrows: false,
+                                    centerMode: true,
+                                    centerPadding: '40px',
+                                    slidesToShow: 1
+                                }
+                            }
+                        ]
+                    });
+                };
             </script>
             <script type="text/javascript">
-                                //Search Product
-                                var autocomplete_data = <?php echo json_encode($autocomplete); ?>;
-                                var options = {
+                //Search Product
+                var autocomplete_data = <?php echo json_encode($autocomplete); ?>;
+                var options = {
 
-                                data: autocomplete_data,
-                                        getValue: function(element) {
-                                        return element.name;
-                                        },
-                                        list: {
-                                        match: {
-                                        enabled: true
-                                        },
-                                                onChooseEvent: function() {
-                                                var selected_id = $("#product").getSelectedItemData().code;
-                                                var selected_cat_id = $("#product").getSelectedItemData().category_id;
-                                                        var selected_category = $("#product").getSelectedItemData().type;
-                                                        if (selected_category === 'category') {
-                                                renderCategory(selected_id);
-                                                        $('html, body').stop().animate({
-                                                scrollTop: $('#explor_product').offset().top - 95
-                                                }, 1000);
-                                                }
-                                                if (selected_category === 'sub_category') {
-                                                $('#explor_product .tab-pane').addClass('hidden').removeClass('active');
-                                                        $('#tab' + selected_cat_id).removeClass('hidden').addClass('active');
-                                                        $('.list-group-product li').removeClass('active');
-                                                        $('#tab_list' + selected_cat_id).addClass('active');
-                                                        renderSubCategory(selected_id);
-                                                        $('html, body').stop().animate({
-                                                scrollTop: $('#explor_product').offset().top - 95
-                                                }, 1000);
-                                                }
-                                                }
-                                        },
-                                        theme: "square"
-                                };
-                                $("#product").easyAutocomplete(options);
+                    data: autocomplete_data,
+                    getValue: function (element) {
+                        return element.name;
+                    },
+                    list: {
+                        match: {
+                            enabled: true
+                        },
+                        onChooseEvent: function () {
+                            var selected_id = $("#product").getSelectedItemData().code;
+                            var selected_cat_id = $("#product").getSelectedItemData().category_id;
+                            var selected_category = $("#product").getSelectedItemData().type;
+                            if (selected_category === 'category') {
+                                renderCategory(selected_id);
+                                $('html, body').stop().animate({
+                                    scrollTop: $('#explor_product').offset().top - 95
+                                }, 1000);
+                            }
+                            if (selected_category === 'sub_category') {
+                                $('#explor_product .tab-pane').addClass('hidden').removeClass('active');
+                                $('#tab' + selected_cat_id).removeClass('hidden').addClass('active');
+                                $('.list-group-product li').removeClass('active');
+                                $('#tab_list' + selected_cat_id).addClass('active');
+                                renderSubCategory(selected_id);
+                                $('html, body').stop().animate({
+                                    scrollTop: $('#explor_product').offset().top - 95
+                                }, 1000);
+                            }
+                        }
+                    },
+                    theme: "square"
+                };
+                $("#product").easyAutocomplete(options);
             </script>
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
             <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
             <symbol id="icon-behance" viewBox="0 0 37 32">
