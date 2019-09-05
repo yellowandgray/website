@@ -122,12 +122,20 @@
 <script src="js/slick-slider.js" type="text/javascript"></script>
 <script>
     function openNav() {
-        document.getElementById("mySidenav").style.width = "100%";
+        document.getElementById("mySidenav").style.height = "100%";
+        document.getElementById("mySidenav").style.top = "0px";
     }
 
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
+    var modal = document.getElementById("mySidenav");
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.height = "0%";
+            modal.style.top = "-60px";
+
+        }
     }
+
+
 </script>
 <!--mega-menu-->
 <script>
