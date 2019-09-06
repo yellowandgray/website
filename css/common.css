@@ -967,4 +967,143 @@ button {
 
 }
 
+.event-sec {
+    padding: 170px 0px 50px 0px;
+    background: #858585;
+}
+.event-title h3{
+    color:#fff;
+    font-weight: 600;
+    padding: 0px 0px 25px 0px;
+}
+.event-conent p span {
+    font-size: 17px;
+    font-weight: 600;
+    color: #363636;
+}
+.event-desc h5 a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ed1c24;
+    padding: 5px 10px;
+}
+.event-desc h5 {
+    transform: skewX(-10deg);
+}
+.event-desc  p span {
+    font-size: 17px;
+    font-weight: 600;
+    color: #363636;
+}
+.event-n {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
 
+}
+.event-img{
+    flex:1;
+    padding: 10px;
+}
+.event-conent {
+    flex:1.5;
+    padding: 10px;
+}
+.event-desc{
+    flex:3;
+    padding: 10px;
+}
+.event-num {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.event-num-1 {
+    flex-basis:100%;
+}
+.event-num-1 {
+    background: #eee;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 2px 5px 0px #363636;
+    padding: 10px 10px 10px 10px ;
+    margin-bottom: 20px;
+}
+.img-responsive{
+    width: 100%;
+    height: auto;
+}
+.event-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.event-title {
+    flex-basis: 100%;
+}
+.event-num {
+    flex-basis: 70%;
+}
+.past-event{
+    flex-basis: 28%;
+    background: #363636;
+    padding: 10px;
+}
+.past-event h3{
+    font-size: 17px;
+    color: #363636;
+    font-weight: 600;
+}
+.past-event  p span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #363636;
+}
+.past-event  p {
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+.past-event  h5 {
+    color:#eee;
+}
+
+@media (max-width:991px) and (min-width:768px)
+{
+    .event-num p{
+        font-size: 14px;
+    }   
+    .event-num p span{
+        font-size: 14px;
+    }   
+    .event-num h3{
+        font-size: 18px;
+    }  
+    .event-n{
+        flex-wrap: wrap;
+    }
+    .past-event .event-num-1 .event-img {
+        flex-basis: 100%;
+
+    }
+    .past-event .event-num-1 .event-conent{
+        flex-basis: 100%;
+
+    }
+}
+@media (max-width:767px) and (min-width:320px)
+{
+    .event-container .event-num {
+        flex-basis: 100%;
+    }
+    .event-container .past-event {
+        flex-basis: 100%;
+    }
+    .event-num .event-conent h3{
+        font-size: 20px;
+    }
+    .event-num .event-conent p,.event-num .event-conent p span, .event-num .event-desc p{
+        font-size: 13px;
+    }
+}
