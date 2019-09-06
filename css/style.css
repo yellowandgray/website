@@ -845,7 +845,7 @@ body {
 
 .press-download-button {
     background: red;
-    padding: 10px 25px;
+    padding: 0.550rem .75rem;
     margin-top: 32px;
     margin-left: 30%;
     position: relative;
@@ -918,4 +918,37 @@ body {
 
 .events-upcoming-content p {
     font-size: 14px;
+}
+
+.padding-lr-0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.news-discover {
+    width: 150px;
+    height: 0;
+    border-bottom: 35px solid #ff0000;
+    border-right: 20px solid transparent;
+    position: relative;
+    bottom: 35px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.news-discover:hover {
+    border-bottom: 35px solid #ff0000c7;
+}
+
+.news-discover a {
+    padding: 7px 0px 0 20px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    transition: 0.3s;
+    width: auto;
+    text-align: left;
+}
+
+.news-discover:hover a {
+    color: #fff;
 }

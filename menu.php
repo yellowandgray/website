@@ -45,37 +45,37 @@
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/001.jpg" alt=""/>
-                                    <center><a href="news.php" class="btn btn-primary">DISCOVER</a></center>
+                                    <center class="news-discover"><a href="news.php">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/002.jpg" alt=""/>
-                                    <center><a href="news.php" class="btn btn-primary">DISCOVER</a></center>
+                                    <center class="news-discover"><a href="news.php">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/003.jpg" alt=""/>
-                                    <center><a href="news.php" class="btn btn-primary">DISCOVER</a></center>
+                                    <center class="news-discover"><a href="news.php">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/004.jpg" alt=""/>
-                                    <center><a href="news.php" class="btn btn-primary">DISCOVER</a></center>
+                                    <center class="news-discover"><a href="news.php">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/004.jpg" alt=""/>
-                                    <center><a href="news.php" class="btn btn-primary">DISCOVER</a></center>
+                                    <center class="news-discover"><a href="news.php">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/003.jpg" alt=""/>
-                                    <center><a href="news.php" class="btn btn-primary">DISCOVER</a></center>
+                                    <center class="news-discover"><a href="news.php">DISCOVER</a></center>
                                 </div>
                             </div>
 
@@ -83,32 +83,32 @@
                     </div>
 
                     <div id="Release" class="tabcontent">
-                        <div class="row release">
+                        <div class="row">
                             <div>
                                 <ul class="release">
                                     <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
                                     <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="#"><span>READ </span>MORE</a></li>
+                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
                                 </ul>
                                 <ul class="release">
                                     <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
                                     <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="#"><span>READ </span>MORE</a></li>
+                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
                                 </ul>
                                 <ul class="release">
                                     <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
                                     <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="#"><span>READ </span>MORE</a></li>
+                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
                                 </ul>
                                 <ul class="release">
                                     <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
                                     <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="#"><span>READ </span>MORE</a></li>
+                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
                                 </ul>
                                 <ul class="release">
                                     <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
                                     <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="#"><span>READ </span>MORE</a></li>
+                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
                                 </ul>
                             </div>
                         </div> 

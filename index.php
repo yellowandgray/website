@@ -309,7 +309,7 @@
         </section>
 
         <section class="attachment-bg">
-            <div class="container-fluid">
+            <div class="container-fluid padding-lr-0">
                 <img src="img/attachment-bg.jpg" alt="" style="width: 100%" />
             </div>
         </section>
