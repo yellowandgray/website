@@ -148,14 +148,14 @@
                             <h2>MASTER EVERY AREA OF YOUR LIFE</h2>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="bx-01">
                         <!-- Features Item -->
-                        <div class="col-lg-4 wow fadeInUp">
+                        <div class="bx-02  coach-box  wow fadeInUp">
                             <div>
                                 <img src="images/slider/001.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container coach-box d-flex flex-column">
+                                <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Financial Freedom</h3>
                                     <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
@@ -170,12 +170,12 @@
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4 wow fadeInUp">
+                        <div class="bx-02  coach-box wow fadeInUp">
                             <div>
                                 <img src="images/slider/002.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container coach-box d-flex flex-column">
+                                <div class="icon_container  d-flex flex-column">
                                     <h3 class="text-center">Life Control</h3>
                                     <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
@@ -190,12 +190,12 @@
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4 wow fadeInUp">
+                        <div class="bx-02  coach-box wow fadeInUp">
                             <div>
                                 <img src="images/slider/003.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container coach-box d-flex flex-column">
+                                <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Career Mastery</h3>
                                     <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
@@ -210,14 +210,14 @@
                         </div>
 
                     </div>
-                    <div class="row margin-top-50">
+                    <div class="bx-01 margin-top-50">
                         <!-- Features Item -->
-                        <div class="col-lg-4 wow fadeInUp">
+                        <div class="wow bx-02 coach-box fadeInUp">
                             <div>
                                 <img src="images/slider/004.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container coach-box d-flex flex-column">
+                                <div class="icon_container  d-flex flex-column">
                                     <h3 class="text-center">Professional Trader</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/fQUfIgLCAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -231,12 +231,12 @@
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4 wow fadeInUp">
+                        <div class="bx-02 coach-box wow fadeInUp">
                             <div>
                                 <img src="images/slider/005.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container coach-box d-flex flex-column">
+                                <div class="icon_container  d-flex flex-column">
                                     <h3 class="text-center">Life reboot</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/u7NntUPBdkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -250,12 +250,12 @@
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4 wow fadeInUp">
+                        <div class="coach-box bx-02 wow fadeInUp">
                             <div>
                                 <img src="images/slider/006.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container coach-box d-flex flex-column">
+                                <div class="icon_container  d-flex flex-column">
                                     <h3 class="text-center">Woman Of Wonder</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/QwooUQ-oAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -577,17 +577,19 @@
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
                             <h2>As Featured In</h2>
                         </div>
-                        <div class="col-md-4">
-                            <div class="apperance wow fadeInUp">
-                                <h2><a href="https://www.khaleejtimes.com/redefining-memory-skills-in-the-digital-age" target="blank">Khaleej Times</a></h2>
+                    </div>
+                    <div class="bx-01">
+                        <div class="bx-02 apperance">
+                            <div class="wow fadeInUp">
+                                <h2><a href="https://www.khaleejtimes.com/redefining-memory-skills-in-the-digital-age" target="blank" style="font-size:21px;">Khaleej Times</a></h2>
                                 <span>Filed on August 6, 2018</span>
                                 <img src="images/khaleej_times.png" alt="" style="width: 100%;"/>
                                 <p>"Neuro-linguistic programming (NLP) offers various tools to aid in improving memory by using the brain's ability for spatial, visual, auditory and kinesthetic storage and recall. One effective method has three steps. First, decide that you want to remember it. Then, pay close attention by writing it down. Finally, create an enchanting story with characters and a sequence of events. Make the story memorable by making it funny, exciting or even ridiculous. This will then help you to quickly recall the story and thus the information that you stored within it."</p>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="apperance wow fadeInUp">
-                                <h2><a href="http://magazines.toastmasters.org/article/HOW_TO/1261771/138995/article.html" target="blank">Toastmasters International Magazine</a></h2>
+                        <div class="bx-02 apperance">
+                            <div class="wow fadeInUp">
+                                <h2><a href="http://magazines.toastmasters.org/article/HOW_TO/1261771/138995/article.html" target="blank" style="font-size:21px;">Toastmasters International Magazine</a></h2>
                                 <span>January 2013</span>
 <!--                                <img src="images/khaleej_times.png" alt="" style="width: 100%;"/>-->
                                 <h3>HOW TO</h3>
@@ -598,9 +600,9 @@
                                 <p>"Dream big” is a phrase we are all familiar with. It is a dogma preached by many at self-help seminars. Volumes have been written about it. However, the hoopla surrounding dreams has overshadowed an equally, if not more important, factor—action. It has been said that “an ounce of action is worth a ton of theory.” It is understandable why action is not everyone’s favorite topic of discussion—it involves work!</p>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="apperance wow fadeInUp">
-                                <h2><a href="https://www.ivyexec.com/best-executive-mba-rankings/sp-jain-executive-mba-in-dubai-review" target="blank">SP Jain’s Featured IVY Exec Alumni</a></h2>
+                        <div class="bx-02 apperance">
+                            <div class="wow fadeInUp">
+                                <h2><a href="https://www.ivyexec.com/best-executive-mba-rankings/sp-jain-executive-mba-in-dubai-review" target="blank" style="font-size:21px;">SP Jain’s Featured IVY Exec Alumni</a></h2>
 <!--                                <span>Filed on August 6, 2018</span>-->
 <!--                                <img src="images/khaleej_times.png" alt="" style="width: 100%;"/>-->
                                 <h3 style="text-align: center;margin: 20px 0;">Featured Alumni</h3>

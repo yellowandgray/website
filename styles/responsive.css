@@ -593,7 +593,7 @@
 }
 @media only screen and (max-width: 991px){
     .fs_menu_nav {
-       top: 22px !important;
+        top: 22px !important;
     }
     .type-coaching-box {
         height: 600px;
@@ -603,5 +603,18 @@
 {
     .con-img {
         margin-bottom: 100px !important;
+    }
+}
+@media (min-width: 320px) and (max-width: 1600px)
+{
+    .modal-body-1 h2 {
+        color: #000;
+
+    }
+}
+@media only screen and (max-width: 328px){
+
+    .features_item p {
+          height:auto!important;
     }
 }

@@ -436,6 +436,7 @@ textarea::placeholder {
     }
     .modal-body-1 h2 {
         font-size: 30px;
+        color: #000;
     }
 }
 
@@ -617,7 +618,7 @@ textarea::placeholder {
 .img-b {
     position: absolute;
     top: -23px;
-    left: -11px;
+    left: -57px;
     z-index: 9;
     width: 65px;
     height: 65px;
@@ -1502,5 +1503,58 @@ audio {
     color: #000 !important;
 }
 .contact-form input{
-        margin: 0 0 0px 0 !important;
+    margin: 0 0 0px 0 !important;
+}
+.bx-01 {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.bx-02 {
+    flex-basis: 30%;
+}
+.bx-02 .features_item p{
+    height: auto;
+}
+.bx-01 .coach-box{
+    height: auto;
+}
+@media (max-width:991px) and (min-width:320px){
+    .bx-02 {
+        flex-basis: 90%;
+    }
+    .bx-01 {
+        justify-content: space-around;
+    }
+}
+
+.bx-03 {
+    flex-basis: 60%
+}
+.bx-04 {
+    flex-basis: 30%
+}
+.bx-01 .box-4 {
+    height: auto !important;
+
+}
+.bx-01 .apperance {
+    height: auto !important;
+
+}
+@media (max-width:991px) and (min-width:320px){
+    .bx-03 {
+        flex-basis: 90%;
+    }
+    .bx-04 {
+        flex-basis: 90%;
+    }
+    .bx-01 {
+        justify-content: space-around;
+    }
+    .bx-01 .apperance {
+        height: auto !important;
+        margin-bottom: 14px;
+    }
 }

@@ -1382,7 +1382,7 @@ section
 }
 .modal-body-1 p {
     font-size: 16px;
-    color: #fff;
+    color: #000;
     font-style: italic;
     font-weight: 600;
 }
@@ -1614,5 +1614,6 @@ button.close {
 }
 .apperance a {
     color: #80358e;
+    
 }
  

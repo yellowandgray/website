@@ -44,8 +44,8 @@
                 <!--<div class="about prlx_parent" style="background-image:url(images/main_slider_03.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">-->
                 <div class="prlx_parent pad-50" >
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8 wow fadeInLeft">
+                        <div class="bx-01">
+                            <div class="bx-03 wow fadeInLeft">
                                 <h3 class="pad-20"><strong>HOW DOES COACHING HELP?</strong></h3>
                                 <ul class="list-1">
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Coaching can help with virtually any aspect of someone’s life, whether it is in their personal or professional life.</li>
@@ -59,11 +59,11 @@
                                 </ul>
 
                             </div>
-                            <div class="col-lg-4 wow fadeInRight">
+                            <div class="bx-04 wow box-4  fadeInRight">
                                 <div>
                                     <img src="images/slider/001.png" alt="" class="img-b">
                                 </div>
-                                <div class="features_item box-4 d-flex flex-column align-items-center ">
+                                <div class="features_item d-flex flex-column align-items-center ">
                                     <div class="icon_container d-flex flex-column">
                                         <h3 class="text-center">Financial Freedom</h3>
                                         <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
