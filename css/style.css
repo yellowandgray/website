@@ -216,6 +216,8 @@ body {
     color: #f92121;
     padding-top: 20px;
     font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
 .tag-box {
@@ -261,11 +263,15 @@ body {
 }
 
 .clb-bg {
-    background: red;
+    border-bottom: 30px solid #ff0000;
+    border-right: 15px solid transparent;
     width: 100px;
-    padding: 5px 0px;
+    height: 0;
+    position: relative;
+    top: 0px;
+    padding: 0;
     text-align: center;
-    margin: 5px 0px 0 0;
+    margin: 0;
     font-weight: 700;
 }
 
@@ -821,9 +827,9 @@ body {
     opacity: 1;
 }
 
-.press-release {
+/*.press-release {
     padding: 80px 0;
-}
+}*/
 
 .press-release h1 {
     font-family: 'Montserrat', sans-serif;
@@ -893,6 +899,41 @@ body {
     font-weight: 600;
 }
 
+.events-main-content strong, p {
+    text-align: justify;
+}
+
+
+.side-news img {
+    width: 100%;
+}
+
+.side-news .side-news-widget1 {
+    border-bottom: 30px solid #ff0000;
+    border-right: 15px solid transparent;
+    width: auto;
+    height: 0;
+    position: relative;
+    top: 25px;
+    padding: 0 15px;
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+    color: #fff;
+}
+
+.side-news .side-news-widget1 span {
+    position: relative;
+    top: 25px;
+}
+
+.side-news h4 {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 10px 0;
+    /*    text-align: center;*/
+}
+
 .clr-white {
     color: #fff;
 }
@@ -900,6 +941,7 @@ body {
 .events-upcoming {
     background: #fff;
     box-shadow: 0 0 20px 10px #eee;
+    margin-bottom: 30px;
 }
 
 .events-upcoming img {
@@ -926,29 +968,104 @@ body {
 }
 
 .news-discover {
-    width: 150px;
-    height: 0;
-    border-bottom: 35px solid #ff0000;
-    border-right: 20px solid transparent;
+    width: 100px;
+    background: #ff0000c9;
     position: relative;
-    bottom: 35px;
+    bottom: 15px;
+    border-radius: 15px;
+    left: 30px;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .news-discover:hover {
-    border-bottom: 35px solid #ff0000c7;
+    background: #ff0000;
 }
 
 .news-discover a {
-    padding: 7px 0px 0 20px;
+    padding: 7px 0px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 10px;
     color: #fff;
     transition: 0.3s;
-    width: auto;
-    text-align: left;
+    width: auto; 
+    text-align: center;
 }
 
 .news-discover:hover a {
     color: #fff;
+}
+
+.button-1{
+    width: 35%;
+    height: 35px;
+    border: 1px solid #ed1820;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 0 10px 0;
+}
+.button-1 a{
+    font-size: 16px;
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 32px;
+    transition: all .5s ease;
+    z-index: 2;
+    position: relative;
+}
+.eff-1{
+    width: 140px;
+    height: 35px;
+    top: -2px;
+    right: -140px;
+    background: #ff0000;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: 1;
+}
+.button-1:hover .eff-1{
+    right:0;
+}
+.button-1:hover a{
+    color:#fff;
+}
+
+.button-8{
+    width: 55%;
+    height: 35px;
+    border: 1px solid #ed1c24;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 0 10px 0px;
+    border-radius: 20px;
+}
+.button-8 a{
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 32px;
+    transition: all .5s ease;
+    z-index: 2;
+    position: relative;
+}
+.eff-8{
+    height: 35px;
+    border: 70px solid #ed1c24;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: 1;
+    box-sizing: border-box;
+}
+.button-8:hover .eff-8{
+    border: 0px solid #ed1c24;
+}
+.button-8:hover a{
+    color: #ed1c24;
 }
