@@ -54,7 +54,7 @@
                                     <img src="images/method-coaching/001.jpg" alt="" />
                                 </a>
                                 <p>This is for you if you are looking for dedicated, laser focus on an area of your life that you wish to make great. Cheryl thrives on working with clients who want nothing but the best - both, for themselves and from her. Here, the engagement will span from 3-12 months, with direct daily access to Cheryl. If you are looking for real, life transforming, permanent change, then this is what you are looking for.</p>
-                            <button type="submit" class="button-2"><span>Coach With Cheryl</span></button>
+                                <button type="submit" class="button-2"><span>Coach With Cheryl</span></button>
                             </div>
                         </div>
                         <div class="col-lg-6 wow fadeInUp">
@@ -79,7 +79,7 @@
                                     <h2>Corporate Training</h2>
                                     <img src="images/method-coaching/003.jpg" alt="" />
                                 </a>
-                           <p>Cheryl has delivered Corporate trainings in corporates such as Oracle, National Paints. The topics she has trained on include Sales Mastery, Function of Treasury in a multi-national corporation, Operations Management, etc.<a href="#enquiry" style="text-decoration: underline;">here</a></p>
+                                <p>Cheryl has delivered Corporate trainings in corporates such as Oracle, National Paints. The topics she has trained on include Sales Mastery, Function of Treasury in a multi-national corporation, Operations Management, etc.<a href="#enquiry" style="text-decoration: underline;">here</a></p>
                             </div>
                         </div>
                         <div class="col-lg-6 wow fadeInUp">
@@ -103,31 +103,29 @@
                             <h2>MASTER EVERY AREA OF YOUR LIFE</h2>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="bx-01">
                         <!-- Features Item -->
-                        <div class="col-lg-4 wow fadeInUp">
+                        <div class="bx-06 type-coaching-box wow fadeInUp">
                             <div>
-                                <img src="images/slider/001.png" alt="" class="img-b">
+                                <img src="images/slider/002.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container type-coaching-box d-flex flex-column">
+                                <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Financial Freedom</h3>
                                     <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
+                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
                                     <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income, if you find yourself drowning in the quagmire of credit card debts, if you wish to start saving more and building a retirement fund then get in touch with me now. I have been a banker for nearly 2 decades and have cracked the code.</p>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Features Item -->
-                        <div class="col-lg-4 wow fadeInUp">
+                        <div class="bx-06 type-coaching-box wow fadeInUp">
                             <div>
                                 <img src="images/slider/002.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container type-coaching-box d-flex flex-column">
+                                <div class="icon_container  d-flex flex-column">
                                     <h3 class="text-center">Transformational Change</h3>
                                     <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
@@ -139,12 +137,12 @@
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4 wow fadeInUp">
+                        <div class="bx-06 type-coaching-box wow fadeInUp">
                             <div>
                                 <img src="images/slider/003.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container type-coaching-box d-flex flex-column">
+                                <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Career Acceleration</h3>
                                     <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/Rise Up - Pre Event Video.mp4" type="video/mp4">
@@ -154,17 +152,19 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Features Item -->
+
 
 
                     </div>
-                    <div class="row margin-top-50">
+                    <div class="bx-01 margin-top-50">
                         <!-- Features Item -->
-                        <div class="col-lg-4 wow fadeInUp">
+                        <div class="bx-06 type-coaching-box wow fadeInUp">
                             <div>
                                 <img src="images/slider/004.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container type-coaching-box d-flex flex-column">
+                                <div class="icon_container  d-flex flex-column">
                                     <h3 class="text-center">Trader Coach</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/fQUfIgLCAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -175,12 +175,12 @@
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4 wow fadeInUp">
+                        <div class="bx-06 type-coaching-box wow fadeInUp">
                             <div>
                                 <img src="images/slider/005.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container type-coaching-box d-flex flex-column">
+                                <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Life (Time) Management</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/u7NntUPBdkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -191,12 +191,12 @@
                         </div>
 
                         <!-- Features Item -->
-                        <div class="col-lg-4 wow fadeInUp">
+                        <div class="bx-06 type-coaching-box wow fadeInUp">
                             <div>
                                 <img src="images/slider/006.png" alt="" class="img-b">
                             </div>
                             <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container type-coaching-box d-flex flex-column">
+                                <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Wonder Woman</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/QwooUQ-oAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
