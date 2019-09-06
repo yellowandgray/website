@@ -137,6 +137,17 @@
 
 
 </script>
+<script>
+    function signIn() {
+        document.getElementById("sign-up").style.display = "block";
+        document.getElementById("log-in").style.display = "none";
+    }
+    function logIn() {
+        document.getElementById("sign-up").style.display = "none";
+        document.getElementById("log-in").style.display = "block";
+    }
+
+</script>
 <!--mega-menu-->
 <script>
     function openCity(evt, cityName) {

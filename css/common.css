@@ -118,6 +118,7 @@
     color: #fff;
     font-size: 10px;
     letter-spacing: 3px;
+    padding-top: 10px;
 
 }
 .bg-img h3 {
@@ -140,6 +141,7 @@
     border-radius: 15px 15px 15px 15px;
     padding: 6px 30px;
     border: 1px solid #ed1c24;
+    cursor: pointer;
 }
 .footer-sec{
     display: flex;
@@ -901,3 +903,67 @@ button {
         height: auto;
     }
 }
+.log-cont-02 {
+    display: none;
+}
+.sign-up-form input{ 
+    margin-bottom: 10px;
+    border: none;
+    background: #eee;
+    padding: 5px;
+    border-radius: 0px 0px 0px 0px ; 
+    /*width: 80%;*/ 
+    text-align: center;
+    outline: none;
+}
+.sign-up-form ::placeholder {
+    text-align: left;
+    opacity: 0.5;
+    font-size: 13px;
+}
+.log-cont-02 h5 i {
+    position: relative ;
+    top: 1px;
+    color: #ed1c24;
+    right: 4px;
+}
+.log-cont-02 h5 {
+    font-size: 15px;
+    color:#a7a4a4;
+    cursor: pointer;
+}
+.sign-up-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sign-up-form input:first-child{
+    flex-basis:100%
+
+}
+.sign-up-form input:nth-child(2){
+    flex-basis:100%
+
+}
+.sign-up-form input:nth-child(3){
+    flex-basis:49%
+
+}
+.sign-up-form input:nth-child(4){
+    flex-basis:49%
+
+}
+.sign-up-form input:nth-child(5){
+    flex-basis:49%
+
+}
+.sign-up-form input:nth-child(6){
+    flex-basis:49%
+
+}
+.sign-up-form button{
+    margin: 10px auto;
+
+}
+
+
