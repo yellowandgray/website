@@ -48,44 +48,15 @@
                             <div class="pad-f-15">
                                 <div class="row">
                                     <div class="col-lg-12 text-center wow fadeInDown">
-                                        <h2>Audio</h2>
+                                        <h2>Document</h2>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12 audio-1 margin-t-22 wow fadeInUp">
-                                        <h3>Title Text Here</h3>
-                                        <audio controls>
-                                            <source src="audio/test-audio.mp3" type="audio/mpeg">
-                                        </audio>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                        <i class="fas fa-file-pdf"></i><h3><a href="pdf/The 30-Day Plan to Build Your Best Year Yet (2019).pdf" target="blank"> The 30-Day Plan to Build Your Best Year Yet (2019)</a></h3>
                                     </div>
-                                    <div class="col-lg-12 audio-1 wow fadeInUp">
-                                        <h3>Title Text Here</h3>
-                                        <audio controls>
-                                            <source src="audio/test-audio.mp3" type="audio/mpeg">
-                                        </audio>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                    <div class="col-lg-12 audio-1 wow fadeInUp">
-                                        <h3>Title Text Here</h3>
-                                        <audio controls>
-                                            <source src="audio/test-audio.mp3" type="audio/mpeg">
-                                        </audio>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                    <div class="col-lg-12 audio-1 wow fadeInUp">
-                                        <h3>Title Text Here</h3>
-                                        <audio controls>
-                                            <source src="audio/test-audio.mp3" type="audio/mpeg">
-                                        </audio>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                    <div class="col-lg-12 audio-1 wow fadeInUp">
-                                        <h3>Title Text Here</h3>
-                                        <audio controls>
-                                            <source src="audio/test-audio.mp3" type="audio/mpeg">
-                                        </audio>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <div class="col-lg-12 audio-1 margin-t-22 wow fadeInUp">
+                                        <i class="fas fa-file-pdf"></i><h3><a href="pdf/Recommended Reading List 2019.pdf" target="blank"> Recommended Reading List 2019</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +84,7 @@
                                     <div class="features_item  d-flex flex-column align-items-center ">
                                         <div class="icon_container box-4 d-flex flex-column">
                                             <h3 class="text-center">What Is The Difference Between Psychiatry & Coaching?</h3>
-                                           <iframe width="330" height="191" src="https://www.youtube.com/embed/QtdJVjmrA2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe width="330" height="191" src="https://www.youtube.com/embed/QtdJVjmrA2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                                         </div>
                                     </div>
