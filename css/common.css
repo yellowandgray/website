@@ -9,7 +9,6 @@
 
 }
 
-
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -54,17 +53,17 @@
     background: #eee;
     padding: 5px;
     border-radius: 15px 15px 15px 15px;
-    width: 50%;
+    width: 65%;
     text-align: center;
     outline: none;
 }
 .login button{
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     border: none;
     background: #eee;
     padding: 5px;
     border-radius: 15px 15px 15px 15px;
-    width: 50%;
+    width: 65%;
     color: #fff;
     background-color: #ed1c24;
     margin-left: 20px;
@@ -77,6 +76,11 @@
     right: -37px;
     color: #ed1c24;
 }
+
+.log-cont-01 p {
+    text-align: center;
+}
+
 .login ::placeholder{
     text-align: center;
     opacity: 0.5;
@@ -90,10 +94,15 @@
     text-align: center;
 
 }
+
+.login h5{
+    text-align: center;
+}
+
 .login h5 a{
-    font-size: 15px;
+    font-size: 12px;
     color: #a5a5a5;
-    margin-top: 30px;
+    text-align: center;
 
 }
 .login {
@@ -110,6 +119,10 @@
     padding: 75px 10px;
 }
 
+.input-container {
+    text-align: center;
+}
+
 .login-sec-2 {
     flex-basis: 35%;
     align-items: center;
@@ -120,11 +133,13 @@
     font-size: 10px;
     letter-spacing: 3px;
     padding-top: 10px;
+    font-weight: 400;
 
 }
 .bg-img h3 {
     font-weight: 600;
     color: #fff;
+    margin-bottom: 0;
 
 }
 .member-t a{
@@ -133,8 +148,14 @@
     border-radius: 15px 15px 15px 15px;
     padding: 6px 30px;
 }
+
+.member-t a {
+    text-decoration: none;
+}
+
 .bg-img .member-t{
     margin: 15px 0px !important;
+    text-align: center;
 }
 .sing-t a{
     background-color: transparent;
@@ -624,6 +645,7 @@ button {
     cursor: pointer;
     transition: 0.3s;
     font-size: 17px;
+    border-bottom-right-radius: 50px;
 }
 
 /* Change background color of buttons on hover */
@@ -664,7 +686,7 @@ button {
 }
 .mega-menu-tab .i-con i {
     padding-right: 12px !important;
-    color: #f2f2f2;
+    color: #686868;
     font-size: 35px;
 }
 .mega-menu-tab .tablinks i {
@@ -788,7 +810,7 @@ button {
     padding: 10px 0px;
 }
 .release-cont-3 a {
-    padding: 10px 0px 10px 0px;
+    padding: 5px 0px 5px 0px;
     text-decoration: none;
     font-size: 10px;
     color: #f2f2f2;
@@ -797,9 +819,9 @@ button {
     width: auto;
     background-color: #fc2d2c;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 25px;
     position: relative;
-    top: 7px;
+    top: 15px;
 }
 
 .release-cont-3 a:hover {
@@ -1107,3 +1129,47 @@ button {
         font-size: 13px;
     }
 }
+
+
+.pop {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: white;
+    color: white;
+    text-align: center;
+
+}
+
+.pop i{
+    position:absolute; 
+    right:4px; 
+    top:2px; 
+    font-size:2rem;
+    cursor:pointer;
+}
+
+.pop i:hover{
+    color: #ed1c24d1;
+}
+
+.pop h4 {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 481px) {
+    .pop {
+        left: 47%;
+        top: 50%;
+        @include transform(translate(-50%, -50%)): ;
+        width: 30%;
+        height: 30%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+} 

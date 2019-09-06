@@ -9,24 +9,31 @@
                         <div class="bg-img text-center">
                             <img src="img/login-001.png" alt=""/>
                             <h5>NOT A TOOWHEEL MEMBER YET?</h5>
-                            <h3>BE A MEMBER TODAY</h3>
+                            <h3>BE A MEMBER TODAY!</h3>
                             <h5>AND ENJOY EXCITING BENEFITS</h5>
                             <p class="member-t"><a href="member.php">MEMBER BENEFITS</a></p>
-                            <p class="sing-t"><a onclick="signIn()" >Sign up</a></p>
+                            <p class="sing-t text-center"><a onclick="signIn()" >Sign up</a></p>
                             <!--                            <button onclick="myFunction()">Click me</button>-->
                         </div>
 
                     </div>
                     <div class="login-sec-2 login">
                         <div id="log-in" class="log-cont-01">
-                            <div class="text-center">
+                            <div>
                                 <h3>LOGIN ACCOUNT</h3>
                                 <form>
-                                    <p><i class="fa fa-user-o" aria-hidden="true"></i><input type="text" name="firstname" placeholder="Username"></p>
-                                    <p><i class="fa fa-ellipsis-h" aria-hidden="true"></i> <input type="text" name="lastname" placeholder="Password"></p>
-                                    <button type="submit">LOGIN</button>
+                                    <div class="input-container"><i class="fa fa-user-o icon" aria-hidden="true"></i><input type="text" name="firstname" placeholder="Username"></div>
+                                    <div class="input-container"><i class="fa fa-ellipsis-h icon" aria-hidden="true"></i><input type="text" name="lastname" placeholder="Password"></div>
+                                    <center><button type="submit">LOGIN</button></center>
                                 </form> 
-                                <h5><a href="#">Forgot your Password</a></h5>
+                                <h5><a href="#" class="forgot-password">Forgot your Password</a></h5>
+                                <div class="pop"><i class="fa fa-times-circle" aria-hidden="true"></i>
+                                    <div class="margin-top-30">
+                                        <h4>Enter Your Register Mail Id!</h4>
+                                        <input type="email" name="email" placeholder="Enter Register Mail Id" />
+                                        <center><button type="submit">Submit</button></center>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div id="sign-up" class="log-cont-02">
@@ -50,6 +57,34 @@
             </div>
         </section>
         <?php include 'footer.php'; ?>
+        <script>
+            $(".forgot-password").click(
+                    function () {
+                        $(".pop").fadeIn('slow');
+                    }
+            );
+
+            $(".pop i").click(
+                    function () {
+                        $(".pop").fadeOut('fast');
+                    }
+            );
+
+            //Thanks for Iphone titlebar fix http://coding.smashingmagazine.com/2013/05/02/truly-responsive-lightbox/
+
+            var getIphoneWindowHeight = function () {
+                // Get zoom level of mobile Safari
+                // Such zoom detection might not work correctly on other platforms
+                // 
+                var zoomLevel = document.documentElement.clientWidth / window.innerWidth;
+
+                // window.innerHeight returns height of the visible area. 
+                // We multiply it by zoom and get our real height.
+                return window.innerHeight * zoomLevel;
+            };
+
+
+        </script>
     </body>
 </html>
 

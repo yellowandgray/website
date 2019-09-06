@@ -766,6 +766,7 @@ body {
 
 #mySidenav ul li {
     list-style: none;
+    font-style: italic;
 }
 
 .dropdown-content {
