@@ -106,23 +106,23 @@
             </div>
             <div class="col-auto mt-3 mt-lg-0">
                 <ul class="list-unstyled d-flex mb-0">
-                    <!--                    <li class="mx-3">
-                                            <a href="#" class="hover-fade-out">
-                                                <img src="assets/img/icons/social/dribbble.svg" alt="Dribbble" class="icon icon-xs bg-white" data-inject-svg>
-                                            </a>
-                                        </li>-->
                     <li class="mx-3">
+                        <a href="https://linkedin.com/company/26628972" target="blank" class="hover-fade-out">
+                            <img src="assets/img/icons/social/linkedin.svg" alt="linkedin" class="icon icon-xs color-white">
+                        </a>
+                    </li>
+<!--                    <li class="mx-3">
                         <a href="#" class="hover-fade-out">
                             <img src="assets/img/icons/social/twitter.svg" alt="Twitter" class="icon icon-xs color-white">
                         </a>
-                    </li>
-                    <!--                    <li class="mx-3">
-                                            <a href="#" class="hover-fade-out">
-                                                <img src="assets/img/icons/social/github.svg" alt="Github" class="icon icon-xs bg-white" data-inject-svg>
-                                            </a>
-                                        </li>-->
+                    </li>-->
                     <li class="mx-3">
-                        <a href="#" class="hover-fade-out">
+                        <a href="https://Instagram.com/projectnextdoor" target="blank" class="hover-fade-out">
+                            <img src="assets/img/icons/social/instagram.svg" alt="Instagram" class="icon icon-xs color-white">
+                        </a>
+                    </li>
+                    <li class="mx-3">
+                        <a href="https://m.facebook.com/Project-Next-Door-105570387456004/" target="blank" class="hover-fade-out">
                             <img src="assets/img/icons/social/facebook.svg" alt="Facebook" class="icon icon-xs color-white">
                         </a>
                     </li>
@@ -143,11 +143,6 @@
 <script type="text/javascript" src="assets/js/popper.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.js"></script>
 <script src="js/jquery-ui.js" type="text/javascript"></script>
-<!-- AOS (Animate On Scroll - animates elements into view while scrolling down)
-
-         This appears in the demo only.  This script ensures our demo countdowns are always showing a date in the future 
-         by altering the date before the countdown is initialized 
--->
 <script type="text/javascript">
     (($) => {
         var now = new Date;

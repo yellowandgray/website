@@ -490,18 +490,6 @@
                 select: 'multiple', // More info about select: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-select
                 headerText: 'Select Date'
             });
-
-//            mobiscroll.calendar('#demo-max-days', {
-//                display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
-//                select: 5, // More info about select: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-select
-//                // headerText: 'Pick up to 5 days'  // More info about headerText: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-headerText
-//            });
-
-//            mobiscroll.calendar('#demo-counter', {
-//                display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
-//                select: 'multiple', // More info about select: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-select
-//                counter: true                    // More info about counter: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-counter
-//            });
         </script>
         <script>
             $(document).ready(function () {
