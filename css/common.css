@@ -1171,9 +1171,11 @@ button {
     .pop {
         left: 47%;
         top: 50%;
-        @include transform(translate(-50%, -50%)): ;
         width: 30%;
         height: 30%;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     }
 } 
+.cc .active {
+    background-color: #d4d4d4 !important;
+}
