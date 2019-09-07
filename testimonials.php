@@ -46,7 +46,9 @@
                         <div class="col-lg-8 left-order testimoni wow fadeInLeft">
                             <h4><strong>Santosh Kulkarni</strong></h4>
                             <h5>Senior Officer at DANWAY Electrical</h5>
-                            <p class="text-justify">"I became fearless to change".</p>
+                            <p class="text-justify">It was a pleasure working with Cheryl. Since working with her, I have achieved Discipline & Dedication. </p>
+                            <p class="text-justify">The best qualities that Cheryl has are making a person comfortable, listening and advising corrective actions in a positive way. Follow-up, Encouraging and Motivating are some of the things she does regularly, and it makes a big difference.  The most important for me was keeping the spirit until we achieved the desired result. Now I am focused on continuously trying to achieve my desired result. Managing my time effectively is one of the key changes I have experienced since coaching with Cheryl. </p>
+                            <p class="text-justify">I would definitely recommend Cheryl. I have not reached where I should be, people will follow mostly successful people. I am confident that one day I will be in a position where people will ask me about my journey and I will refer them to take Cheryl’s help to reach their desired outcomes! People should know that they will gain the confidence and openness to express themselves without any hesitation  (personal as well as professional) to achieve their target after working with Cheryl. Thank you so much for making a change in my life, Cheryl!!</p>
                         </div>
                         <div class="col-lg-4 box-7 text-center wow fadeInRight">
                             <img src="images/testimonial/testimonial-003.png" alt=""/>
@@ -60,6 +62,56 @@
                         </div>
                         <div class="col-lg-4 box-7 text-center wow fadeInRight">
                             <img src="images/testimonial/testimonial-004.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="row pad-20">
+                        <div class="col-lg-8 left-order testimoni wow fadeInLeft">
+                            <h4><strong>Amruta Pandit</strong></h4>
+                            <h5>Business Support Manager</h5>
+                            <p class="text-justify">I was really looking forward to having a life coach for myself as I felt that its a time for me to work on myself personally and professionally.</p>
+                            <p class="text-justify">Post our session, I had clarity in my thoughts and that helped me a lot in the way I was looking at things. I started making commitments and pushed myself to keep them. A few of the small, but important changes I have already experienced are as below: </p>
+                            <p class="text-justify">- I attended Toastmasters meetings as committed</p>
+                            <p class="text-justify">- I kept a diary of 3 Daily “To-Do’s” / or a weekly schedule ever since and has been able to follow almost 95%.</p>
+                            <p class="text-justify">- I started going for yoga</p>
+                            <p class="text-justify">I liked Cheryl’s approach towards me. Cheryl is a kind and non-judgmental person. At the same time, she is very particular. Her openness and non-judgmental attitude helped a lot in allowing me to express myself. She could get me back on track whenever I lost my focus while talking to her. I have become more introspective. This helps me in staying focused on the outcome that I want and constantly working on improving myself to achieve them.</p>
+                            <p class="text-justify">I would definitely recommend Cheryl and her services as it is very important to have clarity in terms of what you want in your life and how you can achieve the same. I would recommend her coaching to someone who is seeking these answers or looking for this change in their life.</p>
+                        </div>
+                        <div class="col-lg-4 box-7 text-center wow fadeInRight">
+                            <img src="images/testimonial/testimonial-011.png" alt=""/>
+                        </div>
+                    </div>
+
+                    <div class="row pad-20">
+                        <div class="col-lg-8 left-order testimoni wow fadeInLeft">
+                            <h4><strong>Dr. H O (Name withheld by request)</strong></h4>
+                            <h5> Dubai Health Authority</h5>
+                            <p class="text-justify">After I started getting coached by Cheryl my life has changed totally. </p>
+                            <p class="text-justify">I became more open for change, less stressed and happy. My family are happy to have me back, loving and caring. My work has become more stable and I have a chance for professional learning and development. I am still working on my physical fitness and I am optimistic that I will reach my goals. </p>
+                            <p class="text-justify">I like Cheryl’s smile, her care, her passion and the way she does follow up of the case and outcomes, in addition I like the different tools that she uses during the session. I have learned some leadership skills and personal skills in addition to the spiritual healing after taking up coaching. Thank you, Cheryl, for your kind care and support. </p>
+                        </div>
+                        <div class="col-lg-4 box-7 text-center wow fadeInRight">
+                            <img src="images/testimonial/testimonial-011.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="row pad-20">
+                        <div class="col-lg-8 left-order testimoni wow fadeInLeft">
+                            <h4><strong>Michelle B</strong></h4>
+                            <p class="text-justify">I am more confident, happier and hopeful after the sessions with Cheryl. I resigned from my previous job where I couldn’t find my purpose and felt stagnated. I realized it is ok to dream big and aspire for more even after being a tied down to a job for 10.8 years. I am taking time off to relax; find myself and not stress about being on the run all the time. I liked her positivity and friendliness. I didn’t feel judged and she respected my views and helped me understand things in a smarter way. I am inspired with the inspirational videos you share regularly with me. With the help of coaching I am able to share what I learnt from Cheryl with other friends who may have been going through a difficult time in their career or personal lives. </p>
+                            <p class="text-justify">I would definitely recommend Cheryl to my friends and family members. They would be able to benefit from Cheryl’s knowledge. Cheryl is trustworthy and has a heart for helping others.</p>
+                        </div>
+                        <div class="col-lg-4 box-7 text-center wow fadeInRight">
+                            <img src="images/testimonial/testimonial-011.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="row pad-20">
+                        <div class="col-lg-8 left-order testimoni wow fadeInLeft">
+                            <h4><strong>Asima M (Name withheld upon request)</strong></h4>
+                            <p class="text-justify">It was the first time I had attended a private coaching session, so I was not sure at first how it would be. Quite a few things changed such as I pushed hard to get a junior support staff to handle a key account with me so I could focus on other different projects. I’ve spoken to the top management about my appraisal. </p>
+                            <p class="text-justify">It is very easy to communicate with Cheryl. Cheryl is focused and result oriented person who is not afraid to chase dreams and aspirations. And she passes on that way of thinking during interactions with her. </p>
+                            <p class="text-justify">The benefits I have got is it has helped me to become an organized person. I keep a reminder of the goals set and work towards achieving them. </p>
+                        </div>
+                        <div class="col-lg-4 box-7 text-center wow fadeInRight">
+                            <img src="images/testimonial/testimonial-011.png" alt=""/>
                         </div>
                     </div>
                     <div class="row pad-20">
@@ -125,6 +177,55 @@
 
                 </div>
             </div>
+            <div class="container test-video">
+                <div class="row  features">
+                    <div class="col-md-12 text-center section_title section_title_dark wow fadeInDown">
+                        <h2>Video</h2>
+                    </div>
+                    <div class="bx-01">
+                        <!-- Features Item -->
+                        <div class="bx-02  coach-box  wow fadeInUp">
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container d-flex flex-column">
+                                    <h3 class="text-center">Avil Pinto</h3>
+                                    <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                        <source src="vedio/Avil Pinto.mp4" type="video/mp4">
+                                        Your browser does not support the <code>video</code> tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Features Item -->
+                        <div class="bx-02  coach-box wow fadeInUp">
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container  d-flex flex-column">
+                                    <h3 class="text-center">Paulo D</h3>
+                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                        <source src="vedio/Paulo D.mp4" type="video/mp4">
+                                        Your browser does not support the <code>video</code> tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Features Item -->
+                        <div class="bx-02  coach-box wow fadeInUp">
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container d-flex flex-column">
+                                    <h3 class="text-center">Sohel Shaikh</h3>
+                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                        <source src="vedio/Sohel Shaikh.mp4" type="video/mp4">
+                                        Your browser does not support the <code>video</code> tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
 
             <?php include 'join-our-community.php'; ?>
 

@@ -19,31 +19,35 @@
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
                             <h2>About Me</h2>
-                            <h3 style="font-weight:bold; position:relative; right: 479px; text-decoration: underline;">CHERYL'S STORY</h3>
+                            <p>About me? I am all about YOU! Enough said.</p>
                         </div><br>
+
                     </div>
                     <div class="row">
-                        <div class="col-lg-8 wow fadeInLeft">
-                            <p class="text-justify">Cheryl Pinto was born to loving parents, who moved as immigrant workers from India to Dubai. Her parents were from a lower-middle class family. Her father spent months looking for work and would often walk 10kms to save on 30-cents in taxi fare. But eventually both her parents found jobs, her mother working shifts and often seeing very little of her children. They both worked long and hard hours to bring money home and raise their two little girls.</p>
-                            <p class="text-justify">Cheryl grew up to become an inquisitive, energetic, high spirited child. When she was a 12-year old girl, she was playing a game of make-believe with her little sister and imaginary friends. That's when she overheard a conversation between her parents.</p>
+                        <div class="col-lg-12 wow fadeInLeft about-cheryl">
+                            <h3 style="font-weight:bold; text-decoration: underline;">CHERYL'S STORY</h3>
+                            <img src="images/cheryl-about.jpg" alt="" style="width: 100%; height: auto;">
+                            <p class="text-justify">Cheryl Pinto was born to loving parents, who moved as immigrant workers from India to Dubai. Her parents were from a lower-middle class family. Her father spent months looking for work and would often walk 10kms to save on 30-cents in taxi fare. But eventually both her parents found jobs, her mother working shifts and often seeing very little of her children. They both worked long and hard hours to bring money home and raise their two little girls. </p>
+                            <p class="text-justify">Cheryl grew up to become an inquisitive, energetic, high spirited child. When she was a 12-year old girl, she was playing a game of make-believe with her little sister and imaginary friends. That's when she overheard a conversation between her parents. </p>
                             <p class="text-justify">She overheard her Mom say, in a rather quiet but worried tone, "We have two daughters. We will need to save a lot of money for them." In the Indian culture, sadly even today, when girls get married, their families give a substantial sum of money to the family of the groom - perhaps as a misguided assurance that the new family will care for their daughters.</p>
                             <p class="text-justify">She then her Dad say "We don't have money & I don’t know about how much we will be able to save for them…."</p>
-                            <p class="text-justify">"But what I do know is that I will give them one of the most valuable treasures I can afford."</p>
+                            <p class="text-justify">"But what I do know is that I will give them <em>one of the most valuable treasures I can afford.</em>"</p>
                             <p class="text-justify"><strong>"I will give them the best education I can."</strong></p>
-                            <p class="text-justify">And on that day, Cheryl's direction and destiny were etched deep within her subconcious. </p>
-                            <p class="text-justify">Her little mind was now changed with a new knowledge of what she picked up as being two <strong style="text-decoration:underline;">very</strong> important things  - Money & Education. But Education, being the <strong style="text-decoration:underline;"> most important.</strong></p>
-                            <p class="text-justify">And so as Cheryl grew, she sought out both of these with a sense of resolute determination. At 16, she took up her first job. At age 26, she had worked for a decade and had two Masters degrees under her belt. Soon she was a Harvard alumni. As her qualifications grew, so did her progress up the corporate ladder. At 26, she became the youngest Assistant Vice President at the Bank she worked for.</p>
-                            <p class="text-justify">But her quest for knowledge did not cease. She worked on improving her.</p>
+                            <p class="text-justify">And on that day, Cheryl's direction and destiny were etched deep within her subconscious.</p>
+                            <p class="text-justify">Her little mind was now changed with a new knowledge of what she picked up as being two <strong style="text-decoration:underline;">very</strong> important things  - <em>Money & Education</em>. But Education, being the <strong style="text-decoration:underline;"> most important.</strong></p>
+                            <p class="text-justify">And so as Cheryl grew, she sought out both of these with a sense of resolute determination. At 16, she took up her first job. At age 26, she had two Masters degrees under her belt. Soon she was a Harvard alumni. As her qualifications grew, so did her progress up the corporate ladder. At 26, she became the youngest Assistant Vice President at the Bank she worked for. </p>
+                            <p class="text-justify">But her quest for knowledge did not cease. She worked on improving her</p>
                         </div>
                         <div class="col-lg-4 wow fadeInRight">
-                            <img src="images/cheryl-about.jpg" alt="" style="width: 100%; height: auto;">
+
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12 wow fadeInUp">
                             <p class="text-justify" style="font-weight: bold; text-decoration: underline">THOUGHTs:</p>
-                            <p class="text-justify">How to weave the 3 stories - TM - public speaking, anything is possible, nothing is permanent, we can absolutely change who we are</p>
+                            <p class="text-justify">How to weave the 3 stories - TM - public speaking, anything is possible, nothing is permanent, we can absolutely change who we are.</p>
                             <p class="text-justify">Fear of water - overcoming it.</p>
+
                         </div>
                     </div>
                 </div>

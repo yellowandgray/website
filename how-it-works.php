@@ -13,16 +13,31 @@
             <div class="prlx_parent" style="height: 110px;background: #3f1a56;width: 100%;">
             </div>
             <!-- Features -->
+            <section class="quotes">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 wow fadeInLeft">
+                            <div class="q-text" style="background-image: url(images/quotes-002.jpg); background-repeat: no-repeat; background-size: cover; z-index: 1;">
+                                <div class="qu-text" style="opacity:1.0;">
+                                    <p class="text-justify">Where there was Confusion,now Clarity.</p>
+                                    <p class="text-justify">Where there were Doubts,now Opportunities.</p>
+                                    <p class="text-justify">Where once the Victims,now the Victors.</p>
+                                    <p class="text-justify">Where there was Fear,now Freedom.</p>
+                                    <p class="text-justify">If this is a change that you could have in your life,then Coaching is for you.</p>
+                                    <p class="text-center" style="font-style:italic; font-weight:bolder">- Cheryl P Pinto.</p><br>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="col-lg-4 img-shadow wow fadeInRight q-img">
+                            <img src="images/quotes-001.jpg" alt="" style="width: 100%;"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <div class="features">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 coaching offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
-                            <p class="text-justify">Where there was Confusion,now Clarity.</p>
-                            <p class="text-justify">Where there were Doubts,now Opportunities.</p>
-                            <p class="text-justify">Where once the Victims,now the Victors.</p>
-                            <p class="text-justify">Where there was Fear,now Freedom.</p>
-                            <p class="text-justify">If this is a change that you could have in your life,then Coaching is for you.</p>
-                            <p class="text-right" style="font-style:italic; font-weight:bolder">Cheryl P Pinto.</p><br>
+                        <div class="col-lg-6 coaching offset-lg-3 section_title section_title_dark wow fadeInDown">
                             <h2>What is Coaching ?</h2>
                         </div>
                     </div>
@@ -37,6 +52,7 @@
                             <img src="images/resource.jpg" alt="" style="width: 100%;"/>
                         </div>
                     </div>
+
 
                 </div>
 

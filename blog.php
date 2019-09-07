@@ -23,10 +23,10 @@
                     </div>
                     <ul id="filters" class="clearfix">
                         <li><span class="filter active wow fadeInRight" data-filter=".app, .card, .icon, .logo1">All</span></li>
-                        <li><span class="filter wow fadeInRight" data-filter=".app">Improve Finances</span></li>
-                        <li><span class="filter wow fadeInRight" data-filter=".card">Manage Time</span></li>
-                        <li><span class="filter wow fadeInRight" data-filter=".icon">Improve Discipline</span></li>
-                        <li><span class="filter wow fadeInRight" data-filter=".logo1">Communication Skills</span></li>
+                        <li><span class="filter wow fadeInRight" data-filter=".app">Mind</span></li>
+                        <li><span class="filter wow fadeInRight" data-filter=".card">Money</span></li>
+                        <li><span class="filter wow fadeInRight" data-filter=".icon">Matter</span></li>
+                        <li><span class="filter wow fadeInRight" data-filter=".logo1">Matrix</span></li>
 <!--                        <li><span class="filter" data-filter=".web">Web</span></li>-->
                     </ul>
 

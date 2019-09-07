@@ -40,7 +40,7 @@
                     <div class="row">
                         <div class="col-lg-12 text-center section_title section_title_dark wow fadeInDown">
                             <h2>FREE RESOURCES</h2>
-                            <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <!--<p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
                         </div>
                     </div>
                     <div class="row">
@@ -74,7 +74,7 @@
                                         <div class="icon_container  d-flex flex-column">
                                             <h3 class="text-center">Do You Need a Crisis or can Everyone benefit from Coaching.</h3>
                                             <iframe width="100%" height="190"src="https://www.youtube.com/embed/Rq7harxrjsc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                            <!--<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>-->
                                         </div>
                                     </div>
                                 </div>
@@ -85,7 +85,7 @@
                                         <div class="icon_container d-flex flex-column">
                                             <h3 class="text-center">What Is The Difference Between Psychiatry & Coaching?</h3>
                                             <iframe width="100%" height="190" src="https://www.youtube.com/embed/QtdJVjmrA2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                            <!--<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>-->
                                         </div>
                                     </div>
                                 </div>
@@ -97,7 +97,7 @@
                                         <div class="icon_container  d-flex flex-column">
                                             <h3 class="text-center">Life Coaching is broad.Which are do you specialize in?</h3>
                                             <iframe width="100%" height="190" src="https://www.youtube.com/embed/16XkwShcNLo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                            <!--<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>-->
                                         </div>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@
                                         <div class="icon_container  d-flex flex-column">
                                             <h3 class="text-center">Life Coaching is broad.Which are do you specialize in?</h3>
                                             <iframe width="100%" height="190" src="https://www.youtube.com/embed/bZTbAff40Lc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                            <!--<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>-->
                                         </div>
                                     </div>
                                 </div>
