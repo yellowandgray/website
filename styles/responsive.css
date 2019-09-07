@@ -518,21 +518,8 @@
         font-size: 13px !important;
     }
 }
-@media only screen  and (max-width: 1090px)
-{
-    .box-7 img  {
-        position: initial !important;
-        margin-top: 85px !important;
-    }
-}
-@media only screen and (max-width: 991px)
-{
-    .box-7 img   {
-        position: initial !important;
-        margin-top: 0px !important;
-        margin-bottom: 30px;
-    }
-}
+
+
 @media only screen and (max-width: 991px)
 {
     .left-order {
@@ -615,6 +602,7 @@
 @media only screen and (max-width: 328px){
 
     .features_item p {
-          height:auto!important;
+        height:auto!important;
     }
 }
+

@@ -1305,7 +1305,7 @@ p:hover {
     width: 160px;
     height: 2px;
     content: '';
-    background: #80358e;
+    /*background: #80358e;*/
     margin-top: 1px;
     color: #20b9ec;
 }
@@ -1610,7 +1610,49 @@ audio {
         flex-basis: 90%;
     }
 
+    .bx-06 h3 {
+        font-size: 14px;
+    }
+
 }
+
+@media (max-width:1600px) and (min-width:320px){
+    .testimoni h4 {
+        font-size: 35px;
+        margin-bottom: 20px;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: #80358e;
+    }
+}
+@media (max-width:1600px) and (min-width:320px){
+    .testimoni h5 {
+        color: #20b9ec;
+        text-align: center;
+    }
+}
+@media (max-width:1090px) and (min-width:992px){
+    .box-7 img{
+        position: initial !important;
+        margin-top: -28px !important;
+    }
+
+}
+@media (max-width:991px) and (min-width:320px){
+    .box-7 img {
+        position: initial;
+        margin-top: 0px;
+    }
+
+}
+
+
+
+
+
+
+
+
 
 
 
