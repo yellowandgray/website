@@ -47,7 +47,6 @@
                                 <p><span>Date:</span> 06-09-2019</p>
                                 <p><span>Location:</span> Malaysia</p>
                                 <p><span>Club Name:</span> Name</p>
-
                             </div>
                             <div class="event-desc">
                                 <p><span>Description</span></p>
@@ -85,7 +84,6 @@
                                 <p><span>Date:</span> 06-09-2019</p>
                                 <p><span>Location:</span> Malaysia</p>
                                 <p><span>Club Name:</span> Name</p>
-
                             </div>
                             <div class="event-desc">
                                 <p><span>Description</span></p>
@@ -100,42 +98,65 @@
                     <div class="event-num-1">
                         <div class="event-n">
                             <div class="event-img">
-                                <img src="img/events/005.jpg" alt="" class="img-responsive"/>
+                                <img src="img/events/006.jpg" alt="" class="img-responsive"/>
                             </div>
                             <div class="event-conent">
                                 <h3>Event Title</h3>
                                 <p><span>Date:</span> 06-09-2019</p>
                                 <p><span>Location:</span> Malaysia</p>
                                 <p><span>Club Name:</span> Name</p>
-
                             </div>
                         </div>
                     </div>
                     <div class="event-num-1">
                         <div class="event-n">
                             <div class="event-img">
-                                <img src="img/events/005.jpg" alt="" class="img-responsive"/>
+                                <img src="img/events/006.jpg" alt="" class="img-responsive"/>
                             </div>
                             <div class="event-conent">
                                 <h3>Event Title</h3>
                                 <p><span>Date:</span> 06-09-2019</p>
                                 <p><span>Location:</span> Malaysia</p>
                                 <p><span>Club Name:</span> Name</p>
-
                             </div>
                         </div>
                     </div>
                     <div class="event-num-1">
                         <div class="event-n">
                             <div class="event-img">
-                                <img src="img/events/005.jpg" alt="" class="img-responsive"/>
+                                <img src="img/events/006.jpg" alt="" class="img-responsive"/>
                             </div>
                             <div class="event-conent">
                                 <h3>Event Title</h3>
                                 <p><span>Date:</span> 06-09-2019</p>
                                 <p><span>Location:</span> Malaysia</p>
                                 <p><span>Club Name:</span> Name</p>
-
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-num-1">
+                        <div class="event-n">
+                            <div class="event-img">
+                                <img src="img/events/006.jpg" alt="" class="img-responsive"/>
+                            </div>
+                            <div class="event-conent">
+                                <h3>Event Title</h3>
+                                <p><span>Date:</span> 06-09-2019</p>
+                                <p><span>Location:</span> Malaysia</p>
+                                <p><span>Club Name:</span> Name</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-num-1">
+                        <div class="event-n">
+                            <div class="event-img">
+                                <img src="img/events/006.jpg" alt="" class="img-responsive"/>
+                            </div>
+                            <div class="event-conent">
+                                <h3>Event Title</h3>
+                                <p><span>Date:</span> 06-09-2019</p>
+                                <p><span>Location:</span> Malaysia</p>
+                                <p><span>Club Name:</span> Name</p>
                             </div>
                         </div>
                     </div>

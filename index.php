@@ -16,18 +16,18 @@
             <div class="container">
                 <h1>DISCOVER</h1>
                 <div class="row cc">
-                    <div class="tag-box tablink" onclick="openCit(event, '125')">
+                    <div class="tag-box tablink active" onclick="openTag(event, 'club1')" id="defaultOpen">
                         <p>125 CC</p>
                     </div>
-                    <div class="tag-box tablink" onclick="openCit(event, '250')">
+                    <div class="tag-box tablink" onclick="openTag(event, 'club2')">
                         <p><i class="fa fa-times-circle-o" aria-hidden="true"></i> 250 CC</p>
                     </div>
-                    <div class="tag-box tablink" onclick="openCit(event, '500')">
+                    <div class="tag-box tablink" onclick="openTag(event, 'club3')">
                         <p><i class="fa fa-times-circle-o" aria-hidden="true"></i> 500 CC</p>
                     </div>
                 </div>
             </div>
-            <div id="125" class="tabconten">
+            <div id="club1" class="tagcontent">
                 <div class="container-fluid">
                     <div class="slider">
                         <div class="discover-slider">
@@ -97,7 +97,7 @@
                     </div>
                 </div>
             </div>
-            <div id="250" class="tabconten">
+            <div id="club2" class="tagcontent">
                 <div class="container-fluid">
                     <div class="slider">
                         <div class="discover-slider">
@@ -166,7 +166,7 @@
                     </div>
                 </div>
             </div>
-            <div id="500" class="tabconten">
+            <div id="club3" class="tagcontent">
                 <div class="container-fluid">
                     <div class="slider">
                         <div class="discover-slider">
@@ -235,8 +235,8 @@
                     </div>
                 </div>
             </div>
-
         </section>
+
         <section class="media-press-release">
             <div class="container">
                 <div class="media-bg">
@@ -492,6 +492,26 @@
                     enabled: true
                 }
             });
+        </script>
+        <script>
+            function openTag(evt, clubName) {
+                var i, tagcontent, tablink;
+                tagcontent = document.getElementsByClassName("tagcontent");
+                for (i = 0; i < tagcontent.length; i++) {
+                    tagcontent[i].style.display = "none";
+                }
+                document.getElementById(clubName).style.display = "block";
+                if (evt !== null) {
+                    tablink = document.getElementsByClassName("tablink");
+                    for (i = 0; i < tablink.length; i++) {
+                        tablink[i].className = tablink[i].className.replace(" active", "");
+                    }
+                    evt.currentTarget.className += " active";
+                }
+            }
+            setTimeout(function () {
+                openTag(null, 'club1');
+            }, 1000);
         </script>
     </body>
 </html>

@@ -51,9 +51,9 @@
     margin-bottom: 10px;
     border: none;
     background: #eee;
-    padding: 5px 0 5px 30px;
-    border-radius: 15px 15px 15px 15px;
-    width: 65%;
+    padding: 5px 30px;
+    border-radius: 25px;
+    width: 75%;
     text-align: center;
     outline: none;
 }
@@ -63,13 +63,13 @@
     background: #eee;
     padding: 5px;
     border-radius: 15px 15px 15px 15px;
-    width: 65%;
+    width: 75%;
     color: #fff;
     background-color: #ed1c24;
-    margin-left: 20px;
+    margin-left: 12px;
     outline: none;
-
 }
+
 .login i{
     position: relative;
     top: 0px;
@@ -143,10 +143,12 @@
 
 }
 .member-t a{
-    background-color: #ed1c24;
+    background-color: #ed1c24a6;
     color: #fff !important;
-    border-radius: 15px 15px 15px 15px;
-    padding: 6px 30px;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-size: 12px;
+    letter-spacing: 3px;
 }
 
 .member-t a {
@@ -154,7 +156,7 @@
 }
 
 .bg-img .member-t{
-    margin: 15px 0px !important;
+    margin: 20px 0px !important;
     text-align: center;
 }
 .sing-t a{
@@ -751,7 +753,7 @@ button {
     color: #f2f2f2;
 }*/
 .mega-menu .sidenav{   
-    background-color: rgba(0, 0, 0, 0.72);
+    background-color: rgba(0, 0, 0, 0.8);
     height: 0%;
     width: 100%;
     position: fixed;
@@ -874,6 +876,9 @@ button {
     }
 }
 @media (max-width: 1199px) and (min-width:992px){
+    .news-discover {
+        left: 20px;
+    }
     .news-cont center a {
         /*        font-size: 13px;
                 position: relative;
@@ -1074,8 +1079,11 @@ button {
 }
 .past-event{
     flex-basis: 28%;
-    background: #363636;
+    background: #ffffff;
     padding: 10px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
 }
 .past-event h3{
     font-size: 17px;
@@ -1092,7 +1100,7 @@ button {
     font-size: 12px;
 }
 .past-event  h5 {
-    color:#eee;
+    color: #ed1c24;
 }
 
 @media (max-width:991px) and (min-width:768px)
@@ -1178,4 +1186,19 @@ button {
 } 
 .cc .active {
     background-color: #d4d4d4 !important;
+}
+
+.sing-t a:hover {
+    background: #ed1c24;
+    box-shadow: 0px 0px 3px 1px white;
+}
+
+.nav-close {
+    cursor: pointer;
+    background: red;
+}
+
+.nav-close img {
+    position: absolute;
+    top: 35px;
 }

@@ -125,17 +125,18 @@
         document.getElementById("mySidenav").style.height = "100%";
         document.getElementById("mySidenav").style.top = "0px";
     }
+    function closeNav() {
+        document.getElementById("mySidenav").style.height = "0";
+        document.getElementById("mySidenav").style.top = "-60px";
+    }
 
     var modal = document.getElementById("mySidenav");
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.height = "0%";
             modal.style.top = "-60px";
-
         }
     }
-
-
 </script>
 <script>
     function signIn() {
@@ -149,42 +150,3 @@
 
 </script>
 <!--mega-menu-->
-<script>
-    function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-
-// Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-</script>
-<script>
-    function openCit(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabconten");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-
-// Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-</script>
-
-
-

@@ -6,14 +6,13 @@
             </span>
             <div id="mySidenav" class="sidenav">
                 <div class="container tab-menu">
+                    <div class="nav-close" onclick="closeNav();"><img src="img/close.png" alt=""></div>
                     <div class="tab mega-menu-tab">
                         <div class="text-center language">
                             <input type="radio" name="size" id="size_1" value="small" checked />
                             <label for="size_1">BM</label>
-
                             <input type="radio" name="size" id="size_2" value="small" />
                             <label for="size_2">EN</label>
-
                         </div>
                         <button class="tablinks" onclick="openCity(event, 'About')">About Us <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'News')" id="defaultOpen">Latest News <i class="fa fa-caret-right" aria-hidden="true"></i></button>
@@ -32,11 +31,9 @@
                             </li>
                         </ul>
                     </div>
-
                     <div id="About" class="tabcontent">
                         <h3>About</h3>
                     </div> 
-
                     <div id="News" class="tabcontent">
                         <div class="row news">
                             <div class="news-cont">
@@ -75,10 +72,8 @@
                                     <center class="news-discover"><a href="news.php">DISCOVER</a></center>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                     <div id="Release" class="tabcontent">
                         <div class="row">
                             <div>
@@ -110,26 +105,39 @@
                             </div>
                         </div> 
                     </div>
-
                     <div id="Member" class="tabcontent">
                         <h3>Member</h3>
                     </div>
-
-
                     <div id="Clubs" class="tabcontent">
                         <h3>Find Clubs</h3>
                     </div>
-
-
                     <div id="Events" class="tabcontent">
                         <h3>Events</h3>
+                        <div class="event-num">
+                            <div class="event-num-1">
+                                <div class="event-n">
+                                    <div class="event-img">
+                                        <img src="img/events/005.jpg" alt="" class="img-responsive"/>
+                                    </div>
+                                    <div class="event-conent">
+                                        <h3>Event Title</h3>
+                                        <p><span>Date:</span> 06-09-2019</p>
+                                        <p><span>Location:</span> Malaysia</p>
+                                        <p><span>Club Name:</span> Name</p>
+
+                                    </div>
+                                    <div class="event-desc">
+                                        <p><span>Description</span></p>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                        <h5><a href="events.php">Read More</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-
                 </div>
             </div>
             <a href="index.php" class="logo"><img src='img/logo.png' alt=''></a>
-
             <div class="header-login">
                 <div class="float-left margin-left-10">
                     <a href="#">
@@ -151,3 +159,21 @@
         </div>
     </div>
 </section>
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+// Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>

@@ -1105,3 +1105,99 @@ body {
     padding: 20px;
     color: red;
 }
+
+.find-club {
+    padding: 40px 0;
+}
+
+.search-section input {
+    border-radius: 25px 0 0 25px;
+    padding: 10px 25px;
+    outline: none;
+    background: #eee;
+    border: none;
+}
+
+.search-section .search-btn {
+    background: red;
+    color: #fff;
+    border-radius: 0 25px 25px 0;
+    padding: 12px 34px 12px;
+    position: relative;
+    left: -5px;
+}
+
+.search-sort-order {
+    background: #eee;
+    padding: 6px 25px;
+    border-radius: 25px;
+    position: relative;
+    margin-left: 12px;
+}
+
+.search-sort-order label {
+    position: relative;
+    top: 5px;
+    font-size: 14px;
+}
+
+.search-sort-order select {
+    position: relative;
+    top: 5px;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.find-club-title {
+    background: #eee;
+    padding: 30px 0;
+}
+
+.find-club-title h1 {
+    color: red;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.club-box {
+    background: #fff;
+    box-shadow: 0 10px 20px 10px #eee;
+    padding: 20px 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.club-box img {
+    width: 100%;
+}
+
+.club-box span {
+    float: right;
+    background: red;
+    color: #fff;
+    padding: 5px 6px;
+    border-radius: 50%;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.club-box h3 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 0px;
+}
+
+.club-box p {
+    font-size: 12px;
+    text-align: center;
+    font-style: italic;
+}

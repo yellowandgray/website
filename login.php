@@ -23,7 +23,7 @@
                                 <h3>LOGIN ACCOUNT</h3>
                                 <form>
                                     <div class="input-container"><i class="fa fa-user-o icon" aria-hidden="true"></i><input type="text" name="firstname" placeholder="Username"></div>
-                                    <div class="input-container"><i class="fa fa-ellipsis-h icon" aria-hidden="true"></i><input type="text" name="lastname" placeholder="Password"></div>
+                                    <div class="input-container"><i class="fa fa-ellipsis-h icon" aria-hidden="true"></i><input type="password" name="lastname" placeholder="Password"></div>
                                     <center><button type="submit">LOGIN</button></center>
                                 </form> 
                                 <h5><a href="#" class="forgot-password">Forgot your Password</a></h5>
