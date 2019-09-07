@@ -1185,12 +1185,12 @@ button {
     }
 } 
 .cc .active {
-    background-color: #d4d4d4 !important;
+/*    background-color: #d4d4d4 !important;*/
 }
 
 .sing-t a:hover {
     background: #ed1c24;
-    box-shadow: 0px 0px 3px 1px white;
+    box-shadow: 0px 0px 3px 0px white;
 }
 
 .nav-close {

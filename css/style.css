@@ -288,6 +288,27 @@ body {
     font-size: 10px;
 }
 
+.menu-btn {
+    position: relative;
+    left: 130%;
+    background: red;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    outline: none;
+    border-color: transparent;
+    width: auto !important;
+    padding: 10px 20px !important;
+}
+
+.menu-btn:hover {
+    background: transparent;
+    color: #ed1c24 !Important;
+    border: 1px solid #ed1c24;
+}
+
 .btn-primary {
     position: relative;
     top: 15px;
@@ -1216,4 +1237,16 @@ body {
 .margin-rl-25 {
     margin-right: 25px;
     margin-left: 25px;
+}
+
+.find-club-menu {
+    background: #eee;
+    margin-left: 20px;
+    border-radius: 15px;
+    padding: 20px 0;
+    margin-right: 20px;
+}
+
+.club-title {
+    width: 75%;
 }

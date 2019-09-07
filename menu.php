@@ -110,6 +110,14 @@
                     </div>
                     <div id="Clubs" class="tabcontent">
                         <h3>Find Clubs</h3>
+                        <div class="row find-club-menu">
+                            <img src="img/find-club/dummy-logo.png" alt="" style="width: 20%;">
+                            <div class="club-title">
+                                <h4>Club Title</h4>
+                                <p><strong>Description</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                            <center><a href="find-a-club.php" class="menu-btn">Read More</a></center>
+                        </div>
                     </div>
                     <div id="Events" class="tabcontent">
                         <h3>Events</h3>
