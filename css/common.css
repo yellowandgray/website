@@ -51,7 +51,7 @@
     margin-bottom: 10px;
     border: none;
     background: #eee;
-    padding: 5px;
+    padding: 5px 0 5px 30px;
     border-radius: 15px 15px 15px 15px;
     width: 65%;
     text-align: center;
@@ -73,7 +73,7 @@
 .login i{
     position: relative;
     top: 0px;
-    right: -37px;
+    right: -25px;
     color: #ed1c24;
 }
 
@@ -875,14 +875,14 @@ button {
 }
 @media (max-width: 1199px) and (min-width:992px){
     .news-cont center a {
-/*        font-size: 13px;
-        position: relative;
-        top: -37px;
-        background-color: #fc2d2c;
-        left: -32px;
-        width: 65%;
-        border-radius: 0px 0px 26px 0px;
-        color: #f2f2f2 !important;*/
+        /*        font-size: 13px;
+                position: relative;
+                top: -37px;
+                background-color: #fc2d2c;
+                left: -32px;
+                width: 65%;
+                border-radius: 0px 0px 26px 0px;
+                color: #f2f2f2 !important;*/
     }
 }
 @media (max-width: 991px) and (min-width:768px){
@@ -890,14 +890,14 @@ button {
         left: 0;
     }
     .news-cont center a {
-/*        font-size: 8px;
-        position: relative;
-        top: -30px;
-        background-color: #fc2d2c;
-        left: -24px;
-        width: 65%;
-        border-radius: 0px 0px 26px 0px;
-        color: #f2f2f2 !important;*/
+        /*        font-size: 8px;
+                position: relative;
+                top: -30px;
+                background-color: #fc2d2c;
+                left: -24px;
+                width: 65%;
+                border-radius: 0px 0px 26px 0px;
+                color: #f2f2f2 !important;*/
     }
 }
 @media (max-width: 767px) and (min-width:530px){
