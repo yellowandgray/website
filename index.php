@@ -134,9 +134,9 @@ foreach ($sub_categories as $row) {
                         </div>
 
                         <ul class="nav_menu clearfix">
-                            <li class="email-margin-b"><a href="mailto:products@macworldinc.com">Email</a></li>
+                            <li class="email-margin-b"><a href="mailto:products@macworldinc.com" target="blank">Email</a></li>
                             <li><a href="https://www.linkedin.com/company/mac-world-industries-sdn-bhd" target="blank">LinkedIN</a></li>
-                            <!--                            <li><a href="#">Facebook</a></li>
+                            <li><a href="https://www.facebook.com/Mac-World-Industries-Sdn-Bhd-113458736699294/" target="blank">Facebook</a></li><!--
                                                         <li><a href="#">Instagram</a></li>-->
                             <li class="mobile-language search-panel-right">
                                 <div class="language_flag select_language text-center" style="display: inline-block;">
