@@ -179,7 +179,7 @@
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
         document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += "active";
+        evt.currentTarget.className += " active";
     }
 
 // Get the element with id="defaultOpen" and click on it

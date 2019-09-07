@@ -15,15 +15,15 @@
             </div>
             <div class="container">
                 <h1>DISCOVER</h1>
-                <div class="row">
-                    <div class="tag-box">
-                        <p class="tablink" onclick="openCit(event, '125')">125 CC</p>
+                <div class="row cc">
+                    <div class="tag-box tablink" onclick="openCit(event, '125')">
+                        <p>125 CC</p>
                     </div>
-                    <div class="tag-box">
-                        <p class="tablink" onclick="openCit(event, '250')"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 250 CC</p>
+                    <div class="tag-box tablink" onclick="openCit(event, '250')">
+                        <p><i class="fa fa-times-circle-o" aria-hidden="true"></i> 250 CC</p>
                     </div>
-                    <div class="tag-box">
-                        <p class="tablink" onclick="openCit(event, '500')"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 500 CC</p>
+                    <div class="tag-box tablink" onclick="openCit(event, '500')">
+                        <p><i class="fa fa-times-circle-o" aria-hidden="true"></i> 500 CC</p>
                     </div>
                 </div>
             </div>
