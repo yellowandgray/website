@@ -766,6 +766,7 @@ body {
 
 #mySidenav ul li {
     list-style: none;
+    font-style: italic;
 }
 
 .dropdown-content {
@@ -1068,4 +1069,30 @@ body {
 }
 .button-8:hover a{
     color: #ed1c24;
+}
+
+.language input[type="radio"]{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+.language label {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    background-color: #454545;
+    color: white;
+    width: 50px;
+    padding: 15px 10px;
+    transition: all 0.3s;
+    border-radius: 50%;
+    position: relative;
+    font-size: 15px;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+.language input[type="radio"]:checked + label{
+    background-color: #d4d4d4;
 }
