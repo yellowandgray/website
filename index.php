@@ -162,9 +162,9 @@
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
                                     <p>Do you now wish to stop working for money and have money work for you? Do you often get to the end of the month and wonder where your money has gone? Are you drowning in the quagmire of credit card debts and know that something needs to change? Then get in touch with me now. I have been a banker for nearly 2 decades, have cracked the code and am waiting to show you how you too, can become finanically free. </p>
-                                    <div class="text-center arrow-1">
-                                        <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-                                    </div>
+                                </div>
+                                <div class="text-center arrow-1">
+                                    <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -182,9 +182,9 @@
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
                                     <p>Do you find yourself wanting to do more, live more meaningfully, give back to the world, but just haven't been able to? Connect with me and we will shine the light on how you may manage your time and thus your life so that you live the life you want to live.</p>
-                                    <div class="text-center arrow-1">
-                                        <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-                                    </div>
+                                </div>
+                                <div class="text-center arrow-1">
+                                    <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -202,9 +202,9 @@
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
                                     <p>Are you in a job that does not light you up, or in a career that you once loved but now wish to change? Or do you find yourself unable to advance in your career no matter what you do? Then chat with me and we will discover how you too can race through the corporate ladder.</p>
-                                    <div class="text-center arrow-1">
-                                        <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-                                    </div>
+                                </div>
+                                <div class="text-center arrow-1">
+                                    <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -223,9 +223,9 @@
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/fQUfIgLCAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <p>Are you a trader in the financial markets and are unable to remain consistently profitable? Perhaps you cannot stick to your rules or deal with the psychological impact of trading? Talk to me - I trade Forex and Futures markets - I have been through the same painful rite of passage and emerged victorious. </p>
-                                    <div class="text-center arrow-1">
-                                        <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-                                    </div>
+                                </div>
+                                <div class="text-center arrow-1">
+                                    <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -242,9 +242,9 @@
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/u7NntUPBdkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <p>Are you at a stage where you feel like it is ‘now time’ to make a large change? Do you feel that there "there has to be more than this" and want to radically catapult all areas of your life? If you wish to disrupt the status quo,follow your passion, live life to the fullest, then contact me right away. I will be honored to guide you along your path to your most fulfilling life.</p>
-                                    <div class="text-center arrow-1">
-                                        <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-                                    </div>
+                                </div>
+                                <div class="text-center arrow-1">
+                                    <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -261,9 +261,9 @@
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/QwooUQ-oAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <p>Are you an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress? Do you want it to be easier to ask for a raise or a promotion or be heard? Then grab a coffee with me! I have ‘been there, done that’ and am thrilled to help you learn the ropes. Let's do this, sister! </p>
-                                    <div class="text-center arrow-1">
-                                        <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-                                    </div>
+                                </div>
+                                <div class="text-center arrow-1">
+                                    <a href="resources.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
