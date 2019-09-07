@@ -828,9 +828,9 @@ body {
     opacity: 1;
 }
 
-/*.press-release {
-    padding: 80px 0;
-}*/
+.press-release {
+    padding-bottom: 60px;
+}
 
 .press-release h1 {
     font-family: 'Montserrat', sans-serif;
@@ -848,15 +848,16 @@ body {
 
 .press-release-content h4 {
     padding: 20px 0 20px 50px;
+    width: 75%;
 }
 
 .press-download-button {
     background: red;
-    padding: 0.550rem .75rem;
-    margin-top: 32px;
-    margin-left: 30%;
-    position: relative;
-    bottom: 20px;
+    padding: 0.3rem 1rem;
+    margin-top: 20px;
+    border-radius: 25px;
+    position: absolute;
+    right: 0;
 }
 
 .press-download-button:hover {
@@ -1095,4 +1096,11 @@ body {
 }
 .language input[type="radio"]:checked + label{
     background-color: #d4d4d4;
+}
+
+#ninja-slider .slider-inner ul li h4 {
+    font-size: 22px;
+    text-align: left;
+    padding: 20px;
+    color: red;
 }

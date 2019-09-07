@@ -875,26 +875,29 @@ button {
 }
 @media (max-width: 1199px) and (min-width:992px){
     .news-cont center a {
-        font-size: 13px;
+/*        font-size: 13px;
         position: relative;
         top: -37px;
         background-color: #fc2d2c;
         left: -32px;
         width: 65%;
         border-radius: 0px 0px 26px 0px;
-        color: #f2f2f2 !important;
+        color: #f2f2f2 !important;*/
     }
 }
 @media (max-width: 991px) and (min-width:768px){
+    .news-discover {
+        left: 0;
+    }
     .news-cont center a {
-        font-size: 8px;
+/*        font-size: 8px;
         position: relative;
         top: -30px;
         background-color: #fc2d2c;
         left: -24px;
         width: 65%;
         border-radius: 0px 0px 26px 0px;
-        color: #f2f2f2 !important;
+        color: #f2f2f2 !important;*/
     }
 }
 @media (max-width: 767px) and (min-width:530px){

@@ -205,16 +205,6 @@
                         <img src="img/video/008.jpg" alt="">
                     </a>
                 </div>
-                <!--                <div class="row video-section ">
-                                    <img src="img/video/001.jpg" alt="" style="width: 100%" />
-                                    <img src="img/video/002.jpg" alt="" style="width: 100%" />
-                                    <img src="img/video/003.jpg" alt="" style="width: 100%" />
-                                </div>
-                                <div class="row video-section ">
-                                    <img src="img/video/004.jpg" alt="" style="width: 100%" />
-                                    <img src="img/video/005.jpg" alt="" style="width: 100%" />
-                                    <img src="img/video/006.jpg" alt="" style="width: 100%" />
-                                </div>-->
             </div>
         </section>
         <section class="ptb-80 social-media-section">
@@ -292,7 +282,8 @@
                 <div class="slider-inner">
                     <ul>
                         <li>
-                            <a class="ns-img" href="img/video/001.jpg"></a>
+                            <h4>TITLE COMES HERE</h4>
+                            <a class="ns-img" href="https://live.staticflickr.com/65535/48691708073_da1f19f532.jpg"></a>
                             <div class="caption">
                                 <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
                                 <!--                                <h3>Dummy Caption 1</h3>
@@ -300,25 +291,29 @@
                             </div>
                         </li>
                         <li>
-                            <a class="ns-img" href="img/video/002.jpg"></a>
+                            <h4>TITLE COMES HERE</h4>
+                            <a class="ns-img" href="https://live.staticflickr.com/65535/48692219917_a8971eb340.jpg"></a>
                             <div class="caption">
                                 <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
                             </div>
                         </li>
                         <li>
-                            <span class="ns-img" style="background-image:url(img/video/005.jpg);"></span>
+                            <h4>TITLE COMES HERE</h4>
+                            <span class="ns-img" style="background-image:url(https://live.staticflickr.com/65535/48692219962_c4a486e64a.jpg);"></span>
                             <div class="caption">
                                 <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
                             </div>
                         </li>
                         <li>
-                            <a class="ns-img" href="img/video/003.jpg"></a>
+                            <h4>TITLE COMES HERE</h4>
+                            <a class="ns-img" href="https://live.staticflickr.com/65535/48692219992_5a7e2a5dbc.jpg"></a>
                             <div class="caption">
                                 <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
                             </div>
                         </li>
                         <li>
-                            <a class="ns-img" href="img/video/004.jpg"></a>
+                            <h4>TITLE COMES HERE</h4>
+                            <a class="ns-img" href="https://live.staticflickr.com/65535/48691708208_ffbeaf41a5.jpg"></a>
                             <div class="caption">
                                 <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
                             </div>

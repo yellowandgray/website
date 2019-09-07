@@ -10,10 +10,10 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="press-release-content">
-                            <div class="row"><img src="img/press-release/mic.png" alt=""><h4>FIA WEC - 4 Hours of Silverstone - Review</h4><a href="" class="press-download-button"><i class="fa fa-download" aria-hidden="true"></i> Download</a></div>
-                            <div class="row"><img src="img/press-release/mic.png" alt=""><h4>FIA WEC - 4 Hours of Silverstone - Review</h4><a href="" class="press-download-button"><i class="fa fa-download" aria-hidden="true"></i> Download</a></div>
-                            <div class="row"><img src="img/press-release/mic.png" alt=""><h4>FIA WEC - 4 Hours of Silverstone - Review</h4><a href="" class="press-download-button"><i class="fa fa-download" aria-hidden="true"></i> Download</a></div>
-                            <div class="row border-bottom1"><img src="img/press-release/mic.png" alt=""><h4>FIA WEC - 4 Hours of Silverstone - Review</h4><a href="" class="press-download-button"><i class="fa fa-download" aria-hidden="true"></i> Download</a></div>
+                            <div class="row"><img src="img/press-release/mic.png" alt=""><h4>PRESS RELEASE EVENTS TITLE COMES HERE</h4><a href="" class="press-download-button"> Read More</a></div>
+                            <div class="row"><img src="img/press-release/mic.png" alt=""><h4>PRESS RELEASE EVENTS TITLE COMES HERE</h4><a href="" class="press-download-button"> Read More</a></div>
+                            <div class="row"><img src="img/press-release/mic.png" alt=""><h4>PRESS RELEASE EVENTS TITLE COMES HERE</h4><a href="" class="press-download-button"> Read More</a></div>
+                            <div class="row border-bottom1"><img src="img/press-release/mic.png" alt=""><h4>PRESS RELEASE EVENTS TITLE COMES HERE </h4><a href="" class="press-download-button"> Read More</a></div>
                         </div>
                     </div>
                 </div>
