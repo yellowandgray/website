@@ -8,15 +8,12 @@
                 <div class="container tab-menu">
                     <div class="tab mega-menu-tab">
                         <div class="text-center language">
-                            <input type="radio" id="bm" name="skills" >
-                            <label for="bm" class="bm">BM</label>
-                            <input type="radio" id="en" name="skills" checked>
-                            <label for="en" class="em">EN</label>
+                            <input type="radio" name="size" id="size_1" value="small" checked />
+                            <label for="size_1">BM</label>
 
-<!--                            <input class="bm" type="radio" name="gender" value="male">
-<input class="em" type="radio" name="gender" value="female">-->
-<!--                            <input class="bm">BM</button>
-<input class="em">EN</button>-->
+                            <input type="radio" name="size" id="size_2" value="small" />
+                            <label for="size_2">EN</label>
+
                         </div>
                         <button class="tablinks" onclick="openCity(event, 'About')">About Us <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'News')" id="defaultOpen">Latest News <i class="fa fa-caret-right" aria-hidden="true"></i></button>

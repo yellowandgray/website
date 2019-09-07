@@ -699,6 +699,7 @@ button {
     flex-direction: row;
     justify-content: center;
 }
+/*
 .language  .em  {
     display: block;
     background-color: #f2f2f2;
@@ -732,8 +733,8 @@ button {
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-}
-.language label {
+}*/
+/*.language label {
     display: inline-block;
     width: 200px;
     padding: 10px;
@@ -748,7 +749,7 @@ button {
 .language input[type="radio"]:checked + label {
     background-color: #929292;
     color: #f2f2f2;
-}
+}*/
 .mega-menu .sidenav{   
     background-color: rgba(0, 0, 0, 0.72);
     height: 0%;
