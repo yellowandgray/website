@@ -1127,12 +1127,23 @@ body {
     left: -5px;
 }
 
+.search-section .search-btn:hover {
+    background: red;
+    color: #fff;
+    border-radius: 0 25px 25px 0;
+    padding: 12px 34px 12px;
+    position: relative;
+    left: -5px;
+    text-decoration: none;
+}
+
 .search-sort-order {
     background: #eee;
     padding: 6px 25px;
     border-radius: 25px;
     position: relative;
     margin-left: 12px;
+    margin-bottom: 20px;
 }
 
 .search-sort-order label {
@@ -1200,4 +1211,9 @@ body {
     font-size: 12px;
     text-align: center;
     font-style: italic;
+}
+
+.margin-rl-25 {
+    margin-right: 25px;
+    margin-left: 25px;
 }

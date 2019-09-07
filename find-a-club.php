@@ -11,7 +11,7 @@
         </div>
         <div class="find-club">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row margin-rl-25">
                     <div class="search-section">
                         <input type="text" name="search" placeholder="Search Club Name" />
                         <a href="#" class="search-btn">Search</a>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="club-box">
                             <span>#1</span>
                             <img src="img/find-club/dummy-logo.png" alt="" />
@@ -50,7 +50,7 @@
                             <p>Kuala Lumpur</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="club-box">
                             <span>#1</span>
                             <img src="img/find-club/dummy-logo.png" alt="" />
@@ -58,7 +58,7 @@
                             <p>Kuala Lumpur</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="club-box">
                             <span>#1</span>
                             <img src="img/find-club/dummy-logo.png" alt="" />
@@ -66,7 +66,7 @@
                             <p>Kuala Lumpur</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="club-box">
                             <span>#1</span>
                             <img src="img/find-club/dummy-logo.png" alt="" />
@@ -74,7 +74,7 @@
                             <p>Kuala Lumpur</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="club-box">
                             <span>#1</span>
                             <img src="img/find-club/dummy-logo.png" alt="" />
@@ -82,7 +82,7 @@
                             <p>Kuala Lumpur</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="club-box">
                             <span>#1</span>
                             <img src="img/find-club/dummy-logo.png" alt="" />
@@ -90,7 +90,7 @@
                             <p>Kuala Lumpur</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="club-box">
                             <span>#1</span>
                             <img src="img/find-club/dummy-logo.png" alt="" />
@@ -98,7 +98,7 @@
                             <p>Kuala Lumpur</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="club-box">
                             <span>#1</span>
                             <img src="img/find-club/dummy-logo.png" alt="" />
@@ -106,7 +106,7 @@
                             <p>Kuala Lumpur</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="club-box">
                             <span>#1</span>
                             <img src="img/find-club/dummy-logo.png" alt="" />
@@ -114,7 +114,7 @@
                             <p>Kuala Lumpur</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="club-box">
                             <span>#1</span>
                             <img src="img/find-club/dummy-logo.png" alt="" />
@@ -122,7 +122,7 @@
                             <p>Kuala Lumpur</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="club-box">
                             <span>#1</span>
                             <img src="img/find-club/dummy-logo.png" alt="" />
@@ -130,7 +130,7 @@
                             <p>Kuala Lumpur</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="club-box">
                             <span>#1</span>
                             <img src="img/find-club/dummy-logo.png" alt="" />

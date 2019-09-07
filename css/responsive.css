@@ -3,6 +3,9 @@
         width: 50% !important;
     }
     .tag-box p {font-size: 10px !important;}
+    .search-section {margin-bottom: 20px !important;}
+    .search-section input  {border-radius: 25px !important;}
+    .search-section .search-btn  {display: none !important;}
 }
 
 @media only screen and (max-width: 600px) {
@@ -25,6 +28,8 @@
     .social-media-section .social-bg span {font-size: 35px !important;}
     .social-media-section h2 {font-size: 11px !important;bottom: 70px !important;}
     .social-icon {bottom: 90px !important;}
+    .search-section .search-btn  {padding: 12px 12px !important;}
+    .search-section {margin-bottom: 20px !important;}
 }
 
 @media screen and (max-height: 600px) {
