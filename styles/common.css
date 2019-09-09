@@ -1519,7 +1519,7 @@ audio {
     flex-basis: 30%;
 }
 .bx-02 .features_item p{
-    height: auto;
+    height: 300px;
 }
 .bx-05 .features_item p{
     height: auto;
@@ -1533,6 +1533,9 @@ audio {
     }
     .bx-01 {
         justify-content: space-around;
+    }
+    .bx-02 .features_item p {
+        height: auto !important;
     }
 }
 
@@ -1783,5 +1786,3 @@ audio {
 .onload-popup-form .form-group input {
     border-bottom: 1px solid #a02db4;
 }
-
-
