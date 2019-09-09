@@ -19,12 +19,12 @@
                         <div class="col-lg-8 wow fadeInLeft">
                             <div class="q-text" style="background-image: url(images/quotes-002.jpg); background-repeat: no-repeat; background-size: cover; z-index: 1;">
                                 <div class="qu-text" style="opacity:1.0;">
-                                    <p class="text-justify">Where there was Confusion,now Clarity.</p>
-                                    <p class="text-justify">Where there were Doubts,now Opportunities.</p>
-                                    <p class="text-justify">Where once the Victims,now the Victors.</p>
-                                    <p class="text-justify">Where there was Fear,now Freedom.</p>
-                                    <p class="text-justify">If this is a change that you could have in your life,then Coaching is for you.</p>
-                                    <p class="text-center" style="font-style:italic; font-weight:bolder">- Cheryl P Pinto.</p><br>
+                                    <p class="text-justify">Where there was Confusion, now Clarity.</p>
+                                    <p class="text-justify">Where there were Doubts, now Opportunities.</p>
+                                    <p class="text-justify">Where once the Victims, now the Victors.</p>
+                                    <p class="text-justify">Where there was Fear, now Freedom.</p>
+                                    <p class="text-justify">If this is a change that you could have in your life, then Coaching is for you.</p>
+                                    <p class="text-center" style="font-style:italic; font-weight:bolder">- Cheryl P Pinto</p><br>
                                 </div> 
                             </div>
                         </div>
@@ -99,13 +99,13 @@
                             <div class="col-lg-12 wow fadeInUp">
                                 <h3 class="pad-20"><strong>WHY WOULD YOU WORK WITH A LIFE COACH?</strong></h3>
                                 <ul class="list-1">
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Can you imagine not having to go to school or University and having to learn everything on your own? How long would that have you taken? You will achieve your goals,with or without a Coach.Having a Coach will just get you there much,much faster.</li>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Can you imagine not having to go to school or University and having to learn everything on your own? How long would that have taken you? You <strong>will</strong> achieve your goals, with or without a Coach. Having a Coach will just get you there much, much faster.</li>
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Do you know you can do, be and have so much more but 'something' stops you?</li>
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Do you feel stuck? Does fear hold you back from doing that which you so dearly want to do?</li>
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Are you done with the rat-race and ready to break out of the mould?</li>
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Do you want to contribute more to our beautiful world by taking your light out to the world?</li>
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">If you've answered yes to any of these questions,then working with a Life Coach will bring you the clarity,direction and courage you seek.</li>
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">If you feel inspired to connect with Cheryl for Coaching,then contact us <a href="https://yellowandgray.com/cherylppinto/contact.php" target="blank" style="text-decoration: underline;">here</a></li>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">If you've answered yes to any of these questions, then working with a Life Coach will bring you the clarity, direction and courage you seek.</li>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">If you feel inspired to connect with Cheryl for Coaching, then contact us <a href="https://yellowandgray.com/cherylppinto/contact.php" target="blank" style="text-decoration: underline;">here</a></li>
                                 </ul>
                             </div>
                         </div>

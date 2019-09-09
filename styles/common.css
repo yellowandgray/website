@@ -553,13 +553,14 @@ textarea::placeholder {
 }
 #ac-wrapper {
     position: fixed;
-    top: 20px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* background: rgba(255, 255, 255, .6); */
+    background: rgba(0, 0, 0, 0.75);
     z-index: 99999;
     overflow: scroll;
+    padding-top: 3%;
 }
 .modal-dialog {
     pointer-events: auto !important;
@@ -569,7 +570,7 @@ textarea::placeholder {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1;
-    color: #20b9ec;
+    color: #9c20b3;
     text-shadow: 0 1px 0 #000;
     opacity: 1;
     position: relative;
@@ -1696,12 +1697,42 @@ audio {
     margin-bottom: 40px;
 }
 
+.modal-body-1 h2{
+    color: #9c20b3;
+    font-size: 25px;
+}
+.modal-body-1 p{
+    font-size: 14px;
 
+}
 
+#ac-wrapper {
+    display: flex;
+    justify-content: space-around;
 
+}
+.modal-dialog {
+    flex-basis: 80%;
+    margin: 10px auto;
+}
+.modal-dialog{
+    height: 560px;
+}
 
+@media (max-width:490px) and (min-width:320px){
+    .modal-dialog{
+        height: auto;
+        padding: 8px;
+    }
+    .modal-body-1 h2 {
+        color: #9c20b3;
+        font-size:17px;
+    }
+    .modal-body-1 p {
+        font-size: 11px;
+    }
 
-
+}
 
 
 

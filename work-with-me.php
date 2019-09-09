@@ -62,7 +62,7 @@
                             </a>
                             <p>Are you looking to experience the energy and knowledge Cheryl brings, but in a group setting? This is for you if you would like to learn and build a network of other likeminded, strong, supportive partners who will champion your progress, then this is for you! Whilst the workshops are organized at a physical location, the MasterMinds are online. Mastermind groups are restricted to keep the focus and ensure everyone gets equal attention. We usually have workshops and Masterminds in the following topics: </p>
                             <ul>
-                                <li><strong>Money Masters</strong></li>
+                                <li><strong>3M: Master your Mind & your Money</strong></li>
                                 <li><strong>Cracking the Career Code</strong></li>
                                 <li><strong>Rise-Up: Women for Women</strong></li>
                             </ul>
@@ -74,14 +74,14 @@
                                 <h2>Corporate Training</h2>
                                 <img src="images/method-coaching/003.jpg" alt="" />
                             </a>
-                            <p>Cheryl has delivered Corporate trainings in corporates such as Oracle, National Paints. The topics she has trained on include Sales Mastery, Function of Treasury in a multi-national corporation, Operations Management, etc.<a href="#enquiry" style="text-decoration: underline;">here</a></p>
+                            <p>Cheryl has delivered Corporate trainings in corporates such as Oracle, National Paints. The topics she has trained on include Sales Mastery, Function of Treasury in a multi-national corporation, Operations Management, etc. To request to book Cheryl for a Corporate Training, please<a href="#enquiry" style="text-decoration: underline;"> click here</a></p>
                         </div>
                         <div class="method-coaching wow fadeInUp">
                             <a href="#enquiry">
                                 <h2>Speaking Engagements</h2>
                                 <img src="images/method-coaching/004.jpg" alt="" />
                             </a>
-                            <p>Cheryl has given keynote speeches at Universities such as SP Jain School of Global Management, Skyline University. She has also addressed church groups on topics such as Financial Discipline and Keys to Career Success.<a href="#enquiry" target="blank" style="text-decoration: underline;">here</a></p>
+                            <p>Cheryl has given keynote speeches at Universities such as SP Jain School of Global Management, Skyline University. She has also addressed church groups on topics such as Financial Discipline and Keys to Career Success. To request to book Cheryl for a Corporate Training, please<a href="#enquiry" style="text-decoration: underline;"> click here</a></p>
                         </div>
                     </div>
                 </div>
