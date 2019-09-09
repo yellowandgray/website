@@ -19,11 +19,11 @@
                     <div class="row">
                         <div class="col-lg-6 form-group">
                             <label>Name</label>
-                            <input type="text" name="name" style="border-bottom: 1px solid #000;">
+                            <input type="text" name="name" style="border-bottom: 1px solid #000;" required>
                         </div>
                         <div class="col-lg-6 form-group">
                             <label>Email Address</label>
-                            <input type="email" name="email" style="border-bottom: 1px solid #000;">
+                            <input type="email" name="email" style="border-bottom: 1px solid #000;" required>
                         </div>
                         <div class="col-lg-12 form-group">
                             <button type="submit" class="button-1 font-16"><span class="color-w">Join us!</span></button>

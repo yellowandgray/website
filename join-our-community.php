@@ -12,10 +12,10 @@
                         <form class="subscribe-form">
                             <div class="row">
                                 <div class="col-lg-4 form-group">
-                                    <input type="text" name="name" placeholder="Your Name..." class="input-box">
+                                    <input type="text" name="name" placeholder="Your Name..." class="input-box" required>
                                 </div>
                                 <div class="col-lg-4 form-group">
-                                    <input type="email" name="email" placeholder="Your Email..." class="input-box">
+                                    <input type="email" name="email" placeholder="Your Email..." class="input-box" required>
                                 </div>
                                 <div class="col-lg-4 form-group">
                                     <button type="submit" class="button-2"><span>Submit</span></button>
