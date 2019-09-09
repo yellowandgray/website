@@ -270,6 +270,7 @@
                                     <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-pre-kg.jpg" alt="Pre-KG - ENPEE International School" title="Pre-KG - ENPEE International School"></div>
                                     <div class="blog-txt">
                                         <h5><a href="#">Pre-KG</a></h5>
+                                        
                                         <!--                                        <ul class="post-meta">
                                                                                     <li><span>By:</span> Danial John</li>
                                                                                     <li><span>Posted:</span> 29 September, 2018</li>
