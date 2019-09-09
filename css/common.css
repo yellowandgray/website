@@ -142,17 +142,19 @@
     margin-bottom: 0;
 
 }
-.member-t a{
-    background-color: #ed1c24a6;
-    color: #fff !important;
-    border-radius: 25px;
-    padding: 10px 30px;
-    font-size: 12px;
-    letter-spacing: 3px;
-}
 
 .member-t a {
+    padding: 10px 30px;
+    width: 100px;
+    background: #ff00009e;
+    border-radius: 25px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.member-t a:hover {
     text-decoration: none;
+    background: #ff0000;
+    color: #fff;
 }
 
 .bg-img .member-t{
@@ -232,22 +234,34 @@ button {
 }
 .member-list li {
     list-style: none;
-    padding: 22px 10px 10px 10px;
+    padding: 15px 10px 15px 10px;
     margin-left: 54px;
     position: relative;
+    font-size: 20px;
 }
 .member-list img{
     position: absolute;
 
 }
-.member-list .mem-sign p a{
+
+.mem-sign p a{
     background-color: #ed1c24;
     color: #fff;
     padding: 10px 30px;
-    border-radius: 17px 17px 17px 17px;
+    border-radius: 25px;
 }
+
+.mem-sign p a:hover {
+    background: transparent;
+    border: 1px solid #ed1c24;
+    color: #ed1c24;
+    text-decoration: none;
+}
+
 .mem-sign {
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .checked {
     color: orange;
@@ -413,7 +427,12 @@ button {
     .footer-sec li a{
         font-size: 10px;
     }
-
+    .member-text h5 {
+        font-size: 20px !important;
+    }
+    .member-text h3 {
+        font-size: 25px !important;
+    }
 }
 
 .nav__title {
@@ -1185,12 +1204,12 @@ button {
     }
 } 
 .cc .active {
-/*    background-color: #d4d4d4 !important;*/
+    /*    background-color: #d4d4d4 !important;*/
 }
 
 .sing-t a:hover {
     background: #ed1c24;
-    box-shadow: 0px 0px 3px 0px white;
+    /*    box-shadow: 0px 0px 3px 0px white;*/
 }
 
 .nav-close {

@@ -2,7 +2,8 @@
     <?php include 'head.php'; ?>
     <body>
         <?php include 'menu.php'; ?>
-        <section class="login-pad" style="background-image:url(img/member/member-01.jpg); background-repeat:no-repeat; background-size: cover;">
+        <div class="padding-top-108"></div>
+        <section style="background-image:url(img/member/member-01.jpg);background-repeat:no-repeat;background-size: cover;height: 100%;padding: 40px 0 0 0;background-position: center;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -11,7 +12,7 @@
                             <h3>MEMBERS GET?</h3>
                         </div>
                         <div class="member-list">
-                            <ul>
+                            <ul class="padding-lr-0">
                                 <img src="img/member/Group 88@2x.png" alt=""/><li>Exclusive TooWheel racing T-Shirt worth RM99.00</li>
                                 <img src="img/member/Group 83@2x.png" alt=""/><li>Accident or death coverage courtesy to Toowheel organization</li>
                                 <img src="img/member/Group 82@2x.png" alt=""/><li>Access to all club portal/forum/updates and event</li>
@@ -20,10 +21,9 @@
                                 <img src="img/member/Group 79@2x.png" alt=""/><li>Special access to Toolwheel Events</li>
                                 <img src="img/member/Group 78@2x.png" alt=""/><li>Be part of monthly contest and exciting giveaway</li>
                             </ul>
-                            <div class="mem-sign">
-                                <p><a href="login.php">SIGN UP</a></p>
-                            </div>
-
+                        </div>
+                        <div class="mem-sign">
+                            <p><a href="login.php">SIGN UP</a></p>
                         </div>
                     </div>
 

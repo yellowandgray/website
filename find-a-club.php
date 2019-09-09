@@ -27,8 +27,9 @@
                         <label>Category:</label>
                         <select>
                             <option value="All">All</option>
-                            <option value="2 Wheel">2 Wheel</option>
-                            <option value="4 Wheel">4 Wheel</option>
+                            <option value="125cc">125cc</option>
+                            <option value="250cc">250cc</option>
+                            <option value="500cc">500cc</option>
                         </select>
                     </div>
                     <div class="search-sort-order">
