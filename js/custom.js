@@ -149,7 +149,7 @@ $(document).ready(function()
 				items: 1,
 				loop: true,
 				autoplay:true,
-				autoplayTimeout:5000,
+				autoplayTimeout:10000,
 				autoplaySpeed:800,
 				smartSpeed:800,
 				dotsContainer:'main_slider_custom_dots'
