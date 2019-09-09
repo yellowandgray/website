@@ -26,13 +26,13 @@ if ($_POST['fname']) {
 
     $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
 
-    $mail->Host = "mail.2dotask.com";      // sets GMAIL as the SMTP server
+    $mail->Host = "sg2plcpnl0113.prod.sin2.secureserver.net";      // sets GMAIL as the SMTP server
 
     $mail->Port = 465;                   // set the SMTP port for the GMAIL server
 
-    $mail->Username = "noreply@2dotask.com";  // GMAIL username
+    $mail->Username = "noreplay@cherylppinto.com";  // GMAIL username
 
-    $mail->Password = "Admin@2dotask";            // GMAIL password
+    $mail->Password = "Admin@cheryl$";             // GMAIL password
     $mail->IsHTML(true);
     $mail->SetFrom('noreply@cherylppinto.com', 'CHERYLPPINTO');
     $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
@@ -115,7 +115,7 @@ if ($_POST['fname']) {
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $mail->Body = $message;
     // More headers
-    $address = "projects@yellowandgray.com";
+    $address = "info@cherylppinto.com";
     $mail->AddAddress($address, "CHERYLPPINTO");
 //    $mail->AddCC('npschoolkkl@gmail.com', 'ALIAS');
 //    $mail->AddCC('arrchanac@gmail.com', 'ALIAS');

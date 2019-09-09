@@ -32,7 +32,7 @@
             </li>
             <li><a href="testimonials.php"><span>Testimonials</span></a></li>
             <li><a href="about.php"><span>About Cheryl</span></a></li>
-            <li><a href="blog.php"><span>Blogs</span></a></li>
+            <li><a href="#"><span>Blogs</span></a></li>
             <li><a href="contact.php"><span>Contact</span></a></li>
         </ul>
     </nav>

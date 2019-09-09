@@ -34,7 +34,7 @@
                             <p class="text-justify">"But what I do know is that I will give them <em>one of the most valuable treasures I can afford.</em>"</p>
                             <p class="text-justify"><strong>"I will give them the best education I can."</strong></p>
                             <p class="text-justify">And on that day, Cheryl's direction and destiny were etched deep within her subconscious.</p>
-                            <p class="text-justify">Her little mind was now changed with a new knowledge of what she picked up as being two <strong style="text-decoration:underline;">very</strong> important things  - <em>Money & Education</em>. But Education, being the <strong style="text-decoration:underline;"> most important.</strong></p>
+                            <p class="text-justify">Her little mind was now changed with a new knowledge of what she picked up as being two <em><strong style="text-decoration:underline;">very</strong></em> important things  - <em>Money & Education</em>. But Education, being the <em><strong style="text-decoration:underline;"> most important.</strong></em></p>
                             <p class="text-justify">And so as Cheryl grew, she sought out both of these with a sense of resolute determination. At 16, she took up her first job. At age 26, she had two Masters degrees under her belt. Soon she was a Harvard alumni. As her qualifications grew, so did her progress up the corporate ladder. At 26, she became the youngest Assistant Vice President at the Bank she worked for. </p>
                             <p class="text-justify">But her quest for knowledge did not cease. She worked on improving her</p>
                         </div>

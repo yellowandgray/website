@@ -45,7 +45,7 @@
     echo 'active';
 } ?>"><a href="testimonials.php"><span>Testimonials</span></a></li>
             <li class="<?php if ($page == 'about') {echo 'active';} ?>"><a href="about.php"><span>About Cheryl</span></a></li>
-            <li class="<?php if ($page == 'blog') {echo 'active';} ?>"><a href="blog.php"><span>Blogs</span></a></li>
+            <li class="<?php if ($page == 'blog') {echo 'active';} ?>"><a href="#"><span>Blogs</span></a></li>
             <li class="<?php if ($page == 'contact') {echo 'active';} ?>"><a href="contact.php"><span>Contact</span></a></li>
         </ul>
     </nav>

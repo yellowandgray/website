@@ -75,7 +75,7 @@
                                 </ul>
 
                             </div>
-                            <div class="bx-04 wow box-4  fadeInRight">
+<!--                            <div class="bx-04 wow box-4  fadeInRight">
                                 <div>
                                     <img src="images/slider/001.png" alt="" class="img-b">
                                 </div>
@@ -89,7 +89,7 @@
                                         <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income...</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>

@@ -25,7 +25,7 @@
             <?php include 'mobile-menu.php'; ?>
             <!-- Hero Slider -->
             <div class="home">
-                <video autoplay loop poster="polina.jpg" id="vid" muted>
+                <video home-v autoplay loop poster="polina.jpg" id="vid" muted>
                     <source src="vedio/Homepage-Banner-V2.mp4" type="video/mp4">
                 </video>  
                 <div class="overlay"></div>
@@ -157,10 +157,9 @@
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Financial Freedom</h3>
-                                    <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
-                                        Your browser does not support the <code>video</code> tag.
-                                    </video>
+                                    <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/L7y0MXIkpj8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
                                     <p>Do you now wish to stop working for money and have money work for you? Do you often get to the end of the month and wonder where your money has gone? Are you drowning in the quagmire of credit card debts and know that something needs to change? Then get in touch with me now. I have been a banker for nearly 2 decades, have cracked the code and am waiting to show you how you too, can become finanically free. </p>
                                 </div>
                                 <div class="text-center arrow-1">
@@ -177,10 +176,9 @@
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container  d-flex flex-column">
                                     <h3 class="text-center">Life Control</h3>
-                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
-                                        Your browser does not support the <code>video</code> tag.
-                                    </video>
+                                    <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/XF98t4cUGWU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
                                     <p>Do you find yourself wanting to do more, live more meaningfully, give back to the world, but just haven't been able to? Connect with me and we will shine the light on how you may manage your time and thus your life so that you live the life you want to live.</p>
                                 </div>
                                 <div class="text-center arrow-1">
@@ -197,10 +195,9 @@
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Career Mastery</h3>
-                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
-                                        Your browser does not support the <code>video</code> tag.
-                                    </video>
+                                    <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/LvWBNouNTzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
                                     <p>Are you in a job that does not light you up, or in a career that you once loved but now wish to change? Or do you find yourself unable to advance in your career no matter what you do? Then chat with me and we will discover how you too can race through the corporate ladder.</p>
                                 </div>
                                 <div class="text-center arrow-1">
@@ -219,13 +216,13 @@
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container  d-flex flex-column">
                                     <h3 class="text-center">Professional Trader</h3>
-                                    <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
-                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/fQUfIgLCAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                   <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/sBlVLrPV_LM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <p>Are you a trader in the financial markets and are unable to remain consistently profitable? Perhaps you cannot stick to your rules or deal with the psychological impact of trading? Talk to me - I trade Forex and Futures markets - I have been through the same painful rite of passage and emerged victorious. </p>
                                 </div>
                                 <div class="text-center arrow-1">
-                                   <a href="contact.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                    <a href="contact.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -239,7 +236,7 @@
                                 <div class="icon_container  d-flex flex-column">
                                     <h3 class="text-center">Life reboot</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
-                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/u7NntUPBdkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/L8zso0wjca4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <p>Are you at a stage where you feel like it is ‘now time’ to make a large change? Do you feel that there "there has to be more than this" and want to radically catapult all areas of your life? If you wish to disrupt the status quo,follow your passion, live life to the fullest, then contact me right away. I will be honored to guide you along your path to your most fulfilling life.</p>
                                 </div>
@@ -258,7 +255,7 @@
                                 <div class="icon_container  d-flex flex-column">
                                     <h3 class="text-center">Woman Of Wonder</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
-                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/QwooUQ-oAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/gtJPS1JE7-c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <p>Are you an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress? Do you want it to be easier to ask for a raise or a promotion or be heard? Then grab a coffee with me! I have ‘been there, done that’ and am thrilled to help you learn the ropes. Let's do this, sister! </p>
                                 </div>
@@ -280,7 +277,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <div class="text-bg wow fadeInUp">
                                 <div class="about_text">
                                     <h3 class="color-purple">Hi! I am Cheryl.</h3>

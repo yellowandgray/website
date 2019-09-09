@@ -14,11 +14,99 @@
             <div class="prlx_parent" style="height: 110px;background: #3f1a56;width: 100%;">
             </div>
             <!-- Features -->
+            <div class="container test-video">
+                <div class="row  features">
+                    <div class="col-md-12 text-center section_title section_title_dark wow fadeInDown">
+                        <h2>Video</h2>
+                    </div>
+                    <div class="bx-01">
+                        <!-- Features Item -->
+                        <div class="bx-02  coach-box  wow fadeInUp">
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container d-flex flex-column">
+                                    <h3 class="text-center">Avil Pinto</h3>
+                                    <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                        <source src="vedio/Avil Pinto.mp4" type="video/mp4">
+                                        Your browser does not support the <code>video</code> tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Features Item -->
+                        <div class="bx-02  coach-box wow fadeInUp">
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container  d-flex flex-column">
+                                    <h3 class="text-center">Paulo D</h3>
+                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                        <source src="vedio/Paulo D.mp4" type="video/mp4">
+                                        Your browser does not support the <code>video</code> tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Features Item -->
+                        <div class="bx-02  coach-box wow fadeInUp">
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container d-flex flex-column">
+                                    <h3 class="text-center">Sohel Shaikh</h3>
+                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                        <source src="vedio/Sohel Shaikh.mp4" type="video/mp4">
+                                        Your browser does not support the <code>video</code> tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <div class="features">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center section_title section_title_dark wow fadeInDown">
                             <h2>HEAR IT FROM THE HAPPY HORSE’S MOUTH</h2>
+                        </div>
+                    </div>
+                    <div class="row pad-20">
+                        <div class="col-lg-8 left-order testimoni wow fadeInLeft">
+                            <h4><strong>Paul Dermody</strong></h4>
+                            <p class="text-justify">Cheryl Pinto has been my life coach for the past 5 months. I was working in the IT industry for 5 years and felt like I needed a change and pursue a passion I always had but never had the courage to follow. By accident I met Cheryl and we started working together. She has been very successful in her own career – she has walked the walk – corporate professional, high intensity work. So therefore she understood my world. She is very capable with her skills with NLP. Her general good nature and intelligence makes Cheryl very easy to work with. She is very smart. She drove me, pushed me in areas I probably wasn’t comfortable to go but I wanted to go. It’s been absolutely phenomenal. Now I am completely changing career and going on a new journey which I am so excited about. I’ve gone from being minorly depressed to majorly excited about the future. I cant thank Cheryl enough and I can’t recommend her enough. It’s difficult to make major changes without someone there to support you, to guide you and to push you. If you’re looking to make that sort of change or impact, then Cheryl is definitely one of the best I’ve worked with –I know, I’ve tried a few :) Good luck!</p>
+                        </div>
+                        <div class="col-lg-4 box-7 text-center wow fadeInRight">
+                            <img src="images/testimonial/testimonial-012.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="row pad-20">
+                        <div class="col-lg-8 left-order testimoni wow fadeInLeft">
+                            <h4><strong>Avil Pinto</strong></h4>
+                            <h5>Founder, Dubai Job Hunt</h5>
+                            <p class="text-justify">Today is just the 18th day since we began our coaching session. With just 2 sessions, falling short of words to describe the transformation that's taking place in my life. In such short time, i have explored & realized things which i was always struggling with! Wish I had known you before .. Thanks for guiding me to clean up my mind out of fears, worries, limiting beliefs and filling me with hope, confidence, clarity, goals and above all helping me understand myself and my purpose. I always believed that nothing comes easy in life, one needs luck on his side and influence of others. After meeting you, I feel life is so simple and everything is possible and achievable. You truly are God's gift to mankind. You have not only brought change within me but also in my family. Thank you very much!</p>
+                            <i>Reach Avil Pinto at FB Page <a href="https://www.facebook.com/groups/Dubaijobhunt/" target="_blank">click here.</a></i>
+                        </div>
+                        <div class="col-lg-4 box-7 text-center wow fadeInRight">
+                            <img src="images/testimonial/testimonial-002.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="row pad-20">
+                        <div class="col-lg-8 left-order testimoni wow fadeInLeft">
+                            <h4><strong>Kunal Bhatia</strong></h4>
+                            <h5>Assistant Vice President- FX, Interest rates & Commodity Derivative Solutions</h5>
+                            <p class="text-justify">At the outset I looked at NLP with a lot of skepticism and it was only because I trusted Cheryl that I decided to give it a shot. She has the ability to make you believe and it comes very naturally to her. As sessions go by, she makes you comfortable enough to open facets of yourself which you wouldn't share with anyone. This enhances her understanding and empathy of you and enables her to perform the various NLP techniques with great effect. The clarity and pin-pointedness with which Cheryl helped my situation is something which has made me understand and manage myself better. I am a better-focused and more energized version of myself. There are obvious improvements in my speech, body language, mental state of being and most importantly i am a tad bit spiritually enlightened. Hand over your absolute 100% trust to her and she will go beyond what is required to help improve your life. She has the emotional and mental maturity as well as the talent and technique to use her NLP skills and understanding to help channel you in the right direction.</p>
+                        </div>
+                        <div class="col-lg-4 box-7 text-center wow fadeInRight">
+                            <img src="images/testimonial/testimonial-013.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="row pad-20">
+                        <div class="col-lg-8 left-order testimoni wow fadeInLeft">
+                            <h4><strong>Ram S</strong></h4>
+                            <h5>Team Leader at a bank in Dubai</h5>
+                            <p class="text-justify">Cheryl has been a friend, mentor and guide for me. I have worked with Cheryl over the past 14 months and I can term our engagement as a wonderful journey of discovering new things, acquiring new habits and learning how to utilize my 24 hours in the best way possible. The key thing I have learned working with Cheryl is how to replace my current habits with new better habits in a small and gradual manner. Now I am working towards setting new goals for myself and I feel more empowered to achieve them then ever before. I have realized that there is so much to achieve and best way to achieve your goals is to work with people who believe in you (like Cheryl).</p>
+                        </div>
+                        <div class="col-lg-4 box-7 text-center wow fadeInRight">
+                            <img src="images/testimonial/testimonial-011.png" alt=""/>
                         </div>
                     </div>
                     <div class="row pad-20">
@@ -39,7 +127,7 @@
                             <i> <a href="#" target="_blank"></a></i>
                         </div>
                         <div class="col-lg-4 box-7 text-center wow fadeInRight">
-                            <img src="images/testimonial/testimonial-002.png" alt=""/>
+                            <img src="images/testimonial/testimonial-011.png" alt=""/>
                         </div>
                     </div><br><br>
                     <div class="row pad-20">
@@ -177,54 +265,7 @@
 
                 </div>
             </div>
-            <div class="container test-video">
-                <div class="row  features">
-                    <div class="col-md-12 text-center section_title section_title_dark wow fadeInDown">
-                        <h2>Video</h2>
-                    </div>
-                    <div class="bx-01">
-                        <!-- Features Item -->
-                        <div class="bx-02  coach-box  wow fadeInUp">
-                            <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container d-flex flex-column">
-                                    <h3 class="text-center">Avil Pinto</h3>
-                                    <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/Avil Pinto.mp4" type="video/mp4">
-                                        Your browser does not support the <code>video</code> tag.
-                                    </video>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Features Item -->
-                        <div class="bx-02  coach-box wow fadeInUp">
-                            <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container  d-flex flex-column">
-                                    <h3 class="text-center">Paulo D</h3>
-                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/Paulo D.mp4" type="video/mp4">
-                                        Your browser does not support the <code>video</code> tag.
-                                    </video>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Features Item -->
-                        <div class="bx-02  coach-box wow fadeInUp">
-                            <div class="features_item  d-flex flex-column align-items-center ">
-                                <div class="icon_container d-flex flex-column">
-                                    <h3 class="text-center">Sohel Shaikh</h3>
-                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/Sohel Shaikh.mp4" type="video/mp4">
-                                        Your browser does not support the <code>video</code> tag.
-                                    </video>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
 
 
             <?php include 'join-our-community.php'; ?>

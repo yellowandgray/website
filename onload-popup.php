@@ -13,11 +13,12 @@
                 <form class="onload-popup-form">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="First Name" required  />
-                    </div>
-                    <div class="form-group">
                         <input type="email" name="email" placeholder="Email" required />
                     </div>
-                    <button type="submit" class="button-1"><span>Get Access!</span></button>
+                    <div class="form-group-s">
+                        <button type="submit" class="button-1"><span>Get Access!</span></button>
+                    </div>
+
                 </form>
             </div>
         </div>
