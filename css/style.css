@@ -258,19 +258,17 @@ body {
     margin: 0;
     background: #0006;
     position: relative;
-    bottom: 164px;
+    bottom: 157px;
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
 }
 
 .clb-bg {
-    border-bottom: 30px solid #ff0000;
-    border-right: 15px solid transparent;
+    background: #ff0000;
     width: 100px;
-    height: 0;
     position: relative;
-    top: 0px;
-    padding: 0;
+    top: 5px;
+    padding: 4px;
     text-align: center;
     margin: 0;
     font-weight: 700;
@@ -1366,3 +1364,28 @@ body {
     box-shadow: 0 0 15px 10px #eee;
     padding: 0 20px 50px;
 }
+
+/*.count-radio {
+    width: 100px;
+    margin: 0 auto;
+    display: table;
+    position: relative;
+}
+
+.count-radio input {
+    visibility: hidden;
+}
+
+.count-radio label {
+    position: relative;
+    width: 25px;
+    background: #ed1c24;
+    border-radius: 50%;
+    color: #fff;
+     display: table-cell; 
+    vertical-align: middle;
+}
+
+.count-radio input[type="radio"]:checked + label{
+  background-color: #58ba83;
+}*/

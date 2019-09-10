@@ -15,6 +15,7 @@
     <link href="css/slick-slider.css" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="css/rangeslider.css" rel="stylesheet" type="text/css"/>
     <style>
         @font-face {
             font-family: "VenusRising";

@@ -140,6 +140,19 @@
                         </div>
                     </div>
                 </div>
+<!--                <div class="row">
+                    <div class="count-radio"> 
+                        <input type="radio" name="size" id="size_1" value="small" checked />
+                        <label for="size_1">1</label>
+
+                        <input type="radio" name="size" id="size_2" value="small" />
+                        <label for="size_2">1</label>
+
+                        <input type="radio" name="size" id="size_3" value="small" />
+                        <label for="size_3">1</label>
+
+                    </div>
+                </div>-->
             </div>
         </div>
         <?php include 'footer.php'; ?>

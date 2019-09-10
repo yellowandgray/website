@@ -120,6 +120,7 @@
 <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
 <script src="js/slick-slider.js" type="text/javascript"></script>
+<script src="js/rangeslider.min.js" type="text/javascript"></script>
 <script>
     function openNav() {
         document.getElementById("mySidenav").style.height = "100%";

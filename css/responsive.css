@@ -6,6 +6,9 @@
     .search-section {margin-bottom: 20px !important;}
     .search-section input  {border-radius: 25px !important;}
     .search-section .search-btn  {display: none !important;}
+    .bg-1 span {
+        font-size: 40px !important;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -22,7 +25,6 @@
     .video-bg-banner .video-overlay {height: 100% !important;}
     .footer__logo img {width: 100% !important;}
     .tag-box p {font-size: 14px !important;}
-    .bg-1 span {font-size: 50px !important;}
     .bg-1 .container {bottom: 0px !important;}
     .bg-1 .slick-slider {bottom: 0px !important;}
     .social-media-section .social-bg span {font-size: 35px !important;}
@@ -30,6 +32,7 @@
     .social-icon {bottom: 90px !important;}
     .search-section .search-btn  {padding: 12px 12px !important;}
     .search-section {margin-bottom: 20px !important;}
+    .bg-1 span {font-size: 50px !important;}
 }
 
 @media screen and (max-height: 600px) {
