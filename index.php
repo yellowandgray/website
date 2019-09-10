@@ -53,7 +53,7 @@ foreach ($sub_categories as $row) {
     </head>
     <body class="home page-template-default page page-id-5 twentyseventeen-front-page has-header-image page-two-column colors-light" style="">
         <div id="page">
-            <!-- header start -->
+            <!-- HEADER SECTION -->
             <header id="header" class="container-fluid">
                 <div class="row">
                     <div class="header-wrapper">
@@ -94,12 +94,14 @@ foreach ($sub_categories as $row) {
                     </div>
                 </div>
             </header>
-            <!-- /header -->
-            <!-- content start -->
+            <!-- END HEADER SECTION -->
+
             <div class="contain content">
                 <section id="main-banner" class="container-fluid" style="height: 756px;">
                     <!--                    <div class="row"></div>-->
                     <div class="banner_menu clearfix banner_sticky" style="height: 756px;">
+                        
+                        <!-- MENU SECTION -->
                         <div class="sidebar-container">
                             <div class="sidebar-menu">
                                 <div id="hamburger" class="hamburger">
@@ -132,7 +134,9 @@ foreach ($sub_categories as $row) {
                                 </ul>
                             </div>
                         </div>
-
+                        <!-- END MENU SECTION -->
+                        
+                        <!-- MOBILE MENU SECTION -->
                         <ul class="nav_menu clearfix">
                             <li class="email-margin-b"><a href="mailto:products@macworldinc.com" target="blank">Email</a></li>
                             <li><a href="https://www.linkedin.com/company/mac-world-industries-sdn-bhd" target="blank">LinkedIN</a></li>
@@ -140,22 +144,34 @@ foreach ($sub_categories as $row) {
                                                         <li><a href="#">Instagram</a></li>-->
                             <li class="mobile-language search-panel-right">
                                 <div class="language_flag select_language text-center" style="display: inline-block;">
-                                    <select class="language_select">
+                                    <div id="google_translate_element"></div>
+<!--                                    <select class="language_select">
                                         <option value="en" selected="">En</option>
                                         <option value="fr">Fr</option>
                                         <option value="ar">Ar</option>
-                                    </select>
+                                    </select>-->
                                 </div>
                             </li>
                         </ul>
+                        <!-- END MOBILE MENU SECTION -->
                     </div>
+                    
+                    <!-- BANNER CONTENT -->
                     <div class="container">
                         <div class="banner_content text-center">
                             <figure><img title="" src="img/mac_wolrd.png" alt=""></figure>
                             <h2>Futurizing Manufacturing <br/>and <br/>Commodities Commerce Globally </h2>
                         </div>
                     </div>
-                    <div class="sroll_down"><a href="#">Scroll Down</a></div>
+                     <!-- END BANNER CONTENT -->
+                     
+                     <!-- RIGHT SIDE SCROLLING SECTION -->
+                    <div class="sroll_down">
+                        <a href="#">Scroll Down</a>
+                    </div>
+                     <!-- END RIGHT SIDE SCROLLING SECTION -->
+                     
+                     <!-- BANNER SECTION -->
                     <div class="row" id="web_banner">
                         <ul id="sb-slider" class="">
                             <li>
@@ -215,6 +231,9 @@ foreach ($sub_categories as $row) {
                             </li>
                         </ul>
                     </div>
+                     <!-- END BANNER SECTION -->
+                     
+                     <!-- MOBILE BANNER SECTION -->
                     <div class="row" id="mobile_banner">
                         <ul id="sb-slider" class="sb-slider">
                             <li>
@@ -274,6 +293,7 @@ foreach ($sub_categories as $row) {
                             </li>
                         </ul>
                     </div>
+                     <!-- END MOBILE BANNER SECTION -->
                 </section>
                 <script>
                     jQuery('input.d-inline-flex.search-product').keypress(function (e) {
@@ -287,6 +307,8 @@ foreach ($sub_categories as $row) {
                         }
                     });
                 </script>
+                
+                <!-- FUTURIZING MANUFACTURING AND COMMODITIES COMMERCE GOLBALLY -->
                 <section id="our_journey" class="container-fluid back_main internation_house_section" style="background-image: url(img/ecport_house.png);">
                     <div class="row">
                         <div class="back_img"> 
@@ -308,6 +330,9 @@ foreach ($sub_categories as $row) {
                         </div>
                     </div>
                 </section>
+                <!-- END FUTURIZING MANUFACTURING AND COMMODITIES COMMERCE GOLBALLY -->
+                
+                <!-- WHO WE ARE SECTION -->
                 <section id="about_section" style="background-image: url(&quot;img/about_banner-01.jpg&quot;); background-size: cover">
                     <div class="container-fluid">
                         <div class="row">
@@ -331,6 +356,8 @@ foreach ($sub_categories as $row) {
                         </div>
                     </div>
                 </section>
+                <!-- END WHO WE ARE SECTION -->
+                
                 <script>
                     $(window).load(function () {
                         $(".trigger_popup_fricc").click(function () {
@@ -351,6 +378,8 @@ foreach ($sub_categories as $row) {
 //                        return false;
 //                    }
                 </script>
+                
+                <!-- JOIN OUR TEAM SECTION -->
                 <section class="about_right_section" id="about_right_section">
                     <div class="container">
                         <div class="row">
@@ -436,6 +465,9 @@ foreach ($sub_categories as $row) {
                         </div>
                     </div>
                 </section>
+                <!-- END JOIN OUR TEAM SECTION -->
+                
+                <!-- WHAT WE DO SECTION -->
                 <section class="container-fluid" id="team_section" style="background: url(img/what-we-do-bg.jpg) no-repeat;background-size: cover">
                     <div class="row">
                         <div class="container">
@@ -464,6 +496,9 @@ foreach ($sub_categories as $row) {
                         </div>
                     </div>
                 </section>
+                <!-- END WHAT WE DO SECTION -->
+                
+                <!-- PRODUCT SECTION -->
                 <section class="container-fluid light-gray-bg">
                     <div class="row">
                         <div class="product-list-wrapper clearfix">
@@ -564,6 +599,9 @@ foreach ($sub_categories as $row) {
                         </div>
                     </div>
                 </section>
+                <!-- END PRODUCT SECTION -->
+                
+                <!-- OUR SERVICES SECTION -->
                 <section class="container-fluid" id="service_section">
                     <div class="row">
                         <div class="container">
@@ -591,6 +629,9 @@ foreach ($sub_categories as $row) {
                         </div>
                     </div>
                 </section>
+                <!-- END OUR SERVICES SECTION -->
+                
+                <!-- ACCREDITATIONS SECTION -->
                 <section class="container-fluid padding-t-80" id="accreditation_section">
                     <div class="row">
                         <div class="container">
@@ -695,6 +736,9 @@ foreach ($sub_categories as $row) {
                         </div>
                     </div>
                 </section>
+                <!-- END ACCREDITATIONS SECTION -->
+                
+                <!-- OUR PARTNERS SECTION -->
                 <section class="container-fluid out_partner_section" id="ourpartner">
                     <div class="row">
                         <div class="container">
@@ -801,6 +845,8 @@ foreach ($sub_categories as $row) {
                         </div>
                     </div>
                 </section>
+                <!-- END OUR PARTNERS SECTION -->
+                
                 <script>
                     $(document).ready(function () {
                         $("ul.nav.nav-tabs li").click(function () {
@@ -870,6 +916,8 @@ foreach ($sub_categories as $row) {
                         </div>
                     </div>
                 </section>-->
+                
+                <!-- MAP SECTION -->
                 <section id="map_indigate_section" class="container-fluid map_indigate_section">
                     <div class="row">
                         <div class="container">
@@ -894,7 +942,9 @@ foreach ($sub_categories as $row) {
                         </div>
                     </div>
                 </section>
-                <!-- footer start -->
+                <!-- END MAP SECTION -->
+                
+                <!-- FOOTER SECTION -->
                 <footer class="container-fluid back_main" id="contact_section" style="background-image: url(img/footer_image.png);">
                     <div class="row">
                         <div class="back_img"> <img src="img/footer_image.png" alt="" title="" style="display: none;"> </div>
@@ -985,6 +1035,8 @@ foreach ($sub_categories as $row) {
                         </div>
                     </div>
                 </footer>
+                <!-- END FOOTER SECTION -->
+                
                 <script>
                     $(window).load(function () {
                         $(".trigger_popup_fricc1").click(function () {
