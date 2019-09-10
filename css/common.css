@@ -715,7 +715,7 @@ ul#menu > li{
 }
 
 label{
-    padding: 0 12px 12px;
+    padding: 0 4px 0px;
     cursor: pointer;
     font-size: 13px;
     font-weight: 700;
@@ -979,7 +979,7 @@ ul.submenu li a{
 }
 
 .c-info {
-    height: 430px;
+    height: 315px;
     margin-bottom: 20px;
 }
 
@@ -1245,4 +1245,14 @@ marquee {
 
 .list-style-none li ul {
     list-style-type: none;
+}
+
+.event-img-margin {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.event-img-margin p {
+   text-align: center;
+   color: #000;
 }
