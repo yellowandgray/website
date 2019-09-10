@@ -329,25 +329,26 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3 mb-md-4">
                                             <label>I'M INTERESTED</label>
-                                            <select name="" class="w-100">
+                                            <select id="carm3" name="" class="w-100">
                                                 <option value="">Please Select</option>
-                                                <option value="Rent our Space">Rent our Space</option>
-                                                <option value="Book a Training Session">Book a Training Session</option>
+                                                <option value="Rent_our_Space">Rent our Space</option>
+                                                <option value="Book_a_Training_Session">Book a Training Session</option>
                                             </select>
                                             <br/>
                                             <br/>
-                                            <div mbsc-form>
-                                                <div class="mbsc-grid">
-                                                    <div class="mbsc-row">
-                                                        <div class="mbsc-col-sm-12 mbsc-col-md-12">
-                                                            <div class="mbsc-form-group">
-                                                                <!--                            <div class="mbsc-form-group-title">Multi-day</div>-->
-                                                                <div id="demo-multi-day"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <input type="text" name="other_interest" style="display:none" />
+                                            <!--                                            <div mbsc-form>
+                                                                                            <div class="mbsc-grid">
+                                                                                                <div class="mbsc-row">
+                                                                                                    <div class="mbsc-col-sm-12 mbsc-col-md-12">
+                                                                                                        <div class="mbsc-form-group">
+                                                                                                                                        <div class="mbsc-form-group-title">Multi-day</div>
+                                                                                                            <div id="demo-multi-day"></div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>-->
                                             <br/>
                                             <button class="btn btn-ok" id="timeButton">Select Date</button>
                                         </div>

@@ -129,6 +129,16 @@
     .table-alignment td {
         font-size: 15px !important;
     }
+    .banner-text h2 {
+        font-size: 40px !important;
+    }
+    .banner-text span {
+        font-size: 25px !important;
+    }
+    .banner-text h1 {
+        font-size: 35px !important;
+        top: 37% !important;
+    }
 }
 
 @media (min-width: 390px) and (max-width: 599px) {
@@ -271,11 +281,30 @@
     }
 }
 
+@media (min-width: 769px) and (max-width: 991px) {
+    .banner-text h2 {
+        font-size: 50px !Important;
+        top: 40% !important;
+    }
+    .banner-text span {
+        font-size: 52px !important;
+        top: 45% !important;
+        left: 15% !important;
+    }
+    .banner-text h1 {
+        font-size: 50px !important;
+        top: 37% !important;
+    }
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
     ul.bannerSlider {
         margin-top: 97px !important;
         margin-bottom: 0 !important;
     }
+}
+
+@media screen and (max-width: 1024px) {
     .banner-text h2 {
         position: relative;
         top: 25%;
@@ -291,8 +320,8 @@
         color: #fff;
         letter-spacing: 5px;
         position: absolute;
-        left: 10% !important;
-        top: 30% !important;
+        left: 10%;
+        top: 30%;
         z-index: 1;
     }
     .banner-text h1 {
