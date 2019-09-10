@@ -35,6 +35,60 @@
                 </div>
             </section>
             <div class="features">
+                <div class="container audio">
+                    <div class="row">
+                        <div class="col-lg-12 text-center wow fadeInDown">
+                            <h2>Video</h2>
+                        </div>
+                    </div>
+                    <div class="bx-01 margin-t-22 pad-f-video">
+                        <!-- Features Item -->
+                        <div class="bx-05 box-4  wow fadeInUp">
+                            <div class="features_item  d-flex flex-column align-items-center">
+                                <div class="icon_container  d-flex flex-column">
+                                    <h3 class="text-center">Do You Need a Crisis or can Everyone benefit from Coaching.</h3>
+                                    <iframe width="100%" height="190"src="https://www.youtube.com/embed/Rq7harxrjsc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <!--<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Features Item -->
+                        <div class=" bx-05 box-4 wow fadeInUp">
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container d-flex flex-column">
+                                    <h3 class="text-center">What Is The Difference Between Psychiatry & Coaching?</h3>
+                                    <iframe width="100%" height="190" src="https://www.youtube.com/embed/QtdJVjmrA2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <!--<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bx-01 margin-t-22 pad-f-video">
+                        <!-- Features Item -->
+                        <div class="bx-05 box-4 wow fadeInUp">
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container  d-flex flex-column">
+                                    <h3 class="text-center">Life Coaching is broad.Which are do you specialize in?</h3>
+                                    <iframe width="100%" height="190" src="https://www.youtube.com/embed/16XkwShcNLo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <!--<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature"bx-05 s Item -->
+                        <div class=" bx-05 box-4 wow fadeInUp">
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container  d-flex flex-column">
+                                    <h3 class="text-center">How are Coaching Sessions Structured?</h3>
+                                    <iframe width="100%" height="190" src="https://www.youtube.com/embed/bZTbAff40Lc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <!--<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 coaching offset-lg-3 section_title section_title_dark wow fadeInDown">
@@ -59,7 +113,7 @@
                 <!-- About -->
                 <!--<div class="about prlx_parent" style="background-image:url(images/main_slider_03.jpg);background-repeat: no-repeat;background-size: cover;background-position: right;">-->
                 <div class="prlx_parent pad-50" >
-                    <div class="container">
+                    <div class="container how">
                         <div class="bx-01">
                             <div class="bx-03 wow fadeInLeft">
                                 <h3 class="pad-20"><strong>HOW DOES COACHING HELP?</strong></h3>
@@ -75,28 +129,17 @@
                                 </ul>
 
                             </div>
-<!--                            <div class="bx-04 wow box-4  fadeInRight">
-                                <div>
-                                    <img src="images/slider/001.png" alt="" class="img-b">
-                                </div>
-                                <div class="features_item d-flex flex-column align-items-center ">
-                                    <div class="icon_container d-flex flex-column">
-                                        <h3 class="text-center">Financial Freedom</h3>
-                                        <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                            <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4">
-                                            Your browser does not support the <code>video</code> tag.
-                                        </video>
-                                        <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income...</p>
-                                    </div>
-                                </div>
-                            </div>-->
+                            <div class="bx-04 wow img-shadow fadeInRight">
+                                <img src="images/resource-01.jpg" alt="" style="width: 100%;"/>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class=" prlx_parent" >
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 wow fadeInUp">
+                    <div class="container how">
+                        <div class="bx-01">
+                            <div  class="bx-03  wow fadeInUp">
                                 <h3 class="pad-20"><strong>WHY WOULD YOU WORK WITH A LIFE COACH?</strong></h3>
                                 <ul class="list-1">
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Can you imagine not having to go to school or University and having to learn everything on your own? How long would that have taken you? You <strong>will</strong> achieve your goals, with or without a Coach. Having a Coach will just get you there much, much faster.</li>
@@ -107,6 +150,9 @@
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">If you've answered yes to any of these questions, then working with a Life Coach will bring you the clarity, direction and courage you seek.</li>
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">If you feel inspired to connect with Cheryl for Coaching, then contact us <a href="https://yellowandgray.com/cherylppinto/contact.php" target="blank" style="text-decoration: underline;">here</a></li>
                                 </ul>
+                            </div>
+                            <div class="bx-04 wow img-shadow fadeInRight">
+                                <img src="images/resource-02.jpg" alt="" style="width: 100%;"/>
                             </div>
                         </div>
                     </div>

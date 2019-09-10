@@ -4,8 +4,8 @@ if ($_POST['fname']) {
     $fname = $_REQUEST['fname'];
     $lname = $_REQUEST['lname'];
     $linkdin = $_REQUEST['linkdin'];
-    $business_name = $_REQUEST['business-name'];
-    $business_url = $_REQUEST['business-url'];
+//    $business_name = $_REQUEST['business-name'];
+//    $business_url = $_REQUEST['business-url'];
     $email = $_REQUEST['email'];
     $mobile = $_REQUEST['phone'];
     $their_full_name = $_REQUEST['their-full-name'];
@@ -15,6 +15,9 @@ if ($_POST['fname']) {
     $about_life = $_REQUEST['about-life'];
     $quickly = $_REQUEST['quickly'];
     $specifically = $_REQUEST['specifically'];
+    $right = $_REQUEST['right'];
+    $connect = $_REQUEST['connect'];
+    $finally = $_REQUEST['finally'];
     //$no_children = $_REQUEST['no_children'];
 //    $preffred_classes = $_REQUEST['preffred_classes'];
 //    $social_media = $_REQUEST['social_media'];
@@ -70,7 +73,7 @@ if ($_POST['fname']) {
             <tbody>
             <tr>
             <td style = "padding:36px 48px;display:block">
-            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "images/logo.png" alt = "CHERYLPPINTO" style = "width:50%" /></h1>
+            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src="http://cherylppinto.com/images/logo.png" alt = "CHERYLPPINTO" style = "width:50%" /></h1>
             </td>
             </tr>
             </tbody>
@@ -89,20 +92,21 @@ if ($_POST['fname']) {
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
             <h3 style = "margin:0 0 16px; text-align:center;">Enquiry Form Details.</h3>
-            <p style = "margin:0 0 16px">Name: ' . $fname . '</p>
-            <p style = "margin:0 0 16px">Name: ' . $lname . '</p>
-            <p style = "margin:0 0 16px">Name: ' . $linkdin . '</p>
-            <p style = "margin:0 0 16px">Name: ' . $business_name . '</p>
-            <p style = "margin:0 0 16px">Name: ' . $business_url . '</p>
-            <p style = "margin:0 0 16px">Email: ' . $email . '</p>
-            <p style = "margin:0 0 16px">Email: ' . $mobile . '</p>
-            <p style = "margin:0 0 16px">Email: ' . $their_full_name . '</p>
-            <p style = "margin:0 0 16px">Email: ' . $about_cheryle . '</p>
-            <p style = "margin:0 0 16px">Email: ' . $about_current . '</p>
-            <p style = "margin:0 0 16px">Email: ' . $challenges . '</p>
-            <p style = "margin:0 0 16px">Email: ' . $about_life . '</p>
-            <p style = "margin:0 0 16px">Email: ' . $quickly . '</p>
-            <p style = "margin:0 0 16px">Email: ' . $specifically . '</p>
+            <p style = "margin:0 0 16px"><strong>Name:</strong>' . $fname . '</p>
+            <p style = "margin:0 0 16px"><strong>Last Name:</strong> ' . $lname . '</p>
+            <p style = "margin:0 0 16px"><strong>Linkedin Page:</strong> ' . $linkdin . '</p>
+            <p style = "margin:0 0 16px"><strong>Email:</strong> ' . $email . '</p>
+            <p style = "margin:0 0 16px"><strong>Phone:</strong> ' . $mobile . '</p>
+            <p style = "margin:0 0 16px"><strong>Full Name of the referred client:</strong> ' . $their_full_name . '</p>
+            <p style = "margin:0 0 16px"><strong>how did you learn about Cheryl P Pinto?</strong> ' . $about_cheryle . '</p>
+            <p style = "margin:0 0 16px"><strong>What do you want to be doing?</strong> ' . $about_current . '</p>
+            <p style = "margin:0 0 16px"><strong>What opportunities and/or challenges are you currently facing that keep you from moving forward?</strong> ' . $challenges . '</p>
+            <p style = "margin:0 0 16px"><strong>What would you most like to change about your life?</strong> ' . $about_life . '</p>
+            <p style = "margin:0 0 16px"><strong>How quickly (or not) would you like to change your life? And why?</strong> ' . $quickly . '</p>
+            <p style = "margin:0 0 16px"><strong>What specifically appeals to you about working with Cheryl P Pinto?</strong> ' . $specifically . '</p>
+            <p style = "margin:0 0 16px"><strong>RIGHT NOW I...:</strong> ' . $right . '</p>
+            <p style = "margin:0 0 16px"><strong>How would you like us to connect:</strong> ' . $connect . '</p>
+            <p style = "margin:0 0 16px"><strong>Finally, on a scale of 1 to 10, how passionately do you approach life?</strong> ' . $finally . '</p>
             <p style="margin:0 0 16px">Sent From Website</p></div>
             </td>
             </tr>
@@ -138,7 +142,7 @@ if ($_POST['fname']) {
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $mail->Body = $message;
     // More headers
-    $address = "info@cherylppinto.com";
+    $address = "cherylppinto@gmail.com";
     $mail->AddAddress($address, "CHERYLPPINTO");
 //    $mail->AddCC('npschoolkkl@gmail.com', 'ALIAS');
 //    $mail->AddCC('arrchanac@gmail.com', 'ALIAS');

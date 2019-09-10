@@ -47,7 +47,7 @@
                                             </div>
                                         </div>-->
                     <div class="row coach">
-                        <div class="method-coaching wow fadeInUp">
+                        <div class="method-coaching top-p wow fadeInUp">
                             <a href="#enquiry">
                                 <h2>Private Coaching</h2>
                                 <img src="images/method-coaching/001.jpg" alt="" />
@@ -66,6 +66,36 @@
                                 <li><strong>Cracking the Career Code</strong></li>
                                 <li><strong>Rise-Up: Women for Women</strong></li>
                             </ul>
+                            <form class="workshop-form">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <p class="color-black bold">To register your interest for either a workshop or Mastermind, please click on the link below:</p>
+                                    </div>
+                                    <div class="col-lg-4 form-group ratio">
+                                        <label> Workshop
+                                            <input type="radio" name="topic" value="Workshop"  checked>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-4 form-group ratio">
+                                        <label> Mastermind
+                                            <input type="radio" name="topic" value="Mastermind" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 form-group">
+                                        <input type='text' name='name' placeholder="Your Name..." class="input-box">
+                                    </div>
+                                    <div class="col-lg-4 form-group">
+                                        <input type='email' name='email' placeholder="Your Email..." class="input-box">
+                                    </div>
+                                    <div class="col-lg-4 form-group" style="text-align: center;">
+                                        <button type="submit" class="button-3"><span>Submit</span></button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <div class="row coach">
@@ -74,14 +104,14 @@
                                 <h2>Corporate Training</h2>
                                 <img src="images/method-coaching/003.jpg" alt="" />
                             </a>
-                            <p>Cheryl has delivered Corporate trainings in corporates such as Oracle, National Paints. The topics she has trained on include Sales Mastery, Function of Treasury in a multi-national corporation, Operations Management, etc. To request to book Cheryl for a Corporate Training, please<a href="#enquiry" style="text-decoration: underline;"> click here</a></p>
+                            <p>Cheryl has delivered Corporate trainings in corporates such as Oracle, National Paints. The topics she has trained on include Sales Mastery, Function of Treasury in a multi-national corporation, Operations Management, etc. To request to book Cheryl for a Corporate Training, please <a href="#enquiry" target="blank" style="text-decoration: underline; color: #007bff; ">here</a></p>
                         </div>
                         <div class="method-coaching wow fadeInUp">
                             <a href="#enquiry">
                                 <h2>Speaking Engagements</h2>
                                 <img src="images/method-coaching/004.jpg" alt="" />
                             </a>
-                            <p>Cheryl has given keynote speeches at Universities such as SP Jain School of Global Management, Skyline University. She has also addressed church groups on topics such as Financial Discipline and Keys to Career Success. To request to book Cheryl for a Corporate Training, please<a href="#enquiry" style="text-decoration: underline;"> click here</a></p>
+                            <p>Cheryl has given keynote speeches at Universities such as SP Jain School of Global Management, Skyline University. She has also addressed church groups on topics such as Financial Discipline and Keys to Career Success. To request to book Cheryl for a Corporate Training, please <a href="#enquiry" target="blank" style="text-decoration: underline; color: #007bff;">here</a></p>
                         </div>
                     </div>
                 </div>
@@ -104,10 +134,9 @@
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Financial Freedom</h3>
-                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.14.49 AM (1).mp4" type="video/mp4" type="video/mp4">
-                                        Your browser does not support the <code>video</code> tag.
-                                    </video>
+                                    <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/L7y0MXIkpj8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
                                     <p>If you often get to the end of the month and wonder where your money has gone, if your expenses exceed your income, if you find yourself drowning in the quagmire of credit card debts, if you wish to start saving more and building a retirement fund then get in touch with me now. I have been a banker for nearly 2 decades and have cracked the code.</p>
                                 </div>
                             </div>
@@ -119,10 +148,9 @@
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container  d-flex flex-column">
                                     <h3 class="text-center">Transformational Change</h3>
-                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/WhatsApp Video 2018-12-18 at 11.36.35 AM.mp4" type="video/mp4">
-                                        Your browser does not support the <code>video</code> tag.
-                                    </video>
+                                    <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/L8zso0wjca4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
                                     <p>If you always find yourself wanting to do more, live more meaningfully, but are somehow unable to, then I will help shine the light on how you may manage your time and thus your life so that you live the life you want to live.</p>
                                 </div>
                             </div>
@@ -136,10 +164,9 @@
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Career Acceleration</h3>
-                                    <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/Rise Up - Pre Event Video.mp4" type="video/mp4">
-                                        Your browser does not support the <code>video</code> tag.
-                                    </video>
+                                    <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/LvWBNouNTzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
                                     <p>If you are in a job that does not light you up, or in a career that you once loved but now wish to change, or if you are not advancing in your career no matter what you do, then chat with me and learn how I raced through the corporate ladder over my 17 years of experience in the corporate world.</p>
                                 </div>
                             </div>
@@ -159,7 +186,7 @@
                                 <div class="icon_container  d-flex flex-column">
                                     <h3 class="text-center">Trader Coach</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
-                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/fQUfIgLCAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/sBlVLrPV_LM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <p>If you are a trader in the financial markets and are unable to remain consistently profitable, if you cannot stick to your rules or deal with the psychological impact of trading, talk to me. I am a Professional Trader and have been through the same painful rite of passage emerging victorious</p>
                                 </div>
@@ -174,8 +201,8 @@
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Life (Time) Management</h3>
-                                    <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
-                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/u7NntUPBdkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/XF98t4cUGWU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <p>If you have found yourself at a stage where you feel like it is ‘now time’ to make a large change that is likely to impact many facets of your life. If you wish to disrupt the status quo,follow your passion, live life to the fullest, then contact me right away. I will be honored to guide you along your path to your most fulfilling life.</p>
                                 </div>
@@ -191,7 +218,7 @@
                                 <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Wonder Woman</h3>
                                     <div class="features_item box-3 d-flex flex-column align-items-center justify-content-center text-center">
-                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/QwooUQ-oAHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/gtJPS1JE7-c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <p>If you are an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress, learn how to ask for a raise or a promotion, be heard, grab a coffee with me. I have ‘been there, done that’ and am thrilled to help you learn the ropes.</p>
                                 </div>
@@ -230,7 +257,7 @@
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i><li>The Mastermind usually runs for a span of 8 weeks.</li>
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i><li>In each session, there will be a lesson for the first 1-hour, which will be led by Cheryl. In the next hour, the participants will interact, share and engage with each other (structured interaction - guidelines provided at the Mastermind).</li>
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Usually each participant will have a "Buddy" - a partner from within the Group. Your Buddy will be your accountability partner and both of you will keep each other motivated by holding yourselves responsible to your commitments! This has one of the most surprisingly positive results :) And you will usually make a really good friend for life!</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>To join one of the Masterminds, please click here (please give them a form where they can choose which Mastermind they want to join and their email address + Mobile Number)</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>To join one of the Masterminds, please click <a href="#enquiry" target="blank" style="text-decoration: underline;">here</a></li>
                             </ul>
                         </div>
                     </div>

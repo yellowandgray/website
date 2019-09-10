@@ -24,6 +24,17 @@
                         <div class="bx-02  coach-box  wow fadeInUp">
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container d-flex flex-column">
+                                    <h3 class="text-center">Amruta Pandit</h3>
+                                    <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                        <source src="vedio/Amruta-Pandit.mp4" type="video/mp4">
+                                        Your browser does not support the <code>video</code> tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bx-02  coach-box  wow fadeInUp">
+                            <div class="features_item  d-flex flex-column align-items-center ">
+                                <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Avil Pinto</h3>
                                     <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
                                         <source src="vedio/Avil Pinto.mp4" type="video/mp4">

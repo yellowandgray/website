@@ -26,18 +26,19 @@
             <!-- Hero Slider -->
             <div class="home">
                 <video home-v autoplay loop poster="polina.jpg" id="vid" muted>
-                    <source src="vedio/Homepage-Banner-V2.mp4" type="video/mp4">
+                    <source src="video/Homepage-Banner-V2.mp4" type="video/mp4">
                 </video>  
-                <div class="overlay"></div>
+                <div class="overlay bg-ban"></div>
+                <div class="overlay bg-banner" style="background-image: url(images/banner-bg.jpg); background-repeat: no-repeat; background-size: cover; width: 100%; height: auto"></div>
                 <div class="hero_slider_container slider_prlx">
                     <div class="owl-carousel owl-theme hero_slider container-slide">
                         <!-- Slider Item -->
                         <div class="owl-item main_slider_item">
-                            <div class="main_slider_shapes"><img src="images/slider-png/banner-01.jpg" alt=""  style="width: 100% !important;"></div>
-                            <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_1.jpg)"></div>-->
+<!--                            <div class="main_slider_shapes"><img src="images/slider-png/banner-01.jpg" alt=""  style="width: 100% !important;"></div>
+                            <div class="main_slider_item_bg" style="background-image:url(images/main_slider_1.jpg)"></div>-->
                             <div class="container">
-                                <div class="row">
-                                    <div class="col slider_content_col">
+                                <div class="banner-text">
+                                    <div class="col-md-12 slider_content_col text-center">
                                         <div class="main_slider_content">
                                             <h1><span>Tired of your doubts & fears holding you back?</span></h1>
                                             <h1><span>Let us smash those limits and catapult you forward!</span></h1>
@@ -54,10 +55,10 @@
                         <!-- Slider Item -->
                         <div class="owl-item main_slider_item">
                             <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_2.jpg)"></div>-->
-                            <div class="main_slider_shapes"><img src="images/slider-png/banner-02.jpg" alt="" style="width: 100% !important;"></div>
+                            <!--<div class="main_slider_shapes"><img src="images/slider-png/banner-02.jpg" alt="" style="width: 100% !important;"></div>-->
                             <div class="container">
-                                <div class="row">
-                                    <div class="col slider_content_col">
+                                <div class="banner-text">
+                                    <div class="col-md-12 slider_content_col text-center">
                                         <div class="main_slider_content">
                                             <h1><span>You KNOW that you can do & be so much more. But something holds you back?</span></h1>
                                             <h1><span>Let’s work together so you can live the life you want to live. </span></h1>
@@ -73,10 +74,10 @@
                         <!-- Slider Item -->
                         <div class="owl-item main_slider_item">
                             <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_3.jpg)"></div>-->
-                            <div class="main_slider_shapes"><img src="images/slider-png/banner-03.jpg" alt="" style="width: 100% !important;"></div>
+                            <!--<div class="main_slider_shapes"><img src="images/slider-png/banner-03.jpg" alt="" style="width: 100% !important;"></div>-->
                             <div class="container">
-                                <div class="row">
-                                    <div class="col slider_content_col">
+                                <div class="banner-text">
+                                    <div class="col-md-12 slider_content_col text-center">
                                         <div class="main_slider_content">
                                             <h1><span>Want to move from confusion to clarity? From difficulties to opportunities? From fear to freedom? </span></h1>
                                             <h1><span>You’ve only got one life. Let’s make sure it’s the greatest possible one! </span></h1>
@@ -91,10 +92,10 @@
                         </div>
                         <div class="owl-item main_slider_item">
                             <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_3.jpg)"></div>-->
-                            <div class="main_slider_shapes"><img src="images/slider-png/banner-04.jpg" alt="" style="width: 100% !important;"></div>
+                            <!--<div class="main_slider_shapes"><img src="images/slider-png/banner-04.jpg" alt="" style="width: 100% !important;"></div>-->
                             <div class="container">
-                                <div class="row">
-                                    <div class="col slider_content_col">
+                                <div class="banner-text">
+                                    <div class="col-md-12 slider_content_col text-center">
                                         <div class="main_slider_content">
                                             <h1><span>Of course, you can do it by yourself. </span></h1>
                                             <h1><span>But having a Partner makes it so much easier & quicker. </span></h1>
@@ -110,10 +111,10 @@
                         </div>
                         <div class="owl-item main_slider_item">
                             <!--<div class="main_slider_item_bg" style="background-image:url(images/main_slider_3.jpg)"></div>-->
-                            <div class="main_slider_shapes"><img src="images/slider-png/banner-05.jpg" alt="" style="width: 100% !important;"></div>
+                            <!--<div class="main_slider_shapes"><img src="images/slider-png/banner-05.jpg" alt="" style="width: 100% !important;"></div>-->
                             <div class="container">
-                                <div class="row">
-                                    <div class="col slider_content_col">
+                                <div class="banner-text">
+                                    <div class="col-md-12 slider_content_col text-center">
                                         <div class="main_slider_content">
                                             <h1><span>What if you reach the top and realize you’ve climbed the wrong mountain? </span></h1>
                                             <h1><span>Let’s work together and discover your true purpose, passion & path. </span></h1>
@@ -216,7 +217,7 @@
                             <div class="features_item  d-flex flex-column align-items-center ">
                                 <div class="icon_container  d-flex flex-column">
                                     <h3 class="text-center">Professional Trader</h3>
-                                   <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
+                                    <div class="features_item box-3 d-flex flex-column align-items-center justify-content-end text-center">
                                         <iframe style="width: 100%" height="176" src="https://www.youtube.com/embed/sBlVLrPV_LM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <p>Are you a trader in the financial markets and are unable to remain consistently profitable? Perhaps you cannot stick to your rules or deal with the psychological impact of trading? Talk to me - I trade Forex and Futures markets - I have been through the same painful rite of passage and emerged victorious. </p>

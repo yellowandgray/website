@@ -29,13 +29,13 @@ if ($_POST['name']) {
 
     $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
 
-    $mail->Host = "mail.2dotask.com";      // sets GMAIL as the SMTP server
+    $mail->Host = "sg2plcpnl0113.prod.sin2.secureserver.net";      // sets GMAIL as the SMTP server
 
     $mail->Port = 465;                   // set the SMTP port for the GMAIL server
 
-    $mail->Username = "noreply@2dotask.com";  // GMAIL username
+    $mail->Username = "noreplay@cherylppinto.com";  // GMAIL username
 
-    $mail->Password = "Admin@2dotask";            // GMAIL password
+    $mail->Password = "Admin@cheryl$";            // GMAIL password
     $mail->IsHTML(true);
     $mail->SetFrom('noreply@cherylppinto.com', 'CHERYLPPINTO');
     $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
@@ -59,7 +59,7 @@ if ($_POST['name']) {
             <tbody>
             <tr>
             <td style = "padding:36px 48px;display:block">
-            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "images/logo.png" alt = "CHERYLPPINTO" style = "width:50%" /></h1>
+            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src="http://cherylppinto.com/images/logo.png" alt = "CHERYLPPINTO" style = "width:50%" /></h1>
             </td>
             </tr>
             </tbody>
@@ -115,7 +115,7 @@ if ($_POST['name']) {
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $mail->Body = $message;
     // More headers
-    $address = "info@cherylppinto.com";
+    $address = "cherylppinto@gmail.com";
     $mail->AddAddress($address, "CHERYLPPINTO");
 //    $mail->AddCC('npschoolkkl@gmail.com', 'ALIAS');
 //    $mail->AddCC('arrchanac@gmail.com', 'ALIAS');
