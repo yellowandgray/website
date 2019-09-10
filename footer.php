@@ -111,11 +111,11 @@
                             <img src="assets/img/icons/social/linkedin.svg" alt="linkedin" class="icon icon-xs color-white">
                         </a>
                     </li>
-<!--                    <li class="mx-3">
-                        <a href="#" class="hover-fade-out">
-                            <img src="assets/img/icons/social/twitter.svg" alt="Twitter" class="icon icon-xs color-white">
-                        </a>
-                    </li>-->
+                    <!--                    <li class="mx-3">
+                                            <a href="#" class="hover-fade-out">
+                                                <img src="assets/img/icons/social/twitter.svg" alt="Twitter" class="icon icon-xs color-white">
+                                            </a>
+                                        </li>-->
                     <li class="mx-3">
                         <a href="https://Instagram.com/projectnextdoor" target="blank" class="hover-fade-out">
                             <img src="assets/img/icons/social/instagram.svg" alt="Instagram" class="icon icon-xs color-white">
@@ -153,9 +153,6 @@
     })(jQuery);
 </script>
 
-<!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
-
-<!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
 <script type="text/javascript" src="assets/js/aos.js"></script>
 <!-- Clipboard (copies content from browser into OS clipboard) -->
 <script type="text/javascript" src="assets/js/clipboard.min.js"></script>
@@ -196,9 +193,21 @@
 <!-- This script appears only on the demo.  It is used to delay unnecessary image loading until after the main page content is loaded. -->
 <script src="js/text-animation.js" type="text/javascript"></script>
 <script src="js/wow.js" type="text/javascript"></script>
-<script src="js/mobiscroll.javascript.min.js" type="text/javascript"></script>
+<!--<script src="js/mobiscroll.javascript.min.js" type="text/javascript"></script>-->
 <script src="js/bootstrap-clockpicker.min.js" type="text/javascript"></script>
+<script src="js/materialize.min.js" type="text/javascript"></script>
 <script src="js/highlight.min.js" type="text/javascript"></script>
+<script src="js/datepicker.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var foopicker = new FooPicker({
+        id: 'datepicker',
+        dateFormat: 'dd/MM/yyyy',
+        disable: ['29/07/2017', '30/07/2017', '31/07/2017', '01/08/2017']
+    });
+    var foopicker2 = new FooPicker({
+        id: 'datepicker2'
+    });
+</script>
 <script type="text/javascript">
     window.addEventListener("load", function () {
         setTimeout(function () {
@@ -219,11 +228,6 @@
         return false;
     });
 </script>
-<!--<script type="text/javascript">
-    $(function () {
-        $("#datepicker").datepicker({firstDay: 1});
-    });
-</script>-->
 <script src="js/fontawesome.min.js" type="text/javascript"></script>
 <script src="js/all.min.js" type="text/javascript"></script>
 

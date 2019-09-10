@@ -336,8 +336,14 @@
                                             </select>
                                             <br/>
                                             <br/>
-                                            <input type="text" name="other_interest" style="display:none" />
-                                            <!--                                            <div mbsc-form>
+                                            <div id="session-class" class="" style="display:none">
+                                                <h2>Project Next Door Session</h2>
+                                            </div>
+                                            
+                                            <div id="date-picker" style="display:none">
+                                                <input type="text" placeholder="Select Time" class="datepicker">
+                                            </div>
+                                            <!--                                        <div mbsc-form>
                                                                                             <div class="mbsc-grid">
                                                                                                 <div class="mbsc-row">
                                                                                                     <div class="mbsc-col-sm-12 mbsc-col-md-12">
@@ -363,9 +369,9 @@
                                                                                             <a><i class="fas fa-chevron-right"></i></a> 
                                                                                         </h5>-->
                                             <div id="time_container"></div>
-                                            <!--<div class="date-select">
-                                                <p><input type='checkbox' name='checkbox' /><strong> SELECTED: </strong> 4/08/2019, 12:45PM.</p>
-                                            </div>-->
+                                            <!--                                            <div class="date-select">
+                                                                                            <p><input type='checkbox' name='checkbox' /><strong> SELECTED: </strong> 4/08/2019, 12:45PM.</p>
+                                                                                        </div>-->
                                             <div class="button-group">
                                                 <a href="#popup1" class="btn btn-ok">Add</a>
                                                 <a href="#" class="btn btn-cancel">Cancel</a>
@@ -469,6 +475,8 @@
         <?php include'footer.php'; ?>
         <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+<!--        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+        <script src="js/custom.js" type="text/javascript"></script>
         <script type="text/javascript">
             //banner slider
             $(".bannerSlider").slick({
@@ -480,18 +488,30 @@
                 arrows: false
             });
         </script>
-        <script type="text/javascript">
-            mobiscroll.settings = {
-                lang: 'en', // Specify language like: lang: 'pl' or omit setting to use default
-                theme: 'ios' // Specify theme like: theme: 'ios' or omit setting to use default
-            };
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.datepicker');
+                var instances = M.Datepicker.init(elems, options);
+            });
 
-            var calendarInstance = mobiscroll.calendar('#demo-multi-day', {
-                display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
-                select: 'multiple', // More info about select: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-select
-                headerText: 'Select Date'
+            // Or with jQuery
+
+            $(document).ready(function () {
+                $('.datepicker').datepicker();
             });
         </script>
+    <!--        <script type="text/javascript">
+                mobiscroll.settings = {
+                            lang: 'en', // Specify language like: lang: 'pl' or omit setting to use default
+    theme: 'ios' // Specify theme like: theme: 'ios' or omit setting to use default
+                    };
+                    
+                    var calendarInstance = mobiscroll.calendar('#demo-multi-day', {
+                            display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
+    select: 'multiple', // More info about select: https://docs.mobiscroll.com/4-7-3/javascript/calendar#opt-select
+                            headerText: 'Select Date'
+                                        });
+                                        </script>-->
         <script>
             $(document).ready(function () {
                 $("#timeButton").click(function () {
@@ -513,17 +533,17 @@
         <script type="text/javascript">
             $('.clockpicker').clockpicker();
         </script>
-        <script type="text/javascript">
-            hljs.configure({tabReplace: '    '});
-            hljs.initHighlightingOnLoad();
-        </script>
-        <div id="popup1" class="overlay">
-            <div class="popup">
-                <h5>Thankyou for Booking with us.</h5>
-                <a class="close" href="#">×</a>
-                <hr>
-                <div class="content">Our team will get in touch with you shortly.</div>
-            </div>
-        </div>
-    </body>
+    <script type="text/javascript">
+        hljs.configure({tabReplace: '    '});
+        hljs.initHighlightingOnLoad();
+    </script>
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h5>Thankyou for Booking with us.</h5>
+            <a class="close" href="#">×</a>
+            <hr>
+            <div class="content">Our team will get in touch with you shortly.</div>
+        </div>                                    
+    </div>
+</body>
 </html>
