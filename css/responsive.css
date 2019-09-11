@@ -10,6 +10,9 @@
         top: 48% !important;
         font-size: 30px !important;
     }
+    #time-picker input {
+        width: 30% !important;
+    }
 }
 
 @media screen and (max-width: 460px) {
@@ -141,6 +144,14 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    .datepicker-modal {
+        max-height: 100% !important;
+        box-shadow: none !important;
+    }
+}
+
+
 @media (min-width: 390px) and (max-width: 599px) {
     .tensorsite-content__clip-shape {
         margin-top: -60px !important;
@@ -148,17 +159,19 @@
     .tensorsite-card {
         height: 290px !important;
     }
-}
 
-@media (min-width: 461px) and (max-width: 670px) {
-
+    #time-picker input {
+        width: 42% !important;
+    }
 }
 
 @media (min-width: 599px) and (max-width: 767px) {
     .tensorsite-content__clip-shape {
         margin-top: -79px !important;
     }
-
+    #time-picker input {
+        width: 35% !important;
+    }
 }
 
 @media screen and (max-width: 599px) {
@@ -173,6 +186,12 @@
     }
     button.slick-next {
         display: none !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #time-picker input {
+        width: 30% !important;
     }
 }
 
@@ -240,9 +259,13 @@
     .tensorsite-card--clip .tensorsite-content__image-wrapper {
         height: 150px !important;
     }
+    .checkbox-session input {
+        width: auto !important;
+        margin: 0 20px !important;
+    }
     /*    #toggle {
-            right: 0 !important;
-            top: 15px !important;
+            width: 45px;
+            margin: 10px 20px 0px;;
         }*/
 }
 
@@ -265,6 +288,15 @@
     }
     .img-bg-cream p {
         font-size: 18px;
+    }
+}
+@media (min-width: 461px) and (max-width: 991px) {
+    #toggle {
+        width: 45px;
+        margin: 10px auto;
+    }
+    .checkbox-session input {
+        width: auto !important;
     }
 }
 

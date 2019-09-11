@@ -222,7 +222,7 @@
                                         </div>
                                         <div class="col-md-6 mb-3 mb-md-4">
                                             <div class="card-session">
-                                                <div class="checkbox-session w-100 float-right">Attend<input type="checkbox" name="attand"></div>
+                                                <div class="flex-row checkbox-session w-100 float-right">Attend<input type="checkbox" name="attand"></div>
                                                 <span class="date-section">06 Sep 2019 / 10:00 AM - 12:00 PM</span>
                                                 <h5>COACHING SESSION TITLE COMES HERE</h5>
                                                 <p>Coacher Name: Name Comes Here <a href="#" class="float-right coacher-btn">Read More</a></p>
@@ -252,7 +252,7 @@
                                                 <p><strong>Session Details: </strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 textarea">
                                             <textarea rows="4" cols="65" placeholder="Command"></textarea>
                                         </div>
                                     </div>
@@ -265,40 +265,26 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3 mb-md-4" id="time-picker">
-                                            <div class="row">
-                                                <div class="col-md-7">
-                                                    <div class="margin-tb-20"><strong>19 Sep 2019</strong></div>
-                                                    <div class="margin-tb-20"><strong>19 Sep 2019</strong></div>
-                                                    <div class="margin-tb-20"><strong>19 Sep 2019</strong></div>
-                                                    <div class="margin-tb-20"><strong>19 Sep 2019</strong></div>
+                                            <div class="flex-row">
+                                                <div class="margin-tb-20 time-overlay">
+                                                    <strong>19 Sep 2019</strong> 
+                                                    <input type="text" placeholder="From" class="timepicker">
+                                                    <input type="text" placeholder="To" class="timepicker">
                                                 </div>
-                                                <div class="col-md-5">
-                                                    <div class="flex-row time-overlay">
-                                                        <input type="text" placeholder="From" class="timepicker">
-                                                        <input type="text" placeholder="To" class="timepicker float-right">
-                                                    </div>
-                                                    <div class="flex-row time-overlay">
-                                                        <input type="text" placeholder="From" class="timepicker">
-                                                        <input type="text" placeholder="To" class="timepicker float-right">
-                                                    </div>
-                                                    <div class="flex-row time-overlay">
-                                                        <input type="text" placeholder="From" class="timepicker">
-                                                        <input type="text" placeholder="To" class="timepicker float-right">
-                                                    </div>
-                                                    <div class="flex-row time-overlay">
-                                                        <input type="text" placeholder="From" class="timepicker">
-                                                        <input type="text" placeholder="To" class="timepicker float-right">
-                                                    </div>
+                                                <div class="margin-tb-20 time-overlay">
+                                                    <strong>19 Sep 2019</strong> 
+                                                    <input type="text" placeholder="From" class="timepicker">
+                                                    <input type="text" placeholder="To" class="timepicker">
                                                 </div>
                                             </div>
                                             <div id="time_container"></div>
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 textarea">
                                             <textarea rows="4" cols="65" placeholder="Command"></textarea>
                                         </div>
                                     </div>
                                     <div class="row" id="other-text" style="display: none;">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 textarea">
                                             <textarea rows="4" cols="65" placeholder="Command"></textarea>
                                         </div>
                                     </div>
@@ -334,8 +320,8 @@
                         <div class="carousel-item active">
                             <div class="testimonial4_slide">
     <!--                                <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />-->
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                <h4>Client 1</h4>
+                                <p>I never expected to have such an engaging experience. The simulations and activities was so much fun and interactive and it brought out the best in us.</p>
+                                <h4>Multinational Company</h4>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
@@ -346,20 +332,20 @@
                         <div class="carousel-item">
                             <div class="testimonial4_slide">
                                 <!--<img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />-->
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                <h4>Client 2</h4>
+                                <p>It was a very interesting experience and we all had a hands on try at the simulation area and it was very insightful to see how actual technology could be use and deploy in a government agency and environment. Well done project next door for bringing this experience to us!</p>
+                                <h4>Government Agency</h4>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star checked"></span>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="testimonial4_slide">
     <!--                                <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />-->
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                <h4>Client 3</h4>
+                                <p>This allowed us to really become imagination engineers and as a start-up we truly believe that project next door has what it takes to deliver the best!</p>
+                                <h4>Private Sector, SME</h4>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>

@@ -831,7 +831,7 @@ body.loaded>div.loader {
 }
 
 #time-picker input {
-    width: 45%;
+    width: 30%;
     border: none;
     border-bottom: 1px solid #000;
     margin: 5px 5px;
@@ -847,4 +847,16 @@ body.loaded>div.loader {
 
 .margin-tb-20 {
     margin: 20px 0;
+}
+
+.textarea textarea {
+    width: 100%;
+}
+
+.dropdown-content.select-dropdown {
+    display: none;
+}
+
+.ui-tooltip {
+    display: none;
 }

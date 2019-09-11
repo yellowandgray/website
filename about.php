@@ -43,13 +43,13 @@
                                 <td>Distributed in our three development centers in Malaysia (Kuala Lumpur, Selangor), India (Chennai) and Philippines (Manila).</td>
                             </tr>
                             <tr>
-                                <th>50+ Professional Trainers from different industry</th>
+                                <th>100+ Professional Coaches and Trainers from different industry vertical</th>
                                 <td>Meet trainers from different industries and various backgrounds.</td>
                             </tr>
-                            <tr>
+<!--                            <tr>
                                 <th>14 Industry Sectors</th>
                                 <td>We have a great experience and numerous projects with 14 different Government and private Industry sector.</td>
-                            </tr>
+                            </tr>-->
                         </table>
                     </div>
                 </div>
@@ -105,14 +105,14 @@
                         <div class="card card-body bg-white h-100">
                             <!--                            <div class="display-4 text-primary mb-3" data-countup data-start="" data-end="97" data-duration="" data-decimal-places="" data-prefix="" data-separator="" data-grouping="" data-suffix="%" data-easing=""></div>-->
                             <h3><i class="fas fa-eye"></i> VISION</h3>                            
-                            <div>Our Vision is to become the most unique and immersive experience where public sector and private where public sector and private sector converges.</div>
+                            <div>Our Vision is to create imagination engineers and to be the benchmark in providing immersive experiences to both public and private sectors and to all individuals from all walks of life.</div>
                         </div>
                     </div>
                     <div class="col-md-4 mb-3 mb-md-0">
                         <div class="card card-body bg-white h-100">
                             <!--                            <div class="display-4 text-primary mb-3" data-countup data-start="20" data-end="24" data-duration="1" data-decimal-places="" data-prefix="" data-separator="" data-grouping="" data-suffix="/7" data-easing="false"></div>-->
                             <h3><i class="fas fa-users"></i> ABOUT US</h3>                            
-                            <div>PROJECT NEXT DOOR is a full service training institution compromising three specialist areas -  empowering for coaching and seminars, experiential for command and support hub, and engaging for room rental.</div>
+                            <div>Project Next Door provide three core areas namely, Empowering for coaching and seminars, Experiential for command and support hub, and Engaging for room rental.</div>
                         </div>
                     </div>
                     <div class="col-md-4 mb-3 mb-md-0">
@@ -139,7 +139,8 @@
                         <h4>HRDF REGISTERED</h4>
                     </div>
                     <div class="col-md-6 img-margin">
-                        <img src="img/about/ttt.png" alt="" />
+<!--                        <img src="img/about/ttt.png" alt="" />-->
+                        <br/>
                         <h4>TTT CERTIFIED TRAINERS</h4>
                     </div>
                 </div>
@@ -163,7 +164,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="font-size-div">Project Next Door believes that learning opens up new possibilities and new horizons for individual. We pay attention to what we deliver, how we deliver, and the environment in which we deliver the training in order to create a great learning experience for our participants.</div>
+                    <div class="font-size-div">Project Next Door believes that learning opens up new possibilities and new horizons for individuals. We pay attention to what we deliver, how we deliver, and the environment in which we deliver the coaching and training in order to create a great learning experience for our participant.</div>
                 </div>
             </div>
         </section>
@@ -172,9 +173,9 @@
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-12 col-lg-12 col-xl-12">
                         <h3 class="display-4">WHAT MAKES US DIFFERENT?</h3>
-                        <div class="lead">After years in the typical training environment, the Project Next Door provides you with the intense course of study which aims not only to expand intellectual horizons but also to provide education that unlocks human intellectual potential.</div>
+                        <div class="lead">After years in the typical training environment, Project Next Door provides you with the intense course of study which aims not only to expand intellectual horizons but also to provide education that unlocks human intellectual potential.</div>
                         <br/>
-                        <div class="lead">Our purpose is to raise standards of what training sessions should be like, providing you with room of pastel color, it's a time for rebirth, making you feel light and calm. Our room provides and creates a feeling of earthiness and sophistication. Its modern and productive environment makes you feel open and sociable. We provide opportunities for practical experience through learning activities and we model what we teach. Delivering our clients with trainers that have passion with helping people learn, incomparable customer service from our team, modern environment and flexible customization, all at a cost effective price.</div>
+                        <div class="lead">Our purpose is to raise standards of what coaching and training sessions should be like, providing you with room of pastel color, it's a time for rebirth, making you feel light and calm. Our room provides and creates a feeling of earthiness and sophistication. Its modern and productive environment makes you feel open and sociable. We provide opportunities for practical experience through learning activities and we model what we teach. Delivering our clients with trainers that have passion of helping people learn, incomparable customer service from our team, modern environment and flexible customization, all at a cost effective price.</div>
                     </div>
                 </div>
                 <!--                <div class="row justify-content-center text-center">
