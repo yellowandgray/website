@@ -198,7 +198,7 @@
 <script src="js/materialize.min.js" type="text/javascript"></script>
 <script src="js/highlight.min.js" type="text/javascript"></script>
 <script src="js/datepicker.js" type="text/javascript"></script>
-<script type="text/javascript">
+<!--<script type="text/javascript">
     var foopicker = new FooPicker({
         id: 'datepicker',
         dateFormat: 'dd/MM/yyyy',
@@ -207,7 +207,7 @@
     var foopicker2 = new FooPicker({
         id: 'datepicker2'
     });
-</script>
+</script>-->
 <script type="text/javascript">
     window.addEventListener("load", function () {
         setTimeout(function () {
@@ -290,7 +290,7 @@
     theToggle.onclick = function () {
         toggleClass(this, 'on');
         return false;
-    }
+    };
 </script>
 <script>
     wow = new WOW(
@@ -298,7 +298,7 @@
                 animateClass: 'animated',
                 offset: 100,
                 callback: function (box) {
-                    console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+                    console.log("WOW: animating <" + box.tagName.toLowerCase() + ">");
                 }
             }
     );

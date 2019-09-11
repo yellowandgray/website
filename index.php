@@ -9,50 +9,8 @@
                 <img class="loading-animation" src="img/load.png">
             </div>
         </div>
-        <!--        <div class="pageLoad">
-                    <div class="inner">
-                        <div><img src="img/load.png"></div>
-                        <div><img src="img/load.png"></div> 
-                        <div><img src="img/load.png"></div>
-                        <div><img src="img/load.png"></div>
-                    </div> 
-                </div>-->
         <?php include 'menu.php'; ?>
         <section class="p-0 pt-75 border-top border-bottom row no-gutters banner-lg">
-            <!--            <div class="col-lg-7 col-xl-6">
-                            <div class="container min-vh-lg-80 d-flex align-items-center">
-                                <div class="row justify-content-center">
-                                    <div class="col col-md-10 col-xl-9 text-center text-lg-left">
-                                        <section>
-                                            <div data-aos="fade-right">
-                                                <h1 class="display-3"><mark data-aos="highlight-text" data-aos-delay="200">Save time</mark> with Jumpstart</h1>
-                                                <p class="lead">
-                                                    Berspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-column flex-sm-row mt-4 mt-md-5 justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="300">
-                                                <a href="#" class="btn btn-primary btn-lg mx-sm-2 mx-lg-0 mr-lg-2 my-1 my-sm-0">Explore Layouts</a>
-                                                <a href="https://themeforest.net/item/jumpstart-app-and-software-template/24207799" class="btn btn-outline-primary btn-lg mx-sm-2 mx-lg-0 mr-lg-2 my-1 my-sm-0">Purchase</a>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
-            <!--            <div class="col-lg-5 col-xl-6 d-lg-flex flex-lg-column">
-                            <div class="divider divider-side transform-flip-y bg-white d-none d-lg-block"></div>
-                            <div class="d-lg-flex flex-column flex-fill controls-hover" data-flickity='{ "imagesLoaded": true, "wrapAround":true, "pageDots":false, "autoPlay":true }'>
-                                <div class="carousel-cell text-center">
-                                    <img class="img-fluid" src="img/slider/banner-1.jpg" alt="Image">
-                                </div>
-                                <div class="carousel-cell text-center">
-                                    <img class="img-fluid" src="img/slider/banner-2.jpg" alt="Image">
-                                </div>
-                                <div class="carousel-cell text-center">
-                                    <img class="img-fluid" src="img/slider/banner-3.jpg" alt="Image">
-                                </div>
-                            </div>
-                        </div>-->
             <div class="col-lg-12 col-xl-12">
                 <div class="d-flex align-items-center">
                     <div class="d-lg-flex flex-column flex-fill controls-hover" data-flickity='{ "imagesLoaded": true, "wrapAround":true, "pageDots":false, "autoPlay":true }'>
@@ -61,15 +19,9 @@
                         </div>
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-2.jpg" alt="Image">
-                            <!--                            <div class="banner-text">
-                                                            <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
-                                                        </div>-->
                         </div>
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-3.jpg" alt="Image">
-                            <!--                            <div class="banner-text">
-                                                            <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
-                                                        </div>-->
                         </div>
                     </div>
                     <div class="banner-text">
@@ -79,10 +31,6 @@
                     </div>
                 </div>
             </div>
-            <!--            <div class="col-lg-5 col-xl-6 d-lg-flex flex-lg-column">
-                            <div class="divider divider-side transform-flip-y bg-green d-none d-lg-block"></div>
-            
-                        </div>-->
         </section>
 
         <!-- Mobile Banner -->
@@ -93,9 +41,6 @@
                         <!--  1. slide  -->
                         <li class="slide">
                             <a href="#">
-                                <!--                                <div class="slide__text banner-text">
-                                                                    <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
-                                                                </div>-->
                                 <div class="slide__image">
                                     <img src="img/slider/banner-1.jpg" alt="" />
                                 </div>
@@ -104,9 +49,6 @@
                         <!--  2. slide  -->
                         <li class="slide">
                             <a href="#">
-                                <!--                                <div class="slide__text banner-text">
-                                                                    <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
-                                                                </div>-->
                                 <div class="slide__image">
                                     <img src="img/slider/banner-2.jpg" alt="" />
                                 </div>
@@ -115,26 +57,11 @@
                         <!--  3. slide  -->
                         <li class="slide">
                             <a href="#">
-                                <!--                                <div class="slide__text banner-text">
-                                                                    <h1>WHERE <span>Imagineers</span><br/> ARE BORN</h1>
-                                                                </div>-->
                                 <div class="slide__image">
                                     <img src="img/slider/banner-3.jpg" alt="" />
                                 </div>
                             </a>
                         </li>
-                        <!--  4. slide  -->
-                        <!--                        <li class="slide">
-                                                    <a href="#">
-                                                        <div class="slide__text">
-                                                            <h2>Coming soon.</h2>
-                                                        </div>
-                                                        <div class="slide__image">
-                                                            <img src="https://unsplash.it/1500/602?random" alt="" />
-                                                        </div>
-                                                    </a>
-                                                </li>-->
-
                     </ul>
                     <div class="slide__text banner-text">
                         <h2>WHERE</h2>
@@ -150,9 +77,7 @@
             <div class="container">
                 <div class="row justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7">
-                        <!--                        <h3 class="display-4">About <mark data-aos="highlight-text" data-aos-delay="300">Project Next Door</mark></h3>-->
                         <h3 class="display-4 pb-40">About Project Next Door</h3>
-                        <!--                        <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>-->
                     </div>
                 </div>
                 <div class="row">
@@ -224,68 +149,15 @@
                 </div>
             </div>
         </section>
-
-<!--        <section class="bg-gray ptb-80">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-md-9 col-lg-8 col-xl-7">
-                                                <h3 class="display-4">About <mark data-aos="highlight-text" data-aos-delay="300">Project Next Door</mark></h3>
-                        <h3 class="display-4 pb-40">About Project Next Door</h3>
-                                                <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-0">
-                        <div class="card h-100 hover-box-shadow wow fadeInLeft">
-                            <div class="d-block bg-gradient rounded-top">
-                                <img class="card-img-top hover-fade-out" src="img/about/about-04.jpg" alt="Image accompanying Circle testimonial">
-                            </div>
-                            <div class="card-body">
-                                <h3>EMPOWERING</h3>
-                                <p>A brief introduction of this area.</p>
-                                <a href="#" class="stretched-link"><i class="fas fa-angle-double-right icon icon-xs" data-inject-svg></i> Find Out More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-0">
-                        <div class="card h-100 hover-box-shadow wow fadeInDown">
-                            <div class="d-block bg-gradient rounded-top">
-                                <img class="card-img-top hover-fade-out" src="img/about/about-02.jpg" alt="Image accompanying Treva testimonial">
-                            </div>
-                            <div class="card-body">
-                                <h3>EXPERIENTIAL</h3>
-                                <p>A brief introduction of this area.</p>
-                                <a href="#" class="stretched-link"><i class="fas fa-angle-double-right icon icon-xs" data-inject-svg></i> Find Out More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-0">
-                        <div class="card h-100 hover-box-shadow wow fadeInRight">
-                            <div class="d-block bg-gradient rounded-top">
-                                <img class="card-img-top hover-fade-out" src="img/about/about-01.jpg" alt="Image accompanying Kanba testimonial">
-                            </div>
-                            <div class="card-body">
-                                <h3>ENGAGING</h3>
-                                <p>A brief introduction of this area.</p>
-                                <a href="#" class="stretched-link"><i class="fas fa-angle-double-right icon icon-xs" data-inject-svg></i> Find Out More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>-->
         <section class="ptb-80">
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7 wow fadeInDown">
-                        <!--                        <h3 class="display-4">About <mark data-aos="highlight-text" data-aos-delay="300">Project Next Door</mark></h3>-->
                         <h3 class="display-4">Gallery</h3>
-                        <!--                        <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>-->
                     </div>
                 </div>
             </div>
             <div class="grid">
-
                 <div class="item wow fadeInLeft" style="background-image: url(img/gallery/command-support.png)">
                     <div class="img-overlay"></div>
                     <h3>Command & Support</h3>
@@ -295,14 +167,10 @@
                     <div class="img-overlay"></div>
                     <h3>Training</h3>
                 </div>
-
-                <!--            <div class="item" style="background-image: url(https://images.unsplash.com/photo-1488572384981-eac03dfeb6b9?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=)"></div>-->
-
                 <div class="item item1 wow fadeInRight" style="background-image: url(img/gallery/rental-space.png)">
                     <div class="img-overlay"></div>
                     <h3>Rental Space</h3>
                 </div>
-
                 <div class="item item1 wow fadeInLeft" style="background-image: url(img/gallery/amenities.png)">
                     <div class="img-overlay"></div>
                     <h3>Amenities</h3>
@@ -339,40 +207,16 @@
                                             <div id="session-class" class="" style="display:none">
                                                 <h2>Project Next Door Session</h2>
                                             </div>
-                                            
+
                                             <div id="date-picker" style="display:none">
-                                                <input type="text" placeholder="Select Time" class="datepicker">
+                                                <input type="text" placeholder="Select Date" class="datepicker">
+                                                <br/>
+                                                <button class="btn btn-ok" id="timeButton">Select Date</button>
                                             </div>
-                                            <!--                                        <div mbsc-form>
-                                                                                            <div class="mbsc-grid">
-                                                                                                <div class="mbsc-row">
-                                                                                                    <div class="mbsc-col-sm-12 mbsc-col-md-12">
-                                                                                                        <div class="mbsc-form-group">
-                                                                                                                                        <div class="mbsc-form-group-title">Multi-day</div>
-                                                                                                            <div id="demo-multi-day"></div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>-->
-                                            <br/>
-                                            <button class="btn btn-ok" id="timeButton">Select Date</button>
                                         </div>
-                                        <!--<div class="col-md-6 mb-3 mb-md-4 time-viewer">-->
                                         <div class="col-md-6 mb-3 mb-md-4">
-                                            <!--                                            <h5 class="br-icon-1" style="line-height: 40px;">DECEMBER 27-JANUARY 19
-                                                                                            <a><i class="fas fa-chevron-left"></i></a>
-                                                                                            <a><i class="fas fa-chevron-right"></i></a> 
-                                                                                        </h5>
-                                                                                        <h5 class="br-icon-2" style="line-height: 40px;">DECEMBER 27-JANUARY 19 <br/>
-                                                                                            <a><i class="fas fa-chevron-left"></i></a>
-                                                                                            <a><i class="fas fa-chevron-right"></i></a> 
-                                                                                        </h5>-->
                                             <div id="time_container"></div>
-                                            <!--                                            <div class="date-select">
-                                                                                            <p><input type='checkbox' name='checkbox' /><strong> SELECTED: </strong> 4/08/2019, 12:45PM.</p>
-                                                                                        </div>-->
-                                            <div class="button-group">
+                                            <div id="date-picker" class="button-group" style="display:none">
                                                 <a href="#popup1" class="btn btn-ok">Add</a>
                                                 <a href="#" class="btn btn-cancel">Cancel</a>
                                             </div>
@@ -533,17 +377,17 @@
         <script type="text/javascript">
             $('.clockpicker').clockpicker();
         </script>
-    <script type="text/javascript">
-        hljs.configure({tabReplace: '    '});
-        hljs.initHighlightingOnLoad();
-    </script>
-    <div id="popup1" class="overlay">
-        <div class="popup">
-            <h5>Thankyou for Booking with us.</h5>
-            <a class="close" href="#">×</a>
-            <hr>
-            <div class="content">Our team will get in touch with you shortly.</div>
-        </div>                                    
-    </div>
-</body>
+        <script type="text/javascript">
+            hljs.configure({tabReplace: '    '});
+            hljs.initHighlightingOnLoad();
+        </script>
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h5>Thankyou for Booking with us.</h5>
+                <a class="close" href="#">×</a>
+                <hr>
+                <div class="content">Our team will get in touch with you shortly.</div>
+            </div>                                    
+        </div>
+    </body>
 </html>
