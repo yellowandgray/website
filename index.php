@@ -30,6 +30,7 @@
                 </video>  
                 <div class="overlay bg-ban"></div>
                 <div class="overlay bg-banner" style="background-image: url(images/banner-bg.jpg); background-repeat: no-repeat; background-size: cover; width: 100%; height: auto"></div>
+                <div class="overlay bg-banner-01" style="background-image: url(images/banner-bg-01.jpg); background-repeat: no-repeat; background-size: cover; width: 100%; height: auto"></div>
                 <div class="hero_slider_container slider_prlx">
                     <div class="owl-carousel owl-theme hero_slider container-slide">
                         <!-- Slider Item -->

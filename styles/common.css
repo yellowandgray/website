@@ -1881,7 +1881,7 @@ audio {
     display: block !important;
 }
 #mmform{
-   display: none;
+    display: none;
 }
 .ratio .checkmark:after {
     content: "";
@@ -1908,11 +1908,28 @@ audio {
 .bg-banner {
     display: none;
 }
-@media (max-width:768px) and (min-width:320px){
+.bg-banner-01 {
+    display: none;
+}
+@media (max-width:768px) and (min-width:500px){
     .bg-ban {
         display: none;
     }
     .bg-banner {
+        display: block;
+    }
+    .bg-banner-01 {
+        display: none;
+    }
+}
+@media (max-width:499px) and (min-width:320px){
+    .bg-ban {
+        display: none;
+    }
+    .bg-banner {
+        display: none;
+    }
+    .bg-banner-01 {
         display: block;
     }
 }
