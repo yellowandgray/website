@@ -206,7 +206,7 @@
                                             <div class="form-group col-md-3">
                                                 <label for="carm3">I'M INTERESTED TO</label>
                                                 <select id="carm3" class="select-session form-control" name="">
-                                                    <option value="0">I'm Interested to</option>
+                                                    <option value="0">Please Select</option>
                                                     <option value="Book_a_Coaching_and_Training_Session">Book a Coaching and Training Session</option>
                                                     <option value="Rent_a_Space">Rent a Space</option>
                                                     <option value="Others">Others</option>
