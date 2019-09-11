@@ -192,7 +192,15 @@ select{
 .booking-form input {
     margin: 20px 0px;
     padding: 5px 5px;
-    width: 355px;
+    width: 24.5%;
+}
+
+.booking-form select.select-session {
+    margin: 20px 0px;
+    padding: 8.2px 5px;
+    width: 24.5%;
+    border: 1px solid rgb(169, 196, 196);
+    background: #eee;
 }
 
 .booking-form h5 a {
@@ -900,18 +908,22 @@ input.queries::placeholder {
 .contact-bg {
     background: url(../img/contact-bg.jpg)no-repeat;
     background-size: cover;
-    height: 346px;
+    height: 400px;
     padding: 50px;
     transition: all .2s ease-in-out;
 }
 
-.contact-bg:hover {
+.contact-bg .card {
+    background: transparent !important;
+}
+
+/*.contact-bg:hover {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .09);
     transform: translateY(-.5rem);
-    /*    background: transparent !important;*/
+        background: transparent !important;
     border: 1px solid #4a7c7c;
     transition: all .2s ease-in-out;
-}
+}*/
 
 .contact-bg svg {
     position: absolute;
@@ -1309,4 +1321,59 @@ input.queries::placeholder {
 .ptb-40 {
     padding-top: 40px;
     padding-bottom: 40px;
+}
+
+.traning-session h2 {
+    text-align: center;
+    font-size: 25px;
+    border-bottom: 1px solid #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.date-section {
+    font-size: 25px;
+    color: #e7aca6;
+}
+
+.traning-session h5 {
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.traning-session p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.coacher-btn {
+    background: #4a7c7c;
+    padding: 5px 20px;
+    margin-bottom: 5px;
+    color: #fff;
+    border-radius: 25px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.coacher-btn:hover {
+    background: transparent;
+    border: 1px solid #4a7c7c;
+    color: #4a7c7c;
+    transition: all 0.3s;
+}
+
+.card-session {
+    border-bottom: 1px solid #000;
+    margin-top: 5px;
+}
+
+.booking-form input[type="checkbox"] {
+    margin: 0 10px;
+    padding: 0;
+    width: auto;
+    height: auto;
 }

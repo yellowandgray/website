@@ -2,7 +2,6 @@
 <html lang="en">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <?php include 'head.php'; ?>
-
     <body>
         <div class="loader">
             <div class="bg-green text-center">
@@ -23,6 +22,9 @@
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-3.jpg" alt="Image">
                         </div>
+                        <div class="carousel-cell text-center">
+                            <img class="img-fluid" src="img/slider/banner-4.jpg" alt="Image">
+                        </div>
                     </div>
                     <div class="banner-text">
                         <h2>WHERE</h2>
@@ -32,7 +34,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Mobile Banner -->
         <div class="banner">
             <div class="row fullwidth">
@@ -72,7 +73,6 @@
             </div>
         </div>
         <!-- Mobile Banner -->
-
         <section class="tensorsite-group tensorsite-group--3up bg-gray ptb-80 ">
             <div class="container">
                 <div class="row justify-content-center text-center">
@@ -93,12 +93,12 @@
                                         <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-                                        <div class="tensorsite-content__subtitle ">Training</div>
+                                        <div class="tensorsite-content__subtitle ">Training/ Coaching</div>
                                         <div class="tensorsite-content__title  ">
                                             EMPOWERING
                                         </div>
                                         <div class="tensorsite-content__description">
-                                            <p>Project Next Door provides you education that unlocks human intellectual potential.</p>     
+                                            <p>Provides you with interactive training and coaching that unlocks your imagination.</p>     
                                         </div>
                                     </div>
                                 </div>
@@ -113,12 +113,12 @@
                                         <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-                                        <div class="tensorsite-content__subtitle ">Modern Coaching</div>
+                                        <div class="tensorsite-content__subtitle ">Disruptive Technology</div>
                                         <div class="tensorsite-content__title  ">
                                             EXPERIENTIAL
                                         </div>
                                         <div class="tensorsite-content__description">
-                                            <p>Productive environment makes you feel open and sociable.</p>     
+                                            <p>Immersive technology that allows you to experience a real life simulations.</p>     
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +127,7 @@
                                 <div class="tensorsite-card tensorsite-card--clip">
                                     <a class="tensorsite-card__href" aria-label="Your first neural network" href="#"></a>
                                     <div class="tensorsite-content__image-wrapper">
-                                        <img class="tensorsite-content__image" src="img/about/about-01.jpg" alt="">
+                                        <img class="tensorsite-content__image" src="img/about/about-001.jpg" alt="">
                                     </div>
                                     <div class="tensorsite-content  tensorsite-content--under-image">
                                         <div class="tensorsite-content__clip-bg">
@@ -138,7 +138,7 @@
                                             ENGAGING
                                         </div>
                                         <div class="tensorsite-content__description">
-                                            <p>We're simplifying the process of revolutionary learning for everone.</p>     
+                                            <p>Productive environment makes you feel open and sociable.</p>     
                                         </div>
                                     </div>
                                 </div>
@@ -193,44 +193,101 @@
                                         <input type="text" placeholder="Name" required />
                                         <input type="text" placeholder="Email" required />
                                         <input type="text" placeholder="Mobile Number" required />
+                                        <!--                                        <label>I'M INTERESTED</label>-->
+                                        <select id="carm3" class="select-session" name="">
+                                            <option value="0">I'm Interested to</option>
+                                            <option value="Book_a_Coaching_and_Training_Session">Book a Coaching and Training Session</option>
+                                            <option value="Rent_a_Space">Rent a Space</option>
+                                            <option value="Others">Others</option>
+                                        </select>
                                     </div>
-                                    <div class="row">
+                                    <div id="session-class" class="row traning-session" style="display: none;">
+                                        <div class="col-md-12">
+                                            <h2>Book a Coaching and Training Session</h2>
+                                        </div>
                                         <div class="col-md-6 mb-3 mb-md-4">
-                                            <label>I'M INTERESTED</label>
-                                            <select id="carm3" name="" class="w-100">
-                                                <option value="">Please Select</option>
-                                                <option value="Rent_our_Space">Rent our Space</option>
-                                                <option value="Book_a_Training_Session">Book a Training Session</option>
-                                            </select>
-                                            <br/>
-                                            <br/>
-                                            <div id="session-class" class="" style="display:none">
-                                                <h2>Project Next Door Session</h2>
+                                            <div class="card-session">
+                                                <div class="checkbox-session w-100 float-right">Attend<input type="checkbox" name="attand"></div>
+                                                <span class="date-section">06 Sep 2019 / 10:00 AM - 12:00 PM</span>
+                                                <h5>COACHING SESSION TITLE COMES HERE</h5>
+                                                <p>Coacher Name: Name Comes Here <a href="#" class="float-right coacher-btn">Read More</a></p>
+                                                <p><strong>Session Details: </strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                             </div>
-
-                                            <div id="date-picker" style="display:none">
+                                            <div class="card-session">
+                                                <div class="checkbox-session w-100 float-right">Attend<input type="checkbox" name="attand"></div>
+                                                <span class="date-section">06 Sep 2019 / 1:30 AM - 03:00 PM</span>
+                                                <h5>COACHING SESSION TITLE COMES HERE</h5>
+                                                <p>Coacher Name: Name Comes Here <a href="#" class="float-right coacher-btn">Read More</a></p>
+                                                <p><strong>Session Details: </strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3 mb-md-4">
+                                            <div class="card-session">
+                                                <div class="checkbox-session w-100 float-right">Attend<input type="checkbox" name="attand"></div>
+                                                <span class="date-section">06 Sep 2019 / 10:00 AM - 12:00 PM</span>
+                                                <h5>COACHING SESSION TITLE COMES HERE</h5>
+                                                <p>Coacher Name: Name Comes Here <a href="#" class="float-right coacher-btn">Read More</a></p>
+                                                <p><strong>Session Details: </strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                            </div>
+                                            <div class="card-session">
+                                                <div class="checkbox-session w-100 float-right">Attend<input type="checkbox" name="attand"></div>
+                                                <span class="date-section">06 Sep 2019 / 1:30 AM - 03:00 PM</span>
+                                                <h5>COACHING SESSION TITLE COMES HERE</h5>
+                                                <p>Coacher Name: Name Comes Here <a href="#" class="float-right coacher-btn">Read More</a></p>
+                                                <p><strong>Session Details: </strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="date-picker" style="display:none">
+                                        <div class="col-md-6 mb-3 mb-md-4">
+                                            <div>
                                                 <input type="text" placeholder="Select Date" class="datepicker">
                                                 <br/>
                                                 <button class="btn btn-ok" id="timeButton">Select Date</button>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 mb-3 mb-md-4">
-                                            <div id="time_container"></div>
-                                            <div id="date-picker" class="button-group" style="display:none">
-                                                <a href="#popup1" class="btn btn-ok">Add</a>
-                                                <a href="#" class="btn btn-cancel">Cancel</a>
+                                        <div class="col-md-6 mb-3 mb-md-4" id="time-picker">
+                                            <div class="row">
+                                                <div class="col-md-7">
+                                                    <div class="margin-tb-20"><strong>19 Sep 2019</strong></div>
+                                                    <div class="margin-tb-20"><strong>19 Sep 2019</strong></div>
+                                                    <div class="margin-tb-20"><strong>19 Sep 2019</strong></div>
+                                                    <div class="margin-tb-20"><strong>19 Sep 2019</strong></div>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="flex-row time-overlay">
+                                                        <input type="text" placeholder="From" class="timepicker">
+                                                        <input type="text" placeholder="To" class="timepicker float-right">
+                                                    </div>
+                                                    <div class="flex-row time-overlay">
+                                                        <input type="text" placeholder="From" class="timepicker">
+                                                        <input type="text" placeholder="To" class="timepicker float-right">
+                                                    </div>
+                                                    <div class="flex-row time-overlay">
+                                                        <input type="text" placeholder="From" class="timepicker">
+                                                        <input type="text" placeholder="To" class="timepicker float-right">
+                                                    </div>
+                                                    <div class="flex-row time-overlay">
+                                                        <input type="text" placeholder="From" class="timepicker">
+                                                        <input type="text" placeholder="To" class="timepicker float-right">
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <div id="time_container"></div>
+                                            <!--                                            <div class="button-group">
+                                                                                            <a href="#popup1" class="btn btn-ok">Add</a>
+                                                                                            <a href="#" class="btn btn-cancel">Cancel</a>
+                                                                                        </div>-->
                                         </div>
                                     </div>
+                                    <center><a href="#popup1" id="interest-btn" class="btn btn-ok">Interest Select</a></center>
                                 </from>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
-
         <section class="bg-primary-3 ptb-80 text-white">
             <div class="divider divider-custom-2 transform-flip-x"></div>
             <div class="container">
@@ -239,20 +296,16 @@
                         <h3 class="display-4 text-white">Contact Us</h3>
                     </div>
                 </div>
-                <div class="row justify-content-center wow fadeInDown">
-                    <div class="col-xl-12 col-lg-12">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6 mb-3 mb-md-4" data-aos="fade-up" data-aos-delay="20">
-                                <div class="card card-body contact-bg min-vh-md-30">
-                                    <div class="flex-fill contact pt-25">
-                                        <!--                                        <h4 class="h3">Address</h4>-->
-                                        <i class="fas fa-map-marker-alt icon icon-xs" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
-                                        <i class="far fa-envelope icon icon-xs" data-inject-svg></i><p> <a href="#" style="color: #fff;">email@mywebsite.com</a></p>
-                                        <i class="fas fa-phone-alt icon icon-xs" data-inject-svg></i><p><a href="#" style="color: #fff;">+630 7662 7601</a></p>
-                                    </div>
-                                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row justify-content-center wow fadeInDown contact-bg">
+                    <div class="col-md-6 mb-3 mb-md-4" data-aos="fade-up" data-aos-delay="20">
+                        <div class="card card-body min-vh-md-30">
+                            <div class="flex-fill contact pt-25">
+                                <i class="fas fa-map-marker-alt icon icon-xs" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
+                                <i class="far fa-envelope icon icon-xs" data-inject-svg></i><p> <a href="#" style="color: #fff;">email@mywebsite.com</a></p>
+                                <i class="fas fa-phone-alt icon icon-xs" data-inject-svg></i><p><a href="#" style="color: #fff;">+630 7662 7601</a></p>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -319,7 +372,7 @@
         <?php include'footer.php'; ?>
         <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
-<!--        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+    <!--        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
         <script src="js/custom.js" type="text/javascript"></script>
         <script type="text/javascript">
             //banner slider
@@ -375,7 +428,17 @@
             });
         </script>
         <script type="text/javascript">
-            $('.clockpicker').clockpicker();
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.timepicker');
+                var instances = M.Timepicker.init(elems, options);
+            });
+
+            // Or with jQuery
+
+            $(document).ready(function () {
+                $('.timepicker').timepicker();
+            });
+//            $('.clockpicker').clockpicker();
         </script>
         <script type="text/javascript">
             hljs.configure({tabReplace: '    '});

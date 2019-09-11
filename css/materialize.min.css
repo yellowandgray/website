@@ -43,7 +43,9 @@
 .datepicker-modal {
     max-width: 325px;
     min-width: 300px;
-    max-height: none
+    max-height: none;
+    webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
 }
 
 .datepicker-container.modal-content {
@@ -222,9 +224,10 @@
 .datepicker-clear,
 .datepicker-today,
 .datepicker-done {
-    color: #ffffff;
-    padding: 0 1rem;
-    background: #26a69a;
+    color: #000000;
+    padding: 8px 1rem;
+    background: transparent;
+    border: none;
 }
 
 .datepicker-select {
@@ -446,7 +449,9 @@
 }
 
 .timepicker-close {
-    color: #26a69a
+    color: #000000;
+    background: transparent;
+    border: none;
 }
 
 .timepicker-clear,
@@ -475,4 +480,8 @@
         text-align: center;
         margin-top: 1.2rem
     }
+}
+
+.timepicker-span-hours.text-primary, .timepicker-span-minutes.text-primary, .am-btn.text-primary, .pm-btn.text-primary {
+    color: #fff !important;
 }

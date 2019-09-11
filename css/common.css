@@ -829,3 +829,22 @@ body.loaded>div.loader {
 #date-picker input:focus {
     outline: none;
 }
+
+#time-picker input {
+    width: 45%;
+    border: none;
+    border-bottom: 1px solid #000;
+    margin: 5px 5px;
+}
+
+#time-picker input:focus {
+    outline: none;
+}
+
+.time-overlay .modal-overlay {
+    display: none !important;
+}
+
+.margin-tb-20 {
+    margin: 20px 0;
+}
