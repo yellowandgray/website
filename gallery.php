@@ -95,27 +95,28 @@
                         <h3 class="display-4 text-white">Contact Us</h3>
                     </div>
                 </div>
-                <div class="row justify-content-center wow fadeInDown">
-                    <div class="col-xl-12 col-lg-12">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6 mb-3 mb-md-4" data-aos="fade-up" data-aos-delay="20">
-                                <div class="card card-body contact-bg min-vh-md-30">
-                                    <div class="flex-fill contact pt-25">
-                                        <!--                                        <h4 class="h3">Address</h4>-->
-                                        <i class="fas fa-map-marker-alt icon icon-xs" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
-                                        <i class="far fa-envelope icon icon-xs" data-inject-svg></i><p> <a href="#" style="color: #fff;">email@mywebsite.com</a></p>
-                                        <i class="fas fa-phone-alt icon icon-xs" data-inject-svg></i><p><a href="#" style="color: #fff;">+630 7662 7601</a></p>
+                <!--                <div class="row justify-content-center wow fadeInDown">
+                                    <div class="col-xl-12 col-lg-12">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-6 mb-3 mb-md-4" data-aos="fade-up" data-aos-delay="20">
+                                                <div class="card card-body contact-bg min-vh-md-30">
+                                                    <div class="flex-fill contact pt-25">
+                                                                                                <h4 class="h3">Address</h4>
+                                                        <i class="fas fa-map-marker-alt icon icon-xs" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
+                                                        <i class="far fa-envelope icon icon-xs" data-inject-svg></i><p> <a href="#" style="color: #fff;">email@mywebsite.com</a></p>
+                                                        <i class="fas fa-phone-alt icon icon-xs" data-inject-svg></i><p><a href="#" style="color: #fff;">+630 7662 7601</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                                </div>-->
             </div>
+            <?php include 'contact-bg-address.php'; ?>
         </section>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 300px;" frameborder="0" style="border:0" allowfullscreen></iframe>
-            <?php include'footer.php'; ?>
+        <?php include 'map.php'; ?>
+        <?php include'footer.php'; ?>
         <script type="text/javascript">
             $(document).ready(function () {
                 $(".gallery-img").click(function () {

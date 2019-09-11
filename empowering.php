@@ -54,7 +54,7 @@
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7">
                         <h3 class="display-4">TRAINING TOPIC CATEGORIES</h3>
-                        <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>
+<!--                        <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>-->
                     </div>
                 </div>
                 <div class="row text-center">
@@ -159,10 +159,10 @@
                     <img src="img/training/business management.jpg" />
                     <h5>Business Management</h5>
                 </div>
-                <div class="training-topic-h5">
+<!--                <div class="training-topic-h5">
                     <img src="img/training/english-content.jpg" />
                     <h5>English Content Delivery</h5>
-                </div>
+                </div>-->
                 <div class="training-topic-h5">
                     <img src="img/training/enterprenurship.jpg" />
                     <h5>Entrepreneurship</h5>
@@ -270,18 +270,16 @@
                                 <div class="row ">
                                     <ul>
                                         <i class="fa fa-home" aria-hidden="true"></i>
-                                        <li>Full and Half Day Training Sessions Available.</li>
+                                        <li>Full and Half Day Training Sessions Available</li>
                                         <i class="fa fa-wifi"></i>
                                         <li>Unlimited High Speed Wifi Connection</li>
                                         <i class="fa fa-tv" aria-hidden="true"></i>
                                         <li>Usage of LED TV</li>
                                         <i class="fas fa-table-tennis"></i>
-                                        <li>Amenities Available.</li>
+                                        <li>Amenities Available</li>
                                         <i class="fas fa-utensils"></i>
                                         <li>Inclusive of Breakfast/Lunch/Dinner/Snacks</li>
-
                                     </ul>
-
                                 </div>
                             </div>
                         </div>
@@ -294,7 +292,6 @@
         <!--        <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
                     <img src="assets/img/icons/interface/icon-arrow-up.svg" alt="Icon" class="icon bg-white" data-inject-svg>
                 </a>-->
-        <!-- Required vendor scripts (Do not remove) -->
         <?php include'footer.php'; ?>
         <script src="js/slick.js" type="text/javascript"></script>
         <script type="text/javascript">

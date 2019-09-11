@@ -182,24 +182,21 @@ select{
 
 .booking-form-box {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .09);
+    padding: 40px 20px;
 }
 
 .booking-form {
-    padding: 40px;
     margin: 0 auto;
 }
 
 .booking-form input {
-    margin: 20px 0px;
+    margin: 10px 0px;
     padding: 5px 5px;
-    width: 24.5%;
+    width: 100%;
 }
 
 .booking-form select.select-session {
-    margin: 20px 0px;
-    padding: 8.2px 5px;
-    width: 24.5%;
-    border: 1px solid rgb(169, 196, 196);
+    margin: 10px 0px;
     background: #eee;
 }
 

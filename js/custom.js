@@ -18,3 +18,13 @@ jQuery(document).ready(function () {
         }
     });
 });
+
+jQuery(document).ready(function () {
+    jQuery("#carm3").change(function () {
+        if (jQuery(this).val() === 'Others') {
+            jQuery('#other-text').show();
+        } else {
+            jQuery('#other-text').hide();
+        }
+    });
+});

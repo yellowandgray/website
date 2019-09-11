@@ -190,16 +190,31 @@
                             <div class="col-md-12 mb-3 mb-md-4" data-aos="fade-down" data-aos-delay="10">
                                 <from action="" class="booking-form">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Name" required />
-                                        <input type="text" placeholder="Email" required />
-                                        <input type="text" placeholder="Mobile Number" required />
+                                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label for="name">Name</label>
+                                                <input type="text" class="form-control" id="name" placeholder="Name" required>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="email">Password</label>
+                                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="mobile">Mobile Number</label>
+                                                <input type="text" class="form-control" id="mobile" placeholder="Mobile" required>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="carm3">I'M INTERESTED TO</label>
+                                                <select id="carm3" class="select-session form-control" name="">
+                                                    <option value="0">I'm Interested to</option>
+                                                    <option value="Book_a_Coaching_and_Training_Session">Book a Coaching and Training Session</option>
+                                                    <option value="Rent_a_Space">Rent a Space</option>
+                                                    <option value="Others">Others</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                         <!--                                        <label>I'M INTERESTED</label>-->
-                                        <select id="carm3" class="select-session" name="">
-                                            <option value="0">I'm Interested to</option>
-                                            <option value="Book_a_Coaching_and_Training_Session">Book a Coaching and Training Session</option>
-                                            <option value="Rent_a_Space">Rent a Space</option>
-                                            <option value="Others">Others</option>
-                                        </select>
+
                                     </div>
                                     <div id="session-class" class="row traning-session" style="display: none;">
                                         <div class="col-md-12">
@@ -237,13 +252,16 @@
                                                 <p><strong>Session Details: </strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                             </div>
                                         </div>
+                                        <div class="col-md-12">
+                                            <textarea rows="4" cols="65" placeholder="Command"></textarea>
+                                        </div>
                                     </div>
                                     <div class="row" id="date-picker" style="display:none">
                                         <div class="col-md-6 mb-3 mb-md-4">
                                             <div>
                                                 <input type="text" placeholder="Select Date" class="datepicker">
                                                 <br/>
-                                                <button class="btn btn-ok" id="timeButton">Select Date</button>
+                                                <button class="btn btn-cancel" id="timeButton">Select Date</button>
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3 mb-md-4" id="time-picker">
@@ -274,10 +292,14 @@
                                                 </div>
                                             </div>
                                             <div id="time_container"></div>
-                                            <!--                                            <div class="button-group">
-                                                                                            <a href="#popup1" class="btn btn-ok">Add</a>
-                                                                                            <a href="#" class="btn btn-cancel">Cancel</a>
-                                                                                        </div>-->
+                                        </div>
+                                        <div class="col-md-12">
+                                            <textarea rows="4" cols="65" placeholder="Command"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="other-text" style="display: none;">
+                                        <div class="col-md-12">
+                                            <textarea rows="4" cols="65" placeholder="Command"></textarea>
                                         </div>
                                     </div>
                                     <center><a href="#popup1" id="interest-btn" class="btn btn-ok">Interest Select</a></center>
@@ -297,21 +319,9 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid">
-                <div class="row justify-content-center wow fadeInDown contact-bg">
-                    <div class="col-md-6 mb-3 mb-md-4" data-aos="fade-up" data-aos-delay="20">
-                        <div class="card card-body min-vh-md-30">
-                            <div class="flex-fill contact pt-25">
-                                <i class="fas fa-map-marker-alt icon icon-xs" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
-                                <i class="far fa-envelope icon icon-xs" data-inject-svg></i><p> <a href="#" style="color: #fff;">email@mywebsite.com</a></p>
-                                <i class="fas fa-phone-alt icon icon-xs" data-inject-svg></i><p><a href="#" style="color: #fff;">+630 7662 7601</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php include 'contact-bg-address.php'; ?>
         </section>
-        <iframe class="wow fadeInDown" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 300px;" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <?php include 'map.php'; ?>
         <section class="testimonial text-center ptb-80">
             <div class="container">
                 <div class="row justify-content-center text-center">

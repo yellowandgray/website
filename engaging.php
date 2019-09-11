@@ -27,7 +27,7 @@
                         <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos="fade-left">
                             <h1 class="display-3">ENGAGING ACTIVITIES<mark data-aos="highlight-text" data-aos-delay="500"></mark></h1>
                             <p class="lead">Productive environment makes you feel open and sociable. Our room provides and creates a feeling of earthiness and sophistication. Modern environment and flexible customization, all at a cost effective price.</p>
-                             <center><a href="#" class="bg-button btn-1">BOOK NOW</a></center>
+                            <center><a href="#" class="bg-button btn-1">BOOK NOW</a></center>
                         </div>
                         <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos="fade-up">
                             <img src="img/engaging/title-img.jpg" alt="Image" class="rounded rounded-image img-fluid shadow-lg">
@@ -242,7 +242,7 @@
                     <div class="col-md-4" data-aos-delay="200" data-aos="fade-right">
                         <i class="fas fa-chair"></i><p> Usage of Chairs and Tables</p>
                         <i class="fas fa-chair"></i><p> Adjustment to desired chairs and tables arrangement</p>
-                        <i class="fas fa-utensils"></i><p> Breakfast / Lunch / Dinner / Snacks</p>
+                        <i class="fas fa-utensils"></i><p> Breakfast / Lunch / Dinner (Optional)</p>
                         <i class="fas fa-dumbbell"></i><p> Gym available</p>
                     </div>
                     <div class="col-md-4" data-aos-delay="200" data-aos="fade-right">
@@ -250,45 +250,47 @@
                         <i class="fas fa-utensils"></i><p> Barbecue Area</p>
                         <i class="fas fa-chess-pawn"></i><p> Usage of Gamesroom</p>
                         <i class="fas fa-chess-pawn"></i><p> Sauna available</p>
+                        <i class="fas fa-chalkboard"></i><p> Usage of Interactive Smart Board</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="bg-primary-3 ptb-80 text-white">
-                        <div class="divider divider-custom-12"></div>
+            <div class="divider divider-custom-12"></div>
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7 wow fadeInDown">
                         <h3 class="display-4 text-white">Contact Us</h3>
                     </div>
                 </div>
-                <div class="row justify-content-center wow fadeInDown">
-                    <div class="col-xl-12 col-lg-12">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6 mb-3 mb-md-4" data-aos="fade-up" data-aos-delay="20">
-                                <div class="card card-body contact-bg min-vh-md-30">
-                                    <div class="flex-fill contact pt-25">
-                                        <!--                                        <h4 class="h3">Address</h4>-->
-                                        <i class="fas fa-map-marker-alt icon icon-xs" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
-                                        <i class="far fa-envelope icon icon-xs" data-inject-svg></i><p> <a href="#" style="color: #fff;">email@mywebsite.com</a></p>
-                                        <i class="fas fa-phone-alt icon icon-xs" data-inject-svg></i><p><a href="#" style="color: #fff;">+630 7662 7601</a></p>
+                <!--                <div class="row justify-content-center wow fadeInDown">
+                                    <div class="col-xl-12 col-lg-12">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-6 mb-3 mb-md-4" data-aos="fade-up" data-aos-delay="20">
+                                                <div class="card card-body contact-bg min-vh-md-30">
+                                                    <div class="flex-fill contact pt-25">
+                                                                                                <h4 class="h3">Address</h4>
+                                                        <i class="fas fa-map-marker-alt icon icon-xs" data-inject-svg></i><p> Project Next Door, No. 16-05, Penthouse,<br/> Menara Infiniti, Jalan SS6/3, 47301<br/> Petaling Jaya, Selangor, Malaysia.</p>
+                                                        <i class="far fa-envelope icon icon-xs" data-inject-svg></i><p> <a href="#" style="color: #fff;">email@mywebsite.com</a></p>
+                                                        <i class="fas fa-phone-alt icon icon-xs" data-inject-svg></i><p><a href="#" style="color: #fff;">+630 7662 7601</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                                </div>-->
             </div>
+            <?php include 'contact-bg-address.php'; ?>
         </section>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9544992786723!2d101.59787331464979!3d3.1067379977377474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d6f2ebba175%3A0x8b633e7b44f03dc6!2sInfinity+Tower!5e0!3m2!1sen!2sin!4v1564835922110!5m2!1sen!2sin" style="width: 100%; height: 300px;" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <?php include 'map.php'; ?>
 <!--        <section class="pb-0">
             <div class="container">
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-9 col-lg-8 col-xl-7">
                         <h3 class="display-4">As seen in...</h3>
-                        <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>
+                        <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doSed utloremque laudantium, totam rem aperiam, eaque ipsa.</div>
                     </div>
                 </div>
                 <div class="row justify-content-center text-center">
