@@ -26,7 +26,7 @@
                                 <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Amruta Pandit</h3>
                                     <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/Amruta-Pandit.mp4" type="video/mp4">
+                                        <source src="video/Amruta-Pandit.mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
                                 </div>
@@ -37,7 +37,7 @@
                                 <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Avil Pinto</h3>
                                     <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/Avil Pinto.mp4" type="video/mp4">
+                                        <source src="video/Avil Pinto.mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
                                 </div>
@@ -50,7 +50,7 @@
                                 <div class="icon_container  d-flex flex-column">
                                     <h3 class="text-center">Paulo D</h3>
                                     <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/Paulo D.mp4" type="video/mp4">
+                                        <source src="video/Paulo D.mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
                                 </div>
@@ -63,7 +63,7 @@
                                 <div class="icon_container d-flex flex-column">
                                     <h3 class="text-center">Sohel Shaikh</h3>
                                     <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
-                                        <source src="vedio/Sohel Shaikh.mp4" type="video/mp4">
+                                        <source src="video/Sohel Shaikh.mp4" type="video/mp4">
                                         Your browser does not support the <code>video</code> tag.
                                     </video>
                                 </div>

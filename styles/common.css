@@ -1652,14 +1652,16 @@ audio {
 
 }
 
-.about-cheryl img{
-    width: 44% !important;
+.about-cheryl img {
+    width: 35% !important;
     height: auto;
     float: right;
     box-shadow: 0px 0px 15px 0px #bdbdbd;
-    margin-left: 10px;
+    margin-left: 15px;
     padding: 3px;
 }
+
+
 .quotes {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -1792,7 +1794,7 @@ audio {
     }
 }
 .onload-popup-form .form-group input::placeholder {
-    color: #fff !important;
+    color: #9c20b3 !important;
 }
 .onload-popup-form .form-group input {
     border-bottom: 1px solid #a02db4;
@@ -1835,6 +1837,13 @@ audio {
 .workshop-form input[type="radio"]{
     visibility:hidden;
 }
+.workshop-form-mm {
+    background: rgba(56, 198, 243, 0.24);
+    padding: 10px;
+}
+.workshop-form-mm input[type="radio"]{
+    visibility:hidden;
+}
 .coach h2 {
     font-size: 25px;
     font-weight: 600;
@@ -1864,6 +1873,15 @@ audio {
 }
 .ratio input:checked ~ .checkmark {
     background-color: #4cccf4;
+}
+.mm {
+    display: none;
+}
+.mm-type input:checked ~ .mm {
+    display: block !important;
+}
+#mmform{
+   display: none;
 }
 .ratio .checkmark:after {
     content: "";
@@ -1917,4 +1935,71 @@ audio {
         top: 50%;
         left: 0px;
     }
+}
+.how-v plc.features_item h3 {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    height: 100%;
+}
+.about-cheryl-head {
+    width: 20%;
+    background: #20b9ec;
+    padding: 10px;
+    transform: skewX(-22deg);
+    color: #fff;
+}
+.qoute .fa-1 {  
+    color: #007bff;
+    position: relative;
+    top: -7px;
+    margin-right: 10px;
+}
+.qoute .fa-2 {  
+    color: #007bff;
+    position: relative;
+    bottom: -9px;
+    margin-left: 10px;
+}
+.qoute  {
+    padding: 20px;
+    background: #20b9ec;
+    color: #fff;
+    border-radius: 25px 1px 25px 1px;
+    box-shadow: 0px 0px 4px 1px #007bff;
+}
+.popup-content-01 {
+    width: 100%;
+    padding: 100px 0;
+    background: #20b9ec;
+    /* background: url(../images/bg/fixed-bg.jpg)no-repeat; */
+    background-attachment: fixed;
+    background-size: cover;
+}
+.popup-content-01 img 
+{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-shadow: 0px 0px 6px 0px #9c20b3;
+    background: #ffffff80;
+    margin-bottom: 10px;
+}
+.popup-content-01 p {
+    color: #fff;
+}
+.part-2 p{
+    background: #cb8ef1;
+    padding: 20px;
+    border-radius: 18px 18px 18px 18px;
+    color: #fff;
+}
+.part-3 .footer_social li i {
+    font-size: 20px;
+    color: rgb(156, 32, 179);
+}
+.heading i{
+    color: #20b9ec;
+    font-size: 25px;
+    padding: 0px 15px 0px 0px;
 }

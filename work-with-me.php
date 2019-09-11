@@ -86,10 +86,10 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-4 form-group">
-                                        <input type='text' name='name' placeholder="Your Name..." class="input-box">
+                                        <input type='text' name='name' placeholder="Your Name..." class="input-box" required>
                                     </div>
                                     <div class="col-lg-4 form-group">
-                                        <input type='email' name='email' placeholder="Your Email..." class="input-box">
+                                        <input type='email' name='email' placeholder="Your Email..." class="input-box" required>
                                     </div>
                                     <div class="col-lg-4 form-group" style="text-align: center;">
                                         <button type="submit" class="button-3"><span>Submit</span></button>
@@ -257,10 +257,56 @@
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i><li>The Mastermind usually runs for a span of 8 weeks.</li>
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i><li>In each session, there will be a lesson for the first 1-hour, which will be led by Cheryl. In the next hour, the participants will interact, share and engage with each other (structured interaction - guidelines provided at the Mastermind).</li>
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i><li>Usually each participant will have a "Buddy" - a partner from within the Group. Your Buddy will be your accountability partner and both of you will keep each other motivated by holding yourselves responsible to your commitments! This has one of the most surprisingly positive results :) And you will usually make a really good friend for life!</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>To join one of the Masterminds, please click <a href="#enquiry" target="blank" style="text-decoration: underline;">here</a></li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>To join one of the Masterminds, please click <a onclick="openMmform()" style="font-weight: 600;color:#5dc2f1;cursor: pointer;">here</a></li>
                             </ul>
                         </div>
                     </div>
+                </div>
+                <div class="container" id="mmform">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form class="workshop-form-mm">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <p class="color-black bold">please click on the link below:</p>
+                                    </div>
+                                    <div class="col-lg-6 form-group ratio">
+                                        <label> Workshop
+                                            <input type="radio" name="topic" value="Workshop"  checked>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-6 form-group ratio mm-type">
+                                        <label> Mastermind
+                                            <input type="radio" name="topic" value="Mastermind" >
+                                            <span class="checkmark"></span>
+                                            <div class="form-group mm">
+                                                <input type="checkbox" name="right" value="FINANCIAL FREEDOM "> FINANCIAL FREEDOM<br/>
+                                                <input type="checkbox" name="right" value="TRANSFORMATIONAL CHANGE  "> TRANSFORMATIONAL CHANGE <br/>
+                                                <input type="checkbox" name="right" value="CAREER ACCELERATION "> CAREER ACCELERATION<br/>
+                                                <input type="checkbox" name="right" value="TRADER COACH "> TRADER COACH<br/>
+                                                <input type="checkbox" name="right" value="LIFE (TIME) MANAGEMENT "> LIFE (TIME) MANAGEMENT<br/>
+                                                <input type="checkbox" name="right" value="WONDER WOMAN"> WONDER WOMAN<br/>
+                                            </div>
+                                        </label>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 form-group">
+                                        <input type='text' name='name' placeholder="Your Name..." class="input-box" required>
+                                    </div>
+                                    <div class="col-lg-4 form-group">
+                                        <input type='email' name='email' placeholder="Your Email..." class="input-box" required>
+                                    </div>
+                                    <div class="col-lg-4 form-group" style="text-align: center;">
+                                        <button type="submit" class="button-3"><span>Submit</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -269,5 +315,6 @@
             <?php include 'contact-page.php'; ?>
             <!-- Footer -->
             <?php include 'footer.php'; ?>
+        </div>
     </body>
 </html>

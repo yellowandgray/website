@@ -42,5 +42,14 @@
 <script src="js/contact-forms.js" type="text/javascript"></script>
 <script src="js/sweetalert.min.js" type="text/javascript"></script>
 <script>
-          new WOW().init();
+                        new WOW().init();
+</script>
+<script>
+    function openMmform() {
+        document.getElementById("mmform").style.display = "block";
+    }
+
+    function closeMmform() {
+        document.getElementById("mmform").style.display = "none";
+    }
 </script>
