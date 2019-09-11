@@ -164,7 +164,7 @@
                                     <p>Do you now wish to stop working for money and have money work for you? Do you often get to the end of the month and wonder where your money has gone? Are you drowning in the quagmire of credit card debts and know that something needs to change? Then get in touch with me now. I have been a banker for nearly 2 decades, have cracked the code and am waiting to show you how you too, can become finanically free. </p>
                                 </div>
                                 <div class="text-center arrow-1">
-                                    <a href="contact.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                    <a href="contact"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +183,7 @@
                                     <p>Do you find yourself wanting to do more, live more meaningfully, give back to the world, but just haven't been able to? Connect with me and we will shine the light on how you may manage your time and thus your life so that you live the life you want to live.</p>
                                 </div>
                                 <div class="text-center arrow-1">
-                                    <a href="contact.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                    <a href="contact"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +202,7 @@
                                     <p>Are you in a job that does not light you up, or in a career that you once loved but now wish to change? Or do you find yourself unable to advance in your career no matter what you do? Then chat with me and we will discover how you too can race through the corporate ladder.</p>
                                 </div>
                                 <div class="text-center arrow-1">
-                                    <a href="contact.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                    <a href="contact"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +223,7 @@
                                     <p>Are you a trader in the financial markets and are unable to remain consistently profitable? Perhaps you cannot stick to your rules or deal with the psychological impact of trading? Talk to me - I trade Forex and Futures markets - I have been through the same painful rite of passage and emerged victorious. </p>
                                 </div>
                                 <div class="text-center arrow-1">
-                                    <a href="contact.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                    <a href="contact"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +242,7 @@
                                     <p>Are you at a stage where you feel like it is ‘now time’ to make a large change? Do you feel that there "there has to be more than this" and want to radically catapult all areas of your life? If you wish to disrupt the status quo,follow your passion, live life to the fullest, then contact me right away. I will be honored to guide you along your path to your most fulfilling life.</p>
                                 </div>
                                 <div class="text-center arrow-1">
-                                    <a href="contact.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                    <a href="contact"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -261,7 +261,7 @@
                                     <p>Are you an ambitious woman, who wishes to break through the proverbial glass-ceiling that is restricting your progress? Do you want it to be easier to ask for a raise or a promotion or be heard? Then grab a coffee with me! I have ‘been there, done that’ and am thrilled to help you learn the ropes. Let's do this, sister! </p>
                                 </div>
                                 <div class="text-center arrow-1">
-                                    <a href="contact.php"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                    <a href="contact"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -308,7 +308,7 @@
                             </div>
                             <div class="col-lg-6 text-center wow fadeInRight">
                                 <!--<button class="button-1" id="myBtn"><span>Apply to Coach with Cheryl</span></button>-->
-                                <button class="button-1"><span><a href="contact.php" class="color-w">Apply to Coach with Cheryl</a></span></button>
+                                <button class="button-1"><span><a href="contact" class="color-w">Apply to Coach with Cheryl</a></span></button>
                             </div>
                         </div>
                     </div>
@@ -338,7 +338,7 @@
                                             <div class="test_quote"></div>
                                             <p>Cheryl Pinto has been my life coach for the past 5 months. I was working in the IT industry for 5 years and felt like I needed a change and pursue a passion...</p>
                                             <div class="button discover_button center">
-                                                <a href="testimonials.php" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -350,7 +350,7 @@
                                             <div class="test_quote">"</div>
                                             <p>Today is just the 18th day since we began our coaching session. With just 2 sessions, falling short of words to describe the transformation that's...</p>
                                             <div class="button discover_button center">
-                                                <a href="testimonials.php" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -363,7 +363,7 @@
                                             <div class="test_quote">"</div>
                                             <p>At the outset I looked at NLP with a lot of skepticism and it was only because I trusted Cheryl that I decided to give it a shot. She has the ability...</p>
                                             <div class="button discover_button center">
-                                                <a  href="testimonials.php" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                <a  href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -376,7 +376,7 @@
                                             <div class="test_quote">"</div>
                                             <p>Cheryl has been a friend, mentor and guide for me. I have worked with Cheryl over the past 14 months and I can term our engagement as a wonderful journey of discovering new things..,</p>
                                             <div class="button discover_button center">
-                                                <a href="testimonials.php" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -389,7 +389,7 @@
                                             <div class="test_quote">"</div>
                                             <p>Cheryl’s warm nature and genuine empathy for her clients are her biggest strengths. She is patient, listens well and is non-judgmental..,</p>
                                             <div class="button discover_button center">
-                                                <a href="testimonials.php" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -402,7 +402,7 @@
                                             <div class="test_quote">"</div>
                                             <p>Cheryl has this contagious confidence in herself and the ability to build the same in you which makes you believe that you too can do it!</p>
                                             <div class="button discover_button center">
-                                                <a href="testimonials.php" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -415,7 +415,7 @@
                                             <div class="test_quote">"</div>
                                             <p>Cheryl is smart, a fast-thinker and just asks the right question at the right time. After coaching with Cheryl, I felt energised and ready to face challenges with my chin up. </p>
                                             <div class="button discover_button center">
-                                                <a href="testimonials.php" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -428,7 +428,7 @@
                                             <div class="test_quote">"</div>
                                             <p>Cheryl is result oriented. She will push you to your limits to get the results you want. I was lost in what I wanted for my career.</p>
                                             <div class="button discover_button center">
-                                                <a href="testimonials.php" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -441,7 +441,7 @@
                                             <div class="test_quote">"</div>
                                             <p>Cheryl has been my role model ever since I've met her. She's inspired me to better myself and improve my life by showing me it's possible.</p>
                                             <div class="button discover_button center">
-                                                <a href="testimonials.php" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -454,7 +454,7 @@
                                             <div class="test_quote">"</div>
                                             <p>Cheryl has a number of strengths & abilities that make her a spectacular coach. Some of them are: persistence, helping me break through self-imposed barriers, obtaining clarity and goal-setting.</p>
                                             <div class="button discover_button center">
-                                                <a href="testimonials.php" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>

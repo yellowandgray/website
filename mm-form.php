@@ -79,7 +79,7 @@ if ($_POST['name']) {
             <tr>
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
-            <h3 style = "margin:0 0 16px; text-align:center;">Enquiry Form Details.</h3>
+            <h3 style = "margin:0 0 16px; text-align:center;">Mastermind Form Details.</h3>
             <p style = "margin:0 0 16px">Interest to Register:' . $topic . '</p>
             <p style = "margin:0 0 16px">Mastermind type:' . $right . ',</p>
             <p style = "margin:0 0 16px">Name: ' . $name . '</p>
@@ -119,7 +119,7 @@ if ($_POST['name']) {
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $mail->Body = $message;
     // More headers
-    $address = "kuttisvignesh@gmail.com";
+    $address = "cherylppinto@gmail.com";
     $mail->AddAddress($address, "CHERYLPPINTO");
 //    $mail->AddCC('npschoolkkl@gmail.com', 'ALIAS');
 //    $mail->AddCC('arrchanac@gmail.com', 'ALIAS');

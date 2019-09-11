@@ -147,7 +147,7 @@
                         </div>
                         <div class="col-lg-6 text-center wow fadeInRight">
 <!--                            <button class="button-1" id="myBtn"><span>Apply to Coach with Cheryl</span></button>-->
-                            <button class="button-1"><span><a href="contact.php" class="color-w">Apply to Coach with Cheryl</a></span></button>
+                            <button class="button-1"><span><a href="contact" class="color-w">Apply to Coach with Cheryl</a></span></button>
                         </div>
                     </div>
                 </div>
@@ -186,7 +186,7 @@
                         </div>-->
 
 
-            <?php include 'join-our-community.php'; ?>
+            <?php include 'join-our-community'; ?>
 
             <?php include 'contact-page.php'; ?>
             <!-- Footer -->

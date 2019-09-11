@@ -177,7 +177,7 @@
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Are you done with the rat-race and ready to break out of the mould?</li>
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">Do you want to contribute more to our beautiful world by taking your light out to the world?</li>
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">If you've answered yes to any of these questions, then working with a Life Coach will bring you the clarity, direction and courage you seek.</li>
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">If you feel inspired to connect with Cheryl for Coaching, then contact us <a href="https://yellowandgray.com/cherylppinto/contact.php" target="blank" style="text-decoration: underline;">here</a></li>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><li class="text-justify">If you feel inspired to connect with Cheryl for Coaching, then contact us <a href="https://yellowandgray.com/cherylppinto/contact" target="blank" style="text-decoration: underline;">here</a></li>
                                 </ul>
                             </div>
                             <div class="bx-04 wow img-shadow fadeInRight">

@@ -53,7 +53,7 @@
                                 <img src="images/method-coaching/001.jpg" alt="" />
                             </a>
                             <p>This is for you if you are looking for dedicated, laser focus on an area of your life that you wish to make great. Cheryl thrives on working with clients who want nothing but the best - both, for themselves and from her. Here, the engagement will span from 3-12 months, with direct daily access to Cheryl. If you are looking for real, life transforming, permanent change, then this is what you are looking for.</p>
-                            <a href="contact.php" target="blank"><button class="button-2"><span>Coach With Cheryl</span></button></a>
+                            <a href="contact" target="blank"><button class="button-2"><span>Coach With Cheryl</span></button></a>
                         </div>
                         <div class="method-coaching wow fadeInUp">
                             <a href="#enquiry">

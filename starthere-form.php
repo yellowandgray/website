@@ -91,7 +91,7 @@ if ($_POST['fname']) {
             <tr>
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
-            <h3 style = "margin:0 0 16px; text-align:center;">Enquiry Form Details.</h3>
+            <h3 style = "margin:0 0 16px; text-align:center;">Opportunity Call Application Form Details.</h3>
             <p style = "margin:0 0 16px"><strong>Name:</strong>' . $fname . '</p>
             <p style = "margin:0 0 16px"><strong>Last Name:</strong> ' . $lname . '</p>
             <p style = "margin:0 0 16px"><strong>Linkedin Page:</strong> ' . $linkdin . '</p>
