@@ -253,15 +253,15 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12 textarea">
-                                            <textarea rows="4" cols="65" placeholder="Command"></textarea>
+                                            <textarea rows="4" cols="65" placeholder="Notes"></textarea>
                                         </div>
                                     </div>
                                     <div class="row" id="date-picker" style="display:none">
                                         <div class="col-md-6 mb-3 mb-md-4">
                                             <div>
-                                                <input type="text" placeholder="Select Date" class="datepicker">
+                                                <input type="text" placeholder="Select Dates" class="datepicker">
                                                 <br/>
-                                                <button class="btn btn-cancel" id="timeButton">Select Date</button>
+                                                <button class="btn btn-cancel" id="timeButton">Select Dates</button>
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3 mb-md-4" id="time-picker">
@@ -280,15 +280,15 @@
                                             <div id="time_container"></div>
                                         </div>
                                         <div class="col-md-12 textarea">
-                                            <textarea rows="4" cols="65" placeholder="Command"></textarea>
+                                            <textarea rows="4" cols="65" placeholder="Notes"></textarea>
                                         </div>
                                     </div>
                                     <div class="row" id="other-text" style="display: none;">
                                         <div class="col-md-12 textarea">
-                                            <textarea rows="4" cols="65" placeholder="Command"></textarea>
+                                            <textarea rows="4" cols="65" placeholder="Notes"></textarea>
                                         </div>
                                     </div>
-                                    <center><a href="#popup1" id="interest-btn" class="btn btn-ok">Interest Select</a></center>
+                                    <center><a href="#popup1" id="interest-btn" class="btn btn-ok">Submit Interest</a></center>
                                 </from>
                             </div>
                         </div>
