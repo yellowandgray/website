@@ -27,8 +27,31 @@
             <section class="wf100 about">
                 <!--About Txt Video Start-->
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
-                    <div class="container">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                        <h2 class="margin-bottom-0 text-center">Krishna Celebrations</h2> 
+                        <p class="text-center"><strong>24th of August 2019</strong></p>
+                        <br/>
+<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                        <div class="row events-margin padding-bottom-30">
+                            <div class="col-md-12">
+                                <div class="event-img-margin">
+                                    <img src="images/krishna jayanthi/001.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    <p>Krishna Jayanthi is celebrated on the star birthday of Lord Krishna, who is known as God of Illusion. ENPEE being a secular campus is celebrating one another famous Hindu Festival. Our kids were dressed up like Radha and Krishna. Also foods that Krishna used to eat were plattered and was tasted by our children and Staff.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a type="button" href="events-krishnajayanthi.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                    </div>
+                </div>
+                <!--About Txt Video End-->
+            </section>
+            <section class="wf100 about">
+                <!--About Txt Video Start-->
+                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
                         <h2 class="margin-bottom-0 text-center">Independence day Celebrations</h2> 
+                        <p class="text-center">(15th of August 2019)</p>
                         <br/>
 <!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
 <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
@@ -40,17 +63,19 @@
                                 </div>
                             </div>
                         </div>
-                        <a type="button" href="events-independence.php" class="btn-custom" style="position:relative; left:345px;">Read More</a>
+                        <a type="button" href="events-independence.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
                     </div>
                 </div>
+
                 <!--About Txt Video End-->
             </section>
             <!--Inner Header End--> 
             <section class="wf100 about">
                 <!--About Txt Video Start-->
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
-                    <div class="container">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
                         <h2 class="margin-bottom-0 text-center">Observation of Color day : White Color</h2> 
+                        <p class="text-center">(13th of August 2019)</p>
                         <br/>
 <!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
 <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
@@ -62,7 +87,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a type="button" href="events-observation.php" class="btn-custom" style="position:relative; left:345px;">Read More</a>
+                        <a type="button" href="events-observation.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
                     </div>
                 </div>
                 <!--About Txt Video End-->
@@ -71,8 +96,9 @@
             <section class="wf100 about">
                 <!--About Txt Video Start-->
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
-                    <div class="container">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
                         <h2 class="margin-bottom-0 text-center">Bhakrid Celebrations</h2> 
+                        <p class="text-center">(12th of August 2019)</p>
                         <br/>
 <!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
 <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
@@ -84,7 +110,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a type="button" href="events-bakrid.php" class="btn-custom" style="position:relative; left:345px;">Read More</a>
+                        <a type="button" href="events-bakrid.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
                     </div>
                 </div>
                 <!--About Txt Video End-->
@@ -93,8 +119,9 @@
             <section class="wf100 about">
                 <!--About Txt Video Start-->
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
-                    <div class="container">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
                         <h2 class="margin-bottom-0 text-center">Kamarajar's Educational Development Day</h2> 
+                        <p class="text-center">(24th of July 2019)</p>
                         <br/>
 <!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
 <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
@@ -106,7 +133,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a type="button" href="events-kamaraj.php" class="btn-custom" style="position:relative; left:345px;">Read More</a>
+                        <a type="button" href="events-kamaraj.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
                     </div>
                 </div>
                 <!--About Txt Video End-->
@@ -116,7 +143,7 @@
             <section class="wf100 about">
                 <!--About Txt Video Start-->
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
-                    <div class="container">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
                         <h4 class="margin-bottom-0 text-center">GO GREEN KARAIKAL – A Green Initiative by ENPEE International School</h4> 
                         <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in ENPEE School premises)</center>
 <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
@@ -128,7 +155,7 @@
                                 <p>Tree planting Program is a learning Opportunity to get our Children involved in the environment and towards Conservation of Natural resources. There are studies suggesting that students are better able to concentrate, complete tasks, and follow directions after playing in natural things and also an increased discipline in students can be achieved through increased exposure to nature.</p>
                             </div>
                         </div>
-                        <a type="button" href="events-gogreen.php" class="btn-custom" style="position:relative; left:345px;">Read More</a>
+                        <a type="button" href="events-gogreen.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
                     </div>
                 </div>
                 <!--About Txt Video End-->
@@ -138,7 +165,7 @@
             <section class="wf100 about">
                 <!--About Txt Video Start-->
                 <div class="about-video-section wf100 event-section">
-                    <div class="container">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
                         <h2 class="margin-bottom-0 text-center">ENPEE INTERNATIONAL SCHOOL - GRAND LAUNCH </h2> 
                         <center>(10<sup>th</sup> February, 2019)</center>
 <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
@@ -167,34 +194,14 @@
                                 <p>These were handed over by the honorable chief guests.</p>
                                 <p>Marriage assitance to poor unmarried girls was also given to assist and reduce the burden of marriage cost to the needy.</p>
                             </div>
-                        </div>      
-                    </div>
-                    <a type="button" href="events-enpee.php" class="btn-custom" style="position:relative; left:345px;">Read More</a>
-                </div>
-                <!--About Txt Video End-->
-            </section>
-            
-            <section class="wf100 about">
-                <!--About Txt Video Start-->
-                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
-                    <div class="container">
-                        <h2 class="margin-bottom-0 text-center">Krishna Celebrations</h2> 
-                        <br/>
-<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
-<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
-                        <div class="row events-margin padding-bottom-30">
-                            <div class="col-md-12">
-                                <div class="event-img-margin">
-                                    <img src="images/krishna jayanthi/001.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    <p>Krishna Jayanthi is celebrated on the star birthday of Lord Krishna, who is known as God of Illusion. ENPEE being a secular campus is celebrating one another famous Hindu Festival. Our kids were dressed up like Radha and Krishna. Also foods that Krishna used to eat were plattered and was tasted by our children and Staff.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <a type="button" href="events-krishnajayanthi.php" class="btn-custom" style="position:relative; left:345px;">Read More</a>
+                        </div>  
+                        <a type="button" href="events-enpee.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
                     </div>
                 </div>
                 <!--About Txt Video End-->
             </section>
+
+
             <!--About End--> 
             <!--Footer Start-->
             <?php include 'footer.php'; ?>
