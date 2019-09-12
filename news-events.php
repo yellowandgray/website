@@ -174,14 +174,14 @@
                 <!--About Txt Video End-->
             </section>
             
-            <section class="wf100 about">
-                <!--About Txt Video Start-->
+<!--            <section class="wf100 about">
+                About Txt Video Start
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
                     <div class="container">
                         <h2 class="margin-bottom-0 text-center">Krishna Celebrations</h2> 
                         <br/>
-<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
-<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>
+                        <p class="text-center">(Feb 10, 2019 Sunday)</p>
                         <div class="row events-margin padding-bottom-30">
                             <div class="col-md-12">
                                 <div class="event-img-margin">
@@ -193,8 +193,8 @@
                         <a type="button" href="events-krishnajayanthi.php" class="btn-custom" style="position:relative; left:345px;">Read More</a>
                     </div>
                 </div>
-                <!--About Txt Video End-->
-            </section>
+                About Txt Video End
+            </section>-->
             <!--About End--> 
             <!--Footer Start-->
             <?php include 'footer.php'; ?>
