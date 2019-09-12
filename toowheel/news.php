@@ -17,7 +17,7 @@
                     <div class="col-md-8">
                         <p class="clb-bg clr-white">WFC</p>
                         <div class="events-main-content">
-                            <h2>EVENT TITLE COMES HERE</h2>
+                            <h2>NEWS TITLE COMES HERE</h2>
                             <strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </strong><br/><br/>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                             <img src="img/attachment-bg.jpg" alt="" style="width: 100%" /><br/><br/>
@@ -62,7 +62,7 @@
                         <div class="events-upcoming">
                             <img src="img/events/001.jpg" alt="" />
                             <div class="events-upcoming-content">
-                                <h4>EVENT TITLE COMES HERE</h4>
+                                <h4>NEWS TITLE COMES HERE</h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                                 <center>
                                     <div class="button-8">
@@ -77,7 +77,7 @@
                         <div class="events-upcoming">
                             <img src="img/events/002.jpg" alt="" />
                             <div class="events-upcoming-content">
-                                <h4>EVENT TITLE COMES HERE</h4>
+                                <h4>NEWS TITLE COMES HERE</h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                                 <center>
                                     <div class="button-8">
@@ -92,7 +92,7 @@
                         <div class="events-upcoming">
                             <img src="img/events/003.jpg" alt="" />
                             <div class="events-upcoming-content">
-                                <h4>EVENT TITLE COMES HERE</h4>
+                                <h4>NEWS TITLE COMES HERE</h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                                 <center>
                                     <div class="button-8">
@@ -107,7 +107,7 @@
                         <div class="events-upcoming">
                             <img src="img/events/004.jpg" alt="" />
                             <div class="events-upcoming-content">
-                                <h4>EVENT TITLE COMES HERE</h4>
+                                <h4>NEWS TITLE COMES HERE</h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                                 <center>
                                     <div class="button-8">

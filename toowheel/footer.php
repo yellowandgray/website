@@ -107,16 +107,58 @@
             </ul>
         </div>
     </div>
-
-<!--    <div class="legal">
-        <p>&copy; 2019 TOOWHEEl. All Right Reserved</p>
-        <span class="legal__links">
-            <a href="#">Privacy Policy</a>
-            <span></span>
-            <a href="#">Terms of Use</a>
-        </span>
-    </div>-->
+    <!--    <div class="legal">
+            <p>&copy; 2019 TOOWHEEl. All Right Reserved</p>
+            <span class="legal__links">
+                <a href="#">Privacy Policy</a>
+                <span></span>
+                <a href="#">Terms of Use</a>
+            </span>
+        </div>-->
 </footer>
 <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
+<script src="js/slick-slider.js" type="text/javascript"></script>
+<script src="js/rangeslider.min.js" type="text/javascript"></script>
+<script src="js/jquery.easing.min.js" type="text/javascript"></script>
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.height = "100%";
+        document.getElementById("mySidenav").style.top = "108px";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.height = "0";
+        document.getElementById("mySidenav").style.top = "-60px";
+    }
 
+//    var modal = document.getElementById("mySidenav");
+//    window.onclick = function (event) {
+//        if (event.target == modal) {
+//            modal.style.height = "0%";
+//            modal.style.top = "-60px";
+//        }
+//    };
+
+    $(document).ready(function () {
+        $('#nav-icon3').click(function () {
+            $(this).toggleClass('open');
+            if ($(this).hasClass('open')) {
+                openNav();
+            } else {
+                closeNav();
+            }
+        });
+    });
+</script>
+<script>
+    function signIn() {
+        document.getElementById("sign-up").style.display = "block";
+        document.getElementById("log-in").style.display = "none";
+    }
+    function logIn() {
+        document.getElementById("sign-up").style.display = "none";
+        document.getElementById("log-in").style.display = "block";
+    }
+
+</script>
+<!--mega-menu-->
