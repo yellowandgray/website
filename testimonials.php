@@ -82,7 +82,7 @@
                     </div>
                     <div class="row pad-20">
                         <div class="col-lg-8 left-order testimoni wow fadeInLeft">
-                            <h4><strong>Paul Dermody</strong></h4>
+                            <h4><strong>Paulo D</strong></h4>
                             <p class="text-justify">Cheryl Pinto has been my life coach for the past 5 months. I was working in the IT industry for 5 years and felt like I needed a change and pursue a passion I always had but never had the courage to follow. By accident I met Cheryl and we started working together. She has been very successful in her own career – she has walked the walk – corporate professional, high intensity work. So therefore she understood my world. She is very capable with her skills with NLP. Her general good nature and intelligence makes Cheryl very easy to work with. She is very smart. She drove me, pushed me in areas I probably wasn’t comfortable to go but I wanted to go. It’s been absolutely phenomenal. Now I am completely changing career and going on a new journey which I am so excited about. I’ve gone from being minorly depressed to majorly excited about the future. I cant thank Cheryl enough and I can’t recommend her enough. It’s difficult to make major changes without someone there to support you, to guide you and to push you. If you’re looking to make that sort of change or impact, then Cheryl is definitely one of the best I’ve worked with –I know, I’ve tried a few :) Good luck!</p>
                         </div>
                         <div class="col-lg-4 box-7 text-center wow fadeInRight">
