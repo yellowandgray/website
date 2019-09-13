@@ -7,9 +7,9 @@
                 <span></span>
                 <span></span>
             </span>
-            <span class="toggle" style="font-size:30px;cursor:pointer;display: none;" id="close" onclick="closeNav();">
+<!--            <span class="toggle" style="font-size:30px;cursor:pointer;display: none;" id="close" onclick="closeNav();">
                 <img src='img/close.png' alt=''>
-            </span>
+            </span>-->
             <div id="mySidenav" class="sidenav">
                 <div class="container tab-menu">
 <!--                    <div class="nav-close" onclick="closeNav();"><img src="img/close.png" alt=""></div>-->
@@ -117,10 +117,29 @@
                     <div id="Clubs" class="tabcontent">
                         <h3>Find Clubs</h3>
                         <div class="row find-club-menu">
-                            <img src="img/find-club/dummy-logo.png" alt="" style="width: 20%;">
-                            <div class="club-title">
-                                <h4>Club Title</h4>
-                                <p><strong>Description</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="club-box">
+                                    <span>#1</span>
+                                    <img src="img/find-club/dummy-logo.png" alt="" />
+                                    <h3>Frendly Bikers</h3>
+                                    <p>Kuala Lumpur</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="club-box">
+                                    <span>#1</span>
+                                    <img src="img/find-club/dummy-logo.png" alt="" />
+                                    <h3>Frendly Bikers</h3>
+                                    <p>Kuala Lumpur</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="club-box">
+                                    <span>#1</span>
+                                    <img src="img/find-club/dummy-logo.png" alt="" />
+                                    <h3>Frendly Bikers</h3>
+                                    <p>Kuala Lumpur</p>
+                                </div>
                             </div>
                             <center><a href="find-a-club" class="menu-btn">Read More</a></center>
                         </div>
