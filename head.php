@@ -1,8 +1,6 @@
 <head>
     <!-- Added by HTTrack -->
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <!-- /Added by HTTrack -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52115242-17"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -20,7 +18,7 @@
     <meta charset="utf-8">
     <title>Project Next Door</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bootstrap HTML template and UI kit by Medium Rare">
+    <meta name="description" content="Project Next Door | Book your Space">
     <link rel="icon" href="img/favicon.png" type="image/gif">
     <!-- Begin loading animation -->
     <style>
