@@ -1,11 +1,9 @@
 <?php
 
-require_once '../include/thirdparty.php';
 require_once '../include/common.php';
-require_once '../include/dbhandler.php';
+require_once '../include/DbHandler.php';
 require_once '../include/Config.php';
 require '../include/Slim/Slim.php';
-//require_once dirname(__FILE__) . '/../dompdf/autoload.inc.php';
 
 use Dompdf\Dompdf;
 
