@@ -225,14 +225,14 @@
                                                 <div class="flex-row checkbox-session w-100 float-right">Attend<input type="checkbox" name="attand"></div>
                                                 <span class="date-section">06 Sep 2019 / 10:00 AM - 12:00 PM</span>
                                                 <h5>COACHING SESSION TITLE COMES HERE</h5>
-                                                <p>Coacher Name: Name Comes Here <a href="#" class="float-right coacher-btn">Read More</a></p>
+                                                <p>Coacher Name: Name Comes Here <a href="#" class="coacher-btn">Read More >></a></p>
                                                 <p><strong>Session Details: </strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                             </div>
                                             <div class="card-session">
                                                 <div class="checkbox-session w-100 float-right">Attend<input type="checkbox" name="attand"></div>
                                                 <span class="date-section">06 Sep 2019 / 1:30 AM - 03:00 PM</span>
                                                 <h5>COACHING SESSION TITLE COMES HERE</h5>
-                                                <p>Coacher Name: Name Comes Here <a href="#" class="float-right coacher-btn">Read More</a></p>
+                                                <p>Coacher Name: Name Comes Here <a href="#" class="coacher-btn">Read More >></a></p>
                                                 <p><strong>Session Details: </strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                             </div>
                                         </div>
@@ -241,14 +241,14 @@
                                                 <div class="checkbox-session w-100 float-right">Attend<input type="checkbox" name="attand"></div>
                                                 <span class="date-section">06 Sep 2019 / 10:00 AM - 12:00 PM</span>
                                                 <h5>COACHING SESSION TITLE COMES HERE</h5>
-                                                <p>Coacher Name: Name Comes Here <a href="#" class="float-right coacher-btn">Read More</a></p>
+                                                <p>Coacher Name: Name Comes Here <a href="#" class="coacher-btn">Read More >></a></p>
                                                 <p><strong>Session Details: </strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                             </div>
                                             <div class="card-session">
                                                 <div class="checkbox-session w-100 float-right">Attend<input type="checkbox" name="attand"></div>
                                                 <span class="date-section">06 Sep 2019 / 1:30 AM - 03:00 PM</span>
                                                 <h5>COACHING SESSION TITLE COMES HERE</h5>
-                                                <p>Coacher Name: Name Comes Here <a href="#" class="float-right coacher-btn">Read More</a></p>
+                                                <p>Coacher Name: Name Comes Here <a href="#" class="coacher-btn">Read More >></a></p>
                                                 <p><strong>Session Details: </strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                             </div>
                                         </div>

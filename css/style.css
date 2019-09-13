@@ -1345,21 +1345,22 @@ input.queries::placeholder {
 }
 
 .coacher-btn {
-    background: #4a7c7c;
+/*    background: #4a7c7c;
     padding: 5px 20px;
-    margin-bottom: 5px;
-    color: #fff;
-    border-radius: 25px;
+    margin-bottom: 5px;*/
+    color: #4c7c7c;
+    font-size: 13px;
+/*    border-radius: 25px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     text-decoration: none;
-    overflow: hidden;
+    overflow: hidden;*/
 }
 
 .coacher-btn:hover {
-    background: transparent;
-    border: 1px solid #4a7c7c;
-    color: #4a7c7c;
+/*    background: transparent;
+    border: 1px solid #4a7c7c;*/
+    color: #e7aca6;
     transition: all 0.3s;
 }
 
