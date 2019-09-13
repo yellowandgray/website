@@ -45,37 +45,37 @@
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/001.jpg" alt=""/>
-                                    <center class="news-discover"><a href="news.php">DISCOVER</a></center>
+                                    <center class="news-discover"><a href="news">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/002.jpg" alt=""/>
-                                    <center class="news-discover"><a href="news.php">DISCOVER</a></center>
+                                    <center class="news-discover"><a href="news">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/003.jpg" alt=""/>
-                                    <center class="news-discover"><a href="news.php">DISCOVER</a></center>
+                                    <center class="news-discover"><a href="news">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/004.jpg" alt=""/>
-                                    <center class="news-discover"><a href="news.php">DISCOVER</a></center>
+                                    <center class="news-discover"><a href="news">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/004.jpg" alt=""/>
-                                    <center class="news-discover"><a href="news.php">DISCOVER</a></center>
+                                    <center class="news-discover"><a href="news">DISCOVER</a></center>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/003.jpg" alt=""/>
-                                    <center class="news-discover"><a href="news.php">DISCOVER</a></center>
+                                    <center class="news-discover"><a href="news">DISCOVER</a></center>
                                 </div>
                             </div>
                         </div>
@@ -86,27 +86,27 @@
                                 <ul class="release">
                                     <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
                                     <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
+                                    <li class="release-cont-3"><a href="press-release"><span>READ </span>MORE</a></li>
                                 </ul>
                                 <ul class="release">
                                     <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
                                     <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
+                                    <li class="release-cont-3"><a href="press-release"><span>READ </span>MORE</a></li>
                                 </ul>
                                 <ul class="release">
                                     <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
                                     <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
+                                    <li class="release-cont-3"><a href="press-release"><span>READ </span>MORE</a></li>
                                 </ul>
                                 <ul class="release">
                                     <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
                                     <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
+                                    <li class="release-cont-3"><a href="press-release"><span>READ </span>MORE</a></li>
                                 </ul>
                                 <ul class="release">
                                     <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
                                     <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
+                                    <li class="release-cont-3"><a href="press-release"><span>READ </span>MORE</a></li>
                                 </ul>
                             </div>
                         </div> 
@@ -122,7 +122,7 @@
                                 <h4>Club Title</h4>
                                 <p><strong>Description</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             </div>
-                            <center><a href="find-a-club.php" class="menu-btn">Read More</a></center>
+                            <center><a href="find-a-club" class="menu-btn">Read More</a></center>
                         </div>
                     </div>
                     <div id="Events" class="tabcontent">
@@ -143,7 +143,7 @@
                                     <div class="event-desc">
                                         <p><span>Description</span></p>
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                        <h5><a href="events.php">Read More</a></h5>
+                                        <h5><a href="events">Read More</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +151,7 @@
                     </div>
                 </div>
             </div>
-            <a href="../index.php" class="logo"><img src='img/logo.png' alt=''></a>
+            <a href="../index" class="logo"><img src='img/logo.png' alt=''></a>
             <div class="header-login">
                 <div class="float-left margin-left-10">
                     <a href="#">
@@ -160,7 +160,7 @@
                     </a>
                 </div>
                 <div class="float-left margin-left-10">
-                    <a href="login.php">
+                    <a href="login">
                         <i class="fa fa-sign-in search-bg"></i>
                         <p> Login</p>
                     </a>
