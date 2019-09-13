@@ -1727,9 +1727,24 @@ audio {
     height: 400px;
 }
 
-@media (max-width:490px) and (min-width:320px){
+@media (max-width:490px) and (min-width:391px){
     .modal-dialog{
-        height: auto;
+        height: 460px;
+        padding: 8px;
+    }
+    .modal-body-1 h2 {
+        color: #9c20b3;
+        font-size:17px;
+    }
+    .modal-body-1 p {
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width:390px) and (min-width:320px){
+    .modal-dialog{
+        height: 517px;
         padding: 8px;
     }
     .modal-body-1 h2 {
@@ -1933,12 +1948,37 @@ audio {
         display: block;
     }
 }
-@media (max-width:1200px) and (min-width:320px){
+@media (max-width:1200px) and (min-width:768px){
     .main_slider_nav_left {
         display: none;
     }
     .main_slider_nav_right {
         display: none;
+    }
+}
+@media (max-width:768px) and (min-width:320px){
+    .main_slider_nav_left {
+        display: block;
+        top: 50%;
+        left: 1%;
+        right: 79px;
+        bottom: 14px;
+    }
+    .main_slider_nav_right {
+        display: block;
+        top: 50%;
+        left: auto;
+        right: 2%;
+        bottom: 14px;
+    }
+    .main_slider_nav i{
+        color: #20b9ec;
+    }
+
+}
+@media (max-width:479px) and (min-width:320px){
+    .main_slider_content h1 span {
+        font-size: 18px;
     }
 }
 @media (max-width:479px) and (min-width:320px){
@@ -2019,4 +2059,81 @@ audio {
     color: #20b9ec;
     font-size: 25px;
     padding: 0px 15px 0px 0px;
+}
+.book-pdf{
+    margin: auto 0 0;
+}
+.book-t {
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0px !important;
+    height: 100%;
+    padding: 15px 0px 0px 0px !important;
+    text-align:center;
+}
+.book-t a {
+    color: #34bfee;
+}
+.icon-box {
+    position: absolute;
+    top: -23px;
+    left: -36px;
+    z-index: 9;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px 100px 100px 100px;
+    padding: 11px 10px 13px 17px;
+    background: #ec3421;
+    color: #ffffff;
+    font-size: 25px;
+}
+@media (max-width:490px) and (min-width:320px){
+    .logo a img {
+        width: 140% !important;
+    }
+
+}
+
+.testimonials_content {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    max-width: 100%;
+}
+
+.test-v video{
+    height: 200px;;
+}
+@media (max-width:490px) and (min-width:320px){
+    .test-v video{
+        height: 100px;;
+    }
+
+}
+@media (max-width:490px) and (min-width:320px){
+    .test-v .button a {
+        display: block;
+        width: 100%;
+        color: #FFFFFF;
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 50px;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+    }
+    .test-v .button {
+        width: 90px;
+        height: 50px;
+    }
+}
+@media (max-width:991px) and (min-width:320px){
+    .about-cheryl-head {
+        width: 60%;
+        background: #20b9ec;
+        padding: 10px;
+        transform: skewX(-22deg);
+        color: #fff;
+        margin-top: 10px;
+    }
 }

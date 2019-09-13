@@ -333,132 +333,67 @@
                                     <!-- Testimonials Item -->
                                     <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
                                         <div class="testimonials_content">
-                                            <div class="test_user_pic"><img src="images/testimonial/person-01.jpg" alt=""></div>
-                                            <div class="test_name">Paul Dermody</div>
-                                            <div class="test_title"></div>
-                                            <div class="test_quote"></div>
-                                            <p>Cheryl Pinto has been my life coach for the past 5 months. I was working in the IT industry for 5 years and felt like I needed a change and pursue a passion...</p>
-                                            <div class="button discover_button center">
-                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                            <div class="test-v">
+                                                <h3 class="text-center">Paulo D</h3>
+                                                <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                                    <source src="video/Paulo D.mp4" type="video/mp4">
+                                                    Your browser does not support the <code>video</code> tag.
+                                                </video>
+                                                <div class="button discover_button center">
+                                                    <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More</a>
+                                                </div>
                                             </div>
+
                                         </div>
                                     </div>
                                     <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
                                         <div class="testimonials_content">
-                                            <div class="test_user_pic"><img src="images/testimonial/person-03.jpg" alt=""></div>
-                                            <div class="test_name">Avil Pinto</div>
-                                            <div class="test_title">Founder, Dubai Job Hunt</div>
-                                            <div class="test_quote">"</div>
-                                            <p>Today is just the 18th day since we began our coaching session. With just 2 sessions, falling short of words to describe the transformation that's...</p>
-                                            <div class="button discover_button center">
-                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                            <div class="test-v">
+                                                <h3 class="text-center">Amruta Pandit</h3>
+                                                <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                                    <source src="video/Amruta-Pandit.mp4" type="video/mp4">
+                                                    Your browser does not support the <code>video</code> tag.
+                                                </video> <div class="button discover_button center">
+                                                    <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More</a>
+                                                </div>
+
                                             </div>
+
                                         </div>
                                     </div>
                                     <!-- Testimonials Item -->
                                     <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
                                         <div class="testimonials_content">
-                                            <div class="test_user_pic"><img src="images/testimonial/person-02.jpg" alt=""></div>
-                                            <div class="test_name">Kunal Bhatia</div>
-                                            <div class="test_title">Assistant Vice President- FX, Interest rates & Commodity Derivative Solutions</div>
-                                            <div class="test_quote">"</div>
-                                            <p>At the outset I looked at NLP with a lot of skepticism and it was only because I trusted Cheryl that I decided to give it a shot. She has the ability...</p>
-                                            <div class="button discover_button center">
-                                                <a  href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                            <div class="test-v">
+                                                <h3 class="text-center">Avil Pinto</h3>
+                                                <video class=" video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                                    <source src="video/Avil Pinto.mp4" type="video/mp4">
+                                                    Your browser does not support the <code>video</code> tag.
+                                                </video>
+                                                <div class="button discover_button center">
+                                                    <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More</a>
+                                                </div>
                                             </div>
+
                                         </div>
                                     </div>
                                     <!-- Testimonials Item -->
                                     <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
                                         <div class="testimonials_content">
-                                            <div class="test_user_pic"><img src="images/testimonial/person-04.jpg" alt=""></div>
-                                            <div class="test_name">Ram S</div>
-                                            <div class="test_title">Team Leader at a bank in Dubai</div>
-                                            <div class="test_quote">"</div>
-                                            <p>Cheryl has been a friend, mentor and guide for me. I have worked with Cheryl over the past 14 months and I can term our engagement as a wonderful journey of discovering new things..,</p>
-                                            <div class="button discover_button center">
-                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                            <div class="test-v">
+                                                <h3 class="text-center">Sohel Shaikh</h3>
+                                                <video class="video-res features_item box-3 d-flex flex-column align-items-center justify-content-end text-center" style="width: 100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls>
+                                                    <source src="video/Sohel Shaikh.mp4" type="video/mp4">
+                                                    Your browser does not support the <code>video</code> tag.
+                                                </video>
+                                                <div class="button discover_button center">
+                                                    <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More</a>
+                                                </div>
                                             </div>
+
                                         </div>
                                     </div>
-                                    <!-- Testimonials Item -->
-                                    <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="testimonials_content">
-                                            <div class="test_user_pic"><img src="images/testimonial/person-05.jpg" alt=""></div>
-                                            <div class="test_name">Neena Sharma</div>
-                                            <div class="test_title">Associate Magazine Editor at The Gulf Today - Dar Al Khaleej</div>
-                                            <div class="test_quote">"</div>
-                                            <p>Cheryl’s warm nature and genuine empathy for her clients are her biggest strengths. She is patient, listens well and is non-judgmental..,</p>
-                                            <div class="button discover_button center">
-                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonials Item -->
-                                    <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="testimonials_content">
-                                            <div class="test_user_pic"><img src="images/testimonial/person-06.jpg" alt=""></div>
-                                            <div class="test_name">Naman Rajvanshi</div>
-                                            <div class="test_title">Sales & Operations Manager at Technauto</div>
-                                            <div class="test_quote">"</div>
-                                            <p>Cheryl has this contagious confidence in herself and the ability to build the same in you which makes you believe that you too can do it!</p>
-                                            <div class="button discover_button center">
-                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonials Item -->
-                                    <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="testimonials_content">
-                                            <div class="test_user_pic"><img src="images/testimonial/person-07.jpg" alt=""></div>
-                                            <div class="test_name">Stefania Picheca</div>
-                                            <div class="test_title">Director of Talent Management at TSA Solutions</div>
-                                            <div class="test_quote">"</div>
-                                            <p>Cheryl is smart, a fast-thinker and just asks the right question at the right time. After coaching with Cheryl, I felt energised and ready to face challenges with my chin up. </p>
-                                            <div class="button discover_button center">
-                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonials Item -->
-                                    <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="testimonials_content">
-                                            <div class="test_user_pic"><img src="images/testimonial/person-08.jpg" alt=""></div>
-                                            <div class="test_name">Karim Zayed</div>
-                                            <div class="test_title">Specialist at Novartis Oncology</div>
-                                            <div class="test_quote">"</div>
-                                            <p>Cheryl is result oriented. She will push you to your limits to get the results you want. I was lost in what I wanted for my career.</p>
-                                            <div class="button discover_button center">
-                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonials Item -->
-                                    <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="testimonials_content">
-                                            <div class="test_user_pic"><img src="images/testimonial/person-09.jpg" alt=""></div>
-                                            <div class="test_name">Luma Iqbal</div>
-                                            <div class="test_title">Student at Murdoch University - Bsc. Computer Science and Bsc. Business Information Systems</div>
-                                            <div class="test_quote">"</div>
-                                            <p>Cheryl has been my role model ever since I've met her. She's inspired me to better myself and improve my life by showing me it's possible.</p>
-                                            <div class="button discover_button center">
-                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonials Item -->
-                                    <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="testimonials_content">
-                                            <div class="test_user_pic"><img src="images/testimonial/person-10.jpg" alt=""></div>
-                                            <div class="test_name">Fanika Nikic</div>
-                                            <div class="test_title">Sales Manager at Azadea Group</div>
-                                            <div class="test_quote">"</div>
-                                            <p>Cheryl has a number of strengths & abilities that make her a spectacular coach. Some of them are: persistence, helping me break through self-imposed barriers, obtaining clarity and goal-setting.</p>
-                                            <div class="button discover_button center">
-                                                <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -470,6 +405,153 @@
                             <i class="fas fa-chevron-right trans_200"></i>
                         </div>
                     </div>
+                    <!--                    <div class="row">
+                                            <div class="col-lg-10 offset-lg-1 wow fadeInUp">
+                                                <div class="testimonials_container">
+                                                    <div class="testimonials_container_inner"></div>
+                                                     Testimonials Slider 
+                                                    <div class="owl-carousel owl-theme testimonials_slider">
+                                                         Testimonials Item 
+                                                         Testimonials Item 
+                                                        <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
+                                                            <div class="testimonials_content">
+                                                                <div class="test_user_pic"><img src="images/testimonial/person-01.jpg" alt=""></div>
+                                                                <div class="test_name">Paul Dermody</div>
+                                                                <div class="test_title"></div>
+                                                                <div class="test_quote"></div>
+                                                                <p>Cheryl Pinto has been my life coach for the past 5 months. I was working in the IT industry for 5 years and felt like I needed a change and pursue a passion...</p>
+                                                                <div class="button discover_button center">
+                                                                    <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
+                                                            <div class="testimonials_content">
+                                                                <div class="test_user_pic"><img src="images/testimonial/person-03.jpg" alt=""></div>
+                                                                <div class="test_name">Avil Pinto</div>
+                                                                <div class="test_title">Founder, Dubai Job Hunt</div>
+                                                                <div class="test_quote">"</div>
+                                                                <p>Today is just the 18th day since we began our coaching session. With just 2 sessions, falling short of words to describe the transformation that's...</p>
+                                                                <div class="button discover_button center">
+                                                                    <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                         Testimonials Item 
+                                                        <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
+                                                            <div class="testimonials_content">
+                                                                <div class="test_user_pic"><img src="images/testimonial/person-02.jpg" alt=""></div>
+                                                                <div class="test_name">Kunal Bhatia</div>
+                                                                <div class="test_title">Assistant Vice President- FX, Interest rates & Commodity Derivative Solutions</div>
+                                                                <div class="test_quote">"</div>
+                                                                <p>At the outset I looked at NLP with a lot of skepticism and it was only because I trusted Cheryl that I decided to give it a shot. She has the ability...</p>
+                                                                <div class="button discover_button center">
+                                                                    <a  href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                         Testimonials Item 
+                                                        <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
+                                                            <div class="testimonials_content">
+                                                                <div class="test_user_pic"><img src="images/testimonial/person-04.jpg" alt=""></div>
+                                                                <div class="test_name">Ram S</div>
+                                                                <div class="test_title">Team Leader at a bank in Dubai</div>
+                                                                <div class="test_quote">"</div>
+                                                                <p>Cheryl has been a friend, mentor and guide for me. I have worked with Cheryl over the past 14 months and I can term our engagement as a wonderful journey of discovering new things..,</p>
+                                                                <div class="button discover_button center">
+                                                                    <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                         Testimonials Item 
+                                                        <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
+                                                            <div class="testimonials_content">
+                                                                <div class="test_user_pic"><img src="images/testimonial/person-05.jpg" alt=""></div>
+                                                                <div class="test_name">Neena Sharma</div>
+                                                                <div class="test_title">Associate Magazine Editor at The Gulf Today - Dar Al Khaleej</div>
+                                                                <div class="test_quote">"</div>
+                                                                <p>Cheryl’s warm nature and genuine empathy for her clients are her biggest strengths. She is patient, listens well and is non-judgmental..,</p>
+                                                                <div class="button discover_button center">
+                                                                    <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                         Testimonials Item 
+                                                        <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
+                                                            <div class="testimonials_content">
+                                                                <div class="test_user_pic"><img src="images/testimonial/person-06.jpg" alt=""></div>
+                                                                <div class="test_name">Naman Rajvanshi</div>
+                                                                <div class="test_title">Sales & Operations Manager at Technauto</div>
+                                                                <div class="test_quote">"</div>
+                                                                <p>Cheryl has this contagious confidence in herself and the ability to build the same in you which makes you believe that you too can do it!</p>
+                                                                <div class="button discover_button center">
+                                                                    <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                         Testimonials Item 
+                                                        <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
+                                                            <div class="testimonials_content">
+                                                                <div class="test_user_pic"><img src="images/testimonial/person-07.jpg" alt=""></div>
+                                                                <div class="test_name">Stefania Picheca</div>
+                                                                <div class="test_title">Director of Talent Management at TSA Solutions</div>
+                                                                <div class="test_quote">"</div>
+                                                                <p>Cheryl is smart, a fast-thinker and just asks the right question at the right time. After coaching with Cheryl, I felt energised and ready to face challenges with my chin up. </p>
+                                                                <div class="button discover_button center">
+                                                                    <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                         Testimonials Item 
+                                                        <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
+                                                            <div class="testimonials_content">
+                                                                <div class="test_user_pic"><img src="images/testimonial/person-08.jpg" alt=""></div>
+                                                                <div class="test_name">Karim Zayed</div>
+                                                                <div class="test_title">Specialist at Novartis Oncology</div>
+                                                                <div class="test_quote">"</div>
+                                                                <p>Cheryl is result oriented. She will push you to your limits to get the results you want. I was lost in what I wanted for my career.</p>
+                                                                <div class="button discover_button center">
+                                                                    <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                         Testimonials Item 
+                                                        <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
+                                                            <div class="testimonials_content">
+                                                                <div class="test_user_pic"><img src="images/testimonial/person-09.jpg" alt=""></div>
+                                                                <div class="test_name">Luma Iqbal</div>
+                                                                <div class="test_title">Student at Murdoch University - Bsc. Computer Science and Bsc. Business Information Systems</div>
+                                                                <div class="test_quote">"</div>
+                                                                <p>Cheryl has been my role model ever since I've met her. She's inspired me to better myself and improve my life by showing me it's possible.</p>
+                                                                <div class="button discover_button center">
+                                                                    <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                         Testimonials Item 
+                                                        <div class="owl-item-1 testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
+                                                            <div class="testimonials_content">
+                                                                <div class="test_user_pic"><img src="images/testimonial/person-10.jpg" alt=""></div>
+                                                                <div class="test_name">Fanika Nikic</div>
+                                                                <div class="test_title">Sales Manager at Azadea Group</div>
+                                                                <div class="test_quote">"</div>
+                                                                <p>Cheryl has a number of strengths & abilities that make her a spectacular coach. Some of them are: persistence, helping me break through self-imposed barriers, obtaining clarity and goal-setting.</p>
+                                                                <div class="button discover_button center">
+                                                                    <a href="testimonials" class="d-flex flex-row align-items-center justify-content-center">Read More<img src="images/arrow_right.svg" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             Testimonials Slider Navigation 
+                                            <div class="test_slider_nav test_slider_nav_left d-flex flex-column justify-content-center align-items-center trans_200 wow fadeInLeft">
+                                                <i class="fas fa-chevron-left trans_200"></i>
+                                            </div>
+                                            <div class="test_slider_nav test_slider_nav_right d-flex flex-column justify-content-center align-items-center trans_200 wow fadeInRight">
+                                                <i class="fas fa-chevron-right trans_200"></i>
+                                            </div>
+                                        </div>-->
                 </div>
             </div>
             <!-- Services -->

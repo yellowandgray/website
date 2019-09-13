@@ -119,7 +119,7 @@ if ($_POST['name']) {
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $mail->Body = $message;
     // More headers
-    $address = "cherylppinto@gmail.com";
+    $address = "kuttisvignesh@gmail.com";
     $mail->AddAddress($address, "CHERYLPPINTO");
 //    $mail->AddCC('npschoolkkl@gmail.com', 'ALIAS');
 //    $mail->AddCC('arrchanac@gmail.com', 'ALIAS');

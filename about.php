@@ -25,7 +25,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-12 wow fadeInLeft about-cheryl">
-                            <h3 class="about-cheryl-head">CHERYL'S STORY</h3>
+                            <h3 class="about-cheryl-head pad-50">CHERYL'S STORY</h3>
                             <img src="images/cheryl-about.jpg" alt="" style="width: 100%; height: auto;">
                             <p class="text-justify"><em>What you’re about to read is an extremely personal, never told before, story that Cheryl has decided to share with you, her precious people. Why? Only so that you can see that if she could do it, then so can you. </em></p>
                             <h3 style="font-weight:bold;">PART I:</h3>
@@ -96,7 +96,8 @@
                             <p class="text-justify color-black heading" style="font-weight: bold;"><i class="fa fa-gift color-w" aria-hidden="true"></i> THE BLESSED RETURN-GIFT:</p>
                             <p class="text-justify"><em>"I tell you, monks, there are two people who are not easy to repay. Which two? Your mother & father.” - Buddha</em></p>
                             <p class="text-justify">And now comes one of the most beautiful moment in Cheryl's life that she feels forever grateful for. Ever since she was a little girl, she always heard her father say with a sparkle in his eyes - “One day I will buy a Land Cruiser”. That was his dream car. Years had turned into decades and with that the dream of him ever owning his dream car faded. My father was now celebrating his 65th birthday. </p>
-                            <p class="text-justify">"I tell you, monks, there are two people who are not easy to repay. Which two? Your mother & father.” - Buddha</p>
+                            <p class="text-justify">And Cheryl saw, her golden, once-in-a-lifetime opportunity of returning the priceless gift of knowledge that her Dad had given her when she was the 12-year old girl. </p>
+                            <p class="text-justify">The picture below says it all – her Dad’s Birthday gift on his 65th Birthday. </p>
                         </div>
                         <div class="col-lg-4 wow fadeInLeft">
                             <img src="images/cheryl-about-01.jpg" alt="" style="width: 100%; height: auto;">
@@ -117,9 +118,9 @@
                                 <p class="text-justify">(Wait! RETIRE in your early 30s? HOW?! That’s what most people ask her too. Her response: “It is a combination of factors – but all relating to two things – Mind & Money. Attend 3M”. Master your Mind & your Money – her signature workshop where she shows you exactly what in your own mind may be sabotaging your own growth and how you too can prepare for and achieve Financial Freedom). To register your interest for her workshop or Mastermind, please drop us a line here so we can have your name on top of that list, as soon as she releases the next course.  </p>
                             </div>
                             <p class="text-justify">She now starts to have that thought that many of us live with “There has to be more to life than this”.   </p>
-                            <p class="text-justify">Her intuition is telling her that her time for taking has ended and that it is now time to give. She does what everyone tells her is the most absurd thing to do – she resigns from her high paying, cushy job and begins her life of service. She is now on her mission to change the world, one person at a time. She has served thousands through her social media, workshops, charity drives, Masterminds and private Coaching. But she says this is just the beginning… “miles to go before I sleep”. </p>
+                            <p class="text-justify">Her intuition is telling her that her <em class="bold">time for taking has ended and that it is now time to give</em>. She does what everyone tells her is the most absurd thing to do – she resigns from her high paying, cushy job and begins her life of service. <em class="bold">She is now on her mission to change the world, one person at a time</em>. She has served thousands through her social media, workshops, charity drives, Masterminds and private Coaching. But she says this is just the beginning… “miles to go before I sleep”. </p>
                             <p class="text-justify">And if you’re still reading this, you are exactly the type of person Cheryl wishes to reach and transform through her work. </p>
-                            <p class="text-justify">Make sure you are connected – there will always be new knowledge, new opportunities to learn and Masterminds coming up. Subscribe to her newsletter if you haven’t already – you will be the first to know when she puts up any new piece of content. </p>
+                            <p class="text-justify">Make sure you are connected – there will always be new knowledge, new opportunities to learn and Masterminds coming up. Subscribe to her youtube channel if you haven’t already – you will be the first to know when she puts up any new piece of content. </p>
                             <p class="text-justify">To your Shining Success. Keep that light shining, Rockstar! </p>
                         </div>
                     </div>

@@ -1,8 +1,9 @@
 <head>
-    <title>Cheryl P Pinto</title>
+    <title>Cheryl P Pinto| The Official Website of the Top Transformative Coach & Trainer Let's go from Fear to Freedom. </title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Cheryl P Pinto">
+    <meta name="description" content="Cheryl Pinto is the CEO of GrowPro Consultants, where the #1 objective is to help people to Learn, Earn & Prosper.">
+    <meta name="keywords" content="Coach in Toronto,Life coach,Financial freedom,Freedom coach,Transformative coach,Intuitive coaching,Coach me">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
     <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">

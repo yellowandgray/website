@@ -44,55 +44,140 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-12  audio audio-bg margin-top-50">
-                            <div class="pad-f-15">
-                                <div class="row">
-                                    <div class="col-lg-12 text-center wow fadeInDown">
-                                        <h2>Document</h2>
-                                    </div>
+                        <div class="bx-01 margin-top-50">
+                            <!-- Features Item -->
+                            <div class="wow bx-02 coach-box fadeInUp">
+                                <div>
+                                    <a href="pdf/The 30-Day Plan to Build Your Best Year Yet V2.pdf" target="blank"><i class="fas fa-file-pdf icon-box"></i></a>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-12 audio-1 margin-t-22 wow fadeInUp">
-                                        <i class="fas fa-file-pdf"></i><h3><a href="pdf/The 30-Day Plan to Build Your Best Year Yet (2019).pdf" target="blank"> The 30-Day Plan to Build Your Best Year Yet (2019)</a></h3>
-                                    </div>
-                                    <div class="col-lg-12 audio-1 margin-t-22 wow fadeInUp">
-                                        <i class="fas fa-file-pdf"></i><h3><a href="pdf/Recommended Reading List 2019.pdf" target="blank"> Recommended Reading List 2019</a></h3>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12 text-center wow fadeInDown">
-                                        <h2>Free Books</h2>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12 audio-1 margin-t-22 wow fadeInUp">
-                                        <i class="fas fa-file-pdf"></i><h3><a href="pdf/free-books/001.pdf" target="blank"> Ask For It - Linda Babcock</a></h3>
-                                    </div>
-                                    <div class="col-lg-12 audio-1 margin-t-22 wow fadeInUp">
-                                        <i class="fas fa-file-pdf"></i><h3><a href="pdf/free-books/002.pdf" target="blank"> Autobiography of a Yogi - Paramhansa Yogananda</a></h3>
-                                    </div>
-                                    <div class="col-lg-12 audio-1 margin-t-22 wow fadeInUp">
-                                        <i class="fas fa-file-pdf"></i><h3><a href="pdf/free-books/003.pdf" target="blank"> Exactly What to Say -The Magic Words for Influence and Impact</a></h3>
-                                    </div>
-                                    <div class="col-lg-12 audio-1 margin-t-22 wow fadeInUp">
-                                        <i class="fas fa-file-pdf"></i><h3><a href="pdf/free-books/004.pdf" target="blank"> How to Win Friends _ Influence People - Dale Carnegie</a></h3>
-                                    </div>
-                                    <div class="col-lg-12 audio-1 margin-t-22 wow fadeInUp">
-                                        <i class="fas fa-file-pdf"></i><h3><a href="pdf/free-books/005.pdf" target="blank"> It Works - R.H. Jarrett</a></h3>
-                                    </div>
-                                    <div class="col-lg-12 audio-1 margin-t-22 wow fadeInUp">
-                                        <i class="fas fa-file-pdf"></i><h3><a href="pdf/free-books/006.pdf" target="blank"> The  E-Myth Revisited  - Billionaire Belief</a></h3>
-                                    </div>
-                                    <div class="col-lg-12 audio-1 margin-t-22 wow fadeInUp">
-                                        <i class="fas fa-file-pdf"></i><h3><a href="pdf/free-books/007.pdf" target="blank"> The Biology of Belief</a></h3>
-                                    </div>
-                                    <div class="col-lg-12 audio-1 margin-t-22 wow fadeInUp">
-                                        <i class="fas fa-file-pdf"></i><h3><a href="pdf/free-books/008.pdf" target="blank"> The Science of Getting Rich - Wallace D Wattles</a></h3>
+                                <div class="features_item  d-flex flex-column align-items-center ">
+                                    <div class="icon_container  d-flex flex-column">
+                                        <div class="features_item  d-flex flex-column align-items-center justify-content-end text-center">
+                                            <img src="images/book/010.jpg" alt=""/>
+                                        </div>
+                                        <h3 class="book-t"><a href="pdf/The 30-Day Plan to Build Your Best Year Yet V2.pdf" target="blank"> The 30-Day Plan to Build Your Best Year Yet</a></h3>
                                     </div>
                                 </div>
                             </div>
+                            <div class="wow bx-02 coach-box fadeInUp">
+                                <div>
+                                    <a href="pdf/Recommended Reading List 2019.pdf" target="blank"><i class="fas fa-file-pdf icon-box"></i></a>
+                                </div>
+                                <div class="features_item  d-flex flex-column align-items-center ">
+                                    <div class="icon_container  d-flex flex-column">
+                                        <div class="features_item  d-flex flex-column align-items-center justify-content-end text-center">
+                                            <img src="images/book/006.jpg" alt=""/>
+                                        </div>
+                                        <h3 class="book-t"><a href="pdf/Recommended Reading List 2019.pdf" target="blank"> Recommended Reading List 2019</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow bx-02 coach-box fadeInUp">
+                                <div>
+                                    <a href="pdf/free-books/001.pdf" target="blank"><i class="fas fa-file-pdf icon-box"></i></a>
+                                </div>
+                                <div class="features_item  d-flex flex-column align-items-center ">
+                                    <div class="icon_container  d-flex flex-column">
+                                        <div class="features_item  d-flex flex-column align-items-center justify-content-end text-center">
+                                            <img src="images/book/001.jpg" alt=""/>
+                                        </div>
+                                        <h3 class="book-t"><a href="pdf/free-books/001.pdf" target="blank"> Ask For It - Linda Babcock</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow bx-02 coach-box fadeInUp">
+                                <div>
+                                    <a href="pdf/free-books/002.pdf" target="blank"><i class="fas fa-file-pdf icon-box"></i></a>
+                                </div>
+                                <div class="features_item  d-flex flex-column align-items-center ">
+                                    <div class="icon_container  d-flex flex-column">
+                                        <div class="features_item  d-flex flex-column align-items-center justify-content-end text-center">
+                                            <img src="images/book/002.jpg" alt=""/>
+                                        </div>
+                                        <h3 class="book-t"><a href="pdf/free-books/002.pdf" target="blank"> Autobiography of a Yogi - Paramhansa Yogananda</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow bx-02 coach-box fadeInUp">
+                                <div>
+                                    <a href="pdf/free-books/003.pdf" target="blank"><i class="fas fa-file-pdf icon-box"></i></a>
+                                </div>
+                                <div class="features_item  d-flex flex-column align-items-center ">
+                                    <div class="icon_container  d-flex flex-column">
+                                        <div class="features_item  d-flex flex-column align-items-center justify-content-end text-center">
+                                            <img src="images/book/003.jpg" alt=""/>
+                                        </div>
+                                        <h3 class="book-t"><a href="pdf/free-books/003.pdf" target="blank"> Exactly What to Say -The Magic Words for Influence and Impact</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow bx-02 coach-box fadeInUp">
+                                <div>
+                                    <a href="pdf/free-books/004.pdf" target="blank"><i class="fas fa-file-pdf icon-box"></i></a>
+                                </div>
+                                <div class="features_item  d-flex flex-column align-items-center ">
+                                    <div class="icon_container  d-flex flex-column">
+                                        <div class="features_item  d-flex flex-column align-items-center justify-content-end text-center">
+                                            <img src="images/book/004.jpg" alt=""/>
+                                        </div>
+                                        <h3 class="book-t"><a href="pdf/free-books/004.pdf" target="blank"> How to Win Friends _ Influence People - Dale Carnegie</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow bx-02 coach-box fadeInUp">
+                                <div>
+                                    <a href="pdf/free-books/005.pdf" target="blank"><i class="fas fa-file-pdf icon-box"></i></a>
+                                </div>
+                                <div class="features_item  d-flex flex-column align-items-center ">
+                                    <div class="icon_container  d-flex flex-column">
+                                        <div class="features_item  d-flex flex-column align-items-center justify-content-end text-center">
+                                            <img src="images/book/005.jpg" alt=""/>
+                                        </div>
+                                        <h3 class="book-t"><a href="pdf/free-books/005.pdf" target="blank"> It Works - R.H. Jarrett</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow bx-02 coach-box fadeInUp">
+                                <div>
+                                    <a href="pdf/free-books/006.pdf" target="blank"><i class="fas fa-file-pdf icon-box"></i></a>
+                                </div>
+                                <div class="features_item  d-flex flex-column align-items-center ">
+                                    <div class="icon_container  d-flex flex-column">
+                                        <div class="features_item  d-flex flex-column align-items-center justify-content-end text-center">
+                                            <img src="images/book/008.jpg" alt=""/>
+                                        </div>
+                                        <h3 class="book-t"><a href="pdf/free-books/006.pdf" target="blank"> The  E-Myth Revisited  - Billionaire Belief</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow bx-02 coach-box fadeInUp">
+                                <div>
+                                    <a href="pdf/free-books/007.pdf" target="blank"><i class="fas fa-file-pdf icon-box"></i></a>
+                                </div>
+                                <div class="features_item  d-flex flex-column align-items-center ">
+                                    <div class="icon_container  d-flex flex-column">
+                                        <div class="features_item  d-flex flex-column align-items-center justify-content-end text-center">
+                                            <img src="images/book/007.jpg" alt=""/>
+                                        </div>
+                                        <h3 class="book-t"><a href="pdf/free-books/007.pdf" target="blank"> The Biology of Belief</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow bx-02 coach-box fadeInUp">
+                                <div>
+                                    <a href="pdf/free-books/008.pdf" target="blank"><i class="fas fa-file-pdf icon-box"></i></a>
+                                </div>
+                                <div class="features_item  d-flex flex-column align-items-center ">
+                                    <div class="icon_container  d-flex flex-column">
+                                        <div class="features_item  d-flex flex-column align-items-center justify-content-end text-center">
+                                            <img src="images/book/009.jpg" alt=""/>
+                                        </div>
+                                        <h3><a href="pdf/free-books/008.pdf" target="blank"> The Science of Getting Rich - Wallace D Wattles</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                       
                     </div>
                 </div>
             </div>
