@@ -29,9 +29,9 @@
         <section class="header">
             <div class="container" style="background: url(img/body-bg.jpg)no-repeat;background-size: cover;padding: 20px;">
                 <div class="row">
-                    <a href="index" class="logo"><img src='img/logo.png' alt=''></a>
+                    <a href="index.php" class="logo"><img src='img/logo.png' alt=''></a>
                     <div class="header-login">
-                        <a href="toowheel/login"><span class="login-button"><i class="fa fa-user"></i> Login</span></a>
+                        <a href="toowheel/login.php"><span class="login-button"><i class="fa fa-user"></i> Login</span></a>
                     </div>
                 </div>
                 <div class="row">
@@ -42,14 +42,14 @@
                     <div class="col-md-6 bg-text">
                         <h2>TWO WHEELS</h2>
                         <h1>TWO<br/> WHEELS</h1>
-                        <a href="toowheel/index" class="engine-button" onclick="document.getElementById('engineON').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON" alt="" /></a>
+                        <a href="toowheel/index.php" class="engine-button" onclick="document.getElementById('engineON').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON" alt="" /></a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 bg-four-text">
                         <h2>FOUR WHEELS</h2>
                         <h1>FOUR<br/> WHEELS</h1>
-                        <a href="toowheel/index" class="engine-button" onclick="document.getElementById('engineON1').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON1" alt="" /></a>
+                        <a href="toowheel/index.php" class="engine-button" onclick="document.getElementById('engineON1').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON1" alt="" /></a>
                     </div>
                     <div class="col-md-6">
                         <img src="img/image-06.png" alt="" style="width: 100%;" />
