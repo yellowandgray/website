@@ -28,6 +28,24 @@
                 <!--About Txt Video Start-->
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
                     <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                        <h2 class="margin-bottom-0 text-center"><strong>Upcoming Event</strong></h2> 
+                        <h2 class="margin-bottom-0 text-center">First Annual Carnival</h2> 
+                        <p class="text-center"><strong>28th of Sep 2019</strong></p>
+                        <br/>
+<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                        <div class="row events-margin padding-bottom-30">
+                            <div class="col-md-12">
+                                <div class="event-img-margin">
+                                    <img src="images/cornival.jpg" alt="Events" title="Events-ENPEE International School" />
+                                </div>
+                            </div>
+                        </div>
+<!--                        <a type="button" href="events-krishnajayanthi.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>-->
+                    </div>
+                </div>
+                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
                         <h2 class="margin-bottom-0 text-center">Krishna Celebrations</h2> 
                         <p class="text-center"><strong>24th of August 2019</strong></p>
                         <br/>
