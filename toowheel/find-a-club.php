@@ -43,6 +43,7 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-md-1"></div>
                     <div class="col-md-2 col-sm-6">
                         <div class="club-box">
                             <span>#1</span>
@@ -83,6 +84,8 @@
                             <p>Kuala Lumpur</p>
                         </div>
                     </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1"></div>
                     <div class="col-md-2 col-sm-6">
                         <div class="club-box">
                             <span>#1</span>
@@ -123,36 +126,21 @@
                             <p>Kuala Lumpur</p>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-6">
-                        <div class="club-box">
-                            <span>#1</span>
-                            <img src="img/find-club/dummy-logo.png" alt="" />
-                            <h3>Frendly Bikers</h3>
-                            <p>Kuala Lumpur</p>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <div class="club-box">
-                            <span>#1</span>
-                            <img src="img/find-club/dummy-logo.png" alt="" />
-                            <h3>Frendly Bikers</h3>
-                            <p>Kuala Lumpur</p>
-                        </div>
-                    </div>
+                    <div class="col-md-1"></div>
                 </div>
-<!--                <div class="row">
-                    <div class="count-radio"> 
-                        <input type="radio" name="size" id="size_1" value="small" checked />
-                        <label for="size_1">1</label>
-
-                        <input type="radio" name="size" id="size_2" value="small" />
-                        <label for="size_2">1</label>
-
-                        <input type="radio" name="size" id="size_3" value="small" />
-                        <label for="size_3">1</label>
-
-                    </div>
-                </div>-->
+                <!--                <div class="row">
+                                    <div class="count-radio"> 
+                                        <input type="radio" name="size" id="size_1" value="small" checked />
+                                        <label for="size_1">1</label>
+                
+                                        <input type="radio" name="size" id="size_2" value="small" />
+                                        <label for="size_2">1</label>
+                
+                                        <input type="radio" name="size" id="size_3" value="small" />
+                                        <label for="size_3">1</label>
+                
+                                    </div>
+                                </div>-->
             </div>
         </div>
         <?php include 'footer.php'; ?>
