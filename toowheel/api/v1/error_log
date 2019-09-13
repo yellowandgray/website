@@ -1,0 +1,59 @@
+[13-Jun-2019 03:39:56 America/Phoenix] PHP Warning:  Uncaught ErrorException: require_once(/home/g3affpfv4f1h/public_html/beta/include/../PHPExcel.php): failed to open stream: No such file or directory in /home/g3affpfv4f1h/public_html/beta/include/common.php:329
+Stack trace:
+#0 /home/g3affpfv4f1h/public_html/beta/include/common.php(329): Slim\Slim::handleErrors(2, 'require_once(/h...', '/home/g3affpfv4...', 329, Array)
+#1 /home/g3affpfv4f1h/public_html/beta/include/common.php(329): require_once()
+#2 /home/g3affpfv4f1h/public_html/beta/routes/master.inc(826): Common->exportExcel(Array, Array, Array, 'bookings', 'bookings')
+#3 [internal function]: {closure}('2019-05-01', '2019-06-13', 'excel')
+#4 /home/g3affpfv4f1h/public_html/beta/include/Slim/Route.php(409): call_user_func_array(Object(Closure), Array)
+#5 /home/g3affpfv4f1h/public_html/beta/include/Slim/Slim.php(1246): Slim\Route->dispatch()
+#6 /home/g3affpfv4f1h/public_html/beta/include/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#7 /home/g3affpfv4f1h/public_html/beta/include/Slim/Middleware/MethodOverri in /home/g3affpfv4f1h/public_html/beta/include/common.php on line 329
+[13-Jun-2019 03:39:56 America/Phoenix] PHP Fatal error:  Common::exportExcel(): Failed opening required '/home/g3affpfv4f1h/public_html/beta/include/../PHPExcel.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/g3affpfv4f1h/public_html/beta/include/common.php on line 329
+[13-Jun-2019 03:41:06 America/Phoenix] PHP Fatal error:  Uncaught Error: Class 'ZipArchive' not found in /home/g3affpfv4f1h/public_html/beta/include/PHPExcel/Writer/Excel2007.php:220
+Stack trace:
+#0 /home/g3affpfv4f1h/public_html/beta/include/common.php(346): PHPExcel_Writer_Excel2007->save('bookings.xlsx')
+#1 /home/g3affpfv4f1h/public_html/beta/routes/master.inc(826): Common->exportExcel(Array, Array, Array, 'bookings', 'bookings')
+#2 [internal function]: {closure}('2019-05-01', '2019-06-13', 'excel')
+#3 /home/g3affpfv4f1h/public_html/beta/include/Slim/Route.php(409): call_user_func_array(Object(Closure), Array)
+#4 /home/g3affpfv4f1h/public_html/beta/include/Slim/Slim.php(1246): Slim\Route->dispatch()
+#5 /home/g3affpfv4f1h/public_html/beta/include/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#6 /home/g3affpfv4f1h/public_html/beta/include/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#7 /home/g3affpfv4f1h/public_html/beta/include/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#8 /home/g3affpfv4f1h/public in /home/g3affpfv4f1h/public_html/beta/include/PHPExcel/Writer/Excel2007.php on line 220
+[19-Jun-2019 12:01:28 Asia/Kolkata] PHP Fatal error:  SoapClient::__setSoapHeaders(): Invalid SOAP header in /home/g3affpfv4f1h/public_html/beta/routes/master.inc on line 358
+[19-Jun-2019 12:21:35 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Class 'AuthHeader' not found in /home/g3affpfv4f1h/public_html/beta/routes/master.inc:357
+Stack trace:
+#0 [internal function]: {closure}('7', '6', '2019-06-25', 'Chennai', 'Pondicherry', '1')
+#1 /home/g3affpfv4f1h/public_html/beta/include/Slim/Route.php(409): call_user_func_array(Object(Closure), Array)
+#2 /home/g3affpfv4f1h/public_html/beta/include/Slim/Slim.php(1246): Slim\Route->dispatch()
+#3 /home/g3affpfv4f1h/public_html/beta/include/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /home/g3affpfv4f1h/public_html/beta/include/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /home/g3affpfv4f1h/public_html/beta/include/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#6 /home/g3affpfv4f1h/public_html/beta/include/Slim/Slim.php(1194): Slim\Middleware\PrettyExceptions->call()
+#7 /home/g3affpfv4f1h/public_html/beta/v1/index.php(94): Slim\Slim->run()
+#8 {main}
+  thrown in /home/g3affpfv4f1h/public_html/beta/routes/master.inc on line 357
+[19-Jun-2019 12:55:21 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined method SoapHeader::AuthHeaderVB() in /home/g3affpfv4f1h/public_html/beta/routes/master.inc:361
+Stack trace:
+#0 [internal function]: {closure}('7', '6', '2019-06-25', 'Chennai', 'Pondicherry', '1')
+#1 /home/g3affpfv4f1h/public_html/beta/include/Slim/Route.php(409): call_user_func_array(Object(Closure), Array)
+#2 /home/g3affpfv4f1h/public_html/beta/include/Slim/Slim.php(1246): Slim\Route->dispatch()
+#3 /home/g3affpfv4f1h/public_html/beta/include/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /home/g3affpfv4f1h/public_html/beta/include/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /home/g3affpfv4f1h/public_html/beta/include/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#6 /home/g3affpfv4f1h/public_html/beta/include/Slim/Slim.php(1194): Slim\Middleware\PrettyExceptions->call()
+#7 /home/g3affpfv4f1h/public_html/beta/v1/index.php(94): Slim\Slim->run()
+#8 {main}
+  thrown in /home/g3affpfv4f1h/public_html/beta/routes/master.inc on line 361
+[19-Jun-2019 13:42:42 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /home/g3affpfv4f1h/public_html/beta/routes/master.inc:360
+Stack trace:
+#0 [internal function]: {closure}('7', '6', '2019-06-25', 'Chennai', 'Pondicherry', '1')
+#1 /home/g3affpfv4f1h/public_html/beta/include/Slim/Route.php(409): call_user_func_array(Object(Closure), Array)
+#2 /home/g3affpfv4f1h/public_html/beta/include/Slim/Slim.php(1246): Slim\Route->dispatch()
+#3 /home/g3affpfv4f1h/public_html/beta/include/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /home/g3affpfv4f1h/public_html/beta/include/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /home/g3affpfv4f1h/public_html/beta/include/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#6 /home/g3affpfv4f1h/public_html/beta/include/Slim/Slim.php(1194): Slim\Middleware\PrettyExceptions->call()
+#7 /home/g3affpfv4f1h/public_html/beta/v1/index.php(94): Slim\Slim->run()
+#8 {main}
+  thrown in /home/g3affpfv4f1h/public_html/beta/routes/master.inc on line 360
