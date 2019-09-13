@@ -82,8 +82,6 @@
                 // We multiply it by zoom and get our real height.
                 return window.innerHeight * zoomLevel;
             };
-
-
         </script>
     </body>
 </html>
