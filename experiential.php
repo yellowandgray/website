@@ -120,7 +120,7 @@
                                 <div class="tensorsite-card tensorsite-card--clip">
                                     <a class="tensorsite-card__href" aria-label="Your first neural network" href="#"></a>
                                     <div class="tensorsite-content__image-wrapper">
-                                        <img class="tensorsite-content__image" src="img/about/about-01.jpg" alt="">
+                                        <img class="tensorsite-content__image" src="img/experiential/internet-thing.jpg" alt="">
                                     </div>
                                     <div class="tensorsite-content  tensorsite-content--under-image">
                                         <!--                                        <div class="tensorsite-content__clip-bg">
