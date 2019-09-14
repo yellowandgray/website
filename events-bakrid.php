@@ -22,7 +22,7 @@
                                         </ul>-->
                 </div>
             </section>
-            
+
             <section class="wf100 about">
                 <!--About Txt Video Start-->
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
@@ -41,50 +41,49 @@
                         </div>
                     </div>
                 </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="row events-margin">
-                                    <div class="col-md-4">
-                                        <img src="images/bhakrid/002.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/bhakrid/003.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/bhakrid/004.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
+                <div class="row">
+                    <div class="container">
+                        <div class="col-md-12">
+                            <div class="row events-margin">
+                                <div class="col-md-4">
+                                    <img src="images/bhakrid/002.jpg" alt="Events" title="Events-ENPEE International School" />
                                 </div>
-                                <div class="row events-margin">
-                                    <div class="col-md-4">
-                                        <img src="images/bhakrid/005.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/bhakrid/008.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/bhakrid/006.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
+                                <div class="col-md-4">
+                                    <img src="images/bhakrid/003.jpg" alt="Events" title="Events-ENPEE International School" />
                                 </div>
-                                <div class="row events-margin">
-                                    <div class="col-md-4">
-                                        <img src="images/bhakrid/007.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/bhakrid/009.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="images/bhakrid/001.jpg" alt="Events" title="Events-ENPEE International School" />
-                                    </div>
+                                <div class="col-md-4">
+                                    <img src="images/bhakrid/004.jpg" alt="Events" title="Events-ENPEE International School" />
                                 </div>
-
                             </div>
+                            <div class="row events-margin">
+                                <div class="col-md-4">
+                                    <img src="images/bhakrid/005.jpg" alt="Events" title="Events-ENPEE International School" />
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="images/bhakrid/008.jpg" alt="Events" title="Events-ENPEE International School" />
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="images/bhakrid/006.jpg" alt="Events" title="Events-ENPEE International School" />
+                                </div>
+                            </div>
+                            <div class="row events-margin">
+                                <div class="col-md-4">
+                                    <img src="images/bhakrid/007.jpg" alt="Events" title="Events-ENPEE International School" />
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="images/bhakrid/009.jpg" alt="Events" title="Events-ENPEE International School" />
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="images/bhakrid/001.jpg" alt="Events" title="Events-ENPEE International School" />
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                <!--About Txt Video End-->
             </section>
-            
-             <?php include 'footer.php'; ?>
+
+            <?php include 'footer.php'; ?>
         </div>
     </body>
 </html>

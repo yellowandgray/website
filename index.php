@@ -110,18 +110,18 @@
                     <img src="images/banner/banner-emphasis.jpg" alt="Emphasis on Mental & Physical activities - ENPEE International School" title="Emphasis on Mental & Physical activities - ENPEE International School"/>
                 </div>
 
-                <div class="item">
-                    <div class="slider-caption text-center">
-                        <div class="container">
-                            <strong>Unique Sports Complex</strong>
-                            <!--                     <h1>Stop Air Pollution</h1>
-                                                 <p> Air Pollution is another main environmental pollution faced by our world today. Air pollution takes place when damaging stuff including particulates.</p>-->
-                            <!--                            <a href="#" class="active">Join us Now</a>
-                                                        <a href="#">More About Us</a> -->
-                        </div>
-                    </div>
-                    <img src="images/banner/banner-sports.jpg" alt="Unique Sports Complex - ENPEE International School" title="Unique Sports Complex - ENPEE International School"/>
-                </div>
+                <!--                <div class="item">
+                                    <div class="slider-caption text-center">
+                                        <div class="container">
+                                            <strong>Unique Sports Complex</strong>
+                                                                 <h1>Stop Air Pollution</h1>
+                                                                 <p> Air Pollution is another main environmental pollution faced by our world today. Air pollution takes place when damaging stuff including particulates.</p>
+                                                                        <a href="#" class="active">Join us Now</a>
+                                                                        <a href="#">More About Us</a> 
+                                        </div>
+                                    </div>
+                                    <img src="images/banner/banner-sports.jpg" alt="Unique Sports Complex - ENPEE International School" title="Unique Sports Complex - ENPEE International School"/>
+                                </div>-->
 
                 <div class="item">
                     <div class="slider-caption text-center">
@@ -148,8 +148,8 @@
 <!--                                <h2> <span>ecova.</span> Welcome to ENPEE INTERNATIONAL SCHOOL</h2>-->
                                 <h2>Welcome to ENPEE INTERNATIONAL SCHOOL</h2>
                                 <p><strong>Our Campus</strong></p>
-                                <p class="text-justify">The ENPEE campus covers over 5 acres surrounded by lush greenery and a serene atmosphere suitable for learning. At the heart of our campus, ENPEE International school spans an incredible area of over 40,000 sq.ft. in its Phase – I, starting from Academic year – 2019-2020. </p>
-                                <p class="text-justify">Our second and Third phases will resume from the successive academic year of 2020-21 and 2021-22 respectively. Our campus will have a spacious Track & field, unique sports complex including but not limited to an aquatic pool, Skating rink, Archery, Basketball, Badminton, Table Tennis aiding in overall growth & development of an individual, Spacious and learner oriented laboratories, mixed age group activity studio, digitized classrooms. <a href="about.php" style="font-style: italic">Read More</a></p>
+                                <p class="text-justify">The ENPEE campus covers over 5 acres surrounded by lush greenery and a serene atmosphere suitable for learning. Our Academic year starts functioning from  2019. </p>
+                                <p class="text-justify">Our campus will have a spacious Track & field, unique sports complex including but not limited to a Skating rink, Archery, Basketball, Badminton, Table Tennis. Football aiding in overall growth & development of an individual, Spacious and learner oriented laboratories, mixed age group activity studio, digitized classrooms. <a href="about.php" style="font-style: italic">Read More</a></p>
                                 <ul>
                                     <li><i class="fas fa-check"></i> Team Building</li>
                                     <li><i class="fas fa-check"></i> Interactive Learning</li>
@@ -210,17 +210,17 @@
                     </div>
                     <!--Services Box End-->
                     <!--Services Box Start-->
-                    <div class="ser-col">
-                        <div class="ser-box height-440">
-                            <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a>
-                                <img src="images/sports-complex.jpg" alt="Unique Sports Complex - ENPEE International School" title="Unique Sports Complex - ENPEE International School"></div>
-                            <div class="ser-txt">
-                                <h4> <a href="#">Unique Sports Complex</a>
-                                </h4>
-                                <span class="aicon"><i class="fas fa-arrow-right"></i></span>
-                            </div>
-                        </div>
-                    </div>
+                    <!--                    <div class="ser-col">
+                                            <div class="ser-box height-440">
+                                                <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a>
+                                                    <img src="images/sports-complex.jpg" alt="Unique Sports Complex - ENPEE International School" title="Unique Sports Complex - ENPEE International School"></div>
+                                                <div class="ser-txt">
+                                                    <h4> <a href="#">Unique Sports Complex</a>
+                                                    </h4>
+                                                    <span class="aicon"><i class="fas fa-arrow-right"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>-->
                     <!--Services Box End-->
                     <!--Services Box Start-->
                     <div class="ser-col">
@@ -228,9 +228,9 @@
                             <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a>
                                 <img src="images/community-football.jpg" alt="Community Football Ground - ENPEE International School" title="Community Football Ground - ENPEE International School"></div>
                             <div class="ser-txt">
-                                <h4> <a href="#">Community Football Ground</a>
-                                </h4>
+                                <h4> <a href="#">Community Football Ground</a></h4>
                                 <span class="aicon"><i class="fas fa-arrow-right"></i></span>
+                                <br>
                             </div>
                         </div>
                     </div>
@@ -270,7 +270,6 @@
                                     <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-pre-kg.jpg" alt="Pre-KG - ENPEE International School" title="Pre-KG - ENPEE International School"></div>
                                     <div class="blog-txt">
                                         <h5><a href="#">Pre-KG</a></h5>
-                                        
                                         <!--                                        <ul class="post-meta">
                                                                                     <li><span>By:</span> Danial John</li>
                                                                                     <li><span>Posted:</span> 29 September, 2018</li>
@@ -320,13 +319,13 @@
                                     <div class="event-thumb">
                                         <a href="#"><i class="fas fa-link"></i></a> <img src="images/event-knowledge-innovation-excellence.jpg" alt="Knowledge Innovation Excellence - ENPEE International School" title="Knowledge Innovation Excellence - ENPEE International School">
                                         <ul class="post-meta">
-                                            <li>10 Febuary, 2019 </li>
-                                            <li> 01:00 pm - 07:00 pm</li>
+                                            <li>28th September, 2019 </li>
+                                            <li> 11:00 am - 04:00 pm</li>
                                         </ul>
                                     </div>
                                     <div class="event-txt">
-                                        <h6><a href="#">Knowledge Innovation Excellence</a></h6>
-                                        <p><i class="fas fa-map-marker-alt"></i> AVS Imperiaa, (Star hotel in Karaikal) </p>
+                                        <h6><a href="news-events.php">First Annual Carnival Enpee 2019</a></h6>
+                                        <p><i class="fas fa-map-marker-alt"></i> Enpee Internatioal School, Karaikal </p>
                                     </div>
                                 </div>
                                 <!--Blog Post End-->
@@ -571,7 +570,7 @@
                                 <li class="col-md-3 col-sm-6 f-cat f-cat4 f-cat2"><span> <a href="images/facilities/sports-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/sports-1.jpg" alt="Sports - ENPEE International School" title="Sports - ENPEE International School"></span> </li>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat1 f-cat4"><span> <a href="images/facilities/pic-yoga-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-yoga-01.jpg" alt="Yoga - ENPEE International School" title="Yoga - ENPEE International School"></span> </li>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat2 f-cat3"><span> <a href="images/facilities/theatre-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/theatre-1.jpg" alt="Theatre - ENPEE International School" title="Theatre - ENPEE International School"></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat3 f-cat2"><span> <a href="images/facilities/swim-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/swim-1.jpg" alt="Swimming - ENPEE International School" title="Swimming - ENPEE International School"></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat3 f-cat2"><span> <a href="images/facilities/swim-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/swim-1.jpg" alt="Class Room - ENPEE International School" title="Class Room - ENPEE International School"></span> </li>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat4 f-cat1"><span> <a href="images/facilities/tour-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/tour-01.jpg" alt="Tourism - ENPEE International School" title="Tourism - ENPEE International School"></span> </li>
                             </ul>
                         </div>

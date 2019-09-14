@@ -17,12 +17,12 @@
             </div>
             <div class="col-md-6">
                 <div class="row">
-                    <h5>ENPEE International School - Grand Launch <span>(Feb 10, 2019 Sunday)</span></h5>
+                    <h5>ENPEE International School - First Annual CARNIVAL <span>(Sep 28, 2019 Saturday)</span></h5>
                     <div class="col-md-6">
-                        <iframe src="https://www.youtube.com/embed/Nd0kcs83jZc" style="width: 100%; height: 175px;" align="left" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img src="images/cornival.jpg" alt="" class="img-responsive"/>
                     </div>
                     <div class="col-md-6">
-                        <p class="text-justify">ENPEE International School was launched in pomp and style on 10th Feb, the Sunday, at Hotel AVS Imperia, Karaikal. Event was launched by chief guest, in the presence of special invitees, parent with their children.</p>
+                        <p class="text-justify">Come and have Fun like never before in Karaikal</p>
                         <a type="button" href="news-events.php" class="btn-custom-1">Read More</a>
                     </div>
                 </div>

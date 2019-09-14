@@ -41,9 +41,9 @@
                     <div class="footer-widget">
                         <h5>Upcoming Events</h5>
                         <ul class="lastest-products">
-                            <li> <img src="images/event-knowledge-innovation-excellence.jpg"  alt="Knowledge Innovation Excellence - ENPEE International School" title="Knowledge Innovation Excellence - ENPEE International School" style="width: 68px; height: 68px"> 
-                                <strong><a href="#">Knowledge Innovation Excellence</a></strong> 
-                                <span class="pdate"><i>Date:</i> 10 Feb 2019</span>
+                            <li> <img src="images/cornival.jpg"  alt="Knowledge Innovation Excellence - ENPEE International School" title="Knowledge Innovation Excellence - ENPEE International School" style="width: 68px; height: 68px"> 
+                                <strong><a href="news-events.php">ENPEE International School - First Annual CARNIVAL</a></strong> 
+                                <span class="pdate"><i>Date:</i> 28 Sep 2019</span>
                             </li>
                             <li> 
                                 <a href="contact.php"><img src="images/pic-admission-open.jpg" alt="Admisstion open 2019-2020 - ENPEE International School" title="Admisstion open 2019-2020 - ENPEE International School" style="width: 68px; height: 68px"> </a>
@@ -161,5 +161,27 @@
             $(".dropdown-content").show();
         });
     });
+</script>
+<script>
+// Get the modal
+    var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = "images/anual-cornival.jpg";
+//        captionText.innerHTML = this.alt;
+    }
+
+// Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+    function closeImg() {
+        modal.style.display = "none";
+    }
 </script>
 
