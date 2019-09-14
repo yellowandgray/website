@@ -3,6 +3,7 @@
     <?php include 'head.php'; ?>
     <body>
         <div class="wrapper">
+
             <!--Header Start-->
             <?php include 'menu.php'; ?>
             <div id="search">
@@ -25,6 +26,7 @@
             </section>
             <!--Inner Header End--> 
             <section class="wf100 about">
+
                 <!--About Txt Video Start-->
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
                     <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
@@ -37,13 +39,21 @@
                         <div class="row events-margin padding-bottom-30">
                             <div class="col-md-12">
                                 <div class="event-img-margin">
-                                    <img src="images/cornival.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    <img id="myImg"  src="images/cornival.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    <div id="myModal" class="modal">
+                                        <span onclick="closeImg()" class="close">&times;</span>
+                                        <img class="modal-content" id="img01">
+                                        <div id="caption"></div>
+                                    </div>
+
                                 </div>
-                            </div>
+
+                            </div> 
                         </div>
-<!--                        <a type="button" href="events-krishnajayanthi.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>-->
+                        <!--                        <a type="button" href="events-krishnajayanthi.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>-->
                     </div>
                 </div>
+
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
                     <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
                         <h2 class="margin-bottom-0 text-center">Krishna Celebrations</h2> 
@@ -63,6 +73,9 @@
                     </div>
                 </div>
                 <!--About Txt Video End-->
+            </section>
+            <section>
+
             </section>
             <section class="wf100 about">
                 <!--About Txt Video Start-->
