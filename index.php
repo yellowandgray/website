@@ -260,15 +260,17 @@
                                                 <input type="text" placeholder="Select Dates" class="datepicker">
                                             </div>
                                         </div>
-                                        <div class="col-md-9 mb-3 mb-md-4" id="time-picker">
+                                        <div class="col-md-5 mb-3 mb-md-4" id="time-picker">
                                             <div class="flex-row">
                                                 <div class="margin-tb-5 time-overlay">
-                                                    <input type="text" placeholder="From" class="timepicker">
-                                                    <input type="text" placeholder="To" class="timepicker">
+                                                    <input type="text" placeholder="From Time" class="timepicker">
+                                                    <input type="text" placeholder="To Time" class="timepicker">
                                                 </div>
-                                                <button class="btn btn-cancel" id="timeButton">Check Availability</button>
                                             </div>
                                             <div id="time_container"></div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button class="btn btn-cancel" id="timeButton"><span>Check Availability</span></button>                                            
                                         </div>
                                         <div class="col-md-12 textarea">
                                             <textarea rows="4" cols="65" placeholder="Notes"></textarea>

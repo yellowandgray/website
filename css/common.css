@@ -802,8 +802,9 @@ body.loaded>div.loader {
 
 #timeButton {
     display: block;
-    margin-right: auto;
-    margin-left: auto;
+    margin-bottom: 20px;
+    /*    margin-right: auto;
+        margin-left: auto;*/
 }
 
 .time-viewer {
@@ -831,7 +832,7 @@ body.loaded>div.loader {
 }
 
 #time-picker input {
-    width: 30%;
+    width: auto;
     border: none;
     border-bottom: 1px solid #000;
     margin: 5px 5px;
