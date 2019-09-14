@@ -27,14 +27,14 @@
             <div class="col-lg-6">
                 <section>
                     <div class="container">
-                        <div class="row section-title justify-content-center text-center">
+                        <div class="row justify-content-center text-center">
                             <div class="col-md-9 col-lg-8 col-xl-7">
-                                <h3 class="display-4">Get in touch with us</h3>
+                                <h3 class="display-4" style="margin-bottom: 50px;">Get in touch with us</h3>
                                 <!--                        <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>-->
                             </div>
                         </div>
                         <div class="row justify-content-center">
-                            <form data-form-email novalidate action="">
+                            <form action="">
                                 <div class="form-row">
                                     <div class="col-sm">
                                         <div class="form-group">
@@ -48,7 +48,7 @@
                                     <div class="col-sm">
                                         <div class="form-group">
                                             <label for="contact-email">Email Address</label>
-                                            <input type="email" name="contact-email" class="form-control" id="contact-email" placeholder="you@website.com" required>
+                                            <input type="email" name="contact-email" class="form-control" id="contact-email" required>
                                             <div class="invalid-feedback">
                                                 Please provide your email address.
                                             </div>
@@ -59,13 +59,13 @@
                                     <div class="col-sm">
                                         <div class="form-group">
                                             <label for="contact-phone">Phone</label>
-                                            <input type="tel" name="contact-phone" class="form-control" id="contact-phone">
+                                            <input type="tel" name="contact-phone" class="form-control" id="contact-phone" required>
                                         </div>
                                     </div>
                                     <div class="col-sm">
                                         <div class="form-group">
                                             <label for="subject">Subject</label>
-                                            <input type="text" name="subject" class="form-control" id="subject">
+                                            <input type="text" name="subject" class="form-control" id="subject" required>
                                         </div>
                                     </div>
                                 </div>
@@ -129,11 +129,11 @@
                             <!--                            <div class="mx-3 mx-lg-0 mr-lg-5 mb-4 contact-social-bg">-->
                             <div class="mx-3 mx-lg-0 mr-lg-5 mb-4 contact-i">
                                 <i class="far fa-envelope"></i>
-                                <a href="#" class="lead">email@projectnextdoor.com</a>
+                                <a href="mailto:info@alias-innovation.com" class="lead">info@alias-innovation.com/</a>
                             </div>
                             <div class="mx-3 mx-lg-0 mr-lg-5 mb-4 contact-i">
                                 <i class="fas fa-phone-alt"></i>
-                                <a href="#" class="lead">+603 7662 7601</a>
+                                <a href="tel:+603 7662 7601" class="lead">+603 7662 7601</a>
                             </div>
                         </div>
                         <div class="">

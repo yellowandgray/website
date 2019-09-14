@@ -860,3 +860,13 @@ body.loaded>div.loader {
 .ui-tooltip {
     display: none;
 }
+
+.who-we-are-h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.margin-tb-5 {
+    margin: 5px 0;
+}
