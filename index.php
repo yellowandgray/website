@@ -390,7 +390,82 @@
                 </div>
             </section>
             <!--Team Section End--> 
-
+            <section class="wf100 p80 projects" style="background-color: #e1e1e1;">
+                <div class="projects-grid custom-gap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="h3-stitle text-center">
+                                    <h1>Metal</h1>
+                                    <p> <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></p>
+                                    <p> and we are providing all kinds of Eco-Friendly and Environmental Services. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--Project box Start-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="pro-box wow fadeInDown">
+                                    <img src="images/home/021.jpg" alt="">
+                                    <h5>Billet</h5>
+                                    <div class="pro-hover">
+                                        <h6>Billet</h6>
+                                        <p> <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></p>
+                                        <a href="#">Read More</a> 
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Project box End-->
+                            <!--Project box Start-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="pro-box wow fadeInDown">
+                                    <img src="images/home/022.jpg" alt="">
+                                    <h5>Reinforcing Bars</h5>
+                                    <div class="pro-hover">
+                                        <h6>Reinforcing Bars</h6>
+                                        <p> <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></p>
+                                        <a href="#">Read More</a> 
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Project box End--> 
+                            <!--Project box Start-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="pro-box wow fadeInDown">
+                                    <img src="images/home/023.jpg" alt="">
+                                    <h5>Compact Coil</h5>
+                                    <div class="pro-hover">
+                                        <h6>Compact Coil</h6>
+                                        <p> <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></p>
+                                        <a href="#">Read More</a> 
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Project box End--> 
+                            <!--Project box Start-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="pro-box wow fadeInDown">
+                                    <img src="images/home/024.jpg" alt="">
+                                    <h5>Wire Bar</h5>
+                                    <div class="pro-hover">
+                                        <h6>Wire Rod</h6>
+                                        <p> <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></p>
+                                        <a href="#">Read More</a> 
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Project box End--> 
+                        </div>
+                        <div class="row pad-t-40">
+                            <div class="col-md-12">
+                                <div class="volbox-3 text-center">
+                                    <a href="metal.php">See More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!--Testimonials Start-->
 
             <!--Partner Logos Section End--> 
