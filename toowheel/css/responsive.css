@@ -181,3 +181,34 @@
         height: 120% !important;
     }
 }
+@media screen and (max-width: 600px) {
+/*    .bg-text h2 {
+        font-size: 46px !important;
+    }
+    .bg-text h1 {
+        font-size: 40px !important;
+        bottom: 25px !Important;
+        right: 0 !important;
+    }
+    .bg-four-text h2 {
+        font-size: 46px !important;
+    }
+    .bg-four-text h1 {
+        font-size: 40px !important;
+        bottom: 25px !Important;
+        left: 0 !important;
+    }*/
+    .cross-btn-01 {
+        position: relative !Important;
+        bottom: 60px !important;
+    }
+    .cross-btn-01 span {
+        top: 30px !important;
+    }
+/*    .engine-button {
+        margin: 0 auto !Important;
+        top: 0 !Important;
+        position: relative !important;
+        bottom: 0 !important;
+    }*/
+}

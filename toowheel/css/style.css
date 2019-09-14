@@ -1250,24 +1250,23 @@ body {
     width: 75%;
 }
 
-.club-logo {
+/*.club-logo {
     text-align: center;
     position: relative;
     top: -85px;
-}
+}*/
 
 .club-logo img {
-    width: 15%;
     border-radius: 50%;
     background: #fff;
     box-shadow: 0 0 5px 2px #ed1c24;
 }
 
-.club-page-title {
+/*.club-page-title {
     text-align: center;
     position: relative;
     top: -85px;
-}
+}*/
 
 .club-page-title h2 {
     margin-top: 20px;
@@ -1284,7 +1283,7 @@ body {
 
 .club-page-description {
     position: relative;
-    top: -85px;
+    top: -30px;
 }
 
 .club-page-description p {
@@ -1390,3 +1389,25 @@ body {
 .count-radio input[type="radio"]:checked + label{
   background-color: #58ba83;
 }*/
+.cross-btn-01 {
+    position: relative;
+    width: auto;
+    height: 0;
+    border-bottom: 40px solid red;
+    border-right: 25px solid transparent;
+    bottom: 61px;
+    text-decoration: none;
+    padding: 0 20px;
+    left: 0px;
+}
+
+.cross-btn-01:hover {
+    text-decoration: none;
+}
+
+.cross-btn-01 span {
+    color: #fff;
+    position: relative;
+    top: 30px;
+    left: 1px;
+}
