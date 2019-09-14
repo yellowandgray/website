@@ -88,7 +88,7 @@
                             <!--Contact Info Start-->
                             <div class="c-info  contact-1">
                                 <h6>For More Information:</h6>
-                                <p><strong>Email:</strong>sales@vpnc.com </p>
+                                <p><strong>Email:</strong>sales@vpnc.com.sg </p>
                                 <p></p>
                             </div>
                             <!--Contact Info End--> 

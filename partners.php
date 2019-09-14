@@ -32,19 +32,29 @@
             <section class="wf100 p80 team pad-t-80 pad-b-80">
                 <div class="team-details">
                     <div class="container">
-                        <div class="row">
+<!--                        <div class="row">
                             <div class="col-lg-12 text-center">
-                                <!--title start-->
+                                title start
                                 <div class="section-title">
                                     <h2>Our Partners</h2>
                                 </div>
-                                <!--title end--> 
+                                title end 
                             </div>
-                        </div>
+                        </div>-->
                         <div class="row">
                             <div class="col-md-5">
-                                <div class="team-large-img"> <img src="images/partners/001.jpg" alt=""> </div>
+                                <div class="team-large-img"> <img src="images/partners/002.jpg" alt=""> </div>
                             </div>
+                            <div class="col-md-7">
+                                <div class="team-details-txt">
+                                    <h2>CAHROS</h2>
+                                    <strong class="trank">Groupe</strong>
+                                    <p class="text-justify">CAHORS offers a range of tailored services to help you, from designing your project to installing and monitoring it. As true partners, our technical and sales teams work alongside you in your projects. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
                             <div class="col-md-7">
                                 <div class="team-details-txt">
                                     <h2>SABIC</h2>
@@ -52,6 +62,9 @@
                                     <p class="text-justify">SABIC is composed of four strategic business units – Petrochemicals, Specialties, Agri-Nutrients, and Metals – each headed by an Executive Vice President.</p>
                                     <p class="text-justify">The Chairman of SABIC is Dr. Abdulaziz Saleh Aljarbou. Vice-Chairman and Chief Executive Officer, Yousef Abdullah Al-Benyan, leads the global management team. The company is overseen by a Board of Directors taken from government and the private sector.</p>
                                 </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="team-large-img"> <img src="images/partners/001.jpg" alt=""> </div>
                             </div>
                         </div>
                     </div>
@@ -62,7 +75,7 @@
                     <div class="partner-logos wf100 mb80">
                         <div class="container">
                             <div id="partner-logos" class="owl-carousel owl-theme">
-                                <div class="item"><img src="images/partners/01.png" alt=""></div>
+                                <div class="item"><img src="images/partners/002.png" alt=""></div>
                                 <div class="item"><img src="images/partners/02.png" alt=""></div>
                                 <div class="item"><img src="images/partners/03.png" alt=""></div>
                                 <div class="item"><img src="images/partners/04.png" alt=""></div>
