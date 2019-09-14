@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Project Next Door</title>
-        <meta name="description" content="Free Web tutorials">
+        <meta name="description" content="Project Next Door | Book Your Space">
         <meta name="keywords" content="Project Next Door">
         <link rel="icon" href="img/favicon.png" type="image/gif">
         <link href="css/css.css" rel="stylesheet" type="text/css"/>
