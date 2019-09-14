@@ -82,6 +82,29 @@
                     </div>
                     <div class="row pad-20">
                         <div class="col-lg-8 left-order testimoni wow fadeInLeft">
+                            <h4><strong>Rupesh Tanna</strong></h4>
+                            <h5>Standard Chartered Bank, Customer Due Diligence Specialist</h5>
+                            <p class="text-justify">Coach Cheryl or a life changer?</p>
+                            <p class="text-justify">Well, for me Coach Cheryl is a life changer in the truest sense.</p>
+                            <p class="text-justify">My sessions with Coach Cheryl were the basis of my life's transformation.</p>
+                            <p class="text-justify">Under Coach Cheryl’s guidance I started to realize my weaknesses as well as my strengths.</p>
+                            <p class="text-justify">I started to identify an ultimate goal of my life, my own habits which were preventing me from achieving it and the habits which I need to inculcate to achieve the best life possible. </p>
+                            <p class="text-justify">Things which I like the most about her coaching are:</p>
+                            <ul class="list-1 wow fadeInUp">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>1. Her friendly and down to earth attitude gives you absolute comfort, which in turn helps you open up and share everything with her.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>2. Ideas for Enlightening your subconscious mind.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>3. Her unique way to find the answers of your problems by asking you intriguing, intelligent questions.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>4. Her constant guidance and hand holding makes sure that her client achieves which they are aspiring for.</li>
+                            </ul>
+                            <p class="text-justify">Work with her and I am sure you will experience the same transformation which I have.</p>
+                            <p class="text-justify">Thank you Coach Cheryl.</p>
+                        </div>
+                        <div class="col-lg-4 box-7 text-center wow fadeInRight">
+                            <img src="images/testimonial/testimonial-014.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="row pad-20">
+                        <div class="col-lg-8 left-order testimoni wow fadeInLeft">
                             <h4><strong>Paulo D</strong></h4>
                             <p class="text-justify">Cheryl Pinto has been my life coach for the past 5 months. I was working in the IT industry for 5 years and felt like I needed a change and pursue a passion I always had but never had the courage to follow. By accident I met Cheryl and we started working together. She has been very successful in her own career – she has walked the walk – corporate professional, high intensity work. So therefore she understood my world. She is very capable with her skills with NLP. Her general good nature and intelligence makes Cheryl very easy to work with. She is very smart. She drove me, pushed me in areas I probably wasn’t comfortable to go but I wanted to go. It’s been absolutely phenomenal. Now I am completely changing career and going on a new journey which I am so excited about. I’ve gone from being minorly depressed to majorly excited about the future. I cant thank Cheryl enough and I can’t recommend her enough. It’s difficult to make major changes without someone there to support you, to guide you and to push you. If you’re looking to make that sort of change or impact, then Cheryl is definitely one of the best I’ve worked with –I know, I’ve tried a few :) Good luck!</p>
                         </div>
@@ -92,8 +115,7 @@
                     <div class="row pad-20">
                         <div class="col-lg-8 left-order testimoni wow fadeInLeft">
                             <h4><strong>Avil Pinto</strong></h4>
-                            <h5>Founder, Dubai Job Hunt</h5>
-                            <p class="text-justify">Today is just the 18th day since we began our coaching session. With just 2 sessions, falling short of words to describe the transformation that's taking place in my life. In such short time, i have explored & realized things which i was always struggling with! Wish I had known you before .. Thanks for guiding me to clean up my mind out of fears, worries, limiting beliefs and filling me with hope, confidence, clarity, goals and above all helping me understand myself and my purpose. I always believed that nothing comes easy in life, one needs luck on his side and influence of others. After meeting you, I feel life is so simple and everything is possible and achievable. You truly are God's gift to mankind. You have not only brought change within me but also in my family. Thank you very much!</p>
+                            <h5>Founder, Dubai Job Hunt</h5> <p class="text-justify">Today is just the 18th day since we began our coaching session. With just 2 sessions, falling short of words to describe the transformation that's taking place in my life. In such short time, i have explored & realized things which i was always struggling with! Wish I had known you before .. Thanks for guiding me to clean up my mind out of fears, worries, limiting beliefs and filling me with hope, confidence, clarity, goals and above all helping me understand myself and my purpose. I always believed that nothing comes easy in life, one needs luck on his side and influence of others. After meeting you, I feel life is so simple and everything is possible and achievable. You truly are God's gift to mankind. You have not only brought change within me but also in my family. Thank you very much!</p>
                             <i>Reach Avil Pinto at FB Page <a href="https://www.facebook.com/groups/Dubaijobhunt/" target="_blank">click here.</a></i>
                         </div>
                         <div class="col-lg-4 box-7 text-center wow fadeInRight">
