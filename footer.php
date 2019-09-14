@@ -143,6 +143,14 @@
 <script type="text/javascript" src="assets/js/popper.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.js"></script>
 <script src="js/jquery-ui.js" type="text/javascript"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
+<script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6Lc5a7gUAAAAABo2gCye8QFPOg7fN2tdt_dx5_op', {action: 'homepage'}).then(function (token) {
+            ...
+        });
+    });
+</script>
 <script type="text/javascript">
     (($) => {
         var now = new Date;

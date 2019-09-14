@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="col-6">
-                                        <div data-recaptcha data-sitekey="6Lfmz4gUAAAAAEau9IKfGA7leOKYAiRhv-3WA3gq"></div>
+                                        <div data-recaptcha data-sitekey="6Lc5a7gUAAAAABo2gCye8QFPOg7fN2tdt_dx5_op"></div>
                                     </div>
                                     <div class="col-6">
                                         <button class="btn btn-contact">Send Message</button>
@@ -129,7 +129,7 @@
                             <!--                            <div class="mx-3 mx-lg-0 mr-lg-5 mb-4 contact-social-bg">-->
                             <div class="mx-3 mx-lg-0 mr-lg-5 mb-4 contact-i">
                                 <i class="far fa-envelope"></i>
-                                <a href="mailto:info@alias-innovation.com" class="lead">info@alias-innovation.com/</a>
+                                <a href="mailto:info@alias-innovation.com" class="lead">info@alias-innovation.com</a>
                             </div>
                             <div class="mx-3 mx-lg-0 mr-lg-5 mb-4 contact-i">
                                 <i class="fas fa-phone-alt"></i>
