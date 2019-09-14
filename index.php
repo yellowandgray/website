@@ -1,3 +1,8 @@
+<?php
+require_once 'toowheel/api/include/common.php';
+$obj = new Common();
+$configs = $obj->getLandingDetails();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -37,7 +42,7 @@
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-5">
-                        <img src="img/image-05.png" alt="" style="width: 100%;" />
+                        <img src="<?php echo BASE_URL . $configs['landing_twowheel_image']; ?>" alt="" style="width: 100%;" />
                     </div>
                     <div class="col-md-6 bg-text">
                         <h2>TWO WHEELS</h2>

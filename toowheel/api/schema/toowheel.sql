@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2019 at 07:45 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.2.12
+-- Generation Time: Sep 14, 2019 at 07:10 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -45,13 +45,13 @@ CREATE TABLE `config` (
 --
 
 INSERT INTO `config` (`config_id`, `name`, `value`, `display_name`, `field_type`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
-(1, 'landing_twowheel_image', '', '', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
-(2, 'landing_fourwheel_image', '', '', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
-(3, 'landing_description', '', '', 'text', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
-(4, 'landing_about_us_image', '', '', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
-(5, 'landing_news_updates_image', '', '', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
-(6, 'landing_join_club_image', '', '', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
-(7, 'landing_show_now_image', '', '', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
+(1, 'landing_twowheel_image', 'uploads/twowheel.png', 'Landing two wheel image', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
+(2, 'landing_fourwheel_image', 'uploads/fourwheel.png', 'Landing four wheel image', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
+(3, 'landing_description', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', 'Landing description', 'text', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
+(4, 'landing_about_us_image', 'uploads/about.png', 'Landing about menu image', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
+(5, 'landing_news_updates_image', 'uploads/news_updates.png', 'Landing news menu image', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
+(6, 'landing_join_club_image', 'uploads/join_a_club.png', 'Landing join club menu image', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
+(7, 'landing_shop_now_image', 'uploads/shop_now.png', 'Landing shop now menu image', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
 (8, 'landing_banner_ad', '', '', 'dropdown', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00');
 
 --
