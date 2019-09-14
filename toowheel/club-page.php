@@ -5,9 +5,7 @@
         <?php include 'menu.php'; ?>
         <div class="club-pad-top-108"></div>
         <section>
-            <div class="row">
-                <img src="img/club-page/banner.jpg" alt="club banner" class="img-responsive">
-            </div>
+            <img src="img/club-page/banner.jpg" alt="club banner" class="img-responsive">
         </section>
         <section>
             <div class="container sec-club-logo">
@@ -64,10 +62,18 @@
             <div class="container">
                 <div class="event-section">
                     <div class="event-con">
-                        <img src="img/club-page/001.jpg" alt="" class="img-responsive"/>
-                        <img src="img/club-page/001.jpg" alt="" class="img-responsive"/>
-                        <img src="img/club-page/001.jpg" alt="" class="img-responsive"/>
-                        <img src="img/club-page/001.jpg" alt="" class="img-responsive"/>
+                        <div class="img-b-10px">
+                            <img src="img/club-page/001.jpg" alt="" class="img-responsive"/>
+                        </div>
+                        <div class="img-b-10px">
+                            <img src="img/club-page/001.jpg" alt="" class="img-responsive"/>
+                        </div>
+                        <div class="img-b-10px">
+                            <img src="img/club-page/001.jpg" alt="" class="img-responsive"/>
+                        </div>
+                        <div class="img-b-10px">
+                            <img src="img/club-page/001.jpg" alt="" class="img-responsive"/>
+                        </div>
                     </div>
 
 
