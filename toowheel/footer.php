@@ -107,20 +107,13 @@
             </ul>
         </div>
     </div>
-    <!--    <div class="legal">
-            <p>&copy; 2019 TOOWHEEl. All Right Reserved</p>
-            <span class="legal__links">
-                <a href="#">Privacy Policy</a>
-                <span></span>
-                <a href="#">Terms of Use</a>
-            </span>
-        </div>-->
 </footer>
 <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
 <script src="js/slick-slider.js" type="text/javascript"></script>
 <script src="js/rangeslider.min.js" type="text/javascript"></script>
 <script src="js/jquery.easing.min.js" type="text/javascript"></script>
+<script src="js/jquery.smartWizard_step_by.min.js" type="text/javascript"></script>
 <script>
     function openNav() {
         document.getElementById("mySidenav").style.height = "100%";
@@ -164,3 +157,47 @@
 <!--mega-menu-->
 <!--calender-->
 <script src="js/calender.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // Step show event
+        $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection, stepPosition) {
+            //alert("You are on step "+stepNumber+" now");
+            if (stepPosition === 'first') {
+                $("#prev-btn").addClass('disabled');
+            } else if (stepPosition === 'final') {
+                $("#next-btn").addClass('disabled');
+            } else {
+                $("#prev-btn").removeClass('disabled');
+                $("#next-btn").removeClass('disabled');
+            }
+        });
+
+        // Toolbar extra buttons
+        var btnFinish = $('<button></button>').text('Finish')
+                .addClass('btn btn-info')
+                .on('click', function () {
+                    alert('Finish Clicked');
+                });
+        var btnCancel = $('<button></button>').text('Cancel')
+                .addClass('btn btn-danger')
+                .on('click', function () {
+                    $('#smartwizard').smartWizard("reset");
+                });
+
+        // Please note enabling option "showStepURLhash" will make navigation conflict for multiple wizard in a page.
+        // so that option is disabling => showStepURLhash: false
+
+        // Smart Wizard 1
+        $('#smartwizard').smartWizard({
+            selected: 0,
+            theme: 'arrows',
+            transitionEffect: 'fade',
+            showStepURLhash: false,
+            toolbarSettings: {toolbarPosition: 'both',
+                toolbarExtraButtons: [btnFinish, btnCancel]
+            }
+        });
+    });
+</script>
+<!--mega-menu-->

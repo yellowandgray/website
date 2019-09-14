@@ -1,3 +1,8 @@
+<?php
+require_once 'toowheel/api/include/common.php';
+$obj = new Common();
+$configs = $obj->getLandingDetails();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,54 +34,54 @@
         <section class="header">
             <div class="container" style="background: url(img/body-bg.jpg)no-repeat;background-size: cover;padding: 20px;">
                 <div class="row">
-                    <a href="index" class="logo"><img src='img/logo.png' alt=''></a>
+                    <a href="index.php" class="logo"><img src='img/logo.png' alt=''></a>
                     <div class="header-login">
-                        <a href="toowheel/login"><span class="login-button"><i class="fa fa-user"></i> Login</span></a>
+                        <a href="toowheel/login.php"><span class="login-button"><i class="fa fa-user"></i> Login</span></a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-5">
-                        <img src="img/image-05.png" alt="" style="width: 100%;" />
+                        <img src="<?php echo BASE_URL . $configs['landing_twowheel_image']; ?>" alt="" style="width: 100%;" />
                     </div>
                     <div class="col-md-6 bg-text">
                         <h2>TWO WHEELS</h2>
                         <h1>TWO<br/> WHEELS</h1>
-                        <a href="toowheel/index" class="engine-button" onclick="document.getElementById('engineON').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON" alt="" /></a>
+                        <a href="toowheel/index.php" class="engine-button" onclick="document.getElementById('engineON').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON" alt="" /></a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 bg-four-text">
                         <h2>FOUR WHEELS</h2>
                         <h1>FOUR<br/> WHEELS</h1>
-                        <a href="toowheel/index" class="engine-button" onclick="document.getElementById('engineON1').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON1" alt="" /></a>
+                        <a href="toowheel/index.php" class="engine-button" onclick="document.getElementById('engineON1').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON1" alt="" /></a>
                     </div>
                     <div class="col-md-6">
-                        <img src="img/image-06.png" alt="" style="width: 100%;" />
+                        <img src="<?php echo BASE_URL . $configs['landing_fourwheel_image']; ?>" alt="" style="width: 100%;" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8 text-center dummy-text">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <p><?php echo $configs['landing_description']; ?></p>
                     </div>
                     <div class="col-md-2"></div>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <img src="img/image/002.png" alt="" />
+                        <img src="<?php echo BASE_URL . $configs['landing_about_us_image']; ?>" alt="" />
                         <a href="#" class="cross-btn"><span>ABOUT US</span></a>
                     </div>
                     <div class="col-md-3">
-                        <img src="img/image/004.png" alt="" />
+                        <img src="<?php echo BASE_URL . $configs['landing_news_updates_image']; ?>" alt="" />
                         <a href="#" class="cross-btn"><span>NEWS & UPDATES</span></a>
                     </div>
                     <div class="col-md-3">
-                        <img src="img/image/003.png" alt="" />
+                        <img src="<?php echo BASE_URL . $configs['landing_join_club_image']; ?>" alt="" />
                         <a href="#" class="cross-btn"><span>JOIN A CLUB</span></a>
                     </div>
                     <div class="col-md-3">
-                        <img src="img/image/001.png" alt="" />
+                        <img src="<?php echo BASE_URL . $configs['landing_shop_now_image']; ?>" alt="" />
                         <a href="#" class="cross-btn"><span>SHOP NOW!</span></a>
                     </div>
                 </div>
