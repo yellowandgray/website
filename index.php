@@ -363,7 +363,6 @@
             <div class="divider divider-custom-3"></div>
             <!--            <div class="divider divider-bottom bg-primary-3 mt-5" style="top: 50px;"></div>-->
         </section>
-        <div class="loader loader-default"></div>
         <?php include'footer.php'; ?>
         <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>

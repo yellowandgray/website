@@ -59,6 +59,11 @@ function submitRecordDate() {
                     data: {name: name, email: email, mobile: mobile, notes: notes_message, dates: dates},
                     success: function (data) {
                         if (data.result.code === 200) {
+                            $('#name').val('');
+                            $('#email').val('');
+                            $('#mobile').val('');
+                            $('#notes_message').val('');
+                            $('#new_date_section').empty();
                             swal("Success", data.result.message, "success");
                         } else {
                             swal("Failed", data.result.message, "error");
