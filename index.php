@@ -254,26 +254,31 @@
                                             <textarea rows="4" cols="65" placeholder="Notes"></textarea>
                                         </div>
                                     </div>
-                                    <div class="row" id="date-picker" style="display:none">
-                                        <div class="col-md-3 mb-3 mb-md-4">
-                                            <div>
-                                                <input type="text" placeholder="Select Dates" class="datepicker">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-5 mb-3 mb-md-4" id="time-picker">
-                                            <div class="flex-row">
-                                                <div class="margin-tb-5 time-overlay">
-                                                    <input type="text" placeholder="From Time" class="timepicker">
-                                                    <input type="text" placeholder="To Time" class="timepicker">
+                                    <div id="date-picker" style="display:none">
+                                        <div class="row">
+                                            <div class="col-md-3 mb-3 mb-md-4">
+                                                <div>
+                                                    <input type="text" placeholder="Select Date" id="selected_date" name="selected_date" class="datepicker" />
                                                 </div>
                                             </div>
-                                            <div id="time_container"></div>
+                                            <div class="col-md-5 mb-3 mb-md-4" id="time-picker">
+                                                <div class="flex-row">
+                                                    <div class="margin-tb-5 time-overlay">
+                                                        <input type="text" placeholder="From Time" id="selected_from_time" name="selected_from_time" class="timepicker" />
+                                                        <input type="text" placeholder="To Time" id="selected_to_time" name="selected_to_time" class="timepicker" />
+                                                    </div>
+                                                </div>
+                                                <div id="time_container"></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button class="btn btn-cancel" id="timeButton" onclick="addDateRow();"><span>Add Date</span></button>
+                                            </div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <button class="btn btn-cancel" id="timeButton"><span>Check Availability</span></button>                                            
-                                        </div>
+                                        <div id="new_date_section"></div>
+                                    </div>
+                                    <div class="row">
                                         <div class="col-md-12 textarea">
-                                            <textarea rows="4" cols="65" placeholder="Notes"></textarea>
+                                            <textarea rows="4" id="notes_message" name="notes_message" cols="65" placeholder="Notes"></textarea>
                                         </div>
                                     </div>
                                     <div class="row" id="other-text" style="display: none;">
@@ -281,7 +286,7 @@
                                             <textarea rows="4" cols="65" placeholder="Notes"></textarea>
                                         </div>
                                     </div>
-                                    <center><a href="#popup1" id="interest-btn" class="btn btn-ok">Submit Interest</a></center>
+                                    <center><a href="javascript: submitRecordDate();" class="btn btn-ok">Submit Interest</a></center>
                                 </from>
                             </div>
                         </div>
@@ -358,21 +363,23 @@
             <div class="divider divider-custom-3"></div>
             <!--            <div class="divider divider-bottom bg-primary-3 mt-5" style="top: 50px;"></div>-->
         </section>
+        <div class="loader loader-default"></div>
         <?php include'footer.php'; ?>
         <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
         <script src="js/custom.js" type="text/javascript"></script>
         <script type="text/javascript">
-            //banner slider
-            $(".bannerSlider").slick({
-                autoplay: true,
-                infinite: true,
-                dots: true,
-                slidesToShow: 1,
-                slideswToScroll: 1,
-                arrows: false
-            });
+                                                    //banner slider
+                                                    $(".bannerSlider").slick({
+                                                        autoplay: true,
+                                                        infinite: true,
+                                                        dots: true,
+                                                        slidesToShow: 1,
+                                                        slideswToScroll: 1,
+                                                        arrows: false
+                                                    });
         </script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
@@ -398,9 +405,12 @@
                             headerText: 'Select Date'
                                         });
                                         </script>-->
-        <script>
-            $(document).ready(function () {
-                $("#timeButton").click(function () {
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function () {
+                $('.timepicker').timepicker();
+                var elems = document.querySelectorAll('.timepicker');
+                var instances = M.Timepicker.init(elems, options);
+                $("#timeButtons").click(function () {
                     var selected_dates = calendarInstance.getVal();
                     $('#time_container').empty();
                     $.each(selected_dates, function (key, val) {
@@ -414,18 +424,6 @@
                         $('#time_container').append(div);
                     });
                 });
-            });
-        </script>
-        <script type="text/javascript">
-            document.addEventListener('DOMContentLoaded', function () {
-                var elems = document.querySelectorAll('.timepicker');
-                var instances = M.Timepicker.init(elems, options);
-            });
-
-            // Or with jQuery
-
-            $(document).ready(function () {
-                $('.timepicker').timepicker();
             });
 //            $('.clockpicker').clockpicker();
         </script>

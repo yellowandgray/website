@@ -311,7 +311,7 @@
             }
     );
     wow.init();
-    document.getElementById('moar').onclick = function () {
+    document.getElementById('moar').click = function () {
         var section = document.createElement('section');
         section.className = 'section--purple wow fadeInDown';
         this.parentNode.insertBefore(section, this);
