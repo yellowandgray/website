@@ -678,10 +678,9 @@ section
 /*********************************
 4. Main Slider
 *********************************/
-
-.home
-{
+.home {
     overflow: hidden;
+    z-index: 999;
 }
 .hero_slider_container
 {

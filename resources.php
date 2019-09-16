@@ -5,6 +5,7 @@
     $page = 'resources';
     ?>
     <body>
+        <?php include 'side-icon.php'; ?>
         <div class="super_container">
             <!-- Header -->
             <?php include 'menu.php'; ?>
@@ -172,11 +173,10 @@
                                         <div class="features_item  d-flex flex-column align-items-center justify-content-end text-center">
                                             <img src="images/book/009.jpg" alt=""/>
                                         </div>
-                                        <h3><a href="pdf/free-books/008.pdf" target="blank"> The Science of Getting Rich - Wallace D Wattles</a></h3>
+                                        <h3 class="book-t"><a href="pdf/free-books/008.pdf" target="blank"> The Science of Getting Rich - Wallace D Wattles</a></h3>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

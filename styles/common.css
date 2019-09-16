@@ -2137,3 +2137,18 @@ audio {
         margin-top: 10px;
     }
 }
+@media (max-width:479px) and (min-width:320px){
+    .side-icon .footer_social li i {
+        font-size: 15px;
+        color: rgb(156, 32, 179);
+    }
+}
+.side-icon {
+    position: fixed;
+    transform: rotate(90deg);
+    top: 53%;
+    /* left: 0; */
+    right: -105px;
+    z-index: 999;
+}
+

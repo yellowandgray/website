@@ -18,6 +18,7 @@
         }
     </script>
     <body>
+        <?php include 'side-icon.php'; ?>
         <div class="super_container">
             <!-- Header -->
             <?php include 'menu.php'; ?>

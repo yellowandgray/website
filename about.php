@@ -5,6 +5,7 @@
     $page = 'about';
     ?>
     <body>
+        <?php include 'side-icon.php'; ?>
         <div class="super_container">
             <!-- Header -->
             <?php include 'menu.php'; ?>
@@ -14,6 +15,7 @@
             <div class="prlx_parent" style="height: 110px;background: #3f1a56;width: 100%;">
             </div>
             <!-- Features -->
+
             <div class="features">
                 <div class="container">
                     <div class="row">
@@ -56,7 +58,7 @@
                     <div class="row">
                         <div class="col-lg-12 wow fadeInLeft">
                             <p class="text-justify heading" style="font-weight: bold;"><i class="fa fa-book" aria-hidden="true"></i> EDUCATION:</p>
-                            <p class="text-justify">And so as Cheryl grew, she sought out both of these with a sense of resolute determination. At 16, she took up her first job. At age 26, she had two Masters degrees under her belt, both of which she paid for herself. For 10 years, she worked mornings and studied evenings. She knew that the job would being the <em class="bold">Money</em> & the universities, the <em class="bold">Education</em>. Her hunger for education was, however, insatiable. She had a dream – to study at the same university campus & live in the same dorms that<em class="bold"> Mark Zuckerberg</em> lived in! :D In 2014, she made that dream come true – becoming a Harvard alumni, completing their Executive Education - Mastering Negotiations – at the Boston campus (YES! Staying at the same dorms Mark Zuckerberg did!). One of her most prized feathers that she wears in her colorful hat 😊 </p>
+                            <p class="text-justify">And so as Cheryl grew, she sought out both of these with a sense of resolute determination. At 16, she took up her first job. At age 26, she had two Masters degrees under her belt, both of which she paid for herself. For 10 years, she worked mornings and studied evenings. She knew that the job would bring the <em class="bold">Money</em> & the universities, the <em class="bold">Education</em>. Her hunger for education was, however, insatiable. She had a dream – to study at the same university campus & live in the same dorms that<em class="bold"> Mark Zuckerberg</em> lived in! :D In 2014, she made that dream come true – becoming a Harvard alumni, completing their Executive Education - Mastering Negotiations – at the Boston campus (YES! Staying at the same dorms Mark Zuckerberg did!). One of her most prized feathers that she wears in her colorful hat 😊 </p>
                         </div>
                         <div class="col-lg-12 wow fadeInRight">
                             <p>Even after that, her quest for learning has never stopped. Few of her literary conquests have been:</p>
@@ -71,7 +73,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="list-1">
-                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li> Trained by Tony Robbin, becoming a “Fire Walker” and learning invaluable lessons that Forever transformed her life and ones that she now shares with her clients. </li>
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i><li> Trained by Tony Robbins, becoming a “Fire Walker” and learning invaluable lessons that Forever transformed her life and ones that she now shares with her clients. </li>
                                         <i class="fa fa-arrow-right" aria-hidden="true"></i><li> Been the President of several Toastmaster clubs, being a winning speaker in many Area-level competitions.</li>
                                         <i class="fa fa-arrow-right" aria-hidden="true"></i><li> Other certifications include Reiki healing (yes, she believes we have a spirit too!), Time Management, Fundamentals of Plant and Avian biology, Learning How we Learn, and many others.</li>
                                         <i class="fa fa-arrow-right" aria-hidden="true"></i><li> She reads a book a month and her goal is to read a book a week! </li>
@@ -103,7 +105,7 @@
                             <img src="images/cheryl-about-01.jpg" alt="" style="width: 100%; height: auto;">
                         </div>
                         <div class="col-lg-12 wow fadeInLeft">
-                            <p class="text-justify">She doesn't share this story with you to impress you, but rather to impress upon you <em class="bold">what you too may be able to do for your loved ones</em>. What would you absolutely LOVE to do for your parents, your siblings, your friends, your partner, you children? Her message to you with this story: <em class="color-black">Even if you’re beginning at nothing, with the right knowledge, powered by the right mindset and direction, <strong>everything is possible.</strong> Everything IS POSSIBLE. </em></p>
+                            <p class="text-justify">She doesn't share this story with you to impress you, but rather to impress upon you <em class="bold">what you too may be able to do for your loved ones</em>. What would you absolutely LOVE to do for your parents, your siblings, your friends, your partner, your children? Her message to you with this story: <em class="color-black">Even if you’re beginning at nothing, with the right knowledge, powered by the right mindset and direction, <strong>everything is possible.</strong> Everything IS POSSIBLE. </em></p>
                         </div>
                     </div>
                 </div>
