@@ -1823,19 +1823,8 @@ button {
 /*sec-club-logo*/
 
 /*Event-sec*/
-.event-section{
-    display: flex;
-    justify-content: space-between;
-}
-.event-con{
-    flex:1;
-   
 
-}
-.event-con:nth-child(2){
-    flex:2;
-    margin: 0 8px;
-}
+
 
 .anounce{
     display: flex;
@@ -1858,6 +1847,7 @@ button {
 .box-anounce{
     padding: 10px;
     box-shadow: 0px 0px 4px 2px #bdbdbd;
+    margin: 10px 0px;
 }
 .anounce-con h5 a {
     font-size: 13px;
@@ -2323,14 +2313,7 @@ body .calender-box{
     top: -226px;
     flex-wrap: wrap;
 }
-@media (max-width:991px) and (min-width:320px){
-    .event-con{
-        flex-basis: 90%;
-    }
-    .event-con:nth-child(2){
-        flex-basis: 90%;
-    }
-}
+
 @media (max-width:934px) and (min-width:768px){
     .w-text h2 {
         font-size: 17px;
@@ -2402,16 +2385,7 @@ body .calender-box{
     }
 }
 @media (max-width:530px) and (min-width:320px){
-    .w-text h2 {
-        font-size: 13px;
-        font-weight: 600;
-        color: #fff;
-    }
-    .w-text h5 {
-        font-size: 13px;
-        font-weight: 600;
-        color: #fff;
-    }
+
     .w-text-con-1 p {
         font-weight: 600;
         color: #676666;
@@ -2426,15 +2400,7 @@ body .calender-box{
         z-index: 2;
         left: 20px;
     }
-    .w-text-1 {
-        padding: 25px 10px 10px 10px;
-        box-shadow: 0px 0px 6px 0px #bbb7b7;
-        margin-bottom: 20px;
-        position: relative;
-        bottom: 28px;
-        z-index: 1;
-        background: #fff;
-    }
+
 }
 
 .event-section-sub{
@@ -2445,3 +2411,74 @@ body .calender-box{
 .img-b-10px{
     margin-bottom: 10px;
 }
+@media (max-width:991px) and (min-width:320px){
+    .img-b-10px {
+        margin-bottom: 10px;
+        width: 60%;
+        margin: 10px auto;
+    }
+    #calendar{
+        width: 100% !important;
+    }
+    .calender-box .header{
+        width: 100% !important;
+    }
+}
+@media (max-width:767px) and (min-width:320px){
+    .img-box-ad {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+@media (max-width:767px) and (min-width:320px){
+    .event-section {
+        position: relative;
+        top: -170px;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:530px) and (min-width:320px){
+    .sec-club-logo {
+        position: relative;
+        top: 0px;
+    }
+    .w-text h2 {
+        font-size: 8px;
+        font-weight: 600;
+        color: #ed1c24;
+        padding: 10px 0px;
+    }
+    .w-text h5 {
+        font-size: 11px;
+        font-weight: 600;
+        color: #ed1c24;
+        padding: 10px 0px;
+    }
+    .w-text-1 {
+        padding: 25px 10px 10px 10px;
+        box-shadow: 0px 0px 6px 0px #bbb7b7;
+        margin-bottom: 20px;
+        position: relative;
+        bottom: 46px;
+        z-index: 1;
+        background: #fff;
+    }
+    .w-icon i {
+        padding: 0px 2px;
+        color: #ed1c24;
+    }
+
+    .event-section {
+        position: relative;
+        top: -74px;
+        flex-wrap: wrap;
+    }
+    .club-logo {
+        position: relative;
+        bottom: 13px;
+        z-index: 2;
+        left: 20px;
+    }
+}
+
+
