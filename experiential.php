@@ -29,7 +29,7 @@
                     <div class="row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
                         <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos="fade-left">
                             <h1 class="display-3">EXPERIENTIAL LEARNING<mark data-aos="highlight-text" data-aos-delay="500"></mark></h1>
-                            <p class="lead">We're simplify the process of revolutionary learning for everyone. We're brining clarity and certainty to an often confusing area and showing a real time simulation and let them experience the real deal!</p>
+                            <p class="lead">We are providing hands on actual simulations and Industry 4.0 walkthroughs using on -site applications and devices.</p>
                             <center><a href="#" class="bg-button btn-1">BOOK NOW</a></center>
                         </div>
                         <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos="fade-up">
@@ -53,7 +53,7 @@
                         <div class="lead"></div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row experiential-height">
                     <div class="tensorsite-container ">
                         <div class="tensorsite-group__inner">
                             <div class="col-md-4" data-aos-delay="200" data-aos="fade-right">
@@ -197,7 +197,7 @@
                                 <div class="tensorsite-card tensorsite-card--clip">
                                     <a class="tensorsite-card__href" aria-label="Your first neural network" href="#"></a>
                                     <div class="tensorsite-content__image-wrapper">
-                                        <img class="tensorsite-content__image" src="img/about/about-02.jpg" alt="">
+                                        <img class="tensorsite-content__image" src="img/experiential/robotics.jpg" alt="">
                                     </div>
                                     <div class="tensorsite-content  tensorsite-content--under-image">
                                         <!--                                        <div class="tensorsite-content__clip-bg">

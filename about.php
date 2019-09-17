@@ -105,21 +105,21 @@
                         <div class="card card-body bg-white h-100 wow fadeInLeft">
                             <!--                            <div class="display-4 text-primary mb-3" data-countup data-start="" data-end="97" data-duration="" data-decimal-places="" data-prefix="" data-separator="" data-grouping="" data-suffix="%" data-easing=""></div>-->
                             <h3><i class="fas fa-eye"></i> VISION</h3>                            
-                            <div>Our Vision is to create imagination engineers and to be the benchmark in providing immersive experiences to both public and private sectors and to all individuals from all walks of life.</div>
+                            <div>Our Vision is to create a sustainable pool of ‘imagination engineers’ or Imagineers, and to be the industry benchmark for providing immersive experiences to both public and private sector audiences - engaging experiences to individuals from all walks of life.</div>
                         </div>
                     </div>
                     <div class="col-md-4 mb-3 mb-md-0">
                         <div class="card card-body bg-white h-100 wow fadeInUp">
                             <!--                            <div class="display-4 text-primary mb-3" data-countup data-start="20" data-end="24" data-duration="1" data-decimal-places="" data-prefix="" data-separator="" data-grouping="" data-suffix="/7" data-easing="false"></div>-->
                             <h3><i class="fas fa-users"></i> ABOUT US</h3>                            
-                            <div>Project Next Door provide three core areas namely, Empowering for coaching and seminars, Experiential for command and support hub, and Engaging for room rental.</div>
+                            <div>Project Next Door caters to three (3) core areas namely: EMPOWERING - providing interactive coaching and cutting edge practical training programs, EXPERIENTIAL - providing hands on actual simulations and Industry 4.0 walkthroughs using on -site applications and devices and ENGAGING - providing the opportunity to everyone and anyone to rent out our space for their own programs and activities at decently affordable rates!</div>
                         </div>
                     </div>
                     <div class="col-md-4 mb-3 mb-md-0">
                         <div class="card card-body bg-white h-100 wow fadeInRight">
                             <!--                            <div class="display-4 text-primary mb-3" data-countup data-start="" data-end="142" data-duration="" data-decimal-places="" data-prefix="" data-separator="" data-grouping="" data-suffix="k+" data-easing=""></div>-->
                             <h3><i class="fas fa-thumbs-up"></i> OUR GOAL</h3>                               
-                            <div>We're simplifying the process of revolutionary learning for everyone. We're bringing clarity and certainty to an often confusing area, and showing a real time simulation and let them experience the real deal. We're empowering the people of all ages to take control of their intellectual limitations and circumstances and achieve their life goals.</div>
+                            <div>We're simplifying the process of revolutionary learning for everyone. We're bringing clarity and certainty to help one another to bring an idea to innovation to creating interest and eventually leading to income. Helping participants and the market measure Financial and Social ROI. All under one roof. Using Imagination Engineering. </div>
                         </div>
                     </div>
 
@@ -146,9 +146,8 @@
                 </div>
                 <div class="row justify-content-center text-center">
                     <div class="col-md-12 text-left para">
-                        <p class="wow fadeInLeftBig" data-wow-delay="0.2s"><i class="fas fa-check"></i> Professional Trainer certified by HRDF after succesfully completing TTT Certification Programme.</p>
-                        <p class="wow fadeInLeftBig" data-wow-delay="0.3s"><i class="fas fa-check"></i> Trainers with knowledge and practical experience to make a difference in your work environment.</p>
-                        <p class="wow fadeInLeftBig" data-wow-delay="0.4s"><i class="fas fa-check"></i> Our trainers are constantly reviewing and improving our training techniques to help our participants learn better and faster.</p>
+                        <p class="wow fadeInLeftBig" data-wow-delay="0.2s"><i class="fas fa-check"></i> We have highly qualified and experienced Professional Trainers and Coaches and we have crafted our Project Next Door Certification Program for individuals from both public and private sectors, both in Malaysia and Internationally. </p>
+                        <p class="wow fadeInLeftBig" data-wow-delay="0.3s"><i class="fas fa-check"></i> Our coaches and trainers are constantly reviewing and improving our training and re/up-skilling techniques to help our participants learn better and faster applying more practical approaches and gaining skills that can be used in real life scenarios.</p>
                     </div>
                 </div>
             </div>
@@ -164,7 +163,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="font-size-div wow fadeInUp">Project Next Door believes that learning opens up new possibilities and new horizons for individuals. We pay attention to what we deliver, how we deliver, and the environment in which we deliver the coaching and training in order to create a great learning experience for our participant.</div>
+                    <div class="font-size-div wow fadeInUp">Project Next Door believes that learning opens up new possibilities and new horizons for individuals. We pay attention to what we deliver, how we deliver, and the environment in which we deliver the coaching and training in order to create a great learning experience for all our participants and future Imagination Engineers. </div>
                 </div>
             </div>
         </section>
@@ -173,9 +172,9 @@
                 <div class="row section-title justify-content-center text-center">
                     <div class="col-md-12 col-lg-12 col-xl-12">
                         <h3 class="display-4 wow pulse">WHAT MAKES US DIFFERENT?</h3>
-                        <div class="lead wow fadeInUp">After years in the typical training environment, Project Next Door provides you with the intense course of study which aims not only to expand intellectual horizons but also to provide education that unlocks human intellectual potential.</div>
+                        <div class="lead wow fadeInUp">After years in the entrepreneurship, consulting, coaching and training environment, the founders of Project Next Door believe that it’s time to give back to society, a coaching/training opportunity with a creative and imaginative twist. </div>
                         <br/>
-                        <div class="lead wow fadeInUp">Our purpose is to raise standards of what coaching and training sessions should be like, providing you with room of pastel color, it's a time for rebirth, making you feel light and calm. Our room provides and creates a feeling of earthiness and sophistication. Its modern and productive environment makes you feel open and sociable. We provide opportunities for practical experience through learning activities and we model what we teach. Delivering our clients with trainers that have passion of helping people learn, incomparable customer service from our team, modern environment and flexible customization, all at a cost effective price.</div>
+                        <div class="lead wow fadeInUp">Our purpose is to raise standards of what coaching and training sessions should be like, providing you with room of pastel colors, a time for rebirth, if you like, making you feel light and calm. Our room provides and creates a feeling of earthiness and sophistication. Its modern and productive environment makes you feel open and sociable. We provide opportunities for practical experience through learning activities and we model what we teach. If we cannot demonstrate what we coach and train you on, we won’t do it. Practical. Powerful. People Centric. </div>
                     </div>
                 </div>
                 <!--                <div class="row justify-content-center text-center">
@@ -274,7 +273,6 @@
             </div>
             <div class="divider divider-custom-15 bg-primary-3"></div>
         </section>-->
-
         <?php include 'footer.php'; ?>
 
     </body>

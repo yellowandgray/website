@@ -14,7 +14,8 @@ $app->post('/space_rent', function() use ($app) {
             foreach ($data['dates'] as $date) {
                 $obj->insertRecord(array('rent_date' => date('Y-m-d', strtotime($date['date'])), 'from_time' => date('H:i:00', strtotime($date['from_time'])), 'to_time' => date('H:i:00', strtotime($date['to_time'])), 'space_rent_id' => $insertion, 'created_at' => date('Y-m-d H:i:s')), 'space_rent_date');
             }
-            $tpy->sendMail($data['email'], $data['name'], 'Thanks to register with us. We\'ll get it touch soon', 'Thanks to register with us. We\'ll get it touch soon', 'Welcome mail', 'mushaqdeen@gmail.com', 'Mushaqdeen', '', '', '', '');
+            $tpy->sendMail($data['email'], $data['name'], 'Thanks to register with us. We\'ll get it touch soon', 'Thanks to register with us. We\'ll get it touch soon', 'Welcome mail', 'info@alias-Innovation.com', 'Project Next Door', '', '', '', '');
+            //$tpy->sendMail($data['email'], $data['name'], 'Thanks to register with us. We\'ll get it touch soon', 'Thanks to register with us. We\'ll get it touch soon', 'Welcome mail', 'projects@yellowandgray.com', 'Project Next Door', '', '', '', '');
         }
     } catch (Exception $ex) {
         $res = array('message' => $ex->getMessage(), 'code' => $ex->getCode());

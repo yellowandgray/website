@@ -382,3 +382,48 @@
         /*        top: 35% !important;*/
     }
 }
+
+@media screen and (max-width: 767px) {
+    .tensorsite-card--clip .tensorsite-content {
+        height: auto !important;
+    }
+    .experiential-height .tensorsite-card--clip .tensorsite-content {
+        height: auto !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .tensorsite-card--clip .tensorsite-content {
+        height: 250px !important;
+    }
+    .experiential-height .tensorsite-card--clip .tensorsite-content {
+        height: auto !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .tensorsite-card--clip .tensorsite-content__image-wrapper {
+        height: 202px !important;
+    }
+    .tensorsite-card--clip .tensorsite-content {
+        height: 200px !important;
+    }
+    .tensorsite-content__clip-shape {
+        margin-top: -49px !important;
+    }
+    .experiential-height .tensorsite-card--clip .tensorsite-content {
+        height: auto !important;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .tensorsite-content__clip-shape {
+        margin-top: -37px !important;
+    }
+    .tensorsite-card--clip .tensorsite-content {
+        height: 200px !important;
+    }
+    .experiential-height .tensorsite-card--clip .tensorsite-content {
+        height: auto !important;
+    }
+}

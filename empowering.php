@@ -34,7 +34,7 @@
                     <div class="row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
                         <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos="fade-left">
                             <h1 class="display-3">EMPOWERING KNOWLEDGE<mark data-aos="highlight-text" data-aos-delay="500"></mark></h1>
-                            <p class="lead">Project Next Door provides you with the intense course of study which aims not only to expand intellectual horizons but also provide education that unlocks human intellectual potential.</p>
+                            <p class="lead">We provide interactive coaching and cutting edge practical training programs.</p>
                             <center><a href="#" class="bg-button btn-1">BOOK NOW</a></center>
                         </div>
                         <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos="fade-up">
@@ -112,6 +112,42 @@
                             <h5>Customized</h5>
                         </div>
                     </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="600">
+                        <div class="mx-xl-4 bg-box">
+                            <img src="img/training-management/011.png" alt="Aven logo" class="mb-4">
+                            <h5>Training Programs</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="600">
+                        <div class="mx-xl-4 bg-box">
+                            <img src="img/training-management/012.png" alt="Aven logo" class="mb-4">
+                            <h5>S.U.M.O</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="600">
+                        <div class="mx-xl-4 bg-box">
+                            <img src="img/training-management/013.png" alt="Aven logo" class="mb-4">
+                            <h5>Ideas@Pondok</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="600">
+                        <div class="mx-xl-4 bg-box">
+                            <img src="img/training-management/014.png" alt="Aven logo" class="mb-4">
+                            <h5>Management</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="600">
+                        <div class="mx-xl-4 bg-box">
+                            <img src="img/training-management/015.png" alt="Aven logo" class="mb-4">
+                            <h5>Technical Skills</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="600">
+                        <div class="mx-xl-4 bg-box">
+                            <img src="img/training-management/016.png" alt="Aven logo" class="mb-4">
+                            <h5>Strategic Planning</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -168,11 +204,11 @@
         <section class="p-0 bg-light row no-gutters">
             <div class="col-lg-5 bg-primary-4">
 
-                <section class='pad-45' data-aos-delay="200" data-aos-offset="500" data-aos-once="false" data-aos="fade-left">
+                <section class='pad-45' data-aos="fade-left">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col col-md-10 col-xl-9 session pnd">
-                                <h3>KIND OF TRAININGS</h3>
+                                <h3>TYPES OF TRAININGS</h3>
                                 <div class="row ">
                                     <ul>
                                         <i class="fa fa-check" aria-hidden="true"></i><li>Bite Sized Trainings</li>
@@ -191,12 +227,12 @@
                 <div class="divider divider-side bg-light d-none d-lg-block"></div>
             </div>
 
-            <div class="col-lg-7 col-xl-6" data-aos-delay="200" data-aos-offset="500" data-aos-once="false" data-aos="fade-right">
+            <div class="col-lg-7 col-xl-6" data-aos="fade-right">
                 <section class='pad-45'>
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col col-md-10 col-xl-9 session pnd">
-                                <h3>PND TRAINING SESSION INCLUSIONS</h3>
+                            <div class="col col-md-10 col-xl-12 session pnd">
+                                <h3>PND COACHING AND TRAINING PROGRAMS</h3>
                                 <div class="row ">
                                     <ul>
                                         <i class="fa fa-home" aria-hidden="true"></i>
