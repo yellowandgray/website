@@ -28,7 +28,7 @@
             <section class="wf100 about">
 
                 <!--About Txt Video Start-->
-                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                <div  id="upcome-event" class="about-video-section wf100 event-section" style="padding-bottom: 0;">
                     <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
                         <h2 class="margin-bottom-0 text-center"><strong>Upcoming Event</strong></h2> 
                         <h2 class="margin-bottom-0 text-center">First Annual Carnival</h2> 
@@ -38,8 +38,8 @@
 <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
                         <div class="row events-margin padding-bottom-30">
                             <div class="col-md-12">
-                                <div class="event-img-margin">
-                                    <img id="myImg"  src="images/cornival.jpg" alt="Events" title="Events-ENPEE International School" />
+                                <div class="event-img-margin-01">
+                                    <img id="myImg"  src="images/cornival-01.jpg" alt="Events" title="Events-ENPEE International School" />
                                     <div id="myModal" class="modal">
                                         <span onclick="closeImg()" class="close">&times;</span>
                                         <img class="modal-content" id="img01">

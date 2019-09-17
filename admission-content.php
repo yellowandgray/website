@@ -9,7 +9,7 @@
                         <img src="images/enpeekkl-admission-open.jpg" alt="Enpee International School Admission Opens" title="Enpee International School Admission Opens" />
                     </div>
                     <div class="col-md-6">
-                        <p>Admissions for  academic year 2019-20 open for PreKG to STD V. Contact our city office at: Old No 79, MOHIDEEN PALLI STREET,OPPOSITE: AXIS BANK  & LATHAA SUPER MARKET, KARAIKAL 609 602.</p>
+                        <p>Admissions for  academic year 2019-20 open for Pre-KG to STD V. Contact Address: ENPEE International School, Château Français, ENPEE Enclave, 241/2, Puthakudy Village, Vadamattam Main Road, Nedungadu Panchayat, Karaikal – 609609. U.T of Puducherry.</p>
                         <a type="button" href="contact.php" class="btn-custom">Enquire Now</a>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                     </div>
                     <div class="col-md-6">
                         <p class="text-justify">Come and have Fun like never before in Karaikal</p>
-                        <a type="button" href="news-events.php" class="btn-custom-1">Read More</a>
+                        <a type="button" href="news-events.php#upcome-event" class="btn-custom-1">Read More</a>
                     </div>
                 </div>
             </div>
