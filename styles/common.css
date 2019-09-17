@@ -2151,4 +2151,7 @@ audio {
     right: -105px;
     z-index: 999;
 }
+.side-icon i{
+    transform: rotate(-90deg);
+}
 

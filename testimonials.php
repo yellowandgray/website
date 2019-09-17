@@ -83,34 +83,33 @@
                     </div>
                     <div class="row pad-20">
                         <div class="col-lg-8 left-order testimoni wow fadeInLeft">
-                            <h4><strong>Rupesh Tanna</strong></h4>
-                            <h5>Standard Chartered Bank, Customer Due Diligence Specialist</h5>
-                            <p class="text-justify">Coach Cheryl or a life changer?</p>
-                            <p class="text-justify">Well, for me Coach Cheryl is a life changer in the truest sense.</p>
-                            <p class="text-justify">My sessions with Coach Cheryl were the basis of my life's transformation.</p>
-                            <p class="text-justify">Under Coach Cheryl’s guidance I started to realize my weaknesses as well as my strengths.</p>
-                            <p class="text-justify">I started to identify an ultimate goal of my life, my own habits which were preventing me from achieving it and the habits which I need to inculcate to achieve the best life possible. </p>
-                            <p class="text-justify">Things which I like the most about her coaching are:</p>
-                            <ul class="list-1 wow fadeInUp">
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>1. Her friendly and down to earth attitude gives you absolute comfort, which in turn helps you open up and share everything with her.</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>2. Ideas for Enlightening your subconscious mind.</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>3. Her unique way to find the answers of your problems by asking you intriguing, intelligent questions.</li>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>4. Her constant guidance and hand holding makes sure that her client achieves which they are aspiring for.</li>
-                            </ul>
-                            <p class="text-justify">Work with her and I am sure you will experience the same transformation which I have.</p>
-                            <p class="text-justify">Thank you Coach Cheryl.</p>
-                        </div>
-                        <div class="col-lg-4 box-7 text-center wow fadeInRight">
-                            <img src="images/testimonial/testimonial-014.png" alt=""/>
-                        </div>
-                    </div>
-                    <div class="row pad-20">
-                        <div class="col-lg-8 left-order testimoni wow fadeInLeft">
                             <h4><strong>Paulo D</strong></h4>
                             <p class="text-justify">Cheryl Pinto has been my life coach for the past 5 months. I was working in the IT industry for 5 years and felt like I needed a change and pursue a passion I always had but never had the courage to follow. By accident I met Cheryl and we started working together. She has been very successful in her own career – she has walked the walk – corporate professional, high intensity work. So therefore she understood my world. She is very capable with her skills with NLP. Her general good nature and intelligence makes Cheryl very easy to work with. She is very smart. She drove me, pushed me in areas I probably wasn’t comfortable to go but I wanted to go. It’s been absolutely phenomenal. Now I am completely changing career and going on a new journey which I am so excited about. I’ve gone from being minorly depressed to majorly excited about the future. I cant thank Cheryl enough and I can’t recommend her enough. It’s difficult to make major changes without someone there to support you, to guide you and to push you. If you’re looking to make that sort of change or impact, then Cheryl is definitely one of the best I’ve worked with –I know, I’ve tried a few :) Good luck!</p>
                         </div>
                         <div class="col-lg-4 box-7 text-center wow fadeInRight">
                             <img src="images/testimonial/testimonial-012.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="row pad-20">
+                        <div class="col-lg-8 left-order testimoni wow fadeInLeft">
+                            <h4><strong>Kunal Bhatia</strong></h4>
+                            <h5>Assistant Vice President- FX, Interest rates & Commodity Derivative Solutions</h5>
+                            <p class="text-justify">At the outset I looked at NLP with a lot of skepticism and it was only because I trusted Cheryl that I decided to give it a shot. She has the ability to make you believe and it comes very naturally to her. As sessions go by, she makes you comfortable enough to open facets of yourself which you wouldn't share with anyone. This enhances her understanding and empathy of you and enables her to perform the various NLP techniques with great effect. The clarity and pin-pointedness with which Cheryl helped my situation is something which has made me understand and manage myself better. I am a better-focused and more energized version of myself. There are obvious improvements in my speech, body language, mental state of being and most importantly i am a tad bit spiritually enlightened. Hand over your absolute 100% trust to her and she will go beyond what is required to help improve your life. She has the emotional and mental maturity as well as the talent and technique to use her NLP skills and understanding to help channel you in the right direction.</p>
+                        </div>
+                        <div class="col-lg-4 box-7 text-center wow fadeInRight">
+                            <img src="images/testimonial/testimonial-013.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="row pad-20">
+                        <div class="col-lg-8 left-order testimoni wow fadeInLeft">
+                            <h4><strong>Dr. H O (Name withheld by request)</strong></h4>
+                            <h5> Dubai Health Authority</h5>
+                            <p class="text-justify">After I started getting coached by Cheryl my life has changed totally. </p>
+                            <p class="text-justify">I became more open for change, less stressed and happy. My family are happy to have me back, loving and caring. My work has become more stable and I have a chance for professional learning and development. I am still working on my physical fitness and I am optimistic that I will reach my goals. </p>
+                            <p class="text-justify">I like Cheryl’s smile, her care, her passion and the way she does follow up of the case and outcomes, in addition I like the different tools that she uses during the session. I have learned some leadership skills and personal skills in addition to the spiritual healing after taking up coaching. Thank you, Cheryl, for your kind care and support. </p>
+                        </div>
+                        <div class="col-lg-4 box-7 text-center wow fadeInRight">
+                            <img src="images/testimonial/testimonial-011.png" alt=""/>
                         </div>
                     </div>
                     <div class="row pad-20">
@@ -125,12 +124,16 @@
                     </div>
                     <div class="row pad-20">
                         <div class="col-lg-8 left-order testimoni wow fadeInLeft">
-                            <h4><strong>Kunal Bhatia</strong></h4>
-                            <h5>Assistant Vice President- FX, Interest rates & Commodity Derivative Solutions</h5>
-                            <p class="text-justify">At the outset I looked at NLP with a lot of skepticism and it was only because I trusted Cheryl that I decided to give it a shot. She has the ability to make you believe and it comes very naturally to her. As sessions go by, she makes you comfortable enough to open facets of yourself which you wouldn't share with anyone. This enhances her understanding and empathy of you and enables her to perform the various NLP techniques with great effect. The clarity and pin-pointedness with which Cheryl helped my situation is something which has made me understand and manage myself better. I am a better-focused and more energized version of myself. There are obvious improvements in my speech, body language, mental state of being and most importantly i am a tad bit spiritually enlightened. Hand over your absolute 100% trust to her and she will go beyond what is required to help improve your life. She has the emotional and mental maturity as well as the talent and technique to use her NLP skills and understanding to help channel you in the right direction.</p>
+                            <h4><strong>Sudha Chakkingal</strong></h4>
+                            <h5>Cash Sales Relationship Manager, ADCB</h5>
+                            <p class="text-justify">Cheryl and I first met in 2010 – she was my senior at work. But Cheryl was more than just a colleague and much more than a friend. She is a companion, confidant, advisor, moral supporter and yes, the best of friends.  </p>
+                            <p class="text-justify">When I began working for her, I was an extremely introverted, shy person. She allowed me to be me, but also encouraged me to let loose and open up to enjoy the virtues of life. </p>
+                            <p class="text-justify">Brutally honest and sincerity are two of Cheryl’s assets.  Her strengths are her patience and listening skills paired with her sense of humor and a touch of class.  She will join you for a hearty laugh and give you a no-nonsense straight answer.  Her word is good, no exception and she has a great smile.  Her circle of friends is special; to be selected or embedded in the circle is an honor.   Entertaining and funny, serious and compassionate. No matter what she's doing, she is willing to listen and give you feedback if you want it. A friend in need.</p>
+                            <p class="text-justify">For years, Cheryl was there to help me with several personal obstacles and years of self-doubt, for that, I am deeply grateful.</p>
+                            <p class="text-justify">My personality, confidence and professional growth - a big part of the credit, I would give it to you Cheryl. People come and go into and out of our lives, but some people's impact lasts forever. Thank you Cheryl.</p>
                         </div>
                         <div class="col-lg-4 box-7 text-center wow fadeInRight">
-                            <img src="images/testimonial/testimonial-013.png" alt=""/>
+                            <img src="images/testimonial/testimonial-016.png" alt=""/>
                         </div>
                     </div>
                     <div class="row pad-20">
@@ -203,16 +206,28 @@
                         </div>
                     </div>
 
+
                     <div class="row pad-20">
                         <div class="col-lg-8 left-order testimoni wow fadeInLeft">
-                            <h4><strong>Dr. H O (Name withheld by request)</strong></h4>
-                            <h5> Dubai Health Authority</h5>
-                            <p class="text-justify">After I started getting coached by Cheryl my life has changed totally. </p>
-                            <p class="text-justify">I became more open for change, less stressed and happy. My family are happy to have me back, loving and caring. My work has become more stable and I have a chance for professional learning and development. I am still working on my physical fitness and I am optimistic that I will reach my goals. </p>
-                            <p class="text-justify">I like Cheryl’s smile, her care, her passion and the way she does follow up of the case and outcomes, in addition I like the different tools that she uses during the session. I have learned some leadership skills and personal skills in addition to the spiritual healing after taking up coaching. Thank you, Cheryl, for your kind care and support. </p>
+                            <h4><strong>Rupesh Tanna</strong></h4>
+                            <h5>Standard Chartered Bank, Customer Due Diligence Specialist</h5>
+                            <p class="text-justify">Coach Cheryl or a life changer?</p>
+                            <p class="text-justify">Well, for me Coach Cheryl is a life changer in the truest sense.</p>
+                            <p class="text-justify">My sessions with Coach Cheryl were the basis of my life's transformation.</p>
+                            <p class="text-justify">Under Coach Cheryl’s guidance I started to realize my weaknesses as well as my strengths.</p>
+                            <p class="text-justify">I started to identify an ultimate goal of my life, my own habits which were preventing me from achieving it and the habits which I need to inculcate to achieve the best life possible. </p>
+                            <p class="text-justify">Things which I like the most about her coaching are:</p>
+                            <ul class="list-1 wow fadeInUp">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>1. Her friendly and down to earth attitude gives you absolute comfort, which in turn helps you open up and share everything with her.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>2. Ideas for Enlightening your subconscious mind.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>3. Her unique way to find the answers of your problems by asking you intriguing, intelligent questions.</li>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i><li>4. Her constant guidance and hand holding makes sure that her client achieves which they are aspiring for.</li>
+                            </ul>
+                            <p class="text-justify">Work with her and I am sure you will experience the same transformation which I have.</p>
+                            <p class="text-justify">Thank you Coach Cheryl.</p>
                         </div>
                         <div class="col-lg-4 box-7 text-center wow fadeInRight">
-                            <img src="images/testimonial/testimonial-011.png" alt=""/>
+                            <img src="images/testimonial/testimonial-014.png" alt=""/>
                         </div>
                     </div>
                     <div class="row pad-20">
@@ -222,7 +237,7 @@
                             <p class="text-justify">I would definitely recommend Cheryl to my friends and family members. They would be able to benefit from Cheryl’s knowledge. Cheryl is trustworthy and has a heart for helping others.</p>
                         </div>
                         <div class="col-lg-4 box-7 text-center wow fadeInRight">
-                            <img src="images/testimonial/testimonial-011.png" alt=""/>
+                            <img src="images/testimonial/testimonial-015.png" alt=""/>
                         </div>
                     </div>
                     <div class="row pad-20">
