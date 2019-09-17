@@ -47,11 +47,28 @@ $app->get('/space_rent', function() {
         $data = $obj->selectAll('*', 'space_rent', 'space_rent_id > 0 ORDER BY space_rent_id DESC');
         if (count($data) > 0) {
             $res['code'] = 200;
-            $res['message'] = 'Space rent added successfully';
+            $res['message'] = 'Space rent fetched successfully';
             foreach ($data as $key => $row) {
                 $dates = $obj->selectAll('*', 'space_rent_date', 'space_rent_id=' . $row['space_rent_id']);
                 $data[$key]['dates'] = $dates;
             }
+            $res['data'] = $data;
+        }
+    } catch (Exception $ex) {
+        $res = array('message' => $ex->getMessage(), 'code' => $ex->getCode());
+    }
+    echoRespnse($res['code'], $res);
+});
+
+$app->get('/pnd_coaching', function() {
+    try {
+        $obj = new Common();
+        $res = array('code' => 201, 'message' => 'Unable to get data');
+        $data = $obj->selectAll('*', 'pnd_coaching', 'pnd_coaching_id > 0 ORDER BY pnd_coaching_id DESC');
+        if (count($data) > 0) {
+            $res['code'] = 200;
+            $res['message'] = 'PND coaching fetched successfully';
+            $res['data'] = $data;
         }
     } catch (Exception $ex) {
         $res = array('message' => $ex->getMessage(), 'code' => $ex->getCode());

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2019 at 03:28 PM
+-- Generation Time: Sep 17, 2019 at 02:19 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.4
 
@@ -21,6 +21,24 @@ SET time_zone = "+00:00";
 --
 -- Database: `projectnextdoor`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pnd_coaching`
+--
+
+CREATE TABLE `pnd_coaching` (
+  `pnd_coaching_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `coaching_date` date DEFAULT NULL,
+  `start_time` time DEFAULT NULL,
+  `end_time` time DEFAULT NULL,
+  `coacher_name` varchar(255) NOT NULL DEFAULT '',
+  `coacher_profile` varchar(255) NOT NULL DEFAULT '',
+  `remark` varchar(500) NOT NULL DEFAULT '',
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -71,6 +89,12 @@ INSERT INTO `space_rent_date` (`space_rent_date_id`, `rent_date`, `from_time`, `
 --
 
 --
+-- Indexes for table `pnd_coaching`
+--
+ALTER TABLE `pnd_coaching`
+  ADD PRIMARY KEY (`pnd_coaching_id`);
+
+--
 -- Indexes for table `space_rent`
 --
 ALTER TABLE `space_rent`
@@ -85,6 +109,12 @@ ALTER TABLE `space_rent_date`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `pnd_coaching`
+--
+ALTER TABLE `pnd_coaching`
+  MODIFY `pnd_coaching_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `space_rent`
