@@ -27,7 +27,7 @@
             <div class="col-lg-6">
                 <section>
                     <div class="container">
-                        <div class="row justify-content-center text-center">
+                        <div class="row justify-content-center text-center wow fadeInUp">
                             <div class="col-md-9 col-lg-8 col-xl-7">
                                 <h3 class="display-4" style="margin-bottom: 50px;">Get in touch with us</h3>
                                 <!--                        <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>-->
