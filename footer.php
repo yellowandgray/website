@@ -42,7 +42,7 @@
                         <h5>Upcoming Events</h5>
                         <ul class="lastest-products">
                             <li> <img src="images/cornival.jpg"  alt="Knowledge Innovation Excellence - ENPEE International School" title="Knowledge Innovation Excellence - ENPEE International School" style="width: 68px; height: 68px"> 
-                                <strong><a href="news-events.php">ENPEE International School - First Annual CARNIVAL</a></strong> 
+                                <strong><a href="news-events.php#upcome-event">ENPEE International School - First Annual CARNIVAL</a></strong> 
                                 <span class="pdate"><i>Date:</i> 28 Sep 2019</span>
                             </li>
                             <li> 
