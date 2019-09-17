@@ -1,7 +1,7 @@
 <footer class="bg-primary-3 text-white links-white pb-4 footer-1">
     <div class="container">
         <div class="row">
-            <div class="col mt-4 mt-md-0 mt-lg-5 mt-xl-0 order-lg-4 order-xl-3 wow fadeInDown">
+<!--            <div class="col mt-4 mt-md-0 mt-lg-5 mt-xl-0 order-lg-4 order-xl-3 wow fadeInDown">
                 <h5>Upcoming Events</h5>
                 <ul class="list-unstyled d-flex flex-wrap">
                     <li class="col-12 col-lg-6 col-xl-12 px-0">
@@ -27,34 +27,35 @@
                         </div>
                     </li>
                 </ul>
-            </div>
-            <div class="col-xl-auto mr-xl-5 col-md-3 wow fadeInDown page-footer">
+            </div>-->
+<!--            <div class="col-xl-auto mr-xl-5 col-md-3 wow fadeInDown page-footer">-->
+            <div class="col-xl-3 mr-xl-5 col-md-3 wow fadeInDown page-footer">
                 <h5>Pages</h5>
                 <ul class="nav flex-row flex-md-column pages">
                     <li class="nav-item mr-3 mr-md-0">
-                        <a href="#" class="nav-link fade-page px-0 py-2">Home</a>
+                        <a href="index" class="nav-link fade-page px-0 py-2">Home</a>
                     </li>
                     <li class="nav-item mr-3 mr-md-0">
-                        <a href="#" class="nav-link fade-page px-0 py-2">Services</a>
+                        <a href="empowering" class="nav-link fade-page px-0 py-2">Services</a>
                     </li>
                     <li class="nav-item mr-3 mr-md-0">
-                        <a href="#" class="nav-link fade-page px-0 py-2">Gallery</a>
+                        <a href="gallery" class="nav-link fade-page px-0 py-2">Gallery</a>
                     </li>
                     <li class="nav-item mr-3 mr-md-0">
-                        <a href="#" class="nav-link fade-page px-0 py-2">Book Now</a>
+                        <a href="index.php#book-now" class="nav-link fade-page px-0 py-2">Book Now</a>
                     </li>
-                    <li class="nav-item mr-3 mr-md-0">
+<!--                    <li class="nav-item mr-3 mr-md-0">
                         <a href="#" class="nav-link fade-page px-0 py-2">FAQs</a>
+                    </li>-->
+                    <li class="nav-item mr-3 mr-md-0">
+                        <a href="about" class="nav-link fade-page px-0 py-2">About</a>
                     </li>
                     <li class="nav-item mr-3 mr-md-0">
-                        <a href="#" class="nav-link fade-page px-0 py-2">About</a>
-                    </li>
-                    <li class="nav-item mr-3 mr-md-0">
-                        <a href="#" class="nav-link fade-page px-0 py-2">Contact</a>
+                        <a href="contact" class="nav-link fade-page px-0 py-2">Contact</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-xl-auto mr-xl-5 col-md-3 mb-4 mb-md-0 wow fadeInDown">
+            <div class="col-xl-3 mr-xl-5 col-md-3 mb-4 mb-md-0 wow fadeInDown">
                 <h5>Services</h5>
                 <ul class="nav flex-row flex-md-column pages">
                     <div class="row">

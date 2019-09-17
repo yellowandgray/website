@@ -93,12 +93,12 @@
                                         <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-                                        <div class="tensorsite-content__subtitle ">Training/ Coaching</div>
+                                        <div class="tensorsite-content__subtitle ">Coaching & Training</div>
                                         <div class="tensorsite-content__title  ">
                                             EMPOWERING
                                         </div>
                                         <div class="tensorsite-content__description">
-                                            <p>Provides you with interactive training and coaching that unlocks your imagination.</p>     
+                                            <p>Provides you with interactive training and coaching that unlocks your imagination and true potential.</p>     
                                         </div>
                                     </div>
                                 </div>
@@ -113,12 +113,12 @@
                                         <div class="tensorsite-content__clip-bg">
                                             <svg class="tensorsite-content__clip-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 132"><path class="color-green" d="M71.2,3.2,0,44v88H409L92.3,1.8A24.1,24.1,0,0,0,71.2,3.2Z" fill="#fff"></path></svg>    
                                         </div>
-                                        <div class="tensorsite-content__subtitle ">Disruptive Technology</div>
+                                        <div class="tensorsite-content__subtitle ">Immersive Learning</div>
                                         <div class="tensorsite-content__title  ">
                                             EXPERIENTIAL
                                         </div>
                                         <div class="tensorsite-content__description">
-                                            <p>Immersive technology that allows you to experience a real life simulations.</p>     
+                                            <p>Immersive learning using Industry 4.0 technologies that allow you to experience real life simulations.</p>     
                                         </div>
                                     </div>
                                 </div>
@@ -138,7 +138,7 @@
                                             ENGAGING
                                         </div>
                                         <div class="tensorsite-content__description">
-                                            <p>Productive environment makes you feel open and sociable.</p>     
+                                            <p>Productive environment that makes you feel open and sociable, capitalising on faster and more effective idea generation, mind mapping and brainstorming huddles.</p>     
                                         </div>
                                     </div>
                                 </div>
@@ -281,11 +281,11 @@
                                             <textarea rows="4" id="notes_message" name="notes_message" cols="65" placeholder="Notes"></textarea>
                                         </div>
                                     </div>
-                                    <div class="row" id="other-text" style="display: none;">
+<!--                                    <div class="row" id="other-text" style="display: none;">
                                         <div class="col-md-12 textarea">
                                             <textarea rows="4" cols="65" placeholder="Notes"></textarea>
                                         </div>
-                                    </div>
+                                    </div>-->
                                     <center><a href="javascript: submitRecordDate();" class="btn btn-ok">Submit Interest</a></center>
                                 </from>
                             </div>

@@ -26,7 +26,7 @@
                     <div class="row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
                         <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos="fade-left">
                             <h1 class="display-3">ENGAGING ACTIVITIES<mark data-aos="highlight-text" data-aos-delay="500"></mark></h1>
-                            <p class="lead">Productive environment makes you feel open and sociable. Our room provides and creates a feeling of earthiness and sophistication. Modern environment and flexible customization, all at a cost effective price.</p>
+                            <p class="lead">Productive environment that makes you feel open and sociable. Our hub provides and creates a feeling of earthiness and sophistication. Modern environment and flexible customization, all at a cost effective price.</p>
                             <center><a href="#" class="bg-button btn-1">BOOK NOW</a></center>
                         </div>
                         <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos="fade-up">
@@ -203,6 +203,10 @@
             </div>
             <div class="slider">
                 <div class="training-topic-h5 mr-0">
+                    <img src="img/engaging/amenities/005.png" />
+                    <h5>Infinity Pool</h5>
+                </div>
+                <div class="training-topic-h5 mr-0">
                     <img src="img/engaging/amenities/001.png" />
                     <h5>Gym</h5>
                 </div>
@@ -211,16 +215,16 @@
                     <h5>Gamesroom</h5>
                 </div>
                 <div class="training-topic-h5 mr-0">
+                    <img src="img/engaging/amenities/006.png" />
+                    <h5>Sauna</h5>
+                </div>
+                <div class="training-topic-h5 mr-0">
                     <img src="img/engaging/amenities/003.png" />
                     <h5>Skygarden</h5>
                 </div>
                 <div class="training-topic-h5 mr-0">
                     <img src="img/engaging/amenities/004.png" />
                     <h5>Barbecue Pit</h5>
-                </div>
-                <div class="training-topic-h5 mr-0">
-                    <img src="img/engaging/amenities/005.png" />
-                    <h5>Infinity Pool</h5>
                 </div>
             </div>
         </section>
@@ -334,7 +338,7 @@
                     dots: false,
                     infinite: true,
                     speed: 500,
-                    slidesToShow: 5,
+                    slidesToShow: 6,
                     slidesToScroll: 1,
                     autoplay: false,
                     autoplaySpeed: 1500,

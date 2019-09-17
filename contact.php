@@ -27,7 +27,7 @@
             <div class="col-lg-6">
                 <section>
                     <div class="container">
-                        <div class="row justify-content-center text-center">
+                        <div class="row justify-content-center text-center wow fadeInUp">
                             <div class="col-md-9 col-lg-8 col-xl-7">
                                 <h3 class="display-4" style="margin-bottom: 50px;">Get in touch with us</h3>
                                 <!--                        <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>-->
@@ -38,8 +38,8 @@
                                 <div class="form-row">
                                     <div class="col-sm">
                                         <div class="form-group">
-                                            <label for="contact-name">Your Name</label>
-                                            <input type="text" name="contact-name" class="form-control" id="contact-name" required>
+                                            <!--                                            <label for="contact-name">Your Name</label>-->
+                                            <input type="text" name="contact-name" class="form-control" id="contact-name" placeholder="Name" required>
                                             <div class="invalid-feedback">
                                                 Please type your name.
                                             </div>
@@ -47,8 +47,8 @@
                                     </div>
                                     <div class="col-sm">
                                         <div class="form-group">
-                                            <label for="contact-email">Email Address</label>
-                                            <input type="email" name="contact-email" class="form-control" id="contact-email" required>
+                                            <!--                                            <label for="contact-email">Email Address</label>-->
+                                            <input type="email" name="contact-email" class="form-control" id="contact-email" placeholder="Email" required>
                                             <div class="invalid-feedback">
                                                 Please provide your email address.
                                             </div>
@@ -58,20 +58,20 @@
                                 <div class="form-row">
                                     <div class="col-sm">
                                         <div class="form-group">
-                                            <label for="contact-phone">Phone</label>
-                                            <input type="tel" name="contact-phone" class="form-control" id="contact-phone" required>
+                                            <!--                                            <label for="contact-phone">Phone</label>-->
+                                            <input type="tel" name="contact-phone" class="form-control" id="contact-phone" placeholder="Phone" required>
                                         </div>
                                     </div>
                                     <div class="col-sm">
                                         <div class="form-group">
-                                            <label for="subject">Subject</label>
-                                            <input type="text" name="subject" class="form-control" id="subject" required>
+                                            <!--                                            <label for="subject">Subject</label>-->
+                                            <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="contact-message">Message</label>
-                                    <textarea id="contact-message" name="contact-message" rows="5" class="form-control" required></textarea>
+                                    <!--                                    <label for="contact-message">Message</label>-->
+                                    <textarea id="contact-message" name="contact-message" rows="5" class="form-control" placeholder="Message" required></textarea>
                                     <div class="invalid-feedback">
                                         Please tell us a little more.
                                     </div>
