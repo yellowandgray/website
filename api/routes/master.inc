@@ -22,3 +22,56 @@ $app->post('/space_rent', function() use ($app) {
     }
     echoRespnse($res['code'], $res);
 });
+
+$app->post('/pnd_coaching', function() use ($app) {
+    try {
+        date_default_timezone_set("Asia/Kuala_Lumpur");
+        $data = $app->request->post();
+        $obj = new Common();
+        $res = array('code' => 201, 'message' => 'Unable to add coach');
+        $insertion = $obj->insertRecord(array('title' => $data['title'], 'coaching_date' => $data['coaching_date'], 'start_time' => $data['start_time'], 'end_time' => $data['end_time'], 'coacher_name' => $data['coacher_name'], 'coacher_profile' => $data['coacher_profile'], 'remark' => $data['remark'], 'created_at' => date('Y-m-d H:i:s')), 'pnd_coaching');
+        if ($insertion > 0) {
+            $res['code'] = 200;
+            $res['message'] = 'Coach added successfully';
+        }
+    } catch (Exception $ex) {
+        $res = array('message' => $ex->getMessage(), 'code' => $ex->getCode());
+    }
+    echoRespnse($res['code'], $res);
+});
+
+$app->get('/space_rent', function() {
+    try {
+        $obj = new Common();
+        $res = array('code' => 201, 'message' => 'Unable to get data');
+        $data = $obj->selectAll('*', 'space_rent', 'space_rent_id > 0 ORDER BY space_rent_id DESC');
+        if (count($data) > 0) {
+            $res['code'] = 200;
+            $res['message'] = 'Space rent fetched successfully';
+            foreach ($data as $key => $row) {
+                $dates = $obj->selectAll('*', 'space_rent_date', 'space_rent_id=' . $row['space_rent_id']);
+                $data[$key]['dates'] = $dates;
+            }
+            $res['data'] = $data;
+        }
+    } catch (Exception $ex) {
+        $res = array('message' => $ex->getMessage(), 'code' => $ex->getCode());
+    }
+    echoRespnse($res['code'], $res);
+});
+
+$app->get('/pnd_coaching', function() {
+    try {
+        $obj = new Common();
+        $res = array('code' => 201, 'message' => 'Unable to get data');
+        $data = $obj->selectAll('*', 'pnd_coaching', 'pnd_coaching_id > 0 ORDER BY pnd_coaching_id DESC');
+        if (count($data) > 0) {
+            $res['code'] = 200;
+            $res['message'] = 'PND coaching fetched successfully';
+            $res['data'] = $data;
+        }
+    } catch (Exception $ex) {
+        $res = array('message' => $ex->getMessage(), 'code' => $ex->getCode());
+    }
+    echoRespnse($res['code'], $res);
+});
