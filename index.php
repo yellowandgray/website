@@ -324,7 +324,7 @@
                                         </ul>
                                     </div>
                                     <div class="event-txt">
-                                        <h6><a href="news-events.php">First Annual Carnival Enpee 2019</a></h6>
+                                        <h6><a href="news-events.php#upcome-event">First Annual Carnival Enpee 2019</a></h6>
                                         <p><i class="fas fa-map-marker-alt"></i> Enpee Internatioal School, Karaikal </p>
                                     </div>
                                 </div>
