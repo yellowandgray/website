@@ -29,7 +29,7 @@
                     <div class="row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
                         <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos="fade-left">
                             <h1 class="display-3">GALLERY<mark data-aos="highlight-text" data-aos-delay="500"></mark></h1>
-                            <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                            <p class="lead">View our space and what Project Next Door has to offer in terms of facilities and amenities</p>
                             <a href="#" class="lead"></a>
                         </div>
                         <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos="fade-up">
