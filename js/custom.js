@@ -67,7 +67,7 @@ function submitRecordDate() {
                             $('#new_date_section').empty();
                             $('.timepicker').val('');
                             $('.datepicker').val('');
-                            swal("Thanksyou for Booking with us.", data.result.message, "success");
+                            swal("Thank you for Booking with us.", data.result.message, "success");
                         } else {
                             swal("Failed", data.result.message, "error");
                         }

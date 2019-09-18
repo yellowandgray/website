@@ -135,7 +135,7 @@
                                 <i class="fas fa-phone-alt"></i>
                                 <a href="tel:+603 7662 7601" class="lead">+603 7662 7601</a>
                                 /
-                                <a href="tel:+6019 277 2077" class="lead">+6019 277 2077</a>
+                                <a href="tel:+6019 277 2077" class="lead">+60 19 277 2077</a>
                             </div>
                         </div>
                         <div class="">
