@@ -1245,7 +1245,7 @@ input.queries::placeholder {
 }
 
 .btn-contact {
-    float: right;
+/*    float: right;*/
     background: #e7aca6;
     color: #fff;
 }

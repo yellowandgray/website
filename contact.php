@@ -77,10 +77,10 @@
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <div class="col-6">
+                                    <div class="col-12">
                                         <div data-recaptcha data-sitekey="6Lc5a7gUAAAAABo2gCye8QFPOg7fN2tdt_dx5_op"></div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-12">
                                         <button class="btn btn-contact">Send Message</button>
                                     </div>
                                 </div>
@@ -122,7 +122,7 @@
                         <address class="lead">
                             <strong>Project Next Door</strong>
                             <p>No.16-05, Penthouse,</p>
-                            <p>Menara Infinitim Jalan SS6/3, 47301 Petaling Jaya,</p>
+                            <p>Menara Infiniti Jalan SS6/3, 47301 Petaling Jaya,</p>
                             <p>Selangor, Malaysia.</p>
                         </address>
                         <div class="d-flex flex-wrap justify-content-center justify-content-lg-start">
@@ -134,10 +134,12 @@
                             <div class="mx-3 mx-lg-0 mr-lg-5 mb-4 contact-i">
                                 <i class="fas fa-phone-alt"></i>
                                 <a href="tel:+603 7662 7601" class="lead">+603 7662 7601</a>
+                                /
+                                <a href="tel:+6019 277 2077" class="lead">+6019 277 2077</a>
                             </div>
                         </div>
                         <div class="">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991.9771243547339!2d101.59876079542575!3d3.106804390908051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4bc8a054a701%3A0x60671c5f314125b8!2sAlias%20Innovation%20Sdn%20Bhd!5e0!3m2!1sta!2sin!4v1568201454148!5m2!1sta!2sin" style="width: 100%; height: 300px;" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.954511519418!2d101.59759671470492!3d3.106734754278434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4bc8a054a701%3A0x60671c5f314125b8!2sAlias%20Innovation%20Sdn%20Bhd!5e0!3m2!1sen!2sin!4v1568793392965!5m2!1sen!2sin" style="width: 100%; height: 300px;" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </section>
