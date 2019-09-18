@@ -48,9 +48,10 @@ function submitRecordDate() {
             title: "Confirmation",
             text: "Your'e booking " + row + ' space',
             icon: "info",
-            buttons: [true, 'Yes'],
-            closeOnConfirm: false,
-            showLoaderOnConfirm: true
+            button: {
+                text: 'Yes',
+                closeModal: false
+            }
         }).then((book) => {
             if (book) {
                 $.ajax({
