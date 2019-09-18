@@ -8,7 +8,7 @@ if ($_POST['name']) {
 
     $email = $_REQUEST['email'];
 
-    $mobile = $_REQUEST['mobile'];
+    $mobile = $_REQUEST['phone'];
 
     $subject = $_REQUEST['subject'];
 
@@ -52,7 +52,7 @@ if ($_POST['name']) {
 
 
 
-    $mail->Host = "box975.bluehost.com";      // sets GMAIL as the SMTP server
+    $mail->Host = "projectnextdoor.com";      // sets GMAIL as the SMTP server
 
 
 
@@ -60,7 +60,7 @@ if ($_POST['name']) {
 
 
 
-    $mail->Username = "noreply@projectnextdoor.com";  // GMAIL username
+    $mail->Username = "no-reply@projectnextdoor.com";  // GMAIL username
 
 
 
@@ -68,7 +68,7 @@ if ($_POST['name']) {
 
     $mail->IsHTML(true);
 
-    $mail->SetFrom('noreply@projectnextdoor.com', 'PROJECT NEXT DOOR');
+    $mail->SetFrom('no-reply@projectnextdoor.com', 'PROJECT NEXT DOOR');
 
     $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
 
@@ -161,7 +161,7 @@ if ($_POST['name']) {
 
 
     $mail->AddAddress($address, "PROJECT NEXT DOOR");
-    $mail->AddCC('blanceelamparo@gmail.com', 'PROJECT NEXT DOOR');
+    $mail->AddCC('yellowandgraychannel@gmail.com', 'PROJECT NEXT DOOR');
     $mail->AddCC('gerard@icontent.my', 'PROJECT NEXT DOOR');
 
 

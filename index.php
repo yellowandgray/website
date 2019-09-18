@@ -330,7 +330,7 @@
                         <div class="carousel-item">
                             <div class="testimonial4_slide">
                                 <!--<img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />-->
-                                <p>It was a very interesting experience and we all had a hands on try at the simulation area and it was very insightful to see how actual technology could be use and deploy in a government agency and environment. Well done project next door for bringing this experience to us!</p>
+                                <p>It was a very interesting experience and we all had a hands on try at the simulation area and it was very insightful to see how actual technology could be used and deployed in a government agency and environment. Well done project next door for bringing this experience to us!</p>
                                 <h4>Government Agency</h4>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
