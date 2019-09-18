@@ -46,7 +46,7 @@ function submitRecordDate() {
         });
         swal({
             title: "Confirmation",
-            text: "Your'e booking " + (row + 1) + ' space',
+            text: "Your'e booking " + row + ' space',
             icon: "info",
             buttons: [true, 'Yes'],
             showLoaderOnConfirm: true,

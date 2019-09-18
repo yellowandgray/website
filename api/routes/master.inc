@@ -16,7 +16,7 @@ $app->post('/space_rent', function() use ($app) {
             }
             //$tpy->sendMail($data['email'], $data['name'], 'Thanks to register with us. We\'ll get it touch soon', 'Thanks to register with us. We\'ll get it touch soon', 'Welcome mail', 'info@alias-Innovation.com', 'Project Next Door', '', '', '', '');
             $tpy->sendMail($data['email'], $data['name'], 'Thanks to register with us. We\'ll get it touch soon', 'Thanks to register with us. We\'ll get it touch soon', 'Welcome mail', 'projects@yellowandgray.com', 'Project Next Door', '', '', '', '');
-            $tpy->sendMail($data['email'], $data['name'], 'Thanks to register with us. We\'ll get it touch soon', 'Thanks to register with us. We\'ll get it touch soon', 'Welcome mail', 'projects@yellowandgray.com', 'Project Next Door', '', '', '', '');
+            $tpy->sendMail('gerard@icontent.my', 'Project Next Door', 'Thanks to register with us. We\'ll get it touch soon', 'Thanks to register with us. We\'ll get it touch soon', 'Welcome mail', $data['email'], $data['name'], '', '', 'blanceelamparo@gmail.com', 'Project Next Door');
         }
     } catch (Exception $ex) {
         $res = array('message' => $ex->getMessage(), 'code' => $ex->getCode());
