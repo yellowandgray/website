@@ -49,8 +49,8 @@ function submitRecordDate() {
             text: "Your'e booking " + row + ' space',
             icon: "info",
             buttons: [true, 'Yes'],
-            showLoaderOnConfirm: true,
-            closeOnConfirm: false
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true
         }).then((book) => {
             if (book) {
                 $.ajax({
@@ -64,6 +64,8 @@ function submitRecordDate() {
                             $('#mobile').val('');
                             $('#notes_message').val('');
                             $('#new_date_section').empty();
+                            $('.timepicker').val('');
+                            $('.datepicker').val('');
                             swal("Success", data.result.message, "success");
                         } else {
                             swal("Failed", data.result.message, "error");

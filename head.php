@@ -41,7 +41,7 @@
     <link href="css/animate.css" rel="stylesheet" type="text/css"/>
     <link href="css/slick.css" rel="stylesheet" type="text/css"/>
     <link href="css/common.css" rel="stylesheet" type="text/css"/>
-<!--    <link href="css/mobiscroll.javascript.min.css" rel="stylesheet" type="text/css"/>-->
+    <!--    <link href="css/mobiscroll.javascript.min.css" rel="stylesheet" type="text/css"/>-->
     <link href="css/bootstrap-clockpicker.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/materialize.min.css" rel="stylesheet" type="text/css"/>
     <style>
