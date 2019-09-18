@@ -34,12 +34,12 @@
                             </div>
                         </div>
                         <div class="row justify-content-center">
-                            <form action="">
+                            <form action="" class="contact-form">
                                 <div class="form-row">
                                     <div class="col-sm">
                                         <div class="form-group">
                                             <!--                                            <label for="contact-name">Your Name</label>-->
-                                            <input type="text" name="contact-name" class="form-control" id="contact-name" placeholder="Name" required>
+                                            <input type="text" name="name" class="form-control" id="contact-name" placeholder="Name" required>
                                             <div class="invalid-feedback">
                                                 Please type your name.
                                             </div>
@@ -48,7 +48,7 @@
                                     <div class="col-sm">
                                         <div class="form-group">
                                             <!--                                            <label for="contact-email">Email Address</label>-->
-                                            <input type="email" name="contact-email" class="form-control" id="contact-email" placeholder="Email" required>
+                                            <input type="email" name="email" class="form-control" id="contact-email" placeholder="Email" required>
                                             <div class="invalid-feedback">
                                                 Please provide your email address.
                                             </div>
@@ -59,7 +59,7 @@
                                     <div class="col-sm">
                                         <div class="form-group">
                                             <!--                                            <label for="contact-phone">Phone</label>-->
-                                            <input type="tel" name="contact-phone" class="form-control" id="contact-phone" placeholder="Phone" required>
+                                            <input type="tel" name="phone" class="form-control" id="contact-phone" placeholder="Phone" required>
                                         </div>
                                     </div>
                                     <div class="col-sm">
@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="form-group">
                                     <!--                                    <label for="contact-message">Message</label>-->
-                                    <textarea id="contact-message" name="contact-message" rows="5" class="form-control" placeholder="Message" required></textarea>
+                                    <textarea id="contact-message" name="message" rows="5" class="form-control" placeholder="Message" required></textarea>
                                     <div class="invalid-feedback">
                                         Please tell us a little more.
                                     </div>
@@ -81,7 +81,7 @@
                                         <div data-recaptcha data-sitekey="6Lc5a7gUAAAAABo2gCye8QFPOg7fN2tdt_dx5_op"></div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-contact">Send Message</button>
+                                        <button type="submit" class="btn btn-contact">Send Message</button>
                                     </div>
                                 </div>
                                 <!--                                <div class="form-row">

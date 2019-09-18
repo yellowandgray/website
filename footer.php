@@ -239,6 +239,8 @@
 </script>
 <script src="js/fontawesome.min.js" type="text/javascript"></script>
 <script src="js/all.min.js" type="text/javascript"></script>
+<script src="js/contactform.js" type="text/javascript"></script>
+<script src="css/sweetalert.min.js" type="text/javascript"></script>
 
 <script>
     //Menu scroll Script
