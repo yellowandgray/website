@@ -1,7 +1,5 @@
 <?php
-
 if ($_POST['name']) {
-
 
 
     $name = $_REQUEST['name'];
@@ -18,9 +16,7 @@ if ($_POST['name']) {
 
 
 
-    require_once('PHPMailer/class.phpmailer.php');
-
-
+    require_once('api/include/PHPMailer/class.phpmailer.php');
 
     //include("include/PHPMailer/class.smtp.php"); // optional, gets called from within class.phpmailer.php if not already loaded
 
@@ -52,7 +48,7 @@ if ($_POST['name']) {
 
 
 
-    $mail->Host = "projectnextdoor.com";      // sets GMAIL as the SMTP server
+    $mail->Host = "mail.alias-innovation.com";      // sets GMAIL as the SMTP server
 
 
 
@@ -60,15 +56,15 @@ if ($_POST['name']) {
 
 
 
-    $mail->Username = "no-reply@projectnextdoor.com";  // GMAIL username
+    $mail->Username = "info@alias-innovation.com";  // GMAIL username
 
 
 
-    $mail->Password = "Admin@projectnextdoor";            // GMAIL password
+    $mail->Password = "Admin@alias-innovation";            // GMAIL password
 
     $mail->IsHTML(true);
 
-    $mail->SetFrom('no-reply@projectnextdoor.com', 'PROJECT NEXT DOOR');
+    $mail->SetFrom('info@alias-innovation.com', 'PROJECT NEXT DOOR');
 
     $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
 
@@ -156,13 +152,13 @@ if ($_POST['name']) {
 
     // More headers
 
-    $address = "info@enpeekkl.com";
+    $address = "blanceelamparo@gmail.com";
 
 
 
     $mail->AddAddress($address, "PROJECT NEXT DOOR");
-    $mail->AddCC('yellowandgraychannel@gmail.com', 'PROJECT NEXT DOOR');
     $mail->AddCC('gerard@icontent.my', 'PROJECT NEXT DOOR');
+//    $mail->AddCC('gerard@icontent.my', 'PROJECT NEXT DOOR');
 
 
 
