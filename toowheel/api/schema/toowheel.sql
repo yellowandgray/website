@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2019 at 07:10 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.4
+-- Generation Time: Sep 19, 2019 at 09:10 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -52,7 +52,12 @@ INSERT INTO `config` (`config_id`, `name`, `value`, `display_name`, `field_type`
 (5, 'landing_news_updates_image', 'uploads/news_updates.png', 'Landing news menu image', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
 (6, 'landing_join_club_image', 'uploads/join_a_club.png', 'Landing join club menu image', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
 (7, 'landing_shop_now_image', 'uploads/shop_now.png', 'Landing shop now menu image', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
-(8, 'landing_banner_ad', '', '', 'dropdown', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00');
+(8, 'landing_banner_ad', '', '', 'dropdown', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
+(9, 'home_banner', '', 'Home page Banner', 'image/video', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
+(10, 'home_press_release_banner', '', 'Press Release Banner', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
+(11, 'home_advertisement_card_1', '', 'Advertisement Card 1', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
+(12, 'home_advertisement_card_2', '', 'Advertisement Card 2', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00'),
+(13, 'home_advertisement_banner', '', 'Advertisement Banner', 'image', 1, 1, '2019-09-13 05:37:00', '2019-09-13 05:37:00');
 
 --
 -- Indexes for dumped tables
@@ -72,7 +77,7 @@ ALTER TABLE `config`
 -- AUTO_INCREMENT for table `config`
 --
 ALTER TABLE `config`
-  MODIFY `config_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `config_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

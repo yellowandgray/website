@@ -222,14 +222,14 @@
             <a href="../index" class="logo"><img src='img/logo.png' alt=''></a>
             <div class="header-login">
                 <div class="float-left margin-left-10">
-                    <!--                    <a href="#">
-                                            <i class="fa fa-search search-bg"></i>
-                                            <p>Search</p>
-                                        </a>-->
-                    <form id="demo-2">
+                    <a href="#" id="demo-2">
                         <input type="search" placeholder="Search">
                         <p>Search</p>
-                    </form>
+                    </a>
+                    <!--                    <form id="demo-2">
+                                            <input type="search" placeholder="Search">
+                                            <p>Search</p>
+                                        </form>-->
                 </div>
                 <div class="float-left margin-left-10">
                     <a href="login">

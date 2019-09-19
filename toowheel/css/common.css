@@ -2481,6 +2481,17 @@ body .calender-box{
     }
 }
 
+.btn-primary:active{
+    color: #f00 !important;
+    background-color: #ffffff !important;
+    border-color: #ff0000 !important;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #ffffff;
+    border-color: #ff0000;
+}
+
 /* Demo 2 */
 #demo-2 input[type=search] {
     width: 15px;
@@ -2489,9 +2500,9 @@ body .calender-box{
     cursor: pointer;
     margin-right: -10px;
 }
-#demo-2 input[type=search]:hover {
+/*#demo-2 input[type=search]:hover {
     background-color: #85858500;
-}
+}*/
 #demo-2 input[type=search]:focus {
     width: 200px;
     padding-left: 32px;
@@ -2507,15 +2518,6 @@ body .calender-box{
     color: transparent;
 }
 
-.btn-primary:active{
-    color: #f00 !important;
-    background-color: #ffffff !important;
-    border-color: #ff0000 !important;
-}
-.btn-primary:hover {
-    color: #fff;
-    background-color: #ffffff;
-    border-color: #ff0000;
 .header-login input {
     outline: none;
 }
@@ -2525,11 +2527,9 @@ body .calender-box{
     font-family: inherit;
     font-size: 100%;
 }
-.header-login input::-webkit-search-decoration,
 .header-login input::-webkit-search-cancel-button {
     display: none; 
 }
-
 
 .header-login input[type=search] {
     background: #85858500 url(../img/search.png) no-repeat 0px center;
@@ -2549,19 +2549,19 @@ body .calender-box{
 .header #demo-2 p {
     position: relative;
     top: 29px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
 }
-.header-login input[type=search]:focus {
-    width: 130px;
+/*.header-login #demo-2 input[type=search]:focus {
+    width: 200px;
     background-color: #fff;
     border-color: #66CC75;
-
+    cursor: auto;
     -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
     -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
     box-shadow: 0 0 5px rgba(109,207,246,.5);
-}
-.header-login #demo-2 input[type=search]:focus p {
-    display: none;
-}
+}*/
 
 .header-login input:-moz-placeholder {
     color: #000;
