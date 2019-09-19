@@ -36,7 +36,7 @@
                 <div class="row">
                     <a href="index.php" class="logo"><img src='img/logo.png' alt=''></a>
                     <div class="header-login">
-                        <a href="toowheel/login.php"><span class="login-button"><i class="fa fa-user"></i> Login</span></a>
+                        <a href="toowheel/login"><span class="login-button"><i class="fa fa-user"></i> Login</span></a>
                     </div>
                 </div>
                 <div class="row">
@@ -48,14 +48,14 @@
                     <div class="col-md-6 bg-text">
                         <h2>TWO WHEELS</h2>
                         <h1>TWO<br/> WHEELS</h1>
-                        <a href="toowheel/index.php" class="engine-button" onclick="document.getElementById('engineON').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON" alt="" /></a>
+                        <a href="toowheel/index" class="engine-button" onclick="document.getElementById('engineON').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON" alt="" /></a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 bg-four-text">
                         <h2>FOUR WHEELS</h2>
                         <h1>FOUR<br/> WHEELS</h1>
-                        <a href="toowheel/index.php" class="engine-button" onclick="document.getElementById('engineON1').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON1" alt="" /></a>
+                        <a href="toowheel/index" class="engine-button" onclick="document.getElementById('engineON1').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON1" alt="" /></a>
                     </div>
                     <div class="col-md-6">
 <!--                        <img src="<?php echo BASE_URL . $configs['landing_fourwheel_image']; ?>" alt="" style="width: 100%;" />-->
@@ -79,7 +79,7 @@
                     <div class="col-md-3">
                         <img src="img/image/001.png" alt="" />
 <!--                        <img src="<?php echo BASE_URL . $configs['landing_news_updates_image']; ?>" alt="" />-->
-                        <a href="#" class="cross-btn"><span>NEWS & UPDATES</span></a>
+                        <a href="news" class="cross-btn"><span>NEWS & UPDATES</span></a>
                     </div>
                     <div class="col-md-3">
 <!--                        <img src="<?php echo BASE_URL . $configs['landing_join_club_image']; ?>" alt="" />-->
