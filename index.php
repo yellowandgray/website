@@ -25,6 +25,15 @@
                         <div class="carousel-cell text-center">
                             <img class="img-fluid" src="img/slider/banner-4.jpg" alt="Image">
                         </div>
+                        <div class="carousel-cell text-center">
+                            <img class="img-fluid" src="img/slider/banner-5.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-cell text-center">
+                            <img class="img-fluid" src="img/slider/banner-6.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-cell text-center">
+                            <img class="img-fluid" src="img/slider/banner-7.jpg" alt="Image">
+                        </div>
                     </div>
                     <div class="banner-text">
                         <h2>WHERE</h2>
