@@ -1,34 +1,34 @@
 <footer class="bg-primary-3 text-white links-white pb-4 footer-1">
     <div class="container">
         <div class="row">
-<!--            <div class="col mt-4 mt-md-0 mt-lg-5 mt-xl-0 order-lg-4 order-xl-3 wow fadeInDown">
-                <h5>Upcoming Events</h5>
-                <ul class="list-unstyled d-flex flex-wrap">
-                    <li class="col-12 col-lg-6 col-xl-12 px-0">
-                        <div class="row my-2 my-md-3">
-                            <a class="col-5" href="#">
-                                <img class="rounded img-fluid hover-fade-out" src="assets/img/blog/thumb-2.jpg" alt="blog.1.image">
-                            </a>
-                            <div class="col">
-                                <a class="h6" href="#">Introducing the new Jumpstart brand</a>
-                                <div class="text-small text-muted mt-2">October 10th</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-12 col-lg-6 col-xl-12 px-0">
-                        <div class="row my-2 my-md-3">
-                            <a class="col-5" href="#">
-                                <img class="rounded img-fluid hover-fade-out" src="assets/img/blog/thumb-1.jpg" alt="blog.2.image">
-                            </a>
-                            <div class="col">
-                                <a class="h6" href="#">Making the most of team-building sessions</a>
-                                <div class="text-small text-muted mt-2">October 2nd</div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>-->
-<!--            <div class="col-xl-auto mr-xl-5 col-md-3 wow fadeInDown page-footer">-->
+            <!--            <div class="col mt-4 mt-md-0 mt-lg-5 mt-xl-0 order-lg-4 order-xl-3 wow fadeInDown">
+                            <h5>Upcoming Events</h5>
+                            <ul class="list-unstyled d-flex flex-wrap">
+                                <li class="col-12 col-lg-6 col-xl-12 px-0">
+                                    <div class="row my-2 my-md-3">
+                                        <a class="col-5" href="#">
+                                            <img class="rounded img-fluid hover-fade-out" src="assets/img/blog/thumb-2.jpg" alt="blog.1.image">
+                                        </a>
+                                        <div class="col">
+                                            <a class="h6" href="#">Introducing the new Jumpstart brand</a>
+                                            <div class="text-small text-muted mt-2">October 10th</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-12 col-lg-6 col-xl-12 px-0">
+                                    <div class="row my-2 my-md-3">
+                                        <a class="col-5" href="#">
+                                            <img class="rounded img-fluid hover-fade-out" src="assets/img/blog/thumb-1.jpg" alt="blog.2.image">
+                                        </a>
+                                        <div class="col">
+                                            <a class="h6" href="#">Making the most of team-building sessions</a>
+                                            <div class="text-small text-muted mt-2">October 2nd</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>-->
+            <!--            <div class="col-xl-auto mr-xl-5 col-md-3 wow fadeInDown page-footer">-->
             <div class="col-xl-3 mr-xl-5 col-md-3 wow fadeInDown page-footer">
                 <h5>Pages</h5>
                 <ul class="nav flex-row flex-md-column pages">
@@ -44,9 +44,9 @@
                     <li class="nav-item mr-3 mr-md-0">
                         <a href="index.php#book-now" class="nav-link fade-page px-0 py-2">Book Now</a>
                     </li>
-<!--                    <li class="nav-item mr-3 mr-md-0">
-                        <a href="#" class="nav-link fade-page px-0 py-2">FAQs</a>
-                    </li>-->
+                    <!--                    <li class="nav-item mr-3 mr-md-0">
+                                            <a href="#" class="nav-link fade-page px-0 py-2">FAQs</a>
+                                        </li>-->
                     <li class="nav-item mr-3 mr-md-0">
                         <a href="about" class="nav-link fade-page px-0 py-2">About</a>
                     </li>
@@ -61,13 +61,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <li class="nav-item mr-3 mr-md-0">
-                                <a href="#" class="nav-link fade-page px-0 py-2">Empowering</a>
+                                <a href="empowering" class="nav-link fade-page px-0 py-2">Empowering</a>
                             </li>
                             <li class="nav-item mr-3 mr-md-0">
-                                <a href="#" class="nav-link fade-page px-0 py-2">Experiential</a>
+                                <a href="engaging" class="nav-link fade-page px-0 py-2">Engaging</a>
                             </li>
                             <li class="nav-item mr-3 mr-md-0">
-                                <a href="#" class="nav-link fade-page px-0 py-2">Engaging</a>
+                                <a href="experiential" class="nav-link fade-page px-0 py-2">Experiential</a>
                             </li>
                         </div>
                     </div>
@@ -80,13 +80,13 @@
                     <h6 style='margin-bottom: 0'>Hello Project Next Door,</h6>
                     <form class="footer-form" data-form-email novalidate action="#">
                         <div class="d-flex flex-column flex-sm-row form-group">
-                            <input class="queries" name="message" placeholder="Message" type="text" required>
+                            <input class="queries form-control" id="message" name="message" placeholder="Message" type="text" required>
                         </div>
                         <div class="d-flex flex-column flex-sm-row form-group">
-                            <input class="queries" name="name" placeholder="My Name" type="text" required>
+                            <input class="queries form-control" id="name" name="name" placeholder="My Name" type="text" required>
                         </div>
                         <div class="d-flex flex-column flex-sm-row form-group">
-                            <input class="queries" name="email" placeholder="My Email" type="email" required>
+                            <input class="queries form-control" id="email" name="email" placeholder="My Email" type="email" required>
                         </div>
                         <button class="btn btn-queries" type="submit">Send</button>
                     </form>

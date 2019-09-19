@@ -871,3 +871,11 @@ body.loaded>div.loader {
 .margin-tb-5 {
     margin: 5px 0;
 }
+
+.queries.form-control:focus {
+    background: transparent;
+    border-color: white;
+    box-shadow: none;
+    color: #fff;
+    outline: none;
+}
