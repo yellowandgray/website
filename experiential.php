@@ -30,7 +30,7 @@
                         <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos="fade-left">
                             <h1 class="display-3">EXPERIENTIAL LEARNING<mark data-aos="highlight-text" data-aos-delay="500"></mark></h1>
                             <p class="lead">We are providing hands on actual simulations and Industry 4.0 walkthroughs using on -site applications and devices.</p>
-                            <center><a href="#" class="bg-button btn-1">BOOK NOW</a></center>
+                            <center><a href="index.php#book-now" class="bg-button btn-1">BOOK NOW</a></center>
                         </div>
                         <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos="fade-up">
                             <img src="img/experiential/title-img.jpg" alt="Image" class="rounded rounded-image img-fluid shadow-lg">

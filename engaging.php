@@ -27,7 +27,7 @@
                         <div class="col-md-9 col-lg-6 col-xl-5 pl-lg-5 pl-xl-0 order-lg-2" data-aos="fade-left">
                             <h1 class="display-3">ENGAGING ACTIVITIES<mark data-aos="highlight-text" data-aos-delay="500"></mark></h1>
                             <p class="lead">Productive environment that makes you feel open and sociable. Our hub provides and creates a feeling of earthiness and sophistication. Modern environment and flexible customization, all at a cost effective price.</p>
-                            <center><a href="#" class="bg-button btn-1">BOOK NOW</a></center>
+                            <center><a href="index.php#book-now" class="bg-button btn-1">BOOK NOW</a></center>
                         </div>
                         <div class="col-md-8 col-lg-6 mt-4 mt-md-5 mt-lg-0 order-lg-1" data-aos="fade-up">
                             <img src="img/engaging/title-img.jpg" alt="Image" class="rounded rounded-image img-fluid shadow-lg">

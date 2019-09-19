@@ -85,7 +85,7 @@
                         <div class="tensorsite-group__inner">
                             <div class="col-md-4" data-aos-delay="200" data-aos="fade-right">
                                 <div class="tensorsite-card tensorsite-card--clip">
-                                    <a class="tensorsite-card__href" aria-label="Your first neural network" href="#"></a>
+                                    <a class="tensorsite-card__href" aria-label="Your first neural network" href="empowering"></a>
                                     <div class="tensorsite-content__image-wrapper">
                                         <img class="tensorsite-content__image" src="img/about/about-04.jpg" alt="">
                                     </div>
@@ -105,7 +105,7 @@
                             </div>
                             <div class="col-md-4" data-aos-delay="200" data-aos="fade-up">
                                 <div class="tensorsite-card tensorsite-card--clip">
-                                    <a class="tensorsite-card__href" aria-label="Your first neural network" href="#"></a>
+                                    <a class="tensorsite-card__href" aria-label="Your first neural network" href="engaging"></a>
                                     <div class="tensorsite-content__image-wrapper">
                                         <img class="tensorsite-content__image" src="img/about/about-02.jpg" alt="">
                                     </div>
@@ -125,7 +125,7 @@
                             </div>
                             <div class="col-md-4" data-aos-delay="200" data-aos="fade-left">
                                 <div class="tensorsite-card tensorsite-card--clip">
-                                    <a class="tensorsite-card__href" aria-label="Your first neural network" href="#"></a>
+                                    <a class="tensorsite-card__href" aria-label="Your first neural network" href="experiential"></a>
                                     <div class="tensorsite-content__image-wrapper">
                                         <img class="tensorsite-content__image" src="img/about/about-001.jpg" alt="">
                                     </div>

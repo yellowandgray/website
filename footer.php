@@ -78,17 +78,17 @@
                 <h5>Get In Touch</h5>
                 <div class="card card-body bg-white">
                     <h6 style='margin-bottom: 0'>Hello Project Next Door,</h6>
-                    <form data-form-email novalidate action="#">
+                    <form class="footer-form" data-form-email novalidate action="#">
                         <div class="d-flex flex-column flex-sm-row form-group">
-                            <input class="queries" name="queries" placeholder="Message" type="text" required>
+                            <input class="queries" name="message" placeholder="Message" type="text" required>
                         </div>
                         <div class="d-flex flex-column flex-sm-row form-group">
                             <input class="queries" name="name" placeholder="My Name" type="text" required>
                         </div>
                         <div class="d-flex flex-column flex-sm-row form-group">
-                            <input class="queries" name="queries" placeholder="My Email" type="text" required>
+                            <input class="queries" name="email" placeholder="My Email" type="email" required>
                         </div>
-                        <button class="btn btn-queries" type="button">Send</button>
+                        <button class="btn btn-queries" type="submit">Send</button>
                     </form>
                 </div>
             </div>
