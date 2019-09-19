@@ -1411,3 +1411,144 @@ body {
     top: 30px;
     left: 1px;
 }
+
+/* According CSS */
+.accordion-container{
+    position: relative;
+    max-width: 600px;
+    height: auto;
+    margin: 10px auto;
+}
+.accordion-container > h2{
+    text-align: center;
+    color: #fff;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.set{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #ed1c24;
+}
+.set > a{
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    -webkit-transition:all 0.2s linear;
+    -moz-transition:all 0.2s linear;
+    transition:all 0.2s linear;
+}
+.set > a i{
+    float: right;
+    margin-top: 2px;
+}
+.set > a.active{
+    background-color:#858585;
+    color: #fff;
+}
+.content{
+    background-color: transparent;
+    border: 1px solid #ddd;
+    display:none;
+}
+.content p{
+    padding: 10px 15px;
+    margin: 0;
+    color: #333;
+}
+
+
+/* Table Css */
+
+
+.rwd-table {
+    margin: 0 auto;
+    min-width: 100%;
+}
+
+th, td {
+    text-align: left;
+}
+
+tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    display: none;
+}
+td {
+    display: block; 
+}
+
+td:first-child {
+    padding-top: .5em;
+}
+td:last-child {
+    padding-bottom: .5em;
+}
+
+td:before {
+    content: attr(data-th)": ";
+    font-weight: bold;
+
+
+    width: 6.5em; 
+    display: inline-block;
+
+}
+
+.rwd-table {
+    background: #ffffff;
+    color: #000;
+    border-radius: .4em;
+    overflow: hidden;
+
+}
+
+@media (min-width: 480px) { 
+    th, td {
+        padding: 1em !important; 
+    }
+}
+
+tr {
+    border-color: lighten(#34495E, 10%);
+}
+th, td {
+    margin: .5em 1em;
+}
+th, td:before {
+    color: #000;
+}
+
+@media (min-width: 480px) {
+    th, td{
+        display: table-cell;
+        padding: .25em .5em;
+    }
+    th, td:first-child {
+        padding-left: 0;
+    }
+
+    th, td:last-child {
+        padding-right: 0;
+    }
+}
+
+@media (min-width: 480px) {
+    td:before{
+        display: none;
+    }
+}
+
+.accordion-container h2 {
+    color: red;
+}

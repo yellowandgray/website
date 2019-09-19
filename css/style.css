@@ -409,7 +409,7 @@ button {
 .btn-enter {
     background: #fff;
     border-radius: 25px;
-    padding: 15px 25px 15px 50px;
+    padding: 15px 15px 15px 50px;
     color: #000;
     font-weight: 800;
     font-size: 20px;
@@ -429,6 +429,10 @@ button {
     color: red;
 }
 
+.padding-btn {
+    padding: 15px 50px 15px 15px;
+}
+
 .padding-tb-40 {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -438,4 +442,6 @@ button {
     -webkit-box-shadow: 0 10px 6px -6px #777;
     -moz-box-shadow: 0 10px 6px -6px #777;
     box-shadow: 0 10px 6px -6px #777;
+    width: 100%;
 }
+

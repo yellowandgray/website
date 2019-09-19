@@ -1,5 +1,5 @@
-<footer class="footer">
-    <div class="container footer-sec">
+<footer class="footer slide slide-four">
+    <div class="container footer-sec inside">
         <div class="footer-section fooetr-1">
             <img src="img/footer-logo.png" alt=""/>
         </div>
@@ -117,6 +117,7 @@
         </span>
     </div>-->
 </footer>
-<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
+<script src="js/jquery.scrollie.min.js" type="text/javascript"></script>
 

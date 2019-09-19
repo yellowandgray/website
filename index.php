@@ -59,7 +59,7 @@
                     <div class="col-md-5 bg-four-text">
                         <h2>FOUR WHEELS</h2>
                         <h1>FOUR<br/> WHEELS</h1>
-                        <div class="btn-position-fourwheel"><a href="toowheel/index" class="btn-enter"><i class="fa fa-play-circle" aria-hidden="true"></i> ENTER</a></div>
+                        <div class="btn-position-fourwheel"><a href="toowheel/index" class="btn-enter padding-btn"><i class="fa fa-play-circle" aria-hidden="true"></i> ENTER</a></div>
                     </div>
                     <div class="col-md-7">
     <!--                        <img src="<?php echo BASE_URL . $configs['landing_fourwheel_image']; ?>" alt="" style="width: 100%;" />-->
@@ -106,5 +106,19 @@
             </div>
         </section>
         <?php include 'footer.php'; ?>
+<!--        <script type="text/javascript">
+            $(window).ready(function () {
+                var wHeight = $(window).height();
+                $('.slide')
+                        .height(wHeight)
+                        .scrollie({
+                            scrollOffset: -50,
+                            scrollingInView: function (elem) {
+                                var bgColor = elem.data('background');
+                                $('body').css('background-color', bgColor);
+                            }
+                        });
+            });
+        </script>-->
     </body>
 </html>
