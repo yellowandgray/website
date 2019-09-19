@@ -2507,6 +2507,15 @@ body .calender-box{
     color: transparent;
 }
 
+.btn-primary:active{
+    color: #f00 !important;
+    background-color: #ffffff !important;
+    border-color: #ff0000 !important;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #ffffff;
+    border-color: #ff0000;
 .header-login input {
     outline: none;
 }
