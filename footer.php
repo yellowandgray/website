@@ -1,5 +1,5 @@
 <footer class="footer">
-    <div class="footer-sec">
+    <div class="container footer-sec">
         <div class="footer-section fooetr-1">
             <img src="img/footer-logo.png" alt=""/>
         </div>
@@ -57,7 +57,7 @@
                 </li>
             </ul>
         </div>
-        <div class="footer-section fooetr-4">
+<!--        <div class="footer-section fooetr-4">
             <ul class="footer__nav">
                 <li class="nav__item">
                     <h2 class="nav__title">CAREERS</h2>
@@ -83,7 +83,7 @@
                     </ul>
                 </li>
             </ul>
-        </div>
+        </div>-->
         <div class="footer-section fooetr-5">
             <ul class="footer__nav">
                 <li class="nav__item">
