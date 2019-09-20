@@ -21,7 +21,7 @@
                         </tr>-->
                         <tr>
                             <th>PROFILE</th>
-                            <td><input type="file" /></td>
+                            <td><img src="img/person.png"> <input type="file" /></td>
                             <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
                         </tr>
                         <tr>

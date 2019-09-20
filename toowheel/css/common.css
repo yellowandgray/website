@@ -1256,7 +1256,7 @@ button {
     padding: 20px;
     margin: 10px auto;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    width: auto;
+    width: 60%;
 }
 
 #club-register h3 {
@@ -2490,6 +2490,23 @@ body .calender-box{
     color: #fff;
     background-color: #ffffff;
     border-color: #ff0000;
+}
+
+.btn-club-register {
+    color: #fff !important;
+    background-color: #ff0000 !important;
+    padding: 9px 30px !important;
+    border-radius: 25px;
+    font-size: 20px !important;
+    width: 170px !important;
+}
+
+.btn-club-register:hover {
+    color: #ff0000 !important;
+    background-color: transparent !important;
+    border: 1px solid #ff0000 !important;
+    width: 170px !important;
+    font-size: 19px !important;
 }
 
 /* Demo 2 */
