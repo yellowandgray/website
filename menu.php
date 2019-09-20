@@ -5,8 +5,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <ul class="header-contact">
-                        <li><i class="fas fa-phone"></i> 0800 12345</li>
-                        <li><i class="fas fa-envelope"></i> info@vpnc.com</li>
+                        <li><i class="fas fa-phone"></i> +65 9481 9943</li>
+                        <li><i class="fas fa-envelope"></i> sales@vpnc.com.sg</li>
                     </ul>
                 </div>
 

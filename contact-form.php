@@ -8,7 +8,7 @@ if ($_POST['fname']) {
 
     $email = $_REQUEST['email'];
 
-    $phone = $_REQUEST['phone'];
+    $phone = $_REQUEST['contact'];
     
     $subject = $_REQUEST['subject'];
 

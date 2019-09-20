@@ -34,29 +34,29 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="contact-form">
+                            <form class="contact-form">
                                 <h3>Feel Free to Contact us</h3>
                                 <ul class="cform">
                                     <li class="half pr-15">
-                                        <input type="text" class="form-control" placeholder="Full Name">
+                                        <input type="text" class="form-control" name="fname" placeholder="Full Name">
                                     </li>
                                     <li class="half pl-15">
-                                        <input type="text" class="form-control" placeholder="Email">
+                                        <input type="text" class="form-control" name="email" placeholder="Email">
                                     </li>
                                     <li class="half pr-15">
-                                        <input type="text" class="form-control" placeholder="Contact">
+                                        <input type="text" class="form-control" name="contact" placeholder="Contact">
                                     </li>
                                     <li class="half pl-15">
-                                        <input type="text" class="form-control" placeholder="Subject">
+                                        <input type="text" class="form-control" name="subject" placeholder="Subject">
                                     </li>
                                     <li class="full">
-                                        <textarea class="textarea-control" placeholder="Message"></textarea>
+                                        <textarea class="textarea-control" name="message" placeholder="Message"></textarea>
                                     </li>
                                     <li class="full">
                                         <input type="submit" value="Contact us" class="fsubmit">
                                     </li>
                                 </ul>
-                            </div>
+                            </form>
                         </div>
                         <div class="col-md-6">
                             <div class="google-map">

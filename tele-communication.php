@@ -1751,7 +1751,7 @@
                                     <section class="wf100 p80 events">
                                         <div class="event-posts">
                                             <div class="container">
-                                                <h4>Covers</h4><br>
+                                                <h4>GRP & FRP Covers</h4><br>
                                                 <div class="row">
                                                     <!--Blog Post Start-->
                                                     <div class="col-md-3 col-sm-6">
@@ -1761,7 +1761,43 @@
 
                                                             </div>
                                                             <div class="event-txt">
-                                                                <h5 align="center"><a href="#">GRP/FRP Manhole Covers(Type 4 covers with frame)</a></h5>
+                                                                <h5 align="center"><a href="#">GRP/FRP Manhole Covers</a></h5>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-6">
+                                                        <div class="event-post">
+                                                            <div class="event-thumb">
+                                                                <img src="images/covers/002.jpg" alt="">
+
+                                                            </div>
+                                                            <div class="event-txt">
+                                                                <h5 align="center"><a href="#">Hinged Overhead & U. G Water Tank Covers</a></h5>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-6">
+                                                        <div class="event-post">
+                                                            <div class="event-thumb">
+                                                                <img src="images/covers/003.jpg" alt="">
+
+                                                            </div>
+                                                            <div class="event-txt">
+                                                                <h5 align="center"><a href="#">Recess Manhole Covers</a></h5>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-6">
+                                                        <div class="event-post">
+                                                            <div class="event-thumb">
+                                                                <img src="images/covers/004.jpg" alt="">
+
+                                                            </div>
+                                                            <div class="event-txt">
+                                                                <h5 align="center"><a href="#">Solid Top Manhole Covers</a></h5>
 
                                                             </div>
                                                         </div>
@@ -1771,13 +1807,69 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="event-post">
                                                             <div class="event-thumb">
-                                                                <img src="images/covers/001.jpg" alt="">
+                                                                <img src="images/covers/005.jpg" alt="">
                                                                 <ul class="post-meta">
 
                                                                 </ul>
                                                             </div>
                                                             <div class="event-txt">
-                                                                <h5 align="center"><a href="#">GRP/FRP Manhole Covers(Type 6 covers with frame)</a></h5>
+                                                                <h5 align="center"><a href="#">Multiple Covers With Frame</a></h5>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-6">
+                                                        <div class="event-post">
+                                                            <div class="event-thumb">
+                                                                <img src="images/covers/007.jpg" alt="">
+                                                                <ul class="post-meta">
+
+                                                                </ul>
+                                                            </div>
+                                                            <div class="event-txt">
+                                                                <h5 align="center"><a href="#">Water Gully Covers</a></h5>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-6">
+                                                        <div class="event-post">
+                                                            <div class="event-thumb">
+                                                                <img src="images/covers/006.jpg" alt="">
+                                                                <ul class="post-meta">
+
+                                                                </ul>
+                                                            </div>
+                                                            <div class="event-txt">
+                                                                <h5 align="center"><a href="#">Gratings</a></h5>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-6">
+                                                        <div class="event-post">
+                                                            <div class="event-thumb">
+                                                                <img src="images/covers/008.jpg" alt="">
+                                                                <ul class="post-meta">
+
+                                                                </ul>
+                                                            </div>
+                                                            <div class="event-txt">
+                                                                <h5 align="center"><a href="#">Drain Channels With Grating / Gully Cover</a></h5>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-6">
+                                                        <div class="event-post">
+                                                            <div class="event-thumb">
+                                                                <img src="images/covers/009.jpg" alt="">
+                                                                <ul class="post-meta">
+
+                                                                </ul>
+                                                            </div>
+                                                            <div class="event-txt">
+                                                                <h5 align="center"><a href="#">Chambers</a></h5>
 
                                                             </div>
                                                         </div>
