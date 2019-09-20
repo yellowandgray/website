@@ -13,23 +13,7 @@
                     Your browser does not support the <code>video</code> tag.
                 </video>
             </div>
-            <!--            <div class="">
-                            <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
-                                <div class="col-lg-12 d-block">
-                                    <div class="row width-100">
-                                        <div class="col-md-12 s-icon-2 align-items-center">
-                                            <div class="float-right">
-                                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                                                <i class="fa fa-youtube" aria-hidden="true"></i>
-                                                <a><i class="fa fa-phone-square" aria-hidden="true"></i><p>+044 0000 0000</p></a>
-                                                <a><i class="fa fa-whatsapp" aria-hidden="true"></i><p>+91 000000000</p></a>
-                                                <a><i class="fa fa-envelope" aria-hidden="true"></i><p>test@gmail.com</p></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
+         
             <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar  ftco-navbar-light-01" id="ftco-navbar">
                 <div class="row width-100">
                     <div class="col-md-12">
