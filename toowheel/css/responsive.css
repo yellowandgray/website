@@ -33,6 +33,8 @@
     .search-section .search-btn  {padding: 12px 12px !important;}
     .search-section {margin-bottom: 20px !important;}
     .bg-1 span {font-size: 50px !important;}
+    .button-8 {width: 33% !important;}
+    .events-content {top: 0 !important;}
 }
 
 @media screen and (max-height: 600px) {
