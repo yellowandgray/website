@@ -1,4 +1,4 @@
-var IMG_BASE_URL = 'https://2dotask.com/mac-world/admin/v1/';
+var IMG_BASE_URL = 'https://macworldinc.com/admin/v1/';
 
 function mouseOut(ele) {
     ele.src = $(ele).data('normal');

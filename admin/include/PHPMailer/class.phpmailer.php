@@ -220,13 +220,13 @@ class PHPMailer {
      * Hosts will be tried in order.
      * @var string
      */
-    public $Host = 'sg2plcpnl0201.prod.sin2.secureserver.net';
+    public $Host = 'mail.myithelper.net';
 
     /**
      * Sets the default SMTP server port.
      * @var int
      */
-    public $Port = 465;
+    public $Port = 587;
 
     /**
      * Sets the SMTP HELO of the message (Default is $Hostname).
@@ -238,7 +238,7 @@ class PHPMailer {
      * Sets connection prefix. Options are "", "ssl" or "tls"
      * @var string
      */
-    public $SMTPSecure = 'ssl';
+    public $SMTPSecure = 'tls';
 
     /**
      * Sets SMTP authentication. Utilizes the Username and Password variables.
@@ -250,13 +250,13 @@ class PHPMailer {
      * Sets SMTP username.
      * @var string
      */
-    public $Username = 'info@ygbeta.in';
+    public $Username = 'notification@macworldinc.com';
 
     /**
      * Sets SMTP password.
      * @var string
      */
-    public $Password = 'ygbeta';
+    public $Password = 'admin@notification';
 
     /**
      *  Sets SMTP auth type. Options are LOGIN | PLAIN | NTLM  (default LOGIN)

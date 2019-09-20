@@ -211,7 +211,7 @@ app.filter('category', function ($rootScope) {
 
 app.filter('image_url', function () {
     return function (input) {
-        var image = 'https://2dotask.com/mac-world/admin/v1/';
+        var image = 'https://macworldinc.com/admin/v1/';
         return image + input;
     };
 });

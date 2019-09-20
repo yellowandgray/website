@@ -1,0 +1,6 @@
+[26-Aug-2019 05:04:43 UTC] PHP Warning:  POST Content-Length of 16407294 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[26-Aug-2019 05:05:18 UTC] PHP Warning:  POST Content-Length of 16407294 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[26-Aug-2019 05:06:06 UTC] PHP Warning:  POST Content-Length of 16407294 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[26-Aug-2019 05:27:21 UTC] PHP Warning:  POST Content-Length of 16407294 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[20-Sep-2019 07:21:57 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[20-Sep-2019 07:57:59 UTC] PHP Fatal error:  Class 'SMTP' not found in /home/myithelp/public_html/macworldinc.com/admin/include/PHPMailer/class.phpmailer.php on line 1059

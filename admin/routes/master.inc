@@ -302,7 +302,20 @@ $app->post('/upload_image', function() use ($app) {
     }
     if ($data != '') {
         $res['error'] = false;
-        $res['message'] = 'Image uploaded successfully';
+        $res['message'] = 'File uploaded successfully';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/submit_join_team', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to submit form');
+    $data = $app->request->post();
+    $tpry = new Thirdparty();
+    $tpry->sendMail('mushaqdeen@gmail.com', 'Mushaqdeen', 'New join team form', 'New join team form', 'New join team form', $data['email'], $data['name'], $data['cv'], 'cv.pdf', '', '');
+    if ($data != '') {
+        $res['error'] = false;
+        $res['message'] = 'File uploaded successfully';
         $res['data'] = $data;
     }
     echoRespnse(201, $res);

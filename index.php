@@ -100,7 +100,7 @@ foreach ($sub_categories as $row) {
                 <section id="main-banner" class="container-fluid" style="height: 756px;">
                     <!--                    <div class="row"></div>-->
                     <div class="banner_menu clearfix banner_sticky" style="height: 756px;">
-                        
+
                         <!-- MENU SECTION -->
                         <div class="sidebar-container">
                             <div class="sidebar-menu">
@@ -135,7 +135,7 @@ foreach ($sub_categories as $row) {
                             </div>
                         </div>
                         <!-- END MENU SECTION -->
-                        
+
                         <!-- MOBILE MENU SECTION -->
                         <ul class="nav_menu clearfix">
                             <li class="email-margin-b"><a href="mailto:products@macworldinc.com" target="blank">Email</a></li>
@@ -155,7 +155,7 @@ foreach ($sub_categories as $row) {
                         </ul>
                         <!-- END MOBILE MENU SECTION -->
                     </div>
-                    
+
                     <!-- BANNER CONTENT -->
                     <div class="container">
                         <div class="banner_content text-center">
@@ -163,15 +163,15 @@ foreach ($sub_categories as $row) {
                             <h2>Futurizing Manufacturing <br/>and <br/>Commodities Commerce Globally </h2>
                         </div>
                     </div>
-                     <!-- END BANNER CONTENT -->
-                     
-                     <!-- RIGHT SIDE SCROLLING SECTION -->
+                    <!-- END BANNER CONTENT -->
+
+                    <!-- RIGHT SIDE SCROLLING SECTION -->
                     <div class="sroll_down">
                         <a href="#">Scroll Down</a>
                     </div>
-                     <!-- END RIGHT SIDE SCROLLING SECTION -->
-                     
-                     <!-- BANNER SECTION -->
+                    <!-- END RIGHT SIDE SCROLLING SECTION -->
+
+                    <!-- BANNER SECTION -->
                     <div class="row" id="web_banner">
                         <ul id="sb-slider" class="">
                             <li>
@@ -231,9 +231,9 @@ foreach ($sub_categories as $row) {
                             </li>
                         </ul>
                     </div>
-                     <!-- END BANNER SECTION -->
-                     
-                     <!-- MOBILE BANNER SECTION -->
+                    <!-- END BANNER SECTION -->
+
+                    <!-- MOBILE BANNER SECTION -->
                     <div class="row" id="mobile_banner">
                         <ul id="sb-slider" class="sb-slider">
                             <li>
@@ -293,7 +293,7 @@ foreach ($sub_categories as $row) {
                             </li>
                         </ul>
                     </div>
-                     <!-- END MOBILE BANNER SECTION -->
+                    <!-- END MOBILE BANNER SECTION -->
                 </section>
                 <script>
                     jQuery('input.d-inline-flex.search-product').keypress(function (e) {
@@ -307,7 +307,7 @@ foreach ($sub_categories as $row) {
                         }
                     });
                 </script>
-                
+
                 <!-- FUTURIZING MANUFACTURING AND COMMODITIES COMMERCE GOLBALLY -->
                 <section id="our_journey" class="container-fluid back_main internation_house_section" style="background-image: url(img/ecport_house.png);">
                     <div class="row">
@@ -331,7 +331,7 @@ foreach ($sub_categories as $row) {
                     </div>
                 </section>
                 <!-- END FUTURIZING MANUFACTURING AND COMMODITIES COMMERCE GOLBALLY -->
-                
+
                 <!-- WHO WE ARE SECTION -->
                 <section id="about_section" style="background-image: url(&quot;img/about_banner-01.jpg&quot;); background-size: cover">
                     <div class="container-fluid">
@@ -357,8 +357,9 @@ foreach ($sub_categories as $row) {
                     </div>
                 </section>
                 <!-- END WHO WE ARE SECTION -->
-                
+
                 <script>
+                    var cv_document = '';
                     $(window).load(function () {
                         $(".trigger_popup_fricc").click(function () {
                             $('.hover_bkgr_fricc').show();
@@ -370,15 +371,84 @@ foreach ($sub_categories as $row) {
                             $('.hover_bkgr_fricc').hide();
                         });
                     });
-//                    function formSubmit() {
-//                        if ($.trim($('#join_team_name').val()) === '') {
-//                            alert('Name required');
-//                            return false;
-//                        }
-//                        return false;
-//                    }
+                    function uploadDocument(id) {
+                        var form = new FormData();
+                        form.append('file', $('#' + id)[0].files[0]);
+                        $.ajax({
+                            type: "POST",
+                            url: 'admin/v1/upload_image',
+                            processData: false,
+                            contentType: false,
+                            data: form,
+                            success: function (data) {
+                                if (data.result.error === false) {
+                                    cv_document = data.result.data;
+                                } else {
+                                    alert(data.result.message);
+                                }
+                            },
+                            error: function (err) {
+                                console.log(err.statusText);
+                            }
+                        });
+                    }
+                    function submitForm() {
+                        if (validForm()) {
+                            var formData = new FormData();
+                            formData.append('name', $('#join_team_name').val());
+                            formData.append('email', $('#join_team_email').val());
+                            formData.append('contact', $('#join_team_contact').val());
+                            formData.append('comment', $('#join_team_comment').val());
+                            formData.append('cv', cv_document);
+                            $.ajax({
+                                type: "POST",
+                                url: 'admin/v1/submit_join_team',
+                                processData: false,
+                                contentType: false,
+                                data: formData,
+                                success: function (data) {
+                                    alert(data.result.message);
+                                    if (data.result.error === false) {
+                                        $('#join_team_name').val('');
+                                        $('#join_team_email').val('');
+                                        $('#join_team_contact').val('');
+                                        $('#join_team_comment').val('');
+                                        $('#join_team_cv').val('');
+                                        cv_document = '';
+                                    }
+                                },
+                                error: function (err) {
+                                    console.log(err.statusText);
+                                }
+                            });
+                            return false;
+                        }
+                    }
+                    function validForm() {
+                        if ($.trim($('#join_team_name').val()) === '') {
+                            alert('Name required');
+                            return false;
+                        }
+                        if ($.trim($('#join_team_email').val()) === '') {
+                            alert('Email required');
+                            return false;
+                        }
+                        if ($.trim($('#join_team_contact').val()) === '') {
+                            alert('Contact required');
+                            return false;
+                        }
+                        if ($.trim($('#join_team_comment').val()) === '') {
+                            alert('Comment required');
+                            return false;
+                        }
+                        if ($.trim($('#join_team_cv').val()) === '') {
+                            alert('Upload CV');
+                            return false;
+                        }
+                        return true;
+                    }
                 </script>
-                
+
                 <!-- JOIN OUR TEAM SECTION -->
                 <section class="about_right_section" id="about_right_section">
                     <div class="container">
@@ -393,15 +463,15 @@ foreach ($sub_categories as $row) {
                                     <from>
                                         <input type="text" name="name" id="join_team_name" class="form-control" placeholder="Name" required="required"/>
                                         <br/>
-                                        <input type="email" name="email" class="form-control" placeholder="Email" required/>
+                                        <input type="email" name="email" id="join_team_email" class="form-control" placeholder="Email" required/>
                                         <br/>
-                                        <input type="text" name="contact" pattern="[0-9]{10}" class="form-control" placeholder="Contact Number" required/>
+                                        <input type="text" name="contact" id="join_team_contact" pattern="[0-9]{10}" class="form-control" placeholder="Contact Number" required/>
                                         <br/>
-                                        <textarea row="4" type="text" name="message" class="form-control" placeholder="Leave Comments" required></textarea>
-                                        <p style="float:left;color:#555;font-size: 14px;margin: 10px 0 0;">Upload CV</p> <input type="file" name="upload" class="form-control" accept="image/pdf*">
+                                        <textarea row="4" type="text" name="message" id="join_team_comment" class="form-control" placeholder="Leave Comments" required></textarea>
+                                        <p style="float:left;color:#555;font-size: 14px;margin: 10px 0 0;">Upload CV</p> <input type="file" id="join_team_cv" onchange="uploadDocument('join_team_cv');" name="upload" class="form-control" accept="image/pdf*" />
                                         <br/>
                                         <br/>
-                                        <input type="submit" class="about_us_btn" value="Submit" onclick="return formSubmit();" />
+                                        <input type="button" onclick="submitForm();" class="about_us_btn" value="Submit" />
                                     </from>
                                 </div>
                             </div>
@@ -466,7 +536,7 @@ foreach ($sub_categories as $row) {
                     </div>
                 </section>
                 <!-- END JOIN OUR TEAM SECTION -->
-                
+
                 <!-- WHAT WE DO SECTION -->
                 <section class="container-fluid" id="team_section" style="background: url(img/what-we-do-bg.jpg) no-repeat;background-size: cover">
                     <div class="row">
@@ -497,7 +567,7 @@ foreach ($sub_categories as $row) {
                     </div>
                 </section>
                 <!-- END WHAT WE DO SECTION -->
-                
+
                 <!-- PRODUCT SECTION -->
                 <section class="container-fluid light-gray-bg">
                     <div class="row">
@@ -600,7 +670,7 @@ foreach ($sub_categories as $row) {
                     </div>
                 </section>
                 <!-- END PRODUCT SECTION -->
-                
+
                 <!-- OUR SERVICES SECTION -->
                 <section class="container-fluid" id="service_section">
                     <div class="row">
@@ -630,7 +700,7 @@ foreach ($sub_categories as $row) {
                     </div>
                 </section>
                 <!-- END OUR SERVICES SECTION -->
-                
+
                 <!-- ACCREDITATIONS SECTION -->
                 <section class="container-fluid padding-t-80" id="accreditation_section">
                     <div class="row">
@@ -737,7 +807,7 @@ foreach ($sub_categories as $row) {
                     </div>
                 </section>
                 <!-- END ACCREDITATIONS SECTION -->
-                
+
                 <!-- OUR PARTNERS SECTION -->
                 <section class="container-fluid out_partner_section" id="ourpartner">
                     <div class="row">
@@ -846,7 +916,7 @@ foreach ($sub_categories as $row) {
                     </div>
                 </section>
                 <!-- END OUR PARTNERS SECTION -->
-                
+
                 <script>
                     $(document).ready(function () {
                         $("ul.nav.nav-tabs li").click(function () {
@@ -916,7 +986,7 @@ foreach ($sub_categories as $row) {
                         </div>
                     </div>
                 </section>-->
-                
+
                 <!-- MAP SECTION -->
                 <section id="map_indigate_section" class="container-fluid map_indigate_section">
                     <div class="row">
@@ -943,7 +1013,7 @@ foreach ($sub_categories as $row) {
                     </div>
                 </section>
                 <!-- END MAP SECTION -->
-                
+
                 <!-- FOOTER SECTION -->
                 <footer class="container-fluid back_main" id="contact_section" style="background-image: url(img/footer_image.png);">
                     <div class="row">
@@ -1036,7 +1106,7 @@ foreach ($sub_categories as $row) {
                     </div>
                 </footer>
                 <!-- END FOOTER SECTION -->
-                
+
                 <script>
                     $(window).load(function () {
                         $(".trigger_popup_fricc1").click(function () {
