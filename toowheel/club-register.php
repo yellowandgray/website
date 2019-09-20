@@ -14,12 +14,14 @@
                         </fieldset>
                         <fieldset>
                             <select>
+                                <option>Type</option>
                                 <option>2 Wheel</option>
                                 <option>4 Wheel</option>
                             </select>
                         </fieldset>
                         <fieldset>
                             <select>
+                                <option>Category</option>
                                 <option>125 cc</option>
                                 <option>250 cc</option>
                                 <option>500 cc</option>
