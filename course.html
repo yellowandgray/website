@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Starter Template - Materialize</title>
+
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+
+
+
+        <section class="bg-sec-color-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center lg-text-c">
+                            <img src="img/001.png" alt=""/>
+                            <h3 class="text-center">E-Learning Modules</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4 table-c">
+                                <table>
+                                    <tr>
+                                        <th>Course</th>
+                                        <th>Duration</th> 
+                                    </tr>
+                                    <tr>
+                                        <td><a href="home.html">Title-1</a></td>
+                                        <td><a href="home.html">20.00</a></td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-2</td>
+                                        <td>08.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-3</td>
+                                        <td>12.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-4</td>
+                                        <td>05.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-5</td>
+                                        <td>17.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-6</td>
+                                        <td>11.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-7</td>
+                                        <td>10.00</td> 
+                                    </tr>
+
+                                </table>
+                            </div>
+
+                            <div class="col-md-4 table-c">
+                                <table>
+                                    <tr>
+                                        <th>Course</th>
+                                        <th>Duration</th> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-8</td>
+                                        <td>10.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-9</td>
+                                        <td>15.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-10</td>
+                                        <td>13.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-11</td>
+                                        <td>07.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-12</td>
+                                        <td>03.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-13</td>
+                                        <td>19.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-14</td>
+                                        <td>15.00</td> 
+                                    </tr>
+
+                                </table>
+                            </div>
+
+                            <div class="col-md-4 table-c">
+                                <table>
+                                    <tr>
+                                        <th>Course</th>
+                                        <th>Duration</th> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-15</td>
+                                        <td>16.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-16</td>
+                                        <td>12.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-17</td>
+                                        <td>09.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-18</td>
+                                        <td>07.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-19</td>
+                                        <td>18.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-20</td>
+                                        <td>15.00</td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Title-21</td>
+                                        <td>20.00</td> 
+                                    </tr>
+
+                                </table>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/fontawesome.min.js" type="text/javascript"></script>
+        <!--side-tap-->
+        <script>
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Starter Template - Materialize</title>
+
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <section class="bg-sec" style=" background-image: url(img/bg-01.jpg);  background-repeat: no-repeat;background-size: cover;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="text-center lg-text">
+                                    <img src="img/001.png" alt="" />
+                                    <h3 class="text-center">E-Learning Modules</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pad-10">
+                            <div class="box-01">
+                                <div class="col-md-12">
+                                    <h2>Student Login</h2>  
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <form>
+                                            <div class="input-std">
+                                                <input type="text" name="fname" placeholder="User name" />
+                                                <input type="password" name="password" placeholder="Password"/>
+                                            </div>
+                                            <div class="submit">
+                                                <div class="sub-con">
+                                                    <a href="course.html"> <input type=""  placeholder="SUBMIT" align="center"/></a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/fontawesome.min.js" type="text/javascript"></script>
+        <!--side-tap-->
+        <script>
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+
+    </body>
+</html>

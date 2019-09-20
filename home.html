@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Starter Template - Materialize</title>
+
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <nav class="light-gray lighten-1" role="navigation">
+            <div class="nav-wrapper pad-25">
+                <a id="logo-container" href="#" class="brand-logo">
+                    <img src="img/001.png" alt="" class="img-responsive-7"/>
+                </a>
+                <ul class="right hide-on-med-and-down nav-i">
+                    <li><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a></li>
+                    <li><a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="sidenav">
+                    <li><a href="#">Navbar Link</a></li>
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+        <section class="side-tab">
+            <div class="row bt-0">
+                <div class="tab">
+                    <!--                    <button class="tablinks" onclick="openCity(event, 'topic-1')" id="defaultOpen">Topic-1</button>
+                                        <button class="tablinks" onclick="openCity(event, 'topic-2')">Topic-2</button>
+                                        <button class="tablinks" onclick="openCity(event, 'topic-3')">Topic-3</button>
+                                        <button class="tablinks" onclick="openCity(event, 'topic-4')">Topic-4</button>
+                                        <button class="tablinks" onclick="openCity(event, 'topic-5')">Topic-5</button>
+                                        <button class="tablinks" onclick="openCity(event, 'topic-6')">Sequence All</button>-->
+                    <button class="tablinks" onclick="openCity(event)" id="defaultOpen1">Topic-1</button>
+                    <button class="tablinks" onclick="openCity(event)" id="defaultOpen2">Topic-2</button>
+                    <button class="tablinks" onclick="openCity(event)" id="defaultOpen3">Topic-3</button>
+                    <button class="tablinks" onclick="openCity(event)" id="defaultOpen4">Topic-4</button>
+                    <button class="tablinks" onclick="openCity(event)" id="defaultOpen5">Topic-5</button>
+                    <button class="tablinks" onclick="openCity(event)" id="defaultOpen6">Sequence All</button>
+                </div>
+                <div  class="tabcontent">
+                    <video id="videoclip" width="110%" controls="controls" poster="images/cover.jpg" title="Video title">
+                        <source id="mp4video" src="media/video1.mp4" type="video/mp4"  />
+                    </video>
+                </div>
+
+
+                <!--                <div id="topic-1" class="tabcontent">
+                                    <h6>Introduction</h6>
+                                    <video id="videosec" width="110%" height="" controls="" muted autoplay>
+                                        <source src="videos/Sequence-01.mp4" type="video/mp4">  
+                                        Your browser does not support the video tag.
+                                    </video>
+                
+                                </div>
+                
+                                <div id="topic-2" class="tabcontent">
+                                    <h6>Simple Regression</h6>
+                                    <video id="videosec" width="110%" height="" controls muted autoplay>
+                                        <source src="videos/Sequence-02.mp4" type="video/mp4">  
+                                        Your browser does not support the video tag.</video>
+                                </div>
+                
+                                <div id="topic-3" class="tabcontent">
+                                    <h6>Crop Example</h6>
+                                    <video  id="videosec" width="110%" height="" controls muted autoplay>
+                                        <source src="videos/Sequence-03.mp4" type="video/mp4">  
+                                        Your browser does not support the video tag.</video>
+                                </div>
+                
+                                <div id="topic-4" class="tabcontent">
+                                    <h6>TV / Radio / News Paper Example</h6>
+                                    <video id="videosec" width="110%" height="" controls muted autoplay>
+                                        <source src="videos/Sequence-04.mp4" type="video/mp4">  
+                                        Your browser does not support the video tag.</video>
+                                </div>
+                
+                                <div id="topic-5" class="tabcontent">
+                                    <h6>Sales on TV</h6>
+                                    <video id="videosec" width="110%" height="" controls muted autoplay>
+                                        <source src="videos/Sequence-05.mp4" type="video/mp4">  
+                                        Your browser does not support the video tag.</video>
+                                </div>
+                
+                                <div id="topic-6" class="tabcontent">
+                                    <h6>Sequence All</h6>
+                                    <video id="videosec" width="110%" height="" controls muted autoplay>
+                                        <source src="videos/Sequence-All.mp4" type="video/mp4">  
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>-->
+
+            </div>
+
+        </section>
+
+        <!--        <footer class="page-footer orange">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col l6 s12">
+                                <h5 class="white-text">Company Bio</h5>
+                                <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+        
+        
+                            </div>
+                            <div class="col l3 s12">
+                                <h5 class="white-text">Settings</h5>
+                                <ul>
+                                    <li><a class="white-text" href="#!">Link 1</a></li>
+                                    <li><a class="white-text" href="#!">Link 2</a></li>
+                                    <li><a class="white-text" href="#!">Link 3</a></li>
+                                    <li><a class="white-text" href="#!">Link 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="col l3 s12">
+                                <h5 class="white-text">Connect</h5>
+                                <ul>
+                                    <li><a class="white-text" href="#!">Link 1</a></li>
+                                    <li><a class="white-text" href="#!">Link 2</a></li>
+                                    <li><a class="white-text" href="#!">Link 3</a></li>
+                                    <li><a class="white-text" href="#!">Link 4</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright">
+                        <div class="container">
+                            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+                        </div>
+                    </div>
+                </footer>-->
+
+
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/fontawesome.min.js" type="text/javascript"></script>
+        <!--side-tap-->
+        <script>
+                        $(document).ready(function () {
+                            $('.tablinks').on('click', function () {
+                                //alert('clicked');
+                                $(this).siblings().removeClass('active');
+                                $(this).addClass('active');
+                            });
+                        });
+                       
+//                        function openCity(evt) {
+//                            evt.currentTarget.className += " active";
+//                        }
+//
+//                        // Get the element with id="defaultOpen" and click on it
+//                        document.getElementById("defaultOpen").click();
+        </script>
+        <script type="text/javascript">
+            var videocontainer = document.getElementById('videoclip');
+            var videosource = document.getElementById('mp4video');
+            var newmp4 = 'videos/Sequence-01.mp4';
+            var newmp5 = 'videos/Sequence-02.mp4';
+            var newmp6 = 'videos/Sequence-03.mp4';
+            var newmp7 = 'videos/Sequence-04.mp4';
+            var newmp8 = 'videos/Sequence-05.mp4';
+            var newmp9 = 'videos/Sequence-All.mp4';
+            var newposter = 'images/video-cover.jpg';
+
+            var videobutton = document.getElementById("defaultOpen1");
+            var videobutton1 = document.getElementById("defaultOpen2");
+            var videobutton2 = document.getElementById("defaultOpen3");
+            var videobutton3 = document.getElementById("defaultOpen4");
+            var videobutton4 = document.getElementById("defaultOpen5");
+            var videobutton5 = document.getElementById("defaultOpen6");
+
+            videobutton.addEventListener("click", function (event) {
+                videocontainer.pause();
+                videosource.setAttribute('src', newmp4);
+                videocontainer.load();
+                //videocontainer.setAttribute('poster', newposter); //Changes video poster image
+                videocontainer.play();
+            }, false);
+            videobutton1.addEventListener("click", function (event) {
+                videocontainer.pause();
+                videosource.setAttribute('src', newmp5);
+                videocontainer.load();
+                //videocontainer.setAttribute('poster', newposter); //Changes video poster image
+                videocontainer.play();
+            }, false);
+            videobutton2.addEventListener("click", function (event) {
+                videocontainer.pause();
+                videosource.setAttribute('src', newmp6);
+                videocontainer.load();
+                //videocontainer.setAttribute('poster', newposter); //Changes video poster image
+                videocontainer.play();
+            }, false);
+            videobutton3.addEventListener("click", function (event) {
+                videocontainer.pause();
+                videosource.setAttribute('src', newmp7);
+                videocontainer.load();
+                //videocontainer.setAttribute('poster', newposter); //Changes video poster image
+                videocontainer.play();
+            }, false);
+            videobutton4.addEventListener("click", function (event) {
+                videocontainer.pause();
+                videosource.setAttribute('src', newmp8);
+                videocontainer.load();
+                //videocontainer.setAttribute('poster', newposter); //Changes video poster image
+                videocontainer.play();
+            }, false);
+            videobutton5.addEventListener("click", function (event) {
+                videocontainer.pause();
+                videosource.setAttribute('src', newmp9);
+                videocontainer.load();
+                //videocontainer.setAttribute('poster', newposter); //Changes video poster image
+                videocontainer.play();
+            }, false);
+
+        </script>
+
+    </body>
+</html>

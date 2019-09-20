@@ -1,0 +1,197 @@
+
+.icon-block {
+    padding: 0 15px;
+}
+.icon-block .material-icons {
+    font-size: inherit;
+}
+
+/*side-tab*/
+.tab {
+    float: left;
+    /*border: 1px solid #ccc;*/
+    background-color: #f1f1f1;
+    width: 20%;
+    height: 750px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color:  #24288e;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    font-weight: 600;
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #dc373a;
+    color: #ffffff;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    /*border: 1px solid #ccc;*/
+    width: 70%;
+    border-left: none;
+    height: 750px;
+}
+.img-responsive-7 {
+    width: 70%;
+    height: auto;
+}
+.light-gray {
+    background-color: #d6d6d6 !important;
+}
+.bt-0{
+    margin-bottom: 0px !important;
+}
+.pad-25{
+    padding: 0 25px;
+}
+.nav-i li a {
+    font-size: 1.5rem !important;
+    color: #292e90 !important;
+
+}
+.pad-10 {
+    padding: 0px 10% 16% 10%;
+}
+.box-01 {
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 14px 0px #cecece;
+    padding: 20px;
+    background: rgba(88, 88, 88, 0.43137254901960786);
+}
+.box-01 h2 {
+    font-size: 31px;
+    line-height: 110%;
+    margin: 2.3733333333rem 0 1.424rem 0;
+    font-weight: 600;
+    color: #ea0909;
+    text-align: center;
+}
+.submit input{
+    padding: 10px;
+    border: none;
+    background: #3975fb;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    width: 100px;
+    margin-top: 20px;
+    outline: none;
+    cursor: pointer;
+}
+.submit {
+    display: flex;
+}
+.sub-con{
+    margin: 0 auto;
+}
+.input-std input{
+    border-bottom: 1px solid #dcdcdc !important;
+    padding: 0 10px !important;
+    width: 94%  !important;
+
+}
+.text-center {
+    text-align: center;
+}
+.lg-text h3 {
+    font-size: 28px;
+    line-height: 110%;
+    margin: 1.9466666667rem 0 1.168rem 0;
+    color: #141786;
+}
+
+.lg-text-c h3 {
+    font-size: 23px;
+    line-height: 110%;
+    margin: 0;
+    color: #141986;
+    padding-bottom: 15px;
+}
+.bg-sec{
+    padding: 31px 0px;
+}
+
+input::placeholder{
+    color:#fff;
+}
+.table-c table th     {
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    background: #ea0506;
+    font-size: 20px;
+    /* border: 1px solid #ea0000; */
+    border-radius: 0px;
+}
+.table-c table tr td:nth-child(2)  {
+    padding: 10px;
+    text-align: center;
+
+}
+.table-c table tr td {
+    font-size: 15px;
+    padding: 10px;
+    color: #141984;
+    border-radius: 0px;
+}
+.table-c table tr  {
+    background: #e8e9ff;
+
+}
+.bg-sec-color-gray {
+    background-color: #d0d0d0;
+    height: 800px;
+    padding: 10%;
+}
+@media (max-width:768px) and (min-width:320px){
+    .box-01 {
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: 0px 0px 14px 0px #cecece;
+        padding: 20px;
+        background: #bbb;
+    }
+    .box-01 h2 {
+        font-size: 26px;
+        line-height: 110%;
+        margin: 2.3733333333rem 0 1.424rem 0;
+        font-weight: 600;
+        color: #ea0909;
+        text-align: center;
+    }
+}
+.table-c table tr:hover {
+    background: #909090;
+
+}
+.table-c table tr:hover a{
+    color: #fff;
+    /*    text-decoration: none;*/
+
+}
+.table-c table tr:hover td{
+    color: #fff;
+
+}
