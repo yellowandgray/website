@@ -406,7 +406,7 @@ button {
     left: 50px;
 }
 
-.btn-enter {
+.btn-enter-twowheel {
     background: #fff;
     border-radius: 25px;
     padding: 15px 15px 15px 50px;
@@ -417,20 +417,39 @@ button {
     top: -125px;
 }
 
-.btn-enter:hover {
+.btn-enter-twowheel:hover {
     text-decoration: none;
     color: #000;
 }
 
-.btn-enter i {
+.btn-enter-twowheel i {
     font-size: 30px;
     position: relative;
     top: 3px;
     color: red;
 }
 
-.padding-btn {
+.btn-enter-fourwheel {
+    background: #fff;
+    border-radius: 25px;
     padding: 15px 50px 15px 15px;
+    color: #000;
+    font-weight: 800;
+    font-size: 20px;
+    position: relative;
+    top: -125px;
+}
+
+.btn-enter-fourwheel:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.btn-enter-fourwheel i {
+    font-size: 30px;
+    position: relative;
+    top: 3px;
+    color: red;
 }
 
 .padding-tb-40 {
