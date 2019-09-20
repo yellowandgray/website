@@ -1357,14 +1357,23 @@ marquee {
     }
 }
 .event-img-margin-01{
-   display: flex;
+    display: flex;
 }
 .event-img-margin-01 img {
     margin-bottom: 20px;
-    width: 30%;
+    width: 100%;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     margin: 0 auto;
+}
+.img-eve{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.img-eve-con{
+    flex-basis: 30%;
+
 }

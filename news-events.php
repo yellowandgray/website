@@ -39,7 +39,19 @@
                         <div class="row events-margin padding-bottom-30">
                             <div class="col-md-12">
                                 <div class="event-img-margin-01">
-                                    <img id="myImg"  src="images/cornival-01.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    <div class="img-eve ">
+                                        <div class="img-eve-con text-center">
+                                            <img id="myImg1"  src="images/cornival-02.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        </div>
+                                        <div class="img-eve-con text-center">
+                                            <img id="myImg"  src="images/cornival-01.jpg" alt="Events" title="Events-ENPEE International School" />
+                                        </div>
+                                    </div>
+                                    <div id="myModal" class="modal">
+                                        <span onclick="closeImg()" class="close">&times;</span>
+                                        <img class="modal-content" id="img01">
+                                        <div id="caption"></div>
+                                    </div>
                                     <div id="myModal" class="modal">
                                         <span onclick="closeImg()" class="close">&times;</span>
                                         <img class="modal-content" id="img01">
