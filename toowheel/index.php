@@ -243,7 +243,7 @@
         <section class="media-press-release">
             <div class="container">
                 <div class="media-bg">
-                    <a href="press-release" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
+                    <a href="press-release.php" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
                 </div>
             </div>
         </section>

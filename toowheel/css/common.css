@@ -799,6 +799,8 @@ button {
 .news-cont img {
     width: 75%;
     height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 1px #fc2d2c;
 }
 /*.news-cont center a {
     font-size: 14px;
@@ -863,6 +865,11 @@ button {
 .tabcontent {
     flex: 2;
 }
+
+.tabcontent h3 {
+    color: red;
+}
+
 @media (max-width: 767px) and (min-width:320px){
     .tab button{
         font-size: 13px;
@@ -1051,6 +1058,14 @@ button {
     align-items: stretch;
     justify-content: space-between;
 
+}
+
+.tabcontent .event-num .event-conent p {
+    font-size: 14px;
+}
+
+.tabcontent .event-num .event-desc p {
+    font-size: 14px;
 }
 .event-img{
     flex:1;

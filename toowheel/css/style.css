@@ -1233,6 +1233,15 @@ body {
     font-style: italic;
 }
 
+.find-club-menu .club-box img {
+    width: 85%
+}
+
+.find-club-menu .club-box h3 {
+    font-size: 18px;
+}
+
+
 .margin-rl-25 {
     margin-right: 25px;
     margin-left: 25px;

@@ -24,7 +24,7 @@
                         <button class="tablinks" onclick="openCity(event, 'News')" id="defaultOpen">Latest News <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Release')">Press Release <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Member')">Be A Member <i class="fa fa-caret-right" aria-hidden="true"></i></button>
-                        <button class="tablinks" onclick="openCity(event, 'Clubs')">Find Clubs <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                        <button class="tablinks" onclick="openCity(event, 'Clubs')">Find a Club <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Events')">Events <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'register-club')">Club Registration <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <div class="line-g"></div>
@@ -135,7 +135,7 @@
                         </div>
                     </div>
                     <div id="Clubs" class="tabcontent">
-                        <h3>Find Clubs</h3>
+                        <h3>Find a Club</h3>
                         <div class="find-club-menu">
                             <div class="row">
                                 <div class="col-md-4 col-sm-6">
@@ -170,12 +170,12 @@
                         <h3>Events</h3>
                         <div class="event-num">
                             <div class="event-num-1">
+                                <h3>Event Title</h3>
                                 <div class="event-n">
                                     <div class="event-img">
                                         <img src="img/events/005.jpg" alt="" class="img-responsive"/>
                                     </div>
                                     <div class="event-conent">
-                                        <h3>Event Title</h3>
                                         <p><span>Date:</span> 06-09-2019</p>
                                         <p><span>Location:</span> Malaysia</p>
                                         <p><span>Club Name:</span> Name</p>
