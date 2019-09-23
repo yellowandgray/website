@@ -52,6 +52,7 @@
                             <input placeholder="Contact No." type="text" tabindex="9" required>
                         </fieldset>
                         <fieldset>
+                            <br/>
                             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
                         </fieldset>
                     </form>

@@ -40,6 +40,17 @@
                     </div>
                     <div id="About" class="tabcontent">
                         <h3>About</h3>
+                        <div class="about-menu">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="img/menu-about.jpg" alt=""/>
+                                </div>
+                                <div class="col-md-8">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <div class="find-club-btn"><a href="club-register.php" class="menu-btn">Read More</a></div>
+                                </div>
+                            </div>
+                        </div>
                     </div> 
                     <div id="News" class="tabcontent">
                         <div class="row news">
@@ -113,36 +124,46 @@
                         </div> 
                     </div>
                     <div id="Member" class="tabcontent">
-                        <h3>Member</h3>
+                        <h3>Member Registration</h3>
+                        <div class="member-register-menu">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <div class="find-club-btn"><a href="club-register.php" class="menu-btn">Click to Register</a></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div id="Clubs" class="tabcontent">
                         <h3>Find Clubs</h3>
-                        <div class="row find-club-menu">
-                            <div class="col-md-4 col-sm-6">
-                                <div class="club-box">
-                                    <span>#1</span>
-                                    <img src="img/find-club/dummy-logo.png" alt="" />
-                                    <h3>Frendly Bikers</h3>
-                                    <p>Kuala Lumpur</p>
+                        <div class="find-club-menu">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/find-club/dummy-logo.png" alt="" />
+                                        <h3>Frendly Bikers</h3>
+                                        <p>Kuala Lumpur</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/find-club/dummy-logo.png" alt="" />
+                                        <h3>Frendly Bikers</h3>
+                                        <p>Kuala Lumpur</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/find-club/dummy-logo.png" alt="" />
+                                        <h3>Frendly Bikers</h3>
+                                        <p>Kuala Lumpur</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6">
-                                <div class="club-box">
-                                    <span>#1</span>
-                                    <img src="img/find-club/dummy-logo.png" alt="" />
-                                    <h3>Frendly Bikers</h3>
-                                    <p>Kuala Lumpur</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <div class="club-box">
-                                    <span>#1</span>
-                                    <img src="img/find-club/dummy-logo.png" alt="" />
-                                    <h3>Frendly Bikers</h3>
-                                    <p>Kuala Lumpur</p>
-                                </div>
-                            </div>
-                            <center><a href="find-a-club.php" class="menu-btn">Read More</a></center>
+                            <div class="find-club-btn"><a href="find-a-club.php" class="menu-btn">Read More</a></div>
                         </div>
                     </div>
                     <div id="Events" class="tabcontent">
@@ -163,7 +184,7 @@
                                     <div class="event-desc">
                                         <p><span>Description</span></p>
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                        <h5><a href="events.php">Read More</a></h5>
+                                        <div class="find-club-btn"><a href="events.php">Read More</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -172,7 +193,7 @@
                     <div id="register-club" class="tabcontent">
                         <h3>Register My Club</h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                        <a href="club-register.php" class="btn-club-register">Read More</a>
+                        <div class="find-club-btn"><a href="club-register.php">Read More</a></div>
                     </div>
                 </div>
             </div>

@@ -684,11 +684,11 @@ button {
 
 .tabcontent {
     float: left;
-    padding: 0px 12px;
+    padding: 20px;
     border: 1px solid #ccc;
     /*width: 75%;*/
     border-left: none;
-    /*height: 700px;*/
+    height: auto;
     background-color: #fff;
 
 }
@@ -926,29 +926,29 @@ button {
     }
 }
 @media (max-width: 767px) and (min-width:530px){
-    .news-cont center a {
-        font-size: 7px;
-        position: relative;
-        top: -28px;
-        background-color: #fc2d2c;
-        left: -12px;
-        width: 76%;
-        border-radius: 0px 0px 0px 0px;
-        color: #f2f2f2 !important;
+    .news-discover {
+        width: auto !Important;
+        left: 0px !Important;
+    }
+    .news-discover a {
+        padding: 4px !important;
+    }
+    .news-cont img {
+        width: 100%;
     }
 }
 @media (max-width: 529px) and (min-width:320px){
     .news-cont center a {
-        font-size: 14px;
-        position:initial; 
-        top: -39px;
-        left: 0px; 
-        width: 100%; 
-        border-radius: 0px 0px 0px 0px;
-        background: #fc2d2c;
-        color: #f2f2f2 !important;
-        font-weight: bold;
-        padding: 10px;
+        padding: 4px 0px;
+        text-decoration: none;
+        font-size: 10px;
+        color: #fff;
+        transition: 0.3s;
+        width: auto;
+        text-align: center;
+    }
+    .news-discover {
+        left: 0 !important;
     }
     .news-cont img {
         width: 100%;
@@ -2492,22 +2492,22 @@ body .calender-box{
     border-color: #ff0000;
 }
 
-.btn-club-register {
+/*.btn-club-register {
     color: #fff !important;
     background-color: #ff0000 !important;
-    padding: 9px 30px !important;
+    padding: 9px 15px !important;
     border-radius: 25px;
-    font-size: 20px !important;
-    width: 170px !important;
+    font-size: 15px !important;
+    width: 120px !important;
 }
 
 .btn-club-register:hover {
     color: #ff0000 !important;
     background-color: transparent !important;
     border: 1px solid #ff0000 !important;
-    width: 170px !important;
     font-size: 19px !important;
-}
+    width: 120px !important;
+}*/
 
 /* Demo 2 */
 #demo-2 input[type=search] {
@@ -2585,4 +2585,33 @@ body .calender-box{
 }
 .header-login input::-webkit-input-placeholder {
     color: #000;
+}
+
+.find-club-btn { 
+    width: auto;
+    text-align: center;
+}
+
+.find-club-btn a {
+    background: red;
+    padding: 10px 25px !important;
+    color: #fff;
+    border-radius: 25px;
+    position: relative;
+    left: 0;
+    top: 0;
+    font-size: 15px;
+    width: 150px;
+    display: inline;
+}
+.find-club-btn a:hover {
+    color: red;
+    background: transparent;
+    border: 1px solid red;
+}
+
+.member-register-menu {
+    background: #eee;
+    padding: 20px;
+    border-radius: 10px;
 }
