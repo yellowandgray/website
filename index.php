@@ -114,7 +114,7 @@
                             </div>
                             <div class="col-md-4" data-aos-delay="200" data-aos="fade-up">
                                 <div class="tensorsite-card tensorsite-card--clip">
-                                    <a class="tensorsite-card__href" aria-label="Your first neural network" href="engaging"></a>
+                                    <a class="tensorsite-card__href" aria-label="Your first neural network" href="experiential"></a>
                                     <div class="tensorsite-content__image-wrapper">
                                         <img class="tensorsite-content__image" src="img/about/about-02.jpg" alt="">
                                     </div>
@@ -134,7 +134,7 @@
                             </div>
                             <div class="col-md-4" data-aos-delay="200" data-aos="fade-left">
                                 <div class="tensorsite-card tensorsite-card--clip">
-                                    <a class="tensorsite-card__href" aria-label="Your first neural network" href="experiential"></a>
+                                    <a class="tensorsite-card__href" aria-label="Your first neural network" href="engaging"></a>
                                     <div class="tensorsite-content__image-wrapper">
                                         <img class="tensorsite-content__image" src="img/about/about-001.jpg" alt="">
                                     </div>
@@ -290,11 +290,11 @@
                                             <textarea rows="4" id="notes_message" name="notes_message" cols="65" placeholder="Notes"></textarea>
                                         </div>
                                     </div>
-<!--                                    <div class="row" id="other-text" style="display: none;">
-                                        <div class="col-md-12 textarea">
-                                            <textarea rows="4" cols="65" placeholder="Notes"></textarea>
-                                        </div>
-                                    </div>-->
+                                    <!--                                    <div class="row" id="other-text" style="display: none;">
+                                                                            <div class="col-md-12 textarea">
+                                                                                <textarea rows="4" cols="65" placeholder="Notes"></textarea>
+                                                                            </div>
+                                                                        </div>-->
                                     <center><a href="javascript: submitRecordDate();" class="btn btn-ok">Submit Interest</a></center>
                                 </from>
                             </div>

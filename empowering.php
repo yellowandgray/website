@@ -196,7 +196,7 @@
                 </div>
                 <div class="training-topic-h5">
                     <img src="img/training/ideas.jpg" />
-                    <h5>Idenas@Pondok</h5>
+                    <h5>Ideas@Pondok</h5>
                 </div>
             </div>
         </section>

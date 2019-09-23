@@ -57,11 +57,11 @@
 
                     <img src="img/gallery/gallery-02.jpg" alt="" width="100%" height="auto" class="gallery-img" />		
                     <img src="img/gallery/gallery-03.jpg" alt="" width="100%" height="auto" class="gallery-img" />
-                    <img src="img/gallery/gallery-04.jpg" alt="" width="100%" height="auto" class="gallery-img" />
-                    <img src="img/gallery/gallery-05.jpg" alt="" width="100%" height="auto" class="gallery-img" />
+<!--                    <img src="img/gallery/gallery-04.jpg" alt="" width="100%" height="auto" class="gallery-img" />-->
+<!--                    <img src="img/gallery/gallery-05.jpg" alt="" width="100%" height="auto" class="gallery-img" />-->
                     <img src="img/gallery/gallery-07.jpg" alt="" width="100%" height="auto" class="gallery-img" />
 
-                    <img src="img/gallery/gallery-06.jpg" alt="" width="100%" height="auto" class="gallery-img" />
+<!--                    <img src="img/gallery/gallery-06.jpg" alt="" width="100%" height="auto" class="gallery-img" />-->
                     <img src="img/gallery/gallery-08.jpg" alt="" width="100%" height="auto" class="gallery-img" />
                     <img src="img/gallery/gallery-09.jpg" alt="" width="100%" height="auto" class="gallery-img" />
                     <img src="img/gallery/gallery-10.jpg" alt="" width="100%" height="auto" class="gallery-img" />
