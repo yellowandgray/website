@@ -24,7 +24,10 @@
                             <span>2 WHEELS</span>
                             <span>250CC</span>
                         </div>
-                        <span>RTM BIKERS CLUB</span>
+                        <div class="profile-club-details">
+                            <span>RTM BIKERS CLUB</span>
+                            <span>Invite a Friend</span>
+                        </div>
                         <h2>MUHAMAD HAFIZI</h2>
                         <div class="profile-table">
                             <table>
@@ -84,6 +87,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="">
+                
             </div>
         </div>
         <?php include 'footer.php'; ?>

@@ -47,7 +47,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    <div class="find-club-btn"><a href="club-register.php" class="menu-btn">Read More</a></div>
+                                    <div class="find-club-btn"><a href="about.php" class="menu-btn">Read More</a></div>
                                 </div>
                             </div>
                         </div>

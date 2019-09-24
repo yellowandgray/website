@@ -64,6 +64,9 @@
     .header-login {
         display: none !important;
     }
+    .about-bg img {
+        width: 100%;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
