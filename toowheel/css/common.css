@@ -2502,7 +2502,7 @@ body .calender-box{
     border-color: #ff0000 !important;
 }
 .btn-primary:hover {
-    color: #fff;
+    color: #ff0000;
     background-color: #ffffff;
     border-color: #ff0000;
 }
@@ -2630,3 +2630,69 @@ body .calender-box{
     padding: 20px;
     border-radius: 10px;
 }
+
+.about-section {
+    background: #747474;
+}
+.about-section .about-background {
+    background: url(../img/about/banner.jpg);
+    background-size: cover;
+    width: 100%;box-shadow: 0px -12px 10px 0px #171717;
+}
+
+.about-bg {
+    padding-top: 100px;
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.about-bg img {
+    padding-bottom: 70px;
+}
+
+.about-bg h1 {
+    color: red;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.about-bg p {
+    padding-top: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+
+.vision-section {
+    background: #171717;
+    box-shadow: 0px -12px 10px 0px #171717;
+}
+
+.vision-section img {
+    width: 100%;
+}
+
+.vision-section h1 {
+    color: red;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+.twitter-share, .facebook-share {
+  background: #fff;
+  color: rgb(87, 207, 244);
+  cursor: pointer;
+  display: inline-block;
+  padding: 1em 2em;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.twitter-share, .facebook-share:hover {
+    position: relative;
+    top: -1px;
+  }
