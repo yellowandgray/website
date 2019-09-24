@@ -13,7 +13,7 @@ $app->post('/update_config', function() {
 $app->get('/get_landing_configs', function() {
     $res = array('error' => true, 'message' => 'Unable to export');
     $com = new Common();
-    $data = $com->selectAll('name, value, display_name, field_type', 'config', 'name IN (\'landing_twowheel_image\', \'landing_fourwheel_image\', \'landing_description\', \'landing_about_us_image\', \'landing_news_updates_image\', \'landing_join_club_image\', \'landing_banner_ad\')');
+    $data = $com->selectAll('name, value, display_name, field_type', 'config', 'name IN (\'landing_twowheel_image\', \'landing_fourwheel_image\', \'landing_description\', \'landing_about_us_image\', \'landing_news_updates_image\', \'landing_join_club_image\', \'landing_shop_now_image\', \'landing_banner_ad\')');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
