@@ -2667,7 +2667,8 @@ body .calender-box{
 }
 
 .vision-section {
-    background: #171717;
+    padding: 72px 0;
+    background: url(../img/about/vission-bg.png)no-repeat;
     box-shadow: 0px -12px 10px 0px #171717;
 }
 
@@ -2740,4 +2741,77 @@ body .calender-box{
 
 .news-gallery h3 {
     color: red;
+}
+
+.vision-section h1:after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 45%;
+    border: 2px solid #ff0000;
+    /* margin-top: 0px; */
+}
+
+.vision-section p {
+    color: #fff;
+    font-size: 17px;
+}
+
+.mission-section {
+    padding: 72px 0;
+    background: url(../img/about/mission-bg.png)no-repeat;
+    box-shadow: 0px -12px 10px 0px #171717;
+}
+
+.mission-section img {
+    width: 100%;
+}
+
+.mission-section h1 {
+    color: red;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.mission-section h1:after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 45%;
+    border: 2px solid #ff0000;
+    left: 350px;
+}
+
+.mission-section p {
+    color: #fff;
+    font-size: 17px;
+}
+
+.core-value-section {
+    padding: 72px 0;
+    background: url(../img/about/core-value-bg.png)no-repeat;
+    box-shadow: 0px -12px 10px 0px #171717;
+}
+
+.core-value-section img {
+    width: 100%;
+}
+
+.core-value-section h1 {
+    color: red;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.core-value-section h1:after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 70%;
+    border: 2px solid #ff0000;
+}
+
+.core-value-section p {
+    color: #fff;
+    font-size: 17px;
 }
