@@ -4,7 +4,7 @@ $app->post('/update_config', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to update');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->updateRecordWithWhere(array('value' => $data['value']), 'config', 'config_id = ' . $data['config_id']);
+    $record = $com->updateRecordWithWhere(array('value' => $data['value'], 'display_name' => $data['display_name']), 'config', 'config_id = ' . $data['config_id']);
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record updated successfully';
