@@ -1,8 +1,6 @@
 <?php
 
-require_once 'thirdparty.php';
 require_once 'common.php';
-require_once 'tcpdf/tcpdf.php';
 
 class DbHandler {
 
