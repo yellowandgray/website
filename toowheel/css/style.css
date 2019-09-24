@@ -921,11 +921,12 @@ body {
 }
 
 .events-main-content h2 {
-    padding: 0px 0 20px;
+    /* padding: 0px 0 20px; */
     font-family: 'Montserrat', sans-serif;
     color: red;
     font-size: 25px;
     font-weight: 600;
+    flex: 1;
 }
 
 .events-main-content strong, p {

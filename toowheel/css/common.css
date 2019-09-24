@@ -2682,17 +2682,62 @@ body .calender-box{
 }
 
 
-.twitter-share, .facebook-share {
-  background: #fff;
-  color: rgb(87, 207, 244);
-  cursor: pointer;
-  display: inline-block;
-  padding: 1em 2em;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
+.twitter-share {
+    background: #00BCD4;
+    color: rgb(255, 255, 255) !important;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1em 2em;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    margin-right: 10px;
 }
 
-.twitter-share, .facebook-share:hover {
+.middle {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.middle span i {
+    font-size: 15px;
+}
+
+.facebook-share {
+    background: #4267b2;
+    color: rgb(255, 255, 255) !important;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1em 2em;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.twitter-share:hover {
     position: relative;
     top: -1px;
+}
+
+.facebook-share:hover {
+    position: relative;
+    top: -1px;
+}
+
+.middle > * {
+    vertical-align: middle;
+}
+
+.event-gallery-section {
+    display: flex;
+}
+
+.event-gallery-section img {
+    width: 100%;
+    /* border: 1px solid red; */
+    margin: 10px 0;
+    box-shadow: 0 0 5px 0px red;
+}
+
+.news-gallery h3 {
+    color: red;
 }

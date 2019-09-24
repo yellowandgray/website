@@ -18,15 +18,46 @@
                         <p class="clb-bg clr-white">WFC</p>
                         <div class="events-main-content">
                             <span>Media | Author Name | 24-09-2019</span>
-                            <div class="row">
+                            <div class="middle">
                                 <h2>NEWS TITLE COMES HERE</h2>
-                                <span class="twitter-share" data-js="twitter-share">Twitter</span>
-                                <span class="facebook-share" data-js="facebook-share">Facebook</span>
+                                <span class="twitter-share" data-js="twitter-share"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</span>
+                                <span class="facebook-share" data-js="facebook-share"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</span>
                             </div>
                             <strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </strong><br/><br/>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                             <img src="img/attachment-bg.jpg" alt="" style="width: 100%" /><br/><br/>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <div class="news-gallery">
+                                <h3>Gallery</h3>
+                                <div class="row event-gallery-section">
+                                    <div class="col-md-3 col-sm-6">
+                                        <img src="img/news/gallery/001.png" alt="" />
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <img src="img/news/gallery/002.png" alt="" />
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <img src="img/news/gallery/001.png" alt="" />
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <img src="img/news/gallery/002.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="row event-gallery-section">
+                                    <div class="col-md-3 col-sm-6">
+                                        <img src="img/news/gallery/002.png" alt="" />
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <img src="img/news/gallery/001.png" alt="" />
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <img src="img/news/gallery/002.png" alt="" />
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <img src="img/news/gallery/001.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
