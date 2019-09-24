@@ -400,6 +400,17 @@
                             </div>
                             <div id="step-3" class="">
                                 <h2>Make Payment</h2>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="member-register-btn"><a href="#">PayPal</a></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="member-register-btn"><a href="#">CMD Found Transfer</a></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="member-register-btn"><a href="#">Upload Your Receipt</a></div>
+                                    </div>
+                                </div>
                             </div>
                             <div id="step-4" class="text-center">
                                 <h2>Registration Successful</h2>

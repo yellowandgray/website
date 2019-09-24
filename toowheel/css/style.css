@@ -1521,3 +1521,31 @@ body {
 .profile-table {
     padding-top: 20px;
 }
+
+.member-register-btn {
+    padding: 10px 32px;
+    color: #0098d8;
+    border: 1px solid #002e82;
+    border-radius: 25px;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer
+}
+
+.member-register-btn a {
+    color: #002e82;
+    font-weight: 800;
+}
+
+.member-register-btn:hover {
+    background: #002e82;
+}
+
+.member-register-btn:hover a {
+    color: #fff;
+}
+
+.member-register-btn a:hover {
+    text-decoration: none;
+}
