@@ -436,9 +436,6 @@ button {
     }
 }
 
-.nav__title {
-    font-size: 19px;
-}
 @media screen and (min-width: 40.375em){
     .footer {
         padding: 5em 5em 5em; 
@@ -673,11 +670,13 @@ button {
 /* Change background color of buttons on hover */
 .tab button:hover {
     background-color: #ddd;
+    color: #000;
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-    background-color:#fc2d2c;
+    background-color: #fc2d2c;
+    color: #fff;
 }
 
 /* Style the tab content */
@@ -2817,4 +2816,100 @@ body .calender-box{
 .core-value-section p {
     color: #fff;
     font-size: 17px;
+}
+
+.box-refer {
+    background: #fff;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    padding: 40px 25px;
+    position: relative;
+    top: -110px;
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.refer-border {
+    border-right: 2px solid #eee;
+}
+
+.refer-border-1 {
+    border-left: 2px solid #eee;
+    border-right: 2px solid #eee;
+
+}
+
+.refer-border-2 {
+    border-left: 2px solid #eee;
+}
+
+.refer-point-img img {
+    width: 100%;
+}
+
+.refer-point-img h5 {
+    color: #9a9a9a;
+}
+
+.refer-point-num h4 {
+    color: red;
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-family: roboto;
+}
+
+.refer-point-num span {
+    color: red;
+    float: right;
+}
+
+.password-popup {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: #00000070;
+    color: white;
+    text-align: center;
+
+}
+
+.popup-box {
+    position: relative;
+    top: 30%;
+    width: 40%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px;
+}
+
+.password-popup i{
+    position:absolute; 
+    right:4px; 
+    top:2px; 
+    font-size:2rem;
+    cursor:pointer;
+    color: #ed1c24;
+}
+
+.password-popup i:hover{
+    color: #ed1c24d1;
+}
+
+.password-popup h4 {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.password-popup input {
+    border-radius: 10px;
+    outline: none;
+    margin: 10px 0;
 }

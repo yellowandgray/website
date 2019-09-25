@@ -166,10 +166,6 @@ p {
     font-size: 1.25rem;
 }
 
-.nav__title {
-    font-size: 1.25rem;
-}
-
 .footer address {
     font-style: normal;
     color: #9ca0b1;
@@ -247,7 +243,9 @@ p {
 }
 
 .nav__title {
-    color: #fff;
+    color: #f00;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 @media screen and (min-width: 24.375em) {
@@ -304,7 +302,7 @@ p {
     flex-basis:  20%;
 }
 .fooetr-5{
-    flex-basis: 40%;
+    flex-basis: 30%;
 
 }
 .fooetr-5 input  {
@@ -329,7 +327,7 @@ p {
     outline: none;
 }
 .fooetr-5 .i-con {
-    padding: 10px 30px;
+    padding: 15px 30px;
 }
 .fooetr-5 .i-con i{
     font-size: 24px;
@@ -464,3 +462,9 @@ button {
     width: 100%;
 }
 
+.footer-text {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 2;
+    color: #fff;
+}

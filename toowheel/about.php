@@ -31,7 +31,7 @@
                     <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-7">
-                            <h1 class="text-right">OUR VISION</h1>
+                            <h1 class="text-right">OUR MISSION</h1>
                             <p class="text-right">To unite and provide Malaysian motorsport’s safety and education to all active motorsport enthusiast</p>
                         </div>
                         <div class="col-md-2">
