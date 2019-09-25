@@ -2669,6 +2669,7 @@ body .calender-box{
 .vision-section {
     padding: 72px 0;
     background: url(../img/about/vission-bg.png)no-repeat;
+    background-size: cover;
     box-shadow: 0px -12px 10px 0px #171717;
 }
 
@@ -2760,6 +2761,7 @@ body .calender-box{
 .mission-section {
     padding: 72px 0;
     background: url(../img/about/mission-bg.png)no-repeat;
+    background-size: cover;
     box-shadow: 0px -12px 10px 0px #171717;
 }
 
@@ -2790,6 +2792,7 @@ body .calender-box{
 .core-value-section {
     padding: 72px 0;
     background: url(../img/about/core-value-bg.png)no-repeat;
+    background-size: cover;
     box-shadow: 0px -12px 10px 0px #171717;
 }
 

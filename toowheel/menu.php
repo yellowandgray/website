@@ -20,8 +20,8 @@
                             <input type="radio" name="size" id="size_2" value="small" />
                             <label for="size_2">EN</label>
                         </div>
-                        <button class="tablinks" onclick="openCity(event, 'About')">About Us <i class="fa fa-caret-right" aria-hidden="true"></i></button>
-                        <button class="tablinks" onclick="openCity(event, 'News')" id="defaultOpen">Latest News <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                        <button class="tablinks" onclick="openCity(event, 'About')" id="defaultOpen">About Us <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                        <button class="tablinks" onclick="openCity(event, 'News')">Latest News <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Release')">Press Release <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Member')">Be A Member <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Clubs')">Find a Club <i class="fa fa-caret-right" aria-hidden="true"></i></button>
