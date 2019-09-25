@@ -15,7 +15,7 @@
                             <li><a href="#step-4">Step 4<br /><small>This is step description</small></a></li>
                         </ul>
 
-                        <div>
+                        <div class="registation-step">
                             <div id="step-1" class="">
                                 <h2>Member Registration</h2>
                                 <h4>Basic Information</h4>
@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="firstname">First Name</label>
-                                    <input type="text" class="form-control" id="firstname" placeholder="First Name" required autofocus>
+                                    <input type="text" class="form-control" id="firstname" placeholder="First Name" required>
 <!--                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                 </div>
                                 <div class="form-group">
@@ -299,100 +299,148 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-6">
+                                    <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <span>#1</span>
                                             <img src="img/find-club/dummy-logo.png" alt="" />
                                             <h3>Frendly Bikers</h3>
                                             <p>Kuala Lumpur</p>
+                                            <div class="club-btn">
+                                                <div class="eff-9"></div>
+                                                <a href="club-page">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6">
+                                    <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <span>#1</span>
                                             <img src="img/find-club/dummy-logo.png" alt="" />
                                             <h3>Frendly Bikers</h3>
                                             <p>Kuala Lumpur</p>
+                                            <div class="club-btn">
+                                                <div class="eff-9"></div>
+                                                <a href="club-page">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6">
+                                    <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <span>#1</span>
                                             <img src="img/find-club/dummy-logo.png" alt="" />
                                             <h3>Frendly Bikers</h3>
                                             <p>Kuala Lumpur</p>
+                                            <div class="club-btn">
+                                                <div class="eff-9"></div>
+                                                <a href="club-page">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6">
+                                    <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <span>#1</span>
                                             <img src="img/find-club/dummy-logo.png" alt="" />
                                             <h3>Frendly Bikers</h3>
                                             <p>Kuala Lumpur</p>
+                                            <div class="club-btn">
+                                                <div class="eff-9"></div>
+                                                <a href="club-page">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6">
+                                    <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <span>#1</span>
                                             <img src="img/find-club/dummy-logo.png" alt="" />
                                             <h3>Frendly Bikers</h3>
                                             <p>Kuala Lumpur</p>
+                                            <div class="club-btn">
+                                                <div class="eff-9"></div>
+                                                <a href="club-page">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6">
+                                    <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <span>#1</span>
                                             <img src="img/find-club/dummy-logo.png" alt="" />
                                             <h3>Frendly Bikers</h3>
                                             <p>Kuala Lumpur</p>
+                                            <div class="club-btn">
+                                                <div class="eff-9"></div>
+                                                <a href="club-page">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6">
+                                    <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <span>#1</span>
                                             <img src="img/find-club/dummy-logo.png" alt="" />
                                             <h3>Frendly Bikers</h3>
                                             <p>Kuala Lumpur</p>
+                                            <div class="club-btn">
+                                                <div class="eff-9"></div>
+                                                <a href="club-page">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6">
+                                    <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <span>#1</span>
                                             <img src="img/find-club/dummy-logo.png" alt="" />
                                             <h3>Frendly Bikers</h3>
                                             <p>Kuala Lumpur</p>
+                                            <div class="club-btn">
+                                                <div class="eff-9"></div>
+                                                <a href="club-page">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6">
+                                    <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <span>#1</span>
                                             <img src="img/find-club/dummy-logo.png" alt="" />
                                             <h3>Frendly Bikers</h3>
                                             <p>Kuala Lumpur</p>
+                                            <div class="club-btn">
+                                                <div class="eff-9"></div>
+                                                <a href="club-page">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6">
+                                    <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <span>#1</span>
                                             <img src="img/find-club/dummy-logo.png" alt="" />
                                             <h3>Frendly Bikers</h3>
                                             <p>Kuala Lumpur</p>
+                                            <div class="club-btn">
+                                                <div class="eff-9"></div>
+                                                <a href="club-page">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6">
+                                    <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <span>#1</span>
                                             <img src="img/find-club/dummy-logo.png" alt="" />
                                             <h3>Frendly Bikers</h3>
                                             <p>Kuala Lumpur</p>
+                                            <div class="club-btn">
+                                                <div class="eff-9"></div>
+                                                <a href="club-page">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6">
+                                    <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <span>#1</span>
                                             <img src="img/find-club/dummy-logo.png" alt="" />
                                             <h3>Frendly Bikers</h3>
                                             <p>Kuala Lumpur</p>
+                                            <div class="club-btn">
+                                                <div class="eff-9"></div>
+                                                <a href="club-page">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -432,7 +480,7 @@
                                 <br/>
                                 <center>
                                     <span class="member-t">
-                                        <a href="#">My Benefits</a>
+                                        <a href="member.php">My Benefits</a>
                                     </span>
                                     <span class="member-t">
                                         <a href="index">Back to Homepage</a>

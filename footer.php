@@ -40,13 +40,13 @@
                     <h2 class="nav__title">MEMBERS</h2>
                     <ul class="nav__ul">
                         <li>
-                            <a href="#">Login</a>
+                            <a href="toowheel/login">Login</a>
                         </li>
                         <li>
-                            <a href="#">Be A Member</a>
+                            <a href="toowheel/member-register">Be A Member</a>
                         </li>
                         <li>
-                            <a href="#">Member Benefits</a>
+                            <a href="toowheel/member">Member Benefits</a>
                         </li>
                     </ul>
                 </li>
@@ -56,10 +56,10 @@
                     <h2 class="nav__title">CLUB</h2>
                     <ul class="nav__ul">
                         <li>
-                            <a href="#">Find A Club</a>
+                            <a href="toowheel/find-a-club">Find A Club</a>
                         </li>
                         <li>
-                            <a href="#">Register My Club</a>
+                            <a href="toowheel/club-register">Register My Club</a>
                         </li>
                     </ul>
                 </li>
@@ -71,7 +71,7 @@
                     <h2 class="nav__title">TOOWHEEL</h2>
                     <ul class="nav__ul">
                         <li>
-                            <a href="#">About us</a>
+                            <a href="toowheel/about">About us</a>
                         </li>
                         <li>
                             <a href="#">Contact us</a>
@@ -89,8 +89,10 @@
                             <a href="#">Receive updates on our Upcoming Events</a>
                         </li>
                         <li>
-                            <input type="email" placeholder="Email Address">
-                            <button type="submit">submit</button>
+                            <form>
+                                <input type="email" placeholder="Email Address" required="">
+                                <button type="submit">submit</button>
+                            </form>
                         </li>
                         <li class="i-con text-center">
                             <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>

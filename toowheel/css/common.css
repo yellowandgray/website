@@ -1224,7 +1224,16 @@ button {
 
 .sing-t a:hover {
     background: #ed1c24;
-    /*    box-shadow: 0px 0px 3px 0px white;*/
+    /* box-shadow: 0px 0px 3px 0px white; */
+    text-decoration: none;
+}
+
+.color-red {
+    color: red;
+}
+
+.registation-step h2 {
+    color: red;
 }
 
 /*.nav-close {
@@ -1253,7 +1262,7 @@ button {
 
 /* CLUB REGISTER FORM CSS */
 
-#club-register input[type="text"],
+/*#club-register input[type="text"],
 #club-register input[type="email"],
 #club-register input[type="tel"],
 #club-register input[type="date"],
@@ -1263,7 +1272,7 @@ button {
 #club-register textarea,
 #club-register button[type="submit"] {
     font: 400 12px/16px 'Montserrat', sans-serif;
-}
+}*/
 
 #club-register {
     background: #ffffff;
@@ -1276,10 +1285,11 @@ button {
 #club-register h3 {
     display: block;
     font-size: 30px;
-    font-weight: 300;
+    font-weight: 600;
     margin-bottom: 20px;
     color: red;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 /*fieldset {
@@ -1299,11 +1309,13 @@ button {
 #club-register select,
 #club-register textarea {
     width: 100%;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    background: transparent;
-    margin: 0 0 5px;
-    padding: 10px;
+    /* border: none; */
+    border: 1px solid #ccc; 
+    /* background: transparent; */
+    margin: 10px 0 5px;
+    padding: 12px;
+    transition: border-color 0.3s ease-in-out;
+    border-radius: 4px;
 }
 
 #club-register input[type="file"] {
@@ -1328,11 +1340,11 @@ button {
 #club-register input[type="url"]:hover,
 #club-register select:hover,
 #club-register textarea:hover {
-    border: none;
+    /* border: none; */
     -webkit-transition: border-color 0.3s ease-in-out;
     -moz-transition: border-color 0.3s ease-in-out;
     transition: border-color 0.3s ease-in-out;
-    border-bottom: 1px solid #aaa;
+    /* border-bottom: 1px solid #aaa; */
 }
 
 #club-register textarea {
@@ -1343,23 +1355,24 @@ button {
 
 #club-register button[type="submit"] {
     cursor: pointer;
-    width: 25%;
-    border: none;
-    background: #ed1c24;
+    width: 100%;
+    background: linear-gradient(to right, #6f6f6f 0%, #ed1c24 100%);
     color: #FFF;
     margin: 0 auto 5px;
     padding: 10px;
     font-size: 15px;
-    border-radius: 25px;
+    border-radius: 3px;
+    border: none;
+    transition: 0.3s;
 }
 
 #club-register button[type="submit"]:hover {
-    background: transparent;
+    background: linear-gradient(to right, #ed1c24 0%, #6f6f6f 100%);
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
-    color: red;
-    border: 1px solid red;
+    color: white;
+    /* border: 1px solid red; */
 }
 
 /*#club-register button[type="submit"]:active {
@@ -1378,8 +1391,10 @@ button {
 #club-register select:focus,
 #club-register textarea:focus {
     outline: 0;
-    border: none;
-    border-bottom: 1px solid red;
+    border: 1px solid red;
+    /* transition: border-color 0.3s ease-in-out; */
+    padding: 12px;
+    margin: 10px 0 5px;
 }
 
 ::-webkit-input-placeholder {
@@ -1444,6 +1459,19 @@ button {
 }
 #club-register .button-1:hover a{
     color:#fff;
+}
+
+.already-account {
+    padding: 40px 0 30px;
+}
+
+.already-account p {
+    text-align: center;
+}
+.already-account p a {
+    color: #1d1d1d;
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 /* END CLUB REGISTER FORM CSS */
@@ -1777,13 +1805,15 @@ button {
 
 .w-text h2{
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
     color: #fff;
+    margin: 0;
 }
 .w-text h5{
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     color: #fff;
+    margin: 0;
 }
 .w-text{
     display: flex;
@@ -1806,14 +1836,15 @@ button {
 
 }
 .w-text-con-1{
-    flex-basis: 30%;
+    flex-basis: 35%;
 }
 .w-icon{
     list-style: none;
 }
 .w-icon i{
-    padding:0px 10px;
+    padding: 0px 10px;
     color: #ed1c24;
+    font-size: 25px;
 }
 .w-text-1{
     padding: 25px 10px 10px 10px;
@@ -1829,11 +1860,29 @@ button {
     position: relative;
     top: -87px;
 }
-.w-text-con-1 p{
-    font-weight: 600;
+.w-text-con-1 p {
     color: #676666;
+    font-weight: 600;
     font-size: 17px;
 }
+
+.w-text-con-1 p a{
+    color: #676666;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.w-text-con-1 p a:hover{
+    text-decoration: none;
+}
+
+.w-text-con-1 p i{
+    color: red;
+    font-size: 20px;
+    margin: 0 2px 0 0;
+}
+
+
 /*sec-club-logo*/
 
 /*Event-sec*/
@@ -1846,10 +1895,10 @@ button {
     margin-bottom: 10px;
 }
 .anounce-con{
-    flex-basis:28%
+    flex-basis: 25%
 }
 .anounce-con:nth-child(2){
-    flex-basis:68%
+    flex-basis: 72%
 }
 
 .anounce-con-1{
@@ -1859,23 +1908,37 @@ button {
     flex-basis:80%
 }
 .box-anounce{
-    padding: 10px;
+    padding: 5px;
     box-shadow: 0px 0px 4px 2px #bdbdbd;
-    margin: 10px 0px;
+}
+.box-anounce-1{
+    padding: 5px;
+    box-shadow: 0px 0px 5px 3px #bdbdbd;
+    background: #eee;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 .anounce-con h5 a {
-    font-size: 13px;
+    font-size: 10px;
     padding: 3px;
     background: #ed1c24;
     color: #fff !important;
+    box-shadow: 0 0 4px 0px red;
+    font-style: italic;
 }
-.anounce-con h5  {
-    transform: skewX(-10deg);
-
+.anounce-con img  {
+    border-radius: 10px;
 }
 .anounce-con p  { 
     font-size: 10px;
     margin: 2px 0px;
+    color: #000;
+    font-weight: 600;
+}
+
+.anounce-con span  { 
+    font-size: 10px;
+    color: #a0a0a0;
 }
 .anounce-con h3  { 
     font-size: 20px;
@@ -1889,7 +1952,7 @@ button {
     color: #fff !important;
 }
 .anounce-con-1 h5  {
-    transform: skewX(-10deg);
+    font-style: italic;
 
 }
 .anounce-con-1 p  { 
@@ -1905,13 +1968,31 @@ button {
     font-size: 34px;
     color: #505050;
     font-weight: 600;
+    margin: 0;
 }
 .event-con h2{
     font-size: 20px;
     color: #ed1c24;
-    font-weight: 600;
+    font-weight: 700;
     padding: 10px;
 }
+
+.box-anounce .discover-slider-content h2 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 5px 0 0;
+    padding: 0;
+}
+
+.box-anounce .discover-slider-content p {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+
 /*calender*/
 *, *:before, *:after {
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
@@ -2307,6 +2388,10 @@ body .calender-box{
 .event-con-img {
     flex-basis: 32%
 }
+
+.discover-slider img {
+    border-radius: 10px;
+}
 .event-con .discover-slider-content h2 {
     color: #fff;
     font-size: 15px;
@@ -2318,7 +2403,7 @@ body .calender-box{
     margin: 0;
     background: #0006;
     position: relative;
-    bottom: 109px;
+    bottom: 118px;
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
 }
@@ -2423,7 +2508,8 @@ body .calender-box{
     flex-wrap: wrap;
 }
 .img-b-10px{
-    margin-bottom: 10px;
+    margin: 2px auto;
+    text-align: center;
 }
 @media (max-width:991px) and (min-width:320px){
     .img-b-10px {
@@ -2501,7 +2587,7 @@ body .calender-box{
     border-color: #ff0000 !important;
 }
 .btn-primary:hover {
-    color: #ff0000;
+    color: #ff0000 !important;
     background-color: #ffffff;
     border-color: #ff0000;
 }
@@ -2912,4 +2998,187 @@ body .calender-box{
     border-radius: 10px;
     outline: none;
     margin: 10px 0;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ed1c24;
+    outline: 0;
+    box-shadow: none;
+}
+
+.btn-secondary.focus, .btn-secondary:focus {
+    box-shadow: none;
+}
+
+.club-box .club-btn {
+    width: 50%;
+    height: 26px;
+    border: 1px solid #ed1820;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 auto 10px auto;
+}
+
+.club-box .club-btn .eff-9 {
+    width: 140px;
+    height: 26px;
+    top: -2px;
+    right: -140px;
+    background: #ff0000;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: 1;
+}
+
+.club-box .club-btn:hover .eff-9 {
+    right: 0;
+}
+
+.club-box .club-btn a {
+    font-size: 10px;
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 32px;
+    transition: all .5s ease;
+    z-index: 2;
+    position: relative;
+    top: -3px;
+}
+
+.club-box .club-btn:hover a {
+    color: #fff;
+}
+
+.club-gallery img {
+    width: 32%;
+    margin-bottom: 4px;
+}
+
+.box-anounce .discover-slider-content center a {
+    position: relative;
+    top: 10px;
+    background: red;
+    border-radius: 20px;
+    /* text-align: center; */
+    color: #fff !important;
+    font-size: 10px;
+    font-weight: 600;
+    outline: none;
+    border-color: transparent;
+}
+
+.box-anounce .discover-slider-content center a:hover {
+    color: #ff0000 !important;
+    background-color: #ffffff;
+    border-color: #ff0000;
+}
+
+
+/* CALENDER CSS */
+
+.group {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+img {
+    max-width:100%;
+    height:auto;
+    vertical-align:baseline;
+}
+
+a {
+    text-decoration:none;
+}
+
+.calendar-wrapper {
+    width: 100%;
+    margin: 2em auto;
+    /* padding: 2em; */
+    /* border: 1px solid rgb(220,220,255); */
+    border-radius: 5px;
+    background: #fff;
+
+}
+table {
+    clear:both;
+    width:100%;
+    border:1px solid rgb(220,220,255);
+    border-radius:3px;
+    border-collapse:collapse;
+    color:#444;
+}
+td {
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    border-right: 1px solid rgb(220,220,255);
+    border-top: 1px solid rgb(220,220,255);
+    width: 100% / 7;
+    color: #000;
+}
+td.not-current {
+    color:#c0c0c0;
+}
+td.normal {}
+td.today {
+    font-weight:700;
+    color:rgb(40,40,59);
+    font-size:1.5em;
+}
+thead td {
+    border:none;
+    color:rgb(40,40,59);
+    text-transform:uppercase;
+    font-size:1.5em;
+}
+#btnPrev {
+    float:left;
+/*    margin-bottom:20px;*/
+
+}
+
+#btnPrev:before {
+    content:'\f104';
+    font-family:FontAwesome;
+    padding-right:4px;
+}
+
+#btnNext {
+    float:right;
+/*    margin-bottom:20px;*/
+
+}
+
+#btnNext:after {
+    content:'\f105';
+    font-family:FontAwesome;
+    padding-left:4px;
+}
+
+#btnPrev, #btnNext {
+    background:transparent;
+    border:none;
+    outline:none;
+    font-size:1em;
+    color:#c0c0c0;
+    cursor:pointer;
+    font-family:"Roboto Condensed", sans-serif;
+    text-transform:uppercase;
+    transition:all 0.3s ease;
+
+}
+#btnPrev, #btnNext:hover {
+    color:rgb(40,40,59);
+    font-weight:bold;
 }
