@@ -17,7 +17,7 @@ export class ConfigComponent implements OnInit {
   ngOnInit() {
     this.getConfig();
   }
-  image_url: string = '../api/v1/';
+  image_url: string = 'toowheel/api/v1/';
     getConfig(): void {
   this.httpClient.get<any>('../api/v1/get_landing_configs')
   .subscribe(
