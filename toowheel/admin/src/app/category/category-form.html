@@ -1,14 +1,17 @@
 <h2 mat-dialog-title>Category</h2>
 <mat-dialog-content class="mat-typography">
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline">
-                <mat-label>Category name</mat-label>
-                <input matInput placeholder="Placeholder" />
-                <mat-icon matSuffix>category</mat-icon>
-            </mat-form-field>
+    <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Category name</mat-label>
+                    <input matInput placeholder="Placeholder" required formControlName="name" [(ngModel)]="name" />
+                    <mat-error>Category name is required</mat-error>
+                    <mat-icon matSuffix>category</mat-icon>
+                </mat-form-field>
+            </div>
         </div>
-    </div>
+    </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Cancel</button>

@@ -669,8 +669,8 @@ button {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #ddd;
-    color: #000;
+    background-color: #fc2d2c;
+    color: #fff;
 }
 
 /* Create an active/current "tab button" class */
@@ -710,6 +710,24 @@ button {
     color: #686868;
     font-size: 35px;
 }
+
+.tablinks a {
+    font-size: 17px;
+    text-align: left;
+    padding: 0;
+    color: #fff;
+    width: auto;
+}
+
+.tablinks:hover a {
+    color: #fff;
+}
+
+.tablinks a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
 .mega-menu-tab .tablinks i {
     float: right;
     color: #f2f2f2;
@@ -3144,7 +3162,7 @@ thead td {
 }
 #btnPrev {
     float:left;
-/*    margin-bottom:20px;*/
+    /*    margin-bottom:20px;*/
 
 }
 
@@ -3156,7 +3174,7 @@ thead td {
 
 #btnNext {
     float:right;
-/*    margin-bottom:20px;*/
+    /*    margin-bottom:20px;*/
 
 }
 

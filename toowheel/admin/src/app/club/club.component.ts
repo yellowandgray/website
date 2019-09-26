@@ -1,10 +1,10 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
 
 @Component({
   selector: 'app-club',
@@ -12,21 +12,45 @@ export interface DialogData {
   styleUrls: ['./club.component.css']
 })
 export class ClubComponent implements OnInit {
-  constructor(public dialog: MatDialog) { }
+  result = [];
+    constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
+    this.getClub();
+  }
+  image_url: string = 'http://localhost/twowheel-frontend/toowheel/api/v1/';
+  getClub(): void {
+  this.httpClient.get<any>('http://localhost/twowheel-frontend/toowheel/api/v1/get_clubevent')
+  .subscribe(
+          (res)=>{
+              this.result = res["result"]["data"];
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
   }
   openDialog(): void  {
+  var data = null;
+    this.result.forEach(val=> {
+        if(parseInt(val.category_id) === parseInt(id)) {
+             data = val;
+             return false;
+        }
+      });
     const dialogRef = this.dialog.open(ClubForm, {
         minWidth: "40%",
         maxWidth: "40%"
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+        if(result !== false && result !== 'false') {
+            this.getClub();
+        }
     });
 }
-
 }
 
 @Component({
@@ -34,11 +58,135 @@ export class ClubComponent implements OnInit {
   templateUrl: 'club-form.html',
 })
 export class ClubForm {
+    clubForm: FormGroup;
+    loading = false;
+    club_name: string;
+    field_type: string;
+    file_name: string = 'Select Picture';
+    category_id: string;
     constructor(
     public dialogRef: MatDialogRef<ClubForm>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        this.type = this.data.type;
+        this.category_id = this.data.category_id;
+        this.club_name = this.data.club_name;
+        this.field_type = this.data.field_type;
+        this.state = this.data.state;
+        this.city = this.data.city;
+        this.zip = this.data.zip;
+        this.address = this.data.address;
+        this.club_leader_name = this.data.club_leader_name;
+        this.no_of_member = this.data.no_of_member;
+        this.email = this.data.email;
+        this.phone = this.data.phone;
+        this.contact_person = this.data.contact_person;
+        this.mobile_number = this.data.mobile_number;
+        this.year_of_established = this.data.year_of_established;
+        this.activity = this.data.activity;
+        this.club_secretary = this.data.club_secretary;
+        this.competition_secretary = this.data.competition_secretary;
+        this.chairman = this.data.chairman;
+        this.treasurer = this.data.treasurer;
+        this.about_club = this.data.about_club;
+    }
 
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
+  ngOnInit() {
+      this.clubForm = new FormGroup({
+      'type': new FormControl('', Validators.required),
+      'category_id': new FormControl('', Validators.required),
+      'club_name': new FormControl('', Validators.required),
+      'state': new FormControl('', Validators.required),
+      'city': new FormControl('', Validators.required),
+      'zip': new FormControl('', Validators.required),
+      'address': new FormControl('', Validators.required),
+      'club_leader_name': new FormControl('', Validators.required),
+      'no_of_member': new FormControl('', Validators.required),
+      'email': new FormControl('', Validators.required),
+      'phone': new FormControl('', Validators.required),
+      'contact_person': new FormControl('', Validators.required),
+      'mobile_number': new FormControl('', Validators.required),
+      'year_of_established': new FormControl('', Validators.required),
+      'activity': new FormControl('', Validators.required),
+      'club_secretary': new FormControl('', Validators.required),
+      'competition_secretary': new FormControl('', Validators.required),
+      'chairman': new FormControl('', Validators.required),
+      'treasurer': new FormControl('', Validators.required),
+      'about_club': new FormControl('', Validators.required)
+        });
+    }
+    fileProgress(fileInput: any) {
+        var fileData = <File>fileInput.target.files[0];
+        console.log(fileData);
+        this.file_name = fileData.name;
+        this.loading = true;
+          var formData = new FormData();
+          formData.append('file', fileData);
+          this.httpClient.post('http://localhost/twowheel-frontend/toowheel/api/v1/upload_file', formData).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.value = res["result"]["data"];
+                }else{
+this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            });
+    }
+
+    onSubmit() {
+          if (this.configForm.invalid) {
+                return;
+          }
+          this.loading = true;
+          var formData = new FormData();
+          formData.append('type', this.type);
+          formData.append('category_id', this.category_id);
+          formData.append('club_name', this.club_name);
+          formData.append('banner', this.banner);
+          formData.append('state', this.state);
+          formData.append('city', this.city);
+          formData.append('zip', this.zip);
+          formData.append('address', this.address);
+          formData.append('club_leader_name', this.club_leader_name);
+          formData.append('no_of_member', this.no_of_member);
+          formData.append('email', this.email);
+          formData.append('phone', this.phone);
+          formData.append('contact_person', this.contact_person);
+          formData.append('mobile_number', this.mobile_number);
+          formData.append('year_of_established', this.year_of_established);
+          formData.append('activity', this.activity);
+          formData.append('club_secretary', this.club_secretary);
+          formData.append('competition_secetary', this.competition_secetary);
+          formData.append('chairman', this.chairman);
+          formData.append('treasurer', this.treasurer);
+          formData.append('about_club', this.about_club);
+          this.httpClient.post('http://localhost/twowheel-frontend/toowheel/api/v1/insert_club', formData).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+            );
+      }
+    
 }
