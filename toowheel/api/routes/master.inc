@@ -28,7 +28,7 @@ $app->post('/insert_club', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type, category_id, club_name_id, banner, state, city, zip, address, club_leader_name, no_of_member, email, phone, contact_person, mobile_number, year_of_established, activity, club_secretary, competition_secretary, chairman, treasurer, about_club'], 'display_name' => $data['display_name']), 'category');
+    $record = $com->insertRecord(array('type' => $data['type, category_id, club_name, banner, state, city, zip, address, club_leader_name, no_of_member, email, phone, contact_person, mobile_number, year_of_established, activity, club_secretary, competition_secretary, chairman, treasurer, about_club'], 'display_name' => $data['display_name']), 'category');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -79,7 +79,7 @@ $app->get('/get_category', function() {
 $app->get('/get_club', function() {
     $res = array('error' => true, 'message' => 'Unable to export');
     $com = new Common();
-    $data = $com->selectAll('type, category_id, club_name_id, banner, state, city, zip, address, club_leader_name, no_of_member, email, phone, contact_person, mobile_number, year_of_established, activity, club_secretary, competition_secretary, chairman, treasurer, about_club', 'category_id < 0');
+    $data = $com->selectAll('type, category_id, club_name, banner, state, city, zip, address, club_leader_name, no_of_member, email, phone, contact_person, mobile_number, year_of_established, activity, club_secretary, competition_secretary, chairman, treasurer, about_club', 'category_id < 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
