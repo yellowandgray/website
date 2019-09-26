@@ -1,0 +1,190 @@
+<h2 mat-dialog-title>Club</h2>
+<mat-dialog-content class="mat-typography">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Type</mat-label>
+                <mat-select>
+                    <mat-option [value]="">
+                        Two Wheeler
+                    </mat-option>
+                    <mat-option [value]="">
+                        Four Wheeler
+                    </mat-option>
+                </mat-select>
+                <mat-icon matSuffix>grade</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Category</mat-label>
+                <mat-select>
+                    <mat-option [value]="">
+                        160 CC
+                    </mat-option>
+                    <mat-option [value]="">
+                        200 CC
+                    </mat-option>
+                    <mat-option [value]="">
+                        250 CC
+                    </mat-option>
+                </mat-select>
+                <mat-icon matSuffix>category</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Club name</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>home</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <button type="button" mat-raised-button (click)="fileInput.click()">Choose Club Logo</button>
+            <input hidden #fileInput type="file" id="file" />
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>State</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>business</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>City</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>list_alt</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Zip</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>code</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Address</mat-label>
+                 <textarea matInput placeholder="Leave a comment"></textarea>
+                <mat-icon matSuffix>message</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Club Leader Name (Full Name)</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>No. of Members</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>format_list_numbered</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Phone</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Contact person</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Mobile number</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>mobile_friendly</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Year of established</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>calendar_today</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Activity</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>accessibility</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Club secretary</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>security</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Competition secretary</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>device_hub</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Chairman</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>person_pin</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Treasurer</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>person_outline</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxFlex="100%">
+            <mat-form-field class="full-width">
+                <mat-label>About club</mat-label>
+                <textarea matInput placeholder="Write here"></textarea>
+                <mat-icon matSuffix>message</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+</mat-dialog-actions>

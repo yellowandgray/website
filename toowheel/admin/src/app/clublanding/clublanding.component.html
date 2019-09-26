@@ -1,0 +1,32 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <section class="section">
+            <h2>About</h2>
+            <div fxLayout="row" fxLayoutAlign="end center">
+                <button mat-raised-button color="primary" (click)="openDialog()"><mat-icon>edit</mat-icon> Edit</button>
+            </div>
+            <mat-card>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </mat-card>
+            <h2>Logo</h2>
+            <div fxLayout="row" fxLayoutAlign="end center">
+                <button mat-raised-button color="primary" (click)="fileInput.click()"><mat-icon>edit</mat-icon> Change</button>
+                <input hidden #fileInput type="file" id="file" />
+            </div>
+            <mat-card>
+                <img src="assets/bike_club1.png" alt="Logo" />
+            </mat-card>
+            <h2>Banner</h2>
+            <div fxLayout="row" fxLayoutAlign="end center">
+                <button mat-raised-button color="primary" (click)="fileInput.click()"><mat-icon>edit</mat-icon> Change</button>
+            </div>
+            <mat-card>
+                <img src="assets/background.jpg" alt="Background" />
+            </mat-card>
+        </section>
+    </mat-sidenav-content>
+</mat-sidenav-container>

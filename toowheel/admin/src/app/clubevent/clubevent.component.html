@@ -1,0 +1,43 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <div class="add-btn-container">
+            <button mat-raised-button color="primary" (click)="openDialog()"><mat-icon>add</mat-icon> Event</button>
+        </div>
+        <mat-card class="detail-card">
+            <mat-card-header>
+                <mat-card-title>Summer Event</mat-card-title>
+                <mat-card-subtitle>On 09-09-2019</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="assets/news1.jpg" alt="Photo of a Shiba Inu" />
+            <mat-card-content>
+                <p>
+                    Must be a 160 CC bike. Race will be conduct on 1hr.
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-icon-button matTooltip="News" aria-label="label">
+                    <mat-icon>assignment</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Photo Gallery" aria-label="label">
+                    <mat-icon>photo_library</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Participant" aria-label="label">
+                    <mat-icon>people</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Discussion" aria-label="label" routerLink="/clubdiscussion">
+                    <mat-icon>record_voice_over</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Edit" aria-label="label">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Delete" aria-label="label">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-sidenav-content>
+</mat-sidenav-container>

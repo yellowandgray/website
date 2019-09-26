@@ -1,0 +1,19 @@
+app-sidenav { 
+    display: flex; 
+}
+
+mat-drawer-container { 
+    flex: 1 1 auto; 
+}
+
+.primary {
+    background-color: #ed1c24;
+}
+
+.primary .mat-list-item {
+    color: #ffffff;
+}
+
+.primary .mat-list-item .mat-icon {
+    padding-right: 5px;
+}

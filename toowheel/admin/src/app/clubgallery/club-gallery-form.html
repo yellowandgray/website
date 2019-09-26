@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>Gallery</h2>
+<mat-dialog-content class="mat-typography">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Title</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>title</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <button type="button" mat-raised-button (click)="fileInput.click()">Choose Media</button>
+            <input hidden #fileInput type="file" id="file" />
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Type</mat-label>
+                <mat-select>
+                    <mat-option [value]="">
+                        Image
+                    </mat-option>
+                    <mat-option [value]="">
+                        Video
+                    </mat-option>
+                    <mat-option [value]="">
+                        Audio
+                    </mat-option>
+                </mat-select>
+                <mat-icon matSuffix>grade</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+</mat-dialog-actions>

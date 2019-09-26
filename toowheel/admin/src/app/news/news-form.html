@@ -1,0 +1,158 @@
+<h2 mat-dialog-title>News</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Type</mat-label>
+                    <mat-select required formControlName="club_type">
+                        <mat-option [value]="'2wheel'">
+                            2 Wheel
+                        </mat-option>
+                        <mat-option [value]="'4wheel'">
+                            4 Wheel
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Club type is required</mat-error>
+                    <mat-icon matSuffix>grade</mat-icon>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Category</mat-label>
+                    <mat-select required formControlName="club_category">
+                        <mat-option [value]="'100cc'">
+                            100 CC
+                        </mat-option>
+                        <mat-option [value]="'150cc'">
+                            150 CC
+                        </mat-option>
+                        <mat-option [value]="'200cc'">
+                            200 CC
+                        </mat-option>
+                        <mat-option [value]="'250cc'">
+                            250 CC
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Club Category is required</mat-error>
+                    <mat-icon matSuffix>grade</mat-icon>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Club Name</mat-label>
+                    <mat-select required formControlName="club_name">
+                        <mat-option [value]="kfc">
+                            KFC
+                        </mat-option>
+                        <mat-option [value]="club1">
+                            Club Name
+                        </mat-option>
+                        <mat-option [value]="club2">
+                            Club Name
+                        </mat-option>
+                        <mat-option [value]="club3">
+                            Club Name
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Club Name is required</mat-error>
+                    <mat-icon matSuffix>grade</mat-icon>
+                </mat-form-field>
+            </div>
+            <div fxFlex="5%"></div>
+            <div fxFlex="45%">
+                <button type="button" mat-raised-button required formControlName="banner" (click)="fileInput.click()">Cover Image</button>
+                <input hidden #fileInput type="file" id="file" />
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Title</mat-label>
+                    <input matInput placeholder="Placeholder" required formControlName="title" />
+                    <mat-error>Title is required</mat-error>
+                    <mat-icon matSuffix>title</mat-icon>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Media</mat-label>
+                    <mat-select required formControlName="media">
+                        <mat-option [value]="kltimes">
+                            KL Times
+                        </mat-option>
+                        <mat-option [value]="morningmalaysia">
+                            Morning Malaysia
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Media is required</mat-error>
+                    <mat-icon matSuffix>grade</mat-icon>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Author Name</mat-label>
+                    <input matInput placeholder="" required formControlName="author_name" />
+                    <mat-error>Author Name is required</mat-error>
+                    <mat-icon matSuffix>person</mat-icon>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Date</mat-label>
+                    <input matInput placeholder="DD/MM/YYYY" required formControlName="date" />
+                    <mat-error>Date is required</mat-error>
+                    <mat-icon matSuffix>calendar_today</mat-icon>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <button type="button" mat-raised-button required formControlName="sub_banner" (click)="fileInput.click()">Banner Image 1</button>
+                <input hidden #fileInput type="file" id="file" />
+            </div>
+            <div fxFlex="50%">
+                <button type="button" mat-raised-button required formControlName="sub_banner_1" (click)="fileInput.click()">Banner Image 2</button>
+                <input hidden #fileInput type="file" id="file" />
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%">
+                <mat-form-field class="full-width">
+                    <mat-label>Moto Text</mat-label>
+                    <textarea rows="4" matInput placeholder="Moto Text" required formControlName="moto_text"></textarea>
+                    <mat-error>Moto is required</mat-error>
+                    <mat-icon matSuffix>message</mat-icon>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%">
+                <mat-form-field class="full-width">
+                    <mat-label>Description</mat-label>
+                    <textarea rows="4" matInput placeholder="Write Here" required formControlName="description"></textarea>
+                    <mat-error>Description is required</mat-error>
+                    <mat-icon matSuffix>message</mat-icon>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%">
+                <mat-form-field class="full-width">
+                    <mat-label>Description</mat-label>
+                    <textarea rows="4" matInput placeholder="Write here" required formControlName="description_1"></textarea>
+                    <mat-error>Description is required</mat-error>
+                    <mat-icon matSuffix>message</mat-icon>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button type="submit" [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+</mat-dialog-actions>

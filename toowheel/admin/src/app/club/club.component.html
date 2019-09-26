@@ -1,0 +1,212 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <mat-tab-group>
+            <mat-tab label="2 Wheeler">
+                <div class="add-btn-container">
+                    <button mat-raised-button color="primary" (click)="openDialog()"><mat-icon>add</mat-icon> Club</button>
+                </div>
+                <mat-card class="detail-card">
+                    <mat-card-header>
+                        <mat-card-title>Turkey Point Club</mat-card-title>
+                        <mat-card-subtitle>160 CC</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="assets/bike_club1.png" alt="Photo of a Shiba Inu" />
+                    <mat-card-content>
+                        <p>
+                            This club was founded at 1976 by the grate racer.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="News" aria-label="label">
+                            <mat-icon>assignment</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Events" aria-label="label">
+                            <mat-icon>event</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Photo Gallery" aria-label="label">
+                            <mat-icon>photo_library</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Member" aria-label="label" routerLink="/member">
+                            <mat-icon>people</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label" (click)="openDialog()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Delete" aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+                <mat-card class="detail-card">
+                    <mat-card-header>
+                        <mat-card-title>Blue Bridge Club</mat-card-title>
+                        <mat-card-subtitle>180 CC</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="assets/bike_club2.png" alt="Photo of a Shiba Inu" />
+                    <mat-card-content>
+                        <p>
+                            This club was founded at 1976 by the grate racer.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="News" aria-label="label">
+                            <mat-icon>assignment</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Events" aria-label="label">
+                            <mat-icon>event</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Photo Gallery" aria-label="label">
+                            <mat-icon>photo_library</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Member" aria-label="label" routerLink="/member">
+                            <mat-icon>people</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label" (click)="openDialog()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Delete" aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+                <mat-card class="detail-card">
+                    <mat-card-header>
+                        <mat-card-title>ABC Club</mat-card-title>
+                        <mat-card-subtitle>250 CC</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="assets/bike_club3.jpg" alt="Photo of a Shiba Inu" />
+                    <mat-card-content>
+                        <p>
+                            This club was founded at 1976 by the grate racer.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="News" aria-label="label">
+                            <mat-icon>assignment</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Events" aria-label="label">
+                            <mat-icon>event</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Photo Gallery" aria-label="label">
+                            <mat-icon>photo_library</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Member" aria-label="label" routerLink="/member">
+                            <mat-icon>people</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label" (click)="openDialog()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Delete" aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+            </mat-tab>
+            <mat-tab label="4 Wheeler">
+                <div class="add-btn-container">
+                    <button mat-raised-button color="primary" (click)="openDialog()"><mat-icon>add</mat-icon> Club</button>
+                </div>
+                <mat-card class="detail-card">
+                    <mat-card-header>
+                        <mat-card-title>Turkey Point Club</mat-card-title>
+                        <mat-card-subtitle>160 CC</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="assets/bike_club1.png" alt="Photo of a Shiba Inu" />
+                    <mat-card-content>
+                        <p>
+                            This club was founded at 1976 by the grate racer.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="News" aria-label="label">
+                            <mat-icon>assignment</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Events" aria-label="label">
+                            <mat-icon>event</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Photo Gallery" aria-label="label">
+                            <mat-icon>photo_library</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Member" aria-label="label" routerLink="/member">
+                            <mat-icon>people</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label" (click)="openDialog()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Delete" aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+                <mat-card class="detail-card">
+                    <mat-card-header>
+                        <mat-card-title>Blue Bridge Club</mat-card-title>
+                        <mat-card-subtitle>180 CC</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="assets/bike_club2.png" alt="Photo of a Shiba Inu" />
+                    <mat-card-content>
+                        <p>
+                            This club was founded at 1976 by the grate racer.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="News" aria-label="label">
+                            <mat-icon>assignment</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Events" aria-label="label">
+                            <mat-icon>event</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Photo Gallery" aria-label="label">
+                            <mat-icon>photo_library</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Member" aria-label="label" routerLink="/member">
+                            <mat-icon>people</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label" (click)="openDialog()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Delete" aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+                <mat-card class="detail-card">
+                    <mat-card-header>
+                        <mat-card-title>ABC Club</mat-card-title>
+                        <mat-card-subtitle>250 CC</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="assets/bike_club3.jpg" alt="Photo of a Shiba Inu" />
+                    <mat-card-content>
+                        <p>
+                            This club was founded at 1976 by the grate racer.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="News" aria-label="label">
+                            <mat-icon>assignment</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Events" aria-label="label">
+                            <mat-icon>event</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Photo Gallery" aria-label="label">
+                            <mat-icon>photo_library</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Member" aria-label="label" routerLink="/member">
+                            <mat-icon>people</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label" (click)="openDialog()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button matTooltip="Delete" aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-sidenav-content>
+</mat-sidenav-container>

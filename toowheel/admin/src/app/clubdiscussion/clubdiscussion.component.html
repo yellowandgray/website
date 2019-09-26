@@ -1,0 +1,30 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <section class="section">
+            <h2>Summer Event's discussion</h2>
+            <mat-card class="conversion-card">
+                <div>What was the age restriction?</div>
+                <div fxLayout="row" fxLayoutAlign="end center">
+                    <small class="gray-font">Johni on 24/11/2019 11:15AM</small>
+                </div>
+            </mat-card>
+            <mat-card class="conversion-card">
+                <div>Where can I get the application form?</div>
+                <div fxLayout="row" fxLayoutAlign="end center">
+                    <small class="gray-font">Venki on 28/11/2019 09:15AM</small>
+                </div>
+            </mat-card>
+        </section>
+        <div class="message-section">
+            <mat-form-field appearance="outline" class="user-input">
+                <mat-label>Message</mat-label>
+                <input matInput placeholder="Type message here" />
+            </mat-form-field>
+            <button mat-raised-button color="primary" mat-mini-fab><mat-icon>send</mat-icon></button>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

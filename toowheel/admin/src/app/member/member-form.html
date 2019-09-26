@@ -1,0 +1,85 @@
+<h2 mat-dialog-title>Member</h2>
+<mat-dialog-content class="mat-typography">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Member name</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <button type="button" mat-raised-button (click)="fileInput.click()">Profile pic</button>
+            <input hidden #fileInput type="file" id="file" />
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Mobile number</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>mobile_friendly</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Date of Birth</mat-label>
+                <input matInput placeholder="DD/MM/YYYY" />
+                <mat-icon matSuffix>calendar_today</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Gender</mat-label>
+                <mat-select>
+                    <mat-option [value]="">
+                        Male
+                    </mat-option>
+                    <mat-option [value]="">
+                        Female
+                    </mat-option>
+                </mat-select>
+                <mat-icon matSuffix>grade</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Register medium</mat-label>
+                <mat-select>
+                    <mat-option [value]="">
+                        YG Book Center
+                    </mat-option>
+                    <mat-option [value]="">
+                        Alias Knowledge Center
+                    </mat-option>
+                    <mat-option [value]="">
+                        Website
+                    </mat-option>
+                </mat-select>
+                <mat-icon matSuffix>directions_run</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline">
+                <mat-label>Referral</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>card_giftcard</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+</mat-dialog-actions>

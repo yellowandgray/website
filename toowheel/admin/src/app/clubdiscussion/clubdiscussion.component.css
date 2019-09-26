@@ -1,0 +1,19 @@
+.conversion-card {
+    width: 60%;
+    margin-top: 15px;
+}
+
+.message-section {
+    position: absolute;
+    left: 15px;
+    bottom: 0px;
+    width: 80%;    
+}
+
+.user-input {
+    width: 80%;
+}
+
+.mat-form-field-wrapper {
+    padding-bottom: 0em!important;
+}
