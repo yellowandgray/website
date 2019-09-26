@@ -11,8 +11,9 @@
                             <h5>NOT A TOOWHEEL MEMBER YET?</h5>
                             <h3>BE A MEMBER TODAY!</h3>
                             <h5>AND ENJOY EXCITING BENEFITS</h5>
-                            <p class="member-t"><a href="member.php">MEMBER BENEFITS</a></p>
-                            <p class="sing-t text-center"><a onclick="signIn()" >Sign up</a></p>
+                            <p class="member-t"><a href="member-benefits">MEMBER BENEFITS</a></p>
+                            <p class="sing-t text-center"><a href="member-register" >Sign up</a></p>
+<!--                            <p class="sing-t text-center"><a onclick="signIn()" >Sign up</a></p>-->
                             <!--                            <button onclick="myFunction()">Click me</button>-->
                         </div>
 

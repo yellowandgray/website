@@ -177,11 +177,12 @@ button::-moz-focus-inner {
 
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
-    color: #FFF;
-    right: -6px;
+    color: #ed1c24;
+    /* right: -6px; */
     text-align: right;
-    padding-right: 6px;
-    width: 100%
+    padding-right: 15px;
+    width: 100%;
+    font-size: 40px;
 }
 
 .mfp-counter {
@@ -364,7 +365,8 @@ img.mfp-img {
 }
 
 .mfp-gallery .mfp-image-holder .mfp-figure {
-    cursor: pointer
+    cursor: pointer;
+    background: #fff;
 }
 
 @media screen and (max-width:800px) and (orientation:landscape),

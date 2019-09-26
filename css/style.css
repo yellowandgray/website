@@ -3,9 +3,7 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
-    background: #fff;
     font-family: 'Montserrat', sans-serif;
-    background: #313131;
 }
 
 p {
@@ -19,6 +17,11 @@ p {
 .logo {
     text-align: center;
     margin: 0 auto;
+    width: 80%;
+}
+
+.logo img {
+    width: 50%;
 }
 
 .header-login {
@@ -50,7 +53,7 @@ p {
 }
 
 .bg-text h2 {
-    font-size: 89px;
+    font-size: 112px;
     font-family: "VenusRising", sans-serif;
     color: #fff;
     opacity: 0.1;
@@ -65,12 +68,12 @@ p {
     text-align: right;
     font-family: "VenusRising", sans-serif;
     color: #e41527;
-    font-size: 60px;
+    font-size: 70px;
     opacity: 1;
     /* font-weight: 500; */
     letter-spacing: 0;
     position: relative;
-    bottom: 100px;
+    bottom: 173px;
     right: 40px;
 }
 
@@ -78,13 +81,13 @@ p {
     text-align: center;
     margin: 0 300px;
     position: absolute;
-    bottom: 80px;
+    top: 55%;
 }
 
 .bg-four-text h2 {
-    font-size: 89px;
+    font-size: 110px;
     font-family: "VenusRising", sans-serif;
-    color: #fff;
+    color: #000000;
     opacity: 0.1;
     text-align: left;
     position: relative;
@@ -96,29 +99,32 @@ p {
 .bg-four-text h1 {
     text-align: left;
     font-family: "VenusRising", sans-serif;
-    color: #e41527;
-    font-size: 60px;
+    color: #111111;
+    font-size: 80px;
     opacity: 1;
     /* font-weight: 500; */
     letter-spacing: 0;
     position: relative;
-    bottom: 100px;
+    bottom: 180px;
     left: 50px;
 }
 
 .dummy-text p {
-    color: #bdbdbd;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #b2b2b2;
+    font-size: 20px;
 }
 
 .cross-btn {
-    position: absolute;
+    position: relative;
     width: auto;
     height: 0;
     border-bottom: 40px solid red;
     border-right: 25px solid transparent;
-    bottom: 0;
     text-decoration: none;
     padding: 0 20px;
+    bottom: 61px;
 }
 
 .cross-btn:hover {
@@ -128,8 +134,8 @@ p {
 .cross-btn span {
     color: #fff;
     position: relative;
-    top: 10px;
-    /*    left: 10px;*/
+    top: 30px;
+    /* left: 10px;*/
 }
 
 
@@ -137,8 +143,8 @@ p {
 .footer {
     display: flex;
     flex-flow: row wrap;
-    background-color: #363636;
-    padding: 3em 1em;
+    background-color: #fff;
+    padding: 0em;
     font-size: 0.9375rem;
 }
 
@@ -157,10 +163,6 @@ p {
 
 .footer__addr h2 {
     margin-top: 1.3em;
-    font-size: 1.25rem;
-}
-
-.nav__title {
     font-size: 1.25rem;
 }
 
@@ -241,7 +243,9 @@ p {
 }
 
 .nav__title {
-    color: #fff;
+    color: #f00;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 @media screen and (min-width: 24.375em) {
@@ -252,7 +256,7 @@ p {
 
 @media screen and (min-width: 40.375em) {
     .footer {
-        padding: 3em 4em 1em;
+        padding: 0em;
     }
 
     .footer__nav > * {
@@ -277,22 +281,28 @@ p {
 .footer-sec{
     display: flex;
     justify-content: space-between;
-    /*flex-direction: row;*/
+    /* flex-direction: row; */
+    background: #111111;
+    -webkit-box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.3), 0 0 5px 0px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.3), 0 0 5px 0px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.3), 0 0 5px 0px rgba(0, 0, 0, 0.1) inset;
+    max-width: 1250px;
+    padding: 4rem 0;
 }
 .fooetr-1{
-    flex-basis: 18%;
+    flex-basis: 20%;
 }
 .fooetr-2{
-    flex-basis:  18%;
+    flex-basis:  20%;
 }
 .fooetr-3{
-    flex-basis:  18%;
+    flex-basis:  20%;
 }
 .fooetr-4{
-    flex-basis:  18%;
+    flex-basis:  20%;
 }
 .fooetr-5{
-    flex-basis: 25%;
+    flex-basis: 30%;
 
 }
 .fooetr-5 input  {
@@ -313,11 +323,11 @@ p {
     color: #fff;
     padding: 5px 25px 5px 25px;
     position: relative;
-     right: 11px; 
+    right: 11px; 
     outline: none;
 }
 .fooetr-5 .i-con {
-    padding: 10px 30px;
+    padding: 15px 30px;
 }
 .fooetr-5 .i-con i{
     font-size: 24px;
@@ -329,3 +339,132 @@ button {
 }
 
 /* Footer Section CSS END */
+
+
+.landing-bike {
+    position: relative;
+    left: -30%;
+}
+
+.header {
+    background: #0f0f0f;
+}
+
+.header .container {
+    /*    background: url(img/body-bg.jpg)no-repeat;*/
+    background-size: cover;
+    padding: 20px;
+    background: rgb(15, 15, 15);
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 20px 15px rgba(0, 0, 0, 0.3), 0 0 5px 0px rgba(0, 0, 0, 0.1) inset;
+    max-width: 1250px;
+}
+
+.fourwheel {
+    background: #f4001e;
+}
+
+.fourwheel .container {
+    /*    background: url(img/body-bg.jpg)no-repeat;*/
+    background-size: cover;
+    padding: 20px;
+    background: #f4001e;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 20px 15px rgba(0, 0, 0, 0.3), 0 0 5px 0px rgba(0, 0, 0, 0.1) inset;
+    max-width: 1250px;
+}
+
+.landing-text {
+    background: #fff;
+}
+
+.landing-text .container {
+    background-size: cover;
+    padding: 20px;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3), 0px 0px 0px 0px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3), 0px 0px 0px 0px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3), 0px 0px 0px 0px rgba(0, 0, 0, 0.1) inset;
+    max-width: 1250px;
+}
+
+.landing-car {
+
+}
+
+.btn-position-twowheel {
+    position: absolute;
+    right: 50px;
+}
+
+.btn-position-fourwheel {
+    position: absolute;
+    left: 50px;
+}
+
+.btn-enter-twowheel {
+    background: #fff;
+    border-radius: 25px;
+    padding: 15px 15px 15px 15px;
+    color: #000;
+    font-weight: 800;
+    font-size: 20px;
+    position: relative;
+    top: -125px;
+}
+
+.btn-enter-twowheel:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.btn-enter-twowheel i {
+    font-size: 30px;
+    position: relative;
+    top: 3px;
+    color: red;
+}
+
+.btn-enter-fourwheel {
+    background: #fff;
+    border-radius: 25px;
+    padding: 15px 15px 15px 15px;
+    color: #000;
+    font-weight: 800;
+    font-size: 20px;
+    position: relative;
+    top: -125px;
+}
+
+.btn-enter-fourwheel:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.btn-enter-fourwheel i {
+    font-size: 30px;
+    position: relative;
+    top: 3px;
+    color: red;
+}
+
+.padding-tb-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.landing-row-img img {
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+    width: 100%;
+}
+
+.footer-text {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 2;
+    color: #fff;
+}

@@ -228,7 +228,7 @@ body {
     bottom: 0;
     text-decoration: none;
     padding: 0 20px;
-    margin: 0 5px;
+    margin: 5px 5px;
     cursor: pointer;
 }
 
@@ -313,7 +313,7 @@ body {
     background: red;
     border-radius: 20px;
     /* text-align: center; */
-    color: #fff;
+    color: #fff !important;
     font-size: 12px;
     font-weight: 600;
     outline: none;
@@ -651,10 +651,6 @@ body {
     font-size: 1.25rem;
 }
 
-.nav__title {
-    font-size: 1.25rem;
-}
-
 .footer address {
     font-style: normal;
     color: #9ca0b1;
@@ -697,7 +693,8 @@ body {
 }
 
 .nav__ul a {
-    color: #9ca0b1;
+    color: #ffffff;
+    font-weight: 500;
 }
 
 .nav__ul--extra {
@@ -732,8 +729,24 @@ body {
 }
 
 .nav__title {
+    color: #f00;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer-text {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 2;
     color: #fff;
 }
+
+.fooetr-5 ul li span {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.fooetr-5 ul{}
 
 @media screen and (min-width: 24.375em) {
     .legal span {
@@ -911,15 +924,22 @@ body {
 }
 
 .events-main-content {
-    padding: 0 40px;
+    padding: 20px 40px;
+}
+
+.events-main-content span { 
+    font-size: 12px;
+    color: gray;
+    font-weight: 500;
 }
 
 .events-main-content h2 {
-    padding: 20px 0;
+    /* padding: 0px 0 20px; */
     font-family: 'Montserrat', sans-serif;
     color: red;
     font-size: 25px;
     font-weight: 600;
+    flex: 1;
 }
 
 .events-main-content strong, p {
@@ -1142,16 +1162,16 @@ body {
     background: red;
     color: #fff;
     border-radius: 0 25px 25px 0;
-    padding: 12px 34px 12px;
+    padding: 12px 20px;
     position: relative;
     left: -5px;
 }
 
 .search-section .search-btn:hover {
-    background: red;
+    background: #858585;
     color: #fff;
     border-radius: 0 25px 25px 0;
-    padding: 12px 34px 12px;
+    padding: 12px 20px;
     position: relative;
     left: -5px;
     text-decoration: none;
@@ -1233,6 +1253,15 @@ body {
     font-style: italic;
 }
 
+.find-club-menu .club-box img {
+    width: 85%
+}
+
+.find-club-menu .club-box h3 {
+    font-size: 18px;
+}
+
+
 .margin-rl-25 {
     margin-right: 25px;
     margin-left: 25px;
@@ -1250,24 +1279,24 @@ body {
     width: 75%;
 }
 
-.club-logo {
+/*.club-logo {
     text-align: center;
     position: relative;
     top: -85px;
-}
+}*/
 
 .club-logo img {
-    width: 15%;
     border-radius: 50%;
     background: #fff;
-    box-shadow: 0 0 5px 2px #ed1c24;
+    /* box-shadow: 0 0 5px 2px #ffffff; */
+    border: 4px solid #fff;
 }
 
-.club-page-title {
+/*.club-page-title {
     text-align: center;
     position: relative;
     top: -85px;
-}
+}*/
 
 .club-page-title h2 {
     margin-top: 20px;
@@ -1284,7 +1313,7 @@ body {
 
 .club-page-description {
     position: relative;
-    top: -85px;
+    top: -30px;
 }
 
 .club-page-description p {
@@ -1390,3 +1419,156 @@ body {
 .count-radio input[type="radio"]:checked + label{
   background-color: #58ba83;
 }*/
+.cross-btn-01 {
+    position: relative;
+    width: auto;
+    height: 0;
+    border-bottom: 40px solid red;
+    border-right: 25px solid transparent;
+    bottom: 61px;
+    text-decoration: none;
+    padding: 0 20px;
+    left: 0px;
+}
+
+.cross-btn-01:hover {
+    text-decoration: none;
+}
+
+.cross-btn-01 span {
+    color: #fff;
+    position: relative;
+    top: 30px;
+    left: 1px;
+}
+
+/* According CSS */
+.my-account-section {
+    background: #808080;
+    padding: 50px 0 100px;
+}
+
+.profile-section {
+    display: flex;
+}
+
+.profile-picture-section {
+    flex: 0 0 25%;
+}
+
+.profile-details-section {
+    flex: 0 1 100%;
+    padding: 20px 15px;
+    margin-top: 50px;
+}
+
+.profile-club-details {
+    display: flex;
+}
+
+.profile-details-section span {
+    background: #ed1c24;
+    padding: 5px;
+    color: #fff;
+    border-radius: 5px;
+    margin: 10px 5px 10px 0;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.profile-details-section h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+.profile-club-details span {
+    /*    flex: 0 20px; */
+    background: #ed1c24;
+    padding: 5px;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0px 5px 5px 0;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.flex-icon {
+    flex: 1 1 160px;
+    float: right;
+}
+
+.flex-icon div {
+    background: #9e9e9e;
+    width: 60px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    float: right;
+    margin: 0 10px;
+}
+
+
+.profile-table table {
+    width: 100%
+}
+
+.profile-table th, td {
+    color: #fff;
+}
+
+.profile-table table th{
+    text-align: right;
+}
+
+.profile-table table td{
+    padding-left: 10px;
+}
+
+/*.profile-details-section-1 {
+    padding-top: 75px;
+}*/
+
+.profile-details-section-1 h4{
+    font-size: 15px;
+    /*    margin-top: 25px;*/
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.profile-table {
+    padding-top: 20px;
+}
+
+.member-register-btn {
+    padding: 10px 32px;
+    color: #0098d8;
+    border: 1px solid #002e82;
+    border-radius: 25px;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer
+}
+
+.member-register-btn a {
+    color: #002e82;
+    font-weight: 800;
+}
+
+.member-register-btn:hover {
+    background: #002e82;
+}
+
+.member-register-btn:hover a {
+    color: #fff;
+}
+
+.member-register-btn a:hover {
+    text-decoration: none;
+}

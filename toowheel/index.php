@@ -20,10 +20,10 @@
                         <p>125 CC</p>
                     </div>
                     <div class="tag-box tablink" onclick="openTag(event, 'club2')">
-                        <p><i class="fa fa-times-circle-o" aria-hidden="true"></i> 250 CC</p>
+                        <p>250 CC</p>
                     </div>
                     <div class="tag-box tablink" onclick="openTag(event, 'club3')">
-                        <p><i class="fa fa-times-circle-o" aria-hidden="true"></i> 500 CC</p>
+                        <p>500 CC</p>
                     </div>
                 </div>
             </div>
@@ -243,7 +243,7 @@
         <section class="media-press-release">
             <div class="container">
                 <div class="media-bg">
-                    <a href="#" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
+                    <a href="press-release.php" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
                 </div>
             </div>
         </section>

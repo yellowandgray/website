@@ -20,8 +20,8 @@
     .video-section {top: 0 !important;}
     .header {height: 85px !important;}
     .logo {width: 66% !important;}
-    .discover-slider-content {top: -111px !important;}
-    .bg-1 {top: 85px !important;}
+    .discover-slider-content {top: -142px !important;}
+    .bg-1 {top: 85px !important;height: auto !important;}
     .video-bg-banner .video-overlay {height: 100% !important;}
     .footer__logo img {width: 100% !important;}
     .tag-box p {font-size: 14px !important;}
@@ -33,12 +33,13 @@
     .search-section .search-btn  {padding: 12px 12px !important;}
     .search-section {margin-bottom: 20px !important;}
     .bg-1 span {font-size: 50px !important;}
+    .button-8 {width: 33% !important;}
+    .events-content {top: 0 !important;}
 }
 
 @media screen and (max-height: 600px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-
     /*    .video-bg-banner {
             top: 120px !important;
         }
@@ -62,6 +63,15 @@
 @media screen and (max-width: 767px) {
     .header-login {
         display: none !important;
+    }
+    .about-bg img {
+        width: 100%;
+    }
+    .login-pad {
+        height: auto !important;
+    }
+    .profile-table table th {
+        text-align: left;
     }
 }
 
@@ -99,6 +109,11 @@
     }
     .toggle {
         margin: 10px 0 0 5px !important;
+    }
+    .mission-section h1:after {
+        right: 0 !important;
+        width: 100% !important;
+        left: 0 !important;
     }
 }
 
@@ -180,4 +195,35 @@
     .video-bg-banner .video-overlay {
         height: 120% !important;
     }
+}
+@media screen and (max-width: 600px) {
+    /*    .bg-text h2 {
+            font-size: 46px !important;
+        }
+        .bg-text h1 {
+            font-size: 40px !important;
+            bottom: 25px !Important;
+            right: 0 !important;
+        }
+        .bg-four-text h2 {
+            font-size: 46px !important;
+        }
+        .bg-four-text h1 {
+            font-size: 40px !important;
+            bottom: 25px !Important;
+            left: 0 !important;
+        }*/
+    .cross-btn-01 {
+        position: relative !Important;
+        bottom: 60px !important;
+    }
+    .cross-btn-01 span {
+        top: 30px !important;
+    }
+    /*    .engine-button {
+            margin: 0 auto !Important;
+            top: 0 !Important;
+            position: relative !important;
+            bottom: 0 !important;
+        }*/
 }

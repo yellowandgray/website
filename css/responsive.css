@@ -1,19 +1,23 @@
 @media screen and (max-width: 600px) {
     .bg-text h2 {
-        font-size: 46px !important;
+        font-size: 60px !important;
     }
     .bg-text h1 {
         font-size: 40px !important;
-        bottom: 25px !Important;
+        bottom: 140px !Important;
         right: 0 !important;
     }
     .bg-four-text h2 {
-        font-size: 46px !important;
+        font-size: 55px !important;
+        text-align: center !important;
+        top: 0 !important;
     }
     .bg-four-text h1 {
         font-size: 40px !important;
-        bottom: 25px !Important;
+        /* top: 0 !Important; */
         left: 0 !important;
+        bottom: 135px !important;
+        text-align: center !important;
     }
     .cross-btn {
         position: relative !Important;
@@ -157,7 +161,7 @@
 }
 @media screen and (min-width: 40.375em){
     .footer {
-        padding: 3em 1em 0em; 
+        padding: 0em; 
     }
 }
 @media (max-width:991px) and (min-width:768px){
@@ -291,4 +295,87 @@
         color: #ed1c24;
     }
 
+}
+
+@media screen and (min-width: 766px) {
+    .mob-block {
+        display: none;
+    }
+}
+@media screen and (max-width: 767px) {
+    .landing-bike {
+        width: 100%;
+        left: 0 !important;
+    }
+    .landing-car {
+        width: 100%;
+    }
+    .landing-row-img img {
+        width: 100%;
+    }
+    .logo img {
+        width: 100%;
+    }
+    .bg-text h2 {
+        text-align: center !important;
+        top: 0 !important;
+    }
+    .bg-text h1 {
+        text-align: center !important;
+    }
+    .btn-position-twowheel {
+        text-align: center !important;
+        position: unset !important;
+    }
+    .btn-enter-twowheel {
+        top: -125px !important;
+    }
+    .btn-position-fourwheel {
+        position: unset !important;
+        text-align: center;
+    }
+    .order-img {
+        order: 1 !important;
+    }
+    .logo {
+        width: 80% !Important;
+    }
+    .logo img {
+        width: 100% !Important;
+    }
+    .header-login {
+        width: 20% !important
+    }
+    .mob-noon {
+        display: none;
+    }
+    .mob-block {
+        display: block;
+    }
+    .mob-block .login-button {
+        padding: 15px 20px !important;
+        float: right;
+        margin-right: 0;
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .bg-text h2 {
+        font-size: 65px !important;
+    }
+    .bg-text h1 {
+        font-size: 35px !important;
+        bottom: 55px !important;
+        right: 10px !important;
+    }
+    .btn-enter-twowheel {
+        top: 0 !Important;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .landing-car {
+        width: 100%;
+    }
 }
