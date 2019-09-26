@@ -20,7 +20,7 @@ export class ClubComponent implements OnInit {
   }
   image_url: string = 'http://localhost/twowheel-frontend/toowheel/api/v1/';
   getClub(): void {
-  this.httpClient.get<any>('http://localhost/twowheel-frontend/toowheel/api/v1/get_club')
+  this.httpClient.get<any>('http://localhost/twowheel-frontend/toowheel/api/v1/get_clubevent')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -86,7 +86,7 @@ export class ClubForm {
         this.year_of_established = this.data.year_of_established;
         this.activity = this.data.activity;
         this.club_secretary = this.data.club_secretary;
-        this.competition_secetary = this.data.competition_secetary;
+        this.competition_secretary = this.data.competition_secretary;
         this.chairman = this.data.chairman;
         this.treasurer = this.data.treasurer;
         this.about_club = this.data.about_club;
@@ -110,7 +110,7 @@ export class ClubForm {
       'year_of_established': new FormControl('', Validators.required),
       'activity': new FormControl('', Validators.required),
       'club_secretary': new FormControl('', Validators.required),
-      'competition_secetary': new FormControl('', Validators.required),
+      'competition_secretary': new FormControl('', Validators.required),
       'chairman': new FormControl('', Validators.required),
       'treasurer': new FormControl('', Validators.required),
       'about_club': new FormControl('', Validators.required)

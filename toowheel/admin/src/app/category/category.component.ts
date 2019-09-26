@@ -79,7 +79,7 @@ export class CategoryForm {
       this.loading = true;
       var formData = new FormData();
           formData.append('name', this.name);
-      this.httpClient.post('http://localhost/twowheel-frontend/toowheel/api/v1/insert_category', {name: this.categoryForm.value.name, category_id: this.categoryForm.value.name, created_by: 'Admin', updated_by: 'Admin'}).subscribe(
+      this.httpClient.post('http://localhost/twowheel-frontend/toowheel/api/v1/insert_category', formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
