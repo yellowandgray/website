@@ -23,7 +23,7 @@
                         <button class="tablinks" onclick="openCity(event, 'About')" id="defaultOpen">About Us <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'News')">Latest News <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Release')">Press Release <i class="fa fa-caret-right" aria-hidden="true"></i></button>
-                        <button class="tablinks" onclick="openCity(event, 'Member')">Be A Member <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                        <button class="tablinks" onclick="openCity(event, 'Member')"><a href="member-register">Be A Member <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>
                         <button class="tablinks" onclick="openCity(event, 'Clubs')">Find a Club <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Events')">Events <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'register-club')">Club Registration <i class="fa fa-caret-right" aria-hidden="true"></i></button>
