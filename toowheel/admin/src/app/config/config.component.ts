@@ -22,10 +22,10 @@ export class ConfigComponent implements OnInit {
   this.httpClient.get<any>('../api/v1/get_landing_configs')
   .subscribe(
           (res)=>{
-              this.result = res.result.data;
+              this.result = res["result"]["data"];
         },
         (error)=>{
-            this._snackBar.open(error.statusText, '', {
+            this._snackBar.open(error["statusText"], '', {
       duration: 2000,
     });
         }
@@ -91,17 +91,17 @@ export class ConfigForm {
           this.httpClient.post('../api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
-                if(res.result.error === false) {
-                    this.value = res.result.data;
+                if(res["result"]["error"] === false) {
+                    this.value = res["result"]["data"];
                 }else{
-this._snackBar.open(res.result.message, '', {
+this._snackBar.open(res["result"]["message"], '', {
           duration: 2000,
         });
                 }
             },
             (error)=>{
                 this.loading = false;
-                this._snackBar.open(error.statusText, '', {
+                this._snackBar.open(error["statusText"], '', {
           duration: 2000,
         });
             });
@@ -118,17 +118,17 @@ this._snackBar.open(res.result.message, '', {
           this.httpClient.post('../api/v1/update_config', formData).subscribe(
               (res)=>{
                 this.loading = false;
-                if(res.result.error === false) {
+                if(res["result"]["error"] === false) {
                     this.dialogRef.close(true);
                 }else{
-this._snackBar.open(res.result.message, '', {
+this._snackBar.open(res["result"]["message"], '', {
           duration: 2000,
         });
                 }
             },
             (error)=>{
                 this.loading = false;
-                this._snackBar.open(error.statusText, '', {
+                this._snackBar.open(error["statusText"], '', {
           duration: 2000,
         });
             }
