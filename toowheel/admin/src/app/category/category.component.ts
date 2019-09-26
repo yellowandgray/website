@@ -15,9 +15,9 @@ export class CategoryComponent implements OnInit {
     constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
-    this.getcategory();
+    this.getCategory();
   }
-    getcategory(): void {
+    getCategory(): void {
       this.httpClient.get<any>('http://localhost/twowheel-frontend/toowheel/api/v1/get_category')
       .subscribe(
             (res)=>{
@@ -41,7 +41,7 @@ export class CategoryComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
         if(result !== false && result !== 'false') {
-            this.getcategory();
+            this.getCategory();
         }
     });
 }
