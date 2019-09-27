@@ -10,7 +10,11 @@ use Dompdf\Dompdf;
 error_reporting(-1);
 
 ini_set("display_errors", 1);
+
 ini_set('max_execution_time', 300);
+
+ini_set('upload_max_filesize', '10M');
+
 \Slim\Slim::registerAutoloader();
 
 $app = new \Slim\Slim();
