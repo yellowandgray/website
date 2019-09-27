@@ -70,13 +70,7 @@ export class ClubEventForm {
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        this.type = this.data.type;
-        this.category_id = this.data.category_id;
-        this.club_name_id = this.data.club_name_id;
-        this.event_title = this.data.event_title;
-        this.date = this.data.date;
-        this.location = this.data.location;
-        this.address = this.data.address;
+        
     }
 
   ngOnInit() {

@@ -480,7 +480,7 @@
                                 <br/>
                                 <center>
                                     <span class="member-t">
-                                        <a href="member.php">My Benefits</a>
+                                        <a href="member-benefits">My Benefits</a>
                                     </span>
                                     <span class="member-t">
                                         <a href="index">Back to Homepage</a>

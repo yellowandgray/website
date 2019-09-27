@@ -69,27 +69,7 @@ export class ClubForm {
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        this.type = this.data.type;
-        this.category_id = this.data.category_id;
-        this.club_name = this.data.club_name;
-        this.field_type = this.data.field_type;
-        this.state = this.data.state;
-        this.city = this.data.city;
-        this.zip = this.data.zip;
-        this.address = this.data.address;
-        this.club_leader_name = this.data.club_leader_name;
-        this.no_of_member = this.data.no_of_member;
-        this.email = this.data.email;
-        this.phone = this.data.phone;
-        this.contact_person = this.data.contact_person;
-        this.mobile_number = this.data.mobile_number;
-        this.year_of_established = this.data.year_of_established;
-        this.activity = this.data.activity;
-        this.club_secretary = this.data.club_secretary;
-        this.competition_secretary = this.data.competition_secretary;
-        this.chairman = this.data.chairman;
-        this.treasurer = this.data.treasurer;
-        this.about_club = this.data.about_club;
+        
     }
 
   ngOnInit() {
