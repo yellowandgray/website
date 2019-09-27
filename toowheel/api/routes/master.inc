@@ -104,7 +104,7 @@ $app->get('/get_advertisment', function() {
 $app->get('/get_category', function() {
     $res = array('error' => true, 'message' => 'Unable to export');
     $com = new Common();
-    $data = $com->selectAll('name, category_id', 'category', 'category_id < 0');
+    $data = $com->selectAll('*', 'category', 'category_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
