@@ -36,10 +36,10 @@ $configs = $obj->getLandingDetails();
         <section class="header slide slide-one" data-background="#0f0f0f">
             <div class="container inside">
                 <div class="row">
-                    <a href="index" class="logo"><img src='img/logo.png' alt=''></a>
+                    <a href="index.php" class="logo"><img src='img/logo.png' alt=''></a>
                     <div class="header-login">
-                        <a href="toowheel/login" class="mob-noon"><span class="login-button"><i class="fa fa-user"></i> Login</span></a>
-                        <a href="toowheel/login" class="mob-block"><span class="login-button"><i class="fa fa-user"></i></span></a>
+                        <a href="toowheel/login.php" class="mob-noon"><span class="login-button"><i class="fa fa-user"></i> Login</span></a>
+                        <a href="toowheel/login.php" class="mob-block"><span class="login-button"><i class="fa fa-user"></i></span></a>
                     </div>
                 </div>
                 <div class="row">
@@ -50,8 +50,8 @@ $configs = $obj->getLandingDetails();
                     <div class="col-md-7 bg-text">
                         <h2>TWO WHEELS</h2>
                         <h1>TWO<br/> WHEELS</h1>
-                        <div class="btn-position-twowheel"><a href="toowheel/index" class="btn-enter-twowheel">ENTER <i class="fa fa-play-circle" aria-hidden="true"></i></a></div>
-                        <!--<a href="toowheel/index" class="engine-button" onclick="document.getElementById('engineON').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON" alt="" /></a>-->
+                        <div class="btn-position-twowheel"><a href="toowheel/index.php" class="btn-enter-twowheel">ENTER <i class="fa fa-play-circle" aria-hidden="true"></i></a></div>
+                        <!--<a href="toowheel/index.php" class="engine-button" onclick="document.getElementById('engineON').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON" alt="" /></a>-->
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@ $configs = $obj->getLandingDetails();
                     <div class="col-md-5 order-img bg-four-text">
                         <h2>FOUR WHEELS</h2>
                         <h1>FOUR<br/> WHEELS</h1>
-                        <div class="btn-position-fourwheel"><a href="toowheel/index" class="btn-enter-fourwheel"><i class="fa fa-play-circle" aria-hidden="true"></i> ENTER</a></div>
+                        <div class="btn-position-fourwheel"><a href="toowheel/index.php" class="btn-enter-fourwheel"><i class="fa fa-play-circle" aria-hidden="true"></i> ENTER</a></div>
                     </div>
                     <div class="col-md-7">
                         <img src="<?php echo BASE_URL . $configs['landing_fourwheel_image']; ?>" alt=""  class="landing-car" />
@@ -85,17 +85,17 @@ $configs = $obj->getLandingDetails();
                     <div class="col-md-3">
 <!--                        <img src="img/image/002.png" alt="" />-->
                         <img src="<?php echo BASE_URL . $configs['landing_about_us_image']; ?>" alt="" />
-                        <a href="toowheel/about" class="cross-btn"><span>ABOUT US</span></a>
+                        <a href="toowheel/about.php" class="cross-btn"><span>ABOUT US</span></a>
                     </div>
                     <div class="col-md-3">
                         <!--<img src="img/image/001.png" alt="" />-->
                         <img src="<?php echo BASE_URL . $configs['landing_news_updates_image']; ?>" alt="" />
-                        <a href="toowheel/news" class="cross-btn"><span>NEWS & UPDATES</span></a>
+                        <a href="toowheel/news.php" class="cross-btn"><span>NEWS & UPDATES</span></a>
                     </div>
                     <div class="col-md-3">
                         <img src="<?php echo BASE_URL . $configs['landing_join_club_image']; ?>" alt="" />
                 <!--<img src="img/image/003.png" alt="" />-->
-                        <a href="toowheel/member-register" class="cross-btn"><span>JOIN A CLUB</span></a>
+                        <a href="toowheel/member-register.php" class="cross-btn"><span>JOIN A CLUB</span></a>
                     </div>
                     <div class="col-md-3">
                         <img src="<?php echo BASE_URL . $configs['landing_shop_now_image']; ?>" alt="" />

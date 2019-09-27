@@ -44,7 +44,7 @@
                             <div class="w-text-con-1">
                                 <div class="row">
                                     <div class="col-md-5">
-                                        <p><a href="about">About</a></p>
+                                        <p><a href="about.php">About</a></p>
                                     </div>
                                     <div class="col-md-7">
                                         <li class="w-icon">

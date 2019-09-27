@@ -296,7 +296,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div><a href="#" class="btn-secondary">SEE MORE</a></div>
+                        <div><a href="events.php" class="btn-secondary">SEE MORE</a></div>
                     </div>
                 </div>
             </div>

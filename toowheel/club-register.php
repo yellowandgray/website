@@ -61,7 +61,7 @@
                             </fieldset>
                         </form>
                         <div class="already-account">
-                            <p>Have already an account? <a href="login">Login here</a></p>
+                            <p>Have already an account? <a href="login.php">Login here</a></p>
                         </div>
                     </div>
                 </div>

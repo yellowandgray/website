@@ -307,7 +307,7 @@
                                             <p>Kuala Lumpur</p>
                                             <div class="club-btn">
                                                 <div class="eff-9"></div>
-                                                <a href="club-page">Read More</a>
+                                                <a href="club-page.php">Read More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -319,7 +319,7 @@
                                             <p>Kuala Lumpur</p>
                                             <div class="club-btn">
                                                 <div class="eff-9"></div>
-                                                <a href="club-page">Read More</a>
+                                                <a href="club-page.php">Read More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -331,7 +331,7 @@
                                             <p>Kuala Lumpur</p>
                                             <div class="club-btn">
                                                 <div class="eff-9"></div>
-                                                <a href="club-page">Read More</a>
+                                                <a href="club-page.php">Read More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -343,7 +343,7 @@
                                             <p>Kuala Lumpur</p>
                                             <div class="club-btn">
                                                 <div class="eff-9"></div>
-                                                <a href="club-page">Read More</a>
+                                                <a href="club-page.php">Read More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -355,7 +355,7 @@
                                             <p>Kuala Lumpur</p>
                                             <div class="club-btn">
                                                 <div class="eff-9"></div>
-                                                <a href="club-page">Read More</a>
+                                                <a href="club-page.php">Read More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -367,7 +367,7 @@
                                             <p>Kuala Lumpur</p>
                                             <div class="club-btn">
                                                 <div class="eff-9"></div>
-                                                <a href="club-page">Read More</a>
+                                                <a href="club-page.php">Read More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -379,7 +379,7 @@
                                             <p>Kuala Lumpur</p>
                                             <div class="club-btn">
                                                 <div class="eff-9"></div>
-                                                <a href="club-page">Read More</a>
+                                                <a href="club-page.php">Read More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -391,7 +391,7 @@
                                             <p>Kuala Lumpur</p>
                                             <div class="club-btn">
                                                 <div class="eff-9"></div>
-                                                <a href="club-page">Read More</a>
+                                                <a href="club-page.php">Read More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -403,7 +403,7 @@
                                             <p>Kuala Lumpur</p>
                                             <div class="club-btn">
                                                 <div class="eff-9"></div>
-                                                <a href="club-page">Read More</a>
+                                                <a href="club-page.php">Read More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -415,7 +415,7 @@
                                             <p>Kuala Lumpur</p>
                                             <div class="club-btn">
                                                 <div class="eff-9"></div>
-                                                <a href="club-page">Read More</a>
+                                                <a href="club-page.php">Read More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -427,7 +427,7 @@
                                             <p>Kuala Lumpur</p>
                                             <div class="club-btn">
                                                 <div class="eff-9"></div>
-                                                <a href="club-page">Read More</a>
+                                                <a href="club-page.php">Read More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -439,7 +439,7 @@
                                             <p>Kuala Lumpur</p>
                                             <div class="club-btn">
                                                 <div class="eff-9"></div>
-                                                <a href="club-page">Read More</a>
+                                                <a href="club-page.php">Read More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -480,10 +480,10 @@
                                 <br/>
                                 <center>
                                     <span class="member-t">
-                                        <a href="member-benefits">My Benefits</a>
+                                        <a href="member-benefits.php">My Benefits</a>
                                     </span>
                                     <span class="member-t">
-                                        <a href="index">Back to Homepage</a>
+                                        <a href="index.php">Back to Homepage</a>
                                     </span>
                                 </center>
                             </div>
