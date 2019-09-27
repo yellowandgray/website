@@ -16,6 +16,7 @@ export interface DialogData {
   styleUrls: ['./club.component.css']
 })
 export class ClubComponent implements OnInit {
+  result:any[];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
