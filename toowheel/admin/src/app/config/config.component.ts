@@ -80,6 +80,9 @@ export class ConfigForm {
       this.configForm = new FormGroup({
       'display_name': new FormControl('', Validators.required)
         });
+        if(this.field_type === 'dropdown') {
+            console.log('dropdown');
+        }
     }
     fileProgress(fileInput: any) {
         var fileData = <File>fileInput.target.files[0];
