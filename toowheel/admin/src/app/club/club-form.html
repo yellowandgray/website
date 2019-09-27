@@ -6,10 +6,10 @@
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Type</mat-label>
                     <mat-select required formControlName="type">
-                        <mat-option [value]="">
+                        <mat-option [value]="'twowheel'">
                             Two Wheeler
                         </mat-option>
-                        <mat-option [value]="">
+                        <mat-option [value]="'fourwheel'">
                             Four Wheeler
                         </mat-option>
                     </mat-select>
@@ -20,13 +20,13 @@
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Category</mat-label>
                     <mat-select required formControlName="category_id">
-                        <mat-option [value]="">
+                        <mat-option [value]="'160cc'">
                             160 CC
                         </mat-option>
-                        <mat-option [value]="">
+                        <mat-option [value]="'200cc'">
                             200 CC
                         </mat-option>
-                        <mat-option [value]="">
+                        <mat-option [value]="'250cc'">
                             250 CC
                         </mat-option>
                     </mat-select>
@@ -95,7 +95,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>No. of Members</mat-label>
-                    <input matInput placeholder="Placeholder" required formControlName="no_of_mameber" />
+                    <input matInput placeholder="Placeholder" required formControlName="no_of_member" />
                     <mat-error>Members is required</mat-error>
                 </mat-form-field>
             </div>
