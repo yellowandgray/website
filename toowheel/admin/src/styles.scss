@@ -46,3 +46,19 @@ body {
 .gray-font {
     color: gray;
 }
+
+.primary {
+    background-color: #ed1c24!important;
+}
+
+.primary .mat-list-item {
+    color: #ffffff!important;
+}
+
+.primary .mat-list-item .mat-icon {
+    padding-right: 5px!important;
+}
+
+.active-nav {
+    background: rgba(0, 0, 0, 0.04);
+}
