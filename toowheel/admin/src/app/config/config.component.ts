@@ -125,7 +125,6 @@ this._snackBar.open(res["result"]["message"], '', {
             });
     }
     onSubmit() {
-        console.log(this.ads);
           if (this.configForm.invalid) {
                 return;
           }
