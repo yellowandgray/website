@@ -76,9 +76,9 @@ export class ConfigComponent implements OnInit {
         }
         );
   }
-  openDialog(id): void  {
+  openDialog(id, res): void  {
       var data = null;
-       this.result.forEach(val=> {
+       this[res].forEach(val=> {
            if(parseInt(val.config_id) === parseInt(id)) {
                 data = val;
                 return false;

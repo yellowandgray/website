@@ -19,7 +19,7 @@
                                 <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
                                 <mat-card-actions>
                                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>
@@ -34,7 +34,7 @@
                                 <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
                                 <mat-card-actions>
                                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>
@@ -53,7 +53,7 @@
                                 </mat-card-content>
                                 <mat-card-actions>
                                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>
@@ -68,7 +68,7 @@
                                 <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
                                 <mat-card-actions>
                                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>                    
@@ -86,7 +86,7 @@
                                 <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
                                 <mat-card-actions>
                                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>                    
@@ -101,7 +101,7 @@
                                 <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
                                 <mat-card-actions>
                                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>                    
@@ -116,7 +116,7 @@
                                 <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
                                 <mat-card-actions>
                                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>                    
@@ -135,11 +135,10 @@
                                 </ng-container>
                                 <mat-card-actions>
                                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
                                     </button>
                                 </mat-card-actions>
-                            </mat-card>                    
-
+                            </mat-card>
                         </ng-container>
                     </ng-container>
                 </div>
@@ -157,7 +156,7 @@
                                 </video>
                                 <mat-card-actions>
                                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                        <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>
@@ -176,7 +175,7 @@
                                 </ng-container>
                                 <mat-card-actions>
                                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                        <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>                    
@@ -196,7 +195,7 @@
                                 </ng-container>
                                 <mat-card-actions>
                                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                        <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>                    
@@ -216,7 +215,7 @@
                                 </ng-container>
                                 <mat-card-actions>
                                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                        <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>
