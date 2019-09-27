@@ -2712,14 +2712,14 @@ body .calender-box{
 
 .find-club-btn a {
     background: red;
-    padding: 10px 25px !important;
+    padding: 5px 15px !important;
     color: #fff;
     border-radius: 25px;
     position: relative;
     left: 0;
     top: 0;
-    font-size: 15px;
-    width: 150px;
+    font-size: 12px;
+/*    width: 150px;*/
     display: inline;
 }
 .find-club-btn a:hover {
