@@ -95,5 +95,14 @@ class Common {
         }
         return $return;
     }
+    
+    public function getHomeDetails() {
+        $return = array();
+        $data = $this->selectAll('name, value', 'config', 'name IN (\'home_banner_video\', \'home_card_ad1\', \'home_card_ad2\', \'home_banner_ad\')');
+        foreach ($data as $row) {
+            $return[$row['name']] = $row['value'];
+        }
+        return $return;
+    }
 
 }

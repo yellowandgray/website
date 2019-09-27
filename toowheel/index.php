@@ -1,3 +1,11 @@
+<?php
+require_once 'api/include/common.php';
+$obj = new Common();
+$configs = $obj->getHomeDetails();
+$card_add_one = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_card_ad1']);
+$card_add_two = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_card_ad2']);
+$banner_add = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_banner_ad']);
+?>
 <!DOCTYPE html>
 <html>
     <?php include 'head.php'; ?>
@@ -5,7 +13,7 @@
         <?php include 'menu.php'; ?>
         <section class="video-bg-banner">
             <video autoplay muted loop id="myVideo">
-                <source src="video/video-bike.mp4" type="video/mp4">
+                <source src="<?php echo BASE_URL . $configs['home_banner_video']; ?>" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
         </section>
@@ -235,9 +243,9 @@
                     </div>
                 </div>
             </div>
-<!--            <div class="container">
-                <input type="range" id="relationship-status-slider" class="relationship-status-slider" min="0" max="10" step="1">
-            </div>-->
+            <!--            <div class="container">
+                            <input type="range" id="relationship-status-slider" class="relationship-status-slider" min="0" max="10" step="1">
+                        </div>-->
         </section>
 
         <section class="media-press-release">
@@ -252,13 +260,17 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="advertaisement-bg">
-                            <img src="img/add/001.png" alt="" style="width: 100%;" />
+                            <a href="<?php echo $card_add_one['url']; ?>" target="_blank">
+                                <img src="<?php echo BASE_URL . $card_add_one['image']; ?>" alt="" style="width: 100%;" />
+                            </a>
                             <div class="icon-bg"><i class="fa fa-play" aria-hidden="true"></i></div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="advertaisement-bg">
-                            <img src="img/add/002.png" alt="" style="width: 100%;" />
+                            <a href="<?php echo $card_add_two['url']; ?>" target="_blank">
+                                <img src="<?php echo BASE_URL . $card_add_two['image']; ?>" alt="" style="width: 100%;" />
+                            </a>
                             <div class="icon-bg"><i class="fa fa-play" aria-hidden="true"></i></div>
                         </div>
                     </div>
@@ -414,10 +426,9 @@
                 </div>
             </div>
         </section>
-
         <section class="attachment-bg">
             <div class="container-fluid padding-lr-0">
-                <img src="img/attachment-bg.jpg" alt="" style="width: 100%" />
+                <a href="<?php echo $banner_add['url']; ?>" target="_blank"><img src="<?php echo BASE_URL . $banner_add['image']; ?>" alt="" style="width: 100%;" /></a>
             </div>
         </section>
         <?php include 'footer.php'; ?>
