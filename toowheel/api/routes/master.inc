@@ -12,7 +12,6 @@ $app->post('/update_config', function() use ($app) {
     echoRespnse(201, $res);
 });
 
-
 $app->post('/insert_advertisement', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
@@ -89,10 +88,46 @@ $app->get('/get_landing_configs', function() {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_home_configs', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('name, value, display_name, field_type, config_id', 'config', 'name IN (\'home_banner_video\', \'home_card_ad1\', \'home_card_ad2\', \'home_banner_ad\')');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_advertisment', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('*', 'advertisement', 'advertisement_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_banner_advertisment', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'advertisement', 'advertisement_id > 0 AND type = \'banner\'');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_card_advertisment', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'advertisement', 'advertisement_id > 0 AND type = \'card\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

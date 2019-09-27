@@ -122,17 +122,26 @@
                             </mat-card>                    
                         </ng-container>
                     </ng-container>
-                    <mat-card fxFlex="25%">
-                        <mat-card-header>
-                            <mat-card-title>Advertisement Banner</mat-card-title>
-                        </mat-card-header>
-                        <img mat-card-image src="assets/attachment-bg.jpg" alt="Photo of a Shiba Inu" />
-                        <mat-card-actions>
-                            <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                <mat-icon (click)="openDialog(0)">edit</mat-icon>
-                            </button>
-                        </mat-card-actions>
-                    </mat-card>                    
+                    <ng-container *ngFor="let data of result">
+                        <ng-container *ngIf="data.name === 'landing_banner_ad'">
+                            <mat-card fxFlex="25%">
+                                <mat-card-header>
+                                    <mat-card-title>{{data.display_name}}</mat-card-title>
+                                </mat-card-header>
+                                <ng-container *ngFor="let row of ads">
+                                    <ng-container *ngIf="row.advertisement_id == data.value">
+                                        <img mat-card-image src="{{image_url}}{{row.image}}" alt="Photo of a Shiba Inu" />
+                                    </ng-container>
+                                </ng-container>
+                                <mat-card-actions>
+                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                    </button>
+                                </mat-card-actions>
+                            </mat-card>                    
+
+                        </ng-container>
+                    </ng-container>
                 </div>
             </mat-tab>
             <mat-tab label="Home">

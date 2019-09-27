@@ -12,10 +12,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ConfigComponent implements OnInit {
   result = [];
+  ads = [];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
     this.getConfig();
+    this.getBannerAds();
+    this.getCardAds();
+    this.getHomeConfig();
   }
   image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
     getConfig(): void {
@@ -31,7 +35,45 @@ export class ConfigComponent implements OnInit {
         }
         );
   }
-
+    getHomeConfig(): void {
+  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_landing_configs')
+  .subscribe(
+          (res)=>{
+              this.result = res["result"]["data"];
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
+  }
+    getBannerAds(): void {
+  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_banner_advertisment')
+  .subscribe(
+          (res)=>{
+              this.ads = res["result"]["data"];
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
+  }
+    getCardAds(): void {
+  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_card_advertisment')
+  .subscribe(
+          (res)=>{
+              this.ads = res["result"]["data"];
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
+  }
   openDialog(id): void  {
       var data = null;
        this.result.forEach(val=> {
@@ -40,6 +82,7 @@ export class ConfigComponent implements OnInit {
                 return false;
            }
          });
+         data.ads = this.ads;
     const dialogRef = this.dialog.open(ConfigForm, {
         minWidth: "40%",
         maxWidth: "40%",
@@ -66,6 +109,7 @@ export class ConfigForm {
     file_name: string = 'Select Picture';
     display_name: string;
     config_id: string;
+    ads:any;
     constructor(
     public dialogRef: MatDialogRef<ConfigForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -75,6 +119,7 @@ export class ConfigForm {
         this.display_name = this.data.display_name;
         this.field_type = this.data.field_type;
         this.config_id = this.data.config_id;
+        this.ads = this.data.ads;
     }
   ngOnInit() {
       this.configForm = new FormGroup({

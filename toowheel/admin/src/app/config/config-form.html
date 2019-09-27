@@ -14,22 +14,32 @@
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event)" />
             </div>
             <div fxFlex="50%" *ngIf="field_type === 'text'">
-                <mat-form-field>
+                <mat-form-field appearance="outline">
                     <mat-label>Value</mat-label>
                     <textarea rows="6" matInput placeholder="Write here" required [(ngModel)]="value" [ngModelOptions]="{standalone: true}"></textarea>
                 </mat-form-field>
             </div>
+            <div fxFlex="50%" *ngIf="field_type === 'dropdown'">
+                <mat-form-field appearance="outline">
+                    <mat-label>Select Ad.</mat-label>
+                    <mat-select [(ngModel)]="value" [ngModelOptions]="{standalone: true}">
+                        <mat-option *ngFor="let ad of ads" [value]="ad.advertisement_id">
+                            {{ad.title}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
-        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <button mat-button [mat-dialog-close]="false">Cancel</button>
-            <button mat-button type="submit" cdkFocusInitial [disabled]="loading">Save</button>
-            <mat-progress-spinner
-                class="example-margin"
-                *ngIf="loading"
-                [mode]="'indeterminate'"
-                [strokeWidth]="3"
-                [diameter]="25">
-            </mat-progress-spinner>
-        </div>
-    </form>
+    </div>
+    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+        <button mat-button [mat-dialog-close]="false">Cancel</button>
+        <button mat-button type="submit" cdkFocusInitial [disabled]="loading">Save</button>
+        <mat-progress-spinner
+            class="example-margin"
+            *ngIf="loading"
+            [mode]="'indeterminate'"
+            [strokeWidth]="3"
+            [diameter]="25">
+        </mat-progress-spinner>
+    </div>
+</form>
 </mat-dialog-content>
