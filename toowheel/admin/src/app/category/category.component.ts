@@ -14,22 +14,8 @@ export class CategoryComponent implements OnInit {
     result = [];
     constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
-  ngOnInit() {
-    this.getCategory();
-  }
-    getCategory(): void {
-      this.httpClient.get<any>('http://localhost/twowheel-frontend/toowheel/api/v1/get_category')
-      .subscribe(
-            (res)=>{
-                this.result = res.data;
-          },
-          (error)=>{
-              this._snackBar.open(error.statusText, '', {
-        duration: 2000,
-      });
-      }
-      );
-    }
+  ngOnInit() {}
+    
 
   openDialog(): void  {
     var data = null;
@@ -55,20 +41,20 @@ export class CategoryComponent implements OnInit {
 export class CategoryForm {
     categoryForm: FormGroup;
     loading = false;
-    name: string;
     category_id: string;
     constructor(
     public dialogRef: MatDialogRef<CategoryForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        this.name = this.data.name;
-        this.category_id = this.data.category_id;
-    }
+        this.categoryForm = new FormGroup({
+            'name': new FormControl('', Validators.required)
+        });
+}
 
  ngOnInit() {
       this.categoryForm = new FormGroup({
-      'name': new FormControl('', Validators.required)
+            'name': new FormControl('', Validators.required)
         });
     }
 
@@ -78,8 +64,8 @@ export class CategoryForm {
       }
       this.loading = true;
       var formData = new FormData();
-          formData.append('name', this.name);
-      this.httpClient.post('http://localhost/twowheel-frontend/toowheel/api/v1/insert_category', formData).subscribe(
+          formData.append('name', this.categoryForm.value.name);
+      this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/insert_category', formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

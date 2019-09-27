@@ -7,13 +7,19 @@
                     <mat-label>Category name</mat-label>
                     <input matInput placeholder="Placeholder" required formControlName="name" [(ngModel)]="name" />
                     <mat-error>Category name is required</mat-error>
-                    <mat-icon matSuffix>category</mat-icon>
                 </mat-form-field>
             </div>
         </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" cdkFocusInitial [disabled]="loading">Save</button>
+            <mat-progress-spinner
+                class="example-margin"
+                *ngIf="loading"
+                [mode]="'indeterminate'"
+                [strokeWidth]="3"
+                [diameter]="25">
+            </mat-progress-spinner>
+        </div>
     </form>
 </mat-dialog-content>
-<mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
-</mat-dialog-actions>

@@ -29,7 +29,7 @@ $app->post('/insert_category', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'display_name' => $data['display_name']), 'category');
+    $record = $com->insertRecord(array('name' => $data['name']), 'category');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
