@@ -145,61 +145,84 @@
                 </div>
             </mat-tab>
             <mat-tab label="Home">
-                <mat-card class="detail-card">
-                    <mat-card-header>
-                        <mat-card-title>Banner</mat-card-title>
-                    </mat-card-header>
-                    <img mat-card-image src="assets/banner-background-cover.png" alt="Photo of a Shiba Inu" />
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(0)">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
-                <mat-card class="detail-card">
-                    <mat-card-header>
-                        <mat-card-title>Press Release</mat-card-title>
-                    </mat-card-header>
-                    <img mat-card-image src="assets/media-bg.jpg" alt="Photo of a Shiba Inu" />
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(0)">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
-                <mat-card class="detail-card">
-                    <mat-card-header>
-                        <mat-card-title>Advertisement banner 1</mat-card-title>
-                    </mat-card-header>
-                    <img mat-card-image src="assets/add/001.png" alt="Photo of a Shiba Inu" />
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(0)">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
-                <mat-card class="detail-card">
-                    <mat-card-header>
-                        <mat-card-title>Advertisement banner 2</mat-card-title>
-                    </mat-card-header>
-                    <img mat-card-image src="assets/add/002.png" alt="Photo of a Shiba Inu" />
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(0)">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
-                <mat-card class="detail-card">
-                    <mat-card-header>
-                        <mat-card-title>Home Advertisement Banner</mat-card-title>
-                    </mat-card-header>
-                    <img mat-card-image src="assets/attachment-bg.jpg" alt="Photo of a Shiba Inu" />
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(0)">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
+                <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
+                    <ng-container *ngFor="let data of result_home">
+                        <ng-container *ngIf="data.name === 'home_banner_video'">
+                            <mat-card fxFlex="25%">
+                                <mat-card-header>
+                                    <mat-card-title>{{data.display_name}}</mat-card-title>
+                                </mat-card-header>
+                                <video mat-card-image controls>
+                                    <source src="{{image_url}}{{data.value}}" type="video/mp4" />
+                                </video>
+                                <mat-card-actions>
+                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                    </button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </ng-container>
+                    </ng-container>
+                    <ng-container *ngFor="let data of result_home">
+                        <ng-container *ngIf="data.name === 'home_card_ad1'">
+                            <mat-card fxFlex="25%">
+                                <mat-card-header>
+                                    <mat-card-title>{{data.display_name}}</mat-card-title>
+                                </mat-card-header>
+                                <ng-container *ngFor="let row of ads_card">
+                                    <ng-container *ngIf="row.advertisement_id == data.value">
+                                        <img mat-card-image src="{{image_url}}{{row.image}}" alt="Photo of a Shiba Inu" />
+                                    </ng-container>
+                                </ng-container>
+                                <mat-card-actions>
+                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                    </button>
+                                </mat-card-actions>
+                            </mat-card>                    
+
+                        </ng-container>
+                    </ng-container>
+                    <ng-container *ngFor="let data of result_home">
+                        <ng-container *ngIf="data.name === 'home_card_ad2'">
+                            <mat-card fxFlex="25%">
+                                <mat-card-header>
+                                    <mat-card-title>{{data.display_name}}</mat-card-title>
+                                </mat-card-header>
+                                <ng-container *ngFor="let row of ads_card">
+                                    <ng-container *ngIf="row.advertisement_id == data.value">
+                                        <img mat-card-image src="{{image_url}}{{row.image}}" alt="Photo of a Shiba Inu" />
+                                    </ng-container>
+                                </ng-container>
+                                <mat-card-actions>
+                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                    </button>
+                                </mat-card-actions>
+                            </mat-card>                    
+
+                        </ng-container>
+                    </ng-container>
+                    <ng-container *ngFor="let data of result_home">
+                        <ng-container *ngIf="data.name === 'home_banner_ad'">
+                            <mat-card fxFlex="25%">
+                                <mat-card-header>
+                                    <mat-card-title>{{data.display_name}}</mat-card-title>
+                                </mat-card-header>
+                                <ng-container *ngFor="let row of ads">
+                                    <ng-container *ngIf="row.advertisement_id == data.value">
+                                        <img mat-card-image src="{{image_url}}{{row.image}}" alt="Photo of a Shiba Inu" />
+                                    </ng-container>
+                                </ng-container>
+                                <mat-card-actions>
+                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                        <mat-icon (click)="openDialog(data.config_id)">edit</mat-icon>
+                                    </button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </ng-container>
+                    </ng-container>
+                </div>
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>

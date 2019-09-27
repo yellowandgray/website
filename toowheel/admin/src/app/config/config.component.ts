@@ -12,7 +12,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ConfigComponent implements OnInit {
   result = [];
+  result_home = [];
   ads = [];
+  ads_card = [];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
@@ -36,10 +38,10 @@ export class ConfigComponent implements OnInit {
         );
   }
     getHomeConfig(): void {
-  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_landing_configs')
+  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_home_configs')
   .subscribe(
           (res)=>{
-              this.result = res["result"]["data"];
+              this.result_home = res["result"]["data"];
         },
         (error)=>{
             this._snackBar.open(error["statusText"], '', {
@@ -65,7 +67,7 @@ export class ConfigComponent implements OnInit {
   this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_card_advertisment')
   .subscribe(
           (res)=>{
-              this.ads = res["result"]["data"];
+              this.ads_card = res["result"]["data"];
         },
         (error)=>{
             this._snackBar.open(error["statusText"], '', {
@@ -83,6 +85,7 @@ export class ConfigComponent implements OnInit {
            }
          });
          data.ads = this.ads;
+         data.ads_card = this.ads_card;
     const dialogRef = this.dialog.open(ConfigForm, {
         minWidth: "40%",
         maxWidth: "40%",
@@ -91,6 +94,7 @@ export class ConfigComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
         if(result !== false && result !== 'false') {
             this.getConfig();
+            this.getHomeConfig();
         }
     });
 }
@@ -106,10 +110,12 @@ export class ConfigForm {
     loading = false;
     value: string;
     field_type: string;
+    name: string;
     file_name: string = 'Select Picture';
     display_name: string;
     config_id: string;
     ads:any;
+    ads_card:any;
     constructor(
     public dialogRef: MatDialogRef<ConfigForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -117,9 +123,11 @@ export class ConfigForm {
     private httpClient: HttpClient) {
         this.value = this.data.value;
         this.display_name = this.data.display_name;
+        this.name = this.data.name;
         this.field_type = this.data.field_type;
         this.config_id = this.data.config_id;
         this.ads = this.data.ads;
+        this.ads_card = this.data.ads_card;
     }
   ngOnInit() {
       this.configForm = new FormGroup({

@@ -19,7 +19,7 @@
                     <textarea rows="6" matInput placeholder="Write here" required [(ngModel)]="value" [ngModelOptions]="{standalone: true}"></textarea>
                 </mat-form-field>
             </div>
-            <div fxFlex="50%" *ngIf="field_type === 'dropdown'">
+            <div fxFlex="50%" *ngIf="name === 'landing_banner_ad' || name === 'home_banner_ad'">
                 <mat-form-field appearance="outline">
                     <mat-label>Select Ad.</mat-label>
                     <mat-select [(ngModel)]="value" [ngModelOptions]="{standalone: true}">
@@ -29,17 +29,27 @@
                 </mat-select>
             </mat-form-field>
         </div>
+        <div fxFlex="50%" *ngIf="name === 'home_card_ad1' || name === 'home_card_ad2'">
+            <mat-form-field appearance="outline">
+                <mat-label>Select Ad.</mat-label>
+                <mat-select [(ngModel)]="value" [ngModelOptions]="{standalone: true}">
+                    <mat-option *ngFor="let ad of ads_card" [value]="ad.advertisement_id">
+                        {{ad.title}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
     </div>
-    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <button mat-button [mat-dialog-close]="false">Cancel</button>
-        <button mat-button type="submit" cdkFocusInitial [disabled]="loading">Save</button>
-        <mat-progress-spinner
-            class="example-margin"
-            *ngIf="loading"
-            [mode]="'indeterminate'"
-            [strokeWidth]="3"
-            [diameter]="25">
-        </mat-progress-spinner>
-    </div>
+</div>
+<div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+    <button mat-button [mat-dialog-close]="false">Cancel</button>
+    <button mat-button type="submit" cdkFocusInitial [disabled]="loading">Save</button>
+    <mat-progress-spinner
+        class="example-margin"
+        *ngIf="loading"
+        [mode]="'indeterminate'"
+        [strokeWidth]="3"
+        [diameter]="25">
+    </mat-progress-spinner>
+</div>
 </form>
 </mat-dialog-content>
