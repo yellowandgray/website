@@ -18,9 +18,24 @@ export class ConfigComponent implements OnInit {
   ngOnInit() {
     this.getConfig();
     this.getBannerAds();
+    this.getCardAds();
+    this.getHomeConfig();
   }
   image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
     getConfig(): void {
+  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_landing_configs')
+  .subscribe(
+          (res)=>{
+              this.result = res["result"]["data"];
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
+  }
+    getHomeConfig(): void {
   this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_landing_configs')
   .subscribe(
           (res)=>{
@@ -46,7 +61,19 @@ export class ConfigComponent implements OnInit {
         }
         );
   }
-
+    getCardAds(): void {
+  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_card_advertisment')
+  .subscribe(
+          (res)=>{
+              this.ads = res["result"]["data"];
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
+  }
   openDialog(id): void  {
       var data = null;
        this.result.forEach(val=> {
