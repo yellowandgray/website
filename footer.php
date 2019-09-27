@@ -40,13 +40,13 @@
                     <h2 class="nav__title">MEMBERS</h2>
                     <ul class="nav__ul">
                         <li>
-                            <a href="toowheel/login">Login</a>
+                            <a href="toowheel/login.php">Login</a>
                         </li>
                         <li>
-                            <a href="toowheel/member-register">Be A Member</a>
+                            <a href="toowheel/member-register.php">Be A Member</a>
                         </li>
                         <li>
-                            <a href="toowheel/member">Member Benefits</a>
+                            <a href="toowheel/member-benefits.php">Member Benefits</a>
                         </li>
                     </ul>
                 </li>
@@ -56,10 +56,10 @@
                     <h2 class="nav__title">CLUB</h2>
                     <ul class="nav__ul">
                         <li>
-                            <a href="toowheel/find-a-club">Find A Club</a>
+                            <a href="toowheel/find-a-club.php">Find A Club</a>
                         </li>
                         <li>
-                            <a href="toowheel/club-register">Register My Club</a>
+                            <a href="toowheel/club-register.php">Register My Club</a>
                         </li>
                     </ul>
                 </li>
@@ -71,7 +71,7 @@
                     <h2 class="nav__title">TOOWHEEL</h2>
                     <ul class="nav__ul">
                         <li>
-                            <a href="toowheel/about">About us</a>
+                            <a href="toowheel/about.php">About us</a>
                         </li>
                         <li>
                             <a href="#">Contact us</a>
