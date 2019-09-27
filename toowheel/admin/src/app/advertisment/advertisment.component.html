@@ -5,37 +5,79 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog()"><mat-icon>add</mat-icon> Advertisement</button>
+            <button mat-raised-button color="primary" (click)="openDialog(0)"><mat-icon>add</mat-icon> Advertisement</button>
         </div>
-        <mat-card class="detail-card">
-            <mat-card-header>
-                <mat-card-title>Join into our racing school and get 40% OFF</mat-card-title>
-                <mat-card-subtitle>Banner</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="assets/news1.jpg" alt="Photo of a Shiba Inu" />
-            <mat-card-actions>
-                <button mat-icon-button aria-label="label" (click)="openDialog()">
-                    <mat-icon>edit</mat-icon>
-                </button>
-                <button mat-icon-button aria-label="label">
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-        <mat-card class="detail-card">
-            <mat-card-header>
-                <mat-card-title>Join into our racing school and get 30% OFF</mat-card-title>
-                <mat-card-subtitle>Card</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="assets/news2.jpg" alt="Photo of a Shiba Inu" />
-            <mat-card-actions>
-                <button mat-icon-button aria-label="label" (click)="openDialog()">
-                    <mat-icon>edit</mat-icon>
-                </button>
-                <button mat-icon-button aria-label="label">
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
+        <ng-container *ngFor="let data of result; let i = index">
+            <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
+                <ng-container *ngIf="result[i]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i]['type']|uppercase}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="{{image_url}}{{result[i]['image']}}" alt="Photo of a Shiba Inu" />
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label" (click)="openDialog()">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+                <ng-container *ngIf="result[i + 1]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i + 1]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i + 1]['type']|uppercase}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="{{image_url}}{{result[i + 1]['image']}}" alt="Photo of a Shiba Inu" />
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label" (click)="openDialog()">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+                <ng-container *ngIf="result[i + 2]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i + 2]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i + 2]['type']|uppercase}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="{{image_url}}{{result[i + 2]['image']}}" alt="Photo of a Shiba Inu" />
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label" (click)="openDialog()">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+                <ng-container *ngIf="result[i + 3]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i + 3]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i + 3]['type']|uppercase}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="{{image_url}}{{result[i + 3]['image']}}" alt="Photo of a Shiba Inu" />
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label" (click)="openDialog()">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+            </div>            
+        </ng-container>
     </mat-sidenav-content>
 </mat-sidenav-container>

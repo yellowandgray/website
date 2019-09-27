@@ -1,40 +1,52 @@
 <h2 mat-dialog-title>Advertisement</h2>
 <mat-dialog-content class="mat-typography">
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline">
-                <mat-label>Title</mat-label>
-                <input matInput placeholder="Placeholder" />
-            </mat-form-field>
+    <form [formGroup]="advertismentForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Title</mat-label>
+                    <input matInput placeholder="Placeholder" formControlName="title" [(ngModel)]="title" />
+                    <mat-error>Title is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <button type="button" mat-raised-button (click)="fileInput.click()">{{file_name}}</button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event)" />
+            </div>
         </div>
-        <div fxFlex="50%">
-            <button type="button" mat-raised-button (click)="fileInput.click()">Choose Picture</button>
-            <input hidden #fileInput type="file" id="file" />
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Type</mat-label>
+                    <mat-select formControlName="type" [(ngModel)]="type">
+                        <mat-option [value]="'banner'">
+                            Banner
+                        </mat-option>
+                        <mat-option [value]="'card'">
+                            Card
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Type is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline">
+                    <mat-label>Link</mat-label>
+                    <input matInput placeholder="Placeholder" formControlName="url" [(ngModel)]="url" />
+                    <mat-error>Link is required</mat-error>
+                </mat-form-field>
+            </div>
         </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline">
-                <mat-label>Type</mat-label>
-                <mat-select>
-                    <mat-option [value]="">
-                        Banner
-                    </mat-option>
-                    <mat-option [value]="">
-                        Card
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" cdkFocusInitial [disabled]="loading">Save</button>
+            <mat-progress-spinner
+                class="example-margin"
+                *ngIf="loading"
+                [mode]="'indeterminate'"
+                [strokeWidth]="3"
+                [diameter]="25">
+            </mat-progress-spinner>
         </div>
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline">
-                <mat-label>Links</mat-label>
-                <input matInput placeholder="Placeholder" />
-            </mat-form-field>
-        </div>
-    </div>
+    </form>
 </mat-dialog-content>
-<mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
-</mat-dialog-actions>
