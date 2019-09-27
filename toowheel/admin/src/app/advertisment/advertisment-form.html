@@ -5,7 +5,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline">
                     <mat-label>Title</mat-label>
-                    <input matInput placeholder="Placeholder" formControlName="title" [(ngModel)]="title" />
+                    <input matInput placeholder="Placeholder" formControlName="title" />
                     <mat-error>Title is required</mat-error>
                 </mat-form-field>
             </div>
@@ -18,7 +18,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline">
                     <mat-label>Type</mat-label>
-                    <mat-select formControlName="type" [(ngModel)]="type">
+                    <mat-select formControlName="type">
                         <mat-option [value]="'banner'">
                             Banner
                         </mat-option>
@@ -32,7 +32,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline">
                     <mat-label>Link</mat-label>
-                    <input matInput placeholder="Placeholder" formControlName="url" [(ngModel)]="url" />
+                    <input matInput placeholder="Placeholder" formControlName="url" />
                     <mat-error>Link is required</mat-error>
                 </mat-form-field>
             </div>
