@@ -1,11 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
-
 @Component({
   selector: 'app-advertisment',
   templateUrl: './advertisment.component.html',
@@ -17,10 +12,14 @@ export class AdvertismentComponent implements OnInit {
 
   ngOnInit() {
   }
-  openDialog(): void  {
+  openDialog(id): void  {
+      
     const dialogRef = this.dialog.open(AdvertismentForm, {
         minWidth: "40%",
-        maxWidth: "40%"
+        maxWidth: "40%",
+        data: {
+            
+        }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -37,7 +36,7 @@ export class AdvertismentComponent implements OnInit {
 export class AdvertismentForm {
     constructor(
     public dialogRef: MatDialogRef<AdvertismentForm>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    @Inject(MAT_DIALOG_DATA) public data: any) {}
 
   onNoClick(): void {
     this.dialogRef.close();
