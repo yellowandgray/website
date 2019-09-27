@@ -52,6 +52,9 @@
                             <fieldset>
                                 <input placeholder="Contact No." type="text" tabindex="9" required>
                             </fieldset>
+                             <fieldset>
+                                <textarea placeholder="About Club" type="text" tabindex="10" required></textarea>
+                            </fieldset>
                             <fieldset>
                                 <br/>
                                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>

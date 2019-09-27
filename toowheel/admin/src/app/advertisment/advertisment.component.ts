@@ -81,7 +81,7 @@ export class AdvertismentForm {
                 if(res["result"]["error"] === false) {
                     this.image = res["result"]["data"];
                 }else{
-this._snackBar.open(res["result"]["message"], '', {
+    this._snackBar.open(res["result"]["message"], '', {
           duration: 2000,
         });
                 }
@@ -109,10 +109,10 @@ this._snackBar.open(res["result"]["message"], '', {
                 if(res["result"]["error"] === false) {
                     this.dialogRef.close(true);
                 }else{
-this._snackBar.open(res["result"]["message"], '', {
-          duration: 2000,
-        });
-                }
+            this._snackBar.open(res["result"]["message"], '', {
+              duration: 2000,
+            });
+            }
             },
             (error)=>{
                 this.loading = false;
