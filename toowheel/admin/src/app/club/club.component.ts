@@ -32,7 +32,7 @@ export class ClubComponent implements OnInit {
         }
         );
   }
-  openDialog(): void  {
+  openDialog(id): void  {
   var data = null;
     this.result.forEach(val=> {
         if(parseInt(val.category_id) === parseInt(id)) {
@@ -64,6 +64,8 @@ export class ClubForm {
     field_type: string;
     file_name: string = 'Select Picture';
     category_id: string;
+    value: string;
+    type_value: string;
     constructor(
     public dialogRef: MatDialogRef<ClubForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -98,7 +100,6 @@ export class ClubForm {
     }
     fileProgress(fileInput: any) {
         var fileData = <File>fileInput.target.files[0];
-        console.log(fileData);
         this.file_name = fileData.name;
         this.loading = true;
           var formData = new FormData();
@@ -123,12 +124,12 @@ this._snackBar.open(res["result"]["message"], '', {
     }
 
     onSubmit() {
-          if (this.configForm.invalid) {
+          if (this.clubForm.invalid) {
                 return;
           }
           this.loading = true;
           var formData = new FormData();
-          formData.append('type', this.type);
+          formData.append('type', this.type_value);
           formData.append('category_id', this.category_id);
           formData.append('club_name', this.club_name);
           formData.append('banner', this.banner);
