@@ -14,9 +14,23 @@ export class CategoryComponent implements OnInit {
     result = [];
     constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+      this.getCategory();
+  }
     
-
+  getCategory(): void {
+  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_category')
+  .subscribe(
+          (res)=>{
+              this.result = res["result"]["data"];
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
+  }
   openDialog(): void  {
     var data = null;
     
@@ -25,10 +39,8 @@ export class CategoryComponent implements OnInit {
         maxWidth: "40%"
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-        if(result !== false && result !== 'false') {
-            this.getCategory();
-        }
+   dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
     });
 }
 
