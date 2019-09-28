@@ -187,7 +187,7 @@ body {
 
 .bg-1 {
     background: url(../img/bg-1.jpg)no-repeat;
-    height: 678px;
+    height: 100%;
     /* padding-bottom: 50px; */
     position: relative;
     z-index: 2;
@@ -934,10 +934,11 @@ body {
 }
 
 .events-main-content h2 {
+    margin: 15px 0 0;
     /* padding: 0px 0 20px; */
     font-family: 'Montserrat', sans-serif;
     color: red;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 600;
     flex: 1;
 }
@@ -1511,11 +1512,13 @@ body {
     border-radius: 50%;
     float: right;
     margin: 0 10px;
+    box-shadow: 0px 3px 10px rgba(78, 78, 78, 0.8);
 }
 
 
 .profile-table table {
-    width: 100%
+    width: 100%;
+    border: none;
 }
 
 .profile-table th, td {
@@ -1528,6 +1531,10 @@ body {
 
 .profile-table table td{
     padding-left: 10px;
+    border: none;
+    color: #fff;
+    height: auto;
+    text-align: left;
 }
 
 /*.profile-details-section-1 {

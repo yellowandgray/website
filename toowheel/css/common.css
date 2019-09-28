@@ -2719,7 +2719,7 @@ body .calender-box{
     left: 0;
     top: 0;
     font-size: 12px;
-/*    width: 150px;*/
+    /*    width: 150px;*/
     display: inline;
 }
 .find-club-btn a:hover {
@@ -2788,23 +2788,26 @@ body .calender-box{
 
 
 .twitter-share {
-    background: #00BCD4;
+    background: #00BCD6;
     color: rgb(255, 255, 255) !important;
     cursor: pointer;
     display: inline-block;
-    padding: 1em 2em;
+    padding: 1em 1em;
     -webkit-border-radius: 6px;
-    border-radius: 6px;
+    border-radius: 50%;
     margin-right: 10px;
+    border: 1px solid #00BCD4;
 }
 
 .middle {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: flex;
 }
 
 .middle span i {
     font-size: 15px;
+    position: relative;
+    top: 2px;
 }
 
 .facebook-share {
@@ -2812,20 +2815,34 @@ body .calender-box{
     color: rgb(255, 255, 255) !important;
     cursor: pointer;
     display: inline-block;
-    padding: 1em 2em;
+    padding: 1em 1.2em;
     -webkit-border-radius: 6px;
-    border-radius: 6px;
+    border-radius: 50%;
     margin-right: 10px;
+    border: 1px solid #4267b2;
 }
 
 .twitter-share:hover {
     position: relative;
     top: -1px;
+    background: #fff;
+    border: 1px solid #00BCD4;
+}
+
+.twitter-share:hover i {
+    color: #00BCD4
+}
+
+.facebook-share:hover i {
+    color: #4267b2
 }
 
 .facebook-share:hover {
     position: relative;
     top: -1px;
+    background: #fff;
+    border: 1px solid #4267b2;
+
 }
 
 .middle > * {
@@ -2972,7 +2989,7 @@ body .calender-box{
 
 .password-popup {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     top: 0;
     left: 0;
@@ -3013,9 +3030,28 @@ body .calender-box{
 }
 
 .password-popup input {
-    border-radius: 10px;
+    border-radius: 25px;
     outline: none;
     margin: 10px 0;
+    background: transparent;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    width: auto;
+}
+
+.password-popup button {
+    background: red;
+    border: 1px solid red;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 25px;
+    width: auto;
+}
+
+.password-popup button:hover {
+    background: white;
+    border: 1px solid red;
+    color: #f00;
 }
 
 .form-control:focus {
@@ -3199,4 +3235,15 @@ thead td {
 #btnPrev, #btnNext:hover {
     color:rgb(40,40,59);
     font-weight:bold;
+}
+
+#myDiv {
+    position: relative;
+    bottom: -28px;
+    display: block;
+}
+
+.editing-icon img {
+    position: relative;
+    top: 4px;
 }
