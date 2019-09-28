@@ -6,9 +6,6 @@
     .search-section {margin-bottom: 20px !important;}
     .search-section input  {border-radius: 25px !important;}
     .search-section .search-btn  {display: none !important;}
-    .bg-1 span {
-        font-size: 40px !important;
-    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -32,7 +29,7 @@
     .social-icon {bottom: 90px !important;}
     .search-section .search-btn  {padding: 12px 12px !important;}
     .search-section {margin-bottom: 20px !important;}
-    .bg-1 span {font-size: 50px !important;}
+    .bg-1 span {font-size: 40px !important;}
     .button-8 {width: 33% !important;}
     .events-content {top: 0 !important;}
 }
@@ -162,7 +159,13 @@
 
 @media (min-width: 1200px) and (max-width: 1368px) {
     .discover-slider-content {
-        top: -194px !important;
+        top: -188px !important;
+    }
+}
+
+@media (min-width: 1369px) and (max-width: 1440px) {
+    .discover-slider-content {
+        top: -172px !important;
     }
 }
 
@@ -258,5 +261,26 @@
 @media (min-width: 1441px) and (max-width: 1500px) {
     .header-login input[type=search] {
         right: 18% !important;
+    }
+    .bg-1 span {
+        font-size: 190px !important;
+    }
+}
+
+@media (min-width: 937px) and (max-width: 990px) {
+    .discover-slider-content{
+        bottom: 142px !important;
+    }
+}
+
+@media (min-width: 991px) and (max-width: 1023px) {
+    .discover-slider-content{
+        bottom: 187px !important;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .discover-slider-content {
+        bottom: 187px !important;
     }
 }

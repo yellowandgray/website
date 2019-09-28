@@ -187,7 +187,7 @@ body {
 
 .bg-1 {
     background: url(../img/bg-1.jpg)no-repeat;
-    height: 678px;
+    height: 100%;
     /* padding-bottom: 50px; */
     position: relative;
     z-index: 2;
