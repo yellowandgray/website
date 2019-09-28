@@ -117,7 +117,7 @@
     }
     function closeNav() {
         document.getElementById("mySidenav").style.height = "0";
-        document.getElementById("mySidenav").style.top = "-60px";
+        document.getElementById("mySidenav").style.top = "-540px";
     }
 
 //    var modal = document.getElementById("mySidenav");
