@@ -1088,7 +1088,7 @@ button {
 }
 .event-img{
     flex:1;
-    padding: 10px;
+/*    padding: 10px;*/
 }
 .event-conent {
     flex:1.5;
@@ -3256,11 +3256,11 @@ thead td {
 }
 @media (max-width: 678px) and (min-width:320px){
     .header{
-        position: absolute;
+        position: fixed;
     }
     .mega-menu .sidenav{
-        height: 500px !important;
-        position: absolute;
+        height: 768px !important;
+        position: fixed;
         overflow: scroll !important;
     }
     .mega-menu .sidenav p{
@@ -3289,7 +3289,6 @@ thead td {
     .mega-menu-tab .nav__ul { 
         padding-left: 12px;
     }
-
 
 }
 @media (max-width: 1200px) and (min-width:679px){
