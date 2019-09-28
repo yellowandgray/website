@@ -166,22 +166,22 @@ a{
     padding: 0.5rem 0 !important;
 }
 .navbar-nav li a {
-    font-size: 18px;
+    font-size: 15px;
     text-transform: uppercase;
 }
 .mar-b-30{
     margin-bottom: 30px;
 }
 body p {
-    color: #505050 !important;
+    color: #333 !important;
     /*    font-family: 'Montserrat', sans-serif !important;*/
-    font-family: 'Open Sans', sans-serif ;
+    font-family: 'Montserrat', sans-serif;
 }
 body {
     font-family: 'Open Sans', sans-serif;
 }
 .see a {
-    font-size: 20px;
+    font-size: 16px;
     color: #000000;
     border-bottom: 1px solid #000;
     padding-bottom: 5px;
@@ -208,7 +208,7 @@ body {
     font-size: 40px;
     font-weight: 300 !important;
     color: #000000;
-    font-family: 'Barlow Condensed', sans-serif !important;
+    font-family: 'Abel', sans-serif !important;
 }
 
 .testimony-wrap {
@@ -363,9 +363,9 @@ video { display: block; width: 100%; height: auto; }
     display: none;
 }
 .sticky .top-3 .navbar-nav li a  {
-    color: #000000 !important;
+    color: #449dc9 !important;
     padding-top: 40px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
 }
 
@@ -378,7 +378,9 @@ video { display: block; width: 100%; height: auto; }
 }
 .box-2 {
     padding: 50px;
+    /*background: #449dc9;*/
 }
+
 .mouse-icon {
     width: 60px;
     height: 60px;
@@ -497,19 +499,21 @@ video { display: block; width: 100%; height: auto; }
     text-align: center;
     font-weight: 400 !important;
     padding-top: 10px;
-    font-size: 22px;
+    font-size: 17px;
 }
 
 .pro-img img{
     width: 80% !important;
 }
-.box-2{
-    border-radius: 53%;
-    border: 3px solid #eee;
+.box-2 {
+    /*border-right: 10px solid #eee;*/
+    /*transform: skewX(-25deg);*/
 }
+
 .box-2 img{
     padding: 40px;
 }
+
 .pro-d h3 {
     color: #98d659;
     font-weight: 600 ;
@@ -534,8 +538,8 @@ footer .copy p{
 }
 .price {
     padding: 10px;
-    background: #ffffff57;
-    border-radius: 20px;
+    /*background: #ffffff57;*/
+    /*border-radius: 20px;*/
 }
 @media (max-width:1024px) and (min-width:768px){
     .owl-carousel.home-slider {
@@ -592,4 +596,23 @@ footer .copy p{
 }
 .testimony-section .owl-dots .owl-dot.active {
     background: #ffffff !important;
+}
+.mar-t-30 {
+    margin-top: 30px;
+}
+.app h3 {
+    font-size: 20px !important;
+    font-weight: 600;
+}
+.acc h2 {
+    color: #ffffff !important;
+}
+.acc p {
+    color: #ffffff !important;
+    padding: 20px 0px;
+}
+.box-1 {
+    padding: 10px;
+    background: #449dc9;
+   
 }

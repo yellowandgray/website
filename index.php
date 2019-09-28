@@ -70,7 +70,7 @@
                                 <div class="row">
                                     <div class="col-md-8 product-text">
                                         <!--<h1 class="mb-2">PRODUCT</h1>-->
-                                        <h2 class="subheading mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</h2>
+                                        <h2 class="subheading mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
                                         <div class="row price">
                                             <div class="col-md-6 pro-d">
                                                 <h3>Combo pack</h3>
@@ -94,23 +94,35 @@
                                     <div class="col-md-12">
 
                                         <div class="row feature-l"> 
-                                            <div class="col-md-2 text-center">
-                                                <img src="images/feature/003.png" alt=""/><p>Non Leaching </p>
+                                            <div class="col-md-2">
+                                                <div class="box-1">
+                                                    <img src="images/feature/003.png" alt=""/><p>Non Leaching </p>
+                                                </div>
                                             </div>
                                             <div class="col-md-2">
-                                                <img src="images/feature/002.png" alt=""/><p>Safest </p>
+                                                <div class="box-1">
+                                                    <img src="images/feature/002.png" alt=""/><p>Safest </p>
+                                                </div>
                                             </div>
                                             <div class="col-md-2">
-                                                <img src="images/feature/006.png" alt="" /><p>Lock and Bond</p>
+                                                <div class="box-1">
+                                                    <img src="images/feature/006.png" alt="" /><p>Lock and Bond</p>
+                                                </div>
                                             </div>
                                             <div class="col-md-2">
-                                                <img src="images/feature/001.png" alt=""/><p>Cleanest</p>
+                                                <div class="box-1">
+                                                    <img src="images/feature/001.png" alt=""/><p>Cleanest</p>
+                                                </div>
                                             </div>
                                             <div class="col-md-2">
-                                                <img src="images/feature/004.png" alt="" /><p>Non Depleting </p>
+                                                <div class="box-1">
+                                                    <img src="images/feature/004.png" alt="" /><p>Non Depleting </p>
+                                                </div>
                                             </div>
                                             <div class="col-md-2">
-                                                <img src="images/feature/005.png" alt=""/><p>Greenest</p>
+                                                <div class="box-1">
+                                                    <img src="images/feature/005.png" alt=""/><p>Greenest</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -129,7 +141,7 @@
                     <h2 class="mb-4 text-head">Applications</h2>
                 </div>
             </div>
-            <div class="row">
+            <div class="row app">
                 <div class="col-md-12">
                     <div class="row  mar-b-30">
                         <div class="col-md-4">
@@ -139,7 +151,6 @@
                                 </div>
                             </div>
                             <h3>Health Care</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                             <h3 class="see"><a href="#">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
                         <div class="col-md-4">
@@ -149,7 +160,6 @@
                                 </div>
                             </div>
                             <h3>Hospitality</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                             <h3 class="see"><a href="#">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
                         <div class="col-md-4">
@@ -159,12 +169,11 @@
                                 </div>
                             </div>
                             <h3>Water and Air Filtration </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                             <h3 class="see"><a href="#">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
 
                     </div>
-                    <div class="row">
+                    <div class="row mar-t-30">
                         <div class="col-md-4">
                             <div class="div-1">
                                 <div class="div-2">
@@ -172,7 +181,6 @@
                                 </div>
                             </div>
                             <h3>Footwear </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                             <h3 class="see"><a href="#">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
                         <div class="col-md-4">
@@ -182,7 +190,6 @@
                                 </div>
                             </div>
                             <h3>Foot & pharma manufacturing</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                             <h3 class="see"><a href="#">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
                         <div class="col-md-4">
@@ -192,7 +199,6 @@
                                 </div>
                             </div>
                             <h3>Textiles</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                             <h3 class="see"><a href="#">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> </h3>
                         </div>
 
@@ -200,33 +206,35 @@
                 </div>
             </div>
         </section>
-        <section class=" img" style="background: #5d5d5d;">
+        <section class="img" style="background:#88d4f9;">
             <div class="pad-80">
-                <div class="row">
+                <div class="row acc">
                     <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
                          <!--<span class="subheading">Best Price For You</span>-->
                         <h2 class="mb-4 text-center">Accreditation</h2>
+                        <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+
                         <div class="row">
                             <div class="col-md-3">
-                                <div class="text-center box-2">
+                                <div class="text-center box-2" style="background-image: url(images/acc/bg-001.jpg);background-size: cover;">
                                     <img src="images/acc/001.png" alt=""/>
                                     <p>US EPA</p>
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="text-center box-2">
+                                <div class="text-center box-2" style="background-image: url(images/acc/bg-004.jpg); background-size: cover;">
                                     <img src="images/acc/002.png" alt=""/>
                                     <p>Oeko-Tex</p>
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="text-center box-2">
+                                <div class="text-center box-2" style="background-image: url(images/acc/bg-002.jpg);background-size: cover;">
                                     <img src="images/acc/003.png" alt=""/>
                                     <p>European BPR</p>
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="text-center box-2">
+                                <div class="text-center box-2" style="background-image: url(images/acc/bg-003.jpg);background-size: cover;">
                                     <img src="images/acc/004.png" alt="" />
                                     <p>Primary Industry in New Zealand</p>
                                 </div>
