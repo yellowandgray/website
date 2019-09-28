@@ -16,26 +16,26 @@ export interface DialogData {
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
-    result = [];
-    constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
+  result = [];  
+  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
-  ngOnInit() {
-    this.getNews();
-  }
-
-    getNews(): void {
-  this.httpClient.get<any>('http://localhost:3000/news')
-  .subscribe(
-          (res)=>{
-              this.result = res.data;
-        },
-        (error)=>{
-            this._snackBar.open(error.statusText, '', {
-      duration: 2000,
-    });
-    }
-    );
-  }
+    ngOnInit() {
+         this.getNews();
+     }
+     image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
+       getNews(): void {
+     this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_news')
+     .subscribe(
+             (res)=>{
+                 this.result = res["result"]["data"];
+           },
+           (error)=>{
+               this._snackBar.open(error["statusText"], '', {
+         duration: 2000,
+       });
+           }
+           );
+     }
 
   openDialog(): void  {
     const dialogRef = this.dialog.open(NewsForm, {
@@ -44,9 +44,7 @@ export class NewsComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-        if(result !== false && result !== 'false') {
-            this.getNews();
-        }
+      console.log(`Dialog result: ${result}`);
     });
 }
 
@@ -59,17 +57,20 @@ export class NewsComponent implements OnInit {
 export class NewsForm {
     newsForm: FormGroup;
     loading = false;
+    cover_image: string = 'Choose Cover Image';
+    banner_image_1: string = 'Choose Cover Image';
+    banner_image_2: string = 'Choose Cover Image';
     constructor(
     public dialogRef: MatDialogRef<NewsForm>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {}
 
     ngOnInit() {
       this.newsForm = new FormGroup({
       'club_type': new FormControl('', Validators.required),
-      'club_category': new FormControl('', Validators.required),
-      'club_name': new FormControl('', Validators.required),
+      'category_id': new FormControl('', Validators.required),
+      'club_id': new FormControl('', Validators.required),
       'title': new FormControl('', Validators.required),
       'date': new FormControl('', Validators.required),
       'media': new FormControl('', Validators.required),
@@ -77,25 +78,67 @@ export class NewsForm {
       'author_name': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required),
       'description_1': new FormControl('', Validators.required)
+      });
+    }
+    fileProgress(fileInput: any, field: string) {
+        var fileData = <File>fileInput.target.files[0];
+        this[field] = fileData.name;
+        this.loading = true;
+          var formData = new FormData();
+          formData.append('file', fileData);
+          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/upload_file', formData).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this[field] = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
         });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            });
     }
 
   onSubmit() {
-      if (this.newsForm.invalid) {
+      if (this.newsForm.invalid || this.image === '') {
             return;
       }
       this.loading = true;
-      this.httpClient.post('http://localhost:3000/news', {club_type: this.newsForm.value.name, club_category: this.newsForm.value.name, club_name: this.newsForm.value.name, title: this.newsForm.value.name, date: this.newsForm.value.name, media: this.newsForm.value.name, banner: this.newsForm.value.name, moto_text: this.newsForm.value.name, description: this.newsForm.value.name, sub_banner: this.newsForm.value.name, sub_banner_1: this.newsForm.value.name, description_1: this.newsForm.value.name, author_name: this.newsForm.value.name, created_by: 'Admin', updated_by: 'Admin'}).subscribe(
+      var formData = new FormData();
+          formData.append('club_type', this.newsForm.value.club_type);
+          formData.append('category_id', this.newsForm.value.media_type);
+          formData.append('cover_image', this.cover_image);
+          formData.append('club_id', this.newsForm.value.club_type);
+          formData.append('title', this.newsForm.value.title);
+          formData.append('media', this.newsForm.value.media);
+          formData.append('author_name', this.newsForm.value.author_name);
+          formData.append('date', this.newsForm.value.date);
+          formData.append('moto_text', this.newsForm.value.moto_text);
+          formData.append('description', this.newsForm.value.description);
+          formData.append('description_1', this.newsForm.value.description_1);
+      this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/insert_news', formData).subscribe(
           (res)=>{
-            this.loading = false;
-            this.dialogRef.close(true);
-        },
-        (error)=>{
-            this.loading = false;
-            this._snackBar.open(error.statusText, '', {
-      duration: 2000,
-    });
-        }
-        );
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+            this._snackBar.open(res["result"]["message"], '', {
+              duration: 2000,
+            });
+            }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+            );
   }
 }

@@ -18,6 +18,7 @@ import { ClubdiscussionComponent} from './clubdiscussion/clubdiscussion.componen
 import { ClubgalleryComponent } from './clubgallery/clubgallery.component';
 import { ClubnewsComponent } from './clubnews/clubnews.component';
 import { LoginComponent } from './login/login.component';
+import { AnnouncementComponent } from './announcement/announcement.component';
 
 
 const routes: Routes = [
@@ -38,7 +39,8 @@ const routes: Routes = [
     {path: 'clubevent', component: ClubeventComponent},
     {path: 'clubdiscussion', component: ClubdiscussionComponent},
     {path: 'clubgallery', component: ClubgalleryComponent},
-    {path: 'clubnews', component: ClubnewsComponent}
+    {path: 'clubnews', component: ClubnewsComponent},
+    {path: 'announcement', component: AnnouncementComponent}
 ];
 
 @NgModule({

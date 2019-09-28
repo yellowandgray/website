@@ -26,6 +26,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatNativeDateModule} from '@angular/material/core';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CategoryComponent, CategoryForm } from './category/category.component';
@@ -48,6 +49,7 @@ import { ClubdiscussionComponent } from './clubdiscussion/clubdiscussion.compone
 import { LoginComponent } from './login/login.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { AnnouncementComponent } from './announcement/announcement.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +85,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     ClubNewsForm,
     ClubdiscussionComponent,
     LoginComponent,
-    SidenavComponent
+    SidenavComponent,
+    AnnouncementComponent
   ],
   imports: [
     BrowserModule,
@@ -112,7 +115,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     MatProgressSpinnerModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatNativeDateModule
   ],
   entryComponents: [ClubComponent, ClubForm, CategoryComponent, CategoryForm, VendorComponent, VendorForm, MemberComponent, MemberForm, NewsComponent, NewsForm, AdvertismentComponent, AdvertismentForm, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm],
   providers: [],

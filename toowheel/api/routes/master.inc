@@ -48,6 +48,30 @@ $app->post('/insert_club', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_gallery', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('media_type' => $data['media_type'], 'title' => $data['title'], 'media_path' => $data['media_path']), 'gallery');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/insert_news', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'club_id' => $data['club_id'], 'cover_image' => $data['cover_image'], 'title' => $data['title'], 'media_id' => $data['media_id'], 'author_name' => $data['author_name'], 'date' => $data['date'], 'banner_image_1' => $data['banner_image_1'], 'banner_image_2' => $data['banner_image_2'], 'moto_text' => $data['moto_text'], 'description' => $data['description'], 'description_1' => $data['description_1']), 'news');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/insert_clubevent', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
@@ -152,6 +176,30 @@ $app->get('/get_club', function() {
     $res = array('error' => true, 'message' => 'Unable to export');
     $com = new Common();
     $data = $com->selectAll('*', 'club', 'club_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_gallery', function() {
+    $res = array('error' => true, 'message' => 'Unable to export');
+    $com = new Common();
+    $data = $com->selectAll('*', 'gallery', 'gallery_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_news', function() {
+    $res = array('error' => true, 'message' => 'Unable to export');
+    $com = new Common();
+    $data = $com->selectAll('*', 'news', 'news_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
