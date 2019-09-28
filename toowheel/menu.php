@@ -197,13 +197,14 @@
                     </div>
                 </div>
             </div>
-            <a href="../index" class="logo"><img src='img/logo.png' alt=''></a>
+            <a href="../index.php" class="logo"><img src='img/logo.png' alt=''></a>
             <div class="header-login">
                 <div class="float-left margin-left-10">
-                    <a href="#" id="demo-2">
+                    <a href="#" onclick="myFunction()" id="demo-2">
                         <input type="search" placeholder="Search">
-                        <p>Search</p>
+
                     </a>
+                    <p id="myDiv">Search</p>
                     <!--                    <form id="demo-2">
                                             <input type="search" placeholder="Search">
                                             <p>Search</p>
@@ -245,4 +246,14 @@
 //    document.getElementById("toggle").onclick = function (e) {
 //        e.target.style.visibility = 'hidden';
 //    };
+
+    function myFunction() {
+        var x = document.getElementById("myDiv");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
 </script>

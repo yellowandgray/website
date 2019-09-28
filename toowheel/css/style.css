@@ -934,10 +934,11 @@ body {
 }
 
 .events-main-content h2 {
+    margin: 15px 0 0;
     /* padding: 0px 0 20px; */
     font-family: 'Montserrat', sans-serif;
     color: red;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 600;
     flex: 1;
 }

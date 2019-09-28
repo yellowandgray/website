@@ -227,3 +227,36 @@
             bottom: 0 !important;
         }*/
 }
+
+
+@media (min-width: 768px) and (max-width: 805px) {
+    .header-login input[type=search] {
+        right: 16% !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1204px) {
+    .header-login input[type=search] {
+        right: 11% !important;
+    }
+}
+
+@media (min-width: 1205px) and (max-width: 1166px) {
+    .header-login input[type=search] { 
+        right: 13% !important;
+    }
+}
+
+
+@media (min-width: 1167px) and (max-width: 1440px) {
+    .header-login input[type=search] {
+        right: 17% !important;
+    }
+}
+
+
+@media (min-width: 1441px) and (max-width: 1500px) {
+    .header-login input[type=search] {
+        right: 18% !important;
+    }
+}
