@@ -71,6 +71,7 @@ export class ClubForm {
             'state': new FormControl('', Validators.required),
             'city': new FormControl('', Validators.required),
             'zip': new FormControl('', Validators.required),
+            'landmark': new FormControl('', Validators.required),
             'address': new FormControl('', Validators.required),
             'club_leader_name': new FormControl('', Validators.required),
             'no_of_member': new FormControl('', Validators.required),
@@ -119,6 +120,7 @@ export class ClubForm {
           formData.append('state', this.clubForm.value.name);
           formData.append('city', this.clubForm.value.name);
           formData.append('zip', this.clubForm.value.name);
+          formData.append('landmark', this.clubForm.value.name);
           formData.append('address', this.clubForm.value.name);
           formData.append('club_leader_name', this.clubForm.value.name);
           formData.append('no_of_member', this.clubForm.value.name);

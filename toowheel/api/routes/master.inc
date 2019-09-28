@@ -40,7 +40,7 @@ $app->post('/insert_club', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'club_name' => $data['club_name'], 'cover_image' => $data['cover_image'], 'logo' => $data['logo'], 'state' => $data['state'], 'city' => $data['city'], 'zip' => $data['zip'], 'address' => $data['address'], 'club_leader_name' => $data['club_leader_name'], 'no_of_member' => $data['no_of_member'], 'email' => $data['email'], 'mobile' => $data['mobile'], 'about' => $data['about']), 'club');
+    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'club_name' => $data['club_name'], 'cover_image' => $data['cover_image'], 'logo' => $data['logo'], 'state' => $data['state'], 'city' => $data['city'], 'zip' => $data['zip'], 'landmark' => $data['landmark'], 'address' => $data['address'], 'club_leader_name' => $data['club_leader_name'], 'no_of_member' => $data['no_of_member'], 'email' => $data['email'], 'mobile' => $data['mobile'], 'about' => $data['about']), 'club');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
