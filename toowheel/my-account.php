@@ -6,7 +6,7 @@
         <div class="padding-top-108"></div>
         <div class="my-account-section">
             <div class="container">
-                <div class="display-flex">
+                <div class="display-flex editing-icon">
                     <div class="flex-icon">
                         <div><a href="#" class="change-password"><img src="img/my-account/edit.png" alt="" /></a></div>
                         <div><img src="img/my-account/setting.png" alt="" /></div>
