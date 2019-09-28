@@ -797,10 +797,10 @@ button {
     z-index: 1;
     top: 0;
     left: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
     transition: 0.3s;
     padding-top: 0px;
-    top: -60px;
+    top: -800px;
     border-top: 2px solid red;
 }
 .news {
@@ -889,10 +889,10 @@ button {
 
 @media (max-width: 767px) and (min-width:320px){
     .tab button{
-        font-size: 13px;
+        font-size: 11px;
     }
     .tabcontent .release-cont-2{
-        font-size: 13px;
+        font-size: 11px;
     }
 }
 @media (max-width: 991px) and (min-width:320px){
@@ -3253,4 +3253,49 @@ thead td {
 .editing-icon img {
     position: relative;
     top: 4px;
+}
+@media (max-width: 678px) and (min-width:320px){
+    .header{
+        position: absolute;
+    }
+    .mega-menu .sidenav{
+        height: 500px !important;
+        position: absolute;
+        overflow: scroll !important;
+    }
+    .mega-menu .sidenav p{
+        font-size: 10px !important;
+    }
+    .sidenav{
+        position: absolute;
+
+    }
+    .tab button {
+        padding: 7px 7px;
+
+    }
+    .tablinks a {
+        font-size: 10px;
+
+    }
+    .mega-menu-tab h5 {
+        font-size: 15px;
+    }
+    .mega-menu-tab .i-con i {
+        padding-right: 2px !important;
+        color: #686868;
+        font-size: 16px;
+    }
+    .mega-menu-tab .nav__ul { 
+        padding-left: 12px;
+    }
+
+
+}
+@media (max-width: 1200px) and (min-width:679px){
+    .mega-menu .sidenav{
+        overflow: scroll !important;
+    }
+
+
 }
