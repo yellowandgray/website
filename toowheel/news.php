@@ -19,9 +19,15 @@
                         <div class="events-main-content">
                             <span>Media | Author Name | 24-09-2019</span>
                             <div class="middle">
-                                <h2>NEWS TITLE COMES HERE</h2>
-                                <span class="twitter-share" data-js="twitter-share"><i class="fa fa-twitter" aria-hidden="true"></i></span>
-                                <span class="facebook-share" data-js="facebook-share"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                                <div class="middle-1">
+                                    <h2>NEWS TITLE COMES HERE</h2>
+                                </div>
+                                <div class="middle-2">
+                                    <span class="twitter-share" data-js="twitter-share"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="middle-2">
+                                    <span class="facebook-share" data-js="facebook-share"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                                </div>
                             </div>
                             <strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </strong><br/><br/>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>

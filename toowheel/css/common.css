@@ -3296,5 +3296,12 @@ thead td {
         overflow: scroll !important;
     }
 
+}
+.middle-1{
+    flex-basis: 80%;
+}
 
+.middle-2{
+    flex-basis: 10%;
+    padding: 10px;
 }
