@@ -113,11 +113,11 @@
 <script>
     function openNav() {
         document.getElementById("mySidenav").style.height = "100%";
-        document.getElementById("mySidenav").style.top = "108px";
+        document.getElementById("mySidenav").style.top = "85px";
     }
     function closeNav() {
         document.getElementById("mySidenav").style.height = "0";
-        document.getElementById("mySidenav").style.top = "-540px";
+        document.getElementById("mySidenav").style.top = "-800px";
     }
 
 //    var modal = document.getElementById("mySidenav");
