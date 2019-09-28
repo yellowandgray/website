@@ -35,6 +35,12 @@
 }
 
 
+@media screen and (max-width: 375px) {
+    .bg-four-text h2 {
+        font-size: 45px !important;
+    }
+}
+
 @media (max-width:1367px) and (min-width:1123px){
     .fooetr-5 button {
         background-color: #ed1c24;
