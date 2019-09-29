@@ -12,14 +12,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CategoryComponent implements OnInit {
     result = [];
+    result_fw = [];
     constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
       this.getCategory();
+      this.getFourWheelCategory();
   }
     
   getCategory(): void {
-  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_category')
+  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_two_wheel_category')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -31,16 +33,33 @@ export class CategoryComponent implements OnInit {
         }
         );
   }
-  openDialog(): void  {
-    var data = null;
-    
+  getFourWheelCategory(): void {
+  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_four_wheel_category')
+  .subscribe(
+          (res)=>{
+              this.result_fw = res["result"]["data"];
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
+  }
+  openDialog(ctype): void  {
     const dialogRef = this.dialog.open(CategoryForm, {
         minWidth: "40%",
-        maxWidth: "40%"
+        maxWidth: "40%",
+        data: {
+            ctype: ctype
+        }
     });
 
    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+       if(result !== false && result !== 'false') {
+      this.getCategory();
+      this.getFourWheelCategory();
+       }
     });
 }
 
@@ -54,6 +73,7 @@ export class CategoryForm {
     categoryForm: FormGroup;
     loading = false;
     category_id: string;
+    category_type: string;
     constructor(
     public dialogRef: MatDialogRef<CategoryForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -62,6 +82,7 @@ export class CategoryForm {
         this.categoryForm = new FormGroup({
             'name': new FormControl('', Validators.required)
         });
+        this.category_type= this.data.ctype;
 }
 
  ngOnInit() {
@@ -77,6 +98,7 @@ export class CategoryForm {
       this.loading = true;
       var formData = new FormData();
           formData.append('name', this.categoryForm.value.name);
+          formData.append('type', this.category_type);
       this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/insert_category', formData).subscribe(
           (res)=>{
                 this.loading = false;

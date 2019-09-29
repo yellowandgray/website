@@ -28,7 +28,7 @@ $app->post('/insert_category', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name']), 'category');
+    $record = $com->insertRecord(array('name' => $data['name'], 'type' => $data['type']), 'category');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -160,10 +160,22 @@ $app->get('/get_card_advertisment', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_category', function() {
+$app->get('/get_two_wheel_category', function() {
     $res = array('error' => true, 'message' => 'Unable to export');
     $com = new Common();
-    $data = $com->selectAll('*', 'category', 'category_id > 0');
+    $data = $com->selectAll('*', 'category', 'category_id > 0 AND type = \'two_wheel\'');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_four_wheel_category', function() {
+    $res = array('error' => true, 'message' => 'Unable to export');
+    $com = new Common();
+    $data = $com->selectAll('*', 'category', 'category_id > 0 AND type = \'four_wheel\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
