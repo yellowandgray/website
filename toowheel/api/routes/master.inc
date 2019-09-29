@@ -161,9 +161,33 @@ $app->get('/get_card_advertisment', function() {
 });
 
 $app->get('/get_two_wheel_category', function() {
-    $res = array('error' => true, 'message' => 'Unable to export');
+    $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $data = $com->selectAll('*', 'category', 'category_id > 0 AND type = \'two_wheel\'');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_states', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'state', 'state_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_city_by_state/:sid', function($sid) {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'city', 'city_id > 0 AND state_id = '.$sid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -184,10 +208,22 @@ $app->get('/get_four_wheel_category', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_club', function() {
+$app->get('/get_two_wheel_club', function() {
     $res = array('error' => true, 'message' => 'Unable to export');
     $com = new Common();
-    $data = $com->selectAll('*', 'club', 'club_id > 0');
+    $data = $com->selectAll('*', 'club', 'club_id > 0 AND type \'two_wheel\'');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_four_wheel_club', function() {
+    $res = array('error' => true, 'message' => 'Unable to export');
+    $com = new Common();
+    $data = $com->selectAll('*', 'club', 'club_id > 0 AND type \'four_wheel\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

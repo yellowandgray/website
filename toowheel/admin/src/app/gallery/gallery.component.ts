@@ -39,7 +39,9 @@ export class GalleryComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      if(result !== false && result !== 'false') {
+      this.getGallery();
+       }
     });
 }
 

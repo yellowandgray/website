@@ -5,11 +5,11 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Type</mat-label>
-                    <mat-select required formControlName="type">
-                        <mat-option [value]="'twowheel'">
+                    <mat-select required formControlName="type" (selectionChange)="getCategory()">
+                        <mat-option [value]="'two_wheel'">
                             Two Wheeler
                         </mat-option>
-                        <mat-option [value]="'fourwheel'">
+                        <mat-option [value]="'four_wheel'">
                             Four Wheeler
                         </mat-option>
                     </mat-select>
@@ -20,14 +20,8 @@
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Category</mat-label>
                     <mat-select required formControlName="category_id">
-                        <mat-option [value]="'160cc'">
-                            160 CC
-                        </mat-option>
-                        <mat-option [value]="'200cc'">
-                            200 CC
-                        </mat-option>
-                        <mat-option [value]="'250cc'">
-                            250 CC
+                        <mat-option [value]="row.category_id" *ngFor="let row of categories">
+                            {{row.name}}
                         </mat-option>
                     </mat-select>
                     <mat-error>Category is required</mat-error>
@@ -36,12 +30,12 @@
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="50%">
-                <button type="button" mat-raised-button (click)="fileInput.click()">Choose Cover Image</button>
-                <input hidden #fileInput type="file" id="file" />
+                <button type="button" mat-raised-button (click)="fileInputCover.click()">{{file_cover_name}}</button>
+                <input hidden #fileInputCover type="file" id="file_cover" (change)="fileProgress($event,'file_cover_name', 'cover_image')" />
             </div>
             <div fxFlex="50%">
-                <button type="button" mat-raised-button (click)="fileInput.click()">Choose Club Logo</button>
-                <input hidden #fileInput type="file" id="file" />
+                <button type="button" mat-raised-button (click)="fileInputLogo.click()">{{file_logo_name}}</button>
+                <input hidden #fileInputLogo type="file_logo" id="file" (change)="fileProgress($event,'file_logo_name', 'logo_image')" />
             </div>
         </div>
         <br/>
@@ -74,9 +68,9 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>State</mat-label>
-                    <mat-select required formControlName="state">
-                        <mat-option [value]="'selangor'">
-                            Selangor
+                    <mat-select required formControlName="state" (selectionChange)="getCityByState()">
+                        <mat-option [value]="row.state_id" *ngFor="let row of states">
+                            {{row.name}}
                         </mat-option>
                     </mat-select>
                     <mat-error>State is required</mat-error>
@@ -86,8 +80,8 @@
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>City</mat-label>
                     <mat-select required formControlName="city">
-                        <mat-option [value]="'kuala_lumpur'">
-                            Kuala Lumpur
+                        <mat-option [value]="row.city_id" *ngFor="let row of cities">
+                            {{row.name}}
                         </mat-option>
                     </mat-select>
                     <mat-error>City is required</mat-error>

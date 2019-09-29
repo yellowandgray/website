@@ -32,7 +32,6 @@ export class AdvertismentComponent implements OnInit {
         );
   }
   openDialog(id): void  {
-      
     const dialogRef = this.dialog.open(AdvertismentForm, {
         minWidth: "40%",
         maxWidth: "40%",
@@ -40,9 +39,10 @@ export class AdvertismentComponent implements OnInit {
             
         }
     });
-
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      if(result !== false && result !== 'false') {
+      this.getAdvertisment();
+       }
     });
 }
 
