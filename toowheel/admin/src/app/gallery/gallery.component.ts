@@ -90,7 +90,7 @@ export class GalleryForm {
             });
     }
   onSubmit() {
-          if (this.galleryForm.invalid || this.image === '') {
+          if (this.galleryForm.invalid || this.media_path == '') {
                 return;
           }
           this.loading = true;
