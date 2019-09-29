@@ -32,7 +32,7 @@ export class GalleryComponent implements OnInit {
         );
   }
   
-  openDialog(): void  {
+  openDialog(id): void  {
     const dialogRef = this.dialog.open(GalleryForm, {
         minWidth: "40%",
         maxWidth: "40%"

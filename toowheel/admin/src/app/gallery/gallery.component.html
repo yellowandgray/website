@@ -5,37 +5,92 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog()"><mat-icon>add</mat-icon> Gallery</button>
+            <button mat-raised-button color="primary" (click)="openDialog(0)"><mat-icon>add</mat-icon> Gallery</button>
         </div>
-        <mat-card class="detail-card">
-            <mat-card-header>
-                <mat-card-title>Race on 2018</mat-card-title>
-                <mat-card-subtitle>Image</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="assets/news1.jpg" alt="Photo of a Shiba Inu" />
-            <mat-card-actions>
-                <button mat-icon-button aria-label="label" (click)="openDialog()">
-                    <mat-icon>edit</mat-icon>
-                </button>
-                <button mat-icon-button aria-label="label">
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-        <mat-card class="detail-card">
-            <mat-card-header>
-                <mat-card-title>Race on 2017</mat-card-title>
-                <mat-card-subtitle>Image</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="assets/news2.jpg" alt="Photo of a Shiba Inu" />
-            <mat-card-actions>
-                <button mat-icon-button aria-label="label" (click)="openDialog()">
-                    <mat-icon>edit</mat-icon>
-                </button>
-                <button mat-icon-button aria-label="label">
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
+
+        <ng-container *ngFor="let data of result; let i = index">
+            <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
+                <ng-container *ngIf="result[i]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i]['type']|uppercase}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image *ngIf="result[i]['media_type'] === 'image'" src="{{image_url}}{{result[i]['media_path']}}" alt="Photo" />
+                        <video mat-card-image controls *ngIf="result[i]['media_type'] === 'video'">
+                            <source src="{{image_url}}{{result[i]['media_path']}}" type="video/mp4" />
+                        </video>
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['gallery_id'])">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+                <ng-container *ngIf="result[i + 1]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i + 1]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i + 1]['type']|uppercase}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image *ngIf="result[i + 1]['media_type'] === 'image'" src="{{image_url}}{{result[i + 1]['media_path']}}" alt="Photo" />
+                        <video mat-card-image controls *ngIf="result[i + 1]['media_type'] === 'video'">
+                            <source src="{{image_url}}{{result[i + 1]['media_path']}}" type="video/mp4" />
+                        </video>
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+1]['gallery_id'])">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+                <ng-container *ngIf="result[i + 2]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i + 2]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i + 2]['type']|uppercase}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image *ngIf="result[i + 2]['media_type'] === 'image'" src="{{image_url}}{{result[i + 2]['media_path']}}" alt="Photo" />
+                        <video mat-card-image controls *ngIf="result[i + 2]['media_type'] === 'video'">
+                            <source src="{{image_url}}{{result[i + 2]['media_path']}}" type="video/mp4" />
+                        </video>
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+2]['gallery_id'])">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+                <ng-container *ngIf="result[i + 3]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i + 3]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i + 3]['type']|uppercase}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image *ngIf="result[i + 3]['media_type'] === 'image'" src="{{image_url}}{{result[i + 3]['media_path']}}" alt="Photo" />
+                        <video mat-card-image controls *ngIf="result[i + 3]['media_type'] === 'video'">
+                            <source src="{{image_url}}{{result[i + 3]['media_path']}}" type="video/mp4" />
+                        </video>
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+3]['gallery_id'])">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+            </div>
+        </ng-container>
     </mat-sidenav-content>
 </mat-sidenav-container>
