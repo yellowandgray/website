@@ -53,7 +53,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                     <p class="clb-bg"><?php echo $row['club']; ?></p>
                                     <h2><?php echo $row['title']; ?></h2>
                                     <p><?php echo $row['moto_text']; ?></p>
-                                    <center><a class="btn btn-primary">DISCOVER</a></center>
+                                    <center><a href="" class="btn btn-primary">DISCOVER</a></center>
                                 </div>
                             </div>
                         <?php } ?>

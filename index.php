@@ -86,21 +86,21 @@ $configs = $obj->getLandingDetails();
                 <div class="row padding-tb-40 landing-row-img">
                     <div class="col-md-3">
 <!--                        <img src="img/image/002.png" alt="" />-->
-                        <img src="<?php echo BASE_URL . $configs['landing_about_us_image']; ?>" alt="" />
+                        <a href="toowheel/about.php"><img src="<?php echo BASE_URL . $configs['landing_about_us_image']; ?>" alt="" /></a>
                         <a href="toowheel/about.php" class="cross-btn"><span>ABOUT US</span></a>
                     </div>
                     <div class="col-md-3">
                         <!--<img src="img/image/001.png" alt="" />-->
-                        <img src="<?php echo BASE_URL . $configs['landing_news_updates_image']; ?>" alt="" />
+                        <a href="toowheel/news.php"><img src="<?php echo BASE_URL . $configs['landing_news_updates_image']; ?>" alt="" /></a>
                         <a href="toowheel/news.php" class="cross-btn"><span>NEWS & UPDATES</span></a>
                     </div>
                     <div class="col-md-3">
-                        <img src="<?php echo BASE_URL . $configs['landing_join_club_image']; ?>" alt="" />
+                        <a href="toowheel/find-a-club.php"><img src="<?php echo BASE_URL . $configs['landing_join_club_image']; ?>" alt="" /></a>
                 <!--<img src="img/image/003.png" alt="" />-->
-                        <a href="toowheel/member-register.php" class="cross-btn"><span>JOIN A CLUB</span></a>
+                        <a href="toowheel/find-a-club.php" class="cross-btn"><span>JOIN A CLUB</span></a>
                     </div>
                     <div class="col-md-3">
-                        <img src="<?php echo BASE_URL . $configs['landing_shop_now_image']; ?>" alt="" />
+                        <a href="#"><img src="<?php echo BASE_URL . $configs['landing_shop_now_image']; ?>" alt="" /></a>
                         <!--<img src="img/image/004.png" alt="" />-->
                         <a href="#" class="cross-btn"><span>SHOP NOW!</span></a>
                     </div>
