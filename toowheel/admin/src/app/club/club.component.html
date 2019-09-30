@@ -103,7 +103,98 @@
                 </ng-container>
             </mat-tab>
             <mat-tab label="4 Wheeler">
-
+                <ng-container *ngFor="let data of result_four_wheel; let i = index">
+                    <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
+                        <ng-container *ngIf="result[i]">
+                            <mat-card fxFlex="25%">
+                                <mat-card-header>
+                                    <mat-card-title>{{result[i]['name']}}</mat-card-title>
+                                    <mat-card-subtitle>{{result[i]['category']|uppercase}}</mat-card-subtitle>
+                                </mat-card-header>
+                                <img mat-card-image src="{{image_url}}{{result[i]['cover_image']}}" alt="Photo of a Shiba Inu" />
+                                <mat-card-content>
+                                    <p>
+                                        {{result[i]['about']}}
+                                    </p>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['club_id'])">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </ng-container>
+                        <ng-container *ngIf="result[i + 1]">
+                            <mat-card fxFlex="25%">
+                                <mat-card-header>
+                                    <mat-card-title>{{result[i + 1]['name']}}</mat-card-title>
+                                    <mat-card-subtitle>{{result[i + 1]['category']|uppercase}}</mat-card-subtitle>
+                                </mat-card-header>
+                                <img mat-card-image src="{{image_url}}{{result[i + 1]['cover_image']}}" alt="Photo of a Shiba Inu" />
+                                <mat-card-content>
+                                    <p>
+                                        {{result[i + 1]['about']}}
+                                    </p>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 1]['club_id'])">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </ng-container>
+                        <ng-container *ngIf="result[i + 2]">
+                            <mat-card fxFlex="25%">
+                                <mat-card-header>
+                                    <mat-card-title>{{result[i + 2]['name']}}</mat-card-title>
+                                    <mat-card-subtitle>{{result[i + 2]['category']|uppercase}}</mat-card-subtitle>
+                                </mat-card-header>
+                                <img mat-card-image src="{{image_url}}{{result[i + 2]['cover_image']}}" alt="Photo of a Shiba Inu" />
+                                <mat-card-content>
+                                    <p>
+                                        {{result[i + 2]['about']}}
+                                    </p>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 2]['club_id'])">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+                                </mat-card-actions>
+                            </mat-card> 
+                        </ng-container>
+                        <ng-container *ngIf="result[i + 3]">
+                            <mat-card fxFlex="25%">
+                                <mat-card-header>
+                                    <mat-card-title>{{result[i + 3]['name']}}</mat-card-title>
+                                    <mat-card-subtitle>{{result[i + 3]['category']|uppercase}}</mat-card-subtitle>
+                                </mat-card-header>
+                                <img mat-card-image src="{{image_url}}{{result[i + 3]['cover_image']}}" alt="Photo of a Shiba Inu" />
+                                <mat-card-content>
+                                    <p>
+                                        {{result[i + 3]['about']}}
+                                    </p>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 3]['club_id'])">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+                                </mat-card-actions>
+                            </mat-card> 
+                        </ng-container>
+                    </div>            
+                </ng-container>
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>

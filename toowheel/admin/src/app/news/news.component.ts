@@ -37,14 +37,16 @@ export class NewsComponent implements OnInit {
            );
      }
 
-  openDialog(): void  {
+  openDialog(id): void  {
     const dialogRef = this.dialog.open(NewsForm, {
         minWidth: "40%",
         maxWidth: "40%"
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      if(result !== false && result !== 'false') {
+      this.getNews();
+       }
     });
 }
 

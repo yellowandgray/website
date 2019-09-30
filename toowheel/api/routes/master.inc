@@ -247,7 +247,7 @@ $app->get('/get_gallery', function() {
 $app->get('/get_news', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('*', 'news', 'news_id > 0');
+    $data = $com->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
