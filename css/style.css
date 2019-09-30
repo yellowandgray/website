@@ -466,7 +466,7 @@ button {
     font-weight: 600;
     font-size: 19px;
     line-height: 2;
-    color: #fff;
+    color: #fff !important;
 }
 
 .slide .inside {

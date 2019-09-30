@@ -42,43 +42,46 @@
 }
 
 @media (max-width:1367px) and (min-width:1123px){
+    
+    .fooetr-5 input {
+        padding: 5px 0px 5px 10px !important;
+    }
     .fooetr-5 button {
-        background-color: #ed1c24;
-        border: none;
-        border-radius: 0px 18px 18px 0;
-        color: #fff;
-        padding: 5px 25px 5px 25px;
-        position: relative;
-        right: -180px;
-        outline: none;
-        top: -40px;
+        background-color: #ed1c24 !important;
+        border: none !important;
+        border-radius: 0px 18px 18px 0 !important;
+        color: #fff !important;
+        padding: 5px 10px 5px 10px !important;
+        position: relative !important;
+        right: 5px !important;
+        outline: none !important;
     }
 }
 @media (max-width:1122px) and (min-width:911px){
     .fooetr-5 button {
-        background-color: #ed1c24;
-        border: none;
-        border-radius: 0px 18px 18px 0;
+        background-color: #ed1c24 !important;
+        border: none !important;
+        border-radius: 0px 18px 18px 0 !important;
         color: #fff;
-        padding: 5px 25px 5px 25px;
-        position: relative;
-        right: -134px;
-        outline: none;
-        top: -40px;
+        padding: 5px 25px 5px 25px !important;
+        position: relative !important;
+        right: -134px !important;
+        outline: none !important;
+        top: -40px !important;
     }
 
 }
 @media (max-width:910px) and (min-width:756px){
     .fooetr-5 button {
-        background-color: #ed1c24;
-        border: none;
-        border-radius: 0px 18px 18px 0;
-        color: #fff;
-        padding: 5px 25px 5px 25px;
-        position: relative;
-        right: -134px;
-        outline: none;
-        top: -40px;
+        background-color: #ed1c24 !important;
+        border: none !important;
+        border-radius: 0px 18px 18px 0 !important;
+        color: #fff !important;
+        padding: 5px 10px !important;
+        position: relative !important;
+        right: -134px !important;
+        outline: none !important;
+        top: -40px !important;
     }
     .nav__title {
         font-size: 12px !important;
@@ -92,41 +95,41 @@
 @media (max-width:755px) and (min-width:320px){
     .fooetr-1{
         flex-basis: 100% !important;
-        text-align: center;
+        text-align: center !important;
     }
     .fooetr-2{
         flex:1 !important;
-        padding: 0px 0px 0px 40px;
+        padding: 0px 0px 0px 40px !important;
     }
     .fooetr-3{
         flex:1 !important;
-        padding: 0px 0px 0px 40px;
+        padding: 0px 0px 0px 40px !important;
     }
     .fooetr-4{
         flex:1 !important;
-        padding: 0px 0px 0px 40px;
+        padding: 0px 0px 0px 40px !important;
     }
     .fooetr-5{
-        flex-basis: 100% !important;
-        text-align: center;
+        flex-basis: 100% !important !important;
+        text-align: center !important;
     }
     .footer-sec{
-        display: flex;
+        display: flex !important;
         /*flex-direction: row;*/
-        flex-wrap: wrap;
-        justify-content: space-around;
+        flex-wrap: wrap !important;
+        justify-content: space-around !important;
 
     }
     .fooetr-5 button {
-        background-color: #ed1c24;
+        background-color: #ed1c24 !important;
         border: none;
-        border-radius: 0px 18px 18px 0;
-        color: #fff;
-        padding: 5px 25px 5px 25px;
-        position: relative;
-        right: 11px;
-        outline: none;
-        top: 0px;
+        border-radius: 0px 18px 18px 0 !important;
+        color: #fff !important;
+        padding: 5px 25px 5px 25px !important;
+        position: relative !important;
+        right: 11px !important;
+        outline: none !important;
+        top: 0px !important;
     }
 
 
@@ -134,15 +137,15 @@
 }
 @media (max-width:364px) and (min-width:320px){
     .fooetr-5 button {
-        background-color: #ed1c24;
-        border: none;
-        border-radius: 0px 18px 18px 0;
-        color: #fff;
-        padding: 5px 25px 5px 25px;
-        position: relative;
-        right: -84px;
-        outline: none;
-        top: -40px;
+        background-color: #ed1c24 !important;
+        border: none !important;
+        border-radius: 0px 18px 18px 0 !important;
+        color: #fff !important;
+        padding: 5px 25px 5px 25px !important;
+        position: relative !important;
+        right: -84px !important;
+        outline: none !important;
+        top: -40px !important;
     }
 
 
@@ -150,14 +153,14 @@
 @media (max-width:397px) and (min-width:320px){
 
     .footer-sec li a{
-        font-size: 9px;
+        font-size: 9px !important;
     }
 
 }
 @media screen and (max-width:590px){
 
     .footer-sec li a{
-        font-size: 10px;
+        font-size: 10px !important;
     }
 
 }
@@ -167,63 +170,63 @@
 }
 @media screen and (min-width: 40.375em){
     .footer {
-        padding: 0em; 
+        padding: 0em !important; 
     }
 }
 @media (max-width:991px) and (min-width:768px){
     .red-l {
-        background-color: #ed1c24;
-        width: 60%;
-        height: 2px;
-        position: relative;
-        left: 137px;
-        margin-bottom: 40px;
+        background-color: #ed1c24 !important;
+        width: 60% !important;
+        height: 2px !important;
+        position: relative !important;
+        left: 137px !important;
+        margin-bottom: 40px !important;
     }
 }
 @media (max-width:767px) and (min-width:500px){
     .red-l {
-        background-color: #ed1c24;
-        width: 60%;
-        height: 2px;
-        position: relative;
-        left: 97px;
-        margin-bottom: 40px;
+        background-color: #ed1c24 !important;
+        width: 60% !important;
+        height: 2px !important;
+        position: relative !important;
+        left: 97px !important;
+        margin-bottom: 40px !important;
     }
     .member-tt h3 {
-        text-align: center;
-        letter-spacing: 8px;
-        font-size: 27px;
-        padding: 40px 0px 0px 0px;
+        text-align: center !important;
+        letter-spacing: 8px !important;
+        font-size: 27px !important;
+        padding: 40px 0px 0px 0px !important;
     }
     .nav__title {
-        font-size: 18px;
+        font-size: 18px !important;
     }
 }
 @media (max-width:499px) and (min-width:320px){
     .red-l {
-        display: none;
+        display: none !important;
     }
     .member-tt h3 {
-        text-align: center;
-        letter-spacing: 8px;
-        font-size: 27px;
-        padding: 40px 0px 0px 0px;
+        text-align: center !important;
+        letter-spacing: 8px !important;
+        font-size: 27px !important;
+        padding: 40px 0px 0px 0px !important;
     }
     .nav__title {
-        font-size: 14px;
+        font-size: 14px !important;
     }
 }
 @media (max-width:434px) and (min-width:320px){
     .fooetr-2{
         flex:1 !important;
-        padding: 0px 0px 0px 8px;
+        padding: 0px 0px 0px 8px !important;
     }
     .fooetr-3{
         flex:1 !important;
-        padding: 0px 0px 0px 8px;
+        padding: 0px 0px 0px 8px !important;
     }.fooetr-4{
         flex:1 !important;
-        padding: 0px 0px 0px 8px;
+        padding: 0px 0px 0px 8px !important;
     }
     .nav__title {
         font-size: 14px;
@@ -231,22 +234,22 @@
 }
 @media (max-width:991px) and (min-width:768px){
     .mem-flex p{
-        font-size: 13px;
+        font-size: 13px !important;
     }
     .member-box {
-        padding: 10px 10px;
+        padding: 10px 10px !important;
     }
     .img-t img {
-        position: relative;
-        top: -55px;
-        left: 43px;
+        position: relative !important;
+        top: -55px !important;
+        left: 43px !important;
     }
 }
 @media (max-width:1199px) and (min-width:992px){
     .img-t img {
-        position: relative;
-        top: -58px;
-        left: 49px;
+        position: relative !important;
+        top: -58px !important;
+        left: 49px !important;
     }
 
 }
@@ -261,66 +264,66 @@
 }
 @media (max-width:768px) and (min-width:320px){
     .mem-flex-item {
-        flex-basis: 100%;
-        margin: 20px 10px;
+        flex-basis: 100% !important;
+        margin: 20px 10px !important;
     }
     .img-t img {
-        position: relative;
-        top: -58px;
-        left: 171px;
+        position: relative !important;
+        top: -58px !important;
+        left: 171px !important;
     }
 
 }
 @media (max-width:526px) and (min-width:320px){
     .img-t img {
-        position: relative;
-        top: -58px;
-        left: 71px;
+        position: relative !important;
+        top: -58px !important;
+        left: 71px !important;
     }
 
 }
 @media (max-width:364px) and (min-width:320px){
     .fooetr-5 .i-con {
-        padding: 10px 1px 0px 59px;
+        padding: 10px 1px 0px 59px !important;
     }
 
 }
 @media (max-width:1045px) and (min-width:911px){
     .fooetr-5 .i-con i {
-        font-size: 23px;
-        padding-right: 13px;
-        color: #6f6f6f;
+        font-size: 23px !important;
+        padding-right: 13px !important;
+        color: #6f6f6f !important;
     }
 
 }
 @media (max-width:1199px) and (min-width:992px){
     .login i {
-        position: relative;
-        top: 0px;
-        right: -24px;
-        color: #ed1c24;
+        position: relative !important;
+        top: 0px !important;
+        right: -24px !important;
+        color: #ed1c24 !important;
     }
 
 }
 
 @media screen and (min-width: 766px) {
     .mob-block {
-        display: none;
+        display: none !important;
     }
 }
 @media screen and (max-width: 767px) {
     .landing-bike {
-        width: 100%;
+        width: 100% !important;
         left: 0 !important;
     }
     .landing-car {
-        width: 100%;
+        width: 100% !important;
     }
     .landing-row-img img {
-        width: 100%;
+        width: 100% !important;
     }
     .logo img {
-        width: 100%;
+        width: 100% !important;
     }
     .bg-text h2 {
         text-align: center !important;
@@ -338,7 +341,7 @@
     }
     .btn-position-fourwheel {
         position: unset !important;
-        text-align: center;
+        text-align: center !important;
     }
     .order-img {
         order: 1 !important;
@@ -353,16 +356,16 @@
         width: 20% !important
     }
     .mob-noon {
-        display: none;
+        display: none !important;
     }
     .mob-block {
-        display: block;
+        display: block !important;
     }
     .mob-block .login-button {
         padding: 15px 20px !important;
-        float: right;
-        margin-right: 0;
-        margin-top: 0;
+        float: right !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
     }
 }
 
@@ -382,6 +385,6 @@
 
 @media screen and (max-width: 1350px) {
     .landing-car {
-        width: 100%;
+        width: 100% !important;
     }
 }
