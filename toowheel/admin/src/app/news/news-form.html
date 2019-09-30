@@ -5,7 +5,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Type</mat-label>
-                    <mat-select required formControlName="club_type">
+                    <mat-select required formControlName="type" (selectionChange)="getCategory()">
                         <mat-option [value]="'two_wheel'">
                             2 Wheel
                         </mat-option>
@@ -19,7 +19,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Category</mat-label>
-                    <mat-select required formControlName="category_id">
+                    <mat-select required formControlName="category_id" (selectionChange)="getClub()">
                         <mat-option [value]="row.category_id" *ngFor="let row of categories">
                             {{row.name}}
                         </mat-option>

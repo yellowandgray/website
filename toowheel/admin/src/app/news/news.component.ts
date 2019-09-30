@@ -18,7 +18,6 @@ export interface DialogData {
 export class NewsComponent implements OnInit {
   result = [];  
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
-
     ngOnInit() {
          this.getNews();
      }
@@ -59,18 +58,24 @@ export class NewsComponent implements OnInit {
 export class NewsForm {
     newsForm: FormGroup;
     loading = false;
+    categories:any[];
+    clubs:any[];
     cover_image: string = 'Choose Cover Image';
+    thumb_image: string = 'Choose Thumb Image';
     banner_image_1: string = 'Choose Cover Image';
     banner_image_2: string = 'Choose Cover Image';
+    cover_image_path: string;
+    thumb_image_path: string;
+    banner_image_1_path: string;
+    banner_image_2_path: string;
     constructor(
     public dialogRef: MatDialogRef<NewsForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {}
-
     ngOnInit() {
       this.newsForm = new FormGroup({
-      'club_type': new FormControl('', Validators.required),
+      'type': new FormControl('', Validators.required),
       'category_id': new FormControl('', Validators.required),
       'club_id': new FormControl('', Validators.required),
       'title': new FormControl('', Validators.required),
@@ -82,9 +87,49 @@ export class NewsForm {
       'description_1': new FormControl('', Validators.required)
       });
     }
-    fileProgress(fileInput: any, field: string) {
+    getCategory(): void {
+       this.loading = true;
+          this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_'+this.newsForm.value.type+'_category').subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.categories = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
+    getClub(): void {
+       this.loading = true;
+          this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_club_by_category/'+this.newsForm.value.category_id).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.clubs = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
+    fileProgress(fileInput: any, name:string, field: string) {
         var fileData = <File>fileInput.target.files[0];
-        this[field] = fileData.name;
+        this[name] = fileData.name;
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
