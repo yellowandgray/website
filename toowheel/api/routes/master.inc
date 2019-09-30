@@ -280,6 +280,18 @@ $app->get('/get_news', function() {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_event', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'event', 'event_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_clubevent', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();

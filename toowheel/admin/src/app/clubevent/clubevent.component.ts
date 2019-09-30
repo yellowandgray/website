@@ -5,11 +5,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
-
 @Component({
   selector: 'app-clubevent',
   templateUrl: './clubevent.component.html',
@@ -20,22 +15,22 @@ export class ClubeventComponent implements OnInit {
     constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
-    this.getClubEvent();
+    this.getEvent();
   }
-
-    getClubEvent(): void {
-  this.httpClient.get<any>('http://localhost:3000/clubevent')
-  .subscribe(
-          (res)=>{
-              this.result = res.data;
-        },
-        (error)=>{
-            this._snackBar.open(error.statusText, '', {
-      duration: 2000,
-    });
-        }
-        );
-  }
+image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
+       getEvent(): void {
+     this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_event')
+     .subscribe(
+             (res)=>{
+                 this.result = res["result"]["data"];
+           },
+           (error)=>{
+               this._snackBar.open(error["statusText"], '', {
+         duration: 2000,
+       });
+           }
+           );
+     }
 
   openDialog(): void  {
     const dialogRef = this.dialog.open(ClubEventForm, {
