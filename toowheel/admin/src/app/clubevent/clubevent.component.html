@@ -7,37 +7,97 @@
         <div class="add-btn-container">
             <button mat-raised-button color="primary" (click)="openDialog()"><mat-icon>add</mat-icon> Event</button>
         </div>
-        <mat-card class="detail-card">
-            <mat-card-header>
-                <mat-card-title>Summer Event</mat-card-title>
-                <mat-card-subtitle>On 09-09-2019</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="assets/news1.jpg" alt="Photo of a Shiba Inu" />
-            <mat-card-content>
-                <p>
-                    Must be a 160 CC bike. Race will be conduct on 1hr.
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-icon-button matTooltip="News" aria-label="label">
-                    <mat-icon>assignment</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip="Photo Gallery" aria-label="label">
-                    <mat-icon>photo_library</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip="Participant" aria-label="label">
-                    <mat-icon>people</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip="Discussion" aria-label="label" routerLink="/clubdiscussion">
-                    <mat-icon>record_voice_over</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip="Edit" aria-label="label">
-                    <mat-icon>edit</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip="Delete" aria-label="label">
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
+        <ng-container *ngFor="let data of result; let i = index">
+            <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
+                <ng-container *ngIf="result[i]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i]['type']|uppercase}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="{{image_url}}{{result[i]['cover_image']}}" alt="Photo of a Shiba Inu" />
+                        <mat-card-content>
+                            <p>
+                                {{result[i]['moto_text']}}
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['advertisement_id'])">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+                <ng-container *ngIf="result[i + 1]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i + 1]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i + 1]['type']|uppercase}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="{{image_url}}{{result[i + 1]['image']}}" alt="Photo of a Shiba Inu" />
+                        <mat-card-content>
+                            <p>
+                                {{result[i + 1]['moto_text']}}
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+1]['advertisement_id'])">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+                <ng-container *ngIf="result[i + 2]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i + 2]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i + 2]['type']|uppercase}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="{{image_url}}{{result[i + 2]['image']}}" alt="Photo of a Shiba Inu" />
+                        <mat-card-content>
+                            <p>
+                                {{result[i + 2]['moto_text']}}
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+2]['advertisement_id'])">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+                <ng-container *ngIf="result[i + 3]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i + 3]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i + 3]['type']|uppercase}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="{{image_url}}{{result[i + 3]['image']}}" alt="Photo of a Shiba Inu" />
+                        <mat-card-content>
+                            <p>
+                                {{result[i + 3]['moto_text']}}
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+3]['advertisement_id'])">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+            </div>            
+        </ng-container>
     </mat-sidenav-content>
 </mat-sidenav-container>
