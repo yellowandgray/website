@@ -32,7 +32,7 @@ image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/
            );
      }
 
-  openDialog(): void  {
+  openDialog(id): void  {
     const dialogRef = this.dialog.open(ClubEventForm, {
         minWidth: "40%",
         maxWidth: "40%"
