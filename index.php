@@ -70,7 +70,7 @@
                                 <div class="row">
                                     <div class="col-md-8 product-text">
                                         <!--<h1 class="mb-2">PRODUCT</h1>-->
-                                        <h2 class="subheading mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                                        <h2 class="subheading mb-4">FRESCHE delivers high performance antibacterial, antifungal, mould and odour control on treated textile fibres and substrates.</h2>
                                         <div class="row price">
                                             <div class="col-md-6 pro-d">
                                                 <h3>Combo pack</h3>
@@ -81,7 +81,8 @@
                                             <div class="col-md-6">
                                                 <div class="button-1">
                                                     <div class="eff-1"></div>
-                                                    <a href="#">Add To Cart</a>
+
+                                                    <a href="#"><img src="images/add.png" alt="" class="add-img"/>  Add To Cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -206,11 +207,11 @@
                 </div>
             </div>
         </section>
-        <section class="img" style="background:#88d4f9;">
+<!--        <section class="img" style="background:#88d4f9;">
             <div class="pad-80">
                 <div class="row acc">
                     <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
-                         <!--<span class="subheading">Best Price For You</span>-->
+                         <span class="subheading">Best Price For You</span>
                         <h2 class="mb-4 text-center">Accreditation</h2>
                         <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 
@@ -240,53 +241,39 @@
                                 </div>
                             </div>
                         </div>
-                        <!--                        <ul class="acc-list">
+                                                <ul class="acc-list">
                                                     <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>US EPA</li>
                                                     <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>Oeko-Tex</li>
                                                     <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>European BPR</li>
                                                     <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>Primary Industry in New Zealand</li>
-                                                </ul>-->
+                                                </ul>
 
                     </div>
                 </div> 
             </div>                
-        </section>
+        </section>-->
         <section class="pad-80 img">
             <div class="row">
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
                                    <!--<span class="subheading">Best Price For You</span>-->
-                    <h2 class="mb-4 text-head">Certificates</h2>
                     <div class="row pad-tb-50">
-                        <div class="col-md-8">
-                            <div class="">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-
+                        <div class="col-md-6">
+                            <div class="cer-text">
+                                <h3>Bio Antimicrobials</h3>
+                                <p>Fresche Bioscience is a new generation SI QAC antimicrobial which delivers high performance, broad spectrum antibacterial, anti-fungal, mould and odour protection on surfaces to which they are either applied or infused. They are widely recognised as one of the worlds most advanced non-volatile, surface bonded antimicrobial, safe for people, plants, pets and the environment.</p>
+                                <div class="button-1">
+                                    <div class="eff-1"></div>
+                                    <a href="#">See More</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="">
-                                <img src="images/applications/004.jpg" alt="" class="img-responsive"/>
+                        <div class="col-md-6">
+                            <div class="cer-img">
+                                <img src="images/applications/007.jpg" alt="" class="img-responsive"/>
                             </div>
                         </div>
                     </div>
                     <hr/>
-                    <div class="row pad-tb-50">
-                        <div class="col-md-4">
-                            <div class="">
-                                <img src="images/applications/004.jpg" alt="" class="img-responsive"/>
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div> 
         </section>
