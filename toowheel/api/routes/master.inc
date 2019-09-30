@@ -40,7 +40,7 @@ $app->post('/insert_club', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'club_name' => $data['club_name'], 'cover_image' => $data['cover_image'], 'logo' => $data['logo'], 'state' => $data['state'], 'city' => $data['city'], 'zip' => $data['zip'], 'landmark' => $data['landmark'], 'address' => $data['address'], 'club_leader_name' => $data['club_leader_name'], 'no_of_member' => $data['no_of_member'], 'email' => $data['email'], 'mobile' => $data['mobile'], 'about' => $data['about']), 'club');
+    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'name' => $data['name'], 'cover_image' => $data['cover_image'], 'logo' => $data['logo'], 'state_id' => $data['state'], 'city_id' => $data['city'], 'zipcode' => $data['zip'], 'landmark' => $data['landmark'], 'address' => $data['address'], 'leader_name' => $data['club_leader_name'], 'no_of_member' => $data['no_of_member'], 'email' => $data['email'], 'phone' => $data['mobile'], 'about' => $data['about']), 'club');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -187,7 +187,7 @@ $app->get('/get_states', function() {
 $app->get('/get_city_by_state/:sid', function($sid) {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('*', 'city', 'city_id > 0 AND state_id = '.$sid);
+    $data = $com->selectAll('*', 'city', 'city_id > 0 AND state_id = ' . $sid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -211,7 +211,7 @@ $app->get('/get_four_wheel_category', function() {
 $app->get('/get_two_wheel_club', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('*', 'club', 'club_id > 0 AND type = \'two_wheel\'');
+    $data = $com->selectAll('c.*, ca.name AS category', 'club AS c LEFT JOIN category AS ca ON c.category_id = ca.category_id', 'c.club_id > 0 AND c.type = \'two_wheel\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -223,7 +223,7 @@ $app->get('/get_two_wheel_club', function() {
 $app->get('/get_four_wheel_club', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('*', 'club', 'club_id > 0 AND type = \'four_wheel\'');
+    $data = $com->selectAll('c.*, ca.name AS category', 'club AS c LEFT JOIN category AS ca ON c.category_id = ca.category_id', 'c.club_id > 0 AND c.type = \'four_wheel\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

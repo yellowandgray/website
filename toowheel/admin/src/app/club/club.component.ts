@@ -45,7 +45,7 @@ export class ClubComponent implements OnInit {
         }
         );
   }
-  openDialog(): void  {
+  openDialog(id): void  {
     const dialogRef = this.dialog.open(ClubForm, {
         minWidth: "40%",
         maxWidth: "40%"
@@ -179,22 +179,21 @@ export class ClubForm {
         }
         this.loading = true;
         var formData = new FormData();
-          formData.append('name', this.clubForm.value.title);
+          formData.append('name', this.clubForm.value.name);
           formData.append('type', this.clubForm.value.type);
           formData.append('cover_image', this.cover_image);
           formData.append('logo', this.logo_image);
-          formData.append('category_id', this.clubForm.value.url);
-          formData.append('state', this.clubForm.value.name);
-          formData.append('city', this.clubForm.value.name);
-          formData.append('zip', this.clubForm.value.name);
-          formData.append('landmark', this.clubForm.value.name);
-          formData.append('address', this.clubForm.value.name);
-          formData.append('club_leader_name', this.clubForm.value.name);
-          formData.append('no_of_member', this.clubForm.value.name);
-          formData.append('club_leader_name', this.clubForm.value.name);
-          formData.append('email', this.clubForm.value.name);
-          formData.append('mobile', this.clubForm.value.name);
-          formData.append('about', this.clubForm.value.name);
+          formData.append('category_id', this.clubForm.value.category_id);
+          formData.append('state', this.clubForm.value.state);
+          formData.append('city', this.clubForm.value.city);
+          formData.append('zip', this.clubForm.value.zip);
+          formData.append('landmark', this.clubForm.value.landmark);
+          formData.append('address', this.clubForm.value.address);
+          formData.append('club_leader_name', this.clubForm.value.club_leader_name);
+          formData.append('no_of_member', this.clubForm.value.no_of_member);
+          formData.append('email', this.clubForm.value.email);
+          formData.append('mobile', this.clubForm.value.mobile);
+          formData.append('about', this.clubForm.value.about);
           this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/insert_club', formData).subscribe(
           (res)=>{
                 this.loading = false;
