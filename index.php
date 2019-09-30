@@ -252,6 +252,73 @@
                 </div> 
             </div>                
         </section>-->
+        <section class="img" style="background-image: url(images/bg-acc.jpg); background-size: cover;">
+            <div class="pad-80">
+                <div class="row acc">
+                    <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
+                        <h2 class="mb-4 text-center">Accreditation</h2>
+                        <div class="">
+                            <ul class="acc-list accredition">
+                                <img src="images/acc/005.png" alt=""/><li>US EPA</li>
+                                <img src="images/acc/005.png" alt=""/><li>Oeko-Tex</li>
+                                <img src="images/acc/005.png" alt=""/><li>European BPR</li>
+                                <img src="images/acc/005.png" alt="" /><li>Primary Industry in New Zealand</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
+                        <h2 class="mb-4 text-center">Certificates</h2>
+                        <div class="row ftco-animate">
+                            <div class="col-md-12">
+                                <div class="carousel-testimony owl-carousel">
+                                    <div class="item">
+                                        <div class="testimony-wrap p-4 pb-5">
+                                            <div class="text text-center certificate">
+                                                <img src="images/applications/008.jpg" class="img-responsive"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimony-wrap p-4 pb-5 ">
+                                            <div class="text text-center certificate">
+                                                <img src="images/applications/008.jpg" class="img-responsive"/>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="testimony-wrap p-4 pb-5">
+                                            <div class="text text-center certificate">
+                                                <img src="images/applications/008.jpg" class="img-responsive"/>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="testimony-wrap p-4 pb-5">
+                                            <div class="text text-center certificate">
+                                                <img src="images/applications/008.jpg" class="img-responsive"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="testimony-wrap p-4 pb-5">
+                                            <div class="text text-center certificate">
+                                                <img src="images/applications/008.jpg" class="img-responsive"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div> 
+            </div>                
+        </section>
         <section class="pad-80 img">
             <div class="row">
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
@@ -273,10 +340,10 @@
                             </div>
                         </div>
                     </div>
-                    <hr/>
                 </div>
             </div> 
         </section>
+
 
         <section class="ftco-section testimony-section bg-blue">
             <div class="container">
