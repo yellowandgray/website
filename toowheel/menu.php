@@ -26,7 +26,7 @@
                         <button class="tablinks"><a href="member-register.php">Be A Member <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>
                         <button class="tablinks" onclick="openCity(event, 'Clubs')">Find a Club <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Events')">Events <i class="fa fa-caret-right" aria-hidden="true"></i></button>
-                        <button class="tablinks" onclick="openCity(event, 'register-club')">Club Registration <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                        <button class="tablinks"><a href="club-register.php">Club Registration <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>
                         <div class="line-g"></div>
                         <h5>FOLLOW US</h5>
                         <ul class="nav__ul">
@@ -212,7 +212,6 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6">
                                     <div class="club-box">
-                                        <span>#1</span>
                                         <img src="img/events/005.jpg" alt="" />
                                         <h3>Event Title</h3>
                                         <p>Date: 10/10/2019</p>
@@ -221,7 +220,6 @@
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="club-box">
-                                        <span>#1</span>
                                         <img src="img/events/005.jpg" alt="" />
                                         <h3>Event Title</h3>
                                         <p>Date: 10/10/2019</p>
@@ -230,7 +228,6 @@
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="club-box">
-                                        <span>#1</span>
                                         <img src="img/events/005.jpg" alt="" />
                                         <h3>Event Title</h3>
                                         <p>Date: 10/10/2019</p>
@@ -239,7 +236,6 @@
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="club-box">
-                                        <span>#1</span>
                                         <img src="img/events/005.jpg" alt="" />
                                         <h3>Event Title</h3>
                                         <p>Date: 10/10/2019</p>
@@ -248,7 +244,6 @@
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="club-box">
-                                        <span>#1</span>
                                         <img src="img/events/005.jpg" alt="" />
                                         <h3>Event Title</h3>
                                         <p>Date: 10/10/2019</p>
@@ -257,7 +252,6 @@
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="club-box">
-                                        <span>#1</span>
                                         <img src="img/events/005.jpg" alt="" />
                                         <h3>Event Title</h3>
                                         <p>Date: 10/10/2019</p>
@@ -266,7 +260,6 @@
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="club-box">
-                                        <span>#1</span>
                                         <img src="img/events/005.jpg" alt="" />
                                         <h3>Event Title</h3>
                                         <p>Date: 10/10/2019</p>
@@ -275,7 +268,6 @@
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="club-box">
-                                        <span>#1</span>
                                         <img src="img/events/005.jpg" alt="" />
                                         <h3>Event Title</h3>
                                         <p>Date: 10/10/2019</p>
