@@ -77,9 +77,18 @@
     .profile-table table th {
         text-align: left;
     }
-/*    .event-n {
-        height: auto !important;
-    }*/
+    /*    .event-n {
+            height: auto !important;
+        }*/
+    #nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+        width: 40px !important;
+    }
+    #nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
+        top: 10px !important;
+    }
+    #nav-icon3 span:nth-child(4) {
+        top: 20px !important;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {

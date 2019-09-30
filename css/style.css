@@ -125,10 +125,16 @@ p {
     text-decoration: none;
     padding: 0 20px;
     bottom: 61px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .cross-btn:hover {
     text-decoration: none;
+    border-bottom: 40px solid #ffffff;
+}
+
+.cross-btn:hover span {
+    color: #ff0000;
 }
 
 .cross-btn span {
@@ -195,6 +201,10 @@ p {
 
 .footer a {
     text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
 .footer__nav {
@@ -408,16 +418,24 @@ button {
     background: #fff;
     border-radius: 25px;
     padding: 15px 15px 15px 15px;
+    border: 2px solid #0f0f0f;
     color: #000;
     font-weight: 800;
     font-size: 20px;
     position: relative;
     top: -125px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .btn-enter-twowheel:hover {
     text-decoration: none;
-    color: #000;
+    color: #fff;
+    background: red;
+    border: 2px solid #fff;
+}
+
+.btn-enter-twowheel:hover i {
+    color: #fff;
 }
 
 .btn-enter-twowheel i {
@@ -431,16 +449,24 @@ button {
     background: #fff;
     border-radius: 25px;
     padding: 15px 15px 15px 15px;
+    border: 2px solid #f4001e;
     color: #000;
     font-weight: 800;
     font-size: 20px;
     position: relative;
     top: -125px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .btn-enter-fourwheel:hover {
     text-decoration: none;
-    color: #000;
+    color: #fff;
+    background: red;
+    border: 2px solid #fff;
+}
+
+.btn-enter-fourwheel:hover i {
+    color: #fff;
 }
 
 .btn-enter-fourwheel i {
