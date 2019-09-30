@@ -72,7 +72,7 @@ export class ClubEventForm {
       'category_id': new FormControl('', Validators.required),
       'club_id': new FormControl('', Validators.required),
       'title': new FormControl('', Validators.required),
-      'date': new FormControl('', Validators.required),
+      'event_date': new FormControl('', Validators.required),
       'location': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required)
         });
@@ -153,7 +153,7 @@ export class ClubEventForm {
           formData.append('cover_image', this.cover_image_path);
           formData.append('thumb_image', this.thumb_image_path);
           formData.append('title', this.clubeventForm.value.title);
-          formData.append('event_date', this.clubeventForm.value.date);
+          formData.append('event_date', this.clubeventForm.value.event_date);
           formData.append('location', this.clubeventForm.value.location);
           formData.append('description', this.clubeventForm.value.description);
           this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/insert_event', formData).subscribe(
