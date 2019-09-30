@@ -1,14 +1,3 @@
-<?php
-require_once 'api/include/common.php';
-$obj = new Common();
-$configs = $obj->getHomeDetails();
-$card_add_one = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_card_ad1']);
-$card_add_two = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_card_ad2']);
-$banner_add = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_banner_ad']);
-$categories = $obj->selectAll('*', 'category', 'category_id > 0 AND type = \'two_wheel\'');
-$news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'two_wheel\' AND category_id = ' . $categories[0]['category_id']);
-$galleries = $obj->selectAll('*', 'gallery', 'gallery_id > 0');
-?>
 <!DOCTYPE html>
 <html>
     <?php include 'head.php'; ?>

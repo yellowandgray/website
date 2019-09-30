@@ -270,7 +270,7 @@
                                         </form>-->
                 </div>
                 <div class="float-left margin-left-10">
-                    <a href="login">
+                    <a href="login.php">
                         <i class="fa fa-sign-in search-bg"></i>
                         <p> Login</p>
                     </a>
