@@ -179,7 +179,7 @@
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1200px) and (max-width: 1440px) {
     .bg-1 span {
         font-size: 155px !important;
     }
@@ -298,5 +298,11 @@
 @media (min-width: 1025px) and (max-width: 1199px) {
     .discover-slider-content {
         bottom: 187px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1488px) { 
+    .fooetr-5 button {
+        padding: 5px 10px !important;
     }
 }

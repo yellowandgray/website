@@ -23,7 +23,7 @@
                         <button class="tablinks" onclick="openCity(event, 'About')" id="defaultOpen">About Us <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'News')">Latest News <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Release')">Press Release <i class="fa fa-caret-right" aria-hidden="true"></i></button>
-                        <button class="tablinks" onclick="openCity(event, 'Member')"><a href="member-register.php">Be A Member <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>
+                        <button class="tablinks"><a href="member-register.php">Be A Member <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>
                         <button class="tablinks" onclick="openCity(event, 'Clubs')">Find a Club <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Events')">Events <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'register-club')">Club Registration <i class="fa fa-caret-right" aria-hidden="true"></i></button>
@@ -138,7 +138,7 @@
                         <h3>Find a Club</h3>
                         <div class="find-club-menu">
                             <div class="row">
-                                <div class="col-md-4 col-sm-6">
+                                <div class="col-md-3 col-sm-6">
                                     <div class="club-box">
                                         <span>#1</span>
                                         <img src="img/find-club/dummy-logo.png" alt="" />
@@ -146,7 +146,7 @@
                                         <p>Kuala Lumpur</p>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-6">
+                                <div class="col-md-3 col-sm-6">
                                     <div class="club-box">
                                         <span>#1</span>
                                         <img src="img/find-club/dummy-logo.png" alt="" />
@@ -154,7 +154,47 @@
                                         <p>Kuala Lumpur</p>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-6">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/find-club/dummy-logo.png" alt="" />
+                                        <h3>Frendly Bikers</h3>
+                                        <p>Kuala Lumpur</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/find-club/dummy-logo.png" alt="" />
+                                        <h3>Frendly Bikers</h3>
+                                        <p>Kuala Lumpur</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/find-club/dummy-logo.png" alt="" />
+                                        <h3>Frendly Bikers</h3>
+                                        <p>Kuala Lumpur</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/find-club/dummy-logo.png" alt="" />
+                                        <h3>Frendly Bikers</h3>
+                                        <p>Kuala Lumpur</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/find-club/dummy-logo.png" alt="" />
+                                        <h3>Frendly Bikers</h3>
+                                        <p>Kuala Lumpur</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
                                     <div class="club-box">
                                         <span>#1</span>
                                         <img src="img/find-club/dummy-logo.png" alt="" />

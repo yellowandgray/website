@@ -6,11 +6,15 @@
         <div class="footer-section fooetr-2">
             <ul class="footer__nav">
                 <li class="nav__item">
-                    <h2 class="footer-text">2 Wheel</h2>
-                    <h2 class="footer-text">4 Wheel</h2>
-                    <h2 class="footer-text">NEWS & MEDIA</h2>
-                    <h2 class="footer-text">UPCOMING EVENTS</h2>
-                    <h2 class="footer-text">PRESS RELEASE</h2>
+                    <a href="index.php" class="footer-text">2 Wheel</a>
+                    <br/>
+                    <a href="index.php" class="footer-text">4 Wheel</a>
+                    <br/>
+                    <a href="news.php" class="footer-text">NEWS & MEDIA</a>
+                    <br/>
+                    <a href="events.php" class="footer-text">UPCOMING EVENTS</a>
+                    <br/>
+                    <a href="press-release.php" class="footer-text">PRESS RELEASE</a>
                     <!--                    <ul class="nav__ul">
                                             <li>
                                                 <a href="#">Home</a>
