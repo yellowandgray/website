@@ -5,7 +5,7 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog()"><mat-icon>add</mat-icon> Event</button>
+            <button mat-raised-button color="primary" (click)="openDialog(0)"><mat-icon>add</mat-icon> Event</button>
         </div>
         <ng-container *ngFor="let data of result; let i = index">
             <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
@@ -22,7 +22,7 @@
                             </p>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['advertisement_id'])">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['event_id'])">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label">
@@ -44,7 +44,7 @@
                             </p>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+1]['advertisement_id'])">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+1]['event_id'])">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label">
@@ -66,7 +66,7 @@
                             </p>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+2]['advertisement_id'])">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+2]['event_id'])">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label">
@@ -88,7 +88,7 @@
                             </p>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+3]['advertisement_id'])">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+3]['event_id'])">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label">
