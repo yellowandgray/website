@@ -76,7 +76,7 @@ $app->post('/insert_event', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'club_id' => $data['club_id'], 'cover_image' => $data['cover_image'], 'title' => $data['title'], 'thumb_image' => $data['thumb_image'], 'event_date' => date('Y-m-d', strtotime($data['date'])), 'location' => $data['author_name'], 'description' => $data['thumb_image']), 'event');
+    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'club_id' => $data['club_id'], 'cover_image' => $data['cover_image'], 'title' => $data['title'], 'thumb_image' => $data['thumb_image'], 'event_date' => date('Y-m-d', strtotime($data['event_date'])), 'location' => $data['location'], 'description' => $data['description']), 'event');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
