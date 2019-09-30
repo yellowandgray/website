@@ -72,11 +72,11 @@ $app->post('/insert_news', function() use ($app) {
     echoRespnse(201, $res);
 });
 
-$app->post('/insert_clubevent', function() use ($app) {
+$app->post('/insert_event', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type, category_id, club_name_id, banner, title, date, location, address'], 'display_name' => $data['display_name']), 'category');
+    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'club_id' => $data['club_id'], 'cover_image' => $data['cover_image'], 'title' => $data['title'], 'thumb_image' => $data['media_id'], 'event_date' => date('Y-m-d', strtotime($data['date'])), 'location' => $data['author_name'], 'description' => $data['thumb_image']), 'event');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -280,10 +280,10 @@ $app->get('/get_news', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_clubevent', function() {
+$app->get('/get_event', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('type, category_id, club_name_id, banner, title, date, location, address', 'category_id < 0');
+    $data = $com->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

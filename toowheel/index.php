@@ -5,6 +5,9 @@ $configs = $obj->getHomeDetails();
 $card_add_one = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_card_ad1']);
 $card_add_two = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_card_ad2']);
 $banner_add = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_banner_ad']);
+$categories = $obj->selectAll('*', 'category', 'category_id > 0 AND type = \'two_wheel\'');
+$news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'two_wheel\' AND category_id = ' . $categories[0]['category_id']);
+$galleries = $obj->selectAll('*', 'gallery', 'gallery_id > 0');
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,15 +27,18 @@ $banner_add = $obj->selectRow('url, image', 'advertisement', 'advertisement_id =
             <div class="container">
                 <h1>DISCOVER</h1>
                 <div class="row cc">
-                    <div class="tag-box tablink active" onclick="openTag(event, 'club1')" id="defaultOpen">
-                        <p>125 CC</p>
-                    </div>
-                    <div class="tag-box tablink" onclick="openTag(event, 'club2')">
-                        <p>250 CC</p>
-                    </div>
-                    <div class="tag-box tablink" onclick="openTag(event, 'club3')">
-                        <p>500 CC</p>
-                    </div>
+                    <?php
+                    foreach ($categories as $key => $val) {
+                        $cls = '';
+                        if ($key == 0) {
+                            $cls = 'active';
+                        }
+                        ?>
+                        <div class="tag-box tablink <?php echo $cls; ?>" onclick="openTag(event, 'club1')">
+                            <p><?php echo $val['name']; ?></p>
+                        </div>
+                    <?php }
+                    ?>
                 </div>
             </div>
             <div id="club1" class="tagcontent">
@@ -247,7 +253,6 @@ $banner_add = $obj->selectRow('url, image', 'advertisement', 'advertisement_id =
                             <input type="range" id="relationship-status-slider" class="relationship-status-slider" min="0" max="10" step="1">
                         </div>-->
         </section>
-
         <section class="media-press-release">
             <div class="container">
                 <div class="media-bg">
