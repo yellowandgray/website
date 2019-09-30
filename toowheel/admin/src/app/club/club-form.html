@@ -35,7 +35,7 @@
             </div>
             <div fxFlex="50%">
                 <button type="button" mat-raised-button (click)="fileInputLogo.click()">{{file_logo_name}}</button>
-                <input hidden #fileInputLogo type="file_logo" id="file" (change)="fileProgress($event,'file_logo_name', 'logo_image')" />
+                <input hidden #fileInputLogo type="file" id="file_logo" (change)="fileProgress($event,'file_logo_name', 'logo_image')" />
             </div>
         </div>
         <br/>

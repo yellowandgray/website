@@ -18,7 +18,6 @@ export interface DialogData {
 export class NewsComponent implements OnInit {
   result = [];  
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
-
     ngOnInit() {
          this.getNews();
      }
@@ -37,14 +36,16 @@ export class NewsComponent implements OnInit {
            );
      }
 
-  openDialog(): void  {
+  openDialog(id): void  {
     const dialogRef = this.dialog.open(NewsForm, {
         minWidth: "40%",
         maxWidth: "40%"
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      if(result !== false && result !== 'false') {
+      this.getNews();
+       }
     });
 }
 
@@ -57,18 +58,25 @@ export class NewsComponent implements OnInit {
 export class NewsForm {
     newsForm: FormGroup;
     loading = false;
+    categories:any[];
+    clubs:any[];
+    medias:any[];
     cover_image: string = 'Choose Cover Image';
+    thumb_image: string = 'Choose Thumb Image';
     banner_image_1: string = 'Choose Cover Image';
     banner_image_2: string = 'Choose Cover Image';
+    cover_image_path: string;
+    thumb_image_path: string;
+    banner_image_1_path: string;
+    banner_image_2_path: string;
     constructor(
     public dialogRef: MatDialogRef<NewsForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {}
-
     ngOnInit() {
       this.newsForm = new FormGroup({
-      'club_type': new FormControl('', Validators.required),
+      'type': new FormControl('', Validators.required),
       'category_id': new FormControl('', Validators.required),
       'club_id': new FormControl('', Validators.required),
       'title': new FormControl('', Validators.required),
@@ -79,10 +87,65 @@ export class NewsForm {
       'description': new FormControl('', Validators.required),
       'description_1': new FormControl('', Validators.required)
       });
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_medias').subscribe(
+              (res)=>{
+                if(res["result"]["error"] === false) {
+                    this.medias = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
     }
-    fileProgress(fileInput: any, field: string) {
+    getCategory(): void {
+       this.loading = true;
+          this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_'+this.newsForm.value.type+'_category').subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.categories = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
+    getClub(): void {
+       this.loading = true;
+          this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_club_by_category/'+this.newsForm.value.category_id).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.clubs = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
+    fileProgress(fileInput: any, name:string, field: string) {
         var fileData = <File>fileInput.target.files[0];
-        this[field] = fileData.name;
+        this[name] = fileData.name;
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
@@ -111,14 +174,17 @@ export class NewsForm {
       }
       this.loading = true;
       var formData = new FormData();
-          formData.append('club_type', this.newsForm.value.club_type);
-          formData.append('category_id', this.newsForm.value.media_type);
-          formData.append('cover_image', this.cover_image);
-          formData.append('club_id', this.newsForm.value.club_type);
+          formData.append('type', this.newsForm.value.type);
+          formData.append('category_id', this.newsForm.value.category_id);
+          formData.append('club_id', this.newsForm.value.club_id);
+          formData.append('cover_image', this.cover_image_path);
           formData.append('title', this.newsForm.value.title);
-          formData.append('media', this.newsForm.value.media);
+          formData.append('media_id', this.newsForm.value.media);
           formData.append('author_name', this.newsForm.value.author_name);
           formData.append('date', this.newsForm.value.date);
+          formData.append('thumb_image', this.thumb_image_path);
+          formData.append('banner_image_1', this.banner_image_1_path);
+          formData.append('banner_image_2', this.banner_image_2_path);
           formData.append('moto_text', this.newsForm.value.moto_text);
           formData.append('description', this.newsForm.value.description);
           formData.append('description_1', this.newsForm.value.description_1);

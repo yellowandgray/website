@@ -5,11 +5,11 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Type</mat-label>
-                    <mat-select required formControlName="club_type">
-                        <mat-option [value]="'2wheel'">
+                    <mat-select required formControlName="type" (selectionChange)="getCategory()">
+                        <mat-option [value]="'two_wheel'">
                             2 Wheel
                         </mat-option>
-                        <mat-option [value]="'4wheel'">
+                        <mat-option [value]="'four_wheel'">
                             4 Wheel
                         </mat-option>
                     </mat-select>
@@ -19,18 +19,9 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Category</mat-label>
-                    <mat-select required formControlName="category_id">
-                        <mat-option [value]="'100cc'">
-                            100 CC
-                        </mat-option>
-                        <mat-option [value]="'150cc'">
-                            150 CC
-                        </mat-option>
-                        <mat-option [value]="'200cc'">
-                            200 CC
-                        </mat-option>
-                        <mat-option [value]="'250cc'">
-                            250 CC
+                    <mat-select required formControlName="category_id" (selectionChange)="getClub()">
+                        <mat-option [value]="row.category_id" *ngFor="let row of categories">
+                            {{row.name}}
                         </mat-option>
                     </mat-select>
                     <mat-error>Club Category is required</mat-error>
@@ -42,17 +33,8 @@
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Club Name</mat-label>
                     <mat-select required formControlName="club_id">
-                        <mat-option [value]="'kfc'">
-                            KFC
-                        </mat-option>
-                        <mat-option [value]="'club_name_1'">
-                            Club Name 1
-                        </mat-option>
-                        <mat-option [value]="'club_name_2'">
-                            Club Name 2
-                        </mat-option>
-                        <mat-option [value]="'club_name_3'">
-                            Club Name 3
+                        <mat-option [value]="row.club_id" *ngFor="let row of clubs">
+                            {{row.name}}
                         </mat-option>
                     </mat-select>
                     <mat-error>Club Name is required</mat-error>
@@ -60,7 +42,7 @@
             </div>
             <div fxFlex="50%" fxLayoutAlign="center center">
                 <button type="button" mat-raised-button (click)="fileInput.click()">{{cover_image}}</button>
-                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'cover_image')" />
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'cover_image', 'cover_image_path')" />
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
@@ -75,11 +57,8 @@
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Media</mat-label>
                     <mat-select required formControlName="media">
-                        <mat-option [value]="'kl_times'">
-                            KL Times
-                        </mat-option>
-                        <mat-option [value]="'morning_malaysia'">
-                            Morning Malaysia
+                        <mat-option [value]="row.media_id" *ngFor="let row of medias">
+                            {{row.name}}
                         </mat-option>
                     </mat-select>
                     <mat-error>Media is required</mat-error>
@@ -105,12 +84,16 @@
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="50%">
+                <button type="button" mat-raised-button (click)="fileInputThumb.click()">{{thumb_image}}</button>
+                <input hidden #fileInputThumb type="file" id="file_thumb" (change)="fileProgress($event, 'thumb_image', 'thumb_image_path')" />
+            </div>
+            <div fxFlex="50%">
                 <button type="button" mat-raised-button (click)="fileInputBanner1.click()">{{banner_image_1}}</button>
-                <input hidden #fileInputBanner1 type="file" id="file_banner_1" (change)="fileProgress($event, 'banner_image_1')" />
+                <input hidden #fileInputBanner1 type="file" id="file_banner_1" (change)="fileProgress($event, 'banner_image_1', 'banner_image_1_path')" />
             </div>
             <div fxFlex="50%">
                 <button type="button" mat-raised-button (click)="fileInputBanner2.click()">{{banner_image_2}}</button>
-                <input hidden #fileInputBanner2 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_2')" />
+                <input hidden #fileInputBanner2 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_2', 'banner_image_2_path')" />
             </div>
         </div>
         <br/>
