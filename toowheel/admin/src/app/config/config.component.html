@@ -222,6 +222,26 @@
                         </ng-container>
                     </ng-container>
                 </div>
+                <br/>
+                <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
+                    <ng-container *ngFor="let data of result_home">
+                        <ng-container *ngIf="data.name === 'home_banner_video_four_wheel'">
+                            <mat-card fxFlex="25%">
+                                <mat-card-header>
+                                    <mat-card-title>{{data.display_name}}</mat-card-title>
+                                </mat-card-header>
+                                <video mat-card-image controls>
+                                    <source src="{{image_url}}{{data.value}}" type="video/mp4" />
+                                </video>
+                                <mat-card-actions>
+                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                        <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
+                                    </button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </ng-container>
+                    </ng-container>
+                </div>
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>

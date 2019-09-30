@@ -115,7 +115,7 @@ $app->get('/get_landing_configs', function() {
 $app->get('/get_home_configs', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('name, value, display_name, field_type, config_id', 'config', 'name IN (\'home_banner_video\', \'home_card_ad1\', \'home_card_ad2\', \'home_banner_ad\')');
+    $data = $com->selectAll('name, value, display_name, field_type, config_id', 'config', 'name IN (\'home_banner_video\', \'home_card_ad1\', \'home_card_ad2\', \'home_banner_ad\', \'home_banner_video_four_wheel\')');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
