@@ -1049,11 +1049,11 @@ button {
 .event-title h3{
     color: #ed1c24;
     font-weight: 600;
-    padding: 0px 0px 25px 0px;
+    padding: 0px 0px 15px 0px;
 }
 .event-conent p span {
-    font-size: 17px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 500;
     color: #363636;
 }
 .event-desc h5 a {
@@ -1071,14 +1071,19 @@ button {
     color: #363636;
 }
 .event-n {
-        display: flex;
-    align-items: stretch;
-    justify-content: space-between;
+    /*        display: flex;
+        align-items: stretch;
+        justify-content: space-between;*/
     background: #fff;
     box-shadow: 0 10px 20px 10px #eee;
     border-radius: 5px;
     padding: 10px 10px 10px 10px;
     margin-bottom: 20px;
+}
+
+.event-n h3 {
+    color: red;
+    font-size: 25px;
 }
 
 .tabcontent .event-num .event-conent p {
@@ -1091,25 +1096,27 @@ button {
     margin: 0px;
 }
 .event-img{
-    flex:1.5;
+    /*    flex:1.5;*/
     /*    padding: 10px;*/
 }
 .event-conent {
-    flex: 1.5;
-    padding-left: 10px;
+    padding-top: 15px;
 }
 
 .event-conent p, .event-desc p {
     margin-bottom: 0px;
+    text-align: left;
+    font-size: 15px;
 }
 
 .event-desc{
-    flex: 3;
-    padding-left: 10px;
+    /*    flex: 3;
+        padding-left: 10px;*/
 }
 
-.event-desc .button-8 {
-    width: 35%;
+.event-btn-width .button-8 {
+    width: 18%;
+    margin: 0 auto;
 }
 
 .event-num {
