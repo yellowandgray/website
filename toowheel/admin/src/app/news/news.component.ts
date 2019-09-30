@@ -174,12 +174,12 @@ export class NewsForm {
       }
       this.loading = true;
       var formData = new FormData();
-          formData.append('type', this.newsForm.value.club_type);
+          formData.append('type', this.newsForm.value.type);
           formData.append('category_id', this.newsForm.value.category_id);
           formData.append('club_id', this.newsForm.value.club_id);
           formData.append('cover_image', this.cover_image_path);
           formData.append('title', this.newsForm.value.title);
-          formData.append('media', this.newsForm.value.media);
+          formData.append('media_id', this.newsForm.value.media);
           formData.append('author_name', this.newsForm.value.author_name);
           formData.append('date', this.newsForm.value.date);
           formData.append('thumb_image', this.thumb_image_path);
