@@ -42,7 +42,7 @@
             </div>
             <div fxFlex="50%" fxLayoutAlign="center center">
                 <button type="button" mat-raised-button (click)="fileInput.click()">{{cover_image}}</button>
-                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'cover_image')" />
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'cover_image', 'cover_image_path')" />
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
@@ -84,16 +84,16 @@
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="50%">
-                <button type="button" mat-raised-button (click)="fileInputBanner1.click()">{{thumb_image}}</button>
-                <input hidden #fileInputBanner1 type="file" id="file_banner_1" (change)="fileProgress($event, 'banner_image_1')" />
+                <button type="button" mat-raised-button (click)="fileInputThumb.click()">{{thumb_image}}</button>
+                <input hidden #fileInputThumb type="file" id="file_thumb" (change)="fileProgress($event, 'thumb_image', 'thumb_image_path')" />
             </div>
             <div fxFlex="50%">
                 <button type="button" mat-raised-button (click)="fileInputBanner1.click()">{{banner_image_1}}</button>
-                <input hidden #fileInputBanner1 type="file" id="file_banner_1" (change)="fileProgress($event, 'banner_image_1')" />
+                <input hidden #fileInputBanner1 type="file" id="file_banner_1" (change)="fileProgress($event, 'banner_image_1', 'banner_image_1_path')" />
             </div>
             <div fxFlex="50%">
                 <button type="button" mat-raised-button (click)="fileInputBanner2.click()">{{banner_image_2}}</button>
-                <input hidden #fileInputBanner2 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_2')" />
+                <input hidden #fileInputBanner2 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_2', 'banner_image_2_path')" />
             </div>
         </div>
         <br/>

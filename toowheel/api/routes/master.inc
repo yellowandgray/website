@@ -244,6 +244,18 @@ $app->get('/get_club_by_category/:cid', function($cid) {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_medias', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'media', 'media_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_gallery', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();

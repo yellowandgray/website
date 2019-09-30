@@ -60,6 +60,7 @@ export class NewsForm {
     loading = false;
     categories:any[];
     clubs:any[];
+    medias:any[];
     cover_image: string = 'Choose Cover Image';
     thumb_image: string = 'Choose Thumb Image';
     banner_image_1: string = 'Choose Cover Image';
@@ -86,6 +87,21 @@ export class NewsForm {
       'description': new FormControl('', Validators.required),
       'description_1': new FormControl('', Validators.required)
       });
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_medias').subscribe(
+              (res)=>{
+                if(res["result"]["error"] === false) {
+                    this.medias = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
     }
     getCategory(): void {
        this.loading = true;
@@ -158,14 +174,17 @@ export class NewsForm {
       }
       this.loading = true;
       var formData = new FormData();
-          formData.append('club_type', this.newsForm.value.club_type);
-          formData.append('category_id', this.newsForm.value.media_type);
-          formData.append('cover_image', this.cover_image);
-          formData.append('club_id', this.newsForm.value.club_type);
+          formData.append('type', this.newsForm.value.club_type);
+          formData.append('category_id', this.newsForm.value.category_id);
+          formData.append('club_id', this.newsForm.value.club_id);
+          formData.append('cover_image', this.cover_image_path);
           formData.append('title', this.newsForm.value.title);
           formData.append('media', this.newsForm.value.media);
           formData.append('author_name', this.newsForm.value.author_name);
           formData.append('date', this.newsForm.value.date);
+          formData.append('thumb_image', this.thumb_image_path);
+          formData.append('banner_image_1', this.banner_image_1_path);
+          formData.append('banner_image_2', this.banner_image_2_path);
           formData.append('moto_text', this.newsForm.value.moto_text);
           formData.append('description', this.newsForm.value.description);
           formData.append('description_1', this.newsForm.value.description_1);
