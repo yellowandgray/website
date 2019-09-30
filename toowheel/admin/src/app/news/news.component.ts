@@ -106,7 +106,7 @@ export class NewsForm {
     }
 
   onSubmit() {
-      if (this.newsForm.invalid || this.image === '') {
+      if (this.newsForm.invalid) {
             return;
       }
       this.loading = true;

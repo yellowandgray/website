@@ -28,7 +28,7 @@ $app->post('/insert_category', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name']), 'category');
+    $record = $com->insertRecord(array('name' => $data['name'], 'type' => $data['type']), 'category');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -160,10 +160,10 @@ $app->get('/get_card_advertisment', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_category', function() {
-    $res = array('error' => true, 'message' => 'Unable to export');
+$app->get('/get_two_wheel_category', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('*', 'category', 'category_id > 0');
+    $data = $com->selectAll('*', 'category', 'category_id > 0 AND type = \'two_wheel\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -172,10 +172,58 @@ $app->get('/get_category', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_club', function() {
-    $res = array('error' => true, 'message' => 'Unable to export');
+$app->get('/get_states', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('*', 'club', 'club_id > 0');
+    $data = $com->selectAll('*', 'state', 'state_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_city_by_state/:sid', function($sid) {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'city', 'city_id > 0 AND state_id = '.$sid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_four_wheel_category', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'category', 'category_id > 0 AND type = \'four_wheel\'');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_two_wheel_club', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'club', 'club_id > 0 AND type = \'two_wheel\'');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_four_wheel_club', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'club', 'club_id > 0 AND type = \'four_wheel\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -185,7 +233,7 @@ $app->get('/get_club', function() {
 });
 
 $app->get('/get_gallery', function() {
-    $res = array('error' => true, 'message' => 'Unable to export');
+    $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $data = $com->selectAll('*', 'gallery', 'gallery_id > 0');
     if (count($data) > 0) {
@@ -197,7 +245,7 @@ $app->get('/get_gallery', function() {
 });
 
 $app->get('/get_news', function() {
-    $res = array('error' => true, 'message' => 'Unable to export');
+    $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $data = $com->selectAll('*', 'news', 'news_id > 0');
     if (count($data) > 0) {
@@ -209,7 +257,7 @@ $app->get('/get_news', function() {
 });
 
 $app->get('/get_clubevent', function() {
-    $res = array('error' => true, 'message' => 'Unable to export');
+    $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $data = $com->selectAll('type, category_id, club_name_id, banner, title, date, location, address', 'category_id < 0');
     if (count($data) > 0) {

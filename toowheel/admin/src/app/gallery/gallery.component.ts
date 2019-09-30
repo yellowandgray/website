@@ -32,14 +32,16 @@ export class GalleryComponent implements OnInit {
         );
   }
   
-  openDialog(): void  {
+  openDialog(id): void  {
     const dialogRef = this.dialog.open(GalleryForm, {
         minWidth: "40%",
         maxWidth: "40%"
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      if(result !== false && result !== 'false') {
+      this.getGallery();
+       }
     });
 }
 
@@ -90,7 +92,7 @@ export class GalleryForm {
             });
     }
   onSubmit() {
-          if (this.galleryForm.invalid || this.image === '') {
+          if (this.galleryForm.invalid || this.media_path == '') {
                 return;
           }
           this.loading = true;

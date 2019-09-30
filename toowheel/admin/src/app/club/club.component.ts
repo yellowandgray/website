@@ -5,11 +5,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
-
 @Component({
   selector: 'app-club',
   templateUrl: './club.component.html',
@@ -17,17 +12,31 @@ export interface DialogData {
 })
 export class ClubComponent implements OnInit {
   result:any[];
+  result_four_wheel:any[];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
-
   ngOnInit() {
       this.getClub();
+      this.getFourWheelClub();
   }
     image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
     getClub(): void {
-  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_club')
+  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_two_wheel_club')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
+  }
+    getFourWheelClub(): void {
+  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_four_wheel_club')
+  .subscribe(
+          (res)=>{
+              this.result_four_wheel = res["result"]["data"];
         },
         (error)=>{
             this._snackBar.open(error["statusText"], '', {
@@ -41,14 +50,14 @@ export class ClubComponent implements OnInit {
         minWidth: "40%",
         maxWidth: "40%"
     });
-
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      if(result !== false && result !== 'false') {
+      this.getClub();
+      this.getFourWheelClub();
+       }
     });
 }
-
 }
-
 @Component({
   selector: 'club-form',
   templateUrl: 'club-form.html',
@@ -57,8 +66,13 @@ export class ClubForm {
     clubForm: FormGroup;
     loading = false;
     club_id: string;
-    image: string;
-    file_name: string = 'Select Picture';
+    categories:any[];
+    states:any[];
+    cities:any[];
+    file_cover_name: string = 'Choose Cover Image';
+    file_logo_name: string = 'Choose Club Logo';
+    cover_image: string;
+    logo_image: string;
     constructor(
     public dialogRef: MatDialogRef<ClubForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -79,11 +93,25 @@ export class ClubForm {
             'mobile': new FormControl('', Validators.required),
             'about': new FormControl('', Validators.required)
         });
+        this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_states').subscribe(
+              (res)=>{
+                if(res["result"]["error"] === false) {
+                    this.states = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
     }
-
-    fileProgress(fileInput: any) {
+    fileProgress(fileInput: any, name:string, path:string) {
         var fileData = <File>fileInput.target.files[0];
-        this.file_name = fileData.name;
+        this[name] = fileData.name;
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
@@ -91,7 +119,7 @@ export class ClubForm {
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
-                    this.image = res["result"]["data"];
+                    this[path] = res["result"]["data"];
                 }else{
     this._snackBar.open(res["result"]["message"], '', {
           duration: 2000,
@@ -105,17 +133,56 @@ export class ClubForm {
             });
         });
     }
-    
+    getCategory(): void {
+       this.loading = true;
+          this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_'+this.clubForm.value.type+'_category').subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.categories = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
+    getCityByState(): void {
+       this.loading = true;
+          this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_city_by_state/'+this.clubForm.value.state).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.cities = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
     onSubmit() {
-        if (this.clubForm.invalid || this.image === '') {
+        if (this.clubForm.invalid) {
                   return;
         }
         this.loading = true;
         var formData = new FormData();
           formData.append('name', this.clubForm.value.title);
           formData.append('type', this.clubForm.value.type);
-          formData.append('cover_image', this.image);
-          formData.append('logo', this.image);
+          formData.append('cover_image', this.cover_image);
+          formData.append('logo', this.logo_image);
           formData.append('category_id', this.clubForm.value.url);
           formData.append('state', this.clubForm.value.name);
           formData.append('city', this.clubForm.value.name);
