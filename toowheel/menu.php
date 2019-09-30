@@ -208,46 +208,123 @@
                     </div>
                     <div id="Events" class="tabcontent">
                         <h3>Events</h3>
-                        <div class="event-num">
-                            <div class="event-num-1">
-                                <h3>Event Title</h3>
-                                <div class="event-n">
-                                    <div class="event-img">
-                                        <img src="img/events/005.jpg" alt="" class="img-responsive"/>
+                        <div class="find-club-menu event-menu-box">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/events/005.jpg" alt="" />
+                                        <h3>Event Title</h3>
+                                        <p>Date: 10/10/2019</p>
+                                        <p>Location: Kuala lumpur</p>
                                     </div>
-                                    <div class="event-conent">
-                                        <p><span>Date:</span> 06-09-2019</p>
-                                        <p><span>Location:</span> Malaysia</p>
-                                        <p><span>Club Name:</span> Name</p>
-
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/events/005.jpg" alt="" />
+                                        <h3>Event Title</h3>
+                                        <p>Date: 10/10/2019</p>
+                                        <p>Location: Kuala lumpur</p>
                                     </div>
-<!--                                    <div class="event-desc">
-                                        <p><span>Description</span></p>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                        <div class="find-club-btn"><a href="events.php">Read More</a></div>
-                                    </div>-->
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/events/005.jpg" alt="" />
+                                        <h3>Event Title</h3>
+                                        <p>Date: 10/10/2019</p>
+                                        <p>Location: Kuala lumpur</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/events/005.jpg" alt="" />
+                                        <h3>Event Title</h3>
+                                        <p>Date: 10/10/2019</p>
+                                        <p>Location: Kuala lumpur</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/events/005.jpg" alt="" />
+                                        <h3>Event Title</h3>
+                                        <p>Date: 10/10/2019</p>
+                                        <p>Location: Kuala lumpur</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/events/005.jpg" alt="" />
+                                        <h3>Event Title</h3>
+                                        <p>Date: 10/10/2019</p>
+                                        <p>Location: Kuala lumpur</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/events/005.jpg" alt="" />
+                                        <h3>Event Title</h3>
+                                        <p>Date: 10/10/2019</p>
+                                        <p>Location: Kuala lumpur</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="club-box">
+                                        <span>#1</span>
+                                        <img src="img/events/005.jpg" alt="" />
+                                        <h3>Event Title</h3>
+                                        <p>Date: 10/10/2019</p>
+                                        <p>Location: Kuala lumpur</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="event-num-1">
-                                <h3>Event Title</h3>
-                                <div class="event-n">
-                                    <div class="event-img">
-                                        <img src="img/events/005.jpg" alt="" class="img-responsive"/>
-                                    </div>
-                                    <div class="event-conent">
-                                        <p><span>Date:</span> 06-09-2019</p>
-                                        <p><span>Location:</span> Malaysia</p>
-                                        <p><span>Club Name:</span> Name</p>
-
-                                    </div>
-<!--                                    <div class="event-desc">
-                                        <p><span>Description</span></p>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                        <div class="find-club-btn"><a href="events.php">Read More</a></div>
-                                    </div>-->
-                                </div>
-                            </div>
+                            <div class="find-club-btn"><a href="events.php" class="menu-btn">Read More</a></div>
                         </div>
+                        <!--                        <div class="event-num">
+                                                    <div class="event-num-1">
+                                                        <h3>Event Title</h3>
+                                                        <div class="event-n">
+                                                            <div class="event-img">
+                                                                <img src="img/events/005.jpg" alt="" class="img-responsive"/>
+                                                            </div>
+                                                            <div class="event-conent">
+                                                                <p><span>Date:</span> 06-09-2019</p>
+                                                                <p><span>Location:</span> Malaysia</p>
+                                                                <p><span>Club Name:</span> Name</p>
+                        
+                                                            </div>
+                                                            <div class="event-desc">
+                                                                <p><span>Description</span></p>
+                                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                                                <div class="find-club-btn"><a href="events.php">Read More</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="event-num-1">
+                                                        <h3>Event Title</h3>
+                                                        <div class="event-n">
+                                                            <div class="event-img">
+                                                                <img src="img/events/005.jpg" alt="" class="img-responsive"/>
+                                                            </div>
+                                                            <div class="event-conent">
+                                                                <p><span>Date:</span> 06-09-2019</p>
+                                                                <p><span>Location:</span> Malaysia</p>
+                                                                <p><span>Club Name:</span> Name</p>
+                        
+                                                            </div>
+                                                            <div class="event-desc">
+                                                                <p><span>Description</span></p>
+                                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                                                <div class="find-club-btn"><a href="events.php">Read More</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>-->
                     </div>
                     <div id="register-club" class="tabcontent">
                         <h3>Register My Club</h3>
