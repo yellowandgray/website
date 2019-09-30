@@ -5,107 +5,94 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Type</mat-label>
-                    <mat-select required formControlName="club_type">
-                        <mat-option [value]="'2wheel'">
+                    <mat-select required formControlName="type" (selectionChange)="getCategory()">
+                        <mat-option [value]="'two_wheel'">
                             2 Wheel
                         </mat-option>
-                        <mat-option [value]="'4wheel'">
+                        <mat-option [value]="'four_wheel'">
                             4 Wheel
                         </mat-option>
                     </mat-select>
                     <mat-error>Club type is required</mat-error>
-                    <mat-icon matSuffix>grade</mat-icon>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Category</mat-label>
-                    <mat-select required formControlName="club_category">
-                        <mat-option [value]="'100cc'">
-                            100 CC
-                        </mat-option>
-                        <mat-option [value]="'150cc'">
-                            150 CC
-                        </mat-option>
-                        <mat-option [value]="'200cc'">
-                            200 CC
-                        </mat-option>
-                        <mat-option [value]="'250cc'">
-                            250 CC
-                        </mat-option>
-                    </mat-select>
-                    <mat-error>Club Category is required</mat-error>
-                    <mat-icon matSuffix>grade</mat-icon>
-                </mat-form-field>
-            </div>
-        </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Club Name</mat-label>
-                    <mat-select required formControlName="club_name">
-                        <mat-option [value]="">
-                            KFC
-                        </mat-option>
-                        <mat-option [value]="">
-                            Club Name
-                        </mat-option>
-                        <mat-option [value]="">
-                            Club Name
-                        </mat-option>
-                        <mat-option [value]="">
-                            Club Name
-                        </mat-option>
-                    </mat-select>
-                    <mat-error>Club Name is required</mat-error>
-                    <mat-icon matSuffix>grade</mat-icon>
-                </mat-form-field>
-            </div>
-            <div fxFlex="5%"></div>
-            <div fxFlex="45%">
-                <button type="button" mat-raised-button required formControlName="banner" (click)="fileInput.click()">Choose Club Event Picture</button>
-                <input hidden #fileInput type="file" id="file" />
-            </div>
-        </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Event Title</mat-label>
-                    <input matInput placeholder="Placeholder" required formControlName="title" />
-                    <mat-error>Title is required</mat-error>
-                    <mat-icon matSuffix>title</mat-icon>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline">
-                    <mat-label>Date</mat-label>
-                    <input matInput placeholder="DD/MM/YYYY" required formControlName="date" />
-                    <mat-error>Date is required</mat-error>
-                    <mat-icon matSuffix>calendar_today</mat-icon>
-                </mat-form-field>
-            </div>
-        </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline">
-                    <mat-label>Location</mat-label>
-                    <input matInput placeholder="Placeholder" required formControlName="location" />
-                    <mat-error>Location is required</mat-error>
-                    <mat-icon matSuffix>navigation</mat-icon>
-                </mat-form-field>
-            </div>
-        </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <mat-form-field fxFlex="100%">
-                <mat-label>Address</mat-label>
-                <textarea rows="6" matInput placeholder="Address" required formControlName="address"></textarea>
-                    <mat-error>Address is required</mat-error>
-                <mat-icon matSuffix>message</mat-icon>
+                    <mat-select required formControlName="category_id" (selectionChange)="getClub()">
+                        <mat-option [value]="row.category_id" *ngFor="let row of categories">
+                            {{row.name}}
+                    </mat-option>
+                </mat-select>
+                <mat-error>Club Category is required</mat-error>
             </mat-form-field>
         </div>
-    </form>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline" fxFlex="100%">
+                <mat-label>Club Name</mat-label>
+                <mat-select required formControlName="club_id">
+                    <mat-option [value]="row.club_id" *ngFor="let row of clubs">
+                        {{row.name}}
+                </mat-option>
+            </mat-select>
+            <mat-error>Club Name is required</mat-error>
+        </mat-form-field>
+    </div>
+    <div fxFlex="5%"></div>
+    <div fxFlex="45%">
+        <button type="button" mat-raised-button required (click)="fileInput.click()">{{cover_image}}</button>
+        <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'cover_image', 'cover_image_path')" />
+    </div>
+</div>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline" fxFlex="100%">
+            <mat-label>Event Title</mat-label>
+            <input matInput placeholder="Placeholder" required formControlName="title" />
+            <mat-error>Title is required</mat-error>
+        </mat-form-field>
+    </div>
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline">
+            <mat-label>Date</mat-label>
+            <input matInput placeholder="DD/MM/YYYY" required formControlName="date" />
+            <mat-error>Date is required</mat-error>
+        </mat-form-field>
+    </div>
+</div>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline">
+            <mat-label>Location</mat-label>
+            <input matInput placeholder="Placeholder" required formControlName="location" />
+            <mat-error>Location is required</mat-error>
+        </mat-form-field>
+    </div>
+    <div fxFlex="5%"></div>
+    <div fxFlex="45%">
+        <button type="button" mat-raised-button required (click)="fileInputThumb.click()">{{thumb_image}}</button>
+        <input hidden #fileInputThumb type="file" id="file_thumb" (change)="fileProgress($event, 'thumb_image', 'thumb_image_path')" />
+    </div>
+</div>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+    <mat-form-field fxFlex="100%">
+        <mat-label>Description</mat-label>
+        <textarea rows="6" matInput placeholder="Description" required formControlName="description"></textarea>
+        <mat-error>Description is required</mat-error>
+    </mat-form-field>
+</div>
+<div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+    <button mat-button [mat-dialog-close]="false">Cancel</button>
+    <button mat-button type="submit" cdkFocusInitial [disabled]="loading">Save</button>
+    <mat-progress-spinner
+        class="example-margin"
+        *ngIf="loading"
+        [mode]="'indeterminate'"
+        [strokeWidth]="3"
+        [diameter]="25">
+    </mat-progress-spinner>
+</div>
+</form>
 </mat-dialog-content>
-<mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
-</mat-dialog-actions>
