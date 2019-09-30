@@ -1065,16 +1065,20 @@ button {
 .event-desc h5 {
     transform: skewX(-10deg);
 }
-.event-desc  p span {
+.event-desc span {
     font-size: 17px;
     font-weight: 600;
     color: #363636;
 }
 .event-n {
-    display: flex;
+        display: flex;
     align-items: stretch;
     justify-content: space-between;
-
+    background: #fff;
+    box-shadow: 0 10px 20px 10px #eee;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 20px;
 }
 
 .tabcontent .event-num .event-conent p {
@@ -1087,17 +1091,27 @@ button {
     margin: 0px;
 }
 .event-img{
-    flex:1;
-/*    padding: 10px;*/
+    flex:1.5;
+    /*    padding: 10px;*/
 }
 .event-conent {
-    flex:1.5;
-    padding: 10px;
+    flex: 1.5;
+    padding-left: 10px;
 }
+
+.event-conent p, .event-desc p {
+    margin-bottom: 0px;
+}
+
 .event-desc{
-    flex:3;
-    padding: 10px;
+    flex: 3;
+    padding-left: 10px;
 }
+
+.event-desc .button-8 {
+    width: 35%;
+}
+
 .event-num {
     display: flex;
     align-items: stretch;
@@ -1106,7 +1120,7 @@ button {
 
 }
 .event-num-1 {
-    flex-basis:48%;
+    flex-basis:100%;
 }
 .event-num-1 h3 {
     font-size: 20px;
@@ -1115,8 +1129,8 @@ button {
 }
 .event-num-1 {
     background: #fff;
+    box-shadow: 0 10px 20px 10px #eee;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px black;
     padding: 10px 10px 10px 10px;
     margin-bottom: 20px;
 }

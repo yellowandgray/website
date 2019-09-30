@@ -176,7 +176,7 @@ body {
     bottom: 0;
     background: url(../img/banner-background-cover.png)center center no-repeat;
     width: 100%;
-    height: 85%;
+    height: 100%;
     background-size: cover;
     z-index: 1;
 }
@@ -738,7 +738,7 @@ body {
     font-weight: 600;
     font-size: 19px;
     line-height: 2;
-    color: #fff;
+    color: #fff !important;
 }
 
 .fooetr-5 ul li span {
@@ -1254,12 +1254,24 @@ body {
     font-style: italic;
 }
 
+/*.find-club-menu .club-box {
+    padding
+}*/
+
+.find-club-menu .club-box span {
+    font-size: 10px;
+}
+
 .find-club-menu .club-box img {
-    width: 85%
+    width: 80%
 }
 
 .find-club-menu .club-box h3 {
-    font-size: 18px;
+    font-size: 12px;
+}
+
+.find-club-menu .club-box p {
+    font-size: 10px;
 }
 
 
@@ -1268,13 +1280,13 @@ body {
     margin-left: 25px;
 }
 
-.find-club-menu {
+/*.find-club-menu {
     background: #eee;
     margin-left: 20px;
     border-radius: 15px;
     padding: 20px 0;
     margin-right: 20px;
-}
+}*/
 
 .club-title {
     width: 75%;

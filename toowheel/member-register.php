@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="firstname">First Name</label>
-                                    <input type="text" class="form-control" id="firstname" placeholder="First Name" required>
+                                    <input type="text" class="form-control" id="firstname" placeholder="" required>
 <!--                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                 </div>
                                 <div class="form-group">
@@ -47,7 +47,7 @@
                                 <div class="form-group">
                                     <label for="age">Age</label>
                                     <select class="form-control" id="age">
-                                        <option value="0">Age</option>
+                                        <!--                                        <option value="0">Age</option>-->
                                         <option value='1'>1</option>
                                         <option value='2'>2</option>
                                         <option value='3'>3</option>
@@ -92,13 +92,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="ic-no-passport-no">IC Number / Passport Number</label>
-                                    <input type="text" class="form-control" id="state" placeholder="IC Number / Passport Number" required>
+                                    <input type="text" class="form-control" id="state" placeholder="" required>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-md-4 mb-3">
                                         <label for="date">Date</label>
                                         <select class="form-control" id="date">
-                                            <option value="0">date</option>
+                                            <!--                                            <option value="0">date</option>-->
                                             <option value='1'>1</option>
                                             <option value='2'>2</option>
                                             <option value='3'>3</option>
@@ -135,7 +135,7 @@
                                     <div class="col-md-4 mb-3">
                                         <label for="month">Month</label>
                                         <select class="form-control" id='monthd'>
-                                            <option value='0'>Month</option>
+                                            <!--                                            <option value='0'>Month</option>-->
                                             <option value='1'>1</option>
                                             <option value='2'>2</option>
                                             <option value='3'>3</option>
@@ -153,7 +153,7 @@
                                     <div class="col-md-4 mb-3">
                                         <label for="year">Year</label>
                                         <select class="form-control" id='year'>
-                                            <option value='0'>Year</option>
+                                            <!--                                            <option value='0'>Year</option>-->
                                             <option value='1947'>1947</option>
                                             <option value='1948'>1948</option>
                                             <option value='1949'>1949</option>
@@ -200,13 +200,23 @@
                                             <option value='1990'>1990</option>
                                             <option value='1991'>1991</option>
                                             <option value='1992'>1992</option>
-                                            <option value='1993'>1993</option>
+                                            <option value='1993' selected>1993</option>
+                                            <option value='1994'>1994</option>
+                                            <option value='1995'>1995</option>
+                                            <option value='1996'>1996</option>
+                                            <option value='1997'>1997</option>
+                                            <option value='1998'>1998</option>
+                                            <option value='1999'>1999</option>
+                                            <option value='2000'>2000</option>
+                                            <option value='2001'>2001</option>
+                                            <option value='2002'>2002</option>
+                                            <option value='2003'>2003</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="contact">Contact Number</label>
-                                    <input type="text" class="form-control" id="contact" placeholder="Contact Number" required>
+                                    <input type="text" class="form-control" id="contact" placeholder="" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="driver-license-category">Driver License Category</label>
@@ -219,53 +229,53 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="address">Address</label>
-                                    <textarea class="form-control" placeholder="Address" id="address" type="text" rows="3" required></textarea>
+                                    <textarea class="form-control" placeholder="" id="address" type="text" rows="3" required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="country">Country</label>
-                                    <input placeholder="Country" id="country" type="text" class="form-control" required>
+                                    <input placeholder="" id="country" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="state">State</label>
-                                    <input type="text" class="form-control" placeholder="State">
+                                    <input type="text" class="form-control" placeholder="">
                                 </div>
                                 <br/>
                                 <h4>Referral</h4>
                                 <div class="form-group">
                                     <label for="member-id">Member ID</label>
-                                    <input placeholder="Member ID" id="member-id" type="text" class="form-control" required>
+                                    <input placeholder="" id="member-id" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="club-id">Club ID</label>
-                                    <input placeholder="Club ID" id="club-id" type="text" class="form-control" required>
+                                    <input placeholder="" id="club-id" type="text" class="form-control" required>
                                 </div>
                                 <br/>
                                 <h4>Coverage</h4>
                                 <div class="form-group">
                                     <label for="fullname">Full Name</label>
-                                    <input placeholder="Full Name" id="fullname" type="text" class="form-control" required>
+                                    <input placeholder="" id="fullname" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="mobile">Contact Number</label>
-                                    <input type="text" class="form-control" id="mobile" placeholder="Contact Number" required>
+                                    <input type="text" class="form-control" id="mobile" placeholder="" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="address">Address</label>
-                                    <textarea class="form-control" placeholder="Address" id="address" type="text" rows="3" required></textarea>
+                                    <textarea class="form-control" placeholder="" id="address" type="text" rows="3" required></textarea>
                                 </div>
                                 <br/>
                                 <h4>Login Information</h4>
                                 <div class="form-group">
                                     <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                                    <input type="email" class="form-control" id="email" placeholder="" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control" id="password" placeholder="password" required>
+                                    <input type="password" class="form-control" id="password" placeholder="" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="cnfpassword">Conform Password</label>
-                                    <input type="password" class="form-control" id="cnfpassword" placeholder="Conform password" required>
+                                    <label for="cnfpassword">Confirm Password</label>
+                                    <input type="password" class="form-control" id="cnfpassword" placeholder="" required>
                                 </div>
                             </div>
                             <div id="step-2" class="">
