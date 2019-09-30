@@ -13,7 +13,7 @@
                     <mat-card fxFlex="25%">
                         <mat-card-header>
                             <mat-card-title>{{result[i]['title']}}</mat-card-title>
-                            <mat-card-subtitle>{{result[i]['news_date']|uppercase}}</mat-card-subtitle>
+                            <mat-card-subtitle>{{result[i]['news_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
                         </mat-card-header>
                         <img mat-card-image src="{{image_url}}{{result[i]['cover_image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-content>
@@ -35,9 +35,9 @@
                     <mat-card fxFlex="25%">
                         <mat-card-header>
                             <mat-card-title>{{result[i + 1]['title']}}</mat-card-title>
-                            <mat-card-subtitle>{{result[i + 1]['type']|uppercase}}</mat-card-subtitle>
+                            <mat-card-subtitle>{{result[i + 1]['news_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
                         </mat-card-header>
-                        <img mat-card-image src="{{image_url}}{{result[i + 1]['image']}}" alt="Photo of a Shiba Inu" />
+                        <img mat-card-image src="{{image_url}}{{result[i + 1]['cover_image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-content>
                             <p>
                                 {{result[i + 1]['moto_text']}}
@@ -57,9 +57,9 @@
                     <mat-card fxFlex="25%">
                         <mat-card-header>
                             <mat-card-title>{{result[i + 2]['title']}}</mat-card-title>
-                            <mat-card-subtitle>{{result[i + 2]['type']|uppercase}}</mat-card-subtitle>
+                            <mat-card-subtitle>{{result[i + 2]['news_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
                         </mat-card-header>
-                        <img mat-card-image src="{{image_url}}{{result[i + 2]['image']}}" alt="Photo of a Shiba Inu" />
+                        <img mat-card-image src="{{image_url}}{{result[i + 2]['cover_image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-content>
                             <p>
                                 {{result[i + 2]['moto_text']}}
@@ -79,9 +79,9 @@
                     <mat-card fxFlex="25%">
                         <mat-card-header>
                             <mat-card-title>{{result[i + 3]['title']}}</mat-card-title>
-                            <mat-card-subtitle>{{result[i + 3]['type']|uppercase}}</mat-card-subtitle>
+                            <mat-card-subtitle>{{result[i + 3]['news_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
                         </mat-card-header>
-                        <img mat-card-image src="{{image_url}}{{result[i + 3]['image']}}" alt="Photo of a Shiba Inu" />
+                        <img mat-card-image src="{{image_url}}{{result[i + 3]['cover_image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-content>
                             <p>
                                 {{result[i + 3]['moto_text']}}
