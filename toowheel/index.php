@@ -6,8 +6,10 @@ $card_add_one = $obj->selectRow('url, image', 'advertisement', 'advertisement_id
 $card_add_two = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_card_ad2']);
 $banner_add = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_banner_ad']);
 $categories = $obj->selectAll('*', 'category', 'category_id > 0 AND type = \'two_wheel\'');
-$news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'two_wheel\' AND category_id = ' . $categories[0]['category_id']);
-$galleries = $obj->selectAll('*', 'gallery', 'gallery_id > 0');
+$news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'two_wheel\' AND category_id = ' . $categories[0]['category_id'] . ' ORDER BY n.news_id DESC LIMIT 10');
+$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'two_wheel\' ORDER BY e.event_id DESC LIMIT 3');
+$images = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'image\' ORDER BY gallery_id DESC LIMIT 6');
+$videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'video\' ORDER BY gallery_id DESC LIMIT 6');
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,214 +46,20 @@ $galleries = $obj->selectAll('*', 'gallery', 'gallery_id > 0');
             <div id="club1" class="tagcontent">
                 <div class="container-fluid">
                     <div class="slider">
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-002.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
+                        <?php foreach ($news as $row) { ?>
+                            <div class="discover-slider">
+                                <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="alt" />
+                                <div class="discover-slider-content">
+                                    <p class="clb-bg"><?php echo $row['club']; ?></p>
+                                    <h2><?php echo $row['title']; ?></h2>
+                                    <p><?php echo $row['moto_text']; ?></p>
+                                    <center><a class="btn btn-primary">DISCOVER</a></center>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-003.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-004.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-005.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-005.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-001.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-005.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
-            <div id="club2" class="tagcontent">
-                <div class="container-fluid">
-                    <div class="slider">
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-001.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-002.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-003.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-004.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-005.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-005.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-005.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="club3" class="tagcontent">
-                <div class="container-fluid">
-                    <div class="slider">
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-002.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-003.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-004.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-005.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-001.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-005.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                        <div class="discover-slider">
-                            <img src="img/slider/slider-005.png" alt=""/>
-                            <div class="discover-slider-content">
-                                <p class="clb-bg">CLUB NAME</p>
-                                <h2>TITLE HERE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--            <div class="container">
-                            <input type="range" id="relationship-status-slider" class="relationship-status-slider" min="0" max="10" step="1">
-                        </div>-->
         </section>
         <section class="media-press-release">
             <div class="container">
@@ -283,36 +91,18 @@ $galleries = $obj->selectAll('*', 'gallery', 'gallery_id > 0');
                         <div class="upcoming-events">
                             <h4>UPCOMING EVENTS</h4>
                         </div>
-                        <div class="upcoming-events-bg">
-                            <div class="row">
-                                <img src="img/upcoming-events.png" alt="" />
-                                <div class="content-detail">
-                                    <h6>Race of Malaysia Sepang 2019</h6>
-                                    <i class="fa fa-calendar" aria-hidden="true"></i><p> December 13, 2019</p>
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i><p> Jalan Pekeliling, 64000 KLIA, Selangor Darul Ehsan, Malaysia</p>
+                        <?php foreach ($events as $row) { ?>
+                            <div class="upcoming-events-bg">
+                                <div class="row">
+                                    <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
+                                    <div class="content-detail">
+                                        <h6><?php echo $row['title']; ?></h6>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i><p> <?php echo $row['event_date']; ?></p>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i><p> <?php echo $row['location']; ?></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="upcoming-events-bg">
-                            <div class="row">
-                                <img src="img/upcoming-events.png" alt="" />
-                                <div class="content-detail">
-                                    <h6>Race of Malaysia Sepang 2019</h6>
-                                    <i class="fa fa-calendar" aria-hidden="true"></i><p> December 13, 2019</p>
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i><p> Jalan Pekeliling, 64000 KLIA, Selangor Darul Ehsan, Malaysia</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="upcoming-events-bg width-bg">
-                            <div class="row">
-                                <img src="img/upcoming-events.png" alt="" />
-                                <div class="content-detail">
-                                    <h6>Race of Malaysia Sepang 2019</h6>
-                                    <i class="fa fa-calendar" aria-hidden="true"></i><p> December 13, 2019</p>
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i><p> Jalan Pekeliling, 64000 KLIA, Selangor Darul Ehsan, Malaysia</p>
-                                </div>
-                            </div>
-                        </div>
+                        <?php } ?>
                         <div><a href="events.php" class="btn-secondary">SEE MORE</a></div>
                     </div>
                 </div>
