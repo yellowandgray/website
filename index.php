@@ -32,7 +32,7 @@
                                                             <i class="fa fa-youtube" aria-hidden="true"></i>
                                                             <a><i class="fa fa-phone-square" aria-hidden="true"></i><p>+91 8409 012345</p></a>
                                                             <a><i class="fa fa-whatsapp" aria-hidden="true"></i><p>+91 8409 012345</p></a>
-                                                            <a><i class="fa fa-envelope" aria-hidden="true"></i><p>info@guardianhealthmanagement.com</p></a>
+                                                            <a><i class="fa fa-envelope" aria-hidden="true"></i><p>info@email.com</p></a>
                                                         </div>
                                                     </div>
                                                 </div>
