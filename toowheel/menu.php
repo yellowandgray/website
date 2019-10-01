@@ -30,7 +30,7 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
                         <button class="tablinks" onclick="openCity(event, 'About')" id="defaultOpen">About Us <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'News')">Latest News <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Release')">Press Release <i class="fa fa-caret-right" aria-hidden="true"></i></button>
-                        <button class="tablinks"><a href="member-register.php">Be A Member <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>
+                        <button class="tablinks"><a href="member-benefits.php">Be A Member <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>
                         <button class="tablinks" onclick="openCity(event, 'Clubs')">Find a Club <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Events')">Events <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks"><a href="club-register.php">Club Registration <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>
@@ -136,6 +136,7 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
                                     <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
                                     <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
                                 </ul>
+                                <div class="find-club-btn"><a href="press-release.php" class="menu-btn">All Press Release</a></div>
                             </div>
                         </div> 
                     </div>
@@ -238,62 +239,62 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
                                         </div>
                                     </div>
                                 <?php } ?>
-<!--                                <div class="col-md-3 col-sm-6">
-                                    <div class="club-box">
-                                        <img src="img/events/005.jpg" alt="" />
-                                        <h3>Event Title</h3>
-                                        <p>Date: 10/10/2019</p>
-                                        <p>Location: Kuala lumpur</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="club-box">
-                                        <img src="img/events/005.jpg" alt="" />
-                                        <h3>Event Title</h3>
-                                        <p>Date: 10/10/2019</p>
-                                        <p>Location: Kuala lumpur</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="club-box">
-                                        <img src="img/events/005.jpg" alt="" />
-                                        <h3>Event Title</h3>
-                                        <p>Date: 10/10/2019</p>
-                                        <p>Location: Kuala lumpur</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="club-box">
-                                        <img src="img/events/005.jpg" alt="" />
-                                        <h3>Event Title</h3>
-                                        <p>Date: 10/10/2019</p>
-                                        <p>Location: Kuala lumpur</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="club-box">
-                                        <img src="img/events/005.jpg" alt="" />
-                                        <h3>Event Title</h3>
-                                        <p>Date: 10/10/2019</p>
-                                        <p>Location: Kuala lumpur</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="club-box">
-                                        <img src="img/events/005.jpg" alt="" />
-                                        <h3>Event Title</h3>
-                                        <p>Date: 10/10/2019</p>
-                                        <p>Location: Kuala lumpur</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="club-box">
-                                        <img src="img/events/005.jpg" alt="" />
-                                        <h3>Event Title</h3>
-                                        <p>Date: 10/10/2019</p>
-                                        <p>Location: Kuala lumpur</p>
-                                    </div>
-                                </div>-->
+                                <!--                                <div class="col-md-3 col-sm-6">
+                                                                    <div class="club-box">
+                                                                        <img src="img/events/005.jpg" alt="" />
+                                                                        <h3>Event Title</h3>
+                                                                        <p>Date: 10/10/2019</p>
+                                                                        <p>Location: Kuala lumpur</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3 col-sm-6">
+                                                                    <div class="club-box">
+                                                                        <img src="img/events/005.jpg" alt="" />
+                                                                        <h3>Event Title</h3>
+                                                                        <p>Date: 10/10/2019</p>
+                                                                        <p>Location: Kuala lumpur</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3 col-sm-6">
+                                                                    <div class="club-box">
+                                                                        <img src="img/events/005.jpg" alt="" />
+                                                                        <h3>Event Title</h3>
+                                                                        <p>Date: 10/10/2019</p>
+                                                                        <p>Location: Kuala lumpur</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3 col-sm-6">
+                                                                    <div class="club-box">
+                                                                        <img src="img/events/005.jpg" alt="" />
+                                                                        <h3>Event Title</h3>
+                                                                        <p>Date: 10/10/2019</p>
+                                                                        <p>Location: Kuala lumpur</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3 col-sm-6">
+                                                                    <div class="club-box">
+                                                                        <img src="img/events/005.jpg" alt="" />
+                                                                        <h3>Event Title</h3>
+                                                                        <p>Date: 10/10/2019</p>
+                                                                        <p>Location: Kuala lumpur</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3 col-sm-6">
+                                                                    <div class="club-box">
+                                                                        <img src="img/events/005.jpg" alt="" />
+                                                                        <h3>Event Title</h3>
+                                                                        <p>Date: 10/10/2019</p>
+                                                                        <p>Location: Kuala lumpur</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3 col-sm-6">
+                                                                    <div class="club-box">
+                                                                        <img src="img/events/005.jpg" alt="" />
+                                                                        <h3>Event Title</h3>
+                                                                        <p>Date: 10/10/2019</p>
+                                                                        <p>Location: Kuala lumpur</p>
+                                                                    </div>
+                                                                </div>-->
                             </div>
                             <div class="find-club-btn"><a href="events.php" class="menu-btn">Read More</a></div>
                         </div>

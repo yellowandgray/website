@@ -29,10 +29,53 @@
                                 </select>
                             </fieldset>
                             <fieldset>
-                                <input placeholder="State" type="text" tabindex="2" required>
+                                <select>
+                                    <option value="0">Country</option>
+                                    <option value='India'>India</option>
+                                    <option value='Malaysia'>Malaysia</option>
+                                </select>
                             </fieldset>
                             <fieldset>
-                                <input placeholder="City" type="text" tabindex="3" required>
+                                <select>
+                                    <option value="0">State</option>
+                                    <option value='Kuala_Lumpur'>Kuala Lumpur</option>
+                                    <option value='Labuan'>Labuan</option>
+                                    <option value='Putrajaya'>Putrajaya</option>
+                                    <option value='Johor'>Johor</option>
+                                    <option value='Kedah'>Kedah</option>
+                                    <option value='Kelantan'>Kelantan</option>
+                                    <option value='Malacca'>Malacca</option>
+                                    <option value='Negeri_Sembilan'>Negeri Sembilan</option>
+                                    <option value='Pahang'>Pahang</option>
+                                    <option value='Perak'>Perak</option>
+                                    <option value='Perlis'>Perlis</option>
+                                    <option value='Penang'>Penang</option>
+                                    <option value='Sabah'>Sabah</option>
+                                    <option value='Sarawak'>Sarawak</option>
+                                    <option value='Selangor'>Selangor</option>
+                                    <option value='Terengganu'>Terengganu</option>
+                                </select>
+                            </fieldset>
+                            <fieldset>
+                                <select>
+                                    <option value="0">City</option>
+                                    <option value='Kuala_Lumpur'>Kuala Lumpur</option>
+                                    <option value='Victoria'>Victoria</option>
+                                    <option value='Putrajaya'>Putrajaya</option>
+                                    <option value='Johor_Bahru'>Johor Bahru</option>
+                                    <option value='Alor_Setar'>Alor Setar</option>
+                                    <option value='Kota_Bharu'>Kota Bharu</option>
+                                    <option value='Malacca_City'>Malacca City</option>
+                                    <option value='Seremban'>Seremban</option>
+                                    <option value='Kuantan'>Kuantan</option>
+                                    <option value='Ipoh'>Ipoh</option>
+                                    <option value='Kangar'>Kangar</option>
+                                    <option value='George_Town'>George Town</option>
+                                    <option value='Kota_Kinabalu'>Kota Kinabalu</option>
+                                    <option value='Kuching'>Kuching</option>
+                                    <option value='Shah_Alam'>Shah Alam</option>
+                                    <option value='Kuala_Terengganu'>Kuala Terengganu</option>
+                                </select>
                             </fieldset>
                             <fieldset>
                                 <input placeholder="Zip" type="text" tabindex="4" required>
@@ -52,7 +95,7 @@
                             <fieldset>
                                 <input placeholder="Contact No." type="text" tabindex="9" required>
                             </fieldset>
-                             <fieldset>
+                            <fieldset>
                                 <textarea placeholder="About Club" type="text" tabindex="10" required></textarea>
                             </fieldset>
                             <fieldset>
@@ -60,9 +103,9 @@
                                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
                             </fieldset>
                         </form>
-                        <div class="already-account">
-                            <p>Have already an account? <a href="login.php">Login here</a></p>
-                        </div>
+                        <!--                        <div class="already-account">
+                                                    <p>Have already an account? <a href="login.php">Login here</a></p>
+                                                </div>-->
                     </div>
                 </div>
             </div>
