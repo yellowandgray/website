@@ -72,6 +72,21 @@ $app->post('/insert_news', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_news_gallery', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    if (isset($_FILES) && isset($_FILES['file'])) {
+        $path = $com->saveFile($_FILES['file'], 'uploads');
+    }
+    $record = $com->insertRecord(array('news_id' => $data['news_id'], 'media_path' => $path), 'news_gallery');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/insert_event', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();

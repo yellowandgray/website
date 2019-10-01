@@ -1,7 +1,14 @@
 <h2 mat-dialog-title>News</h2>
 <mat-dialog-content class="mat-typography">
-    <div class="add-btn-container">
-        <button type="button" mat-raised-button (click)="fileInput.click()">{{cover_image}}</button>
-        <input hidden #fileInput type="file" id="file" (change)="submitPhotos($event)" />
+    <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="end center">
+        <button type="button" mat-raised-button (click)="fileInput.click()"><mat-icon>add</mat-icon> Photos</button>
+        <input hidden #fileInput type="file" id="file" (change)="submitPhotos($event)" multiple />
+               <mat-progress-spinner
+               class="example-margin"
+               *ngIf="loading"
+               [mode]="'indeterminate'"
+               [strokeWidth]="3"
+               [diameter]="25">
+        </mat-progress-spinner>
     </div>
 </mat-dialog-content>
