@@ -1,3 +1,8 @@
+<?php
+    require_once 'api/include/common.php';
+    $obj = new Common();
+    $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'two_wheel\' ORDER BY e.event_id DESC LIMIT 10');
+?>
 <!DOCTYPE html>
 <html>
     <?php include 'head.php'; ?>
@@ -11,20 +16,21 @@
                 <div class="row">
                     <div class="col-md-8">
                         <!--                    <div class="event-num-1">-->
+                         <?php foreach ($events as $row) { ?>
                         <div class="event-n">
-                            <h3>Event Title</h3>
+                            <h3><?php echo $row['title']; ?></h3>
                             <div class="row">
                                 <div class="col-md-3 event-img">
-                                    <img src="img/events/005.jpg" alt="" class="img-responsive"/>
+                                    <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" class="img-responsive"/>
                                 </div>
                                 <div class="col-md-3 event-conent">
-                                    <p><span>Date:</span> 06-09-2019</p>
-                                    <p><span>Location:</span> Malaysia</p>
-                                    <p><span>Club Name:</span> Name</p>
+                                    <p><span>Date:</span> <?php echo $row['event_date']; ?></p>
+                                    <p><span>Location:</span> <?php echo $row['location']; ?></p>
+                                    <p><span>Club Name:</span> <?php echo $row['club_id']; ?></p>
                                 </div>
                                 <div class="col-md-6 event-desc">
                                     <span>Description</span>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                    <p><?php echo $row['description']; ?></p>
                                     <br/>
                                 </div>
                             </div>
@@ -37,9 +43,10 @@
                                 </div>
                             </div>
                         </div>
+                        <?php } ?>
                         <!--                    </div>
                                             <div class="event-num-1">-->
-                        <div class="event-n">
+<!--                        <div class="event-n">
                             <h3>Event Title</h3>
                             <div class="row">
                                 <div class="col-md-3 event-img">
@@ -64,10 +71,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         <!--                    </div>
                                             <div class="event-num-1">-->
-                        <div class="event-n">
+<!--                        <div class="event-n">
                             <h3>Event Title</h3>
                             <div class="row">
                                 <div class="col-md-3 event-img">
@@ -92,7 +99,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
 
                     <!--                </div>-->
