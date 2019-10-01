@@ -256,10 +256,10 @@ export class NewsGalleryForm {
     }
 
   submitPhotos(fileInput: any) {
-      if (!<File>fileInput.target.files[0]) {
+      if (!fileInput.target.files[0]) {
             return;
       }
-      for(var i = 0; i < (<File>fileInput.target.files).length; i++) {
+      for(var i = 0; i < (fileInput.target.files).length; i++) {
           this.loading = true;
       var formData = new FormData();
           formData.append('news_id', this.news_id);
@@ -268,7 +268,7 @@ export class NewsGalleryForm {
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
-                    if(i == (((<File>fileInput.target.files).length) - 1)){
+                    if(i == (((fileInput.target.files).length) - 1)){
                     this.getImages();
                     }
                 }else{

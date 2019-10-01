@@ -12,10 +12,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GalleryComponent implements OnInit {
   result = [];  
+  result_four_wheel = [];  
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
       this.getGallery();
+      this.getGalleryFourWheel();
   }
   image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
     getGallery(): void {
@@ -23,6 +25,20 @@ export class GalleryComponent implements OnInit {
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
+  }
+  
+  getGalleryFourWheel(): void {
+  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_gallery_four_wheel')
+  .subscribe(
+          (res)=>{
+              this.result_four_wheel = res["result"]["data"];
         },
         (error)=>{
             this._snackBar.open(error["statusText"], '', {
@@ -41,6 +57,7 @@ export class GalleryComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if(result !== false && result !== 'false') {
       this.getGallery();
+      this.getGalleryFourWheel();
        }
     });
 }
