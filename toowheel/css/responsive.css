@@ -148,6 +148,7 @@
     }
     .bg-1 .container {bottom: 0px !important;}
     .bg-1 .slick-slider {bottom: 0px !important;}
+    .header-login input[type=search] {right: 23% !Important}
 }
 
 @media (min-width: 768px) and (max-width: 1199px) { 
@@ -262,7 +263,7 @@
 
 @media (min-width: 992px) and (max-width: 1204px) {
     .header-login input[type=search] {
-        right: 11% !important;
+        right: 10.5% !important;
     }
 }
 
@@ -273,9 +274,15 @@
 }
 
 
-@media (min-width: 1167px) and (max-width: 1440px) {
+@media (min-width: 1167px) and (max-width: 1200px) {
     .header-login input[type=search] {
-        right: 17% !important;
+        right: 17.5% !important;
+    }
+}
+
+@media (min-width: 1221px) and (max-width: 1440px) {
+    .header-login input[type=search] {
+        right: 15% !important;
     }
 }
 

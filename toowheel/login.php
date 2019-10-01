@@ -2,6 +2,7 @@
     <?php include 'head.php'; ?>
     <body>
         <?php include 'menu.php'; ?>
+        <div class="padding-top-108"></div>
         <section class="login-pad">
             <div class="container">
                 <div class="login-sec">
@@ -37,7 +38,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="sign-up" class="log-cont-02">
+<!--                        <div id="sign-up" class="log-cont-02">
                             <div class="text-center">
                                 <h3>SIGN UP</h3>
                                 <form class="sign-up-form">
@@ -51,7 +52,7 @@
                                 </form> 
                                 <h5 onclick="logIn()"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>Back to Login</h5>
                             </div>
-                        </div>
+                        </div>-->
 
                     </div>
                 </div>

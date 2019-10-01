@@ -14,12 +14,12 @@
                 <div class="container tab-menu">
 <!--                    <div class="nav-close" onclick="closeNav();"><img src="img/close.png" alt=""></div>-->
                     <div class="tab mega-menu-tab">
-                        <div class="text-center language">
-                            <input type="radio" name="size" id="size_1" value="small" checked />
-                            <label for="size_1">BM</label>
-                            <input type="radio" name="size" id="size_2" value="small" />
-                            <label for="size_2">EN</label>
-                        </div>
+                        <!--                        <div class="text-center language">
+                                                    <input type="radio" name="size" id="size_1" value="small" checked />
+                                                    <label for="size_1">BM</label>
+                                                    <input type="radio" name="size" id="size_2" value="small" />
+                                                    <label for="size_2">EN</label>
+                                                </div>-->
                         <button class="tablinks" onclick="openCity(event, 'About')" id="defaultOpen">About Us <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'News')">Latest News <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Release')">Press Release <i class="fa fa-caret-right" aria-hidden="true"></i></button>
@@ -41,13 +41,15 @@
                     <div id="About" class="tabcontent">
                         <h3>About</h3>
                         <div class="about-menu">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img src="img/menu-about.jpg" alt=""/>
-                                </div>
-                                <div class="col-md-8">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    <div class="find-club-btn"><a href="about.php" class="menu-btn">Read More</a></div>
+                            <div class="about-section">
+                                <div class="about-background">
+                                    <div class="about-bg">
+                                        <img src="img/about/about-logo.png" alt="">
+                                        <h1>About Us</h1>
+                                        <p>Toowheel is an automotive digital platform combining Website, Content Management System, Ecommerce and E-Wallet, That centralized all two wheel and four-wheel motorsports activities and event in Malaysia. With alliance to all registered motor club from various standard, we manage to attract all motorsport enthusiast to support and fully utilize Toowheel platform services. Toowheel operate as a digital platform and combine with physical services such as social community networking ,corporate event and organize multiple legal motorsport entity to cater from lower end to high end motorsports members. With this united platform, we targeted to have more than 30,000 member by end of this year and up to 2 million active members by 2020.</p>
+                                        <br/>
+                                        <div class="news-discover"><a href="about.php">Read More</a></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -330,9 +332,8 @@
                 <div class="float-left margin-left-10">
                     <a href="#" onclick="myFunction()" id="demo-2">
                         <input type="search" placeholder="Search">
-
+                        <p id="myDiv">Search</p>
                     </a>
-                    <p id="myDiv">Search</p>
                     <!--                    <form id="demo-2">
                                             <input type="search" placeholder="Search">
                                             <p>Search</p>

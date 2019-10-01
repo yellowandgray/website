@@ -167,7 +167,7 @@ body {
     display: block;
 }
 
-.video-bg-banner .video-overlay {
+/*.video-bg-banner .video-overlay {
     content: "";
     position: absolute;
     left: 0;
@@ -179,7 +179,7 @@ body {
     height: 100%;
     background-size: cover;
     z-index: 1;
-}
+}*/
 
 .video-bg-banner .video-overlay {
     display: block;
@@ -218,6 +218,7 @@ body {
     font-weight: 700;
     font-size: 25px;
     margin-bottom: 20px;
+    font-style: italic;
 }
 
 .tag-box {
@@ -680,6 +681,10 @@ body {
 
 .footer a {
     text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
 .footer__nav {
@@ -1272,6 +1277,7 @@ body {
 
 .find-club-menu .club-box p {
     font-size: 10px;
+    margin: 0;
 }
 
 

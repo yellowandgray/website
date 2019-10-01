@@ -143,7 +143,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 <div class="social-bg text-center"><span>SOCIAL MEDIA</span></div>
                 <div class="row">
                     <div class="col-md-12">      
-                        <h2>TOOWHEEL MOTORSPROT NETWORK</h2>
+                        <h2>TOOWHEEL MOTORSPORT NETWORK</h2>
                     </div>
                     <div class="col-md-12">                       
                         <div class="row margin-top-30 social-icon">
