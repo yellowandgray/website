@@ -1,4 +1,4 @@
-<h2 mat-dialog-title>News</h2>
+<h2 mat-dialog-title>News Gallery</h2>
 <mat-dialog-content class="mat-typography">
     <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="end center">
         <button type="button" mat-raised-button (click)="fileInput.click()"><mat-icon>add</mat-icon> Photos</button>
@@ -11,4 +11,49 @@
                [diameter]="25">
         </mat-progress-spinner>
     </div>
+    <ng-container *ngFor="let data of result; let i = index">
+        <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
+            <ng-container *ngIf="result[i]">
+                <mat-card fxFlex="25%">
+                    <img mat-card-image src="{{image_url}}{{result[i]['media_path']}}" alt="Photo of a Shiba Inu" />
+                    <mat-card-actions>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+            </ng-container>
+            <ng-container *ngIf="result[i + 1]">
+                <mat-card fxFlex="25%">
+                    <img mat-card-image src="{{image_url}}{{result[i + 1]['media_path']}}" alt="Photo of a Shiba Inu" />
+                    <mat-card-actions>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+            </ng-container>
+            <ng-container *ngIf="result[i + 2]">
+                <mat-card fxFlex="25%">
+                    <img mat-card-image src="{{image_url}}{{result[i + 2]['media_path']}}" alt="Photo of a Shiba Inu" />
+                    <mat-card-actions>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+            </ng-container>
+            <ng-container *ngIf="result[i + 3]">
+                <mat-card fxFlex="25%">
+                    <img mat-card-image src="{{image_url}}{{result[i + 3]['media_path']}}" alt="Photo of a Shiba Inu" />
+                    <mat-card-actions>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+            </ng-container>
+        </div>            
+        <br/>
+    </ng-container>
 </mat-dialog-content>

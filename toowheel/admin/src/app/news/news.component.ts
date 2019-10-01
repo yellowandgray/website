@@ -226,6 +226,7 @@ export class NewsGalleryForm {
     loading = false;
     news_id:any;
     result:any[];
+    image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
     constructor(
     public dialogRef: MatDialogRef<NewsForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
