@@ -346,3 +346,27 @@ $app->get('/get_event', function() {
     }
     echoRespnse(201, $res);
 });
+
+$app->delete('/delete_record/:table/:where', function($table, $where) {
+    $res = array('error' => true, 'message' => 'Unable to delete');
+    $com = new Common();
+    $data = $com->deleteRecordWithWhere($table, $where);
+    if ($data > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record deleted successfully';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/update_record/:table/:where', function($table, $where) use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->updateRecordWithWhere($data, $table, $where);
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record updated successfully';
+    }
+    echoRespnse(201, $res);
+});
