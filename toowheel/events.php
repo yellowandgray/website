@@ -8,6 +8,7 @@
     <?php include 'head.php'; ?>
     <body>
         <?php include 'menu.php'; ?>
+        <div class="padding-top-108"></div>
         <section class="event-sec">
             <div class="container event-container">
                 <div class="event-title">

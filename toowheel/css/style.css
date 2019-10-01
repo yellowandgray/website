@@ -1268,7 +1268,8 @@ body {
 }
 
 .find-club-menu .club-box img {
-    width: 80%
+    width: 84px;
+    height: 84px;
 }
 
 .find-club-menu .club-box h3 {

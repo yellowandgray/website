@@ -83,7 +83,7 @@ $findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'two_wheel\'')
                                 <p> <?php echo $row['city_id']; ?></p>
                             </div>
                         </div>
-                    <?php } ?>
+                        <?php } ?>
                     <!--                    <div class="col-md-2 col-sm-6">
                                             <div class="club-box">
                                                 <span>#1</span>

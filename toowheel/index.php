@@ -150,7 +150,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
             <div class="social-bg text-center"><span>SOCIAL MEDIA</span></div>
             <div class="row">
                 <div class="col-md-12">      
-                    <h2>TOOWHEEL MOTORSPROT NETWORK</h2>
+                    <h2>TOOWHEEL MOTORSPORT NETWORK</h2>
                 </div>
                 <div class="col-md-12">                       
                     <div class="row margin-top-30 social-icon">
@@ -222,39 +222,39 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     <li>
                         <h4>TITLE COMES HERE</h4>
                         <a class="ns-img" href="https://live.staticflickr.com/65535/48691708073_da1f19f532.jpg"></a>
-                        <div class="caption">
+<!--                        <div class="caption">
                             <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                            <!--                                <h3>Dummy Caption 1</h3>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan purus.</p>-->
-                        </div>
+                                                            <h3>Dummy Caption 1</h3>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan purus.</p>
+                        </div>-->
                     </li>
                     <li>
                         <h4>TITLE COMES HERE</h4>
                         <a class="ns-img" href="https://live.staticflickr.com/65535/48692219917_a8971eb340.jpg"></a>
-                        <div class="caption">
+<!--                        <div class="caption">
                             <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                        </div>
+                        </div>-->
                     </li>
                     <li>
                         <h4>TITLE COMES HERE</h4>
                         <span class="ns-img" style="background-image:url(https://live.staticflickr.com/65535/48692219962_c4a486e64a.jpg);"></span>
-                        <div class="caption">
+<!--                        <div class="caption">
                             <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                        </div>
+                        </div>-->
                     </li>
                     <li>
                         <h4>TITLE COMES HERE</h4>
                         <a class="ns-img" href="https://live.staticflickr.com/65535/48692219992_5a7e2a5dbc.jpg"></a>
-                        <div class="caption">
+<!--                        <div class="caption">
                             <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                        </div>
+                        </div>-->
                     </li>
                     <li>
                         <h4>TITLE COMES HERE</h4>
                         <a class="ns-img" href="https://live.staticflickr.com/65535/48691708208_ffbeaf41a5.jpg"></a>
-                        <div class="caption">
+<!--                        <div class="caption">
                             <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                        </div>
+                        </div>-->
                     </li>
                 </ul>
                 <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>

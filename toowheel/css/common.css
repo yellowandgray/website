@@ -1044,7 +1044,7 @@ button {
 }
 
 .event-sec {
-    padding: 170px 0px 50px 0px;
+    padding: 50px 0px 50px 0px;
     background: #f3f3f3;
 }
 .event-title h3{
@@ -2885,7 +2885,8 @@ body .calender-box{
 }
 
 .event-gallery-section img {
-    width: 100%;
+    width: 150px;
+    height: 150px;
     /* border: 1px solid red; */
     margin: 10px 0;
     box-shadow: 0 0 5px 0px red;
@@ -3341,6 +3342,11 @@ thead td {
 
 .about-menu .about-bg {
     padding-top: 50px;
+    width: 100%;
+}
+
+.about-menu .about-section .about-background {
+    background-position: center;
 }
 
 .about-menu .about-bg img {
@@ -3358,4 +3364,12 @@ thead td {
 
 .about-bg .news-discover {
     margin: 0 auto;
+}
+
+.tabcontent .news .discover-slider-content {
+    width: 162px;
+}
+
+.tabcontent .news .news-discover {
+    bottom: 180px;
 }
