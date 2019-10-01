@@ -61,7 +61,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                     <p class="clb-bg"><?php echo $row['club']; ?></p>
                                     <h2><?php echo $row['title']; ?></h2>
                                     <p><?php echo $row['moto_text']; ?></p>
-                                    <center><a href="" class="btn btn-primary">DISCOVER</a></center>
+                                    <center><a href="news.php?nid=<?php echo $row['news_id']; ?>" class="btn btn-primary">DISCOVER</a></center>
                                 </div>
                             </div>
                         <?php } ?>
@@ -307,7 +307,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     if (data.result.error === false) {
                         var list = '';
                         $.each(data.result.data, function (key, val) {
-                            list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + val.club + '</p><h2>' + val.title + '</h2><p>' + val.moto_text + '</p><center><a href="" class="btn btn-primary">DISCOVER</a></center></div></div>';
+                            list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + val.club + '</p><h2>' + val.title + '</h2><p>' + val.moto_text + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
                         });
                         $('#club1 .slider').html(list);
                         $('.slider').slick('refresh');
