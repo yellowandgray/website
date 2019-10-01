@@ -55,7 +55,9 @@ export class GalleryForm {
     galleryForm: FormGroup;
     loading = false;
     media_path: string;
+    thumb_path: string;
     file_name: string = 'Select Picture';
+    file_name_thumb: string = 'Select Thumb';
     constructor(
     public dialogRef: MatDialogRef<GalleryForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -64,12 +66,13 @@ export class GalleryForm {
     ngOnInit() {
       this.galleryForm = new FormGroup({
       'title': new FormControl('', Validators.required),
-      'media_type': new FormControl('', Validators.required)
+      'media_type': new FormControl('', Validators.required),
+      'type': new FormControl('', Validators.required)
         });
     }
-    fileProgress(fileInput: any) {
+    fileProgress(fileInput: any, name: string, path: string) {
         var fileData = <File>fileInput.target.files[0];
-        this.file_name = fileData.name;
+        this[name] = fileData.name;
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
@@ -77,7 +80,7 @@ export class GalleryForm {
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
-                    this.media_path = res["result"]["data"];
+                    this[path] = res["result"]["data"];
                 }else{
     this._snackBar.open(res["result"]["message"], '', {
           duration: 2000,
@@ -99,7 +102,12 @@ export class GalleryForm {
           var formData = new FormData();
           formData.append('title', this.galleryForm.value.title);
           formData.append('media_type', this.galleryForm.value.media_type);
+          formData.append('type', this.galleryForm.value.type);
           formData.append('media_path', this.media_path);
+          console.log(this.thumb_path);
+          if(this.thumb_path && this.thumb_path!= '') {
+              formData.append('thumb_path', this.thumb_path);
+          }
           this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/insert_gallery', formData).subscribe(
               (res)=>{
                 this.loading = false;
