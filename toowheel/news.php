@@ -1,13 +1,12 @@
 <?php
+if (!isset($_GET['nid'])) {
+    header('Location: ../index.php');
+}
+$nid = $_GET['nid'];
 require_once 'api/include/common.php';
 $obj = new Common();
-$configs = $obj->getHomeDetails();
-$card_add_one = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_card_ad1']);
-$card_add_two = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_card_ad2']);
-$banner_add = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_banner_ad']);
-$categories = $obj->selectAll('*', 'category', 'category_id > 0 AND type = \'two_wheel\'');
-$news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'two_wheel\' AND category_id = ' . $categories[0]['category_id']);
-$galleries = $obj->selectAll('*', 'gallery', 'gallery_id > 0');
+$news = $obj->selectRow('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id = ' . $nid);
+$news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,19 +18,19 @@ $galleries = $obj->selectAll('*', 'gallery', 'gallery_id > 0');
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <img src="img/events/banner.jpg" alt="" style="width: 80%;" />
+                        <img src="<?php echo BASE_URL . $news['cover_image']; ?>" alt="" style="width: 80%;" />
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row events-content">
                     <div class="col-md-8">
-                        <p class="clb-bg clr-white">WFC</p>
+                        <p class="clb-bg clr-white"><?php echo $news['category']; ?></p>
                         <div class="events-main-content">
-                            <span>Media | Author Name | 24-09-2019</span>
+                            <span><?php echo $news['media']; ?> | <?php echo $news['author_name']; ?> | <?php echo $news['news_date']; ?></span>
                             <div class="middle">
                                 <div class="middle-1">
-                                    <h2>NEWS TITLE COMES HERE</h2>
+                                    <h2><?php echo $news['title']; ?></h2>
                                 </div>
                                 <div class="middle-2">
                                     <span class="twitter-share" data-js="twitter-share"><i class="fa fa-twitter" aria-hidden="true"></i></span>
@@ -40,39 +39,18 @@ $galleries = $obj->selectAll('*', 'gallery', 'gallery_id > 0');
                                     <span class="facebook-share" data-js="facebook-share"><i class="fa fa-facebook" aria-hidden="true"></i></span>
                                 </div>
                             </div>
-                            <strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </strong><br/><br/>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            <img src="img/attachment-bg.jpg" alt="" style="width: 100%" /><br/><br/>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <strong><?php echo $news['moto_text']; ?></strong><br/><br/>
+                            <p><?php echo $news['description_1']; ?></p>
+                            <img src="<?php echo BASE_URL . $news['banner_1']; ?>" alt="" style="width: 100%" /><br/><br/>
+                            <p><?php echo BASE_URL . $news['description_2']; ?></p>
                             <div class="news-gallery">
                                 <h3>Gallery</h3>
                                 <div class="row event-gallery-section">
-                                    <div class="col-md-3 col-sm-6">
-                                        <img src="img/news/gallery/001.png" alt="" />
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <img src="img/news/gallery/002.png" alt="" />
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <img src="img/news/gallery/001.png" alt="" />
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <img src="img/news/gallery/002.png" alt="" />
-                                    </div>
-                                </div>
-                                <div class="row event-gallery-section">
-                                    <div class="col-md-3 col-sm-6">
-                                        <img src="img/news/gallery/002.png" alt="" />
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <img src="img/news/gallery/001.png" alt="" />
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <img src="img/news/gallery/002.png" alt="" />
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <img src="img/news/gallery/001.png" alt="" />
-                                    </div>
+                                    <?php foreach ($news_gallery as $row) { ?>
+                                        <div class="col-md-3 col-sm-6">
+                                            <img src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" />
+                                        </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>

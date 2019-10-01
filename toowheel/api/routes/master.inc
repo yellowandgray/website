@@ -52,7 +52,11 @@ $app->post('/insert_gallery', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('media_type' => $data['media_type'], 'title' => $data['title'], 'media_path' => $data['media_path']), 'gallery');
+    $array = array('media_type' => $data['media_type'], 'type' => $data['type'], 'title' => $data['title'], 'media_path' => $data['media_path']);
+    if (isset($data['thumb_path'])) {
+        $array['thumb_path'] = $data['thumb_path'];
+    }
+    $record = $com->insertRecord($array, 'gallery');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -286,7 +290,19 @@ $app->get('/get_medias', function() {
 $app->get('/get_gallery', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('*', 'gallery', 'gallery_id > 0');
+    $data = $com->selectAll('*', 'gallery', 'gallery_id > 0 AND type = \'two_wheel\'');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_gallery_four_wheel', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'gallery', 'gallery_id > 0 AND type = \'four_wheel\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -307,6 +323,18 @@ $app->get('/get_news', function() {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_news_by_category/:cid', function($cid) {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.category_id = ' . $cid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_event', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
@@ -315,6 +343,30 @@ $app->get('/get_event', function() {
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->delete('/delete_record/:table/:where', function($table, $where) {
+    $res = array('error' => true, 'message' => 'Unable to delete');
+    $com = new Common();
+    $data = $com->deleteRecordWithWhere($table, $where);
+    if ($data > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record deleted successfully';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/update_record/:table/:where', function($table, $where) use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->updateRecordWithWhere($data, $table, $where);
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record updated successfully';
     }
     echoRespnse(201, $res);
 });

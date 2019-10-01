@@ -24,7 +24,7 @@ class Common {
 
     public function selectRow($fields, $table, $where) {
         $data = array();
-        $result = $this->conn->query('SELECT ' . $fields . ' FROM `' . $table . '` WHERE ' . $where);
+        $result = $this->conn->query('SELECT ' . $fields . ' FROM ' . $table . ' WHERE ' . $where);
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             $data = $row;
@@ -38,6 +38,11 @@ class Common {
             array_push($records, $key . ' = \'' . mysqli_real_escape_string($this->conn, $val) . '\'');
         }
         $this->conn->query('UPDATE `' . $table . '` SET ' . implode(',', $records) . ' WHERE ' . $where);
+        return $this->conn->affected_rows;
+    }
+
+    public function deleteRecordWithWhere($table, $where) {
+        $this->conn->query('DELETE FROM `' . $table . '` WHERE ' . $where);
         return $this->conn->affected_rows;
     }
 
@@ -95,10 +100,10 @@ class Common {
         }
         return $return;
     }
-    
+
     public function getHomeDetails() {
         $return = array();
-        $data = $this->selectAll('name, value', 'config', 'name IN (\'home_banner_video\', \'home_card_ad1\', \'home_card_ad2\', \'home_banner_ad\')');
+        $data = $this->selectAll('name, value', 'config', 'name IN (\'home_banner_video\', \'home_card_ad1\', \'home_card_ad2\', \'home_banner_ad\', \'home_banner_video_four_wheel\', \'two_wheel_photos\', \'two_wheel_videos\', \'four_wheel_photos\', \'four_wheel_videos\')');
         foreach ($data as $row) {
             $return[$row['name']] = $row['value'];
         }

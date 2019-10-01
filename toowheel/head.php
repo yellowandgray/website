@@ -17,7 +17,6 @@
     <link href="css/common.css" rel="stylesheet" type="text/css"/>
     <link href="css/rangeslider.css" rel="stylesheet" type="text/css"/>
     <link href="css/smart_wizard_step_by.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/baguetteBox.min.css" rel="stylesheet" type="text/css"/>
     <style>
         @font-face {
             font-family: "VenusRising";

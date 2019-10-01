@@ -50,7 +50,7 @@ $configs = $obj->getLandingDetails();
                     <div class="col-md-7 bg-text">
                         <h2>TWO WHEELS</h2>
                         <h1>TWO<br/> WHEELS</h1>
-                        <div class="btn-position-twowheel"><a href="toowheel/index.php" class="btn-enter-twowheel">ENTER <i class="fa fa-play-circle" aria-hidden="true"></i></a></div>
+                        <div class="btn-position-twowheel"><a href="toowheel/index.php?type=two_wheel" class="btn-enter-twowheel">ENTER <i class="fa fa-play-circle" aria-hidden="true"></i></a></div>
                         <!--<a href="toowheel/index.php" class="engine-button" onclick="document.getElementById('engineON').src = 'img/engine-on.png'"><img src="img/engine-off.png" id="engineON" alt="" /></a>-->
                     </div>
                 </div>
@@ -63,7 +63,7 @@ $configs = $obj->getLandingDetails();
                         <div class="col-md-5 order-img bg-four-text">
                             <h2>FOUR WHEELS</h2>
                             <h1>FOUR<br/> WHEELS</h1>
-                            <div class="btn-position-fourwheel"><a href="toowheel/index.php" class="btn-enter-fourwheel"><i class="fa fa-play-circle" aria-hidden="true"></i> ENTER</a></div>
+                            <div class="btn-position-fourwheel"><a href="toowheel/index.php?type=four_wheel" class="btn-enter-fourwheel"><i class="fa fa-play-circle" aria-hidden="true"></i> ENTER</a></div>
                         </div>
                         <div class="col-md-7">
                             <img src="<?php echo BASE_URL . $configs['landing_fourwheel_image']; ?>" alt=""  class="landing-car" />
