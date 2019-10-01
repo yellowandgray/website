@@ -22,7 +22,10 @@
                             </p>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['advertisement_id'])">
+                            <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result[i]['news_id'])">
+                                <mat-icon>panorama</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['news_id'])">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label">
@@ -44,7 +47,10 @@
                             </p>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+1]['advertisement_id'])">
+                            <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result[i+1]['news_id'])">
+                                <mat-icon>panorama</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+1]['news_id'])">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label">
@@ -66,7 +72,10 @@
                             </p>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+2]['advertisement_id'])">
+                            <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result[i+2]['news_id'])">
+                                <mat-icon>panorama</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+2]['news_id'])">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label">
@@ -88,7 +97,10 @@
                             </p>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+3]['advertisement_id'])">
+                            <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result[i+3]['news_id'])">
+                                <mat-icon>panorama</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+3]['news_id'])">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label">
@@ -98,6 +110,7 @@
                     </mat-card>
                 </ng-container>
             </div>            
+            <br/>
         </ng-container>
     </mat-sidenav-content>
 </mat-sidenav-container>

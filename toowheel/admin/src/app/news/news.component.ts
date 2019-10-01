@@ -44,6 +44,20 @@ export class NewsComponent implements OnInit {
     });
 }
 
+  openGalleryDialog(id): void  {
+    const dialogRef = this.dialog.open(NewsGalleryForm, {
+        minWidth: "80%",
+        maxWidth: "80%",
+        data: {
+            news_id: id
+        }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+        console.log('Closed');
+    });
+}
+
 }
 
 @Component({
@@ -167,6 +181,106 @@ export class NewsForm {
       if (this.newsForm.invalid) {
             return;
       }
+      this.loading = true;
+      var formData = new FormData();
+          formData.append('type', this.newsForm.value.type);
+          formData.append('category_id', this.newsForm.value.category_id);
+          formData.append('club_id', this.newsForm.value.club_id);
+          formData.append('cover_image', this.cover_image_path);
+          formData.append('title', this.newsForm.value.title);
+          formData.append('media_id', this.newsForm.value.media);
+          formData.append('author_name', this.newsForm.value.author_name);
+          formData.append('date', this.newsForm.value.date);
+          formData.append('thumb_image', this.thumb_image_path);
+          formData.append('banner_image_1', this.banner_image_1_path);
+          formData.append('banner_image_2', this.banner_image_2_path);
+          formData.append('moto_text', this.newsForm.value.moto_text);
+          formData.append('description', this.newsForm.value.description);
+          formData.append('description_1', this.newsForm.value.description_1);
+      this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/insert_news', formData).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+            this._snackBar.open(res["result"]["message"], '', {
+              duration: 2000,
+            });
+            }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+            );
+  }
+}
+
+@Component({
+  selector: 'news-gallery-form',
+  templateUrl: 'news-gallery-form.html',
+})
+export class NewsGalleryForm {
+    loading = false;
+    news_id:any;
+    result:any[];
+    constructor(
+    public dialogRef: MatDialogRef<NewsForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        this.news_id = this.data.news_id;
+    }
+    ngOnInit() {
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_news_gallery_by_news/'+this.news_id).subscribe(
+              (res)=>{
+                if(res["result"]["error"] === false) {
+                    this.result = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
+    
+    fileProgress(fileInput: any, name:string, field: string) {
+        var fileData = <File>fileInput.target.files[0];
+        this[name] = fileData.name;
+        this.loading = true;
+          var formData = new FormData();
+          formData.append('file', fileData);
+          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/upload_file', formData).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this[field] = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            });
+    }
+
+  submitPhotos(fileInput: any) {
+      if (!<File>fileInput.target.files[0]) {
+            return;
+      }
+      var fileData = <File>fileInput.target.files[0];
       this.loading = true;
       var formData = new FormData();
           formData.append('type', this.newsForm.value.type);

@@ -136,6 +136,18 @@ $app->get('/get_advertisment', function() {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_news_gallery_by_news/:nid', function($nid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'news_gallery', 'news_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_banner_advertisment', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();

@@ -34,7 +34,7 @@ import { ClubComponent, ClubForm } from './club/club.component';
 import { MemberComponent, MemberForm } from './member/member.component';
 import { HeaderComponent } from './header/header.component';
 import { VendorComponent, VendorForm } from './vendor/vendor.component';
-import { NewsComponent, NewsForm } from './news/news.component';
+import { NewsComponent, NewsForm, NewsGalleryForm } from './news/news.component';
 import { BusinessComponent } from './business/business.component';
 import { AdvertismentComponent, AdvertismentForm } from './advertisment/advertisment.component';
 import { GalleryComponent, GalleryForm } from './gallery/gallery.component';
@@ -69,6 +69,7 @@ import { AnnouncementComponent } from './announcement/announcement.component';
     VendorForm,
     MemberForm,
     NewsForm,
+    NewsGalleryForm,
     AdvertismentForm,
     GalleryForm,
     PointComponent,
@@ -118,7 +119,7 @@ import { AnnouncementComponent } from './announcement/announcement.component';
     ReactiveFormsModule,
     MatNativeDateModule
   ],
-  entryComponents: [ClubComponent, ClubForm, CategoryComponent, CategoryForm, VendorComponent, VendorForm, MemberComponent, MemberForm, NewsComponent, NewsForm, AdvertismentComponent, AdvertismentForm, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm],
+  entryComponents: [ClubComponent, ClubForm, CategoryComponent, CategoryForm, VendorComponent, VendorForm, MemberComponent, MemberForm, NewsComponent, NewsForm, NewsGalleryForm, AdvertismentComponent, AdvertismentForm, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm],
   providers: [],
   bootstrap: [AppComponent]
 })

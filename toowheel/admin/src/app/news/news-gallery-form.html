@@ -1,0 +1,7 @@
+<h2 mat-dialog-title>News</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="add-btn-container">
+        <button type="button" mat-raised-button (click)="fileInput.click()">{{cover_image}}</button>
+        <input hidden #fileInput type="file" id="file" (change)="submitPhotos($event)" />
+    </div>
+</mat-dialog-content>
