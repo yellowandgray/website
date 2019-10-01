@@ -44,7 +44,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                             $cls = 'active';
                         }
                         ?>
-                        <div class="tag-box tablink <?php echo $cls; ?>" onclick="openTag(event, 'club1')">
+                        <div class="tag-box tablink <?php echo $cls; ?>" onclick="openTag(event, <?php echo $val['category_id']; ?>)">
                             <p><?php echo $val['name']; ?></p>
                         </div>
                     <?php }
@@ -289,13 +289,8 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         });
     </script>
     <script>
-        function openTag(evt, clubName) {
-            var i, tagcontent, tablink;
-            tagcontent = document.getElementsByClassName("tagcontent");
-            for (i = 0; i < tagcontent.length; i++) {
-                tagcontent[i].style.display = "none";
-            }
-            document.getElementById(clubName).style.display = "block";
+        function openTag(evt, cid) {
+            var i, tablink;
             if (evt !== null) {
                 tablink = document.getElementsByClassName("tablink");
                 for (i = 0; i < tablink.length; i++) {
@@ -303,10 +298,27 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 }
                 evt.currentTarget.className += " active";
             }
+            $.ajax({
+                type: "GET",
+                url: 'api/v1/get_news_by_category/' + cid,
+                success: function (data) {
+                    $('#club1 .slider').empty();
+                    var BASE_URL = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
+                    if (data.result.error === false) {
+                        var list = '';
+                        $.each(data.result.data, function (key, val) {
+                            list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + val.club + '</p><h2>' + val.title + '</h2><p>' + val.moto_text + '</p><center><a href="" class="btn btn-primary">DISCOVER</a></center></div></div>';
+                        });
+                        $('#club1 .slider').html(list);
+                        $('.slider').slick('refresh');
+                    }
+                },
+                error: function (err) {
+                    $('#club1 .slider').empty();
+                    console.log(err.statusText);
+                }
+            });
         }
-        setTimeout(function () {
-            openTag(null, 'club1');
-        }, 1000);
     </script>
 </body>
 </html>
