@@ -303,6 +303,16 @@
                                         <p class="text-justify"> Our CBSE method of education through Continuous Comprehensive Evaluation(CCE) is a curricular initiative shifting emphasis from assessment to holistic learning. We follow the NCERT books, which supplements the learning process at ENPEE. Our friendly & welcoming classrooms offer children the space to learn the right way. </p>
                                     </div>
                                 </div>
+                                <div class="blog-post wf100">
+                                    <h5 class="text-center color-black">ENPEE sports Academy</h5>
+                                    <div class="col-md-6">
+                                        <img src="images/sports-001.jpg" alt=""  class="img-s">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="images/sports-002.jpg" alt=""  class="img-s">
+                                    </div>
+                                   
+                                </div>
                                 <!--Blog Post End-->
                             </div>
                         </div>

@@ -83,6 +83,29 @@
                                 </div>
                                 <!--campaign box end--> 
                             </div>
+                            <div class="col-md-4 padding-15">
+                                <!--campaign box start-->
+                                <div class="campaign-box">
+                                     <div class="campaign-txt">
+                                        <h5>ENPEE Sports Academy</h5>
+                                   </div>
+                                    <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/sports-001.jpg" alt="" title=""> </div>
+                                   
+                                    <!--                                    <a href="management.php" class="dbutton">Read More</a> -->
+                                </div>
+                                <!--campaign box end--> 
+                            </div>
+                            <div class="col-md-4 padding-15">
+                                <!--campaign box start-->
+                                <div class="campaign-box">
+                                     <div class="campaign-txt">
+                                        <h5>ENPEE Sports Academy</h5>
+                                   </div>
+                                    <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/sports-002.jpg" alt="" title=""> </div>
+                                    
+                                 </div>
+                                <!--campaign box end--> 
+                            </div>
                         </div>
                     </div>
                 </section>

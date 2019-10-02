@@ -1377,3 +1377,10 @@ marquee {
     flex-basis: 30%;
 
 }
+.img-s{
+    padding-top: 20px;
+    display: block;
+    max-width: 500px;
+    height: auto;
+    width: 100%;
+}
