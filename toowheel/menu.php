@@ -2,7 +2,6 @@
 require_once 'api/include/common.php';
 $obj = new Common();
 $findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'two_wheel\' ORDER BY club_id DESC LIMIT 8');
-$news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' AND n.category_id = ' . $categories[0]['category_id'] . ' ORDER BY n.news_id DESC LIMIT 6');
 $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'two_wheel\' ORDER BY e.event_id DESC LIMIT 8');
 ?>
 <section class="header">
@@ -63,8 +62,8 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
                     </div> 
                     <div id="News" class="tabcontent">
                         <div class="row news">
-                            <?php foreach ($news as $row) { ?>
-                                <div class="news-cont">
+                            <?php //foreach ($news as $row) { ?>
+<!--                                <div class="news-cont">
                                     <div>
                                         <img src="<?php echo BASE_URL . $news['thumb_image']; ?>" alt=""/>
                                         <div class="discover-slider-content">
@@ -74,38 +73,44 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
                                         </div>
                                     </div>
                                     <center class="news-discover"><a href="news.php">DISCOVER</a></center>
+                                </div>-->
+                            <?php //} ?>
+                            <div class="news-cont">
+                                <div>
+                                    <img src="img/mega-menu/001.jpg" alt=""/>
+                                    <center class="news-discover"><a href="#">DISCOVER</a></center>
                                 </div>
-                            <?php } ?>
-                            <!--                            <div class="news-cont">
-                                                            <div>
-                                                                <img src="img/mega-menu/002.jpg" alt=""/>
-                                                                <center class="news-discover"><a href="news.php">DISCOVER</a></center>
-                                                            </div>
-                                                        </div>
-                                                        <div class="news-cont">
-                                                            <div>
-                                                                <img src="img/mega-menu/003.jpg" alt=""/>
-                                                                <center class="news-discover"><a href="news.php">DISCOVER</a></center>
-                                                            </div>
-                                                        </div>
-                                                        <div class="news-cont">
-                                                            <div>
-                                                                <img src="img/mega-menu/004.jpg" alt=""/>
-                                                                <center class="news-discover"><a href="news.php">DISCOVER</a></center>
-                                                            </div>
-                                                        </div>
-                                                        <div class="news-cont">
-                                                            <div>
-                                                                <img src="img/mega-menu/004.jpg" alt=""/>
-                                                                <center class="news-discover"><a href="news.php">DISCOVER</a></center>
-                                                            </div>
-                                                        </div>
-                                                        <div class="news-cont">
-                                                            <div>
-                                                                <img src="img/mega-menu/003.jpg" alt=""/>
-                                                                <center class="news-discover"><a href="news.php">DISCOVER</a></center>
-                                                            </div>
-                                                        </div>-->
+                            </div>
+                            <div class="news-cont">
+                                <div>
+                                    <img src="img/mega-menu/002.jpg" alt=""/>
+                                    <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                </div>
+                            </div>
+                            <div class="news-cont">
+                                <div>
+                                    <img src="img/mega-menu/003.jpg" alt=""/>
+                                    <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                </div>
+                            </div>
+                            <div class="news-cont">
+                                <div>
+                                    <img src="img/mega-menu/004.jpg" alt=""/>
+                                    <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                </div>
+                            </div>
+                            <div class="news-cont">
+                                <div>
+                                    <img src="img/mega-menu/004.jpg" alt=""/>
+                                    <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                </div>
+                            </div>
+                            <div class="news-cont">
+                                <div>
+                                    <img src="img/mega-menu/003.jpg" alt=""/>
+                                    <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div id="Release" class="tabcontent">
