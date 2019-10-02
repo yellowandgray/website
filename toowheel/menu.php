@@ -63,52 +63,82 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
                     <div id="News" class="tabcontent">
                         <div class="row news">
                             <?php //foreach ($news as $row) { ?>
-<!--                                <div class="news-cont">
-                                    <div>
-                                        <img src="<?php echo BASE_URL . $news['thumb_image']; ?>" alt=""/>
-                                        <div class="discover-slider-content">
-                                            <p class="clb-bg"><?php echo $row['club']; ?></p>
-                                            <h2><?php echo $row['title']; ?></h2>
-                                            <p><?php echo $row['moto_text']; ?></p>
-                                        </div>
-                                    </div>
-                                    <center class="news-discover"><a href="news.php">DISCOVER</a></center>
-                                </div>-->
+                            <!--                                <div class="news-cont">
+                                                                <div>
+                                                                    <img src="<?php echo BASE_URL . $news['thumb_image']; ?>" alt=""/>
+                                                                    <div class="discover-slider-content">
+                                                                        <p class="clb-bg"><?php echo $row['club']; ?></p>
+                                                                        <h2><?php echo $row['title']; ?></h2>
+                                                                        <p><?php echo $row['moto_text']; ?></p>
+                                                                    </div>
+                                                                </div>
+                                                                <center class="news-discover"><a href="news.php">DISCOVER</a></center>
+                                                            </div>-->
                             <?php //} ?>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/001.jpg" alt=""/>
-                                    <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                    <div class="discover-slider-content">
+                                        <p class="clb-bg">Club Name</p>
+                                        <h2>Title Comes Here</h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+                                        <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                    </div>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/002.jpg" alt=""/>
-                                    <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                    <div class="discover-slider-content">
+                                        <p class="clb-bg">Club Name</p>
+                                        <h2>Title Comes Here</h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+                                        <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                    </div>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/003.jpg" alt=""/>
-                                    <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                    <div class="discover-slider-content">
+                                        <p class="clb-bg">Club Name</p>
+                                        <h2>Title Comes Here</h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+                                        <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                    </div>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/004.jpg" alt=""/>
-                                    <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                    <div class="discover-slider-content">
+                                        <p class="clb-bg">Club Name</p>
+                                        <h2>Title Comes Here</h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+                                        <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                    </div>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/004.jpg" alt=""/>
-                                    <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                    <div class="discover-slider-content">
+                                        <p class="clb-bg">Club Name</p>
+                                        <h2>Title Comes Here</h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+                                        <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                    </div>
                                 </div>
                             </div>
                             <div class="news-cont">
                                 <div>
                                     <img src="img/mega-menu/003.jpg" alt=""/>
-                                    <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                    <div class="discover-slider-content">
+                                        <p class="clb-bg">Club Name</p>
+                                        <h2>Title Comes Here</h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+                                        <center class="news-discover"><a href="#">DISCOVER</a></center>
+                                    </div>
                                 </div>
                             </div>
                         </div>

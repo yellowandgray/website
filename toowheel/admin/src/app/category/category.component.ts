@@ -46,7 +46,16 @@ export class CategoryComponent implements OnInit {
         }
         );
   }
-  openDialog(ctype): void  {
+  openDialog(id, res, ctype): void  {
+    var data = null;
+      if(id != 0) {
+      this[res].forEach(val=> {
+           if(parseInt(val.category_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
     const dialogRef = this.dialog.open(CategoryForm, {
         minWidth: "40%",
         maxWidth: "40%",
@@ -82,6 +91,12 @@ export class CategoryForm {
         this.categoryForm = new FormGroup({
             'name': new FormControl('', Validators.required)
         });
+        if(this.data != null) { 
+            this.categoryForm.patchValue({ 
+                name: this.data.name,
+        })
+        this.getCategory();
+    }
         this.category_type= this.data.ctype;
 }
 

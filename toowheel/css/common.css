@@ -3373,5 +3373,18 @@ thead td {
 }
 
 .tabcontent .news .news-discover {
-    bottom: 20px;
+    bottom: 0;
+    top: 0;
+    margin: 0 auto;
+    left: 0;
 }
+
+.tabcontent .news .news-cont {
+    flex-basis: 30%;
+    padding: 10px 0px;
+    height: 275px;
+}
+
+/*.tabcontent .news .news-cont div {
+    height: 100%;
+}*/
