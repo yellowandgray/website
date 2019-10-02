@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class NewsComponent implements OnInit {
   result = [];  
+  result_four_wheel:any[];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
     ngOnInit() {
          this.getNews();
@@ -31,7 +32,16 @@ export class NewsComponent implements OnInit {
            );
      }
 
-  openDialog(id): void  {
+  openDialog(id, res): void  {
+    var data = null;
+      if(id != 0) {
+      this[res].forEach(val=> {
+           if(parseInt(val.news_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
     const dialogRef = this.dialog.open(NewsForm, {
         minWidth: "40%",
         maxWidth: "40%"
@@ -96,6 +106,21 @@ export class NewsForm {
       'description': new FormControl('', Validators.required),
       'description_1': new FormControl('', Validators.required)
       });
+        if(this.data != null) {
+           this.newsForm.patchValue({
+           type: this.data.type,
+           category_id: this.data.category_id,
+           club_id: this.data.club_id,
+           title: this.data.title,
+           city: this.data.city_id,
+           date: this.data.date,
+           media: this.data.media,
+           moto_text: this.data.moto_text,
+           author_name: this.data.author_name,
+           description: this.data.description,
+           description_1: this.data.description_1
+        });
+        }
       this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_medias').subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {

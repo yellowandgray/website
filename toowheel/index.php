@@ -58,9 +58,9 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                             <div class="discover-slider">
                                 <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="alt" />
                                 <div class="discover-slider-content">
-                                    <p class="clb-bg"><?php echo $row['club']; ?></p>
-                                    <h2><?php echo $row['title']; ?></h2>
-                                    <p><?php echo $row['moto_text']; ?></p>
+                                    <span class="clb-bg"><?php echo $row['club']; ?></span>
+                                    <h2 class="title-text-height"><?php echo $row['title']; ?></h2>
+                                    <p class="moto-text-height"><?php echo $row['moto_text']; ?></p>
                                     <center><a href="news.php?nid=<?php echo $row['news_id']; ?>" class="btn btn-primary">DISCOVER</a></center>
                                 </div>
                             </div>

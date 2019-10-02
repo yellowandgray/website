@@ -3366,6 +3366,7 @@ thead td {
 
 .about-bg .news-discover {
     margin: 0 auto;
+    left: 0px;
 }
 
 .tabcontent .news .discover-slider-content {
@@ -3388,3 +3389,21 @@ thead td {
 /*.tabcontent .news .news-cont div {
     height: 100%;
 }*/
+
+.title-text-height {
+    height: 20px !important;
+    overflow: hidden !important;
+}
+
+.moto-text-height {
+    height: 60px !important;
+    overflow: hidden !important;
+}
+
+.discover-slider-content span {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 10px;
+    font-family: inherit;
+    opacity: 1;
+}

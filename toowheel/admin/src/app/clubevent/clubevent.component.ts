@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ClubeventComponent implements OnInit {
     result = [];
+    result_four_wheel:any[];
     constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
@@ -32,10 +33,20 @@ image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/
            );
      }
 
-  openDialog(id): void  {
+  openDialog(id, res): void  {
+    var data = null;
+      if(id != 0) {
+      this[res].forEach(val=> {
+           if(parseInt(val.event_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
     const dialogRef = this.dialog.open(ClubEventForm, {
         minWidth: "40%",
-        maxWidth: "40%"
+        maxWidth: "40%",
+        data: data
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -64,10 +75,8 @@ export class ClubEventForm {
     public dialogRef: MatDialogRef<ClubEventForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {}
-
-  ngOnInit() {
-      this.clubeventForm = new FormGroup({
+    private httpClient: HttpClient) {
+        this.clubeventForm = new FormGroup({
       'type': new FormControl('', Validators.required),
       'category_id': new FormControl('', Validators.required),
       'club_id': new FormControl('', Validators.required),
@@ -76,6 +85,18 @@ export class ClubEventForm {
       'location': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required)
         });
+        if(this.data != null) {
+                this.clubeventForm.patchValue({
+           type: this.data.type,
+           category_id: this.data.category_id,
+           club_id: this.data.club_id,
+           title: this.data.title,
+           event_date: this.data.event_date,
+           location: this.data.location,
+           description: this.data.description
+        });
+        this.getCategory();
+        }
     }
     getCategory(): void {
        this.loading = true;
