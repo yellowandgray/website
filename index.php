@@ -46,13 +46,21 @@
 
                                         <div class="collapse navbar-collapse" id="ftco-nav">
                                             <ul class="navbar-nav ml-auto">
-                                                <li class="nav-item"><a href="about.html" class="nav-link">Products</a></li>
-                                                <li class="nav-item"><a href="blog.html" class="nav-link">Applications</a></li>
-                                                <li class="nav-item"><a href="contact.html" class="nav-link">Artifacts</a></li>
-                                                <li class="nav-item"><a href="contact.html" class="nav-link">Testimonial</a></li>
-                                                <li class="nav-item active"><a href="index.html" class="nav-link">About</a></li>
-                                                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                                                <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+                                                <!--                                                <li class="nav-item"><a href="about.html" class="nav-link">Products</a></li>
+                                                                                                <li class="nav-item"><a href="blog.html" class="nav-link">Applications</a></li>
+                                                                                                <li class="nav-item"><a href="contact.html" class="nav-link">Artifacts</a></li>
+                                                                                                <li class="nav-item"><a href="contact.html" class="nav-link">Testimonial</a></li>
+                                                                                                <li class="nav-item active"><a href="index.html" class="nav-link">About</a></li>
+                                                                                                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                                                                                                <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>-->
+                                                <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
+                                                <li class="nav-item"><a href="#" class="nav-link">Applications</a></li>
+                                                <li class="nav-item"><a href="#" class="nav-link">Artifacts</a></li>
+                                                <li class="nav-item"><a href="#" class="nav-link">Testimonial</a></li>
+                                                <li class="nav-item active"><a href="#" class="nav-link">About</a></li>
+                                                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                                                <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -328,6 +336,7 @@
                             <div class="cer-text">
                                 <h3>Bio Antimicrobials</h3>
                                 <p>Fresche Bioscience is a new generation SI QAC antimicrobial which delivers high performance, broad spectrum antibacterial, anti-fungal, mould and odour protection on surfaces to which they are either applied or infused. They are widely recognised as one of the worlds most advanced non-volatile, surface bonded antimicrobial, safe for people, plants, pets and the environment.</p>
+                                <p>Fresche is now challenging the dominance of conventional antimicrobials on their key points of risk and concern. These include their chemical volatility, harmful compounds including organo and heavy metals [silver], their instability, toxicity, flammability, poor record in workplace safety, end user health impacts and quite importantly environmental bio-accumulation.</p>
                                 <div class="button-1">
                                     <div class="eff-1"></div>
                                     <a href="#">See More</a>
