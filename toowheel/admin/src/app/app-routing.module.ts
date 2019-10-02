@@ -19,6 +19,7 @@ import { ClubgalleryComponent } from './clubgallery/clubgallery.component';
 import { ClubnewsComponent } from './clubnews/clubnews.component';
 import { LoginComponent } from './login/login.component';
 import { AnnouncementComponent } from './announcement/announcement.component';
+import { PressReleaseComponent, PressReleaseForm } from './press-release/press-release.component';
 
 
 const routes: Routes = [
@@ -40,7 +41,8 @@ const routes: Routes = [
     {path: 'clubdiscussion', component: ClubdiscussionComponent},
     {path: 'clubgallery', component: ClubgalleryComponent},
     {path: 'clubnews', component: ClubnewsComponent},
-    {path: 'announcement', component: AnnouncementComponent}
+    {path: 'announcement', component: AnnouncementComponent},
+    {path: 'press-release', component: PressReleaseComponent}
 ];
 
 @NgModule({

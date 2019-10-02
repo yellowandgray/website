@@ -50,6 +50,7 @@ import { LoginComponent } from './login/login.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { AnnouncementComponent } from './announcement/announcement.component';
+import { PressReleaseComponent, PressReleaseForm } from './press-release/press-release.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +88,9 @@ import { AnnouncementComponent } from './announcement/announcement.component';
     ClubdiscussionComponent,
     LoginComponent,
     SidenavComponent,
-    AnnouncementComponent
+    AnnouncementComponent,
+    PressReleaseComponent,
+    PressReleaseForm
   ],
   imports: [
     BrowserModule,
@@ -119,7 +122,7 @@ import { AnnouncementComponent } from './announcement/announcement.component';
     ReactiveFormsModule,
     MatNativeDateModule
   ],
-  entryComponents: [ClubComponent, ClubForm, CategoryComponent, CategoryForm, VendorComponent, VendorForm, MemberComponent, MemberForm, NewsComponent, NewsForm, NewsGalleryForm, AdvertismentComponent, AdvertismentForm, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm],
+  entryComponents: [ClubComponent, ClubForm, CategoryComponent, CategoryForm, VendorComponent, VendorForm, MemberComponent, MemberForm, NewsComponent, NewsForm, NewsGalleryForm, AdvertismentComponent, AdvertismentForm, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, PressReleaseComponent, PressReleaseForm],
   providers: [],
   bootstrap: [AppComponent]
 })
