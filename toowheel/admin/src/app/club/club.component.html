@@ -5,7 +5,7 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog(0)"><mat-icon>add</mat-icon> Club</button>
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Club</button>
         </div>
         <mat-tab-group>
             <mat-tab label="2 Wheeler">
@@ -24,7 +24,7 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['club_id'])">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['club_id'], 'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label">
@@ -46,7 +46,7 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 1]['club_id'])">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 1]['club_id'], 'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label">
@@ -68,7 +68,7 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 2]['club_id'])">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 2]['club_id'], 'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label">
@@ -90,7 +90,7 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 3]['club_id'])">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 3]['club_id'], 'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label">
@@ -118,7 +118,7 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i]['club_id'])">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i]['club_id'], 'result_four_wheel')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label">
@@ -140,7 +140,7 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 1]['club_id'])">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 1]['club_id'], 'result_four_wheel')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label">
@@ -162,7 +162,7 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 2]['club_id'])">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 2]['club_id'], 'result_four_wheel')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label">
@@ -184,7 +184,7 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 3]['club_id'])">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 3]['club_id'], 'result_four_wheel')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label">

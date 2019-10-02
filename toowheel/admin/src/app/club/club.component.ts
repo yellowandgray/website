@@ -45,10 +45,20 @@ export class ClubComponent implements OnInit {
         }
         );
   }
-  openDialog(id): void  {
+  openDialog(id, res): void  {
+      var data = null;
+      if(id != 0) {
+      this[res].forEach(val=> {
+           if(parseInt(val.club_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
     const dialogRef = this.dialog.open(ClubForm, {
         minWidth: "40%",
-        maxWidth: "40%"
+        maxWidth: "40%",
+        data: data
     });
     dialogRef.afterClosed().subscribe(result => {
       if(result !== false && result !== 'false') {
@@ -93,6 +103,25 @@ export class ClubForm {
             'mobile': new FormControl('', Validators.required),
             'about': new FormControl('', Validators.required)
         });
+        if(this.data != null) {
+                this.clubForm.patchValue({
+           name: this.data.name,
+           type: this.data.type,
+           category_id: this.data.category_id,
+           state: this.data.state_id,
+           city: this.data.city_id,
+           zip: this.data.zipcode,
+           landmark: this.data.landmark,
+           address: this.data.address,
+           club_leader_name: this.data.leader_name,
+           no_of_member: this.data.no_of_member,
+           email: this.data.email,
+           mobile: this.data.phone,
+           about: this.data.about
+        });
+        this.getCategory();
+        this.getCityByState()
+        }
         this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_states').subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
