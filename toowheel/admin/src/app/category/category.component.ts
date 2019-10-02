@@ -48,7 +48,7 @@ export class CategoryComponent implements OnInit {
   }
   openDialog(id, res, ctype): void  {
     var data = null;
-      if(id != 0) {
+      if(id != 0) { 
       this[res].forEach(val=> {
            if(parseInt(val.category_id) === parseInt(id)) {
                 data = val;
