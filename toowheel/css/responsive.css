@@ -280,9 +280,15 @@
     }
 }
 
-@media (min-width: 1221px) and (max-width: 1440px) {
+@media (min-width: 1200px) and (max-width: 1399px) {
     .header-login input[type=search] {
         right: 15% !important;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1440px) {
+    .header-login input[type=search] {
+        right: 17% !important;
     }
 }
 
