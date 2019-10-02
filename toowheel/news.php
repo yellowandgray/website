@@ -12,7 +12,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
 <html>
     <?php include 'head.php'; ?>
     <body>
-        <?php include 'menu.php'; ?>
+        <?php include 'menu_news.php'; ?>
         <div class="padding-top-108"></div>
         <div class="press-release">
             <div class="container-fluid">
