@@ -32,6 +32,8 @@ export class NewsComponent implements OnInit {
            );
      }
 
+         
+         
   openDialog(id, res): void  {
     var data = null;
       if(id != 0) {
