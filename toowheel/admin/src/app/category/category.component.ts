@@ -75,7 +75,7 @@ export class CategoryComponent implements OnInit {
   confirmDelete(id): void  {
     var data = null;
       if(id != 0) { 
-                data = id;
+        data = id;
       }
     const dialogRef = this.dialog.open(CategoryDelete, {
         minWidth: "40%",

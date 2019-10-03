@@ -48,19 +48,30 @@ export class GalleryComponent implements OnInit {
         );
   }
   
-  openDialog(id): void  {
+  openDialog(id, res): void  {
+    var data = null;
+      if(id != 0) {
+      this[res].forEach(val=> {
+           if(parseInt(val.gallery_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
     const dialogRef = this.dialog.open(GalleryForm, {
         minWidth: "40%",
-        maxWidth: "40%"
+        maxWidth: "40%",
+        data: data
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if(result !== false && result !== 'false') {
-      this.getGallery();
+        if(result !== false && result !== 'false') {
+          this.getGallery();
       this.getGalleryFourWheel();
-       }
+        }
     });
 }
+    
 
     confirmDelete(id): void  {
     var data = null;
@@ -98,14 +109,21 @@ export class GalleryForm {
     public dialogRef: MatDialogRef<GalleryForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {}
-    ngOnInit() {
-      this.galleryForm = new FormGroup({
+    private httpClient: HttpClient) {
+         this.galleryForm = new FormGroup({
       'title': new FormControl('', Validators.required),
       'media_type': new FormControl('', Validators.required),
       'type': new FormControl('', Validators.required)
         });
-    }
+        if(this.data != null) {
+                this.galleryForm.patchValue({
+           title: this.data.type,
+           media_type: this.data.category_id,
+           type: this.data.gallery_id,
+        });
+        }
+        }
+   
     fileProgress(fileInput: any, name: string, path: string) {
         var fileData = <File>fileInput.target.files[0];
         this[name] = fileData.name;

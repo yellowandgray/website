@@ -31,20 +31,29 @@ export class AdvertismentComponent implements OnInit {
         }
         );
   }
-  openDialog(id): void  {
-    const dialogRef = this.dialog.open(AdvertismentForm, {
+   openDialog(id,res): void  {
+    var data = null;
+      if(id != 0) {
+      this[res].forEach(val=> {
+           if(parseInt(val.advertisment_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
+   const dialogRef = this.dialog.open(AdvertismentForm, {
         minWidth: "40%",
         maxWidth: "40%",
-        data: {
-            
+        data: data
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+        if(result !== false && result !== 'false') {
+             this.getAdvertisment();
         }
     });
-    dialogRef.afterClosed().subscribe(result => {
-      if(result !== false && result !== 'false') {
-      this.getAdvertisment();
-       }
-    });
 }
+   
 
     confirmDelete(id): void  {
     var data = null;
@@ -78,13 +87,21 @@ export class AdvertismentForm {
     public dialogRef: MatDialogRef<AdvertismentForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {}
-    ngOnInit() {
-      this.advertismentForm = new FormGroup({
+    private httpClient: HttpClient) {
+        this.advertismentForm = new FormGroup({
       'title': new FormControl('', Validators.required),
       'type': new FormControl('', Validators.required),
       'url': new FormControl('', Validators.required)
         });
+        if(this.data != null) {
+                this.advertismentForm.patchValue({
+           title: this.data.title,
+           type: this.data.type,
+           url: this.data.url,
+          
+        });
+       
+        }
     }
     fileProgress(fileInput: any) {
         var fileData = <File>fileInput.target.files[0];

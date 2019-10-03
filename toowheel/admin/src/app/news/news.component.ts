@@ -46,7 +46,8 @@ export class NewsComponent implements OnInit {
       }
     const dialogRef = this.dialog.open(NewsForm, {
         minWidth: "40%",
-        maxWidth: "40%"
+        maxWidth: "40%",
+         data: data
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -112,9 +113,8 @@ export class NewsForm {
     public dialogRef: MatDialogRef<NewsForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {}
-    ngOnInit() {
-      this.newsForm = new FormGroup({
+    private httpClient: HttpClient) {
+        this.newsForm = new FormGroup({
       'type': new FormControl('', Validators.required),
       'category_id': new FormControl('', Validators.required),
       'club_id': new FormControl('', Validators.required),
@@ -133,14 +133,16 @@ export class NewsForm {
            club_id: this.data.club_id,
            title: this.data.title,
            city: this.data.city_id,
-           date: this.data.date,
-           media: this.data.media,
+           date: this.data.news_date,
+           media: this.data.media_id,
            moto_text: this.data.moto_text,
            author_name: this.data.author_name,
-           description: this.data.description,
-           description_1: this.data.description_1
+           description: this.data.description_1,
+           description_1: this.data.description_2
         });
-        }
+        this.getCategory();
+        this.getClub();
+    }
       this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_medias').subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
