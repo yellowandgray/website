@@ -48,6 +48,20 @@
                 </mat-form-field>
             </div>
         </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <button type="button" mat-raised-button (click)="fileInputImage.click()">{{image_path_1}}</button>
+                <input hidden #fileInputImage type="file" id="file_image" (change)="fileProgress($event, 'image_path_1', 'image_path')" />
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Youtube link</mat-label>
+                    <input matInput placeholder="" required formControlName="youtube_link" />
+                    <mat-error>Youtube Link is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <br/>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
@@ -66,17 +80,10 @@
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Url</mat-label>
-                    <input matInput placeholder="" required formControlName="url" />
-                    <mat-error>Url is required</mat-error>
-                </mat-form-field>
-            </div>
             <div fxFlex="100%">
                 <mat-form-field class="full-width">
                     <mat-label>Description</mat-label>
-                    <textarea matInput placeholder="Write Here" required formControlName="description"></textarea>
+                    <textarea rows='4' matInput placeholder="Write Here" required formControlName="description"></textarea>
                     <mat-error>Description is required</mat-error>
                 </mat-form-field>
             </div>
