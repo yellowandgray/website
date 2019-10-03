@@ -404,7 +404,7 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
             </div>
             <div class="mobile-header-login">
                 <i class="fa fa-search"></i>
-                <i class="fa fa-user"></i>
+                <a href="login.php"><i class="fa fa-user"></i></a>
             </div>
         </div>
     </div>

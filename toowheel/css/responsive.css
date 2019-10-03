@@ -266,7 +266,7 @@
 
 @media (min-width: 992px) and (max-width: 1204px) {
     .header-login input[type=search] {
-        right: 10.5% !important;
+        right: 14.5% !important;
     }
 }
 
@@ -338,5 +338,168 @@
 @media (min-width: 768px) and (max-width: 1488px) { 
     .fooetr-5 button {
         padding: 5px 10px !important;
+    }
+}
+@media (min-width: 320px) and (max-width: 450px) { 
+    .member-list li {
+        list-style: none;
+        padding: 15px 10px 6px 10px !important; 
+        margin-left: 54px;
+        position: relative;
+        font-size: 15px !important;
+    }
+    .about-pad{
+        padding: 0px 10px;
+    }
+    .vision-section img {
+        width: 50% !important;
+        margin: 0 25%;
+    }
+    .mission-section img {
+        width: 50% !important;
+        margin: 0 25%;
+    }
+    .core-value-section img {
+        width: 50% !important;
+        margin: 0 25%;
+    }
+    .vision-section {
+        padding: 25px 0 !important;
+
+    }
+    .mission-section {
+        padding: 25px 0 !important;
+    }
+    .core-value-section {
+        padding: 25px 0 !important;
+    }
+    .vision-section h1{
+        font-size: 28px !important;
+    }
+    .mission-section h1{
+        font-size: 28px !important;
+    }
+    .core-value-section h1{
+        font-size: 28px !important;
+    }
+}
+@media (min-width: 451px) and (max-width: 767px) { 
+    .member-list li {
+        list-style: none;
+        padding: 15px 10px 15px 10px !important; 
+        margin-left: 54px;
+        position: relative;
+        font-size: 16px !important;
+    }
+    .fooetr-5 button {
+        right: -167px;
+    }
+    .about-pad{
+        padding: 0px 10px;
+    }
+    .vision-section img {
+        width: 50% !important;
+        margin: 0 25%;
+    }
+    .mission-section img {
+        width: 50% !important;
+        margin: 0 25%;
+    }
+    .core-value-section img {
+        width: 50% !important;
+        margin: 0 25%;
+    }
+    .vision-section {
+        padding: 25px 0 !important;
+    }
+    .mission-section {
+        padding: 25px 0 !important;
+    }
+    .core-value-section {
+        padding: 25px 0 !important;
+    }
+    .vision-section h1{
+        font-size: 28px !important;
+    }
+    .mission-section h1{
+        font-size: 28px !important;
+    }
+    .core-value-section h1{
+        font-size: 28px !important;
+    }
+    .tabcontent {
+
+        padding-bottom: 235px !important;
+
+    }
+}
+@media (min-width: 320px) and (max-width: 575px) { 
+    .tab {
+        flex-basis: 100% !important;
+    }
+    .tabcontent {
+        flex-basis: 100% !important;
+        margin-bottom: 235px;
+    }
+    .mega-menu .sidenav {
+        height: auto !important;
+        position: fixed;
+        overflow: scroll !important;
+    }
+    .press-release-content h4 {
+        font-size: 15px !important;
+    }
+    .press-release-content a {
+        font-size: 9px !important;
+    } 
+    .partners-section img {
+
+        width: 50% !important;
+        margin: 0 25% !important;
+    }
+    .club-box{
+        width: 80% !important;
+        margin: 5px 10% !important;
+
+    }
+    .login-sec-1 {
+        flex-basis: 100% !important;
+        padding: 75px 10px !important;
+    }
+    .login-sec-2 {
+        flex-basis: 100% !important;
+        padding: 75px 10px !important;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) { 
+    .sidenav .tab-menu {
+        max-width: 720px !important;
+    }
+    .press-release-content h4 {
+        font-size: 15px !important;
+    } 
+    .press-release-content a {
+        font-size: 9px !important;
+    } 
+    .partners-section img {
+
+        width: 50% !important;
+        margin: 0 25% !important;
+    }
+    .club-box{
+        width: 60% !important;
+        margin: 5px 20% !important;
+
+    }
+    .login-sec-1 {
+        flex-basis: 100% !important;
+        padding: 75px 10px !important;
+    }
+    .login-sec-2 {
+        flex-basis: 100% !important;
+        padding: 75px 10px !important;
+    }
+    .log-in{
+        max-width: 700px !important; 
     }
 }

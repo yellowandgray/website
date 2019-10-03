@@ -22,8 +22,10 @@
                             <img src="img/about/vision.png" alt="" />
                         </div>
                         <div class="col-md-7">
-                            <h1>OUR VISION</h1>
-                            <p>We exist to provide a valuable platform and protect motorsport members needs and facilitate them with international standard</p>
+                            <div class="about-pad">
+                                <h1>OUR VISION</h1>
+                                <p>We exist to provide a valuable platform and protect motorsport members needs and facilitate them with international standard</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -31,8 +33,10 @@
                     <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-7">
-                            <h1 class="text-right">OUR MISSION</h1>
-                            <p class="text-right">To unite and provide Malaysian motorsport’s safety and education to all active motorsport enthusiast</p>
+                            <div class="about-pad">
+                                <h1 class="text-right">OUR MISSION</h1>
+                                <p class="text-right">To unite and provide Malaysian motorsport’s safety and education to all active motorsport enthusiast</p>
+                            </div>
                         </div>
                         <div class="col-md-2">
                             <img src="img/about/mission.png" alt="" />
@@ -47,14 +51,16 @@
                             <img src="img/about/core-value.png" alt="" />
                         </div>
                         <div class="col-md-7">
-                            <h1>OUR CORE VALUES</h1>
-                            <p><strong>HONESTY & INTEGRITY</strong> - We strive to do the right thing while preserving the integrity of the sport. </p>
-                            <p><strong>QUALITY & ACCOUNTABILITY</strong> - We are responsible for our actions</p>
-                            <p><strong>MUTUAL RESPECT & TRUST</strong> - We want actions and efforts to be kind in nature and true in fact.</p>
-                            <p><strong>PURSUIT OF EXCELLENCE</strong> - We expect the best from ourselves and our motorsport community.</p>
-                            <p><strong>INNOVATION</strong> - We find creative, new ways to delight our Members, Teams, Sponsors and Spectators. </p>
-                            <p><strong>COMMUNITY</strong> - We value a friendship and networking within our motorsport platform</p>
-                            
+                            <div class="about-pad">
+                                <h1>OUR CORE VALUES</h1>
+                                <p><strong>HONESTY & INTEGRITY</strong> - We strive to do the right thing while preserving the integrity of the sport. </p>
+                                <p><strong>QUALITY & ACCOUNTABILITY</strong> - We are responsible for our actions</p>
+                                <p><strong>MUTUAL RESPECT & TRUST</strong> - We want actions and efforts to be kind in nature and true in fact.</p>
+                                <p><strong>PURSUIT OF EXCELLENCE</strong> - We expect the best from ourselves and our motorsport community.</p>
+                                <p><strong>INNOVATION</strong> - We find creative, new ways to delight our Members, Teams, Sponsors and Spectators. </p>
+                                <p><strong>COMMUNITY</strong> - We value a friendship and networking within our motorsport platform</p>
+
+                            </div>
                         </div>
                     </div>
                 </div>

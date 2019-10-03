@@ -73,6 +73,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         <section class="media-press-release">
             <div class="container">
                 <div class="media-bg">
+                    <a href='press-release.php'></a>
                     <a href="press-release.php" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
                 </div>
             </div>
@@ -100,19 +101,14 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                         <div class="upcoming-events">
                             <h4>UPCOMING EVENTS</h4>
                         </div>
-                        <?php  foreach ($events as $row) {  $intValue++;  if ($intValue>"4") { break;}?> 
-                        
-                                    <div class="upcoming-events-bg">
-                                        <div class="row">
-                                         
-                                            <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
-                                            <div class="content-detail">
-                                                <h6><?php echo $row['title']; ?></h6>
-                                                <i class="fa fa-calendar" aria-hidden="true"></i><p> <?php echo $row['event_date']; ?></p>
-                                                <i class="fa fa-map-marker" aria-hidden="true"></i><p> <?php echo $row['location']; ?></p>
-                                            </div>
-                                            
-                                        </div>
+                        <?php foreach ($events as $row) { ?>
+                            <div class="upcoming-events-bg">
+                                <div class="row">
+                                    <img class="home-upcoming" src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
+                                    <div class="content-detail">
+                                        <h6><?php echo $row['title']; ?></h6>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i><p> <?php echo $row['event_date']; ?></p>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i><p> <?php echo $row['location']; ?></p>
                                     </div>
                         
                         <?php }  ?>
@@ -220,7 +216,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
     </section>
     <?php include 'footer.php'; ?>
     <script src="js/ninja-slider.js" type="text/javascript"></script>
-    <div>
+    <div style="display:none">
         <div id="ninja-slider">
             <div class="slider-inner" id="ninja-slider-sec">
                 <ul>

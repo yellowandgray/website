@@ -4,7 +4,7 @@
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
         <section class="login-pad">
-            <div class="container">
+            <div class="container log-in">
                 <div class="login-sec">
                     <div class="login-sec-1" style="background-image:url(img/login-pic.jpg)">
                         <div class="bg-img text-center">
