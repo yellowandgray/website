@@ -97,10 +97,10 @@ export class GalleryForm {
       'type': new FormControl('', Validators.required)
         });
         if(this.data != null) {
-                this.clubeventForm.patchValue({
+                this.galleryForm.patchValue({
            title: this.data.type,
            media_type: this.data.category_id,
-           type: this.data.club_id,
+           type: this.data.gallery_id,
         });
         }
         }
