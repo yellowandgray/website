@@ -95,7 +95,6 @@ export class CategoryForm {
             this.categoryForm.patchValue({ 
                 name: this.data.name,
         })
-        this.getCategory();
     }
         this.category_type= this.data.ctype;
 }
