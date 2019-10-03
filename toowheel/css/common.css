@@ -3393,6 +3393,11 @@ thead td {
     height: 275px;
 }
 
+.home-upcoming {
+    width: 33%;
+    height: 100px;
+}
+
 /*.tabcontent .news .news-cont div {
     height: 100%;
 }*/

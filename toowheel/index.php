@@ -72,6 +72,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         <section class="media-press-release">
             <div class="container">
                 <div class="media-bg">
+                    <a href='press-release.php'></a>
                     <a href="press-release.php" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
                 </div>
             </div>
@@ -102,7 +103,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                         <?php foreach ($events as $row) { ?>
                             <div class="upcoming-events-bg">
                                 <div class="row">
-                                    <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
+                                    <img class="home-upcoming" src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
                                     <div class="content-detail">
                                         <h6><?php echo $row['title']; ?></h6>
                                         <i class="fa fa-calendar" aria-hidden="true"></i><p> <?php echo $row['event_date']; ?></p>
