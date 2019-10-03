@@ -58,7 +58,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                             <div class="discover-slider">
                                 <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="alt" />
                                 <div class="discover-slider-content">
-                                    <span class="clb-bg"><?php echo $row['club']; ?></span>
+                                    <p class="clb-bg"><?php echo $row['club']; ?></p>
                                     <h2 class="title-text-height"><?php echo $row['title']; ?></h2>
                                     <p class="moto-text-height"><?php echo $row['moto_text']; ?></p>
                                     <center><a href="news.php?nid=<?php echo $row['news_id']; ?>" class="btn btn-primary">DISCOVER</a></center>
@@ -207,7 +207,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
             </div>
         </div>
     </section>
-        
+
     <section class="attachment-bg">
         <div class="container-fluid padding-lr-0">
             <a href="<?php echo $banner_add['url']; ?>" target="_blank"><img src="<?php echo BASE_URL . $banner_add['image']; ?>" alt="" style="width: 100%;" /></a>
@@ -215,46 +215,46 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
     </section>
     <?php include 'footer.php'; ?>
     <script src="js/ninja-slider.js" type="text/javascript"></script>
-    <div style="display:none;">
+    <div>
         <div id="ninja-slider">
-            <div class="slider-inner">
+            <div class="slider-inner" id="ninja-slider-sec">
                 <ul>
                     <li>
                         <h4>TITLE COMES HERE</h4>
                         <a class="ns-img" href="https://live.staticflickr.com/65535/48691708073_da1f19f532.jpg"></a>
-<!--                        <div class="caption">
-                            <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                                                            <h3>Dummy Caption 1</h3>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan purus.</p>
-                        </div>-->
+                        <!--                        <div class="caption">
+                                                    <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
+                                                                                    <h3>Dummy Caption 1</h3>
+                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan purus.</p>
+                                                </div>-->
                     </li>
                     <li>
                         <h4>TITLE COMES HERE</h4>
                         <a class="ns-img" href="https://live.staticflickr.com/65535/48692219917_a8971eb340.jpg"></a>
-<!--                        <div class="caption">
-                            <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                        </div>-->
+                        <!--                        <div class="caption">
+                                                    <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
+                                                </div>-->
                     </li>
-                    <li>
-                        <h4>TITLE COMES HERE</h4>
-                        <span class="ns-img" style="background-image:url(https://live.staticflickr.com/65535/48692219962_c4a486e64a.jpg);"></span>
-<!--                        <div class="caption">
-                            <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                        </div>-->
-                    </li>
+                    <!--                    <li>
+                                            <h4>TITLE COMES HERE</h4>
+                                            <span class="ns-img" style="background-image:url(https://live.staticflickr.com/65535/48692219962_c4a486e64a.jpg);"></span>
+                                            <div class="caption">
+                                                <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
+                                            </div>
+                                        </li>-->
                     <li>
                         <h4>TITLE COMES HERE</h4>
                         <a class="ns-img" href="https://live.staticflickr.com/65535/48692219992_5a7e2a5dbc.jpg"></a>
-<!--                        <div class="caption">
-                            <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                        </div>-->
+                        <!--                        <div class="caption">
+                                                    <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
+                                                </div>-->
                     </li>
                     <li>
                         <h4>TITLE COMES HERE</h4>
                         <a class="ns-img" href="https://live.staticflickr.com/65535/48691708208_ffbeaf41a5.jpg"></a>
-<!--                        <div class="caption">
-                            <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                        </div>-->
+                        <!--                        <div class="caption">
+                                                    <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
+                                                </div>-->
                     </li>
                 </ul>
                 <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
@@ -263,22 +263,25 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
     </div>
     <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
     <script>
-                    function lightbox(idx) {
-                        //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
-                        var ninjaSldr = document.getElementById("ninja-slider");
-                        ninjaSldr.parentNode.style.display = "block";
+                        function lightbox(idx) {
+                            //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+                            var ninjaSldr = document.getElementById("ninja-slider");
+                            ninjaSldr.parentNode.style.display = "block";
+                            var x = document.getElementById("ninja-slider-sec");
+                            x.style.left = "0px";
+                            x.style.opacity = "1";
+                            x.style.transition = "all 1s ease-in-out ";
 
-                        nslider.init(idx);
+                            nslider.init(idx);
 
-                        var fsBtn = document.getElementById("fsBtn");
-                        fsBtn.click();
-                    }
-
-                    function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
-                        if (isFullscreen) {
-                            ninjaSldr.parentNode.style.display = "none";
+                            var fsBtn = document.getElementById("fsBtn");
+                            fsBtn.click();
                         }
-                    }
+                        function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+                            if (isFullscreen) {
+                                ninjaSldr.parentNode.style.display = "none";
+                            }
+                        }
     </script>
     <script>
         $(".home-gallery").magnificPopup({

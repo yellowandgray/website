@@ -156,7 +156,7 @@
 </script>-->
 <!--mega-menu-->
 <!--calender-->
-<script src="js/calender.js" type="text/javascript"></script>
+
 <script type="text/javascript">
     $(document).ready(function () {
 
