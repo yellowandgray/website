@@ -215,7 +215,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
     </section>
     <?php include 'footer.php'; ?>
     <script src="js/ninja-slider.js" type="text/javascript"></script>
-    <div>
+    <div style="display:none">
         <div id="ninja-slider">
             <div class="slider-inner" id="ninja-slider-sec">
                 <ul>

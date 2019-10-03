@@ -42,7 +42,7 @@
 }
 
 @media (max-width:1367px) and (min-width:1123px){
-    
+
     .fooetr-5 input {
         padding: 5px 0px 5px 10px !important;
     }
@@ -143,9 +143,9 @@
         color: #fff !important;
         padding: 5px 25px 5px 25px !important;
         position: relative !important;
-        right: -84px !important;
+        right: 5px !important;
         outline: none !important;
-        top: -40px !important;
+        top: 0px !important;
     }
 
 
