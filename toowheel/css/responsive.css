@@ -302,6 +302,12 @@
 }
 
 
+@media (min-width: 1369px) and (max-width: 1440px) {
+    .discover-slider-content {
+        height: 172px !Important;
+    }
+}
+
 @media (min-width: 1441px) and (max-width: 1500px) {
     .header-login input[type=search] {
         right: 18% !important;

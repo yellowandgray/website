@@ -262,6 +262,7 @@ body {
     bottom: 157px;
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
+    height: 157px;
 }
 
 .clb-bg {
@@ -273,6 +274,7 @@ body {
     text-align: center;
     margin: 0;
     font-weight: 700;
+    height: auto !important;
 }
 
 .discover-slider-content h2 {
@@ -286,6 +288,8 @@ body {
     color: #fff;
     margin-bottom: 8px;
     font-size: 10px;
+    height: 60px;
+    overflow: hidden;
 }
 
 .menu-btn {

@@ -10,7 +10,7 @@ $card_add_one = $obj->selectRow('url, image', 'advertisement', 'advertisement_id
 $card_add_two = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_card_ad2']);
 $banner_add = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_banner_ad']);
 $categories = $obj->selectAll('*', 'category', 'category_id > 0 AND type = \'' . $type . '\'');
-$news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' AND n.category_id = ' . $categories[0]['category_id'] . ' ORDER BY n.news_id DESC LIMIT 10');
+$news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' AND n.category_id = '  >0 . ' ORDER BY n.news_id DESC LIMIT 10');
 $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 3');
 $images = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'image\' AND type = \'' . $type . '\' ORDER BY gallery_id DESC LIMIT 8');
 $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'video\' AND type = \'' . $type . '\' ORDER BY gallery_id DESC LIMIT 8');
@@ -41,7 +41,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     foreach ($categories as $key => $val) {
                         $cls = '';
                         if ($key == 0) {
-                            $cls = 'active';
+                            //$cls = 'active';
                         }
                         ?>
                         <div class="tag-box tablink <?php echo $cls; ?>" onclick="openTag(event, <?php echo $val['category_id']; ?>)">
@@ -58,9 +58,9 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                             <div class="discover-slider">
                                 <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="alt" />
                                 <div class="discover-slider-content">
-                                    <p class="clb-bg"><?php echo $row['club']; ?></p>
-                                    <h2 class="title-text-height"><?php echo $obj->charLimit($row['title'], 25); ?></h2>
-                                    <p class="moto-text-height"><?php echo $obj->charLimit($row['moto_text'], 60); ?></p>
+                                    <p class="clb-bg"><?php echo $obj->charLimit($row['club'], 10); ?></p>
+                                    <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
+                                    <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
                                     <center><a href="news.php?nid=<?php echo $row['news_id']; ?>" class="btn btn-primary">DISCOVER</a></center>
                                 </div>
                             </div>
@@ -320,7 +320,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     if (data.result.error === false) {
                         var list = '';
                         $.each(data.result.data, function (key, val) {
-                            list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + val.club + '</p><h2>' + charLimit(val.title, 25) + '</h2><p>' + charLimit(val.moto_text, 60) + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
+                            list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(val.club, 10) + '</p><h2>' + charLimit(val.title, 20) + '</h2><p>' + charLimit(val.moto_text, 120) + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
                         });
                         $('#club1 .slider').html(list);
                         $('.slider').slick('refresh');
