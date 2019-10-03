@@ -174,12 +174,11 @@ export class CategoryDelete {
 }
 
   confirmDelete() {
-      console.log(this.category_id);
       if (this.category_id == null || this.category_id == 0) {
             return;
       }
       this.loading = true;
-      this.httpClient.delete('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/category/category_id='+this.category_id).subscribe(
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/category/category_id='+this.category_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
