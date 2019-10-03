@@ -17,7 +17,7 @@
                         </mat-card-header>
                         <img mat-card-image src="{{image_url}}{{result[i]['image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['advertisement_id'])">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['advertisement_id'],'result')">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label">
@@ -34,7 +34,7 @@
                         </mat-card-header>
                         <img mat-card-image src="{{image_url}}{{result[i + 1]['image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+1]['advertisement_id'])">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+1]['advertisement_id'], 'result')">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label">
@@ -51,7 +51,7 @@
                         </mat-card-header>
                         <img mat-card-image src="{{image_url}}{{result[i + 2]['image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+2]['advertisement_id'])">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+2]['advertisement_id'],'result')">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label">
@@ -68,7 +68,7 @@
                         </mat-card-header>
                         <img mat-card-image src="{{image_url}}{{result[i + 3]['image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+3]['advertisement_id'])">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i+3]['advertisement_id'],'result')">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label">

@@ -96,6 +96,7 @@ export class ClubEventForm {
            description: this.data.description
         });
         this.getCategory();
+        this.getClub();
         }
     }
     getCategory(): void {
