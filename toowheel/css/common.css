@@ -3376,6 +3376,7 @@ thead td {
 
 .tabcontent .news .discover-slider-content {
     width: 162px;
+    height: auto;
 }
 
 .tabcontent .news .news-discover {
@@ -3395,7 +3396,7 @@ thead td {
     height: 100%;
 }*/
 
-.title-text-height {
+/*.title-text-height {
     height: 20px !important;
     overflow: hidden !important;
 }
@@ -3411,4 +3412,4 @@ thead td {
     font-size: 10px;
     font-family: inherit;
     opacity: 1;
-}
+}*/
