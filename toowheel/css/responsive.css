@@ -470,6 +470,21 @@
         flex-basis: 100% !important;
         padding: 75px 10px !important;
     }
+    .cc .tag-box {
+        width: 100% !important;
+        height: auto;
+        transform: skew(0deg) !important;
+        background: red;
+        bottom: 0;
+        text-decoration: none;
+        padding: 0 20px;
+        margin: 5px 5px;
+        cursor: pointer;
+    }
+    .bg-1 {
+        height: auto !important;
+    }
+
 }
 @media (min-width: 576px) and (max-width: 767px) { 
     .sidenav .tab-menu {
@@ -487,8 +502,7 @@
         margin: 0 25% !important;
     }
     .club-box{
-        width: 60% !important;
-        margin: 5px 20% !important;
+        width: 100% !important;
 
     }
     .login-sec-1 {
@@ -501,5 +515,30 @@
     }
     .log-in{
         max-width: 700px !important; 
+    }
+    .cc .tag-box {
+        width: 100% !important;
+        height: auto;
+        transform: skew(0deg) !important;
+        background: red;
+        bottom: 0;
+        text-decoration: none;
+        padding: 0 20px;
+        margin: 5px 5px;
+        cursor: pointer;
+    }
+    .bg-1 {
+        height: auto !important;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 599px) { 
+    .discover-slider-content {
+        height: 142px !important;
+    }
+    .btn-primary {
+        position: relative;
+        top: 2px !important;
     }
 }

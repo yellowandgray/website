@@ -31,12 +31,13 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
             <div class="video-overlay"></div>
         </section>
         <section class="bg-1">
-            <div class="container-fluid text-center">
+            <div class=" container-fluid text-center">
                 <span>DISCOVER</span>
             </div>
             <div class="container">
                 <h1>DISCOVER</h1>
                 <div class="row cc">
+                    
                     <?php
                     foreach ($categories as $key => $val) {
                         $cls = '';
