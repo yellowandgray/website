@@ -2,6 +2,7 @@
 if (!isset($_GET['type'])) {
     header('Location: ../index.php');
 }
+$intValue = 0;
 $type = $_GET['type'];
 require_once 'api/include/common.php';
 $obj = new Common();
@@ -99,18 +100,22 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                         <div class="upcoming-events">
                             <h4>UPCOMING EVENTS</h4>
                         </div>
-                        <?php foreach ($events as $row) { ?>
-                            <div class="upcoming-events-bg">
-                                <div class="row">
-                                    <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
-                                    <div class="content-detail">
-                                        <h6><?php echo $row['title']; ?></h6>
-                                        <i class="fa fa-calendar" aria-hidden="true"></i><p> <?php echo $row['event_date']; ?></p>
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i><p> <?php echo $row['location']; ?></p>
+                        <?php  foreach ($events as $row) {  $intValue++;  if ($intValue>"4") { break;}?> 
+                        
+                                    <div class="upcoming-events-bg">
+                                        <div class="row">
+                                         
+                                            <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
+                                            <div class="content-detail">
+                                                <h6><?php echo $row['title']; ?></h6>
+                                                <i class="fa fa-calendar" aria-hidden="true"></i><p> <?php echo $row['event_date']; ?></p>
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i><p> <?php echo $row['location']; ?></p>
+                                            </div>
+                                            
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        <?php } ?>
+                        
+                        <?php }  ?>
                         <div><a href="events.php" class="btn-secondary">SEE MORE</a></div>
                     </div>
                 </div>
@@ -308,7 +313,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 tablink = document.getElementsByClassName("tablink");
                 for (i = 0; i < tablink.length; i++) {
                     tablink[i].className = tablink[i].className.replace(" active", "");
-                }
+                }                               
                 evt.currentTarget.className += " active";
             }
             $.ajax({
@@ -317,13 +322,14 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 success: function (data) {
                     $('#club1 .slider').empty();
                     var BASE_URL = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
-                    if (data.result.error === false) {
-                        var list = '';
-                        $.each(data.result.data, function (key, val) {
-                            list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(val.club, 10) + '</p><h2>' + charLimit(val.title, 20) + '</h2><p>' + charLimit(val.moto_text, 120) + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
-                        });
-                        $('#club1 .slider').html(list);
-                        $('.slider').slick('refresh');
+                    if (data.result.error === false) {                       
+                            var list = '';
+                            $.each(data.result.data, function (key, val) {                                
+                                   list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(val.club, 10) + '</p><h2>' + charLimit(val.title, 20) + '</h2><p>' + charLimit(val.moto_text, 120) + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
+                              
+                            });
+                            $('#club1 .slider').html(list);
+                            $('.slider').slick('refresh');                  
                     }
                 },
                 error: function (err) {
