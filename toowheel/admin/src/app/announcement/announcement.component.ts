@@ -37,10 +37,10 @@ export class AnnouncementComponent implements OnInit {
            );
      }
      
-     openDialog(id, res): void  {
+     openDialog(id): void  {
     var data = null;
       if(id != 0) {
-      this[res].forEach(val=> {
+      this.result.forEach(val=> {
            if(parseInt(val.announcement_id) === parseInt(id)) {
                 data = val;
                 return false;
