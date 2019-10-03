@@ -2442,6 +2442,7 @@ body .calender-box{
 .discover-slider img {
     border-radius: 10px;
     height: 360px;
+    box-shadow: 0px 0px 6px 0px #000;
 }
 .event-con .discover-slider-content h2 {
     color: #fff;
@@ -3390,6 +3391,11 @@ thead td {
     flex-basis: 30%;
     padding: 10px 0px;
     height: 275px;
+}
+
+.home-upcoming {
+    width: 33%;
+    height: 100px;
 }
 
 /*.tabcontent .news .news-cont div {
