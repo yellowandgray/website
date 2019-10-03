@@ -7,11 +7,11 @@
         <mat-tab-group>
             <mat-tab label="2 Wheeler">
                 <div class="add-btn-container">
-                    <button mat-raised-button color="primary" (click)="openDialog('two_wheel')"><mat-icon>add</mat-icon> Category</button>
+                    <button mat-raised-button color="primary" (click)="openDialog(0, 'result', 'two_wheel')"><mat-icon>add</mat-icon> Category</button>
                 </div>
                 <mat-list>
                     <mat-list-item *ngFor="let data of result">
-                        <button mat-icon-button aria-label="label" (click)="openDialog('two_wheel')">
+                        <button mat-icon-button aria-label="label" (click)="openDialog(data.category_id, 'result', 'two_wheel')">
                             <mat-icon>edit</mat-icon>
                         </button>
                         <button mat-icon-button aria-label="label">
@@ -24,11 +24,11 @@
             </mat-tab>
             <mat-tab label="4 Wheeler">
                 <div class="add-btn-container">
-                    <button mat-raised-button color="primary" (click)="openDialog('four_wheel')"><mat-icon>add</mat-icon> Category</button>
+                    <button mat-raised-button color="primary" (click)="openDialog(0, 'result_fw', 'four_wheel')"><mat-icon>add</mat-icon> Category</button>
                 </div>
                 <mat-list>
                     <mat-list-item *ngFor="let data of result_fw">
-                        <button mat-icon-button aria-label="label" (click)="openDialog('four_wheel')">
+                        <button mat-icon-button aria-label="label" (click)="openDialog(data.category_id, 'result_fw', 'four_wheel')">
                             <mat-icon>edit</mat-icon>
                         </button>
                         <button mat-icon-button aria-label="label">

@@ -335,7 +335,6 @@ $app->get('/get_news', function() {
     echoRespnse(201, $res);
 });
 
-
 $app->get('/get_press_release', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
