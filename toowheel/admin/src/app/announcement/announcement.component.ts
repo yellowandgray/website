@@ -14,7 +14,7 @@ import { HttpClient } from '@angular/common/http';
 export class AnnouncementComponent implements OnInit {
   result = [];
   club_id = 0;
-  constructor(private route: ActivatedRoute) { }
+  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit() {
       this.route.paramMap.subscribe(params => {
@@ -72,7 +72,7 @@ export class AnnouncementComponent implements OnInit {
 export class AnnouncementForm {
     announcementForm: FormGroup;
     loading = false;
-    club_id = 0;
+    club_id = '0';
     thumb_image: string = 'Choose Thumb Image';
     thumb_image_path: string;
     constructor(
@@ -122,7 +122,7 @@ export class AnnouncementForm {
     }
 
   onSubmit() {
-      if (this.newsForm.invalid) {
+      if (this.announcementForm.invalid) {
             return;
       }
       this.loading = true;
