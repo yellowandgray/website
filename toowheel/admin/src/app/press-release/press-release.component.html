@@ -27,7 +27,7 @@
                             <button mat-icon-button aria-label="label"(click)="openDialog()">
                                 <mat-icon>edit</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['press_release_id'])">
                                 <mat-icon>delete</mat-icon>
                             </button>
                         </mat-card-actions>
@@ -51,7 +51,7 @@
                             <button mat-icon-button aria-label="label"(click)="openDialog()">
                                 <mat-icon>edit</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 1]['press_release_id'])">
                                 <mat-icon>delete</mat-icon>
                             </button>
                         </mat-card-actions>
@@ -75,7 +75,7 @@
                             <button mat-icon-button aria-label="label"(click)="openDialog()">
                                 <mat-icon>edit</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 2]['press_release_id'])">
                                 <mat-icon>delete</mat-icon>
                             </button>
                         </mat-card-actions>
@@ -99,31 +99,7 @@
                             <button mat-icon-button aria-label="label"(click)="openDialog()">
                                 <mat-icon>edit</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
-                                <mat-icon>delete</mat-icon>
-                            </button>
-                        </mat-card-actions>
-                    </mat-card>
-                </ng-container>
-                <ng-container *ngIf="result[i + 4]">
-                    <mat-card fxFlex="25%">
-                        <mat-card-header>
-                            <mat-card-title>{{result[i + 4]['title']}}</mat-card-title>
-                            <mat-card-subtitle>{{result[i + 4]['press_release_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
-                        </mat-card-header>
-                        <mat-card-content>
-                            <p>
-                                {{result[i + 4]['description']}}
-                            </p>
-                            <p>
-                                {{result[i + 4]['url']}}
-                            </p>
-                        </mat-card-content>
-                        <mat-card-actions>
-                            <button mat-icon-button aria-label="label"(click)="openDialog()">
-                                <mat-icon>edit</mat-icon>
-                            </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 3]['press_release_id'])">
                                 <mat-icon>delete</mat-icon>
                             </button>
                         </mat-card-actions>

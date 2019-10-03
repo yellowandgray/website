@@ -56,6 +56,24 @@ image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/
     });
 }
 
+        confirmDelete(id): void  {
+        var data = null;
+          if(id != 0) { 
+                    data = id;
+          }
+        const dialogRef = this.dialog.open(ClubEventDelete, {
+            minWidth: "40%",
+            maxWidth: "40%",
+            data: data
+        });
+
+       dialogRef.afterClosed().subscribe(result => {
+           if(result !== false && result !== 'false') {
+                 this.getEvent();
+           }
+        });
+    }
+
 }
 
 @Component({
@@ -196,4 +214,48 @@ export class ClubEventForm {
             }
             );
       }
+}
+
+
+@Component({
+  selector: 'clubevent-delete-confirmation',
+  templateUrl: 'clubevent-delete-confirmation.html',
+})
+export class ClubEventDelete {
+    loading = false;
+    event_id = 0;
+    constructor(
+    public dialogRef: MatDialogRef<ClubEventForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.data != null) { 
+            this.event_id = this.data;
+    }
+}
+
+  confirmDelete() {
+      if (this.event_id == null || this.event_id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/event/event_id='+this.event_id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+        this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+        );
+  }
 }

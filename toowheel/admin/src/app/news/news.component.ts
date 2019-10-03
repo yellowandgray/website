@@ -70,6 +70,24 @@ export class NewsComponent implements OnInit {
     });
 }
 
+    confirmDelete(id): void  {
+    var data = null;
+      if(id != 0) { 
+                data = id;
+      }
+    const dialogRef = this.dialog.open(NewsDelete, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: data
+    });
+
+   dialogRef.afterClosed().subscribe(result => {
+       if(result !== false && result !== 'false') {
+            this.getNews();
+       }
+    });
+}
+
 }
 
 @Component({
@@ -312,5 +330,49 @@ export class NewsGalleryForm {
             }
             );
       }
+  }
+}
+
+
+@Component({
+  selector: 'news-delete-confirmation',
+  templateUrl: 'news-delete-confirmation.html',
+})
+export class NewsDelete {
+    loading = false;
+    news_id = 0;
+    constructor(
+    public dialogRef: MatDialogRef<NewsForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.data != null) { 
+            this.news_id = this.data;
+    }
+}
+
+  confirmDelete() {
+      if (this.news_id == null || this.news_id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/news/news_id='+this.news_id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+        );
   }
 }
