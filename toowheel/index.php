@@ -59,8 +59,8 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                 <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="alt" />
                                 <div class="discover-slider-content">
                                     <p class="clb-bg"><?php echo $row['club']; ?></p>
-                                    <h2 class="title-text-height"><?php echo $row['title']; ?></h2>
-                                    <p class="moto-text-height"><?php echo $row['moto_text']; ?></p>
+                                    <h2 class="title-text-height"><?php echo $obj->charLimit($row['title'], 25); ?></h2>
+                                    <p class="moto-text-height"><?php echo $obj->charLimit($row['moto_text'], 40); ?></p>
                                     <center><a href="news.php?nid=<?php echo $row['news_id']; ?>" class="btn btn-primary">DISCOVER</a></center>
                                 </div>
                             </div>
@@ -293,6 +293,15 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         });
     </script>
     <script>
+        function charLimit(str, len) {
+             if (str.length <= len) {
+            return str;
+        } else {
+            var y = str.substring(0,len) + '...';
+            return y;
+        }
+        }
+        
         function openTag(evt, cid) {
             var i, tablink;
             if (evt !== null) {
@@ -311,7 +320,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     if (data.result.error === false) {
                         var list = '';
                         $.each(data.result.data, function (key, val) {
-                            list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + val.club + '</p><h2>' + val.title + '</h2><p>' + val.moto_text + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
+                            list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + val.club + '</p><h2>' + charLimit(val.title, 25) + '</h2><p>' + charLimit(val.moto_text, 40) + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
                         });
                         $('#club1 .slider').html(list);
                         $('.slider').slick('refresh');
