@@ -6,7 +6,7 @@
         <section class="login-pad">
             <div class="container log-in">
                 <div class="login-sec">
-                    <div class="login-sec-1" style="background-image:url(img/login-pic.jpg)">
+                    <div class="login-sec-1" style="background-image:url(img/login-pic.jpg);background-repeat: no-repeat; background-size: cover;">
                         <div class="bg-img text-center">
                             <img src="img/login-001.png" alt=""/>
                             <h5>NOT A TOOWHEEL MEMBER YET?</h5>

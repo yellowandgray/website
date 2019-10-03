@@ -335,7 +335,6 @@ $app->get('/get_news', function() {
     echoRespnse(201, $res);
 });
 
-
 $app->get('/get_press_release', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
@@ -372,7 +371,7 @@ $app->get('/get_event', function() {
     echoRespnse(201, $res);
 });
 
-$app->delete('/delete_record/:table/:where', function($table, $where) {
+$app->get('/delete_record/:table/:where', function($table, $where) {
     $res = array('error' => true, 'message' => 'Unable to delete');
     $com = new Common();
     $data = $com->deleteRecordWithWhere($table, $where);
