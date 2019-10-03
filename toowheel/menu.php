@@ -384,10 +384,12 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
             <a href="index.php" class="logo"><img src='img/logo.png' alt=''></a>
             <div class="header-login">
                 <div class="float-left margin-left-10">
-                    <a href="#" onclick="myFunction()" id="demo-2">
+                    <a href="#" onfocusin="myFunction()" onfocusout="myFunction2()" id="demo-2">
                         <input type="search" placeholder="Search">
-                        <p id="myDiv">Search</p>
-                    </a>
+
+                    </a> 
+                    <p id="myDiv">Search</p>
+
                     <!--                    <form id="demo-2">
                                             <input type="search" placeholder="Search">
                                             <p>Search</p>
@@ -432,11 +434,11 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
 
     function myFunction() {
         var x = document.getElementById("myDiv");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
+        x.style.display = "none";
+    }
+    function myFunction2() {
+        var x = document.getElementById("myDiv");
+        x.style.display = "block";
     }
 
 </script>

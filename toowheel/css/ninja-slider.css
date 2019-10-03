@@ -2,7 +2,7 @@
 
 #ninja-slider {
     width:100%;
-    background: rgba(34, 32, 32, 0.5);
+    background:rgba(34, 32, 32, 0.85);
     padding: 0;
 
     margin:0 auto;
@@ -12,21 +12,21 @@
 
 
 #ninja-slider .fs-icon {
-    top: 65px !important;
+    top: 75px !important;
     right: 6px;
     width: 60px;
     height: 26px;
     background: rgba(0, 0, 0, 0);
     z-index: 2;
-    color: #fc2d2c;
+    color: #fbfafa;
     text-align: center;
     text-shadow: 0 0 1px black;
-    font: bold 18px/36px arial;
+    font: bold 12px/36px arial;
     border-radius: 2px;
     opacity: 0;
     -webkit-transition: opacity 0.8s;
     transition: opacity 0.8s;
-    position: absolute !important
+    position: absolute !important;
 }
 
 #ninja-slider .slider-inner:hover .fs-icon,
@@ -71,22 +71,28 @@
 }
 
 #ninja-slider li {
-
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     position: absolute;
-    font-size:12px;
-    list-style:none;
-    margin:0;
-    padding:0;
-    opacity:0;
-    /*overflow:hidden;*/ /*Comment it out to show the caption*/
-    box-sizing:border-box;
+    font-size: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    /* overflow: hidden; */
+    box-sizing: border-box;
     margin-bottom: 0px!important;
     margin-top: 60px !important;
-    background: #fff;
+    background: #2c2b2b;
+    background-image:url(../img/photo-bg-001.png);
+    background-size: cover;
+    box-shadow: 1px 0px 7px 2px #4a4a4a;
+    border-radius: 10px;   
+    transition:all 2s !important;
+
+
 }
 
 #ninja-slider li.ns-show {
@@ -97,7 +103,7 @@
 
 /* --------- slider image ------- */  
 #ninja-slider .ns-img {
-    background-size: contain;
+    /*background-size: contain;*/
     cursor: default;
     display: block;
     position: absolute;
@@ -136,10 +142,10 @@
     width:42px;
     height:56px;
     line-height:56px;
-    top: 40%; /* not 50% as caption at bottom should be counted.*/
+    /*    top: 40%;  not 50% as caption at bottom should be counted.*/
     margin-top:-28px;
-    background-color:rgba(0,0,0,0.4);
-    background-color:#ccc\9;/*IE8 hack*/
+    /*    background-color:rgba(0,0,0,0.4);
+        background-color:#ccc\9;IE8 hack*/
     backface-visibility:hidden;
     color:white;
     overflow:hidden;
@@ -148,7 +154,7 @@
     user-select:none;
     border-radius:2px;
     z-index:10;
-    opacity:0.3; 
+    opacity:1; 
     font-family:sans-serif;   
     font-size:13px;
     cursor:pointer;
@@ -162,10 +168,10 @@
 
 
 #ninja-slider-prev {
-    left: -42px; /*set it with a positive value if .slider-inner does not have max-width setting.*/
+    left: 22px; /*set it with a positive value if .slider-inner does not have max-width setting.*/
 }
 #ninja-slider-next {
-    right: -42px;
+    right: 22px;
 }
 
 /* arrows */
@@ -239,4 +245,11 @@
         font-size:20px;
     }
 }
+.slider-inner{
+    position: absolute;
+    left: -1800px;
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+}
+
 
