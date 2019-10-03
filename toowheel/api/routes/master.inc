@@ -107,7 +107,7 @@ $app->post('/insert_press_release', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'title' => $data['title'], 'media_id' => $data['media_id'], 'author_name' => $data['author_name'], 'press_release_date' => date('Y-m-d', strtotime($data['date'])), 'url' => $data['url'], 'description' => $data['description']), 'press_release');
+    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'title' => $data['title'], 'media_id' => $data['media_id'], 'author_name' => $data['author_name'], 'press_release_date' => date('Y-m-d', strtotime($data['date'])), 'youtube_link' => $data['youtube_link'], 'image_path' => $data['image_path'], 'description' => $data['description']), 'press_release');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
