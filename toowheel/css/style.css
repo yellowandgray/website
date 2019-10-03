@@ -1229,8 +1229,9 @@ body {
     margin-bottom: 15px;
     border-radius: 15px;
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: 18%;
 }
 
 .club-box img {
@@ -1267,6 +1268,10 @@ body {
     padding
 }*/
 
+.find-club-menu .club-box {
+    width: auto;
+}
+
 .find-club-menu .club-box span {
     font-size: 10px;
 }
@@ -1277,7 +1282,8 @@ body {
 }
 
 .find-club-menu .club-box h3 {
-    font-size: 12px;
+    font-size: 12px;    
+    margin-top: 10px;
 }
 
 .find-club-menu .club-box p {
