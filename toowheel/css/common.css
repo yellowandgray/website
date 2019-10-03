@@ -3274,8 +3274,9 @@ thead td {
 #myDiv {
     position: relative;
     bottom: -28px;
-    display: block;
+  
 }
+
 
 .editing-icon img {
     position: relative;
