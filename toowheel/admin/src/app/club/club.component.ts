@@ -66,7 +66,25 @@ export class ClubComponent implements OnInit {
       this.getFourWheelClub();
        }
     });
-}
+    }
+    confirmDelete(id): void  {
+        var data = null;
+          if(id != 0) { 
+                    data = id;
+          }
+        const dialogRef = this.dialog.open(ClubDelete, {
+            minWidth: "40%",
+            maxWidth: "40%",
+            data: data
+        });
+
+       dialogRef.afterClosed().subscribe(result => {
+           if(result !== false && result !== 'false') {
+          this.getClub();
+          this.getFourWheelClub();
+           }
+        });
+    }
 }
 @Component({
   selector: 'club-form',
@@ -233,6 +251,50 @@ export class ClubForm {
             duration: 2000,
             });
             }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+        );
+  }
+}
+
+
+@Component({
+  selector: 'club-delete-confirmation',
+  templateUrl: 'club-delete-confirmation.html',
+})
+export class ClubDelete {
+    loading = false;
+    club_id = 0;
+    constructor(
+    public dialogRef: MatDialogRef<clubForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.data != null) { 
+            this.club_id = this.data;
+    }
+}
+
+  confirmDelete() {
+      if (this.club_id == null || this.club_id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/club/club_id='+this.club_id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+        this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
             },
             (error)=>{
                 this.loading = false;

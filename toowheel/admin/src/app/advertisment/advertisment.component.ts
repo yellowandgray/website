@@ -31,21 +31,47 @@ export class AdvertismentComponent implements OnInit {
         }
         );
   }
-  openDialog(id): void  {
-    const dialogRef = this.dialog.open(AdvertismentForm, {
+   openDialog(id,res): void  {
+    var data = null;
+      if(id != 0) {
+      this[res].forEach(val=> {
+           if(parseInt(val.advertisment_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
+   const dialogRef = this.dialog.open(AdvertismentForm, {
         minWidth: "40%",
         maxWidth: "40%",
-        data: {
-            
+        data: data
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+        if(result !== false && result !== 'false') {
+             this.getAdvertisment();
         }
     });
-    dialogRef.afterClosed().subscribe(result => {
-      if(result !== false && result !== 'false') {
+}
+   
+
+    confirmDelete(id): void  {
+    var data = null;
+      if(id != 0) { 
+                data = id;
+      }
+    const dialogRef = this.dialog.open(AdvertismentDelete, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: data
+    });
+
+   dialogRef.afterClosed().subscribe(result => {
+       if(result !== false && result !== 'false') {
       this.getAdvertisment();
        }
     });
-}
-
+    }
 }
 
 @Component({
@@ -61,13 +87,21 @@ export class AdvertismentForm {
     public dialogRef: MatDialogRef<AdvertismentForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {}
-    ngOnInit() {
-      this.advertismentForm = new FormGroup({
+    private httpClient: HttpClient) {
+        this.advertismentForm = new FormGroup({
       'title': new FormControl('', Validators.required),
       'type': new FormControl('', Validators.required),
       'url': new FormControl('', Validators.required)
         });
+        if(this.data != null) {
+                this.advertismentForm.patchValue({
+           title: this.data.title,
+           type: this.data.type,
+           url: this.data.url,
+          
+        });
+       
+        }
     }
     fileProgress(fileInput: any) {
         var fileData = <File>fileInput.target.files[0];
@@ -123,4 +157,49 @@ export class AdvertismentForm {
             );
       }
   
+}
+
+
+
+@Component({
+  selector: 'advertisment-delete-confirmation',
+  templateUrl: 'advertisment-delete-confirmation.html',
+})
+export class AdvertismentDelete {
+    loading = false;
+    advertisement_id = 0;
+    constructor(
+    public dialogRef: MatDialogRef<AdvertismentForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.data != null) { 
+            this.advertisement_id = this.data;
+    }
+}
+
+  confirmDelete() {
+      if (this.advertisement_id == null || this.advertisement_id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/advertisement/advertisement_id='+this.advertisement_id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+            this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+        );
+  }
 }
