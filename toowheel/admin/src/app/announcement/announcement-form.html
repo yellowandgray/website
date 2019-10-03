@@ -1,0 +1,113 @@
+<h2 mat-dialog-title>News</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
+        
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Club Name</mat-label>
+                    <mat-select required formControlName="club_id">
+                        <mat-option [value]="row.club_id" *ngFor="let row of clubs">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Club Name is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                <button type="button" mat-raised-button (click)="fileInput.click()">{{cover_image}}</button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'cover_image', 'cover_image_path')" />
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Title</mat-label>
+                    <input matInput placeholder="Placeholder" required formControlName="title" />
+                    <mat-error>Title is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Media</mat-label>
+                    <mat-select required formControlName="media">
+                        <mat-option [value]="row.media_id" *ngFor="let row of medias">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Media is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Author Name</mat-label>
+                    <input matInput placeholder="" required formControlName="author_name" />
+                    <mat-error>Author Name is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <input matInput required formControlName="date" [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error>Date is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <button type="button" mat-raised-button (click)="fileInputThumb.click()">{{thumb_image}}</button>
+                <input hidden #fileInputThumb type="file" id="file_thumb" (change)="fileProgress($event, 'thumb_image', 'thumb_image_path')" />
+            </div>
+            <div fxFlex="50%">
+                <button type="button" mat-raised-button (click)="fileInputBanner1.click()">{{banner_image_1}}</button>
+                <input hidden #fileInputBanner1 type="file" id="file_banner_1" (change)="fileProgress($event, 'banner_image_1', 'banner_image_1_path')" />
+            </div>
+            <div fxFlex="50%">
+                <button type="button" mat-raised-button (click)="fileInputBanner2.click()">{{banner_image_2}}</button>
+                <input hidden #fileInputBanner2 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_2', 'banner_image_2_path')" />
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%">
+                <mat-form-field class="full-width">
+                    <mat-label>Moto Text</mat-label>
+                    <textarea rows="4" matInput placeholder="Moto Text" required formControlName="moto_text"></textarea>
+                    <mat-error>Moto is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%">
+                <mat-form-field class="full-width">
+                    <mat-label>Description</mat-label>
+                    <textarea rows="4" matInput placeholder="Write Here" required formControlName="description"></textarea>
+                    <mat-error>Description is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%">
+                <mat-form-field class="full-width">
+                    <mat-label>Description 1</mat-label>
+                    <textarea rows="4" matInput placeholder="Write here" required formControlName="description_1"></textarea>
+                    <mat-error>Description 1 is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" cdkFocusInitial [disabled]="loading">Save</button>
+            <mat-progress-spinner
+                class="example-margin"
+                *ngIf="loading"
+                [mode]="'indeterminate'"
+                [strokeWidth]="3"
+                [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

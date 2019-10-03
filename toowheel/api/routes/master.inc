@@ -76,6 +76,18 @@ $app->post('/insert_news', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_announcement', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('club_id' => $data['club_id'], 'title' => $data['title'], 'announcement_date' => date('Y-m-d', strtotime($data['date'])), 'thumb_image' => $data['thumb_image'], 'description' => $data['description']), 'announcement');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/insert_news_gallery', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
@@ -351,6 +363,18 @@ $app->get('/get_news_by_category/:cid', function($cid) {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $data = $com->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.category_id = ' . $cid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_announcement/:cid', function($cid) {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'announcement', 'announcement_id > 0 AND club_id = ' . $cid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
