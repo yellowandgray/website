@@ -14,7 +14,7 @@
                         <button mat-icon-button aria-label="label" (click)="openDialog(data.category_id, 'result', 'two_wheel')">
                             <mat-icon>edit</mat-icon>
                         </button>
-                        <button mat-icon-button aria-label="label">
+                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.category_id)">
                             <mat-icon>delete</mat-icon>
                         </button>
                         <h3 matLine>{{data.name}}</h3>
@@ -31,7 +31,7 @@
                         <button mat-icon-button aria-label="label" (click)="openDialog(data.category_id, 'result_fw', 'four_wheel')">
                             <mat-icon>edit</mat-icon>
                         </button>
-                        <button mat-icon-button aria-label="label">
+                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.category_id)">
                             <mat-icon>delete</mat-icon>
                         </button>
                         <h3 matLine>{{data.name}}</h3>

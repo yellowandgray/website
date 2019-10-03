@@ -29,7 +29,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { CategoryComponent, CategoryForm } from './category/category.component';
+import { CategoryComponent, CategoryForm, CategoryDelete } from './category/category.component';
 import { ClubComponent, ClubForm } from './club/club.component';
 import { MemberComponent, MemberForm } from './member/member.component';
 import { HeaderComponent } from './header/header.component';
@@ -57,6 +57,7 @@ import { PressReleaseComponent, PressReleaseForm } from './press-release/press-r
     AppComponent,
     DashboardComponent,
     CategoryComponent,
+    CategoryDelete,
     ClubComponent,
     MemberComponent,
     HeaderComponent,
@@ -122,7 +123,7 @@ import { PressReleaseComponent, PressReleaseForm } from './press-release/press-r
     ReactiveFormsModule,
     MatNativeDateModule
   ],
-  entryComponents: [ClubComponent, ClubForm, CategoryComponent, CategoryForm, VendorComponent, VendorForm, MemberComponent, MemberForm, NewsComponent, NewsForm, NewsGalleryForm, AdvertismentComponent, AdvertismentForm, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, PressReleaseComponent, PressReleaseForm],
+  entryComponents: [ClubComponent, ClubForm, CategoryComponent, CategoryForm, CategoryDelete, VendorComponent, VendorForm, MemberComponent, MemberForm, NewsComponent, NewsForm, NewsGalleryForm, AdvertismentComponent, AdvertismentForm, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, PressReleaseComponent, PressReleaseForm],
   providers: [],
   bootstrap: [AppComponent]
 })

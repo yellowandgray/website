@@ -72,6 +72,24 @@ export class CategoryComponent implements OnInit {
        }
     });
 }
+  confirmDelete(id): void  {
+    var data = null;
+      if(id != 0) { 
+                data = id;
+      }
+    const dialogRef = this.dialog.open(CategoryDelete, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: data
+    });
+
+   dialogRef.afterClosed().subscribe(result => {
+       if(result !== false && result !== 'false') {
+      this.getCategory();
+      this.getFourWheelCategory();
+       }
+    });
+}
 
 }
 
@@ -118,6 +136,50 @@ export class CategoryForm {
       }
       this.loading = true;
       this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+        );
+  }
+}
+
+@Component({
+  selector: 'category-delete-confirmation',
+  templateUrl: 'category-delete-confirmation.html',
+})
+export class CategoryDelete {
+    loading = false;
+    category_id = 0;
+    constructor(
+    public dialogRef: MatDialogRef<CategoryForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.data != null) { 
+            this.category_id = this.data;
+    }
+}
+
+  confirmDelete() {
+      console.log(this.category_id);
+      if (this.category_id == null || this.category_id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.delete('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/category/category_id='+this.category_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
