@@ -1,5 +1,9 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 export interface DialogData {
   animal: string;
@@ -12,11 +16,25 @@ export interface DialogData {
   styleUrls: ['./press-release.component.css']
 })
 export class PressReleaseComponent implements OnInit {
-
-  constructor(public dialog: MatDialog) { }
+    result = [];  
+    constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
+    this.getPressRelease();
   }
+    getPressRelease(): void {
+     this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_press_release')
+     .subscribe(
+             (res)=>{
+                 this.result = res["result"]["data"];
+           },
+           (error)=>{
+               this._snackBar.open(error["statusText"], '', {
+         duration: 2000,
+       });
+           }
+           );
+     }
         openDialog(): void  {
         const dialogRef = this.dialog.open(PressReleaseForm, {
             minWidth: "40%",
@@ -24,8 +42,10 @@ export class PressReleaseComponent implements OnInit {
         });
 
         dialogRef.afterClosed().subscribe(result => {
-        console.log(`Dialog result: ${result}`);
-        });
+            if(result !== false && result !== 'false') {
+            this.getPressRelease();
+             }
+          });
     }
 
 }
@@ -35,11 +55,59 @@ export class PressReleaseComponent implements OnInit {
   templateUrl: 'press-release-form.html',
 })
 export class PressReleaseForm {
+    pressreleaseForm: FormGroup;
+    loading = false;
+    press_release_id: string;
     constructor(
     public dialogRef: MatDialogRef<PressReleaseForm>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
 
-  onNoClick(): void {
-    this.dialogRef.close();
+ngOnInit() {
+    this.pressreleaseForm = new FormGroup({
+      'type': new FormControl('', Validators.required),
+      'category_id': new FormControl('', Validators.required),
+      'title': new FormControl('', Validators.required),
+      'date': new FormControl('', Validators.required),
+      'author_name': new FormControl('', Validators.required),
+      'media': new FormControl('', Validators.required),
+      'url': new FormControl('', Validators.required),
+      'description': new FormControl('', Validators.required)
+        });
+    }
+
+  onSubmit() {
+      if (this.pressreleaseForm.invalid) {
+            return;
+      }
+      this.loading = true;
+      var formData = new FormData();
+          formData.append('type', this.pressreleaseForm.value.type);
+          formData.append('category_id', this.pressreleaseForm.value.category_id);
+          formData.append('title', this.pressreleaseForm.value.title);
+          formData.append('media_id', this.pressreleaseForm.value.media);
+          formData.append('author_name', this.pressreleaseForm.value.author_name);
+          formData.append('date', this.pressreleaseForm.value.date);
+          formData.append('description', this.pressreleaseForm.value.description);
+          formData.append('url', this.pressreleaseForm.value.url);
+      this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/insert_press_release', formData).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+            this._snackBar.open(res["result"]["message"], '', {
+              duration: 2000,
+            });
+            }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+            );
   }
 }

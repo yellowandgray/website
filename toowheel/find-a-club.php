@@ -72,18 +72,17 @@ $findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'two_wheel\'')
                 </div>
             </div>
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-1"></div>
+                <div class="row" style="max-width: 1200px; margin: 0 auto;">
                     <?php foreach ($findclub as $row) { ?>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="club-box">
-                                <span>#1</span>
-                                <img src="<?php echo BASE_URL . $row['logo']; ?>" alt="" />
-                                <h3> <?php echo $row['name']; ?></h3>
-                                <p> <?php echo $row['city_id']; ?></p>
-                            </div>
+                        <!--                        <div class="col-md-2 col-sm-6">-->
+                        <div class="club-box">
+                            <span>#1</span>
+                            <img src="<?php echo BASE_URL . $row['logo']; ?>" alt="" />
+                            <h3> <?php echo $row['name']; ?></h3>
+                            <p> <?php echo $row['city_id']; ?></p>
                         </div>
-                        <?php } ?>
+                        <!--                        </div>-->
+                    <?php } ?>
                     <!--                    <div class="col-md-2 col-sm-6">
                                             <div class="club-box">
                                                 <span>#1</span>
@@ -158,7 +157,6 @@ $findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'two_wheel\'')
                                                 <p>Kuala Lumpur</p>
                                             </div>
                                         </div>-->
-                    <div class="col-md-1"></div>
                 </div>
                 <!--                <div class="row">
                                     <div class="count-radio"> 

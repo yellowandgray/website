@@ -156,9 +156,9 @@
                                     </div>
                                     <div class="form-row">
                                         <div class="col-md-4 mb-3">
-                                            <label for="date">Date</label>
+                                            <label for="date">Date of Birth</label>
                                             <select class="form-control" id="date">
-                                                <!--                                            <option value="0">date</option>-->
+                                                <option value="0">Day</option>
                                                 <option value='1'>1</option>
                                                 <option value='2'>2</option>
                                                 <option value='3'>3</option>
@@ -193,9 +193,9 @@
                                             </select>
                                         </div>
                                         <div class="col-md-4 mb-3">
-                                            <label for="month">Month</label>
+                                            <label for="month">&nbsp;</label>
                                             <select class="form-control" id='monthd'>
-                                                <!--                                            <option value='0'>Month</option>-->
+                                                <option value='0'>Month</option>
                                                 <option value='1'>1</option>
                                                 <option value='2'>2</option>
                                                 <option value='3'>3</option>
@@ -211,9 +211,9 @@
                                             </select>
                                         </div>
                                         <div class="col-md-4 mb-3">
-                                            <label for="year">Year</label>
+                                            <label for="year">&nbsp;</label>
                                             <select class="form-control" id='year'>
-                                                <!--                                            <option value='0'>Year</option>-->
+                                                <option value='0'>Year</option>
                                                 <option value='1947'>1947</option>
                                                 <option value='1948'>1948</option>
                                                 <option value='1949'>1949</option>
@@ -260,7 +260,7 @@
                                                 <option value='1990'>1990</option>
                                                 <option value='1991'>1991</option>
                                                 <option value='1992'>1992</option>
-                                                <option value='1993' selected>1993</option>
+                                                <option value='1993'>1993</option>
                                                 <option value='1994'>1994</option>
                                                 <option value='1995'>1995</option>
                                                 <option value='1996'>1996</option>

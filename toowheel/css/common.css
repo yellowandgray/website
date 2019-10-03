@@ -3350,6 +3350,7 @@ thead td {
 
 .about-menu .about-section .about-background {
     background-position: center;
+    box-shadow: 0px 0px 10px 0px #171717;
 }
 
 .about-menu .about-bg img {

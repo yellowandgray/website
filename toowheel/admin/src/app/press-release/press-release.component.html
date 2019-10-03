@@ -5,107 +5,132 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog(0)"><mat-icon>add</mat-icon> Press Release</button>
+            <button mat-raised-button color="primary" (click)="openDialog()"><mat-icon>add</mat-icon> Press Release</button>
         </div>
-        <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-            
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>Title</mat-card-title>
-                        <mat-card-subtitle>Sub Title</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="" alt="Photo of a Shiba Inu" />
-                    <mat-card-content>
-                        <p>
-                            Description
-                        </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon>panorama</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon>edit</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon>delete</mat-icon>
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
-            
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>Title</mat-card-title>
-                        <mat-card-subtitle>Sub Title</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="" alt="Photo of a Shiba Inu" />
-                    <mat-card-content>
-                        <p>
-                            Description
-                        </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon>panorama</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon>edit</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon>delete</mat-icon>
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
-            
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>Title</mat-card-title>
-                        <mat-card-subtitle>Sub Title</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="" alt="Photo of a Shiba Inu" />
-                    <mat-card-content>
-                        <p>
-                            Description
-                        </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon>panorama</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon>edit</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon>delete</mat-icon>
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
-            
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>Title</mat-card-title>
-                        <mat-card-subtitle>Sub Title</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="" alt="Photo of a Shiba Inu" />
-                    <mat-card-content>
-                        <p>
-                            Description
-                        </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon>panorama</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon>edit</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon>delete</mat-icon>
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
-            
-        </div>            
-        <br/>
+        <ng-container *ngFor="let data of result; let i = index">
+            <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
+                <ng-container *ngIf="result[i]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i]['press_release_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p>
+                                {{result[i]['description']}}
+                            </p>
+                            <p>
+                                {{result[i]['url']}}
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label"(click)="openDialog()">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+                <ng-container *ngIf="result[i + 1]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i + 1]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i + 1]['press_release_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p>
+                                {{result[i + 1]['description']}}
+                            </p>
+                            <p>
+                                {{result[i + 1]['url']}}
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label"(click)="openDialog()">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+                <ng-container *ngIf="result[i + 2]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i + 2]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i + 2]['press_release_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p>
+                                {{result[i + 2]['description']}}
+                            </p>
+                            <p>
+                                {{result[i + 2]['url']}}
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label"(click)="openDialog()">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+                <ng-container *ngIf="result[i + 3]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i + 3]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i + 3]['press_release_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p>
+                                {{result[i + 3]['description']}}
+                            </p>
+                            <p>
+                                {{result[i + 3]['url']}}
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label"(click)="openDialog()">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+                <ng-container *ngIf="result[i + 4]">
+                    <mat-card fxFlex="25%">
+                        <mat-card-header>
+                            <mat-card-title>{{result[i + 4]['title']}}</mat-card-title>
+                            <mat-card-subtitle>{{result[i + 4]['press_release_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p>
+                                {{result[i + 4]['description']}}
+                            </p>
+                            <p>
+                                {{result[i + 4]['url']}}
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-icon-button aria-label="label"(click)="openDialog()">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+            </div>            
+            <br/>
+        </ng-container>
     </mat-sidenav-content>
 </mat-sidenav-container>
