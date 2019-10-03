@@ -110,4 +110,12 @@ class Common {
         return $return;
     }
 
+    public function charLimit($str, $len) {
+        if (strlen($str) <= $len) {
+            return $str;
+        } else {
+            $y = substr($str, 0, $len) . '...';
+            return $y;
+        }
+    }
 }
