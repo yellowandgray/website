@@ -22,6 +22,7 @@ export class PressReleaseComponent implements OnInit {
   ngOnInit() {
     this.getPressRelease();
   }
+  image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
     getPressRelease(): void {
      this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_press_release')
      .subscribe(
