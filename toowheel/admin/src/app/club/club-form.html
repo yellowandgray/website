@@ -68,7 +68,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>State</mat-label>
-                    <mat-select required formControlName="state" (selectionChange)="getCityByState()">
+                    <mat-select required formControlName="state">
                         <mat-option [value]="row.state_id" *ngFor="let row of states">
                             {{row.name}}
                         </mat-option>
@@ -79,11 +79,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>City</mat-label>
-                    <mat-select required formControlName="city">
-                        <mat-option [value]="row.city_id" *ngFor="let row of cities">
-                            {{row.name}}
-                        </mat-option>
-                    </mat-select>
+                    <input matInput placeholder="Placeholder" required formControlName="city" />
                     <mat-error>City is required</mat-error>
                 </mat-form-field>
             </div>

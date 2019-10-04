@@ -127,7 +127,7 @@ export class ClubForm {
            type: this.data.type,
            category_id: this.data.category_id,
            state: this.data.state_id,
-           city: this.data.city_id,
+           city: this.data.city,
            zip: this.data.zipcode,
            landmark: this.data.landmark,
            address: this.data.address,
@@ -138,7 +138,6 @@ export class ClubForm {
            about: this.data.about
         });
         this.getCategory();
-        this.getCityByState()
         }
         this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_states').subscribe(
               (res)=>{
