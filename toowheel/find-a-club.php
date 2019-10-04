@@ -80,6 +80,7 @@ $findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'two_wheel\'')
                             <img src="<?php echo BASE_URL . $row['logo']; ?>" alt="" />
                             <h3> <?php echo $row['name']; ?></h3>
                             <p> <?php echo $row['city_id']; ?></p>
+                            <a href="club-page.php" class="find-club-button"> Read More</a>
                         </div>
                         <!--                        </div>-->
                     <?php } ?>

@@ -1681,3 +1681,18 @@ body {
 .btn-primary.focus, .btn-primary:focus {
     box-shadow: none;
 }
+
+.find-club-button {
+    background: red;
+    color: #fff;
+    border-radius: 25px;
+    padding: 5px 12px;
+    border: 1px solid red;
+}
+
+.find-club-button:hover {
+    background: transparent;
+    color: red;
+    border: 1px solid red;
+    text-decoration: none;
+}
