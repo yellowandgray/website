@@ -149,7 +149,7 @@ export class AnnouncementForm {
       var formData = new FormData();
         var formData = new FormData();
       var url = '';
-      if(this.category_id != 0) {
+      if(this.announcement_id != 0) {
         formData.append('club_id', this.club_id);
           formData.append('title', this.announcementForm.value.title);
           formData.append('announcement_date', this.announcementForm.value.announcement_date);
