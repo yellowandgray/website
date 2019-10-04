@@ -12,7 +12,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class NewsComponent implements OnInit {
   result = [];  
-  result_four_wheel:any[];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
     ngOnInit() {
          this.getNews();
@@ -99,6 +98,7 @@ export class NewsForm {
     newsForm: FormGroup;
     loading = false;
     categories:any[];
+    news_id = 0;
     clubs:any[];
     medias:any[];
     cover_image: string = 'Choose Cover Image';
@@ -124,7 +124,8 @@ export class NewsForm {
       'moto_text': new FormControl('', Validators.required),
       'author_name': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required),
-      'description_1': new FormControl('', Validators.required)
+      'description_1': new FormControl('', Validators.required),
+      'youtube_id': new FormControl('', Validators.required)
       });
         if(this.data != null) {
            this.newsForm.patchValue({
@@ -132,14 +133,15 @@ export class NewsForm {
            category_id: this.data.category_id,
            club_id: this.data.club_id,
            title: this.data.title,
-           city: this.data.city_id,
            date: this.data.news_date,
            media: this.data.media_id,
            moto_text: this.data.moto_text,
            author_name: this.data.author_name,
            description: this.data.description_1,
-           description_1: this.data.description_2
+           description_1: this.data.description_2,
+           youtube_id: this.data.youtube_id
         });
+        this.news_id = this.data.news_id;
         this.getCategory();
         this.getClub();
     }
@@ -229,8 +231,35 @@ export class NewsForm {
             return;
       }
       this.loading = true;
+      var url = '';
       var formData = new FormData();
-          formData.append('type', this.newsForm.value.type);
+      if(this.news_id != 0) {
+        formData.append('type', this.newsForm.value.type);
+          formData.append('category_id', this.newsForm.value.category_id);
+          formData.append('club_id', this.newsForm.value.club_id);
+          if(this.cover_image_path && this.cover_image_path != '') {
+          formData.append('cover_image', this.cover_image_path);
+          }
+          formData.append('title', this.newsForm.value.title);
+          formData.append('media_id', this.newsForm.value.media);
+          formData.append('author_name', this.newsForm.value.author_name);
+          formData.append('news_date', this.newsForm.value.date);
+          if(this.thumb_image_path && this.thumb_image_path != '') {
+          formData.append('thumb_image', this.thumb_image_path);
+          }
+          if(this.banner_image_1_path && this.banner_image_1_path != '') {
+              formData.append('banner_1', this.banner_image_1_path);
+          }
+          if(this.banner_image_2_path && this.banner_image_2_path != '') {
+               formData.append('banner_2', this.banner_image_2_path); 
+          }
+          formData.append('moto_text', this.newsForm.value.moto_text);
+          formData.append('description_1', this.newsForm.value.description);
+          formData.append('description_2', this.newsForm.value.description_1);
+          formData.append('youtube_id', this.newsForm.value.youtube_id);
+        url = 'update_record/news/news_id = '+this.news_id;
+      } else {
+        formData.append('type', this.newsForm.value.type);
           formData.append('category_id', this.newsForm.value.category_id);
           formData.append('club_id', this.newsForm.value.club_id);
           formData.append('cover_image', this.cover_image_path);
@@ -244,7 +273,10 @@ export class NewsForm {
           formData.append('moto_text', this.newsForm.value.moto_text);
           formData.append('description', this.newsForm.value.description);
           formData.append('description_1', this.newsForm.value.description_1);
-      this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/insert_news', formData).subscribe(
+          formData.append('youtube_id', this.newsForm.value.youtube_id);
+        url = 'insert_news';
+      }
+      this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -332,6 +364,31 @@ export class NewsGalleryForm {
             }
             );
       }
+  }
+  
+  deleteGallery(id) {
+      if (id == null || id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/news_gallery/news_gallery_id='+id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.getImages();
+                }else{
+this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+        );
   }
 }
 

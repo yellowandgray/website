@@ -1091,6 +1091,13 @@ button {
     padding: 10px 10px 10px 10px;
     margin-bottom: 20px;
 }
+.event-n p{
+    color: #000;
+}
+.event-n p span{
+    color: #ed1c24;
+    font-weight: 600;
+}
 
 .event-n h3 {
     color: red;
@@ -3435,3 +3442,12 @@ thead td {
     font-family: inherit;
     opacity: 1;
 }*/
+/*.event-img img {
+    padding: 10px !important;
+}*/
+.event-sec-r {
+    border-right: 2px solid #ed1c24;
+}
+.event-conent p{
+    font-size: 13px;
+}

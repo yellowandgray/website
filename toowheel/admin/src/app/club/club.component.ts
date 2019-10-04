@@ -93,7 +93,7 @@ export class ClubComponent implements OnInit {
 export class ClubForm {
     clubForm: FormGroup;
     loading = false;
-    club_id: 0;
+    club_id = 0;
     categories:any[];
     states:any[];
     cities:any[];
@@ -227,7 +227,7 @@ export class ClubForm {
         this.loading = true;
         var url = '';
         var formData = new FormData();
-      if(this.category_id != 0) {
+      if(this.club_id != 0) {
         formData.append('name', this.clubForm.value.name);
           formData.append('type', this.clubForm.value.type);
           if(this.cover_image && this.cover_image!= '') {

@@ -35,7 +35,7 @@ export class AdvertismentComponent implements OnInit {
     var data = null;
       if(id != 0) {
       this[res].forEach(val=> {
-           if(parseInt(val.advertisment_id) === parseInt(id)) {
+           if(parseInt(val.advertisement_id) === parseInt(id)) {
                 data = val;
                 return false;
            }
@@ -82,6 +82,7 @@ export class AdvertismentForm {
     advertismentForm: FormGroup;
     loading = false;
     image: string;
+    advertisment_id: 0;
     file_name: string = 'Select Picture';
     constructor(
     public dialogRef: MatDialogRef<AdvertismentForm>,
@@ -97,10 +98,9 @@ export class AdvertismentForm {
                 this.advertismentForm.patchValue({
            title: this.data.title,
            type: this.data.type,
-           url: this.data.url,
-          
+           url: this.data.url
         });
-       
+        this.advertisment_id = this.data.advertisement_id;
         }
     }
     fileProgress(fileInput: any) {
@@ -133,11 +133,23 @@ export class AdvertismentForm {
           }
           this.loading = true;
           var formData = new FormData();
-          formData.append('title', this.advertismentForm.value.title);
+          var url = '';
+          if(this.advertisment_id != 0) {
+             formData.append('title', this.advertismentForm.value.title);
+          formData.append('type', this.advertismentForm.value.type);
+          if(this.image && this.image!= '') {
+          formData.append('image', this.image);
+          }
+          formData.append('url', this.advertismentForm.value.url); 
+              url = 'update_record/advertisement/advertisement_id = '+this.advertisment_id;
+          } else {
+            formData.append('title', this.advertismentForm.value.title);
           formData.append('type', this.advertismentForm.value.type);
           formData.append('image', this.image);
           formData.append('url', this.advertismentForm.value.url);
-          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/insert_advertisement', formData).subscribe(
+          url = 'insert_advertisement';
+          }
+          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
