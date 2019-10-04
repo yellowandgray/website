@@ -114,17 +114,13 @@ body {
 }
 
 .header-login a:hover input {
-    width: 20px;
-    top: 10px;
-    margin-left: 0;
+    transition: 0.3s;
+    opacity: 0.7;
 }
 
 .header-login a:hover i {
-    width: auto;
-    bottom: 10px;
-    margin-left: 0;
-    position: relative;
     transition: 0.3s;
+    opacity: 0.7;
 }
 
 .float-right {

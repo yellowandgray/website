@@ -2844,7 +2844,7 @@ body .calender-box{
     color: rgb(255, 255, 255) !important;
     cursor: pointer;
     display: inline-block;
-    padding: 1em 1em;
+    padding: 1em 1.1em;
     -webkit-border-radius: 6px;
     border-radius: 50%;
     margin-right: 10px;
@@ -2868,7 +2868,7 @@ body .calender-box{
     color: rgb(255, 255, 255) !important;
     cursor: pointer;
     display: inline-block;
-    padding: 1em 1.2em;
+    padding: 1em 1.4em;
     -webkit-border-radius: 6px;
     border-radius: 50%;
     margin-right: 10px;

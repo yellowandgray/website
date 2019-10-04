@@ -17,8 +17,6 @@
         <div class="row social-media-post-section">
             <div class="col-md-6">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/XTRAIKnnUuA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FZigWheelsMalaysia%2Fposts%2F404349960220802&width=500" style="border:none;overflow:hidden;width: 100%;height: 450px" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F20531316728%2Fposts%2F10154009990506729%2F&width=500&show_text=true&height=274&appId" style="border:none;overflow:hidden;width: 100%;height: 450px" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 <!--                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FBikeRaceByTopFreeGames%2Fposts%2F1509211869182434&width=500" width="500" height="465" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>-->
             </div>
             <div class="col-md-6">
