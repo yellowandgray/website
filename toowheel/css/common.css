@@ -3403,8 +3403,15 @@ thead td {
 .home-upcoming {
     width: 33%;
     height: 95px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px #000;
 }
 
+
+.news-cover-image {
+    width: 80%;
+    height: 500px;
+}
 
 /*.tabcontent .news .news-cont div {
     height: 100%;

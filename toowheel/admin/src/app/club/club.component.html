@@ -24,10 +24,13 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" routerLink="/announcement/{{result[i]['club_id']}}">
+                                        <mat-icon>hearing</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['club_id'], 'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['club_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -46,10 +49,13 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" routerLink="/announcement/{{result[i + 1]['club_id']}}">
+                                        <mat-icon>hearing</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 1]['club_id'], 'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['club_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -68,10 +74,13 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" routerLink="/announcement/{{result[i + 2]['club_id']}}">
+                                        <mat-icon>hearing</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 2]['club_id'], 'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 2]['club_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -90,10 +99,13 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" routerLink="/announcement/{{result[i]['club_id']}}">
+                                        <mat-icon>hearing</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 3]['club_id'], 'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 3]['club_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -118,10 +130,13 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" routerLink="/announcement/{{result_four_wheel[i]['club_id']}}">
+                                        <mat-icon>hearing</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i]['club_id'], 'result_four_wheel')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i]['club_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -140,10 +155,13 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" routerLink="/announcement/{{result_four_wheel[i + 1]['club_id']}}">
+                                        <mat-icon>hearing</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 1]['club_id'], 'result_four_wheel')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i + 1]['club_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -162,10 +180,13 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" routerLink="/announcement/{{result_four_wheel[i + 2]['club_id']}}">
+                                        <mat-icon>hearing</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 2]['club_id'], 'result_four_wheel')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i + 2]['club_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -184,10 +205,13 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" routerLink="/announcement/{{result_four_wheel[i + 3]['club_id']}}">
+                                        <mat-icon>hearing</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 3]['club_id'], 'result_four_wheel')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i + 3]['club_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>

@@ -22,10 +22,10 @@
                                      <source src="{{image_url}}{{result[i]['media_path']}}" type="video/mp4" />
                                 </video>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['gallery_id'],'result')">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['gallery_id'], 'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['gallery_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -42,10 +42,10 @@
                                      <source src="{{image_url}}{{result[i + 1]['media_path']}}" type="video/mp4" />
                                 </video>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i+1]['gallery_id'],'result')">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 1]['gallery_id'], 'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 1]['gallery_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -62,10 +62,10 @@
                                      <source src="{{image_url}}{{result[i + 2]['media_path']}}" type="video/mp4" />
                                 </video>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i+2]['gallery_id'],'result')">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 2]['gallery_id'], 'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 2]['gallery_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -82,10 +82,10 @@
                                      <source src="{{image_url}}{{result[i + 3]['media_path']}}" type="video/mp4" />
                                 </video>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i+3]['gallery_id'],'result')">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 3]['gallery_id'], 'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 3]['gallery_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -95,7 +95,7 @@
                 </ng-container>
             </mat-tab>
             <mat-tab label="4 Wheeler">
-<ng-container *ngFor="let data of result_four_wheel; let i = index">
+            <ng-container *ngFor="let data of result_four_wheel; let i = index">
             <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
                 <ng-container *ngIf="result_four_wheel[i]">
                     <mat-card fxFlex="25%">
@@ -108,10 +108,10 @@
                              <source src="{{image_url}}{{result_four_wheel[i]['media_path']}}" type="video/mp4" />
                         </video>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i]['gallery_id'],'result')">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i]['gallery_id'], 'result')">
                                 <mat-icon>edit</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i]['gallery_id'])">
                                 <mat-icon>delete</mat-icon>
                             </button>
                         </mat-card-actions>
@@ -128,10 +128,10 @@
                              <source src="{{image_url}}{{result_four_wheel[i + 1]['media_path']}}" type="video/mp4" />
                         </video>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i+1]['gallery_id'],'result')">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 1]['gallery_id'], 'result')">
                                 <mat-icon>edit</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i + 1]['gallery_id'])">
                                 <mat-icon>delete</mat-icon>
                             </button>
                         </mat-card-actions>
@@ -148,10 +148,10 @@
                              <source src="{{image_url}}{{result_four_wheel[i + 2]['media_path']}}" type="video/mp4" />
                         </video>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i+2]['gallery_id'],'result')">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 2]['gallery_id'], 'result')">
                                 <mat-icon>edit</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i + 2]['gallery_id'])">
                                 <mat-icon>delete</mat-icon>
                             </button>
                         </mat-card-actions>
@@ -168,10 +168,10 @@
                              <source src="{{image_url}}{{result_four_wheel[i + 3]['media_path']}}" type="video/mp4" />
                         </video>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i+3]['gallery_id'],'result')">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 3]['gallery_id'], 'result')">
                                 <mat-icon>edit</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i + 3]['gallery_id'])">
                                 <mat-icon>delete</mat-icon>
                             </button>
                         </mat-card-actions>

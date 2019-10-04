@@ -73,6 +73,25 @@ export class GalleryComponent implements OnInit {
 }
     
 
+    confirmDelete(id): void  {
+    var data = null;
+      if(id != 0) { 
+                data = id;
+      }
+    const dialogRef = this.dialog.open(GalleryDelete, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: data
+    });
+
+   dialogRef.afterClosed().subscribe(result => {
+       if(result !== false && result !== 'false') {
+       this.getGallery();
+      this.getGalleryFourWheel();
+       }
+    });
+}
+
 }
 
 @Component({
@@ -162,4 +181,48 @@ export class GalleryForm {
             }
             );
       }
+}
+
+
+@Component({
+  selector: 'gallery-delete-confirmation',
+  templateUrl: 'gallery-delete-confirmation.html',
+})
+export class GalleryDelete {
+    loading = false;
+    gallery_id = 0;
+    constructor(
+    public dialogRef: MatDialogRef<GalleryForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.data != null) { 
+            this.gallery_id = this.data;
+    }
+}
+
+  confirmDelete() {
+      if (this.gallery_id == null || this.gallery_id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/gallery/gallery_id='+this.gallery_id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+        );
+  }
 }

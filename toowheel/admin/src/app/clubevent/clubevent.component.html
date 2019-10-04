@@ -27,7 +27,7 @@
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['event_id'],'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['event_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -49,7 +49,7 @@
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 1]['event_id'],'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 1]['event_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -71,7 +71,7 @@
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 2]['event_id'],'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 2]['event_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -93,7 +93,7 @@
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 3]['event_id'],'result')">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 3]['event_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>

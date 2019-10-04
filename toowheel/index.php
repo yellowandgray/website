@@ -38,7 +38,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
             <div class="container">
                 <h1>DISCOVER</h1>
                 <div class="row cc">
-                    
+
                     <?php
                     foreach ($categories as $key => $val) {
                         $cls = '';
@@ -73,9 +73,11 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         </section>
         <section class="media-press-release">
             <div class="container">
-                <div class="media-bg">
-                    <a href='press-release.php'></a>
-                    <a href="press-release.php" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
+                <div class="col-md-12">
+                    <div class="media-bg">
+                        <a href='press-release.php'></a>
+                        <a href="press-release.php" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
+                    </div>
                 </div>
             </div>
         </section>
