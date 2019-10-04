@@ -93,7 +93,7 @@ export class ClubComponent implements OnInit {
 export class ClubForm {
     clubForm: FormGroup;
     loading = false;
-    club_id: string;
+    club_id: 0;
     categories:any[];
     states:any[];
     cities:any[];
@@ -127,7 +127,7 @@ export class ClubForm {
            type: this.data.type,
            category_id: this.data.category_id,
            state: this.data.state_id,
-           city: this.data.city_id,
+           city: this.data.city,
            zip: this.data.zipcode,
            landmark: this.data.landmark,
            address: this.data.address,
@@ -137,8 +137,8 @@ export class ClubForm {
            mobile: this.data.phone,
            about: this.data.about
         });
+        this.club_id = this.data.club_id;
         this.getCategory();
-        this.getCityByState()
         }
         this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_states').subscribe(
               (res)=>{
@@ -225,8 +225,31 @@ export class ClubForm {
                   return;
         }
         this.loading = true;
+        var url = '';
         var formData = new FormData();
-          formData.append('name', this.clubForm.value.name);
+      if(this.category_id != 0) {
+        formData.append('name', this.clubForm.value.name);
+          formData.append('type', this.clubForm.value.type);
+          if(this.cover_image && this.cover_image!= '') {
+              formData.append('cover_image', this.cover_image);
+          }
+          if(this.logo_image && this.logo_image!= '') {
+              formData.append('logo', this.logo_image);
+          }
+          formData.append('category_id', this.clubForm.value.category_id);
+          formData.append('state_id', this.clubForm.value.state);
+          formData.append('city', this.clubForm.value.city);
+          formData.append('zipcode', this.clubForm.value.zip);
+          formData.append('landmark', this.clubForm.value.landmark);
+          formData.append('address', this.clubForm.value.address);
+          formData.append('leader_name', this.clubForm.value.club_leader_name);
+          formData.append('no_of_member', this.clubForm.value.no_of_member);
+          formData.append('email', this.clubForm.value.email);
+          formData.append('phone', this.clubForm.value.mobile);
+          formData.append('about', this.clubForm.value.about);
+        url = 'update_record/club/club_id = '+this.club_id;
+      } else {
+        formData.append('name', this.clubForm.value.name);
           formData.append('type', this.clubForm.value.type);
           formData.append('cover_image', this.cover_image);
           formData.append('logo', this.logo_image);
@@ -241,7 +264,9 @@ export class ClubForm {
           formData.append('email', this.clubForm.value.email);
           formData.append('mobile', this.clubForm.value.mobile);
           formData.append('about', this.clubForm.value.about);
-          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/insert_club', formData).subscribe(
+        url = 'insert_club';
+      }
+          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -271,7 +296,7 @@ export class ClubDelete {
     loading = false;
     club_id = 0;
     constructor(
-    public dialogRef: MatDialogRef<clubForm>,
+    public dialogRef: MatDialogRef<ClubDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {

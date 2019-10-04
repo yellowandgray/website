@@ -41,7 +41,7 @@ const routes: Routes = [
     {path: 'clubdiscussion', component: ClubdiscussionComponent},
     {path: 'clubgallery', component: ClubgalleryComponent},
     {path: 'clubnews', component: ClubnewsComponent},
-    {path: 'announcement', component: AnnouncementComponent},
+    {path: 'announcement/:cid', component: AnnouncementComponent},
     {path: 'press-release', component: PressReleaseComponent}
 ];
 

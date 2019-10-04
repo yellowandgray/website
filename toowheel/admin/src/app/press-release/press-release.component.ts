@@ -166,7 +166,7 @@ export class PressreleaseDelete {
     loading = false;
     press_release_id = 0;
     constructor(
-    public dialogRef: MatDialogRef<PressreleaseForm>,
+    public dialogRef: MatDialogRef<PressreleaseDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
