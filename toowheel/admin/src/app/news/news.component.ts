@@ -368,6 +368,31 @@ export class NewsGalleryForm {
             );
       }
   }
+  
+  deleteGallery(id) {
+      if (id == null || id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/news_gallery/news_gallery_id='+id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.getImages();
+                }else{
+this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+        );
+  }
 }
 
 
