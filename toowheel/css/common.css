@@ -2846,6 +2846,7 @@ body .calender-box{
 .middle {
     margin-bottom: 10px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .middle span i {
@@ -3336,8 +3337,8 @@ thead td {
     }
 
 }
-.middle-1{
-    flex-basis: 80%;
+.middle-1 {
+    flex-basis: 67%;
 }
 
 .middle-2{
@@ -3442,4 +3443,9 @@ thead td {
 }
 .event-conent p{
     font-size: 13px;
+}
+@media (max-width: 991px) and (min-width:320px){
+    .middle-1 {
+        flex-basis: 100% !important;
+    }
 }
