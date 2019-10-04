@@ -38,7 +38,7 @@ $configs = $obj->getLandingDetails();
                 <div class="row">
                     <a href="index.php" class="logo"><img src='img/logo.png' alt=''></a>
                     <div class="header-login">
-                        <a href="toowheel/login.php" class="mob-noon"><span class="login-button"><i class="fa fa-user"></i> Login</span></a>
+                        <a href="toowheel/login.php" class="mob-noon login-button"><i class="fa fa-user"></i> Login</a>
                         <a href="toowheel/login.php" class="mob-block"><span class="login-button"><i class="fa fa-user"></i></span></a>
                     </div>
                 </div>
@@ -91,8 +91,8 @@ $configs = $obj->getLandingDetails();
                     </div>
                     <div class="col-md-3">
                         <!--<img src="img/image/001.png" alt="" />-->
-                        <a href="toowheel/news.php"><img src="<?php echo BASE_URL . $configs['landing_news_updates_image']; ?>" alt="" /></a>
-                        <a href="toowheel/news.php" class="cross-btn"><span>NEWS & UPDATES</span></a>
+                        <a href="toowheel/all-news.php"><img src="<?php echo BASE_URL . $configs['landing_news_updates_image']; ?>" alt="" /></a>
+                        <a href="toowheel/all-news.php" class="cross-btn"><span>NEWS & UPDATES</span></a>
                     </div>
                     <div class="col-md-3">
                         <a href="toowheel/find-a-club.php"><img src="<?php echo BASE_URL . $configs['landing_join_club_image']; ?>" alt="" /></a>

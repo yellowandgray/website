@@ -890,8 +890,7 @@ body {
 }
 
 .press-release-content h4 {
-    margin-top: 20px;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .press-release-content span {
@@ -919,13 +918,15 @@ body {
 
 .news-all-content img {
     width: 100%;
-    height: 150px;
+    height: auto;
     vertical-align: middle;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px #000;
 }
 
 .news-all-content h4 {
-    margin-top: 20px;
-    margin-bottom: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .news-all-content span {
@@ -943,8 +944,6 @@ body {
     padding: 0.3rem 1rem;
     margin-top: 20px;
     border-radius: 25px;
-    position: absolute;
-    bottom: 25px;
 }
 
 .press-download-button:hover {
@@ -961,8 +960,6 @@ body {
     padding: 0.3rem 1rem;
     margin-top: 20px;
     border-radius: 25px;
-    position: absolute;
-    bottom: 25px;
 }
 
 .all-news-button:hover {
@@ -973,9 +970,9 @@ body {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.press-release-content .row {
+/*.press-release-content .row {
     border-bottom: 1px solid #363636;
-}
+}*/
 
 .all-news-content .row {
     border-bottom: 1px solid #363636;
@@ -1305,7 +1302,7 @@ body {
     text-align: center;
     margin-left: 12px;
     margin-right: 12px;
-    width: 100%;
+    width: 18%;
 }
 
 .club-box img {

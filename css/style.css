@@ -32,10 +32,11 @@ p {
     background: #474747;
     border-radius: 25px;
     /* float: right; */
-    padding: 10px 35px 10px 20px;
+    padding: 10px 20px 10px 20px;
     margin-top: 20px;
     text-align: center;
     margin-right: 40px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .login-button i {
@@ -49,7 +50,16 @@ p {
 
 .login-button {
     color: #a1a1a1;
-    font-size: 18px;
+}
+
+.login-button:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.login-button:hover {
+    background: #0f0f0f;
+    box-shadow: 0 0 3px 1px red;
 }
 
 .bg-text h2 {
