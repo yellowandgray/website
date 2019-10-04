@@ -59,7 +59,7 @@
 }
 .login button{
     margin-bottom: 0px;
-    border: none;
+    border: 1px solid #ed1c24;
     background: #eee;
     padding: 5px;
     border-radius: 15px 15px 15px 15px;
@@ -68,6 +68,13 @@
     background-color: #ed1c24;
     margin-left: 12px;
     outline: none;
+    transition: 0.3s;
+}
+.login button:hover {
+    
+    background: transparent;
+    color: #ed1c24;
+    border: 1px solid #ed1c24;
 }
 
 .login i{
@@ -2720,14 +2727,15 @@ body .calender-box{
     border-radius: 10em;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
-    transition: all .5s;
+    transition: all .35s;
     position: absolute;
     right: 20%;
-    top: 26px;
+    top: 24px;
 }
+
 .header #demo-2 p {
     position: relative;
-    top: 29px;
+    top: 28px;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;

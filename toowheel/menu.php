@@ -383,24 +383,18 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
             </div>
             <a href="index.php" class="logo"><img src='img/logo.png' alt=''></a>
             <div class="header-login">
-                <div class="float-left margin-left-10">
-                    <a href="#" onfocusin="myFunction()" onfocusout="myFunction2()" id="demo-2">
+                <a href="#" class="float-left margin-left-10" id="demo-2">
+                    <span onfocusin="myFunction()" onfocusout="myFunction2()">
                         <input type="search" placeholder="Search">
-
-                    </a> 
-                    <p id="myDiv">Search</p>
-
-                    <!--                    <form id="demo-2">
-                                            <input type="search" placeholder="Search">
-                                            <p>Search</p>
-                                        </form>-->
-                </div>
-                <div class="float-left margin-left-10">
-                    <a href="login.php">
+                        <p id="myDiv">Search</p>
+                    </span> 
+                </a>
+                <a href="login.php" class="float-left margin-left-10">
+                    <span>
                         <i class="fa fa-sign-in search-bg"></i>
                         <p> Login</p>
-                    </a>
-                </div>
+                    </span>
+                </a>
             </div>
             <div class="mobile-header-login">
                 <i class="fa fa-search"></i>

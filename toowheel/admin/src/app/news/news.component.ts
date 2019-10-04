@@ -98,7 +98,7 @@ export class NewsForm {
     newsForm: FormGroup;
     loading = false;
     categories:any[];
-    news_id: 0;
+    news_id = 0;
     clubs:any[];
     medias:any[];
     cover_image: string = 'Choose Cover Image';
@@ -133,7 +133,6 @@ export class NewsForm {
            category_id: this.data.category_id,
            club_id: this.data.club_id,
            title: this.data.title,
-           city: this.data.city_id,
            date: this.data.news_date,
            media: this.data.media_id,
            moto_text: this.data.moto_text,
@@ -234,7 +233,7 @@ export class NewsForm {
       this.loading = true;
       var url = '';
       var formData = new FormData();
-      if(this.category_id != 0) {
+      if(this.news_id != 0) {
         formData.append('type', this.newsForm.value.type);
           formData.append('category_id', this.newsForm.value.category_id);
           formData.append('club_id', this.newsForm.value.club_id);
@@ -277,8 +276,6 @@ export class NewsForm {
           formData.append('youtube_id', this.newsForm.value.youtube_id);
         url = 'insert_news';
       }
-      
-          
       this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
@@ -367,6 +364,31 @@ export class NewsGalleryForm {
             }
             );
       }
+  }
+  
+  deleteGallery(id) {
+      if (id == null || id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/news_gallery/news_gallery_id='+id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.getImages();
+                }else{
+this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+        );
   }
 }
 
