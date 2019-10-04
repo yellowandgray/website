@@ -71,7 +71,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 </div>
             </div>
         </section>
-        <section class="media-press-release">
+        <section class="media-press-release" onClick="document.location.href='press-release.php'">
             <div class="container">
                 <div class="col-md-12">
                     <div class="media-bg">
