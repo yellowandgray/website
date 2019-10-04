@@ -63,6 +63,24 @@ export class AnnouncementComponent implements OnInit {
     });
 }
 
+confirmDelete(id): void  {
+    var data = null;
+      if(id != 0) { 
+        data = id;
+      }
+    const dialogRef = this.dialog.open(AnnouncementDelete, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: data
+    });
+
+   dialogRef.afterClosed().subscribe(result => {
+       if(result !== false && result !== 'false') {
+      this.getAnnouncement();
+       }
+    });
+}
+
 }
 
 @Component({
@@ -73,6 +91,7 @@ export class AnnouncementForm {
     announcementForm: FormGroup;
     loading = false;
     club_id = '0';
+    announcement_id = 0;
     thumb_image: string = 'Choose Thumb Image';
     thumb_image_path: string;
     constructor(
@@ -88,12 +107,13 @@ export class AnnouncementForm {
       'announcement_date': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required),
       });
-        if(this.data != null) {
+        if(this.data.data != null) {
            this.announcementForm.patchValue({
-           title: this.data.title,
-           announcement_date: this.data.announcement_date,
-           description: this.data.description
+           title: this.data.data.title,
+           announcement_date: this.data.data.announcement_date,
+           description: this.data.data.description
         });
+        this.announcement_id = this.data.data.announcement_id;
         }
     }
     fileProgress(fileInput: any, name:string, field: string) {
@@ -127,12 +147,26 @@ export class AnnouncementForm {
       }
       this.loading = true;
       var formData = new FormData();
-          formData.append('club_id', this.club_id);
+        var formData = new FormData();
+      var url = '';
+      if(this.category_id != 0) {
+        formData.append('club_id', this.club_id);
+          formData.append('title', this.announcementForm.value.title);
+          formData.append('announcement_date', this.announcementForm.value.announcement_date);
+          if(this.thumb_image_path && this.thumb_image_path != '') {
+          formData.append('thumb_image', this.thumb_image_path);
+          }
+          formData.append('description', this.announcementForm.value.description);
+        url = 'update_record/announcement/announcement_id = '+this.announcement_id;
+      } else {
+        formData.append('club_id', this.club_id);
           formData.append('title', this.announcementForm.value.title);
           formData.append('announcement_date', this.announcementForm.value.announcement_date);
           formData.append('thumb_image', this.thumb_image_path);
           formData.append('description', this.announcementForm.value.description);
-      this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/insert_announcement', formData).subscribe(
+        url = 'insert_announcement';
+      }
+      this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -150,5 +184,48 @@ export class AnnouncementForm {
         });
             }
             );
+  }
+}
+
+@Component({
+  selector: 'announcement-delete-confirmation',
+  templateUrl: 'announcement-delete-confirmation.html',
+})
+export class AnnouncementDelete {
+    loading = false;
+    announcement_id = 0;
+    constructor(
+    public dialogRef: MatDialogRef<AnnouncementDelete>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.data != null) { 
+            this.announcement_id = this.data;
+    }
+}
+
+  confirmDelete() {
+      if (this.announcement_id == null || this.announcement_id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/announcement/announcement_id='+this.announcement_id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+        );
   }
 }

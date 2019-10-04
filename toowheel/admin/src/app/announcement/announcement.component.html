@@ -18,14 +18,14 @@
                                 <img mat-card-image src="{{image_url}}{{result[i]['thumb_image']}}" alt="Photo of a Shiba Inu" />
                                 <mat-card-content>
                                     <p>
-                                        {{result[i]['moto_text']}}
+                                        {{result[i]['description']}}
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['news_id'], 'result')">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['announcement_id'])">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['news_id'])">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['announcement_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -40,14 +40,14 @@
                                 <img mat-card-image src="{{image_url}}{{result[i + 1]['thumb_image']}}" alt="Photo of a Shiba Inu" />
                                 <mat-card-content>
                                     <p>
-                                        {{result[i + 1]['moto_text']}}
+                                        {{result[i + 1]['description']}}
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 1]['news_id'], 'result')">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 1]['announcement_id'])">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 1]['news_id'])">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 1]['announcement_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -62,14 +62,14 @@
                                 <img mat-card-image src="{{image_url}}{{result[i + 2]['thumb_image']}}" alt="Photo of a Shiba Inu" />
                                 <mat-card-content>
                                     <p>
-                                        {{result[i + 2]['moto_text']}}
+                                        {{result[i + 2]['description']}}
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 2]['news_id'], 'result')">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 2]['announcement_id'])">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 2]['news_id'])">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 2]['announcement_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
@@ -84,14 +84,14 @@
                                 <img mat-card-image src="{{image_url}}{{result[i + 3]['thumb_image']}}" alt="Photo of a Shiba Inu" />
                                 <mat-card-content>
                                     <p>
-                                        {{result[i + 3]['moto_text']}}
+                                        {{result[i + 3]['description']}}
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 3]['news_id'], 'result')">
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 3]['announcement_id'])">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 3]['news_id'])">
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 3]['announcement_id'])">
                                         <mat-icon>delete</mat-icon>
                                     </button>
                                 </mat-card-actions>

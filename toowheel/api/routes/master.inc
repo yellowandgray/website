@@ -80,7 +80,7 @@ $app->post('/insert_announcement', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('club_id' => $data['club_id'], 'title' => $data['title'], 'announcement_date' => date('Y-m-d', strtotime($data['date'])), 'thumb_image' => $data['thumb_image'], 'description' => $data['description']), 'announcement');
+    $record = $com->insertRecord(array('club_id' => $data['club_id'], 'title' => $data['title'], 'announcement_date' => date('Y-m-d', strtotime($data['announcement_date'])), 'thumb_image' => $data['thumb_image'], 'description' => $data['description']), 'announcement');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
