@@ -203,10 +203,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                             //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
                             var ninjaSldr = document.getElementById("ninja-slider");
                             ninjaSldr.parentNode.style.display = "block";
-                            var x = document.getElementById("ninja-slider-sec");
-                            x.style.left = "0px";
-                            x.style.opacity = "1";
-                            x.style.transition = "all 1s ease-in-out ";
+                            
 
                             nslider.init(idx);
 
