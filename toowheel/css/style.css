@@ -786,8 +786,10 @@ body {
 /* Footer Section CSS END */
 
 .social-media-post-section {
-    margin-top: 40px;
-    /*    margin-bottom: 40px;*/
+    /*    margin-top: 40px;
+            margin-bottom: 40px;*/
+    top: -80px;
+    position: relative;
 }
 
 .social-media-post-section iframe {
