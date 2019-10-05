@@ -41,12 +41,8 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
 
                     <?php
                     foreach ($categories as $key => $val) {
-                        $cls = '';
-                        if ($key == 0) {
-                            //$cls = 'active';
-                        }
                         ?>
-                        <div class="tag-box tablink <?php echo $cls; ?>" onclick="openTag(event, <?php echo $val['category_id']; ?>)">
+                        <div class="tag-box tablink" onclick="openTag(event, <?php echo $val['category_id']; ?>)">
                             <p><?php echo $val['name']; ?></p>
                         </div>
                     <?php }

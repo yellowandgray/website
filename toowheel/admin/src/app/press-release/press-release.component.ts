@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-press-release',
@@ -175,7 +176,7 @@ export class PressReleaseForm {
           formData.append('title', this.pressreleaseForm.value.title);
           formData.append('media_id', this.pressreleaseForm.value.media);
           formData.append('author_name', this.pressreleaseForm.value.author_name);
-          formData.append('press_release_date', this.pressreleaseForm.value.date);
+          formData.append('press_release_date', moment(this.pressreleaseForm.value.date).format('YYYY-MM-DD'));
           if(this.thumb_image_path && this.thumb_image_path != '') {
           formData.append('thumb_image', this.thumb_image_path);
           }
@@ -195,7 +196,7 @@ export class PressReleaseForm {
           formData.append('title', this.pressreleaseForm.value.title);
           formData.append('media_id', this.pressreleaseForm.value.media);
           formData.append('author_name', this.pressreleaseForm.value.author_name);
-          formData.append('date', this.pressreleaseForm.value.date);
+          formData.append('date', moment(this.pressreleaseForm.value.date).format('YYYY-MM-DD'));
           formData.append('thumb_image', this.thumb_image_path);
           formData.append('banner_image_1', this.banner_image_1_path);
           formData.append('banner_image_2', this.banner_image_2_path);
