@@ -122,7 +122,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                         <div class="club-box">
                                             <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
                                             <h3><?php echo $row['title']; ?></h3>
-                                            <p>Date: <?php echo $row['event_date']; ?></p>
+                                            <!--<p>Date: <?php// echo $row['event_date']; ?></p>-->
                                             <p>Location: <?php echo $row['location']; ?></p>
                                         </div>
                                     </div>
