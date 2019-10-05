@@ -87,8 +87,8 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                             <div class="events-upcoming">
                                 <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
                                 <div class="events-upcoming-content">
-                                    <h4><?php echo $row['title']; ?></h4>
-                                    <p><?php echo $row['moto_text']; ?></p>
+                                    <h4><?php echo $obj->charLimit($row['title'], 25); ?></h4>
+                                    <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
                                     <center>
                                         <div class="button-8">
                                             <div class="eff-8"></div>
