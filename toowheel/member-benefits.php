@@ -23,7 +23,7 @@
                             </ul>
                         </div>
                         <div class="mem-sign">
-                            <p><a href="login.php">SIGN UP</a></p>
+                            <p><a href="member-register.php">SIGN UP</a></p>
                         </div>
                     </div>
 

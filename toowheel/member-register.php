@@ -21,7 +21,7 @@
                                 <h4>Basic Information</h4>
                                 <form class="">
                                     <div class="form-group">
-                                        <label for="category">Category</label>
+                                        <label for="category">Category</label> <i class="fa fa-star red" aria-hidden="true"></i>
                                         <select class="form-control" id="category">
                                             <option value="0">Select Category</option>
                                             <option value="4-Wheel">4 Wheel</option>
@@ -29,7 +29,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="firstname">First Name</label>
+                                        <label for="firstname">First Name</label> <i class="fa fa-star red" aria-hidden="true"></i>
                                         <input type="text" class="form-control" id="firstname" placeholder="" required>
     <!--                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                     </div>
@@ -151,13 +151,13 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="ic-no-passport-no">IC Number / Passport Number</label>
+                                        <label for="ic-no-passport-no">IC Number / Passport Number</label> <i class="fa fa-star red" aria-hidden="true"></i>
                                         <input type="text" class="form-control" id="state" placeholder="" required>
                                     </div>
                                     <div class="form-row">
                                         <div class="col-md-4 mb-3">
-                                            <label for="date">Date of Birth</label>
-                                            <select class="form-control" id="date">
+                                            <label for="date">Date of Birth</label> <i class="fa fa-star red" aria-hidden="true"></i>
+                                            <select class="form-control" id="date" required>
                                                 <option value="0">Day</option>
                                                 <option value='1'>1</option>
                                                 <option value='2'>2</option>
@@ -194,7 +194,7 @@
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="month">&nbsp;</label>
-                                            <select class="form-control" id='monthd'>
+                                            <select class="form-control" id='monthd' required>
                                                 <option value='0'>Month</option>
                                                 <option value='1'>1</option>
                                                 <option value='2'>2</option>
@@ -212,7 +212,7 @@
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="year">&nbsp;</label>
-                                            <select class="form-control" id='year'>
+                                            <select class="form-control" id='year' required>
                                                 <option value='0'>Year</option>
                                                 <option value='1947'>1947</option>
                                                 <option value='1948'>1948</option>
@@ -275,12 +275,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="contact">Contact Number</label>
+                                        <label for="contact">Contact Number</label> <i class="fa fa-star red" aria-hidden="true"></i>
                                         <input type="text" class="form-control" id="contact" placeholder="" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="driver-license-category">Driver License Category</label>
-                                        <select class="form-control" id='driver-license-category'>
+                                        <label for="driver-license-category">Driver License Category</label> <i class="fa fa-star red" aria-hidden="true"></i>
+                                        <select class="form-control" id='driver-license-category' required>
                                             <option value='class3'>Class 3</option>
                                             <option value='class3a'>Class 3A</option>
                                             <option value='class3c'>Class 3C</option>
@@ -288,53 +288,53 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="address">Address</label>
+                                        <label for="address">Address</label> <i class="fa fa-star red" aria-hidden="true"></i>
                                         <textarea class="form-control" placeholder="" id="address" type="text" rows="3" required></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="country">Country</label>
+                                        <label for="country">Country</label> <i class="fa fa-star red" aria-hidden="true"></i>
                                         <input placeholder="" id="country" type="text" class="form-control" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="state">State</label>
-                                        <input type="text" class="form-control" placeholder="">
+                                        <label for="state">State</label> <i class="fa fa-star red" aria-hidden="true"></i>
+                                        <input type="text" class="form-control" placeholder="" required>
                                     </div>
                                     <br/>
                                     <h4>Referral</h4>
                                     <div class="form-group">
                                         <label for="member-id">Member ID</label>
-                                        <input placeholder="" id="member-id" type="text" class="form-control" required>
+                                        <input placeholder="" id="member-id" type="text" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label for="club-id">Club ID</label>
-                                        <input placeholder="" id="club-id" type="text" class="form-control" required>
+                                        <input placeholder="" id="club-id" type="text" class="form-control">
                                     </div>
                                     <br/>
                                     <h4>Coverage</h4>
                                     <div class="form-group">
                                         <label for="fullname">Full Name (Next of Kin)</label>
-                                        <input placeholder="" id="fullname" type="text" class="form-control" required>
+                                        <input placeholder="" id="fullname" type="text" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label for="mobile">Contact Number</label>
-                                        <input type="text" class="form-control" id="mobile" placeholder="" required>
+                                        <input type="text" class="form-control" id="mobile" placeholder="">
                                     </div>
                                     <div class="form-group">
                                         <label for="address">Address</label>
-                                        <textarea class="form-control" placeholder="" id="address" type="text" rows="3" required></textarea>
+                                        <textarea class="form-control" placeholder="" id="address" type="text" rows="3"></textarea>
                                     </div>
                                     <br/>
                                     <h4>Login Information</h4>
                                     <div class="form-group">
-                                        <label for="email">Email Address</label>
+                                        <label for="email">Email Address</label> <i class="fa fa-star red" aria-hidden="true"></i>
                                         <input type="email" class="form-control" id="email" placeholder="" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="password">Password</label>
+                                        <label for="password">Password</label> <i class="fa fa-star red" aria-hidden="true"></i>
                                         <input type="password" class="form-control" id="password" placeholder="" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="cnfpassword">Confirm Password</label>
+                                        <label for="cnfpassword">Confirm Password</label> <i class="fa fa-star red" aria-hidden="true"></i>
                                         <input type="password" class="form-control" id="cnfpassword" placeholder="" required>
                                     </div>
                                 </form>
@@ -515,7 +515,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="member-t"><a href="#">Skip</a></p>
+                                <p class="member-t margin-top-30"><a href="#">Skip</a></p>
                             </div>
                             <div id="step-3" class="">
                                 <h2>Make Payment</h2>
@@ -524,7 +524,27 @@
                                         <div class="member-register-btn"><a href="#">PayPal</a></div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="member-register-btn"><a href="#">CDM Fund Transfer</a></div>
+                                        <div class="member-register-btn cdm-found"><a href="#">CDM Fund Transfer</a></div>
+                                        <div class="pop member-register-popup"><i class="fa fa-times-circle" aria-hidden="true"></i>
+                                            <div class="margin-top-30">
+                                                <h4>UPLOAD DEPOSIT SLIP OR FUND TRANSFER PECEIPT</h4>
+                                                <h5>TOOWHEEL BANK ACCOUNT DETAILS</h5>
+                                                <p>Upload your slip picture within 24hrs</p>
+                                                <form>
+                                                    <label>Upload Your Recipit</label>
+                                                    <input type="file" name="recipt" />
+                                                    <br/>
+                                                    <br/>
+                                                    <center>
+                                                        <a href="#" type="submit">Upload Now</a>
+                                                    </center>
+                                                    <br/>
+                                                    <center>
+                                                        <a href="#" type="submit">Upload Later</a>
+                                                    </center>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="member-register-btn"><a href="#">Upload Your Receipt</a></div>
@@ -565,5 +585,18 @@
             </div>
         </div>
         <?php include 'footer.php'; ?>
+        <script>
+            $(".cdm-found").click(
+                    function () {
+                        $(".pop").fadeIn('slow');
+                    }
+            );
+
+            $(".pop i").click(
+                    function () {
+                        $(".pop").fadeOut('fast');
+                    }
+            );
+        </script>
     </body>
 </html>
