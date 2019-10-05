@@ -919,7 +919,7 @@ body {
 
 .news-all-content img {
     width: 100%;
-    height: auto;
+    height: 250px;
     vertical-align: middle;
     border-radius: 10px;
     box-shadow: 0 0 5px 1px #000;
