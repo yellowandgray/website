@@ -541,11 +541,21 @@
 
 @media (min-width: 320px) and (max-width: 599px) { 
     .discover-slider-content {
-        height: 142px !important;
+        height: 135px !important;
     }
     .btn-primary {
         position: relative;
         top: 2px !important;
+    }
+}
+@media (min-width: 320px) and (max-width: 384px) { 
+    .tabcontent .news .news-cont {
+        flex-basis: 90% !important;
+        padding: 10px 0px;
+        height: 450px !important;
+    }
+    .tabcontent .news .discover-slider-content {
+        width: 100% !important;
     }
 }
 @media (min-width: 320px) and (max-width: 599px) { 
