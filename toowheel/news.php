@@ -28,7 +28,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
             <div class="container">
                 <div class="row events-content">
                     <div class="col-md-8">
-                        <p class="clb-bg clr-white"><?php echo $news['category']; ?></p>
+                        <p class="clb-bg clr-white"><?php echo $obj->charLimit($news['category'], 17); ?></p>
                         <div class="events-main-content">
                             <span><?php echo $news['media']; ?> | <?php echo $news['author_name']; ?> | <?php echo date('M d, Y', strtotime($news['news_date'])); ?></span>
                             <div class="middle">
@@ -71,7 +71,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                     <div class="col-md-4">
                         <?php foreach ($releated_news as $row) { ?>
                             <div class="side-news">
-                                <span class="side-news-widget1"><span><?php echo $row['club']; ?></span></span>
+                                <span class="side-news-widget1"><span><?php echo $obj->charLimit($row['club'], 30); ?></span></span>
                                 <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt=" image" />
                                 <h4><?php echo $row['title']; ?></h4>
                                 <p><?php echo $row['moto_text']; ?></p>
