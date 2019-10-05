@@ -31,8 +31,7 @@ $configs = $obj->getLandingDetails();
         </style>
 
     </head>
-    <body>
-        <!--        <div class="main-wrapper">-->
+    <body class="main-wrapper">
         <section class="header slide slide-one" data-background="#0f0f0f">
             <div class="container inside">
                 <div class="row">
@@ -57,18 +56,16 @@ $configs = $obj->getLandingDetails();
             </div>
         </section>
         <section class="fourwheel slide slide-two" data-background="#f4001e">
-            <div class="container">
-                <div class="inside">
-                    <div class="row">
-                        <div class="col-md-5 order-img bg-four-text">
-                            <h2>FOUR WHEELS</h2>
-                            <h1>FOUR<br/> WHEELS</h1>
-                            <div class="btn-position-fourwheel"><a href="toowheel/index.php?type=four_wheel" class="btn-enter-fourwheel"><i class="fa fa-play-circle" aria-hidden="true"></i> ENTER</a></div>
-                        </div>
-                        <div class="col-md-7">
-                            <img src="<?php echo BASE_URL . $configs['landing_fourwheel_image']; ?>" alt=""  class="landing-car" />
-    <!--                        <img src="img/image-06.png" alt="" class="landing-car"/>-->
-                        </div>
+            <div class="container inside">
+                <div class="row">
+                    <div class="col-md-5 order-img bg-four-text">
+                        <h2>FOUR WHEELS</h2>
+                        <h1>FOUR<br/> WHEELS</h1>
+                        <div class="btn-position-fourwheel"><a href="toowheel/index.php?type=four_wheel" class="btn-enter-fourwheel"><i class="fa fa-play-circle" aria-hidden="true"></i> ENTER</a></div>
+                    </div>
+                    <div class="col-md-7">
+                        <img src="<?php echo BASE_URL . $configs['landing_fourwheel_image']; ?>" alt=""  class="landing-car" />
+<!--                        <img src="img/image-06.png" alt="" class="landing-car"/>-->
                     </div>
                 </div>
             </div>
@@ -230,21 +227,20 @@ $configs = $obj->getLandingDetails();
                             </span>
                         </div>
                 </footer>-->
-        <!--        </div>-->
         <?php include 'footer.php'; ?>
-        <!--        <script type="text/javascript">
-                    $(window).ready(function () {
-                        var wHeight = $(window).height();
-                        $('.slide')
-                                .height(wHeight)
-                                .scrollie({
-                                    scrollOffset: -50,
-                                    scrollingInView: function (elem) {
-                                        var bgColor = elem.data('background');
-                                        $('body').css('background-color', bgColor);
-                                    }
-                                });
+<!--        <script type="text/javascript">
+        $(window).ready(function () {
+            var wHeight = $(window).height();
+            $('.slide')
+                    .height(wHeight)
+                    .scrollie({
+                        scrollOffset: -50,
+                        scrollingInView: function (elem) {
+                            var bgColor = elem.data('background');
+                            $('body').css('background-color', bgColor);
+                        }
                     });
-                </script>-->
+        });
+        </script>-->
     </body>
 </html>
