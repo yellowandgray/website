@@ -18,9 +18,9 @@ export class PressReleaseComponent implements OnInit {
   ngOnInit() {
     this.getPressRelease();
   }
-  image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
+  image_url: string = 'api/v1/';
     getPressRelease(): void {
-     this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_press_release')
+     this.httpClient.get<any>('api/v1/get_press_release')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -119,7 +119,7 @@ export class PressReleaseForm {
         });
         this.press_release_id = this.data.press_release_id;
     }
-    this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_medias').subscribe(
+    this.httpClient.get('api/v1/get_medias').subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
                     this.medias = res["result"]["data"];
@@ -142,7 +142,7 @@ export class PressReleaseForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -205,7 +205,7 @@ export class PressReleaseForm {
           formData.append('youtube_id', this.pressreleaseForm.value.youtube_id);
         url = 'insert_press_release';
       }
-      this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -249,7 +249,7 @@ export class PressreleaseDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/press_release/press_release_id='+this.press_release_id).subscribe(
+      this.httpClient.get('api/v1/delete_record/press_release/press_release_id='+this.press_release_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
