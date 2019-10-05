@@ -72,7 +72,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     <div class="media-bg">
                         <a href="press-release.php"><img src="img/media-bg.jpg" alt="" /></a>
                     </div>
-                    <a href="press-release.php" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
+                    <a href="press-release.php?type=<?php echo $type; ?>" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
                 </div>
             </div>
         </section>

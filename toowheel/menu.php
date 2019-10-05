@@ -1,7 +1,7 @@
 <?php
-$latest_news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' ORDER BY n.news_id DESC LIMIT 6');
-$press_release = $obj->selectAll('*', 'press_release', 'type = \'' . $type . '\' ORDER BY press_release_id DESC LIMIT 5');
-$findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\' ORDER BY club_id DESC LIMIT 8');
+$menu_latest_news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' ORDER BY n.news_id DESC LIMIT 6');
+$menu_press_release = $obj->selectAll('*', 'press_release', 'type = \'' . $type . '\' ORDER BY press_release_id DESC LIMIT 5');
+$menu_findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\' ORDER BY club_id DESC LIMIT 8');
 $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 8');
 ?>
 <section class="header">
@@ -52,7 +52,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                     </div> 
                     <div id="News" class="tabcontent">
                         <div class="row news">
-                            <?php foreach ($latest_news as $row) { ?>
+                            <?php foreach ($menu_latest_news as $row) { ?>
                                 <div class="news-cont">
                                     <div>
                                         <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" />
@@ -70,9 +70,9 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                     <div id="Release" class="tabcontent">
                         <div class="row">
                             <div>
-                                <?php foreach ($press_release as $row) { ?>
+                                <?php foreach ($menu_press_release as $row) { ?>
                                     <ul class="release">
-                                        <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt="image" /></li>
+                                        <li class="release-cont-1"><img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" /></li>
                                         <li class="release-cont-2"><?php echo $obj->charLimit($row['title'], 160); ?></li>
                                         <li class="release-cont-3"><a href="press.php?pid=<?php echo $row['press_release_id']; ?>"><span>READ </span>MORE</a></li>
                                     </ul>
@@ -96,7 +96,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                         <h3>Find a Club</h3>
                         <div class="find-club-menu">
                             <div class="row">
-                                <?php foreach ($findclub as $row) { ?>
+                                <?php foreach ($menu_findclub as $row) { ?>
                                     <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <span>#1</span>
