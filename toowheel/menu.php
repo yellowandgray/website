@@ -1,8 +1,8 @@
 <?php
-require_once 'api/include/common.php';
-$obj = new Common();
-$findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'two_wheel\' ORDER BY club_id DESC LIMIT 8');
-$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'two_wheel\' ORDER BY e.event_id DESC LIMIT 8');
+$latest_news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' ORDER BY n.news_id DESC LIMIT 6');
+$press_release = $obj->selectAll('*', 'press_release', 'type = \'' . $type . '\' ORDER BY press_release_id DESC LIMIT 5');
+$findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\' ORDER BY club_id DESC LIMIT 8');
+$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 8');
 ?>
 <section class="header">
     <div class="container">
@@ -13,19 +13,9 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
                 <span></span>
                 <span></span>
             </span>
-<!--            <span class="toggle" style="font-size:30px;cursor:pointer;display: none;" id="close" onclick="closeNav();">
-                <img src='img/close.png' alt=''>
-            </span>-->
             <div id="mySidenav" class="sidenav">
                 <div class="container tab-menu">
-<!--                    <div class="nav-close" onclick="closeNav();"><img src="img/close.png" alt=""></div>-->
                     <div class="tab mega-menu-tab">
-                        <!--                        <div class="text-center language">
-                                                    <input type="radio" name="size" id="size_1" value="small" checked />
-                                                    <label for="size_1">BM</label>
-                                                    <input type="radio" name="size" id="size_2" value="small" />
-                                                    <label for="size_2">EN</label>
-                                                </div>-->
                         <button class="tablinks" onclick="openCity(event, 'About')" id="defaultOpen">About Us <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'News')">Latest News <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Release')">Press Release <i class="fa fa-caret-right" aria-hidden="true"></i></button>
@@ -62,116 +52,32 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
                     </div> 
                     <div id="News" class="tabcontent">
                         <div class="row news">
-                            <?php //foreach ($news as $row) { ?>
-                            <!--                                <div class="news-cont">
-                                                                <div>
-                                                                    <img src="<?php echo BASE_URL . $news['thumb_image']; ?>" alt=""/>
-                                                                    <div class="discover-slider-content">
-                                                                        <p class="clb-bg"><?php echo $row['club']; ?></p>
-                                                                        <h2><?php echo $row['title']; ?></h2>
-                                                                        <p><?php echo $row['moto_text']; ?></p>
-                                                                    </div>
-                                                                </div>
-                                                                <center class="news-discover"><a href="news.php">DISCOVER</a></center>
-                                                            </div>-->
-                            <?php //} ?>
-                            <div class="news-cont">
-                                <div>
-                                    <img src="img/mega-menu/001.jpg" alt=""/>
-                                    <div class="discover-slider-content">
-                                        <p class="clb-bg">Club Name</p>
-                                        <h2>Title Comes Here</h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
-                                        <center class="news-discover"><a href="#">DISCOVER</a></center>
+                            <?php foreach ($latest_news as $row) { ?>
+                                <div class="news-cont">
+                                    <div>
+                                        <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" />
+                                        <div class="discover-slider-content">
+                                            <p class="clb-bg"><?php echo $obj->charLimit($row['club'], 10); ?></p>
+                                            <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
+                                            <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
+                                            <center class="news-discover"><a href="news.php?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="news-cont">
-                                <div>
-                                    <img src="img/mega-menu/002.jpg" alt=""/>
-                                    <div class="discover-slider-content">
-                                        <p class="clb-bg">Club Name</p>
-                                        <h2>Title Comes Here</h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
-                                        <center class="news-discover"><a href="#">DISCOVER</a></center>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-cont">
-                                <div>
-                                    <img src="img/mega-menu/003.jpg" alt=""/>
-                                    <div class="discover-slider-content">
-                                        <p class="clb-bg">Club Name</p>
-                                        <h2>Title Comes Here</h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
-                                        <center class="news-discover"><a href="#">DISCOVER</a></center>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-cont">
-                                <div>
-                                    <img src="img/mega-menu/004.jpg" alt=""/>
-                                    <div class="discover-slider-content">
-                                        <p class="clb-bg">Club Name</p>
-                                        <h2>Title Comes Here</h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
-                                        <center class="news-discover"><a href="#">DISCOVER</a></center>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-cont">
-                                <div>
-                                    <img src="img/mega-menu/004.jpg" alt=""/>
-                                    <div class="discover-slider-content">
-                                        <p class="clb-bg">Club Name</p>
-                                        <h2>Title Comes Here</h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
-                                        <center class="news-discover"><a href="#">DISCOVER</a></center>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-cont">
-                                <div>
-                                    <img src="img/mega-menu/003.jpg" alt=""/>
-                                    <div class="discover-slider-content">
-                                        <p class="clb-bg">Club Name</p>
-                                        <h2>Title Comes Here</h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
-                                        <center class="news-discover"><a href="#">DISCOVER</a></center>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php } ?>
                         </div>
                     </div>
                     <div id="Release" class="tabcontent">
                         <div class="row">
                             <div>
-                                <ul class="release">
-                                    <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
-                                    <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
-                                </ul>
-                                <ul class="release">
-                                    <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
-                                    <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
-                                </ul>
-                                <ul class="release">
-                                    <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
-                                    <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
-                                </ul>
-                                <ul class="release">
-                                    <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
-                                    <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
-                                </ul>
-                                <ul class="release">
-                                    <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt=""/></li>
-                                    <li class="release-cont-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</li>
-                                    <li class="release-cont-3"><a href="press-release.php"><span>READ </span>MORE</a></li>
-                                </ul>
-                                <div class="find-club-btn"><a href="press-release.php" class="menu-btn">All Press Release</a></div>
+                                <?php foreach ($press_release as $row) { ?>
+                                    <ul class="release">
+                                        <li class="release-cont-1"><img src="img/mega-menu/mic.png" alt="image" /></li>
+                                        <li class="release-cont-2"><?php echo $obj->charLimit($row['title'], 160); ?></li>
+                                        <li class="release-cont-3"><a href="press.php?pid=<?php echo $row['press_release_id']; ?>"><span>READ </span>MORE</a></li>
+                                    </ul>
+                                <?php } ?>
+                                <div class="find-club-btn"><a href="press-release.php?type=<?php echo $type; ?>" class="menu-btn">All Press Release</a></div>
                             </div>
                         </div> 
                     </div>
@@ -200,62 +106,6 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
                                         </div>
                                     </div>
                                 <?php } ?>
-                                <!--                                <div class="col-md-3 col-sm-6">
-                                                                    <div class="club-box">
-                                                                        <span>#1</span>
-                                                                        <img src="img/find-club/dummy-logo.png" alt="" />
-                                                                        <h3>Frendly Bikers</h3>
-                                                                        <p>Kuala Lumpur</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6">
-                                                                    <div class="club-box">
-                                                                        <span>#1</span>
-                                                                        <img src="img/find-club/dummy-logo.png" alt="" />
-                                                                        <h3>Frendly Bikers</h3>
-                                                                        <p>Kuala Lumpur</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6">
-                                                                    <div class="club-box">
-                                                                        <span>#1</span>
-                                                                        <img src="img/find-club/dummy-logo.png" alt="" />
-                                                                        <h3>Frendly Bikers</h3>
-                                                                        <p>Kuala Lumpur</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6">
-                                                                    <div class="club-box">
-                                                                        <span>#1</span>
-                                                                        <img src="img/find-club/dummy-logo.png" alt="" />
-                                                                        <h3>Frendly Bikers</h3>
-                                                                        <p>Kuala Lumpur</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6">
-                                                                    <div class="club-box">
-                                                                        <span>#1</span>
-                                                                        <img src="img/find-club/dummy-logo.png" alt="" />
-                                                                        <h3>Frendly Bikers</h3>
-                                                                        <p>Kuala Lumpur</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6">
-                                                                    <div class="club-box">
-                                                                        <span>#1</span>
-                                                                        <img src="img/find-club/dummy-logo.png" alt="" />
-                                                                        <h3>Frendly Bikers</h3>
-                                                                        <p>Kuala Lumpur</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6">
-                                                                    <div class="club-box">
-                                                                        <span>#1</span>
-                                                                        <img src="img/find-club/dummy-logo.png" alt="" />
-                                                                        <h3>Frendly Bikers</h3>
-                                                                        <p>Kuala Lumpur</p>
-                                                                    </div>
-                                                                </div>-->
                             </div>
                             <div class="find-club-btn"><a href="find-a-club.php" class="menu-btn">Read More</a></div>
                         </div>
@@ -274,105 +124,9 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
                                         </div>
                                     </div>
                                 <?php } ?>
-                                <!--                                <div class="col-md-3 col-sm-6">
-                                                                    <div class="club-box">
-                                                                        <img src="img/events/005.jpg" alt="" />
-                                                                        <h3>Event Title</h3>
-                                                                        <p>Date: 10/10/2019</p>
-                                                                        <p>Location: Kuala lumpur</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6">
-                                                                    <div class="club-box">
-                                                                        <img src="img/events/005.jpg" alt="" />
-                                                                        <h3>Event Title</h3>
-                                                                        <p>Date: 10/10/2019</p>
-                                                                        <p>Location: Kuala lumpur</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6">
-                                                                    <div class="club-box">
-                                                                        <img src="img/events/005.jpg" alt="" />
-                                                                        <h3>Event Title</h3>
-                                                                        <p>Date: 10/10/2019</p>
-                                                                        <p>Location: Kuala lumpur</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6">
-                                                                    <div class="club-box">
-                                                                        <img src="img/events/005.jpg" alt="" />
-                                                                        <h3>Event Title</h3>
-                                                                        <p>Date: 10/10/2019</p>
-                                                                        <p>Location: Kuala lumpur</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6">
-                                                                    <div class="club-box">
-                                                                        <img src="img/events/005.jpg" alt="" />
-                                                                        <h3>Event Title</h3>
-                                                                        <p>Date: 10/10/2019</p>
-                                                                        <p>Location: Kuala lumpur</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6">
-                                                                    <div class="club-box">
-                                                                        <img src="img/events/005.jpg" alt="" />
-                                                                        <h3>Event Title</h3>
-                                                                        <p>Date: 10/10/2019</p>
-                                                                        <p>Location: Kuala lumpur</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-6">
-                                                                    <div class="club-box">
-                                                                        <img src="img/events/005.jpg" alt="" />
-                                                                        <h3>Event Title</h3>
-                                                                        <p>Date: 10/10/2019</p>
-                                                                        <p>Location: Kuala lumpur</p>
-                                                                    </div>
-                                                                </div>-->
                             </div>
                             <div class="find-club-btn"><a href="events.php" class="menu-btn">Read More</a></div>
                         </div>
-                        <!--                        <div class="event-num">
-                                                    <div class="event-num-1">
-                                                        <h3>Event Title</h3>
-                                                        <div class="event-n">
-                                                            <div class="event-img">
-                                                                <img src="img/events/005.jpg" alt="" class="img-responsive"/>
-                                                            </div>
-                                                            <div class="event-conent">
-                                                                <p><span>Date:</span> 06-09-2019</p>
-                                                                <p><span>Location:</span> Malaysia</p>
-                                                                <p><span>Club Name:</span> Name</p>
-                        
-                                                            </div>
-                                                            <div class="event-desc">
-                                                                <p><span>Description</span></p>
-                                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                                                <div class="find-club-btn"><a href="events.php">Read More</a></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="event-num-1">
-                                                        <h3>Event Title</h3>
-                                                        <div class="event-n">
-                                                            <div class="event-img">
-                                                                <img src="img/events/005.jpg" alt="" class="img-responsive"/>
-                                                            </div>
-                                                            <div class="event-conent">
-                                                                <p><span>Date:</span> 06-09-2019</p>
-                                                                <p><span>Location:</span> Malaysia</p>
-                                                                <p><span>Club Name:</span> Name</p>
-                        
-                                                            </div>
-                                                            <div class="event-desc">
-                                                                <p><span>Description</span></p>
-                                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                                                <div class="find-club-btn"><a href="events.php">Read More</a></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>-->
                     </div>
                     <div id="register-club" class="tabcontent">
                         <h3>Register My Club</h3>

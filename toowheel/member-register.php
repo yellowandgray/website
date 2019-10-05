@@ -537,7 +537,15 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="member-register-btn cdm-found"><a href="#">CDM Fund Transfer</a></div>
-                                        <div class="pop member-register-popup"><i class="fa fa-times-circle" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="member-register-btn upload-btn-wrapper">
+                                            <button class="btn"><a>Upload a file</a></button>
+                                            <input type="file" name="myfile" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="pop-1 member-register-popup"><i class="fa fa-times-circle" aria-hidden="true"></i>
                                             <div class="margin-top-30">
                                                 <h4>UPLOAD DEPOSIT SLIP OR FUND TRANSFER PECEIPT</h4>
                                                 <h5>TOOWHEEL BANK ACCOUNT DETAILS</h5>
@@ -557,9 +565,6 @@
                                                 </form>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="member-register-btn"><a href="#">Upload Your Receipt</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -600,13 +605,13 @@
         <script>
             $(".cdm-found").click(
                     function () {
-                        $(".pop").fadeIn('slow');
+                        $(".pop-1").fadeIn('slow');
                     }
             );
 
-            $(".pop i").click(
+            $(".pop-1 i").click(
                     function () {
-                        $(".pop").fadeOut('fast');
+                        $(".pop-1").fadeOut('fast');
                     }
             );
         </script>
