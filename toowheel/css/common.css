@@ -696,7 +696,7 @@ button {
     border: 1px solid #ccc;
     /*width: 75%;*/
     border-left: none;
-    height: auto;
+    height: 613px;
     background-color: #fff;
 
 }
@@ -872,7 +872,7 @@ button {
     text-align: center;
     border-radius: 25px;
     position: relative;
-    top: 15px;
+    /*    top: 15px;*/
 }
 
 .release-cont-3 a:hover {
