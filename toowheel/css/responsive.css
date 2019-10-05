@@ -42,7 +42,10 @@
         margin-right: 0 !important;
     }
     .media-press-release {
-        padding: 20% 0 8% 0 !important;
+        padding: 40% 0 0% 0 !important;
+    }
+    .mobile-search {
+        display: block !important;
     }
 }
 
@@ -64,7 +67,7 @@
     }
     .mobile-header-login i {
         color: red;
-        font-size: 20px;
+        font-size: 30px;
         margin: 0 5px;
     }
 }
@@ -578,21 +581,22 @@
     .mobile-header-login {
         display: block !important;
         margin-top: 12px;
+        margin-right: 1px;
     }
     #nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
-        width: 26px !important;
+        width: 35px !important;
     }
     .header {
-        height: 60px !important;
+        height: auto !important;
     }
     .bg-1 {
-        top: 59px !important;
+        top: 107px !important;
         height: auto !important;
     }
     .video-bg-banner {
         width: 100%;
         background: #000;
         position: relative;
-        top: 60px !important;
+        top: 107px !important;
     }
 }

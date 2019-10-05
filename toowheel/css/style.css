@@ -1697,3 +1697,22 @@ body {
     border: 1px solid red;
     text-decoration: none;
 }
+
+.mobile-search {
+    display: none;
+}
+
+.mobile-search {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.mobile-search input {
+    border:  none;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.mobile-search input:focus {
+    outline: none;
+}
