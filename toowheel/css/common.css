@@ -859,6 +859,10 @@ button {
     padding: 10px 0px;
 }
 
+.release-cont-2 p {
+    font-size: 14px;
+}
+
 .release-cont-2 span {
     font-size: 12px;
     color: gray;

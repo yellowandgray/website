@@ -76,7 +76,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                     <ul class="release">
                                         <li class="release-cont-1"><img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" /></li>
                                         <li class="release-cont-2">
-                                            <p><strong><?php echo $obj->charLimit($row['title'], 160); ?></strong></p>
+                                            <strong><?php echo $obj->charLimit($row['title'], 160); ?></strong>
                                             <span><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo $row['press_release_date']; ?></span>
                                             <p><?php echo $obj->charLimit($row['description_1'], 160); ?>
                                         </li>
