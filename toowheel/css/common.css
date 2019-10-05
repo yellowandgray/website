@@ -885,7 +885,8 @@ button {
 .tab-menu {
     display: flex;
     flex-wrap: wrap;
-
+    overflow: scroll;
+    height: 768px;
 }
 .tab {
     flex: 1;
