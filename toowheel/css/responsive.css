@@ -38,7 +38,9 @@
     .padding-top-108 {
         padding-top: 85px !important;
     }
-
+    .twitter-share {
+        margin-right: 0 !important;
+    }
 }
 
 @media screen and (max-height: 600px) {

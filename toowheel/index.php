@@ -12,7 +12,7 @@ $card_add_two = $obj->selectRow('url, image', 'advertisement', 'advertisement_id
 $banner_add = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_banner_ad']);
 $categories = $obj->selectAll('*', 'category', 'category_id > 0 AND type = \'' . $type . '\'');
 $news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' AND n.category_id = ' > 0 . ' ORDER BY n.news_id DESC LIMIT 10');
-$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 3');
+$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 4');
 $images = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'image\' AND type = \'' . $type . '\' ORDER BY gallery_id DESC LIMIT 8');
 $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'video\' AND type = \'' . $type . '\' ORDER BY gallery_id DESC LIMIT 8');
 ?>

@@ -84,8 +84,8 @@ export class PressReleaseForm {
     medias:any[];
     cover_image: string = 'Choose Cover Image';
     thumb_image: string = 'Choose Thumb Image';
-    banner_image_1: string = 'Choose Cover Image';
-    banner_image_2: string = 'Choose Cover Image';
+    banner_image_1: string = 'Choose Image';
+    banner_image_2: string = 'Choose Image';
     cover_image_path: string;
     thumb_image_path: string;
     banner_image_1_path: string;
