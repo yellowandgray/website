@@ -5,7 +5,7 @@ if (!isset($_GET['pid'])) {
 $pid = $_GET['pid'];
 require_once 'api/include/common.php';
 $obj = new Common();
-$press_release = $obj->selectRow('p.*, m.name AS media', 'press_release AS p LEFT JOIN media AS m ON m.media_id = p.media_id', 'p.type = \'' . $type . '\' ORDER BY p.press_release_id = ' . $pid);
+$press_release = $obj->selectRow('p.*, m.name AS media', 'press_release AS p LEFT JOIN media AS m ON m.media_id = p.media_id', 'p.press_release_id = ' . $pid);
 $type = $press_release['type'];
 ?>
 <!DOCTYPE html>
