@@ -144,7 +144,7 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                         <div class="col-md-6">
                                             <h3><?php echo $row['title']; ?></h3>
                                             <p><span>Club Name:</span> <?php echo $row['club']; ?></p>
-                                            <p><strong>Description</strong><br/> <?php echo $row['description']; ?></p>
+                                            <p><strong>Description</strong><br/> <?php echo $obj->charLimit($row['description'], 200); ?></p>
                                         </div>
                                     </div>
                                     <hr>
