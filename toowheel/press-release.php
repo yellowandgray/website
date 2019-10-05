@@ -18,7 +18,7 @@ $press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEF
                 <h3>PRESS RELEASE</h3>
                 <div class="press-release-content">
                     <?php foreach ($press_release as $row) { ?>
-                        <div class="border-bottom">
+                        <div class="border-bottom" style="margin-bottom: 10px;">
                             <div class="row">
                                 <div class="col-md-2">
                                     <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="">

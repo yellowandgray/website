@@ -51,6 +51,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                         </div>
                     </div> 
                     <div id="News" class="tabcontent">
+                        <h3>Latest News</h3>
                         <div class="row news">
                             <?php foreach ($menu_latest_news as $row) { ?>
                                 <div class="news-cont">
@@ -58,8 +59,8 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                         <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" />
                                         <div class="discover-slider-content">
                                             <p class="clb-bg"><?php echo $obj->charLimit($row['club'], 10); ?></p>
-                                            <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
-                                            <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
+                                            <h2><?php echo $obj->charLimit($row['title'], 15); ?></h2>
+                                            <p><?php echo $obj->charLimit($row['moto_text'], 100); ?></p>
                                             <center class="news-discover"><a href="news.php?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
                                         </div>
                                     </div>

@@ -55,7 +55,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                             <div class="discover-slider">
                                 <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="alt" />
                                 <div class="discover-slider-content">
-                                    <p class="clb-bg"><?php echo $obj->charLimit($row['club'], 10); ?></p>
+                                    <p class="clb-bg"><?php echo $obj->charLimit($row['club'], 14); ?></p>
                                     <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
                                     <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
                                     <center><a href="news.php?nid=<?php echo $row['news_id']; ?>" class="btn btn-primary">DISCOVER</a></center>
@@ -104,9 +104,9 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                 <div class="row">
                                     <img class="home-upcoming" src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
                                     <div class="content-detail">
-                                        <h6><?php echo $row['title']; ?></h6>
+                                        <h6><?php echo $obj->charLimit($row['title'], 25); ?></h6>
                                         <i class="fa fa-calendar" aria-hidden="true"></i><p> <?php echo date('M d, Y', strtotime($row['event_date'])); ?></p>
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i><p> <?php echo $row['location']; ?></p>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i><p> <?php echo $obj->charLimit($row['location'], 50); ?></p>
                                     </div>
                                 </div>
                             </div>
