@@ -492,6 +492,7 @@ body {
     font-size: 11px;
     margin: 0 0 5px 0;
     font-weight: 500;
+    text-align: left;
 }
 
 .photo-section {
@@ -1716,4 +1717,57 @@ body {
 
 .mobile-search input:focus {
     outline: none;
+}
+
+.member-register-popup {
+    height: auto !important;
+    position: fixed !important;
+    top: 20% !important;
+    left: 35% !important;
+}
+
+.member-register-popup h5 {
+    font-size: 18px;
+    color: #000;
+    margin: 0 0 10px 0;
+}
+
+.member-register-popup p {
+    color: #000;
+    text-align: center;
+}
+
+.member-register-popup label{
+    color: #afafaf;
+}
+
+.member-register-popup input[type="file"] {
+    border: .5px solid #000;
+    border-radius: 5px;
+    color: #363636;
+}
+
+.member-register-popup a {
+    background: red;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid red;
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    -webkit-appearance: unset;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.member-register-popup a:hover {
+    background: #ffffff;
+    color: red;
+    border: 1px solid #ff1c1c;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.member-register-popup i {
+    background: #ffffff;
+    color: red;
 }
