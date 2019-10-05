@@ -21,7 +21,7 @@
                                 <h4>Basic Information</h4>
                                 <form class="">
                                     <div class="form-group">
-                                        <label for="category">Category</label> <i class="fa fa-star red" aria-hidden="true"></i>
+                                        <label for="category">Category</label> <i class="fa fa-star red-i" aria-hidden="true"></i>
                                         <select class="form-control" id="category">
                                             <option value="0">Select Category</option>
                                             <option value="4-Wheel">4 Wheel</option>
@@ -29,8 +29,8 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="firstname">First Name</label> <i class="fa fa-star red" aria-hidden="true"></i>
-                                        <input type="text" class="form-control" id="firstname" placeholder="" required>
+                                        <label for="firstname">First Name</label> <i class="fa fa-star red-i" aria-hidden="true"></i>
+                                        <input type="text" class="form-control" id="firstname" placeholder="" required-i>
     <!--                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                     </div>
                                     <div class="form-group">
@@ -151,13 +151,13 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="ic-no-passport-no">IC Number / Passport Number</label> <i class="fa fa-star red" aria-hidden="true"></i>
-                                        <input type="text" class="form-control" id="state" placeholder="" required>
+                                        <label for="ic-no-passport-no">IC Number / Passport Number</label> <i class="fa fa-star red-i" aria-hidden="true"></i>
+                                        <input type="text" class="form-control" id="state" placeholder="" required-i>
                                     </div>
                                     <div class="form-row">
                                         <div class="col-md-4 mb-3">
-                                            <label for="date">Date of Birth</label> <i class="fa fa-star red" aria-hidden="true"></i>
-                                            <select class="form-control" id="date" required>
+                                            <label for="date">Date of Birth</label> <i class="fa fa-star red-i" aria-hidden="true"></i>
+                                            <select class="form-control" id="date" required-i>
                                                 <option value="0">Day</option>
                                                 <option value='1'>1</option>
                                                 <option value='2'>2</option>
@@ -194,7 +194,7 @@
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="month">&nbsp;</label>
-                                            <select class="form-control" id='monthd' required>
+                                            <select class="form-control" id='monthd' required-i>
                                                 <option value='0'>Month</option>
                                                 <option value='1'>1</option>
                                                 <option value='2'>2</option>
@@ -212,7 +212,7 @@
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="year">&nbsp;</label>
-                                            <select class="form-control" id='year' required>
+                                            <select class="form-control" id='year' required-i>
                                                 <option value='0'>Year</option>
                                                 <option value='1947'>1947</option>
                                                 <option value='1948'>1948</option>
@@ -275,12 +275,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="contact">Contact Number</label> <i class="fa fa-star red" aria-hidden="true"></i>
-                                        <input type="text" class="form-control" id="contact" placeholder="" required>
+                                        <label for="contact">Contact Number</label> <i class="fa fa-star red-i" aria-hidden="true"></i>
+                                        <input type="text" class="form-control" id="contact" placeholder="" required-i>
                                     </div>
                                     <div class="form-group">
-                                        <label for="driver-license-category">Driver License Category</label> <i class="fa fa-star red" aria-hidden="true"></i>
-                                        <select class="form-control" id='driver-license-category' required>
+                                        <label for="driver-license-category">Driver License Category</label> <i class="fa fa-star red-i" aria-hidden="true"></i>
+                                        <select class="form-control" id='driver-license-category' required-i>
                                             <option value='class3'>Class 3</option>
                                             <option value='class3a'>Class 3A</option>
                                             <option value='class3c'>Class 3C</option>
@@ -288,16 +288,16 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="address">Address</label> <i class="fa fa-star red" aria-hidden="true"></i>
-                                        <textarea class="form-control" placeholder="" id="address" type="text" rows="3" required></textarea>
+                                        <label for="address">Address</label> <i class="fa fa-star red-i" aria-hidden="true"></i>
+                                        <textarea class="form-control" placeholder="" id="address" type="text" rows="3" required-i></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="country">Country</label> <i class="fa fa-star red" aria-hidden="true"></i>
-                                        <input placeholder="" id="country" type="text" class="form-control" required>
+                                        <label for="country">Country</label> <i class="fa fa-star red-i" aria-hidden="true"></i>
+                                        <input placeholder="" id="country" type="text" class="form-control" required-i>
                                     </div>
                                     <div class="form-group">
-                                        <label for="state">State</label> <i class="fa fa-star red" aria-hidden="true"></i>
-                                        <input type="text" class="form-control" placeholder="" required>
+                                        <label for="state">State</label> <i class="fa fa-star red-i" aria-hidden="true"></i>
+                                        <input type="text" class="form-control" placeholder="" required-i>
                                     </div>
                                     <br/>
                                     <h4>Referral</h4>
@@ -326,16 +326,16 @@
                                     <br/>
                                     <h4>Login Information</h4>
                                     <div class="form-group">
-                                        <label for="email">Email Address</label> <i class="fa fa-star red" aria-hidden="true"></i>
-                                        <input type="email" class="form-control" id="email" placeholder="" required>
+                                        <label for="email">Email Address</label> <i class="fa fa-star red-i" aria-hidden="true"></i>
+                                        <input type="email" class="form-control" id="email" placeholder="" required-i>
                                     </div>
                                     <div class="form-group">
-                                        <label for="password">Password</label> <i class="fa fa-star red" aria-hidden="true"></i>
-                                        <input type="password" class="form-control" id="password" placeholder="" required>
+                                        <label for="password">Password</label> <i class="fa fa-star red-i" aria-hidden="true"></i>
+                                        <input type="password" class="form-control" id="password" placeholder="" required-i>
                                     </div>
                                     <div class="form-group">
-                                        <label for="cnfpassword">Confirm Password</label> <i class="fa fa-star red" aria-hidden="true"></i>
-                                        <input type="password" class="form-control" id="cnfpassword" placeholder="" required>
+                                        <label for="cnfpassword">Confirm Password</label> <i class="fa fa-star red-i" aria-hidden="true"></i>
+                                        <input type="password" class="form-control" id="cnfpassword" placeholder="" required-i>
                                     </div>
                                 </form>
                             </div>
