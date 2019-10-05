@@ -1,3 +1,11 @@
+<?php
+if (!isset($_GET['type'])) {
+    header('Location: ../index.php');
+}
+$type = $_GET['type'];
+require_once 'api/include/common.php';
+$obj = new Common();
+?>
 <html>
     <?php include 'head.php'; ?>
     <body>
@@ -23,7 +31,7 @@
                             </ul>
                         </div>
                         <div class="mem-sign">
-                            <p><a href="member-register.php">SIGN UP</a></p>
+                            <p><a href="member-register.php?type=<?php echo $type; ?>">SIGN UP</a></p>
                         </div>
                     </div>
 

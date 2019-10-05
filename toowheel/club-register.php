@@ -1,3 +1,11 @@
+<?php
+if (!isset($_GET['type'])) {
+    header('Location: ../index.php');
+}
+$type = $_GET['type'];
+require_once 'api/include/common.php';
+$obj = new Common();
+?>
 <!DOCTYPE html>
 <html>
     <?php include 'head.php'; ?>
