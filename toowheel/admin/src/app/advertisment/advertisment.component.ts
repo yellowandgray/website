@@ -82,7 +82,7 @@ export class AdvertismentForm {
     advertismentForm: FormGroup;
     loading = false;
     image: string;
-    advertisment_id: 0;
+    advertisment_id = 0;
     file_name: string = 'Select Picture';
     constructor(
     public dialogRef: MatDialogRef<AdvertismentForm>,
