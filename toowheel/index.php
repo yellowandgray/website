@@ -104,7 +104,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                 <div class="row">
                                     <img class="home-upcoming" src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
                                     <div class="content-detail">
-                                        <h6><?php echo $obj->charLimit($row['title'], 25); ?></h6>
+                                        <h6><?php echo $obj->charLimit($row['title'], 38); ?></h6>
                                         <i class="fa fa-calendar" aria-hidden="true"></i><p> <?php echo date('M d, Y', strtotime($row['event_date'])); ?></p>
                                         <i class="fa fa-map-marker" aria-hidden="true"></i><p> <?php echo $obj->charLimit($row['location'], 50); ?></p>
                                     </div>
