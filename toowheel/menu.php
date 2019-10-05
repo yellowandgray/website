@@ -51,6 +51,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                         </div>
                     </div> 
                     <div id="News" class="tabcontent">
+                        <h3>Latest News</h3>
                         <div class="row news">
                             <?php foreach ($menu_latest_news as $row) { ?>
                                 <div class="news-cont">
@@ -58,8 +59,8 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                         <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" />
                                         <div class="discover-slider-content">
                                             <p class="clb-bg"><?php echo $obj->charLimit($row['club'], 10); ?></p>
-                                            <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
-                                            <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
+                                            <h2><?php echo $obj->charLimit($row['title'], 15); ?></h2>
+                                            <p><?php echo $obj->charLimit($row['moto_text'], 100); ?></p>
                                             <center class="news-discover"><a href="news.php?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
                                         </div>
                                     </div>
@@ -72,8 +73,11 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                             <div>
                                 <?php foreach ($menu_press_release as $row) { ?>
                                     <ul class="release">
-                                        <li class="release-cont-1"><img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" /></li>
-                                        <li class="release-cont-2"><?php echo $obj->charLimit($row['title'], 160); ?></li>
+                                        <!--<li class="release-cont-1"><img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" /></li>-->
+                                        <li class="release-cont-2">
+                                            <p><?php echo $obj->charLimit($row['title'], 160); ?></p>
+                                            <p><?php echo $obj->charLimit($row['description_1'], 160); ?>
+                                        </li>
                                         <li class="release-cont-3"><a href="press.php?pid=<?php echo $row['press_release_id']; ?>"><span>READ </span>MORE</a></li>
                                     </ul>
                                 <?php } ?>
@@ -119,7 +123,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                         <div class="club-box">
                                             <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
                                             <h3><?php echo $row['title']; ?></h3>
-                                            <p>Date: <?php echo $row['event_date']; ?></p>
+                                            <!--<p>Date: <?php// echo $row['event_date']; ?></p>-->
                                             <p>Location: <?php echo $row['location']; ?></p>
                                         </div>
                                     </div>
