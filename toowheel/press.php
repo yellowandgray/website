@@ -18,20 +18,18 @@ $type = $press_release['type'];
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <img src="img/5.jpg" alt="" style="width: 80%;" />
+                        <img src="<?php echo BASE_URL . $press_release['cover_image']; ?>" alt="" style="width: 80%;" />
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row events-content">
                     <div class="col-md-8">
-<!--                        <p class="clb-bg clr-white"></p>-->
                         <div class="events-main-content">
-
                             <div class="middle">
                                 <div class="middle-1">
-                                    <h2>TITLE COMES HERE</h2>
-                                    <span>Media | Author Name | 23 December 2019</span>
+                                    <h2><?php echo $press_release['title']; ?></h2>
+                                    <span><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
                                 </div>
                                 <div class="middle-2">
                                     <span class="twitter-share" data-js="twitter-share"><i class="fa fa-twitter" aria-hidden="true"></i></span>
@@ -40,9 +38,17 @@ $type = $press_release['type'];
                                     <span class="facebook-share" data-js="facebook-share"><i class="fa fa-facebook" aria-hidden="true"></i></span>
                                 </div>
                             </div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            <img src="img/3.jpg" alt="" style="width: 100%" /><br/><br/>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p><?php echo $press_release['description_1']; ?></p>
+                            <?php if (isset($press_release['banner_1']) && $press_release['banner_1'] != '') { ?>
+                                <img src="<?php echo BASE_URL . $press_release['banner_1']; ?>" alt="" style="width: 100%" /><br/><br/>
+                            <?php } ?>
+                            <p><?php echo $press_release['description_2']; ?></p>
+                            <?php if (isset($press_release['banner_2']) && $press_release['banner_2'] != '') { ?>
+                                <img src="<?php echo BASE_URL . $press_release['banner_2']; ?>" alt="" style="width: 100%" /><br/><br/>
+                            <?php } ?>
+                            <?php if (isset($press_release['youtube_id']) && $press_release['youtube_id'] != '') { ?>
+                                <iframe src="http://www.youtube.com/embed/<?php echo $press_release['youtube_id']; ?>" style="width: 100%; height: auto;" frameborder="0" allowfullscreen></iframe><br/><br/>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="col-md-4">
