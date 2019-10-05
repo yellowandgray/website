@@ -6,6 +6,8 @@ $pid = $_GET['pid'];
 require_once 'api/include/common.php';
 $obj = new Common();
 $press_release = $obj->selectRow('p.*, m.name AS media', 'press_release AS p LEFT JOIN media AS m ON m.media_id = p.media_id', 'p.press_release_id = ' . $pid);
+$releated_press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEFT JOIN media AS m ON m.media_id = p.media_id', 'p.type = \'' . $press_release['type'] . '\' AND p.press_release_id != ' . $press_release['press_release_id'] . ' ORDER BY RAND() LIMIT 3');
+$similar_press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEFT JOIN media AS m ON m.media_id = p.media_id', 'p.type = \'' . $press_release['type'] . '\' ORDER BY RAND() LIMIT 4');
 $type = $press_release['type'];
 ?>
 <!DOCTYPE html>
@@ -52,89 +54,38 @@ $type = $press_release['type'];
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="side-news">
-                            <span class="side-news-widget1"><span>WFC</span></span>
-                            <img src="img/events/001.jpg" alt="" />
-                            <h4>TITLE COMES HERE</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                            <div class="button-1">
-                                <div class="eff-1"></div>
-                                <a href="#">Discover</a>
+                        <?php foreach ($releated_press_release as $row) { ?>
+                            <div class="side-news">
+                                <span class="side-news-widget1"><span><?php echo $row['author_name']; ?></span></span>
+                                <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" />
+                                <h4><?php echo $row['title']; ?></h4>
+                                <p><?php echo $row['description_1']; ?></p>
+                                <div class="button-1">
+                                    <div class="eff-1"></div>
+                                    <a href="press.php?pid=<?php echo $row['press_release_id']; ?>">Discover</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="side-news">
-                            <span class="side-news-widget1"><span>WFC</span></span>
-                            <img src="img/events/001.jpg" alt="" />
-                            <h4>TITLE COMES HERE</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                            <div class="button-1">
-                                <div class="eff-1"></div>
-                                <a href="#">Discover</a>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="events-upcoming">
-                            <img src="img/events/001.jpg" alt="" />
-                            <div class="events-upcoming-content">
-                                <h4>NEWS TITLE COMES HERE</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                <center>
-                                    <div class="button-8">
-                                        <div class="eff-8"></div>
-                                        <a href="#">Discover</a>
-                                    </div>
-                                </center>
+                    <?php foreach ($similar_press_release as $row) { ?>
+                        <div class="col-md-3">
+                            <div class="events-upcoming">
+                                <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" />
+                                <div class="events-upcoming-content">
+                                    <h4><?php echo $obj->charLimit($row['title'], 25); ?></h4>
+                                    <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
+                                    <center>
+                                        <div class="button-8">
+                                            <div class="eff-8"></div>
+                                            <a href="press.php?pid=<?php echo $row['press_release_id']; ?>">Discover</a>
+                                        </div>
+                                    </center>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="events-upcoming">
-                            <img src="img/events/002.jpg" alt="" />
-                            <div class="events-upcoming-content">
-                                <h4>NEWS TITLE COMES HERE</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                <center>
-                                    <div class="button-8">
-                                        <div class="eff-8"></div>
-                                        <a href="#">Discover</a>
-                                    </div>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="events-upcoming">
-                            <img src="img/events/003.jpg" alt="" />
-                            <div class="events-upcoming-content">
-                                <h4>NEWS TITLE COMES HERE</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                <center>
-                                    <div class="button-8">
-                                        <div class="eff-8"></div>
-                                        <a href="#">Discover</a>
-                                    </div>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="events-upcoming">
-                            <img src="img/events/004.jpg" alt="" />
-                            <div class="events-upcoming-content">
-                                <h4>NEWS TITLE COMES HERE</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                <center>
-                                    <div class="button-8">
-                                        <div class="eff-8"></div>
-                                        <a href="#">Discover</a>
-                                    </div>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
