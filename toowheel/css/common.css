@@ -698,6 +698,7 @@ button {
     border-left: none;
     height: 613px;
     background-color: #fff;
+    overflow: scroll;
 
 }
 
