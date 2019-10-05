@@ -75,7 +75,7 @@ $type = $press_release['type'];
                                 <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" />
                                 <div class="events-upcoming-content">
                                     <h4><?php echo $obj->charLimit($row['title'], 25); ?></h4>
-                                    <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
+                                    <p><?php echo $obj->charLimit($row['description_1'], 120); ?></p>
                                     <center>
                                         <div class="button-8">
                                             <div class="eff-8"></div>
