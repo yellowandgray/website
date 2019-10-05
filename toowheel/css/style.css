@@ -360,11 +360,14 @@ body {
 }
 
 .media-bg {
-    background: url(../img/media-bg.jpg)no-repeat;
-    background-size: cover;
-    min-height: 600px;
-    height: 100%;
-    box-shadow: 0px 15px 20px 10px #eee;
+    /*    background: url(../img/media-bg.jpg)no-repeat;
+        background-size: cover;*/
+    box-shadow: 0px 0px 5px 1px #000;
+}
+
+.media-bg img {
+    vertical-align: middle;
+    width: 100%;
 }
 
 .btn-tranparent {
@@ -382,7 +385,7 @@ body {
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     position: relative;
-    top: 540px;
+    bottom: 50px;
     font-size: 20px;
     color: #fff;
     font-weight: 600;

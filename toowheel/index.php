@@ -71,13 +71,13 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 </div>
             </div>
         </section>
-        <section class="media-press-release" onClick="document.location.href='press-release.php'">
+        <section class="media-press-release" onClick="document.location.href = 'press-release.php'">
             <div class="container">
                 <div class="col-md-12">
                     <div class="media-bg">
-                        <a href='press-release.php'></a>
-                        <a href="press-release.php" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
+                        <a href="press-release.php"><img src="img/media-bg.jpg" alt="" /></a>
                     </div>
+                    <a href="press-release.php" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
                 </div>
             </div>
         </section>
@@ -201,22 +201,22 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         </div>
         <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
         <script>
-                        function lightbox(idx) {
-                            //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
-                            var ninjaSldr = document.getElementById("ninja-slider");
-                            ninjaSldr.parentNode.style.display = "block";
-                            
+                            function lightbox(idx) {
+                                //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+                                var ninjaSldr = document.getElementById("ninja-slider");
+                                ninjaSldr.parentNode.style.display = "block";
 
-                            nslider.init(idx);
 
-                            var fsBtn = document.getElementById("fsBtn");
-                            fsBtn.click();
-                        }
-                        function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
-                            if (isFullscreen) {
-                                ninjaSldr.parentNode.style.display = "none";
+                                nslider.init(idx);
+
+                                var fsBtn = document.getElementById("fsBtn");
+                                fsBtn.click();
                             }
-                        }
+                            function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+                                if (isFullscreen) {
+                                    ninjaSldr.parentNode.style.display = "none";
+                                }
+                            }
         </script>
         <script>
             $(".home-gallery").magnificPopup({

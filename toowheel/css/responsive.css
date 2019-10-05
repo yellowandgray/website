@@ -41,6 +41,9 @@
     .twitter-share {
         margin-right: 0 !important;
     }
+    .media-press-release {
+        padding: 20% 0 8% 0 !important;
+    }
 }
 
 @media screen and (max-height: 600px) {
@@ -97,6 +100,13 @@
     .news-cover-image {
         width: 100% !important;
         height: auto !important;
+    }
+    .btn-tranparent {
+        margin-left: 0 !important;
+        bottom: 34px !important;
+    }
+    .btn-tranparent span {
+        font-size: 12px;
     }
 }
 

@@ -401,6 +401,11 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
                 <a href="login.php"><i class="fa fa-user"></i></a>
             </div>
         </div>
+        <div class="row">
+            <div class="">
+                <input type="search" placeholder="Search">
+            </div>
+        </div>
     </div>
 </section>
 <script>
