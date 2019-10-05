@@ -5,7 +5,6 @@ if (!isset($_GET['type'])) {
 $type = $_GET['type'];
 require_once 'api/include/common.php';
 $obj = new Common();
-$type = $_GET['type'];
 $news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' ORDER BY n.news_id DESC');
 ?>
 <!DOCTYPE html>
