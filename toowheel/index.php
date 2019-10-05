@@ -111,7 +111,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                 </div>
                             </div>
                         <?php } ?>
-                        <div><a href="events.php" class="btn-secondary">SEE MORE</a></div>
+                        <div><a href="events.php?type=<?php echo $type; ?>" class="btn-secondary">SEE MORE</a></div>
                     </div>
                     </section>
                     <section class="photo-section">

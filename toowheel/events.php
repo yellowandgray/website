@@ -1,7 +1,13 @@
 <?php
+date_default_timezone_set("Asia/Kuala_Lumpur");
+if (!isset($_GET['type'])) {
+    header('Location: ../index.php');
+}
+$type = $_GET['type'];
 require_once 'api/include/common.php';
 $obj = new Common();
-$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'two_wheel\' ORDER BY e.event_id DESC LIMIT 10');
+$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' AND e.event_date >= ' . date('Y-m-d') . ' ORDER BY e.event_id DESC');
+$past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' AND e.event_date < ' . date('Y-m-d') . ' ORDER BY e.event_id DESC');
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +22,6 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
                 </div>
                 <div class="row">
                     <div class="col-md-8">
-                        <!--                    <div class="event-num-1">-->
                         <?php foreach ($events as $row) { ?>
                             <div class="event-n">
                                 <h3><?php echo $row['title']; ?></h3>
@@ -134,67 +139,27 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
                                                     </div>
                                                 </div>-->
                     </div>
-
-                    <!--                </div>-->
                     <div class="col-md-4">
-                        <div class="past-event">
-                            <h5>Past Events</h5>
-                            <!--                            <div class="event-num-1">
-                                                            <div class="event-n">
-                                                                <div class="event-img">
-                                                                    <img src="img/events/006.jpg" alt="" class="img-responsive"/>
-                                                                </div>
-                                                                <div class="event-conent">
-                                                                    <h3>Event Title</h3>
-                                                                    <p><span>Date:</span> 06-09-2019</p>
-                                                                    <p><span>Location:</span> Malaysia</p>
-                                                                    <p><span>Club Name:</span> Name</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>-->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="img/events/006.jpg" alt="" class="img-responsive"/>
-                                    <p><span>Date:</span> 06-09-2019</p>
-                                    <p><span>Location:</span> Malaysia</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3>Event Title</h3>
-                                    <p><span>Club Name:</span> Name</p>
-                                    <p><strong>Description</strong><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500</p>
-                                </div>
+                        <?php if (count($past_events) > 0) { ?>
+                            <div class="past-event">
+                                <h5>Past Events</h5>
+                                <?php foreach ($past_events as $row) { ?>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" class="img-responsive"/>
+                                            <p><span>Date:</span> <?php echo date('M d, Y', strtotime($row['event_date'])); ?></p>
+                                            <p><span>Location:</span> <?php echo $row['location']; ?></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h3><?php echo $row['title']; ?></h3>
+                                            <p><span>Club Name:</span> <?php echo $row['club']; ?></p>
+                                            <p><strong>Description</strong><br/> <?php echo $row['description']; ?></p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                <?php } ?>
                             </div>
-                            <!--<div class="find-club-btn"><a href="#" class="menu-btn">Read More</a></div>-->
-                            <hr>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="img/events/006.jpg" alt="" class="img-responsive"/>
-                                    <p><span>Date:</span> 06-09-2019</p>
-                                    <p><span>Location:</span> Malaysia</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3>Event Title</h3>
-                                    <p><span>Club Name:</span> Name</p>
-                                    <p><strong>Description</strong><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500</p>
-                                </div>
-                            </div>
-                            <!--<div class="find-club-btn"><a href="#" class="menu-btn">Read More</a></div>-->
-                            <hr>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="img/events/006.jpg" alt="" class="img-responsive"/>
-                                    <p><span>Date:</span> 06-09-2019</p>
-                                    <p><span>Location:</span> Malaysia</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3>Event Title</h3>
-                                    <p><span>Club Name:</span> Name</p>
-                                    <p><strong>Description</strong><br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500</p>
-                                </div>
-                            </div>
-                            <!--<div class="find-club-btn"><a href="#" class="menu-btn">Read More</a></div>-->
-                            <hr>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
