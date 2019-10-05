@@ -64,6 +64,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                             <center class="news-discover"><a href="news.php?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
                                         </div>
                                     </div>
+                                    <div class="find-club-btn"><a href="news-updates.php" class="menu-btn">See All Latest News</a></div>
                                 </div>
                             <?php } ?>
                         </div>
@@ -122,9 +123,9 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                     <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
-                                            <h3><?php echo $row['title']; ?></h3>
+                                            <h3><?php echo $obj->charLimit($row['title'], 25); ?></h3>
                                             <!--<p>Date: <?php// echo $row['event_date']; ?></p>-->
-                                            <p>Location: <?php echo $row['location']; ?></p>
+                                            <p>Location: <?php echo $obj->charLimit($row['location'], 20); ?></p>
                                         </div>
                                     </div>
                                 <?php } ?>
