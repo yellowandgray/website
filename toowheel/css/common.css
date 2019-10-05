@@ -3457,3 +3457,6 @@ thead td {
         flex-basis: 100% !important;
     }
 }
+.tab-pane .club-box{
+        width: 100% !important; 
+}

@@ -524,7 +524,7 @@
                                         <div class="member-register-btn"><a href="#">PayPal</a></div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="member-register-btn"><a href="#">CMD Found Transfer</a></div>
+                                        <div class="member-register-btn"><a href="#">CDM Fund Transfer</a></div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="member-register-btn"><a href="#">Upload Your Receipt</a></div>
