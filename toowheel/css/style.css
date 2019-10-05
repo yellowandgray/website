@@ -1720,14 +1720,15 @@ body {
 }
 
 .mobile-search {
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
 }
 
 .mobile-search input {
-    border:  none;
+    border: none;
     padding: 5px 10px;
-    border-radius: 15px;
+    border-radius: 8px;
+    width: 100%;
 }
 
 .mobile-search input:focus {
