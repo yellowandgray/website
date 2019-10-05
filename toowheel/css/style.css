@@ -1666,7 +1666,7 @@ body {
 }
 
 .member-register-btn a {
-    color: #002e82;
+    color: #002e82 !important;
     font-weight: 800;
 }
 
@@ -1675,7 +1675,7 @@ body {
 }
 
 .member-register-btn:hover a {
-    color: #fff;
+    color: #fff !important;
 }
 
 .member-register-btn a:hover {
@@ -1722,9 +1722,10 @@ body {
 
 .member-register-popup {
     height: auto !important;
-    position: fixed !important;
+    /*position: fixed !important;*/
     top: 20% !important;
     left: 35% !important;
+    margin-top: 30px;
 }
 
 .member-register-popup h5 {
