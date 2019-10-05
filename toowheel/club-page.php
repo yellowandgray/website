@@ -11,6 +11,11 @@
             <div class="container sec-club-logo">
                 <div class="row">
                     <div class="col-lg-12">
+                        <div id="about-club">
+                            <p onclick="document.getElementById('about-club').classList.remove('club-about')"><i class="fa fa-times" aria-hidden="true"></i></P>
+                            <h1>About Club</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
                         <div class="row w-text">
                             <div class="w-text-con">
                                 <h2 class="text-center">REAPPEAR MALAYSIA</h2>
@@ -44,7 +49,7 @@
                             <div class="w-text-con-1">
                                 <div class="row">
                                     <div class="col-md-5">
-                                        <p><a href="about.php">About</a></p>
+                                        <p><a onclick="document.getElementById('about-club').classList.add('club-about')" style="cursor: pointer;">About</a></p>
                                     </div>
                                     <div class="col-md-7">
                                         <li class="w-icon">

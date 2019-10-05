@@ -613,8 +613,16 @@
     }
 }
 @media screen and (max-width: 991px){
-   .news-cont img {
-    width: 100% !important;
+    .news-cont img {
+        width: 100% !important;
+    }
 }
+@media (max-width: 467px) and (min-width: 320px){
+    .member-register-popup input[type="file"] {
+        border: .5px solid #000;
+        border-radius: 5px;
+        color: #363636;
+        width: 107px;
+    }
 }
 
