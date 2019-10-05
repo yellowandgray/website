@@ -2,7 +2,6 @@
 if (!isset($_GET['type'])) {
     header('Location: ../index.php');
 }
-$intValue = 0;
 $type = $_GET['type'];
 require_once 'api/include/common.php';
 $obj = new Common();
@@ -11,10 +10,10 @@ $card_add_one = $obj->selectRow('url, image', 'advertisement', 'advertisement_id
 $card_add_two = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_card_ad2']);
 $banner_add = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_banner_ad']);
 $categories = $obj->selectAll('*', 'category', 'category_id > 0 AND type = \'' . $type . '\'');
-$news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' AND n.category_id = ' > 0 . ' ORDER BY n.news_id DESC LIMIT 10');
-$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 4');
-$images = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'image\' AND type = \'' . $type . '\' ORDER BY gallery_id DESC LIMIT 8');
-$videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'video\' AND type = \'' . $type . '\' ORDER BY gallery_id DESC LIMIT 8');
+$news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' ORDER BY n.news_id DESC LIMIT 10');
+$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 4');
+$images = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'image\' AND type = \'' . $type . '\' ORDER BY gallery_id DESC');
+$videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'video\' AND type = \'' . $type . '\' ORDER BY gallery_id DESC');
 ?>
 <!DOCTYPE html>
 <html>
@@ -121,9 +120,9 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                 <div class="col-md-12">
                                     <h1>PHOTOS</h1>
                                     <?php if ($type == 'two_wheel') { ?>
-                                        <img src="<?php echo BASE_URL . $configs['two_wheel_photos']; ?>" onclick="lightbox()" class="popup-img" alt=""/>
+                                        <img src="<?php echo BASE_URL . $configs['two_wheel_photos']; ?>" onclick="lightbox('ninja_slider_images')" class="popup-img" alt=""/>
                                     <?php } else { ?>
-                                        <img src="<?php echo BASE_URL . $configs['four_wheel_photos']; ?>" onclick="lightbox()" class="popup-img" alt=""/>
+                                        <img src="<?php echo BASE_URL . $configs['four_wheel_photos']; ?>" onclick="lightbox('ninja_slider_images')" class="popup-img" alt=""/>
                                     <?php } ?>
                                 </div>
                             </div>
@@ -137,9 +136,9 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 </div>
                 <div class="home-gallery video-section">
                     <?php if ($type == 'two_wheel') { ?>
-                        <img src="<?php echo BASE_URL . $configs['two_wheel_videos']; ?>" onclick="lightbox()" class="popup-img" alt=""/>
+                        <img src="<?php echo BASE_URL . $configs['two_wheel_videos']; ?>" onclick="lightbox('ninja_slider_videos')" class="popup-img" alt=""/>
                     <?php } else { ?>
-                        <img src="<?php echo BASE_URL . $configs['four_wheel_videos']; ?>" onclick="lightbox()" class="popup-img" alt=""/>
+                        <img src="<?php echo BASE_URL . $configs['four_wheel_videos']; ?>" onclick="lightbox('ninja_slider_videos')" class="popup-img" alt=""/>
                     <?php } ?>
                 </div>
             </div>
@@ -149,47 +148,25 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         <?php include 'add-banner.php'; ?>
         <?php include 'footer.php'; ?>
         <script src="js/ninja-slider.js" type="text/javascript"></script>
+        <script src="js/ninjaVideoPlugin.js" type="text/javascript"></script>
         <div style="display:none">
             <div id="ninja-slider">
                 <div class="slider-inner" id="ninja-slider-sec">
-                    <ul>
-                        <li>
-                            <h4>TITLE COMES HERE</h4>
-                            <a class="ns-img" href="https://live.staticflickr.com/65535/48691708073_da1f19f532.jpg"></a>
-                            <!--                        <div class="caption">
-                                                        <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                                                                                        <h3>Dummy Caption 1</h3>
-                                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan purus.</p>
-                                                    </div>-->
-                        </li>
-                        <li>
-                            <h4>TITLE COMES HERE</h4>
-                            <a class="ns-img" href="https://live.staticflickr.com/65535/48692219917_a8971eb340.jpg"></a>
-                            <!--                        <div class="caption">
-                                                        <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                                                    </div>-->
-                        </li>
-                        <!--                    <li>
-                                                <h4>TITLE COMES HERE</h4>
-                                                <span class="ns-img" style="background-image:url(https://live.staticflickr.com/65535/48692219962_c4a486e64a.jpg);"></span>
-                                                <div class="caption">
-                                                    <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                                                </div>
-                                            </li>-->
-                        <li>
-                            <h4>TITLE COMES HERE</h4>
-                            <a class="ns-img" href="https://live.staticflickr.com/65535/48692219992_5a7e2a5dbc.jpg"></a>
-                            <!--                        <div class="caption">
-                                                        <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                                                    </div>-->
-                        </li>
-                        <li>
-                            <h4>TITLE COMES HERE</h4>
-                            <a class="ns-img" href="https://live.staticflickr.com/65535/48691708208_ffbeaf41a5.jpg"></a>
-                            <!--                        <div class="caption">
-                                                        <a href="#" class="btn-secondary">SEE MORE PICTURES</a>
-                                                    </div>-->
-                        </li>
+                    <ul id="ninja_slider_images">
+                        <?php foreach ($images as $img) { ?>
+                            <li>
+                                <h4><?php echo $img['title']; ?></h4>
+                                <a class="ns-img" href="<?php echo BASE_URL . $img['media_path']; ?>"></a>
+                            </li>
+                        <?php } ?>
+                        <?php foreach ($videos as $vid) { ?>
+                            <li>
+                                <h4><?php echo $img['title']; ?></h4>
+                                <video>
+                                    <source src="<?php echo BASE_URL . $vid['media_path']; ?>" type="video/mp4">
+                                </video>
+                            </li>
+                        <?php } ?>
                     </ul>
                     <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
                 </div>
@@ -197,73 +174,107 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         </div>
         <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
         <script>
-                            function lightbox(idx) {
-                                //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
-                                var ninjaSldr = document.getElementById("ninja-slider");
-                                ninjaSldr.parentNode.style.display = "block";
-
-
-                                nslider.init(idx);
-
-                                var fsBtn = document.getElementById("fsBtn");
-                                fsBtn.click();
-                            }
-                            function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
-                                if (isFullscreen) {
-                                    ninjaSldr.parentNode.style.display = "none";
-                                }
-                            }
-        </script>
-        <script>
-            $(".home-gallery").magnificPopup({
-                delegate: 'a',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        </script>
-        <script>
-            function charLimit(str, len) {
-                if (str.length <= len) {
-                    return str;
-                } else {
-                    var y = str.substring(0, len) + '...';
-                    return y;
-                }
-            }
-
-            function openTag(evt, cid) {
-                var i, tablink;
-                if (evt !== null) {
-                    tablink = document.getElementsByClassName("tablink");
-                    for (i = 0; i < tablink.length; i++) {
-                        tablink[i].className = tablink[i].className.replace(" active", "");
-                    }
-                    evt.currentTarget.className += " active";
-                }
-                $.ajax({
-                    type: "GET",
-                    url: 'api/v1/get_news_by_category/' + cid,
-                    success: function (data) {
-                        $('#club1 .slider').empty();
-                        var BASE_URL = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
-                        if (data.result.error === false) {
-                            var list = '';
-                            $.each(data.result.data, function (key, val) {
-                                list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(val.club, 10) + '</p><h2>' + charLimit(val.title, 20) + '</h2><p>' + charLimit(val.moto_text, 120) + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
-
-                            });
-                            $('#club1 .slider').html(list);
-                            $('.slider').slick('refresh');
+                        function lightbox(type) {
+                            var ninjaSldr = document.getElementById("ninja-slider");
+                            ninjaSldr.parentNode.style.display = "block";
+                            nslider.init();
+                            var fsBtn = document.getElementById("fsBtn");
+                            fsBtn.click();
                         }
-                    },
-                    error: function (err) {
-                        $('#club1 .slider').empty();
-                        console.log(err.statusText);
-                    }
-                });
-            }
+                        function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+                            if (isFullscreen) {
+                                ninjaSldr.parentNode.style.display = "none";
+                            }
+                        }
+                        $(".home-gallery").magnificPopup({
+                            delegate: 'a',
+                            type: 'image',
+                            gallery: {
+                                enabled: true
+                            }
+                        });
+                        function charLimit(str, len) {
+                            if (str.length <= len) {
+                                return str;
+                            } else {
+                                var y = str.substring(0, len) + '...';
+                                return y;
+                            }
+                        }
+
+                        function openTag(evt, cid) {
+                            var i, tablink;
+                            if (evt !== null) {
+                                tablink = document.getElementsByClassName("tablink");
+                                for (i = 0; i < tablink.length; i++) {
+                                    tablink[i].className = tablink[i].className.replace(" active", "");
+                                }
+                                evt.currentTarget.className += " active";
+                            }
+                            $.ajax({
+                                type: "GET",
+                                url: 'api/v1/get_news_by_category/' + cid,
+                                success: function (data) {
+                                    $('.slider').slick('unslick');
+                                    $('#club1 .slider').empty();
+                                    var BASE_URL = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
+                                    if (data.result.error === false) {
+                                        var list = '';
+                                        $.each(data.result.data, function (key, val) {
+                                            list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(val.club, 10) + '</p><h2>' + charLimit(val.title, 20) + '</h2><p>' + charLimit(val.moto_text, 120) + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
+
+                                        });
+                                        $('#club1 .slider').html(list);
+                                        $('.slider').slick({
+                                            dots: false,
+                                            infinite: true,
+                                            speed: 500,
+                                            slidesToShow: 6,
+                                            slidesToScroll: 1,
+                                            autoplay: false,
+                                            autoplaySpeed: 2000,
+                                            arrows: false,
+                                            responsive: [{
+                                                    breakpoint: 1024,
+                                                    settings: {
+                                                        slidesToShow: 5,
+                                                        slidesToScroll: 1,
+                                                        autoplay: false
+                                                    }
+                                                },
+                                                {
+                                                    breakpoint: 991,
+                                                    settings: {
+                                                        slidesToShow: 3,
+                                                        slidesToScroll: 1,
+                                                        autoplay: false
+                                                    }
+                                                },
+                                                {
+                                                    breakpoint: 600,
+                                                    settings: {
+                                                        slidesToShow: 1,
+                                                        slidesToScroll: 1,
+                                                        autoplay: false
+                                                    }
+                                                },
+                                                {
+                                                    breakpoint: 400,
+                                                    settings: {
+                                                        arrows: false,
+                                                        slidesToShow: 1,
+                                                        slidesToScroll: 1,
+                                                        autoplay: false
+                                                    }
+                                                }]
+                                        });
+                                    }
+                                },
+                                error: function (err) {
+                                    $('#club1 .slider').empty();
+                                }
+                            });
+                        }
         </script>
     </body>
 </html>

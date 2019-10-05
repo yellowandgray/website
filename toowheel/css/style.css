@@ -283,6 +283,7 @@ body {
     font-size: 10px;
     height: 60px;
     overflow: hidden;
+    text-align: left;
 }
 
 .menu-btn {
