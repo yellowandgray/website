@@ -51,7 +51,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                         </div>
                     </div> 
                     <div id="News" class="tabcontent">
-                        <h3>Latest News</h3>
+<!--                        <h3>Latest News</h3>-->
                         <div class="row news">
                             <?php foreach ($menu_latest_news as $row) { ?>
                                 <div class="news-cont">
@@ -59,15 +59,15 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                         <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" />
                                         <div class="discover-slider-content">
                                             <p class="clb-bg"><?php echo $obj->charLimit($row['club'], 10); ?></p>
-                                            <h2><?php echo $obj->charLimit($row['title'], 15); ?></h2>
-                                            <p><?php echo $obj->charLimit($row['moto_text'], 100); ?></p>
+                                            <h2><?php echo $obj->charLimit($row['title'], 10); ?></h2>
+                                            <p><?php echo $obj->charLimit($row['moto_text'], 60); ?></p>
                                             <center class="news-discover"><a href="news.php?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
                                         </div>
                                     </div>
-                                    <div class="find-club-btn"><a href="news-updates.php" class="menu-btn">See All Latest News</a></div>
                                 </div>
                             <?php } ?>
                         </div>
+                        <div class="find-club-btn"><a href="news-updates.php" class="menu-btn">See All Latest News</a></div>
                     </div>
                     <div id="Release" class="tabcontent">
                         <div class="row">
@@ -76,16 +76,17 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                     <ul class="release">
                                         <li class="release-cont-1"><img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" /></li>
                                         <li class="release-cont-2">
-                                            <strong><?php echo $obj->charLimit($row['title'], 160); ?></strong>
+                                            <strong><?php echo $obj->charLimit($row['title'], 80); ?></strong>
+                                            <br/>
                                             <span><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo $row['press_release_date']; ?></span>
                                             <p><?php echo $obj->charLimit($row['description_1'], 160); ?>
                                         </li>
                                         <li class="release-cont-3"><a href="press.php?pid=<?php echo $row['press_release_id']; ?>"><span>READ </span>MORE</a></li>
                                     </ul>
                                 <?php } ?>
-                                <div class="find-club-btn"><a href="press-release.php?type=<?php echo $type; ?>" class="menu-btn">All Press Release</a></div>
                             </div>
                         </div> 
+                        <div class="find-club-btn"><a href="press-release.php?type=<?php echo $type; ?>" class="menu-btn">All Press Release</a></div>
                     </div>
                     <div id="Member" class="tabcontent">
                         <h3>Member Registration</h3>
@@ -125,7 +126,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                         <div class="club-box">
                                             <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
                                             <h3><?php echo $obj->charLimit($row['title'], 25); ?></h3>
-                                            <!--<p>Date: <?php// echo $row['event_date']; ?></p>-->
+                                            <!--<p>Date: <?php // echo $row['event_date'];     ?></p>-->
                                             <p>Location: <?php echo $obj->charLimit($row['location'], 20); ?></p>
                                         </div>
                                     </div>
