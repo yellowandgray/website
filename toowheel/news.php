@@ -6,6 +6,9 @@ $nid = $_GET['nid'];
 require_once 'api/include/common.php';
 $obj = new Common();
 $news = $obj->selectRow('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id = ' . $nid);
+$releated_news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.category_id = ' . $news['category_id'] . ' AND n.type = \'' . $news['type'] . '\' AND n.news_id != ' . $news['news_id'] . ' ORDER BY RAND() LIMIT 3');
+$similar_news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.type = \'' . $news['type'] . '\' AND n.category_id != ' . $news['category_id'] . ' ORDER BY RAND() LIMIT 4');
+$type = $news['type'];
 $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
 ?>
 <!DOCTYPE html>
@@ -27,7 +30,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                     <div class="col-md-8">
                         <p class="clb-bg clr-white"><?php echo $news['category']; ?></p>
                         <div class="events-main-content">
-                            <span><?php echo $news['media']; ?> | <?php echo $news['author_name']; ?> | <?php echo $news['news_date']; ?></span>
+                            <span><?php echo $news['media']; ?> | <?php echo $news['author_name']; ?> | <?php echo date('M d, Y', strtotime($news['news_date'])); ?></span>
                             <div class="middle">
                                 <div class="middle-1">
                                     <h2><?php echo $news['title']; ?></h2>
@@ -42,113 +45,60 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                             <strong><?php echo $news['moto_text']; ?></strong><br/><br/>
                             <p><?php echo $news['description_1']; ?></p>
                             <img src="<?php echo BASE_URL . $news['banner_1']; ?>" alt="" style="width: 100%" /><br/><br/>
-                            <p><?php echo BASE_URL . $news['description_2']; ?></p>
-                            <div class="news-gallery">
-                                <h3>Gallery</h3>
-                                <div class="row event-gallery-section">
-                                    <?php foreach ($news_gallery as $row) { ?>
-                                        <div class="col-md-3 col-sm-6">
-                                            <img src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" />
-                                        </div>
-                                    <?php } ?>
+                            <?php if (isset($news['banner_2']) && $news['banner_2'] != '') { ?>
+                                <img src="<?php echo BASE_URL . $news['banner_2']; ?>" alt="" style="width: 100%" /><br/><br/>
+                            <?php } ?>
+                            <?php if (isset($news['youtube_id']) && $news['youtube_id'] != '') { ?>
+                                <iframe src="http://www.youtube.com/embed/<?php echo $news['youtube_id']; ?>" style="width: 100%; height: auto;" frameborder="0" allowfullscreen></iframe><br/><br/>
+                            <?php } ?>
+                            <p><?php echo $news['description_2']; ?></p>
+                            <?php if (count($news_gallery) > 0) { ?>
+                                <div class="news-gallery">
+                                    <h3>Gallery</h3>
+                                    <div class="row event-gallery-section">
+                                        <?php foreach ($news_gallery as $row) { ?>
+                                            <div class="col-md-3 col-sm-6">
+                                                <img src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" />
+                                            </div>
+                                        <?php } ?>
+                                    </div>
                                 </div>
-                            </div>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <!--                        <div class="side-news">
-                                                    <span class="side-news-widget1"><span>WFC</span></span>
-                                                    <img src="img/events/001.jpg" alt="" />
-                                                    <h4>TITLE COMES HERE</h4>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                                    <div class="button-1">
-                                                        <div class="eff-1"></div>
-                                                        <a href="#">Discover</a>
-                                                    </div>
-                                                </div>-->
-                        <div class="side-news">
-                            <span class="side-news-widget1"><span>WFC</span></span>
-                            <img src="img/events/001.jpg" alt="" />
-                            <h4>TITLE COMES HERE</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                            <div class="button-1">
-                                <div class="eff-1"></div>
-                                <a href="#">Discover</a>
+                        <?php foreach ($releated_news as $row) { ?>
+                            <div class="side-news">
+                                <span class="side-news-widget1"><span><?php echo $row['club']; ?></span></span>
+                                <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt=" image" />
+                                <h4><?php echo $row['title']; ?></h4>
+                                <p><?php echo $row['moto_text']; ?></p>
+                                <div class="button-1">
+                                    <div class="eff-1"></div>
+                                    <a href="news.php?nid=<?php echo $row['news_id']; ?>">Discover</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="side-news">
-                            <span class="side-news-widget1"><span>WFC</span></span>
-                            <img src="img/events/001.jpg" alt="" />
-                            <h4>TITLE COMES HERE</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                            <div class="button-1">
-                                <div class="eff-1"></div>
-                                <a href="#">Discover</a>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="events-upcoming">
-                            <img src="img/events/001.jpg" alt="" />
-                            <div class="events-upcoming-content">
-                                <h4>NEWS TITLE COMES HERE</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                <center>
-                                    <div class="button-8">
-                                        <div class="eff-8"></div>
-                                        <a href="#">Discover</a>
-                                    </div>
-                                </center>
+                    <?php foreach ($similar_news as $row) { ?>
+                        <div class="col-md-3">
+                            <div class="events-upcoming">
+                                <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
+                                <div class="events-upcoming-content">
+                                    <h4><?php echo $row['title']; ?></h4>
+                                    <p><?php echo $row['moto_text']; ?></p>
+                                    <center>
+                                        <div class="button-8">
+                                            <div class="eff-8"></div>
+                                            <a href="news.php?nid=<?php echo $row['news_id']; ?>">Discover</a>
+                                        </div>
+                                    </center>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="events-upcoming">
-                            <img src="img/events/002.jpg" alt="" />
-                            <div class="events-upcoming-content">
-                                <h4>NEWS TITLE COMES HERE</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                <center>
-                                    <div class="button-8">
-                                        <div class="eff-8"></div>
-                                        <a href="#">Discover</a>
-                                    </div>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="events-upcoming">
-                            <img src="img/events/003.jpg" alt="" />
-                            <div class="events-upcoming-content">
-                                <h4>NEWS TITLE COMES HERE</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                <center>
-                                    <div class="button-8">
-                                        <div class="eff-8"></div>
-                                        <a href="#">Discover</a>
-                                    </div>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="events-upcoming">
-                            <img src="img/events/004.jpg" alt="" />
-                            <div class="events-upcoming-content">
-                                <h4>NEWS TITLE COMES HERE</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                <center>
-                                    <div class="button-8">
-                                        <div class="eff-8"></div>
-                                        <a href="#">Discover</a>
-                                    </div>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
