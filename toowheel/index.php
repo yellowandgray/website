@@ -197,22 +197,22 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         </div>
         <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
         <script>
-                            function lightbox(idx) {
-                                //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
-                                var ninjaSldr = document.getElementById("ninja-slider");
-                                ninjaSldr.parentNode.style.display = "block";
+                        function lightbox(idx) {
+                            //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+                            var ninjaSldr = document.getElementById("ninja-slider");
+                            ninjaSldr.parentNode.style.display = "block";
 
 
-                                nslider.init(idx);
+                            nslider.init(idx);
 
-                                var fsBtn = document.getElementById("fsBtn");
-                                fsBtn.click();
+                            var fsBtn = document.getElementById("fsBtn");
+                            fsBtn.click();
+                        }
+                        function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+                            if (isFullscreen) {
+                                ninjaSldr.parentNode.style.display = "none";
                             }
-                            function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
-                                if (isFullscreen) {
-                                    ninjaSldr.parentNode.style.display = "none";
-                                }
-                            }
+                        }
         </script>
         <script>
             $(".home-gallery").magnificPopup({
@@ -246,6 +246,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     type: "GET",
                     url: 'api/v1/get_news_by_category/' + cid,
                     success: function (data) {
+                        $('.slider').slick('unslick');
                         $('#club1 .slider').empty();
                         var BASE_URL = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
                         if (data.result.error === false) {
@@ -255,12 +256,53 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
 
                             });
                             $('#club1 .slider').html(list);
-                            $('.slider').slick('refresh');
+                            $('.slider').slick({
+                                dots: false,
+                                infinite: true,
+                                speed: 500,
+                                slidesToShow: 6,
+                                slidesToScroll: 1,
+                                autoplay: false,
+                                autoplaySpeed: 2000,
+                                arrows: false,
+                                responsive: [{
+                                        breakpoint: 1024,
+                                        settings: {
+                                            slidesToShow: 5,
+                                            slidesToScroll: 1,
+                                            autoplay: false
+                                        }
+                                    },
+                                    {
+                                        breakpoint: 991,
+                                        settings: {
+                                            slidesToShow: 3,
+                                            slidesToScroll: 1,
+                                            autoplay: false
+                                        }
+                                    },
+                                    {
+                                        breakpoint: 600,
+                                        settings: {
+                                            slidesToShow: 1,
+                                            slidesToScroll: 1,
+                                            autoplay: false
+                                        }
+                                    },
+                                    {
+                                        breakpoint: 400,
+                                        settings: {
+                                            arrows: false,
+                                            slidesToShow: 1,
+                                            slidesToScroll: 1,
+                                            autoplay: false
+                                        }
+                                    }]
+                            });
                         }
                     },
                     error: function (err) {
                         $('#club1 .slider').empty();
-                        console.log(err.statusText);
                     }
                 });
             }
