@@ -810,7 +810,7 @@ body {
 #mySidenav ul li {
     list-style: none;
     font-style: italic;
-    margin: auto 10px;
+    margin: auto 5px;
 }
 
 .dropdown-content {
