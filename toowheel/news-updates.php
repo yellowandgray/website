@@ -15,7 +15,7 @@ $news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS catego
         <div class="padding-top-108"></div>
         <div class="news-all">
             <div class="container">
-                <h3>ALL NEWS</h3>
+                <h3>NEWS & UPDATES</h3>
                 <div class="news-all-content">
                     <?php foreach ($news as $row) { ?>
                         <div class="row">

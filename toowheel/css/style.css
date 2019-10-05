@@ -616,6 +616,13 @@ body {
     font-weight: 600;
 }
 
+.partners-section .text-center {
+    box-shadow: 0 0 2px 1px #c3c3c3;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
 .partners-section img {
     margin: 40px 0;
     width: 100%;
@@ -915,11 +922,9 @@ body {
     margin: 30px 0;
 }
 
-
-
 .news-all-content img {
     width: 100%;
-    height: auto;
+    height: 250px;
     vertical-align: middle;
     border-radius: 10px;
     box-shadow: 0 0 5px 1px #000;
