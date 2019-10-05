@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-clubevent',
@@ -83,7 +84,7 @@ image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/
 export class ClubEventForm {
     clubeventForm: FormGroup;
     loading = false;
-    event_id: 0;
+    event_id = 0;
     categories:any[];
     clubs:any[];
     cover_image: string = 'Choose Event Picture';
@@ -201,7 +202,7 @@ formData.append('type', this.clubeventForm.value.type);
           formData.append('thumb_image', this.thumb_image_path);
           }
           formData.append('title', this.clubeventForm.value.title);
-          formData.append('event_date', this.clubeventForm.value.event_date);
+          formData.append('event_date', moment(this.clubeventForm.value.event_date).format('YYYY-MM-DD'));
           formData.append('location', this.clubeventForm.value.location);
           formData.append('description', this.clubeventForm.value.description);              
           url = 'update_record/event/event_id = '+this.event_id;
@@ -212,7 +213,7 @@ formData.append('type', this.clubeventForm.value.type);
           formData.append('cover_image', this.cover_image_path);
           formData.append('thumb_image', this.thumb_image_path);
           formData.append('title', this.clubeventForm.value.title);
-          formData.append('event_date', this.clubeventForm.value.event_date);
+          formData.append('event_date', moment(this.clubeventForm.value.event_date).format('YYYY-MM-DD'));
           formData.append('location', this.clubeventForm.value.location);
           formData.append('description', this.clubeventForm.value.description);              
           url = 'insert_event';

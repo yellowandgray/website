@@ -524,7 +524,27 @@
                                         <div class="member-register-btn"><a href="#">PayPal</a></div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="member-register-btn"><a href="#">CDM Fund Transfer</a></div>
+                                        <div class="member-register-btn cdm-found"><a href="#">CDM Fund Transfer</a></div>
+                                        <div class="pop member-register-popup"><i class="fa fa-times-circle" aria-hidden="true"></i>
+                                            <div class="margin-top-30">
+                                                <h4>UPLOAD DEPOSIT SLIP OR FUND TRANSFER PECEIPT</h4>
+                                                <h5>TOOWHEEL BANK ACCOUNT DETAILS</h5>
+                                                <p>Upload your slip picture within 24hrs</p>
+                                                <form>
+                                                    <label>Upload Your Recipit</label>
+                                                    <input type="file" name="recipt" />
+                                                    <br/>
+                                                    <br/>
+                                                    <center>
+                                                        <a href="#" type="submit">Upload Now</a>
+                                                    </center>
+                                                    <br/>
+                                                    <center>
+                                                        <a href="#" type="submit">Upload Later</a>
+                                                    </center>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="member-register-btn"><a href="#">Upload Your Receipt</a></div>
@@ -565,5 +585,18 @@
             </div>
         </div>
         <?php include 'footer.php'; ?>
+        <script>
+            $(".cdm-found").click(
+                    function () {
+                        $(".pop").fadeIn('slow');
+                    }
+            );
+
+            $(".pop i").click(
+                    function () {
+                        $(".pop").fadeOut('fast');
+                    }
+            );
+        </script>
     </body>
 </html>

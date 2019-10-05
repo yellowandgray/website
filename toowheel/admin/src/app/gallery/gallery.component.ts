@@ -33,7 +33,6 @@ export class GalleryComponent implements OnInit {
         }
         );
   }
-  
   getGalleryFourWheel(): void {
   this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_gallery_four_wheel')
   .subscribe(
@@ -150,6 +149,13 @@ export class GalleryForm {
         });
             });
     }
+    changeUploadText() : void {
+      if(this.galleryForm.value.media_type == 'video') {
+          this.file_name = 'Select Video';
+      } else {
+          this.file_name = 'Select Picture';
+      }
+  }
   onSubmit() {
           if (this.galleryForm.invalid || this.media_path == '') {
                 return;

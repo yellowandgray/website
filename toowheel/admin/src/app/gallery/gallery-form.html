@@ -19,7 +19,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Media Type</mat-label>
-                    <mat-select required formControlName="media_type">
+                    <mat-select required formControlName="media_type" (selectionChange)="changeUploadText()">
                         <mat-option [value]="'image'">
                             Image
                         </mat-option>
@@ -32,20 +32,16 @@
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="40%">
+            <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Title</mat-label>
                     <input matInput placeholder="Placeholder" required formControlName="title" />
                     <mat-error>Title is required</mat-error>
                 </mat-form-field>
             </div>
-            <div fxFlex="30%" fxLayoutAlign="center center">
+            <div fxFlex="50%" fxLayoutAlign="center center">
                 <button type="button" mat-raised-button (click)="fileInput.click()">{{file_name}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'file_name', 'media_path')" />
-            </div>
-            <div fxFlex="30%" fxLayoutAlign="center center" *ngIf="galleryForm.value.media_type == 'video'">
-                <button type="button" mat-raised-button (click)="fileInputThumb.click()">{{file_name_thumb}}</button>
-                <input hidden #fileInputThumb type="file" id="file" (change)="fileProgress($event, 'file_name_thumb', 'thumb_path')" />
             </div>
         </div>
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">

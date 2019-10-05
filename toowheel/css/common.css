@@ -71,7 +71,7 @@
     transition: 0.3s;
 }
 .login button:hover {
-    
+
     background: transparent;
     color: #ed1c24;
     border: 1px solid #ed1c24;
@@ -1243,12 +1243,12 @@ button {
 
 .pop {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 9999;
-    top: 0;
+    top: 100px;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 40%;
     padding: 20px;
     background: white;
     color: white;
@@ -3458,5 +3458,5 @@ thead td {
     }
 }
 .tab-pane .club-box{
-        width: 100% !important; 
+    width: 100%; 
 }
