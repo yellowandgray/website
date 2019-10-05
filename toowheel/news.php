@@ -44,14 +44,16 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                             </div>
                             <strong><?php echo $news['moto_text']; ?></strong><br/><br/>
                             <p><?php echo $news['description_1']; ?></p>
-                            <img src="<?php echo BASE_URL . $news['banner_1']; ?>" alt="" style="width: 100%" /><br/><br/>
+                            <?php if (isset($news['banner_1']) && $news['banner_1'] != '') { ?>
+                                <img src="<?php echo BASE_URL . $news['banner_1']; ?>" alt="" style="width: 100%" /><br/><br/>
+                            <?php } ?>
+                            <p><?php echo $news['description_2']; ?></p>
                             <?php if (isset($news['banner_2']) && $news['banner_2'] != '') { ?>
                                 <img src="<?php echo BASE_URL . $news['banner_2']; ?>" alt="" style="width: 100%" /><br/><br/>
                             <?php } ?>
                             <?php if (isset($news['youtube_id']) && $news['youtube_id'] != '') { ?>
                                 <iframe src="http://www.youtube.com/embed/<?php echo $news['youtube_id']; ?>" style="width: 100%; height: auto;" frameborder="0" allowfullscreen></iframe><br/><br/>
                             <?php } ?>
-                            <p><?php echo $news['description_2']; ?></p>
                             <?php if (count($news_gallery) > 0) { ?>
                                 <div class="news-gallery">
                                     <h3>Gallery</h3>
@@ -70,7 +72,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                         <?php foreach ($releated_news as $row) { ?>
                             <div class="side-news">
                                 <span class="side-news-widget1"><span><?php echo $row['club']; ?></span></span>
-                                <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt=" image" />
+                                <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt=" image" />
                                 <h4><?php echo $row['title']; ?></h4>
                                 <p><?php echo $row['moto_text']; ?></p>
                                 <div class="button-1">
@@ -85,7 +87,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                     <?php foreach ($similar_news as $row) { ?>
                         <div class="col-md-3">
                             <div class="events-upcoming">
-                                <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
+                                <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" />
                                 <div class="events-upcoming-content">
                                     <h4><?php echo $row['title']; ?></h4>
                                     <p><?php echo $row['moto_text']; ?></p>

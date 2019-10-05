@@ -121,5 +121,5 @@
 </footer>
 <script src="js/jquery.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
-<script src="js/jquery.scrollie.min.js" type="text/javascript"></script>
+<!--<script src="js/jquery.scrollie.min.js" type="text/javascript"></script>-->
 
