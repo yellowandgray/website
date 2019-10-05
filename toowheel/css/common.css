@@ -885,8 +885,6 @@ button {
 .tab-menu {
     display: flex;
     flex-wrap: wrap;
-    overflow: scroll;
-    height: 768px;
 }
 .tab {
     flex: 1;
@@ -3563,5 +3561,13 @@ thead td {
     }
     .club-about h1{
         font-size: 20px !important;
+    }
+}
+@media (max-width: 1024px) and (min-width:320px){
+    .tab-menu {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: scroll;
+        height: 768px;
     }
 }
