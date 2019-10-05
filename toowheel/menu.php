@@ -1,8 +1,6 @@
 <?php
-require_once 'api/include/common.php';
-$obj = new Common();
-$findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'two_wheel\' ORDER BY club_id DESC LIMIT 8');
-$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'two_wheel\' ORDER BY e.event_id DESC LIMIT 8');
+$findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\' ORDER BY club_id DESC LIMIT 8');
+$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 8');
 ?>
 <section class="header">
     <div class="container">
@@ -13,19 +11,9 @@ $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS 
                 <span></span>
                 <span></span>
             </span>
-<!--            <span class="toggle" style="font-size:30px;cursor:pointer;display: none;" id="close" onclick="closeNav();">
-                <img src='img/close.png' alt=''>
-            </span>-->
             <div id="mySidenav" class="sidenav">
                 <div class="container tab-menu">
-<!--                    <div class="nav-close" onclick="closeNav();"><img src="img/close.png" alt=""></div>-->
                     <div class="tab mega-menu-tab">
-                        <!--                        <div class="text-center language">
-                                                    <input type="radio" name="size" id="size_1" value="small" checked />
-                                                    <label for="size_1">BM</label>
-                                                    <input type="radio" name="size" id="size_2" value="small" />
-                                                    <label for="size_2">EN</label>
-                                                </div>-->
                         <button class="tablinks" onclick="openCity(event, 'About')" id="defaultOpen">About Us <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'News')">Latest News <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Release')">Press Release <i class="fa fa-caret-right" aria-hidden="true"></i></button>
