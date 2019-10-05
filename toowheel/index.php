@@ -72,7 +72,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     <div class="media-bg">
                         <a href="press-release.php"><img src="img/media-bg.jpg" alt="" /></a>
                     </div>
-                    <a href="press-release.php" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
+                    <a href="press-release.php?type=<?php echo $type; ?>" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
                 </div>
             </div>
         </section>
@@ -104,9 +104,9 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                 <div class="row">
                                     <img class="home-upcoming" src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
                                     <div class="content-detail">
-                                        <h6><?php echo $obj->charLimit($row['title'], 30); ?></h6>
-                                        <i class="fa fa-calendar" aria-hidden="true"></i><p> <?php echo $row['event_date']; ?></p>
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i><p> <?php echo $obj->charLimit($row['location'], 50); ?></p>
+                                        <h6><?php echo $row['title']; ?></h6>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i><p> <?php echo date('M d, Y', strtotime($row['event_date'])); ?></p>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i><p> <?php echo $row['location']; ?></p>
                                     </div>
                                 </div>
                             </div>
