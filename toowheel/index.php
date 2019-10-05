@@ -12,7 +12,7 @@ $card_add_two = $obj->selectRow('url, image', 'advertisement', 'advertisement_id
 $banner_add = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_banner_ad']);
 $categories = $obj->selectAll('*', 'category', 'category_id > 0 AND type = \'' . $type . '\'');
 $news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' AND n.category_id = ' > 0 . ' ORDER BY n.news_id DESC LIMIT 10');
-$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 3');
+$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 4');
 $images = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'image\' AND type = \'' . $type . '\' ORDER BY gallery_id DESC LIMIT 8');
 $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'video\' AND type = \'' . $type . '\' ORDER BY gallery_id DESC LIMIT 8');
 ?>
@@ -38,7 +38,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
             <div class="container">
                 <h1>DISCOVER</h1>
                 <div class="row cc">
-                    
+
                     <?php
                     foreach ($categories as $key => $val) {
                         $cls = '';
@@ -71,10 +71,12 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 </div>
             </div>
         </section>
-        <section class="media-press-release">
+        <section class="media-press-release" onClick="document.location.href = 'press-release.php'">
             <div class="container">
-                <div class="media-bg">
-                    <a href='press-release.php'></a>
+                <div class="col-md-12">
+                    <div class="media-bg">
+                        <a href="press-release.php"><img src="img/media-bg.jpg" alt="" /></a>
+                    </div>
                     <a href="press-release.php" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
                 </div>
             </div>
@@ -199,25 +201,22 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         </div>
         <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
         <script>
-                        function lightbox(idx) {
-                            //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
-                            var ninjaSldr = document.getElementById("ninja-slider");
-                            ninjaSldr.parentNode.style.display = "block";
-                            var x = document.getElementById("ninja-slider-sec");
-                            x.style.left = "0px";
-                            x.style.opacity = "1";
-                            x.style.transition = "all 1s ease-in-out ";
+                            function lightbox(idx) {
+                                //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+                                var ninjaSldr = document.getElementById("ninja-slider");
+                                ninjaSldr.parentNode.style.display = "block";
 
-                            nslider.init(idx);
 
-                            var fsBtn = document.getElementById("fsBtn");
-                            fsBtn.click();
-                        }
-                        function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
-                            if (isFullscreen) {
-                                ninjaSldr.parentNode.style.display = "none";
+                                nslider.init(idx);
+
+                                var fsBtn = document.getElementById("fsBtn");
+                                fsBtn.click();
                             }
-                        }
+                            function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+                                if (isFullscreen) {
+                                    ninjaSldr.parentNode.style.display = "none";
+                                }
+                            }
         </script>
         <script>
             $(".home-gallery").magnificPopup({

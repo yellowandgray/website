@@ -5,7 +5,7 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog()"><mat-icon>add</mat-icon> Press Release</button>
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Press Release</button>
         </div>
         <ng-container *ngFor="let data of result; let i = index">
             <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
@@ -13,18 +13,16 @@
                     <mat-card fxFlex="25%">
                         <mat-card-header>
                             <mat-card-title>{{result[i]['title']}}</mat-card-title>
-                            <mat-card-subtitle>{{result[i]['press_release_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+                            <mat-card-subtitle>{{result[i]['news_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
                         </mat-card-header>
+                        <img mat-card-image src="{{image_url}}{{result[i]['cover_image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-content>
                             <p>
-                                {{result[i]['description']}}
-                            </p>
-                            <p>
-                                {{result[i]['url']}}
+                                {{result[i]['description_1']}}
                             </p>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label"(click)="openDialog()">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['press_release_id'], 'result')">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['press_release_id'])">
@@ -37,18 +35,16 @@
                     <mat-card fxFlex="25%">
                         <mat-card-header>
                             <mat-card-title>{{result[i + 1]['title']}}</mat-card-title>
-                            <mat-card-subtitle>{{result[i + 1]['press_release_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+                            <mat-card-subtitle>{{result[i + 1]['news_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
                         </mat-card-header>
+                        <img mat-card-image src="{{image_url}}{{result[i + 1]['cover_image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-content>
                             <p>
-                                {{result[i + 1]['description']}}
-                            </p>
-                            <p>
-                                {{result[i + 1]['url']}}
+                                {{result[i + 1]['description_1']}}
                             </p>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label"(click)="openDialog()">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 1]['press_release_id'], 'result')">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 1]['press_release_id'])">
@@ -61,18 +57,16 @@
                     <mat-card fxFlex="25%">
                         <mat-card-header>
                             <mat-card-title>{{result[i + 2]['title']}}</mat-card-title>
-                            <mat-card-subtitle>{{result[i + 2]['press_release_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+                            <mat-card-subtitle>{{result[i + 2]['news_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
                         </mat-card-header>
+                        <img mat-card-image src="{{image_url}}{{result[i + 2]['cover_image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-content>
                             <p>
-                                {{result[i + 2]['description']}}
-                            </p>
-                            <p>
-                                {{result[i + 2]['url']}}
+                                {{result[i + 2]['description_1']}}
                             </p>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label"(click)="openDialog()">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 2]['press_release_id'], 'result')">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 2]['press_release_id'])">
@@ -85,18 +79,16 @@
                     <mat-card fxFlex="25%">
                         <mat-card-header>
                             <mat-card-title>{{result[i + 3]['title']}}</mat-card-title>
-                            <mat-card-subtitle>{{result[i + 3]['press_release_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+                            <mat-card-subtitle>{{result[i + 3]['news_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
                         </mat-card-header>
+                        <img mat-card-image src="{{image_url}}{{result[i + 3]['cover_image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-content>
                             <p>
-                                {{result[i + 3]['description']}}
-                            </p>
-                            <p>
-                                {{result[i + 3]['url']}}
+                                {{result[i + 3]['description_1']}}
                             </p>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button mat-icon-button aria-label="label"(click)="openDialog()">
+                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 3]['press_release_id'], 'result')">
                                 <mat-icon>edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 3]['press_release_id'])">

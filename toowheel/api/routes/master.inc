@@ -40,7 +40,7 @@ $app->post('/insert_club', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'name' => $data['name'], 'cover_image' => $data['cover_image'], 'logo' => $data['logo'], 'state_id' => $data['state'], 'city_id' => $data['city'], 'zipcode' => $data['zip'], 'landmark' => $data['landmark'], 'address' => $data['address'], 'leader_name' => $data['club_leader_name'], 'no_of_member' => $data['no_of_member'], 'email' => $data['email'], 'phone' => $data['mobile'], 'about' => $data['about']), 'club');
+    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'name' => $data['name'], 'cover_image' => $data['cover_image'], 'logo' => $data['logo'], 'state_id' => $data['state'], 'city' => $data['city'], 'zipcode' => $data['zip'], 'landmark' => $data['landmark'], 'address' => $data['address'], 'leader_name' => $data['club_leader_name'], 'no_of_member' => $data['no_of_member'], 'email' => $data['email'], 'phone' => $data['mobile'], 'about' => $data['about']), 'club');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -68,7 +68,19 @@ $app->post('/insert_news', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'club_id' => $data['club_id'], 'cover_image' => $data['cover_image'], 'title' => $data['title'], 'media_id' => $data['media_id'], 'author_name' => $data['author_name'], 'news_date' => date('Y-m-d', strtotime($data['date'])), 'thumb_image' => $data['thumb_image'], 'banner_1' => $data['banner_image_1'], 'banner_2' => $data['banner_image_2'], 'moto_text' => $data['moto_text'], 'description_1' => $data['description'], 'description_2' => $data['description_1']), 'news');
+    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'club_id' => $data['club_id'], 'cover_image' => $data['cover_image'], 'title' => $data['title'], 'media_id' => $data['media_id'], 'author_name' => $data['author_name'], 'news_date' => date('Y-m-d', strtotime($data['date'])), 'thumb_image' => $data['thumb_image'], 'banner_1' => $data['banner_image_1'], 'banner_2' => $data['banner_image_2'], 'moto_text' => $data['moto_text'], 'description_1' => $data['description'], 'description_2' => $data['description_1'], 'youtube_id' => $data['youtube_id']), 'news');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/insert_press_release', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('type' => $data['type'], 'cover_image' => $data['cover_image'], 'title' => $data['title'], 'media_id' => $data['media_id'], 'author_name' => $data['author_name'], 'press_release_date' => date('Y-m-d', strtotime($data['date'])), 'thumb_image' => $data['thumb_image'], 'banner_1' => $data['banner_image_1'], 'banner_2' => $data['banner_image_2'], 'description_1' => $data['description'], 'description_2' => $data['description_1'], 'youtube_id' => $data['youtube_id']), 'press_release');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -80,7 +92,7 @@ $app->post('/insert_announcement', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('club_id' => $data['club_id'], 'title' => $data['title'], 'announcement_date' => date('Y-m-d', strtotime($data['date'])), 'thumb_image' => $data['thumb_image'], 'description' => $data['description']), 'announcement');
+    $record = $com->insertRecord(array('club_id' => $data['club_id'], 'title' => $data['title'], 'announcement_date' => date('Y-m-d', strtotime($data['announcement_date'])), 'thumb_image' => $data['thumb_image'], 'description' => $data['description']), 'announcement');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -108,18 +120,6 @@ $app->post('/insert_event', function() use ($app) {
     $data = $app->request->post();
     $com = new Common();
     $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'club_id' => $data['club_id'], 'cover_image' => $data['cover_image'], 'title' => $data['title'], 'thumb_image' => $data['thumb_image'], 'event_date' => date('Y-m-d', strtotime($data['event_date'])), 'location' => $data['location'], 'description' => $data['description']), 'event');
-    if ($record > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Record inserted successfully';
-    }
-    echoRespnse(201, $res);
-});
-
-$app->post('/insert_press_release', function() use ($app) {
-    $res = array('error' => true, 'message' => 'Unable to insert');
-    $data = $app->request->post();
-    $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'title' => $data['title'], 'media_id' => $data['media_id'], 'author_name' => $data['author_name'], 'press_release_date' => date('Y-m-d', strtotime($data['date'])), 'youtube_link' => $data['youtube_link'], 'image_path' => $data['image_path'], 'description' => $data['description']), 'press_release');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';

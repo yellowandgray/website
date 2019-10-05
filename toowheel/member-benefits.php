@@ -3,7 +3,7 @@
     <body>
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
-        <section style="background-image:url(img/member/member-01.jpg);background-repeat:no-repeat;background-size: cover;height: 100%;padding: 40px 0 0 0;background-position: center;">
+        <section style="background-image:url(img/member/member-01.jpg);background-repeat:no-repeat;background-size: cover;height: auto;padding: 40px 0 30px;background-position: center;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">

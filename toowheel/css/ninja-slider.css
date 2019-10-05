@@ -245,11 +245,6 @@
         font-size:20px;
     }
 }
-.slider-inner{
-    position: absolute;
-    left: -1800px;
-    opacity: 0;
-    transition: all ease-in-out 0.5s;
-}
+
 
 

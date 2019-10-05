@@ -59,7 +59,7 @@
 }
 .login button{
     margin-bottom: 0px;
-    border: none;
+    border: 1px solid #ed1c24;
     background: #eee;
     padding: 5px;
     border-radius: 15px 15px 15px 15px;
@@ -68,6 +68,13 @@
     background-color: #ed1c24;
     margin-left: 12px;
     outline: none;
+    transition: 0.3s;
+}
+.login button:hover {
+    
+    background: transparent;
+    color: #ed1c24;
+    border: 1px solid #ed1c24;
 }
 
 .login i{
@@ -1083,6 +1090,13 @@ button {
     border-radius: 5px;
     padding: 10px 10px 10px 10px;
     margin-bottom: 20px;
+}
+.event-n p{
+    color: #000;
+}
+.event-n p span{
+    color: #ed1c24;
+    font-weight: 600;
 }
 
 .event-n h3 {
@@ -2713,14 +2727,15 @@ body .calender-box{
     border-radius: 10em;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
-    transition: all .5s;
+    transition: all .35s;
     position: absolute;
     right: 20%;
-    top: 26px;
+    top: 24px;
 }
+
 .header #demo-2 p {
     position: relative;
-    top: 29px;
+    top: 28px;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -2829,7 +2844,7 @@ body .calender-box{
     color: rgb(255, 255, 255) !important;
     cursor: pointer;
     display: inline-block;
-    padding: 1em 1em;
+    padding: 1em 1.1em;
     -webkit-border-radius: 6px;
     border-radius: 50%;
     margin-right: 10px;
@@ -2839,6 +2854,7 @@ body .calender-box{
 .middle {
     margin-bottom: 10px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .middle span i {
@@ -2852,7 +2868,7 @@ body .calender-box{
     color: rgb(255, 255, 255) !important;
     cursor: pointer;
     display: inline-block;
-    padding: 1em 1.2em;
+    padding: 1em 1.4em;
     -webkit-border-radius: 6px;
     border-radius: 50%;
     margin-right: 10px;
@@ -3329,8 +3345,8 @@ thead td {
     }
 
 }
-.middle-1{
-    flex-basis: 80%;
+.middle-1 {
+    flex-basis: 67%;
 }
 
 .middle-2{
@@ -3396,8 +3412,15 @@ thead td {
 .home-upcoming {
     width: 33%;
     height: 95px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px #000;
 }
 
+
+.news-cover-image {
+    width: 80%;
+    height: 500px;
+}
 
 /*.tabcontent .news .news-cont div {
     height: 100%;
@@ -3420,3 +3443,20 @@ thead td {
     font-family: inherit;
     opacity: 1;
 }*/
+/*.event-img img {
+    padding: 10px !important;
+}*/
+.event-sec-r {
+    border-right: 2px solid #ed1c24;
+}
+.event-conent p{
+    font-size: 13px;
+}
+@media (max-width: 991px) and (min-width:320px){
+    .middle-1 {
+        flex-basis: 100% !important;
+    }
+}
+.tab-pane .club-box{
+        width: 100% !important; 
+}

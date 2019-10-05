@@ -101,6 +101,7 @@ export class GalleryComponent implements OnInit {
 export class GalleryForm {
     galleryForm: FormGroup;
     loading = false;
+    gallery_id = 0;
     media_path: string;
     thumb_path: string;
     file_name: string = 'Select Picture';
@@ -117,10 +118,11 @@ export class GalleryForm {
         });
         if(this.data != null) {
                 this.galleryForm.patchValue({
-           title: this.data.type,
-           media_type: this.data.category_id,
-           type: this.data.gallery_id,
+           title: this.data.title,
+           media_type: this.data.media_type,
+           type: this.data.type,
         });
+        this.gallery_id = this.data.gallery_id;
         }
         }
    
@@ -154,15 +156,26 @@ export class GalleryForm {
           }
           this.loading = true;
           var formData = new FormData();
-          formData.append('title', this.galleryForm.value.title);
+          var url = '';
+          if(this.gallery_id != 0) {
+              formData.append('title', this.galleryForm.value.title);
+          formData.append('media_type', this.galleryForm.value.media_type);
+          formData.append('type', this.galleryForm.value.type);
+          if(this.media_path && this.media_path != '') {
+          formData.append('media_path', this.media_path);
+          }
+          url = 'update_record/gallery/gallery_id = '+this.gallery_id;
+          } else {
+                formData.append('title', this.galleryForm.value.title);
           formData.append('media_type', this.galleryForm.value.media_type);
           formData.append('type', this.galleryForm.value.type);
           formData.append('media_path', this.media_path);
-          console.log(this.thumb_path);
+          url = 'insert_gallery';
+          }
           if(this.thumb_path && this.thumb_path!= '') {
               formData.append('thumb_path', this.thumb_path);
           }
-          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/insert_gallery', formData).subscribe(
+          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

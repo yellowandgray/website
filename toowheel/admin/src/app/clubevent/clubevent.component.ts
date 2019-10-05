@@ -84,6 +84,7 @@ image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/
 export class ClubEventForm {
     clubeventForm: FormGroup;
     loading = false;
+    event_id: 0;
     categories:any[];
     clubs:any[];
     cover_image: string = 'Choose Event Picture';
@@ -114,6 +115,7 @@ export class ClubEventForm {
            location: this.data.location,
            description: this.data.description
         });
+        this.event_id = this.data.event_id;
         this.getCategory();
         this.getClub();
         }
@@ -188,7 +190,24 @@ export class ClubEventForm {
           }
           this.loading = true;
           var formData = new FormData();
-          formData.append('type', this.clubeventForm.value.type);
+          var url = '';
+          if(this.event_id != 0) {
+formData.append('type', this.clubeventForm.value.type);
+          formData.append('category_id', this.clubeventForm.value.category_id);
+          formData.append('club_id', this.clubeventForm.value.club_id);
+          if(this.cover_image_path && this.cover_image_path != '') {
+          formData.append('cover_image', this.cover_image_path);
+          }
+          if(this.thumb_image_path && this.thumb_image_path != '') {
+          formData.append('thumb_image', this.thumb_image_path);
+          }
+          formData.append('title', this.clubeventForm.value.title);
+          formData.append('event_date', this.clubeventForm.value.event_date);
+          formData.append('location', this.clubeventForm.value.location);
+          formData.append('description', this.clubeventForm.value.description);              
+          url = 'update_record/event/event_id = '+this.event_id;
+          }else {
+formData.append('type', this.clubeventForm.value.type);
           formData.append('category_id', this.clubeventForm.value.category_id);
           formData.append('club_id', this.clubeventForm.value.club_id);
           formData.append('cover_image', this.cover_image_path);
@@ -196,8 +215,10 @@ export class ClubEventForm {
           formData.append('title', this.clubeventForm.value.title);
           formData.append('event_date', this.clubeventForm.value.event_date);
           formData.append('location', this.clubeventForm.value.location);
-          formData.append('description', this.clubeventForm.value.description);
-          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/insert_event', formData).subscribe(
+          formData.append('description', this.clubeventForm.value.description);              
+          url = 'insert_event';
+          }
+          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
