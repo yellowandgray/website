@@ -20,7 +20,7 @@ $news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS catego
                     <?php foreach ($news as $row) { ?>
                         <div class="row">
                             <div class="col-md-2">
-                                <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="">
+                                <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" />
                             </div>
                             <div class="col-md-10">
                                 <h4><?php echo $row['title']; ?></h4>
