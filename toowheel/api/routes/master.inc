@@ -76,6 +76,18 @@ $app->post('/insert_news', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_media', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('name' => $data['name']), 'media');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/insert_press_release', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
