@@ -107,19 +107,19 @@ export class ClubForm {
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
         this.clubForm = new FormGroup({
-            'name': new FormControl('', Validators.required),
-            'type': new FormControl('', Validators.required),
-            'category_id': new FormControl('', Validators.required),
-            'state': new FormControl('', Validators.required),
-            'city': new FormControl('', Validators.required),
-            'zip': new FormControl('', Validators.required),
-            'landmark': new FormControl('', Validators.required),
-            'address': new FormControl('', Validators.required),
-            'club_leader_name': new FormControl('', Validators.required),
-            'no_of_member': new FormControl('', Validators.required),
-            'email': new FormControl('', Validators.required),
-            'mobile': new FormControl('', Validators.required),
-            'about': new FormControl('', Validators.required)
+            'name': new FormControl(),
+            'type': new FormControl(),
+            'category_id': new FormControl(),
+            'state': new FormControl(),
+            'city': new FormControl(),
+            'zip': new FormControl(),
+            'landmark': new FormControl(),
+            'address': new FormControl(),
+            'club_leader_name': new FormControl(),
+            'no_of_member': new FormControl(),
+            'email': new FormControl(),
+            'mobile': new FormControl(),
+            'about': new FormControl()
         });
         if(this.data != null) {
                 this.clubForm.patchValue({
