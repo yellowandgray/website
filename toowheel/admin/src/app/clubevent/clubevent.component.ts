@@ -19,9 +19,9 @@ export class ClubeventComponent implements OnInit {
   ngOnInit() {
     this.getEvent();
   }
-image_url: string = 'api/v1/';
+image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
        getEvent(): void {
-     this.httpClient.get<any>('api/v1/get_event')
+     this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_event')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -122,7 +122,7 @@ export class ClubEventForm {
     }
     getCategory(): void {
        this.loading = true;
-          this.httpClient.get('api/v1/get_'+this.clubeventForm.value.type+'_category').subscribe(
+          this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_'+this.clubeventForm.value.type+'_category').subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -142,7 +142,7 @@ export class ClubEventForm {
     }
     getClub(): void {
        this.loading = true;
-          this.httpClient.get('api/v1/get_club_by_category/'+this.clubeventForm.value.category_id).subscribe(
+          this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_club_by_category/'+this.clubeventForm.value.category_id).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -166,7 +166,7 @@ export class ClubEventForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -218,7 +218,7 @@ formData.append('type', this.clubeventForm.value.type);
           formData.append('description', this.clubeventForm.value.description);              
           url = 'insert_event';
           }
-          this.httpClient.post('api/v1/'+url, formData).subscribe(
+          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -262,7 +262,7 @@ export class ClubEventDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('api/v1/delete_record/event/event_id='+this.event_id).subscribe(
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/event/event_id='+this.event_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

@@ -22,9 +22,9 @@ export class AnnouncementComponent implements OnInit {
       this.getAnnouncement();
     });
   }
-  image_url: string = 'api/v1/';
+  image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
        getAnnouncement(): void {
-     this.httpClient.get<any>('api/v1/get_announcement/'+this.club_id)
+     this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_announcement/'+this.club_id)
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -122,7 +122,7 @@ export class AnnouncementForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -166,7 +166,7 @@ export class AnnouncementForm {
           formData.append('description', this.announcementForm.value.description);
         url = 'insert_announcement';
       }
-      this.httpClient.post('api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -209,7 +209,7 @@ export class AnnouncementDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('api/v1/delete_record/announcement/announcement_id='+this.announcement_id).subscribe(
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/announcement/announcement_id='+this.announcement_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

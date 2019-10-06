@@ -19,9 +19,9 @@ export class GalleryComponent implements OnInit {
       this.getGallery();
       this.getGalleryFourWheel();
   }
-  image_url: string = 'api/v1/';
+  image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
     getGallery(): void {
-  this.httpClient.get<any>('api/v1/get_gallery')
+  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_gallery')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -34,7 +34,7 @@ export class GalleryComponent implements OnInit {
         );
   }
   getGalleryFourWheel(): void {
-  this.httpClient.get<any>('api/v1/get_gallery_four_wheel')
+  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_gallery_four_wheel')
   .subscribe(
           (res)=>{
               this.result_four_wheel = res["result"]["data"];
@@ -131,7 +131,7 @@ export class GalleryForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -181,7 +181,7 @@ export class GalleryForm {
           if(this.thumb_path && this.thumb_path!= '') {
               formData.append('thumb_path', this.thumb_path);
           }
-          this.httpClient.post('api/v1/'+url, formData).subscribe(
+          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -225,7 +225,7 @@ export class GalleryDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('api/v1/delete_record/gallery/gallery_id='+this.gallery_id).subscribe(
+      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/gallery/gallery_id='+this.gallery_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
