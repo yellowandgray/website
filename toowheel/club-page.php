@@ -7,7 +7,11 @@ require_once 'api/include/common.php';
 $obj = new Common();
 $club = $obj->selectRow('*', 'club', 'club_id = ' . $cid);
 $type = $club['type'];
-$announcement = $obj->selectAll('*', 'announcement', 'club_id = ' . $cid);
+$announcements = $obj->selectAll('*', 'announcement', 'club_id = ' . $cid);
+$events = $obj->selectAll('*', 'event', 'club_id = ' . $cid);
+$news = $obj->selectAll('n.*, c.name AS club', 'news AS n LEFT JOIN club AS c ON c.club_id = n.club_id', 'n.club_id = ' . $cid . ' LIMIT 3');
+$images = $obj->selectAll('ng.media_path', 'news AS n LEFT JOIN news_gallery AS ng ON ng.news_id = n.news_id', 'n.club_id = ' . $cid . ' LIMIT 10');
+$ad = $obj->selectRow('*', 'advertisement', 'type = \'card\' RAND() LIMIT 1');
 $club_type = '2 WHEEL CLUB';
 if ($type == 'four_wheel') {
     $club_type = '4 WHEEL CLUB';
@@ -86,124 +90,56 @@ if ($type == 'four_wheel') {
                 <div class="row">
                     <div class="col-lg-3 col-md-12">
                         <div class="row">
-<!--                            <img src="img/club-page/001.jpg" alt="" class="img-responsive"/>
-                            <div class="img-b-10px club-gallery">
-                                <img src="img/club-page/club-gallery/001.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/002.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/003.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/004.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/005.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/006.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/007.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/008.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/009.jpg" alt="" class="img-responsive"/>
-                            </div>-->
                             <img src="img/club-page/002.jpg" alt="" class="img-responsive"/>
                             <div class="img-b-10px club-gallery">
-                                <img src="img/club-page/club-gallery/001.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/002.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/003.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/004.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/005.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/006.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/007.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/008.jpg" alt="" class="img-responsive"/>
-                                <img src="img/club-page/club-gallery/009.jpg" alt="" class="img-responsive"/>
+                                <?php foreach ($images as $row) { ?>
+                                    <img src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" class="img-responsive"/>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 event-con">
-                        <div class="box-anounce">
-                            <h2>Announcements</h2>
-                            <div class="anounce box-anounce-1">
-                                <div class="anounce-con">
-                                    <img src="img/club-page/club-logo.jpg" alt="" class="img-responsive"/>
-                                </div>  
-                                <div class="anounce-con">
-                                    <h5><a>CLUB ADMIN</a></h5>
-                                    <span><em>September 13, 2019</em></span>
-                                    <h3>Club Policy</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et doloremagna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
-                                </div>  
+                        <?php if (count($announcements) > 0) { ?>
+                            <div class="box-anounce">
+                                <h2>Announcements</h2>
+                                <?php foreach ($announcements as $row) { ?>
+                                    <div class="anounce box-anounce-1">
+                                        <div class="anounce-con">
+                                            <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" class="img-responsive"/>
+                                        </div> 
+                                        <div class="anounce-con">
+                                            <h5><a>CLUB ADMIN</a></h5>
+                                            <span><em><?php echo date('M d, Y', strtotime($row['announcement_date'])); ?></em></span>
+                                            <h3><?php echo $row['title']; ?></h3>
+                                            <p><?php echo $row['description']; ?></p>
+                                        </div>  
+                                    </div>
+                                <?php } ?>
                             </div>
-                            <div class="anounce box-anounce-1">
-                                <div class="anounce-con">
-                                    <img src="img/club-page/club-logo.jpg" alt="" class="img-responsive"/>
-                                </div>  
-                                <div class="anounce-con">
-                                    <h5><a>CLUB ADMIN</a></h5>
-                                    <span><em>September 13, 2019</em></span>
-                                    <h3>Club Policy</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et doloremagna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
-                                </div>  
-                            </div>
-                            <div class="anounce box-anounce-1">
-                                <div class="anounce-con">
-                                    <img src="img/club-page/club-logo.jpg" alt="" class="img-responsive"/>
-                                </div>  
-                                <div class="anounce-con">
-                                    <h5><a>CLUB ADMIN</a></h5>
-                                    <span><em>September 13, 2019</em></span>
-                                    <h3>Club Policy</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et doloremagna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
-                                </div>  
-                            </div>
-                        </div>
+                        <?php } ?>
                         <br/>
-                        <div class="box-anounce">
-                            <h2>Updates</h2>
-                            <div class="anounce">
-                                <div class="event-section-sub">
-                                    <div class="event-con-img">
-                                        <div class="discover-slider">
-                                            <img src="img/slider/slider-002.png" alt="" class="img-responsive"/>
-                                            <div class="discover-slider-content">
-                                                <p class="clb-bg">CLUB NAME</p>
-                                                <h2>TITLE HERE</h2>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                <center><a class="btn btn-primary">DISCOVER</a></center>
+                        <?php if (count($events) > 0) { ?>
+                            <div class="box-anounce">
+                                <h2>Updates</h2>
+                                <div class="anounce">
+                                    <div class="event-section-sub">
+                                        <?php foreach ($news as $row) { ?>
+                                            <div class="event-con-img">
+                                                <div class="discover-slider">
+                                                    <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" class="img-responsive"/>
+                                                    <div class="discover-slider-content">
+                                                        <p class="clb-bg"><?php echo $row['club']; ?></p>
+                                                        <h2><?php echo $row['title']; ?></h2>
+                                                        <p><?php echo $row['description']; ?></p>
+                                                        <center><a class="btn btn-primary" href="news.php?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="event-con-img">
-                                        <div class="discover-slider">
-                                            <img src="img/slider/slider-002.png" alt="" class="img-responsive"/>
-                                            <div class="discover-slider-content">
-                                                <p class="clb-bg">CLUB NAME</p>
-                                                <h2>TITLE HERE</h2>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="event-con-img">
-                                        <div class="discover-slider">
-                                            <img src="img/slider/slider-002.png" alt="" class="img-responsive"/>
-                                            <div class="discover-slider-content">
-                                                <p class="clb-bg">CLUB NAME</p>
-                                                <h2>TITLE HERE</h2>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                <center><a class="btn btn-primary">DISCOVER</a></center>
-                                            </div>
-                                        </div>
+                                        <?php } ?>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--                            <div class="box-anounce">
-                                <h2>News Feed</h2>
-                                <div class="anounce ">
-                                    <div class="anounce-con-1">
-                                        <img src="img/club-page/club-logo.jpg" alt="" class="img-responsive"/>
-                                    </div>  
-                                    <div class="anounce-con-1">
-                                        <h5><a>CLUB ADMIN</a></h5>
-                                        <h3>Club Policy</h3>
-                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
-                                    </div>  
-                                </div>
-                                <img src="img/club-page/ad-02.jpg" alt="" class="img-responsive"/>
-                            </div>-->
+                        <?php } ?>
                     </div>
                     <div class="col-lg-3 col-md-12 box-anounce event-con">
                         <div class="col-lg-12 col-mg-12">
@@ -215,164 +151,38 @@ if ($type == 'four_wheel') {
                                 <button id="btnNext" type="button">Next</button>
                                 <div id="divCal"></div>
                             </div>
-                            <!--                                <div class="calender-box">
-                                                                <div id="calendar"></div>
-                                                                <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>  
-                                                            </div>-->
                         </div>
                         <div class="col-lg-12 col-md-8">
-                            <div class="anounce box-anounce-1">
-                                <div class="anounce-con-1">
-                                    <h1>19</h1>
-                                    <p class="text-center">SEP</p>
-                                </div>  
-                                <div class="anounce-con-1">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h5><a>CLUB ADMIN</a></h5>
+                            <?php foreach ($events as $row) { ?>
+                                <div class="anounce box-anounce-1">
+                                    <div class="anounce-con-1">
+                                        <h1><?php echo date('d', strtotime($row['event_date'])) ?></h1>
+                                        <p class="text-center"><?php echo date('M', strtotime($row['event_date'])) ?></p>
+                                    </div>  
+                                    <div class="anounce-con-1">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h5><a>CLUB ADMIN</a></h5>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><em><?php echo date('M d, Y', strtotime($row['event_date'])) ?></em></p>
+                                            </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <p><em>Sep 13, 2019</em></p>
-                                        </div>
-                                    </div>
-                                    <h3>Club Policy</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-                                </div>  
-                            </div>
-                            <div class="anounce box-anounce-1">
-                                <div class="anounce-con-1">
-                                    <h1>19</h1>
-                                    <p class="text-center">SEP</p>
-                                </div>  
-                                <div class="anounce-con-1">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h5><a>CLUB ADMIN</a></h5>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p><em>Sep 13, 2019</em></p>
-                                        </div>
-                                    </div>
-                                    <h3>Club Policy</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-                                </div>  
-                            </div>
-                            <div class="anounce box-anounce-1">
-                                <div class="anounce-con-1">
-                                    <h1>19</h1>
-                                    <p class="text-center">SEP</p>
-                                </div>  
-                                <div class="anounce-con-1">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h5><a>CLUB ADMIN</a></h5>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p><em>Sep13, 2019</em></p>
-                                        </div>
-                                    </div>
-                                    <h3>Club Policy</h3>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-                                </div>  
-                            </div>
+                                        <h3><?php echo $row['title']; ?></h3>
+                                        <p><?php echo $row['description']; ?></p>
+                                    </div>  
+                                </div>
+                            <?php } ?>
                         </div>
                         <div class="col-lg-12 col-md-4">
                             <div class="img-box-ad">
-                                <img src="img/club-page/ad-01.jpg" alt="" class="img-responsive"/>
+                                <img src="<?php echo BASE_URL . $ad['image']; ?>" alt="" class="img-responsive"/>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--        <div class="club-section" style="background: #eaeaea;">
-                    <div class="container bg-box-shadow" style="background: #fff;">
-        
-                        <div class="row club-mem-detail">
-                            <div class="club-t club-page-title club-box-01">
-                                <p>Name: <span></span></p>
-                                <p>Phone: <span></span></p>
-                                <p>Email: <span></span></p>
-                            </div>
-                            <div class="club-t club-page-title text-center club-box-01">
-                                <h2>CLUB NAME HERE</h2>
-                                <span class="color-w">Member: 0000</span>
-                            </div>
-                            <div class="club-t club-page-title club-box-01">
-                                <p class="text-center">Address:</p>
-                                <h1 class="text-center"><span></span><br/></h1>
-                                <h1 class="text-center"><span></span><br/></h1>
-                                <h1 class="text-center"><span></span><br/></h1>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="club-page-description">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <img src="../img/attachment-bg.jpg" alt="" style="width: 100%;margin: 20px 0;">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="club-img">
-                                    <div class="club-img-con">
-                                        <img src="../img/image/002.png" alt="" class="img-responsive"/>
-                                        <a href="#" class="cross-btn-01"><span>NEWS</span></a>
-                                    </div>
-                                    <div class="club-img-con">
-                                        <img src="../img/image/004.png" alt="" class="img-responsive"/>
-                                        <a href="#" class="cross-btn-01"><span>EVENTS</span></a>
-                                    </div>
-                                    <div class="club-img-con">
-                                        <img src="../img/image/001.png" alt="" class="img-responsive"/>
-                                        <a href="#" class="cross-btn-01"><span>GALLERY</span></a>
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                                <div class="row text-center margin-b-40">
-                                    <div class="col-md-12 about-text-title">
-                                        <h2>About CLUB NAME</h2>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="zoominbox club-page-box">
-                                            <a href="#">
-                                                <img src="img/club-page/event.jpg" alt="events" class="zoomboximg" />
-                                                <div class="zoominDiv">
-                                                    <h3>Events</h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="zoominbox club-page-box">
-                                            <a href="#">
-                                                <img src="img/club-page/news.jpg" alt="news" class="zoomboximg" />
-                                                <div class="zoominDiv">
-                                                    <h3>News</h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="zoominbox club-page-box">
-                                            <a href="#">
-                                                <img src="img/club-page/gallery.jpg" alt="Gallery" class="zoomboximg" />
-                                                <div class="zoominDiv">
-                                                    <h3>Gallery</h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                </div>-->
     </div>
     <?php include 'footer.php' ?>
     <script>
