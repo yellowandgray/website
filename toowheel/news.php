@@ -71,7 +71,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                     <div class="col-md-4">
                         <?php foreach ($releated_news as $row) { ?>
                             <div class="side-news">
-                                <span class="side-news-widget1"><span><?php echo $obj->charLimit($row['club'], 30); ?></span></span>
+                                <span class="side-news-widget1"><span><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 30) : $obj->charLimit($row['sponsor'], 30); ?></span></span>
                                 <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt=" image" />
                                 <h4><?php echo $row['title']; ?></h4>
                                 <p><?php echo $row['moto_text']; ?></p>

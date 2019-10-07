@@ -32,12 +32,11 @@
         <div fxFlex="50%">
             <mat-form-field appearance="outline" fxFlex="100%">
                 <mat-label>Club Name</mat-label>
-                <mat-select required formControlName="club_id">
+                <mat-select formControlName="club_id">
                     <mat-option [value]="row.club_id" *ngFor="let row of clubs">
                         {{row.name}}
                 </mat-option>
             </mat-select>
-            <mat-error>Club Name is required</mat-error>
         </mat-form-field>
     </div>
     <div fxFlex="50%" fxLayoutAlign="center center">
@@ -49,7 +48,7 @@
     <div fxFlex="50%">
         <mat-form-field appearance="outline" fxFlex="100%">
             <mat-label>Title</mat-label>
-            <input matInput placeholder="Placeholder" required formControlName="title" />
+            <input matInput placeholder="" required formControlName="title" />
             <mat-error>Title is required</mat-error>
         </mat-form-field>
     </div>
@@ -84,24 +83,29 @@
 </div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
     <div fxFlex="50%">
-        <button type="button" mat-raised-button (click)="fileInputThumb.click()">{{thumb_image}}</button>
-        <input hidden #fileInputThumb type="file" id="file_thumb" (change)="fileProgress($event, 'thumb_image', 'thumb_image_path')" />
+        <mat-form-field appearance="outline" fxFlex="100%">
+            <mat-label>Sponsor</mat-label>
+            <input matInput placeholder="" formControlName="sponsor" />
+        </mat-form-field>
     </div>
     <div fxFlex="50%">
         <mat-form-field appearance="outline" fxFlex="100%">
             <mat-label>YouTube embed ID</mat-label>
-            <input matInput placeholder="Placeholder" required formControlName="youtube_id" />
-            <mat-error>Title is required</mat-error>
+            <input matInput placeholder="" formControlName="youtube_id" />
         </mat-form-field>
     </div>
 </div>
 <br/>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-    <div fxFlex="50%">
+    <div fxFlex="33%">
+        <button type="button" mat-raised-button (click)="fileInputThumb.click()">{{thumb_image}}</button>
+        <input hidden #fileInputThumb type="file" id="file_thumb" (change)="fileProgress($event, 'thumb_image', 'thumb_image_path')" />
+    </div>
+    <div fxFlex="33%">
         <button type="button" mat-raised-button (click)="fileInputBanner1.click()">{{banner_image_1}}</button>
         <input hidden #fileInputBanner1 type="file" id="file_banner_1" (change)="fileProgress($event, 'banner_image_1', 'banner_image_1_path')" />
     </div>
-    <div fxFlex="50%">
+    <div fxFlex="33%">
         <button type="button" mat-raised-button (click)="fileInputBanner2.click()">{{banner_image_2}}</button>
         <input hidden #fileInputBanner2 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_2', 'banner_image_2_path')" />
     </div>
@@ -118,8 +122,8 @@
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
     <div fxFlex="100%">
         <mat-form-field class="full-width">
-            <mat-label>Description</mat-label>
-            <textarea rows="4" matInput placeholder="Write Here" required formControlName="description"></textarea>
+            <mat-label>Description 1</mat-label>
+            <textarea rows="10" matInput placeholder="Write Here" required formControlName="description"></textarea>
             <mat-error>Description is required</mat-error>
         </mat-form-field>
     </div>
@@ -127,8 +131,8 @@
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
     <div fxFlex="100%">
         <mat-form-field class="full-width">
-            <mat-label>Description 1</mat-label>
-            <textarea rows="4" matInput placeholder="Write here" required formControlName="description_1"></textarea>
+            <mat-label>Description 2</mat-label>
+            <textarea rows="10" matInput placeholder="Write here" required formControlName="description_1"></textarea>
             <mat-error>Description 1 is required</mat-error>
         </mat-form-field>
     </div>

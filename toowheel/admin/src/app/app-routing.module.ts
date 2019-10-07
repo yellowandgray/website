@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CategoryComponent } from './category/category.component';
+import { MediaComponent } from './media/media.component';
 import { ClubComponent } from './club/club.component';
 import { MemberComponent } from './member/member.component';
 import { VendorComponent } from './vendor/vendor.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
     {path: '', component: LoginComponent},
     {path: 'dashboard', component: DashboardComponent},
     {path: 'category', component: CategoryComponent},
+    {path: 'media', component: MediaComponent},
     {path: 'club', component: ClubComponent},
     {path: 'member', component: MemberComponent},
     {path: 'vendor', component: VendorComponent},
