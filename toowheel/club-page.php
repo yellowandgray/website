@@ -23,8 +23,9 @@ if ($type == 'four_wheel') {
     <body>
         <?php include 'menu.php'; ?>
         <div class="club-pad-top-108"></div>
-        <section>
-            <img src="<?php echo BASE_URL . $club['cover_image']; ?>" alt="club banner" class="img-responsive">
+        <section style="background-image: url(<?php echo BASE_URL . $club['cover_image']; ?>); background-size:cover;">
+            <div style="height: 50%;overflow: hidden;">
+            </div>
         </section>
         <section>
             <div class="container sec-club-logo">
