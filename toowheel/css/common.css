@@ -3404,7 +3404,7 @@ thead td {
 }
 .tabcontent .news .discover-slider-content {
     width: 150px;
-    height: auto;
+    height: auto !important;
 }
 
 .tabcontent .news .news-discover {
@@ -3561,11 +3561,12 @@ thead td {
     }
 }
 @media (max-width: 1024px) and (min-width:991px){
-    .discover-slider{
+/*    .discover-slider{
         width: 200px !important;
-    }
+    }*/
 }
 @media (max-width: 1400px) and (min-width:1025px){
-    .discover-slider {
+/*    .discover-slider {
         width: 180px !important;
-    }}
+    }*/
+}
