@@ -29,7 +29,6 @@ $configs = $obj->getLandingDetails();
                     url("fonts/venus-rising/10496aa2f7e9295bdf45faca7f15a5aa.svg#VenusRising") format("svg"); /* iOS 4.1- */
             }
         </style>
-
     </head>
     <body class="main-wrapper">
         <section class="header slide slide-one" data-background="#0f0f0f">
@@ -37,8 +36,8 @@ $configs = $obj->getLandingDetails();
                 <div class="row">
                     <a href="index.php" class="logo"><img src='img/logo.png' alt=''></a>
                     <div class="header-login">
-                        <a href="toowheel/login.php" class="mob-noon login-button"><i class="fa fa-user"></i> Login</a>
-                        <a href="toowheel/login.php" class="mob-block"><span class="login-button"><i class="fa fa-user"></i></span></a>
+                        <a href="toowheel/login.php?type=two_wheel" class="mob-noon login-button"><i class="fa fa-user"></i> Login</a>
+                        <a href="toowheel/login.php?type=two_wheel" class="mob-block"><span class="login-button"><i class="fa fa-user"></i></span></a>
                     </div>
                 </div>
                 <div class="row">
