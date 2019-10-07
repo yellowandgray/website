@@ -15,26 +15,26 @@
                     <a href="toowheel/events.php" class="footer-text">UPCOMING EVENTS</a>
                     <br/>
                     <a href="toowheel/press-release.php" class="footer-text">PRESS RELEASE</a>
-<!--                                        <ul class="nav__ul">
-                                            <li>
-                                                <a href="#">Home</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">News & Media</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Press Release</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Gallery</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Join A Club</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Partners</a>
-                                            </li>
-                                        </ul>-->
+                    <!--                                        <ul class="nav__ul">
+                                                                <li>
+                                                                    <a href="#">Home</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">News & Media</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Press Release</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Gallery</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Join A Club</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Partners</a>
+                                                                </li>
+                                                            </ul>-->
                 </li>
             </ul>
         </div>
@@ -110,16 +110,16 @@
         </div>
     </div>
 
-<!--        <div class="legal">
-            <p>&copy; 2019 TOOWHEEl. All Right Reserved</p>
-            <span class="legal__links">
-                <a href="#">Privacy Policy</a>
-                <span></span>
-                <a href="#">Terms of Use</a>
-            </span>
-        </div>-->
+    <!--        <div class="legal">
+                <p>&copy; 2019 TOOWHEEl. All Right Reserved</p>
+                <span class="legal__links">
+                    <a href="#">Privacy Policy</a>
+                    <span></span>
+                    <a href="#">Terms of Use</a>
+                </span>
+            </div>-->
 </footer>
 <script src="js/jquery.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
-<!--<script src="js/jquery.scrollie.min.js" type="text/javascript"></script>-->
+<script src="js/jquery.scrollie.min.js" type="text/javascript"></script>
 

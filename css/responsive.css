@@ -32,12 +32,30 @@
         position: relative !important;
         bottom: 0 !important;
     }
+    .fourwheel {
+        top: 75px !Important;
+    }
+    .landing-text {
+        top: 0 !important;
+    }
+    .footer {
+        top: 240% !important;
+    }
 }
 
 
 @media screen and (max-width: 375px) {
     .bg-four-text h2 {
         font-size: 45px !important;
+    }
+    .fourwheel {
+        top: 23px !important;
+    }
+    .landing-text {
+        top: -207px !important;
+    }
+    .footer {
+        top: 179% !important;
     }
 }
 
@@ -177,7 +195,7 @@
 }
 @media screen and (min-width: 40.375em){
     .footer {
-        padding: 0em !important; 
+        padding: 0em !important;
     }
 }
 @media (max-width:991px) and (min-width:768px){
@@ -395,5 +413,11 @@
 @media screen and (max-width: 1350px) {
     .landing-car {
         width: 100% !important;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 991px) {
+    .footer {
+        top: 100px !Important;
     }
 }

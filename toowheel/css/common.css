@@ -250,7 +250,8 @@ button {
 }
 .member-list img{
     position: absolute;
-
+    margin-bottom: 10px;
+    vertical-align: bottom;
 }
 
 .mem-sign p a{
@@ -3561,12 +3562,16 @@ thead td {
     }
 }
 @media (max-width: 1024px) and (min-width:991px){
-/*    .discover-slider{
-        width: 200px !important;
-    }*/
+    /*    .discover-slider{
+            width: 200px !important;
+        }*/
 }
 @media (max-width: 1400px) and (min-width:1025px){
-/*    .discover-slider {
-        width: 180px !important;
-    }*/
+    /*    .discover-slider {
+            width: 180px !important;
+        }*/
+}
+.img-responsive-bg{
+    width: 100%;
+    height: 65%;
 }
