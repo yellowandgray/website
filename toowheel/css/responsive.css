@@ -251,6 +251,10 @@
     .video-bg-banner .video-overlay {
         height: 100% !important;
     }
+    .header-login input[type=search] {
+        right: 29.5% !important;
+        width: 65px!important;
+    }
 }
 
 
@@ -658,7 +662,7 @@
         width: 289px !important;
         height: auto;
     }
-     .news-cont img {
+    .news-cont img {
         width: 100%;
         height: 400px !important;
     }
