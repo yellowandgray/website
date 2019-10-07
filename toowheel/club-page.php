@@ -120,7 +120,7 @@ if ($type == 'four_wheel') {
                         <?php } ?>
                         <br/>
                         <?php if (count($events) > 0) { ?>
-                            <div class="box-anounce">
+                            <div class="box-anounce update">
                                 <h2>Updates</h2>
                                 <div class="anounce">
                                     <div class="event-section-sub">
