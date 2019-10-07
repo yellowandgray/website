@@ -24,7 +24,7 @@
                             {{row.name}}
                         </mat-option>
                     </mat-select>
-                    <mat-error>Category is required</mat-error>
+                <mat-error>Category is required</mat-error>
                 </mat-form-field>
             </div>
         </div>
@@ -46,6 +46,19 @@
                     <input matInput placeholder="" formControlName="name" />
                     <mat-error>Club name is required</mat-error>
                 </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Rank</mat-label>
+                    <input matInput placeholder="" formControlName="email" />
+                    <mat-error>Rank is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <button type="button" mat-raised-button (click)="fileInputBanner.click()">Choose Banner</button>
+                <input hidden #fileInputBanner type="file" id="file_banner" (change)="fileProgress($event)" />
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
@@ -73,7 +86,7 @@
                             {{row.name}}
                         </mat-option>
                     </mat-select>
-                    <mat-error>State is required</mat-error>
+                <mat-error>State is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
