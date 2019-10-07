@@ -1,3 +1,18 @@
+<?php
+if (!isset($_GET['cid'])) {
+    header('Location: ../index.php');
+}
+$cid = $_GET['cid'];
+require_once 'api/include/common.php';
+$obj = new Common();
+$club = $obj->selectRow('*', 'club', 'club_id = ' . $cid);
+$type = $club['type'];
+$announcement = $obj->selectAll('*', 'announcement', 'club_id = ' . $cid);
+$club_type = '2 WHEEL CLUB';
+if ($type == 'four_wheel') {
+    $club_type = '4 WHEEL CLUB';
+}
+?>
 <!DOCTYPE html>
 <html>
     <?php include 'head.php'; ?>
@@ -5,7 +20,7 @@
         <?php include 'menu.php'; ?>
         <div class="club-pad-top-108"></div>
         <section>
-            <img src="img/club-page/banner.jpg" alt="club banner" class="img-responsive">
+            <img src="<?php echo BASE_URL . $club['cover_image']; ?>" alt="club banner" class="img-responsive">
         </section>
         <section>
             <div class="container sec-club-logo">
@@ -14,21 +29,21 @@
                         <div id="about-club">
                             <p onclick="document.getElementById('about-club').classList.remove('club-about')"><i class="fa fa-times" aria-hidden="true"></i></P>
                             <h1>About Club</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p><?php echo $club['about']; ?></p>
                         </div>
                         <div class="row w-text">
                             <div class="w-text-con">
-                                <h2 class="text-center">REAPPEAR MALAYSIA</h2>
+                                <h2 class="text-center"><?php echo $club['name']; ?></h2>
                             </div>
                             <div class="w-text-con">
                                 <div class="w-img">
                                     <div class="w-img-con club-logo">
-                                        <img src="img/club-page/club-logo.jpg" alt=""/>
+                                        <img src="<?php echo BASE_URL . $club['logo']; ?>" alt=""/>
                                     </div>
                                 </div>
                             </div>
                             <div class="w-text-con">
-                                <h5 class="text-center">2 WHEELS CLUB</h5>
+                                <h5 class="text-center"><?php echo $club_type; ?></h5>
                             </div>
                         </div>
                         <div class="row w-text-1">
@@ -38,14 +53,13 @@
                                         <p><i class="fa fa-signal" aria-hidden="true"></i> #47</p>
                                     </div>
                                     <div class="col-md-3">
-                                        <p><i class="fa fa-users" aria-hidden="true"></i> 575</p>
+                                        <p><i class="fa fa-users" aria-hidden="true"></i> <?php echo $club['no_of_member']; ?></p>
                                     </div>
                                     <div class="col-md-6">
-                                        <p><i class="fa fa-map-marker" aria-hidden="true"></i> KUALA LUMPUR</p>
+                                        <p><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $club['city']; ?></p>
                                     </div>
                                 </div>
                             </div>
-                            <!--                            <div class="w-text-con-1"></div>-->
                             <div class="w-text-con-1">
                                 <div class="row">
                                     <div class="col-md-5">

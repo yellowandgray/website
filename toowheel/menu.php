@@ -114,7 +114,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                     </div>
                                 <?php } ?>
                             </div>
-                            <div class="find-club-btn"><a href="find-a-club.php" class="menu-btn">Read More</a></div>
+                            <div class="find-club-btn"><a href="find-a-club.php?type=<?php echo $type; ?>" class="menu-btn">Read More</a></div>
                         </div>
                     </div>
                     <div id="Events" class="tabcontent">
