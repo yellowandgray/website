@@ -1,3 +1,12 @@
+<?php
+if (!isset($_GET['type'])) {
+    header('Location: ../index.php');
+}
+$type = $_GET['type'];
+require_once 'api/include/common.php';
+$obj = new Common();
+?>
+<!DOCTYPE html>
 <html>
     <?php include 'head.php'; ?>
     <body>
@@ -38,21 +47,21 @@
                                 </div>
                             </div>
                         </div>
-<!--                        <div id="sign-up" class="log-cont-02">
-                            <div class="text-center">
-                                <h3>SIGN UP</h3>
-                                <form class="sign-up-form">
-                                    <input type="text" name="name" placeholder="Name">
-                                    <input type="email" name="email" placeholder="Email">
-                                    <input type="text" name="phone" placeholder="Phone">
-                                    <input type="text" name="ic" placeholder="IC">
-                                    <input type="text" name="gender" placeholder="Gender">
-                                    <input type="text" name="dob" placeholder="DOB">
-                                    <button type="submit">SIGN UP</button>
-                                </form> 
-                                <h5 onclick="logIn()"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>Back to Login</h5>
-                            </div>
-                        </div>-->
+                        <!--                        <div id="sign-up" class="log-cont-02">
+                                                    <div class="text-center">
+                                                        <h3>SIGN UP</h3>
+                                                        <form class="sign-up-form">
+                                                            <input type="text" name="name" placeholder="Name">
+                                                            <input type="email" name="email" placeholder="Email">
+                                                            <input type="text" name="phone" placeholder="Phone">
+                                                            <input type="text" name="ic" placeholder="IC">
+                                                            <input type="text" name="gender" placeholder="Gender">
+                                                            <input type="text" name="dob" placeholder="DOB">
+                                                            <button type="submit">SIGN UP</button>
+                                                        </form> 
+                                                        <h5 onclick="logIn()"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>Back to Login</h5>
+                                                    </div>
+                                                </div>-->
 
                     </div>
                 </div>

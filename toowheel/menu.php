@@ -149,7 +149,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                         <p id="myDiv">Search</p>
                     </span> 
                 </a>
-                <a href="login.php" class="float-left margin-left-10">
+                <a href="login.php?type=<?php echo $type; ?>" class="float-left margin-left-10">
                     <span>
                         <i class="fa fa-sign-in search-bg"></i>
                         <p> Login</p>
