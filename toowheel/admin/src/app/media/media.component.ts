@@ -18,7 +18,7 @@ export class MediaComponent implements OnInit {
       this.getMedia();
   }
   getMedia(): void {
-  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_medias')
+  this.httpClient.get<any>('../toowheel/api/v1/get_medias')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -109,7 +109,7 @@ export class MediaForm {
         url = 'insert_media';
       }
       this.loading = true;
-      this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -152,7 +152,7 @@ export class MediaDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/media/media_id='+this.media_id).subscribe(
+      this.httpClient.get('../toowheel/api/v1/delete_record/media/media_id='+this.media_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

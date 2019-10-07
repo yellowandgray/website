@@ -18,9 +18,9 @@ export class ClubComponent implements OnInit {
       this.getClub();
       this.getFourWheelClub();
   }
-    image_url: string = 'http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/';
+    image_url: string = '../toowheel/api/v1/';
     getClub(): void {
-  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_two_wheel_club')
+  this.httpClient.get<any>('../toowheel/api/v1/get_two_wheel_club')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -33,7 +33,7 @@ export class ClubComponent implements OnInit {
         );
   }
     getFourWheelClub(): void {
-  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_four_wheel_club')
+  this.httpClient.get<any>('../toowheel/api/v1/get_four_wheel_club')
   .subscribe(
           (res)=>{
               this.result_four_wheel = res["result"]["data"];
@@ -140,7 +140,7 @@ export class ClubForm {
         this.club_id = this.data.club_id;
         this.getCategory();
         }
-        this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_states').subscribe(
+        this.httpClient.get('../toowheel/api/v1/get_states').subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
                     this.states = res["result"]["data"];
@@ -162,7 +162,7 @@ export class ClubForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('../toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -182,7 +182,7 @@ export class ClubForm {
     }
     getCategory(): void {
        this.loading = true;
-          this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_'+this.clubForm.value.type+'_category').subscribe(
+          this.httpClient.get('../toowheel/api/v1/get_'+this.clubForm.value.type+'_category').subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -202,7 +202,7 @@ export class ClubForm {
     }
     getCityByState(): void {
        this.loading = true;
-          this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_city_by_state/'+this.clubForm.value.state).subscribe(
+          this.httpClient.get('../toowheel/api/v1/get_city_by_state/'+this.clubForm.value.state).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -266,7 +266,7 @@ export class ClubForm {
           formData.append('about', this.clubForm.value.about);
         url = 'insert_club';
       }
-          this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
+          this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -310,7 +310,7 @@ export class ClubDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/club/club_id='+this.club_id).subscribe(
+      this.httpClient.get('../toowheel/api/v1/delete_record/club/club_id='+this.club_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

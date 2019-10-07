@@ -21,7 +21,7 @@ export class CategoryComponent implements OnInit {
   }
     
   getCategory(): void {
-  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_two_wheel_category')
+  this.httpClient.get<any>('../toowheel/api/v1/get_two_wheel_category')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -34,7 +34,7 @@ export class CategoryComponent implements OnInit {
         );
   }
   getFourWheelCategory(): void {
-  this.httpClient.get<any>('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/get_four_wheel_category')
+  this.httpClient.get<any>('../toowheel/api/v1/get_four_wheel_category')
   .subscribe(
           (res)=>{
               this.result_fw = res["result"]["data"];
@@ -135,7 +135,7 @@ export class CategoryForm {
         url = 'insert_category';
       }
       this.loading = true;
-      this.httpClient.post('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -178,7 +178,7 @@ export class CategoryDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://ec2-13-233-145-114.ap-south-1.compute.amazonaws.com/toowheel/api/v1/delete_record/category/category_id='+this.category_id).subscribe(
+      this.httpClient.get('../toowheel/api/v1/delete_record/category/category_id='+this.category_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
