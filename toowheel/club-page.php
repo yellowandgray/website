@@ -24,7 +24,7 @@ if ($type == 'four_wheel') {
         <?php include 'menu.php'; ?>
         <div class="club-pad-top-108"></div>
         <section>
-            <img src="<?php echo BASE_URL . $club['cover_image']; ?>" alt="club banner" class="img-responsive">
+            <img src="<?php echo BASE_URL . $club['cover_image']; ?>" alt="club banner" class="img-responsive-bg">
         </section>
         <section>
             <div class="container sec-club-logo">
