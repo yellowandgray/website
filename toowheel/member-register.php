@@ -10,6 +10,7 @@ $obj = new Common();
 <html>
     <?php include 'head.php'; ?>
     <body>
+        <script src="https://www.paypal.com/sdk/js?client-id=ARkbHw__nsXW1AJ3lAhXdKsIKUHMLOowBnKaEvdQ2vrepjFyBgiplpKkuvleAR9P9uhB2_djrTJ2iFJj&currency=MYR"></script>
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
         <div class="member-register-section">
@@ -538,7 +539,7 @@ $obj = new Common();
                                 <h2>Make Payment</h2>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="member-register-btn"><a href="#">PayPal</a></div>
+                                        <div class="member-register-btn"><a id="paywith_paypal"></a></div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="member-register-btn cdm-found"><a href="#">CDM Fund Transfer</a></div>
@@ -610,6 +611,33 @@ $obj = new Common();
                         $(".pop-1").fadeOut('fast');
                     }
             );
+            paypal.Buttons({
+                createOrder: function (data, actions) {
+                    // Set up the transaction
+                    return actions.order.create({
+                        purchase_units: [{
+                                amount: {
+                                    value: '60.00'
+                                }
+                            }]
+                    });
+                },
+                onApprove: function (data, actions) {
+                    return actions.order.capture().then(function (details) {
+                        alert('Transaction completed by ' + details.payer.name.given_name);
+                        // Call your server to save the transaction
+                        return fetch('/paypal-transaction-complete', {
+                            method: 'post',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                orderID: data.orderID
+                            })
+                        });
+                    });
+                }
+            }).render('#paywith_paypal');
         </script>
     </body>
 </html>
