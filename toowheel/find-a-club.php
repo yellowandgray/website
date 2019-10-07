@@ -1,7 +1,11 @@
 <?php
+if (!isset($_GET['type'])) {
+    header('Location: ../index.php');
+}
+$type = $_GET['type'];
 require_once 'api/include/common.php';
 $obj = new Common();
-$findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'two_wheel\'');
+$findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\'');
 ?>
 <!DOCTYPE html>
 <html>
@@ -80,98 +84,10 @@ $findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'two_wheel\'')
                             <img src="<?php echo BASE_URL . $row['logo']; ?>" alt="" />
                             <h3> <?php echo $row['name']; ?></h3>
                             <p> <?php echo $row['city']; ?></p>
-                            <a href="club-page.php" class="find-club-button"> Read More</a>
+                            <a href="club-page.php?cid=<?php echo $row['club_id']; ?>" class="find-club-button"> Read More</a>
                         </div>
-                        <!--                        </div>-->
                     <?php } ?>
-                    <!--                    <div class="col-md-2 col-sm-6">
-                                            <div class="club-box">
-                                                <span>#1</span>
-                                                <img src="img/find-club/dummy-logo.png" alt="" />
-                                                <h3>Frendly Bikers</h3>
-                                                <p>Kuala Lumpur</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-sm-6">
-                                            <div class="club-box">
-                                                <span>#1</span>
-                                                <img src="img/find-club/dummy-logo.png" alt="" />
-                                                <h3>Frendly Bikers</h3>
-                                                <p>Kuala Lumpur</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-sm-6">
-                                            <div class="club-box">
-                                                <span>#1</span>
-                                                <img src="img/find-club/dummy-logo.png" alt="" />
-                                                <h3>Frendly Bikers</h3>
-                                                <p>Kuala Lumpur</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-sm-6">
-                                            <div class="club-box">
-                                                <span>#1</span>
-                                                <img src="img/find-club/dummy-logo.png" alt="" />
-                                                <h3>Frendly Bikers</h3>
-                                                <p>Kuala Lumpur</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-1"></div>
-                                        <div class="col-md-1"></div>
-                                        <div class="col-md-2 col-sm-6">
-                                            <div class="club-box">
-                                                <span>#1</span>
-                                                <img src="img/find-club/dummy-logo.png" alt="" />
-                                                <h3>Frendly Bikers</h3>
-                                                <p>Kuala Lumpur</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-sm-6">
-                                            <div class="club-box">
-                                                <span>#1</span>
-                                                <img src="img/find-club/dummy-logo.png" alt="" />
-                                                <h3>Frendly Bikers</h3>
-                                                <p>Kuala Lumpur</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-sm-6">
-                                            <div class="club-box">
-                                                <span>#1</span>
-                                                <img src="img/find-club/dummy-logo.png" alt="" />
-                                                <h3>Frendly Bikers</h3>
-                                                <p>Kuala Lumpur</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-sm-6">
-                                            <div class="club-box">
-                                                <span>#1</span>
-                                                <img src="img/find-club/dummy-logo.png" alt="" />
-                                                <h3>Frendly Bikers</h3>
-                                                <p>Kuala Lumpur</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-sm-6">
-                                            <div class="club-box">
-                                                <span>#1</span>
-                                                <img src="img/find-club/dummy-logo.png" alt="" />
-                                                <h3>Frendly Bikers</h3>
-                                                <p>Kuala Lumpur</p>
-                                            </div>
-                                        </div>-->
                 </div>
-                <!--                <div class="row">
-                                    <div class="count-radio"> 
-                                        <input type="radio" name="size" id="size_1" value="small" checked />
-                                        <label for="size_1">1</label>
-                
-                                        <input type="radio" name="size" id="size_2" value="small" />
-                                        <label for="size_2">1</label>
-                
-                                        <input type="radio" name="size" id="size_3" value="small" />
-                                        <label for="size_3">1</label>
-                
-                                    </div>
-                                </div>-->
             </div>
         </div>
         <?php include 'footer.php'; ?>
