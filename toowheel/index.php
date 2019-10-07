@@ -66,11 +66,11 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 </div>
             </div>
         </section>
-        <section class="media-press-release" onClick="document.location.href = 'press-release.php'">
+        <section class="media-press-release" onClick="document.location.href = 'press-release.php?type=<?php echo $type; ?>'">
             <div class="container">
                 <div class="col-md-12">
                     <div class="media-bg">
-                        <a href="press-release.php"><img src="img/media-bg.jpg" alt="" /></a>
+                        <a href="press-release.php?type=<?php echo $type; ?>"><img src="img/media-bg.jpg" alt="" /></a>
                     </div>
                     <a href="press-release.php?type=<?php echo $type; ?>" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
                 </div>
