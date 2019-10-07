@@ -129,9 +129,9 @@ if ($type == 'four_wheel') {
                                                 <div class="discover-slider">
                                                     <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" class="img-responsive"/>
                                                     <div class="discover-slider-content">
-                                                        <p class="clb-bg"><?php echo $row['club']; ?></p>
-                                                        <h2><?php echo $row['title']; ?></h2>
-                                                        <p><?php echo $row['description']; ?></p>
+                                                        <p class="clb-bg"><?php echo $obj->charLimit($row['club'], 10); ?></p>
+                                                        <h2><?php echo $obj->charLimit($row['title'], 15); ?></h2>
+                                                        <p><?php echo $obj->charLimit($row['description'], 35); ?></p>
                                                         <center><a class="btn btn-primary" href="news.php?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
                                                     </div>
                                                 </div>
