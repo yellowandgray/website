@@ -19,8 +19,8 @@ $type = $press_release['type'];
         <div class="press-release">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <img src="<?php echo BASE_URL . $press_release['cover_image']; ?>" alt="" style="width: 80%;" />
+                    <div class="col-md-12 text-center club-press">
+                        <img src="<?php echo BASE_URL . $press_release['cover_image']; ?>" alt="" />
                     </div>
                 </div>
             </div>
