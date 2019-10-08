@@ -27,11 +27,11 @@ $obj = new Common();
                             <div id="step-1" class="">
                                 <h2>Member Registration</h2>
                                 <h4>Basic Information</h4>
-                                <form class="">
+                                <form id="basic_information">
                                     <div class="form-group">
                                         <label for="type">Category</label>
                                         <span class="red-i">*</span>
-                                        <select class="form-control" name="type" id="type">
+                                        <select class="form-control" name="type" id="type" onchange="loadClubs(this.value);">
                                             <option value="">Select Category</option>
                                             <option value="four_wheel">4 Wheel</option>
                                             <option value="two_wheel">2 Wheel</option>
