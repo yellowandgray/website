@@ -102,10 +102,10 @@ export class NewsForm {
     news_id = 0;
     clubs:any[];
     medias:any[];
-    cover_image: string = 'Choose Cover Image';
-    thumb_image: string = 'Choose Thumb Image';
-    banner_image_1: string = 'Choose Banner Image 1';
-    banner_image_2: string = 'Choose Banner Image 2';
+    cover_image: string = 'Cover Image';
+    thumb_image: string = 'Thumb Image';
+    banner_image_1: string = 'Banner Image 1';
+    banner_image_2: string = 'Banner Image 2';
     cover_image_path: string;
     thumb_image_path: string;
     banner_image_1_path: string;
@@ -147,6 +147,10 @@ export class NewsForm {
         this.news_id = this.data.news_id;
         this.getCategory();
         this.getClub();
+    }else {
+        this.newsForm.patchValue({
+                date: new Date()
+            });
     }
       this.httpClient.get('../toowheel/api/v1/get_medias').subscribe(
               (res)=>{
