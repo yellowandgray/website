@@ -11,8 +11,7 @@
                     <span class="yt"><img src="img/social-icons/yt.png"/></span>
                     <span class="twitter"><img src="img/social-icons/twitter.png"/></span>
                     <span class="insta"><img src="img/social-icons/insta.png"/></span>-->
-                    <div class="taggbox-container" style=" width:100%;height:100%;overflow: auto;"><script defer src="//web.taggbox.com/app/js/embed.min.js" type="text/javascript"></script><div class="taggbox-socialwall" data-wall-id="25637" view-url="https://taggbox.com/w/25637">  </div></div>
-
+                   <div class="taggbox-container" style=" width:100%;height:100%;overflow: auto;"><script defer src="//web.taggbox.com/app/js/embed.min.js" type="text/javascript"></script><div class="taggbox-socialwall" data-wall-id="25637" view-url="https://taggbox.com/w/25637">  </div></div>
                 </div>
 <!--<iframe allowfullscreen id="wallsio-iframe" src="https://walls.io/r6chu?nobackground=1&amp;show_header=0&amp;scrollable=0" style="border:0;height:800px;width:100%" title="Toowheel Wall"></iframe>-->
                 <!--            <div class="col-md-6">
