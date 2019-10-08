@@ -59,7 +59,7 @@ $type = $press_release['type'];
                                 <span class="side-news-widget1"><span><?php echo $row['author_name']; ?></span></span>
                                 <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" />
                                 <h4><?php echo $row['title']; ?></h4>
-                                <p><?php echo $row['description_1']; ?></p>
+                                <p><?php echo $obj->charLimit($row['description_1'], 275); ?></p>
                                 <div class="button-1">
                                     <div class="eff-1"></div>
                                     <a href="press.php?pid=<?php echo $row['press_release_id']; ?>">Discover</a>
