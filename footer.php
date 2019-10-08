@@ -6,35 +6,15 @@
         <div class="footer-section fooetr-2">
             <ul class="footer__nav">
                 <li class="nav__item">
-                    <a href="toowheel/index.php" class="footer-text">2 Wheel</a>
+                    <a href="toowheel/index.php?type=two_wheel" class="footer-text">2 Wheel</a>
                     <br/>
-                    <a href="toowheel/index.php" class="footer-text">4 Wheel</a>
+                    <a href="toowheel/index.php?type=four_wheel" class="footer-text">4 Wheel</a>
                     <br/>
-                    <a href="toowheel/news.php" class="footer-text">NEWS & MEDIA</a>
+                    <a href="toowheel/news-updates.php?type=two_wheel" class="footer-text">NEWS & MEDIA</a>
                     <br/>
-                    <a href="toowheel/events.php" class="footer-text">UPCOMING EVENTS</a>
+                    <a href="toowheel/events.php?type=two_wheel" class="footer-text">UPCOMING EVENTS</a>
                     <br/>
-                    <a href="toowheel/press-release.php" class="footer-text">PRESS RELEASE</a>
-                    <!--                                        <ul class="nav__ul">
-                                                                <li>
-                                                                    <a href="#">Home</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">News & Media</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Press Release</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Gallery</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Join A Club</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Partners</a>
-                                                                </li>
-                                                            </ul>-->
+                    <a href="toowheel/press-release.php?type=two_wheel" class="footer-text">PRESS RELEASE</a>
                 </li>
             </ul>
         </div>
@@ -44,13 +24,13 @@
                     <h2 class="nav__title">MEMBERS</h2>
                     <ul class="nav__ul">
                         <li>
-                            <a href="toowheel/login.php">Login</a>
+                            <a href="toowheel/login.php?type=two_wheel">Login</a>
                         </li>
                         <li>
-                            <a href="toowheel/member-register.php">Be A Member</a>
+                            <a href="toowheel/member-register.php?type=two_wheel">Be A Member</a>
                         </li>
                         <li>
-                            <a href="toowheel/member-benefits.php">Member Benefits</a>
+                            <a href="toowheel/member-benefits.php?type=two_wheel">Member Benefits</a>
                         </li>
                     </ul>
                 </li>
@@ -60,10 +40,10 @@
                     <h2 class="nav__title">CLUB</h2>
                     <ul class="nav__ul">
                         <li>
-                            <a href="toowheel/find-a-club.php">Find A Club</a>
+                            <a href="toowheel/find-a-club.php?type=two_wheel">Find A Club</a>
                         </li>
                         <li>
-                            <a href="toowheel/club-register.php">Register My Club</a>
+                            <a href="toowheel/club-register.php?type=two_wheel">Register My Club</a>
                         </li>
                     </ul>
                 </li>
