@@ -22,7 +22,7 @@ $obj = new Common();
                         <div class="member-list">
                             <ul class="padding-lr-0">
                                 <img src="img/member/Group 88@2x.png" alt=""/><li>Exclusive TooWheel racing T-Shirt worth RM99.00</li>
-                                <img src="img/member/Group 83@2x.png" alt=""/><li>Accident or death coverage courtesy to Toowheel organization</li>
+                                <img src="img/member/Group 83@2x.png" alt=""/><li>Death coverage courtesy to Toowheel organization</li>
                                 <img src="img/member/Group 82@2x.png" alt=""/><li>Access to all club portal/forum/updates and event</li>
                                 <img src="img/member/Group 81@2x.png" alt=""/><li>Special discount for accessories by E-Kedai Toowheel</li>
                                 <img src="img/member/Group 80@2x.png" alt=""/><li>Loyalty point with purchase of participant companies' merchandise</li>
