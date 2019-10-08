@@ -31,17 +31,19 @@
                 <div class="footer-widget">
                     <h3>Join Us</h3>
                     <div class="newsletter">
-                        <ul>
-                            <li>
-                                <input type="text" placeholder="Your Name">
-                            </li>
-                            <li>
-                                <input type="text" placeholder="Your Email">
-                            </li>
-                            <li>
-                                <input type="submit" value="Enquiry Now">
-                            </li>
-                        </ul>
+                        <form class="enquiry-footer-form">
+                            <ul>
+                                <li class="form-group">
+                                    <input type="text" placeholder="Your Name" name="fname" required>
+                                </li>
+                                <li class="form-group">
+                                    <input type="email" placeholder="Your Email" name="email" required>
+                                </li>
+                                <li>
+                                    <input type="submit" value="Enquiry Now">
+                                </li>
+                            </ul>
+                        </form>
                     </div>
                     <!--<div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-linkedin-in"></i></a> <a href="#"><i class="fab fa-google-plus-g"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-youtube"></i></a> </div>-->
                 </div>
