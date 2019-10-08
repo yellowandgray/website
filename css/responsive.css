@@ -421,3 +421,15 @@
         top: 100px !Important;
     }
 }
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .bg-text h2 {
+        font-size: 90px !Important;
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+    .footer {
+        top: 370px !Important;
+    }
+}

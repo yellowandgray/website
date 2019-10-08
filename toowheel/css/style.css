@@ -140,7 +140,8 @@ body {
     width: 100%;
     background: #000;
     position: relative;
-    top: 85px;
+    top: 108px;
+    height: 100%;
 }
 
 .video-bg-banner video {
@@ -185,6 +186,7 @@ body {
     position: relative;
     z-index: 2;
     background-size: cover;
+    top: 108px;
 }
 
 .bg-1 .container {
@@ -624,7 +626,7 @@ body {
 }
 
 .partners-section img {
-    margin: 40px 0;
+    /*margin: 40px 0;*/
     width: 100%;
 }
 
