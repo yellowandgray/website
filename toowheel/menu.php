@@ -18,6 +18,12 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
             <div id="mySidenav" class="sidenav">
                 <div class="container tab-menu">
                     <div class="tab mega-menu-tab">
+                        <div class="text-center language">
+                            <input type="radio" name="size" id="size_1" value="small" checked />
+                            <label for="size_1">BM</label>
+                            <input type="radio" name="size" id="size_2" value="small" />
+                            <label for="size_2">EN</label>
+                        </div>
                         <button class="tablinks" onclick="openCity(event, 'About')" id="defaultOpen">About Us <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'News')">Latest News <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Release')">Press Release <i class="fa fa-caret-right" aria-hidden="true"></i></button>

@@ -38,9 +38,9 @@
     .landing-text {
         top: 0 !important;
     }
-    .footer {
+/*    .footer {
         top: 240% !important;
-    }
+    }*/
 }
 
 
@@ -54,9 +54,9 @@
     .landing-text {
         top: -207px !important;
     }
-    .footer {
+/*    .footer {
         top: 179% !important;
-    }
+    }*/
 }
 
 @media (max-width:1367px) and (min-width:1123px){
@@ -417,9 +417,9 @@
 }
 
 @media (min-width: 900px) and (max-width: 991px) {
-    .footer {
+/*    .footer {
         top: 100px !Important;
-    }
+    }*/
 }
 
 @media (min-width: 992px) and (max-width: 1024px) {
@@ -429,7 +429,7 @@
 }
 
 @media (min-width: 1300px) and (max-width: 1400px) {
-    .footer {
-        top: 320px !Important;
-    }
+/*    .footer {
+        top: 200px !Important;
+    }*/
 }

@@ -105,7 +105,7 @@ $configs = $obj->getLandingDetails();
                     <?php
                     $banner = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['landing_banner_ad']);
                     ?>
-                    <a href="<?php echo $banner['url']; ?>" target="_blank"><img src="<?php echo BASE_URL . $banner['image']; ?>" alt="" style="width: 100%;margin: 20px 0;" /></a>
+                    <a href="<?php echo $banner['url']; ?>" target="_blank" class="ad-banner-footer"><img src="<?php echo BASE_URL . $banner['image']; ?>" alt=""  /></a>
                 </div>
             </div>
         </section>
@@ -117,15 +117,15 @@ $configs = $obj->getLandingDetails();
                 <div class="footer-section fooetr-2">
                     <ul class="footer__nav">
                         <li class="nav__item">
-                            <a href="toowheel/index.php" class="footer-text">2 Wheel</a>
+                            <a href="toowheel/index.php?type=two_wheel" class="footer-text">2 WHEEL</a>
                             <br/>
-                            <a href="toowheel/index.php" class="footer-text">4 Wheel</a>
+                            <a href="toowheel/index.php?type=four_wheel" class="footer-text">4 WHEEL</a>
                             <br/>
-                            <a href="toowheel/news.php" class="footer-text">NEWS & MEDIA</a>
+                            <a href="toowheel/news-updates.php?type=two_wheel" class="footer-text">NEWS & MEDIA</a>
                             <br/>
-                            <a href="toowheel/events.php" class="footer-text">UPCOMING EVENTS</a>
+                            <a href="toowheel/events.php?type=two_wheel" class="footer-text">UPCOMING EVENTS</a>
                             <br/>
-                            <a href="toowheel/press-release.php" class="footer-text">PRESS RELEASE</a>
+                            <a href="toowheel/press-release.php?type=two_wheel" class="footer-text">PRESS RELEASE</a>
                             <!--                                        <ul class="nav__ul">
                                                                         <li>
                                                                             <a href="#">Home</a>
@@ -155,13 +155,13 @@ $configs = $obj->getLandingDetails();
                             <h2 class="nav__title">MEMBERS</h2>
                             <ul class="nav__ul">
                                 <li>
-                                    <a href="toowheel/login.php">Login</a>
+                                    <a href="toowheel/login.php?type=two_wheel">Login</a>
                                 </li>
                                 <li>
-                                    <a href="toowheel/member-register.php">Be A Member</a>
+                                    <a href="toowheel/member-register.php?type=two_wheel">Be A Member</a>
                                 </li>
                                 <li>
-                                    <a href="toowheel/member-benefits.php">Member Benefits</a>
+                                    <a href="toowheel/member-benefits.php?type=two_wheel">Member Benefits</a>
                                 </li>
                             </ul>
                         </li>
@@ -171,10 +171,10 @@ $configs = $obj->getLandingDetails();
                             <h2 class="nav__title">CLUB</h2>
                             <ul class="nav__ul">
                                 <li>
-                                    <a href="toowheel/find-a-club.php">Find A Club</a>
+                                    <a href="toowheel/find-a-club.php?type=two_wheel">Find A Club</a>
                                 </li>
                                 <li>
-                                    <a href="toowheel/club-register.php">Register My Club</a>
+                                    <a href="toowheel/club-register.php?type=two_wheel">Register My Club</a>
                                 </li>
                             </ul>
                         </li>
@@ -186,7 +186,7 @@ $configs = $obj->getLandingDetails();
                             <h2 class="nav__title">TOOWHEEL</h2>
                             <ul class="nav__ul">
                                 <li>
-                                    <a href="toowheel/about.php">About us</a>
+                                    <a href="toowheel/about.php?type=two_wheel">About us</a>
                                 </li>
                                 <li>
                                     <a href="#">Contact us</a>
@@ -210,10 +210,10 @@ $configs = $obj->getLandingDetails();
                                     </form>
                                 </li>
                                 <li class="i-con text-center">
-                                    <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                    <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/p/B2iG45lnGi-/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="https://twitter.com/@ToowheelM" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="https://www.youtube.com/channel/UCueyRbB52hjc0XUIqbkYxcg" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                                 </li>
                             </ul>
                         </li>
