@@ -52,7 +52,7 @@ $app->post('/insert_gallery', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $array = array('media_type' => $data['media_type'], 'type' => $data['type'], 'title' => $data['title'], 'media_path' => $data['media_path']);
+    $array = array('media_type' => $data['media_type'], 'type' => $data['type'], 'title' => $data['title'], 'media_path' => $data['media_path'], 'description' => $data['description']);
     if (isset($data['thumb_path'])) {
         $array['thumb_path'] = $data['thumb_path'];
     }
