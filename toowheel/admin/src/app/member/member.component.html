@@ -12,92 +12,98 @@
                         <input matInput placeholder="Search for Member" value="">
                     </mat-form-field>
                 </div>
-                <div class="accordion-container">
-                    <mat-accordion>
-                        <mat-expansion-panel>
-                            <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                    Club One
-                                </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            <mat-list>
-                                <mat-list-item>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog()">
-                                        <mat-icon>edit</mat-icon>
-                                    </button>
-                                    <button mat-icon-button aria-label="label">
-                                        <mat-icon>delete</mat-icon>
-                                    </button>
-                                    <img matListAvatar src="assets/1.jpg" alt="...">
-                                    <h3 matLine>Venket <span class="small">Club Name</span></h3>
-                                    <p matLine>
-                                        <span>Register with website on 20/08/2019 with no referral</span>
-                                    </p>
-                                    <p matLine>
-                                        <span>Earned 500 points in referral</span>
-                                    </p>
-                                </mat-list-item>
-                                <mat-list-item>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog()">
-                                        <mat-icon>edit</mat-icon>
-                                    </button>
-                                    <button mat-icon-button aria-label="label">
-                                        <mat-icon>delete</mat-icon>
-                                    </button>
-                                    <img matListAvatar src="assets/1.jpg" alt="...">
-                                    <h3 matLine>Mushaqdeen</h3>
-                                    <p matLine>
-                                        <span>Register with YG Book Center on 25/08/2019 with referral of Venket</span>
-                                    </p>
-                                    <p matLine>
-                                        <span>Earned 50 points in referral</span>
-                                    </p>
-                                </mat-list-item>
-                            </mat-list>
-                        </mat-expansion-panel>
-                        <mat-expansion-panel>
-                            <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                    Club Two
-                                </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            <mat-list>
-                                <mat-list-item>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog()">
-                                        <mat-icon>edit</mat-icon>
-                                    </button>
-                                    <button mat-icon-button aria-label="label">
-                                        <mat-icon>delete</mat-icon>
-                                    </button>
-                                    <img matListAvatar src="assets/1.jpg" alt="...">
-                                    <h3 matLine>Johni</h3>
-                                    <p matLine>
-                                        <span>Register with website on 30/08/2019 with referral on Mushaqdeen</span>
-                                    </p>
-                                    <p matLine>
-                                        <span>Earned 0 points in referral</span>
-                                    </p>
-                                </mat-list-item>
-                                <mat-list-item>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog()">
-                                        <mat-icon>edit</mat-icon>
-                                    </button>
-                                    <button mat-icon-button aria-label="label">
-                                        <mat-icon>delete</mat-icon>
-                                    </button>
-                                    <img matListAvatar src="assets/2.jpg" alt="...">
-                                    <h3 matLine>Jenika</h3>
-                                    <p matLine>
-                                        <span>Register with Alias Knowledge Center on 30/08/2019 with referral of Venket</span>
-                                    </p>
-                                    <p matLine>
-                                        <span>Earned 100 points in referral</span>
-                                    </p>
-                                </mat-list-item>
-                            </mat-list>
-                        </mat-expansion-panel>
-                    </mat-accordion>
-                </div>
+                <mat-list>
+                    <mat-list-item>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openDialog()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>money</mat-icon>
+                        </button>
+                        <img matListAvatar src="assets/1.jpg" alt="...">
+                        <h3 matLine>Venket <span class="small">Club Name</span></h3>
+                        <p matLine>
+                            <span>Register with website on 20/08/2019 with no referral</span>
+                        </p>
+                        <p matLine>
+                            <span>Earned 500 points in referral</span>
+                        </p>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openDialog()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>money</mat-icon>
+                        </button>
+                        <img matListAvatar src="assets/1.jpg" alt="...">
+                        <h3 matLine>Mushaqdeen</h3>
+                        <p matLine>
+                            <span>Register with YG Book Center on 25/08/2019 with referral of Venket</span>
+                        </p>
+                        <p matLine>
+                            <span>Earned 50 points in referral</span>
+                        </p>
+                    </mat-list-item>
+                </mat-list>
+                <mat-list>
+                    <mat-list-item>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openDialog()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>money</mat-icon>
+                        </button>
+                        <img matListAvatar src="assets/1.jpg" alt="...">
+                        <h3 matLine>Johni</h3>
+                        <p matLine>
+                            <span>Register with website on 30/08/2019 with referral on Mushaqdeen</span>
+                        </p>
+                        <p matLine>
+                            <span>Earned 0 points in referral</span>
+                        </p>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openDialog()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>money</mat-icon>
+                        </button>
+                        <img matListAvatar src="assets/2.jpg" alt="...">
+                        <h3 matLine>Jenika</h3>
+                        <p matLine>
+                            <span>Register with Alias Knowledge Center on 30/08/2019 with referral of Venket</span>
+                        </p>
+                        <p matLine>
+                            <span>Earned 100 points in referral</span>
+                        </p>
+                    </mat-list-item>
+                </mat-list>
             </mat-tab>
             <mat-tab label="4 Wheeler">
                 <div class="add-btn-container">
@@ -109,92 +115,98 @@
                         <input matInput placeholder="Search for Member" value="">
                     </mat-form-field>
                 </div>
-                <div class="accordion-container">
-                    <mat-accordion>
-                        <mat-expansion-panel>
-                            <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                    Club One
-                                </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            <mat-list>
-                                <mat-list-item>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog()">
-                                        <mat-icon>edit</mat-icon>
-                                    </button>
-                                    <button mat-icon-button aria-label="label">
-                                        <mat-icon>delete</mat-icon>
-                                    </button>
-                                    <img matListAvatar src="assets/1.jpg" alt="...">
-                                    <h3 matLine>Venket</h3>
-                                    <p matLine>
-                                        <span>Register with website on 20/08/2019 with no referral</span>
-                                    </p>
-                                    <p matLine>
-                                        <span>Earned 500 points in referral</span>
-                                    </p>
-                                </mat-list-item>
-                                <mat-list-item>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog()">
-                                        <mat-icon>edit</mat-icon>
-                                    </button>
-                                    <button mat-icon-button aria-label="label">
-                                        <mat-icon>delete</mat-icon>
-                                    </button>
-                                    <img matListAvatar src="assets/1.jpg" alt="...">
-                                    <h3 matLine>Mushaqdeen</h3>
-                                    <p matLine>
-                                        <span>Register with YG Book Center on 25/08/2019 with referral of Venket</span>
-                                    </p>
-                                    <p matLine>
-                                        <span>Earned 50 points in referral</span>
-                                    </p>
-                                </mat-list-item>
-                            </mat-list>
-                        </mat-expansion-panel>
-                        <mat-expansion-panel>
-                            <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                    Club Two
-                                </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            <mat-list>
-                                <mat-list-item>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog()">
-                                        <mat-icon>edit</mat-icon>
-                                    </button>
-                                    <button mat-icon-button aria-label="label">
-                                        <mat-icon>delete</mat-icon>
-                                    </button>
-                                    <img matListAvatar src="assets/1.jpg" alt="...">
-                                    <h3 matLine>Johni</h3>
-                                    <p matLine>
-                                        <span>Register with website on 30/08/2019 with referral on Mushaqdeen</span>
-                                    </p>
-                                    <p matLine>
-                                        <span>Earned 0 points in referral</span>
-                                    </p>
-                                </mat-list-item>
-                                <mat-list-item>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog()">
-                                        <mat-icon>edit</mat-icon>
-                                    </button>
-                                    <button mat-icon-button aria-label="label">
-                                        <mat-icon>delete</mat-icon>
-                                    </button>
-                                    <img matListAvatar src="assets/2.jpg" alt="...">
-                                    <h3 matLine>Jenika</h3>
-                                    <p matLine>
-                                        <span>Register with Alias Knowledge Center on 30/08/2019 with referral of Venket</span>
-                                    </p>
-                                    <p matLine>
-                                        <span>Earned 100 points in referral</span>
-                                    </p>
-                                </mat-list-item>
-                            </mat-list>
-                        </mat-expansion-panel>
-                    </mat-accordion>
-                </div>
+                <mat-list>
+                    <mat-list-item>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openDialog()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>money</mat-icon>
+                        </button>
+                        <img matListAvatar src="assets/1.jpg" alt="...">
+                        <h3 matLine>Venket</h3>
+                        <p matLine>
+                            <span>Register with website on 20/08/2019 with no referral</span>
+                        </p>
+                        <p matLine>
+                            <span>Earned 500 points in referral</span>
+                        </p>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openDialog()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>money</mat-icon>
+                        </button>
+                        <img matListAvatar src="assets/1.jpg" alt="...">
+                        <h3 matLine>Mushaqdeen</h3>
+                        <p matLine>
+                            <span>Register with YG Book Center on 25/08/2019 with referral of Venket</span>
+                        </p>
+                        <p matLine>
+                            <span>Earned 50 points in referral</span>
+                        </p>
+                    </mat-list-item>
+                </mat-list>
+                <mat-list>
+                    <mat-list-item>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openDialog()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>money</mat-icon>
+                        </button>
+                        <img matListAvatar src="assets/1.jpg" alt="...">
+                        <h3 matLine>Johni</h3>
+                        <p matLine>
+                            <span>Register with website on 30/08/2019 with referral on Mushaqdeen</span>
+                        </p>
+                        <p matLine>
+                            <span>Earned 0 points in referral</span>
+                        </p>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openDialog()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label">
+                            <mat-icon>money</mat-icon>
+                        </button>
+                        <img matListAvatar src="assets/2.jpg" alt="...">
+                        <h3 matLine>Jenika</h3>
+                        <p matLine>
+                            <span>Register with Alias Knowledge Center on 30/08/2019 with referral of Venket</span>
+                        </p>
+                        <p matLine>
+                            <span>Earned 100 points in referral</span>
+                        </p>
+                    </mat-list-item>
+                </mat-list>
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>
