@@ -360,6 +360,8 @@ body {
 .media-press-release {
     background: #f2f2f2;
     padding: 8% 0;
+    position: relative;
+    top: 108px;
 }
 
 .media-bg {
@@ -520,6 +522,8 @@ body {
 
 .section-bg {
     background: #f2f2f2;
+    position: relative;
+    top: 108px !important;
 }
 
 .ptb-40 {
