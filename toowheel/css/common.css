@@ -3605,3 +3605,14 @@ thead td {
     border-radius: 5px;
     padding: 10px 10px;
 }
+@media (max-width: 575px) and (min-width:320px){
+    .pan-1{
+        flex-basis: 100%;
+    }
+    .pan-2{
+        flex-basis: 100%;
+    }
+    .pan-3{
+        flex-basis: 100%;
+    }
+}
