@@ -304,7 +304,7 @@
                                     </div>
                                 </div>
                                 <div class="blog-post wf100">
-                                    <h5 class="text-center color-black">ENPEE sports Academy</h5>
+                                    <h5 class="text-center color-black">ENPEE Sports Academy</h5>
                                     <div class="col-md-6">
                                         <img src="images/sports-001.jpg" alt=""  class="img-s">
                                     </div>
