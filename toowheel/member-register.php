@@ -10,6 +10,7 @@ $obj = new Common();
 <html>
     <?php include 'head.php'; ?>
     <body>
+        <script src="https://www.paypal.com/sdk/js?client-id=ARkbHw__nsXW1AJ3lAhXdKsIKUHMLOowBnKaEvdQ2vrepjFyBgiplpKkuvleAR9P9uhB2_djrTJ2iFJj&currency=MYR"></script>
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
         <div class="member-register-section">
@@ -22,43 +23,40 @@ $obj = new Common();
                             <li><a href="#step-3">Step 3<br /><small>Payment Get way</small></a></li>
                             <li><a href="#step-4">Step 4<br /><small>All Information Finish</small></a></li>
                         </ul>
-
                         <div class="registation-step">
                             <div id="step-1" class="">
                                 <h2>Member Registration</h2>
                                 <h4>Basic Information</h4>
                                 <form class="">
                                     <div class="form-group">
-                                        <label for="category">Category</label>
+                                        <label for="type">Category</label>
                                         <span class="red-i">*</span>
-                                        <select class="form-control" id="category">
-                                            <option value="0">Select Category</option>
-                                            <option value="4-Wheel">4 Wheel</option>
-                                            <option value="4-Wheel">2 Wheel</option>
+                                        <select class="form-control" name="type" id="type">
+                                            <option value="">Select Category</option>
+                                            <option value="four_wheel">4 Wheel</option>
+                                            <option value="two_wheel">2 Wheel</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="firstname">First Name</label>
+                                        <label for="first_name">First Name</label>
                                         <span class="red-i">*</span>
-                                        <input type="text" class="form-control" id="firstname" placeholder="" required-i>
-    <!--                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                        <input type="text" class="form-control" name="first_name" id="first_name" placeholder="" required-i>
                                     </div>
                                     <div class="form-group">
                                         <label for="upload-profile">Upload Your Profile Picture</label>
-                                        <input type="file" class="form-control-file" id="upload-profile">
+                                        <input type="file" class="form-control-file" id="upload-profile" />
                                     </div>
                                     <div class="form-group">
                                         <label for="gender">Gender</label>
-                                        <select class="form-control" id="gender">
-                                            <option value="0">gender</option>
+                                        <select class="form-control" id="gender" name="gender">
+                                            <option value="">gender</option>
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="age">Age</label>
-                                        <select class="form-control" id="age">
-                                            <!--                                        <option value="0">Age</option>-->
+                                        <select class="form-control" id="age" name="age">
                                             <option value='1'>1</option>
                                             <option value='2'>2</option>
                                             <option value='3'>3</option>
@@ -161,15 +159,15 @@ $obj = new Common();
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="ic-no-passport-no">IC Number / Passport Number</label> 
+                                        <label for="ic_passport">IC Number / Passport Number</label> 
                                         <span class="red-i">*</span>
-                                        <input type="text" class="form-control" id="state" placeholder="" required-i>
+                                        <input type="text" class="form-control" name="ic_passport" id="ic_passport" placeholder="" required-i>
                                     </div>
                                     <div class="form-row">
                                         <div class="col-md-4 mb-3">
-                                            <label for="date">Date of Birth</label> 
+                                            <label for="dob_date">Date of Birth</label> 
                                             <span class="red-i">*</span>
-                                            <select class="form-control" id="date" required-i>
+                                            <select class="form-control" id="dob_date" name="dob_date" required-i>
                                                 <option value="0">Day</option>
                                                 <option value='1'>1</option>
                                                 <option value='2'>2</option>
@@ -205,8 +203,8 @@ $obj = new Common();
                                             </select>
                                         </div>
                                         <div class="col-md-4 mb-3">
-                                            <label for="month">&nbsp;</label>
-                                            <select class="form-control" id='monthd' required-i>
+                                            <label for="dob_month">&nbsp;</label>
+                                            <select class="form-control" id='dob_month' name='dob_month' required-i>
                                                 <option value='0'>Month</option>
                                                 <option value='1'>1</option>
                                                 <option value='2'>2</option>
@@ -223,8 +221,8 @@ $obj = new Common();
                                             </select>
                                         </div>
                                         <div class="col-md-4 mb-3">
-                                            <label for="year">&nbsp;</label>
-                                            <select class="form-control" id='year' required-i>
+                                            <label for="dob_year">&nbsp;</label>
+                                            <select class="form-control" id='dob_year' name='dob_year' required-i>
                                                 <option value='0'>Year</option>
                                                 <option value='1947'>1947</option>
                                                 <option value='1948'>1948</option>
@@ -287,14 +285,14 @@ $obj = new Common();
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="contact">Contact Number</label> 
+                                        <label for="contact_number">Contact Number</label> 
                                         <span class="red-i">*</span>
-                                        <input type="text" class="form-control" id="contact" placeholder="" required-i>
+                                        <input type="text" class="form-control" name="contact_number" id="contact_number" placeholder="" required-i />
                                     </div>
                                     <div class="form-group">
-                                        <label for="driver-license-category">Driver License Category</label> 
+                                        <label for="license_category">Driver License Category</label> 
                                         <span class="red-i">*</span>
-                                        <select class="form-control" id='driver-license-category' required-i>
+                                        <select class="form-control" name='license_category' id='license_category' required-i>
                                             <option value='class3'>Class 3</option>
                                             <option value='class3a'>Class 3A</option>
                                             <option value='class3c'>Class 3C</option>
@@ -304,58 +302,58 @@ $obj = new Common();
                                     <div class="form-group">
                                         <label for="address">Address</label> 
                                         <span class="red-i">*</span>
-                                        <textarea class="form-control" placeholder="" id="address" type="text" rows="3" required-i></textarea>
+                                        <textarea class="form-control" placeholder="" name="address" id="address" type="text" rows="3" required-i></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="country">Country</label> 
                                         <span class="red-i">*</span>
-                                        <input placeholder="" id="country" type="text" class="form-control" required-i>
+                                        <input placeholder="" name="country" id="country" type="text" class="form-control" required-i>
                                     </div>
                                     <div class="form-group">
                                         <label for="state">State</label> 
                                         <span class="red-i">*</span>
-                                        <input type="text" class="form-control" placeholder="" required-i>
+                                        <input type="text" class="form-control" name="state" id="state" placeholder="" required-i>
                                     </div>
                                     <br/>
                                     <h4>Referral</h4>
                                     <div class="form-group">
-                                        <label for="member-id">Member ID</label>
-                                        <input placeholder="" id="member-id" type="text" class="form-control">
+                                        <label for="referral_member_id">Member ID</label>
+                                        <input placeholder="" name="referral_member_id" id="referral_member_id" type="text" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="club-id">Club ID</label>
-                                        <input placeholder="" id="club-id" type="text" class="form-control">
+                                        <label for="referral_club_id">Club ID</label>
+                                        <input placeholder="" id="referral_club_id" name="referral_club_id" type="text" class="form-control">
                                     </div>
                                     <br/>
                                     <h4>Coverage</h4>
                                     <div class="form-group">
-                                        <label for="fullname">Full Name (Next of Kin)</label>
-                                        <input placeholder="" id="fullname" type="text" class="form-control">
+                                        <label for="coverage_full_name">Full Name (Next of Kin)</label>
+                                        <input placeholder="" id="coverage_full_name" name="coverage_full_name" type="text" class="form-control" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="mobile">Contact Number</label>
-                                        <input type="text" class="form-control" id="mobile" placeholder="">
+                                        <label for="coverage_contact_number">Contact Number</label>
+                                        <input type="text" class="form-control" name="coverage_contact_number" id="coverage_contact_number" placeholder="" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="address">Address</label>
-                                        <textarea class="form-control" placeholder="" id="address" type="text" rows="3"></textarea>
+                                        <label for="coverage_address">Address</label>
+                                        <textarea class="form-control" placeholder="" name="coverage_address" id="coverage_address" type="text" rows="3"></textarea>
                                     </div>
                                     <br/>
                                     <h4>Login Information</h4>
                                     <div class="form-group">
                                         <label for="email">Email Address</label> 
                                         <span class="red-i">*</span>
-                                        <input type="email" class="form-control" id="email" placeholder="" required-i>
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="" required-i>
                                     </div>
                                     <div class="form-group">
                                         <label for="password">Password</label> 
                                         <span class="red-i">*</span>
-                                        <input type="password" class="form-control" id="password" placeholder="" required-i>
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="" required-i>
                                     </div>
                                     <div class="form-group">
                                         <label for="cnfpassword">Confirm Password</label> 
                                         <span class="red-i">*</span>
-                                        <input type="password" class="form-control" id="cnfpassword" placeholder="" required-i>
+                                        <input type="password" class="form-control" name="cnfpassword" id="cnfpassword" placeholder="" required-i />
                                     </div>
                                 </form>
                             </div>
@@ -541,7 +539,7 @@ $obj = new Common();
                                 <h2>Make Payment</h2>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="member-register-btn"><a href="#">PayPal</a></div>
+                                        <div class="member-register-btn"><a id="paywith_paypal"></a></div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="member-register-btn cdm-found"><a href="#">CDM Fund Transfer</a></div>
@@ -578,25 +576,16 @@ $obj = new Common();
                             </div>
                             <div id="step-4" class="text-center">
                                 <h2>Registration Successful</h2>
-                                <!--                                <div class="card-header">My Details</div>
-                                                                    <div class="card-block p-0">
-                                                                        <table class="table">
-                                                                            <tbody>
-                                                                                <tr> <th>Name:</th> <td>Tim Smith</td> </tr>
-                                                                                <tr> <th>Email:</th> <td>example@example.com</td> </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </div>-->
                                 <div class="text-center">
                                     <h5>Congratulations!</h5>
-                                    <p class="text-center" style="margin-bottom: 0">You are now Offical Member of TooWheel.</p>
+                                    <p class="text-center" style="margin-bottom: 0">You are now Official Member of TooWheel.</p>
                                     <strong>Membership ID: (Unique Number)</strong>
                                     <br/>
                                 </div>
                                 <br/>
                                 <div class="">
                                     <span class="member-t">
-                                        <a href="member-benefits.php">My Benefits</a>
+                                        <a href="member-benefits.php?type=<?php echo $type; ?>">My Benefits</a>
                                     </span>
                                     <span class="member-t">
                                         <a href="index.php">Back to Homepage</a>
@@ -622,6 +611,33 @@ $obj = new Common();
                         $(".pop-1").fadeOut('fast');
                     }
             );
+            paypal.Buttons({
+                createOrder: function (data, actions) {
+                    // Set up the transaction
+                    return actions.order.create({
+                        purchase_units: [{
+                                amount: {
+                                    value: '60.00'
+                                }
+                            }]
+                    });
+                },
+                onApprove: function (data, actions) {
+                    return actions.order.capture().then(function (details) {
+                        alert('Transaction completed by ' + details.payer.name.given_name);
+                        // Call your server to save the transaction
+                        return fetch('/paypal-transaction-complete', {
+                            method: 'post',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                orderID: data.orderID
+                            })
+                        });
+                    });
+                }
+            }).render('#paywith_paypal');
         </script>
     </body>
 </html>

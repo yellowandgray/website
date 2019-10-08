@@ -94,7 +94,8 @@
 <script src="js/rangeslider.min.js" type="text/javascript"></script>
 <script src="js/jquery.easing.min.js" type="text/javascript"></script>
 <script src="js/jquery.smartWizard_step_by.min.js" type="text/javascript"></script>
-<script>
+<script src="js/script.js" type="text/javascript"></script>
+<script type="text/javascript">
     function openNav() {
         document.getElementById("mySidenav").style.height = "100%";
         document.getElementById("mySidenav").style.top = "85px";
@@ -103,14 +104,6 @@
         document.getElementById("mySidenav").style.height = "0";
         document.getElementById("mySidenav").style.top = "-800px";
     }
-
-//    var modal = document.getElementById("mySidenav");
-//    window.onclick = function (event) {
-//        if (event.target == modal) {
-//            modal.style.height = "0%";
-//            modal.style.top = "-60px";
-//        }
-//    };
 
     $(document).ready(function () {
         $('#nav-icon3').click(function () {
@@ -122,24 +115,7 @@
             }
         });
     });
-</script>
-<!--<script>
-    function signIn() {
-        document.getElementById("sign-up").style.display = "block";
-        document.getElementById("log-in").style.display = "none";
-    }
-    function logIn() {
-        document.getElementById("sign-up").style.display = "none";
-        document.getElementById("log-in").style.display = "block";
-    }
-
-</script>-->
-<!--mega-menu-->
-<!--calender-->
-
-<script type="text/javascript">
     $(document).ready(function () {
-
         // Step show event
         $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection, stepPosition) {
             //alert("You are on step "+stepNumber+" now");
@@ -179,8 +155,6 @@
             }
         });
     });
-</script>
-<script type="text/javascript">
     $(document).ready(function () {
         $(".set > a").on("click", function () {
             if ($(this).hasClass("active")) {
