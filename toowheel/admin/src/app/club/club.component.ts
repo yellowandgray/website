@@ -97,9 +97,9 @@ export class ClubForm {
     categories:any[];
     states:any[];
     cities:any[];
-    file_cover_name: string = 'Choose Cover Image';
-    file_logo_name: string = 'Choose Club Logo';
-    club_video_name: string = 'Choose Club Video';
+    file_cover_name: string = 'Cover Image';
+    file_logo_name: string = 'Club Logo';
+    club_video_name: string = 'Club Video';
     cover_image: string;
     logo_image: string;
     club_video: string;
