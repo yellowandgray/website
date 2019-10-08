@@ -427,3 +427,9 @@
         font-size: 90px !Important;
     }
 }
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+    .footer {
+        top: 370px !Important;
+    }
+}
