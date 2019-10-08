@@ -99,8 +99,10 @@ export class ClubForm {
     cities:any[];
     file_cover_name: string = 'Choose Cover Image';
     file_logo_name: string = 'Choose Club Logo';
+    club_video_name: string = 'Choose Club Video';
     cover_image: string;
     logo_image: string;
+    club_video: string;
     constructor(
     public dialogRef: MatDialogRef<ClubForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -119,7 +121,8 @@ export class ClubForm {
             'no_of_member': new FormControl(),
             'email': new FormControl(),
             'mobile': new FormControl(),
-            'about': new FormControl()
+            'about': new FormControl(),
+            'rank': new FormControl()
         });
         if(this.data != null) {
                 this.clubForm.patchValue({
@@ -135,7 +138,8 @@ export class ClubForm {
            no_of_member: this.data.no_of_member,
            email: this.data.email,
            mobile: this.data.phone,
-           about: this.data.about
+           about: this.data.about,
+           rank: this.data.rank
         });
         this.club_id = this.data.club_id;
         this.getCategory();
@@ -236,6 +240,9 @@ export class ClubForm {
           if(this.logo_image && this.logo_image!= '') {
               formData.append('logo', this.logo_image);
           }
+          if(this.club_video && this.club_video!= '') {
+              formData.append('club_video', this.club_video);
+          }
           formData.append('category_id', this.clubForm.value.category_id);
           formData.append('state_id', this.clubForm.value.state);
           formData.append('city', this.clubForm.value.city);
@@ -247,6 +254,7 @@ export class ClubForm {
           formData.append('email', this.clubForm.value.email);
           formData.append('phone', this.clubForm.value.mobile);
           formData.append('about', this.clubForm.value.about);
+          formData.append('rank', this.clubForm.value.rank);
         url = 'update_record/club/club_id = '+this.club_id;
       } else {
         formData.append('name', this.clubForm.value.name);
@@ -264,6 +272,8 @@ export class ClubForm {
           formData.append('email', this.clubForm.value.email);
           formData.append('mobile', this.clubForm.value.mobile);
           formData.append('about', this.clubForm.value.about);
+          formData.append('rank', this.clubForm.value.rank);
+          formData.append('club_video', this.club_video);
         url = 'insert_club';
       }
           this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(
