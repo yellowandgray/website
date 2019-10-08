@@ -98,7 +98,7 @@
 <script type="text/javascript">
     function openNav() {
         document.getElementById("mySidenav").style.height = "100%";
-        document.getElementById("mySidenav").style.top = "85px";
+        document.getElementById("mySidenav").style.top = "96px";
     }
     function closeNav() {
         document.getElementById("mySidenav").style.height = "0";
