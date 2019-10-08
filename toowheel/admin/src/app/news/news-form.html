@@ -96,7 +96,7 @@
     </div>
 </div>
 <br/>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
     <div fxFlex="33%">
         <button type="button" mat-raised-button (click)="fileInputThumb.click()">{{thumb_image}}</button>
         <input hidden #fileInputThumb type="file" id="file_thumb" (change)="fileProgress($event, 'thumb_image', 'thumb_image_path')" />
