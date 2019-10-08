@@ -1,104 +1,233 @@
+jQuery(document).ready(function ($) {
+    "use strict";
 
-jQuery(document).ready(function($) {
-    'use strict';
+    //Contact
+    $('form.contact-form').submit(function () {
+        var f = $(this).find('.form-group'),
+                ferror = false,
+                emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
-    // Get the form.
-    var form = $('form .form-container');
+        f.children('input').each(function () { // run all inputs
 
-    // Get the messages div.
-    var formMessages = $('#form-messages');
+            var i = $(this); // current input
+            var rule = i.attr('data-rule');
 
-    // Set up an event listener for the contact form.
-    $(form).submit(function(e) {
-        // Stop the browser from submitting the form.
-        e.preventDefault();
+            if (rule !== undefined) {
+                var ierror = false; // error flag for current input
+                var pos = rule.indexOf(':', 0);
+                if (pos >= 0) {
+                    var exp = rule.substr(pos + 1, rule.length);
+                    rule = rule.substr(0, pos);
+                } else {
+                    rule = rule.substr(pos + 1, rule.length);
+                }
 
-        // Serialize the form data.
-        var formData = $(form).serialize();
+                switch (rule) {
+                    case 'required':
+                        if (i.val() === '') {
+                            ferror = ierror = true;
+                        }
+                        break;
 
-        // Submit the form using AJAX.
-        $.ajax({
-            type: 'POST',
-            url: "enquiry-form.php",
-            data: formData,
-          
-        })
-        .done(function(response) {
-            // Make sure that the formMessages div has the 'success' class.
-            $(formMessages).removeClass('error');
-            $(formMessages).addClass('success');
+                    case 'minlen':
+                        if (i.val().length < parseInt(exp)) {
+                            ferror = ierror = true;
+                        }
+                        break;
 
-            // Set the message text.
-            $(formMessages).text(response);
+                    case 'email':
+                        if (!emailExp.test(i.val())) {
+                            ferror = ierror = true;
+                        }
+                        break;
 
-            // Clear the form.
-            $('#fname, #lname, #email, #subject, #message').val('');
-        })
-        .fail(function(data) {
-            // Make sure that the formMessages div has the 'error' class.
-            $(formMessages).removeClass('success');
-            $(formMessages).addClass('error');
+                    case 'checked':
+                        if (!i.is(':checked')) {
+                            ferror = ierror = true;
+                        }
+                        break;
 
-            // Set the message text.
-            if (data.responseText !== '') {
-                $(formMessages).text(data.responseText);
-            } else {
-                $(formMessages).text('Oops! An error occured and your message could not be sent.');
+                    case 'regexp':
+                        exp = new RegExp(exp);
+                        if (!exp.test(i.val())) {
+                            ferror = ierror = true;
+                        }
+                        break;
+                }
+                i.next('.validation').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
             }
         });
-    });
+        f.children('textarea').each(function () { // run all inputs
 
-});
+            var i = $(this); // current input
+            var rule = i.attr('data-rule');
 
+            if (rule !== undefined) {
+                var ierror = false; // error flag for current input
+                var pos = rule.indexOf(':', 0);
+                if (pos >= 0) {
+                    var exp = rule.substr(pos + 1, rule.length);
+                    rule = rule.substr(0, pos);
+                } else {
+                    rule = rule.substr(pos + 1, rule.length);
+                }
 
+                switch (rule) {
+                    case 'required':
+                        if (i.val() === '') {
+                            ferror = ierror = true;
+                        }
+                        break;
 
-jQuery(document).ready(function($) {
-    'use strict';
-
-    // Get the form.
-    var form = $('.form-popup .contact-form');
-
-    // Get the messages div.
-    var formMessages = $('#form-messages');
-
-    // Set up an event listener for the contact form.
-    $(form).submit(function(e) {
-        // Stop the browser from submitting the form.
-        e.preventDefault();
-
-        // Serialize the form data.
-        var formData = $(form).serialize();
-
-        // Submit the form using AJAX.
+                    case 'minlen':
+                        if (i.val().length < parseInt(exp)) {
+                            ferror = ierror = true;
+                        }
+                        break;
+                }
+                i.next('.validation').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+            }
+        });
+        if (ferror)
+            return false;
+        else
+            var str = $(this).serialize();
         $.ajax({
-            type: 'POST',
+            type: "POST",
+            dataType: 'json',
             url: "contact-form.php",
-            data: formData,
-          
-        })
-        .done(function(response) {
-            // Make sure that the formMessages div has the 'success' class.
-            $(formMessages).removeClass('error');
-            $(formMessages).addClass('success');
+            data: str,
+            success: function (msg) {
+                // alert(msg);
+                if (msg == 'OK') {
+                    $("#sendmessage").addClass("show");
+                    $("#errormessage").removeClass("show");
+                    $('.contact').find("input, textarea").val("");
+                    swal("Success", "Thank you, We will contact you soon!", 'success');
+                } else {
+                    $("#sendmessage").removeClass("show");
+                    $("#errormessage").addClass("show");
+                    $('#errormessage').html(msg);
+                }
 
-            // Set the message text.
-            $(formMessages).text(response);
-
-            // Clear the form.
-            $('#fname, #lname, #email, #subject, #message').val('');
-        })
-        .fail(function(data) {
-            // Make sure that the formMessages div has the 'error' class.
-            $(formMessages).removeClass('success');
-            $(formMessages).addClass('error');
-
-            // Set the message text.
-            if (data.responseText !== '') {
-                $(formMessages).text(data.responseText);
-            } else {
-                $(formMessages).text('Oops! An error occured and your message could not be sent.');
             }
         });
+        return false;
     });
+    
+    //enquiry
+    $('form.form-container').submit(function () {
+        var f = $(this).find('.form-group'),
+                ferror = false,
+                emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+
+        f.children('input').each(function () { // run all inputs
+
+            var i = $(this); // current input
+            var rule = i.attr('data-rule');
+
+            if (rule !== undefined) {
+                var ierror = false; // error flag for current input
+                var pos = rule.indexOf(':', 0);
+                if (pos >= 0) {
+                    var exp = rule.substr(pos + 1, rule.length);
+                    rule = rule.substr(0, pos);
+                } else {
+                    rule = rule.substr(pos + 1, rule.length);
+                }
+
+                switch (rule) {
+                    case 'required':
+                        if (i.val() === '') {
+                            ferror = ierror = true;
+                        }
+                        break;
+
+                    case 'minlen':
+                        if (i.val().length < parseInt(exp)) {
+                            ferror = ierror = true;
+                        }
+                        break;
+
+                    case 'email':
+                        if (!emailExp.test(i.val())) {
+                            ferror = ierror = true;
+                        }
+                        break;
+
+                    case 'checked':
+                        if (!i.is(':checked')) {
+                            ferror = ierror = true;
+                        }
+                        break;
+
+                    case 'regexp':
+                        exp = new RegExp(exp);
+                        if (!exp.test(i.val())) {
+                            ferror = ierror = true;
+                        }
+                        break;
+                }
+                i.next('.validation').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+            }
+        });
+        f.children('textarea').each(function () { // run all inputs
+
+            var i = $(this); // current input
+            var rule = i.attr('data-rule');
+
+            if (rule !== undefined) {
+                var ierror = false; // error flag for current input
+                var pos = rule.indexOf(':', 0);
+                if (pos >= 0) {
+                    var exp = rule.substr(pos + 1, rule.length);
+                    rule = rule.substr(0, pos);
+                } else {
+                    rule = rule.substr(pos + 1, rule.length);
+                }
+
+                switch (rule) {
+                    case 'required':
+                        if (i.val() === '') {
+                            ferror = ierror = true;
+                        }
+                        break;
+
+                    case 'minlen':
+                        if (i.val().length < parseInt(exp)) {
+                            ferror = ierror = true;
+                        }
+                        break;
+                }
+                i.next('.validation').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+            }
+        });
+        if (ferror)
+            return false;
+        else
+            var str = $(this).serialize();
+        $.ajax({
+            type: "POST",
+            dataType: 'json',
+            url: "enquiry-form.php",
+            data: str,
+            success: function (msg) {
+                // alert(msg);
+                if (msg == 'OK') {
+                    $("#sendmessage").addClass("show");
+                    $("#errormessage").removeClass("show");
+                    $('.contact').find("input, textarea").val("");
+                    swal("Success", "Thank you, We will contact you soon!", 'success');
+                } else {
+                    $("#sendmessage").removeClass("show");
+                    $("#errormessage").addClass("show");
+                    $('#errormessage').html(msg);
+                }
+
+            }
+        });
+        return false;
+    });
+
 
 });

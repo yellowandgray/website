@@ -52,7 +52,7 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Host = "sg3plcpnl0022.prod.sin3.secureserver.net";      // sets GMAIL as the SMTP server
+    $mail->Host = "singapore.verzdesign.com";      // sets GMAIL as the SMTP server
 
 
 
@@ -60,15 +60,15 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Username = "noreply@aaluvglobal.com";  // GMAIL username
+    $mail->Username = "noreply@vpnc.com.sg";  // GMAIL username
 
 
 
-    $mail->Password = "Admin@aaluv";            // GMAIL password
+    $mail->Password = "Admin@vpnc2019";            // GMAIL password
 
     $mail->IsHTML(true);
 
-    $mail->SetFrom('noreply@aaluvglobal.com', 'VPN Commodities');
+    $mail->SetFrom('noreply@vpnc.com.sg', 'VPN Commodities');
 
     $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
 
@@ -157,7 +157,7 @@ if ($_POST['fname']) {
 
     // More headers
 
-    $address = "info@aaluvglobal.com";
+    $address = "sales@vpnc.com.sg";
 
 
     $mail->AddAddress($address, "VPN Commodities");

@@ -50,7 +50,7 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Host = "sg3plcpnl0022.prod.sin3.secureserver.net";      // sets GMAIL as the SMTP server
+    $mail->Host = "singapore.verzdesign.com";      // sets GMAIL as the SMTP server
 
 
 
@@ -58,15 +58,15 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Username = "noreply@aaluvglobal.com";  // GMAIL username
+    $mail->Username = "noreply@vpnc.com.sg";  // GMAIL username
 
 
 
-    $mail->Password = "Admin@aaluv";            // GMAIL password
+    $mail->Password = "Admin@vpnc2019";            // GMAIL password
 
     $mail->IsHTML(true);
 
-    $mail->SetFrom('noreply@aaluvglobal.com', 'VPN Commodities');
+    $mail->SetFrom('noreply@vpnc.com.sg', 'VPN Commodities');
 
     $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
 
@@ -108,7 +108,7 @@ if ($_POST['fname']) {
             <tr>
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
-            <h3 style = "margin:0 0 16px; text-align:center;">Contact Form</h3>
+            <h3 style = "margin:0 0 16px; text-align:center;">Enquity Form</h3>
             <p style = "margin:0 0 16px">first Name: ' . $fname . '</p>
            <p style = "margin:0 0 16px">Email: ' . $email . '</p>
             <p style = "margin:0 0 16px">Contact: ' . $phone . '</p>
@@ -154,7 +154,8 @@ if ($_POST['fname']) {
 
     // More headers
 
-    $address = "info@aaluvglobal.com";
+    $address = "sales@vpnc.com.sg" ;
+    
 
 
     $mail->AddAddress($address, "VPN Commodities");

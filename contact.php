@@ -8,13 +8,13 @@
         <div class="wrapper">
             <!--Header Start-->
             <?php include 'menu.php'; ?>
-            <div id="search">
+<!--            <div id="search">
                 <button type="button" class="close">×</button>
                 <form class="search-overlay-form">
                     <input type="search" value="" placeholder="type keyword(s) here" />
                     <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
                 </form>
-            </div>
+            </div>-->
             <!--Header End-->
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/007.jpg) no-repeat; background-size: cover;">
@@ -37,19 +37,19 @@
                             <form class="contact-form">
                                 <h3>Feel Free to Contact us</h3>
                                 <ul class="cform">
-                                    <li class="half pr-15">
+                                    <li class="half pr-15 form-group">
                                         <input type="text" class="form-control" name="fname" placeholder="Full Name">
                                     </li>
-                                    <li class="half pl-15">
+                                    <li class="half pl-15 form-group">
                                         <input type="text" class="form-control" name="email" placeholder="Email">
                                     </li>
-                                    <li class="half pr-15">
+                                    <li class="half pr-15 form-group">
                                         <input type="text" class="form-control" name="contact" placeholder="Contact">
                                     </li>
-                                    <li class="half pl-15">
+                                    <li class="half pl-15 form-group">
                                         <input type="text" class="form-control" name="subject" placeholder="Subject">
                                     </li>
-                                    <li class="full">
+                                    <li class="full form-group">
                                         <textarea class="textarea-control" name="message" placeholder="Message"></textarea>
                                     </li>
                                     <li class="full">

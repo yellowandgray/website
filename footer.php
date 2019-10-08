@@ -67,7 +67,8 @@
 <script src="js/isotope.min.js"></script> 
 <script src="js/custom.js"></script>
 <script src="js/wow.js"></script>
-<script>
+<script src="js/contact.form.js" type="text/javascript"></script>
+<!--<script>
     wow = new WOW(
             {
                 animateClass: 'animated',
@@ -83,7 +84,7 @@
         section.className = 'section--purple wow fadeInDown';
         this.parentNode.insertBefore(section, this);
     };
-</script>
+</script>-->
 <script>
     window.onscroll = function () {
         myFunction()
