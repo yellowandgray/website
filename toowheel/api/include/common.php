@@ -111,11 +111,15 @@ class Common {
     }
 
     public function charLimit($str, $len) {
-        if (strlen($str) <= $len) {
-            return $str;
+        if ($str && $str != null && $str != 'null' && $str != 'undefined') {
+            if (strlen($str) <= $len) {
+                return $str;
+            } else {
+                $y = substr($str, 0, $len) . '...';
+                return $y;
+            }
         } else {
-            $y = substr($str, 0, $len) . '...';
-            return $y;
+            return '-';
         }
     }
 

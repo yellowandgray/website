@@ -48,7 +48,7 @@ $type = $press_release['type'];
                             <?php if (isset($press_release['banner_2']) && $press_release['banner_2'] != '') { ?>
                                 <img src="<?php echo BASE_URL . $press_release['banner_2']; ?>" alt="" style="width: 100%" /><br/><br/>
                             <?php } ?>
-                            <?php if (isset($press_release['youtube_id']) && $press_release['youtube_id'] != '') { ?>
+                            <?php if (isset($press_release['youtube_id']) && $press_release['youtube_id'] != '' && $press_release['youtube_id'] != null && $press_release['youtube_id'] != 'null' && $press_release['youtube_id'] != 'undefined') { ?>
                                 <iframe src="http://www.youtube.com/embed/<?php echo $press_release['youtube_id']; ?>" style="width: 100%; height: auto;" frameborder="0" allowfullscreen></iframe><br/><br/>
                             <?php } ?>
                         </div>

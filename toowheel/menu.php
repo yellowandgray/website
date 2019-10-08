@@ -65,7 +65,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                     <div>
                                         <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" />
                                         <div class="discover-slider-content">
-                                            <p class="clb-bg"><?php echo $obj->charLimit($row['club'], 10); ?></p>
+                                            <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 10) : $obj->charLimit($row['sponsor'], 10); ?></p>
                                             <h2><?php echo $obj->charLimit($row['title'], 10); ?></h2>
                                             <p><?php echo $obj->charLimit($row['moto_text'], 60); ?></p>
                                             <center class="news-discover"><a href="news.php?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
