@@ -1,3 +1,4 @@
+var avatar = '';
 function attachFile(id) {
     $('.loader').addClass('is-active');
     var form = new FormData();
@@ -11,7 +12,7 @@ function attachFile(id) {
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                file = data.result.data;
+                avatar = data.result.data;
             } else {
                 bootbox.alert(data.result.message);
             }

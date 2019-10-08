@@ -598,14 +598,16 @@ $obj = new Common();
                 </div>
             </div>
         </div>
+        <div class="loader loader-default"></div>
         <?php include 'footer.php'; ?>
+        <script src="js/bootbox.min.js"></script>
+        <script src="js/popper.min.js"></script>
         <script>
             $(".cdm-found").click(
                     function () {
                         $(".pop-1").fadeIn('slow');
                     }
             );
-
             $(".pop-1 i").click(
                     function () {
                         $(".pop-1").fadeOut('fast');
