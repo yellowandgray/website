@@ -3575,3 +3575,7 @@ thead td {
     width: 100%;
     height: 65%;
 }
+
+.mem-sign p {
+    text-align: center;
+}
