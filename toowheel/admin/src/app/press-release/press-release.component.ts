@@ -104,7 +104,7 @@ export class PressReleaseForm {
       'author_name': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required),
       'description_1': new FormControl('', Validators.required),
-      'youtube_id': new FormControl('', Validators.required)
+      'youtube_id': new FormControl()
         });
         if(this.data != null) {
            this.pressreleaseForm.patchValue({
