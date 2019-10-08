@@ -28,7 +28,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
             <div class="container">
                 <div class="row events-content">
                     <div class="col-md-8">
-                        <p class="clb-bg clr-white"><?php echo $obj->charLimit($news['category'], 17); ?></p>
+                        <p class="clb-bg clr-white"><?php echo $news['club_id'] != 0 ? $obj->charLimit($news['category'], 17) : $obj->charLimit($news['sponsor'], 14); ?></p>
                         <div class="events-main-content">
                             <span><?php echo $news['media']; ?> | <?php echo $news['author_name']; ?> | <?php echo date('M d, Y', strtotime($news['news_date'])); ?></span>
                             <div class="middle">
