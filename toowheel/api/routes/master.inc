@@ -139,6 +139,18 @@ $app->post('/insert_event', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_member', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('type' => $data['type'], 'first_name' => $data['first_name'], 'profile_picture' => $data['profile_picture'], 'gender' => $data['gender'], 'age' => $data['age'], 'ic_passport' => $data['ic_passport'], 'dob_date' => $data['dob_date'], 'dob_month' => $data['dob_month'], 'dob_year' => $data['dob_year'], 'contact_number' => $data['contact_number'], 'license_category' => $data['license_category'], 'address' => $data['address'], 'country' => $data['country'], 'state' => $data['state'], 'referral_member_id' => $data['referral_member_id'], 'referral_club_id' => $data['referral_club_id'], 'coverage_full_name' => $data['coverage_full_name'], 'coverage_contact_number' => $data['coverage_contact_number'], 'coverage_address' => $data['coverage_address'], 'email' => $data['email'], 'password' => $com->encryptPassword($data['password']), 'club_id' => $data['club_id'], 'payment_type' => $data['payment_type'], 'paypal_response' => $data['paypal_response'], 'paypal_transaction_id' => $data['paypal_transaction_id'], 'fund_transfer_file' => $data['fund_transfer_file'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'news');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/upload_file', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to upload image');
     $obj = new Common();

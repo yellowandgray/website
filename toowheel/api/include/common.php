@@ -118,4 +118,15 @@ class Common {
             return $y;
         }
     }
+
+    public function encryptPassword($pass) {
+        $encrypt = password_hash($pass, PASSWORD_DEFAULT);
+        return $encrypt;
+    }
+
+    public function decryptPassword($pass, $hash) {
+        $encrypt = password_verify($pass, $hash);
+        return $encrypt;
+    }
+
 }
