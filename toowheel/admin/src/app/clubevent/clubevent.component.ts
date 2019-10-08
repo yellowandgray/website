@@ -118,6 +118,10 @@ export class ClubEventForm {
         this.event_id = this.data.event_id;
         this.getCategory();
         this.getClub();
+        } else {
+            this.clubeventForm.patchValue({
+                event_date: new Date()
+            });
         }
     }
     getCategory(): void {
