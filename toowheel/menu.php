@@ -59,7 +59,6 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                         </div>
                     </div> 
                     <div id="News" class="tabcontent">
-                        <!--                        <h3>Latest News</h3>-->
                         <div class="row news">
                             <?php foreach ($menu_latest_news as $row) { ?>
                                 <div class="news-cont">
@@ -114,7 +113,9 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                 <?php foreach ($menu_findclub as $row) { ?>
                                     <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
-                                            <span>#1</span>
+                                            <?php if ($row['rank'] && $row['rank'] != 0) { ?>
+                                                <span>#<?php echo $row['rank']; ?></span>
+                                            <?php } ?>
                                             <img src="<?php echo BASE_URL . $row['logo']; ?>" alt="" />
                                             <h3><?php echo $row['name']; ?></h3>
                                             <p><?php echo $row['city']; ?></p>

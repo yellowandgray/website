@@ -206,7 +206,7 @@ $app->get('/get_advertisment', function() {
 $app->get('/get_news_gallery_by_news/:nid', function($nid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'news_gallery', 'news_id > 0');
+    $data = $com->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

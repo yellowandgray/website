@@ -80,7 +80,9 @@ $findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '
                     <?php foreach ($findclub as $row) { ?>
                         <!--                        <div class="col-md-2 col-sm-6">-->
                         <div class="club-box">
-                            <span>#1</span>
+                            <?php if ($row['rank'] && $row['rank'] != 0) { ?>
+                                <span>#<?php echo $row['rank']; ?></span>
+                            <?php } ?>
                             <img src="<?php echo BASE_URL . $row['logo']; ?>" alt="" />
                             <h3> <?php echo $row['name']; ?></h3>
                             <p> <?php echo $row['city']; ?></p>

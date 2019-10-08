@@ -37,9 +37,6 @@ $press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEF
                 </div>
             </div>
         </div>
-        <?php include 'social-media-embed.php'; ?>
-        <?php include 'partners-logos.php'; ?>
-        <?php include 'add-banner.php'; ?>
         <?php include 'footer.php'; ?>
     </body>
 </html>

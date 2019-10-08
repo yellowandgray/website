@@ -54,9 +54,11 @@ if ($type == 'four_wheel') {
                         <div class="row w-text-1">
                             <div class="w-text-con-1">
                                 <div class="row">
-                                    <div class="col-md-3">
-                                        <p><i class="fa fa-signal" aria-hidden="true"></i> #47</p>
-                                    </div>
+                                    <?php if ($club['rank'] && $club['rank'] != 0) { ?>
+                                        <div class="col-md-3">
+                                            <p><i class="fa fa-signal" aria-hidden="true"></i> #<?php echo $club['rank']; ?></p>
+                                        </div>
+                                    <?php } ?>
                                     <div class="col-md-3">
                                         <p><i class="fa fa-users" aria-hidden="true"></i> <?php echo $club['no_of_member']; ?></p>
                                     </div>
