@@ -45,8 +45,8 @@ export class NewsComponent implements OnInit {
          });
       }
     const dialogRef = this.dialog.open(NewsForm, {
-        minWidth: "40%",
-        maxWidth: "40%",
+        minWidth: "80%",
+        maxWidth: "80%",
          data: data
     });
 
