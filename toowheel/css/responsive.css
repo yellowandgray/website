@@ -132,6 +132,9 @@
     .section-bg {
         top: 93px !Important;
     }
+    #nav-icon3 p {
+        display: none !important;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {

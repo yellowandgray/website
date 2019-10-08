@@ -12,6 +12,8 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                 <span></span>
                 <span></span>
                 <span></span>
+                <p class="open-menu">MENU</p>
+                <p class="close-menu">CLOSE</p>
             </span>
             <div id="mySidenav" class="sidenav">
                 <div class="container tab-menu">
@@ -27,10 +29,10 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                         <h5>FOLLOW US</h5>
                         <ul class="nav__ul">
                             <li class="i-con">
-                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com/p/B2iG45lnGi-/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="https://twitter.com/@ToowheelM" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="https://www.youtube.com/channel/UCueyRbB52hjc0XUIqbkYxcg" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                             </li>
                         </ul>
                     </div>

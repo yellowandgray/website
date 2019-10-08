@@ -98,7 +98,7 @@ button.slick-prev, button.slick-prev:hover {
 {
     position: relative;
     top: 0;
-    left: 100px;
+/*    left: 100px;*/
     outline: none;
     display: block;
 }

@@ -722,6 +722,11 @@ button {
     font-size: 35px;
 }
 
+.i-con a {
+    padding: 0;
+    display: contents;
+}
+
 .tablinks a {
     font-size: 17px;
     text-align: left;
@@ -1595,12 +1600,12 @@ button {
 }
 
 #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
-    top: 15px;
+    top: 13px;
     width: 90%;
 }
 
 #nav-icon3 span:nth-child(4) {
-    top: 30px;
+    top: 26px;
 }
 
 #nav-icon3.open span:nth-child(1) {
@@ -1630,10 +1635,38 @@ button {
 }
 
 
+#nav-icon3 p.open-menu {
+    color: #858585;
+    position: relative;
+    top: 30px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+#nav-icon3 p.close-menu {
+    color: #858585;
+    position: relative;
+    top: 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .member-register-section {
     padding: 80px 0;
 }
 
+
+#nav-icon3 p.close-menu {
+    display: none;
+}
+
+.toggle.open p.close-menu {
+    display: block !Important;
+}
+
+.toggle.open p.open-menu {
+    display: none !Important;
+}
 
 /* PAGE STEP BY STEP SUBMIT CSS */
 .sw-theme-arrows {
@@ -3513,9 +3546,10 @@ thead td {
     margin: 0 25%;
     background: #fff;
     z-index: 999;
-    top:300px;
+    top: 300px;
     transition: 0.3s all ease-in-out;
     opacity: 0;
+    overflow: hidden;
 }
 #about-club i {
     float: right;
