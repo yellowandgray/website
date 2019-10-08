@@ -68,6 +68,7 @@
 <script src="js/custom.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/contact.form.js" type="text/javascript"></script>
+<script src="js/sweetalert.min.js" type="text/javascript"></script>
 <!--<script>
     wow = new WOW(
             {

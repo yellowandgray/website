@@ -19,6 +19,7 @@
     <link href="css/protfil.css" rel="stylesheet" type="text/css"/>
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="css/animate.css">
+    <link href="css/sweetalert.css" rel="stylesheet" type="text/css"/>
     
     <!-- CSS FILES End -->
 

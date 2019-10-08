@@ -38,19 +38,19 @@
                                 <h3>Feel Free to Contact us</h3>
                                 <ul class="cform">
                                     <li class="half pr-15 form-group">
-                                        <input type="text" class="form-control" name="fname" placeholder="Full Name">
+                                        <input type="text" class="form-control" name="fname" placeholder="Full Name" required>
                                     </li>
                                     <li class="half pl-15 form-group">
-                                        <input type="text" class="form-control" name="email" placeholder="Email">
+                                        <input type="email" class="form-control" name="email" placeholder="Email" required>
                                     </li>
                                     <li class="half pr-15 form-group">
-                                        <input type="text" class="form-control" name="contact" placeholder="Contact">
+                                        <input type="text" class="form-control" name="contact" placeholder="Contact" required>
                                     </li>
                                     <li class="half pl-15 form-group">
-                                        <input type="text" class="form-control" name="subject" placeholder="Subject">
+                                        <input type="text" class="form-control" name="subject" placeholder="Subject" required>
                                     </li>
                                     <li class="full form-group">
-                                        <textarea class="textarea-control" name="message" placeholder="Message"></textarea>
+                                        <textarea class="textarea-control" name="message" placeholder="Message" required></textarea>
                                     </li>
                                     <li class="full">
                                         <input type="submit" value="Contact us" class="fsubmit">

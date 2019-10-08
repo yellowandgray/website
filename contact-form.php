@@ -64,7 +64,7 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Password = "Admin@vpnc2019";            // GMAIL password
+    $mail->Password = "Admin@vpnc";            // GMAIL password
 
     $mail->IsHTML(true);
 
