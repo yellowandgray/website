@@ -220,15 +220,6 @@ $configs = $obj->getLandingDetails();
                     </ul>
                 </div>
             </div>
-
-            <!--        <div class="legal">
-                        <p>&copy; 2019 TOOWHEEl. All Right Reserved</p>
-                        <span class="legal__links">
-                            <a href="#">Privacy Policy</a>
-                            <span></span>
-                            <a href="#">Terms of Use</a>
-                        </span>
-                    </div>-->
         </footer>
         <script src="js/jquery.min.js" type="text/javascript"></script>
         <script src="js/bootstrap.js" type="text/javascript"></script>

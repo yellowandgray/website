@@ -113,13 +113,15 @@ export class GalleryForm {
          this.galleryForm = new FormGroup({
       'title': new FormControl('', Validators.required),
       'media_type': new FormControl('', Validators.required),
-      'type': new FormControl('', Validators.required)
+      'type': new FormControl('', Validators.required),
+      'description': new FormControl('', Validators.required)
         });
         if(this.data != null) {
                 this.galleryForm.patchValue({
            title: this.data.title,
            media_type: this.data.media_type,
            type: this.data.type,
+           description: this.data.description
         });
         this.gallery_id = this.data.gallery_id;
         }
@@ -167,6 +169,7 @@ export class GalleryForm {
               formData.append('title', this.galleryForm.value.title);
           formData.append('media_type', this.galleryForm.value.media_type);
           formData.append('type', this.galleryForm.value.type);
+          formData.append('description', this.galleryForm.value.description);
           if(this.media_path && this.media_path != '') {
           formData.append('media_path', this.media_path);
           }
@@ -176,6 +179,7 @@ export class GalleryForm {
           formData.append('media_type', this.galleryForm.value.media_type);
           formData.append('type', this.galleryForm.value.type);
           formData.append('media_path', this.media_path);
+          formData.append('description', this.galleryForm.value.description);
           url = 'insert_gallery';
           }
           if(this.thumb_path && this.thumb_path!= '') {

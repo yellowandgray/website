@@ -514,7 +514,7 @@ button {
 
 .main-wrapper {
     transition: background 1s ease;
-    background: #ffffff;
+    background: #111111;
 }
 
 .slide .inside {
