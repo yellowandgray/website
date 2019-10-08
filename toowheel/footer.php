@@ -104,7 +104,6 @@
         document.getElementById("mySidenav").style.height = "0";
         document.getElementById("mySidenav").style.top = "-800px";
     }
-
     $(document).ready(function () {
         $('#nav-icon3').click(function () {
             $(this).toggleClass('open');
@@ -114,8 +113,6 @@
                 closeNav();
             }
         });
-    });
-    $(document).ready(function () {
         // Step show event
         $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection, stepPosition) {
             //alert("You are on step "+stepNumber+" now");
@@ -152,10 +149,10 @@
             showStepURLhash: false,
             toolbarSettings: {toolbarPosition: 'both',
                 toolbarExtraButtons: [btnFinish, btnCancel]
-            }
+            },
+            onLeaveStep: leaveAStepCallback,
+            onFinish: onFinishCallback
         });
-    });
-    $(document).ready(function () {
         $(".set > a").on("click", function () {
             if ($(this).hasClass("active")) {
                 $(this).removeClass("active");
