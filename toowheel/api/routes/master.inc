@@ -442,3 +442,24 @@ $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
     }
     echoRespnse(201, $res);
 });
+
+$app->post('/loginadmin', function() use ($app) {
+    try {
+        $data = $app->request->post();
+        $obj = new Common();
+        $res = array('code' => 201, 'message' => 'Invalid login details');
+        $record = $obj->selectRow('a_admin', 'username=\'' . $data['username'] . '\'');
+        if (count($record) > 0) {
+            $pass_matchs = $obj->decryptPassword($data['password'], $record['password']);
+            if ($pass_matchs == true) {
+                $res['code'] = 200;
+                $res['message'] = 'Welcome ' . $record['name'];
+                $res['data'] = $record;
+            }
+        }
+    } catch (Exception $ex) {
+        $res['message'] = $ex->getMessage();
+        $res['code'] = $ex->getCode();
+    }
+    echoRespnse($res['code'], $res);
+});
