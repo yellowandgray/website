@@ -19,8 +19,8 @@ $type = $press_release['type'];
         <div class="press-release">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <img src="<?php echo BASE_URL . $press_release['cover_image']; ?>" alt="" style="width: 80%;" />
+                    <div class="col-md-12 text-center club-press">
+                        <img src="<?php echo BASE_URL . $press_release['cover_image']; ?>" alt="" />
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@ $type = $press_release['type'];
                                 <span class="side-news-widget1"><span><?php echo $row['author_name']; ?></span></span>
                                 <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" />
                                 <h4><?php echo $row['title']; ?></h4>
-                                <p><?php echo $row['description_1']; ?></p>
+                                <p><?php echo $obj->charLimit($row['description_1'], 275); ?></p>
                                 <div class="button-1">
                                     <div class="eff-1"></div>
                                     <a href="press.php?pid=<?php echo $row['press_release_id']; ?>">Discover</a>

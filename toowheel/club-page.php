@@ -24,7 +24,7 @@ if ($type == 'four_wheel') {
         <?php include 'menu.php'; ?>
         <div class="club-pad-top-108"></div>
         <section style="background-image: url(<?php echo BASE_URL . $club['cover_image']; ?>); background-size:cover;">
-            <div style="height: 50%;overflow: hidden;">
+            <div style="height: 50%;overflow: hidden;background: #0000008c;">
             </div>
         </section>
         <section>
