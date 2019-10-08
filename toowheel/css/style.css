@@ -624,7 +624,7 @@ body {
 }
 
 .partners-section img {
-    margin: 40px 0;
+    /*margin: 40px 0;*/
     width: 100%;
 }
 
@@ -1791,4 +1791,7 @@ body {
 
 .anounce .discover-slider img {
     height: 280px;
+}
+.flatCard .post {
+    border: none !important;
 }
