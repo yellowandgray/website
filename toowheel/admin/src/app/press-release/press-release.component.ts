@@ -118,6 +118,10 @@ export class PressReleaseForm {
            youtube_id: this.data.youtube_id
         });
         this.press_release_id = this.data.press_release_id;
+    }else {
+        this.pressreleaseForm.patchValue({
+                date: new Date()
+            });
     }
     this.httpClient.get('../toowheel/api/v1/get_medias').subscribe(
               (res)=>{
