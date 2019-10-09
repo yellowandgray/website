@@ -28,7 +28,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
             <div class="container">
                 <div class="row events-content">
                     <div class="col-md-8">
-                        <p class="clb-bg clr-white"><?php echo $news['club_id'] != 0 ? $obj->charLimit($news['category'], 17) : $obj->charLimit($news['sponsor'], 14); ?></p>
+                        <p class="clb-bg clr-white"><?php echo $news['club_id'] != 0 ? $obj->charLimit($news['club'], 17) : $obj->charLimit($news['sponsor'], 14); ?></p>
                         <div class="events-main-content">
                             <span><?php echo $news['media']; ?> | <?php echo $news['author_name']; ?> | <?php echo date('M d, Y', strtotime($news['news_date'])); ?></span>
                             <div class="middle">
@@ -42,12 +42,12 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                     <span class="facebook-share" data-js="facebook-share"><i class="fa fa-facebook" aria-hidden="true"></i></span>
                                 </div>
                             </div>
-                            <strong><?php echo $news['moto_text']; ?></strong><br/><br/>
-                            <p><?php echo $news['description_1']; ?></p>
+                            <strong><?php echo nl2br($news['moto_text']); ?></strong><br/><br/>
+                            <p><?php echo nl2br($news['description_1']); ?></p>
                             <?php if (isset($news['banner_1']) && $news['banner_1'] != '') { ?>
                                 <img src="<?php echo BASE_URL . $news['banner_1']; ?>" alt="" style="width: 100%" /><br/><br/>
                             <?php } ?>
-                            <p><?php echo $news['description_2']; ?></p>
+                            <p><?php echo nl2br($news['description_2']); ?></p>
                             <?php if (isset($news['banner_2']) && $news['banner_2'] != '') { ?>
                                 <img src="<?php echo BASE_URL . $news['banner_2']; ?>" alt="" style="width: 100%" /><br/><br/>
                             <?php } ?>
@@ -61,7 +61,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                         <?php foreach ($news_gallery as $row) { ?>
                                             <div class="col-md-3 col-sm-6">
 
-                                                <a onclick="document.getElementById('pop-img').style.display='block'"><img src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" /></a>
+                                                <a onclick="document.getElementById('pop-img').style.display = 'block'"><img src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" /></a>
 
                                                 <div class="pop-up-img" id="pop-img">
                                                     <img src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" />  
