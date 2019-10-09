@@ -12,8 +12,8 @@
 }
 button.slick-next, button.slick-next:hover {
     position: absolute;
-    top: 41%;
-    right: 54px;
+    top: 27%;
+    right: 15px;
     width: 47px;
     height: 75px;
     background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
@@ -21,7 +21,7 @@ button.slick-next, button.slick-next:hover {
 }
 button.slick-prev, button.slick-prev:hover {
     position: absolute;
-    top: 41%;
+    top: 27%;
     left: 15px;
     z-index: 1;
     width: 47px;
