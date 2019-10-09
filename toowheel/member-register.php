@@ -36,11 +36,13 @@ $obj = new Common();
                                             <option value="four_wheel">4 Wheel</option>
                                             <option value="two_wheel">2 Wheel</option>
                                         </select>
+                                        <div id="type_error"></div>
                                     </div>
                                     <div class="form-group">
                                         <label for="first_name">First Name</label>
                                         <span class="red-i">*</span>
-                                        <input type="text" class="form-control" name="first_name" id="first_name" placeholder="" required-i>
+                                        <input type="text" class="form-control" name="first_name" id="first_name" placeholder="" required-i onchange="removeValidation('first_name');" />
+                                        <div id="first_name_error"></div>
                                     </div>
                                     <div class="form-group">
                                         <label for="upload-profile">Upload Your Profile Picture</label>
@@ -161,7 +163,8 @@ $obj = new Common();
                                     <div class="form-group">
                                         <label for="ic_passport">IC Number / Passport Number</label> 
                                         <span class="red-i">*</span>
-                                        <input type="text" class="form-control" name="ic_passport" id="ic_passport" placeholder="" required-i>
+                                        <input type="text" class="form-control" name="ic_passport" id="ic_passport" placeholder="" required-i />
+                                        <div id="ic_passport_error"></div>
                                     </div>
                                     <div class="form-row">
                                         <div class="col-md-4 mb-3">
@@ -201,6 +204,7 @@ $obj = new Common();
                                                 <option value='30'>30</option>
                                                 <option value='31'>31</option>
                                             </select>
+                                            <div id="dob_date_error"></div>
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="dob_month">&nbsp;</label>
@@ -219,6 +223,7 @@ $obj = new Common();
                                                 <option value='11'>11</option>
                                                 <option value='12'>12</option>
                                             </select>
+                                            <div id="dob_month_error"></div>
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="dob_year">&nbsp;</label>
@@ -282,12 +287,14 @@ $obj = new Common();
                                                 <option value='2002'>2002</option>
                                                 <option value='2003'>2003</option>
                                             </select>
+                                            <div id="dob_year_error"></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="contact_number">Contact Number</label> 
                                         <span class="red-i">*</span>
                                         <input type="text" class="form-control" name="contact_number" id="contact_number" placeholder="" required-i />
+                                        <div id="contact_number_error"></div>
                                     </div>
                                     <div class="form-group">
                                         <label for="license_category">Driver License Category</label> 
@@ -298,21 +305,25 @@ $obj = new Common();
                                             <option value='class3c'>Class 3C</option>
                                             <option value='class3ca'>Class 3CA</option>
                                         </select>
+                                        <div id="license_category_error"></div>
                                     </div>
                                     <div class="form-group">
                                         <label for="address">Address</label> 
                                         <span class="red-i">*</span>
                                         <textarea class="form-control" placeholder="" name="address" id="address" type="text" rows="3" required-i></textarea>
+                                        <div id="address_error"></div>
                                     </div>
                                     <div class="form-group">
                                         <label for="country">Country</label> 
                                         <span class="red-i">*</span>
                                         <input placeholder="" name="country" id="country" type="text" class="form-control" required-i>
+                                        <div id="country_error"></div>
                                     </div>
                                     <div class="form-group">
                                         <label for="state">State</label> 
                                         <span class="red-i">*</span>
-                                        <input type="text" class="form-control" name="state" id="state" placeholder="" required-i>
+                                        <input type="text" class="form-control" name="state" id="state" placeholder="" required-i />
+                                        <div id="state_error"></div>
                                     </div>
                                     <br/>
                                     <h4>Referral</h4>
@@ -343,17 +354,20 @@ $obj = new Common();
                                     <div class="form-group">
                                         <label for="email">Email Address</label> 
                                         <span class="red-i">*</span>
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="" required-i>
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="" required-i />
+                                        <div id="email_error"></div>
                                     </div>
                                     <div class="form-group">
                                         <label for="password">Password</label> 
                                         <span class="red-i">*</span>
-                                        <input type="password" class="form-control" name="password" id="password" placeholder="" required-i>
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="" required-i />
+                                        <div id="password_error"></div>
                                     </div>
                                     <div class="form-group">
                                         <label for="cnfpassword">Confirm Password</label> 
                                         <span class="red-i">*</span>
                                         <input type="password" class="form-control" name="cnfpassword" id="cnfpassword" placeholder="" required-i />
+                                        <div id="cnfpassword_error"></div>
                                     </div>
                                 </form>
                             </div>

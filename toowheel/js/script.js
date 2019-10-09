@@ -55,7 +55,82 @@ function loadClubs(type) {
     });
 }
 
+$("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDirection) {
+    var change = true;
+    switch (stepNumber) {
+        case 0:
+        case '0':
+            if ($.trim($('#type').val()) === '') {
+                $('#type_error').html('Select type').addClass('error-msg');
+                change = false;
+            }
+            if ($.trim($('#first_name').val()) === '') {
+                $('#first_name_error').html('Enter first name').addClass('error-msg');
+                change = false;
+            }
+            if ($.trim($('#ic_passport').val()) === '') {
+                $('#ic_passport_error').html('Enter passport/IC number').addClass('error-msg');
+                change = false;
+            }
+            if ($.trim($('#dob_date').val()) === '') {
+                $('#dob_date_error').html('Select date').addClass('error-msg');
+                change = false;
+            }
+            if ($.trim($('#dob_month').val()) === '') {
+                $('#dob_month_error').html('Select month').addClass('error-msg');
+                change = false;
+            }
+            if ($.trim($('#dob_year').val()) === '') {
+                $('#dob_year_error').html('Select year').addClass('error-msg');
+                change = false;
+            }
+            if ($.trim($('#contact_number').val()) === '') {
+                $('#contact_number_error').html('Enter contact number').addClass('error-msg');
+                change = false;
+            }
+            if ($.trim($('#license_category').val()) === '') {
+                $('#license_category_error').html('Select license category').addClass('error-msg');
+                change = false;
+            }
+            if ($.trim($('#address').val()) === '') {
+                $('#address_error').html('Enter address').addClass('error-msg');
+                change = false;
+            }
+            if ($.trim($('#country').val()) === '') {
+                $('#country_error').html('Enter country').addClass('error-msg');
+                change = false;
+            }
+            if ($.trim($('#state').val()) === '') {
+                $('#state_error').html('Enter state').addClass('error-msg');
+                change = false;
+            }
+            if ($.trim($('#email').val()) === '') {
+                $('#email_error').html('Enter email').addClass('error-msg');
+                change = false;
+            }
+            if ($.trim($('#password').val()) === '') {
+                $('#password_error').html('Enter password').addClass('error-msg');
+                change = false;
+            }
+            if ($.trim($('#cnfpassword').val()) !== $.trim($('#password').val())) {
+                $('#cnfpassword_error').html('Password mismatch').addClass('error-msg');
+                change = false;
+            }
+            break;
+        default:
+            break;
+    }
+    return change;
+});
+
+setTimeout(function () {
+    console.log('ffff');
+    //$('#smartwizard').smartWizard("next");
+    return true;
+}, 5000);
+
 function leaveAStepCallback(obj, context) {
+    alert('fffffffffff');
     alert("Leaving step " + context.fromStep + " to go to step " + context.toStep);
     return validateSteps(context.fromStep); // return false to stay on step and true to continue navigation 
 }
