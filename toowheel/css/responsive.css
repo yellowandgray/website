@@ -52,9 +52,7 @@
     .media-press-release {
         padding: 40% 0 0% 0 !important;
     }
-    .mobile-search {
-        display: block !important;
-    }
+    
 }
 
 @media screen and (max-height: 600px) {
@@ -693,6 +691,11 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
+    .tabcontent .news .discover-slider-content {
+        top: -163px !important;
+    }
+}
+@media (min-width: 320px) and (max-width: 767px) {
     .tabcontent .news .discover-slider-content {
         top: -163px !important;
     }
