@@ -323,6 +323,18 @@ $app->get('/get_club_by_category/:cid', function($cid) {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_club_by_type/:type', function($type) {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('c.*, ca.name AS category', 'club AS c LEFT JOIN category AS ca ON c.category_id = ca.category_id', 'c.club_id > 0 AND c.type = \'' . $type . '\'');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_medias', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
@@ -390,7 +402,7 @@ $app->get('/get_news_by_category/:cid/:type', function($cid, $type) {
     if ($cid != 0) {
         $category = ' AND n.category_id = ' . $cid;
     }
-    $data = $com->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND type = \'' . $type . '\'' . $category);
+    $data = $com->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\'' . $category);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
