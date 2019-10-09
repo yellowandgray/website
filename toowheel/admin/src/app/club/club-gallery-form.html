@@ -1,0 +1,7 @@
+<h2 mat-dialog-title>Club Gallery</h2>
+<mat-dialog-content class="mat-typography">
+    <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="end center">
+        <button type="button" mat-raised-button (click)="fileInput.click()"><mat-icon>add</mat-icon> Photos</button>
+        <input hidden #fileInput type="file" id="file" multiple />
+    </div>
+</mat-dialog-content>

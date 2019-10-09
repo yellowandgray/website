@@ -340,3 +340,19 @@ export class ClubDelete {
         );
   }
 }
+
+@Component({
+  selector: 'club-gallery-form',
+  templateUrl: 'club-gallery-form.html',
+})
+export class ClubGalleryForm {
+
+  constructor(
+    public dialogRef: MatDialogRef<ClubGalleryForm>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+}
