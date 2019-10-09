@@ -89,8 +89,8 @@ $configs = $obj->getLandingDetails();
                         <a href="toowheel/find-a-club.php?type=two_wheel" class="cross-btn"><span>JOIN A CLUB</span></a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#"><img src="<?php echo BASE_URL . $configs['landing_shop_now_image']; ?>" alt="" /></a>
-                        <a href="toowheel/shop-now.php" class="cross-btn"><span>SHOP NOW!</span></a>
+                        <a href="toowheel/shop-now.php?type=two_wheel"><img src="<?php echo BASE_URL . $configs['landing_shop_now_image']; ?>" alt="" /></a>
+                        <a href="toowheel/shop-now.php?type=two_wheel" class="cross-btn"><span>SHOP NOW!</span></a>
                     </div>
                 </div>
             </div>
