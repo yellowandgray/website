@@ -3,12 +3,15 @@
 <html>
     <?php include 'head.php'; ?>
     <body>
-
-        <div class="padding-top-108"></div>
-        <section class="login-pad">
+        <section class="ekedai">
+            <div>
+                <i  onclick="window.history.back();" class="fa fa-arrow-left" aria-hidden="true"></i>
+                <img src="img/e-kedai.jpg" alt="" class="img-responsive"/>
+            </div>
 
         </section>
-        <
+
+
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="js/bootstrap.js" type="text/javascript"></script>
         <script src="js/slick-slider.js" type="text/javascript"></script>
@@ -18,5 +21,5 @@
         <script src="js/script.js" type="text/javascript"></script>
         <script type="text/javascript">
 
-</body>
-</html>
+        </body>
+        </html>

@@ -3653,3 +3653,15 @@ thead td {
         flex-basis: 100%;
     }
 }
+.ekedai i{
+    font-size: 30px;
+    /* width: 50%; */
+    position: absolute;
+    left: 90px;
+    top: 30px;
+    color: #ed1a26;
+    cursor: pointer;
+}
+.ekedai i:hover{
+   color: #585858;
+}
