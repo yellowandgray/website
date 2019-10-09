@@ -1814,3 +1814,11 @@ body {
     color: red;
     font-size: 12px;
 }
+
+.pointer {
+    cursor: pointer;
+}
+
+.selected-club {
+    background: #000000;
+}

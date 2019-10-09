@@ -495,17 +495,9 @@ $obj = new Common();
                                                                 },
                                                                 onApprove: function (data, actions) {
                                                                     return actions.order.capture().then(function (details) {
-                                                                        alert("Transaction completed by " + details.payer.name.given_name);
-                                                                        // Call your server to save the transaction
-                                                                        return fetch("/paypal-transaction-complete", {
-                                                                            method: "post",
-                                                                            headers: {
-                                                                                "content-type": "application/json"
-                                                                            },
-                                                                            body: JSON.stringify({
-                                                                                orderID: data.orderID
-                                                                            })
-                                                                        });
+                                                                        paypal_response = JSON.stringify(details);
+                                                                        paypal_trans_id = data.orderID;
+                                                                        payment_type = 'paypal';
                                                                     });
                                                                 }
                                                             }).render("#paywith_paypal");

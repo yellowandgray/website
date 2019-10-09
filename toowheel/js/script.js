@@ -25,6 +25,7 @@ function attachFile(id) {
                 }
                 if (id == 'payment_receipt' || id == 'payment_receipt2') {
                     payment_receipt = data.result.data;
+                    payment_type = 'receipt';
                 }
             } else {
                 bootbox.alert(data.result.message);
@@ -53,7 +54,7 @@ function loadClubs(type) {
                         if (val.rank != '' && val.rank != 0) {
                             rank = '<span>#' + val.rank + '</span>';
                         }
-                        div = div + '<div class="col-md-3 col-sm-6"><div class="club-box">' + rank + '<img src="' + BASE_IMAGE_URL + val.logo + '" alt="" /><h3>' + val.name + '</h3><p>' + val.city + '</p><div class="club-btn"><div class="eff-9"></div><a href="club-page.php?cid=' + val.club_id + '">Read More</a></div></div></div>';
+                        div = div + '<div class="col-md-3 col-sm-6"><div class="club-box pointer" onclick="selectClub(' + val.club_id + ', this);">' + rank + '<img src="' + BASE_IMAGE_URL + val.logo + '" alt="" /><h3>' + val.name + '</h3><p>' + val.city + '</p><div class="club-btn"><div class="eff-9"></div><a href="club-page.php?cid=' + val.club_id + '">Read More</a></div></div></div>';
                     });
                     $('#category_clubs').append(div);
                 } else {
@@ -66,6 +67,12 @@ function loadClubs(type) {
         });
         $('#type_error').html('').removeClass('error-msg');
     }
+}
+
+function selectClub(cid, ele) {
+    club_id = cid;
+    $('.club-box.pointer').removeClass('selected-club');
+    $(ele).addClass('selected-club');
 }
 
 function removeValidation(id) {
@@ -152,6 +159,7 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
 });
 
 function skipClubSelection() {
+    club_id = 0;
     $('#smartwizard').smartWizard("next");
 }
 
