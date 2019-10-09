@@ -2747,6 +2747,7 @@ body .calender-box{
     border: 1px solid #F44336;
     right: 20%;
     margin-right: 0px;
+    padding-top: 10px;
 }
 #demo-2 input:-moz-placeholder {
     color: transparent;
