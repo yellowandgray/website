@@ -937,7 +937,10 @@ button {
         flex-wrap: wrap;
     }
     .release-cont-1{
-        flex: 0;
+        flex: 1;
+    }
+    .release-cont-1 img{
+        border-radius: 0;
     }
     .release-cont-2{
         flex:1 0 100%;
