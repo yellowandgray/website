@@ -2745,6 +2745,7 @@ body .calender-box{
     top: 108px;
     position: absolute;
     border: 1px solid #F44336;
+    right: 20%;
 }
 #demo-2 input:-moz-placeholder {
     color: transparent;
@@ -3666,5 +3667,5 @@ thead td {
     color: #585858;
 }
 .rank-h{
-    height: 50px;
+    height: 30px;
 }
