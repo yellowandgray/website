@@ -32,7 +32,7 @@
                 <div class="item">
                     <div class="slider-caption h3slider">
                         <div class="container">
-                            <strong>content-2</strong>
+                            <strong>We are not only selling Products but also Trust </strong>
                             <h1>Industry Safety Products</h1>
                             <a href="industrial-safetyproducts.php">Find Out More</a>
                         </div>
@@ -59,6 +59,16 @@
                     </div>
                     <img src="images/banner/001.jpg" alt=""> 
                 </div>
+                <div class="item">
+                    <div class="slider-caption h3slider">
+                        <div class="container">
+                            <strong>We are not only selling Products but also Trust </strong>
+                            <h1>Metal</h1>
+                            <a href="metal.php">Find Out More</a>
+                        </div>
+                    </div>
+                    <img src="images/banner/005.jpg" alt=""> 
+                </div>
             </section>
             <!--Slider End--> 
             <?php include 'enquiry.php'; ?>
@@ -67,15 +77,15 @@
             <section class="donation-join wf100">
                 <div class="container">
                     <div class="row front-div">
-                        <div class="col-md-3 col-sm-6 wow bounceInUp">
-                            <div class="volbox">
+                        <div class="front-div-con wow bounceInUp">
+                            <div class="volbox nob">
                                 <img src="images/home/002.png" alt="">
                                 <h5>Telecommunications</h5>
                                 <p>Vpn Commodities offers a complete range of products for wiring and connecting subscribers across the entire telecom network and also applied its expertise to ensure quality connections and protection in inclement weather over time.</p>
                                 <a href="tele-communication.php">See More</a> 
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 wow bounceInUp">
+                        <div class="front-div-con wow bounceInUp">
                             <div class="volbox nob">
                                 <img src="images/home/003.png" alt="">
                                 <h5>Renewable Energy</h5>
@@ -83,7 +93,7 @@
                                 <a href="renewable-energy.php">See More</a>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 wow bounceInUp">
+                        <div class="front-div-con wow bounceInUp">
                             <div class="volbox nob">
                                 <img src="images/home/005.png" alt="">
                                 <h5>Strut Channel & Cable Tray</h5>
@@ -91,12 +101,20 @@
                                 <a href="cable-tray.php">See More</a>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 wow bounceInUp">
+                        <div class="front-div-con wow bounceInUp">
                             <div class="volbox nob">
                                 <img src="images/home/004.png" alt="">
                                 <h5>Safety Shoes</h5>
                                 <p>Vpn Commodities Pte Ltd Singapore is a well-established certified organization active in manufacturing & trading business of different kinds of safely footwear.</p>
                                 <a href="industrial-safetyproducts.php">See More</a>
+                            </div>
+                        </div>
+                        <div class="front-div-con wow bounceInUp">
+                            <div class="volbox nob">
+                                <img src="images/home/0006.png" alt="">
+                                <h5>Metal</h5>
+                                <p>VPN Commodities steel rebars are produced through a bar quenching process, where the properties are attained by regulating the microstructure of the steel giving better rebar ductility and good weldability.</p>
+                                <a href="metal.php">See More</a>
                             </div>
                         </div>
                     </div>
@@ -134,7 +152,7 @@
                         <div class="col-md-12">
                             <div class="h3-stitle">
                                 <h1>Telecommunication</h1>
-                                <p> <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p> </p>
+                             <p class="text-justify">Vpn Commodities offers a complete range of products for wiring and connecting subscribers across the entire telecom network and also applied its expertise to ensure quality connections and protection in inclement weather over time.</p>
                             </div>
                         </div>
                     </div>
@@ -157,7 +175,7 @@
                                         <div class="ocp-thumb">
                                             <img src="images/home/007.png" alt=""></div>
                                         <h5>
-                                            <a href="tele-communication.php">Rack & Cabinet</a> </h5>
+                                            <a href="tele-communication.php">Fiber Cable</a> </h5>
                                         </h5>
                                     </div>
                                 </div>
@@ -170,7 +188,7 @@
                                         <div class="ocp-thumb">
                                             <img src="images/home/008.png" alt=""></div>
                                         <h5>
-                                            <a href="tele-communication.php">Rack & Cabinet</a> </h5>
+                                            <a href="tele-communication.php">Copper Cable</a> </h5>
                                         </h5>
                                     </div>
                                 </div>
@@ -181,7 +199,7 @@
                                         <div class="ocp-thumb">
                                             <img src="images/home/009.png" alt=""></div>
                                         <h5> 
-                                            <a href="tele-communication.php">Rack & Cabinet</a> </h5>
+                                            <a href="tele-communication.php">Cable Splicing Connectors</a> </h5>
                                         </h5>
                                     </div>
                                 </div>
@@ -192,7 +210,7 @@
                                         <div class="ocp-thumb">
                                             <img src="images/home/010.png" alt=""></div>
                                         <h5> 
-                                            <a href="tele-communication.php">Rack & Cabinet</a> </h5>
+                                            <a href="tele-communication.php">Ropes</a> </h5>
                                         </h5>
                                     </div>
                                 </div>
@@ -203,7 +221,7 @@
                                         <div class="ocp-thumb">
                                             <img src="images/home/011.png" alt=""></div>
                                         <h5> 
-                                            <a href="tele-communication.php">Rack & Cabinet</a> </h5>
+                                            <a href="tele-communication.php">Covers</a> </h5>
                                         </h5>
                                     </div>
                                 </div>
@@ -286,10 +304,10 @@
                                     <div class="item">
                                         <div class="event-box wow fadeInDown">
                                             <div class="event-thumb">
-                                                <a href="#"><i class="fas fa-link"></i></a>
+                                                <a href="industrial-safetyproducts.php"><i class="fas fa-link"></i></a>
                                                 <img src="images/home/014.jpg" alt=""></div>
                                             <div class="event-txt shoe">
-                                                <h4><a href="#">Safety Shoe</a></h4>
+                                                <h4><a href="industrial-safetyproducts.php">Safety Shoe</a></h4>
                                                 <a class="rm" href="industrial-safetyproducts.php">Read More</a> 
                                             </div>
                                         </div>
@@ -348,8 +366,8 @@
                     <div class="row">
                         <!--Team Box Start-->
                         <div class="col-md-4 col-sm-4 cable-item ">
-                            <div class="team-box wow fadeInDown">
-                                <img src="images/home/015.jpg" alt="">
+                            <div onclick="location.href='cable-tray.php'" class="team-box wow fadeInDown">
+                                <img  src="images/home/015.jpg" alt="">
                                 <div class="team-info">
                                     <h3>Wire mesh cable tray</h3>
                                     <!--<a class="rm" href="cable-tray.php">Read More</a>-->
@@ -359,7 +377,7 @@
                         <!--Team Box Start--> 
                         <!--Team Box Start-->
                         <div class="col-md-4 col-sm-4 cable-item">
-                            <div class="team-box wow fadeInDown">
+                            <div  onclick="location.href='cable-tray.php'" class="team-box wow fadeInDown">
                                 <img src="images/home/016.jpg" alt="">
                                 <div class="team-info">
                                     <h3>Frp cable tray </h3>
@@ -370,7 +388,7 @@
                         <!--Team Box Start--> 
                         <!--Team Box Start-->
                         <div class="col-md-4 col-sm-4 cable-item">
-                            <div class="team-box wow fadeInDown">
+                            <div   onclick="location.href='cable-tray.php'" class="team-box wow fadeInDown">
                                 <img src="images/home/017.jpg" alt="">
                                 <div class="team-info">
                                     <h3>Accessories</h3>
@@ -410,8 +428,8 @@
                                     <h5>Billet</h5>
                                     <div class="pro-hover">
                                         <h6>Billet</h6>
-                                        <p> <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></p>
-                                        <a href="#">Read More</a> 
+                                       <p class="text-justify">Billets are the raw material for producing long-steel products. They are produced in various grades and standards based on customer requirements.</p>
+                                        <a href="metal.php">Read More</a> 
                                     </div>
                                 </div>
                             </div>
@@ -423,8 +441,8 @@
                                     <h5>Reinforcing Bars</h5>
                                     <div class="pro-hover">
                                         <h6>Reinforcing Bars</h6>
-                                        <p> <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></p>
-                                        <a href="#">Read More</a> 
+                                       <p class="text-justify">Concrete reinforcing bars (rebars) represent the majority of VPN Commodities’S production. They are made according to international standards.</p>
+                                        <a href="metal.php">Read More</a> 
                                     </div>
                                 </div>
                             </div>
@@ -436,8 +454,8 @@
                                     <h5>Compact Coil</h5>
                                     <div class="pro-hover">
                                         <h6>Compact Coil</h6>
-                                        <p> <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></p>
-                                        <a href="#">Read More</a> 
+                                    <p class="text-justify">Cold deformed compact coil is processed by downstream cut and bend operations and straightening lines to produce straight bars and welded fabric. Weight range is from three to five tons.</p>
+                                        <a href="metal.php">Read More</a> 
                                     </div>
                                 </div>
                             </div>
@@ -446,11 +464,11 @@
                             <div class="col-md-3 col-sm-6">
                                 <div class="pro-box wow fadeInDown">
                                     <img src="images/home/024.jpg" alt="">
-                                    <h5>Wire Bar</h5>
+                                    <h5>Wire Rod</h5>
                                     <div class="pro-hover">
                                         <h6>Wire Rod</h6>
-                                        <p> <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></p>
-                                        <a href="#">Read More</a> 
+                                       <p class="text-justify">Drawing grade wire rods are used by downstream industries to produce mesh, nails, hangers, screws, barbed wires, fencing mesh, binding wires, etc. Mesh grade wire rods are used for downstream cold indentation process to make cold deformed bars for construction.</p>
+                                        <a href="metal.php">Read More</a> 
                                     </div>
                                 </div>
                             </div>

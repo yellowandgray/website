@@ -66,20 +66,8 @@ ul.topbar-social {
     color: #035c40;
     background-color: #fff;
 }
-@media (min-width: 768px) {
-    .col-md-2 {
-        -ms-flex: 0 0 16%;
-        flex: 0 0 16%;
-        max-width: 16%;
-    }
-}
-@media (min-width: 768px) {
-    .front-div .col-md-2 {
-        -ms-flex: 0 0 20%;
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
-}
+
+
 .col-md-2 img {
     width: 100%;
 }
@@ -1316,4 +1304,24 @@ header .navbar-toggler {
 }
 
 
+.front-div{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.front-div-con{
+    flex-basis: 19%;
+}
+@media (max-width:1200px) and (min-width:922px){
 
+    .volbox {
+        padding: 28px 30px 27px;
+    }
+}
+@media (max-width:921px) and (min-width:600px){
+
+    .volbox {
+        padding: 28px 30px 27px;
+    }
+}
