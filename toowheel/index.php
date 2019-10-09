@@ -175,32 +175,25 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
         <script>
                             function lightbox(type) {
-                            var ninjaSldr = document.getElementById("ninja-slider");
-                            ninjaSldr.parentNode.style.display = "block";
-                            nslider.init();
-                            var fsBtn = document.getElementById("fsBtn");
-                            fsBtn.click();
+                                var ninjaSldr = document.getElementById("ninja-slider");
+                                ninjaSldr.parentNode.style.display = "block";
+                                nslider.init();
+                                var fsBtn = document.getElementById("fsBtn");
+                                fsBtn.click();
                             }
                             function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
-                            if (isFullscreen) {
-                            ninjaSldr.parentNode.style.display = "none";
+                                if (isFullscreen) {
+                                    ninjaSldr.parentNode.style.display = "none";
+                                }
                             }
-                            }
-                            $(".home-gallery").magnificPopup({
-                            delegate: 'a',
-                                    type: 'image',
-                                    gallery: {
-                                    enabled: true
-                                    }
-                            });
-                            function openTag(evt, cid) {
+                            function openTag(evt, cid, type) {
                             var i, tablink, remove = false;
-                            if (evt !== null) {
+                                    if (evt !== null) {
                             if ((evt.currentTarget.className).indexOf('active') !== - 1) {
                             remove = true;
                             }
                             tablink = document.getElementsByClassName("tablink");
-                            for (i = 0; i < tablink.length; i++) {
+                                    for (i = 0; i < tablink.length; i++) {
                             tablink[i].className = tablink[i].className.replace(" active", "");
                             }
                             if (remove == false) {
@@ -214,19 +207,19 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                     url: 'api/v1/get_news_by_category/' + cid,
                                     success: function (data) {
                                     $('.slider').slick('unslick');
-                                    $('#club1 .slider').empty();
-                                    var BASE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
-                                    if (data.result.error === false) {
+                                            $('#club1 .slider').empty();
+                                            var BASE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
+                                            if (data.result.error === false) {
                                     var list = '';
-                                    $.each(data.result.data, function (key, val) {
-                                    var name = val.sponsor;
-                                    if (val.club && val.club !== null && val.club !== 'null') {
-                                    name = val.club;
-                                    }
-                                    list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(name, 10) + '</p><h2>' + charLimit(val.title, 20) + '</h2><p>' + charLimit(val.moto_text, 120) + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
-                                    });
-                                    $('#club1 .slider').html(list);
-                                    $('.slider').slick({
+                                            $.each(data.result.data, function (key, val) {
+                                            var name = val.sponsor;
+                                                    if (val.club && val.club !== null && val.club !== 'null') {
+                                            name = val.club;
+                                            }
+                                            list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(name, 10) + '</p><h2>' + charLimit(val.title, 20) + '</h2><p>' + charLimit(val.moto_text, 120) + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
+                                            });
+                                            $('#club1 .slider').html(list);
+                                            $('.slider').slick({
                                     dots: false,
                                             infinite: true,
                                             speed: 500,
@@ -273,28 +266,28 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                     },
                                     error: function (err) {
                                     $('#club1 .slider').empty();
-                                    >>> >>> > origin / twowheel
+                                            >>> >>> > origin / twowheel
                                     }
                             });
-                            function charLimit(str, len) {
-                            if (str && str !== null && str !== 'null') {
-                            if (str.length <= len) {
-                            return str;
-                            } else {
-                            var y = str.substring(0, len) + '...';
-                            return y;
-                            }
-                            }
-                            }
+                                    function charLimit(str, len) {
+                                    if (str && str !== null && str !== 'null') {
+                                    if (str.length <= len) {
+                                    return str;
+                                    } else {
+                                    var y = str.substring(0, len) + '...';
+                                            return y;
+                                    }
+                                    }
+                                    }
 
                             function openTag(evt, cid, type) {
                             var i, tablink, remove = false;
-                            if (evt !== null) {
+                                    if (evt !== null) {
                             if ((evt.currentTarget.className).indexOf('active') !== - 1) {
                             remove = true;
                             }
                             tablink = document.getElementsByClassName("tablink");
-                            for (i = 0; i < tablink.length; i++) {
+                                    for (i = 0; i < tablink.length; i++) {
                             tablink[i].className = tablink[i].className.replace(" active", "");
                             }
                             if (remove == false) {
@@ -308,19 +301,19 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                     url: 'api/v1/get_news_by_category/' + cid + '/' + type,
                                     success: function (data) {
                                     $('.slider').slick('unslick');
-                                    $('#club1 .slider').empty();
-                                    var BASE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
-                                    if (data.result.error === false) {
+                                            $('#club1 .slider').empty();
+                                            var BASE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
+                                            if (data.result.error === false) {
                                     var list = '';
-                                    $.each(data.result.data, function (key, val) {
-                                    var name = val.sponsor;
-                                    if (val.club && val.club !== null && val.club !== 'null') {
-                                    name = val.club;
-                                    }
-                                    list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(name, 10) + '</p><h2>' + charLimit(val.title, 20) + '</h2><p>' + charLimit(val.moto_text, 120) + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
-                                    });
-                                    $('#club1 .slider').html(list);
-                                    $('.slider').slick({
+                                            $.each(data.result.data, function (key, val) {
+                                            var name = val.sponsor;
+                                                    if (val.club && val.club !== null && val.club !== 'null') {
+                                            name = val.club;
+                                            }
+                                            list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(name, 10) + '</p><h2>' + charLimit(val.title, 20) + '</h2><p>' + charLimit(val.moto_text, 120) + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
+                                            });
+                                            $('#club1 .slider').html(list);
+                                            $('.slider').slick({
                                     dots: false,
                                             infinite: true,
                                             speed: 500,
