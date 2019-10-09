@@ -3537,7 +3537,7 @@ thead td {
         top: 50%;
         /*width: 30%;*/
         height: 30%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 5px rgba(185, 185, 185, 0.8);
     }
 } 
 #about-club {
