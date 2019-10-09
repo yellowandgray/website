@@ -1,4 +1,5 @@
 var avatar = '';
+var BASE_IMAGE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
 
 function attachFile(id) {
     $('.loader').addClass('is-active');
@@ -6,7 +7,7 @@ function attachFile(id) {
     form.append('file', $('#' + id)[0].files[0]);
     $.ajax({
         type: "POST",
-        url: 'admin/v1/upload_file',
+        url: 'api/v1/upload_file',
         processData: false,
         contentType: false,
         data: form,
@@ -26,21 +27,22 @@ function attachFile(id) {
 }
 
 function loadClubs(type) {
-    var form = new FormData();
-    form.append('file', type);
     $.ajax({
-        type: "POST",
-        url: 'api/v1/get_club_by_type',
+        type: "GET",
+        url: 'api/v1/get_club_by_type/' + type,
         processData: false,
         contentType: false,
-        data: form,
         success: function (data) {
             $('#type').empty();
             var div = '';
             if (data.result.error === false) {
                 $('#category_clubs').empty();
                 $.each(data.result.data, function (key, val) {
-                    div = div + '<div class="col-md-3 col-sm-6"><div class="club-box"><span>#1</span><img src="img/find-club/dummy-logo.png" alt="" /><h3>Frendly Bikers</h3><p>Kuala Lumpur</p><div class="club-btn"><div class="eff-9"></div><a href="club-page.php">Read More</a></div></div></div>';
+                    var rank = '';
+                    if (val.rank != '') {
+                        rank = '<span>#' + val.rank + '</span>';
+                    }
+                    div = div + '<div class="col-md-3 col-sm-6"><div class="club-box">' + rank + '<img src="' + BASE_IMAGE_URL + val.logo + '" alt="" /><h3>' + val.name + '</h3><p>' + val.city + '</p><div class="club-btn"><div class="eff-9"></div><a href="club-page.php?cid=' + val.club_id + '">Read More</a></div></div></div>';
                 });
                 $('#category_clubs').append(div);
             } else {
