@@ -1268,13 +1268,13 @@ button {
     z-index: 9999;
     top: 100px;
     left: 0;
-    width: 50%;
+    width: 34%;
     height: 40%;
     padding: 20px;
     background: white;
     color: white;
     text-align: center;
-    margin: 0 25%;
+    margin: 0 33%;
 }
 
 .pop i{
