@@ -27,32 +27,39 @@ function attachFile(id) {
 }
 
 function loadClubs(type) {
-    $.ajax({
-        type: "GET",
-        url: 'api/v1/get_club_by_type/' + type,
-        processData: false,
-        contentType: false,
-        success: function (data) {
-            $('#type').empty();
-            var div = '';
-            if (data.result.error === false) {
-                $('#category_clubs').empty();
-                $.each(data.result.data, function (key, val) {
-                    var rank = '';
-                    if (val.rank != '') {
-                        rank = '<span>#' + val.rank + '</span>';
-                    }
-                    div = div + '<div class="col-md-3 col-sm-6"><div class="club-box">' + rank + '<img src="' + BASE_IMAGE_URL + val.logo + '" alt="" /><h3>' + val.name + '</h3><p>' + val.city + '</p><div class="club-btn"><div class="eff-9"></div><a href="club-page.php?cid=' + val.club_id + '">Read More</a></div></div></div>';
-                });
-                $('#category_clubs').append(div);
-            } else {
-                $('#category_clubs').empty();
+    if (type != '') {
+        $.ajax({
+            type: "GET",
+            url: 'api/v1/get_club_by_type/' + type,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                $('#type').empty();
+                var div = '';
+                if (data.result.error === false) {
+                    $('#category_clubs').empty();
+                    $.each(data.result.data, function (key, val) {
+                        var rank = '';
+                        if (val.rank != '') {
+                            rank = '<span>#' + val.rank + '</span>';
+                        }
+                        div = div + '<div class="col-md-3 col-sm-6"><div class="club-box">' + rank + '<img src="' + BASE_IMAGE_URL + val.logo + '" alt="" /><h3>' + val.name + '</h3><p>' + val.city + '</p><div class="club-btn"><div class="eff-9"></div><a href="club-page.php?cid=' + val.club_id + '">Read More</a></div></div></div>';
+                    });
+                    $('#category_clubs').append(div);
+                } else {
+                    $('#category_clubs').empty();
+                }
+            },
+            error: function (err) {
+                console.log(err.statusText);
             }
-        },
-        error: function (err) {
-            console.log(err.statusText);
-        }
-    });
+        });
+        $('#type_error').html('').removeClass('error-msg');
+    }
+}
+
+function removeValidation(id) {
+    $('#' + id + '_error').html('').removeClass('error-msg');
 }
 
 $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDirection) {
