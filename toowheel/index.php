@@ -238,7 +238,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                             });
                                             $('#club1 .slider').html(list);
                                             $('.slider').slick({
-                                                dots: false,
+                                                dots: true,
                                                 infinite: true,
                                                 speed: 500,
                                                 slidesToShow: 6,
