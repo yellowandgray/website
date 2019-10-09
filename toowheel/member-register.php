@@ -46,7 +46,7 @@ $obj = new Common();
                                     </div>
                                     <div class="form-group">
                                         <label for="upload-profile">Upload Your Profile Picture</label>
-                                        <input type="file" class="form-control-file" id="profile_image" onchange="attachFile("profile_image");" />
+                                        <input type="file" class="form-control-file" id="profile_image" onchange="attachFile('profile_image');" />
                                     </div>
                                     <div class="form-group">
                                         <label for="gender">Gender</label>
