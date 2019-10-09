@@ -30,7 +30,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CategoryComponent, CategoryForm, CategoryDelete } from './category/category.component';
-import { ClubComponent, ClubForm, ClubDelete, ClubGalleryForm } from './club/club.component';
+import { ClubComponent, ClubForm, ClubDelete, ClubPhotosForm } from './club/club.component';
 import { MemberComponent, MemberForm } from './member/member.component';
 import { HeaderComponent } from './header/header.component';
 import { VendorComponent, VendorForm } from './vendor/vendor.component';
@@ -70,7 +70,7 @@ import { MediaComponent, MediaForm, MediaDelete } from './media/media.component'
     AdvertismentComponent,
     GalleryComponent,
     ClubForm,
-    ClubGalleryForm,
+    ClubPhotosForm,
     CategoryForm,
     VendorForm,
     MemberForm,
@@ -136,7 +136,7 @@ import { MediaComponent, MediaForm, MediaDelete } from './media/media.component'
     ReactiveFormsModule,
     MatNativeDateModule
   ],
-  entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubGalleryForm, CategoryComponent, CategoryForm, CategoryDelete, VendorComponent, VendorForm, MemberComponent, MemberForm, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete],
+  entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubPhotosForm, CategoryComponent, CategoryForm, CategoryDelete, VendorComponent, VendorForm, MemberComponent, MemberForm, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete],
   providers: [],
   bootstrap: [AppComponent]
 })

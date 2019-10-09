@@ -88,7 +88,7 @@ export class ClubComponent implements OnInit {
 
 
     openGalleryDialog(): void  {
-        const dialogRef = this.dialog.open(ClubGalleryForm, {
+        const dialogRef = this.dialog.open(ClubPhotosForm, {
             minWidth: "80%",
             maxWidth: "80%",
         });
@@ -357,11 +357,11 @@ export class ClubDelete {
   selector: 'club-gallery-form',
   templateUrl: 'club-gallery-form.html',
 })
-export class ClubGalleryForm {
+export class ClubPhotosForm {
 
   constructor(
-    public dialogRef: MatDialogRef<ClubGalleryForm>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    public dialogRef: MatDialogRef<ClubPhotosForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any) {}
 
   onNoClick(): void {
     this.dialogRef.close();
