@@ -16,7 +16,7 @@
             <div fxFlex="50%" *ngIf="field_type === 'text'">
                 <mat-form-field appearance="outline">
                     <mat-label>Value</mat-label>
-                    <textarea rows="6" matInput placeholder="Write here" required [(ngModel)]="value" [ngModelOptions]="{standalone: true}"></textarea>
+                    <textarea rows="6" matInput placeholder="" required [(ngModel)]="value" [ngModelOptions]="{standalone: true}"></textarea>
                 </mat-form-field>
             </div>
             <div fxFlex="50%" *ngIf="name === 'landing_banner_ad' || name === 'home_banner_ad'">

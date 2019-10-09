@@ -3692,3 +3692,17 @@ thead td {
         margin: 0 10%;
     }
 }
+.pop-up-img {
+    display: none;
+    position: fixed;
+    bottom: -32px;
+    z-index: 999;
+    transition: all 0.1s linear;
+} 
+.pop-up-img img{
+    width: 50%;
+    height: auto;
+
+    margin: 16% 21%;
+    box-shadow: 0 0 5px 0px red;
+}
