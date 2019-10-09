@@ -96,7 +96,7 @@ $configs = $obj->getLandingDetails();
             </div>
         </section>
         <section class="attachment-bg">
-            <div class="container-fluid padding-lr-0">
+            <div class="container-fluid">
                 <div class="row">
                     <?php
                     $banner = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['landing_banner_ad']);

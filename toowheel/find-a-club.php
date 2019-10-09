@@ -81,7 +81,7 @@ $findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '
                         <!--                        <div class="col-md-2 col-sm-6">-->
                         <div class="club-box">
                             <?php if ($row['rank'] && $row['rank'] != 0) { ?>
-                                <span>#<?php echo $row['rank']; ?></span>
+                            <div class="rank-button"><span>#<?php echo $row['rank']; ?></span></div>
                             <?php } ?>
                             <img src="<?php echo BASE_URL . $row['logo']; ?>" alt="" />
                             <h3> <?php echo $row['name']; ?></h3>
