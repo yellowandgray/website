@@ -90,7 +90,7 @@ $configs = $obj->getLandingDetails();
                     </div>
                     <div class="col-md-3">
                         <a href="#"><img src="<?php echo BASE_URL . $configs['landing_shop_now_image']; ?>" alt="" /></a>
-                        <a href="#" class="cross-btn"><span>SHOP NOW!</span></a>
+                        <a href="toowheel/shop-now.php" class="cross-btn"><span>SHOP NOW!</span></a>
                     </div>
                 </div>
             </div>
