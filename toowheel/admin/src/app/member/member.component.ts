@@ -13,14 +13,15 @@ import { HttpClient } from '@angular/common/http';
 export class MemberComponent implements OnInit {
   result = [];
   result_fw = [];  
+  image_url: string = '../toowheel/api/v1/';
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
-      this.getCategory();
-      this.getFourWheelCategory();
+      this.getMember();
+      this.getFourWheelMember();
   }
   getCategory(): void {
-  this.httpClient.get<any>('../toowheel/api/v1/get_two_wheel_category')
+  this.httpClient.get<any>('../toowheel/api/v1/get_two_wheel_member')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -33,7 +34,7 @@ export class MemberComponent implements OnInit {
         );
   }
   getFourWheelCategory(): void {
-  this.httpClient.get<any>('../toowheel/api/v1/get_four_wheel_category')
+  this.httpClient.get<any>('../toowheel/api/v1/get_four_wheel_member')
   .subscribe(
           (res)=>{
               this.result_fw = res["result"]["data"];
@@ -49,7 +50,7 @@ export class MemberComponent implements OnInit {
       var data = null;
       if(id != 0) { 
       this[res].forEach(val=> {
-           if(parseInt(val.category_id) === parseInt(id)) {
+           if(parseInt(val.member_id) === parseInt(id)) {
                 data = val;
                 return false;
            }
@@ -63,8 +64,8 @@ export class MemberComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
         if(result !== false && result !== 'false') {
-            this.getCategory();
-            this.getFourWheelCategory();
+            this.getMember();
+            this.getFourWheelMember();
        }
     });
 }
