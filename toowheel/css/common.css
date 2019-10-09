@@ -1268,13 +1268,13 @@ button {
     z-index: 9999;
     top: 100px;
     left: 0;
-    width: 100%;
+    width: 34%;
     height: 40%;
     padding: 20px;
     background: white;
     color: white;
     text-align: center;
-
+    margin: 0 33%;
 }
 
 .pop i{
@@ -1296,7 +1296,7 @@ button {
 
 @media only screen and (min-width: 481px) {
     .pop {
-        left: 47%;
+/*        left: 47%;*/
         top: 50%;
         /*width: 30%;*/
         height: 30%;
@@ -2745,6 +2745,7 @@ body .calender-box{
     top: 108px;
     position: absolute;
     border: 1px solid #F44336;
+    right: 20%;
 }
 #demo-2 input:-moz-placeholder {
     color: transparent;
