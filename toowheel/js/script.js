@@ -173,6 +173,7 @@ function registerMember() {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
                 $('#smartwizard').smartWizard("next");
+                $('#membership_id').html(data.result.data);
             } else {
                 bootbox.alert(data.result.message);
             }

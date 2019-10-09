@@ -146,7 +146,10 @@ $app->post('/insert_member', function() use ($app) {
     $record = $com->insertRecord(array('type' => $data['type'], 'first_name' => $data['first_name'], 'profile_picture' => $data['profile_picture'], 'gender' => $data['gender'], 'age' => $data['age'], 'ic_passport' => $data['ic_passport'], 'dob_date' => $data['dob_date'], 'dob_month' => $data['dob_month'], 'dob_year' => $data['dob_year'], 'contact_number' => $data['contact_number'], 'license_category' => $data['license_category'], 'address' => $data['address'], 'country' => $data['country'], 'state' => $data['state'], 'referral_member_id' => $data['referral_member_id'], 'referral_club_id' => $data['referral_club_id'], 'coverage_full_name' => $data['coverage_full_name'], 'coverage_contact_number' => $data['coverage_contact_number'], 'coverage_address' => $data['coverage_address'], 'email' => $data['email'], 'password' => $com->encryptPassword($data['password']), 'club_id' => $data['club_id'], 'payment_type' => $data['payment_type'], 'paypal_response' => $data['paypal_response'], 'paypal_transaction_id' => $data['paypal_transaction_id'], 'fund_transfer_file' => $data['fund_transfer_file'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'member');
     if ($record > 0) {
         $res['error'] = false;
+        $member_id = 'TW' . str_pad($record, 6, '0', STR_PAD_LEFT);
+        $com->updateRecordWithWhere(array('membership_id' => $member_id), 'member', 'member_id = ' . $record);
         $res['message'] = 'Record inserted successfully';
+        $res['data'] = $member_id;
     }
     echoRespnse(201, $res);
 });
