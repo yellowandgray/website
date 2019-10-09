@@ -415,7 +415,7 @@ $obj = new Common();
                                         </div>
                                     </div>
                                 </div>
-                                <p class="member-t margin-top-30"><a href="#" onclick="">Skip</a></p>
+                                <p class="member-t margin-top-30"><a href="#" onclick="skipClubSelection();">Skip</a></p>
                             </div>
                             <div id="step-3" class="">
                                 <h2>Make Payment</h2>
@@ -429,7 +429,7 @@ $obj = new Common();
                                     <div class="col-md-4">
                                         <div class="member-register-btn upload-btn-wrapper">
                                             <button class="btn"><a>Upload a file</a></button>
-                                            <input type="file" name="myfile" />
+                                            <input type="file" name="payment_receipt" id="payment_receipt" onchange="attachFile('payment_receipt');" />
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -440,11 +440,11 @@ $obj = new Common();
                                                 <p>Upload your slip picture within 24hrs</p>
                                                 <form>
                                                     <label>Upload Your Recipit</label>
-                                                    <input type="file" name="recipt" />
+                                                    <input type="file" name="payment_receipt2" id="payment_receipt2" />
                                                     <br/>
                                                     <br/>
                                                     <center>
-                                                        <a href="#" type="submit">Upload Now</a>
+                                                        <a href="#" type="button" onclick="attachFile('payment_receipt2');">Upload Now</a>
                                                     </center>
                                                     <br/>
                                                     <center>
@@ -485,43 +485,43 @@ $obj = new Common();
         <script src="js/bootbox.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script>
-                                            $(".cdm-found").click(
-                                                    function () {
-                                                        $(".pop-1").fadeIn("slow");
-                                                    }
-                                            );
-                                            $(".pop-1 i").click(
-                                                    function () {
-                                                        $(".pop-1").fadeOut("fast");
-                                                    }
-                                            );
-                                            paypal.Buttons({
-                                                createOrder: function (data, actions) {
-                                                    // Set up the transaction
-                                                    return actions.order.create({
-                                                        purchase_units: [{
-                                                                amount: {
-                                                                    value: "60.00"
+                                                            $(".cdm-found").click(
+                                                                    function () {
+                                                                        $(".pop-1").fadeIn("slow");
+                                                                    }
+                                                            );
+                                                            $(".pop-1 i").click(
+                                                                    function () {
+                                                                        $(".pop-1").fadeOut("fast");
+                                                                    }
+                                                            );
+                                                            paypal.Buttons({
+                                                                createOrder: function (data, actions) {
+                                                                    // Set up the transaction
+                                                                    return actions.order.create({
+                                                                        purchase_units: [{
+                                                                                amount: {
+                                                                                    value: "60.00"
+                                                                                }
+                                                                            }]
+                                                                    });
+                                                                },
+                                                                onApprove: function (data, actions) {
+                                                                    return actions.order.capture().then(function (details) {
+                                                                        alert("Transaction completed by " + details.payer.name.given_name);
+                                                                        // Call your server to save the transaction
+                                                                        return fetch("/paypal-transaction-complete", {
+                                                                            method: "post",
+                                                                            headers: {
+                                                                                "content-type": "application/json"
+                                                                            },
+                                                                            body: JSON.stringify({
+                                                                                orderID: data.orderID
+                                                                            })
+                                                                        });
+                                                                    });
                                                                 }
-                                                            }]
-                                                    });
-                                                },
-                                                onApprove: function (data, actions) {
-                                                    return actions.order.capture().then(function (details) {
-                                                        alert("Transaction completed by " + details.payer.name.given_name);
-                                                        // Call your server to save the transaction
-                                                        return fetch("/paypal-transaction-complete", {
-                                                            method: "post",
-                                                            headers: {
-                                                                "content-type": "application/json"
-                                                            },
-                                                            body: JSON.stringify({
-                                                                orderID: data.orderID
-                                                            })
-                                                        });
-                                                    });
-                                                }
-                                            }).render("#paywith_paypal");
+                                                            }).render("#paywith_paypal");
         </script>
     </body>
 </html>

@@ -1,4 +1,5 @@
 var avatar = '';
+var payment_receipt = '';
 var BASE_IMAGE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
 
 function attachFile(id) {
@@ -14,7 +15,12 @@ function attachFile(id) {
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                avatar = data.result.data;
+                if (id == 'profile_image') {
+                    avatar = data.result.data;
+                }
+                if (id == 'payment_receipt' || id == 'payment_receipt2') {
+                    payment_receipt = data.result.data;
+                }
             } else {
                 bootbox.alert(data.result.message);
             }
@@ -34,7 +40,6 @@ function loadClubs(type) {
             processData: false,
             contentType: false,
             success: function (data) {
-                $('#type').empty();
                 var div = '';
                 if (data.result.error === false) {
                     $('#category_clubs').empty();
