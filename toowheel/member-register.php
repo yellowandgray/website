@@ -415,7 +415,7 @@ $obj = new Common();
                                         </div>
                                     </div>
                                 </div>
-                                <p class="member-t margin-top-30"><a href="#">Skip</a></p>
+                                <p class="member-t margin-top-30"><a href="#" onclick="">Skip</a></p>
                             </div>
                             <div id="step-3" class="">
                                 <h2>Make Payment</h2>

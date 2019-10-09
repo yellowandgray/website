@@ -130,11 +130,9 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
     return change;
 });
 
-setTimeout(function () {
-    console.log('ffff');
-    //$('#smartwizard').smartWizard("next");
-    return true;
-}, 5000);
+function skipClubSelection() {
+    $('#smartwizard').smartWizard("next");
+}
 
 function leaveAStepCallback(obj, context) {
     alert('fffffffffff');
