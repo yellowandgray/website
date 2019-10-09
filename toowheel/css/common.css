@@ -3662,11 +3662,12 @@ thead td {
 .ekedai i{
     font-size: 30px;
     /* width: 50%; */
-    position: absolute;
-    left: 90px;
-    top: 30px;
+    position: relative;
+    /* left: 87px; */
+    /* top: 13px; */
     color: #ed1a26;
     cursor: pointer;
+    padding: 20px 0px 0px 30px;
 }
 .ekedai i:hover{
     color: #585858;
