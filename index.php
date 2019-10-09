@@ -93,6 +93,10 @@ $configs = $obj->getLandingDetails();
                         <a href="#" class="cross-btn"><span>SHOP NOW!</span></a>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="attachment-bg">
+            <div class="container-fluid padding-lr-0">
                 <div class="row">
                     <?php
                     $banner = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['landing_banner_ad']);
