@@ -60,7 +60,12 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                     <div class="row event-gallery-section">
                                         <?php foreach ($news_gallery as $row) { ?>
                                             <div class="col-md-3 col-sm-6">
-                                                <img src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" />
+
+                                                <a onclick="document.getElementById('pop-img').style.display='block'"><img src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" /></a>
+
+                                                <div class="pop-up-img" id="pop-img">
+                                                    <img src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" />  
+                                                </div>
                                             </div>
                                         <?php } ?>
                                     </div>
@@ -126,6 +131,14 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                     facebookWindow.focus();
                 }
                 return false;
+            }
+        </script>
+        <script type="text/javascript">
+            var modal = document.getElementById('pop-img');
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
             }
         </script>
     </body>
