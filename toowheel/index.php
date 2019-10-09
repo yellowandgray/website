@@ -242,10 +242,10 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                             infinite: true,
                                             speed: 500,
                                             slidesToShow: 6,
-                                            slidesToScroll: 1,
+                                            slidesToScroll: 3,
                                             autoplay: false,
                                             autoplaySpeed: 2000,
-                                            arrows: false,
+                                            arrows: true,
                                             responsive: [{
                                                     breakpoint: 1024,
                                                     settings: {
