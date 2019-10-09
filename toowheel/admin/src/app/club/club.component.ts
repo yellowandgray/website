@@ -85,6 +85,18 @@ export class ClubComponent implements OnInit {
            }
         });
     }
+
+
+    openGalleryDialog(): void  {
+        const dialogRef = this.dialog.open(ClubGalleryForm, {
+            minWidth: "80%",
+            maxWidth: "80%",
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+            console.log('Closed');
+        });
+    }
 }
 @Component({
   selector: 'club-form',
