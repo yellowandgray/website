@@ -2736,16 +2736,17 @@ body .calender-box{
     background-color: #85858500;
 }*/
 #demo-2 input[type=search]:focus {
-    width: 500px;
-    padding-left: 32px;
+    width: 200px;
+    padding-left: 30px;
     color: #000;
     background-color: #fff;
     cursor: auto;
     border-color: transparent;
-    top: 108px;
+    /* top: 108px; */
     position: absolute;
     border: 1px solid #F44336;
     right: 20%;
+    margin-right: 0px;
 }
 #demo-2 input:-moz-placeholder {
     color: transparent;
@@ -2775,9 +2776,9 @@ body .calender-box{
     -webkit-border-radius: 10em;
     -moz-border-radius: 10em;
     border-radius: 10em;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    transition: all .35s;
+    /*    -webkit-transition: all .5s;
+        -moz-transition: all .5s;*/
+    /*    transition: all .35s;*/
     /*position: absolute;*/
     /*    right: 20%;
         top: 24px;*/

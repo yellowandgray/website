@@ -154,7 +154,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
             </div>
             <a href="index.php" class="logo"><img src='img/logo.png' alt=''></a>
             <div class="header-login">
-                <a href="#" class="float-left margin-left-10" id="demo-2">
+                <a href="#" class="float-left margin-left-10" id="demo-2" style="position: relative;top: -2px;">
                     <span onfocusin="myFunction()" onfocusout="myFunction2()">
                         <input type="search" placeholder="Search">
                         <p id="myDiv">Search</p>
