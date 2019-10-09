@@ -21,7 +21,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <img src="<?php echo BASE_URL . $news['cover_image']; ?>" alt="" class="news-cover-image" style="width: 80%;" />
+                        <img src="<?php echo BASE_URL . $news['cover_image']; ?>" alt="" class="news-cover-image" />
                     </div>
                 </div>
             </div>

@@ -1,11 +1,11 @@
 jQuery(document).ready(function ($) {
     $('.slider').slick({
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 6,
-        slidesToScroll: 3,
-        autoplay: false,
+        slidesToScroll: 1,
+        autoplay: true,
         autoplaySpeed: 2000,
         arrows: true,
         responsive: [{
@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
                     slidesToShow: 5,
                     slidesToScroll: 1,
                     arrows: false,
-                    autoplay: false
+                    autoplay: true
                 }
             },
             {
@@ -23,7 +23,7 @@ jQuery(document).ready(function ($) {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     arrows: false,
-                    autoplay: false
+                    autoplay: true
                 }
             },
             {
@@ -32,7 +32,7 @@ jQuery(document).ready(function ($) {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: false,
-                    autoplay: false
+                    autoplay: true
                 }
             },
             {
@@ -41,7 +41,7 @@ jQuery(document).ready(function ($) {
                     arrows: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    autoplay: false
+                    autoplay: true
                 }
             }]
     });
