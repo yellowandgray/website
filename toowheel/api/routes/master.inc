@@ -383,14 +383,14 @@ $app->get('/get_press_release', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_news_by_category/:cid', function($cid) {
+$app->get('/get_news_by_category/:cid/:type', function($cid, $type) {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $category = '';
     if ($cid != 0) {
         $category = ' AND n.category_id = ' . $cid;
     }
-    $data = $com->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0' . $category);
+    $data = $com->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND type = \'' . $type . '\'' . $category);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

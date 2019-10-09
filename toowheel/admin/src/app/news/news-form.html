@@ -33,6 +33,7 @@
             <mat-form-field appearance="outline" fxFlex="100%">
                 <mat-label>Club Name</mat-label>
                 <mat-select formControlName="club_id">
+                    <mat-option value="0">None</mat-option>
                     <mat-option [value]="row.club_id" *ngFor="let row of clubs">
                         {{row.name}}
                 </mat-option>
@@ -110,11 +111,12 @@
         <input hidden #fileInputBanner2 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_2', 'banner_image_2_path')" />
     </div>
 </div>
+<br/>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
     <div fxFlex="100%">
         <mat-form-field class="full-width">
             <mat-label>Moto Text</mat-label>
-            <textarea rows="40" matInput placeholder="Moto Text" required formControlName="moto_text"></textarea>
+            <textarea rows="10" matInput placeholder="Moto Text" required formControlName="moto_text"></textarea>
             <mat-error>Moto is required</mat-error>
         </mat-form-field>
     </div>

@@ -41,7 +41,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     <?php
                     foreach ($categories as $key => $val) {
                         ?>
-                        <div class="tag-box tablink" onclick="openTag(event, <?php echo $val['category_id']; ?>)">
+                        <div class="tag-box tablink" onclick="openTag(event, <?php echo $val['category_id']; ?>, '<?php echo $type; ?>')">
                             <p><?php echo $val['name']; ?></p>
                         </div>
                     <?php }
@@ -174,71 +174,53 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         </div>
         <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
         <script>
-                        function lightbox(type) {
-                            var ninjaSldr = document.getElementById("ninja-slider");
-                            ninjaSldr.parentNode.style.display = "block";
-                            nslider.init();
-                            var fsBtn = document.getElementById("fsBtn");
-                            fsBtn.click();
-                        }
-                        function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
-                            if (isFullscreen) {
-                                ninjaSldr.parentNode.style.display = "none";
+                            function lightbox(type) {
+                                var ninjaSldr = document.getElementById("ninja-slider");
+                                ninjaSldr.parentNode.style.display = "block";
+                                nslider.init();
+                                var fsBtn = document.getElementById("fsBtn");
+                                fsBtn.click();
                             }
-                        }
-                        $(".home-gallery").magnificPopup({
-                            delegate: 'a',
-                            type: 'image',
-                            gallery: {
-                                enabled: true
-                            }
-                        });
-                        function charLimit(str, len) {
-                            if (str && str !== null && str !== 'null') {
-                                if (str.length <= len) {
-                                    return str;
-                                } else {
-                                    var y = str.substring(0, len) + '...';
-                                    return y;
+                            function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+                                if (isFullscreen) {
+                                    ninjaSldr.parentNode.style.display = "none";
                                 }
                             }
-                        }
-
-                        function openTag(evt, cid) {
+                            function openTag(evt, cid, type) {
                             var i, tablink, remove = false;
-                            if (evt !== null) {
-                                if ((evt.currentTarget.className).indexOf('active') !== -1) {
-                                    remove = true;
-                                }
-                                tablink = document.getElementsByClassName("tablink");
-                                for (i = 0; i < tablink.length; i++) {
-                                    tablink[i].className = tablink[i].className.replace(" active", "");
-                                }
-                                if (remove == false) {
-                                    evt.currentTarget.className += " active";
-                                } else {
-                                    cid = 0;
-                                }
+                                    if (evt !== null) {
+                            if ((evt.currentTarget.className).indexOf('active') !== - 1) {
+                            remove = true;
+                            }
+                            tablink = document.getElementsByClassName("tablink");
+                                    for (i = 0; i < tablink.length; i++) {
+                            tablink[i].className = tablink[i].className.replace(" active", "");
+                            }
+                            if (remove == false) {
+                            evt.currentTarget.className += " active";
+                            } else {
+                            cid = 0;
+                            }
                             }
                             $.ajax({
-                                type: "GET",
-                                url: 'api/v1/get_news_by_category/' + cid,
-                                success: function (data) {
+                            type: "GET",
+                                    url: 'api/v1/get_news_by_category/' + cid,
+                                    success: function (data) {
                                     $('.slider').slick('unslick');
-                                    $('#club1 .slider').empty();
-                                    var BASE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
-                                    if (data.result.error === false) {
-                                        var list = '';
-                                        $.each(data.result.data, function (key, val) {
+                                            $('#club1 .slider').empty();
+                                            var BASE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
+                                            if (data.result.error === false) {
+                                    var list = '';
+                                            $.each(data.result.data, function (key, val) {
                                             var name = val.sponsor;
-                                            if (val.club && val.club !== null && val.club !== 'null') {
-                                                name = val.club;
+                                                    if (val.club && val.club !== null && val.club !== 'null') {
+                                            name = val.club;
                                             }
                                             list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(name, 10) + '</p><h2>' + charLimit(val.title, 20) + '</h2><p>' + charLimit(val.moto_text, 120) + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
-                                        });
-                                        $('#club1 .slider').html(list);
-                                        $('.slider').slick({
-                                            dots: false,
+                                            });
+                                            $('#club1 .slider').html(list);
+                                            $('.slider').slick({
+                                    dots: false,
                                             infinite: true,
                                             speed: 500,
                                             slidesToShow: 6,
@@ -247,46 +229,140 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                             autoplaySpeed: 2000,
                                             arrows: true,
                                             responsive: [{
-                                                    breakpoint: 1024,
+                                            breakpoint: 1024,
                                                     settings: {
-                                                        slidesToShow: 4,
-                                                        slidesToScroll: 1,
-                                                        autoplay: true
+                                                    slidesToShow: 4,
+                                                            slidesToScroll: 1,
+                                                            autoplay: true
                                                     }
-                                                },
-                                                {
-                                                    breakpoint: 991,
+                                            },
+                                            {
+                                            breakpoint: 991,
                                                     settings: {
-                                                        slidesToShow: 3,
-                                                        slidesToScroll: 1,
-                                                        autoplay: true
+                                                    slidesToShow: 3,
+                                                            slidesToScroll: 1,
+                                                            autoplay: true
                                                     }
-                                                },
-                                                {
-                                                    breakpoint: 600,
+                                            },
+                                            {
+                                            breakpoint: 600,
                                                     settings: {
-                                                        slidesToShow: 1,
-                                                        slidesToScroll: 1,
-                                                        autoplay: true
+                                                    slidesToShow: 1,
+                                                            slidesToScroll: 1,
+                                                            autoplay: true
                                                     }
-                                                },
-                                                {
-                                                    breakpoint: 400,
+                                            },
+                                            {
+                                            breakpoint: 400,
                                                     settings: {
-                                                        arrows: false,
-                                                        slidesToShow: 1,
-                                                        slidesToScroll: 1,
-                                                        autoplay: true
+                                                    arrows: false,
+                                                            slidesToShow: 1,
+                                                            slidesToScroll: 1,
+                                                            autoplay: true
                                                     }
-                                                }]
-                                        });
+                                            }]
+                                    });
                                     }
-                                },
-                                error: function (err) {
+                                    },
+                                    error: function (err) {
                                     $('#club1 .slider').empty();
-                                }
+                                            >>> >>> > origin / twowheel
+                                    }
                             });
-                        }
+                                    function charLimit(str, len) {
+                                    if (str && str !== null && str !== 'null') {
+                                    if (str.length <= len) {
+                                    return str;
+                                    } else {
+                                    var y = str.substring(0, len) + '...';
+                                            return y;
+                                    }
+                                    }
+                                    }
+
+                            function openTag(evt, cid, type) {
+                            var i, tablink, remove = false;
+                                    if (evt !== null) {
+                            if ((evt.currentTarget.className).indexOf('active') !== - 1) {
+                            remove = true;
+                            }
+                            tablink = document.getElementsByClassName("tablink");
+                                    for (i = 0; i < tablink.length; i++) {
+                            tablink[i].className = tablink[i].className.replace(" active", "");
+                            }
+                            if (remove == false) {
+                            evt.currentTarget.className += " active";
+                            } else {
+                            cid = 0;
+                            }
+                            }
+                            $.ajax({
+                            type: "GET",
+                                    url: 'api/v1/get_news_by_category/' + cid + '/' + type,
+                                    success: function (data) {
+                                    $('.slider').slick('unslick');
+                                            $('#club1 .slider').empty();
+                                            var BASE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
+                                            if (data.result.error === false) {
+                                    var list = '';
+                                            $.each(data.result.data, function (key, val) {
+                                            var name = val.sponsor;
+                                                    if (val.club && val.club !== null && val.club !== 'null') {
+                                            name = val.club;
+                                            }
+                                            list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(name, 10) + '</p><h2>' + charLimit(val.title, 20) + '</h2><p>' + charLimit(val.moto_text, 120) + '</p><center><a href="news.php?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
+                                            });
+                                            $('#club1 .slider').html(list);
+                                            $('.slider').slick({
+                                    dots: false,
+                                            infinite: true,
+                                            speed: 500,
+                                            slidesToShow: 6,
+                                            slidesToScroll: 1,
+                                            autoplay: false,
+                                            autoplaySpeed: 2000,
+                                            arrows: false,
+                                            responsive: [{
+                                            breakpoint: 1024,
+                                                    settings: {
+                                                    slidesToShow: 4,
+                                                            slidesToScroll: 1,
+                                                            autoplay: true
+                                                    }
+                                            },
+                                            {
+                                            breakpoint: 991,
+                                                    settings: {
+                                                    slidesToShow: 3,
+                                                            slidesToScroll: 1,
+                                                            autoplay: true
+                                                    }
+                                            },
+                                            {
+                                            breakpoint: 600,
+                                                    settings: {
+                                                    slidesToShow: 1,
+                                                            slidesToScroll: 1,
+                                                            autoplay: true
+                                                    }
+                                            },
+                                            {
+                                            breakpoint: 400,
+                                                    settings: {
+                                                    arrows: false,
+                                                            slidesToShow: 1,
+                                                            slidesToScroll: 1,
+                                                            autoplay: true
+                                                    }
+                                            }]
+                                    });
+                                    }
+                                    },
+                                    error: function (err) {
+                                    $('#club1 .slider').empty();
+                                    }
+                            });
+                            }
         </script>
     </body>
 </html>
