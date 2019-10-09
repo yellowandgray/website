@@ -57,8 +57,8 @@ export class CategoryComponent implements OnInit {
          });
       }
     const dialogRef = this.dialog.open(CategoryForm, {
-        minWidth: "40%",
-        maxWidth: "40%",
+        minWidth: "80%",
+        maxWidth: "80%",
         data: {
             ctype: ctype,
             data: data
