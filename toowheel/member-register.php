@@ -401,20 +401,7 @@ $obj = new Common();
                                         </select>
                                     </div>
                                 </div>
-                                <div class="row" id="category_clubs">
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="club-box">
-                                            <span>#1</span>
-                                            <img src="img/find-club/dummy-logo.png" alt="" />
-                                            <h3>Frendly Bikers</h3>
-                                            <p>Kuala Lumpur</p>
-                                            <div class="club-btn">
-                                                <div class="eff-9"></div>
-                                                <a href="club-page.php">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="row" id="category_clubs"></div>
                                 <p class="member-t margin-top-30"><a href="#" onclick="skipClubSelection();">Skip</a></p>
                             </div>
                             <div id="step-3" class="">
@@ -448,7 +435,7 @@ $obj = new Common();
                                                     </center>
                                                     <br/>
                                                     <center>
-                                                        <a href="#" type="submit">Upload Later</a>
+                                                        <a href="#" onclick="registerMember();" type="submit">Upload Later</a>
                                                     </center>
                                                 </form>
                                             </div>
@@ -501,7 +488,7 @@ $obj = new Common();
                                                                     return actions.order.create({
                                                                         purchase_units: [{
                                                                                 amount: {
-                                                                                    value: "60.00"
+                                                                                    value: "99.00"
                                                                                 }
                                                                             }]
                                                                     });
