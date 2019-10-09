@@ -113,9 +113,11 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                 <?php foreach ($menu_findclub as $row) { ?>
                                     <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
+                                            <div class="rank-h">
                                             <?php if ($row['rank'] && $row['rank'] != 0) { ?>
                                                 <span>#<?php echo $row['rank']; ?></span>
                                             <?php } ?>
+                                            </div>
                                             <img src="<?php echo BASE_URL . $row['logo']; ?>" alt="" />
                                             <h3><?php echo $row['name']; ?></h3>
                                             <p><?php echo $row['city']; ?></p>

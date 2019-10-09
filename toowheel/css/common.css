@@ -657,7 +657,7 @@ button {
     background-color: #363636;
     /* width: 25%; */
     /* height: 700px; */
-/*    padding-top: 10px;*/
+    /*    padding-top: 10px;*/
 
 }
 
@@ -937,7 +937,10 @@ button {
         flex-wrap: wrap;
     }
     .release-cont-1{
-        flex: 0;
+        flex: 1;
+    }
+    .release-cont-1 img{
+        border-radius: 0;
     }
     .release-cont-2{
         flex:1 0 100%;
@@ -1265,13 +1268,13 @@ button {
     z-index: 9999;
     top: 100px;
     left: 0;
-    width: 100%;
+    width: 34%;
     height: 40%;
     padding: 20px;
     background: white;
     color: white;
     text-align: center;
-
+    margin: 0 33%;
 }
 
 .pop i{
@@ -1293,7 +1296,7 @@ button {
 
 @media only screen and (min-width: 481px) {
     .pop {
-        left: 47%;
+        /*        left: 47%;*/
         top: 50%;
         /*width: 30%;*/
         height: 30%;
@@ -2742,6 +2745,7 @@ body .calender-box{
     top: 108px;
     position: absolute;
     border: 1px solid #F44336;
+    right: 20%;
 }
 #demo-2 input:-moz-placeholder {
     color: transparent;
@@ -2766,7 +2770,7 @@ body .calender-box{
 .header-login input[type=search] {
     background: #85858500 url(../img/search.png) no-repeat 0px center;
     border: solid 1px #85858500;
-    padding: 5px 10px 5px 32px;
+    padding: 0px 15px 9px 0px;
     width: 55px;
     -webkit-border-radius: 10em;
     -moz-border-radius: 10em;
@@ -2774,14 +2778,14 @@ body .calender-box{
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .35s;
-    position: absolute;
-    right: 20%;
-    top: 24px;
+    /*position: absolute;*/
+    /*    right: 20%;
+        top: 24px;*/
 }
 
 .header #demo-2 p {
     position: relative;
-    top: 28px;
+    top: -6px;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -3622,7 +3626,6 @@ thead td {
     align-items: stretch;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 .pan-1{
     flex-basis: 69%;
@@ -3639,6 +3642,12 @@ thead td {
     border-radius: 5px;
     padding: 10px 10px;
 }
+
+.rank-button {
+    width: 100%;
+    height: 35px;
+}
+
 @media (max-width: 575px) and (min-width:320px){
     .pan-1{
         flex-basis: 100%;
@@ -3648,5 +3657,38 @@ thead td {
     }
     .pan-3{
         flex-basis: 100%;
+    }
+}
+.ekedai i{
+    font-size: 30px;
+    /* width: 50%; */
+    position: relative;
+    /* left: 87px; */
+    /* top: 13px; */
+    color: #ed1a26;
+    cursor: pointer;
+    padding: 20px 0px 0px 30px;
+}
+.ekedai i:hover{
+    color: #585858;
+}
+.rank-h{
+    height: 26px;
+}
+@media (max-width:767px) and (min-width:320px)
+{
+    .pop {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 100px;
+        left: 0;
+        width: 80%;
+        height: 40%;
+        padding: 20px;
+        background: white;
+        color: white;
+        text-align: center;
+        margin: 0 10%;
     }
 }

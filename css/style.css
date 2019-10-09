@@ -159,7 +159,7 @@ p {
 .footer {
     display: flex;
     flex-flow: row wrap;
-    background-color: #fff;
+    background-color: #111111;
     padding: 0em;
     font-size: 0.9375rem;
     /*    position: relative;
@@ -387,8 +387,7 @@ button {
 
 .fourwheel {
     /*    background: #f4001e;*/
-    position: relative;
-    top: 220px;
+    height: auto !important;
 }
 
 .fourwheel .container {
@@ -526,6 +525,11 @@ button {
 
 .ad-banner-footer img {
     width: 100%;
-    margin: 20px 0 0;
-    height: 285px;
+    margin: 20px 0 1px;
+    height: auto;
 }
+/*
+.padding-lr-0 {
+    padding-left: 0;
+    padding-right: 0;
+}*/
