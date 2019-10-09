@@ -133,6 +133,9 @@
     #nav-icon3 p {
         display: none !important;
     }
+    .club-cover-image {
+        height: auto !important;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
