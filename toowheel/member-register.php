@@ -387,139 +387,7 @@ $obj = new Common();
                                         </select>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="club-box">
-                                            <span>#1</span>
-                                            <img src="img/find-club/dummy-logo.png" alt="" />
-                                            <h3>Frendly Bikers</h3>
-                                            <p>Kuala Lumpur</p>
-                                            <div class="club-btn">
-                                                <div class="eff-9"></div>
-                                                <a href="club-page.php">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="club-box">
-                                            <span>#1</span>
-                                            <img src="img/find-club/dummy-logo.png" alt="" />
-                                            <h3>Frendly Bikers</h3>
-                                            <p>Kuala Lumpur</p>
-                                            <div class="club-btn">
-                                                <div class="eff-9"></div>
-                                                <a href="club-page.php">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="club-box">
-                                            <span>#1</span>
-                                            <img src="img/find-club/dummy-logo.png" alt="" />
-                                            <h3>Frendly Bikers</h3>
-                                            <p>Kuala Lumpur</p>
-                                            <div class="club-btn">
-                                                <div class="eff-9"></div>
-                                                <a href="club-page.php">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="club-box">
-                                            <span>#1</span>
-                                            <img src="img/find-club/dummy-logo.png" alt="" />
-                                            <h3>Frendly Bikers</h3>
-                                            <p>Kuala Lumpur</p>
-                                            <div class="club-btn">
-                                                <div class="eff-9"></div>
-                                                <a href="club-page.php">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="club-box">
-                                            <span>#1</span>
-                                            <img src="img/find-club/dummy-logo.png" alt="" />
-                                            <h3>Frendly Bikers</h3>
-                                            <p>Kuala Lumpur</p>
-                                            <div class="club-btn">
-                                                <div class="eff-9"></div>
-                                                <a href="club-page.php">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="club-box">
-                                            <span>#1</span>
-                                            <img src="img/find-club/dummy-logo.png" alt="" />
-                                            <h3>Frendly Bikers</h3>
-                                            <p>Kuala Lumpur</p>
-                                            <div class="club-btn">
-                                                <div class="eff-9"></div>
-                                                <a href="club-page.php">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="club-box">
-                                            <span>#1</span>
-                                            <img src="img/find-club/dummy-logo.png" alt="" />
-                                            <h3>Frendly Bikers</h3>
-                                            <p>Kuala Lumpur</p>
-                                            <div class="club-btn">
-                                                <div class="eff-9"></div>
-                                                <a href="club-page.php">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="club-box">
-                                            <span>#1</span>
-                                            <img src="img/find-club/dummy-logo.png" alt="" />
-                                            <h3>Frendly Bikers</h3>
-                                            <p>Kuala Lumpur</p>
-                                            <div class="club-btn">
-                                                <div class="eff-9"></div>
-                                                <a href="club-page.php">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="club-box">
-                                            <span>#1</span>
-                                            <img src="img/find-club/dummy-logo.png" alt="" />
-                                            <h3>Frendly Bikers</h3>
-                                            <p>Kuala Lumpur</p>
-                                            <div class="club-btn">
-                                                <div class="eff-9"></div>
-                                                <a href="club-page.php">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="club-box">
-                                            <span>#1</span>
-                                            <img src="img/find-club/dummy-logo.png" alt="" />
-                                            <h3>Frendly Bikers</h3>
-                                            <p>Kuala Lumpur</p>
-                                            <div class="club-btn">
-                                                <div class="eff-9"></div>
-                                                <a href="club-page.php">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="club-box">
-                                            <span>#1</span>
-                                            <img src="img/find-club/dummy-logo.png" alt="" />
-                                            <h3>Frendly Bikers</h3>
-                                            <p>Kuala Lumpur</p>
-                                            <div class="club-btn">
-                                                <div class="eff-9"></div>
-                                                <a href="club-page.php">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="row" id="category_clubs">
                                     <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <span>#1</span>
@@ -603,43 +471,43 @@ $obj = new Common();
         <script src="js/bootbox.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script>
-            $(".cdm-found").click(
-                    function () {
-                        $(".pop-1").fadeIn('slow');
-                    }
-            );
-            $(".pop-1 i").click(
-                    function () {
-                        $(".pop-1").fadeOut('fast');
-                    }
-            );
-            paypal.Buttons({
-                createOrder: function (data, actions) {
-                    // Set up the transaction
-                    return actions.order.create({
-                        purchase_units: [{
-                                amount: {
-                                    value: '60.00'
-                                }
-                            }]
-                    });
-                },
-                onApprove: function (data, actions) {
-                    return actions.order.capture().then(function (details) {
-                        alert('Transaction completed by ' + details.payer.name.given_name);
-                        // Call your server to save the transaction
-                        return fetch('/paypal-transaction-complete', {
-                            method: 'post',
-                            headers: {
-                                'content-type': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                orderID: data.orderID
-                            })
-                        });
-                    });
-                }
-            }).render('#paywith_paypal');
+                                            $(".cdm-found").click(
+                                                    function () {
+                                                        $(".pop-1").fadeIn('slow');
+                                                    }
+                                            );
+                                            $(".pop-1 i").click(
+                                                    function () {
+                                                        $(".pop-1").fadeOut('fast');
+                                                    }
+                                            );
+                                            paypal.Buttons({
+                                                createOrder: function (data, actions) {
+                                                    // Set up the transaction
+                                                    return actions.order.create({
+                                                        purchase_units: [{
+                                                                amount: {
+                                                                    value: '60.00'
+                                                                }
+                                                            }]
+                                                    });
+                                                },
+                                                onApprove: function (data, actions) {
+                                                    return actions.order.capture().then(function (details) {
+                                                        alert('Transaction completed by ' + details.payer.name.given_name);
+                                                        // Call your server to save the transaction
+                                                        return fetch('/paypal-transaction-complete', {
+                                                            method: 'post',
+                                                            headers: {
+                                                                'content-type': 'application/json'
+                                                            },
+                                                            body: JSON.stringify({
+                                                                orderID: data.orderID
+                                                            })
+                                                        });
+                                                    });
+                                                }
+                                            }).render('#paywith_paypal');
         </script>
     </body>
 </html>
