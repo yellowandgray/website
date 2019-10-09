@@ -149,9 +149,7 @@
             showStepURLhash: false,
             toolbarSettings: {toolbarPosition: 'both',
                 toolbarExtraButtons: [btnFinish, btnCancel]
-            },
-            onLeaveStep: leaveAStepCallback,
-            onFinish: onFinishCallback
+            }
         });
         $(".set > a").on("click", function () {
             if ($(this).hasClass("active")) {
