@@ -58,8 +58,8 @@ export class GalleryComponent implements OnInit {
          });
       }
     const dialogRef = this.dialog.open(GalleryForm, {
-        minWidth: "40%",
-        maxWidth: "40%",
+        minWidth: "80%",
+        maxWidth: "80%",
         data: data
     });
 

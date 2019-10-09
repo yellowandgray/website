@@ -45,8 +45,8 @@ image_url: string = '../toowheel/api/v1/';
          });
       }
     const dialogRef = this.dialog.open(ClubEventForm, {
-        minWidth: "40%",
-        maxWidth: "40%",
+        minWidth: "80%",
+        maxWidth: "80%",
         data: data
     });
 

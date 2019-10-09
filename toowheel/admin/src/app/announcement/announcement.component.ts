@@ -48,8 +48,8 @@ export class AnnouncementComponent implements OnInit {
          });
       }
     const dialogRef = this.dialog.open(AnnouncementForm, {
-        minWidth: "40%",
-        maxWidth: "40%",
+        minWidth: "80%",
+        maxWidth: "80%",
         data: {
             data: data,
             club_id: this.club_id

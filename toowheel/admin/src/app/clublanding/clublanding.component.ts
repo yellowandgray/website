@@ -19,8 +19,8 @@ export class ClublandingComponent implements OnInit {
   }
 openDialog(): void  {
     const dialogRef = this.dialog.open(LandingAboutForm, {
-        minWidth: "40%",
-        maxWidth: "40%"
+        minWidth: "80%",
+        maxWidth: "80%"
     });
 
     dialogRef.afterClosed().subscribe(result => {

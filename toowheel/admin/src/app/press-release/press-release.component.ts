@@ -43,8 +43,8 @@ export class PressReleaseComponent implements OnInit {
          });
       }
         const dialogRef = this.dialog.open(PressReleaseForm, {
-            minWidth: "40%",
-            maxWidth: "40%",
+            minWidth: "80%",
+            maxWidth: "80%",
             data: data
         });
 

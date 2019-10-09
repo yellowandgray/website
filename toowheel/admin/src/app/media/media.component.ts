@@ -41,8 +41,8 @@ export class MediaComponent implements OnInit {
          });
       }
     const dialogRef = this.dialog.open(MediaForm, {
-        minWidth: "40%",
-        maxWidth: "40%",
+        minWidth: "80%",
+        maxWidth: "80%",
         data: data
     });
 

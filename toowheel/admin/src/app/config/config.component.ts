@@ -87,8 +87,8 @@ export class ConfigComponent implements OnInit {
          data.ads = this.ads;
          data.ads_card = this.ads_card;
     const dialogRef = this.dialog.open(ConfigForm, {
-        minWidth: "40%",
-        maxWidth: "40%",
+        minWidth: "80%",
+        maxWidth: "80%",
         data: data
     });
     dialogRef.afterClosed().subscribe(result => {
