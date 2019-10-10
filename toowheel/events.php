@@ -36,7 +36,7 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                                     <div class="col-md-6">
                                                         <div class="row">
                                                             <div class="col-md-12">
-                                                                <p><span>Club/Sponsor:</span> <?php echo $row['club_id'] != 0 ? $row['club'] : $row['sponsor']; ?></p>
+                                                                <p><span>Club/Sponsor:</span> <?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 20) : $obj->charLimit($row['sponsor'], 20); ?></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -87,7 +87,7 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                         </div>
                                         <div class="col-md-6">
                                             <h3><?php echo $row['title']; ?></h3>
-                                            <p><span>Club/Sponsor:</span> <?php echo $row['club_id'] != 0 ? $row['club'] : $row['sponsor']; ?></p>
+                                            <p><span>Club/Sponsor:</span> <?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 20) : $obj->charLimit($row['sponsor'], 20); ?></p>
                                             <p><strong>Description</strong><br/> <?php echo $obj->charLimit($row['description'], 200); ?></p>
                                         </div>
                                     </div>
