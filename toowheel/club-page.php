@@ -94,7 +94,7 @@ if ($type == 'four_wheel') {
                 <div class="row">
                     <div class="col-lg-3 col-md-12">
                         <div class="row">
-                            <video autoplay muted loop id="myVideo" class="img-responsive">
+                            <video muted loop controls id="myVideo" class="img-responsive">
                                 <source src="<?php echo BASE_URL . $club['club_video']; ?>" type="video/mp4">
                             </video>
                             <div class="img-b-10px club-gallery">
