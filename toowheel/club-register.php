@@ -36,25 +36,19 @@ $obj = new Common();
                                     <option>500 cc</option>
                                 </select>
                             </div>
-                            <br/>
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                                <label class="custom-file-label" >Choose file...</label>
+                                <label class="custom-file-label" >Choose Cover Image...</label>
                             </div>
-                            <br/>
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                                <label class="custom-file-label">Choose file...</label>
+                                <label class="custom-file-label">Choose Logo...</label>
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                                <label class="custom-file-label">Choose Club Video...</label>
                             </div>
                             <br/>
-                            <div class="form-group">
-                                <input type="text" name="rank" placeholder="Rank" tabindex="6" required />
-                            </div>
-                            <br/>
-                            <div class="form-group">
-                                <label>Club Video :</label>
-                                <input type="file" name="video" placeholder="" tabindex="7" required />
-                            </div>
                             <div class="form-group">
                                 <input placeholder="Email Address" name="email" type="email" tabindex="8" required>
                             </div>
@@ -105,6 +99,9 @@ $obj = new Common();
                             <div class="form-group">
                                 <input placeholder="No. of Members" name="no_of_members" type="text" tabindex="17" required>
                             </div>
+                            <div class="form-group">
+                                <textarea placeholder="About Club" name="about_club" type="text" tabindex="22" required></textarea>
+                            </div>
                             <div class="form-row">
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
@@ -132,9 +129,6 @@ $obj = new Common();
                                         <input placeholder="Instagram Link" name="insta_link" type="text" tabindex="21" style="padding-left: 50px">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <textarea placeholder="About Club" name="about_club" type="text" tabindex="22" required></textarea>
                             </div>
                             <br/>
                             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>

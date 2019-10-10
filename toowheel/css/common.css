@@ -693,7 +693,7 @@ button {
 
 .tabcontent {
     float: left;
-    padding: 20px;
+    padding: 5px 20px 20px;
     border: 1px solid #ccc;
     /*width: 75%;*/
     border-left: none;
@@ -848,7 +848,7 @@ button {
 .release {
     display: flex !important;
     justify-content: space-around;
-    padding: 10px 10px 0;
+    padding: 0px 10px 0;
     margin-bottom: 10px;
     border-bottom: 1px solid gray;
 }
