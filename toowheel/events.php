@@ -67,7 +67,7 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                     </div>
                                     <div class="col-md-6 event-desc">
                                         <span>Description</span>
-                                        <p><?php echo $row['description']; ?></p>
+                                        <p><?php echo nl2br($row['description']); ?></p>
                                         <br/>
                                     </div>
                                 </div>

@@ -117,7 +117,7 @@ if ($type == 'four_wheel') {
                                             <h5><a>CLUB ADMIN</a></h5>
                                             <span><em><?php echo date('M d, Y', strtotime($row['announcement_date'])); ?></em></span>
                                             <h3><?php echo $row['title']; ?></h3>
-                                            <p><?php echo $row['description']; ?></p>
+                                            <p><?php echo nl2br($row['description']); ?></p>
                                         </div>  
                                     </div>
                                 <?php } ?>

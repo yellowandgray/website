@@ -5,7 +5,7 @@
     .tag-box p {font-size: 10px !important;}
     .video-bg-banner {
         top: 100px !important;
-/*        height: auto !Important;*/
+        /*        height: auto !Important;*/
     }
     .bg-1{
         top: 100px !important;
@@ -24,7 +24,7 @@
     .logo {width: 66% !important;}
     .discover-slider-content {top: -142px !important;}
     .bg-1 {top: 85px !important;height: auto !important;}
-/*    .video-bg-banner {height: auto !important;}*/
+    /*    .video-bg-banner {height: auto !important;}*/
     .footer__logo img {width: 100% !important;}
     .tag-box p {font-size: 14px !important;}
     .bg-1 .container {bottom: 0px !important;}
@@ -52,7 +52,7 @@
     .media-press-release {
         padding: 40% 0 0% 0 !important;
     }
-    
+
 }
 
 @media screen and (max-height: 600px) {
@@ -136,6 +136,13 @@
     .club-cover-image {
         height: auto !important;
     }
+    .club-press img {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .events-main-content {
+        padding: 20px 0 !important;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
@@ -181,9 +188,9 @@
     #club-register {
         width: 95% !important;
     }
-/*    .slick-dots {
-            display: none;
-    }*/
+    /*    .slick-dots {
+                display: none;
+        }*/
 }
 
 @media (min-width: 768px) and (max-width: 991px) { 
@@ -716,6 +723,6 @@
 
 @media (min-width: 1200px) and (max-width: 1440px) {
     .slick-dots {
-            bottom: 80px !important;
+        bottom: 80px !important;
     }
 }

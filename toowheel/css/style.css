@@ -1019,7 +1019,7 @@ body {
 
 .events-main-content iframe {
     width: 100% !important;
-    height: 315px !important;
+    height: 360px !important;
 }
 
 .events-main-content span { 
@@ -1802,7 +1802,7 @@ body {
 
 .club-press img {
     width: 80%;
-    height: 450px;
+    height: auto;
 }
 
 .club-cover-image {
