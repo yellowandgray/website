@@ -5,7 +5,7 @@ if (!isset($_GET['type'])) {
 $type = $_GET['type'];
 require_once 'api/include/common.php';
 $obj = new Common();
-$states = $obj->selectAll('*', 'state', 'state_id > 0 AND type = \'' . $type . '\'');
+$states = $obj->selectAll('*', 'state', 'state_id > 0');
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,14 +61,14 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0 AND type = \'' . $type . '
                                     <option value='Malaysia'>Malaysia</option>
                                 </select>
                             </div>
-                            <?php foreach ($states as $row) { ?>
-                                <div class="form-group">
-                                    <select name="state" tabindex="11" required>
-                                        <option value="0">State</option>
-                                        <option value='Kuala_Lumpur'><?php echo $row['name']; ?></option>
-                                    </select>
-                                </div>
-                            <?php } ?>
+                            <div class="form-group">
+                                <select name="state" tabindex="11" required>
+                                    <option value="0">State</option>
+                                    <?php foreach ($states as $row) { ?>
+                                        <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <input placeholder="City" name="city" type="text" tabindex="12" required>
                             </div>
