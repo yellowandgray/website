@@ -107,8 +107,8 @@ export class MemberForm {
             this.categoryForm.patchValue({ 
                 name: this.data.data.name
         })
-        this.category_id = this.data.data.category_id;*/
-    }
+        this.category_id = this.data.data.category_id;
+    }*/
     }
 
   onSubmit() {
