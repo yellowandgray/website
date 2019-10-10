@@ -448,6 +448,7 @@ $obj = new Common();
                                 <div class="text-center">
                                     <h5>Congratulations!</h5>
                                     <p class="text-center" style="margin-bottom: 0">You are now Official Member of TooWheel.</p>
+                                    <strong>"Thank you! Our Team will get in touch with you soon."</strong>
                                     <strong>Membership ID: <span id="membership_id"></span></strong>
                                     <br/>
                                 </div>

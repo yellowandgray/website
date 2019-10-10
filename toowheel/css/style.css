@@ -1820,7 +1820,15 @@ body {
 }
 
 .selected-club {
-    background: #000000;
+    background: #858585;
+}
+
+.selected-club h3 {
+    color: #fff;
+}
+
+.selected-club p {
+    color: #fff;
 }
 @media screen and (min-width:768px){
     .header {
