@@ -261,3 +261,47 @@ function renderCategory(type) {
         $('#category_id').append('<option value="">Category</option>');
     }
 }
+
+function filterClub() {
+    var filter_name = $('#filter_name').val();
+    var filter_category = $('#filter_category').val();
+    var filter_limit = $('#filter_limit').val();
+    var filter_state = $('#filter_state').val();
+    $('.club-box').removeClass('hidden');
+    $('.club-box').each(function (index, ele) {
+        if (filter_name !== '') {
+            if (typeof $(ele).data('name') !== 'undefined' && ($(ele).data('name')).indexOf(filter_name) < 0) {
+                $(ele).addClass('hidden');
+            }
+        }
+        if (filter_category !== '') {
+            if (typeof $(ele).data('category') !== 'undefined' && $(ele).data('category') != filter_category) {
+                $(ele).addClass('hidden');
+            }
+        }
+        if (filter_state !== '') {
+            if (typeof $(ele).data('state') !== 'undefined' && $(ele).data('state') != filter_state) {
+                $(ele).addClass('hidden');
+            }
+        }
+    });
+    sortClub();
+    if (filter_limit !== '') {
+        $('#club_list .club-box:gt(' + filter_limit + ')').addClass('hidden');
+    }
+}
+
+function sortClub() {
+    var filter_order = $('#filter_order').val();
+    var items = $('#club_list .club-box');
+    if (filter_order == 'asc') {
+        items.sort(function (a, b) {
+            return ($(b).data('name')) < ($(a).data('name')) ? 1 : -1;
+        });
+    } else {
+        items.sort(function (a, b) {
+            return ($(b).data('name')) > ($(a).data('name')) ? 1 : -1;
+        });
+    }
+    items.appendTo('#club_list');
+}
