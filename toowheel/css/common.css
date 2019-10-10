@@ -3716,7 +3716,7 @@ thead td {
     box-shadow: 0 0 5px 0px red;
 }
 
-.form-group i {
+.form-group i fa-facebook {
     position: absolute;
     font-size: 25px;
     margin: 0;
@@ -3727,7 +3727,17 @@ thead td {
     border-bottom-left-radius: 4px;
 }
 
-.from-row .form-group input {
-    width: 45%;
+.form-group i fa-youtube {
+    position: absolute;
+    font-size: 25px;
+    margin: 0;
+    padding: 12px;
+    color: #fff;
+    background: #3F51B5;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.input-padding .form-group input {
     padding-left: 40px;
 }

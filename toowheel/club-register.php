@@ -105,16 +105,16 @@ $obj = new Common();
                             <div class="form-group">
                                 <input placeholder="No. of Members" name="no_of_members" type="text" tabindex="17" required>
                             </div>
-                            <div class="form-row">
+                            <div class="form-row input-padding">
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
-                                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
                                         <input placeholder="Facebook Link" name="fb_link" type="text" tabindex="18">
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
-                                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                        <i class="fa fa-youtube" aria-hidden="true"></i>
                                         <input placeholder="Facebook Link" name="fb_link" type="text" tabindex="18">
                                     </div>
                                 </div>
