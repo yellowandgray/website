@@ -2737,7 +2737,9 @@ body .calender-box{
     padding-left: 0;
     color: transparent;
     cursor: pointer;
-    margin-right: -10px;
+    /* margin-right: -10px; */
+    top: -2px;
+    position: relative;
 }
 /*#demo-2 input[type=search]:hover {
     background-color: #85858500;
