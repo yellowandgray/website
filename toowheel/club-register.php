@@ -105,29 +105,33 @@ $obj = new Common();
                             <div class="form-group">
                                 <input placeholder="No. of Members" name="no_of_members" type="text" tabindex="17" required>
                             </div>
-                            <div class="form-row input-padding">
+                            <div class="form-row">
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
                                         <i class="fa fa-facebook" aria-hidden="true"></i>
-                                        <input placeholder="Facebook Link" name="fb_link" type="text" tabindex="18">
+                                        <input placeholder="Facebook Link" name="fb_link" type="text" tabindex="18" style="padding-left: 40px">
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
                                         <i class="fa fa-youtube" aria-hidden="true"></i>
-                                        <input placeholder="Youtube Link" name="fb_link" type="text" tabindex="18">
+                                        <input placeholder="Youtube Link" name="yt_link" type="text" tabindex="19" style="padding-left: 50px">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row input-padding">
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
-                                        <input placeholder="Twitter Link" name="tw_link" type="text" tabindex="20">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                        <input placeholder="Twitter Link" name="tw_link" type="text" tabindex="20" style="padding-left: 40px">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <input placeholder="Instagram Link" name="insta_link" type="text" tabindex="21">
+                                <div class="col-md-6 mb-6">
+                                    <div class="form-group">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                        <input placeholder="Instagram Link" name="insta_link" type="text" tabindex="21" style="padding-left: 40px">
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <textarea placeholder="About Club" name="about_club" type="text" tabindex="22" required></textarea>
@@ -135,9 +139,6 @@ $obj = new Common();
                             <br/>
                             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
                         </form>
-                        <!--                        <div class="already-account">
-                                                    <p>Have already an account? <a href="login.php">Login here</a></p>
-                                                </div>-->
                     </div>
                 </div>
             </div>

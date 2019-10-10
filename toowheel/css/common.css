@@ -3738,6 +3738,13 @@ thead td {
     border-bottom-left-radius: 4px;
 }
 
-.input-padding .form-group input {
-    padding-left: 40px;
+.form-group i.fa-twitter {
+    position: absolute;
+    font-size: 25px;
+    margin: 0;
+    padding: 12px;
+    color: #fff;
+    background: #f00;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
