@@ -65,7 +65,7 @@
 </div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
     <div fxFlex="50%">
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" class="full-width">
             <mat-label>Location</mat-label>
             <input matInput placeholder="" required formControlName="location" />
             <mat-error>Location is required</mat-error>
@@ -77,6 +77,16 @@
         <input hidden #fileInputThumb type="file" id="file_thumb" (change)="fileProgress($event, 'thumb_image', 'thumb_image_path')" />
     </div>
 </div>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+    <div fxFlex="100%">
+        <mat-form-field appearance="outline" fxFlex="100%">
+            <mat-label>Sponsor Name</mat-label>
+            <input matInput placeholder="" required formControlName="sponsor_name" />
+            <mat-error>Sponsor Name is required</mat-error>
+        </mat-form-field>
+    </div>
+</div>
+<br/>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
     <mat-form-field fxFlex="100%">
         <mat-label>Description</mat-label>
