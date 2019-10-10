@@ -33,6 +33,7 @@
             <mat-form-field appearance="outline" fxFlex="100%">
                 <mat-label>Club Name</mat-label>
                 <mat-select required formControlName="club_id">
+                    <mat-option value="0">None</mat-option>
                     <mat-option [value]="row.club_id" *ngFor="let row of clubs">
                         {{row.name}}
                 </mat-option>
