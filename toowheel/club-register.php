@@ -18,54 +18,55 @@ $obj = new Common();
                     <div id="club-register">
                         <form action="" method="post">
                             <h3>Register Your Club</h3>
-                            <fieldset>
+                            <div class="form-group">
                                 <input placeholder="Your club name" name="club_name" type="text" tabindex="1" required autofocus>
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <select name="type" tabindex="2" required>
                                     <option>Type</option>
                                     <option>2 Wheel</option>
                                     <option>4 Wheel</option>
                                 </select>
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <select name="category" tabindex="3" required>
                                     <option>Category</option>
                                     <option>125 cc</option>
                                     <option>250 cc</option>
                                     <option>500 cc</option>
                                 </select>
-                            </fieldset>
+                            </div>
                             <br/>
-                            <fieldset>
-                                <label>Cover Image :</label>
-                                <input type="file" name="cover_image" tabindex="4" required placeholder="" />
-                            </fieldset>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                                <label class="custom-file-label" >Choose file...</label>
+                            </div>
                             <br/>
-                            <fieldset>
-                                <label>Logo Image :</label>
-                                <input type="file" name="logo" placeholder="" tabindex="5" required />
-                            </fieldset>
-                            <fieldset>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                                <label class="custom-file-label">Choose file...</label>
+                            </div>
+                            <br/>
+                            <div class="form-group">
                                 <input type="text" name="rank" placeholder="Rank" tabindex="6" required />
-                            </fieldset>
+                            </div>
                             <br/>
-                            <fieldset>
+                            <div class="form-group">
                                 <label>Club Video :</label>
                                 <input type="file" name="video" placeholder="" tabindex="7" required />
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <input placeholder="Email Address" name="email" type="email" tabindex="8" required>
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <input placeholder="Contact No." name="contact" type="text" tabindex="9" required>
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <select name="country" tabindex="10" required>
                                     <option value='Malaysia'>Malaysia</option>
                                 </select>
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <select name="state" tabindex="11" required>
                                     <option value="0">State</option>
                                     <option value='Kuala_Lumpur'>Kuala Lumpur</option>
@@ -85,44 +86,53 @@ $obj = new Common();
                                     <option value='Selangor'>Selangor</option>
                                     <option value='Terengganu'>Terengganu</option>
                                 </select>
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <input placeholder="City" name="city" type="text" tabindex="12" required>
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <input placeholder="Zip" name="zip" type="text" tabindex="13" required>
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <input placeholder="Landmark" name="landmark" type="text" tabindex="14" required>
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <textarea placeholder="Address" name="address" type="text" tabindex="15" required></textarea>
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <input placeholder="Club Leader name (Full Name)" name="leader_name" type="text" tabindex="16" required>
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <input placeholder="No. of Members" name="no_of_members" type="text" tabindex="17" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Facebook Link" name="fb_link" type="text" tabindex="18">
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-6">
+                                    <div class="form-group">
+                                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                        <input placeholder="Facebook Link" name="fb_link" type="text" tabindex="18">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-6">
+                                    <div class="form-group">
+                                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                        <input placeholder="Facebook Link" name="fb_link" type="text" tabindex="18">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <input placeholder="Youtube Link" name="yt_link" type="text" tabindex="19">
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <input placeholder="Twitter Link" name="tw_link" type="text" tabindex="20">
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <input placeholder="Instagram Link" name="insta_link" type="text" tabindex="21">
-                            </fieldset>
-                            <fieldset>
+                            </div>
+                            <div class="form-group">
                                 <textarea placeholder="About Club" name="about_club" type="text" tabindex="22" required></textarea>
-                            </fieldset>
-                            <fieldset>
-                                <br/>
-                                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-                            </fieldset>
+                            </div>
+                            <br/>
+                            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
                         </form>
                         <!--                        <div class="already-account">
                                                     <p>Have already an account? <a href="login.php">Login here</a></p>
