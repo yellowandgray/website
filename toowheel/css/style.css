@@ -1822,3 +1822,7 @@ body {
 .selected-club {
     background: #000000;
 }
+
+div#html5-watermark {
+    display: none!important;
+}

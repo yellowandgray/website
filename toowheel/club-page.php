@@ -75,10 +75,18 @@ if ($type == 'four_wheel') {
                                     </div>
                                     <div class="col-md-7">
                                         <li class="w-icon">
-                                            <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                            <?php if ($club['facebook_link'] && $club['facebook_link'] != '') { ?>
+                                                <a href="<?php echo $club['facebook_link']; ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                            <?php } ?>
+                                            <?php if ($club['youtube_link'] && $club['youtube_link'] != '') { ?>
+                                                <a href="<?php echo $club['youtube_link']; ?>"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>                                            
+                                            <?php } ?>
+                                            <?php if ($club['twitter_link'] && $club['twitter_link'] != '') { ?>
+                                                <a href="<?php echo $club['twitter_link']; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                            <?php } ?>
+                                            <?php if ($club['instagram_link'] && $club['instagram_link'] != '') { ?>
+                                                <a href="<?php echo $club['instagram_link']; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                            <?php } ?>
                                         </li>
                                     </div>
                                 </div>
