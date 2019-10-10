@@ -109,7 +109,7 @@ $obj = new Common();
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
                                         <i class="fa fa-facebook" aria-hidden="true"></i>
-                                        <input placeholder="Facebook Link" name="fb_link" type="text" tabindex="18" style="padding-left: 40px">
+                                        <input placeholder="Facebook Link" name="fb_link" type="text" tabindex="18" style="padding-left: 50px">
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-6">
@@ -123,13 +123,13 @@ $obj = new Common();
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
                                         <i class="fa fa-twitter" aria-hidden="true"></i>
-                                        <input placeholder="Twitter Link" name="tw_link" type="text" tabindex="20" style="padding-left: 40px">
+                                        <input placeholder="Twitter Link" name="tw_link" type="text" tabindex="20" style="padding-left: 50px">
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
                                         <i class="fa fa-instagram" aria-hidden="true"></i>
-                                        <input placeholder="Instagram Link" name="insta_link" type="text" tabindex="21" style="padding-left: 40px">
+                                        <input placeholder="Instagram Link" name="insta_link" type="text" tabindex="21" style="padding-left: 50px">
                                     </div>
                                 </div>
                             </div>

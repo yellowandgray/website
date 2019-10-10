@@ -3720,7 +3720,7 @@ thead td {
     position: absolute;
     font-size: 25px;
     margin: 0;
-    padding: 12px;
+    padding: 12px 16px;
     color: #fff;
     background: #3F51B5;
     border-top-left-radius: 4px;
@@ -3744,7 +3744,18 @@ thead td {
     margin: 0;
     padding: 12px;
     color: #fff;
-    background: #f00;
+    background: #1da1f2;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.form-group i.fa-instagram {
+    position: absolute;
+    font-size: 25px;
+    margin: 0;
+    padding: 12px;
+    color: #fff;
+    background: #d6249f;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
