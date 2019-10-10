@@ -27,7 +27,7 @@
             </mat-tab>
             <mat-tab label="4 Wheeler">
                 <mat-list>
-                    <mat-list-item (click)="openDialog(data.member_id, 'result_fw')">
+                    <mat-list-item *ngFor="let data of result_fw">
                         <button mat-icon-button aria-label="label">
                             <mat-icon>done</mat-icon>
                         </button>

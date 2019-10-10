@@ -96,6 +96,9 @@ confirmDelete(id): void  {
 })
 export class MemberForm {
     categoryForm: FormGroup;
+    loading = false;
+    category_id = 0;
+    category_type: string;
     constructor(
     public dialogRef: MatDialogRef<MemberForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,private _snackBar: MatSnackBar,
