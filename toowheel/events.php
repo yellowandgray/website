@@ -36,7 +36,7 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                                     <div class="col-md-6">
                                                         <div class="row">
                                                             <div class="col-md-12">
-                                                                <p><span>Club Name:</span> <?php echo $row['club_id']; ?></p>
+                                                                <p><span>Club/Sponsor:</span> <?php echo $row['club_id'] != 0 ? $row['club'] : $row['sponsor']; ?></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -73,62 +73,6 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                 </div>
                             </div>
                         <?php } ?>
-                        <!--                    </div>
-                                            <div class="event-num-1">-->
-                        <!--                        <div class="event-n">
-                                                    <h3>Event Title</h3>
-                                                    <div class="row">
-                                                        <div class="col-md-3 event-img">
-                                                            <img src="img/events/005.jpg" alt="" class="img-responsive"/>
-                                                        </div>
-                                                        <div class="col-md-3 event-conent">
-                                                            <p><span>Date:</span> 06-09-2019</p>
-                                                            <p><span>Location:</span> Malaysia</p>
-                                                            <p><span>Club Name:</span> Name</p>
-                                                        </div>
-                                                        <div class="col-md-6 event-desc">
-                                                            <span>Description</span>
-                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                                            <br/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 event-btn-width">
-                                                            <div class="button-8">
-                                                                <div class="eff-8"></div>
-                                                                <a href="#">Attend</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>-->
-                        <!--                    </div>
-                                            <div class="event-num-1">-->
-                        <!--                        <div class="event-n">
-                                                    <h3>Event Title</h3>
-                                                    <div class="row">
-                                                        <div class="col-md-3 event-img">
-                                                            <img src="img/events/005.jpg" alt="" class="img-responsive"/>
-                                                        </div>
-                                                        <div class="col-md-3 event-conent">
-                                                            <p><span>Date:</span> 06-09-2019</p>
-                                                            <p><span>Location:</span> Malaysia</p>
-                                                            <p><span>Club Name:</span> Name</p>
-                                                        </div>
-                                                        <div class="col-md-6 event-desc">
-                                                            <span>Description</span>
-                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                                            <br/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 event-btn-width">
-                                                            <div class="button-8">
-                                                                <div class="eff-8"></div>
-                                                                <a href="#">Attend</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>-->
                     </div>
                     <div class="col-md-4">
                         <?php if (count($past_events) > 0) { ?>
@@ -143,7 +87,7 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                         </div>
                                         <div class="col-md-6">
                                             <h3><?php echo $row['title']; ?></h3>
-                                            <p><span>Club Name:</span> <?php echo $row['club']; ?></p>
+                                            <p><span>Club/Sponsor:</span> <?php echo $row['club_id'] != 0 ? $row['club'] : $row['sponsor']; ?></p>
                                             <p><strong>Description</strong><br/> <?php echo $obj->charLimit($row['description'], 200); ?></p>
                                         </div>
                                     </div>
