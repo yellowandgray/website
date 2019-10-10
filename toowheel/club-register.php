@@ -115,15 +115,16 @@ $obj = new Common();
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
                                         <i class="fa fa-youtube" aria-hidden="true"></i>
-                                        <input placeholder="Facebook Link" name="fb_link" type="text" tabindex="18">
+                                        <input placeholder="Youtube Link" name="fb_link" type="text" tabindex="18">
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <input placeholder="Youtube Link" name="yt_link" type="text" tabindex="19">
-                            </div>
-                            <div class="form-group">
-                                <input placeholder="Twitter Link" name="tw_link" type="text" tabindex="20">
+                            <div class="form-row input-padding">
+                                <div class="col-md-6 mb-6">
+                                    <div class="form-group">
+                                        <input placeholder="Twitter Link" name="tw_link" type="text" tabindex="20">
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <input placeholder="Instagram Link" name="insta_link" type="text" tabindex="21">
