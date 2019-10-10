@@ -5,6 +5,7 @@ if (!isset($_GET['type'])) {
 $type = $_GET['type'];
 require_once 'api/include/common.php';
 $obj = new Common();
+$states = $obj->selectAll('*', 'state', 'state_id > 0 AND type = \'' . $type . '\'');
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,15 +38,15 @@ $obj = new Common();
                                 </select>
                             </div>
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                                <input type="file" class="custom-file-input" id="validatedCustomFile">
                                 <label class="custom-file-label" >Choose Cover Image...</label>
                             </div>
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                                <input type="file" class="custom-file-input" id="validatedCustomFile">
                                 <label class="custom-file-label">Choose Logo...</label>
                             </div>
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                                <input type="file" class="custom-file-input" id="validatedCustomFile">
                                 <label class="custom-file-label">Choose Club Video...</label>
                             </div>
                             <br/>
@@ -60,27 +61,14 @@ $obj = new Common();
                                     <option value='Malaysia'>Malaysia</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <select name="state" tabindex="11" required>
-                                    <option value="0">State</option>
-                                    <option value='Kuala_Lumpur'>Kuala Lumpur</option>
-                                    <option value='Labuan'>Labuan</option>
-                                    <option value='Putrajaya'>Putrajaya</option>
-                                    <option value='Johor'>Johor</option>
-                                    <option value='Kedah'>Kedah</option>
-                                    <option value='Kelantan'>Kelantan</option>
-                                    <option value='Malacca'>Malacca</option>
-                                    <option value='Negeri_Sembilan'>Negeri Sembilan</option>
-                                    <option value='Pahang'>Pahang</option>
-                                    <option value='Perak'>Perak</option>
-                                    <option value='Perlis'>Perlis</option>
-                                    <option value='Penang'>Penang</option>
-                                    <option value='Sabah'>Sabah</option>
-                                    <option value='Sarawak'>Sarawak</option>
-                                    <option value='Selangor'>Selangor</option>
-                                    <option value='Terengganu'>Terengganu</option>
-                                </select>
-                            </div>
+                            <?php foreach ($states as $row) { ?>
+                                <div class="form-group">
+                                    <select name="state" tabindex="11" required>
+                                        <option value="0">State</option>
+                                        <option value='Kuala_Lumpur'><?php echo $row['name']; ?></option>
+                                    </select>
+                                </div>
+                            <?php } ?>
                             <div class="form-group">
                                 <input placeholder="City" name="city" type="text" tabindex="12" required>
                             </div>

@@ -96,7 +96,7 @@
 </div>
 <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
     <button mat-button [mat-dialog-close]="false">Cancel</button>
-    <button mat-button type="submit" cdkFocusInitial [disabled]="loading">Save</button>
+    <button mat-button type="submit" [disabled]="loading">Save</button>
     <mat-progress-spinner
         class="example-margin"
         *ngIf="loading"

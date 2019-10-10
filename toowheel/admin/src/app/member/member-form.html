@@ -129,7 +129,7 @@
             </mat-form-field>
         </div>
         <div fxFlex="50%">
-            <mat-form-field appearance="outline" appearance="outline">
+            <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Contact Number</mat-label>
                 <input matInput placeholder="" />
                 <mat-error>Contact Number is required</mat-error>
@@ -140,7 +140,7 @@
         <div fxFlex="100%">
             <mat-form-field class="full-width">
                 <mat-label>Address</mat-label>
-                <textarea matInput placeholder="" ></textarea>
+                <textarea rows="4" matInput placeholder="" ></textarea>
                 <mat-error>Address is required</mat-error>
             </mat-form-field>
         </div>
@@ -170,7 +170,3 @@
         </div>
     </div>
 </mat-dialog-content>
-<mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
-</mat-dialog-actions>
