@@ -5,6 +5,9 @@ var paypal_response = '';
 var payment_type = '';
 var club_id = 0;
 var inserted = false;
+var cover_image = '';
+var logo = '';
+var club_video = '';
 var BASE_IMAGE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
 
 function attachFile(id) {
@@ -26,6 +29,15 @@ function attachFile(id) {
                 if (id == 'payment_receipt' || id == 'payment_receipt2') {
                     payment_receipt = data.result.data;
                     payment_type = 'receipt';
+                }
+                if (id == 'cover_image') {
+                    cover_image = data.result.data;
+                }
+                if (id == 'logo') {
+                    logo = data.result.data;
+                }
+                if (id == 'club_video') {
+                    club_video = data.result.data;
                 }
             } else {
                 bootbox.alert(data.result.message);
@@ -190,19 +202,62 @@ function registerClub() {
     $.ajax({
         type: "POST",
         url: 'api/v1/insert_club',
-        data: {type: $('#type').val(), category_id: $('#category_id').val(), name: $('#name'), cover_image: $('#cover_image').val(), logo: $('#logo').val(), state: $('#state').val(), city: $('#city').val(), zip: $('#zip').val(), landmark: $('#landmark').val(), address: $('#address').val(), club_leader_name: $('#club_leader_name').val(), no_of_member: $('#no_of_member').val(), email: $('#email').val(), mobile: $('#mobile').val(), about: $('#about').val(), facebook_link: $('#facebook_link').val(), youtube_link: $('#youtube_link').val(), twitter_link: $('#twitter_link').val(), instagram_link: $('#instagram_link').val(), rank: 0, club_video: $('#club_video').val()},
+        data: {type: $('#type').val(), category_id: $('#category_id').val(), name: $('#name').val(), cover_image: cover_image, logo: logo, state: $('#state').val(), city: $('#city').val(), zip: $('#zip').val(), landmark: $('#landmark').val(), address: $('#address').val(), club_leader_name: $('#club_leader_name').val(), no_of_member: $('#no_of_member').val(), email: $('#email').val(), mobile: $('#mobile').val(), about: $('#about').val(), facebook_link: $('#facebook_link').val(), youtube_link: $('#youtube_link').val(), twitter_link: $('#twitter_link').val(), instagram_link: $('#instagram_link').val(), rank: 0, club_video: club_video},
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                $('#smartwizard').smartWizard("next");
-                $('#membership_id').html(data.result.data);
+                $('#type').val('');
+                $('#category_id').val('');
+                $('#name').val('');
+                cover_image = '';
+                logo = '';
+                $('#state').val('')
+                $('#city').val('');
+                $('#zip').val('')
+                $('#landmark').val('');
+                $('#address').val('');
+                $('#club_leader_name').val('');
+                $('#no_of_member').val('');
+                $('#email').val('');
+                $('#mobile').val('');
+                $('#about').val();
+                $('#facebook_link').val();
+                $('#youtube_link').val();
+                $('#twitter_link').val();
+                $('#instagram_link').val();
+                club_video = '';
+                swal("Thank you!", " Our Team will get in touch with you soon.", "success");
             } else {
-                bootbox.alert(data.result.message);
+                swal("Oops!", data.result.message, "info");
             }
         },
         error: function (err) {
-            $('.loader').removeClass('is-active');
-            bootbox.alert(err.statusText);
+            swal("Oops!", err.statusText, "error");
         }
     });
+    return false;
+}
+
+function renderCategory(type) {
+    $('#category_id').empty();
+    if (type != '') {
+        $.ajax({
+            type: "GET",
+            url: 'api/v1/get_' + type + '_category',
+            success: function (data) {
+                if (data.result.error === false) {
+                    var option = '<option value="">Category</option>';
+                    $.each(data.result.data, function (key, val) {
+                        option = option + '<option value="' + val.category_id + '">' + val.name + '</option>';
+                    });
+                    $('#category_id').append(option);
+                }
+            },
+            error: function (err) {
+                console.log(err.statusText);
+            }
+        });
+    } else {
+        $('#category_id').append('<option value="">Category</option>');
+    }
 }
