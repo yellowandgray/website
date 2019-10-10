@@ -100,14 +100,14 @@ export class MemberForm {
     public dialogRef: MatDialogRef<MemberForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        this.categoryForm = new FormGroup({
+        /*this.categoryForm = new FormGroup({
             'name': new FormControl('', Validators.required)
         });
         if(this.data.data != null) { 
             this.categoryForm.patchValue({ 
                 name: this.data.data.name
         })
-        this.category_id = this.data.data.category_id;
+        this.category_id = this.data.data.category_id;*/
     }
     }
 
