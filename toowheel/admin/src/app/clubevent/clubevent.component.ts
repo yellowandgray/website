@@ -210,7 +210,8 @@ formData.append('type', this.clubeventForm.value.type);
           formData.append('title', this.clubeventForm.value.title);
           formData.append('event_date', moment(this.clubeventForm.value.event_date).format('YYYY-MM-DD'));
           formData.append('location', this.clubeventForm.value.location);
-          formData.append('description', this.clubeventForm.value.description);              
+          formData.append('description', this.clubeventForm.value.description);
+          formData.append('sponsor', this.clubeventForm.value.sponsor);
           url = 'update_record/event/event_id = '+this.event_id;
           }else {
 formData.append('type', this.clubeventForm.value.type);
@@ -221,7 +222,8 @@ formData.append('type', this.clubeventForm.value.type);
           formData.append('title', this.clubeventForm.value.title);
           formData.append('event_date', moment(this.clubeventForm.value.event_date).format('YYYY-MM-DD'));
           formData.append('location', this.clubeventForm.value.location);
-          formData.append('description', this.clubeventForm.value.description);              
+          formData.append('description', this.clubeventForm.value.description);
+          formData.append('sponsor', this.clubeventForm.value.sponsor);              
           url = 'insert_event';
           }
           this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(
