@@ -20,7 +20,7 @@ export class MemberComponent implements OnInit {
       this.getMember();
       this.getFourWheelMember();
   }
-  getCategory(): void {
+  getMember(): void {
   this.httpClient.get<any>('../toowheel/api/v1/get_two_wheel_member')
   .subscribe(
           (res)=>{
@@ -33,7 +33,7 @@ export class MemberComponent implements OnInit {
         }
         );
   }
-  getFourWheelCategory(): void {
+  getFourWheelMember(): void {
   this.httpClient.get<any>('../toowheel/api/v1/get_four_wheel_member')
   .subscribe(
           (res)=>{
@@ -74,7 +74,7 @@ confirmDelete(id): void  {
       if(id != 0) { 
         data = id;
       }
-    const dialogRef = this.dialog.open(CategoryDelete, {
+    const dialogRef = this.dialog.open(MemberDelete, {
         minWidth: "40%",
         maxWidth: "40%",
         data: data
@@ -82,8 +82,8 @@ confirmDelete(id): void  {
 
    dialogRef.afterClosed().subscribe(result => {
        if(result !== false && result !== 'false') {
-      this.getCategory();
-      this.getFourWheelCategory();
+      this.getMember();
+      this.getFourWheelMember();
        }
     });
 }

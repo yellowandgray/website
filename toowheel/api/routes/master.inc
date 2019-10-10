@@ -127,6 +127,21 @@ $app->post('/insert_news_gallery', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_club_gallery', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    if (isset($_FILES) && isset($_FILES['file'])) {
+        $path = $com->saveFile($_FILES['file'], 'uploads');
+    }
+    $record = $com->insertRecord(array('club_id' => $data['club_id'], 'media_path' => $path), 'club_gallery');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/insert_event', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
@@ -210,6 +225,18 @@ $app->get('/get_news_gallery_by_news/:nid', function($nid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_club_gallery_by_club/:cid', function($cid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'club_gallery', 'club_id = ' . $cid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

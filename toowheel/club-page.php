@@ -10,7 +10,7 @@ $type = $club['type'];
 $announcements = $obj->selectAll('*', 'announcement', 'club_id = ' . $cid);
 $events = $obj->selectAll('*', 'event', 'club_id = ' . $cid);
 $news = $obj->selectAll('n.*, c.name AS club', 'news AS n LEFT JOIN club AS c ON c.club_id = n.club_id', 'n.club_id = ' . $cid . ' LIMIT 3');
-$images = $obj->selectAll('ng.media_path', 'news AS n LEFT JOIN news_gallery AS ng ON ng.news_id = n.news_id', 'n.club_id = ' . $cid . ' LIMIT 10');
+$images = $obj->selectAll('media_path', 'club_gallery', 'club_id = ' . $cid);
 $ad = $obj->selectRow('*', 'advertisement', 'type = \'card\' RAND() LIMIT 1');
 $club_type = '2 WHEEL CLUB';
 if ($type == 'four_wheel') {
@@ -122,7 +122,7 @@ if ($type == 'four_wheel') {
                             </div>
                         <?php } ?>
                         <br/>
-                        <?php if (count($events) > 0) { ?>
+                        <?php if (count($news) > 0) { ?>
                             <div class="box-anounce update">
                                 <h2>Updates</h2>
                                 <div class="anounce">

@@ -87,10 +87,13 @@ export class ClubComponent implements OnInit {
     }
 
 
-    openGalleryDialog(): void  {
+    openGalleryDialog(id): void  {
         const dialogRef = this.dialog.open(ClubPhotosForm, {
             minWidth: "80%",
             maxWidth: "80%",
+            data: {
+            club_id: id
+        }
         });
 
         dialogRef.afterClosed().subscribe(result => {
@@ -358,13 +361,94 @@ export class ClubDelete {
   templateUrl: 'club-gallery-form.html',
 })
 export class ClubPhotosForm {
-
+  loading = false;
+    club_id:any;
+    result:any[];
+    image_url: string = '../toowheel/api/v1/';  
   constructor(
     public dialogRef: MatDialogRef<ClubPhotosForm>,
-    @Inject(MAT_DIALOG_DATA) public data: any) {}
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        this.club_id = this.data.club_id;
+    }
 
-  onNoClick(): void {
-    this.dialogRef.close();
+  ngOnInit() {
+      this.getImages();
+    }
+    getImages(){
+        this.httpClient.get('../toowheel/api/v1/get_club_gallery_by_club/'+this.club_id).subscribe(
+              (res)=>{
+                if(res["result"]["error"] === false) {
+                    this.result = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
+
+  submitPhotos(fileInput: any) {
+      if (!fileInput.target.files[0]) {
+            return;
+      }
+      for(var i = 0; i < (fileInput.target.files).length; i++) {
+          this.loading = true;
+      var formData = new FormData();
+          formData.append('club_id', this.club_id);
+          formData.append('file', <File>fileInput.target.files[i]);
+      this.httpClient.post('../toowheel/api/v1/insert_club_gallery', formData).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    if(i == (((fileInput.target.files).length) - 1)){
+                    this.getImages();
+                    }
+                }else{
+            this._snackBar.open(res["result"]["message"], '', {
+              duration: 2000,
+            });
+            }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+            );
+      }
+  }
+  
+  deleteGallery(id) {
+      if (id == null || id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('../toowheel/api/v1/delete_record/club_gallery/club_gallery_id='+id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.getImages();
+                }else{
+this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+        );
   }
 
 }

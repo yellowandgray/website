@@ -316,7 +316,7 @@ export class NewsGalleryForm {
     result:any[];
     image_url: string = '../toowheel/api/v1/';
     constructor(
-    public dialogRef: MatDialogRef<NewsForm>,
+    public dialogRef: MatDialogRef<NewsGalleryForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
