@@ -36,10 +36,18 @@ $obj = new Common();
                                     <option>500 cc</option>
                                 </select>
                             </fieldset>
+                            <br/>
+                            <fieldset>
+                                <label>Cover Image :</label>
+                                <input type="file" name="cover_image" placeholder="" />
+                            </fieldset>
+                            <br/>
+                            <fieldset>
+                                <label>Logo Image :</label>
+                                <input type="file" name="logo" placeholder="" />
+                            </fieldset>
                             <fieldset>
                                 <select name="country">
-                                    <option value="0">Country</option>
-                                    <option value='India'>India</option>
                                     <option value='Malaysia'>Malaysia</option>
                                 </select>
                             </fieldset>
@@ -65,25 +73,7 @@ $obj = new Common();
                                 </select>
                             </fieldset>
                             <fieldset>
-                                <select name="city">
-                                    <option value="0">City</option>
-                                    <option value='Kuala_Lumpur'>Kuala Lumpur</option>
-                                    <option value='Victoria'>Victoria</option>
-                                    <option value='Putrajaya'>Putrajaya</option>
-                                    <option value='Johor_Bahru'>Johor Bahru</option>
-                                    <option value='Alor_Setar'>Alor Setar</option>
-                                    <option value='Kota_Bharu'>Kota Bharu</option>
-                                    <option value='Malacca_City'>Malacca City</option>
-                                    <option value='Seremban'>Seremban</option>
-                                    <option value='Kuantan'>Kuantan</option>
-                                    <option value='Ipoh'>Ipoh</option>
-                                    <option value='Kangar'>Kangar</option>
-                                    <option value='George_Town'>George Town</option>
-                                    <option value='Kota_Kinabalu'>Kota Kinabalu</option>
-                                    <option value='Kuching'>Kuching</option>
-                                    <option value='Shah_Alam'>Shah Alam</option>
-                                    <option value='Kuala_Terengganu'>Kuala Terengganu</option>
-                                </select>
+                                <input placeholder="City" name="city" type="text" tabindex="4" required>
                             </fieldset>
                             <fieldset>
                                 <input placeholder="Zip" name="zip" type="text" tabindex="4" required>
@@ -104,16 +94,16 @@ $obj = new Common();
                                 <input placeholder="Contact No." name="contact" type="text" tabindex="9" required>
                             </fieldset>
                             <fieldset>
-                                <input placeholder="Facebook Link" name="fb_link" type="text" tabindex="10" required>
+                                <input placeholder="Facebook Link" name="fb_link" type="text" tabindex="10">
                             </fieldset>
                             <fieldset>
-                                <input placeholder="Youtube Link" name="yt_link" type="text" tabindex="11" required>
+                                <input placeholder="Youtube Link" name="yt_link" type="text" tabindex="11">
                             </fieldset>
                             <fieldset>
-                                <input placeholder="Twitter Link" name="tw_link" type="text" tabindex="12" required>
+                                <input placeholder="Twitter Link" name="tw_link" type="text" tabindex="12">
                             </fieldset>
                             <fieldset>
-                                <input placeholder="Instagram Link" name="insta_link" type="text" tabindex="13" required>
+                                <input placeholder="Instagram Link" name="insta_link" type="text" tabindex="13">
                             </fieldset>
                             <fieldset>
                                 <textarea placeholder="About Club" name="about_club" type="text" tabindex="14" required></textarea>

@@ -20,7 +20,7 @@ $obj = new Common();
                         <ul>
                             <li><a href="#step-1">Step 1<br /><small>Enter Your Information</small></a></li>
                             <li><a href="#step-2">Step 2<br /><small>Choose Your Club</small></a></li>
-                            <li><a href="#step-3">Step 3<br /><small>Payment Get way</small></a></li>
+                            <li><a href="#step-3">Step 3<br /><small>Payment Method</small></a></li>
                             <li><a href="#step-4">Step 4<br /><small>All Information Finish</small></a></li>
                         </ul>
                         <div class="registation-step">
