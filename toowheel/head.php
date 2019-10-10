@@ -18,6 +18,9 @@
     <link href="css/rangeslider.css" rel="stylesheet" type="text/css"/>
     <link href="css/smart_wizard_step_by.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/css-loader.css" rel="stylesheet" type="text/css"/>
+    <link href="css/fs-gal.css" rel="stylesheet" type="text/css"/>
+    <link rel="dns-prefetch" href="https://code.jquery.com" />
+    <link href="css/sweet-alert.css" rel="stylesheet" type="text/css"/>
     <style>
         @font-face {
             font-family: "VenusRising";

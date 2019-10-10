@@ -81,6 +81,7 @@
             <input hidden #fileInputBanner2 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_2', 'banner_image_2_path')" />
         </div>
     </div>
+    <br/>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
         <div fxFlex="100%">
             <mat-form-field class="full-width">
@@ -101,7 +102,7 @@
     </div>
     <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
         <button mat-button [mat-dialog-close]="false">Cancel</button>
-        <button mat-button type="submit" cdkFocusInitial [disabled]="loading">Save</button>
+        <button mat-button type="submit" [disabled]="loading">Save</button>
         <mat-progress-spinner
             class="example-margin"
             *ngIf="loading"

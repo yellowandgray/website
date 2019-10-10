@@ -3,7 +3,7 @@
     <form [formGroup]="configForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
-                <mat-form-field appearance="outline">
+                <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Name</mat-label>
                     <input matInput placeholder="" required formControlName="display_name" [(ngModel)]="display_name" />
                     <mat-error>Display Name is required</mat-error>
@@ -14,7 +14,7 @@
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event)" />
             </div>
             <div fxFlex="50%" *ngIf="field_type === 'text'">
-                <mat-form-field appearance="outline">
+                <mat-form-field class="full-width">
                     <mat-label>Value</mat-label>
                     <textarea rows="6" matInput placeholder="" required [(ngModel)]="value" [ngModelOptions]="{standalone: true}"></textarea>
                 </mat-form-field>
@@ -42,7 +42,7 @@
 </div>
 <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
     <button mat-button [mat-dialog-close]="false">Cancel</button>
-    <button mat-button type="submit" cdkFocusInitial [disabled]="loading">Save</button>
+    <button mat-button type="submit" [disabled]="loading">Save</button>
     <mat-progress-spinner
         class="example-margin"
         *ngIf="loading"

@@ -5,6 +5,7 @@ if (!isset($_GET['type'])) {
 $type = $_GET['type'];
 require_once 'api/include/common.php';
 $obj = new Common();
+$states = $obj->selectAll('*', 'state', 'state_id > 0');
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,120 +17,107 @@ $obj = new Common();
             <div class="container">
                 <div class="row">
                     <div id="club-register">
-                        <form action="" method="post">
+                        <form onsubmit="return registerClub();">
                             <h3>Register Your Club</h3>
-                            <fieldset>
-                                <input placeholder="Your club name" name="club_name" type="text" tabindex="1" required autofocus>
-                            </fieldset>
-                            <fieldset>
-                                <select name="type">
-                                    <option>Type</option>
-                                    <option>2 Wheel</option>
-                                    <option>4 Wheel</option>
+                            <div class="form-group">
+                                <input id="name" placeholder="Your club name" name="name" type="text" tabindex="1" required autofocus>
+                            </div>
+                            <div class="form-group">
+                                <select id="type" name="type" tabindex="2" required onchange="renderCategory(this.value);">
+                                    <option value="">Type</option>
+                                    <option value="two_wheel">2 Wheel</option>
+                                    <option value="four_wheel">4 Wheel</option>
                                 </select>
-                            </fieldset>
-                            <fieldset>
-                                <select name="category">
-                                    <option>Category</option>
-                                    <option>125 cc</option>
-                                    <option>250 cc</option>
-                                    <option>500 cc</option>
-                                </select>
-                            </fieldset>
-                            <fieldset>
-                                <select name="country">
-                                    <option value="0">Country</option>
-                                    <option value='India'>India</option>
-                                    <option value='Malaysia'>Malaysia</option>
-                                </select>
-                            </fieldset>
-                            <fieldset>
-                                <select name="state">
+                            </div>
+                            <div class="form-group">
+                                <select id="category_id" name="category_id" tabindex="3" required></select>
+                            </div>
+                            <div class="custom-file">
+                                <input id="cover_image" name="cover_image" type="file" class="custom-file-input" onchange="attachFile('cover_image');" />
+                                <label class="custom-file-label" >Choose Cover Image...</label>
+                            </div>
+                            <div class="custom-file">
+                                <input id="logo" name="logo" type="file" class="custom-file-input" onchange="attachFile('logo');" />
+                                <label class="custom-file-label">Choose Logo...</label>
+                            </div>
+                            <div class="custom-file">
+                                <input id="club_video" name="club_video" type="file" class="custom-file-input" onchange="attachFile('club_video');" />
+                                <label class="custom-file-label">Choose Club Video...</label>
+                            </div>
+                            <br/>
+                            <div class="form-group">
+                                <input id="email" placeholder="Email Address" name="email" type="email" tabindex="8" required />
+                            </div>
+                            <div class="form-group">
+                                <input id="mobile" placeholder="Contact No." name="mobile" type="text" tabindex="9" required />
+                            </div>
+                            <div class="form-group">
+                                <select id="state" name="state" required tabindex="11">
                                     <option value="0">State</option>
-                                    <option value='Kuala_Lumpur'>Kuala Lumpur</option>
-                                    <option value='Labuan'>Labuan</option>
-                                    <option value='Putrajaya'>Putrajaya</option>
-                                    <option value='Johor'>Johor</option>
-                                    <option value='Kedah'>Kedah</option>
-                                    <option value='Kelantan'>Kelantan</option>
-                                    <option value='Malacca'>Malacca</option>
-                                    <option value='Negeri_Sembilan'>Negeri Sembilan</option>
-                                    <option value='Pahang'>Pahang</option>
-                                    <option value='Perak'>Perak</option>
-                                    <option value='Perlis'>Perlis</option>
-                                    <option value='Penang'>Penang</option>
-                                    <option value='Sabah'>Sabah</option>
-                                    <option value='Sarawak'>Sarawak</option>
-                                    <option value='Selangor'>Selangor</option>
-                                    <option value='Terengganu'>Terengganu</option>
+                                    <?php foreach ($states as $row) { ?>
+                                        <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
+                                    <?php } ?>
                                 </select>
-                            </fieldset>
-                            <fieldset>
-                                <select name="city">
-                                    <option value="0">City</option>
-                                    <option value='Kuala_Lumpur'>Kuala Lumpur</option>
-                                    <option value='Victoria'>Victoria</option>
-                                    <option value='Putrajaya'>Putrajaya</option>
-                                    <option value='Johor_Bahru'>Johor Bahru</option>
-                                    <option value='Alor_Setar'>Alor Setar</option>
-                                    <option value='Kota_Bharu'>Kota Bharu</option>
-                                    <option value='Malacca_City'>Malacca City</option>
-                                    <option value='Seremban'>Seremban</option>
-                                    <option value='Kuantan'>Kuantan</option>
-                                    <option value='Ipoh'>Ipoh</option>
-                                    <option value='Kangar'>Kangar</option>
-                                    <option value='George_Town'>George Town</option>
-                                    <option value='Kota_Kinabalu'>Kota Kinabalu</option>
-                                    <option value='Kuching'>Kuching</option>
-                                    <option value='Shah_Alam'>Shah Alam</option>
-                                    <option value='Kuala_Terengganu'>Kuala Terengganu</option>
-                                </select>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Zip" name="zip" type="text" tabindex="4" required>
-                            </fieldset>
-                            <fieldset>
-                                <textarea placeholder="Address" name="address" type="text" tabindex="5" required></textarea>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Club Leader name (Full Name)" name="leader_name" type="text" tabindex="6" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="No. of Members" name="no_of_members" type="text" tabindex="7" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Email Address" name="email" type="email" tabindex="8" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Contact No." name="contact" type="text" tabindex="9" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Facebook Link" name="fb_link" type="text" tabindex="10" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Youtube Link" name="yt_link" type="text" tabindex="11" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Twitter Link" name="tw_link" type="text" tabindex="12" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Instagram Link" name="insta_link" type="text" tabindex="13" required>
-                            </fieldset>
-                            <fieldset>
-                                <textarea placeholder="About Club" name="about_club" type="text" tabindex="14" required></textarea>
-                            </fieldset>
-                            <fieldset>
-                                <br/>
-                                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-                            </fieldset>
+                            </div>
+                            <div class="form-group">
+                                <input id="city" placeholder="City" name="city" type="text" tabindex="12" required />
+                            </div>
+                            <div class="form-group">
+                                <input id="zip" placeholder="Zip" name="zip" type="text" tabindex="13" required />
+                            </div>
+                            <div class="form-group">
+                                <input id="landmark" placeholder="Landmark" name="landmark" type="text" tabindex="14" required />
+                            </div>
+                            <div class="form-group">
+                                <textarea id="address" placeholder="Address" name="address" type="text" tabindex="15" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input id="club_leader_name" placeholder="Club Leader name (Full Name)" name="club_leader_name" type="text" tabindex="16" required />
+                            </div>
+                            <div class="form-group">
+                                <input id="no_of_member" placeholder="No. of Members" name="no_of_member" type="text" tabindex="17" required />
+                            </div>
+                            <div class="form-group">
+                                <textarea id="about" placeholder="About Club" name="about" type="text" tabindex="22" required></textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-6">
+                                    <div class="form-group">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                        <input id="facebook_link" placeholder="Facebook Link" name="facebook_link" type="text" tabindex="18" style="padding-left: 50px" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-6">
+                                    <div class="form-group">
+                                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                                        <input id="youtube_link" placeholder="Youtube Link" name="youtube_link" type="text" tabindex="19" style="padding-left: 50px" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row input-padding">
+                                <div class="col-md-6 mb-6">
+                                    <div class="form-group">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                        <input id="twitter_link" placeholder="Twitter Link" name="twitter_link" type="text" tabindex="20" style="padding-left: 50px" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-6">
+                                    <div class="form-group">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                        <input id="instagram_link" placeholder="Instagram Link" name="instagram_link" type="text" tabindex="21" style="padding-left: 50px" />
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <button name="submit" type="submit" id="contact-submit">Submit</button>
                         </form>
-                        <!--                        <div class="already-account">
-                                                    <p>Have already an account? <a href="login.php">Login here</a></p>
-                                                </div>-->
                     </div>
                 </div>
             </div>
         </div>
+        <div class="loader loader-default"></div>
         <?php include 'footer.php'; ?>
+        <script src="js/bootbox.min.js"></script>
+        <script src="js/popper.min.js"></script>
     </body>
 </html>

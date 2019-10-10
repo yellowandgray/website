@@ -40,11 +40,11 @@ $type = $press_release['type'];
                                     <span class="facebook-share" data-js="facebook-share"><i class="fa fa-facebook" aria-hidden="true"></i></span>
                                 </div>
                             </div>
-                            <p><?php echo $press_release['description_1']; ?></p>
+                            <p><?php echo nl2br($press_release['description_1']); ?></p>
                             <?php if (isset($press_release['banner_1']) && $press_release['banner_1'] != '') { ?>
                                 <img src="<?php echo BASE_URL . $press_release['banner_1']; ?>" alt="" style="width: 100%" /><br/><br/>
                             <?php } ?>
-                            <p><?php echo $press_release['description_2']; ?></p>
+                            <p><?php echo nl2br($press_release['description_2']); ?></p>
                             <?php if (isset($press_release['banner_2']) && $press_release['banner_2'] != '') { ?>
                                 <img src="<?php echo BASE_URL . $press_release['banner_2']; ?>" alt="" style="width: 100%" /><br/><br/>
                             <?php } ?>

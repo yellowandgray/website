@@ -4,28 +4,14 @@
         <div fxFlex="50%">
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Category</mat-label>
-                <mat-select>
-                    <mat-option [value]="'2wheel'">
-                        2 Wheel
-                    </mat-option>
-                    <mat-option [value]="'4wheel'">
-                        4 Wheel
-                    </mat-option>
-                </mat-select>
+                <input matInput placeholder=""/>
                 <mat-error>Category is required</mat-error>
             </mat-form-field>
         </div>
         <div fxFlex="50%">
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Club</mat-label>
-                <mat-select>
-                    <mat-option [value]="'club1'">
-                        club 1
-                    </mat-option>
-                    <mat-option [value]="'club2'">
-                        club 2
-                    </mat-option>
-                </mat-select>
+                <input matInput placeholder=""/>
                 <mat-error>Club is required</mat-error>
             </mat-form-field>
         </div>
@@ -34,7 +20,7 @@
         <div fxFlex="50%">
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Full Name</mat-label>
-                <input matInput placeholder="" formControlName="name"/>
+                <input matInput placeholder=""/>
                 <mat-error>Name is required</mat-error>
             </mat-form-field>
         </div>
@@ -46,29 +32,15 @@
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
         <div fxFlex="50%">
             <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Gender</mat-label>
-                <mat-select>
-                    <mat-option [value]="">
-                        Male
-                    </mat-option>
-                    <mat-option [value]="">
-                        Female
-                    </mat-option>
-                </mat-select>
-                <mat-error>Gender is required</mat-error>
+                <mat-label>Gendar</mat-label>
+                <input matInput placeholder=""/>
+                <mat-error>Gendar is required</mat-error>
             </mat-form-field>
         </div>
         <div fxFlex="50%">
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Age</mat-label>
-                <mat-select>
-                    <mat-option [value]="'1'">
-                        1
-                    </mat-option>
-                    <mat-option [value]="'2'">
-                        2
-                    </mat-option>
-                </mat-select>
+                <input matInput placeholder=""/>
                 <mat-error>Age is required</mat-error>
             </mat-form-field>
         </div>
@@ -93,24 +65,14 @@
         <div fxFlex="50%">
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>IC Number / Passport Number</mat-label>
-                <input matInput placeholder="" formControlName="name"/>
+                <input matInput placeholder=""/>
                 <mat-error>IC Number / Passport Number is required</mat-error>
             </mat-form-field>
         </div>
         <div fxFlex="50%">
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Driver License Category</mat-label>
-                <mat-select>
-                    <mat-option [value]="'Class1'">
-                        Class1
-                    </mat-option>
-                    <mat-option [value]="'Class2'">
-                        Class2
-                    </mat-option>
-                    <mat-option [value]="'Class3'">
-                        Class3
-                    </mat-option>
-                </mat-select>
+                <input matInput placeholder="" />
                 <mat-error>Driver License Category is required</mat-error>
             </mat-form-field>
         </div>
@@ -119,7 +81,7 @@
         <div fxFlex="100%">
             <mat-form-field class="full-width">
                 <mat-label>Address</mat-label>
-                <textarea rows="6" matInput placeholder=""></textarea>
+                <textarea rows="6" matInput placeholder="" ></textarea>
                 <mat-error>Address is required</mat-error>
             </mat-form-field>
         </div>
@@ -128,7 +90,7 @@
         <div fxFlex="50%">
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Country</mat-label>
-                <input matInput placeholder="" />
+                <input matInput placeholder=""  />
                 <mat-error>Country is required</mat-error>
             </mat-form-field>
         </div>
@@ -145,7 +107,7 @@
         <div fxFlex="50%">
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Member ID</mat-label>
-                <input matInput placeholder="" />
+                <input matInput placeholder=""  />
                 <mat-error>Member ID is required</mat-error>
             </mat-form-field>
         </div>
@@ -167,7 +129,7 @@
             </mat-form-field>
         </div>
         <div fxFlex="50%">
-            <mat-form-field appearance="outline" appearance="outline">
+            <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Contact Number</mat-label>
                 <input matInput placeholder="" />
                 <mat-error>Contact Number is required</mat-error>
@@ -178,7 +140,7 @@
         <div fxFlex="100%">
             <mat-form-field class="full-width">
                 <mat-label>Address</mat-label>
-                <textarea matInput placeholder=""></textarea>
+                <textarea rows="4" matInput placeholder="" ></textarea>
                 <mat-error>Address is required</mat-error>
             </mat-form-field>
         </div>
@@ -208,7 +170,3 @@
         </div>
     </div>
 </mat-dialog-content>
-<mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
-</mat-dialog-actions>

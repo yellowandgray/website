@@ -1019,7 +1019,7 @@ body {
 
 .events-main-content iframe {
     width: 100% !important;
-    height: 315px !important;
+    height: 360px !important;
 }
 
 .events-main-content span { 
@@ -1801,8 +1801,8 @@ body {
 }
 
 .club-press img {
-    width: 80%;
-    height: 450px;
+    width: 100%;
+    height: auto;
 }
 
 .club-cover-image {
@@ -1820,7 +1820,29 @@ body {
 }
 
 .selected-club {
-    background: #000000;
+    background: #858585;
+}
+
+.selected-club h3 {
+    color: #fff;
+}
+
+.selected-club p {
+    color: #fff;
+}
+@media screen and (min-width:768px){
+    .header {
+        height: 110px;
+    }
+}
+.pop-up-img i {
+    position: absolute;
+    top: 13px;
+    right: 13%;
+}
+
+.hidden {
+    display: none;
 }
 
 div#html5-watermark {

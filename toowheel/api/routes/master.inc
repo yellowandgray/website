@@ -40,7 +40,7 @@ $app->post('/insert_club', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'name' => $data['name'], 'cover_image' => $data['cover_image'], 'logo' => $data['logo'], 'state_id' => $data['state'], 'city' => $data['city'], 'zipcode' => $data['zip'], 'landmark' => $data['landmark'], 'address' => $data['address'], 'leader_name' => $data['club_leader_name'], 'no_of_member' => $data['no_of_member'], 'email' => $data['email'], 'phone' => $data['mobile'], 'about' => $data['about'], 'rank' => $data['rank'], 'club_video' => $data['club_video']), 'club');
+    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'name' => $data['name'], 'cover_image' => $data['cover_image'], 'logo' => $data['logo'], 'state_id' => $data['state'], 'city' => $data['city'], 'zipcode' => $data['zip'], 'landmark' => $data['landmark'], 'address' => $data['address'], 'leader_name' => $data['club_leader_name'], 'no_of_member' => $data['no_of_member'], 'email' => $data['email'], 'phone' => $data['mobile'], 'about' => $data['about'], 'facebook_link' => $data['facebook_link'], 'youtube_link' => $data['youtube_link'], 'twitter_link' => $data['twitter_link'], 'instagram_link' => $data['instagram_link'], 'rank' => $data['rank'], 'club_video' => $data['club_video']), 'club');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -146,7 +146,7 @@ $app->post('/insert_event', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'club_id' => $data['club_id'], 'cover_image' => $data['cover_image'], 'title' => $data['title'], 'thumb_image' => $data['thumb_image'], 'event_date' => $data['event_date'], 'location' => $data['location'], 'description' => $data['description']), 'event');
+    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'club_id' => $data['club_id'], 'cover_image' => $data['cover_image'], 'title' => $data['title'], 'thumb_image' => $data['thumb_image'], 'event_date' => $data['event_date'], 'location' => $data['location'], 'description' => $data['description'], 'sponsor' => $data['sponsor']), 'event');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -161,7 +161,7 @@ $app->post('/insert_member', function() use ($app) {
     $record = $com->insertRecord(array('type' => $data['type'], 'first_name' => $data['first_name'], 'profile_picture' => $data['profile_picture'], 'gender' => $data['gender'], 'age' => $data['age'], 'ic_passport' => $data['ic_passport'], 'dob_date' => $data['dob_date'], 'dob_month' => $data['dob_month'], 'dob_year' => $data['dob_year'], 'contact_number' => $data['contact_number'], 'license_category' => $data['license_category'], 'address' => $data['address'], 'country' => $data['country'], 'state' => $data['state'], 'referral_member_id' => $data['referral_member_id'], 'referral_club_id' => $data['referral_club_id'], 'coverage_full_name' => $data['coverage_full_name'], 'coverage_contact_number' => $data['coverage_contact_number'], 'coverage_address' => $data['coverage_address'], 'email' => $data['email'], 'password' => $com->encryptPassword($data['password']), 'club_id' => $data['club_id'], 'payment_type' => $data['payment_type'], 'paypal_response' => $data['paypal_response'], 'paypal_transaction_id' => $data['paypal_transaction_id'], 'fund_transfer_file' => $data['fund_transfer_file'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'member');
     if ($record > 0) {
         $res['error'] = false;
-        $member_id = 'TW' . str_pad($record, 6, '0', STR_PAD_LEFT);
+        $member_id = 'TW' . strtoupper(substr($data['gender'], 0, 1)) . strtoupper(substr($data['ic_passport'], 0, 3)) . strtoupper(substr($data['state'], 0, 2));
         $com->updateRecordWithWhere(array('membership_id' => $member_id), 'member', 'member_id = ' . $record);
         $res['message'] = 'Record inserted successfully';
         $res['data'] = $member_id;

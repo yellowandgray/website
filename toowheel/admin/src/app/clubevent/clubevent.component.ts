@@ -103,7 +103,8 @@ export class ClubEventForm {
       'title': new FormControl('', Validators.required),
       'event_date': new FormControl('', Validators.required),
       'location': new FormControl('', Validators.required),
-      'description': new FormControl('', Validators.required)
+      'description': new FormControl('', Validators.required),
+      'sponsor': new FormControl()
         });
         if(this.data != null) {
                 this.clubeventForm.patchValue({
@@ -113,7 +114,8 @@ export class ClubEventForm {
            title: this.data.title,
            event_date: this.data.event_date,
            location: this.data.location,
-           description: this.data.description
+           description: this.data.description,
+           sponsor: this.data.sponsor
         });
         this.event_id = this.data.event_id;
         this.getCategory();
@@ -208,7 +210,8 @@ formData.append('type', this.clubeventForm.value.type);
           formData.append('title', this.clubeventForm.value.title);
           formData.append('event_date', moment(this.clubeventForm.value.event_date).format('YYYY-MM-DD'));
           formData.append('location', this.clubeventForm.value.location);
-          formData.append('description', this.clubeventForm.value.description);              
+          formData.append('description', this.clubeventForm.value.description);
+          formData.append('sponsor', this.clubeventForm.value.sponsor);
           url = 'update_record/event/event_id = '+this.event_id;
           }else {
 formData.append('type', this.clubeventForm.value.type);
@@ -219,7 +222,8 @@ formData.append('type', this.clubeventForm.value.type);
           formData.append('title', this.clubeventForm.value.title);
           formData.append('event_date', moment(this.clubeventForm.value.event_date).format('YYYY-MM-DD'));
           formData.append('location', this.clubeventForm.value.location);
-          formData.append('description', this.clubeventForm.value.description);              
+          formData.append('description', this.clubeventForm.value.description);
+          formData.append('sponsor', this.clubeventForm.value.sponsor);              
           url = 'insert_event';
           }
           this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(
