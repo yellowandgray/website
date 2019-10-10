@@ -20,7 +20,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                         <form onsubmit="return registerClub();">
                             <h3>Register Your Club</h3>
                             <div class="form-group">
-                                <input id="name" placeholder="Your club name" name="name" type="text" tabindex="1" required autofocus>
+                                <input id="name" placeholder="Your club name" name="name" type="text" tabindex="1" required autofocus />
                             </div>
                             <div class="form-group">
                                 <select id="type" name="type" tabindex="2" required onchange="renderCategory(this.value);">

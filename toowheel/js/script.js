@@ -305,3 +305,25 @@ function sortClub() {
     }
     items.appendTo('#club_list');
 }
+
+function subscribeNewsLetter() {
+    $('.loader').addClass('is-active');
+    $.ajax({
+        type: "POST",
+        url: 'api/v1/subscribe_news_letter',
+        data: {email: $('#newsletter_email').val()},
+        success: function (data) {
+            $('.loader').removeClass('is-active');
+            if (data.result.error === false) {
+                $('#newsletter_email').val('');
+                swal("Thanks for the subscirption", "we will get in touch with you", "success");
+            } else {
+                swal("Oops!", data.result.message, "info");
+            }
+        },
+        error: function (err) {
+            swal("Oops!", err.statusText, "error");
+        }
+    });
+    return false;
+}

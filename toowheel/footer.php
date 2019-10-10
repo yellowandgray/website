@@ -71,8 +71,8 @@
                     <span>Receive updates on our Upcoming Events</span>
                     <ul class="nav__ul" style="margin-top: 10px;">
                         <li>
-                            <form>
-                                <input type="email" placeholder="Email Address" required="">
+                            <form onsubmit="return subscribeNewsLetter();">
+                                <input type="email" id="newsletter_email" name="newsletter_email" placeholder="Email Address" required="" />
                                 <button type="submit">submit</button>
                             </form>
                         </li>
