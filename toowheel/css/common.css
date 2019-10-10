@@ -1415,6 +1415,9 @@ button {
 #club-register input[type="file"]:focus {
     border-bottom: none;
     outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
 #club-register input[type="text"]:hover,
