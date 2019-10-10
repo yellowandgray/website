@@ -137,6 +137,10 @@ export class ClubForm {
             'email': new FormControl(),
             'mobile': new FormControl(),
             'about': new FormControl(),
+            'facebook_link': new FormControl(),
+            'youtube_link': new FormControl(),
+            'twitter_link': new FormControl(),
+            'instagram_link': new FormControl(),
             'rank': new FormControl()
         });
         if(this.data != null) {
@@ -154,6 +158,10 @@ export class ClubForm {
            email: this.data.email,
            mobile: this.data.phone,
            about: this.data.about,
+           facebook_link: this.data.facebook_link,
+           youtube_link: this.data.youtube_link,
+           twitter_link: this.data.twitter_link,
+           instagram_link: this.data.instagram_link,
            rank: this.data.rank
         });
         this.club_id = this.data.club_id;
@@ -269,6 +277,10 @@ export class ClubForm {
           formData.append('email', this.clubForm.value.email);
           formData.append('phone', this.clubForm.value.mobile);
           formData.append('about', this.clubForm.value.about);
+          formData.append('facebook_link', this.clubForm.value.facebook_link);
+          formData.append('youtube_link', this.clubForm.value.youtube_link);
+          formData.append('twitter_link', this.clubForm.value.twitter_link);
+          formData.append('instagram_link', this.clubForm.value.instagram_link);
           formData.append('rank', this.clubForm.value.rank);
         url = 'update_record/club/club_id = '+this.club_id;
       } else {
@@ -287,6 +299,10 @@ export class ClubForm {
           formData.append('email', this.clubForm.value.email);
           formData.append('mobile', this.clubForm.value.mobile);
           formData.append('about', this.clubForm.value.about);
+          formData.append('facebook_link', this.clubForm.value.facebook_link);
+          formData.append('youtube_link', this.clubForm.value.youtube_link);
+          formData.append('twitter_link', this.clubForm.value.twitter_link);
+          formData.append('instagram_link', this.clubForm.value.instagram_link);
           formData.append('rank', this.clubForm.value.rank);
           formData.append('club_video', this.club_video);
         url = 'insert_club';
