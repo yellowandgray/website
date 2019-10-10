@@ -20,7 +20,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                         <form action="" method="post">
                             <h3>Register Your Club</h3>
                             <div class="form-group">
-                                <input id="name" placeholder="Your club name" name="club_name" type="text" tabindex="1" required autofocus>
+                                <input id="name" placeholder="Your club name" name="name" type="text" tabindex="1" required autofocus>
                             </div>
                             <div class="form-group">
                                 <select id="type" name="type" tabindex="2" required>
@@ -30,7 +30,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select id="category_id" name="category" tabindex="3" required>
+                                <select id="category_id" name="category_id" tabindex="3" required>
                                     <option>Category</option>
                                     <option>125 cc</option>
                                     <option>250 cc</option>
@@ -38,15 +38,15 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 </select>
                             </div>
                             <div class="custom-file">
-                                <input id="cover_image" type="file" class="custom-file-input" id="validatedCustomFile">
+                                <input id="cover_image" name="cover_image" type="file" class="custom-file-input">
                                 <label class="custom-file-label" >Choose Cover Image...</label>
                             </div>
                             <div class="custom-file">
-                                <input id="logo" type="file" class="custom-file-input" id="validatedCustomFile">
+                                <input id="logo" name="logo" type="file" class="custom-file-input">
                                 <label class="custom-file-label">Choose Logo...</label>
                             </div>
                             <div class="custom-file">
-                                <input id="club_video" type="file" class="custom-file-input" id="validatedCustomFile">
+                                <input id="club_video" name="club_video" type="file" class="custom-file-input">
                                 <label class="custom-file-label">Choose Club Video...</label>
                             </div>
                             <br/>
@@ -54,7 +54,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <input id="email" placeholder="Email Address" name="email" type="email" tabindex="8" required>
                             </div>
                             <div class="form-group">
-                                <input id="mobile" placeholder="Contact No." name="contact" type="text" tabindex="9" required>
+                                <input id="mobile" placeholder="Contact No." name="mobile" type="text" tabindex="9" required>
                             </div>
 <!--                            <div class="form-group">
                                 <select id="" name="country" tabindex="10" required>
@@ -82,25 +82,25 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <textarea id="address" placeholder="Address" name="address" type="text" tabindex="15" required></textarea>
                             </div>
                             <div class="form-group">
-                                <input id="club_leader_name" placeholder="Club Leader name (Full Name)" name="leader_name" type="text" tabindex="16" required>
+                                <input id="club_leader_name" placeholder="Club Leader name (Full Name)" name="club_leader_name" type="text" tabindex="16" required>
                             </div>
                             <div class="form-group">
-                                <input id="no_of_member" placeholder="No. of Members" name="no_of_members" type="text" tabindex="17" required>
+                                <input id="no_of_member" placeholder="No. of Members" name="no_of_member" type="text" tabindex="17" required>
                             </div>
                             <div class="form-group">
-                                <textarea id="about" placeholder="About Club" name="about_club" type="text" tabindex="22" required></textarea>
+                                <textarea id="about" placeholder="About Club" name="about" type="text" tabindex="22" required></textarea>
                             </div>
                             <div class="form-row">
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
                                         <i class="fa fa-facebook" aria-hidden="true"></i>
-                                        <input id="facebook_link" placeholder="Facebook Link" name="fb_link" type="text" tabindex="18" style="padding-left: 50px">
+                                        <input id="facebook_link" placeholder="Facebook Link" name="facebook_link" type="text" tabindex="18" style="padding-left: 50px">
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
                                         <i class="fa fa-youtube" aria-hidden="true"></i>
-                                        <input id="youtube_link" placeholder="Youtube Link" name="yt_link" type="text" tabindex="19" style="padding-left: 50px">
+                                        <input id="youtube_link" placeholder="Youtube Link" name="youtube_link" type="text" tabindex="19" style="padding-left: 50px">
                                     </div>
                                 </div>
                             </div>
@@ -108,13 +108,13 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
                                         <i class="fa fa-twitter" aria-hidden="true"></i>
-                                        <input id="twitter_link" placeholder="Twitter Link" name="tw_link" type="text" tabindex="20" style="padding-left: 50px">
+                                        <input id="twitter_link" placeholder="Twitter Link" name="twitter_link" type="text" tabindex="20" style="padding-left: 50px">
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
                                         <i class="fa fa-instagram" aria-hidden="true"></i>
-                                        <input id="instagram_link" placeholder="Instagram Link" name="insta_link" type="text" tabindex="21" style="padding-left: 50px">
+                                        <input id="instagram_link" placeholder="Instagram Link" name="instagram_link" type="text" tabindex="21" style="padding-left: 50px">
                                     </div>
                                 </div>
                             </div>
