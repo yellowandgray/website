@@ -3696,15 +3696,15 @@ thead td {
 }
 .pop-up-img {
     display: none;
-    position: fixed;
-    bottom: -32px;
+    position: absolute;
+    bottom: 0%;
     z-index: 999;
     transition: all 0.1s linear;
 } 
-.pop-up-img img{
-    width: 50%;
+.pop-up-img img {
+    width: 60%;
     height: auto;
 
-    margin: 16% 21%;
+    margin: 0 30%;
     box-shadow: 0 0 5px 0px red;
 }

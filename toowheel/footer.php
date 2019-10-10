@@ -95,6 +95,7 @@
 <script src="js/jquery.easing.min.js" type="text/javascript"></script>
 <script src="js/jquery.smartWizard_step_by.min.js" type="text/javascript"></script>
 <script src="js/script.js" type="text/javascript"></script>
+<script src="js/fs-gal.js" type="text/javascript"></script>
 <script type="text/javascript">
     function openNav() {
         document.getElementById("mySidenav").style.height = "100%";

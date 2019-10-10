@@ -18,6 +18,15 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
         <div class="press-release">
+            <!--pop-up-gallery-->
+            <div class="fs-gal-view">
+                <h1></h1>
+                <img class="fs-gal-prev fs-gal-nav" src="img/prev.svg" alt="Previous picture" title="Previous picture" />
+                <img class="fs-gal-next fs-gal-nav" src="img/next.svg" alt="Next picture" title="Next picture" />
+                <img class="fs-gal-close" src="img/close.svg" alt="Close gallery" title="Close gallery" />
+                <img class="fs-gal-main" src="" alt="" />
+            </div>
+            <!--pop-up-gallery-->
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 text-center">
@@ -60,18 +69,14 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                     <div class="row event-gallery-section">
                                         <?php foreach ($news_gallery as $row) { ?>
                                             <div class="col-md-3 col-sm-6">
-
-                                                <a onclick="document.getElementById('pop-img').style.display = 'block'"><img src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" /></a>
-
-                                                <div class="pop-up-img" id="pop-img">
-                                                    <img src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" />  
-                                                </div>
+                                                <img  class="fs-gal" src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" data-url="<?php echo BASE_URL . $row['media_path']; ?>"/>
                                             </div>
                                         <?php } ?>
                                     </div>
                                 </div>
                             <?php } ?>
                         </div>
+
                     </div>
                     <div class="col-md-4">
                         <?php foreach ($releated_news as $row) { ?>
