@@ -316,7 +316,7 @@ function subscribeNewsLetter() {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
                 $('#newsletter_email').val('');
-                swal("Thanks for the subscirption", "we will get in touch with you", "success");
+                swal("Thanks for the subscription", "we will get in touch with you", "success");
             } else {
                 swal("Oops!", data.result.message, "info");
             }
