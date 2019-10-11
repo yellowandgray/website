@@ -2770,6 +2770,7 @@ body .calender-box{
     /* margin-right: -10px; */
     top: -2px;
     position: relative;
+    left: 4px;
 }
 /*#demo-2 input[type=search]:hover {
     background-color: #85858500;
