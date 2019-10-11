@@ -2636,7 +2636,7 @@ body .calender-box{
 @media (max-width:991px) and (min-width:320px){
     .img-b-10px {
         margin-bottom: 10px;
-        width: 60%;
+        width: 95%;
         margin: 10px auto;
     }
     #calendar{
@@ -3228,7 +3228,7 @@ body .calender-box{
 .club-gallery img {
     width: 32%;
     margin-bottom: -3px;
-    height: 70px;
+    height: 130px;
 }
 
 .box-anounce .discover-slider-content center a {
