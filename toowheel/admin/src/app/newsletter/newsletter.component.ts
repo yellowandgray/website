@@ -41,8 +41,8 @@ export class NewsletterComponent implements OnInit {
          });
       }
     const dialogRef = this.dialog.open(NewsletterForm, {
-        minWidth: "80%",
-        maxWidth: "80%",
+        minWidth: "40%",
+        maxWidth: "40%",
         data: data
     });
 
@@ -104,7 +104,7 @@ export class NewsletterForm {
       var url = '';
       if(this.newsletter_id != 0) {
         formData.append('email', this.newsletterForm.value.email);
-        url = 'update_record/category/category_id = '+this.newsletter_id;
+        url = 'update_record/newsletter/newsletter_id = '+this.newsletter_id;
       }
       this.loading = true;
       this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(

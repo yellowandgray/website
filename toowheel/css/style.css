@@ -1906,3 +1906,10 @@ div#html5-watermark {
 .cc {
     margin-bottom: 20px;
 }
+.autocomplete-no-suggestion
+{
+    color: #f52424;
+    padding: 2px;
+    background: #fff;
+    border: 1px solid #d2d2d2;
+}
