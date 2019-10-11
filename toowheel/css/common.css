@@ -1138,6 +1138,7 @@ button {
 .event-n h3 {
     color: red;
     font-size: 25px;
+    margin-bottom: 20px;
 }
 
 .tabcontent .event-num .event-conent p {
@@ -1200,10 +1201,10 @@ button {
     height: auto;
 }
 .event-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-between;
+    /*    display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;*/
 }
 .event-title {
     flex-basis: 100%;

@@ -24,44 +24,23 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                     <div class="col-md-8">
                         <?php foreach ($events as $row) { ?>
                             <div class="event-n">
-                                <h3><?php echo $row['title']; ?></h3>
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="row">
-                                            <div class="col-md-12 event-img">
-                                                <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" class="img-responsive"/>
+                                    <div class="col-md-12">
+                                        <h3><?php echo $row['title']; ?></h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 event-img">
+                                        <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" class="img-responsive"/>
+                                        <div class="event-conent">
+                                            <div>
+                                                <p style="width: 100%"><span>Club/Sponsor : </span> <?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 20) : $obj->charLimit($row['sponsor'], 20); ?> </p>
                                             </div>
-                                            <div class="col-md-12 event-conent">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <p><span>Club/Sponsor:</span> <?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 20) : $obj->charLimit($row['sponsor'], 20); ?></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div>
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                    <p><span>Date:</span> <?php echo date('M d, Y', strtotime($row['event_date'])); ?></p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <div>
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                    <p><span>Location:</span></p>
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <p><?php echo $row['location']; ?></p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div class="">
+                                                <p style="width: 100%"><span>Date : </span> <?php echo date('M d, Y', strtotime($row['event_date'])); ?></p>
+                                            </div>
+                                            <div class="">
+                                                <p style="width: 100%"><span>Location : </span> <?php echo $row['location']; ?></p>
                                             </div>
                                         </div>
                                     </div>
