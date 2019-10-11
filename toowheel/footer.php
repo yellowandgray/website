@@ -98,6 +98,7 @@
 <script src="js/script.js" type="text/javascript"></script>
 <script src="js/fs-gal.js" type="text/javascript"></script>
 <script src="js/sweet-alert.min.js" type="text/javascript"></script>
+<script src="js/jquery.autocomplete.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     function openNav() {
         document.getElementById("mySidenav").style.height = "100%";
