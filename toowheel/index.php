@@ -255,7 +255,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                         settings: {
                                             slidesToShow: 3,
                                             slidesToScroll: 1,
-                                            dots: true,
+                                            dots: false,
                                             autoplay: true
                                         }
                                     },
@@ -264,7 +264,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                         settings: {
                                             slidesToShow: 1,
                                             slidesToScroll: 1,
-                                            dots: true,
+                                            dots: false,
                                             autoplay: true
                                         }
                                     },
@@ -274,7 +274,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                             arrows: false,
                                             slidesToShow: 1,
                                             slidesToScroll: 1,
-                                            dots: true,
+                                            dots: false,
                                             autoplay: true
                                         }
                                     }]
