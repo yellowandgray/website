@@ -102,7 +102,7 @@
 <script type="text/javascript">
                                 function openNav() {
                                     document.getElementById("mySidenav").style.height = "100%";
-                                    document.getElementById("mySidenav").style.top = "118px";
+                                    document.getElementById("mySidenav").style.top = "110px";
                                 }
                                 function closeNav() {
                                     document.getElementById("mySidenav").style.height = "0";
@@ -181,31 +181,33 @@
                                         }
                                     });
                                 });
-//                                $.each(autocomplete_club, function (key, val) {
-//                                    autocomplete_suggestion.push({value: val.name, data: {category: 'club', id: val.club_id}});
-//                                });
-//                                $.each(autocomplete_news, function (key, val) {
-//                                    autocomplete_suggestion.push({value: val.title, data: {category: 'news', id: val.news_id}});
-//                                });
-//                                $.each(autocomplete_press_release, function (key, val) {
-//                                    autocomplete_suggestion.push({value: val.title, data: {category: 'press_release', id: val.press_release_id}});
-//                                });
-//                                console.log(autocomplete_suggestion);
-//                                $('.head-search').devbridgeAutocomplete({
-//                                    lookup: autocomplete_suggestion,
-//                                    minChars: 1,
-//                                    onSelect: function (suggestion) {
-//                                        if (suggestion.data.category == 'news') {
-//                                            window.location = 'news.php?nid=' + suggestion.data.id;
-//                                        }
-//                                        if (suggestion.data.category == 'news') {
-//                                            window.location = 'news.php?nid=' + suggestion.data.id;
-//                                        }
-//
-//                                    },
-//                                    showNoSuggestionNotice: true,
-//                                    noSuggestionNotice: 'Sorry, no matching results',
-//                                    groupBy: 'category'
-//                                });
+                                $.each(autocomplete_club, function (key, val) {
+                                    autocomplete_suggestion.push({value: val.name, data: {category: 'club', id: val.club_id}});
+                                });
+                                $.each(autocomplete_news, function (key, val) {
+                                    autocomplete_suggestion.push({value: val.title, data: {category: 'news', id: val.news_id}});
+                                });
+                                $.each(autocomplete_press_release, function (key, val) {
+                                    autocomplete_suggestion.push({value: val.title, data: {category: 'press_release', id: val.press_release_id}});
+                                });
+                                console.log(autocomplete_suggestion);
+                                $('.head-search').devbridgeAutocomplete({
+                                    lookup: autocomplete_suggestion,
+                                    minChars: 1,
+                                    onSelect: function (suggestion) {
+                                        if (suggestion.data.category == 'news') {
+                                            window.location = 'news.php?nid=' + suggestion.data.id;
+                                        }
+                                        if (suggestion.data.category == 'club') {
+                                            window.location = 'club-page.php?cid=' + suggestion.data.id;
+                                        }
+                                        if (suggestion.data.category == 'press_release') {
+                                            window.location = 'press.php?pid=' + suggestion.data.id;
+                                        }
+                                    },
+                                    showNoSuggestionNotice: true,
+                                    noSuggestionNotice: 'Sorry, no matching results',
+                                    groupBy: 'category'
+                                });
 </script>
 <!--mega-menu-->
