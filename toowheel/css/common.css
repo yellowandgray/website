@@ -1138,6 +1138,7 @@ button {
 .event-n h3 {
     color: red;
     font-size: 25px;
+    margin-bottom: 20px;
 }
 
 .tabcontent .event-num .event-conent p {
@@ -1200,10 +1201,10 @@ button {
     height: auto;
 }
 .event-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-between;
+    /*    display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;*/
 }
 .event-title {
     flex-basis: 100%;
@@ -2769,6 +2770,7 @@ body .calender-box{
     /* margin-right: -10px; */
     top: -2px;
     position: relative;
+    left: 4px;
 }
 /*#demo-2 input[type=search]:hover {
     background-color: #85858500;
@@ -2879,10 +2881,13 @@ body .calender-box{
 .about-section {
     background: #747474;
 }
+
 .about-section .about-background {
     background: url(../img/about/banner.jpg);
     background-size: cover;
-    width: 100%;box-shadow: 0px -12px 10px 0px #171717;
+    width: 100%;
+    box-shadow: 0px -12px 10px 0px #171717;
+    background-position: center;
 }
 
 .about-bg {
@@ -3612,7 +3617,7 @@ thead td {
     height: auto  !important;
     margin: 0 25%;
     background: #fff;
-    top:200px !important;
+    top: 160px !important;
     z-index: 999;
     opacity: 1 !important;
     overflow: scroll;
