@@ -46,6 +46,22 @@ export class MemberComponent implements OnInit {
         }
         );
   }
+  changeStatus(id, status): void {
+      var formData = new FormData();
+      formData.append('activated', status);
+      this.httpClient.get<any>('../toowheel/api/v1/update_record/member/member_id = '+id)
+  .subscribe(
+          (res)=>{
+              this.getMember();
+            this.getFourWheelMember();
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
+  }
   openDialog(id, res): void  {
       var data = null;
       if(id != 0) { 
@@ -69,7 +85,7 @@ export class MemberComponent implements OnInit {
        }
     });
 }
-confirmDelete(id): void  {
+confirmDialog(id, action): void  {
     var data = null;
       if(id != 0) { 
         data = id;
@@ -77,7 +93,10 @@ confirmDelete(id): void  {
     const dialogRef = this.dialog.open(MemberDelete, {
         minWidth: "40%",
         maxWidth: "40%",
-        data: data
+        data: {
+            data: data,
+            action: action
+        }
     });
 
    dialogRef.afterClosed().subscribe(result => {
@@ -153,24 +172,31 @@ export class MemberForm {
   templateUrl: 'member-delete-confirmation.html',
 })
 export class MemberDelete {
+    image_url: string = '../toowheel/api/v1/';
+    action: string = '';
     loading = false;
-    category_id = 0;
+    member_id = 0;
+    data: any;
     constructor(
     public dialogRef: MatDialogRef<MemberDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
         if(this.data != null) { 
-            this.category_id = this.data;
+            this.action = this.data.action;
+            this.data = this.data.data;
+            if(this.data.action == 'delete') {
+                this.member_id = this.data.data;
+            }
     }
 }
 
   confirmDelete() {
-      if (this.category_id == null || this.category_id == 0) {
+      if (this.member_id == null || this.member_id == 0) {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../toowheel/api/v1/delete_record/category/category_id='+this.category_id).subscribe(
+      this.httpClient.get('../toowheel/api/v1/delete_record/member/member_id='+this.member_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

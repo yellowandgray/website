@@ -8,10 +8,10 @@
             <mat-tab label="2 Wheeler">
                 <mat-list>
                     <mat-list-item *ngFor="let data of result">
-                        <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'active')">
+                        <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)">
                             <mat-icon>done</mat-icon>
                         </button>
-                        <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'block')" *ngIf="data.activated == 1">
+                        <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
                             <mat-icon>block</mat-icon>
                         </button>
                         <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result')">
