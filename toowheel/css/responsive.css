@@ -800,3 +800,29 @@
         width: 22% !important;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .club-logo img {
+        height: 324px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .club-logo img {
+        height: 272px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .club-logo img {
+        height: 141px;
+    }
+}
+@media (min-width: 500px) and (max-width: 767px) {
+    .club-logo img {
+        height: 105px;
+    }
+}
+@media (min-width: 320px) and (max-width: 499px) {
+    .club-logo img {
+        height: 80px;
+    }
+}
