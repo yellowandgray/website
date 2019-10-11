@@ -1025,6 +1025,9 @@ button {
         width: 100%;
         height: 261px;
     }
+    .tabcontent .news .news-cont {
+        height: 275px !important;
+    }
 }
 .log-cont-02 {
     display: none;
@@ -2861,7 +2864,7 @@ body .calender-box{
     border-radius: 25px;
     position: relative;
     left: 0;
-    top: 0;
+    top: 10px;
     font-size: 12px;
     /*    width: 150px;*/
     display: inline;
