@@ -68,10 +68,12 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         </section>
         <section class="media-press-release" onClick="document.location.href = 'press-release.php?type=<?php echo $type; ?>'">
             <div class="container">
-                <div class="media-bg">
-                    <a href="press-release.php?type=<?php echo $type; ?>"><img src="img/media-bg.jpg" alt="" /></a>
+                <div class="col-md-12">
+                    <div class="media-bg">
+                        <a href="press-release.php?type=<?php echo $type; ?>"><img src="img/media-bg.jpg" alt="" /></a>
+                    </div>
+                    <a href="press-release.php?type=<?php echo $type; ?>" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
                 </div>
-                <a href="press-release.php?type=<?php echo $type; ?>" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
             </div>
         </section>
         <section class="section-bg">
@@ -244,56 +246,38 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                         settings: {
                                             slidesToShow: 4,
                                             slidesToScroll: 1,
-                                            autoplay: true,
-                                            autoplaySpeed: 2000,
-                                            arrows: true,
-                                            responsive: [{
-                                                    breakpoint: 1024,
-                                                    settings: {
-                                                        slidesToShow: 4,
-                                                        slidesToScroll: 1,
-                                                        dots: false,
-                                                        arrows: true,
-                                                        autoplay: true
-                                                    }
-                                                },
-                                                {
-                                                    breakpoint: 991,
-                                                    settings: {
-                                                        slidesToShow: 3,
-                                                        slidesToScroll: 1,
-                                                        dots: false,
-                                                        arrows: true,
-                                                        autoplay: true
-                                                    }
-                                                },
-                                                {
-                                                    breakpoint: 600,
-                                                    settings: {
-                                                        slidesToShow: 1,
-                                                        slidesToScroll: 1,
-                                                        dots: false,
-                                                        arrows: true,
-                                                        autoplay: true
-                                                    }
-                                                },
-                                                {
-                                                    breakpoint: 400,
-                                                    settings: {
-                                                        arrows: false,
-                                                        slidesToShow: 1,
-                                                        slidesToScroll: 1,
-                                                        dots: false,
-                                                        arrows: true,
-                                                        autoplay: true
-                                                    }
-                                                }]
-                                        });
-                                    }
-                                },
-                                error: function (err) {
-                                    $('#club1 .slider').empty();
-                                }
+                                            dots: false,
+                                            autoplay: true
+                                        }
+                                    },
+                                    {
+                                        breakpoint: 991,
+                                        settings: {
+                                            slidesToShow: 3,
+                                            slidesToScroll: 1,
+                                            dots: false,
+                                            autoplay: true
+                                        }
+                                    },
+                                    {
+                                        breakpoint: 600,
+                                        settings: {
+                                            slidesToShow: 1,
+                                            slidesToScroll: 1,
+                                            dots: false,
+                                            autoplay: true
+                                        }
+                                    },
+                                    {
+                                        breakpoint: 400,
+                                        settings: {
+                                            arrows: false,
+                                            slidesToShow: 1,
+                                            slidesToScroll: 1,
+                                            dots: false,
+                                            autoplay: true
+                                        }
+                                    }]
                             });
                         }
                     },
