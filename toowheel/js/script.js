@@ -220,11 +220,11 @@ function registerClub() {
                 $('#no_of_member').val('');
                 $('#email').val('');
                 $('#mobile').val('');
-                $('#about').val();
-                $('#facebook_link').val();
-                $('#youtube_link').val();
-                $('#twitter_link').val();
-                $('#instagram_link').val();
+                $('#about').val('');
+                $('#facebook_link').val('');
+                $('#youtube_link').val('');
+                $('#twitter_link').val('');
+                $('#instagram_link').val('');
                 club_video = '';
                 swal("Thank you!", " Our Team will get in touch with you soon.", "success");
             } else {
@@ -232,6 +232,7 @@ function registerClub() {
             }
         },
         error: function (err) {
+            $('.loader').removeClass('is-active');
             swal("Oops!", err.statusText, "error");
         }
     });
