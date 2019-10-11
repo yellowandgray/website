@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MemberComponent implements OnInit {
   result = [];
-  result_fw = [];  
+  result_fw = [];
   image_url: string = '../toowheel/api/v1/';
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 

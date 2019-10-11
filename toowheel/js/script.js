@@ -263,14 +263,14 @@ function renderCategory(type) {
 }
 
 function filterClub() {
-    var filter_name = $('#filter_name').val();
+    var filter_name = ($('#filter_name').val()).toLowerCase();
     var filter_category = $('#filter_category').val();
     var filter_limit = $('#filter_limit').val();
     var filter_state = $('#filter_state').val();
     $('.club-box').removeClass('hidden');
     $('.club-box').each(function (index, ele) {
         if (filter_name !== '') {
-            if (typeof $(ele).data('name') !== 'undefined' && ($(ele).data('name')).indexOf(filter_name) < 0) {
+            if (typeof $(ele).data('name') !== 'undefined' && (($(ele).data('name')).toLowerCase()).indexOf(filter_name) < 0) {
                 $(ele).addClass('hidden');
             }
         }
@@ -289,6 +289,7 @@ function filterClub() {
     if (typeof filter_limit !== 'undefined' && filter_limit !== '') {
         $('#club_list .club-box:gt(' + filter_limit + ')').addClass('hidden');
     }
+    return false;
 }
 
 function sortClub() {
