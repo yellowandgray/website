@@ -1313,6 +1313,10 @@ body {
     height: 100px;
 }
 
+.tab-pane #club_list {
+    margin: 0 25px !important;
+}
+
 .find-club-title {
     background: #eee;
     padding: 30px 0;
