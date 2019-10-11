@@ -740,9 +740,17 @@
     }
     .news-cont img {
         width: 100%;
-        height: 400px !important;
+        height: 450px !important;
     }
+    .tabcontent .news .news-cont {
+        height: 470px !important;
+    }
+}
 
+@media (min-width: 385px) and (max-width: 529px) {
+    .tabcontent .news .news-cont {
+        height: 275px !important;
+    }
 }
 @media (max-width: 768px) and (min-width: 320px){
     .discover-slider-content {
