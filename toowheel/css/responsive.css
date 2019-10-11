@@ -767,7 +767,12 @@
         bottom: 102px;
     }
 }
-@media (min-width: 768px) and (max-width: 1230px) {
+@media (min-width: 768px) and (max-width: 991px) {
+    .club-box {
+        width: 30% !important;
+    }
+}
+@media (min-width: 992px) and (max-width: 1230px) {
     .club-box {
         width: 22% !important;
     }
