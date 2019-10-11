@@ -434,7 +434,7 @@ button {
 
 .btn-enter-twowheel {
     background: #fff;
-    border-radius: 25px;
+    border-radius: 50px;
     padding: 15px 15px 15px 15px;
     border: 2px solid #0f0f0f;
     color: #000;
@@ -465,7 +465,7 @@ button {
 
 .btn-enter-fourwheel {
     background: #fff;
-    border-radius: 25px;
+    border-radius: 50px;
     padding: 15px 15px 15px 15px;
     border: 2px solid #f4001e;
     color: #000;

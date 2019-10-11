@@ -108,7 +108,7 @@ $obj = new Common();
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span> 
                                         </div>
-                                        <h3 class="text-center">Effa & Club Members</h3>
+                                        <h3 class="text-center">Qasey & Club Members</h3>
                                         <h5 class="text-center">R15 Ladies Club</h5>
                                     </span>
                                 </div>
