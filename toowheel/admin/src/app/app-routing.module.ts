@@ -20,7 +20,8 @@ import { ClubgalleryComponent } from './clubgallery/clubgallery.component';
 import { ClubnewsComponent } from './clubnews/clubnews.component';
 import { LoginComponent } from './login/login.component';
 import { AnnouncementComponent } from './announcement/announcement.component';
-import { PressReleaseComponent, PressReleaseForm } from './press-release/press-release.component';
+import { PressReleaseComponent } from './press-release/press-release.component';
+import { NewsletterComponent } from './newsletter/newsletter.component';
 
 
 const routes: Routes = [
@@ -44,6 +45,7 @@ const routes: Routes = [
     {path: 'clubgallery', component: ClubgalleryComponent},
     {path: 'clubnews', component: ClubnewsComponent},
     {path: 'announcement/:cid', component: AnnouncementComponent},
+    {path: 'newsletter', component: NewsletterComponent},
     {path: 'press-release', component: PressReleaseComponent}
 ];
 
