@@ -765,7 +765,8 @@
         align-items: center;
         position: relative;
         bottom: 102px;
-
+    }
+}
 @media (min-width: 768px) and (max-width: 1230px) {
     .club-box {
         width: 22% !important;
