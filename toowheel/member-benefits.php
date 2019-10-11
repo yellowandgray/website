@@ -49,62 +49,68 @@ $obj = new Common();
                         <div class="row mem-flex">
                             <div class="mem-flex-item">
                                 <div class="member-box">
-                                    <div class="img-t">
-                                        <img src="img/testimonial/Tuan-Haji-Ali-Hassan-Mohammad-Hassan.jpg" alt=""/>
-                                    </div>
-                                    <div class="text-center img-tt">
-                                        <img src="img/member/asset1@2x.png" alt=""/>
-                                    </div>
-                                    <p class="text-center">Congratulations to TooWheel for their soft-launch event. Their Media and Digital Platform is a great way to strengthen the relationship of all motorsport club in Malaysia. A good way to increase communication and exchange feedback for a better future of the club and community.</p>
-                                    <div class="rating">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span> 
-                                    </div>
-                                    <h3 class="text-center">Tuan Haji Ali Hassan Mohammad Hassan</h3>
-                                    <h5 class="text-center">Founder of Al-Ikhsan And CEO of Prestige Sport</h5>
+                                    <span class="testimonial-top">
+                                        <div class="img-t">
+                                            <img src="img/testimonial/Tuan-Haji-Ali-Hassan-Mohammad-Hassan.jpg" alt=""/>
+                                        </div>
+                                        <div class="text-center img-tt">
+                                            <img src="img/member/asset1@2x.png" alt=""/>
+                                        </div>
+                                        <p class="text-center">Congratulations to TooWheel for their soft-launch event. Their Media and Digital Platform is a great way to strengthen the relationship of all motorsport club in Malaysia. A good way to increase communication and exchange feedback for a better future of the club and community.</p>
+                                        <div class="rating">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span> 
+                                        </div>
+                                        <h3 class="text-center">Tuan Haji Ali Hassan Mohammad Hassan</h3>
+                                        <h5 class="text-center">Founder of Al-Ikhsan And CEO of Prestige Sport</h5>
+                                    </span>
                                 </div>
                             </div>
                             <div class="mem-flex-item">
                                 <div class="member-box">
-                                    <div class="img-t">
-                                        <img src="img/testimonial/002.jpg" alt=""/>
-                                    </div>
-                                    <div class="text-center img-tt">
-                                        <img src="img/member/asset1@2x.png" alt=""/>
-                                    </div>
-                                    <p class="text-center">An innovative idea to combine all car and motorcycle club under one platform. The portal is a great platform to combine all motorsport enthusiast to share their experiences, events and to showcase their club. And also, by bringing them closer regardless of distance, gender and nationality.</p>
-                                    <div class="rating">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span> 
-                                    </div>
-                                    <h3 class="text-center">Ben Ng</h3>
-                                    <h5 class="text-center">Director of NKS Distributors (KL) Sdn. Bhd</h5>
+                                    <span class="testimonial-top">
+                                        <div class="img-t">
+                                            <img src="img/testimonial/002.jpg" alt=""/>
+                                        </div>
+                                        <div class="text-center img-tt">
+                                            <img src="img/member/asset1@2x.png" alt=""/>
+                                        </div>
+                                        <p class="text-center">An innovative idea to combine all car and motorcycle club under one platform. The portal is a great platform to combine all motorsport enthusiast to share their experiences, events and to showcase their club. And also, by bringing them closer regardless of distance, gender and nationality.</p>
+                                        <div class="rating">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span> 
+                                        </div>
+                                        <h3 class="text-center">Ben Ng</h3>
+                                        <h5 class="text-center">Director of NKS Distributors (KL) Sdn. Bhd</h5>
+                                    </span>
                                 </div>
                             </div>
                             <div class="mem-flex-item">
                                 <div class="member-box">
-                                    <div class="img-t">
-                                        <img src="img/testimonial/003.jpg" alt=""/>
-                                    </div>
-                                    <div class="text-center img-tt">
-                                        <img src="img/member/asset1@2x.png" alt=""/>
-                                    </div>
-                                    <p class="text-center">Thank you TooWheel Malaysia for having such platform. Where we can exhibit our passion, make new friends and most especially we can have our second family.</p>
-                                    <div class="rating">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span> 
-                                    </div>
-                                    <h3 class="text-center">Effa & Club Members</h3>
-                                    <h5 class="text-center">R15 Ladies Club</h5>
+                                    <span class="testimonial-top">
+                                        <div class="img-t">
+                                            <img src="img/testimonial/003.jpg" alt=""/>
+                                        </div>
+                                        <div class="text-center img-tt">
+                                            <img src="img/member/asset1@2x.png" alt=""/>
+                                        </div>
+                                        <p class="text-center">Thank you TooWheel Malaysia for having such platform. Where we can exhibit our passion, make new friends and most especially we can have our second family.</p>
+                                        <div class="rating">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span> 
+                                        </div>
+                                        <h3 class="text-center">Effa & Club Members</h3>
+                                        <h5 class="text-center">R15 Ladies Club</h5>
+                                    </span>
                                 </div>
                             </div>
                         </div>
