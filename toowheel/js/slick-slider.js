@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     arrows: true,
-                    dots: false,
+                    dots: true,
                     autoplay: true
                 }
             },
@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: true,
-                    dots: false,
+                    dots: true,
                     autoplay: true
                 }
             },
@@ -44,7 +44,7 @@ jQuery(document).ready(function ($) {
                     arrows: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    dots: false,
+                    dots: true,
                     autoplay: true
                 }
             }]

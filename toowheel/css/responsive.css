@@ -295,7 +295,7 @@
     }
     .bg-1 .container {bottom: 210px !important;}
     .bg-1 .slick-slider {bottom: 195px !important;}
-    .bg-1 {height: 600px !important;}
+    .bg-1 {height: 675px !important;}
 }
 
 /*@media (min-width: 1750px) and (max-width: 1842px) { 
@@ -755,7 +755,7 @@
 
 @media (min-width: 1200px) and (max-width: 1440px) {
     .slick-dots {
-        bottom: 80px !important;
+        bottom: 40px !important;
     }
 }
 @media (min-width: 992px) and (max-width: 2000px) {
