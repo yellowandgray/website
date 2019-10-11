@@ -191,7 +191,7 @@ function registerMember() {
                 } else {
                     msg = '<strong>We will get back you soon</strong>';
                 }
-                $('#success_member_section').appen(msg);
+                $('#success_member_section').append(msg);
                 $('#smartwizard').smartWizard("next");
             } else {
                 bootbox.alert(data.result.message);

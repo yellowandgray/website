@@ -318,13 +318,18 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     <div class="form-group">
                                         <label for="country">Country</label> 
                                         <span class="red-i">*</span>
-                                        <input placeholder="" name="country" id="country" type="text" class="form-control" required-i onchange="removeValidation('country');" />
+                                        <input placeholder="" name="country" id="country" type="text" class="form-control" required-i onchange="removeValidation('country');" value="Malaysia" readonly />
                                         <div id="country_error"></div>
                                     </div>
                                     <div class="form-group">
                                         <label for="state_id">State</label> 
                                         <span class="red-i">*</span>
-                                        <input type="text" class="form-control" name="state_id" id="state_id" placeholder="" required-i onchange="removeValidation('state_id');" />
+                                        <select class="form-control" id="state_id" name="state_id" required-i onchange="removeValidation('state_id');">
+                                            <option value="">State</option>
+                                            <?php foreach ($states as $row) { ?>
+                                                <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
+                                            <?php } ?>
+                                        </select>
                                         <div id="state_id_error"></div>
                                     </div>
                                     <br/>

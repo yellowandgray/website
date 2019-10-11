@@ -158,6 +158,8 @@ $app->post('/insert_member', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
+    $state = $com->selectRow('*', 'state', 'state_id = ' . $data['state_id']);
+    $data['state'] = $state['name'];
     $record = $com->insertRecord(array('type' => $data['type'], 'first_name' => $data['first_name'], 'profile_picture' => $data['profile_picture'], 'gender' => $data['gender'], 'age' => $data['age'], 'ic_passport' => $data['ic_passport'], 'dob_date' => $data['dob_date'], 'dob_month' => $data['dob_month'], 'dob_year' => $data['dob_year'], 'contact_number' => $data['contact_number'], 'license_category' => $data['license_category'], 'address' => $data['address'], 'country' => $data['country'], 'state_id' => $data['state_id'], 'referral_member_id' => $data['referral_member_id'], 'referral_club_id' => $data['referral_club_id'], 'coverage_full_name' => $data['coverage_full_name'], 'coverage_contact_number' => $data['coverage_contact_number'], 'coverage_address' => $data['coverage_address'], 'email' => $data['email'], 'password' => $com->encryptPassword($data['password']), 'club_id' => $data['club_id'], 'payment_type' => $data['payment_type'], 'paypal_response' => $data['paypal_response'], 'paypal_transaction_id' => $data['paypal_transaction_id'], 'fund_transfer_file' => $data['fund_transfer_file'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'member');
     if ($record > 0) {
         $res['error'] = false;
@@ -392,7 +394,7 @@ $app->get('/get_four_wheel_club', function() {
 $app->get('/get_club_by_category/:cid', function($cid) {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('c.*, ca.name AS category', 'club AS c LEFT JOIN category AS ca ON c.category_id = ca.category_id', 'c.club_id > 0 AND c.category_id = ' . $cid.' AND c.published = 1');
+    $data = $com->selectAll('c.*, ca.name AS category', 'club AS c LEFT JOIN category AS ca ON c.category_id = ca.category_id', 'c.club_id > 0 AND c.category_id = ' . $cid . ' AND c.published = 1');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
