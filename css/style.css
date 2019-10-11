@@ -120,9 +120,9 @@ p {
 }
 
 .dummy-text p {
-    padding-top: 40px;
+    padding-top: 60px;
     padding-bottom: 40px;
-    color: #b2b2b2;
+    color: #000000;
     font-size: 20px;
 }
 
@@ -533,3 +533,8 @@ button {
     padding-left: 0;
     padding-right: 0;
 }*/
+
+.landing-description {
+    padding: 0px 0 60px;
+    height: auto !important;
+}

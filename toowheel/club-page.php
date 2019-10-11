@@ -23,6 +23,15 @@ if ($type == 'four_wheel') {
     <body>
         <?php include 'menu.php'; ?>
         <div class="club-pad-top-108"></div>
+        <!--pop-up-gallery-->
+        <div class="fs-gal-view">
+            <h1></h1>
+            <img class="fs-gal-prev fs-gal-nav" src="img/prev.svg" alt="Previous picture" title="Previous picture" />
+            <img class="fs-gal-next fs-gal-nav" src="img/next.svg" alt="Next picture" title="Next picture" />
+            <img class="fs-gal-close" src="img/close.svg" alt="Close gallery" title="Close gallery" />
+            <img class="fs-gal-main" src="" alt="" />
+        </div>
+        <!--pop-up-gallery-->
         <section>
             <!--            <div style="height: 50%;overflow: hidden;background: #00008c;">
                         </div>-->
@@ -99,7 +108,7 @@ if ($type == 'four_wheel') {
                             </video>
                             <div class="img-b-10px club-gallery">
                                 <?php foreach ($images as $row) { ?>
-                                    <img src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" class="img-responsive"/>
+                                    <img class="fs-gal" src="<?php echo BASE_URL . $row['media_path']; ?>" alt=""  data-url="<?php echo BASE_URL . $row['media_path']; ?>" class="img-responsive"/>
                                 <?php } ?>
                             </div>
                         </div>

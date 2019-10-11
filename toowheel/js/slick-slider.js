@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
                 settings: {
                     slidesToShow: 5,
                     slidesToScroll: 1,
-                    arrows: false,
+                    arrows: true,
                     dots: false,
                     autoplay: true
                 }
@@ -23,7 +23,7 @@ jQuery(document).ready(function ($) {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
-                    arrows: false,
+                    arrows: true,
                     dots: false,
                     autoplay: true
                 }
@@ -33,7 +33,7 @@ jQuery(document).ready(function ($) {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    arrows: false,
+                    arrows: true,
                     dots: false,
                     autoplay: true
                 }
@@ -41,7 +41,7 @@ jQuery(document).ready(function ($) {
             {
                 breakpoint: 400,
                 settings: {
-                    arrows: false,
+                    arrows: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     dots: false,

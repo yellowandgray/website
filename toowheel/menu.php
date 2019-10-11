@@ -86,7 +86,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                             <strong><?php echo $obj->charLimit($row['title'], 80); ?></strong>
                                             <br/>
                                             <span><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo $row['press_release_date']; ?></span>
-                                            <p><?php echo $obj->charLimit($row['description_1'], 160); ?>
+                                            <p><?php echo $obj->charLimit($row['description_1'], 120); ?>
                                         </li>
                                         <li class="release-cont-3"><a href="press.php?pid=<?php echo $row['press_release_id']; ?>"><span>READ </span>MORE</a></li>
                                     </ul>
@@ -119,8 +119,8 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                             <?php } ?>
                                             </div>
                                             <img src="<?php echo BASE_URL . $row['logo']; ?>" alt="" />
-                                            <h3><?php echo $row['name']; ?></h3>
-                                            <p><?php echo $row['city']; ?></p>
+                                            <h3><?php echo $obj->charLimit($row['name'], 13); ?></h3>
+                                            <p><?php echo $obj->charLimit($row['city'], 20); ?></p>
                                         </div>
                                     </div>
                                 <?php } ?>
@@ -136,7 +136,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                     <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
-                                            <h3><?php echo $obj->charLimit($row['title'], 20); ?></h3>
+                                            <h3><?php echo $obj->charLimit($row['title'], 13); ?></h3>
                                             <p>Location: <?php echo $obj->charLimit($row['location'], 20); ?></p>
                                         </div>
                                     </div>
@@ -169,7 +169,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
             </div>
             <div class="mobile-header-login">
 <!--                <i class="fa fa-search"></i>-->
-                <a href="login.php"><i class="fa fa-user"></i></a>
+                <a href="login.php?type=<?php echo $type; ?>"><i class="fa fa-user"></i></a>
             </div>
         </div>
         <div class="row">

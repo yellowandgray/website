@@ -68,12 +68,10 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         </section>
         <section class="media-press-release" onClick="document.location.href = 'press-release.php?type=<?php echo $type; ?>'">
             <div class="container">
-                <div class="col-md-12">
-                    <div class="media-bg">
-                        <a href="press-release.php?type=<?php echo $type; ?>"><img src="img/media-bg.jpg" alt="" /></a>
-                    </div>
-                    <a href="press-release.php?type=<?php echo $type; ?>" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
+                <div class="media-bg">
+                    <a href="press-release.php?type=<?php echo $type; ?>"><img src="img/media-bg.jpg" alt="" /></a>
                 </div>
+                <a href="press-release.php?type=<?php echo $type; ?>" class="btn-tranparent"><span>ALL PRESS RELEASE</span></a>
             </div>
         </section>
         <section class="section-bg">
@@ -252,6 +250,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                                         slidesToShow: 4,
                                                         slidesToScroll: 1,
                                                         dots: false,
+                                                        arrows: true,
                                                         autoplay: true
                                                     }
                                                 },
@@ -261,6 +260,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                                         slidesToShow: 3,
                                                         slidesToScroll: 1,
                                                         dots: false,
+                                                        arrows: true,
                                                         autoplay: true
                                                     }
                                                 },
@@ -270,6 +270,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                                         slidesToShow: 1,
                                                         slidesToScroll: 1,
                                                         dots: false,
+                                                        arrows: true,
                                                         autoplay: true
                                                     }
                                                 },
@@ -280,6 +281,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                                         slidesToShow: 1,
                                                         slidesToScroll: 1,
                                                         dots: false,
+                                                        arrows: true,
                                                         autoplay: true
                                                     }
                                                 }]

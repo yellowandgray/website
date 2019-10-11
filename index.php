@@ -64,17 +64,20 @@ $configs = $obj->getLandingDetails();
                         <img src="<?php echo BASE_URL . $configs['landing_fourwheel_image']; ?>" alt=""  class="landing-car" />
                     </div>
                 </div>
+
             </div>
         </section>
-        <section class="landing-text slide slide-three" data-background="#fff">
-            <div class="container inside">
+        <section class="landing-description slide slide-three" data-background="#f4001e">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center dummy-text">
                         <p><?php echo $configs['landing_description']; ?></p>
                     </div>
                 </div>
-                <br/>
-                <br/>
+            </div>
+        </section>
+        <section class="landing-text slide slide-four" data-background="#fff">
+            <div class="container inside">
                 <div class="row padding-tb-40 landing-row-img">
                     <div class="col-md-3">
                         <a href="toowheel/about.php?type=two_wheel"><img src="<?php echo BASE_URL . $configs['landing_about_us_image']; ?>" alt="" /></a>

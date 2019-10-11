@@ -69,7 +69,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                     <div class="row event-gallery-section">
                                         <?php foreach ($news_gallery as $row) { ?>
                                             <div class="col-md-3 col-sm-6">
-                                                <img  class="fs-gal" src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" data-url="<?php echo BASE_URL . $row['media_path']; ?>"/>
+                                                <img class="fs-gal" src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" data-url="<?php echo BASE_URL . $row['media_path']; ?>"/>
                                             </div>
                                         <?php } ?>
                                     </div>
