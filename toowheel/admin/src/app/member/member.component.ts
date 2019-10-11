@@ -49,7 +49,7 @@ export class MemberComponent implements OnInit {
   changeStatus(id, status): void {
       var formData = new FormData();
       formData.append('activated', status);
-      this.httpClient.get<any>('../toowheel/api/v1/update_record/member/member_id = '+id)
+      this.httpClient.post<any>('../toowheel/api/v1/update_record/member/member_id = '+id, formData)
   .subscribe(
           (res)=>{
               this.getMember();
@@ -179,14 +179,14 @@ export class MemberDelete {
     data: any;
     constructor(
     public dialogRef: MatDialogRef<MemberDelete>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        if(this.data != null) { 
-            this.action = this.data.action;
-            this.data = this.data.data;
-            if(this.data.action == 'delete') {
-                this.member_id = this.data.data;
+        if(this.datapopup != null) { 
+            this.action = this.datapopup.action;
+            this.data = this.datapopup.data;
+            if(this.datapopup.action == 'delete') {
+                this.member_id = this.datapopup.data;
             }
     }
 }
