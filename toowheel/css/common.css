@@ -3495,8 +3495,8 @@ thead td {
 
 .tabcontent .news .news-cont {
     flex-basis: 20%;
-    padding: 10px 0px;
-    height: 275px;
+    padding: 10px 0px 0;
+    height: 250px;
 }
 
 .home-upcoming {
