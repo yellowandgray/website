@@ -3,6 +3,9 @@ $menu_latest_news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.na
 $menu_press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEFT JOIN media AS m ON m.media_id = p.media_id', 'p.type = \'' . $type . '\' ORDER BY p.press_release_id DESC LIMIT 3');
 $menu_findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\' ORDER BY club_id DESC LIMIT 8');
 $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 8');
+$autocomplete_club = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\' ORDER BY name DESC');
+$autocomplete_news = $obj->selectAll('*', 'news', 'news_id > 0 AND type = \'' . $type . '\' ORDER BY title DESC');
+$autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_release_id > 0 AND type = \'' . $type . '\' ORDER BY title DESC');
 ?>
 <section class="header">
     <div class="container">
@@ -114,9 +117,9 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                     <div class="col-md-3 col-sm-6">
                                         <div class="club-box">
                                             <div class="rank-h">
-                                            <?php if ($row['rank'] && $row['rank'] != 0) { ?>
-                                                <span>#<?php echo $row['rank']; ?></span>
-                                            <?php } ?>
+                                                <?php if ($row['rank'] && $row['rank'] != 0) { ?>
+                                                    <span>#<?php echo $row['rank']; ?></span>
+                                                <?php } ?>
                                             </div>
                                             <img src="<?php echo BASE_URL . $row['logo']; ?>" alt="" />
                                             <h3><?php echo $obj->charLimit($row['name'], 13); ?></h3>
@@ -156,7 +159,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
             <div class="header-login">
                 <a href="#" class="float-left margin-left-10" id="demo-2" style="position: relative;top: -2px;">
                     <span onfocusin="myFunction()" onfocusout="myFunction2()">
-                        <input type="search" placeholder="Search">
+                        <input type="search" placeholder="Search" class="head-search" />
                         <p id="myDiv">Search</p>
                     </span> 
                 </a>
@@ -174,7 +177,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
         </div>
         <div class="row">
             <div class="mobile-search">
-                <input type="search" placeholder="Search">
+                <input type="search" placeholder="Search" class="head-search" />
             </div>
         </div>
     </div>
@@ -193,6 +196,19 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
         document.getElementById(cityName).style.display = "block";
         evt.currentTarget.className += " active";
     }
+    var autocomplete_club = <?php echo json_encode($autocomplete_club); ?>
+    var autocomplete_news = <?php echo json_encode($autocomplete_news); ?>
+    var autocomplete_press_release = <?php echo json_encode($autocomplete_press_release); ?>
+    $('.head-search').devbridgeAutocomplete({
+        lookup: rs,
+        minChars: 1,
+        onSelect: function (suggestion) {
+            window.location = 'product.php?code=' + suggestion.data.code;
+        },
+        showNoSuggestionNotice: true,
+        noSuggestionNotice: 'Sorry, no matching results',
+        groupBy: 'category'
+    });
 
 // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
