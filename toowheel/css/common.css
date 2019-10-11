@@ -1919,26 +1919,28 @@ button {
 
 .club-logo {
     position: relative;
-    bottom: 109px;
+    bottom: 22px;
     z-index: 2;
 }
 
 .w-text h2{
     font-size: 24px;
     font-weight: 700;
-    color: #fff;
+    color: #ed1c24;
     margin: 0;
 }
 .w-text h5{
     font-size: 18px;
     font-weight: 500;
-    color: #fff;
+    color: #ed1c24;
     margin: 0;
 }
-.w-text{
+.w-text {
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
+    position: relative;
+    bottom: 64px;
 }
 .w-text-con{
     flex-basis: 30%;
@@ -2539,12 +2541,12 @@ body .calender-box{
     .w-text h2 {
         font-size: 17px;
         font-weight: 600;
-        color: #fff;
+        color: #ed1c24;
     }
     .w-text h5 {
         font-size: 13px;
         font-weight: 600;
-        color: #fff;
+        color: #ed1c24;
     }
     .w-text-con-1 p {
         font-weight: 600;
@@ -2574,12 +2576,12 @@ body .calender-box{
     .w-text h2 {
         font-size: 14px;
         font-weight: 600;
-        color: #fff;
+        color: #ed1c24;
     }
     .w-text h5 {
         font-size: 13px;
         font-weight: 600;
-        color: #fff;
+        color: #ed1c24;
     }
     .w-text-con-1 p {
         font-weight: 600;
@@ -2591,7 +2593,7 @@ body .calender-box{
     }
     .club-logo {
         position: relative;
-        bottom: 37px;
+        bottom:0px;
         z-index: 2;
         left: 20px;
     }
@@ -2603,6 +2605,13 @@ body .calender-box{
         bottom: 90px;
         z-index: 1;
         background: #fff;
+    }
+    .w-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        bottom: 46px;
     }
 }
 @media (max-width:530px) and (min-width:320px){
@@ -2621,9 +2630,20 @@ body .calender-box{
         z-index: 2;
         left: 20px;
     }
-
+    .w-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        bottom: 17px;
+    }
+   .w-text h2 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #ed1c24;
+        padding: 10px 0px;
+    }
 }
-
 .event-section-sub{
     display: flex;
     justify-content: space-between;
@@ -2636,7 +2656,7 @@ body .calender-box{
 @media (max-width:991px) and (min-width:320px){
     .img-b-10px {
         margin-bottom: 10px;
-        width: 60%;
+        width: 95%;
         margin: 10px auto;
     }
     #calendar{
@@ -2663,12 +2683,6 @@ body .calender-box{
     .sec-club-logo {
         position: relative;
         top: 0px;
-    }
-    .w-text h2 {
-        font-size: 8px;
-        font-weight: 600;
-        color: #ed1c24;
-        padding: 10px 0px;
     }
     .w-text h5 {
         font-size: 11px;
@@ -3228,7 +3242,7 @@ body .calender-box{
 .club-gallery img {
     width: 32%;
     margin-bottom: -3px;
-    height: 70px;
+    height: 130px;
 }
 
 .box-anounce .discover-slider-content center a {

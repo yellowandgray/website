@@ -51,10 +51,8 @@ if ($type == 'four_wheel') {
                                 <h2 class="text-center"><?php echo $club['name']; ?></h2>
                             </div>
                             <div class="w-text-con">
-                                <div class="w-img">
-                                    <div class="w-img-con club-logo">
-                                        <img src="<?php echo BASE_URL . $club['logo']; ?>" alt=""/>
-                                    </div>
+                                <div class="w-img-con club-logo">
+                                    <img src="<?php echo BASE_URL . $club['logo']; ?>" alt=""/>
                                 </div>
                             </div>
                             <div class="w-text-con">
