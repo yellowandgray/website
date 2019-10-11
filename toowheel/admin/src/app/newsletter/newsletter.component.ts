@@ -48,8 +48,7 @@ export class NewsletterComponent implements OnInit {
 
    dialogRef.afterClosed().subscribe(result => {
        if(result !== false && result !== 'false') {
-      this.getCategory();
-      this.getFourWheelCategory();
+      this.getNewsletter();
        }
     });
 }
@@ -58,7 +57,7 @@ export class NewsletterComponent implements OnInit {
       if(id != 0) { 
         data = id;
       }
-    const dialogRef = this.dialog.open(CategoryDelete, {
+    const dialogRef = this.dialog.open(NewsletterDelete, {
         minWidth: "40%",
         maxWidth: "40%",
         data: data
@@ -66,8 +65,7 @@ export class NewsletterComponent implements OnInit {
 
    dialogRef.afterClosed().subscribe(result => {
        if(result !== false && result !== 'false') {
-      this.getCategory();
-      this.getFourWheelCategory();
+     this.getNewsletter();
        }
     });
 }
@@ -83,7 +81,7 @@ export class NewsletterForm {
     loading = false;
     newsletter_id = 0;
     constructor(
-    public dialogRef: MatDialogRef<CategoryForm>,
+    public dialogRef: MatDialogRef<NewsletterForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
@@ -143,7 +141,7 @@ export class NewsletterDelete {
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
         if(this.data != null) { 
-            this.category_id = this.data;
+            this.newsletter_id = this.data;
     }
 }
 
