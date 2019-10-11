@@ -72,6 +72,15 @@
     }
 }
 
+@media screen and (max-width: 500px) {
+    .search-sort-order {
+        width: 100%;
+    }
+    .search-section input {
+        padding: 15px 45px !important;
+    }
+}
+
 @media screen and (max-height: 600px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
@@ -162,6 +171,12 @@
     }
     .club-gallery img {
         height: 120px !Important;
+    }
+    .news-all-content img {
+        height: auto !important;
+    }
+    .member-box {
+        height: auto !important;
     }
 }
 
