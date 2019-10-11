@@ -78,9 +78,9 @@
                         </li>
                         <li class="i-con text-center">
                             <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                                <a href="https://www.instagram.com/p/B2iG45lnGi-/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href="https://twitter.com/@ToowheelM" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="https://www.youtube.com/channel/UCueyRbB52hjc0XUIqbkYxcg" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/p/B2iG45lnGi-/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/@ToowheelM" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://www.youtube.com/channel/UCueyRbB52hjc0XUIqbkYxcg" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </li>
@@ -100,87 +100,112 @@
 <script src="js/sweet-alert.min.js" type="text/javascript"></script>
 <script src="js/jquery.autocomplete.min.js" type="text/javascript"></script>
 <script type="text/javascript">
-    function openNav() {
-        document.getElementById("mySidenav").style.height = "100%";
-        document.getElementById("mySidenav").style.top = "118px";
-    }
-    function closeNav() {
-        document.getElementById("mySidenav").style.height = "0";
-        document.getElementById("mySidenav").style.top = "-800px";
-    }
-    $(document).ready(function () {
-        $('#nav-icon3').click(function () {
-            $(this).toggleClass('open');
-            if ($(this).hasClass('open')) {
-                openNav();
-            } else {
-                closeNav();
-            }
-        });
-        // Step show event
-        $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection, stepPosition) {
-            //alert("You are on step "+stepNumber+" now");
-            if (stepPosition === 'first') {
-                $("#prev-btn").addClass('disabled');
-            } else if (stepPosition === 'final') {
-                $("#next-btn").addClass('disabled');
-            } else {
-                $("#prev-btn").removeClass('disabled');
-                $("#next-btn").removeClass('disabled');
-            }
-        });
+                                function openNav() {
+                                    document.getElementById("mySidenav").style.height = "100%";
+                                    document.getElementById("mySidenav").style.top = "118px";
+                                }
+                                function closeNav() {
+                                    document.getElementById("mySidenav").style.height = "0";
+                                    document.getElementById("mySidenav").style.top = "-800px";
+                                }
+                                $(document).ready(function () {
+                                    $('#nav-icon3').click(function () {
+                                        $(this).toggleClass('open');
+                                        if ($(this).hasClass('open')) {
+                                            openNav();
+                                        } else {
+                                            closeNav();
+                                        }
+                                    });
+                                    // Step show event
+                                    $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection, stepPosition) {
+                                        //alert("You are on step "+stepNumber+" now");
+                                        if (stepPosition === 'first') {
+                                            $("#prev-btn").addClass('disabled');
+                                        } else if (stepPosition === 'final') {
+                                            $("#next-btn").addClass('disabled');
+                                        } else {
+                                            $("#prev-btn").removeClass('disabled');
+                                            $("#next-btn").removeClass('disabled');
+                                        }
+                                    });
 
-        // Toolbar extra buttons
-        var btnFinish = $('<button></button>').text('Finish')
-                .addClass('btn btn-info')
-                .on('click', function () {
-                    alert('Finish Clicked');
-                });
-        var btnCancel = $('<button></button>').text('Cancel')
-                .addClass('btn btn-danger')
-                .on('click', function () {
-                    $('#smartwizard').smartWizard("reset");
-                });
+                                    // Toolbar extra buttons
+                                    var btnFinish = $('<button></button>').text('Finish')
+                                            .addClass('btn btn-info')
+                                            .on('click', function () {
+                                                alert('Finish Clicked');
+                                            });
+                                    var btnCancel = $('<button></button>').text('Cancel')
+                                            .addClass('btn btn-danger')
+                                            .on('click', function () {
+                                                $('#smartwizard').smartWizard("reset");
+                                            });
 
-        // Please note enabling option "showStepURLhash" will make navigation conflict for multiple wizard in a page.
-        // so that option is disabling => showStepURLhash: false
+                                    // Please note enabling option "showStepURLhash" will make navigation conflict for multiple wizard in a page.
+                                    // so that option is disabling => showStepURLhash: false
 
-        // Smart Wizard 1
-        $('#smartwizard').smartWizard({
-            selected: 0,
-            theme: 'arrows',
-            transitionEffect: 'fade',
-            showStepURLhash: false,
-            toolbarSettings: {toolbarPosition: 'both',
-                toolbarExtraButtons: [btnFinish, btnCancel]
-            }
-        });
-        $(".set > a").on("click", function () {
-            if ($(this).hasClass("active")) {
-                $(this).removeClass("active");
-                $(this)
-                        .siblings(".content")
-                        .slideUp(200);
-                $(".set > a i")
-                        .removeClass("fa-minus")
-                        .addClass("fa-plus");
-            } else {
-                $(".set > a i")
-                        .removeClass("fa-minus")
-                        .addClass("fa-plus");
-                $(this)
-                        .find("i")
-                        .removeClass("fa-plus")
-                        .addClass("fa-minus");
-                $(".set > a").removeClass("active");
-                $(this).addClass("active");
-                $(".content").slideUp(200);
-                $(this)
-                        .siblings(".content")
-                        .slideDown(200);
-            }
-        });
-    });
+                                    // Smart Wizard 1
+                                    $('#smartwizard').smartWizard({
+                                        selected: 0,
+                                        theme: 'arrows',
+                                        transitionEffect: 'fade',
+                                        showStepURLhash: false,
+                                        toolbarSettings: {toolbarPosition: 'both',
+                                            toolbarExtraButtons: [btnFinish, btnCancel]
+                                        }
+                                    });
+                                    $(".set > a").on("click", function () {
+                                        if ($(this).hasClass("active")) {
+                                            $(this).removeClass("active");
+                                            $(this)
+                                                    .siblings(".content")
+                                                    .slideUp(200);
+                                            $(".set > a i")
+                                                    .removeClass("fa-minus")
+                                                    .addClass("fa-plus");
+                                        } else {
+                                            $(".set > a i")
+                                                    .removeClass("fa-minus")
+                                                    .addClass("fa-plus");
+                                            $(this)
+                                                    .find("i")
+                                                    .removeClass("fa-plus")
+                                                    .addClass("fa-minus");
+                                            $(".set > a").removeClass("active");
+                                            $(this).addClass("active");
+                                            $(".content").slideUp(200);
+                                            $(this)
+                                                    .siblings(".content")
+                                                    .slideDown(200);
+                                        }
+                                    });
+                                });
+                                $.each(autocomplete_club, function (key, val) {
+                                    autocomplete_suggestion.push({value: val.name, data: {category: 'club', id: val.club_id}});
+                                });
+                                $.each(autocomplete_news, function (key, val) {
+                                    autocomplete_suggestion.push({value: val.title, data: {category: 'news', id: val.news_id}});
+                                });
+                                $.each(autocomplete_press_release, function (key, val) {
+                                    autocomplete_suggestion.push({value: val.title, data: {category: 'press_release', id: val.press_release_id}});
+                                });
+                                console.log(autocomplete_suggestion);
+                                $('.head-search').devbridgeAutocomplete({
+                                    lookup: autocomplete_suggestion,
+                                    minChars: 1,
+                                    onSelect: function (suggestion) {
+                                        if (suggestion.data.category == 'news') {
+                                            window.location = 'news.php?nid=' + suggestion.data.id;
+                                        }
+                                        if (suggestion.data.category == 'news') {
+                                            window.location = 'news.php?nid=' + suggestion.data.id;
+                                        }
 
+                                    },
+                                    showNoSuggestionNotice: true,
+                                    noSuggestionNotice: 'Sorry, no matching results',
+                                    groupBy: 'category'
+                                });
 </script>
 <!--mega-menu-->

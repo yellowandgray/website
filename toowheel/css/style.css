@@ -1871,7 +1871,8 @@ div#html5-watermark {
 .autocomplete-suggestion { 
     padding: 2px 5px; 
     white-space: nowrap; 
-    overflow: hidden; 
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .autocomplete-selected { 

@@ -196,22 +196,10 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
         document.getElementById(cityName).style.display = "block";
         evt.currentTarget.className += " active";
     }
-    var autocomplete_club = <?php echo json_encode($autocomplete_club); ?>
-    var autocomplete_news = <?php echo json_encode($autocomplete_news); ?>
-    var autocomplete_press_release = <?php echo json_encode($autocomplete_press_release); ?>
-    var autocomplete_club_suggestion = [];
-    var autocomplete_news_suggestion = [];
-    var autocomplete_press_release_suggestion = [];
-    $('.head-search').devbridgeAutocomplete({
-        lookup: rs,
-        minChars: 1,
-        onSelect: function (suggestion) {
-            window.location = 'product.php?code=' + suggestion.data.code;
-        },
-        showNoSuggestionNotice: true,
-        noSuggestionNotice: 'Sorry, no matching results',
-        groupBy: 'category'
-    });
+    var autocomplete_club = <?php echo json_encode($autocomplete_club); ?>;
+    var autocomplete_news = <?php echo json_encode($autocomplete_news); ?>;
+    var autocomplete_press_release = <?php echo json_encode($autocomplete_press_release); ?>;
+    var autocomplete_suggestion = [];
 
 // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
