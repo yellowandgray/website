@@ -740,6 +740,31 @@
         height: 80px !Important;
     }
 }
+@media (min-width: 935px) and (max-width: 991px) {
+    .w-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        bottom: 102px;
+    }
+}
+@media (min-width: 768px) and (max-width: 934px) {
+    .w-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        bottom: 102px;
+    }
+}
+@media (min-width: 768px) and (max-width: 934px) {
+    .w-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        bottom: 102px;
 
 @media (min-width: 768px) and (max-width: 1230px) {
     .club-box {
