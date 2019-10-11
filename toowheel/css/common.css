@@ -2621,9 +2621,7 @@ body .calender-box{
         z-index: 2;
         left: 20px;
     }
-
 }
-
 .event-section-sub{
     display: flex;
     justify-content: space-between;
