@@ -71,8 +71,8 @@
                     <span>Receive updates on our Upcoming Events</span>
                     <ul class="nav__ul" style="margin-top: 10px;">
                         <li>
-                            <form>
-                                <input type="email" placeholder="Email Address" required="">
+                            <form onsubmit="return subscribeNewsLetter();">
+                                <input type="email" id="newsletter_email" name="newsletter_email" placeholder="Email Address" required="" />
                                 <button type="submit">submit</button>
                             </form>
                         </li>
@@ -94,6 +94,7 @@
 <script src="js/rangeslider.min.js" type="text/javascript"></script>
 <script src="js/jquery.easing.min.js" type="text/javascript"></script>
 <script src="js/jquery.smartWizard_step_by.min.js" type="text/javascript"></script>
+<script src="js/html5lightbox.js" type="text/javascript"></script>
 <script src="js/script.js" type="text/javascript"></script>
 <script src="js/fs-gal.js" type="text/javascript"></script>
 <script src="js/sweet-alert.min.js" type="text/javascript"></script>

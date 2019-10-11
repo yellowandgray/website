@@ -6,6 +6,8 @@ $type = $_GET['type'];
 require_once 'api/include/common.php';
 $obj = new Common();
 $findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\'');
+$categories = $obj->selectAll('*', 'category', 'category_id > 0 AND type = \'' . $type . '\'');
+$states = $obj->selectAll('*', 'state', 'state_id > 0');
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,29 +24,30 @@ $findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '
             <div class="container">
                 <div class="row">
                     <div class="search-section">
-                        <input type="text" name="search" placeholder="Search Club Name" />
-                        <a href="#" class="search-btn">Search</a>
+                        <input type="text" name="search" placeholder="Search Club Name" id="filter_name" />
+                        <a href="#" onclick="filterClub();" class="search-btn">Search</a>
                     </div>
                     <div class="search-sort-order">
-                        <label>Name:</label>
-                        <select>
-                            <option value="A-Z">A-Z</option>
-                            <option value="Z-A">Z-A</option>
+                        <label>Order:</label>
+                        <select onchange="filterClub();" id="filter_order">
+                            <option value="asc">A-Z</option>
+                            <option value="desc">Z-A</option>
                         </select>
                     </div>
                     <div class="search-sort-order">
                         <label>Category:</label>
-                        <select>
-                            <option value="All">All</option>
-                            <option value="125cc">125cc</option>
-                            <option value="250cc">250cc</option>
-                            <option value="500cc">500cc</option>
+                        <select onchange="filterClub();" id="filter_category">
+                            <option value="">All</option>
+                            <?php foreach ($categories as $cat) { ?>
+                                <option value="<?php echo $cat['category_id']; ?>"><?php echo $cat['name']; ?></option>
+                            <?php } ?>
                         </select>
                     </div>
                     <div class="search-sort-order">
                         <label>Show:</label>
-                        <select>
-                            <option value="All">All</option>
+                        <select onchange="filterClub();" id="filter_limit">
+                            <option value="">All</option>
+                            <option value="2">2</option>
                             <option value="25">25</option>
                             <option value="50">50</option>
                             <option value="100">100</option>
@@ -52,34 +55,19 @@ $findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '
                     </div>
                     <div class="search-sort-order">
                         <label>State:</label>
-                        <select>
-                            <option value="All">All</option>
-                            <option value="Johor">Johor</option>
-                            <option value="Kedah">Kedah</option>
-                            <option value="Kelantan">Kelantan</option>
-                            <option value="Kuala-Lumpur">Kuala Lumpur</option>
-                            <option value="Labuan">Labuan</option>
-                            <option value="Melaka">Melaka</option>
-                            <option value="Negeri-Sembilan">Negeri Sembilan</option>
-                            <option value="Pahang">Pahang</option>
-                            <option value="Perak">Perak</option>
-                            <option value="Perlis">Perlis</option>
-                            <option value="Pulau-Pinang">Pulau Pinang</option>
-                            <option value="Putrajaya">Putrajaya</option>
-                            <option value="Sabah">Sabah</option>
-                            <option value="Sarawak">Sarawak</option>
-                            <option value="Selangor">Selangor</option>
-                            <option value="Terengganu">Terengganu</option>
-                            <option value="Putrajaya">Putrajaya</option>
+                        <select onchange="filterClub();" id="filter_state">
+                            <option value="">All</option>
+                            <?php foreach ($states as $row) { ?>
+                                <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
+                            <?php } ?>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="container-fluid">
-                <div class="row" style="max-width: 1200px; margin: 0 auto;">
+                <div class="row" style="max-width: 1200px; margin: 0 auto;" id="club_list">
                     <?php foreach ($findclub as $row) { ?>
-                        <!--                        <div class="col-md-2 col-sm-6">-->
-                        <div class="club-box">
+                        <div class="club-box" data-name="<?php echo $row['name']; ?>" data-state="<?php echo $row['state_id']; ?>" data-category="<?php echo $row['category_id']; ?>">
                             <div class="rank-button">
                                 <?php if ($row['rank'] && $row['rank'] != 0) { ?>
                                     <span>#<?php echo $row['rank']; ?></span>
@@ -88,7 +76,7 @@ $findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '
                             <img src="<?php echo BASE_URL . $row['logo']; ?>" alt="" />
                             <h3> <?php echo $row['name']; ?></h3>
                             <p> <?php echo $row['city']; ?></p>
-                            <a href="club-page.php?cid=<?php echo $row['club_id']; ?>" class="find-club-button"> Read More</a>
+                            <a href="club-page.php?cid=<?php echo $row['club_id']; ?>" class="find-club-button">Read More</a>
                         </div>
                     <?php } ?>
                 </div>

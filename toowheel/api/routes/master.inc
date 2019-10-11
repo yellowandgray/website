@@ -533,3 +533,20 @@ $app->post('/loginadmin', function() use ($app) {
     }
     echoRespnse($res['code'], $res);
 });
+
+$app->post('/subscribe_news_letter', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to subscribe');
+    $data = $app->request->post();
+    $com = new Common();
+    $exist = $com->selectRow('*', 'newsletter', 'email=\'' . $data['email'] . '\'');
+    if (count($exist) > 0) {
+        $res['message'] = 'This email have already subscribed';
+    } else {
+        $record = $com->insertRecord(array('email' => $data['email']), 'newsletter');
+        if ($record > 0) {
+            $res['error'] = false;
+            $res['message'] = 'Record inserted successfully';
+        }
+    }
+    echoRespnse(201, $res);
+});

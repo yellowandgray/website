@@ -5,6 +5,8 @@ if (!isset($_GET["type"])) {
 $type = $_GET["type"];
 require_once "api/include/common.php";
 $obj = new Common();
+$categories = $obj->selectAll('*', 'category', 'category_id > 0 AND type = \'' . $type . '\'');
+$states = $obj->selectAll('*', 'state', 'state_id > 0');
 ?>
 <!DOCTYPE html>
 <html>
@@ -375,33 +377,36 @@ $obj = new Common();
                                 <h2>Choose A Club</h2>
                                 <div class="row margin-rl-25">
                                     <div class="search-section">
-                                        <input type="text" name="search" placeholder="Search Club Name" />
-                                        <a href="#" class="search-btn">Search</a>
+                                        <input type="text" name="search" placeholder="Search Club Name" id="filter_name" />
+                                        <a href="#" onclick="filterClub();" class="search-btn">Search</a>
                                     </div>
                                     <div class="search-sort-order">
                                         <label>Sort:</label>
-                                        <select>
-                                            <option value="A-Z">A-Z</option>
-                                            <option value="Z-A">Z-A</option>
+                                        <select onchange="filterClub();" id="filter_order">
+                                            <option value="asc">A-Z</option>
+                                            <option value="desc">Z-A</option>
                                         </select>
                                     </div>
                                     <div class="search-sort-order">
                                         <label>Category:</label>
-                                        <select>
-                                            <option value="All">All</option>
-                                            <option value="125cc">125cc</option>
-                                            <option value="250cc">250cc</option>
-                                            <option value="500cc">500cc</option>
+                                        <select onchange="filterClub();" id="filter_category">
+                                            <option value="">All</option>
+                                            <?php foreach ($categories as $cat) { ?>
+                                                <option value="<?php echo $cat['category_id']; ?>"><?php echo $cat['name']; ?></option>
+                                            <?php } ?>
                                         </select>
                                     </div>
                                     <div class="search-sort-order">
                                         <label>Location by States:</label>
-                                        <select>
-                                            <option value="All">All</option>
+                                        <select onchange="filterClub();" id="filter_state">
+                                            <option value="">All</option>
+                                            <?php foreach ($states as $row) { ?>
+                                                <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
+                                            <?php } ?>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="row" id="category_clubs"></div>
+                                <div class="row" id="club_list"></div>
                                 <p class="member-t margin-top-30"><a href="#" onclick="skipClubSelection();">Skip</a></p>
                             </div>
                             <div id="step-3" class="">

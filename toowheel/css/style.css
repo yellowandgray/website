@@ -1842,3 +1842,11 @@ body {
     top: 13px;
     right: 13%;
 }
+
+.hidden {
+    display: none;
+}
+
+div#html5-watermark {
+    display: none!important;
+}

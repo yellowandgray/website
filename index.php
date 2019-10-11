@@ -16,6 +16,7 @@ $configs = $obj->getLandingDetails();
         <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="toowheel/css/sweet-alert.css" rel="stylesheet" type="text/css"/>
         <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <style>
@@ -203,8 +204,8 @@ $configs = $obj->getLandingDetails();
                                     <a href="#">Receive updates on our Upcoming Events</a>
                                 </li>
                                 <li>
-                                    <form>
-                                        <input type="email" placeholder="Email Address" required="">
+                                    <form onsubmit="return subscribeNewsLetter();">
+                                        <input type="email" id="newsletter_email" name="newsletter_email" placeholder="Email Address" required="">
                                         <button type="submit">submit</button>
                                     </form>
                                 </li>
@@ -223,19 +224,41 @@ $configs = $obj->getLandingDetails();
         <script src="js/jquery.min.js" type="text/javascript"></script>
         <script src="js/bootstrap.js" type="text/javascript"></script>
         <script src="js/jquery.scrollie.min.js" type="text/javascript"></script>
+        <script src="toowheel/js/sweet-alert.min.js" type="text/javascript"></script>
         <script type="text/javascript">
-            $(window).ready(function () {
-                var wHeight = $(window).height();
-                $('.slide')
-                        .height(wHeight)
-                        .scrollie({
-                            scrollOffset: -50,
-                            scrollingInView: function (elem) {
-                                var bgColor = elem.data('background');
-                                $('body').css('background-color', bgColor);
-                            }
-                        });
-            });
+                                        function subscribeNewsLetter() {
+                                            $('.loader').addClass('is-active');
+                                            $.ajax({
+                                                type: "POST",
+                                                url: 'toowheel/api/v1/subscribe_news_letter',
+                                                data: {email: $('#newsletter_email').val()},
+                                                success: function (data) {
+                                                    $('.loader').removeClass('is-active');
+                                                    if (data.result.error === false) {
+                                                        $('#newsletter_email').val('');
+                                                        swal("Thanks for the subscirption", "we will get in touch with you", "success");
+                                                    } else {
+                                                        swal("Oops!", data.result.message, "info");
+                                                    }
+                                                },
+                                                error: function (err) {
+                                                    swal("Oops!", err.statusText, "error");
+                                                }
+                                            });
+                                            return false;
+                                        }
+                                        $(window).ready(function () {
+                                            var wHeight = $(window).height();
+                                            $('.slide')
+                                                    .height(wHeight)
+                                                    .scrollie({
+                                                        scrollOffset: -50,
+                                                        scrollingInView: function (elem) {
+                                                            var bgColor = elem.data('background');
+                                                            $('body').css('background-color', bgColor);
+                                                        }
+                                                    });
+                                        });
         </script>
     </body>
 </html>
