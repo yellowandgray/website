@@ -8,16 +8,19 @@
             <mat-tab label="2 Wheeler">
                 <mat-list>
                     <mat-list-item *ngFor="let data of result">
-                        <button mat-icon-button aria-label="label">
+                        <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'active')">
                             <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'block')" *ngIf="data.activated == 1">
+                            <mat-icon>block</mat-icon>
                         </button>
                         <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result')">
                             <mat-icon>remove_red_eye</mat-icon>
                         </button>
-                        <button mat-icon-button aria-label="label">
+                        <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'delete')">
                             <mat-icon>delete</mat-icon>
                         </button>
-                        <button mat-icon-button aria-label="label">
+                        <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
                             <mat-icon>money</mat-icon>
                         </button>
                         <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." />
@@ -31,16 +34,19 @@
             <mat-tab label="4 Wheeler">
                 <mat-list>
                     <mat-list-item *ngFor="let data of result_fw">
-                        <button mat-icon-button aria-label="label">
+                        <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'active')">
                             <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'block')" *ngIf="data.activated == 1">
+                            <mat-icon>block</mat-icon>
                         </button>
                         <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result_fw')">
                             <mat-icon>remove_red_eye</mat-icon>
                         </button>
-                        <button mat-icon-button aria-label="label">
+                        <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'delete')">
                             <mat-icon>delete</mat-icon>
                         </button>
-                        <button mat-icon-button aria-label="label">
+                        <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
                             <mat-icon>money</mat-icon>
                         </button>
                         <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." />
