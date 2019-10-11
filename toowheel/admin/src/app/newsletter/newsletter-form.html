@@ -1,8 +1,8 @@
-<h2 mat-dialog-title>Category</h2>
+<h2 mat-dialog-title>News Letter</h2>
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="newsletterForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
+            <div fxFlex="100%">
                 <mat-form-field appearance="outline">
                     <mat-label>Email</mat-label>
                     <input matInput placeholder="" required formControlName="email" />

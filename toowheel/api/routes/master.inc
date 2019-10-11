@@ -284,7 +284,7 @@ $app->get('/get_two_wheel_category', function() {
 $app->get('/get_newsletter', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('*', 'newsletter', 'newsletter > 0');
+    $data = $com->selectAll('*', 'newsletter', 'newsletter_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
