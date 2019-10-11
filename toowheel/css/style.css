@@ -1252,7 +1252,7 @@ body {
 
 .search-section input {
     border-radius: 25px 0 0 25px;
-    padding: 10px 25px;
+    padding: 10px 15px;
     outline: none;
     background: #eee;
     border: none;
@@ -1262,7 +1262,7 @@ body {
     background: red;
     color: #fff;
     border-radius: 0 25px 25px 0;
-    padding: 12px 20px;
+    padding: 12px 10px;
     position: relative;
     left: -5px;
 }
@@ -1271,7 +1271,7 @@ body {
     background: #858585;
     color: #fff;
     border-radius: 0 25px 25px 0;
-    padding: 12px 20px;
+    padding: 12px 10px;
     position: relative;
     left: -5px;
     text-decoration: none;
@@ -1279,10 +1279,10 @@ body {
 
 .search-sort-order {
     background: #eee;
-    padding: 6px 25px;
+    padding: 6px 15px;
     border-radius: 25px;
     position: relative;
-    margin-left: 12px;
+    margin-left: 5px;
     margin-bottom: 20px;
 }
 
@@ -1301,6 +1301,16 @@ body {
     font-weight: 600;
     font-size: 15px;
     background: none;
+}
+
+.step-content .margin-rl-25 {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.tab-pane .club-box img {
+    width: 100px;
+    height: 100px;
 }
 
 .find-club-title {
