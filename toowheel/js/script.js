@@ -202,7 +202,7 @@ function registerClub() {
     $.ajax({
         type: "POST",
         url: 'api/v1/insert_club',
-        data: {type: $('#type').val(), category_id: $('#category_id').val(), name: $('#name').val(), cover_image: cover_image, logo: logo, state: $('#state').val(), city: $('#city').val(), zip: $('#zip').val(), landmark: $('#landmark').val(), address: $('#address').val(), club_leader_name: $('#club_leader_name').val(), no_of_member: $('#no_of_member').val(), email: $('#email').val(), mobile: $('#mobile').val(), about: $('#about').val(), facebook_link: $('#facebook_link').val(), youtube_link: $('#youtube_link').val(), twitter_link: $('#twitter_link').val(), instagram_link: $('#instagram_link').val(), rank: 0, club_video: club_video},
+        data: {type: $('#type').val(), category_id: $('#category_id').val(), name: $('#name').val(), cover_image: cover_image, logo: logo, state: $('#state').val(), city: $('#city').val(), zip: $('#zip').val(), landmark: $('#landmark').val(), address: $('#address').val(), club_leader_name: $('#club_leader_name').val(), no_of_member: $('#no_of_member').val(), email: $('#email').val(), mobile: $('#mobile').val(), about: $('#about').val(), facebook_link: $('#facebook_link').val(), youtube_link: $('#youtube_link').val(), twitter_link: $('#twitter_link').val(), instagram_link: $('#instagram_link').val(), rank: 0, published: 0, club_video: club_video},
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
