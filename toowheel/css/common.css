@@ -2676,7 +2676,7 @@ body .calender-box{
 @media (max-width:767px) and (min-width:320px){
     .event-section {
         position: relative;
-        top: -170px;
+        top: -102px;
         flex-wrap: wrap;
     }
 }
@@ -2707,7 +2707,7 @@ body .calender-box{
 
     .event-section {
         position: relative;
-        top: -74px;
+        top: -52px;
         flex-wrap: wrap;
     }
     .club-logo {

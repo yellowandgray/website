@@ -401,6 +401,7 @@ export class ClubPhotosForm {
     this._snackBar.open(res["result"]["message"], '', {
           duration: 2000,
         });
+        this.result = [];
                 }
             },
             (error)=>{

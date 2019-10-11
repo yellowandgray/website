@@ -6,22 +6,19 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-category',
-  templateUrl: './category.component.html',
-  styleUrls: ['./category.component.css']
+  selector: 'app-newsletter',
+  templateUrl: './newsletter.component.html',
+  styleUrls: ['./newsletter.component.css']
 })
-export class CategoryComponent implements OnInit {
-    result = [];
-    result_fw = [];
-    constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
+export class NewsletterComponent implements OnInit {
+  result = [];  
+  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
-      this.getCategory();
-      this.getFourWheelCategory();
+      this.getNewsletter();
   }
-    
-  getCategory(): void {
-  this.httpClient.get<any>('../toowheel/api/v1/get_two_wheel_category')
+  getNewsletter(): void {
+  this.httpClient.get<any>('../toowheel/api/v1/get_newsletter')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -33,42 +30,25 @@ export class CategoryComponent implements OnInit {
         }
         );
   }
-  getFourWheelCategory(): void {
-  this.httpClient.get<any>('../toowheel/api/v1/get_four_wheel_category')
-  .subscribe(
-          (res)=>{
-              this.result_fw = res["result"]["data"];
-        },
-        (error)=>{
-            this._snackBar.open(error["statusText"], '', {
-      duration: 2000,
-    });
-        }
-        );
-  }
-  openDialog(id, res, ctype): void  {
+  openDialog(id): void  {
     var data = null;
       if(id != 0) { 
-      this[res].forEach(val=> {
-           if(parseInt(val.category_id) === parseInt(id)) {
+      this.result.forEach(val=> {
+           if(parseInt(val.newsletter_id) === parseInt(id)) {
                 data = val;
                 return false;
            }
          });
       }
-    const dialogRef = this.dialog.open(CategoryForm, {
+    const dialogRef = this.dialog.open(NewsletterForm, {
         minWidth: "80%",
         maxWidth: "80%",
-        data: {
-            ctype: ctype,
-            data: data
-        }
+        data: data
     });
 
    dialogRef.afterClosed().subscribe(result => {
        if(result !== false && result !== 'false') {
-      this.getCategory();
-      this.getFourWheelCategory();
+      this.getNewsletter();
        }
     });
 }
@@ -77,7 +57,7 @@ export class CategoryComponent implements OnInit {
       if(id != 0) { 
         data = id;
       }
-    const dialogRef = this.dialog.open(CategoryDelete, {
+    const dialogRef = this.dialog.open(NewsletterDelete, {
         minWidth: "40%",
         maxWidth: "40%",
         data: data
@@ -85,8 +65,7 @@ export class CategoryComponent implements OnInit {
 
    dialogRef.afterClosed().subscribe(result => {
        if(result !== false && result !== 'false') {
-      this.getCategory();
-      this.getFourWheelCategory();
+     this.getNewsletter();
        }
     });
 }
@@ -94,45 +73,38 @@ export class CategoryComponent implements OnInit {
 }
 
 @Component({
-  selector: 'category-form',
-  templateUrl: 'category-form.html',
+  selector: 'newsletter-form',
+  templateUrl: 'newsletter-form.html',
 })
-export class CategoryForm {
-    categoryForm: FormGroup;
+export class NewsletterForm {
+    newsletterForm: FormGroup;
     loading = false;
-    category_id = 0;
-    category_type: string;
+    newsletter_id = 0;
     constructor(
-    public dialogRef: MatDialogRef<CategoryForm>,
+    public dialogRef: MatDialogRef<NewsletterForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        this.categoryForm = new FormGroup({
-            'name': new FormControl('', Validators.required)
+        this.newsletterForm = new FormGroup({
+            'email': new FormControl('', Validators.required)
         });
-        if(this.data.data != null) { 
-            this.categoryForm.patchValue({ 
-                name: this.data.data.name
+        if(this.data != null) { 
+            this.newsletterForm.patchValue({ 
+                email: this.data.email
         })
-        this.category_id = this.data.data.category_id;
+        this.newsletter_id = this.data.newsletter_id;
     }
-        this.category_type= this.data.ctype;
 }
 
   onSubmit() {
-      if (this.categoryForm.invalid) {
+      if (this.newsletterForm.invalid) {
             return;
       }
       var formData = new FormData();
       var url = '';
-      if(this.category_id != 0) {
-        formData.append('name', this.categoryForm.value.name);
-        formData.append('type', this.category_type);  
-        url = 'update_record/category/category_id = '+this.category_id;
-      } else {
-        formData.append('name', this.categoryForm.value.name);
-        formData.append('type', this.category_type);          
-        url = 'insert_category';
+      if(this.newsletter_id != 0) {
+        formData.append('email', this.newsletterForm.value.email);
+        url = 'update_record/category/category_id = '+this.newsletter_id;
       }
       this.loading = true;
       this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(
@@ -157,28 +129,28 @@ this._snackBar.open(res["result"]["message"], '', {
 }
 
 @Component({
-  selector: 'category-delete-confirmation',
-  templateUrl: 'category-delete-confirmation.html',
+  selector: 'newsletter-delete-confirmation',
+  templateUrl: 'newsletter-delete-confirmation.html',
 })
-export class CategoryDelete {
+export class NewsletterDelete {
     loading = false;
-    category_id = 0;
+    newsletter_id = 0;
     constructor(
-    public dialogRef: MatDialogRef<CategoryDelete>,
+    public dialogRef: MatDialogRef<NewsletterDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
         if(this.data != null) { 
-            this.category_id = this.data;
+            this.newsletter_id = this.data;
     }
 }
 
   confirmDelete() {
-      if (this.category_id == null || this.category_id == 0) {
+      if (this.newsletter_id == null || this.newsletter_id == 0) {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../toowheel/api/v1/delete_record/category/category_id='+this.category_id).subscribe(
+      this.httpClient.get('../toowheel/api/v1/delete_record/newsletter/newsletter_id='+this.newsletter_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
