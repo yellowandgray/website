@@ -762,6 +762,9 @@
     .club-gallery img {
         height: 80px !Important;
     }
+    .w-text-1 {
+        bottom: 183px !Important;
+    }
 }
 @media (min-width: 935px) and (max-width: 991px) {
     .w-text {
@@ -769,25 +772,23 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
-        bottom: 102px !important;
+        bottom: 53px !important;
+    }
+    .w-text-1 {
+        bottom: 110px !important;
+    }
+    .w-text h2 {
+        font-size: 19px !important;
     }
 }
+
 @media (min-width: 768px) and (max-width: 934px) {
     .w-text {
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
-        bottom: 102px;
-    }
-}
-@media (min-width: 768px) and (max-width: 934px) {
-    .w-text {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        bottom: 102px;
+        bottom: 60px  !important;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
