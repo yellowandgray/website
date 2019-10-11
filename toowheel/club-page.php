@@ -110,9 +110,11 @@ if ($type == 'four_wheel') {
                 <div class="row">
                     <div class="col-lg-3 col-md-12">
                         <div class="row">
-                            <video muted loop controls id="myVideo" class="img-responsive">
-                                <source src="<?php echo BASE_URL . $club['club_video']; ?>" type="video/mp4">
-                            </video>
+                            <?php if ($club['club_video'] && $club['club_video'] != '' && $club['club_video'] != 'undefined') { ?>
+                                <video muted loop controls id="myVideo" class="img-responsive">
+                                    <source src="<?php echo BASE_URL . $club['club_video']; ?>" type="video/mp4">
+                                </video>
+                            <?php } ?>
                             <div class="img-b-10px club-gallery">
                                 <?php foreach ($images as $row) { ?>
                                     <img class="fs-gal" src="<?php echo BASE_URL . $row['media_path']; ?>" alt=""  data-url="<?php echo BASE_URL . $row['media_path']; ?>" class="img-responsive"/>
