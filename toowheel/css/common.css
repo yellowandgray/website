@@ -1940,7 +1940,7 @@ button {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    bottom: 64px;
+    bottom: 88px;
 }
 .w-text-con{
     flex-basis: 30%;
@@ -1978,9 +1978,9 @@ button {
     background: #fff;
 }
 
-.sec-club-logo{
+.sec-club-logo {
     position: relative;
-    top: -87px;
+    top: -3px;
 }
 .w-text-con-1 p {
     color: #676666;
@@ -2533,7 +2533,7 @@ body .calender-box{
 }
 .event-section {
     position: relative;
-    top: -226px;
+    top: -132px;
     flex-wrap: wrap;
 }
 
@@ -2567,7 +2567,7 @@ body .calender-box{
         box-shadow: 0px 0px 6px 0px #bbb7b7;
         margin-bottom: 20px;
         position: relative;
-        bottom: 127px;
+        bottom: 119px;
         z-index: 1;
         background: #fff;
     }
@@ -2635,9 +2635,9 @@ body .calender-box{
         justify-content: space-between;
         align-items: center;
         position: relative;
-        bottom: 17px;
+        bottom: 27px;
     }
-   .w-text h2 {
+    .w-text h2 {
         font-size: 15px;
         font-weight: 600;
         color: #ed1c24;
@@ -2675,7 +2675,7 @@ body .calender-box{
 @media (max-width:767px) and (min-width:320px){
     .event-section {
         position: relative;
-        top: -170px;
+        top: -102px;
         flex-wrap: wrap;
     }
 }
@@ -2706,7 +2706,7 @@ body .calender-box{
 
     .event-section {
         position: relative;
-        top: -74px;
+        top: -52px;
         flex-wrap: wrap;
     }
     .club-logo {
@@ -3775,4 +3775,8 @@ thead td {
     background: #d6249f;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
+}
+
+.news-banner {
+    width: 100%;
 }

@@ -29,7 +29,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
             <!--pop-up-gallery-->
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12 text-center">
+                    <div class="news-banner text-center">
                         <img src="<?php echo BASE_URL . $news['cover_image']; ?>" alt="" class="news-cover-image" />
                     </div>
                 </div>

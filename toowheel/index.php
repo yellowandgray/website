@@ -21,7 +21,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
     <body>
         <?php include 'menu.php'; ?>
         <section class="video-bg-banner">
-            <video autoplay muted loop id="myVideo">
+            <video autoplay muted loop id="myVideo" playsinline>
                 <?php if ($type == 'two_wheel') { ?>
                     <source src="<?php echo BASE_URL . $configs['home_banner_video']; ?>" type="video/mp4">
                 <?php } else { ?>
@@ -246,7 +246,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                         settings: {
                                             slidesToShow: 4,
                                             slidesToScroll: 1,
-                                            dots: false,
+                                            dots: true,
                                             autoplay: true
                                         }
                                     },
@@ -255,7 +255,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                         settings: {
                                             slidesToShow: 3,
                                             slidesToScroll: 1,
-                                            dots: false,
+                                            dots: true,
                                             autoplay: true
                                         }
                                     },
@@ -264,7 +264,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                         settings: {
                                             slidesToShow: 1,
                                             slidesToScroll: 1,
-                                            dots: false,
+                                            dots: true,
                                             autoplay: true
                                         }
                                     },
@@ -274,7 +274,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                             arrows: false,
                                             slidesToShow: 1,
                                             slidesToScroll: 1,
-                                            dots: false,
+                                            dots: true,
                                             autoplay: true
                                         }
                                     }]

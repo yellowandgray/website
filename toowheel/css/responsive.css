@@ -295,7 +295,7 @@
     }
     .bg-1 .container {bottom: 210px !important;}
     .bg-1 .slick-slider {bottom: 195px !important;}
-    .bg-1 {height: 600px !important;}
+    .bg-1 {height: 675px !important;}
 }
 
 /*@media (min-width: 1750px) and (max-width: 1842px) { 
@@ -755,12 +755,15 @@
 
 @media (min-width: 1200px) and (max-width: 1440px) {
     .slick-dots {
-        bottom: 80px !important;
+        bottom: 40px !important;
     }
 }
 @media (min-width: 992px) and (max-width: 2000px) {
     .club-gallery img {
         height: 80px !Important;
+    }
+    .w-text-1 {
+        bottom: 183px !Important;
     }
 }
 @media (min-width: 935px) and (max-width: 991px) {
@@ -769,25 +772,23 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
-        bottom: 102px !important;
+        bottom: 53px !important;
+    }
+    .w-text-1 {
+        bottom: 110px !important;
+    }
+    .w-text h2 {
+        font-size: 19px !important;
     }
 }
+
 @media (min-width: 768px) and (max-width: 934px) {
     .w-text {
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
-        bottom: 102px;
-    }
-}
-@media (min-width: 768px) and (max-width: 934px) {
-    .w-text {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        bottom: 102px;
+        bottom: 60px  !important;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -798,5 +799,31 @@
 @media (min-width: 992px) and (max-width: 1230px) {
     .club-box {
         width: 22% !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .club-logo img {
+        height: 324px !important;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .club-logo img {
+        height: 272px !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .club-logo img {
+        height: 141px !important;
+    }
+}
+@media (min-width: 500px) and (max-width: 767px) {
+    .club-logo img {
+        height: 105px !important;
+    }
+}
+@media (min-width: 320px) and (max-width: 499px) {
+    .club-logo img {
+        height: 80px !important;
     }
 }
