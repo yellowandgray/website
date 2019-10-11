@@ -392,7 +392,7 @@ $app->get('/get_four_wheel_club', function() {
 $app->get('/get_club_by_category/:cid', function($cid) {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('c.*, ca.name AS category', 'club AS c LEFT JOIN category AS ca ON c.category_id = ca.category_id', 'c.club_id > 0 AND c.category_id = ' . $cid);
+    $data = $com->selectAll('c.*, ca.name AS category', 'club AS c LEFT JOIN category AS ca ON c.category_id = ca.category_id', 'c.club_id > 0 AND c.category_id = ' . $cid.' AND c.published = 1');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -404,7 +404,7 @@ $app->get('/get_club_by_category/:cid', function($cid) {
 $app->get('/get_club_by_type/:type', function($type) {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('c.*, ca.name AS category', 'club AS c LEFT JOIN category AS ca ON c.category_id = ca.category_id', 'c.club_id > 0 AND c.type = \'' . $type . '\'');
+    $data = $com->selectAll('c.*, ca.name AS category', 'club AS c LEFT JOIN category AS ca ON c.category_id = ca.category_id', 'c.club_id > 0 AND c.type = \'' . $type . '\' AND c.published = 1');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
