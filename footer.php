@@ -1,11 +1,11 @@
 <footer class="ftco-footer ftco-section">
-    <div class="row">
+<!--    <div class="row">
         <div class="mouse">
             <a href="#" class="mouse-icon">
                 <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
             </a>
         </div>
-    </div>
+    </div>-->
     <div class="row footer-h">
         <div class="footer-1">
             <div class="ftco-footer-widget ftco-footer-widget-img mb-4">
@@ -56,12 +56,9 @@
                     </div>
                     <div class="news">
                         <input type="text" name="fname" placeholder="Name">
-                    </div>
-                    <div class="news footer-3">
                         <input type="email" name="email" placeholder="Email Address">
                     </div>
-
-                    <div class="footer-3">
+                   <div class="footer-3">
                         <div class="button-2">
                             <div class="eff-1"></div>
                             <a href="#">SUBMIT</a>
@@ -71,16 +68,16 @@
                 </form> 
 
             </div>
-            <div class="ftco-footer-widget mb-4">
+            <div class="ftco-footer-widget mb-4 policy">
                 <div class="footer-h">
                     <div class="block-23 mb-3 footer-3">
-                        <i class="fa fa-globe" aria-hidden="true"></i><h2 class="ftco-heading-2 white">Environmental Policy</h2>
+                        <a href="#"><i class="fa fa-globe" aria-hidden="true"></i><h2 class="ftco-heading-2">Environmental Policy</h2></a>
                     </div>
                     <div class="block-23 mb-3 footer-3">
-                        <i class="fa fa-user-secret" aria-hidden="true"></i><h2 class="ftco-heading-2 white">Privacy Policy</h2>
+                        <a href="#"><i class="fa fa-user-secret" aria-hidden="true"></i><h2 class="ftco-heading-2">Privacy Policy</h2></a>
                     </div>
                     <div class="block-23 mb-3 footer-3">
-                        <i class="fa fa-hand-o-right" aria-hidden="true"></i> <h2 class="ftco-heading-2 white">Disclaimer Policy</h2>
+                        <a href="#"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <h2 class="ftco-heading-2 ">Disclaimer Policy</h2></a>
                     </div>
                     <div class="block-23 mb-3 footer-3">
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft">

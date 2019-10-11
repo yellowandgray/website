@@ -28,7 +28,35 @@
     margin-right: 10px;
 }
 .s-icon-2 i {
-    color: #fff;
+    color: #449dc9;
+    padding: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    float: left;
+}
+.s-icon-2 i:nth-child(2) {
+    color: #f10000;
+    padding: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    float: left;
+}
+.s-icon-2 a i {
+    color: #000;
+    padding: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    float: left;
+}
+.s-icon-2 .whatsapp i {
+    color: #3dc546;
+    padding: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    float: left;
+}
+.s-icon-2 .mail i {
+    color: #f31d1d;
     padding: 5px;
     font-size: 16px;
     margin-right: 10px;
@@ -36,7 +64,7 @@
 }
 .s-icon-2 p {
     padding: 0px 10px 0px 0px;
-    color: #fff !important;
+    color: #118dcd !important;
     float: left;
     font-size: 14px;
 }
@@ -75,8 +103,7 @@
 }
 
 .ftco-footer{
-    background: #3a3a3a !important
-        ;
+    background: #ffffff !important;
 }
 .ftco-footer {
     font-size: 14px !important;
@@ -88,16 +115,16 @@
     margin-bottom: 20px;
     font-size: 16px;
     font-weight: 500;
-    color: #98d659;
+    color: #449dc9;
 }
 .ftco-footer .ftco-footer-widget p {
-    color: #eee !important;
+    color: #676767 !important;
 }
 .ftco-footer .ftco-footer-widget li a {
     color: #eee !important;
 }
 .ftco-footer .ftco-footer-widget span {
-    color: #eee !important;
+    color: #757575 !important;
 }
 .enquiry-form input {
     width: 100%;
@@ -119,12 +146,12 @@
     background: #fbfafa;
 }
 .ftco-navbar-light-01 {
-    background: none !important; 
+    background-color:rgba(255, 255, 255, 0.74);
     z-index: 3; 
     padding: 0;
 }
 .navbar-dark .navbar-nav .nav-link {
-    color: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0) !important;
 }
 .navbar-dark .navbar-nav .nav-link:hover{
     /*border-bottom: 2px solid #82ae46;*/
@@ -170,6 +197,7 @@ a{
     font-size: 15px;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600;
 }
 .mar-b-30{
     margin-bottom: 30px;
@@ -202,7 +230,7 @@ body {
     padding: 50px 0px;
 }
 .ftco-section {
-    padding: 80px 0 !important;
+    padding: 80px 0 0 !important;
     position: relative;
 }
 .heading-section h2 {
@@ -258,7 +286,7 @@ video { display: block; width: 100%; height: auto; }
 }
 .quick button {
     padding: 1px;
-    background-color: #98d659;
+    background-color: #449dc9;
     width: 162px;
     font-size: 24px;
     color: #fff;
@@ -335,7 +363,7 @@ video { display: block; width: 100%; height: auto; }
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-    background-color: red;
+    background-color: #449dc9;
 }
 
 /* Add some hover effects to buttons */
@@ -404,19 +432,21 @@ video { display: block; width: 100%; height: auto; }
 }
 
 .button-1 {
-    width: 132px;
-    height: 50px;
+    width: 121px;
+    height: 32px;
     /* border: 2px solid #98d659; */
     border-radius: 4px;
     text-align: center;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     box-sizing: border-box;
     overflow: hidden;
     margin: 0 0 10px 0;
     background: #449dc9;
-    padding: 10px;
+    padding: 3px 3px;
     bottom: -48px;
+    top: 110px;
+    right: 48px;
 }
 .button-2 {
     width: 50%;
@@ -523,12 +553,12 @@ video { display: block; width: 100%; height: auto; }
 }
 
 .pro-d h3 {
-    color: #98d659;
+    color: rgb(0, 0, 0) !important;
     font-weight: 600 ;
     font-size: 30px !important;
 }
 .pro-d p {
-    color: #fff !important;
+    color: #449dc9 !important ;
     margin-bottom: 0px !important;
 }
 .pro-d p span {
@@ -688,16 +718,16 @@ footer .copy p{
     margin: 0 auto  !important;
 }
 .accredition{
-    width: 53%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 10px auto;
     /* background: #616161; */
     box-shadow: 0px 0px 6px 4px #eee;
 }
-.price{
-    /* background: #eee; */
-    box-shadow: 0px 0px 6px 0px #eee;
+.price {
+    background: #f3f3f3;
+    box-shadow: 1px 3px 6px 0px #585858;
     width: 80%;
-    border-radius: 7px;
+    border-radius: 5px;
 }
 .cer-text .button-1 {
     width: 132px;
@@ -716,7 +746,7 @@ footer .copy p{
 }
 .footer-h .block-23 i {
     position: absolute;
-    color: #fff;
+    color:#4c4c4c;
     font-size: 20px;
 }
 .ftco-footer .ftco-footer-widget h2 {
@@ -744,4 +774,121 @@ footer .copy p{
 .white{
     color:#fff !important;
 }
-
+.ftco-footer{
+    overflow: hidden;
+}
+.ftco-navbar-light-02 {
+    background-color:rgb(241, 241, 241) !important;
+    border-bottom: 2px solid #118dcd;
+}
+.subheading-1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 29px;
+    font-weight: 600;
+    color: #828282;
+}
+.button-01 {
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 20px 0 10px 0;
+    background: #62ab18;
+    padding: 11px 30px;
+    border-style: none;
+}
+.button-01 a {
+    color: #fff;
+}
+.button-01 a:focus {
+    text-decoration: none;
+    color: #fff;
+}
+.button-01:hover a{
+    text-decoration: none;
+    color: #118dcd;
+}
+.button-01:hover{
+    background: #fff;
+    border: 1px solid #118dcd;
+}
+.pro-d-1 p {
+    color: #7d7d7d !important;
+    margin-bottom: 0px !important;
+}
+.pro-d-1 h3   {
+    color: #424242 !important;
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+}
+.pro-d-1 p span {
+    color: #35b5f5;
+    font-size: 36px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+.pro-d-1 p span i {
+    padding-right: 4px;
+}
+.pad-t-20{
+    padding-top: 20px;
+}
+.banner-container{
+    padding: 20px 100px;
+}
+.feature-l-img img{
+    width: 50% !important;
+    text-align: center;
+    margin: 0 auto;
+}
+.quick-1 button {
+    padding: 1px;
+    background-color: #ffffff;
+    width: 162px;
+    font-size: 24px;
+    color: #118dcd;
+    height: 56px;
+    position: fixed;
+    right: -66px;
+    text-align: center;
+    transform: rotate(90deg);
+    top: 62%;
+    z-index: 99;
+    transition: 0.5s all linear;
+}
+@media (min-width:992px) and (max-width:1220px) {
+    .subheading-1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px !important;
+        font-weight: 600;
+        color: #828282;
+    }
+    .pro-d-1 h3 {
+        color: #424242 !important;
+        font-family: 'poppins', sans-serif;
+        font-weight: 600;
+        font-size: 40px;
+    }
+}
+@media (min-width:768px) and (max-width:991px) {
+    .subheading-1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px !important;
+        font-weight: 600;
+        color: #828282;
+    }
+    .pro-d-1 h3 {
+        color: #424242 !important;
+        font-family: 'poppins', sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+    }
+    .pro-d-1 p span {
+        color: #35b5f5;
+        font-size: 20px;
+        font-weight: 500;
+        font-family: 'Poppins', sans-serif;
+    }
+}

@@ -6,14 +6,14 @@
 
         <!-- END nav -->
         <?php include 'enquiry.php'; ?>
-        <section id="home-section" class="hero" style="background-image:url(images/bg_green.jpg);background-size:cover">
+        <section id="home-section" class="hero" style="background-image:url(images/bg_green-1.jpg);background-size:cover">
             <!--            <div id="video-viewport">
                             <video width="1920" height="1280" autoplay muted loop>
                                 <source src="video/nature-01.mp4" type="video/mp4">
                                 Your browser does not support the <code>video</code> tag.
                             </video>
                         </div>-->
-            <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar  ftco-navbar-light-01" id="ftco-navbar">
+            <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar   ftco-navbar-light-01 ftco-navbar-light-02" id="ftco-navbar">
                 <div class="row width-100">
                     <div class="col-md-12">
                         <div class="row">
@@ -32,7 +32,7 @@
                                                             <i class="fa fa-youtube" aria-hidden="true"></i>
                                                             <a class="phone"><i class="fa fa-phone-square" aria-hidden="true"></i><p>+91 8409 012345</p></a>
                                                             <a class="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i><p>+91 8409 012345</p></a>
-                                                            <a class="mail"><i class="fa fa-envelope" aria-hidden="true"></i><p>info@email.com</p></a>
+                                                            <a class="mail"><i class="fa fa-envelope" aria-hidden="true"></i><p>info@guardianhealthmanagement.com</p></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -72,73 +72,105 @@
             </nav>
             <div class="home-slider owl-carousel">
                 <div class="slider-item">
-                    <div class="container">
+                    <div class="banner-container">
                         <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
                             <div class="col-md-12 ftco-animate">
                                 <div class="row">
-                                    <div class="col-md-8 product-text col-sm-12">
+                                    <div class="col-md-6 product-text col-sm-12">
                                         <!--<h1 class="mb-2">PRODUCT</h1>-->
-                                        <h2 class="subheading mb-4">FRESCHE delivers high performance antibacterial, antifungal, mould and odour control on treated textile fibres and substrates.</h2>
-                                        <div class="row price">
+                                        <h2 class="subheading-1 mb-4">FRESCHE delivers high performance antibacterial, antifungal, mould and odour control on treated textile fibres and substrates.</h2>
+                                        <div class="row price-1">
 
-                                            <div class="col-md-8 pro-d col-sm-6 ">
+                                            <div class="col-md-12 pro-d-1 col-sm-12 ">
                                                 <h3>Combo Pack</h3>
                                                 <p>Fresche EF 3851– 1 Litre</p>
                                                 <p>Bz 1 Binder – 1.5 Litre </p>
-                                                <p><span>MRP : </span>Rs.8000/-</p>
-                                                <!--                                                <div class="button-1">
-                                                                                                    <div class="eff-1"></div>
-                                                                                                    <a href="#"><img src="images/add.png" alt="" class="add-img"/>  Add To Cart</a>
-                                                                                                </div>-->
-
-                                            </div>
-                                            <div class="col-md-4 col-sm-6 add-cart">
-                                                <img src="images/add-cart.png" alt="" class="img-responsive"/>
+                                                <p class="pad-t-20"><span><i class="fa fa-inr" aria-hidden="true"></i>8000/-</span></p>
+                                                <button class="button-01"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>
                                             </div>
 
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-12 pro-img">
-                                        <img src="images/product-01.png" alt=""/>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-12 pro-img-1">
+                                                <img src="images/product-01.png" alt=""/>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 pro-img">
+                                                <div class="row feature-l feature-l-img">
+                                                    <div class="col-md-6">
+                                                        <div class="box-1">
+                                                            <img src="images/feature/003.png" alt=""/><p>Non Leaching </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="box-1">
+                                                            <img src="images/feature/002.png" alt=""/><p>Safest </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="box-1">
+                                                            <img src="images/feature/006.png" alt="" /><p>Lock and Bond</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="box-1">
+                                                            <img src="images/feature/001.png" alt=""/><p>Cleanest</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="box-1">
+                                                            <img src="images/feature/004.png" alt="" /><p>Non Depleting </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="box-1">
+                                                            <img src="images/feature/005.png" alt=""/><p>Greenest</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-                                        <div class="row feature-l"> 
-                                            <div class="col-md-2">
-                                                <div class="box-1">
-                                                    <img src="images/feature/003.png" alt=""/><p>Non Leaching </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="box-1">
-                                                    <img src="images/feature/002.png" alt=""/><p>Safest </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="box-1">
-                                                    <img src="images/feature/006.png" alt="" /><p>Lock and Bond</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="box-1">
-                                                    <img src="images/feature/001.png" alt=""/><p>Cleanest</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="box-1">
-                                                    <img src="images/feature/004.png" alt="" /><p>Non Depleting </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="box-1">
-                                                    <img src="images/feature/005.png" alt=""/><p>Greenest</p>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!--                                <div class="row">
+                                                                    <div class="col-md-12">
+                                
+                                                                        <div class="row feature-l"> 
+                                                                            <div class="col-md-2">
+                                                                                <div class="box-1">
+                                                                                    <img src="images/feature/003.png" alt=""/><p>Non Leaching </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-2">
+                                                                                <div class="box-1">
+                                                                                    <img src="images/feature/002.png" alt=""/><p>Safest </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-2">
+                                                                                <div class="box-1">
+                                                                                    <img src="images/feature/006.png" alt="" /><p>Lock and Bond</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-2">
+                                                                                <div class="box-1">
+                                                                                    <img src="images/feature/001.png" alt=""/><p>Cleanest</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-2">
+                                                                                <div class="box-1">
+                                                                                    <img src="images/feature/004.png" alt="" /><p>Non Depleting </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-2">
+                                                                                <div class="box-1">
+                                                                                    <img src="images/feature/005.png" alt=""/><p>Greenest</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -218,14 +250,14 @@
                 </div>
             </div>
         </section>
-<!--        <section class="img" style="background:#88d4f9;">
+        <!--        <section class="img" style="background:#88d4f9;">
             <div class="pad-80">
                 <div class="row acc">
                     <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
                          <span class="subheading">Best Price For You</span>
                         <h2 class="mb-4 text-center">Accreditation</h2>
                         <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-
+        
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="text-center box-2" style="background-image: url(images/acc/bg-001.jpg);background-size: cover;">
@@ -258,7 +290,7 @@
                                                     <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>European BPR</li>
                                                     <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>Primary Industry in New Zealand</li>
                                                 </ul>
-
+        
                     </div>
                 </div> 
             </div>                

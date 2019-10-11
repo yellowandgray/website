@@ -11,11 +11,13 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Vidaloka&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="icon" href="images/fav-i.png">
 
     <link rel="stylesheet" href="css/aos.css">
 
@@ -28,4 +30,5 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
 </head>

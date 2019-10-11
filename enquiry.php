@@ -1,4 +1,4 @@
-<div class="quick">
+<div class="quick-1">
     <button class="open-button" onclick="openForm()">Enquiry</button>
 </div>
 <div class="form-popup" id="contact-form">
