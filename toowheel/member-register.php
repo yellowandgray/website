@@ -499,7 +499,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                                     return actions.order.create({
                                                                         purchase_units: [{
                                                                                 amount: {
-                                                                                    value: "80.00"
+                                                                                    value: "1.00"
                                                                                 }
                                                                             }]
                                                                     });
@@ -509,6 +509,8 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                                         paypal_response = JSON.stringify(details);
                                                                         paypal_trans_id = data.orderID;
                                                                         payment_type = 'paypal';
+                                                                        inserted = true;
+                                                                        registerMember();
                                                                     });
                                                                 }
                                                             }).render("#paywith_paypal");

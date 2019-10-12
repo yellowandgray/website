@@ -4,7 +4,7 @@
     <img mat-card-image *ngIf="action == 'payment' && data.payment_type == 'receipt'" src="{{image_url}}{{data['fund_transfer_file']}}" alt="Photo" />
     <img mat-card-image *ngIf="action == 'preview'" src="{{image_url}}{{data['profile_picture']}}" alt="Photo" />
          <div *ngIf="action == 'payment' && data.payment_type == ''">No payment made</div>
-         <div *ngIf="action == 'payment' && data.payment_type == 'paypal'">PayPal Transaction ID: {{data.paypal_transaction_id}}</div>
+         <div *ngIf="action == 'payment' && data.payment_type == 'paypal'">PayPal Order ID: {{data.paypal_transaction_id}}</div>
     <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
         <button mat-button cdkFocusInitial [mat-dialog-close]="false">Cancel</button>
         <button mat-button (click)="confirmDelete()" *ngIf="action == 'delete'" [disabled]="loading">Yes, delete it!</button>
