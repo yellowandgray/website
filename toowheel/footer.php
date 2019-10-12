@@ -1,94 +1,94 @@
 <footer class="footer">
-<div class="container">
-    <div class="footer-sec">
-        <div class="footer-section fooetr-1">
-            <img src="img/footer-logo.png" alt=""/>
-        </div>
-        <div class="footer-section fooetr-2">
-            <ul class="footer__nav">
-                <li class="nav__item">
-                    <a href="index.php?type=two_wheel" class="footer-text">2 Wheel</a>
-                    <br/>
-                    <a href="index.php?type=four_wheel" class="footer-text">4 Wheel</a>
-                    <br/>
-                    <a href="news-updates.php?type=<?php echo $type; ?>" class="footer-text">NEWS & MEDIA</a>
-                    <br/>
-                    <a href="events.php?type=<?php echo $type; ?>" class="footer-text">UPCOMING EVENTS</a>
-                    <br/>
-                    <a href="press-release.php?type=<?php echo $type; ?>" class="footer-text">PRESS RELEASE</a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-section fooetr-3">
-            <ul class="footer__nav">
-                <li class="nav__item">
-                    <h2 class="nav__title">MEMBERS</h2>
-                    <ul class="nav__ul">
-                        <li>
-                            <a href="login.php?type=<?php echo $type; ?>">Login</a>
-                        </li>
-                        <li>
-                            <a href="member-register.php?type=<?php echo $type; ?>">Be A Member</a>
-                        </li>
-                        <li>
-                            <a href="member-benefits.php?type=<?php echo $type; ?>">Member Benefits</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="footer__nav">
-                <li class="nav__item">
-                    <h2 class="nav__title">CLUB</h2>
-                    <ul class="nav__ul">
-                        <li>
-                            <a href="find-a-club.php?type=<?php echo $type; ?>">Find A Club</a>
-                        </li>
-                        <li>
-                            <a href="club-register.php?type=<?php echo $type; ?>">Register My Club</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-section fooetr-4">
-            <ul class="footer__nav">
-                <li class="nav__item">
-                    <h2 class="nav__title">TOOWHEEL</h2>
-                    <ul class="nav__ul">
-                        <li>
-                            <a href="about.php?type=<?php echo $type; ?>">About us</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact us</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-section fooetr-5">
-            <ul class="footer__nav">
-                <li class="nav__item">
-                    <h2 class="nav__title color-w">ALWAYS GET IN TOUCH</h2>
-                    <span>Receive updates on our Upcoming Events</span>
-                    <ul class="nav__ul" style="margin-top: 10px;">
-                        <li>
-                            <form onsubmit="return subscribeNewsLetter();">
-                                <input type="email" id="newsletter_email" name="newsletter_email" placeholder="Email Address" required="" />
-                                <button type="submit">submit</button>
-                            </form>
-                        </li>
-                        <li class="i-con text-center">
-                            <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                            <a href="https://www.instagram.com/p/B2iG45lnGi-/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            <a href="https://twitter.com/@ToowheelM" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="https://www.youtube.com/channel/UCueyRbB52hjc0XUIqbkYxcg" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+    <div class="container">
+        <div class="footer-sec">
+            <div class="footer-section fooetr-1">
+                <img src="img/footer-logo.png" alt=""/>
+            </div>
+            <div class="footer-section fooetr-2">
+                <ul class="footer__nav">
+                    <li class="nav__item">
+                        <a href="index.php?type=two_wheel" class="footer-text">2 Wheel</a>
+                        <br/>
+                        <a href="index.php?type=four_wheel" class="footer-text">4 Wheel</a>
+                        <br/>
+                        <a href="news-updates.php?type=<?php echo $type; ?>" class="footer-text">NEWS & MEDIA</a>
+                        <br/>
+                        <a href="events.php?type=<?php echo $type; ?>" class="footer-text">UPCOMING EVENTS</a>
+                        <br/>
+                        <a href="press-release.php?type=<?php echo $type; ?>" class="footer-text">PRESS RELEASE</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section fooetr-3">
+                <ul class="footer__nav">
+                    <li class="nav__item">
+                        <h2 class="nav__title">MEMBERS</h2>
+                        <ul class="nav__ul">
+                            <li>
+                                <a href="login.php?type=<?php echo $type; ?>">Login</a>
+                            </li>
+                            <li>
+                                <a href="member-register.php?type=<?php echo $type; ?>">Be A Member</a>
+                            </li>
+                            <li>
+                                <a href="member-benefits.php?type=<?php echo $type; ?>">Member Benefits</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="footer__nav">
+                    <li class="nav__item">
+                        <h2 class="nav__title">CLUB</h2>
+                        <ul class="nav__ul">
+                            <li>
+                                <a href="find-a-club.php?type=<?php echo $type; ?>">Find A Club</a>
+                            </li>
+                            <li>
+                                <a href="club-register.php?type=<?php echo $type; ?>">Register My Club</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section fooetr-4">
+                <ul class="footer__nav">
+                    <li class="nav__item">
+                        <h2 class="nav__title">TOOWHEEL</h2>
+                        <ul class="nav__ul">
+                            <li>
+                                <a href="about.php?type=<?php echo $type; ?>">About us</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact us</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section fooetr-5">
+                <ul class="footer__nav">
+                    <li class="nav__item">
+                        <h2 class="nav__title color-w">ALWAYS GET IN TOUCH</h2>
+                        <span>Receive updates on our Upcoming Events</span>
+                        <ul class="nav__ul" style="margin-top: 10px;">
+                            <li>
+                                <form onsubmit="return subscribeNewsLetter();">
+                                    <input type="email" id="newsletter_email" name="newsletter_email" placeholder="Email Address" required="" />
+                                    <button type="submit">submit</button>
+                                </form>
+                            </li>
+                            <li class="i-con text-center">
+                                <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com/p/B2iG45lnGi-/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="https://twitter.com/@ToowheelM" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="https://www.youtube.com/channel/UCueyRbB52hjc0XUIqbkYxcg" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 </footer>
 <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
@@ -116,6 +116,11 @@
                                         if ($(this).hasClass('open')) {
                                             openNav();
                                         } else {
+                                            closeNav();
+                                        }
+                                    });
+                                    $('body').click(function () {
+                                        if (!$('#nav-icon3').hasClass('open')) {
                                             closeNav();
                                         }
                                     });
@@ -196,13 +201,13 @@
                                     lookup: autocomplete_suggestion,
                                     minChars: 1,
                                     onSelect: function (suggestion) {
-                                        if (suggestion.data.category == 'news') {
+                                        if (suggestion.data.category == 'News') {
                                             window.location = 'news.php?nid=' + suggestion.data.id;
                                         }
-                                        if (suggestion.data.category == 'club') {
+                                        if (suggestion.data.category == 'Club') {
                                             window.location = 'club-page.php?cid=' + suggestion.data.id;
                                         }
-                                        if (suggestion.data.category == 'press_release') {
+                                        if (suggestion.data.category == 'Press Release') {
                                             window.location = 'press.php?pid=' + suggestion.data.id;
                                         }
                                     },
