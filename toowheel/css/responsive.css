@@ -178,6 +178,12 @@
     .member-box {
         height: auto !important;
     }
+    .press-release-content h4 {
+        font-size: 20px !important;
+    }
+    .press-release-content h4 {
+        margin: 10px 0 !important;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
@@ -560,9 +566,6 @@
         height: auto !important;
         position: fixed;
         overflow: scroll !important;
-    }
-    .press-release-content h4 {
-        font-size: 15px !important;
     }
     .press-release-content a {
         font-size: 9px !important;
