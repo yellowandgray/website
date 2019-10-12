@@ -499,7 +499,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                                     return actions.order.create({
                                                                         purchase_units: [{
                                                                                 amount: {
-                                                                                    value: "99.00"
+                                                                                    value: "80.00"
                                                                                 }
                                                                             }]
                                                                     });
