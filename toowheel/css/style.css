@@ -1883,7 +1883,7 @@ div#html5-watermark {
 }
 
 .autocomplete-selected { 
-    background: #F0F0F0; 
+    background: #000; 
 }
 
 .autocomplete-suggestions strong {
