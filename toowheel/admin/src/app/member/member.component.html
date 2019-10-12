@@ -49,7 +49,7 @@
                         <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
                             <mat-icon>money</mat-icon>
                         </button>
-                        <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." />
+                        <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
                              <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.profile_picture || data.profile_picture == ''" alt="..." />
                         <h3 matLine>{{data.first_name}}</h3>
                         <p matLine>{{data.ic_passport}} - {{data.contact_number}}</p>
