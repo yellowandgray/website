@@ -182,13 +182,13 @@
                                     });
                                 });
                                 $.each(autocomplete_club, function (key, val) {
-                                    autocomplete_suggestion.push({value: val.name, data: {category: 'club', id: val.club_id}});
+                                    autocomplete_suggestion.push({value: val.name, data: {category: 'Club', id: val.club_id}});
                                 });
                                 $.each(autocomplete_news, function (key, val) {
-                                    autocomplete_suggestion.push({value: val.title, data: {category: 'news', id: val.news_id}});
+                                    autocomplete_suggestion.push({value: val.title, data: {category: 'News', id: val.news_id}});
                                 });
                                 $.each(autocomplete_press_release, function (key, val) {
-                                    autocomplete_suggestion.push({value: val.title, data: {category: 'press_release', id: val.press_release_id}});
+                                    autocomplete_suggestion.push({value: val.title, data: {category: 'Press Release', id: val.press_release_id}});
                                 });
                                 $('.head-search').devbridgeAutocomplete({
                                     lookup: autocomplete_suggestion,
