@@ -190,7 +190,6 @@
                                 $.each(autocomplete_press_release, function (key, val) {
                                     autocomplete_suggestion.push({value: val.title, data: {category: 'press_release', id: val.press_release_id}});
                                 });
-                                console.log(autocomplete_suggestion);
                                 $('.head-search').devbridgeAutocomplete({
                                     lookup: autocomplete_suggestion,
                                     minChars: 1,

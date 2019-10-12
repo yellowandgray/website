@@ -5,7 +5,7 @@ if (!isset($_GET['type'])) {
 $type = $_GET['type'];
 require_once 'api/include/common.php';
 $obj = new Common();
-$findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\'');
+$findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\' AND published = 1');
 $categories = $obj->selectAll('*', 'category', 'category_id > 0 AND type = \'' . $type . '\'');
 $states = $obj->selectAll('*', 'state', 'state_id > 0');
 ?>

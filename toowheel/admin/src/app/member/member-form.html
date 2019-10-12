@@ -1,172 +1,143 @@
 <h2 mat-dialog-title>Member</h2>
 <mat-dialog-content class="mat-typography">
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Category</mat-label>
-                <input matInput placeholder=""/>
-                <mat-error>Category is required</mat-error>
-            </mat-form-field>
+    <form [formGroup]="memberForm">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Category</mat-label>
+                    <mat-select formControlName="type">
+                        <mat-option [value]="'two_wheel'">
+                            Two Wheel
+                        </mat-option>
+                        <mat-option [value]="'four_wheel'">
+                            Four Wheel
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Full Name</mat-label>
+                    <input matInput placeholder="" formControlName="first_name" />
+                </mat-form-field>
+            </div>
         </div>
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Club</mat-label>
-                <input matInput placeholder=""/>
-                <mat-error>Club is required</mat-error>
-            </mat-form-field>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Gender</mat-label>
+                    <input matInput placeholder="" formControlName="gender" />
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Age</mat-label>
+                    <input matInput placeholder="" formControlName="age" />
+                </mat-form-field>
+            </div>
         </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Full Name</mat-label>
-                <input matInput placeholder="" />
-                <mat-error>Name is required</mat-error>
-            </mat-form-field>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="33%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>IC Number / Passport Number</mat-label>
+                    <input matInput placeholder="" formControlName="ic_passport" />
+                </mat-form-field>
+            </div>
+            <div fxFlex="33%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput placeholder="DD/MM/YYYY" formControlName="dob" />
+                </mat-form-field>
+            </div>
+            <div fxFlex="33%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Club</mat-label>
+                    <input matInput placeholder="" formControlName="club" />
+                </mat-form-field>
+            </div>
         </div>
-        <div fxFlex="50%">
-            <button type="button" mat-raised-button (click)="fileInput.click()">Profile picture</button>
-            <input hidden #fileInput type="file" id="file" />
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Contact Number</mat-label>
+                    <input matInput placeholder="" formControlName="contact_number" />
+                </mat-form-field>
+            </div>            
+            <div fxFlex="50%">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Driver License Category</mat-label>
+                    <input matInput placeholder="" formControlName="license_category" />
+                </mat-form-field>
+            </div>
         </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Gendar</mat-label>
-                <input matInput placeholder=""/>
-                <mat-error>Gendar is required</mat-error>
-            </mat-form-field>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="100%">
+                <mat-form-field class="full-width">
+                    <mat-label>Address</mat-label>
+                    <textarea rows="6" matInput placeholder="" formControlName="address"></textarea>
+                </mat-form-field>
+            </div>
         </div>
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Age</mat-label>
-                <input matInput placeholder=""/>
-                <mat-error>Age is required</mat-error>
-            </mat-form-field>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Country</mat-label>
+                    <input matInput placeholder="" formControlName="country" />
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>State</mat-label>
+                    <input matInput placeholder="" formControlName="state" />
+                </mat-form-field>
+            </div>
         </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Date of Birth</mat-label>
-                <input matInput placeholder="DD/MM/YYYY" />
-                <mat-error>Date of Birth is required</mat-error>
-            </mat-form-field>
+        <h4>Referral:</h4>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Member ID</mat-label>
+                    <input matInput placeholder="" formControlName="referral_member_id" />
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Club</mat-label>
+                    <input matInput placeholder="" formControlName="referral_club_id" />
+                </mat-form-field>
+            </div>
         </div>
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Contact Number</mat-label>
-                <input matInput placeholder="" />
-                <mat-error>Contact Number is required</mat-error>
-            </mat-form-field>
+        <h4>Coverage:</h4>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Full Name (Next of Kin)</mat-label>
+                    <input matInput placeholder="" formControlName="coverage_full_name" />
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Contact Number</mat-label>
+                    <input matInput placeholder="" formControlName="coverage_contact_number" />
+                </mat-form-field>
+            </div>
         </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>IC Number / Passport Number</mat-label>
-                <input matInput placeholder=""/>
-                <mat-error>IC Number / Passport Number is required</mat-error>
-            </mat-form-field>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="100%">
+                <mat-form-field class="full-width">
+                    <mat-label>Address</mat-label>
+                    <textarea rows="4" matInput placeholder="" formControlName="coverage_address"></textarea>
+                </mat-form-field>
+            </div>
         </div>
-        <div fxFlex="50%">
-            <mat-form-field class="full-width" appearance="outline">
-                <mat-label>Driver License Category</mat-label>
-                <input matInput placeholder="" />
-                <mat-error>Driver License Category is required</mat-error>
-            </mat-form-field>
+        <h4>Login Information:</h4>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Email Address</mat-label>
+                    <input matInput placeholder="" formControlName="email" />
+                </mat-form-field>
+            </div>
         </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-        <div fxFlex="100%">
-            <mat-form-field class="full-width">
-                <mat-label>Address</mat-label>
-                <textarea rows="6" matInput placeholder="" ></textarea>
-                <mat-error>Address is required</mat-error>
-            </mat-form-field>
-        </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Country</mat-label>
-                <input matInput placeholder=""  />
-                <mat-error>Country is required</mat-error>
-            </mat-form-field>
-        </div>
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>State</mat-label>
-                <input matInput placeholder="" />
-                <mat-error>State is required</mat-error>
-            </mat-form-field>
-        </div>
-    </div>
-    <h4>Referral:</h4>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Member ID</mat-label>
-                <input matInput placeholder=""  />
-                <mat-error>Member ID is required</mat-error>
-            </mat-form-field>
-        </div>
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Club ID</mat-label>
-                <input matInput placeholder="" />
-                <mat-error>Club ID is required</mat-error>
-            </mat-form-field>
-        </div>
-    </div>
-    <h4>Coverage:</h4>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Full Name (Next of Kin)</mat-label>
-                <input matInput placeholder="" />
-                <mat-error>Full Name is required</mat-error>
-            </mat-form-field>
-        </div>
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Contact Number</mat-label>
-                <input matInput placeholder="" />
-                <mat-error>Contact Number is required</mat-error>
-            </mat-form-field>
-        </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-        <div fxFlex="100%">
-            <mat-form-field class="full-width">
-                <mat-label>Address</mat-label>
-                <textarea rows="4" matInput placeholder="" ></textarea>
-                <mat-error>Address is required</mat-error>
-            </mat-form-field>
-        </div>
-    </div>
-    <h4>Login Information:</h4>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-        <div fxFlex="33%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Email Address</mat-label>
-                <input matInput placeholder="" />
-                <mat-error>Email is required</mat-error>
-            </mat-form-field>
-        </div>
-        <div fxFlex="33%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Password</mat-label>
-                <input matInput placeholder="" />
-                <mat-error>Password is required</mat-error>
-            </mat-form-field>
-        </div>
-        <div fxFlex="33%">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Confirm Password</mat-label>
-                <input matInput placeholder="" />
-                <mat-error>Confirm Password is required</mat-error>
-            </mat-form-field>
-        </div>
-    </div>
+    </form>
 </mat-dialog-content>

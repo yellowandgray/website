@@ -136,8 +136,8 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
                 $('#country_error').html('Enter country').addClass('error-msg');
                 change = false;
             }
-            if ($.trim($('#state').val()) === '') {
-                $('#state_error').html('Enter state').addClass('error-msg');
+            if ($.trim($('#state_id').val()) === '') {
+                $('#state_id_error').html('Select state').addClass('error-msg');
                 change = false;
             }
             if ($.trim($('#email').val()) === '') {
@@ -180,12 +180,19 @@ function registerMember() {
     $.ajax({
         type: "POST",
         url: 'api/v1/insert_member',
-        data: {type: $('#type').val(), first_name: $('#first_name').val(), profile_picture: avatar, gender: $('#gender').val(), age: $('#age').val(), ic_passport: $('#ic_passport').val(), dob_date: $('#dob_date').val(), dob_month: $('#dob_month').val(), dob_year: $('#dob_year').val(), contact_number: $('#contact_number').val(), license_category: $('#license_category').val(), address: $('#address').val(), country: $('#country').val(), state: $('#state').val(), referral_member_id: $('#referral_member_id').val(), referral_club_id: $('#referral_club_id').val(), coverage_full_name: $('#coverage_full_name').val(), coverage_contact_number: $('#coverage_contact_number').val(), coverage_address: $('#coverage_address').val(), email: $('#email').val(), password: $('#password').val(), club_id: club_id, payment_type: payment_type, paypal_response: paypal_response, paypal_transaction_id: paypal_trans_id, fund_transfer_file: payment_receipt},
+        data: {type: $('#type').val(), first_name: $('#first_name').val(), profile_picture: avatar, gender: $('#gender').val(), age: $('#age').val(), ic_passport: $('#ic_passport').val(), dob_date: $('#dob_date').val(), dob_month: $('#dob_month').val(), dob_year: $('#dob_year').val(), contact_number: $('#contact_number').val(), license_category: $('#license_category').val(), address: $('#address').val(), country: $('#country').val(), state_id: $('#state_id').val(), referral_member_id: $('#referral_member_id').val(), referral_club_id: $('#referral_club_id').val(), coverage_full_name: $('#coverage_full_name').val(), coverage_contact_number: $('#coverage_contact_number').val(), coverage_address: $('#coverage_address').val(), email: $('#email').val(), password: $('#password').val(), club_id: club_id, payment_type: payment_type, paypal_response: paypal_response, paypal_transaction_id: paypal_trans_id, fund_transfer_file: payment_receipt},
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
+                $('#success_member_section').empty();
+                var msg = '';
+                if (payment_type == 'paypal') {
+                    msg = '<p class="text-center" style="margin-bottom: 0">You are now Official Member of TooWheel.</p><strong>Membership ID: ' + data.result.data + '</strong>';
+                } else {
+                    msg = '<strong>We will get back you soon</strong>';
+                }
+                $('#success_member_section').append(msg);
                 $('#smartwizard').smartWizard("next");
-                $('#membership_id').html(data.result.data);
             } else {
                 bootbox.alert(data.result.message);
             }
@@ -202,7 +209,7 @@ function registerClub() {
     $.ajax({
         type: "POST",
         url: 'api/v1/insert_club',
-        data: {type: $('#type').val(), category_id: $('#category_id').val(), name: $('#name').val(), cover_image: cover_image, logo: logo, state: $('#state').val(), city: $('#city').val(), zip: $('#zip').val(), landmark: $('#landmark').val(), address: $('#address').val(), club_leader_name: $('#club_leader_name').val(), no_of_member: $('#no_of_member').val(), email: $('#email').val(), mobile: $('#mobile').val(), about: $('#about').val(), facebook_link: $('#facebook_link').val(), youtube_link: $('#youtube_link').val(), twitter_link: $('#twitter_link').val(), instagram_link: $('#instagram_link').val(), rank: 0, published: 0, club_video: club_video},
+        data: {type: $('#type').val(), category_id: $('#category_id').val(), name: $('#name').val(), cover_image: cover_image, logo: logo, state: $('#state').val(), city: $('#city').val(), zip: $('#zip').val(), landmark: $('#landmark').val(), address: $('#address').val(), club_leader_name: $('#club_leader_name').val(), no_of_member: $('#no_of_member').val(), email: $('#email').val(), mobile: $('#mobile').val(), about: $('#about').val(), facebook_link: $('#facebook_link').val(), youtube_link: $('#youtube_link').val(), twitter_link: $('#twitter_link').val(), instagram_link: $('#instagram_link').val(), rank: 0, published: 0, source: 'web', club_video: club_video},
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
@@ -220,11 +227,11 @@ function registerClub() {
                 $('#no_of_member').val('');
                 $('#email').val('');
                 $('#mobile').val('');
-                $('#about').val();
-                $('#facebook_link').val();
-                $('#youtube_link').val();
-                $('#twitter_link').val();
-                $('#instagram_link').val();
+                $('#about').val('');
+                $('#facebook_link').val('');
+                $('#youtube_link').val('');
+                $('#twitter_link').val('');
+                $('#instagram_link').val('');
                 club_video = '';
                 swal("Thank you!", " Our Team will get in touch with you soon.", "success");
             } else {
@@ -232,6 +239,7 @@ function registerClub() {
             }
         },
         error: function (err) {
+            $('.loader').removeClass('is-active');
             swal("Oops!", err.statusText, "error");
         }
     });

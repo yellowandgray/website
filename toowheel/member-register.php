@@ -318,14 +318,19 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     <div class="form-group">
                                         <label for="country">Country</label> 
                                         <span class="red-i">*</span>
-                                        <input placeholder="" name="country" id="country" type="text" class="form-control" required-i onchange="removeValidation('country');" />
+                                        <input placeholder="" name="country" id="country" type="text" class="form-control" required-i onchange="removeValidation('country');" value="Malaysia" readonly />
                                         <div id="country_error"></div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="state">State</label> 
+                                        <label for="state_id">State</label> 
                                         <span class="red-i">*</span>
-                                        <input type="text" class="form-control" name="state" id="state" placeholder="" required-i onchange="removeValidation('state');" />
-                                        <div id="state_error"></div>
+                                        <select class="form-control" id="state_id" name="state_id" required-i onchange="removeValidation('state_id');">
+                                            <option value="">State</option>
+                                            <?php foreach ($states as $row) { ?>
+                                                <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
+                                            <?php } ?>
+                                        </select>
+                                        <div id="state_id_error"></div>
                                     </div>
                                     <br/>
                                     <h4>Referral</h4>
@@ -452,9 +457,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <h2>Registration Successful</h2>
                                 <div class="text-center">
                                     <h5>Congratulations!</h5>
-                                    <p class="text-center" style="margin-bottom: 0">You are now Official Member of TooWheel.</p>
-<!--                                    <strong>"Thank you! Our Team will get in touch with you soon."</strong>-->
-                                    <strong>Membership ID: <span id="membership_id"></span></strong>
+                                    <div id="success_member_section"></div>
                                     <br/>
                                 </div>
                                 <br/>

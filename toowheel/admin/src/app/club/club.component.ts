@@ -100,6 +100,23 @@ export class ClubComponent implements OnInit {
             console.log('Closed');
         });
     }
+    
+    changeStatus(id, status): void {
+      var formData = new FormData();
+      formData.append('published', status);
+      this.httpClient.post<any>('../toowheel/api/v1/update_record/club/club_id = '+id, formData)
+  .subscribe(
+          (res)=>{
+              this.getClub();
+          this.getFourWheelClub();
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
+  }
 }
 @Component({
   selector: 'club-form',
@@ -282,7 +299,6 @@ export class ClubForm {
           formData.append('twitter_link', this.clubForm.value.twitter_link);
           formData.append('instagram_link', this.clubForm.value.instagram_link);
           formData.append('rank', this.clubForm.value.rank);
-          formData.append('published', 1);
         url = 'update_record/club/club_id = '+this.club_id;
       } else {
         formData.append('name', this.clubForm.value.name);
@@ -305,7 +321,8 @@ export class ClubForm {
           formData.append('twitter_link', this.clubForm.value.twitter_link);
           formData.append('instagram_link', this.clubForm.value.instagram_link);
           formData.append('rank', this.clubForm.value.rank);
-          formData.append('published', 1);
+          formData.append('published', '1');
+          formData.append('source', 'admin');
           formData.append('club_video', this.club_video);
         url = 'insert_club';
       }

@@ -12,7 +12,7 @@
                 <ng-container *ngFor="let data of result; let i = index">
                     <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
                         <ng-container *ngIf="result[i]">
-                            <mat-card fxFlex="25%">
+                            <mat-card fxFlex="25%" [class.web-club]="result[i]['source'] == 'web'">
                                 <mat-card-header>
                                     <mat-card-title>{{result[i]['name']}}</mat-card-title>
                                     <mat-card-subtitle>{{result[i]['category']|uppercase}}</mat-card-subtitle>
@@ -24,6 +24,12 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result[i]['club_id'], 1)" *ngIf="result[i]['published'] == 0 && result[i]['source'] == 'web'">
+                                            <mat-icon>done</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result[i]['club_id'], 0)" *ngIf="result[i]['published'] == 1 && result[i]['source'] == 'web'">
+                                            <mat-icon>block</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result[i]['club_id'])">
                                         <mat-icon>collections</mat-icon>
                                     </button>
@@ -40,7 +46,7 @@
                             </mat-card>
                         </ng-container>
                         <ng-container *ngIf="result[i + 1]">
-                            <mat-card fxFlex="25%">
+                            <mat-card fxFlex="25%" [class.web-club]="result[i + 1]['source'] == 'web'">
                                 <mat-card-header>
                                     <mat-card-title>{{result[i + 1]['name']}}</mat-card-title>
                                     <mat-card-subtitle>{{result[i + 1]['category']|uppercase}}</mat-card-subtitle>
@@ -52,6 +58,12 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result[i + 1]['club_id'], 1)" *ngIf="result[i + 1]['published'] == 0 && result[i + 1]['source'] == 'web'">
+                                            <mat-icon>done</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result[i + 1]['club_id'], 0)" *ngIf="result[i + 1]['published'] == 1 && result[i + 1]['source'] == 'web'">
+                                            <mat-icon>block</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result[i + 1]['club_id'])">
                                         <mat-icon>collections</mat-icon>
                                     </button>
@@ -68,7 +80,7 @@
                             </mat-card>
                         </ng-container>
                         <ng-container *ngIf="result[i + 2]">
-                            <mat-card fxFlex="25%">
+                            <mat-card fxFlex="25%" [class.web-club]="result[i + 2]['source'] == 'web'">
                                 <mat-card-header>
                                     <mat-card-title>{{result[i + 2]['name']}}</mat-card-title>
                                     <mat-card-subtitle>{{result[i + 2]['category']|uppercase}}</mat-card-subtitle>
@@ -80,6 +92,12 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result[i + 2]['club_id'], 1)" *ngIf="result[i + 2]['published'] == 0 && result[i + 2]['source'] == 'web'">
+                                            <mat-icon>done</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result[i + 2]['club_id'], 0)" *ngIf="result[i + 2]['published'] == 1 && result[i + 2]['source'] == 'web'">
+                                            <mat-icon>block</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result[i + 2]['club_id'])">
                                         <mat-icon>collections</mat-icon>
                                     </button>
@@ -96,7 +114,7 @@
                             </mat-card> 
                         </ng-container>
                         <ng-container *ngIf="result[i + 3]">
-                            <mat-card fxFlex="25%">
+                            <mat-card fxFlex="25%" [class.web-club]="result[i + 3]['source'] == 'web'">
                                 <mat-card-header>
                                     <mat-card-title>{{result[i + 3]['name']}}</mat-card-title>
                                     <mat-card-subtitle>{{result[i + 3]['category']|uppercase}}</mat-card-subtitle>
@@ -108,6 +126,12 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result[i + 3]['club_id'], 1)" *ngIf="result[i + 3]['published'] == 0 && result[i + 3]['source'] == 'web'">
+                                            <mat-icon>done</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result[i + 3]['club_id'], 0)" *ngIf="result[i + 3]['published'] == 1 && result[i + 3]['source'] == 'web'">
+                                            <mat-icon>block</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result[i + 3]['club_id'])">
                                         <mat-icon>collections</mat-icon>
                                     </button>
@@ -130,7 +154,7 @@
                 <ng-container *ngFor="let data of result_four_wheel; let i = index">
                     <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
                         <ng-container *ngIf="result_four_wheel[i]">
-                            <mat-card fxFlex="25%">
+                            <mat-card fxFlex="25%" [class.web-club]="result_four_wheel[i]['source'] == 'web'">
                                 <mat-card-header>
                                     <mat-card-title>{{result_four_wheel[i]['name']}}</mat-card-title>
                                     <mat-card-subtitle>{{result_four_wheel[i]['category']|uppercase}}</mat-card-subtitle>
@@ -142,6 +166,12 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i]['club_id'], 1)" *ngIf="result_four_wheel[i]['published'] == 0 && result_four_wheel[i]['source'] == 'web'">
+                                            <mat-icon>done</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i]['club_id'], 0)" *ngIf="result_four_wheel[i]['published'] == 1 && result_four_wheel[i]['source'] == 'web'">
+                                            <mat-icon>block</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result_four_wheel[i]['club_id'])">
                                         <mat-icon>collections</mat-icon>
                                     </button>
@@ -158,7 +188,7 @@
                             </mat-card>
                         </ng-container>
                         <ng-container *ngIf="result_four_wheel[i + 1]">
-                            <mat-card fxFlex="25%">
+                            <mat-card fxFlex="25%" [class.web-club]="result_four_wheel[i + 1]['source'] == 'web'">
                                 <mat-card-header>
                                     <mat-card-title>{{result_four_wheel[i + 1]['name']}}</mat-card-title>
                                     <mat-card-subtitle>{{result_four_wheel[i + 1]['category']|uppercase}}</mat-card-subtitle>
@@ -170,6 +200,12 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i + 1]['club_id'], 1)" *ngIf="result_four_wheel[i + 1]['published'] == 0 && result_four_wheel[i + 1]['source'] == 'web'">
+                                            <mat-icon>done</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i + 1]['club_id'], 0)" *ngIf="result_four_wheel[i + 1]['published'] == 1 && result_four_wheel[i + 1]['source'] == 'web'">
+                                            <mat-icon>block</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result_four_wheel[i + 1]['club_id'])">
                                         <mat-icon>collections</mat-icon>
                                     </button>
@@ -186,7 +222,7 @@
                             </mat-card>
                         </ng-container>
                         <ng-container *ngIf="result_four_wheel[i + 2]">
-                            <mat-card fxFlex="25%">
+                            <mat-card fxFlex="25%" [class.web-club]="result_four_wheel[i + 2]['source'] == 'web'">
                                 <mat-card-header>
                                     <mat-card-title>{{result_four_wheel[i + 2]['name']}}</mat-card-title>
                                     <mat-card-subtitle>{{result_four_wheel[i + 2]['category']|uppercase}}</mat-card-subtitle>
@@ -198,6 +234,12 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i + 2]['club_id'], 1)" *ngIf="result_four_wheel[i + 2]['published'] == 0 && result_four_wheel[i + 2]['source'] == 'web'">
+                                            <mat-icon>done</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i + 2]['club_id'], 0)" *ngIf="result_four_wheel[i + 2]['published'] == 1 && result_four_wheel[i + 2]['source'] == 'web'">
+                                            <mat-icon>block</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result_four_wheel[i + 2]['club_id'])">
                                         <mat-icon>collections</mat-icon>
                                     </button>
@@ -214,7 +256,7 @@
                             </mat-card> 
                         </ng-container>
                         <ng-container *ngIf="result_four_wheel[i + 3]">
-                            <mat-card fxFlex="25%">
+                            <mat-card fxFlex="25%" [class.web-club]="result_four_wheel[i + 3]['source'] == 'web'">
                                 <mat-card-header>
                                     <mat-card-title>{{result_four_wheel[i + 3]['name']}}</mat-card-title>
                                     <mat-card-subtitle>{{result_four_wheel[i + 3]['category']|uppercase}}</mat-card-subtitle>
@@ -226,6 +268,12 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i + 3]['club_id'], 1)" *ngIf="result_four_wheel[i + 3]['published'] == 0 && result_four_wheel[i + 3]['source'] == 'web'">
+                                            <mat-icon>done</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i + 3]['club_id'], 0)" *ngIf="result_four_wheel[i + 3]['published'] == 1 && result_four_wheel[i + 3]['source'] == 'web'">
+                                            <mat-icon>block</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result_four_wheel[i + 3]['club_id'])">
                                         <mat-icon>collections</mat-icon>
                                     </button>

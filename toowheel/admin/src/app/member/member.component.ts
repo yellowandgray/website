@@ -46,6 +46,22 @@ export class MemberComponent implements OnInit {
         }
         );
   }
+  changeStatus(id, status): void {
+      var formData = new FormData();
+      formData.append('activated', status);
+      this.httpClient.post<any>('../toowheel/api/v1/update_record/member/member_id = '+id, formData)
+  .subscribe(
+          (res)=>{
+              this.getMember();
+            this.getFourWheelMember();
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
+  }
   openDialog(id, res): void  {
       var data = null;
       if(id != 0) { 
@@ -69,7 +85,7 @@ export class MemberComponent implements OnInit {
        }
     });
 }
-confirmDelete(id): void  {
+confirmDialog(id, action): void  {
     var data = null;
       if(id != 0) { 
         data = id;
@@ -77,7 +93,10 @@ confirmDelete(id): void  {
     const dialogRef = this.dialog.open(MemberDelete, {
         minWidth: "40%",
         maxWidth: "40%",
-        data: data
+        data: {
+            data: data,
+            action: action
+        }
     });
 
    dialogRef.afterClosed().subscribe(result => {
@@ -95,60 +114,57 @@ confirmDelete(id): void  {
   templateUrl: 'member-form.html',
 })
 export class MemberForm {
-    categoryForm: FormGroup;
+    memberForm: FormGroup;
     loading = false;
-    category_id = 0;
-    category_type: string;
+    member_id = 0;
     constructor(
     public dialogRef: MatDialogRef<MemberForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        /*this.categoryForm = new FormGroup({
-            'name': new FormControl('', Validators.required)
+        this.memberForm = new FormGroup({
+            'type': new FormControl(),
+            'first_name': new FormControl(),
+            'gender': new FormControl(),
+            'age': new FormControl(),
+            'ic_passport': new FormControl(),
+            'dob': new FormControl(),
+            'club': new FormControl(),
+            'contact_number': new FormControl(),
+            'license_category': new FormControl(),
+            'address': new FormControl(),
+            'country': new FormControl(),
+            'state': new FormControl(),
+            'referral_member_id': new FormControl(),
+            'referral_club_id': new FormControl(),
+            'coverage_full_name': new FormControl(),
+            'coverage_contact_number': new FormControl(),
+            'coverage_address': new FormControl(),
+            'email': new FormControl()
         });
-        if(this.data.data != null) { 
-            this.categoryForm.patchValue({ 
-                name: this.data.data.name
+        if(this.data != null) { 
+            this.memberForm.patchValue({ 
+                'type': this.data.type,
+            'first_name': this.data.first_name,
+            'gender': this.data.gender,
+            'age': this.data.age,
+            'ic_passport': this.data.ic_passport,
+            'dob': this.data.dob_year +'-'+this.data.dob_month +'-'+this.data.dob_date,
+            'club': this.data.club,
+            'contact_number': this.data.contact_number,
+            'license_category': this.data.license_category,
+            'address': this.data.address,
+            'country': this.data.country,
+            'state': this.data.state,
+            'referral_member_id': this.data.referral_member_id,
+            'referral_club_id': this.data.referral_club_id,
+            'coverage_full_name': this.data.coverage_full_name,
+            'coverage_contact_number': this.data.coverage_contact_number,
+            'coverage_address': this.data.coverage_address,
+            'email': this.data.email
         })
-        this.category_id = this.data.data.category_id;
-    }*/
+        this.member_id = this.data.member_id;
     }
-
-  onSubmit() {
-      if (this.categoryForm.invalid) {
-            return;
-      }
-      var formData = new FormData();
-      var url = '';
-      if(this.category_id != 0) {
-        formData.append('name', this.categoryForm.value.name);
-        formData.append('type', this.category_type);  
-        url = 'update_record/category/category_id = '+this.category_id;
-      } else {
-        formData.append('name', this.categoryForm.value.name);
-        formData.append('type', this.category_type);          
-        url = 'insert_category';
-      }
-      this.loading = true;
-      this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(
-          (res)=>{
-                this.loading = false;
-                if(res["result"]["error"] === false) {
-                    this.dialogRef.close(true);
-                }else{
-this._snackBar.open(res["result"]["message"], '', {
-          duration: 2000,
-        });
-                }
-            },
-            (error)=>{
-                this.loading = false;
-                this._snackBar.open(error["statusText"], '', {
-          duration: 2000,
-        });
-            }
-        );
-  }
+    }
 }
 
 @Component({
@@ -156,24 +172,31 @@ this._snackBar.open(res["result"]["message"], '', {
   templateUrl: 'member-delete-confirmation.html',
 })
 export class MemberDelete {
+    image_url: string = '../toowheel/api/v1/';
+    action: string = '';
     loading = false;
-    category_id = 0;
+    member_id = 0;
+    data: any;
     constructor(
     public dialogRef: MatDialogRef<MemberDelete>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        if(this.data != null) { 
-            this.category_id = this.data;
+        if(this.datapopup != null) { 
+            this.action = this.datapopup.action;
+            this.data = this.datapopup.data;
+            if(this.datapopup.action == 'delete') {
+                this.member_id = this.datapopup.data;
+            }
     }
 }
 
   confirmDelete() {
-      if (this.category_id == null || this.category_id == 0) {
+      if (this.member_id == null || this.member_id == 0) {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../toowheel/api/v1/delete_record/category/category_id='+this.category_id).subscribe(
+      this.httpClient.get('../toowheel/api/v1/delete_record/member/member_id='+this.member_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
