@@ -66,7 +66,7 @@ function loadClubs(type) {
                         if (val.rank != '' && val.rank != 0) {
                             rank = '<span>#' + val.rank + '</span>';
                         }
-                        div = div + '<div class="club-box pointer col-md-2 col-sm-6" onclick="selectClub(' + val.club_id + ', this);"data-name="' + val.name + '" data-state="' + val.state_id + '" data-category="' + val.category_id + '"><div class="rank-button">' + rank + '</div><img src="' + BASE_IMAGE_URL + val.logo + '" alt="" /><h3>' + val.name + '</h3><p>' + val.city + '</p><div class="club-btn"><div class="eff-9"></div><a href="club-page.php?cid=' + val.club_id + '">Read More</a></div></div>';
+                        div = div + '<div class="club-box pointer col-md-2 col-sm-6" onclick="selectClub(' + val.club_id + ', this);"data-name="' + val.name + '" data-state="' + val.state_id + '" data-category="' + val.category_id + '"><div class="rank-button">' + rank + '</div><img src="' + BASE_IMAGE_URL + val.logo + '" alt="" /><h3>' + val.name + '</h3><p>' + val.city + '</p><div class="club-btn"><div class="eff-9"></div><a href="club-page.php?cid=' + val.club_id + '" target="_blank">Read More</a></div></div>';
                     });
                     $('#club_list').append(div);
                 } else {
