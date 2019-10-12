@@ -1,4 +1,5 @@
 <footer class="footer">
+<div class="container">
     <div class="footer-sec">
         <div class="footer-section fooetr-1">
             <img src="img/footer-logo.png" alt=""/>
@@ -87,6 +88,7 @@
             </ul>
         </div>
     </div>
+</div>
 </footer>
 <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
