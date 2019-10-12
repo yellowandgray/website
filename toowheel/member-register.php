@@ -422,7 +422,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         <div class="member-register-btn"><a id="paywith_paypal"></a></div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="member-register-btn cdm-found"><a href="#">CDM Fund Transfer</a></div>
+                                        <div class="member-register-btn cdm-found"><a href="#">CDM / Fund Transfer</a></div>
                                     </div>
                                     <div class="col-md-2"></div>
                                     <!--                                    <div class="col-md-4">

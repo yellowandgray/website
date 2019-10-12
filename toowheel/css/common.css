@@ -1234,6 +1234,7 @@ button {
 .past-event  p {
     margin-bottom: 2px;
     font-size: 12px;
+    text-align: left;
 }
 .past-event  h5 {
     color: #ed1c24;
