@@ -446,9 +446,9 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                         <a href="#" type="button" onclick="attachFile('payment_receipt2');">Upload Now</a>
                                                     </center>
                                                     <br/>
-                                                    <center>
+                                                    <!--<center>
                                                         <a href="#" onclick="uploadLater();" type="submit">Upload Later</a>
-                                                    </center>
+                                                    </center>-->
                                                 </form>
                                             </div>
                                         </div>

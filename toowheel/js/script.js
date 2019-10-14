@@ -172,12 +172,17 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
             break;
         case '2':
         case 2:
-            if (inserted == false) {
-                registerMember();
-                change = false;
-                inserted = true;
+            if (payment_type !== '') {
+                if (inserted == false) {
+                    registerMember();
+                    change = false;
+                    inserted = true;
+                } else {
+                    change = true;
+                }
             } else {
-                change = true;
+                swal('Information', 'Please select payment method', 'info');
+                change = false;
             }
             break;
         default:

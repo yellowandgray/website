@@ -6,30 +6,70 @@
         <app-header></app-header>
         <mat-tab-group>
             <mat-tab label="2 Wheeler">
-                <mat-list>
-                    <mat-list-item *ngFor="let data of result">
-                        <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
-                            <mat-icon>done</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
-                            <mat-icon>block</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result')">
-                            <mat-icon>remove_red_eye</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'delete')">
-                            <mat-icon>delete</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
-                            <mat-icon>money</mat-icon>
-                        </button>
-                        <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
-                             <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.profile_picture || data.profile_picture == ''" alt="..." />
-                        <h3 matLine>{{data.first_name}}</h3>
-                        <p matLine>{{data.ic_passport}} - {{data.contact_number}}</p>
-                        <p matLine>{{data.email}}</p>
-                    </mat-list-item>
-                </mat-list>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Pending
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-list>
+                            <mat-list-item *ngFor="let data of result" *ngIf="data.activated == 0">
+                                <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
+                                    <mat-icon>done</mat-icon>
+                                </button>
+                                <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                    <mat-icon>block</mat-icon>
+                                </button>
+                                <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result')">
+                                    <mat-icon>remove_red_eye</mat-icon>
+                                </button>
+                                <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'delete')">
+                                    <mat-icon>delete</mat-icon>
+                                </button>
+                                <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
+                                    <mat-icon>money</mat-icon>
+                                </button>
+                                <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                                     <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.profile_picture || data.profile_picture == ''" alt="..." />
+                                <h3 matLine>{{data.first_name}}</h3>
+                                <p matLine>{{data.ic_passport}} - {{data.contact_number}}</p>
+                                <p matLine>{{data.email}}</p>
+                            </mat-list-item>
+                        </mat-list>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Member
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-list>
+                            <mat-list-item *ngFor="let data of result" *ngIf="data.activated == 1">
+                                <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
+                                    <mat-icon>done</mat-icon>
+                                </button>
+                                <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                    <mat-icon>block</mat-icon>
+                                </button>
+                                <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result')">
+                                    <mat-icon>remove_red_eye</mat-icon>
+                                </button>
+                                <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'delete')">
+                                    <mat-icon>delete</mat-icon>
+                                </button>
+                                <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
+                                    <mat-icon>money</mat-icon>
+                                </button>
+                                <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                                     <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.profile_picture || data.profile_picture == ''" alt="..." />
+                                <h3 matLine>{{data.first_name}}</h3>
+                                <p matLine>{{data.ic_passport}} - {{data.contact_number}}</p>
+                                <p matLine>{{data.email}}</p>
+                            </mat-list-item>
+                        </mat-list>
+                    </mat-expansion-panel>
+                </mat-accordion>
             </mat-tab>
             <mat-tab label="4 Wheeler">
                 <mat-list>
