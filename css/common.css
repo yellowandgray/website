@@ -1,0 +1,19 @@
+.read-more-btn {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fe5c24;
+    opacity: 0.6
+}
+.read-more-btn:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+.about_part a.btn_2 {
+    background-color: #fe5c24;
+    color: #fff;
+}
+
+.about_part a.btn_2:hover {
+    background-color: #191d34;
+}
