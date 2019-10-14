@@ -152,7 +152,22 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
                 $('#cnfpassword_error').html('Password mismatch').addClass('error-msg');
                 change = false;
             }
-
+            if (change == true) {
+                $.ajax({
+                    type: "POST",
+                    url: 'api/v1/insert_member',
+                    data: {email: $('#email').val()},
+                    success: function (data) {
+                        $('.loader').removeClass('is-active');
+                        if (data.result.error === true) {
+                            swal('Information', data.result.message, 'info');
+                        }
+                    },
+                    error: function (err) {
+                        swal('Error', err.statusText, 'error');
+                    }
+                });
+            }
             break;
         case '2':
         case 2:
