@@ -509,6 +509,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                                         paypal_trans_id = data.orderID;
                                                                         payment_type = 'paypal';
                                                                         inserted = true;
+                                                                        activated = 1;
                                                                         registerMember();
                                                                     });
                                                                 }
