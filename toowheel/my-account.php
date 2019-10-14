@@ -91,17 +91,17 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                     <tr>
                                         <th>Full Name</th>
                                         <td>:</td>
-                                        <td><?php echo $member['coverage_full_name']; ?></td>
+                                        <td><?php echo isset($member['coverage_full_name']) && $member['coverage_full_name'] != '' ? $member['coverage_full_name'] : 'N/A'; ?></td>
                                     </tr>
                                     <tr>
                                         <th>Contact No.</th>
                                         <td>:</td>
-                                        <td><?php echo $member['coverage_contact_number']; ?></td>
+                                        <td><?php echo isset($member['coverage_contact_number']) && $member['coverage_contact_number'] != '' ? $member['coverage_contact_number'] : 'N/A'; ?></td>
                                     </tr>
                                     <tr>
                                         <th>Address</th>
                                         <td>:</td>
-                                        <td><?php echo $member['coverage_address']; ?></td>
+                                        <td><?php echo isset($member['coverage_address']) && $member['coverage_address'] != '' ? $member['coverage_address'] : 'N/A'; ?></td>
                                     </tr>
                                 </table>
                             </div>
