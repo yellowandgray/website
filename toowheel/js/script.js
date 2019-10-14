@@ -369,7 +369,7 @@ function loginMember() {
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                window.location = 'my-account.php';
+                window.location = 'my-account.php?type=two_wheel';
             } else {
                 swal('Information', data.result.message, 'info');
             }

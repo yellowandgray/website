@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $app->post('/update_config', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to update');
     $data = $app->request->post();

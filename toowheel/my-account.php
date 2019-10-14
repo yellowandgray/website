@@ -1,3 +1,16 @@
+<?php
+session_start();
+if (!isset($_GET["type"]) && !isset($_SESSION["member_id"])) {
+    header("Location: ../index.php");
+}
+$type = $_GET["type"];
+require_once "api/include/common.php";
+$obj = new Common();
+$member = $obj->selectRow('*', 'member', 'member_id = ' . $_SESSION["member_id"]);
+print_r($member);
+print($_SESSION["member_id"]);
+exit();
+?>
 <!DOCTYPE html>
 <html>
     <?php include 'head.php'; ?>
