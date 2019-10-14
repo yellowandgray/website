@@ -6,10 +6,7 @@ if (!isset($_GET["type"]) && !isset($_SESSION["member_id"])) {
 $type = $_GET["type"];
 require_once "api/include/common.php";
 $obj = new Common();
-$member = $obj->selectRow('*', 'member', 'member_id = ' . $_SESSION["member_id"]);
-print_r($member);
-print($_SESSION["member_id"]);
-exit();
+$member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS c ON c.club_id = m.club_id', 'm.member_id = ' . $_SESSION["member_id"]);
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,19 +27,22 @@ exit();
                 <div class="row">
                     <div class="col-md-4 profile-picture-section">
                         <div class="">
-                            <img src="img/my-account/person.png" alt="" />
+                            <?php if (isset($member['profile_picture']) && $member['profile_picture'] == '') { ?>
+                                <img src="<?php echo BASE_URL . $member['gender']; ?>.jpg" alt="" />
+                            <?php } else { ?>
+                                <img src="<?php echo BASE_URL . $member['profile_picture']; ?>" alt="" />
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="col-md-8 profile-details-section">
                         <div class="profile-club-details">
-                            <span>2 WHEELS</span>
-                            <span>250CC</span>
+                            <span><?php echo $member['type'] == 'two_wheel' ? '2 WHEELS' : '4 WHEELS'; ?></span>
                         </div>
                         <div class="profile-club-details">
-                            <span>RTM BIKERS CLUB</span>
+                            <span><?php echo $member['club'] && isset($member['club']) ? $member['club'] : 'No club selected'; ?></span>
                             <span>Invite a Friend</span>
                         </div>
-                        <h2>MUHAMAD HAFIZI</h2>
+                        <h2><?php echo $member['first_name']; ?></h2>
                     </div>
                 </div>
                 <div class="row margin-b-40">
@@ -53,32 +53,32 @@ exit();
                                 <tr>
                                     <th>Age</th>
                                     <td>:</td>
-                                    <td>34</td>
+                                    <td><?php echo $member['age']; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Gender</th>
                                     <td>:</td>
-                                    <td>Male</td>
+                                    <td><?php echo strtoupper($member['gender']); ?></td>
                                 </tr>
                                 <tr>
                                     <th>Date of Birth</th>
                                     <td>:</td>
-                                    <td>November 14 1985</td>
+                                    <td><?php echo $member['dob_date'] . '-' . $member['dob_month'] . '-' . $member['dob_year']; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Email Address</th>
                                     <td>:</td>
-                                    <td>Muhamadhafizi@gmail.com</td>
+                                    <td><?php echo strtoupper($member['email']); ?></td>
                                 </tr>
                                 <tr>
                                     <th>Contact No</th>
                                     <td>:</td>
-                                    <td>+3011 245 24077</td>
+                                    <td><?php echo $member['contact_number']; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Address</th>
                                     <td>:</td>
-                                    <td>Jalan SS 6/3, Ss 6, 47301<br/> Petaling Jaya, Selangor.</td>
+                                    <td><?php echo $member['address']; ?></td>
                                 </tr>
                             </table>
                         </div>
@@ -91,17 +91,17 @@ exit();
                                     <tr>
                                         <th>Full Name</th>
                                         <td>:</td>
-                                        <td>Muhamad Farhan</td>
+                                        <td><?php echo $member['coverage_full_name']; ?></td>
                                     </tr>
                                     <tr>
                                         <th>Contact No.</th>
                                         <td>:</td>
-                                        <td>+3011 245 24077</td>
+                                        <td><?php echo $member['coverage_contact_number']; ?></td>
                                     </tr>
                                     <tr>
                                         <th>Address</th>
                                         <td>:</td>
-                                        <td>Jalan SS 6/3, Ss 6, 47301<br/> Petaling Jaya, Selangor.</td>
+                                        <td><?php echo $member['coverage_address']; ?></td>
                                     </tr>
                                 </table>
                             </div>
@@ -120,8 +120,8 @@ exit();
                                 <h5>POINTS</h5>
                             </div>
                             <div class="col-md-6 refer-point-num">
-                                <h4>345</h4>
-                                <span>RM 172.50</span>
+                                <h4>0</h4>
+                                <span>RM 0</span>
                             </div>
                         </div>  
                     </div>
@@ -132,7 +132,7 @@ exit();
                                 <h5>REFERAL</h5>
                             </div>
                             <div class="col-md-6 refer-point-num">
-                                <h4>30</h4>
+                                <h4>0</h4>
                             </div>
                         </div>  
                     </div>
@@ -143,7 +143,7 @@ exit();
                                 <h5>EVENTS ATTENDED</h5>
                             </div>
                             <div class="col-md-6 refer-point-num">
-                                <h4>76</h4>
+                                <h4>0</h4>
                             </div>
                         </div>  
                     </div>
