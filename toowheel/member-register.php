@@ -447,7 +447,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                     </center>
                                                     <br/>
                                                     <center>
-                                                        <a href="#" onclick="registerMember();" type="submit">Upload Later</a>
+                                                        <a href="#" onclick="uploadLater();" type="submit">Upload Later</a>
                                                     </center>
                                                 </form>
                                             </div>
@@ -458,7 +458,6 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             <div id="step-4" class="text-center">
                                 <h2>Registration Successful</h2>
                                 <div class="text-center">
-                                    <h5>Congratulations!</h5>
                                     <div id="success_member_section"></div>
                                     <br/>
                                 </div>

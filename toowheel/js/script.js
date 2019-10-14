@@ -155,11 +155,11 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
             if (change == true) {
                 $.ajax({
                     type: "POST",
-                    url: 'api/v1/insert_member',
+                    url: 'api/v1/check_member_exist',
                     data: {email: $('#email').val()},
                     success: function (data) {
-                        $('.loader').removeClass('is-active');
                         if (data.result.error === true) {
+                            $('#smartwizard').smartWizard("prev");
                             swal('Information', data.result.message, 'info');
                         }
                     },
@@ -185,6 +185,11 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
     return change;
 });
 
+function uploadLater() {
+    inserted = true;
+    registerMember();
+}
+
 function skipClubSelection() {
     club_id = 0;
     $('#smartwizard').smartWizard("next");
@@ -202,9 +207,11 @@ function registerMember() {
                 $('#success_member_section').empty();
                 var msg = '';
                 if (payment_type == 'paypal') {
-                    msg = '<p class="text-center" style="margin-bottom: 0">You are now Official Member of TooWheel.</p><strong>Membership ID: ' + data.result.data + '</strong>';
+                    msg = '<h5>Congratulations!</h5><p class="text-center" style="margin-bottom: 0">You are now Official Member of TooWheel.</p><strong>Membership ID: ' + data.result.data + '</strong>';
+                } else if (payment_type == 'receipt') {
+                    msg = '<h5>Thank you!</h5><p class="text-center" style="margin-bottom: 0">Verification process may take 24hrs. You will receive an SMS or Email once your account has been activated</p>';
                 } else {
-                    msg = '<strong>We will get back you soon</strong>';
+                    msg = '<h5>Thank you!</h5><p class="text-center" style="margin-bottom: 0">Please make payment to activate your account</p>';
                 }
                 $('#success_member_section').append(msg);
                 $('#smartwizard').smartWizard("next");
