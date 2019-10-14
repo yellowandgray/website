@@ -565,12 +565,16 @@ $app->post('/loginmember', function() use ($app) {
         $res = array('code' => 201, 'message' => 'Invalid login details');
         $record = $obj->selectRow('*', 'member', 'email=\'' . $data['email'] . '\'');
         if (count($record) > 0) {
-            $pass_matchs = $obj->decryptPassword($data['password'], $record['password']);
-            if ($pass_matchs == true) {
-                $res['code'] = 200;
-                $res['message'] = 'Welcome ' . $record['name'];
-                $res['data'] = $record;
+            if ($record['activated'] == 1) {
+                $pass_matchs = $obj->decryptPassword($data['password'], $record['password']);
+                if ($pass_matchs == true) {
+                    $res['code'] = 200;
+                    $res['message'] = 'Welcome ' . $record['name'];
+                    $_SESSION['member_id'] = $record['member_id'];
+                }
             }
+        } else {
+            $res['message'] = 'Your account was not activated! Kindly contact admin team';
         }
     } catch (Exception $ex) {
         $res['message'] = $ex->getMessage();

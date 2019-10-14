@@ -29,9 +29,9 @@ $obj = new Common();
                         <div id="log-in" class="log-cont-01">
                             <div>
                                 <h3>LOGIN ACCOUNT</h3>
-                                <form>
-                                    <div class="input-container"><i class="fa fa-user-o icon" aria-hidden="true"></i><input type="text" name="firstname" placeholder="Username"></div>
-                                    <div class="input-container"><i class="fa fa-ellipsis-h icon" aria-hidden="true"></i><input type="password" name="lastname" placeholder="Password"></div>
+                                <form onsubmit="return loginMember();">
+                                    <div class="input-container"><i class="fa fa-user-o icon" aria-hidden="true"></i><input type="text" name="email" id="email" placeholder="Email" /></div>
+                                    <div class="input-container"><i class="fa fa-ellipsis-h icon" aria-hidden="true"></i><input type="password" name="password" id="password" placeholder="Password" /></div>
                                     <center><button type="submit">LOGIN</button></center>
                                 </form> 
                                 <h5><a href="#" class="forgot-password">Forgot your Password</a></h5>
@@ -48,6 +48,7 @@ $obj = new Common();
                 </div>
             </div>
         </section>
+        <div class="loader loader-default"></div>
         <?php include 'footer.php'; ?>
         <script>
             $(".forgot-password").click(

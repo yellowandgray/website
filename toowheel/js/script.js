@@ -359,3 +359,25 @@ function subscribeNewsLetter() {
     });
     return false;
 }
+
+function loginMember() {
+    $('.loader').addClass('is-active');
+    $.ajax({
+        type: "POST",
+        url: 'api/v1/loginmember',
+        data: {email: $('#email').val(), password: $('#password').val()},
+        success: function (data) {
+            $('.loader').removeClass('is-active');
+            if (data.result.error === false) {
+                window.location = 'my-account.php';
+            } else {
+                swal('Information', data.result.message, 'info');
+            }
+        },
+        error: function (err) {
+            $('.loader').removeClass('is-active');
+            swal('Error', err.statusText, 'error');
+        }
+    });
+    return false;
+}
