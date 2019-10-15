@@ -3814,6 +3814,21 @@ thead td {
     height: 200px;
 }
 
+.bank-details {
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.bank-details td {
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.bank-details th {
+    border: 1px solid #000;
+    text-align: center;
+}
+
 @media (max-width:394px) and (min-width:365px){
     .fooetr-5 button {
         background-color: #ed1c24;
