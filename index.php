@@ -13,63 +13,7 @@
                                 Your browser does not support the <code>video</code> tag.
                             </video>
                         </div>-->
-            <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar  ftco-navbar-light-01" id="ftco-navbar">
-                <div class="row width-100">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-3 top-1">
-                                <a class="navbar-brand" href="index.html"><img src="images/logo-01.png" alt="" class="img-responsive"/></a>
-                            </div>
-                            <div class="col-md-9 ">
-                                <div class="row">
-                                    <div class="col-md-12 top-2 social-i">
-                                        <div class="no-gutters float-right d-flex align-items-start align-items-center px-md-0">
-                                            <div class="d-block">
-                                                <div class="width-100">
-                                                    <div class="s-icon-2 align-items-center">
-                                                        <div class="float-right">
-                                                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                                                            <i class="fa fa-youtube" aria-hidden="true"></i>
-                                                            <a class="phone"><i class="fa fa-phone-square" aria-hidden="true"></i><p>+91 8409 012345</p></a>
-                                                            <a class="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i><p>+91 8409 012345</p></a>
-                                                            <a class="mail"><i class="fa fa-envelope" aria-hidden="true"></i><p>info@email.com</p></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 top-3">
-                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                                            <span class="oi oi-menu"></span> Menu
-                                        </button>
-
-                                        <div class="collapse navbar-collapse" id="ftco-nav">
-                                            <ul class="navbar-nav ml-auto">
-                                                <!--                                                <li class="nav-item"><a href="about.html" class="nav-link">Products</a></li>
-                                                                                                <li class="nav-item"><a href="blog.html" class="nav-link">Applications</a></li>
-                                                                                                <li class="nav-item"><a href="contact.html" class="nav-link">Artifacts</a></li>
-                                                                                                <li class="nav-item"><a href="contact.html" class="nav-link">Testimonial</a></li>
-                                                                                                <li class="nav-item active"><a href="index.html" class="nav-link">About</a></li>
-                                                                                                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                                                                                                <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>-->
-                                                <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
-                                                <li class="nav-item"><a href="#" class="nav-link">Applications</a></li>
-                                                <li class="nav-item"><a href="#" class="nav-link">Artifacts</a></li>
-                                                <li class="nav-item"><a href="#" class="nav-link">Testimonial</a></li>
-                                                <li class="nav-item active"><a href="#" class="nav-link">About</a></li>
-                                                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-                                                <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <?php include 'menu.php'; ?>
             <div class="home-slider owl-carousel">
                 <div class="slider-item">
                     <div class="container">
@@ -85,7 +29,7 @@
                                                 <h3>Combo Pack</h3>
                                                 <p>Fresche EF 3851– 1 Litre</p>
                                                 <p>Bz 1 Binder – 1.5 Litre </p>
-                                                <p><span>MRP : </span>Rs.8000/-</p>
+                                                <p><span><i class="fa fa-inr" aria-hidden="true"></i></span><span>8000/-</span></p>
                                                 <!--                                                <div class="button-1">
                                                                                                     <div class="eff-1"></div>
                                                                                                     <a href="#"><img src="images/add.png" alt="" class="add-img"/>  Add To Cart</a>

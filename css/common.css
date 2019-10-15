@@ -103,7 +103,7 @@
 }
 
 .ftco-footer{
-    background: #ffffff !important;
+    background: #f5f5f5 !important;
 }
 .ftco-footer {
     font-size: 14px !important;
@@ -172,16 +172,14 @@ a{
     color: #fff;
 }
 .owl-carousel.home-slider .slider-item .slider-text .subheading {
-    color: #000000;
-    font-weight: 300;
-    font-size: 28px !important;
+    font-weight: 600 !important;
+    font-size: 30px !important;
     letter-spacing: 0px !important;
     text-transform: initial !important;
     display: inline-block;
-    color: #fff;
+    color: #333 !important;
     font-family: 'Josefin Sans', sans-serif;
     padding-right: 21%;
-    /* line-height: 10px !important; */
 }
 .width-100{
     width: 100%;
@@ -223,7 +221,7 @@ body {
 .div-2{
     transition: transform .4s
 }
-.div-2:hover {
+.div-2:hover{
     transform: scale(1.1);
 }
 .pad-tb-50{
@@ -553,18 +551,20 @@ video { display: block; width: 100%; height: auto; }
 }
 
 .pro-d h3 {
-    color: rgb(0, 0, 0) !important;
+    color: rgb(0, 113, 188) !important;
     font-weight: 600 ;
     font-size: 30px !important;
 }
 .pro-d p {
-    color: #449dc9 !important ;
+    color: #656565  !important;
     margin-bottom: 0px !important;
 }
 .pro-d p span {
-    color: #98d659 !important;
+    color: #2f2b2c !important;
     font-weight: 600;
+    padding-right: 5px;
 }
+
 .bg-blue {
     background: #449dc9 !important;
 }
@@ -706,7 +706,7 @@ footer .copy p{
     display: block;
     width: 0;
     height: 2px;
-    background: #82ae46;
+    background: #ed1c24;
     transition: width .3s;
 }
 .nav-link:hover::after {
@@ -724,7 +724,7 @@ footer .copy p{
     box-shadow: 0px 0px 6px 4px #eee;
 }
 .price {
-    background: #f3f3f3;
+    background: rgba(243, 243, 243, 0.8);
     box-shadow: 1px 3px 6px 0px #585858;
     width: 80%;
     border-radius: 5px;
@@ -892,3 +892,129 @@ footer .copy p{
         font-family: 'Poppins', sans-serif;
     }
 }
+.pad-lr-80{
+    padding: 0 80px;
+}
+.product .img-prod {
+    position: relative;
+    display: block;
+    overflow: visible !important;
+    padding: 10px;
+}
+.product {
+    border: none;
+    box-shadow: 3px 3px 10px 1px #b9b9b9;
+    height: 350px;
+    background: #fff;
+}
+.product .img-prod h3{
+    color: #0071bc;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 20px;    
+    font-weight: 600;
+
+
+}
+
+.product-details h3 {
+    font-size: 35px !important;
+    font-weight: 600 !important;
+    color: #252525 !important;
+}
+.product-details h5 {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: #252525 !important;
+}
+.bg-gray{
+    background: #f1f1f1;
+}
+.product-img-responsive{
+    margin: 0 10%;
+    width: 80%;
+}
+.product-img-box {
+    padding: 35px;
+    /* border: 1px solid #e4e4e4; */
+    box-shadow: 2px -3px 5px 4px #e2e2e2;
+    background: #00000052;
+}
+.product-2 .product-details h3{
+    color: #000000 !important;
+
+}
+.product-2 .product-details p{
+    color: #fff !important;
+
+}
+.button-03 {
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 20px 0 10px 0;
+    background: #ed1c24 !important;
+    padding: 8px 30px !important;
+    border-style: none;
+    border-radius: 5px;
+}
+.button-03 a, .button-03 i{
+    color: #fff  !important;
+}
+.img-prod img{
+    position: absolute;
+    top: -20px;
+    left: -19px;
+    width: 15%;
+}
+
+.about-fresche{
+    padding: 30px 0px;
+}
+.about-fresche h3{
+    color: #fff !important;
+}
+.about-fresche p{
+    color: #fff !important;
+}
+.about-fresche .product-details{
+    background: #0073bb;
+    border-radius: 20px;
+    box-shadow: 5px 6px 12px 1px #928c8c;
+    padding: 20px;
+}
+
+.about-sec{
+    padding: 15px;
+    height: 315px;
+    box-shadow: 3px 4px 7px 1px #808080;
+
+}
+.box-3 {
+    padding: 10px;
+    background: #0071be;
+    border-radius: 20px;
+}
+.text-for-hai h5{
+    color: #fff !important;
+}
+.text-for-hai P{
+    color: #fff !important;
+}
+.pad-b-50{
+    padding-bottom: 50px !important;
+}
+
+
+
+
+
+
+
+
+
+
+

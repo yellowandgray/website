@@ -9,7 +9,7 @@
     <div class="row footer-h">
         <div class="footer-1">
             <div class="ftco-footer-widget ftco-footer-widget-img mb-4">
-                <img src="images/logo-01.png" alt=""/>
+                <a href="index.php"> <img src="images/logo-01.png" alt=""/></a>
                 <p>Fresche Bioscience is a new generation SI QAC antimicrobial which delivers high performance, broad spectrum antibacterial, anti-fungal, mould and odour protection on surfaces to which they are either applied or infused. They are widely recognised as one of the worlds most advanced non-volatile, surface bonded antimicrobial, safe for people, plants, pets and the environment.</p>
                 <!--                  <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                                         <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>

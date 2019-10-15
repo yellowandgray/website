@@ -8816,11 +8816,11 @@ h1, h2, h3, h4, h5,
     border: 1px solid rgba(0, 0, 0, 0.1) !important;
     color: #82ae46;
     padding: 10px 20px;
-    background: transparent !important;
-    -webkit-border-radius: 0;
+    background: #ed1c24 !important;
+/*    -webkit-border-radius: 0;*/
     -moz-border-radius: 0;
     -ms-border-radius: 0;
-    border-radius: 0;
+  
     font-size: 14px; }
 .product-details button:hover, .product-details button:focus, .product-details .form-control:hover, .product-details .form-control:focus {
     text-decoration: none;
