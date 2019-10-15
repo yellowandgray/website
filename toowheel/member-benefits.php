@@ -25,7 +25,7 @@ $obj = new Common();
                                 <img src="img/member/Group 83@2x.png" alt=""/><li>Death coverage courtesy to Toowheel organization</li>
                                 <img src="img/member/Group 82@2x.png" alt=""/><li>Access to all club portal/forum/updates and event</li>
                                 <img src="img/member/Group 81@2x.png" alt=""/><li>Special discount for accessories by E-Kedai Toowheel</li>
-                                <img src="img/member/Group 80@2x.png" alt=""/><li>Loyalty point with purchase of participant companies' merchandise</li>
+                                <img src="img/member/Group 80@2x.png" alt=""/><li>Loyalty point with purchase of participant companies merchandise</li>
                                 <img src="img/member/Group 79@2x.png" alt=""/><li>Special access to Toolwheel Events</li>
                                 <img src="img/member/Group 78@2x.png" alt=""/><li>Be part of monthly contest and exciting giveaway</li>
                             </ul>

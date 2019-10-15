@@ -23,8 +23,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <input id="name" placeholder="Your club name" name="name" type="text" tabindex="1" required autofocus />
                             </div>
                             <div class="form-group">
-                                <select id="type" name="type" tabindex="2" required onchange="renderCategory(this.value);">
-                                    <option value="">Type</option>
+                                <select id="type" name="type" tabindex="2" required onchange="renderCategory(this.value);">                                   
                                     <option value="two_wheel">2 Wheel</option>
                                     <option value="four_wheel">4 Wheel</option>
                                 </select>
@@ -52,8 +51,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <input id="mobile" placeholder="Contact No." name="mobile" type="text" tabindex="9" required />
                             </div>
                             <div class="form-group">
-                                <select id="state" name="state" required tabindex="11">
-                                    <option value="0">State</option>
+                                <select id="state" name="state" required tabindex="11">                                    
                                     <?php foreach ($states as $row) { ?>
                                         <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
                                     <?php } ?>
