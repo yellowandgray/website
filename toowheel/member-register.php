@@ -436,7 +436,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                             <div class="margin-top-30">
                                                 <h4>UPLOAD DEPOSIT SLIP OR FUND TRANSFER PECEIPT</h4>
                                                 <h5>TOOWHEEL BANK ACCOUNT DETAILS</h5>
-                                                <p>Upload your slip picture within 24hrs</p>
+<!--                                                <p>Upload your slip picture within 24hrs</p>-->
                                                 <form>
                                                     <label>Upload Your Recipit</label>
                                                     <input type="file" name="payment_receipt2" id="payment_receipt2" />
