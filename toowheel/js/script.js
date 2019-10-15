@@ -105,6 +105,10 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
                 $('#first_name_error').html('Enter first name').addClass('error-msg');
                 change = false;
             }
+            if ($.trim($('#last_name').val()) === '') {
+                $('#last_name_error').html('Enter last name').addClass('error-msg');
+                change = false;
+            }
             if ($.trim($('#ic_passport').val()) === '') {
                 $('#ic_passport_error').html('Enter passport/IC number').addClass('error-msg');
                 change = false;

@@ -42,7 +42,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                             <span><?php echo $member['club'] && isset($member['club']) ? $member['club'] : 'No club selected'; ?></span>
                             <span>Invite a Friend</span>
                         </div>
-                        <h2><?php echo $member['first_name']; ?></h2>
+                        <h2><?php echo $member['first_name'] . ' ' . $member['last_name']; ?></h2>
                     </div>
                 </div>
                 <div class="row margin-b-40">
