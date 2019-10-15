@@ -159,7 +159,7 @@ foreach ($sub_categories as $row) {
                     <!-- BANNER CONTENT -->
                     <div class="container">
                         <div class="banner_content text-center">
-                            <figure><img title="" src="img/mac_wolrd.png" alt=""></figure>
+                            <figure><img title="" src="img/mac_wolrd.png" alt="major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide"></figure>
                             <h2>Futurizing Manufacturing <br/>and <br/>Commodities Commerce Globally </h2>
                         </div>
                     </div>
@@ -312,13 +312,13 @@ foreach ($sub_categories as $row) {
                 <section id="our_journey" class="container-fluid back_main internation_house_section" style="background-image: url(img/ecport_house.png);">
                     <div class="row">
                         <div class="back_img"> 
-                            <img src="img/ecport_house-1.png" alt="" title="" style="display: none;"> 
+                            <img src="img/ecport_house-1.png" alt="pioneers of Palm Oil export in Malaysia" title="" style="display: none;"> 
                         </div>
                         <div class="container">
                             <div class="international_exports">
                                 <div class="internation_content_wraper">
                                     <div class="poretal">
-                                        <figure class="text-center"> <img src="img/mac_wolrd.png" alt="" title=""> </figure>
+                                        <figure class="text-center"> <img src="img/mac_wolrd.png" alt="manufacturing and trading Palm Oil, Palm Derivatives" title=""> </figure>
                                         <h3 class="text-center">Futurizing Manufacturing and Commodities Commerce Globally</h3>
                                         <p class="justified-align">MAC WORLD is a diversified yet integrated toll manufacturing group in Malaysia, and key players in the global commodity market. The company has grown exponentially under the forward-thinking leadership of a group of entrepreneurs who shared a common objective and vision.</p>
                                         <p class="justified-align">Headquartered in Malaysia which is known for it abundance in natural resources, MAC WORLD manufactures and supplies raw materials to some of the biggest food and beverage brands across the globe. With worldwide connectivity and by seamlessly integrated operations and services, the group has successfully designed, developed and commercially exported wide range of products and services to most parts of the world.</p>
@@ -351,7 +351,7 @@ foreach ($sub_categories as $row) {
                                 </div>
                             </div>
                             <div class="text-center">
-                                <img src="img/team-02.jpg" alt="" style="width: 100%;">
+                                <img src="img/team-02.jpg" alt="MAC WORLD is a diversified yet integrated toll manufacturing group in Malaysia" style="width: 100%;">
                             </div>
                         </div>
                     </div>
@@ -546,7 +546,7 @@ foreach ($sub_categories as $row) {
                                 <h3 class="text-center">What We Do</h3>
                                 <p class="justified-align">MAC WORLD is an ISO 9001:2015 certified company which exports products and services to over 65 countries. The company is continuously penetrating new markets, opening and accessing new opportunities. Since its inception in 2001, MAC WORLD is in the business of manufacturing and trading Palm Oil, Palm Derivatives, its by-products and agro commodities.</p>
                                 <p class="justified-align">Being pioneers of Palm Oil export in Malaysia, in the recent years, MAC WORLD has further diversified into major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide. MAC WORLD Group have established several brands in the International market like </p>
-                                <p class="text-center"><img class="brand-img margin-lf-20" src="img/goldstar.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/goldfry.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/goldfat.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/mrmac.jpg" alt="image" /><img class="brand-img margin-lf-20" src="img/golden-farm.jpg" alt="image" /></p>
+                                <p class="text-center"><img class="brand-img margin-lf-20" src="img/goldstar.jpg" alt="Global brand manufacturing" /><img class="brand-img margin-lf-20" src="img/goldfry.jpg" alt="leading integrated manufacturer and commodities producer" /><img class="brand-img margin-lf-20" src="img/goldfat.jpg" alt="Manufacturing and trading palm oil, palm derivatives" /><img class="brand-img margin-lf-20" src="img/mrmac.jpg" alt="major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide" /><img class="brand-img margin-lf-20" src="img/golden-farm.jpg" alt="pioneers of Palm Oil export in Malaysia" /></p>
                                 <p class="justified-align">for its range of cooking oil, confectionery fats, vegetable ghee, tomato paste and dairy based products such as sweetened condensed milk, evaporated milk, skim milk powder, fat filled milk powder etc. MAC WORLD has become a one stop shop in Malaysia for palm oil derivatives, oleo chemicals, confectionery fats and agro commodities for customers worldwide.</p>
                                 <p class="justified-align">Driven by the commitment to ensure that high quality products are being offered at competitive pricing by using the expertise and experience to serve the dynamic needs of customers.  MAC WORLD ensures that its values and principles are upheld at all times.</p>
         <!--                                <div class="team-images-set"><img src="img/team.jpg" alt=""></div>-->
@@ -686,7 +686,7 @@ foreach ($sub_categories as $row) {
                                 <div class="produts_listing">
                                     <div class="single-product clearfix left-product left-product">
                                         <div class="img-wraps">
-                                            <img width="736" height="552" src="img/services-01.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="img/services-01.jpg 736w, img/services-01-300x225.jpg 300w" sizes="100vw">
+                                            <img width="736" height="552" src="img/services-01.jpg" class="attachment-full size-full wp-post-image" alt="manufacturing and trading Palm Oil, Palm Derivatives" srcset="img/services-01.jpg 736w, img/services-01-300x225.jpg 300w" sizes="100vw">
                                         </div>
                                         <div class="containt-wrap">
                                             <h3>Integrated Financial Service</h3>
@@ -713,7 +713,7 @@ foreach ($sub_categories as $row) {
                                 <div class="produts_listing clearfix">
                                     <div class="single-product clearfix accreditation_box">
                                         <div class="accreditation_box_img text-center">
-                                            <img src="img/accrediation.png">
+                                            <img src="img/accrediation.png" alt="MAC WORLD is a diversified yet integrated toll manufacturing group in Malaysia">
                                         </div>
                                         <div class="containt-wrap">
                                             <p class="justified-align">As a member of the Roundtable on Sustainable Palm Oil, MAC WORLD demonstrate that its palm oil is sustainable.<br/><br/>Through this certification, we ensure that we are not associated directly or indirectly with any kind of deforestation and loss of critical habitat. Our palm oil is produced responsibly to take care of these ecosystems and their future.</p>
@@ -721,7 +721,7 @@ foreach ($sub_categories as $row) {
                                     </div>
                                     <div class="single-product clearfix accreditation_box">
                                         <div class="accreditation_box_img text-center">
-                                            <img src="img/lrukas-1.jpg">
+                                            <img src="img/lrukas-1.jpg" alt="Global brand manufacturing">
                                         </div>
                                         <div class="containt-wrap">
                                             <p class="justified-align">ISO 9001:2015 sets out the criteria for a quality management system with the capability of complete traceability of the cargo we have supplied. This standard is based on a number of quality management principles including a strong customer focus, the motivation and implication of top management, the process approach and continual improvement. Using ISO 9001:2015 helps ensure that customers get consistent, good quality products and services, which in turn brings good business opportunities.</p>
@@ -733,14 +733,14 @@ foreach ($sub_categories as $row) {
                                         <li class="">
                                             <a href="#">
                                                 <figure>
-                                                    <img src="img/accreditations/Picture1.png" alt="" title="">
+                                                    <img src="img/accreditations/Picture1.png" alt="leading integrated manufacturer and commodities producer" title="">
                                                 </figure>
                                             </a>
                                         </li>
                                         <li class="">
                                             <a href="#">
                                                 <figure>
-                                                    <img src="img/accreditations/Picture2.png" alt="" title="">
+                                                    <img src="img/accreditations/Picture2.png" alt="Manufacturing and trading palm oil, palm derivatives" title="">
                                                 </figure>
                                             </a>
                                         </li>
@@ -755,7 +755,7 @@ foreach ($sub_categories as $row) {
                                         <li class="">
                                             <a href="#">
                                                 <figure>
-                                                    <img src="img/accreditations/Picture4.png" alt="" title="">
+                                                    <img src="img/accreditations/Picture4.png" alt="major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide" title="">
                                                 </figure>
 
                                             </a>
@@ -763,7 +763,7 @@ foreach ($sub_categories as $row) {
                                         <li class="">
                                             <a href="#">
                                                 <figure>
-                                                    <img src="img/accreditations/Picture5.png" alt="" title="">
+                                                    <img src="img/accreditations/Picture5.png" alt="pioneers of Palm Oil export in Malaysia" title="">
                                                 </figure>
 
                                             </a>
@@ -779,7 +779,7 @@ foreach ($sub_categories as $row) {
                                         <li class="">
                                             <a href="#">
                                                 <figure>
-                                                    <img src="img/accreditations/Picture7.png" alt="" title="">
+                                                    <img src="img/accreditations/Picture7.png" alt="manufacturing and trading Palm Oil, Palm Derivatives" title="">
                                                 </figure>
 
                                             </a>
@@ -787,7 +787,7 @@ foreach ($sub_categories as $row) {
                                         <li class="">
                                             <a href="#">
                                                 <figure>
-                                                    <img src="img/accreditations/Picture8.png" alt="" title="">
+                                                    <img src="img/accreditations/Picture8.png" alt="MAC WORLD is a diversified yet integrated toll manufacturing group in Malaysia" title="">
                                                 </figure>
 
                                             </a>
@@ -795,7 +795,7 @@ foreach ($sub_categories as $row) {
                                         <li class="">
                                             <a href="#">
                                                 <figure>
-                                                    <img src="img/accreditations/Picture9.png" alt="" title="">
+                                                    <img src="img/accreditations/Picture9.png" alt="Global brand manufacturing" title="">
                                                 </figure>
 
                                             </a>
@@ -826,31 +826,31 @@ foreach ($sub_categories as $row) {
                                     <div id="menu1" class="tab-pane fade in active padding-t-50">
                                         <div class="slider">
                                             <div class="padding-lr-25">
-                                                <img src="img/banking/banking-1.jpg" alt="" />
+                                                <img src="img/banking/banking-1.jpg" alt="leading integrated manufacturer and commodities producer" />
                                             </div>
                                             <div class="padding-lr-25">
-                                                <img src="img/banking/banking-2.png" alt="" />
+                                                <img src="img/banking/banking-2.png" alt="Manufacturing and trading palm oil, palm derivatives" />
                                             </div>
                                             <div class="padding-lr-25">
-                                                <img src="img/banking/banking-3.jpg" alt="" />
+                                                <img src="img/banking/banking-3.jpg" alt="major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide" />
                                             </div>
                                             <div class="padding-lr-25">
-                                                <img src="img/banking/banking-4.jpg" alt="" />
+                                                <img src="img/banking/banking-4.jpg" alt="pioneers of Palm Oil export in Malaysia" />
                                             </div>
                                             <div class="padding-lr-25">
-                                                <img src="img/banking/banking-5.jpg" alt="" />
+                                                <img src="img/banking/banking-5.jpg" alt="manufacturing and trading Palm Oil, Palm Derivatives" />
                                             </div>
                                             <div class="padding-lr-25">
-                                                <img src="img/banking/banking-6.jpg" alt="" />
+                                                <img src="img/banking/banking-6.jpg" alt="MAC WORLD is a diversified yet integrated toll manufacturing group in Malaysia" />
                                             </div>
                                             <div class="padding-lr-25">
-                                                <img src="img/banking/banking-7.jpg" alt="" />
+                                                <img src="img/banking/banking-7.jpg" alt="Global brand manufacturing" />
                                             </div>
                                             <div class="padding-lr-25">
-                                                <img src="img/banking/banking-8.png" alt="" />
+                                                <img src="img/banking/banking-8.png" alt="leading integrated manufacturer and commodities producer" />
                                             </div>
                                             <div class="padding-lr-25">
-                                                <img src="img/banking/banking-9.png" alt="" />
+                                                <img src="img/banking/banking-9.png" alt="Manufacturing and trading palm oil, palm derivatives" />
                                             </div>
                                         </div>
 
@@ -865,28 +865,28 @@ foreach ($sub_categories as $row) {
 
                                         <div class="slider">
                                             <div class="slide padding-lr-25">
-                                                <img src="img/insurance/insurance-1.png" alt="" />
+                                                <img src="img/insurance/insurance-1.png" alt="major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide" />
                                             </div>
                                             <div class="slide padding-lr-25">
-                                                <img src="img/insurance/insurance-2.png" alt="" />
+                                                <img src="img/insurance/insurance-2.png" alt="pioneers of Palm Oil export in Malaysia" />
                                             </div>
                                             <div class="slide padding-lr-25">
-                                                <img src="img/insurance/insurance-3.jpg" alt="" />
+                                                <img src="img/insurance/insurance-3.jpg" alt="manufacturing and trading Palm Oil, Palm Derivatives" />
                                             </div>
                                             <div class="slide padding-lr-25">
-                                                <img src="img/insurance/insurance-4.png" alt="" />
+                                                <img src="img/insurance/insurance-4.png" alt="MAC WORLD is a diversified yet integrated toll manufacturing group in Malaysia" />
                                             </div>
                                             <div class="slide padding-lr-25">
-                                                <img src="img/insurance/insurance-5.png" alt="" />
+                                                <img src="img/insurance/insurance-5.png" alt="Global brand manufacturing" />
                                             </div>
                                             <div class="slide padding-lr-25">
-                                                <img src="img/insurance/insurance-6.jpg" alt="" />
+                                                <img src="img/insurance/insurance-6.jpg" alt="leading integrated manufacturer and commodities producer" />
                                             </div>
                                             <div class="slide padding-lr-25">
-                                                <img src="img/insurance/insurance-7.png" alt="" />
+                                                <img src="img/insurance/insurance-7.png" alt="Manufacturing and trading palm oil, palm derivatives" />
                                             </div>
                                             <div class="slide padding-lr-25">
-                                                <img src="img/insurance/insurance-8.png" alt="" />
+                                                <img src="img/insurance/insurance-8.png" alt="major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide" />
                                             </div>
                                         </div>
 
@@ -900,7 +900,7 @@ foreach ($sub_categories as $row) {
                                     <div id="menu3" class="tab-pane fade in padding-t-50">
                                         <div>
                                             <div class="" style="text-align: center; padding: 20px;">
-                                                <img src="img/technology/technology.png" alt=""/>
+                                                <img src="img/technology/technology.png" alt="pioneers of Palm Oil export in Malaysia"/>
                                             </div>
                                         </div>
                                         <!--                                        <div class="paginator-center text-color text-center">
@@ -992,7 +992,7 @@ foreach ($sub_categories as $row) {
                     <div class="row">
                         <div class="container">
                             <div class="map_indigate">
-                                <div class="map-image"> <img src="img/pointer_map.png" alt="" title=""> </div>
+                                <div class="map-image"> <img src="img/pointer_map.png" alt="manufacturing and trading Palm Oil, Palm Derivatives" title=""> </div>
                                 <div class="map_pointer_content">
                                     <ul>
                                         <li><a href="#">Malaysia</a></li>
@@ -1017,7 +1017,7 @@ foreach ($sub_categories as $row) {
                 <!-- FOOTER SECTION -->
                 <footer class="container-fluid back_main" id="contact_section" style="background-image: url(img/footer_image.png);">
                     <div class="row">
-                        <div class="back_img"> <img src="img/footer_image.png" alt="" title="" style="display: none;"> </div>
+                        <div class="back_img"> <img src="img/footer_image.png" alt="MAC WORLD is a diversified yet integrated toll manufacturing group in Malaysia" title="" style="display: none;"> </div>
                         <div class="container">
                             <div class="footer_content">
                                 <h3>Contact Us</h3>
@@ -1033,7 +1033,7 @@ foreach ($sub_categories as $row) {
                                         <ul>
                                             <li>
 <!--                                                <span></span>-->
-                                                <img src="img/call_icon1.png" alt="" title="">
+                                                <img src="img/call_icon1.png" alt="Global brand manufacturing" title="">
                                                 <div class="footer_mobile">
                                                     <a href="tel:+603-7954 7059">+603 7954 7059</a>
                                                     <a href="tel:+603-7931 0352">+603-7931 0352</a>
@@ -1042,14 +1042,14 @@ foreach ($sub_categories as $row) {
                                             <li>
                                                 <a href="#"> 
 <!--                                            <span></span>-->
-                                                    <img src="img/fax1.png" alt="" title="">
+                                                    <img src="img/fax1.png" alt="leading integrated manufacturer and commodities producer" title="">
                                                     <p>+603-7954 0059</p>
                                                 </a>
                                                 <p><a href="#"></a></p></li>
                                             <li>
                                                 <a href="mailto: products@macworldinc.com"> 
 <!--                                                    <span></span>-->
-                                                    <img src="img/mail1.png" alt="" title="">
+                                                    <img src="img/mail1.png" alt="Manufacturing and trading palm oil, palm derivatives" title="">
                                                     <p>products@macworldinc.com</p>
                                                 </a>
                                                 <p><a href="#"></a></p>
@@ -1057,7 +1057,7 @@ foreach ($sub_categories as $row) {
                                             <li>
                                                 <a href="#"> 
 <!--                                                    <span></span>-->
-                                                    <img src="img/web1.png" alt="" title="">
+                                                    <img src="img/web1.png" alt="major suppliers of consumer packs, soft/ lauric oils, cattle and poultry feeds, confectionary and bakery products, agro Commodities and oleo chemicals, providing its customers high quality products by engaging in competitive origin sourcing and ensuring on-time delivery to consumers world-wide" title="">
                                                     <p>www.macworldinc.com</p>
                                                 </a><p><a href="#">                                        </a>
                                                 </p>
@@ -1098,7 +1098,7 @@ foreach ($sub_categories as $row) {
                             <img src="img/team-members.jpg" alt="image" class="img-responsive" style="width: 100%">
                             <div class="footer_logo text-center">
                                 <a href="#">
-                                    <figure> <img class="img-responsive" src="img/footer_logo.png" alt="" title=""> </figure>
+                                    <figure> <img class="img-responsive" src="img/footer_logo.png" alt="pioneers of Palm Oil export in Malaysia" title=""> </figure>
                                 </a>
                                 <p>All Rights Reserved. Copyright &copy; 2018 MAC WORLD Industries Sdn. Bhd.</p>
                             </div>
