@@ -2,7 +2,7 @@
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="memberForm">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
+            <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Category</mat-label>
                     <mat-select formControlName="type">
@@ -15,10 +15,18 @@
                     </mat-select>
                 </mat-form-field>
             </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Full Name</mat-label>
+                    <mat-label>First Name</mat-label>
                     <input matInput placeholder="" formControlName="first_name" />
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="" formControlName="last_name" />
                 </mat-form-field>
             </div>
         </div>

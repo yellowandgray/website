@@ -124,6 +124,7 @@ export class MemberForm {
         this.memberForm = new FormGroup({
             'type': new FormControl(),
             'first_name': new FormControl(),
+            'last_name': new FormControl(),
             'gender': new FormControl(),
             'age': new FormControl(),
             'ic_passport': new FormControl(),
@@ -145,6 +146,7 @@ export class MemberForm {
             this.memberForm.patchValue({ 
                 'type': this.data.type,
             'first_name': this.data.first_name,
+            'last_name': this.data.last_name,
             'gender': this.data.gender,
             'age': this.data.age,
             'ic_passport': this.data.ic_passport,

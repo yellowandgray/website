@@ -47,6 +47,12 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         <div id="first_name_error"></div>
                                     </div>
                                     <div class="form-group">
+                                        <label for="last_name">Last Name</label>
+                                        <span class="red-i">*</span>
+                                        <input type="text" class="form-control" name="last_name" id="last_name" placeholder="" required-i onchange="removeValidation('last_name');" />
+                                        <div id="last_name_error"></div>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="upload-profile">Upload Your Profile Picture</label>
                                         <input type="file" class="form-control-file" id="profile_image" onchange="attachFile('profile_image');" />
                                     </div>
