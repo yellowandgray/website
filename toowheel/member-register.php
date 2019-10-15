@@ -33,8 +33,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     <div class="form-group">
                                         <label for="type">Category</label>
                                         <span class="red-i">*</span>
-                                        <select class="form-control" name="type" id="type" onchange="loadClubs(this.value);">
-                                            <option value="">Select Category</option>
+                                        <select class="form-control" name="type" id="type" onchange="loadClubs(this.value);">                                           
                                             <option value="four_wheel">4 Wheel</option>
                                             <option value="two_wheel">2 Wheel</option>
                                         </select>
@@ -58,8 +57,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     </div>
                                     <div class="form-group">
                                         <label for="gender">Gender</label>
-                                        <select class="form-control" id="gender" name="gender">
-                                            <option value="">gender</option>
+                                        <select class="form-control" id="gender" name="gender">                                            
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
                                         </select>
