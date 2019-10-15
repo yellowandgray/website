@@ -26,7 +26,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                 <!--<div class="row profile-section">-->
                 <div class="row">
                     <div class="col-md-4 profile-picture-section">
-                        <div class="">
+                        <div class="member-profile-image">
                             <?php if (isset($member['profile_picture']) && $member['profile_picture'] == '') { ?>
                                 <img src="<?php echo BASE_URL . $member['gender']; ?>.jpg" alt="" />
                             <?php } else { ?>
@@ -156,8 +156,12 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                 <i class="fa fa-times-circle" aria-hidden="true"></i>
                 <div class="margin-top-30">
                     <h4>Change Your Register password!</h4>
-                    <input type="password" name="password" placeholder="Enter Your New Password" />
-                    <center><button type="submit">Submit</button></center>
+                    <input type="password" name="old_password" placeholder="Enter Your Old Password" />
+                    <br/>
+                    <input type="password" name="new_password" placeholder="Enter Your New Password" />
+                    <center>
+                        <button type="submit">Submit</button>
+                    </center>
                 </div>
             </div>
         </div>

@@ -3181,7 +3181,7 @@ body .calender-box{
 }
 
 .password-popup input {
-    border-radius: 25px;
+    border-radius: 5px;
     outline: none;
     margin: 10px 0;
     background: transparent;
@@ -3802,6 +3802,18 @@ thead td {
 .news-banner {
     width: 100%;
 }
+
+.member-profile-image {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.member-profile-image img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
 @media (max-width:394px) and (min-width:365px){
     .fooetr-5 button {
         background-color: #ed1c24;

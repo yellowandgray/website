@@ -1624,6 +1624,7 @@ body {
     color: #fff;
     font-weight: 600;
     letter-spacing: 0px;
+    text-transform: uppercase;
 }
 
 .profile-club-details span {
