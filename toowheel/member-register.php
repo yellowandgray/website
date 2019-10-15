@@ -443,6 +443,23 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                 <h4>UPLOAD DEPOSIT SLIP OR FUND TRANSFER RECEIPT</h4>
                                                 <h5>TOOWHEEL BANK ACCOUNT DETAILS</h5>
 <!--                                                <p>Upload your slip picture within 24hrs</p>-->
+                                                <table>
+                                                    <tr>
+                                                        <td>Bank</td>
+                                                        <td>:</td>
+                                                        <th>CIMB</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bank Account Name</td>
+                                                        <td>:</td>
+                                                        <th>Toowheel Maxcom Synergy</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bank Account Number</td>
+                                                        <td>:</td>
+                                                        <th>8603753851</th>
+                                                    </tr>
+                                                </table>
                                                 <form>
                                                     <label>Upload Your Receipt</label>
                                                     <input type="file" name="payment_receipt2" id="payment_receipt2" />
