@@ -434,11 +434,11 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     <div class="col-md-12">
                                         <div class="pop-1 member-register-popup"><i class="fa fa-times-circle" aria-hidden="true"></i>
                                             <div class="margin-top-30">
-                                                <h4>UPLOAD DEPOSIT SLIP OR FUND TRANSFER PECEIPT</h4>
+                                                <h4>UPLOAD DEPOSIT SLIP OR FUND TRANSFER RECEIPT</h4>
                                                 <h5>TOOWHEEL BANK ACCOUNT DETAILS</h5>
 <!--                                                <p>Upload your slip picture within 24hrs</p>-->
                                                 <form>
-                                                    <label>Upload Your Recipit</label>
+                                                    <label>Upload Your Receipt</label>
                                                     <input type="file" name="payment_receipt2" id="payment_receipt2" />
                                                     <br/>
                                                     <br/>
