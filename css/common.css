@@ -28,35 +28,29 @@
     margin-right: 10px;
 }
 .s-icon-2 i {
-    color: #449dc9;
+    color: #3e3e3e;
     padding: 5px;
     font-size: 16px;
     margin-right: 10px;
     float: left;
 }
-.s-icon-2 i:nth-child(2) {
-    color: #f10000;
-    padding: 5px;
-    font-size: 16px;
-    margin-right: 10px;
-    float: left;
-}
+
 .s-icon-2 a i {
-    color: #000;
+    color: #3e3e3e;
     padding: 5px;
     font-size: 16px;
     margin-right: 10px;
     float: left;
 }
 .s-icon-2 .whatsapp i {
-    color: #3dc546;
+    color: #3e3e3e;
     padding: 5px;
     font-size: 16px;
     margin-right: 10px;
     float: left;
 }
 .s-icon-2 .mail i {
-    color: #f31d1d;
+    color: #3e3e3e;
     padding: 5px;
     font-size: 16px;
     margin-right: 10px;
@@ -103,7 +97,8 @@
 }
 
 .ftco-footer{
-    background: #f5f5f5 !important;
+    background: #fff !important;
+    border-top: 1px solid #ed1c24;
 }
 .ftco-footer {
     font-size: 14px !important;
@@ -151,7 +146,7 @@
     padding: 0;
 }
 .navbar-dark .navbar-nav .nav-link {
-    color: rgb(0, 0, 0) !important;
+    color: rgb(0, 113, 188) !important;
 }
 .navbar-dark .navbar-nav .nav-link:hover{
     /*border-bottom: 2px solid #82ae46;*/
@@ -173,12 +168,12 @@ a{
 }
 .owl-carousel.home-slider .slider-item .slider-text .subheading {
     font-weight: 600 !important;
-    font-size: 30px !important;
+    font-size: 24px !important;
     letter-spacing: 0px !important;
     text-transform: initial !important;
     display: inline-block;
-    color: #333 !important;
-    font-family: 'Josefin Sans', sans-serif;
+    color: #ffffff !important;
+    /*font-family: 'Josefin Sans', sans-serif;*/
     padding-right: 21%;
 }
 .width-100{
@@ -227,9 +222,11 @@ body {
 .pad-tb-50{
     padding: 50px 0px;
 }
+
 .ftco-section {
     padding: 80px 0 0 !important;
     position: relative;
+
 }
 .heading-section h2 {
     position: relative;
@@ -390,12 +387,13 @@ video { display: block; width: 100%; height: auto; }
     background: #fff !important;
     transition: 0.3s all linear;
     padding: 0 1rem !important;
+    border-bottom: 2px solid #0070bd;
 }
 .sticky .top-2 {
     display: none;
 }
 .sticky .top-3 .navbar-nav li a  {
-    color: #449dc9 !important;
+    color: #464646 !important;
     padding-top: 40px;
     font-size: 13px;
     font-weight: 600;
@@ -457,7 +455,7 @@ video { display: block; width: 100%; height: auto; }
     box-sizing: border-box;
     overflow: hidden;
     margin: 0 0 10px 0;
-    background: #449dc9;
+    background: #ed1c24;
     padding: 10px;
     left: 21px;
     top: 2px;
@@ -467,7 +465,7 @@ video { display: block; width: 100%; height: auto; }
     height: 55px;
     top: -2px;
     right: 140px;
-    background: #98d659;
+    background: #0072bb;
     position: absolute;
     transition: all .5s ease;
     z-index: 1;
@@ -539,7 +537,7 @@ video { display: block; width: 100%; height: auto; }
 }
 
 .pro-img img{
-    width: 80% !important;
+    width: 100% !important;
 }
 .box-2 {
     /*border-right: 10px solid #eee;*/
@@ -566,7 +564,7 @@ video { display: block; width: 100%; height: auto; }
 }
 
 .bg-blue {
-    background: #449dc9 !important;
+    background: #0071bc !important;
 }
 .feature-l{
     padding-top: 20px;
@@ -676,7 +674,7 @@ footer .copy p{
     font-size: 26px !important;
 }
 .cer-text .button-1 a {
-    color: #449dc9  !important;
+    color: #0075bb  !important;
 }
 .cer-text .button-1:hover a {
     color: #ffffff  !important;
@@ -688,11 +686,11 @@ footer .copy p{
 .cer-text h3:after {
     height: 1px;
     width: 89px;
-    background: #98d659;
+    background: #0071bc;
     content: "";
     position: absolute;
     /* z-index: 99999; */
-    top: 131px;
+    top: 231px;
     left: 48px;
 }
 .add-img{
@@ -732,7 +730,7 @@ footer .copy p{
 .cer-text .button-1 {
     width: 132px;
     height: 50px;
-    border: 2px solid #98d659;
+    border: 2px solid #ed1c24;
     border-radius: 4px;
     text-align: center;
     cursor: pointer;
@@ -742,7 +740,8 @@ footer .copy p{
     margin: 0 0 10px 0;
     background: #fff; 
     padding: 10px;
-    bottom: -48px;
+    left: 0;
+    top: 25px;
 }
 .footer-h .block-23 i {
     position: absolute;
@@ -872,6 +871,66 @@ footer .copy p{
         font-size: 40px;
     }
 }
+@media (min-width:992px) and (max-width:1305px) {
+    .product {
+        height: 465px !important;
+    }
+}
+@media (min-width:320px) and (max-width:991px) {
+    .product-img-responsive {
+        margin: 0px 25% !important; 
+        width: 50% !important;
+    }
+    .app-con{
+        order: 2;
+    }
+    .app-img{
+        order: 1;
+    }
+}
+@media (min-width:320px) and (max-width:547px) {
+    .product {
+        height: 460px !important;
+    }
+    .pad-lr-80 {
+        padding: 0px 20px !important;
+    }
+}
+@media (min-width:320px) and (max-width:768px) {
+    .about-sec {
+
+        height: auto !important;
+        margin-bottom: 20px;
+    }
+}
+@media (min-width:768px) and (max-width:1374px) {
+    .about-pic h3{
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+}
+@media (min-width:1220px) and (max-width:1440px) {
+    .about-sec {
+        height: 410px !important;
+
+    }
+}
+@media (min-width:992px) and (max-width:1219px) {
+    .about-sec {
+        height: 626px !important;
+
+    }
+}
+@media (min-width:767px) and (max-width:991px) {
+    .about-sec {
+        height: 600px !important;
+
+    }
+    .about-sec p {
+        font-size: 14px;
+
+    }
+}
 @media (min-width:768px) and (max-width:991px) {
     .subheading-1 {
         font-family: 'Poppins', sans-serif;
@@ -939,14 +998,14 @@ footer .copy p{
     padding: 35px;
     /* border: 1px solid #e4e4e4; */
     box-shadow: 2px -3px 5px 4px #e2e2e2;
-    background: #00000052;
+    background: rgba(0, 0, 0, 0.058823529411764705);
 }
 .product-2 .product-details h3{
     color: #000000 !important;
 
 }
 .product-2 .product-details p{
-    color: #fff !important;
+    /*color: #fff !important;*/
 
 }
 .button-03 {
@@ -991,12 +1050,14 @@ footer .copy p{
     padding: 15px;
     height: 315px;
     box-shadow: 3px 4px 7px 1px #808080;
-
+    margin-top: 21px;
 }
 .box-3 {
     padding: 10px;
     background: #0071be;
     border-radius: 20px;
+    margin-bottom: 10px;
+
 }
 .text-for-hai h5{
     color: #fff !important;
@@ -1008,11 +1069,28 @@ footer .copy p{
     padding-bottom: 50px !important;
 }
 
+.product-text{
+    padding-top: 50px;
+}
+.cer-text .button-1:hover {
+    border: 2px solid #0072bb;
+}
 
 
+.about-pic img {
+    position: absolute;
+}
+.about-pic h3 {
+    padding: 30px 0px 30px 110px;
+}
 
-
-
+.box-4{
+    padding: 10px;
+    box-shadow: 1px 2px 7px 0px #b7b5b5;
+}
+.box-4 h3 {
+    color: #f25258 !important;
+}
 
 
 

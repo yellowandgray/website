@@ -15,7 +15,7 @@
                 <div class="row no-gutters slider-text align-items-center justify-content-center">
                     <div class="col-md-9 ftco-animate text-center">
                         <h1 class="mb-0 bread">Products</h1>
-                        <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home</a></span> <span class="mr-2"><a href="index.html">Product</a></span> <span>Product</span></p>
+                        <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home</a></span> <span>Product</span></p>
 
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </section>
-        <section class="ftco-section" style="background-image: url('images/bg_3.jpg'); background-size: cover;">
+        <section class="ftco-section" style="background: #efefef;">
             <div class="pad-lr-80">
                 <div class="row product-2">
                     <div class="col-lg-8 product-details pl-md-5 ftco-animate">
@@ -61,7 +61,7 @@
             </div>
         </section>
 
-        <section class="ftco-section  bg-gray">
+        <section class="ftco-section"  style="background-image: url('images/bg_02.png'); background-size: cover;">
             <div class="container">
                 <div class="row justify-content-center mb-3 pb-3">
                     <div class="col-md-12 product-details text-center ftco-animate">

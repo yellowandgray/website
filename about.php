@@ -34,7 +34,7 @@
                     <div class="col-lg-4 mb-5  ftco-animate">
                         <div class="">
                         <!--<a href="images/product-01.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
-                            <img src="images/applications/app/001.jpg" class="product-img-responsive" alt="">
+                            <img src="images/applications/app/006.jpg" class="product-img-responsive" alt="">
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,8 @@
         <section class="ftco-section pad-b-50">
             <div class="pad-lr-80">
                 <div class="row  mar-b-30">
-                    <div class="col-md-4">
+                    <div class="col-md-4 about-pic">
+                        <img src="images/about/02.png" alt=""/>
                         <h3>THE COMPANY</h3>
                         <div>
                             <div class="about-sec" style="background-image: url('images/about/001.jpg'); background-size: cover;">
@@ -66,7 +67,8 @@
                         </div>
 
                     </div>
-                  <div class="col-md-4">
+                  <div class="col-md-4 about-pic">
+                      <img src="images/about/03.png" alt=""/>
                         <h3>THE PRODUCT</h3>
                         <div>
                             <div class="about-sec" style="background-image: url('images/about/002.jpg'); background-size: cover;">
@@ -76,7 +78,8 @@
                         </div>
 
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 about-pic">
+                        <img src="images/about/01.png" alt=""/>
                         <h3>THE OPPORTUNITY</h3>
                         <div>
                             <div class="about-sec" style="background-image: url('images/about/003.jpg'); background-size: cover;">

@@ -22,10 +22,17 @@
                                 <div class="row">
                                     <div class="col-md-8 product-text col-sm-12">
                                         <!--<h1 class="mb-2">PRODUCT</h1>-->
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <img src="images/logo.png" alt=""/>
+                                            </div>
+                                        </div>
+
                                         <h2 class="subheading mb-4">FRESCHE delivers high performance antibacterial, antifungal, mould and odour control on treated textile fibres and substrates.</h2>
                                         <div class="row price">
 
                                             <div class="col-md-8 pro-d col-sm-6 ">
+
                                                 <h3>Combo Pack</h3>
                                                 <p>Fresche EF 3851– 1 Litre</p>
                                                 <p>Bz 1 Binder – 1.5 Litre </p>
@@ -280,7 +287,13 @@
                                    <!--<span class="subheading">Best Price For You</span>-->
                     <div class="row pad-tb-50">
                         <div class="col-md-6">
+
                             <div class="cer-text">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="images/logo.png" alt=""/>
+                                    </div>
+                                </div>
                                 <h3>Bio Antimicrobials</h3>
                                 <p>Fresche Bioscience is a new generation SI QAC antimicrobial which delivers high performance, broad spectrum antibacterial, anti-fungal, mould and odour protection on surfaces to which they are either applied or infused. They are widely recognised as one of the worlds most advanced non-volatile, surface bonded antimicrobial, safe for people, plants, pets and the environment.</p>
                                 <p>Fresche is now challenging the dominance of conventional antimicrobials on their key points of risk and concern. These include their chemical volatility, harmful compounds including organo and heavy metals [silver], their instability, toxicity, flammability, poor record in workplace safety, end user health impacts and quite importantly environmental bio-accumulation.</p>
