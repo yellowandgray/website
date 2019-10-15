@@ -1325,3 +1325,35 @@ header .navbar-toggler {
         padding: 28px 30px 27px;
     }
 }
+@media (max-width:767px) and (min-width:320px){
+
+    .sabic-pic {
+        display: none;
+    }
+}
+.pop-up-img {
+    position: fixed;
+    bottom: -32px;
+    z-index: 999;
+} 
+.pop-up-img img{
+    width: 50%;
+    height: auto;
+
+    margin: 16% 21%;
+    box-shadow: 0 0 5px 0px red;
+}
+.download a{ 
+    background: #4ea98c;
+    padding: 10px;
+    color: #fff !important;
+}
+.download a i{ 
+    font-weight: 600;
+    color: red
+}
+@media (max-width:442px) and (min-width:320px){
+    .download a{ 
+        font-size: 9px;
+    }
+}

@@ -62,7 +62,15 @@
                 <div class="item">
                     <div class="slider-caption h3slider">
                         <div class="container">
-                            <strong>We are not only selling Products but also Trust </strong>
+                            <div class="row">
+                                <div class="col-md-5"></div>
+                                <div class="col-md-2 sabic-pic">
+                                    <img src="images/partners/05.png" alt=""/>
+
+                                </div>
+                                <div class="col-md-5"></div>
+                            </div>
+                            <strong>Authorized Dealer of Sabic</strong>
                             <h1>Metal</h1>
                             <a href="metal.php">Find Out More</a>
                         </div>
@@ -152,7 +160,7 @@
                         <div class="col-md-12">
                             <div class="h3-stitle">
                                 <h1>Telecommunication</h1>
-                             <p class="text-justify">Vpn Commodities offers a complete range of products for wiring and connecting subscribers across the entire telecom network and also applied its expertise to ensure quality connections and protection in inclement weather over time.</p>
+                                <p class="text-justify">Vpn Commodities offers a complete range of products for wiring and connecting subscribers across the entire telecom network and also applied its expertise to ensure quality connections and protection in inclement weather over time.</p>
                             </div>
                         </div>
                     </div>
@@ -359,14 +367,14 @@
                         <div class="col-md-12">
                             <div class="h3-stitle text-center">
                                 <h1 class="color-w">Cable Tray</h1>
-                                <p>  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></p>
+                                <p>  <p class="text-justify">Wire Mesh Cable Tray, Cable Tray, Cable Trunking, Cable Ladder, Wireway, Strut Channel and accessories. Our product can be widely used in construction, energy, electricity, plant.</p>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <!--Team Box Start-->
                         <div class="col-md-4 col-sm-4 cable-item ">
-                            <div onclick="location.href='cable-tray.php'" class="team-box wow fadeInDown">
+                            <div onclick="location.href = 'cable-tray.php'" class="team-box wow fadeInDown">
                                 <img  src="images/home/015.jpg" alt="">
                                 <div class="team-info">
                                     <h3>Wire mesh cable tray</h3>
@@ -377,7 +385,7 @@
                         <!--Team Box Start--> 
                         <!--Team Box Start-->
                         <div class="col-md-4 col-sm-4 cable-item">
-                            <div  onclick="location.href='cable-tray.php'" class="team-box wow fadeInDown">
+                            <div  onclick="location.href = 'cable-tray.php'" class="team-box wow fadeInDown">
                                 <img src="images/home/016.jpg" alt="">
                                 <div class="team-info">
                                     <h3>Frp cable tray </h3>
@@ -388,7 +396,7 @@
                         <!--Team Box Start--> 
                         <!--Team Box Start-->
                         <div class="col-md-4 col-sm-4 cable-item">
-                            <div   onclick="location.href='cable-tray.php'" class="team-box wow fadeInDown">
+                            <div   onclick="location.href = 'cable-tray.php'" class="team-box wow fadeInDown">
                                 <img src="images/home/017.jpg" alt="">
                                 <div class="team-info">
                                     <h3>Accessories</h3>
@@ -413,10 +421,20 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="h3-stitle text-center">
-                                    <h1>Metal</h1>
-                                    <p> <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></p>
-                                    <p> and we are providing all kinds of Eco-Friendly and Environmental Services. </p>
+                                <div class="h3-stitle ">
+                                    <h1 class="text-center">Metal</h1>
+                                    <div class="row">
+                                        <div class="col-md-3 sabic-pic" style="padding: 0px 0px 20px 0px  ;">
+                                            <img src="images/partners/05.png" alt=""/>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <p>SABIC is a renowned manufacturer of Steel products in Saudi Arabia producing world class products.</p>
+                                            <p>Rebars are manufactured according to International standards.</p>
+                                            <p>We could also supply Rebars in coil form till thickness of 16 mm.</p>
+
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -428,7 +446,7 @@
                                     <h5>Billet</h5>
                                     <div class="pro-hover">
                                         <h6>Billet</h6>
-                                       <p class="text-justify">Billets are the raw material for producing long-steel products. They are produced in various grades and standards based on customer requirements.</p>
+                                        <p class="text-justify">Billets are the raw material for producing long-steel products. They are produced in various grades and standards based on customer requirements.</p>
                                         <a href="metal.php">Read More</a> 
                                     </div>
                                 </div>
@@ -441,7 +459,7 @@
                                     <h5>Reinforcing Bars</h5>
                                     <div class="pro-hover">
                                         <h6>Reinforcing Bars</h6>
-                                       <p class="text-justify">Concrete reinforcing bars (rebars) represent the majority of VPN Commodities’S production. They are made according to international standards.</p>
+                                        <p class="text-justify">Concrete reinforcing bars (rebars) represent the majority of VPN Commodities’S production. They are made according to international standards.</p>
                                         <a href="metal.php">Read More</a> 
                                     </div>
                                 </div>
@@ -454,7 +472,7 @@
                                     <h5>Compact Coil</h5>
                                     <div class="pro-hover">
                                         <h6>Compact Coil</h6>
-                                    <p class="text-justify">Cold deformed compact coil is processed by downstream cut and bend operations and straightening lines to produce straight bars and welded fabric. Weight range is from three to five tons.</p>
+                                        <p class="text-justify">Cold deformed compact coil is processed by downstream cut and bend operations and straightening lines to produce straight bars and welded fabric. Weight range is from three to five tons.</p>
                                         <a href="metal.php">Read More</a> 
                                     </div>
                                 </div>
@@ -467,7 +485,7 @@
                                     <h5>Wire Rod</h5>
                                     <div class="pro-hover">
                                         <h6>Wire Rod</h6>
-                                       <p class="text-justify">Drawing grade wire rods are used by downstream industries to produce mesh, nails, hangers, screws, barbed wires, fencing mesh, binding wires, etc. Mesh grade wire rods are used for downstream cold indentation process to make cold deformed bars for construction.</p>
+                                        <p class="text-justify">Drawing grade wire rods are used by downstream industries to produce mesh, nails, hangers, screws, barbed wires, fencing mesh, binding wires, etc. Mesh grade wire rods are used for downstream cold indentation process to make cold deformed bars for construction.</p>
                                         <a href="metal.php">Read More</a> 
                                     </div>
                                 </div>

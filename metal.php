@@ -19,7 +19,7 @@
             <!--Inner Header Start-->
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/004.jpg) no-repeat; background-size: cover;">
                 <div class="container">
-                    <h1>Metal</h1>
+                    <h1>Authorized Dealer of Sabic Metal</h1>
                     <ul>
                         <li><a href="index.php">Home</a></li>
                         <li><a href="#"> Products </a></li>
@@ -34,6 +34,17 @@
                     <div class="container">
                         <h3>PRODUCT RANGE</h3>
                         <div class="row">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="pro-box">
+                                    <img src="images/metal/002.jpg" alt="">
+                                    <h5 class="color3">SABIC Metals</h5>
+                                    <div class="pro-hover">
+                                        <h6>METALS</h6>
+                                        <span>SABIC’s metals products are supplied under the SABIC brand through Hadeed, a fully owned manufacturing affiliate of the company. As a leader in the Gulf region for steel production and manufacturing, SABIC produces high-quality metals, and has played a vital role in the construction and industrialization of some of the world’s fastest growing economies.</span>
+
+                                    </div>
+                                </div>
+                            </div>
                             <!--Project box Start-->
                             <div class="col-md-4 col-sm-6">
                                 <div class="pro-box">
@@ -93,7 +104,11 @@
                                     </div>
                                 </div>
                             </div>
+
                             <!--Project box End--> 
+                        </div>
+                        <div class="download">
+                            <a href="pdf/SABIC Metals Long Products Catalog.pdf" target="blank"><span><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download SABIC Metals Long Products Catalog</span></a>
                         </div>
                     </div>
             </section>

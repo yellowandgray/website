@@ -35,52 +35,53 @@
             <section class="wf100 p80 events">
                 <div class="event-posts wow bounceInLeft">
                     <div class="container">
-                        <div class="strut">
-                        <h3>Strut Channel</h3><br>
-                        <div class="row">
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/019.jpg" alt="" class="img-responsive">
 
+                        <div class="strut">
+                            <h3>Strut Channel</h3><br>
+                            <div class="row">
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/019.jpg" alt="" class="img-responsive">
+
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled Duct Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled Duct Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End-->
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/020.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End-->
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/020.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End--> 
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/021.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End--> 
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/021.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Overhead aerial cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Overhead aerial cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
+                                <!--Blog Post End-->
                             </div>
-                            <!--Blog Post End-->
                         </div>
                     </div>
-                </div>
                 </div>
             </section>
 
@@ -88,52 +89,52 @@
                 <div class="event-posts wow bounceInRight">
                     <div class="container">
                         <div class="strut">
-                        <h3>Cable Tray</h3><br>
+                            <h3>Cable Tray</h3><br>
 
-                        <div class="row">
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/001.jpg" alt="" class="img-responsive">
+                            <div class="row">
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/001.jpg" alt="" class="img-responsive">
 
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled Duct Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled Duct Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End-->
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/002.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End-->
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/002.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End--> 
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/003.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End--> 
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/003.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Overhead aerial cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Overhead aerial cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
+                                <!--Blog Post End-->
                             </div>
-                            <!--Blog Post End-->
                         </div>
                     </div>
-                </div>
                 </div>
             </section>
             <!--Causes End--> 
@@ -142,51 +143,51 @@
                 <div class="event-posts wow bounceInLeft">
                     <div class="container">
                         <div class="strut">
-                        <h3>Ladder Tray</h3><br/>
-                        <div class="row">
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/004.jpg" alt="" class="img-responsive">
+                            <h3>Ladder Tray</h3><br/>
+                            <div class="row">
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/004.jpg" alt="" class="img-responsive">
 
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled Duct Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled Duct Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End-->
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/005.jpg" alt="" class="img-responsive"> 
+                                <!--Blog Post End-->
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/005.jpg" alt="" class="img-responsive"> 
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End--> 
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/006.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End--> 
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/006.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Overhead aerial cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Overhead aerial cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
+                                <!--Blog Post End-->
                             </div>
-                            <!--Blog Post End-->
-                        </div>
-                    </div>      
-                </div>  
+                        </div>      
+                    </div>  
                 </div>
             </section>
 
@@ -194,51 +195,51 @@
                 <div class="event-posts wow bounceInLeft">
                     <div class="container">
                         <div class="strut">
-                        <h3>Cable Ldder</h3><br>
-                        <div class="row">
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/007.jpg" alt="" class="img-responsive">
+                            <h3>Cable Ldder</h3><br>
+                            <div class="row">
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/007.jpg" alt="" class="img-responsive">
 
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled Duct Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled Duct Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End-->
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/008.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End-->
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/008.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End--> 
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/009.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End--> 
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/009.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Overhead aerial cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Overhead aerial cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
+                                <!--Blog Post End-->
                             </div>
-                            <!--Blog Post End-->
                         </div>
                     </div>
-                </div>
                 </div>
             </section>
 
@@ -247,51 +248,51 @@
                 <div class="event-posts wow bounceInRight">
                     <div class="container">
                         <div class="strut">
-                        <h3>Wire Mesh Cable Tray</h3><br>
-                        <div class="row">
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/010.jpg" alt="" class="img-responsive">
+                            <h3>Wire Mesh Cable Tray</h3><br>
+                            <div class="row">
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/010.jpg" alt="" class="img-responsive">
 
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled Duct Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled Duct Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End-->
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/011.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End-->
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/011.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End--> 
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/012.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End--> 
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/012.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Overhead aerial cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Overhead aerial cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
+                                <!--Blog Post End-->
                             </div>
-                            <!--Blog Post End-->
                         </div>
                     </div>
-                </div>
                 </div>
             </section>
 
@@ -299,51 +300,51 @@
                 <div class="event-posts wow bounceInLeft">
                     <div class="container">
                         <div class="strut">
-                        <h3>Wireway</h3><br>
-                        <div class="row">
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/013.jpg" alt="" class="img-responsive">
+                            <h3>Wireway</h3><br>
+                            <div class="row">
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/013.jpg" alt="" class="img-responsive">
 
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled Duct Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled Duct Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End-->
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/014.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End-->
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/014.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End--> 
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/015.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End--> 
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/015.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Overhead aerial cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Overhead aerial cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
+                                <!--Blog Post End-->
                             </div>
-                            <!--Blog Post End-->
                         </div>
                     </div>
-                </div>
                 </div>
             </section>
 
@@ -351,51 +352,51 @@
                 <div class="event-posts wow bounceInRight">
                     <div class="container">
                         <div class="strut">
-                        <h3>Cable Trunking</h3><br>
-                        <div class="row">
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/016.jpg" alt="" class="img-responsive">
+                            <h3>Cable Trunking</h3><br>
+                            <div class="row">
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/016.jpg" alt="" class="img-responsive">
 
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled Duct Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled Duct Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End-->
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/017.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End-->
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/017.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End--> 
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/018.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End--> 
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/018.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Overhead aerial cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Overhead aerial cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
+                                <!--Blog Post End-->
                             </div>
-                            <!--Blog Post End-->
                         </div>
                     </div>
-                </div>
                 </div>
             </section>
 
@@ -403,51 +404,54 @@
                 <div class="event-posts wow bounceInLeft">
                     <div class="container">
                         <div class="strut">
-                        <h3>FRP Cable Tray</h3><br>
-                        <div class="row">
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/022.jpg" alt="" class="img-responsive">
+                            <h3>FRP Cable Tray</h3><br>
+                            <div class="row">
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/022.jpg" alt="" class="img-responsive">
 
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled Duct Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled Duct Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End-->
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/023.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End-->
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/023.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Jelly Filled  Burial Cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
-                            </div>
-                            <!--Blog Post End--> 
-                            <!--Blog Post Start-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/024.jpg" alt="" class="img-responsive">
+                                <!--Blog Post End--> 
+                                <!--Blog Post Start-->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="event-post">
+                                        <div class="event-thumb">
+                                            <a href="#"><i class="fas fa-link"></i></a> <img src="images/cable-tray/024.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <!--                                    <div class="event-txt">
+                                                                                <h5><a href="#">Overhead aerial cable</a></h5>
+                                        
+                                                                            </div>-->
                                     </div>
-                                    <!--                                    <div class="event-txt">
-                                                                            <h5><a href="#">Overhead aerial cable</a></h5>
-                                    
-                                                                        </div>-->
                                 </div>
+                                <!--Blog Post End-->
                             </div>
-                            <!--Blog Post End-->
+                        </div>
+                        <div class="download">
+                            <a href="pdf/VPN cable tray catalog.pdf" target="blank"><span><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download VPN Strut Channel & Cable Tray Products Catalog</span></a>
                         </div>
                     </div>
-                </div>
                 </div>
             </section>
 
