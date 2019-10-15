@@ -41,7 +41,7 @@
                                                 <li class="nav-item"><a href="product.php" class="nav-link">Products</a></li>
                                                 <li class="nav-item"><a href="application.php" class="nav-link">Applications</a></li>
                                                 <li class="nav-item"><a href="#" class="nav-link">Artifacts</a></li>
-                                                <li class="nav-item"><a href="testimonial.php" class="nav-link">Testimonial</a></li>
+                                                <li class="nav-item"><a href="#" class="nav-link">Testimonial</a></li>
                                                 <li class="nav-item active"><a href="about.php" class="nav-link">About</a></li>
                                                 <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
                                                 <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
