@@ -415,6 +415,7 @@ foreach ($sub_categories as $row) {
                                         $('#join_team_comment').val('');
                                         $('#join_team_cv').val('');
                                         cv_document = '';
+                                        $('.hover_bkgr_fricc').hide();
                                     }
                                 },
                                 error: function (err) {
@@ -423,6 +424,9 @@ foreach ($sub_categories as $row) {
                             });
                             return false;
                         }
+                    }
+                    function closeboxfun() {
+                        $('.hover_bkgr_fricc').hide();
                     }
                     function validForm() {
                         if ($.trim($('#join_team_name').val()) === '') {
@@ -433,6 +437,12 @@ foreach ($sub_categories as $row) {
                             alert('Email required');
                             return false;
                         }
+                        var email = $("#join_team_email").val();
+                        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                                if (!emailReg.test(email)) {
+                                    alert('Invalid Email Type');
+                                    return;
+                                }
                         if ($.trim($('#join_team_contact').val()) === '') {
                             alert('Contact required');
                             return false;
@@ -1064,13 +1074,13 @@ foreach ($sub_categories as $row) {
                                             </li>
                                         </ul>
                                         <div class="padding-t-20">
-                                            <a class="about_us_btn3 trigger_popup_fricc1">Join our Team</a>
+                                            <a class="about_us_btn3 trigger_popup_fricc">Join our Team</a>
                                         </div>
                                     </div>
                                 </div>
                                 <br/>
-                                <div class="padding-20">
-                                    <div class="hover_bkgr_fricc1">
+<!--                                <div class="padding-20">
+                                    <div class="hover_bkgr_fricc">
                                         <span class="helper1"></span>
                                         <div>
                                             <div class="popupCloseButton1">X</div>
@@ -1090,7 +1100,7 @@ foreach ($sub_categories as $row) {
                                             </from>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
 
                             </div>
                         </div>
@@ -1107,19 +1117,19 @@ foreach ($sub_categories as $row) {
                 </footer>
                 <!-- END FOOTER SECTION -->
 
-                <script>
+<!--                <script>
                     $(window).load(function () {
                         $(".trigger_popup_fricc1").click(function () {
-                            $('.hover_bkgr_fricc1').show();
+                            $('.hover_bkgr_fricc').show();
                         });
                         //                        $('.hover_bkgr_fricc').click(function () {
                         //                            $('.hover_bkgr_fricc').hide();
                         //                        });
                         $('.popupCloseButton1').click(function () {
-                            $('.hover_bkgr_fricc1').hide();
+                            $('.hover_bkgr_fricc').hide();
                         });
                     });
-                </script>
+                </script>-->
                 <!-- footer End -->
             </div>
             <script src="js/bootstrap.min.js" type="text/javascript"></script>

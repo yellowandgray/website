@@ -312,10 +312,34 @@ $app->post('/submit_join_team', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to submit form');
     $data = $app->request->post();
     $tpry = new Thirdparty();
-    $tpry->sendMail('mushaqdeen@gmail.com', 'Mushaqdeen', 'New join team form', 'New join team form', 'New join team form', $data['email'], $data['name'], $data['cv'], 'cv.pdf', '', '');
+    $tpry->sendMail('hr@macworldinc.com', 'MACWORLD', '  
+    <table>
+    <img src="http://macworldinc.com/img/logo-top-1.png" alt="" style="width: 12%" />
+    <h2>JOIN OUR TEAM</h2>
+        <tr>
+            <th>Name</th>
+            <td>:</td>
+            <td>' . $data['name'] . '</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>:</td>
+            <td>' . $data['email'] . '</td>
+        </tr>
+        <tr>
+            <th>Contact</th>
+            <td>:</td>
+            <td>' . $data['contact'] . '</td>
+        </tr>
+        <tr>
+            <th>Message</th>
+            <td>:</td>
+            <td>' . $data['comment'] . '</td>
+        </tr>
+    </table>', 'New join team form', $data['name'], $data['email'], $data['comment'], $data['cv'], 'cv.pdf', '', '');
     if ($data != '') {
         $res['error'] = false;
-        $res['message'] = 'File uploaded successfully';
+        $res['message'] = 'Thanks for sending your resume. We will get in touch with you soon!';
         $res['data'] = $data;
     }
     echoRespnse(201, $res);
