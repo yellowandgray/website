@@ -33,7 +33,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     <div class="form-group">
                                         <label for="type">Category</label>
                                         <span class="red-i">*</span>
-                                        <select class="form-control" name="type" id="type" onchange="loadClubs(this.value);">                                           
+                                        <select class="form-control" name="type" id="type" onchange="loadClubs(this.value);">
                                             <option value="four_wheel">4 Wheel</option>
                                             <option value="two_wheel">2 Wheel</option>
                                         </select>
@@ -505,6 +505,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
         <script src="js/bootbox.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script>
+                                                            loadClubs('four_wheel');
                                                             $(".cdm-found").click(
                                                                     function () {
                                                                         $(".pop-1").fadeIn("slow");
