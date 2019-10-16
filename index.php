@@ -427,10 +427,10 @@
                                         <div class="col-md-3 sabic-pic" style="padding: 0px 0px 20px 0px  ;">
                                             <img src="images/partners/05.png" alt=""/>
                                         </div>
-                                        <div class="col-md-9">
-                                            <p>SABIC is a renowned manufacturer of Steel products in Saudi Arabia producing world class products.</p>
-                                            <p>Rebars are manufactured according to International standards.</p>
-                                            <p>We could also supply Rebars in coil form till thickness of 16 mm.</p>
+                                        <div class="col-md-9" style="padding: 10px  ;">
+                                            <p> <i class="fa fa-arrow-right" aria-hidden="true"></i>  SABIC is a renowned manufacturer of Steel products in Saudi Arabia producing world class products.</p>
+                                            <p>  <i class="fa fa-arrow-right" aria-hidden="true"></i> Rebars are manufactured according to International standards.</p>
+                                            <p>  <i class="fa fa-arrow-right" aria-hidden="true"></i> We could also supply Rebars in coil form till thickness of 16 mm.</p>
 
                                         </div>
                                     </div>
