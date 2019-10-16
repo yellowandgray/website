@@ -27,6 +27,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CategoryComponent, CategoryForm, CategoryDelete } from './category/category.component';
@@ -142,7 +143,8 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
     FormsModule,
     ReactiveFormsModule,
     MatNativeDateModule,
-    Ng2GoogleChartsModule
+    Ng2GoogleChartsModule,
+    AngularEditorModule
   ],
   entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubPhotosForm, CategoryComponent, CategoryForm, CategoryDelete, VendorComponent, VendorForm, MemberComponent, MemberForm, MemberDelete, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete, NewsletterComponent, NewsletterForm, NewsletterDelete],
   providers: [],

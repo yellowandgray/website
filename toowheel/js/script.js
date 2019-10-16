@@ -14,46 +14,51 @@ var BASE_IMAGE_URL = 'http://www.toowheel.com/toowheel/api/v1/';
 
 
 function attachFile(id) {
-    $('.loader').addClass('is-active');
-    var form = new FormData();
-    form.append('file', $('#' + id)[0].files[0]);
-    $.ajax({
-        type: "POST",
-        url: 'api/v1/upload_file',
-        processData: false,
-        contentType: false,
-        data: form,
-        success: function (data) {
-            $('.loader').removeClass('is-active');
-            if (data.result.error === false) {
-                if (id == 'profile_image') {
-                    avatar = data.result.data;
+    var val = $('#' + id).val();
+    if ($.trim(val) != '') {
+        $('.loader').addClass('is-active');
+        var form = new FormData();
+        form.append('file', $('#' + id)[0].files[0]);
+        $.ajax({
+            type: "POST",
+            url: 'api/v1/upload_file',
+            processData: false,
+            contentType: false,
+            data: form,
+            success: function (data) {
+                $('.loader').removeClass('is-active');
+                if (data.result.error === false) {
+                    if (id == 'profile_image') {
+                        avatar = data.result.data;
+                    }
+                    if (id == 'payment_receipt' || id == 'payment_receipt2') {
+                        payment_receipt = data.result.data;
+                        payment_type = 'receipt';
+                    }
+                    if (id == 'cover_image') {
+                        cover_image = data.result.data;
+                    }
+                    if (id == 'logo') {
+                        logo = data.result.data;
+                    }
+                    if (id == 'club_video') {
+                        club_video = data.result.data;
+                    }
+                } else {
+                    bootbox.alert(data.result.message);
                 }
-                if (id == 'payment_receipt' || id == 'payment_receipt2') {
-                    payment_receipt = data.result.data;
-                    payment_type = 'receipt';
-                }
-                if (id == 'cover_image') {
-                    cover_image = data.result.data;
-                }
-                if (id == 'logo') {
-                    logo = data.result.data;
-                }
-                if (id == 'club_video') {
-                    club_video = data.result.data;
-                }
-            } else {
-                bootbox.alert(data.result.message);
+            },
+            error: function (err) {
+                $('.loader').removeClass('is-active');
+                bootbox.alert(err.statusText);
             }
-        },
-        error: function (err) {
-            $('.loader').removeClass('is-active');
-            bootbox.alert(err.statusText);
-        }
-    });
+        });
+    } else {
+        swal('Information', 'Please attach slip', 'info');
+    }
 }
 
-function loadClubs(type) {        
+function loadClubs(type) {
     if (type != '') {
         $.ajax({
             type: "GET",
@@ -97,10 +102,10 @@ function removeValidation(id) {
 function emailVaildation(id)
 {
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-                                if (!emailReg.test(id)) {
-                                    alert('Invalid Email Type');
-                                    return;
-                                }
+    if (!emailReg.test(id)) {
+        alert('Invalid Email Type');
+        return;
+    }
 }
 
 $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDirection) {
@@ -235,7 +240,7 @@ function registerMember() {
                     msg = '<h5>Congratulations!</h5><p class="text-center" style="margin-bottom: 0">You are now Official Member of TooWheel.</p><strong>Membership ID: ' + data.result.data + '</strong>';
                 } else if (payment_type == 'receipt') {
                     msg = '<h5>Thank you!</h5><p class="text-center" style="margin-bottom: 0">Verification process may take 24hrs. You will receive a SMS or Email once your account has been activated</p>';
-                    mailSendFun();                    
+                    mailSendFun();
                 } else {
                     msg = '<h5>Thank you!</h5><p class="text-center" style="margin-bottom: 0">Please make payment to activate your account</p>';
                 }
@@ -255,8 +260,8 @@ function registerMember() {
 function mailSendFun() {
     console.log("mail send");
     $tpry = new Thirdparty();
-    $tpry-sendMail('noreply@toowheel.com', 'TOOWHELL',
-    '', 'New join team form','name','yellowandgraychannel@gmail.com','comment','cv','cv.pdf', '', '');
+    $tpry - sendMail('noreply@toowheel.com', 'TOOWHELL',
+            '', 'New join team form', 'name', 'yellowandgraychannel@gmail.com', 'comment', 'cv', 'cv.pdf', '', '');
 }
 
 function registerClub() {

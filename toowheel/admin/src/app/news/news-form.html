@@ -123,11 +123,7 @@
 </div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
     <div fxFlex="100%">
-        <mat-form-field class="full-width">
-            <mat-label>Description 1</mat-label>
-            <textarea rows="40" matInput placeholder="" required formControlName="description"></textarea>
-            <mat-error>Description is required</mat-error>
-        </mat-form-field>
+        <angular-editor id="editor1" formControlName="description" [config]="editorConfig"></angular-editor>
     </div>
 </div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
