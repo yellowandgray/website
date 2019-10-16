@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head.php'; ?>
+    <?php
+     $page = 'about';
+     include 'head.php'; ?>
     <body class="goto-here">
 
 
@@ -43,6 +45,11 @@
         <section>
             <div class="pad-lr-80">
                 <div class="row about-fresche">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="images/logo.png" alt=""/>
+                        </div>
+                    </div>
                     <div class="text-center col-lg-12 product-details pl-md-5 ftco-animate">
                         <h3>Fresche Bioscience</h3>
                         <p>Fresche Bioscience is a leading international company, specializing in research, technical development, marketing and distribution of advanced molecular compounds relating to microbial control and surface protection, textile thermal transfer and moisture management coatings.</p>
@@ -67,8 +74,8 @@
                         </div>
 
                     </div>
-                  <div class="col-md-4 about-pic">
-                      <img src="images/about/03.png" alt=""/>
+                    <div class="col-md-4 about-pic">
+                        <img src="images/about/03.png" alt=""/>
                         <h3>THE PRODUCT</h3>
                         <div>
                             <div class="about-sec" style="background-image: url('images/about/002.jpg'); background-size: cover;">

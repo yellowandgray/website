@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head.php'; ?>
+    <?php 
+      $page = 'applications';
+      include 'head.php'; ?>
     <body class="goto-here">
 
 
         <!-- END nav -->
         <?php include 'enquiry.php'; ?>
         <section>
-            <?php include 'menu.php'; ?>
+            <?php  include 'menu.php';  ?>
         </section>
         <div class="hero-wrap hero-bread" style="background-image: url('images/bg_03.jpg'); background-size: cover;">
 
@@ -34,7 +36,7 @@
                         <!--<button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>-->
                     </div>
                     <div class=" text-center col-lg-4 product-details pl-md-5 ftco-animate">
-                      
+
                         <img src="images/applications/app/005.jpg" class="product-img-responsive" alt=""/>
                     </div>
                 </div>
@@ -80,7 +82,7 @@
                 </div>
             </div>
         </section>
-        <section class="ftco-section">
+        <section class="ftco-section ">
             <div class="pad-lr-80">
                 <div class="row">
                     <div class="col-lg-4 mb-5 app-img  ftco-animate">
@@ -100,7 +102,7 @@
                 </div>
             </div>
         </section>
-        <section class="ftco-section" style="background-image: url('images/bg_02.png'); background-size: cover;">
+        <section class="ftco-section pad-b-50" style="background-image: url('images/bg_02.png'); background-size: cover;">
             <div class="pad-lr-80">
                 <div class="row">
                     <div class="col-lg-8 product-details pl-md-5  app-con ftco-animate">
@@ -126,6 +128,6 @@
                 </div>
             </div>
         </section>
-        <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
     </body>
 </html>

@@ -22,17 +22,17 @@
                                 <div class="row">
                                     <div class="col-md-8 product-text col-sm-12">
                                         <!--<h1 class="mb-2">PRODUCT</h1>-->
-                                        <div class="row">
-                                            <div class="col-md-3">
-                                                <img src="images/logo.png" alt=""/>
-                                            </div>
-                                        </div>
+
 
                                         <h2 class="subheading mb-4">FRESCHE delivers high performance antibacterial, antifungal, mould and odour control on treated textile fibres and substrates.</h2>
                                         <div class="row price">
 
                                             <div class="col-md-8 pro-d col-sm-6 ">
-
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <img src="images/logo.png" alt=""/>
+                                                    </div>
+                                                </div>
                                                 <h3>Combo Pack</h3>
                                                 <p>Fresche EF 3851– 1 Litre</p>
                                                 <p>Bz 1 Binder – 1.5 Litre </p>
@@ -114,7 +114,7 @@
                                 </div>
                             </div>
                             <h3>Health Care</h3>
-                            <h3 class="see"><a href="#">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
+                            <h3 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
                         <div class="col-md-4">
                             <div class="div-1">
@@ -123,7 +123,7 @@
                                 </div>
                             </div>
                             <h3>Hospitality</h3>
-                            <h3 class="see"><a href="#">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
+                            <h3 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
                         <div class="col-md-4">
                             <div class="div-1">
@@ -132,7 +132,7 @@
                                 </div>
                             </div>
                             <h3>Water and Air Filtration </h3>
-                            <h3 class="see"><a href="#">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
+                            <h3 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
 
                     </div>
@@ -144,7 +144,7 @@
                                 </div>
                             </div>
                             <h3>Footwear </h3>
-                            <h3 class="see"><a href="#">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
+                            <h3 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
                         <div class="col-md-4">
                             <div class="div-1">
@@ -153,7 +153,7 @@
                                 </div>
                             </div>
                             <h3>Foot & pharma manufacturing</h3>
-                            <h3 class="see"><a href="#">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
+                            <h3 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
                         <div class="col-md-4">
                             <div class="div-1">
@@ -162,7 +162,7 @@
                                 </div>
                             </div>
                             <h3>Textiles</h3>
-                            <h3 class="see"><a href="#">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> </h3>
+                            <h3 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> </h3>
                         </div>
 
                     </div>
@@ -285,8 +285,8 @@
             <div class="row">
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
                                    <!--<span class="subheading">Best Price For You</span>-->
-                    <div class="row pad-tb-50">
-                        <div class="col-md-6">
+                    <div class="row pad-tb-50 ">
+                        <div class="col-md-8">
 
                             <div class="cer-text">
                                 <div class="row">
@@ -305,14 +305,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 cer-text">
+                        <div class="col-md-4 cer-text">
                             <div class="cer-img">
                                 <img src="images/applications/007.jpg" alt="" class="img-responsive"/>
                             </div>
                             <div class="see-2">
                                 <div class="button-1">
                                     <div class="eff-1"></div>
-                                    <a href="#">See More</a>
+                                    <a href="about.php">See More</a>
                                 </div>
                             </div>
                         </div>

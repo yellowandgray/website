@@ -172,7 +172,7 @@ a{
     letter-spacing: 0px !important;
     text-transform: initial !important;
     display: inline-block;
-    color: #ffffff !important;
+    color: #232323 !important;
     /*font-family: 'Josefin Sans', sans-serif;*/
     padding-right: 21%;
 }
@@ -582,7 +582,7 @@ footer .copy p{
         height: 441px;
 
     }.owl-carousel.home-slider .slider-item .slider-text .subheading {
-        font-size: 26px !important;
+        font-size: 15px !important;
 
     }
     .feature-l p {
@@ -607,11 +607,11 @@ footer .copy p{
         height: 441px;
 
     }.owl-carousel.home-slider .slider-item .slider-text .subheading {
-        font-size: 26px !important;
+        font-size: 17px !important;
 
     }
     .feature-l p {
-        font-size: 16px;
+        font-size: 11px;
     }
     .owl-carousel.home-slider .slider-item .slider-text {
         height: 0 !important;
@@ -627,6 +627,9 @@ footer .copy p{
     }
     .pro-img img {
         width: 67% !important;
+    }
+    .product-text{
+        padding-top: 20px !important;
     }
 
 }
@@ -666,7 +669,7 @@ footer .copy p{
     flex-basis: 24%;
 }
 .cer-text{
-    padding: 90px 30px;
+    /*padding: 90px 30px;*/
 }
 .cer-text h3{
     font-family: 'Montserrat', sans-serif !important;
@@ -681,7 +684,7 @@ footer .copy p{
 }
 
 .cer-img img{
-    padding: 48px;
+    padding-top: 48px ;
 }
 .cer-text h3:after {
     height: 1px;
@@ -690,9 +693,10 @@ footer .copy p{
     content: "";
     position: absolute;
     /* z-index: 99999; */
-    top: 231px;
-    left: 48px;
+    top: 138px;
+    left: 19px;
 }
+
 .add-img{
     float: left;
     width: 20% !important;
@@ -902,6 +906,9 @@ footer .copy p{
         height: auto !important;
         margin-bottom: 20px;
     }
+    .pro-img{
+        display: none;
+    }
 }
 @media (min-width:768px) and (max-width:1374px) {
     .about-pic h3{
@@ -1091,8 +1098,21 @@ footer .copy p{
 .box-4 h3 {
     color: #f25258 !important;
 }
+.add-cart{
+    margin: auto;
 
+}
+.add-cart img {
+    width: 70% !important;
+}
 
-
+.active .nav-link::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ed1c24;
+    transition: width .3s;
+}
 
 
