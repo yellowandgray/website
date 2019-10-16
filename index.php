@@ -41,7 +41,7 @@
                             <img src="img/ind/industries_1.png" alt="">
                             <h3> <a href="#"> SWITCHGEARS</a></h3>
                             <p>The Design of the insulation system for metal-enclosed switchgear is based upon life expectancy of about 30 years.</p>
-                            <a href="#" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
+                            <a href="switchgears.php" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
@@ -49,7 +49,7 @@
                             <img src="img/ind/industries_2.png" alt="">
                             <h3><a href="#">TRANSFORMERS</a></h3>
                             <p>High-voltage transformers are some of the most important (and expensive) pieces of equipment required for operating a power system.</p>
-                            <a href="#" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
+                            <a href="transformers.php" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
@@ -57,7 +57,7 @@
                             <img src="img/ind/industries_3.png" alt="">
                             <h3><a href="#">CABLES</a></h3>
                             <p>Cabling is an expensive business and must be treated carefully. The expenditure of substitution once the routes are all concealed is bigger.</p>
-                            <a href="#" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
+                            <a href="cables.php" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
                     </div>
                 </div>
@@ -76,9 +76,11 @@
                     </div>
                     <div class="col-md-5 col-lg-5">
                         <div class="about_text">
-                            <h2>Company Profile</h2>
+                            <h2>About us</h2>
                             <h4>WE ARE A ELECTRICAL SERVICE COMPANY THAT AIMS TO PROVIDE YOU WITH THE BEST SERVICE.</h4>
-                            <p>S&T Testing Services Pvt Ltd is a well recognized Electrical Service Company having 20 years Singapore experienced Team. We provides exemplary service quality for Testing, Installation and Commissioning of Electrical Equipment's. By Choosing us, You no need to worry about the Completion of project, we will take care of that.</p>
+                            <p>S&T Testing Services Pvt Ltd is a well recognized Electrical Service Company having 20 years</p>
+                            <p>Singapore experienced Team. We provides exemplary service quality for Testing, Installation and Commissioning of Electrical Equipment's.</p>
+                            <p>By Choosing us, You no need to worry about the Completion of project, we will take care of that.</p>
                             <a href="#" class="btn_2">read more</a>
                         </div>
                     </div>
@@ -203,8 +205,8 @@
                                 <div class="card_iner overlay">
                                     <img src="img/gallery/gallery_item.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Electrical Engineering</h5>
-                                        <p class="card-text">For together creepeth created second air fill don divide <br> said personal crud neil bus </p>
+                                        <h5 class="card-title">Title Comes Here</h5>
+                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                         <a href="#" class="portfolio_btn">read more <img src="img/right-arrow.svg" alt="">
                                         </a>
                                     </div>
@@ -215,7 +217,7 @@
                                 <div class="card_iner overlay">
                                     <img src="img/gallery/gallery_item_1.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Electrical Engineering</h5>
+                                        <h5 class="card-title">Title Comes Here</h5>
                                         <p class="card-text">For together creepeth created second air fill don divide <br>
                                             said personal crud neil bus </p>
                                         <a href="#" class="portfolio_btn">read more <img src="img/right-arrow.svg" alt="">
@@ -227,7 +229,7 @@
                                 <div class="card_iner overlay">
                                     <img src="img/gallery/gallery_item_2.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Electrical Engineering</h5>
+                                        <h5 class="card-title">Title Comes Here</h5>
                                         <p class="card-text">For together creepeth created second air fill don divide <br>
                                             said personal crud neil bus </p>
                                         <a href="#" class="portfolio_btn">read more <img src="img/right-arrow.svg" alt="">
@@ -239,11 +241,10 @@
                                 <div class="card_iner overlay">
                                     <img src="img/gallery/gallery_item_3.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Electrical Engineering</h5>
+                                        <h5 class="card-title">Title Comes Here</h5>
                                         <p class="card-text">For together creepeth created second air fill don divide <br>
                                             said personal crud neil bus </p>
-                                        <a href="#" class="portfolio_btn">read more <img src="img/right-arrow.svg" alt="">
-                                        </a>
+                                        <a href="#" class="portfolio_btn">read more <img src="img/right-arrow.svg" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -417,41 +418,7 @@
         <!--::catagory_post end::-->
 
         <!--::subscribe area start::-->
-        <section class="subscribe_area">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <div class="subscribe_iner">
-                            <div class="row align-items-center">
-                                <div class="col-lg-5 col-xl-5">
-                                    <div class="subscribe_area_tittle">
-                                        <h2>Do You Have a Question?</h2>
-                                    </div>
-                                </div>
-                                <div class="col-lg-7 col-xl-6">
-                                    <div id="mc_embed_signup">
-                                        <aside class="single_sidebar_widget newsletter_widget">
-                                            <form target="_blank"
-                                                  action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                                  method="get">
-                                                <div class="form-group">
-                                                    <input type="email" class="form-control" onfocus="this.placeholder = ''"
-                                                           onblur="this.placeholder = 'Enter email'" placeholder='Enter email'
-                                                           required>
-                                                </div>
-                                                <button class="btn_2" type="submit">Subscribe</button>
-
-                                                <div class="info"></div>
-                                            </form>
-                                        </aside>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php include 'subscribe.php'; ?>
         <!--::subscribe area end::-->
 
         <?php include 'footer.php'; ?>

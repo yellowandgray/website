@@ -4,7 +4,7 @@
         <div class="row justify-content-between">
             <div class="col-sm-6 col-md-3 col-xl-3">
                 <div class="single-footer-widget footer_1">
-                    <a href="index.html"> <img src="img/footer-logo.png" alt=""> </a>
+                    <a href="index.php"> <img src="img/footer-logo.png" alt=""> </a>
                     <p>We are a electrical service company that aims to provide you with the best service.</p>
                 </div>
             </div>
@@ -13,18 +13,18 @@
                 <div class="single-footer-widget">
                     <h4>Links</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="about.php">About us</a></li>
+                        <li><a href="service.php">Services</a></li>
+                        <li><a href="project.php">Projects</a></li>
+                        <li><a href="contact.php">Contact us</a></li>
                     </ul>
 
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-xl-3">
                 <div class="single-footer-widget footer_3">
-                    <h4> our Gallery</h4>
+                    <h4> Services</h4>
                     <div class="footer_img">
                         <div class="single_footer_img">
                             <img src="img/footer_img/footer_img_1.png" alt="">
@@ -50,12 +50,18 @@
             <div class="col-sm-6 col-md-3 col-xl-3">
                 <div class="single-footer-widget footer_icon">
                     <h4>Contact Info</h4>
-                    <p>iSPACE, 7 Soon Lee Street, Unit 02-11, Singapore - 627608</p>
+                    <p>iSPACE, 7 Soon Lee Street,<br/> Unit 02-11, Singapore - 627608</p>
                     <ul>
-                        <li><a href="tel:+65-6561-7601"><i class="ti-mobile"></i>Tel: 6561 7601</a></li>
-                        <li><a href="tel:+65-8626-1994"><i class="ti-mobile"></i>Hp: 9650 9762</a></li>
-                        <li><a href="mailto:sales@sttesting.com.sg"><i class="ti-email"></i>sales@sttesting.com.sg</a></li>
-                        <li><a href="www.sttesting.com.sg"><i class="ti-world"></i> www.sttesting.com.sg</a></li>
+                        <li>
+                            <a href="tel:+65-6561-7601"><i class="ti-mobile"></i>Tel: 6561 7601</a> | 
+                            <a href="tel:+65-8626-1994"><i class="ti-mobile"></i>Hp: 9650 9762</a>
+                        </li>
+                        <li>
+                            <a href="mailto:sales@sttesting.com.sg"><i class="ti-email"></i>sales@sttesting.com.sg</a>
+                        </li>
+                        <li>
+                            <a href="http://www.sttesting.com.sg/"><i class="ti-world"></i> www.sttesting.com.sg</a>
+                        </li>
                     </ul>
                 </div>
             </div>

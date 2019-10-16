@@ -17,3 +17,45 @@
 .about_part a.btn_2:hover {
     background-color: #191d34;
 }
+
+.service_text {
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.service_text h3 {
+    color: #fe5c24
+}
+
+.switch-points {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.switch-points .unordered-list li {
+    font-size: 20px;
+}
+
+.switch-points .unordered-list li::before {
+    top: 15px;
+}
+
+.switch-list .unordered-list li {
+    font-size: 18px;
+}
+
+.switch-list .unordered-list li::before {
+    top: 12px;
+}
+
+.ptb-40 {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+@media screen and (max-width: 991px) {
+    .our_industries .single_industries a img {
+        width: auto !important;
+    }
+}
