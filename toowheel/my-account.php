@@ -159,6 +159,8 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                     <input type="password" name="old_password" placeholder="Enter Your Old Password" />
                     <br/>
                     <input type="password" name="new_password" placeholder="Enter Your New Password" />
+                    <br/>
+                    <input type="password" name="confirm_password" placeholder="Enter Confirm Password" />
                     <center>
                         <button type="submit">Submit</button>
                     </center>

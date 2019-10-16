@@ -9,7 +9,7 @@ var cover_image = '';
 var logo = '';
 var activated = 0;
 var club_video = '';
-var BASE_IMAGE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
+var BASE_IMAGE_URL = 'http://www.toowheel.com/toowheel/api/v1/';
 
 
 
@@ -158,6 +158,10 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
             }
             if ($.trim($('#email').val()) === '') {
                 $('#email_error').html('Enter email').addClass('error-msg');
+                change = false;
+            }
+            if (validateEmail($.trim($('#email').val())) === false) {
+                $('#email_error').html('Enter a valid email').addClass('error-msg');
                 change = false;
             }
             if ($.trim($('#password').val()) === '') {
@@ -408,4 +412,12 @@ function loginMember() {
         }
     });
     return false;
+}
+
+function validateEmail(emailField) {
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    if (reg.test(emailField) === false) {
+        return false;
+    }
+    return true;
 }
