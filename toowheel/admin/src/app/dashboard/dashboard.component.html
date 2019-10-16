@@ -4,6 +4,13 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <app-header></app-header>
-       <google-chart [data]="pieChart"></google-chart>
+        <div fxLayout="row">
+            <div fxFlex="50%">
+                <google-chart [data]="pieChart"></google-chart>
+            </div>
+            <div fxFlex="50%">
+                <google-chart [data]="columnChart"></google-chart>
+            </div>
+        </div>
     </mat-sidenav-content>
 </mat-sidenav-container>
