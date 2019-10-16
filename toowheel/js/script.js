@@ -11,6 +11,8 @@ var activated = 0;
 var club_video = '';
 var BASE_IMAGE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
 
+
+
 function attachFile(id) {
     $('.loader').addClass('is-active');
     var form = new FormData();
@@ -51,7 +53,7 @@ function attachFile(id) {
     });
 }
 
-function loadClubs(type) {
+function loadClubs(type) {        
     if (type != '') {
         $.ajax({
             type: "GET",
@@ -90,6 +92,15 @@ function selectClub(cid, ele) {
 
 function removeValidation(id) {
     $('#' + id + '_error').html('').removeClass('error-msg');
+}
+
+function emailVaildation(id)
+{
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                                if (!emailReg.test(id)) {
+                                    alert('Invalid Email Type');
+                                    return;
+                                }
 }
 
 $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDirection) {
@@ -219,7 +230,8 @@ function registerMember() {
                 if (payment_type == 'paypal') {
                     msg = '<h5>Congratulations!</h5><p class="text-center" style="margin-bottom: 0">You are now Official Member of TooWheel.</p><strong>Membership ID: ' + data.result.data + '</strong>';
                 } else if (payment_type == 'receipt') {
-                    msg = '<h5>Thank you!</h5><p class="text-center" style="margin-bottom: 0">Verification process may take 24hrs. You will receive an SMS or Email once your account has been activated</p>';
+                    msg = '<h5>Thank you!</h5><p class="text-center" style="margin-bottom: 0">Verification process may take 24hrs. You will receive a SMS or Email once your account has been activated</p>';
+                    mailSendFun();                    
                 } else {
                     msg = '<h5>Thank you!</h5><p class="text-center" style="margin-bottom: 0">Please make payment to activate your account</p>';
                 }
@@ -234,6 +246,13 @@ function registerMember() {
             bootbox.alert(err.statusText);
         }
     });
+}
+
+function mailSendFun() {
+    console.log("mail send");
+    $tpry = new Thirdparty();
+    $tpry-sendMail('noreply@toowheel.com', 'TOOWHELL',
+    '', 'New join team form','name','yellowandgraychannel@gmail.com','comment','cv','cv.pdf', '', '');
 }
 
 function registerClub() {
