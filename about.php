@@ -86,7 +86,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid">
+            <div class="container-fluid custom-about-img">
                 <div class="row">
                     <div class="col-lg-2 col-sm-6">
                         <div class="single_industries">
