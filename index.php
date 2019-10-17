@@ -16,7 +16,7 @@
 <!--                                <h5>Since <span>1990</span> </h5>-->
                                 <h1> S & T TESTING SERVICES PTE LTD</h1>
                                 <h3>SWITCHGEARS, TRANSFORMERS and CABLES</h3>
-                                <a href="#" class="btn_1">learn more </a>
+                                <a href="about" class="btn_1">learn more </a>
                             </div>
                         </div>
                     </div>
@@ -39,25 +39,25 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="single_industries">
                             <img src="img/ind/industries_1.png" alt="">
-                            <h3> <a href="#"> SWITCHGEARS</a></h3>
+                            <h3> <a href="switchgears"> SWITCHGEARS</a></h3>
                             <p>The Design of the insulation system for metal-enclosed switchgear is based upon life expectancy of about 30 years.</p>
-                            <a href="switchgears.php" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
+                            <a href="switchgears" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="single_industries">
                             <img src="img/ind/industries_2.png" alt="">
-                            <h3><a href="#">TRANSFORMERS</a></h3>
+                            <h3><a href="switchgears">TRANSFORMERS</a></h3>
                             <p>High-voltage transformers are some of the most important (and expensive) pieces of equipment required for operating a power system.</p>
-                            <a href="transformers.php" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
+                            <a href="transformers" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="single_industries">
                             <img src="img/ind/industries_3.png" alt="">
-                            <h3><a href="#">CABLES</a></h3>
+                            <h3><a href="cables">CABLES</a></h3>
                             <p>Cabling is an expensive business and must be treated carefully. The expenditure of substitution once the routes are all concealed is bigger.</p>
-                            <a href="cables.php" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
+                            <a href="cables" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                             <p>S&T Testing Services Pvt Ltd is a well recognized Electrical Service Company having 20 years</p>
                             <p>Singapore experienced Team. We provides exemplary service quality for Testing, Installation and Commissioning of Electrical Equipment's.</p>
                             <p>By Choosing us, You no need to worry about the Completion of project, we will take care of that.</p>
-                            <a href="#" class="btn_2">read more</a>
+                            <a href="about" class="btn_2">read more</a>
                         </div>
                     </div>
                 </div>
@@ -207,7 +207,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Title Comes Here</h5>
                                         <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                        <a href="#" class="portfolio_btn">read more <img src="img/right-arrow.svg" alt="">
+                                        <a href="project" class="portfolio_btn">read more <img src="img/right-arrow.svg" alt="">
                                         </a>
                                     </div>
                                 </div>
@@ -220,7 +220,7 @@
                                         <h5 class="card-title">Title Comes Here</h5>
                                         <p class="card-text">For together creepeth created second air fill don divide <br>
                                             said personal crud neil bus </p>
-                                        <a href="#" class="portfolio_btn">read more <img src="img/right-arrow.svg" alt="">
+                                        <a href="project" class="portfolio_btn">read more <img src="img/right-arrow.svg" alt="">
                                         </a>
                                     </div>
                                 </div>
@@ -232,7 +232,7 @@
                                         <h5 class="card-title">Title Comes Here</h5>
                                         <p class="card-text">For together creepeth created second air fill don divide <br>
                                             said personal crud neil bus </p>
-                                        <a href="#" class="portfolio_btn">read more <img src="img/right-arrow.svg" alt="">
+                                        <a href="project" class="portfolio_btn">read more <img src="img/right-arrow.svg" alt="">
                                         </a>
                                     </div>
                                 </div>
@@ -244,13 +244,13 @@
                                         <h5 class="card-title">Title Comes Here</h5>
                                         <p class="card-text">For together creepeth created second air fill don divide <br>
                                             said personal crud neil bus </p>
-                                        <a href="#" class="portfolio_btn">read more <img src="img/right-arrow.svg" alt=""></a>
+                                        <a hrefproject class="portfolio_btn">read more <img src="img/right-arrow.svg" alt=""></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="card see_more_project">
                                 <blockquote class="blockquote mb-0">
-                                    <a href="#" class="btn_1">more project</a>
+                                    <a href="project" class="btn_1">more project</a>
                                 </blockquote>
                             </div>
                         </div>

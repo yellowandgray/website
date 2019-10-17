@@ -16,7 +16,7 @@
                         <div class="breadcrumb_iner">
                             <div class="breadcrumb_iner_item">
                                 <h2>Switchgears</h2>
-                                <p> <a href="index.php">Home</a> <span>-</span> <a href="service.php">Services</a> <span>-</span> Switchgears</p>
+                                <p> <a href="index">Home</a> <span>-</span> <a href="service">Services</a> <span>-</span> Switchgears</p>
                             </div>
                         </div>
                     </div>

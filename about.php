@@ -14,7 +14,7 @@
                         <div class="breadcrumb_iner">
                             <div class="breadcrumb_iner_item">
                                 <h2>about us</h2>
-                                <p> <a href="index.php">Home</a> <span>-</span>about us</p>
+                                <p> <a href="index">Home</a> <span>-</span>about us</p>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                             <p>S&T Testing Services Pvt Ltd is a well recognized Electrical Service Company having 20 years</p>
                             <p>Singapore experienced Team. We provides exemplary service quality for Testing, Installation and Commissioning of Electrical Equipment's.</p>
                             <p>By Choosing us, You no need to worry about the Completion of project, we will take care of that.</p>
-                            <a href="#" class="btn_2">read more</a>
+<!--                            <a href="#" class="btn_2">read more</a>-->
                         </div>
                     </div>
                 </div>

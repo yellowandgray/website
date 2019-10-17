@@ -4,7 +4,7 @@
         <div class="row justify-content-between">
             <div class="col-sm-6 col-md-3 col-xl-3">
                 <div class="single-footer-widget footer_1">
-                    <a href="index.php"> <img src="img/footer-logo.png" alt=""> </a>
+                    <a href="index"> <img src="img/footer-logo.png" alt=""> </a>
                     <p>We are a electrical service company that aims to provide you with the best service.</p>
                 </div>
             </div>
@@ -13,11 +13,11 @@
                 <div class="single-footer-widget">
                     <h4>Links</h4>
                     <ul>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About us</a></li>
-                        <li><a href="service.php">Services</a></li>
-                        <li><a href="project.php">Projects</a></li>
-                        <li><a href="contact.php">Contact us</a></li>
+                        <li><a href="index">Home</a></li>
+                        <li><a href="about">About us</a></li>
+                        <li><a href="service">Services</a></li>
+                        <li><a href="project">Projects</a></li>
+                        <li><a href="contact">Contact us</a></li>
                     </ul>
 
                 </div>

@@ -14,7 +14,7 @@
                         <div class="breadcrumb_iner">
                             <div class="breadcrumb_iner_item">
                                 <h2>services</h2>
-                                <p> <a href="index.php">Home</a> <span>-</span>services</p>
+                                <p> <a href="index">Home</a> <span>-</span>services</p>
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                             <img src="img/ind/industries_1.png" alt="">
                             <h3> <a href="#"> SWITCHGEARS</a></h3>
                             <p>The Design of the insulation system for metal-enclosed switchgear is based upon life expectancy of about 30 years.</p>
-                            <a href="switchgears.php" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
+                            <a href="switchgears" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
@@ -47,7 +47,7 @@
                             <img src="img/ind/industries_2.png" alt="">
                             <h3><a href="#">TRANSFORMERS</a></h3>
                             <p>High-voltage transformers are some of the most important (and expensive) pieces of equipment required for operating a power system.</p>
-                            <a href="transformers.php" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
+                            <a href="transformers" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
@@ -55,7 +55,7 @@
                             <img src="img/ind/industries_3.png" alt="">
                             <h3><a href="#">CABLES</a></h3>
                             <p>Cabling is an expensive business and must be treated carefully. The expenditure of substitution once the routes are all concealed is bigger.</p>
-                            <a href="cables.php" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
+                            <a href="cables" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
                     </div>
                 </div>

@@ -24,7 +24,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.php"> <img src="img/logo.png" alt="logo"> </a>
+                        <a class="navbar-brand" href="index"> <img src="img/logo.png" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -35,19 +35,19 @@
                              id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.php">Home</a>
+                                    <a class="nav-link" href="index">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="about.php">About us</a>
+                                    <a class="nav-link" href="about">About us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="service.php">Services</a>
+                                    <a class="nav-link" href="service">Services</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="project.php">Projects</a>
+                                    <a class="nav-link" href="project">Projects</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.php">Contact us</a>
+                                    <a class="nav-link" href="contact">Contact us</a>
                                 </li>
                             </ul>
                         </div>
