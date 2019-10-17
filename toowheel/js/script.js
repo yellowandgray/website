@@ -34,6 +34,7 @@ function attachFile(id) {
                     if (id == 'payment_receipt' || id == 'payment_receipt2') {
                         payment_receipt = data.result.data;
                         payment_type = 'receipt';
+                        $('#smartwizard').smartWizard("next");
                     }
                     if (id == 'cover_image') {
                         cover_image = data.result.data;
@@ -80,6 +81,7 @@ function loadClubs(type) {
                 } else {
                     $('#club_list').empty();
                 }
+                loadCategoryByType(type);
             },
             error: function (err) {
                 console.log(err.statusText);
@@ -87,6 +89,36 @@ function loadClubs(type) {
         });
         $('#type_error').html('').removeClass('error-msg');
     }
+}
+
+function loadCategoryByType(type) {
+    var url = '';
+    if (type == 'two_wheel') {
+        url = 'get_two_wheel_category';
+    } else {
+        url = 'get_four_wheel_category';
+    }
+    $.ajax({
+        type: "GET",
+        url: 'api/v1/' + url,
+        processData: false,
+        contentType: false,
+        success: function (data) {
+            var div = '';
+            if (data.result.error === false) {
+                $('#filter_category').empty();
+                $.each(data.result.data, function (key, val) {
+                    div = div + '<option value="' + val.category_id + '">' + val.name + '</option>';
+                });
+                $('#filter_category').append('<option value="">All</option>' + div);
+            } else {
+                $('#filter_category').empty();
+            }
+        },
+        error: function (err) {
+            console.log(err.statusText);
+        }
+    });
 }
 
 function selectClub(cid, ele) {
@@ -110,6 +142,7 @@ function emailVaildation(id)
 
 $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDirection) {
     var change = true;
+    $('.sw-btn-next').removeClass('hidden');
     switch (stepNumber) {
         case 0:
         case '0':
@@ -196,18 +229,21 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
             break;
         case '2':
         case 2:
-            if (payment_type !== '') {
-                if (inserted == false) {
-                    registerMember();
-                    change = false;
-                    inserted = true;
+            if (stepDirection === 'forward') {
+                if (payment_type !== '') {
+                    if (inserted == false) {
+                        registerMember();
+                        change = false;
+                        inserted = true;
+                    } else {
+                        change = true;
+                    }
                 } else {
-                    change = true;
+                    swal('Information', 'Please select payment method', 'info');
+                    change = false;
                 }
-            } else {
-                swal('Information', 'Please select payment method', 'info');
-                change = false;
             }
+
             break;
         default:
             break;
@@ -240,7 +276,6 @@ function registerMember() {
                     msg = '<h5>Congratulations!</h5><p class="text-center" style="margin-bottom: 0">You are now Official Member of TooWheel.</p><strong>Membership ID: ' + data.result.data + '</strong>';
                 } else if (payment_type == 'receipt') {
                     msg = '<h5>Thank you!</h5><p class="text-center" style="margin-bottom: 0">Verification process may take 24hrs. You will receive a SMS or Email once your account has been activated</p>';
-                    mailSendFun();
                 } else {
                     msg = '<h5>Thank you!</h5><p class="text-center" style="margin-bottom: 0">Please make payment to activate your account</p>';
                 }
@@ -255,13 +290,6 @@ function registerMember() {
             bootbox.alert(err.statusText);
         }
     });
-}
-
-function mailSendFun() {
-    console.log("mail send");
-    $tpry = new Thirdparty();
-    $tpry - sendMail('noreply@toowheel.com', 'TOOWHELL',
-            '', 'New join team form', 'name', 'yellowandgraychannel@gmail.com', 'comment', 'cv', 'cv.pdf', '', '');
 }
 
 function registerClub() {
@@ -353,9 +381,14 @@ function filterClub() {
             }
         }
     });
-    sortClub();
-    if (typeof filter_limit !== 'undefined' && filter_limit !== '') {
-        $('#club_list .club-box:gt(' + filter_limit + ')').addClass('hidden');
+    if ($('#club_list .club-box:not(.hidden)').length === 0) {
+        $('#club_list').append('<div id="no_club_found" class="no-club-found">No Club Found</div>');
+    } else {
+        $('#no_club_found').remove();
+        sortClub();
+        if (typeof filter_limit !== 'undefined' && filter_limit !== '') {
+            $('#club_list .club-box:gt(' + filter_limit + ')').addClass('hidden');
+        }
     }
     return false;
 }
