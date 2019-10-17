@@ -5,23 +5,37 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
+import {Sort} from '@angular/material/sort';
 
+export interface Dessert {
+  calories: number;
+  carbs: number;
+  fat: number;
+  name: string;
+  protein: number;
+}
 @Component({
   selector: 'app-clubevent',
   templateUrl: './clubevent.component.html',
-  styleUrls: ['./clubevent.component.css']
+  styleUrls: ['./clubevent.component.css']  
 })
 export class ClubeventComponent implements OnInit {
+ 
+  
     result = [];
     result_four_wheel:any[];
-    constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
+    constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { 
+this.sortedData = this.result.slice();
+}
+
 
   ngOnInit() {
     this.getEvent();
   }
 image_url: string = '../toowheel/api/v1/';
        getEvent(): void {
-     this.httpClient.get<any>('../toowheel/api/v1/get_event')
+     this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_event')
+         /*this.httpClient.get<any>('../toowheel/api/v1/get_event')*/
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -32,7 +46,13 @@ image_url: string = '../toowheel/api/v1/';
        });
            }
            );
+          
+         
      }
+    sortedData: result;
+        
+            
+             
 
   openDialog(id, res): void  {
     var data = null;
@@ -74,7 +94,32 @@ image_url: string = '../toowheel/api/v1/';
            }
         });
     }
+    
+    sortData(sort: Sort) {
+    const data = this.result.slice();
+    console.log("checkentry-->" )
+    if (!sort.active || sort.direction === '') {
+      this.sortedData = data;
+      console.log("check-->" + this.sortedData )
+      return;
+    }
 
+    this.sortedData = data.sort((a, b) => {
+     console.log("check--1>")
+      const isAsc = sort.direction === 'asc';
+      switch (sort.active) {
+      case 'title': return compare(a.title, b.title, isAsc);
+       default: return 0;
+       
+      }
+    });
+  }
+
+
+
+}
+function compare(a: number | string, b: number | string, isAsc: boolean) {
+  return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
 
 @Component({
@@ -290,3 +335,5 @@ export class ClubEventDelete {
         );
   }
 }
+        
+ 
