@@ -33,7 +33,10 @@
     .social-media-section h2 {font-size: 11px !important;bottom: 70px !important;}
     .social-icon {bottom: 90px !important;}
     .search-section .search-btn  {padding: 12px 12px !important;}
-    .search-section {margin-bottom: 20px !important; margin-left: 12px;}
+    .search-section {
+        margin-bottom: 20px !important;
+/*        margin-left: 12px;*/
+    }
     .bg-1 span {font-size: 40px !important;}
     .button-8 {width: 33% !important;}
     .events-content {top: 0 !important;}
