@@ -144,9 +144,9 @@ export class PressReleaseForm {
     editorConfig: AngularEditorConfig = {
         editable: true,
           spellcheck: true,
-          height: 'auto',
-          minHeight: '400',
-          maxHeight: 'auto',
+          height: '600px',
+          minHeight: '600px',
+          maxHeight: '600px',
           width: 'auto',
           minWidth: '0',
           translate: 'yes',
