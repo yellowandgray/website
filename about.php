@@ -77,18 +77,21 @@
         <section class="our_Professional single_page_Professional section_padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-4">
+                    <div class="col-xl-12">
                         <div class="section_tittle">
-                            <h2>Meet Experienced
-                                Professional</h2>
+                            <h2>Meet Experienced Professional</h2>
+                            <br/>
+                            <p>Electrical panels and enclosures are found in every industry across the world. cost-effective system to eliminate fires at the source. We protect all sizes of panels, from small electrical boxes to rooms filled with electrical enclosures.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-2 col-sm-6">
                         <div class="single_industries">
-                            <img src="img/Professional/our_professional_1.png" alt="">
-                            <div class="single_industries_text">
+                            <img src="img/about-technology/001.png" alt="">
+<!--                            <div class="single_industries_text">
                                 <h3>Andrew Flentop</h3>
                                 <p>System Engineer</p>
                                 <div class="social_icon">
@@ -97,13 +100,13 @@
                                     <a href="#"><i class="flaticon-skype"></i></a>
                                     <a href="#"><i class="flaticon-instagram"></i></a>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-2 col-sm-6">
                         <div class="single_industries">
-                            <img src="img/Professional/our_professional_2.png" alt="">
-                            <div class="single_industries_text">
+                            <img src="img/about-technology/002.png" alt="">
+<!--                            <div class="single_industries_text">
                                 <h3>Andrew Flentop</h3>
                                 <p>System Engineer</p>
                                 <div class="social_icon">
@@ -112,13 +115,13 @@
                                     <a href="#"><i class="flaticon-skype"></i></a>
                                     <a href="#"><i class="flaticon-instagram"></i></a>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-2 col-sm-6">
                         <div class="single_industries">
-                            <img src="img/Professional/our_professional_3.png" alt="">
-                            <div class="single_industries_text">
+                            <img src="img/about-technology/003.png" alt="">
+<!--                            <div class="single_industries_text">
                                 <h3>Andrew Flentop</h3>
                                 <p>System Engineer</p>
                                 <div class="social_icon">
@@ -127,13 +130,13 @@
                                     <a href="#"><i class="flaticon-skype"></i></a>
                                     <a href="#"><i class="flaticon-instagram"></i></a>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-2 col-sm-6">
                         <div class="single_industries">
-                            <img src="img/Professional/our_professional_4.png" alt="">
-                            <div class="single_industries_text">
+                            <img src="img/about-technology/005.png" alt="">
+<!--                            <div class="single_industries_text">
                                 <h3>Andrew Flentop</h3>
                                 <p>System Engineer</p>
                                 <div class="social_icon">
@@ -142,7 +145,37 @@
                                     <a href="#"><i class="flaticon-skype"></i></a>
                                     <a href="#"><i class="flaticon-instagram"></i></a>
                                 </div>
-                            </div>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="single_industries">
+                            <img src="img/about-technology/004.png" alt="">
+<!--                            <div class="single_industries_text">
+                                <h3>Andrew Flentop</h3>
+                                <p>System Engineer</p>
+                                <div class="social_icon">
+                                    <a href="#"><i class="flaticon-facebook"></i></a>
+                                    <a href="#"><i class="flaticon-twitter"></i></a>
+                                    <a href="#"><i class="flaticon-skype"></i></a>
+                                    <a href="#"><i class="flaticon-instagram"></i></a>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="single_industries">
+                            <img src="img/about-technology/006.png" alt="">
+<!--                            <div class="single_industries_text">
+                                <h3>Andrew Flentop</h3>
+                                <p>System Engineer</p>
+                                <div class="social_icon">
+                                    <a href="#"><i class="flaticon-facebook"></i></a>
+                                    <a href="#"><i class="flaticon-twitter"></i></a>
+                                    <a href="#"><i class="flaticon-skype"></i></a>
+                                    <a href="#"><i class="flaticon-instagram"></i></a>
+                                </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -153,7 +186,7 @@
         <!--::subscribe area start::-->
         <?php include 'subscribe.php'; ?>
         <!--::subscribe area end::-->
-        
+
         <!-- footer part start-->
         <?php include 'footer.php'; ?>
     </body>

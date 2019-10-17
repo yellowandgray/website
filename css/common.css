@@ -54,6 +54,33 @@
     padding-bottom: 80px;
 }
 
+.custom-portfolio .card-columns {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+    orphans: 1;
+    widows: 1;
+}
+
+.our_Professional .section_tittle p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.single_industries img {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+}
+
+.single_industries img:hover {
+    box-shadow: 0 14px 12px rgba(0,0,0,0.25), 0 10px 5px rgba(0,0,0,0.22);
+}
+
 @media screen and (max-width: 991px) {
     .our_industries .single_industries a img {
         width: auto !important;

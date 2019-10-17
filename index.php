@@ -197,8 +197,8 @@
                         <div class="card-columns">
                             <div class="card tittle">
                                 <blockquote class="blockquote mb-0">
-                                    <h2>Recent Completed <br>
-                                        Project</h2>
+                                    <h2>Recently Completed <br>
+                                        Projects</h2>
                                 </blockquote>
                             </div>
                             <div class="card ">
