@@ -444,17 +444,14 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                 <table class="bank-details">
                                                     <tr>
                                                         <td>Bank</td>
-                                                        <td> &nbsp; : &nbsp; </td>
                                                         <th>CIMB</th>
                                                     </tr>
                                                     <tr>
                                                         <td>Bank Account Name</td>
-                                                        <td> &nbsp; : &nbsp; </td>
                                                         <th>Toowheel Maxcom Synergy</th>
                                                     </tr>
                                                     <tr>
                                                         <td>Bank Account Number</td>
-                                                        <td> &nbsp; : &nbsp; </td>
                                                         <th>8603753851</th>
                                                     </tr>
                                                 </table>
