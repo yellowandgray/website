@@ -105,8 +105,8 @@ export class NewsForm {
     medias:any[];
     cover_image: string = 'Cover Image';
     thumb_image: string = 'Thumb Image';
-    banner_image_1: string = 'Banner Image 1';
-    banner_image_2: string = 'Banner Image 2';
+    banner_image_1: string = 'Image 1';
+    banner_image_2: string = 'Image 2';
     cover_image_path: string;
     thumb_image_path: string;
     banner_image_1_path: string;
