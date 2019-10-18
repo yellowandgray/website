@@ -45,8 +45,6 @@ image_url: string = '../toowheel/api/v1/';
        });
            }
            );
-          
-         
      }
       
 
