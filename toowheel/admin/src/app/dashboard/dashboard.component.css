@@ -7,60 +7,53 @@
     box-shadow: 0px 0px 8px 0px #a7a7a7;
 }
 .dash-1 p{
-    padding: 40px 0px 0px 0px;
     font-size: 17px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    text-align: center;
+    background: #ff9900;
+    padding: 7px 5px;
+    color: #fff;
+    height: 40px;
 }
-.dash-1 span {
-    position: absolute;
-    top: 200px;
-    padding: 0px 0px 0px 20px;
+.dash-1 h3 {
+    padding: 20px 0px 0px 20px;
+    font-size: 36px;
+    margin: 0;
     color: #0099c6;
-    font-size: 25px;
-    font-weight: 600;
 }
 
 .dash-top{
-   margin-top: 10px
+    margin-top: 10px
 }
 .dash-top i{
-    color: #ffff;
+    color: #fff;
     padding: 10px;
     background: #e03030;
-    position: absolute;
-    top: 73px;
     box-shadow: 0px 0px 8px 0px #a7a7a7;
     font-size: 50px;
 }
 .dash-top .dash-1:nth-child(2) i{
-    color: #ffff;
+    color: #fff;
     padding: 10px;
     background: #6a0;
-    position: absolute;
-    top: 73px;
     box-shadow: 0px 0px 8px 0px #a7a7a7;
 }
 .dash-top .dash-1:nth-child(3) i{
-    color: #ffff;
+    color: #fff;
     padding: 10px;
     background: #36c;
-    position: absolute;
-    top: 73px;
     box-shadow: 0px 0px 8px 0px #a7a7a7;
 }
 .dash-top .dash-1:nth-child(4) i{
-    color: #ffff;
+    color: #fff;
     padding: 10px;
     background: #d47;
-    position: absolute;
-    top: 73px;
     box-shadow: 0px 0px 8px 0px #a7a7a7;
 }
 .dash-top .dash-1:nth-child(5) i{
-    color: #ffff;
+    color: #fff;
     padding: 10px;
     background: #f90;
-    position: absolute;
-    top: 73px;
     box-shadow: 0px 0px 8px 0px #a7a7a7;
 }
 .dash-top{
@@ -69,6 +62,30 @@
     justify-content: space-between;
     align-items: stretch;
 }
+.dash-top-2{
+    padding: 20px;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.dash-top-3{
+    padding: 20px;
+    justify-content: space-between;
+    align-items: stretch;
+}
 .top-30{
     margin-bottom: 60px;
+}
+.doller h1 img{
+    width: 16%;
+}
+.doller h3{
+    text-align: center;
+    padding: 10px 10px 20px 10px;
+}
+.doller h4{
+    text-align: center;
+    font-size: 21px;
+    padding: 20px 10px;
+    margin: 0;
+    color: #484848;
 }
