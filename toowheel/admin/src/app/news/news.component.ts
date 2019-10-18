@@ -105,8 +105,8 @@ export class NewsForm {
     medias:any[];
     cover_image: string = 'Cover Image';
     thumb_image: string = 'Thumb Image';
-    banner_image_1: string = 'Image 1';
-    banner_image_2: string = 'Image 2';
+    banner_image_1: string = 'Banner Image 1';
+    banner_image_2: string = 'Banner Image 2';
     cover_image_path: string;
     thumb_image_path: string;
     banner_image_1_path: string;
@@ -170,11 +170,11 @@ export class NewsForm {
         });
     }
     editorConfig: AngularEditorConfig = {
-      editable: true,
+    editable: true,
       spellcheck: true,
-      height: '600px',
-      minHeight: '600px',
-      maxHeight: '600px',
+      height: 'auto',
+      minHeight: '400',
+      maxHeight: 'auto',
       width: 'auto',
       minWidth: '0',
       translate: 'yes',

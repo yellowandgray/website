@@ -5,7 +5,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
-import {Sort} from '@angular/material/sort';
 
 
 
@@ -13,7 +12,7 @@ import {Sort} from '@angular/material/sort';
 @Component({
   selector: 'app-clubevent',
   templateUrl: './clubevent.component.html',
-  styleUrls: ['./clubevent.component.css']  
+  styleUrls: ['./clubevent.component.css']
 })
 export class ClubeventComponent implements OnInit {
 
@@ -64,8 +63,7 @@ export class ClubeventComponent implements OnInit {
 
 image_url: string = '../toowheel/api/v1/';
        getEvent(): void {
-     this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_event')
-         /*this.httpClient.get<any>('../toowheel/api/v1/get_event')*/
+     this.httpClient.get<any>('../toowheel/api/v1/get_event')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -78,10 +76,7 @@ image_url: string = '../toowheel/api/v1/';
        });
            }
            );
-          
-         
      }
-      
 
   openDialog(id, res): void  {
     var data = null;
