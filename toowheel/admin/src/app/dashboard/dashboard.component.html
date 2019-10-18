@@ -2,13 +2,88 @@
     <mat-sidenav mode="side" opened cdkScrollable class="primary">
         <app-sidenav></app-sidenav>
     </mat-sidenav>
-    <mat-sidenav-content>
+    <mat-sidenav-content class="bg-gray">
         <app-header></app-header>
-        <div fxLayout="row">
-            <div fxFlex="50%">
+        <div fxLayout="row" class="dash-top">
+            <div fxFlex="19%" class="dash-1">
+                <div flfxLayout="row">
+                    <div fxFlex="100%">      
+                        <i class="material-icons">supervised_user_circle</i>
+                        <p>Number of Registered Member:</p>
+                        <span>250</span>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex="19%" class="dash-1">
+                <div flfxLayout="row" >
+                    <div fxFlex="100%">      
+                        <i class="material-icons">stars</i>
+                        <p>Number of Registered Club:</p>
+                        <span>850</span>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex="19%" class="dash-1">
+                <div flfxLayout="row">
+                    <div fxFlex="100%">      
+                        <i class="material-icons">gavel</i>
+                        <p>Number of Pending Members for Approval:</p>
+                        <span>250</span>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex="19%"  class="dash-1">
+                <div flfxLayout="row">
+                    <div fxFlex="100%">      
+                        <i class="material-icons">track_changes</i>
+                        <p>used Number of Membership that will Expire:</p>
+                        <span>50</span>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex="19%"  class="dash-1">
+                <div flfxLayout="row" >
+                    <div fxFlex="100%">      
+                        <i class="material-icons">accessibility</i>
+                        <p>Number of Pending T Shirt Delivery:</p>
+                        <span>300</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div fxLayout="row" class="dash-top top-30">
+            <div fxFlex="49%">
+                <!--<google-chart [data]="pieChart"></google-chart>-->
+                <div fxFlex="100%">
+                    <fusioncharts
+                        width="100%"
+                        height="200"
+                        type="Column2d"
+                        [dataSource]="dataSource"
+                        >
+                    </fusioncharts>
+                </div>
+            </div>
+            <div fxFlex="49%">
                 <google-chart [data]="pieChart"></google-chart>
             </div>
-            <div fxFlex="50%">
+        </div>
+
+        <div fxLayout="row" class="dash-top">
+            <div fxFlex="0%">
+                
+<!--                <fusioncharts
+                    width="100%"
+                    height="400"
+                    type="AngularGauge"
+                    [dataSource]="dataSource"
+                    >
+                </fusioncharts>-->
+            </div>
+            <div fxFlex="100%">
+                 
                 <google-chart [data]="columnChart"></google-chart>
             </div>
         </div>

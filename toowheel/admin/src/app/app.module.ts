@@ -55,9 +55,14 @@ import { PressReleaseComponent, PressReleaseForm, PressreleaseDelete } from './p
 import { MediaComponent, MediaForm, MediaDelete } from './media/media.component';
 import { NewsletterComponent, NewsletterForm, NewsletterDelete } from './newsletter/newsletter.component';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
-import {MatSortModule} from '@angular/material/sort';
+import { FusionChartsModule } from 'angular-fusioncharts';
+import * as FusionCharts from "fusioncharts";
+import * as Widgets from "fusioncharts/fusioncharts.widgets";
 
-
+import * as FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
+import * as Charts from 'fusioncharts/fusioncharts.charts';
+import * as TimeSeries from 'fusioncharts/fusioncharts.timeseries';
+FusionChartsModule.fcRoot(FusionCharts, Charts, TimeSeries, Widgets, FusionTheme);
 @NgModule({
   declarations: [
     AppComponent,
@@ -146,8 +151,7 @@ import {MatSortModule} from '@angular/material/sort';
     MatNativeDateModule,
     Ng2GoogleChartsModule,
     AngularEditorModule,
-     MatSortModule,
-    
+    FusionChartsModule
   ],
   entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubPhotosForm, CategoryComponent, CategoryForm, CategoryDelete, VendorComponent, VendorForm, MemberComponent, MemberForm, MemberDelete, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete, NewsletterComponent, NewsletterForm, NewsletterDelete],
   providers: [],
