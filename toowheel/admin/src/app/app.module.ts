@@ -56,6 +56,7 @@ import { MediaComponent, MediaForm, MediaDelete } from './media/media.component'
 import { NewsletterComponent, NewsletterForm, NewsletterDelete } from './newsletter/newsletter.component';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import { FusionChartsModule } from 'angular-fusioncharts';
+import { UsersComponent, UsersForm } from './users/users.component';
 import * as FusionCharts from "fusioncharts";
 import * as Widgets from "fusioncharts/fusioncharts.widgets";
 
@@ -119,6 +120,8 @@ FusionChartsModule.fcRoot(FusionCharts, Charts, TimeSeries, Widgets, FusionTheme
     NewsletterComponent,
     NewsletterForm, 
     NewsletterDelete, 
+    UsersComponent, 
+    UsersForm, 
   ],
   imports: [
     BrowserModule,
@@ -153,7 +156,7 @@ FusionChartsModule.fcRoot(FusionCharts, Charts, TimeSeries, Widgets, FusionTheme
     AngularEditorModule,
     FusionChartsModule
   ],
-  entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubPhotosForm, CategoryComponent, CategoryForm, CategoryDelete, VendorComponent, VendorForm, MemberComponent, MemberForm, MemberDelete, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete, NewsletterComponent, NewsletterForm, NewsletterDelete],
+  entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubPhotosForm, CategoryComponent, CategoryForm, CategoryDelete, VendorComponent, VendorForm, MemberComponent, MemberForm, MemberDelete, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete, NewsletterComponent, NewsletterForm, NewsletterDelete, UsersComponent, UsersForm],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -208,6 +208,20 @@ $app->post('/upload_file', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_users', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $array = array('user_name' => $data['user_name'], 'email' => $data['email'], 'password' => $data['password'], 'media_path' => $data['media_path'], 'role' => $data['role']);
+    $record = $com->insertRecord($array, 'users');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+
 $app->get('/get_landing_configs', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();

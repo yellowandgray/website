@@ -161,28 +161,28 @@ export class ClubForm {
             'rank': new FormControl()
         });
         if(this.data != null) {
-                this.clubForm.patchValue({
-           name: this.data.name,
-           type: this.data.type,
-           category_id: this.data.category_id,
-           state: this.data.state_id,
-           city: this.data.city,
-           zip: this.data.zipcode,
-           landmark: this.data.landmark,
-           address: this.data.address,
-           club_leader_name: this.data.leader_name,
-           no_of_member: this.data.no_of_member,
-           email: this.data.email,
-           mobile: this.data.phone,
-           about: this.data.about,
-           facebook_link: this.data.facebook_link,
-           youtube_link: this.data.youtube_link,
-           twitter_link: this.data.twitter_link,
-           instagram_link: this.data.instagram_link,
-           rank: this.data.rank
-        });
-        this.club_id = this.data.club_id;
-        this.getCategory();
+            this.clubForm.patchValue({
+                name: this.data.name,
+                type: this.data.type,
+                category_id: this.data.category_id,
+                state: this.data.state_id,
+                city: this.data.city,
+                zip: this.data.zipcode,
+                landmark: this.data.landmark,
+                address: this.data.address,
+                club_leader_name: this.data.leader_name,
+                no_of_member: this.data.no_of_member,
+                email: this.data.email,
+                mobile: this.data.phone,
+                about: this.data.about,
+                facebook_link: this.data.facebook_link,
+                youtube_link: this.data.youtube_link,
+                twitter_link: this.data.twitter_link,
+                instagram_link: this.data.instagram_link,
+                rank: this.data.rank
+            });
+            this.club_id = this.data.club_id;
+            this.getCategory();
         }
         this.httpClient.get('../toowheel/api/v1/get_states').subscribe(
               (res)=>{
