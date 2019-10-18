@@ -7,13 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
 import {Sort} from '@angular/material/sort';
 
-export interface Dessert {
-  calories: number;
-  carbs: number;
-  fat: number;
-  name: string;
-  protein: number;
-}
+
 @Component({
   selector: 'app-clubevent',
   templateUrl: './clubevent.component.html',
