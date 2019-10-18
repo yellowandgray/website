@@ -5,7 +5,13 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">  
-            <table matSort (matSortChange)="sortData($event)">
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Event</button>
+        </div>
+<!--            <button mat-raised-button color="primary" class="margin-r-10" (click)="sortfun()">Sort</button>       -->
+         
+        
+<!--         
+<table matSort (matSortChange)="sortData($event)">
                 <tr>
                   <th mat-sort-header="name">TITLE</th>
                   <th mat-sort-header="date">DATE</th>   
@@ -13,13 +19,8 @@
                 </tr>
                 
            </table>
-            <button mat-raised-button color="primary" class="margin-r-10" matSort>Sort</button>       
-            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Event</button>
-        </div>
-<!--            <button mat-raised-button color="primary" class="margin-r-10" (click)="sortfun()">Sort</button>       -->
-         
-        
-<!--         <div id='one'>
+
+<div id='one'>
     <input type='date' id='date1' ng-model="inDate" />
     <input type='text' id='android' ng-model="inAnd" />
     <input type='text' id='ios' ng-model="inIOS" />
