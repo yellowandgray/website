@@ -3867,14 +3867,15 @@ thead td {
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     opacity: 0;
+    text-align: center;
 }
 .img-overlay i {
     color: #fff;
-    font-size: 3em;
+    font-size: 2em;
 }
 #overlay {
     background: rgba(0, 0, 0, 0.7);
@@ -3950,4 +3951,23 @@ thead td {
     #exitButton {
         font-size: 3em;
     }
+}
+
+.img-wrapper .img-overlay .overlay-text {
+    position: relative;
+    top: 30%;
+}
+
+.img-wrapper .img-overlay .overlay-text h3 {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+}
+
+.img-wrapper .img-overlay .overlay-text p {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
 }
