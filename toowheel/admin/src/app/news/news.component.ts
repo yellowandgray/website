@@ -342,8 +342,8 @@ export class NewsForm {
                 this._snackBar.open(error["statusText"], '', {
           duration: 2000,
         });
-            }
-            );
+      }
+    );
   }
 }
 

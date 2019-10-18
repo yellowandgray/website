@@ -40,9 +40,13 @@
             </mat-select>
         </mat-form-field>
     </div>
-    <div fxFlex="50%" fxLayoutAlign="center center">
+    <div fxFlex="25%" fxLayoutAlign="center center">
         <button type="button" mat-raised-button (click)="fileInput.click()">{{cover_image}}</button>
         <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'cover_image', 'cover_image_path')" />
+    </div>
+    <div fxFlex="25%">
+        <button type="button" mat-raised-button (click)="fileInputThumb.click()">{{thumb_image}}</button>
+        <input hidden #fileInputThumb type="file" id="file_thumb" (change)="fileProgress($event, 'thumb_image', 'thumb_image_path')" />
     </div>
 </div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
@@ -82,6 +86,16 @@
         </mat-form-field>
     </div>
 </div>
+<br/>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+    <div fxFlex="100%">
+        <mat-form-field class="full-width">
+            <mat-label>Moto Text</mat-label>
+            <textarea rows="10" matInput placeholder="" required formControlName="moto_text"></textarea>
+            <mat-error>Moto is required</mat-error>
+        </mat-form-field>
+    </div>
+</div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
     <div fxFlex="50%">
         <mat-form-field appearance="outline" fxFlex="100%">
@@ -97,16 +111,12 @@
     </div>
 </div>
 <br/>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-    <div fxFlex="33%">
-        <button type="button" mat-raised-button (click)="fileInputThumb.click()">{{thumb_image}}</button>
-        <input hidden #fileInputThumb type="file" id="file_thumb" (change)="fileProgress($event, 'thumb_image', 'thumb_image_path')" />
-    </div>
-    <div fxFlex="33%">
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+    <div fxFlex="50%" fxLayoutAlign="center center">
         <button type="button" mat-raised-button (click)="fileInputBanner1.click()">{{banner_image_1}}</button>
         <input hidden #fileInputBanner1 type="file" id="file_banner_1" (change)="fileProgress($event, 'banner_image_1', 'banner_image_1_path')" />
     </div>
-    <div fxFlex="33%">
+    <div fxFlex="50%" fxLayoutAlign="center center">
         <button type="button" mat-raised-button (click)="fileInputBanner2.click()">{{banner_image_2}}</button>
         <input hidden #fileInputBanner2 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_2', 'banner_image_2_path')" />
     </div>
@@ -114,25 +124,14 @@
 <br/>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
     <div fxFlex="100%">
-        <mat-form-field class="full-width">
-            <mat-label>Moto Text</mat-label>
-            <textarea rows="10" matInput placeholder="" required formControlName="moto_text"></textarea>
-            <mat-error>Moto is required</mat-error>
-        </mat-form-field>
-    </div>
-</div>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-    <div fxFlex="100%">
         <angular-editor id="editor1" formControlName="description" [config]="editorConfig"></angular-editor>
     </div>
 </div>
+<br/>
+<br/>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
     <div fxFlex="100%">
-        <mat-form-field class="full-width">
-            <mat-label>Description 2</mat-label>
-            <textarea rows="40" matInput placeholder="" required formControlName="description_1"></textarea>
-            <mat-error>Description 1 is required</mat-error>
-        </mat-form-field>
+        <angular-editor id="editor2" formControlName="description_1" [config]="editorConfig"></angular-editor>
     </div>
 </div>
 <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">

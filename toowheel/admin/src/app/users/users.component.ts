@@ -11,20 +11,48 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-
-  constructor(public dialog: MatDialog) { }
+  result = [];
+  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
+    this.getUsers();
   }
   
-  openUsersForm(): void  {
+    image_url: string = '../toowheel/api/v1/';
+       getUsers(): void {
+     this.httpClient.get<any>('../toowheel/api/v1/get_users')
+     .subscribe(
+             (res)=>{
+                 this.result = res["result"]["data"];
+           },
+           (error)=>{
+               this._snackBar.open(error["statusText"], '', {
+         duration: 2000,
+       });
+           }
+           );
+     }
+
+  openUsersForm(id, res): void  {
+    var data = null;
+      if(id != 0) {
+      this[res].forEach(val=> {
+           if(parseInt(val.users_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
     const dialogRef = this.dialog.open(UsersForm, {
         minWidth: "80%",
-        maxWidth: "80%"
+        maxWidth: "80%",
+        data: data
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      if(result !== false && result !== 'false') {
+      this.getUsers();
+       }
     });
 }
 
@@ -37,6 +65,8 @@ export class UsersComponent implements OnInit {
 export class UsersForm {
     usersForm: FormGroup;
     loading = false;
+    medias:any[];
+    users_id = 0;
     file_name: string = 'Choose Profile';
     constructor(
     public dialogRef: MatDialogRef<UsersForm>,
@@ -49,6 +79,34 @@ export class UsersForm {
       'password': new FormControl('', Validators.required),
       'role': new FormControl('', Validators.required)
       });
+      if(this.data != null) {
+           this.usersForm.patchValue({
+           user_name: this.data.user_name,
+           email: this.data.email,
+           password: this.data.password,
+           role: this.data.role
+        });
+        this.users_id = this.data.users_id;
+    }else {
+        this.usersForm.patchValue({
+                date: new Date()
+            });
+    }
+    this.httpClient.get('../toowheel/api/v1/get_users').subscribe(
+              (res)=>{
+                if(res["result"]["error"] === false) {
+                    this.medias = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
 }
 
     fileProgress(fileInput: any, name:string, field: string) {
@@ -78,15 +136,25 @@ export class UsersForm {
 
 
     onSubmit() {
-      this.loading = true;
-      var url = '';
-      var formData = new FormData();
-      if(this) {
-          formData.append('user_name', this.usersForm.value.user_name);
-          formData.append('email', this.usersForm.value.email);
-          
-          formData.append('role', this.usersForm.value.role);
-          formData.append('password', this.usersForm.value.password);
+        if (this.usersForm.invalid) {
+            return;
+        } 
+        this.loading = true;
+        var formData = new FormData();
+        var url = '';
+    if(this.users_id != 0) {
+            formData.append('user_name', this.usersForm.value.user_name);
+            formData.append('email', this.usersForm.value.email);
+            formData.append('role', this.usersForm.value.role);
+            formData.append('password', this.usersForm.value.password);
+        url = 'update_record/users/users_id = '+this.users_id;
+      } else {
+            formData.append('user_name', this.usersForm.value.user_name);
+            formData.append('email', this.usersForm.value.email);
+            formData.append('role', this.usersForm.value.role);
+            formData.append('password', this.usersForm.value.password);
+            formData.append('media_id', this.usersForm.value.media);
+            formData.append('author_name', this.usersForm.value.author_name);
         url = 'insert_users';
       }
       this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(

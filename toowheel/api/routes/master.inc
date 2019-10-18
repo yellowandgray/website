@@ -598,3 +598,16 @@ $app->post('/subscribe_news_letter', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
+
+
+$app->get('/get_users', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'users', 'users_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
