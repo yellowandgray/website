@@ -78,6 +78,9 @@
 .doller h1 img{
     width: 16%;
 }
+.doller h1 {
+    text-align: center;
+}
 .doller h3{
     text-align: center;
     padding: 10px 10px 20px 10px;
