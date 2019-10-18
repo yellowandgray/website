@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 import * as moment from 'moment';
 
 @Component({
@@ -85,8 +86,8 @@ export class PressReleaseForm {
     medias:any[];
     cover_image: string = 'Choose Cover Image';
     thumb_image: string = 'Choose Thumb Image';
-    banner_image_1: string = 'Choose Image';
-    banner_image_2: string = 'Choose Image';
+    banner_image_1: string = 'Choose Image 1';
+    banner_image_2: string = 'Choose Image 2';
     cover_image_path: string;
     thumb_image_path: string;
     banner_image_1_path: string;
@@ -139,6 +140,47 @@ export class PressReleaseForm {
             });
         });
     }
+
+    editorConfig: AngularEditorConfig = {
+        editable: true,
+          spellcheck: true,
+          height: '600px',
+          minHeight: '600px',
+          maxHeight: '600px',
+          width: 'auto',
+          minWidth: '0',
+          translate: 'yes',
+          enableToolbar: true,
+          showToolbar: true,
+          placeholder: 'Enter text here...',
+          defaultParagraphSeparator: '',
+          defaultFontName: '',
+          defaultFontSize: '',
+          fonts: [
+            {class: 'arial', name: 'Arial'},
+            {class: 'times-new-roman', name: 'Times New Roman'},
+            {class: 'calibri', name: 'Calibri'},
+            {class: 'comic-sans-ms', name: 'Comic Sans MS'}
+          ],
+          customClasses: [
+          {
+            name: 'quote',
+            class: 'quote',
+          },
+          {
+            name: 'redText',
+            class: 'redText'
+          },
+          {
+            name: 'titleText',
+            class: 'titleText',
+            tag: 'h1',
+          },
+        ],
+        uploadUrl: 'v1/image',
+        sanitize: true,
+        toolbarPosition: 'top',
+    };
 
     fileProgress(fileInput: any, name:string, field: string) {
         var fileData = <File>fileInput.target.files[0];
