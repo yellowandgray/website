@@ -7,25 +7,68 @@ import { HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
 
 
+
+
 @Component({
   selector: 'app-clubevent',
   templateUrl: './clubevent.component.html',
   styleUrls: ['./clubevent.component.css']
 })
 export class ClubeventComponent implements OnInit {
+
+  
+    sortedData;    
+    result1 = [];
     result = [];
     result_four_wheel:any[];
-    constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
+    constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { 
+       
+     this.sortedData = this.result1.slice();
+
+}
+
 
   ngOnInit() {
     this.getEvent();
+    
+    
   }
+  sortData(sort: Sort) {
+  
+    const data = this.result1.slice();
+    if (!sort.active || sort.direction === '') {
+      this.sortedData = data;
+      this.result = this.sortedData;
+      return;
+    }
+
+    this.sortedData = data.sort((a, b) => {
+    console.log("checking-->"+data.length)
+      const isAsc = sort.direction === 'asc';
+      switch (sort.active) {
+        case 'name': return compare(a.title, b.title, isAsc);
+        case 'date': return compare(a.event_date, b.event_date, isAsc);
+        /*case 'calories': return compare(a.calories, b.calories, isAsc);
+        case 'fat': return compare(a.fat, b.fat, isAsc);
+        case 'carbs': return compare(a.carbs, b.carbs, isAsc);
+        case 'protein': return compare(a.protein, b.protein, isAsc);*/
+        default: return 0;
+      }
+    });  
+  
+    this.result = this.sortedData;
+  }
+  
+   
+
 image_url: string = '../toowheel/api/v1/';
        getEvent(): void {
      this.httpClient.get<any>('../toowheel/api/v1/get_event')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
+                 this.result1= res["result"]["data"];    
+                 this.sortedData = this.result1          
            },
            (error)=>{
                this._snackBar.open(error["statusText"], '', {
@@ -75,7 +118,12 @@ image_url: string = '../toowheel/api/v1/';
            }
         });
     }
+    
+   
+}
 
+function compare(a: number | string, b: number | string, isAsc: boolean) {
+  return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
 
 @Component({
@@ -291,3 +339,4 @@ export class ClubEventDelete {
         );
   }
 }
+ 

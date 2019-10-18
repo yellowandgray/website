@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ChartReadyEvent, ChartErrorEvent, ChartSelectEvent,
    ChartMouseOverEvent, ChartMouseOutEvent } from 'ng2-google-charts';
 import { GoogleChartInterface } from 'ng2-google-charts/google-charts-interfaces';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
 selector: 'app-dashboard',
@@ -9,8 +12,46 @@ templateUrl: './dashboard.component.html',
 styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent  {
+ 
 
-
+result = [];
+result1 = [];
+    result_four_wheel:any[];
+    constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
+  
+    
+ngOnInit() {
+    this.getEvent();
+    this.getNews();
+  }
+image_url: string = 'http://www.toowheel.com/toowheel/api/v1/';
+       getEvent(): void {
+     this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_member')
+     .subscribe(
+             (res)=>{
+                 this.result = res["result"]["data"];
+           },
+           (error)=>{
+               this._snackBar.open(error["statusText"], '', {
+         duration: 2000,
+       });
+           }
+           );
+     }
+       getNews(): void {
+     this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_news')
+     .subscribe(
+             (res)=>{
+                 this.result1 = res["result"]["data"];
+           },
+           (error)=>{
+               this._snackBar.open(error["statusText"], '', {
+         duration: 2000,
+       });
+           }
+           );
+     }
+       
 
 
 /* piechart & columnChart */   

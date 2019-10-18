@@ -56,6 +56,13 @@ import { MediaComponent, MediaForm, MediaDelete } from './media/media.component'
 import { NewsletterComponent, NewsletterForm, NewsletterDelete } from './newsletter/newsletter.component';
 import { UsersComponent, UsersForm } from './users/users.component';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import {MatSortModule} from '@angular/material/sort';
+// search module
+
+import { FilterPipeModule } from './shared/ngx-filter-pipe';
+import { MDL } from './shared/mdl';
+
+
 
 @NgModule({
   declarations: [
@@ -146,7 +153,9 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
     ReactiveFormsModule,
     MatNativeDateModule,
     Ng2GoogleChartsModule,
-    AngularEditorModule
+    AngularEditorModule,
+    MatSortModule,
+    FilterPipeModule,
     
   ],
   entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubPhotosForm, CategoryComponent, CategoryForm, CategoryDelete, VendorComponent, VendorForm, MemberComponent, MemberForm, MemberDelete, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete, NewsletterComponent, NewsletterForm, NewsletterDelete, UsersComponent, UsersForm],
