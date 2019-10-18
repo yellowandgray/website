@@ -4,9 +4,27 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <app-header></app-header>
-        <div class="add-btn-container">
+        <div class="add-btn-container">  
+            <button mat-raised-button color="primary" class="margin-r-10" matSort (matSortChange)="sortData($event)">Sort</button>       
             <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Event</button>
         </div>
+<!--        <table matSort (matSortChange)="sortData($event)">
+               <tr>
+                <th mat-sort-header="name">Dessert (100g)</th>
+                <th mat-sort-header="calories">Calories</th>
+                <th mat-sort-header="fat">Fat (g)</th>
+                <th mat-sort-header="carbs">Carbs (g)</th>
+                <th mat-sort-header="protein">Protein (g)</th>
+            </tr>
+
+            <tr *ngFor="let dessert of sortedData">
+                <td>{{result[i]['title']}}</td>
+                <td>{{dessert.calories}}</td>
+                <td>{{dessert.fat}}</td>
+                <td>{{dessert.carbs}}</td>
+                <td>{{dessert.protein}}</td>
+            </tr>
+        </table>-->
         <ng-container *ngFor="let data of result; let i = index">
             <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
                 <ng-container *ngIf="result[i]">

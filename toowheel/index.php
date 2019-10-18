@@ -4,7 +4,6 @@ if (!isset($_GET['type'])) {
 }
 $type = $_GET['type'];
 require_once 'api/include/common.php';
-//require_once '../include/thirdparty.php';
 $obj = new Common();
 $configs = $obj->getHomeDetails();
 $card_add_one = $obj->selectRow('url, image', 'advertisement', 'advertisement_id = ' . $configs['home_card_ad1']);

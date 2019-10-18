@@ -17,7 +17,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
         <div class="padding-top-108"></div>
         <div class="member-register-section">
             <div class="container">
-                <div class="col-md-12">
+                <div class="col-md-12 hidden" id="smartwizard_container">
                     <div id="smartwizard">
                         <ul>
                             <li><a href="#step-1">Step 1<br /><small>Enter Your Information</small></a></li>
@@ -400,9 +400,6 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         <label>Category:</label>
                                         <select onchange="filterClub();" id="filter_category">
                                             <option value="">All</option>
-                                            <?php foreach ($categories as $cat) { ?>
-                                                <option value="<?php echo $cat['category_id']; ?>"><?php echo $cat['name']; ?></option>
-                                            <?php } ?>
                                         </select>
                                     </div>
                                     <div class="search-sort-order">
@@ -444,17 +441,14 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                 <table class="bank-details">
                                                     <tr>
                                                         <td>Bank</td>
-                                                        <td> &nbsp; : &nbsp; </td>
                                                         <th>CIMB</th>
                                                     </tr>
                                                     <tr>
                                                         <td>Bank Account Name</td>
-                                                        <td> &nbsp; : &nbsp; </td>
                                                         <th>Toowheel Maxcom Synergy</th>
                                                     </tr>
                                                     <tr>
                                                         <td>Bank Account Number</td>
-                                                        <td> &nbsp; : &nbsp; </td>
                                                         <th>8603753851</th>
                                                     </tr>
                                                 </table>
@@ -466,7 +460,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                     <br/>
                                                     <br/>
                                                     <center>
-                                                        <a href="#" type="button" onclick="attachFile('payment_receipt2');">Upload Now</a>
+                                                        <a href="#" type="button" onclick="attachFile('payment_receipt2');">Submit</a>
                                                     </center>
                                                     <br/>
                                                     <!--<center>

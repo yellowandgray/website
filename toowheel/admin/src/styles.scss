@@ -74,3 +74,19 @@ body {
     height: auto !important;
     width: 100% !important;
 }
+
+.container {
+  display: flex;
+}
+
+.container button:first-child {
+  //width: 40%;
+   margin: 10px;
+    text-align: right;
+}
+
+.container button:last-child {
+  //flex-grow: 1;
+    margin: 10px;
+    text-align: right;
+}
