@@ -1,0 +1,28 @@
+.truncate {
+  width: 250px;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: black;
+}
+
+.truncate1 {
+  width: 200px;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+  font-size: 2pt;
+}
+.truncate2 {
+  width: 200px;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+  font-size: 1pt;
+}
+
+.list-container { 
+   
+    border-bottom: 1px solid #ccc;
+   
+}

@@ -31,11 +31,11 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CategoryComponent, CategoryForm, CategoryDelete } from './category/category.component';
-import { ClubComponent, ClubForm, ClubDelete, ClubPhotosForm } from './club/club.component';
+import { ClubComponent, ClubForm, ClubDelete, ClubPhotosForm,PictureViewClub } from './club/club.component';
 import { MemberComponent, MemberForm, MemberDelete } from './member/member.component';
 import { HeaderComponent } from './header/header.component';
 import { VendorComponent, VendorForm } from './vendor/vendor.component';
-import { NewsComponent, NewsForm, NewsGalleryForm, NewsDelete } from './news/news.component';
+import { NewsComponent, NewsForm, NewsGalleryForm, NewsDelete,PictureViewNews} from './news/news.component';
 import { BusinessComponent } from './business/business.component';
 import { AdvertismentComponent, AdvertismentForm, AdvertismentDelete } from './advertisment/advertisment.component';
 import { GalleryComponent, GalleryForm, GalleryDelete } from './gallery/gallery.component';
@@ -43,7 +43,7 @@ import { PointComponent } from './point/point.component';
 import { ConfigComponent, ConfigForm } from './config/config.component';
 import { ClubdashboardComponent } from './clubdashboard/clubdashboard.component';
 import { ClublandingComponent, LandingAboutForm } from './clublanding/clublanding.component';
-import { ClubeventComponent, ClubEventForm, ClubEventDelete } from './clubevent/clubevent.component';
+import { ClubeventComponent, ClubEventForm, ClubEventDelete,PictureView } from './clubevent/clubevent.component';
 import { ClubgalleryComponent, ClubGalleryForm } from './clubgallery/clubgallery.component';
 import { ClubnewsComponent, ClubNewsForm } from './clubnews/clubnews.component';
 import { ClubdiscussionComponent } from './clubdiscussion/clubdiscussion.component';
@@ -51,7 +51,7 @@ import { LoginComponent } from './login/login.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { AnnouncementComponent, AnnouncementForm, AnnouncementDelete } from './announcement/announcement.component';
-import { PressReleaseComponent, PressReleaseForm, PressreleaseDelete } from './press-release/press-release.component';
+import { PressReleaseComponent, PressReleaseForm, PressreleaseDelete,PictureViewPress } from './press-release/press-release.component';
 import { MediaComponent, MediaForm, MediaDelete } from './media/media.component';
 import { NewsletterComponent, NewsletterForm, NewsletterDelete } from './newsletter/newsletter.component';
 import { UsersComponent, UsersForm } from './users/users.component';
@@ -116,7 +116,11 @@ import {MatSortModule} from '@angular/material/sort';
     NewsletterForm, 
     NewsletterDelete, 
     UsersComponent, 
-    UsersForm
+    UsersForm,
+    PictureView,
+    PictureViewNews,
+    PictureViewPress,
+    PictureViewClub
   ],
   imports: [
     BrowserModule,
@@ -151,7 +155,7 @@ import {MatSortModule} from '@angular/material/sort';
     AngularEditorModule,
     MatSortModule
   ],
-  entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubPhotosForm, CategoryComponent, CategoryForm, CategoryDelete, VendorComponent, VendorForm, MemberComponent, MemberForm, MemberDelete, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete, NewsletterComponent, NewsletterForm, NewsletterDelete, UsersComponent, UsersForm],
+  entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubPhotosForm, CategoryComponent, CategoryForm, CategoryDelete, VendorComponent, VendorForm, MemberComponent, MemberForm, MemberDelete, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete, NewsletterComponent, NewsletterForm, NewsletterDelete, UsersComponent, UsersForm,PictureView,PictureViewNews,PictureViewPress,PictureViewClub],
   providers: [],
   bootstrap: [AppComponent]
 })

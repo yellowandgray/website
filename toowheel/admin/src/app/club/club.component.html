@@ -9,7 +9,41 @@
         </div>
         <mat-tab-group>
             <mat-tab label="2 Wheeler">
-                <ng-container *ngFor="let data of result; let i = index">
+                
+                        <mat-list>
+                            <ng-container *ngFor="let data of result; let i = index">
+                                 <ng-container *ngIf="result[i]">
+                                <mat-list-item class="list-container">
+                                     <button mat-icon-button aria-label="label" (click)="changeStatus(result[i]['club_id'], 1)" *ngIf="result[i]['published'] == 0 && result[i]['source'] == 'web'">
+                                            <mat-icon>done</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result[i]['club_id'], 0)" *ngIf="result[i]['published'] == 1 && result[i]['source'] == 'web'">
+                                            <mat-icon>block</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result[i]['club_id'])">
+                                        <mat-icon>collections</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" routerLink="/announcement/{{result[i]['club_id']}}">
+                                        <mat-icon>hearing</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['club_id'], 'result')">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['club_id'])">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>                                   
+                                    <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+<!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />-->
+                                    <h3 class="truncate" matLine>{{data.name}}</h3>
+                                    <p class="truncate1" matLine>{{data.category}}</p>     
+                                    <p class="truncate2" matLine>{{data.about}}</p> 
+                                </mat-list-item>
+                                     </ng-container>
+                            </ng-container>
+                        </mat-list> 
+                
+                
+<!--                <ng-container *ngFor="let data of result; let i = index">
                     <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
                         <ng-container *ngIf="result[i]">
                             <mat-card fxFlex="25%" [class.web-club]="result[i]['source'] == 'web'">
@@ -148,10 +182,41 @@
                             </mat-card> 
                         </ng-container>
                     </div>            
-                </ng-container>
+                </ng-container>-->
             </mat-tab>
             <mat-tab label="4 Wheeler">
-                <ng-container *ngFor="let data of result_four_wheel; let i = index">
+                 <mat-list>
+                            <ng-container *ngFor="let data of result_four_wheel; let i = index">
+                                 <ng-container *ngIf="result_four_wheel[i]">
+                                <mat-list-item class="list-container">
+                                      <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i]['club_id'], 1)" *ngIf="result_four_wheel[i]['published'] == 0 && result_four_wheel[i]['source'] == 'web'">
+                                            <mat-icon>done</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i]['club_id'], 0)" *ngIf="result_four_wheel[i]['published'] == 1 && result_four_wheel[i]['source'] == 'web'">
+                                            <mat-icon>block</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result_four_wheel[i]['club_id'])">
+                                        <mat-icon>collections</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" routerLink="/announcement/{{result_four_wheel[i]['club_id']}}">
+                                        <mat-icon>hearing</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i]['club_id'], 'result_four_wheel')">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i]['club_id'])">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>                              
+                                    <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+<!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />-->
+                                    <h3 class="truncate" matLine>{{data.name}}</h3>
+                                    <p class="truncate1" matLine>{{data.category}}</p>     
+                                    <p class="truncate2" matLine>{{data.about}}</p> 
+                                </mat-list-item>
+                                     </ng-container>
+                            </ng-container>
+                        </mat-list> 
+<!--                <ng-container *ngFor="let data of result_four_wheel; let i = index">
                     <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
                         <ng-container *ngIf="result_four_wheel[i]">
                             <mat-card fxFlex="25%" [class.web-club]="result_four_wheel[i]['source'] == 'web'">
@@ -290,7 +355,7 @@
                             </mat-card> 
                         </ng-container>
                     </div>            
-                </ng-container>
+                </ng-container>-->
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>
