@@ -23,6 +23,7 @@ import { AnnouncementComponent } from './announcement/announcement.component';
 import { PressReleaseComponent } from './press-release/press-release.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { UsersComponent } from './users/users.component';
+import { WorkshopComponent } from './workshop/workshop.component';
 
 
 const routes: Routes = [
@@ -48,7 +49,8 @@ const routes: Routes = [
     {path: 'announcement/:cid', component: AnnouncementComponent},
     {path: 'newsletter', component: NewsletterComponent},
     {path: 'press-release', component: PressReleaseComponent},
-    {path: 'users', component: UsersComponent}
+    {path: 'users', component: UsersComponent},
+    {path: 'workshop', component: WorkshopComponent}
 ];
 
 @NgModule({
