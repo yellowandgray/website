@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-workshop',
@@ -7,10 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkshopComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
 
   }
 
+    openWorkshopForm()  {
+    const dialogRef = this.dialog.open(WorkshopForm, {
+        minWidth: "80%",
+        maxWidth: "80%"
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result !== false && result !== 'false') {
+       }
+    });
 }
+
+}
+
+@Component({
+  selector: 'workshop-form',
+  templateUrl: 'workshop-form.html',
+})
+export class WorkshopForm {}
