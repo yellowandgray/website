@@ -4,124 +4,105 @@
     </mat-sidenav>
     <mat-sidenav-content class="bg-gray">
         <app-header></app-header>
-        <div fxLayout="row" class="dash-top">
-            <div fxFlex="19%" class="dash-1">
-                <div flfxLayout="row" md-select="result">
-                    <div fxFlex="100%">   
-                        <div flfxLayout="row">
-                            <div fxFlex="50%" >
-                                <i class="material-icons">supervised_user_circle</i>
-                            </div>
-                            
-                            <div fxFlex="50%" >
-                                <h3>{{result.length}}</h3>
-                            </div>
-                        </div>
-                        <p>Number of Registered Member</p>
-                    </div>
-                </div>
-            </div>
-            <div fxFlex="19%" class="dash-1">
-                <div flfxLayout="row" md-select="result1" >
-                    <div fxFlex="100%"> 
-                        <div flfxLayout="row">
-                            <div fxFlex="50%" >
-                                <i class="material-icons">stars</i>
-                            </div>
-                            <div fxFlex="50%" >
-                                <h3>{{result1.length}}</h3>
+        <div class="container">
+            <div fxLayout="row">
+                <div fxFlex="20%">
+                    <div fxLayout="column" fxLayoutGap="15px" class="dash-top">
+                        <div class="dash-1">
+                            <div md-select="result">
+                                <div fxFlex="100%">   
+                                    <i  fxLayoutAlign="center"  class="material-icons">supervised_user_circle</i>
+                                    <h3  fxLayoutAlign="center" >{{result.length}}</h3>
+                                    <p  fxLayoutAlign="center" >Number of Registered Member</p>
+                                </div>
                             </div>
                         </div>
-                        <p>Number of Registered Club</p>
-                    </div>
-                </div>
-            </div>
-            <div fxFlex="19%" class="dash-1">
-                <div flfxLayout="row">
-                    <div fxFlex="100%">  
-                        <div flfxLayout="row">
-                            <div fxFlex="50%" >
-                                <i class="material-icons">gavel</i>
-                            </div>
-                            <div fxFlex="50%" >
-                                <h3>175</h3>
+                        <div class="dash-1">
+                            <div md-select="result1" >
+                                <div fxFlex="100%"> 
+                                    <i fxLayoutAlign="center"  class="material-icons">stars</i>
+                                    <h3 fxLayoutAlign="center" >{{result1.length}}</h3>
+                                    <p fxLayoutAlign="center" >Number of Registered Club</p>
+                                </div>
                             </div>
                         </div>
-                        <p>Number of Pending Members for Approval</p>
-                    </div>
-                </div>
-            </div>
-            <div fxFlex="19%"  class="dash-1">
-                <div flfxLayout="row">
-                    <div fxFlex="100%">  
-                        <div flfxLayout="row">
-                            <div fxFlex="50%" >
-                                <i class="material-icons">track_changes</i>
-                            </div>
-                            <div fxFlex="50%" >
-                                <h3>106</h3>
+                        <div class="dash-1">
+                            <div md-select="result1" >
+                                <div fxFlex="100%">  
+                                    <i fxLayoutAlign="center" class="material-icons">gavel</i>
+                                    <h3 fxLayoutAlign="center">175</h3>
+                                    <p fxLayoutAlign="center">Number of Pending Members for Approval</p>
+                                </div>
                             </div>
                         </div>
-                        <p>Number of Membership that will Expire</p>
-                    </div>
-                </div>
-            </div>
-            <div fxFlex="19%"  class="dash-1">
-                <div flfxLayout="row">
-                    <div fxFlex="100%">
-                        <div flfxLayout="row">
-                            <div fxFlex="50%" >
-                                <i class="material-icons">accessibility</i>
-                            </div>
-                            <div fxFlex="50%" >
-                                <h3>300</h3>
-                            </div>
-                        </div>
-                        <p>Number of Pending T Shirt Delivery</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div fxLayout="row" class="dash-top-2">
-            <div fxFlex="49%">
-                <!--<google-chart [data]="pieChart"></google-chart>-->
-                <div fxFlex="100%">
-                    <google-chart [data]="columnChartWTooltips"></google-chart>
-                </div>
-            </div>
-            <div fxFlex="49%">
-                <google-chart [data]="pieChart"></google-chart>
-            </div>
-        </div>
-
-        <div fxLayout="row" class="dash-top-3">
-            <div fxFlex="19%"  class="dash-1">
-                <div flfxLayout="row" class="doller">
-                    <div fxFlex="100%">
-                        <h1><img src="../../assets/008.png" alt=""/></h1>
-                        
-                        <h4>Revenue</h4>
-                        <div flfxLayout="row" >
-                            <div fxFlex="100%" >
-                                <h3>000</h3>    
+                        <div  class="dash-1">
+                            <div md-select="result1" >
+                                <div fxFlex="100%">  
+                                    <i fxLayoutAlign="center" class="material-icons">track_changes</i>
+                                    <h3 fxLayoutAlign="center">106</h3>
+                                    <p fxLayoutAlign="center"s>Number of Membership that will Expire</p>
+                                </div>
                             </div>
                         </div>
 
                     </div>
                 </div>
+                <div fxFlex="78%">
+                    <div fxLayout="row" class="dash-top-2">
+                        <div fxFlex="49%">
+                            <!--<google-chart [data]="pieChart"></google-chart>-->
+                            <div fxFlex="100%">
+                                <google-chart [data]="columnChartWTooltips"></google-chart>
+                            </div>
+                        </div>
+                        <div fxFlex="49%">
+                            <google-chart [data]="pieChart"></google-chart>
+                        </div>
+                    </div>
 
-                <!--                <fusioncharts
-                                    width="100%"
-                                    height="400"
-                                    type="AngularGauge"
-                                    [dataSource]="dataSource"
-                                    >
-                                </fusioncharts>-->
-            </div>
-            <div fxFlex="80%">
-                <google-chart [data]="columnChart"></google-chart>
+                    <div fxLayout="row" class="dash-top-3">
+                        <div fxFlex="19%" class="dash-1">
+                            <div md-select="result1" >
+                                <div fxFlex="100%">
+                                    <i  fxLayoutAlign="center" class="material-icons">accessibility</i>
+                                    <h3 fxLayoutAlign="center" >300</h3>
+                                    <p fxLayoutAlign="center">Number of Pending T Shirt Delivery</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--                        <div fxFlex="19%"  class="dash-1">
+                                                                   <fusioncharts
+                                                                        width="100%"
+                                                                        height="400"
+                                                                        type="AngularGauge"
+                                                                        [dataSource]="dataSource"
+                                                                        >
+                                                                    </fusioncharts>
+                                                </div>-->
+                        <div fxFlex="60%">
+                            <google-chart [data]="columnChart"></google-chart>
+                        </div>
+                        <div fxFlex="19%" class="dash-1">
+                            <div md-select="result1" >
+                                <div fxFlex="100%" class="doller">
+                                    <h1><img src="../../assets/008.png" alt=""/></h1>
+                                    <h3 fxLayoutAlign="center" >300</h3>
+                                    <p fxLayoutAlign="center">Revenue</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--                        <div fxFlex="19%" class="dash-1">
+                                                    <div md-select="result1" >
+                                                        <div fxFlex="100%">
+                                                            <h4>Revenue</h4>
+                                                            <h1><img src="../../assets/008.png" alt=""/></h1>
+                                                            <h3 fxLayoutAlign="center" >300</h3>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>-->
+                    </div>
+                </div>
             </div>
         </div>
     </mat-sidenav-content>
