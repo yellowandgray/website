@@ -1,16 +1,72 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+<h2 mat-dialog-title>Workshop</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="workshopForm">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="" formControlName="name" />
+                    <mat-error>Name is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Type</mat-label>
+                    <mat-select formControlName="type">
+                        <mat-option [value]="'2_wheel'">2-Wheel</mat-option>
+                        <mat-option [value]="'4_wheel'">4-wheel</mat-option>
+                    </mat-select>
+                    <mat-error>Type is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Mobile</mat-label>
+                    <input matInput placeholder="" formControlName="mobile" />
+                    <mat-error>Mobile is required</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="" formControlName="email" />
+                    <mat-error>Email is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>In-charge Name</mat-label>
+                    <input matInput placeholder="" formControlName="incharge" />
+                    <mat-error>In-charge Name is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                <button type="button" mat-raised-button (click)="fileInput.click()">{{workshop_image_path}}</button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'workshop_image_path', 'image_path')"  />
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <mat-form-field class="full-width">
+                <mat-label>Description</mat-label>
+                <textarea rows="6" matInput placeholder="" formControlName="description"></textarea>
+                <mat-error>Description is required</mat-error>
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner
+                class="example-margin"
+                *ngIf="loading"
+                [mode]="'indeterminate'"
+                [strokeWidth]="3"
+                [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

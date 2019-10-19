@@ -212,8 +212,21 @@ $app->post('/insert_users', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $array = array('name' => $data['name'], 'user_name' => $data['user_name'], 'email' => $data['email'], 'contact' => $data['contact'], 'password' => $data['password'], 'media_path' => $data['media_path'], 'role' => $data['role']);
+    $array = array('name' => $data['name'], 'email' => $data['email'], 'contact' => $data['contact'], 'password' => $data['password'], 'media_path' => $data['media_path'], 'role' => $data['role']);
     $record = $com->insertRecord($array, 'users');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/insert_workshop', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $array = array('name' => $data['name'], 'type' => $data['type'], 'email' => $data['email'], 'mobile' => $data['mobile'], 'incharge' => $data['incharge'], 'image_path' => $data['image_path'], 'description' => $data['description']);
+    $record = $com->insertRecord($array, 'workshop');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -604,6 +617,18 @@ $app->get('/get_users', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $data = $com->selectAll('*', 'users', 'users_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_workshop', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'workshop', 'workshop_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

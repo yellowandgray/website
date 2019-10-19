@@ -75,7 +75,6 @@ export class UsersForm {
     private httpClient: HttpClient) {
         this.usersForm = new FormGroup({
       'name': new FormControl('', Validators.required),
-      'user_name': new FormControl('', Validators.required),
       'email': new FormControl('', Validators.required),
       'password': new FormControl('', Validators.required),
       'contact': new FormControl('', Validators.required),
@@ -84,7 +83,6 @@ export class UsersForm {
       if(this.data != null) {
            this.usersForm.patchValue({
            name: this.data.name,
-           user_name: this.data.user_name,
            email: this.data.email,
            password: this.data.password,
            contact: this.data.contact,
@@ -148,7 +146,6 @@ export class UsersForm {
         var url = '';
     if(this.users_id != 0) {
             formData.append('name', this.usersForm.value.name);
-            formData.append('user_name', this.usersForm.value.user_name);
             formData.append('email', this.usersForm.value.email);
             formData.append('role', this.usersForm.value.role);
             formData.append('password', this.usersForm.value.password);
@@ -156,7 +153,6 @@ export class UsersForm {
         url = 'update_record/users/users_id = '+this.users_id;
       } else {
             formData.append('name', this.usersForm.value.name);
-            formData.append('user_name', this.usersForm.value.user_name);
             formData.append('email', this.usersForm.value.email);
             formData.append('role', this.usersForm.value.role);
             formData.append('password', this.usersForm.value.password);

@@ -2,13 +2,6 @@
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="usersForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="20%">
-                <button type="button" mat-raised-button (click)="fileInput.click()">{{file_name}}</button>
-                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'file_name', 'media_path')" />
-            </div>
-        </div>
-        <br/>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Name</mat-label>
@@ -16,32 +9,9 @@
                     <mat-error>Name is required</mat-error>
                 </mat-form-field>
             </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Role</mat-label>
-                    <mat-select formControlName="role">
-                        <mat-option value="Test-1">Test 1</mat-option>
-                        <mat-option value="Test-2">Test 2</mat-option>
-                    </mat-select>
-                    <mat-error>Role is required</mat-error>
-                </mat-form-field>
-            </div>
-        </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>User name</mat-label>
-                    <input matInput placeholder="" formControlName="user_name" />
-                    <mat-error>User name is required</mat-error>
-                </mat-form-field>
-            </div>
-            
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Password</mat-label>
-                    <input matInput placeholder="" formControlName="password" />
-                    <mat-error>Password is required</mat-error>
-                </mat-form-field>
+            <div fxFlex="50%" fxLayoutAlign="start center">
+                <button type="button" mat-raised-button (click)="fileInput.click()">{{file_name}}</button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'file_name', 'media_path')" />
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
@@ -54,12 +24,30 @@
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="" formControlName="password" />
+                    <mat-error>Password is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Contact</mat-label>
                     <input matInput placeholder="" formControlName="contact" />
                     <mat-error>Contact is required</mat-error>
                 </mat-form-field>
             </div>
-            
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Role</mat-label>
+                    <mat-select formControlName="role">
+                        <mat-option [value]="Test-1">Test 1</mat-option>
+                        <mat-option [value]="Test-2">Test 2</mat-option>
+                    </mat-select>
+                    <mat-error>Role is required</mat-error>
+                </mat-form-field>
+            </div>
         </div>
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
             <button mat-button [mat-dialog-close]="false">Cancel</button>

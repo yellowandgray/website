@@ -5,7 +5,17 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openWorkshopForm();"><mat-icon>add</mat-icon> Workshop</button>
+            <button mat-raised-button color="primary" (click)="openWorkshopForm(0, 'null');"><mat-icon>add</mat-icon> Workshop</button>
         </div>
+        <mat-list>
+            <mat-list-item>
+                <h4 matLine>Name</h4>
+                <p matLine class="demo-2">Incharge</p>
+            </mat-list-item>
+            <mat-list-item>
+                <h4 matLine>Name</h4>
+                <p matLine class="demo-2">Incharge</p>
+            </mat-list-item>
+        </mat-list>
     </mat-sidenav-content>
 </mat-sidenav-container>
