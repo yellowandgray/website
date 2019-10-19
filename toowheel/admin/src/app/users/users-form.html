@@ -11,25 +11,9 @@
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>User name</mat-label>
-                    <input matInput placeholder="" formControlName="user_name" />
-                    <mat-error>User name is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Email</mat-label>
-                    <input matInput placeholder="" formControlName="email" />
-                    <mat-error>Email is required</mat-error>
-                </mat-form-field>
-            </div>
-        </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Password</mat-label>
-                    <input matInput placeholder="" formControlName="password" />
-                    <mat-error>Password is required</mat-error>
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="" formControlName="name" />
+                    <mat-error>Name is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
@@ -42,6 +26,40 @@
                     <mat-error>Role is required</mat-error>
                 </mat-form-field>
             </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>User name</mat-label>
+                    <input matInput placeholder="" formControlName="user_name" />
+                    <mat-error>User name is required</mat-error>
+                </mat-form-field>
+            </div>
+            
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="" formControlName="password" />
+                    <mat-error>Password is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="" formControlName="email" />
+                    <mat-error>Email is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Contact</mat-label>
+                    <input matInput placeholder="" formControlName="contact" />
+                    <mat-error>Contact is required</mat-error>
+                </mat-form-field>
+            </div>
+            
         </div>
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
             <button mat-button [mat-dialog-close]="false">Cancel</button>

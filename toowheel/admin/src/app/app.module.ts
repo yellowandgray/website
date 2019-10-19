@@ -57,6 +57,7 @@ import { NewsletterComponent, NewsletterForm, NewsletterDelete } from './newslet
 import { UsersComponent, UsersForm } from './users/users.component';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import {MatSortModule} from '@angular/material/sort';
+import { WorkshopComponent } from './workshop/workshop.component';
 
 
 @NgModule({
@@ -116,7 +117,7 @@ import {MatSortModule} from '@angular/material/sort';
     NewsletterForm, 
     NewsletterDelete, 
     UsersComponent, 
-    UsersForm
+    UsersForm, WorkshopComponent
   ],
   imports: [
     BrowserModule,
