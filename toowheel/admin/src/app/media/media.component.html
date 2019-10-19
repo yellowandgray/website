@@ -10,10 +10,10 @@
                 <mat-list>
                     <mat-list-item *ngFor="let data of result">
                         <button mat-icon-button aria-label="label" (click)="openDialog(data.media_id)">
-                            <mat-icon>edit</mat-icon>
+                            <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                         </button>
                         <button mat-icon-button aria-label="label" (click)="confirmDelete(data.media_id)">
-                            <mat-icon>delete</mat-icon>
+                            <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                         </button>
                         <h3 matLine>{{data.name}}</h3>
                         <mat-divider></mat-divider>
