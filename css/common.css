@@ -81,6 +81,22 @@
     box-shadow: 0 14px 12px rgba(0,0,0,0.25), 0 10px 5px rgba(0,0,0,0.22);
 }
 
+.carousel-control-next, .carousel-control-prev {
+    z-index: 2;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    top: 10%;
+    left: 13%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center; 
+}
+
 @media screen and (max-width: 991px) {
     .our_industries .single_industries a img {
         width: auto !important;

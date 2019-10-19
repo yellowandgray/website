@@ -10,7 +10,7 @@
       autoplay: true,
       margin: 40,
       autoplayHoverPause: true,
-      autoplayTimeout: 5000,
+      autoplayTimeout: 2000,
       nav: true,
       navText: [
         '<img src="img/icon/left.svg" alt="">',

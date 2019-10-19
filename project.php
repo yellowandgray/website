@@ -90,7 +90,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card ">
+<!--                            <div class="card ">
                                 <div class="card_iner overlay">
                                     <img src="img/project/006.png" class="card-img-top" alt="...">
                                     <div class="card-body">
@@ -109,7 +109,7 @@
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="card ">
                                 <div class="card_iner overlay">
                                     <img src="img/project/008.png" class="card-img-top" alt="...">

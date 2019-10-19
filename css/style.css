@@ -2255,7 +2255,7 @@ ul {
 
 /* line 60, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_menu.scss */
 .menu_fixed .navbar-brand img {
-    max-width: 150px;
+    max-width: 250px;
 }
 
 /* line 64, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_menu.scss */
@@ -2336,13 +2336,13 @@ ul {
 /**************** banner part css start ****************/
 /* line 2, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_banner.scss */
 .banner_part {
-    height: 880px;
+/*    height: 880px;*/
     position: relative;
     overflow: hidden;
-    background-image: url(../img/banner_bg.png);
+/*    background-image: url(../img/banner_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center;*/
     z-index: 1;
     border-radius: 0% 0% 50% 50% / 0% 0% 7% 7%;
 }
@@ -2356,7 +2356,7 @@ ul {
     width: 100%;
     height: 100%;
     background-color: #171c3a;
-    z-index: -1;
+    z-index: 1;
     opacity: 0.8;
     border-radius: 0% 0% 50% 50% / 0% 0% 7% 7%;
 }
@@ -2364,7 +2364,7 @@ ul {
 @media (max-width: 576px) {
     /* line 2, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_banner.scss */
     .banner_part {
-        height: 650px;
+        height: auto;
         background-color: #f0eed4;
     }
 }
@@ -2372,7 +2372,7 @@ ul {
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     /* line 2, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_banner.scss */
     .banner_part {
-        height: 650px;
+        height: auto;
         background-color: #f0eed4;
     }
 }
@@ -2380,7 +2380,7 @@ ul {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     /* line 2, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_banner.scss */
     .banner_part {
-        height: 700px;
+        height: auto;
         background-color: #f0eed4;
     }
 }
@@ -2389,7 +2389,7 @@ ul {
     /* line 2, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_banner.scss */
     .banner_part {
         background-size: cover;
-        height: 650px;
+        height: auto;
     }
 }
 
@@ -2397,7 +2397,7 @@ ul {
 .banner_part .banner_text {
     display: table;
     width: 100%;
-    height: 880px;
+/*    height: 880px;*/
 }
 
 /* line 46, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_banner.scss */
@@ -2411,7 +2411,7 @@ ul {
     .banner_part .banner_text {
         text-align: center;
         padding-top: 0px;
-        height: 650px;
+        height: auto;
     }
 }
 
@@ -2420,7 +2420,7 @@ ul {
     .banner_part .banner_text {
         text-align: center;
         padding-top: 0px;
-        height: 650px;
+        height: auto;
     }
 }
 
@@ -2429,14 +2429,14 @@ ul {
     .banner_part .banner_text {
         text-align: center;
         padding-top: 0px;
-        height: 700px;
+        height: auto;
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
     /* line 42, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_banner.scss */
     .banner_part .banner_text {
-        height: 650px;
+        height: auto;
     }
 }
 
@@ -2510,6 +2510,7 @@ ul {
     font-size: 48px;
     font-weight: 300;
     color: #fff;
+    margin-top: 10px;
 }
 
 @media (max-width: 576px) {
@@ -2528,7 +2529,7 @@ ul {
 
 /* line 126, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_banner.scss */
 .banner_part .banner_text .btn_1 {
-    margin-top: 45px;
+    margin-top: 30px;
 }
 
 /* line 131, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_banner.scss */
@@ -5646,14 +5647,14 @@ input:focus {
 
 /* line 265, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_footer.scss */
 .footer-area .footer_icon p {
-    margin-bottom: 22px;
+    margin-bottom: 15px;
     font-size: 16px;
     color: #999;
 }
 
 /* line 271, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_footer.scss */
 .footer-area .footer_icon ul li {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 /* line 273, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_footer.scss */

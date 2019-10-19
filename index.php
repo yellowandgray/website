@@ -7,21 +7,90 @@
         <!-- Header part end-->
 
         <!-- banner part start-->
-        <section class="banner_part">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-10">
-                        <div class="banner_text text-center">
-                            <div class="banner_text_iner">
-<!--                                <h5>Since <span>1990</span> </h5>-->
-                                <h1> S & T TESTING SERVICES PTE LTD</h1>
-                                <h3>SWITCHGEARS, TRANSFORMERS and CABLES</h3>
-                                <a href="about" class="btn_1">learn more </a>
+        <section id="carouselExampleIndicators" class="carousel slide banner_part" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="img/banner_bg.png" alt="First slide">
+                    <div class="container carousel-caption d-none d-md-block">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-lg-10">
+                                <div class="banner_text text-center">
+                                    <div class="banner_text_iner">
+        <!--                                <h5>Since <span>1990</span> </h5>-->
+                                        <h1> S & T TESTING SERVICES PTE LTD</h1>
+                                        <h3>Switch Gear Installation and testing commissioning</h3>
+                                        <a href="about" class="btn_1">learn more </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/banner_bg.png" alt="Second slide">
+                    <div class="container carousel-caption d-none d-md-block">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-lg-10">
+                                <div class="banner_text text-center">
+                                    <div class="banner_text_iner">
+        <!--                                <h5>Since <span>1990</span> </h5>-->
+                                        <h1> S & T TESTING SERVICES PTE LTD</h1>
+                                        <h3>Transformer installation and testing commissioning</h3>
+                                        <a href="about" class="btn_1">learn more </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/banner_bg.png" alt="Third slide">
+                    <div class="container carousel-caption d-none d-md-block">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-lg-10">
+                                <div class="banner_text text-center">
+                                    <div class="banner_text_iner">
+        <!--                                <h5>Since <span>1990</span> </h5>-->
+                                        <h1> S & T TESTING SERVICES PTE LTD</h1>
+                                        <h3>HT cable termination and testing commissioning</h3>
+                                        <a href="about" class="btn_1">learn more </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/banner_bg.png" alt="Third slide">
+                    <div class="container carousel-caption d-none d-md-block">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-lg-10">
+                                <div class="banner_text text-center">
+                                    <div class="banner_text_iner">
+        <!--                                <h5>Since <span>1990</span> </h5>-->
+                                        <h1> S & T TESTING SERVICES PTE LTD</h1>
+                                        <h3>Fire suppression system installation and inspection and testing</h3>
+                                        <a href="about" class="btn_1">learn more </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </section>
         <!-- banner part start-->
 
@@ -78,7 +147,7 @@
                         <div class="about_text">
                             <h2>About us</h2>
                             <h4>WE ARE A ELECTRICAL SERVICE COMPANY THAT AIMS TO PROVIDE YOU WITH THE BEST SERVICE.</h4>
-                            <p>S&T Testing Services Pvt Ltd is a well recognized Electrical Service Company having 20 years</p>
+                            <p>S&T Testing Services Pte Ltd is a well recognized Electrical Service Company having 20 years</p>
                             <p>Singapore experienced Team. We provides exemplary service quality for Testing, Installation and Commissioning of Electrical Equipment's.</p>
                             <p>By Choosing us, You no need to worry about the Completion of project, we will take care of that.</p>
                             <a href="about" class="btn_2">read more</a>

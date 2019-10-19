@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-8">
                     <div class="sub_menu_right_content">
-                        <a href="tel:+65-6561-7601"><i class="flaticon-phone-call"></i>6561-7601</a> <span>|</span>
+                        <a href="tel:+65-8626-1994"><i class="flaticon-phone-call"></i>+65-8626-1994</a> <span>|</span>
                         <a href="mailto:sales@sttesting.com.sg"><i class="flaticon-at"></i>sales@sttesting.com.sg</a>
                     </div>
                 </div>

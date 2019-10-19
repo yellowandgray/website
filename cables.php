@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-lg-12 mb-30">
                         <div class="section_tittle">
-                            <h2>Cables</h2>
+                            <h2>HT Cables Termination and Testing</h2>
                         </div>
                         <img src="img/cables/cover.jpg" alt="" />
                     </div>

@@ -50,17 +50,17 @@
             <div class="col-sm-6 col-md-3 col-xl-3">
                 <div class="single-footer-widget footer_icon">
                     <h4>Contact Info</h4>
-                    <p>iSPACE, 7 Soon Lee Street,<br/> Unit 02-11, Singapore - 627608</p>
+                    <p>iSPACE, 7 Soon Lee Street,<br/> #02-12, Singapore - 627608</p>
                     <ul>
                         <li>
-                            <a href="tel:+65-6561-7601"><i class="ti-mobile"></i>Tel: 6561 7601</a> | 
-                            <a href="tel:+65-8626-1994"><i class="ti-mobile"></i>Hp: 9650 9762</a>
+                            <a href="tel:+65-8626-1994"><i class="ti-mobile"></i>Mob: (65) 8626 1994</a>
                         </li>
                         <li>
-                            <a href="mailto:sales@sttesting.com.sg"><i class="ti-email"></i>sales@sttesting.com.sg</a>
+                             <a href="tel:+65-6250-0394"><i class="ti-mobile"></i>Tel: (65) 6250 0394</a> |
+                             <a href="tel:+65-6266-4226"><i class="ti-mobile"></i>Fax: (65) 6266 4226</a> 
                         </li>
                         <li>
-                            <a href="http://www.sttesting.com.sg/"><i class="ti-world"></i> www.sttesting.com.sg</a>
+                            <a href="mailto:mano@sttesting.com.sg"><i class="ti-email"></i>mano@sttesting.com.sg</a>
                         </li>
                     </ul>
                 </div>
