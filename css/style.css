@@ -3388,6 +3388,9 @@ ul {
         font-size: 35px;
         margin-bottom: 20px;
     }
+    .carousel-caption {
+        left: 10% !important;
+    }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1440px) {
@@ -3395,6 +3398,9 @@ ul {
     .faq_part .faq_content h1 {
         font-size: 35px;
         margin-bottom: 20px;
+    }
+    .carousel-caption {
+        left: 7.2% !important;
     }
 }
 
