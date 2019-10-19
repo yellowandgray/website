@@ -85,6 +85,27 @@ export class ClubComponent implements OnInit {
            }
         });
     }
+     confirmDialog(id, action): void  {
+    var data = null;
+      if(id != 0) { 
+        data = id;
+      }
+    const dialogRef = this.dialog.open(PictureViewClub, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: {
+            data: data,
+            action: action
+        }
+    });
+
+   dialogRef.afterClosed().subscribe(result => {
+       if(result !== false && result !== 'false') {
+      //this.getMember();
+      //this.getFourWheelMember();
+       }
+    });
+}
 
 
     openGalleryDialog(id): void  {
@@ -488,3 +509,29 @@ this._snackBar.open(res["result"]["message"], '', {
   }
 
 }
+              
+  @Component({
+  selector: 'picture-view',
+  templateUrl: 'picture-view.html',
+})
+ 
+export class PictureViewClub {
+    image_url: string = '../toowheel/api/v1/';
+    action: string = '';
+    loading = false;
+    member_id = 0;
+    data: any;
+    constructor(
+    public dialogRef: MatDialogRef<PictureViewClub>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.datapopup != null) { 
+            this.action = this.datapopup.action;
+            this.data = this.datapopup.data;
+            if(this.datapopup.action == 'delete') {
+                this.member_id = this.datapopup.data;
+            }
+    }
+}
+        }  

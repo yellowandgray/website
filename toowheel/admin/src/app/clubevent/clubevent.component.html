@@ -37,7 +37,55 @@
   <td>{{result.title}}</td>  
   </tr>
 </table>-->
-        <ng-container *ngFor="let data of result; let i = index">
+
+ <mat-tab-group>
+            <mat-tab label="2 Wheeler">
+
+                        <mat-list>
+                            <ng-container *ngFor="let data of result; let i = index">
+                                 <ng-container *ngIf="result[i]">
+                                <mat-list-item class="list-container">
+                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['event_id'],'result')">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['event_id'])">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>                                    
+                                    <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+<!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />-->
+                                    <h3 class="truncate" matLine>{{data.title}}</h3>
+                                    <p class="truncate1" matLine>{{data.location}}</p>     
+                                    <p class="truncate2" matLine>{{data.event_date}}</p> 
+                                </mat-list-item>
+                                     </ng-container>
+                            </ng-container>
+                        </mat-list>
+            </mat-tab>
+            <mat-tab label="4 Wheeler">
+                 <mat-list>
+<!--                            <ng-container *ngFor="let data of result; let i = index">
+                                <ng-container *ngIf="result[i]">
+                                <mat-list-item class="list-container">
+                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['event_id'],'result')">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['event_id'])">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>                                    
+                                    <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />
+                                    <h3 class="truncate" matLine>{{data.title}}</h3>
+                                    <p class="truncate1" matLine>{{data.location}}</p>     
+                                    <p class="truncate2" matLine>{{data.event_date}}</p> 
+                                </mat-list-item>
+                                     </ng-container>
+                            </ng-container>-->
+                        </mat-list>
+            </mat-tab>
+     </mat-tab-group>
+
+
+<!--        <ng-container *ngFor="let data of result; let i = index">
             <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
                 <ng-container *ngIf="result[i]">
                     <mat-card fxFlex="25%">
@@ -128,6 +176,6 @@
                     </mat-card>
                 </ng-container>
             </div>            
-        </ng-container>
+        </ng-container>-->
     </mat-sidenav-content>
 </mat-sidenav-container>
