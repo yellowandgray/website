@@ -59,7 +59,6 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import {MatSortModule} from '@angular/material/sort';
 import { WorkshopComponent, WorkshopForm } from './workshop/workshop.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -159,7 +158,7 @@ import { WorkshopComponent, WorkshopForm } from './workshop/workshop.component';
     MatSortModule
   ],
   entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubPhotosForm, CategoryComponent, CategoryForm, CategoryDelete, VendorComponent, VendorForm, MemberComponent, MemberForm, MemberDelete, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete, NewsletterComponent, NewsletterForm, NewsletterDelete, UsersComponent, UsersForm,PictureView,PictureViewNews,PictureViewPress,PictureViewClub, WorkshopComponent, WorkshopForm],
-
   providers: [],
   bootstrap: [AppComponent]
-})
+});
+export class AppModule { }
