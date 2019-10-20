@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>Workshop</h2>
 <mat-dialog-content class="mat-typography">
-    <form [formGroup]="workshopForm">
+    <form [formGroup]="workshopForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
@@ -13,8 +13,8 @@
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Type</mat-label>
                     <mat-select formControlName="type">
-                        <mat-option [value]="'2_wheel'">2-Wheel</mat-option>
-                        <mat-option [value]="'4_wheel'">4-wheel</mat-option>
+                        <mat-option [value]="'two_wheel'">2 Wheel</mat-option>
+                        <mat-option [value]="'four_wheel'">4 wheel</mat-option>
                     </mat-select>
                     <mat-error>Type is required</mat-error>
                 </mat-form-field>
@@ -28,7 +28,6 @@
                     <mat-error>Mobile is required</mat-error>
                 </mat-form-field>
             </div>
-
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Email</mat-label>
@@ -40,7 +39,7 @@
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>In-charge Name</mat-label>
+                    <mat-label>In charge Name</mat-label>
                     <input matInput placeholder="" formControlName="incharge" />
                     <mat-error>In-charge Name is required</mat-error>
                 </mat-form-field>

@@ -625,10 +625,22 @@ $app->get('/get_users', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_workshop', function() {
+$app->get('/get_two_wheel_workshop', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('*', 'workshop', 'workshop_id > 0');
+    $data = $com->selectAll('*', 'workshop', 'workshop_id > 0 AND type = \'two_wheel\'');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_four_wheel_workshop', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'workshop', 'workshop_id > 0 AND type = \'four_wheel\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

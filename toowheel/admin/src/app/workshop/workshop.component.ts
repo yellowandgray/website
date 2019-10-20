@@ -109,7 +109,7 @@ export class WorkshopForm {
             'mobile': new FormControl('', Validators.required),
             'email': new FormControl('', Validators.required),
             'incharge': new FormControl('', Validators.required),
-            'description': new FormControl('', Validators.required)
+            'description': new FormControl('')
         });
         if(this.data != null) { 
             this.workshopForm.patchValue({ 
@@ -162,6 +162,7 @@ export class WorkshopForm {
           formData.append('mobile', this.workshopForm.value.mobile);
           formData.append('email', this.workshopForm.value.email);
           formData.append('incharge', this.workshopForm.value.incharge);
+          formData.append('description', this.workshopForm.value.description);
           if(this.image_path && this.image_path != '') {
               formData.append('image_path', this.image_path);
           }
@@ -172,6 +173,7 @@ export class WorkshopForm {
           formData.append('mobile', this.workshopForm.value.mobile);
           formData.append('email', this.workshopForm.value.email);
           formData.append('incharge', this.workshopForm.value.incharge);
+          formData.append('description', this.workshopForm.value.description);
           formData.append('image_path', this.image_path);
         url = 'insert_workshop';
       }
