@@ -221,7 +221,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     success: function (data) {
                         $('.slider').slick('unslick');
                         $('#club1 .slider').empty();
-                        var BASE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
+                        var BASE_URL = 'http://www.toowheel.com/toowheel/api/v1/';
                         if (data.result.error === false) {
                             var list = '';
                             $.each(data.result.data, function (key, val) {

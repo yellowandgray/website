@@ -19,9 +19,9 @@ export class PressReleaseComponent implements OnInit {
   ngOnInit() {
     this.getPressRelease();
   }
-  image_url: string = '../toowheel/api/v1/';
+  image_url: string = 'http://www.toowheel.com/toowheel/api/v1/';
     getPressRelease(): void {
-     this.httpClient.get<any>('../toowheel/api/v1/get_press_release')
+     this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_press_release')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -146,7 +146,7 @@ export class PressReleaseForm {
                 date: new Date()
             });
     }
-    this.httpClient.get('../toowheel/api/v1/get_medias').subscribe(
+    this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/get_medias').subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
                     this.medias = res["result"]["data"];
@@ -210,7 +210,7 @@ export class PressReleaseForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('../toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('http://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -273,7 +273,7 @@ export class PressReleaseForm {
           formData.append('youtube_id', this.pressreleaseForm.value.youtube_id);
         url = 'insert_press_release';
       }
-      this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -317,7 +317,7 @@ export class PressreleaseDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../toowheel/api/v1/delete_record/press_release/press_release_id='+this.press_release_id).subscribe(
+      this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/delete_record/press_release/press_release_id='+this.press_release_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -344,7 +344,7 @@ export class PressreleaseDelete {
 })
  
 export class PictureViewPress {
-    image_url: string = '../toowheel/api/v1/';
+    image_url: string = 'http://www.toowheel.com/toowheel/api/v1/';
     action: string = '';
     loading = false;
     member_id = 0;

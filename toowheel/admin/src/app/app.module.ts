@@ -57,7 +57,7 @@ import { NewsletterComponent, NewsletterForm, NewsletterDelete } from './newslet
 import { UsersComponent, UsersForm } from './users/users.component';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import {MatSortModule} from '@angular/material/sort';
-import { WorkshopComponent, WorkshopForm } from './workshop/workshop.component';
+import { WorkshopComponent, WorkshopForm, WorkshopDelete } from './workshop/workshop.component';
 
 @NgModule({
   declarations: [
@@ -122,7 +122,8 @@ import { WorkshopComponent, WorkshopForm } from './workshop/workshop.component';
     PictureViewPress,
     PictureViewClub,
     WorkshopComponent, 
-    WorkshopForm
+    WorkshopForm,
+    WorkshopDelete
   ],
   imports: [
     BrowserModule,
@@ -157,8 +158,8 @@ import { WorkshopComponent, WorkshopForm } from './workshop/workshop.component';
     AngularEditorModule,
     MatSortModule
   ],
-  entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubPhotosForm, CategoryComponent, CategoryForm, CategoryDelete, VendorComponent, VendorForm, MemberComponent, MemberForm, MemberDelete, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete, NewsletterComponent, NewsletterForm, NewsletterDelete, UsersComponent, UsersForm,PictureView,PictureViewNews,PictureViewPress,PictureViewClub, WorkshopComponent, WorkshopForm],
+  entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubPhotosForm, CategoryComponent, CategoryForm, CategoryDelete, VendorComponent, VendorForm, MemberComponent, MemberForm, MemberDelete, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete, NewsletterComponent, NewsletterForm, NewsletterDelete, UsersComponent, UsersForm,PictureView,PictureViewNews,PictureViewPress,PictureViewClub, WorkshopComponent, WorkshopForm, WorkshopDelete],
   providers: [],
   bootstrap: [AppComponent]
-});
+})
 export class AppModule { }

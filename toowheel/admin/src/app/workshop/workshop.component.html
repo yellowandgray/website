@@ -5,17 +5,41 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openWorkshopForm(0, 'null');"><mat-icon>add</mat-icon> Workshop</button>
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null');"><mat-icon>add</mat-icon> Workshop</button>
         </div>
-        <mat-list>
-            <mat-list-item>
-                <h4 matLine>Name</h4>
-                <p matLine class="demo-2">Incharge</p>
-            </mat-list-item>
-            <mat-list-item>
-                <h4 matLine>Name</h4>
-                <p matLine class="demo-2">Incharge</p>
-            </mat-list-item>
-        </mat-list>
+        <mat-tab-group>
+            <mat-tab label="2 Wheeler">
+                <mat-list>
+                    <mat-list-item class="list-container" *ngFor="let data of result">
+                                   <button mat-icon-button aria-label="label" (click)="openDialog(data.workshop_id, 'result')">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.workshop_id, 'result')">
+                            <mat-icon>delete</mat-icon>
+                        </button>                                    
+                        <img matListAvatar src="{{image_url}}{{data.image_path}}" *ngIf="data.image_path && data.image_path != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                             <img matListAvatar src="{{image_url}}no_preview.jpg" *ngIf="!data.image_path || data.image_path == ''" alt="..." />
+                        <h3 class="truncate" matLine>{{data.name}} - {{data.incharge}}</h3>
+                        <p class="truncate2" matLine>{{data.email}} - {{data.mobile}}</p>
+                    </mat-list-item>
+                </mat-list>
+            </mat-tab>
+            <mat-tab label="4 Wheeler">
+                <mat-list>
+                    <mat-list-item class="list-container" *ngFor="let data of result_fw">
+                                   <button mat-icon-button aria-label="label" (click)="openDialog(data.workshop_id, 'result_fw')">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.workshop_id, 'result_fw')">
+                            <mat-icon>delete</mat-icon>
+                        </button>                                    
+                        <img matListAvatar src="{{image_url}}{{data.image_path}}" *ngIf="data.image_path && data.image_path != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                             <img matListAvatar src="{{image_url}}no_preview.jpg" *ngIf="!data.image_path || data.image_path == ''" alt="..." />
+                        <h3 class="truncate" matLine>{{data.name}} - {{data.incharge}}</h3>
+                        <p class="truncate2" matLine>{{data.email}} - {{data.mobile}}</p>
+                    </mat-list-item>
+                </mat-list>
+            </mat-tab>
+        </mat-tab-group>
     </mat-sidenav-content>
 </mat-sidenav-container>

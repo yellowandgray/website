@@ -13,7 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class MemberComponent implements OnInit {
   result = [];
   result_fw = [];
-  image_url: string = '../toowheel/api/v1/';
+  image_url: string = 'http://www.toowheel.com/toowheel/api/v1/';
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
@@ -21,7 +21,7 @@ export class MemberComponent implements OnInit {
       this.getFourWheelMember();
   }
   getMember(): void {
-  this.httpClient.get<any>('../toowheel/api/v1/get_two_wheel_member')
+  this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_two_wheel_member')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -34,7 +34,7 @@ export class MemberComponent implements OnInit {
         );
   }
   getFourWheelMember(): void {
-  this.httpClient.get<any>('../toowheel/api/v1/get_four_wheel_member')
+  this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_four_wheel_member')
   .subscribe(
           (res)=>{
               this.result_fw = res["result"]["data"];
@@ -49,7 +49,7 @@ export class MemberComponent implements OnInit {
   changeStatus(id, status): void {
       var formData = new FormData();
       formData.append('activated', status);
-      this.httpClient.post<any>('../toowheel/api/v1/update_record/member/member_id = '+id, formData)
+      this.httpClient.post<any>('http://www.toowheel.com/toowheel/api/v1/update_record/member/member_id = '+id, formData)
   .subscribe(
           (res)=>{
               this.getMember();
@@ -174,7 +174,7 @@ export class MemberForm {
   templateUrl: 'member-delete-confirmation.html',
 })
 export class MemberDelete {
-    image_url: string = '../toowheel/api/v1/';
+    image_url: string = 'http://www.toowheel.com/toowheel/api/v1/';
     action: string = '';
     loading = false;
     member_id = 0;
@@ -198,7 +198,7 @@ export class MemberDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../toowheel/api/v1/delete_record/member/member_id='+this.member_id).subscribe(
+      this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/delete_record/member/member_id='+this.member_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
