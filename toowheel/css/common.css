@@ -3971,3 +3971,44 @@ thead td {
     text-align: center;
     width: 100%;
 }
+
+.workshop-section {
+    padding: 40px 0;
+}
+
+.workshop-section h3 {
+    color: red;
+}
+
+.image-border-width {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.workshop-section .rating {
+    text-align: left;
+}
+
+.workshop-btn {
+    background: red;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: 1px solid red;
+}
+
+.workshop-btn:hover {
+    background: transparent;
+    color: red;
+    border: 1px solid red;
+    text-decoration: none;
+}
+
+.workshop-title {
+    color: red;
+    font-weight: 700;
+}
+
+.events-content .rating {
+    text-align: left;
+}

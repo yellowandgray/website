@@ -19,7 +19,7 @@ export class ClubeventComponent implements OnInit {
 
    
    
-
+    value = '';
     result1 = [];
     result = [];
     result_four_wheel:any[];
@@ -35,7 +35,25 @@ export class ClubeventComponent implements OnInit {
      //this.dataSource.paginator = this.paginator;
     //this.dataSource.sort = this.sort;
     
-  }
+  }   
+
+    OnSearch() {
+      console.log("OnSearch", this.value);
+    }
+
+    OnSearchNext() {
+      console.log("OnSearchNext", this.value);
+    }
+
+    OnSearchPrevious() {
+      console.log("OnSearchPrevious", this.value);
+    }
+
+    OnClear() {
+      console.log("OnClear");
+      this.value = "";
+    }
+  
   /*applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
