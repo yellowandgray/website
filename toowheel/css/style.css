@@ -363,7 +363,7 @@ body {
     background: #f2f2f2;
     padding: 8% 0;
     position: relative;
-/*    top: 108px;*/
+    /*    top: 108px;*/
 }
 
 .media-bg {
@@ -525,7 +525,7 @@ body {
 .section-bg {
     background: #f2f2f2;
     position: relative;
-/*    top: 108px !important;*/
+    /*    top: 108px !important;*/
 }
 
 .ptb-40 {
@@ -1950,4 +1950,22 @@ div#html5-watermark {
     color: red;
     border: 1px solid red;
     text-decoration: none;
+}
+.dont-show{
+    padding: 10px;
+    /* background: #363636; */
+    color: #bdbdbd;
+    cursor: pointer;
+}
+.dont-show-cancel  {
+    border: none;
+    background: #363636;
+    color: #fff;
+    margin-top: 10px;
+}
+.dont-show-submit  {
+    border: none;
+    background: #ff0202;
+    color: #fff;
+    margin-top: 10px;
 }

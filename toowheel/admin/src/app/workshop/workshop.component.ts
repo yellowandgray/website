@@ -4,6 +4,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-workshop',
@@ -20,7 +22,7 @@ export class WorkshopComponent implements OnInit {
     this.getFourWheelWorkshop();
   }
   getWorkshop(): void {
-  this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_two_wheel_workshop')
+  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_two_wheel_workshop')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -33,7 +35,7 @@ export class WorkshopComponent implements OnInit {
         );
   }
   getFourWheelWorkshop(): void {
-  this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_four_wheel_workshop')
+  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_four_wheel_workshop')
   .subscribe(
           (res)=>{
               this.result_fw = res["result"]["data"];
@@ -45,7 +47,7 @@ export class WorkshopComponent implements OnInit {
         }
         );
   }
-    image_url: string = 'http://www.toowheel.com/toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
     openDialog(id, res) {
         var data = null;
       if(id != 0) { 
@@ -68,6 +70,30 @@ export class WorkshopComponent implements OnInit {
        }
     });
 }
+
+confirmDialog(id, action): void  {
+    var data = null;
+      if(id != 0) { 
+        data = id;
+      }
+    const dialogRef = this.dialog.open(PictureViewWorkshop, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: {
+            data: data,
+            action: action
+        }
+    });
+
+   dialogRef.afterClosed().subscribe(result => {
+       if(result !== false && result !== 'false') {
+      //this.getMember();
+      //this.getFourWheelMember();
+       }
+    });
+}
+
+
 confirmDelete(id): void  {
     var data = null;
       if(id != 0) { 
@@ -124,13 +150,54 @@ export class WorkshopForm {
     }
     }
 
+        editorConfig: AngularEditorConfig = {
+    editable: true,
+      spellcheck: true,
+      height: '600px',
+      minHeight: '600px',
+      maxHeight: '600px',
+      width: 'auto',
+      minWidth: '0',
+      translate: 'yes',
+      enableToolbar: true,
+      showToolbar: true,
+      placeholder: 'Enter text here...',
+      defaultParagraphSeparator: '',
+      defaultFontName: '',
+      defaultFontSize: '',
+      fonts: [
+        {class: 'arial', name: 'Arial'},
+        {class: 'times-new-roman', name: 'Times New Roman'},
+        {class: 'calibri', name: 'Calibri'},
+        {class: 'comic-sans-ms', name: 'Comic Sans MS'}
+      ],
+      customClasses: [
+      {
+        name: 'quote',
+        class: 'quote',
+      },
+      {
+        name: 'redText',
+        class: 'redText'
+      },
+      {
+        name: 'titleText',
+        class: 'titleText',
+        tag: 'h1',
+      },
+    ],
+    uploadUrl: 'v1/image',
+    sanitize: true,
+    toolbarPosition: 'top',
+};
+        
     fileProgress(fileInput: any, name:string, field: string) {
         var fileData = <File>fileInput.target.files[0];
         this[name] = fileData.name;
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('http://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -148,6 +215,7 @@ export class WorkshopForm {
         });
             });
     }
+           
 
     onSubmit() {
       if (this.workshopForm.invalid) {
@@ -177,7 +245,7 @@ export class WorkshopForm {
           formData.append('image_path', this.image_path);
         url = 'insert_workshop';
       }
-      this.httpClient.post('http://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -220,7 +288,7 @@ export class WorkshopDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/delete_record/workshop/workshop_id='+this.workshop_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/workshop/workshop_id='+this.workshop_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -240,3 +308,29 @@ this._snackBar.open(res["result"]["message"], '', {
         );
   }
 }
+        
+        @Component({
+  selector: 'picture-view',
+  templateUrl: 'picture-view.html',
+})
+ 
+export class PictureViewWorkshop {
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+    action: string = '';
+    loading = false;
+    member_id = 0;
+    data: any;
+    constructor(
+    public dialogRef: MatDialogRef<PictureViewWorkshop>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.datapopup != null) { 
+            this.action = this.datapopup.action;
+            this.data = this.datapopup.data;
+            if(this.datapopup.action == 'delete') {
+                this.member_id = this.datapopup.data;
+            }
+    }
+}
+        }

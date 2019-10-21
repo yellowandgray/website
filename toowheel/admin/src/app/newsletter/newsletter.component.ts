@@ -18,7 +18,7 @@ export class NewsletterComponent implements OnInit {
       this.getNewsletter();
   }
   getNewsletter(): void {
-  this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_newsletter')
+  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_newsletter')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -107,7 +107,7 @@ export class NewsletterForm {
         url = 'update_record/newsletter/newsletter_id = '+this.newsletter_id;
       }
       this.loading = true;
-      this.httpClient.post('http://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -150,7 +150,7 @@ export class NewsletterDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/delete_record/newsletter/newsletter_id='+this.newsletter_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/newsletter/newsletter_id='+this.newsletter_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

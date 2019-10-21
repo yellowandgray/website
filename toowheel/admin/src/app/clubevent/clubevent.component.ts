@@ -5,6 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
+//import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 
 
 
@@ -15,6 +16,9 @@ import * as moment from 'moment';
   styleUrls: ['./clubevent.component.css']
 })
 export class ClubeventComponent implements OnInit {
+
+   
+   
 
     result1 = [];
     result = [];
@@ -28,13 +32,19 @@ export class ClubeventComponent implements OnInit {
 
   ngOnInit() {
     this.getEvent();
-    
+     //this.dataSource.paginator = this.paginator;
+    //this.dataSource.sort = this.sort;
     
   }
+  /*applyFilter(filterValue: string) {
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+    this.dataSource.filter = filterValue;
+  }*/
 
-image_url: string = 'http://www.toowheel.com/toowheel/api/v1/';
+image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
        getEvent(): void {
-     this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_event')
+     this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_event')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -169,7 +179,7 @@ export class ClubEventForm {
     }
     getCategory(): void {
        this.loading = true;
-          this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/get_'+this.clubeventForm.value.type+'_category').subscribe(
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_'+this.clubeventForm.value.type+'_category').subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -189,7 +199,7 @@ export class ClubEventForm {
     }
     getClub(): void {
        this.loading = true;
-          this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/get_club_by_category/'+this.clubeventForm.value.category_id).subscribe(
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_club_by_category/'+this.clubeventForm.value.category_id).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -213,7 +223,7 @@ export class ClubEventForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('http://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -267,7 +277,7 @@ formData.append('type', this.clubeventForm.value.type);
           formData.append('sponsor', this.clubeventForm.value.sponsor);              
           url = 'insert_event';
           }
-          this.httpClient.post('http://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -311,7 +321,7 @@ export class ClubEventDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/delete_record/event/event_id='+this.event_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/event/event_id='+this.event_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -338,7 +348,7 @@ export class ClubEventDelete {
 })
  
 export class PictureView {
-    image_url: string = 'http://www.toowheel.com/toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
     action: string = '';
     loading = false;
     member_id = 0;

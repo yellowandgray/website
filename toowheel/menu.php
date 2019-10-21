@@ -164,7 +164,8 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                         <p id="myDiv">Search</p>
                     </span> 
                 </a>
-                <a href="login.php?type=<?php echo $type; ?>" class="float-left margin-left-10">
+<!--                <a href="login.php?type=<?php echo $type; ?>" class="float-left margin-left-10">-->
+                <a onclick="document.getElementById('about-club').classList.add('club-about')" class="float-left margin-left-10">
                     <span>
                         <i class="fa fa-sign-in search-bg"></i>
                         <p> Login</p>
@@ -173,13 +174,45 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
             </div>
             <div class="mobile-header-login">
 <!--                <i class="fa fa-search"></i>-->
-                <a href="login.php?type=<?php echo $type; ?>"><i class="fa fa-user"></i></a>
+                <!--<a href="login.php?type=<?php echo $type; ?>"><i class="fa fa-user"></i></a>-->
+                <a onclick="document.getElementById('about-club').classList.add('club-about')"><i class="fa fa-user"></i></a>
             </div>
         </div>
         <div class="row">
             <div class="mobile-search">
                 <input type="search" placeholder="Search" class="head-search" />
             </div>
+        </div>
+        <div class="row">
+            <div id="about-club">
+                <p onclick="document.getElementById('about-club').classList.remove('club-about')"><i class="fa fa-times" aria-hidden="true"></i></P>
+                <h4>Coverage</h4>
+                <div class="form-group">
+                    <label for="coverage_full_name">Full Name (Next of Kin)</label>
+                    <input placeholder="" id="coverage_full_name" name="coverage_full_name" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="coverage_contact_number">Contact Number</label>
+                    <input type="text" class="form-control" name="coverage_contact_number" id="coverage_contact_number" placeholder="" />
+                </div>
+                <div class="form-group">
+                    <label for="coverage_address">Address</label>
+                    <textarea class="form-control" placeholder="" name="coverage_address" id="coverage_address" type="text" rows="3"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="dont-show">Dont Show again</p>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="dont-show-cancel">cancel</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="dont-show-submit">Submit</button>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </div>
 </section>
