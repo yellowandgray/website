@@ -14,22 +14,19 @@ import * as moment from 'moment';
 
 export class ClubeventComponent implements OnInit {
     searchTerm: string = '';
-    result1 = [];
+    sortdata: string = '';
     result = [];
     result_four_wheel:any[];
-    constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { 
-
-}
-  ngOnInit() {
-    this.getEvent();
-  }
-image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
-       getEvent(): void {
-     this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_event')
+    constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
+    ngOnInit() {
+      this.getEvent();
+    }
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+    getEvent(): void {
+    this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_event')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
-                 this.result1= res["result"]["data"];    
            },
            (error)=>{
                this._snackBar.open(error["statusText"], '', {
@@ -39,28 +36,27 @@ image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
            );
      }
 
-  openDialog(id, res): void  {
-    var data = null;
-      if(id != 0) {
-      this[res].forEach(val=> {
+    openDialog(id, res): void  {
+        var data = null;
+        if(id != 0) {
+        this[res].forEach(val=> {
            if(parseInt(val.event_id) === parseInt(id)) {
                 data = val;
                 return false;
            }
          });
-      }
-    const dialogRef = this.dialog.open(ClubEventForm, {
-        minWidth: "80%",
-        maxWidth: "80%",
-        data: data
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-        if(result !== false && result !== 'false') {
-            this.getEvent();
         }
-    });
-}
+        const dialogRef = this.dialog.open(ClubEventForm, {
+            minWidth: "80%",
+            maxWidth: "80%",
+            data: data
+        });
+        dialogRef.afterClosed().subscribe(result => {
+            if(result !== false && result !== 'false') {
+                this.getEvent();
+            }
+        });
+    }
 
  confirmDialog(id, action): void  {
     var data = null;
@@ -99,6 +95,24 @@ image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
                  this.getEvent();
            }
         });
+    }
+    sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.title.localeCompare(b.title));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.title.localeCompare(a.title));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.event_id.localeCompare(b.event_id));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.event_id.localeCompare(a.event_id));
+            break;
+            default:
+            break;
+        }
     }
 }
 

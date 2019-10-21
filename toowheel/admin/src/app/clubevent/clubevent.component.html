@@ -4,53 +4,37 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <app-header></app-header>
-        <div class="add-btn-container sortby"> 
-            <!--            <mat-form-field>
-                            <mat-label>Favorite food</mat-label>                
-                              <select matNativeControl required>
-                              <mat-option *ngFor="let data of result" [value]="food.value">
-                                {{food.viewValue}}
-                              </mat-option>
-                            </select>
-                          </mat-form-field>-->
-            
-                <mat-form-field>
-                    <mat-label>Sort By</mat-label>
-                    <select matNativeControl required>
-                        <option value="title">Title</option>
-                        <option value="date">Date</option>
-                        <option value="location">Location</option> 
-                        <option value="a-z">Orderby A-Z</option> 
-                        <option value="a-z">Orderby Z-A</option> 
-                        <option value="a-z">Orderby Normal</option> 
-                    </select>
-                </mat-form-field>           
-                <button mat-button mat-icon-button (click)="OnSearch()" matTooltip="search">
-                        <mat-icon>search</mat-icon>
-                </button>
-                <mat-form-field class="form-field" [floatLabel]="'never'">
-                    <input matInput type="text" placeholder="Search" [(ngModel)]="searchTerm" />
-                </mat-form-field>
-
-                             <button mat-button mat-icon-button (click)="OnSearchPrevious()"
-                                matTooltip="Search Previous">
-                                <mat-icon>keyboard_arrow_up</mat-icon>
-                              </button>
-                
-                              <button mat-button mat-icon-button (click)="OnSearchNext()"
-                                matTooltip="Search Next">
-                                <mat-icon>keyboard_arrow_down</mat-icon>
-                              </button>
-
-                <button mat-button mat-icon-button (click)="OnClear()"
-                        matTooltip="Clear">
-                        <mat-icon>clear</mat-icon>
-                </button>
-           
-            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Event</button>           
-        </div>
+        <section class="section">
+            <br/>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+                <div fxFlex="30%" fxLayoutAlign="end center">
+                    <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Event</button>
+                </div>
+            </div>
+        </section>
         <mat-tab-group>
             <mat-tab label="2 Wheeler">
+                <section class="section">
+                    <br/>
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                        <div fxFlex="50%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTerm" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="20%">
+                            <mat-form-field fxFlex="100%">
+                                <mat-label>Sort by</mat-label>
+                                <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
+                                    <mat-option value="title_a_z">Title A-Z</mat-option>
+                                    <mat-option value="title_z_a">Title Z-A</mat-option>
+                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </section>
                 <mat-list>
                     <ng-container *ngFor="let data of result | filterEvent: searchTerm;">
                         <mat-list-item class="list-container">
@@ -59,131 +43,19 @@
                             </button>
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(data.event_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                            </button>                                    
+                            </button>
                             <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
                                  <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />-->
                                  <h3 class="truncate" matLine>{{data.title}}</h3>
-                            <p class="truncate1" matLine>{{data.location}}</p>     
-                            <p class="truncate2" matLine>{{data.event_date}}</p> 
+                            <p class="truncate1" matLine>{{data.location}}</p>
+                            <p class="truncate2" matLine>{{data.event_date}}</p>
                         </mat-list-item>
                     </ng-container>
                 </mat-list>
             </mat-tab>
             <mat-tab label="4 Wheeler">
-                <mat-list>
-                    <!--                            <ng-container *ngFor="let data of result; let i = index">
-                                                    <ng-container *ngIf="result[i]">
-                                                    <mat-list-item class="list-container">
-                                                         <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['event_id'],'result')">
-                                                            <mat-icon>edit</mat-icon>
-                                                        </button>
-                                                        <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['event_id'])">
-                                                            <mat-icon>delete</mat-icon>
-                                                        </button>                                    
-                                                        <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
-                                                             <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />
-                                                        <h3 class="truncate" matLine>{{data.title}}</h3>
-                                                        <p class="truncate1" matLine>{{data.location}}</p>     
-                                                        <p class="truncate2" matLine>{{data.event_date}}</p> 
-                                                    </mat-list-item>
-                                                         </ng-container>
-                                                </ng-container>-->
-                </mat-list>
+
             </mat-tab>
         </mat-tab-group>
-
-
-        <!--        <ng-container *ngFor="let data of result; let i = index">
-                    <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                        <ng-container *ngIf="result[i]">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{result[i]['title']}}</mat-card-title>
-                                    <mat-card-subtitle>{{result[i]['category']|uppercase}}</mat-card-subtitle>
-                                </mat-card-header>
-                                <img mat-card-image src="{{image_url}}{{result[i]['cover_image']}}" alt="Photo of a Shiba Inu" />
-                                <mat-card-content>
-                                    <p>
-                                        {{result[i]['location']}}
-                                    </p>
-                                </mat-card-content>
-                                <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['event_id'],'result')">
-                                        <mat-icon>edit</mat-icon>
-                                    </button>
-                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['event_id'])">
-                                        <mat-icon>delete</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>
-                        </ng-container>
-                        <ng-container *ngIf="result[i + 1]">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{result[i + 1]['title']}}</mat-card-title>
-                                    <mat-card-subtitle>{{result[i + 1]['category']|uppercase}}</mat-card-subtitle>
-                                </mat-card-header>
-                                <img mat-card-image src="{{image_url}}{{result[i + 1]['cover_image']}}" alt="Photo of a Shiba Inu" />
-                                <mat-card-content>
-                                    <p>
-                                        {{result[i + 1]['location']}}
-                                    </p>
-                                </mat-card-content>
-                                <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 1]['event_id'],'result')">
-                                        <mat-icon>edit</mat-icon>
-                                    </button>
-                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 1]['event_id'])">
-                                        <mat-icon>delete</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>
-                        </ng-container>
-                        <ng-container *ngIf="result[i + 2]">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{result[i + 2]['title']}}</mat-card-title>
-                                    <mat-card-subtitle>{{result[i + 2]['category']|uppercase}}</mat-card-subtitle>
-                                </mat-card-header>
-                                <img mat-card-image src="{{image_url}}{{result[i + 2]['cover_image']}}" alt="Photo of a Shiba Inu" />
-                                <mat-card-content>
-                                    <p>
-                                        {{result[i + 2]['location']}}
-                                    </p>
-                                </mat-card-content>
-                                <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 2]['event_id'],'result')">
-                                        <mat-icon>edit</mat-icon>
-                                    </button>
-                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 2]['event_id'])">
-                                        <mat-icon>delete</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>
-                        </ng-container>
-                        <ng-container *ngIf="result[i + 3]">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{result[i + 3]['title']}}</mat-card-title>
-                                    <mat-card-subtitle>{{result[i + 3]['category']|uppercase}}</mat-card-subtitle>
-                                </mat-card-header>
-                                <img mat-card-image src="{{image_url}}{{result[i + 3]['cover_image']}}" alt="Photo of a Shiba Inu" />
-                                <mat-card-content>
-                                    <p>
-                                        {{result[i + 3]['location']}}
-                                    </p>
-                                </mat-card-content>
-                                <mat-card-actions>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 3]['event_id'],'result')">
-                                        <mat-icon>edit</mat-icon>
-                                    </button>
-                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 3]['event_id'])">
-                                        <mat-icon>delete</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>
-                        </ng-container>
-                    </div>            
-                </ng-container>-->
     </mat-sidenav-content>
 </mat-sidenav-container>
