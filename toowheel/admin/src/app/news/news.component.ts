@@ -18,9 +18,9 @@ export class NewsComponent implements OnInit {
     ngOnInit() {
          this.getNews();
      }
-     image_url: string = 'http://www.toowheel.com/toowheel/api/v1/';
+     image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
        getNews(): void {
-     this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_news')
+     this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_news')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -175,7 +175,7 @@ export class NewsForm {
                 date: new Date()
             });
     }
-      this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/get_medias').subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_medias').subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
                     this.medias = res["result"]["data"];
@@ -233,7 +233,7 @@ export class NewsForm {
 };
     getCategory(): void {
        this.loading = true;
-          this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/get_'+this.newsForm.value.type+'_category').subscribe(
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_'+this.newsForm.value.type+'_category').subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -253,7 +253,7 @@ export class NewsForm {
     }
     getClub(): void {
        this.loading = true;
-          this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/get_club_by_category/'+this.newsForm.value.category_id).subscribe(
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_club_by_category/'+this.newsForm.value.category_id).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -277,7 +277,7 @@ export class NewsForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('http://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -348,7 +348,7 @@ export class NewsForm {
           formData.append('sponsor', this.newsForm.value.sponsor);
         url = 'insert_news';
       }
-      this.httpClient.post('http://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -377,7 +377,7 @@ export class NewsGalleryForm {
     loading = false;
     news_id:any;
     result:any[];
-    image_url: string = 'http://www.toowheel.com/toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
     constructor(
     public dialogRef: MatDialogRef<NewsGalleryForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -389,7 +389,7 @@ export class NewsGalleryForm {
       this.getImages();
     }
     getImages(){
-        this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/get_news_gallery_by_news/'+this.news_id).subscribe(
+        this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_news_gallery_by_news/'+this.news_id).subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
                     this.result = res["result"]["data"];
@@ -415,7 +415,7 @@ export class NewsGalleryForm {
       var formData = new FormData();
           formData.append('news_id', this.news_id);
           formData.append('file', <File>fileInput.target.files[i]);
-      this.httpClient.post('http://www.toowheel.com/toowheel/api/v1/insert_news_gallery', formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/insert_news_gallery', formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -443,7 +443,7 @@ export class NewsGalleryForm {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/delete_record/news_gallery/news_gallery_id='+id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/news_gallery/news_gallery_id='+id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -487,7 +487,7 @@ export class NewsDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/delete_record/news/news_id='+this.news_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/news/news_id='+this.news_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -514,7 +514,7 @@ this._snackBar.open(res["result"]["message"], '', {
 })
  
 export class PictureViewNews {
-    image_url: string = 'http://www.toowheel.com/toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
     action: string = '';
     loading = false;
     member_id = 0;

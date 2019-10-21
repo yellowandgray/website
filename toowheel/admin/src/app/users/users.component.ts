@@ -18,9 +18,9 @@ export class UsersComponent implements OnInit {
     this.getUsers();
   }
   
-    image_url: string = 'http://www.toowheel.com/toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
        getUsers(): void {
-     this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_users')
+     this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_users')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -94,7 +94,7 @@ export class UsersForm {
                 date: new Date()
             });
     }
-    this.httpClient.get('http://www.toowheel.com/toowheel/api/v1/get_users').subscribe(
+    this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_users').subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
                     this.medias = res["result"]["data"];
@@ -117,7 +117,7 @@ export class UsersForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('http://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -159,7 +159,7 @@ export class UsersForm {
             formData.append('contact', this.usersForm.value.contact);
         url = 'insert_users';
       }
-      this.httpClient.post('http://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
