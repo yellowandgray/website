@@ -1,18 +1,65 @@
+
 <mat-sidenav-container fullscreen>
     <mat-sidenav mode="side" opened cdkScrollable class="primary">
         <app-sidenav></app-sidenav>
     </mat-sidenav>
     <mat-sidenav-content>
         <app-header></app-header>
-        <div class="add-btn-container">  
-            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Event</button>
+        <div class="add-btn-container sortby"> 
+            <!--            <mat-form-field>
+                            <mat-label>Favorite food</mat-label>                
+                              <select matNativeControl required>
+                              <mat-option *ngFor="let data of result" [value]="food.value">
+                                {{food.viewValue}}
+                              </mat-option>
+                            </select>
+                          </mat-form-field>-->
+            
+                <mat-form-field>
+                    <mat-label>Sort By</mat-label>
+                    <select matNativeControl required>
+                        <option value="title">Title</option>
+                        <option value="date">Date</option>
+                        <option value="location">Location</option> 
+                        <option value="a-z">Orderby A-Z</option> 
+                        <option value="a-z">Orderby Z-A</option> 
+                        <option value="a-z">Orderby Normal</option> 
+                    </select>
+                </mat-form-field>           
+                <button mat-button mat-icon-button (click)="OnSearch()" matTooltip="search">
+                        <mat-icon>search</mat-icon>
+                </button>
+
+                <mat-form-field
+                    class="form-field"
+                    [floatLabel]="'never'">
+                    <input matInput type="text" placeholder="Search" [(ngModel)]="value"
+                           (keyup.enter)="OnSearch()"/>
+                </mat-form-field>
+
+                             <button mat-button mat-icon-button (click)="OnSearchPrevious()"
+                                matTooltip="Search Previous">
+                                <mat-icon>keyboard_arrow_up</mat-icon>
+                              </button>
+                
+                              <button mat-button mat-icon-button (click)="OnSearchNext()"
+                                matTooltip="Search Next">
+                                <mat-icon>keyboard_arrow_down</mat-icon>
+                              </button>
+
+                <button mat-button mat-icon-button (click)="OnClear()"
+                        matTooltip="Clear">
+                        <mat-icon>clear</mat-icon>
+                </button>
+           
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Event</button>           
         </div>
-      
-<!--        <div class="example-header">
-            <mat-form-field>
-              <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
-            </mat-form-field>
-          </div>-->
+
+        <!--        <div class="example-header">
+                    <mat-form-field>
+                      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+                    </mat-form-field>
+                  </div>-->
         <!--            <button mat-raised-button color="primary" class="margin-r-10" (click)="sortfun()">Sort</button>       -->
 
 
