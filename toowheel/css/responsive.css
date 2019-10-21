@@ -35,7 +35,7 @@
     .search-section .search-btn  {padding: 12px 12px !important;}
     .search-section {
         margin-bottom: 20px !important;
-/*        margin-left: 12px;*/
+        /*        margin-left: 12px;*/
     }
     .bg-1 span {font-size: 40px !important;}
     .button-8 {width: 33% !important;}
@@ -72,6 +72,12 @@
     }
     .fs-gal-prev {
         left: 8% !important;
+    }
+    .bg-1 .container {
+        position: unset !important;
+    }
+    #club1 {
+        top: 0 !important;
     }
 }
 
@@ -187,6 +193,15 @@
     .press-release-content h4 {
         margin: 10px 0 !important;
     }
+    .bg-1 .container {
+        position: unset !important;
+    }
+    #club1 {
+        top: 0 !important;
+    }
+    .discover-btn {
+        width: 4% !important;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
@@ -252,11 +267,16 @@
         font-size: 100px !important;
     }
     .bg-1 .container {bottom: 0px !important;}
-    .bg-1 .slick-slider {bottom: 0px !important;}
     .header-login input[type=search] {right: 23% !Important;}
     .fs-gal-close {
         top: 50px !Important;
         right: 12% !Important;
+    }
+    .bg-1 .container {
+        position: unset !important;
+    }
+    #club1 {
+        position: unset !important
     }
 }
 
@@ -276,12 +296,33 @@
     .bg-1 span {
         font-size: 130px !important;
     }
-    .bg-1 .container {bottom: 177px !important;}
-    .bg-1 .slick-slider {bottom: 177px !important;}
+    /*    .bg-1 .container {bottom: 177px !important;}
+        .bg-1 .slick-slider {bottom: 177px !important;}*/
     .fs-gal-close {
         right: 18% !important;
     }
 
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .bg-1 .container {
+        position: unset !important;
+    }
+    .discover-btn {
+        width: 140px !important;
+    }
+}
+
+@media (min-width: 1025px)  and (max-width: 1199px) {
+    .discover-btn {
+        width: 135px !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .discover-btn {
+        width: 210px !important;
+    }
 }
 
 @media screen and (max-width: 1199px) {
@@ -303,6 +344,12 @@
     }
 }
 
+@media (min-width: 1025px) and (max-width: 1199px) {
+    #club1 {
+        position: unset !important;
+    }
+}
+
 @media (min-width: 1369px) and (max-width: 1440px) {
     .discover-slider-content {
         top: -172px !important;
@@ -317,9 +364,12 @@
     .bg-1 span {
         font-size: 155px !important;
     }
-    .bg-1 .container {bottom: 210px !important;}
-    .bg-1 .slick-slider {bottom: 195px !important;}
+    /*    .bg-1 .container {bottom: 210px !important;}
+        .bg-1 .slick-slider {bottom: 195px !important;}*/
     .bg-1 {height: 768px !important;}
+    #club1 {
+        position: unset !important;
+    }
 }
 
 /*@media (min-width: 1750px) and (max-width: 1842px) { 
@@ -328,6 +378,11 @@
     }
 }*/
 
+@media (min-width: 1600px) and (max-width: 1843px) {
+    .discover-btn {
+        width: 230px !important;
+    }
+}
 @media (min-width: 1843px) and (max-width: 2560px) {
     .discover-slider-content {
         top: -154px !important; 
@@ -339,6 +394,9 @@
     .header-login input[type=search] {
         right: 29.5% !important;
         width: 65px!important;
+    }
+    .discover-btn {
+        width: 2.8% !important;
     }
 }
 
@@ -703,12 +761,12 @@
     }
 }
 @media (max-width: 992px) and (min-width: 768px){
-    .bg-1 .container {
-        bottom: 130px !important;
-    }
-    .bg-1 .slick-slider {
-        bottom: 100px !important;
-    }
+    /*    .bg-1 .container {
+            bottom: 130px !important;
+        }*/
+    /*    .bg-1 .slick-slider {
+            bottom: 100px !important;
+        }*/
 }
 @media screen and (max-width: 991px){
     .news-cont img {
@@ -784,7 +842,7 @@
 
 @media (min-width: 1200px) and (max-width: 1440px) {
     .slick-dots {
-        bottom: 40px !important;
+        /*        bottom: 40px !important;*/
     }
 }
 @media (min-width: 992px) and (max-width: 2000px) {
@@ -861,3 +919,4 @@
         width: 123px  !important;
     }
 }
+
