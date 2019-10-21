@@ -5,61 +5,24 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
-//import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-
-
-
 
 @Component({
   selector: 'app-clubevent',
   templateUrl: './clubevent.component.html',
   styleUrls: ['./clubevent.component.css']
 })
-export class ClubeventComponent implements OnInit {
 
-   
-   
-    value = '';
+export class ClubeventComponent implements OnInit {
+    searchTerm: string = '';
     result1 = [];
     result = [];
     result_four_wheel:any[];
     constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { 
-       
-     //this.sortedData = this.result1.slice();
 
 }
-
-
   ngOnInit() {
     this.getEvent();
-     //this.dataSource.paginator = this.paginator;
-    //this.dataSource.sort = this.sort;
-    
-  }   
-
-    OnSearch() {
-      console.log("OnSearch", this.value);
-    }
-
-    OnSearchNext() {
-      console.log("OnSearchNext", this.value);
-    }
-
-    OnSearchPrevious() {
-      console.log("OnSearchPrevious", this.value);
-    }
-
-    OnClear() {
-      console.log("OnClear");
-      this.value = "";
-    }
-  
-  /*applyFilter(filterValue: string) {
-    filterValue = filterValue.trim(); // Remove whitespace
-    filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
-    this.dataSource.filter = filterValue;
-  }*/
-
+  }
 image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
        getEvent(): void {
      this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_event')
@@ -67,7 +30,6 @@ image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
              (res)=>{
                  this.result = res["result"]["data"];
                  this.result1= res["result"]["data"];    
-                 //this.sortedData = this.result1          
            },
            (error)=>{
                this._snackBar.open(error["statusText"], '', {
@@ -121,10 +83,6 @@ image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
        }
     });
 }
-
-
-
-
         confirmDelete(id): void  {
         var data = null;
           if(id != 0) { 
@@ -142,8 +100,6 @@ image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
            }
         });
     }
-    
-   
 }
 
 @Component({

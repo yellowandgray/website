@@ -44,6 +44,7 @@ import { ConfigComponent, ConfigForm } from './config/config.component';
 import { ClubdashboardComponent } from './clubdashboard/clubdashboard.component';
 import { ClublandingComponent, LandingAboutForm } from './clublanding/clublanding.component';
 import { ClubeventComponent, ClubEventForm, ClubEventDelete,PictureView } from './clubevent/clubevent.component';
+import { filterEvent } from './clubevent/filter-event.pipe';
 import { ClubgalleryComponent, ClubGalleryForm } from './clubgallery/clubgallery.component';
 import { ClubnewsComponent, ClubNewsForm } from './clubnews/clubnews.component';
 import { ClubdiscussionComponent } from './clubdiscussion/clubdiscussion.component';
@@ -124,7 +125,8 @@ import { WorkshopComponent, WorkshopForm, WorkshopDelete,PictureViewWorkshop } f
     WorkshopComponent, 
     WorkshopForm,
     WorkshopDelete,
-    PictureViewWorkshop
+    PictureViewWorkshop,
+    filterEvent
   ],
   imports: [
     BrowserModule,
