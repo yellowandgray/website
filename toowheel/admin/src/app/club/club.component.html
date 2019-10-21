@@ -15,22 +15,22 @@
                                  <ng-container *ngIf="result[i]">
                                 <mat-list-item class="list-container">
                                      <button mat-icon-button aria-label="label" (click)="changeStatus(result[i]['club_id'], 1)" *ngIf="result[i]['published'] == 0 && result[i]['source'] == 'web'">
-                                            <mat-icon>done</mat-icon>
+                                            <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(result[i]['club_id'], 0)" *ngIf="result[i]['published'] == 1 && result[i]['source'] == 'web'">
-                                            <mat-icon>block</mat-icon>
+                                            <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result[i]['club_id'])">
-                                        <mat-icon>collections</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Collections">collections</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" routerLink="/announcement/{{result[i]['club_id']}}">
-                                        <mat-icon>hearing</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Hearing">hearing</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['club_id'], 'result')">
-                                        <mat-icon>edit</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['club_id'])">
-                                        <mat-icon>delete</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                     </button>                                   
                                     <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
 <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />-->
@@ -190,22 +190,22 @@
                                  <ng-container *ngIf="result_four_wheel[i]">
                                 <mat-list-item class="list-container">
                                       <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i]['club_id'], 1)" *ngIf="result_four_wheel[i]['published'] == 0 && result_four_wheel[i]['source'] == 'web'">
-                                            <mat-icon>done</mat-icon>
+                                            <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i]['club_id'], 0)" *ngIf="result_four_wheel[i]['published'] == 1 && result_four_wheel[i]['source'] == 'web'">
-                                            <mat-icon>block</mat-icon>
+                                            <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result_four_wheel[i]['club_id'])">
-                                        <mat-icon>collections</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Collections">collections</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" routerLink="/announcement/{{result_four_wheel[i]['club_id']}}">
-                                        <mat-icon>hearing</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Hearing">hearing</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i]['club_id'], 'result_four_wheel')">
-                                        <mat-icon>edit</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i]['club_id'])">
-                                        <mat-icon>delete</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                     </button>                              
                                     <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
 <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />-->

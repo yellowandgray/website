@@ -28,10 +28,10 @@
                         </mat-card-content>
                                 <mat-card-actions>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['gallery_id'], 'result')">
-                                        <mat-icon>edit</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['gallery_id'])">
-                                        <mat-icon>delete</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>
@@ -53,10 +53,10 @@
                         </mat-card-content>
                                 <mat-card-actions>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 1]['gallery_id'], 'result')">
-                                        <mat-icon>edit</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 1]['gallery_id'])">
-                                        <mat-icon>delete</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>
@@ -78,10 +78,10 @@
                         </mat-card-content>
                                 <mat-card-actions>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 2]['gallery_id'], 'result')">
-                                        <mat-icon>edit</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 2]['gallery_id'])">
-                                        <mat-icon>delete</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>
@@ -103,10 +103,10 @@
                         </mat-card-content>
                                 <mat-card-actions>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 3]['gallery_id'], 'result')">
-                                        <mat-icon>edit</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 3]['gallery_id'])">
-                                        <mat-icon>delete</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                     </button>
                                 </mat-card-actions>
                             </mat-card>
@@ -134,10 +134,10 @@
                         </mat-card-content>
                         <mat-card-actions>
                             <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i]['gallery_id'], 'result_four_wheel')">
-                                <mat-icon>edit</mat-icon>
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i]['gallery_id'])">
-                                <mat-icon>delete</mat-icon>
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
                         </mat-card-actions>
                     </mat-card>
@@ -159,10 +159,10 @@
                         </mat-card-content>
                         <mat-card-actions>
                             <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 1]['gallery_id'], 'result_four_wheel')">
-                                <mat-icon>edit</mat-icon>
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i + 1]['gallery_id'])">
-                                <mat-icon>delete</mat-icon>
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
                         </mat-card-actions>
                     </mat-card>

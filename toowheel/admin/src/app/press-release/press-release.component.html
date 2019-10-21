@@ -14,10 +14,10 @@
                     <ng-container *ngFor="let data of result">
                         <mat-list-item class="list-container">
                             <button mat-icon-button aria-label="label" (click)="openDialog(data.press_release_id,'result')">
-                                <mat-icon>edit</mat-icon>
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(data.press_release_id)">
-                                <mat-icon>delete</mat-icon>
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
                             <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
                                  <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />-->
