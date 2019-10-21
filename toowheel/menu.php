@@ -199,14 +199,14 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                     <textarea class="form-control" placeholder="" name="coverage_address" id="coverage_address" type="text" rows="3"></textarea>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <p class="dont-show">Dont Show again</p>
                     </div>
-                    <div class="col-md-4">
-                        <button>cancel</button>
+                    <div class="col-md-3">
+                        <button class="dont-show-cancel">cancel</button>
                     </div>
-                    <div class="col-md-4">
-                        <button>Submit</button>
+                    <div class="col-md-3">
+                        <button class="dont-show-submit">Submit</button>
                     </div>
                 </div>
 
