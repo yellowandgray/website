@@ -31,13 +31,10 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
             <div class="video-overlay"></div>
         </section>
         <section class="bg-1">
-            <div class=" container-fluid text-center">
-                <span>DISCOVER</span>
-            </div>
+
             <div class="container">
                 <h1>DISCOVER</h1>
                 <div class="row cc">
-
                     <?php
                     foreach ($categories as $key => $val) {
                         ?>
@@ -47,6 +44,9 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     <?php }
                     ?>
                 </div>
+            </div>
+            <div class=" container-fluid text-center">
+                <span>DISCOVER</span>
             </div>
             <div id="club1" class="tagcontent">
                 <div class="container-fluid">
@@ -58,7 +58,9 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                     <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
                                     <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
                                     <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
-                                    <center><a href="news.php?nid=<?php echo $row['news_id']; ?>" class="btn btn-primary">DISCOVER</a></center>
+                                </div>
+                                <div class="discover-btn">
+                                    <a href="news.php?nid=<?php echo $row['news_id']; ?>" class="discover-btn-home">DISCOVER</a>
                                 </div>
                             </div>
                         <?php } ?>

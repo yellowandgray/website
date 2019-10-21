@@ -98,7 +98,7 @@ button.slick-prev, button.slick-prev:hover {
 {
     position: relative;
     top: 0;
-/*    left: 100px;*/
+    /*    left: 100px;*/
     outline: none;
     display: block;
 }
@@ -285,15 +285,11 @@ button.slick-prev, button.slick-prev:hover {
 .slick-dots
 {
     position: absolute;
-    bottom: 30px;
-
+    bottom: -100px;
     display: block;
-
     width: 100%;
     padding: 0;
-
     list-style: none;
-
     text-align: center;
 }
 .slick-dots li

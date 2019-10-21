@@ -24,9 +24,9 @@ ngOnInit() {
     this.getEvent();
     this.getNews();
   }
-image_url: string = 'http://www.toowheel.com/toowheel/api/v1/';
+image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
        getEvent(): void {
-     this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_member')
+     this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_member')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -39,7 +39,7 @@ image_url: string = 'http://www.toowheel.com/toowheel/api/v1/';
            );
      }
        getNews(): void {
-     this.httpClient.get<any>('http://www.toowheel.com/toowheel/api/v1/get_news')
+     this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_news')
      .subscribe(
              (res)=>{
                  this.result1 = res["result"]["data"];

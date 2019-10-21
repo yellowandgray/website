@@ -44,18 +44,26 @@
                     <mat-error>In-charge Name is required</mat-error>
                 </mat-form-field>
             </div>
-            <div fxFlex="50%" fxLayoutAlign="center center">
+           
+          <div fxFlex="50%" fxLayoutAlign="center center">
                 <button type="button" mat-raised-button (click)="fileInput.click()">{{workshop_image_path}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'workshop_image_path', 'image_path')"  />
             </div>
         </div>
+        <!--        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                    <mat-form-field class="full-width">
+                        <mat-label>Description</mat-label>
+                        <textarea rows="6" matInput placeholder="" formControlName="description"></textarea>
+                        <mat-error>Description is required</mat-error>
+                    </mat-form-field>
+                </div>-->
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <mat-form-field class="full-width">
-                <mat-label>Description</mat-label>
-                <textarea rows="6" matInput placeholder="" formControlName="description"></textarea>
-                <mat-error>Description is required</mat-error>
-            </mat-form-field>
+            <div fxFlex="100%">
+                <angular-editor id="editor1" formControlName="description" [config]="editorConfig"></angular-editor>
+            </div>
         </div>
+
+
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
             <button mat-button [mat-dialog-close]="false">Cancel</button>
             <button mat-button type="submit" [disabled]="loading">Save</button>
