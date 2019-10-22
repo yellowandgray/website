@@ -63,7 +63,6 @@ import { MediaComponent, MediaForm, MediaDelete } from './media/media.component'
 import { filterEventmedia } from './media/filter-event.pipe';
 import { NewsletterComponent, NewsletterForm, NewsletterDelete } from './newsletter/newsletter.component';
 import { filterEventnewsletter } from './newsletter/filter-event.pipe';
-import { UsersComponent, UsersForm } from './users/users.component';
 import { filterEventusers } from './users/filter-event.pipe';
 import { UsersComponent, UsersForm, UsersViewFrom } from './users/users.component';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
