@@ -32,15 +32,21 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CategoryComponent, CategoryForm, CategoryDelete } from './category/category.component';
 import { ClubComponent, ClubForm, ClubDelete, ClubPhotosForm,PictureViewClub } from './club/club.component';
+import { filterEventClub } from './club/filter-event.pipe';
 import { MemberComponent, MemberForm, MemberDelete } from './member/member.component';
+import { filterEventMember } from './member/filter-event.pipe';
 import { HeaderComponent } from './header/header.component';
 import { VendorComponent, VendorForm } from './vendor/vendor.component';
 import { NewsComponent, NewsForm, NewsGalleryForm, NewsDelete,PictureViewNews} from './news/news.component';
+import { filterEventNews } from './news/filter-event.pipe';
 import { BusinessComponent } from './business/business.component';
 import { AdvertismentComponent, AdvertismentForm, AdvertismentDelete } from './advertisment/advertisment.component';
+import { filterEventAdvertisment } from './advertisment/filter-event.pipe';
 import { GalleryComponent, GalleryForm, GalleryDelete } from './gallery/gallery.component';
+import { filterEventgallery } from './gallery/filter-event.pipe';
 import { PointComponent } from './point/point.component';
 import { ConfigComponent, ConfigForm } from './config/config.component';
+import { filterEventconfig } from './config/filter-event.pipe';
 import { ClubdashboardComponent } from './clubdashboard/clubdashboard.component';
 import { ClublandingComponent, LandingAboutForm } from './clublanding/clublanding.component';
 import { ClubeventComponent, ClubEventForm, ClubEventDelete,PictureView } from './clubevent/clubevent.component';
@@ -53,12 +59,17 @@ import {HttpClientModule} from '@angular/common/http';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { AnnouncementComponent, AnnouncementForm, AnnouncementDelete } from './announcement/announcement.component';
 import { PressReleaseComponent, PressReleaseForm, PressreleaseDelete,PictureViewPress } from './press-release/press-release.component';
+import { filterEventPress } from './press-release/filter-event.pipe';
 import { MediaComponent, MediaForm, MediaDelete } from './media/media.component';
+import { filterEventmedia } from './media/filter-event.pipe';
 import { NewsletterComponent, NewsletterForm, NewsletterDelete } from './newsletter/newsletter.component';
+import { filterEventnewsletter } from './newsletter/filter-event.pipe';
 import { UsersComponent, UsersForm } from './users/users.component';
+import { filterEventusers } from './users/filter-event.pipe';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import {MatSortModule} from '@angular/material/sort';
 import { WorkshopComponent, WorkshopForm, WorkshopDelete,PictureViewWorkshop } from './workshop/workshop.component';
+import { filterEventworkshop } from './workshop/filter-event.pipe';
 
 @NgModule({
   declarations: [
@@ -126,7 +137,18 @@ import { WorkshopComponent, WorkshopForm, WorkshopDelete,PictureViewWorkshop } f
     WorkshopForm,
     WorkshopDelete,
     PictureViewWorkshop,
-    filterEvent
+    filterEvent,
+    filterEventClub,
+    filterEventMember,
+    filterEventNews,
+    filterEventPress,
+    filterEventnewsletter,
+    filterEventworkshop,
+    filterEventconfig,
+    filterEventmedia,
+    filterEventusers,
+    filterEventAdvertisment,
+    filterEventgallery
   ],
   imports: [
     BrowserModule,

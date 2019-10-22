@@ -11,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./newsletter.component.css']
 })
 export class NewsletterComponent implements OnInit {
+ searchTerm: string = '';
+    sortdata: string = '';
   result = [];  
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
@@ -69,6 +71,24 @@ export class NewsletterComponent implements OnInit {
        }
     });
 }
+sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.email.localeCompare(b.email));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.email.localeCompare(a.email));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.newsletter_id.localeCompare(b.newsletter_id));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.newsletter_id.localeCompare(a.newsletter_id));
+            break;
+            default:
+            break;
+        }
+    }
 
 }
 

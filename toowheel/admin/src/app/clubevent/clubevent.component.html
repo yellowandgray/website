@@ -10,14 +10,14 @@
                 <div fxFlex="30%" fxLayoutAlign="end center">
                     <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Event</button>
                 </div>
-            </div>
+            </div>           
         </section>
         <mat-tab-group>
             <mat-tab label="2 Wheeler">
                 <section class="section">
-                    <br/>
+                    <br/>                     
                     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                        <div fxFlex="50%">
+                        <div class="searchdesign" fxFlex="50%">
                             <mat-form-field [floatLabel]="'never'" fxFlex="100%">
                                 <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTerm" />
                             </mat-form-field>
@@ -25,7 +25,7 @@
                         <div fxFlex="20%">
                             <mat-form-field fxFlex="100%">
                                 <mat-label>Sort by</mat-label>
-                                <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
+                              <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
                                     <mat-option value="title_a_z">Title A-Z</mat-option>
                                     <mat-option value="title_z_a">Title Z-A</mat-option>
                                     <mat-option value="created_a_z">Created Date ASC</mat-option>

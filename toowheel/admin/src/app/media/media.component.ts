@@ -11,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./media.component.css']
 })
 export class MediaComponent implements OnInit {
+searchTerm: string = '';
+    sortdata: string = '';
   result = [];  
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
@@ -69,6 +71,24 @@ export class MediaComponent implements OnInit {
        }
     });
 }
+sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.name.localeCompare(b.name));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.name.localeCompare(a.name));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.created_at.localeCompare(b.created_at));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
+    }
 }
 
 @Component({
