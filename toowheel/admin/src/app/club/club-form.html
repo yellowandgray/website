@@ -32,10 +32,12 @@
         <div fxFlex="50%">
             <button type="button" mat-raised-button (click)="fileInputCover.click()">{{file_cover_name}}</button>
             <input hidden #fileInputCover type="file" id="file_cover" (change)="fileProgress($event,'file_cover_name', 'cover_image')" />
+            <mat-icon matTooltip="Width: 1583px, Height: 400px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon> 
         </div>
         <div fxFlex="50%">
             <button type="button" mat-raised-button (click)="fileInputLogo.click()">{{file_logo_name}}</button>
             <input hidden #fileInputLogo type="file" id="file_logo" (change)="fileProgress($event,'file_logo_name', 'logo_image')" />
+            <mat-icon matTooltip="Width: 320px, Height: 320px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
         </div>
     </div>
     <br/>
@@ -59,6 +61,7 @@
         <div fxFlex="50%">
             <button type="button" mat-raised-button (click)="fileInputBanner.click()">{{club_video_name}}</button>
             <input hidden #fileInputBanner type="file" id="file_banner" (change)="fileProgress($event, 'club_video_name', 'club_video')" />
+            <mat-icon matTooltip="Width: any, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
         </div>
     </div>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
