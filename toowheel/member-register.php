@@ -332,7 +332,8 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     </div>
                                     <div class="form-group">
                                         <label for="zip_code">Zip Code</label>
-                                        <input placeholder="" name="zip_code" id="zip_code" type="text" class="form-control">
+                                        <span class="red-i">*</span>
+                                        <input placeholder="" name="zip_code" id="zip_code" type="text" required-i class="form-control">
                                     </div>
                                     <br/>
                                     <h4>Referral</h4>
