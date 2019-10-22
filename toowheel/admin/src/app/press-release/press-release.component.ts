@@ -56,6 +56,18 @@ export class PressReleaseComponent implements OnInit {
           });
     }
     
+       
+        openView(): void  {
+        const dialogRef = this.dialog.open(PressreleaseViewFrom, {
+            minWidth: "40%",
+            maxWidth: "40%"
+        });
+
+       dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+            });
+        }
+
     confirmDialog(id, action): void  {
     var data = null;
       if(id != 0) { 
@@ -363,3 +375,21 @@ export class PictureViewPress {
     }
 }
         }  
+
+
+  @Component({
+  selector: 'pressrelease-view-form',
+  templateUrl: 'pressrelease-view-form.html',
+})
+ 
+export class PressreleaseViewFrom {
+    constructor(
+    public dialogRef: MatDialogRef<PressreleaseViewFrom>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
+    
+    onNoClick(): void {
+        this.dialogRef.close();
+    }
+}  

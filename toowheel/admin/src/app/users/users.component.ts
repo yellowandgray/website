@@ -56,6 +56,17 @@ export class UsersComponent implements OnInit {
     });
 }
 
+    openView(): void  {
+        const dialogRef = this.dialog.open(UsersViewFrom, {
+            minWidth: "40%",
+            maxWidth: "40%"
+        });
+
+       dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+            });
+        }
+
 }
 
 @Component({
@@ -180,3 +191,21 @@ export class UsersForm {
   }
 
 }
+
+
+  @Component({
+  selector: 'user-view-form',
+  templateUrl: 'user-view-form.html',
+})
+ 
+export class UsersViewFrom {
+    constructor(
+    public dialogRef: MatDialogRef<UsersViewFrom>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
+    
+    onNoClick(): void {
+        this.dialogRef.close();
+    }
+}  

@@ -75,6 +75,18 @@ export class ClubeventComponent implements OnInit {
    dialogRef.afterClosed().subscribe(result => {
     });
 }
+
+        openView(): void  {
+        const dialogRef = this.dialog.open(ClubEventViewFrom, {
+            minWidth: "40%",
+            maxWidth: "40%"
+        });
+
+       dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+            });
+        }
+
         confirmDelete(id): void  {
         var data = null;
           if(id != 0) { 
@@ -351,3 +363,20 @@ export class PictureView {
     }
 }
         }  
+
+  @Component({
+  selector: 'clubevent-view-form',
+  templateUrl: 'clubevent-view-form.html',
+})
+ 
+export class ClubEventViewFrom {
+    constructor(
+    public dialogRef: MatDialogRef<ClubEventViewFrom>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
+    
+    onNoClick(): void {
+        this.dialogRef.close();
+    }
+}  
