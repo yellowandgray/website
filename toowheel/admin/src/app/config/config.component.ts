@@ -11,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./config.component.css']
 })
 export class ConfigComponent implements OnInit {
+ searchTerm: string = '';
+    sortdata: string = '';
   result = [];
   result_home = [];
   ads = [];
@@ -98,8 +100,47 @@ export class ConfigComponent implements OnInit {
         }
     });
 }
+ sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.display_name.localeCompare(b.display_name));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.display_name.localeCompare(a.display_name));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.created_at.localeCompare(b.created_at));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
+      
+    }
+    sortRecords1(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result_home).sort((a,b) => a.display_name.localeCompare(b.display_name));
+            break;
+            case 'title_z_a':
+            (this.result_home).sort((a,b) => b.display_name.localeCompare(a.display_name));
+            break;
+            case 'created_a_z':
+                (this.result_home).sort((a,b) => a.created_at.localeCompare(b.created_at));
+            break;
+            case 'created_z_a':
+                (this.result_home).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
+    }
+    
 
 }
+
 
 @Component({
   selector: 'config-form',

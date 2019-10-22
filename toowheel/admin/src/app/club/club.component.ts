@@ -5,12 +5,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-club',
   templateUrl: './club.component.html',
   styleUrls: ['./club.component.css']
 })
 export class ClubComponent implements OnInit {
+  searchTerm: string = '';
+  sortdata: string = '';
   result:any[];
   result_four_wheel:any[];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
@@ -148,6 +151,43 @@ export class ClubComponent implements OnInit {
         }
         );
   }
+   sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.name.localeCompare(b.name));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.name.localeCompare(a.name));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.created_at.localeCompare(b.created_at));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
+    }   
+          sortRecords1(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result_four_wheel).sort((a,b) => a.name.localeCompare(b.name));
+            break;
+            case 'title_z_a':
+            (this.result_four_wheel).sort((a,b) => b.name.localeCompare(a.name));
+            break;
+            case 'created_a_z':
+                (this.result_four_wheel).sort((a,b) => a.created_at.localeCompare(b.created_at));
+            break;
+            case 'created_z_a':
+                (this.result_four_wheel).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
+    }     
+          
 }
 @Component({
   selector: 'club-form',

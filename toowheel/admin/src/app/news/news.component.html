@@ -9,8 +9,29 @@
         </div>
         <mat-tab-group>
             <mat-tab label="2 Wheeler">
+                <section class="section">
+                    <br/>
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                        <div class="searchdesign" fxFlex="50%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTerm" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="20%">
+                            <mat-form-field fxFlex="100%">
+                                <mat-label>Sort by</mat-label>
+                                <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
+                                    <mat-option value="title_a_z">Title A-Z</mat-option>
+                                    <mat-option value="title_z_a">Title Z-A</mat-option>
+                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </section>
                 <mat-list>
-                    <ng-container *ngFor="let data of result">
+                    <ng-container *ngFor="let data of result | filterEventNews:searchTerm">
                         <mat-list-item class="list-container">
                             <button mat-icon-button aria-label="label" (click)="openGalleryDialog(data['news_id'])">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Add Image">panorama</mat-icon>
