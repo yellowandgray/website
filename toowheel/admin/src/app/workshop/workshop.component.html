@@ -29,12 +29,15 @@
             </mat-tab>
             <mat-tab label="4 Wheeler">
                 <mat-list>
-                    <mat-list-item class="list-container" *ngFor="let data of result_fw;let i = index">                                   
-                                   <button mat-icon-button aria-label="label" (click)="openDialog(data.workshop_id, 'result_fw')">
-                            <mat-icon>edit</mat-icon>
+                    <mat-list-item class="list-container" *ngFor="let data of result_fw;let i = index">                            
+                        <button mat-icon-button aria-label="label" (click)="openView()">
+                                <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openDialog(data.workshop_id, 'result_fw')">
+                            <mat-icon #tooltip="matTooltip" matTooltip="View">edit</mat-icon>
                         </button>
                         <button mat-icon-button aria-label="label" (click)="confirmDelete(data.workshop_id)">
-                            <mat-icon>delete</mat-icon>
+                            <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                         </button>                                    
                         <img matListAvatar src="{{image_url}}{{data.image_path}}" *ngIf="data.image_path && data.image_path != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
                              <img matListAvatar src="{{image_url}}no_preview.jpg" *ngIf="!data.image_path || data.image_path == ''" alt="..." />
