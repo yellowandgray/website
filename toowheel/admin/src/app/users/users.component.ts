@@ -12,6 +12,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsersComponent implements OnInit {
   result = [];
+  sortdata: string = '';
+  searchTerm: string = '';
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
@@ -66,6 +68,24 @@ export class UsersComponent implements OnInit {
             console.log(`Dialog result: ${result}`);
             });
         }
+        sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.title.localeCompare(b.title));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.title.localeCompare(a.title));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.news_date.localeCompare(b.news_date));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.news_date.localeCompare(a.news_date));
+            break;
+            default:
+            break;
+        }
+    }
 
 }
 
