@@ -44,7 +44,10 @@
                                         <mat-icon #tooltip="matTooltip" matTooltip="Collections">collections</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" routerLink="/announcement/{{result[i]['club_id']}}">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Hearing">hearing</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Announcement">hearing</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openView()">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['club_id'], 'result')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>

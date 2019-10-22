@@ -38,6 +38,9 @@
                 <mat-list>
                     <ng-container *ngFor="let data of result | filterEvent: searchTerm;">
                         <mat-list-item class="list-container">
+                            <button mat-icon-button aria-label="label" (click)="openView()">
+                                <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                            </button>
                             <button mat-icon-button aria-label="label" (click)="openDialog(data.event_id,'result')">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                             </button>

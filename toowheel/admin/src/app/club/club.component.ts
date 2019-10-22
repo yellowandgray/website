@@ -88,6 +88,16 @@ export class ClubComponent implements OnInit {
            }
         });
     }
+    openView(): void  {
+        const dialogRef = this.dialog.open(ClubViewFrom, {
+            minWidth: "40%",
+            maxWidth: "40%"
+        });
+
+       dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+        });
+    }
      confirmDialog(id, action): void  {
     var data = null;
       if(id != 0) { 
@@ -575,3 +585,21 @@ export class PictureViewClub {
     }
 }
         }  
+
+             
+  @Component({
+  selector: 'club-view-form',
+  templateUrl: 'club-view-form.html',
+})
+ 
+export class ClubViewFrom {
+    constructor(
+    public dialogRef: MatDialogRef<ClubViewFrom>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
+    
+    onNoClick(): void {
+        this.dialogRef.close();
+    }
+}  

@@ -65,26 +65,12 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     <div class="form-group">
                                         <label for="age">Age</label>
                                         <select class="form-control" id="age" name="age">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="13">13</option>
-                                            <option value="14">14</option>
                                             <option value="15">15</option>
                                             <option value="16">16</option>
                                             <option value="17">17</option>
                                             <option value="18">18</option>
                                             <option value="19">19</option>
-                                            <option value="20">20</option>
+                                            <option value="20" selected>20</option>
                                             <option value="21">21</option>
                                             <option value="22">22</option>
                                             <option value="23">23</option>
@@ -169,7 +155,6 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     <div class="form-group">
                                         <label for="age">Marital Status</label>
                                         <select class="form-control" id="marital_status" name="marital_status">
-                                            <option value="">-</option>
                                             <option value="single">Single</option>
                                             <option value="married">Married</option>
                                          </select>
@@ -347,7 +332,8 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     </div>
                                     <div class="form-group">
                                         <label for="zip_code">Zip Code</label>
-                                        <input placeholder="" name="zip_code" id="zip_code" type="text" class="form-control">
+                                        <span class="red-i">*</span>
+                                        <input placeholder="" name="zip_code" id="zip_code" type="text" required-i class="form-control">
                                     </div>
                                     <br/>
                                     <h4>Referral</h4>

@@ -45,6 +45,7 @@
     <div fxFlex="45%">
         <button type="button" mat-raised-button required (click)="fileInput.click()">{{cover_image}}</button>
         <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'cover_image', 'cover_image_path')" />
+        <mat-icon matTooltip="Width: 340px, Height: 255px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
     </div>
 </div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
@@ -76,6 +77,7 @@
     <div fxFlex="45%">
         <button type="button" mat-raised-button required (click)="fileInputThumb.click()">{{thumb_image}}</button>
         <input hidden #fileInputThumb type="file" id="file_thumb" (change)="fileProgress($event, 'thumb_image', 'thumb_image_path')" />
+        <mat-icon matTooltip="Width: 350px, Height: 220px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
     </div>
 </div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
