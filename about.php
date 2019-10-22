@@ -62,7 +62,7 @@
                         <div class="about_text">
                             <h2>About us</h2>
                             <h4>WE ARE A ELECTRICAL SERVICE COMPANY THAT AIMS TO PROVIDE YOU WITH THE BEST SERVICE.</h4>
-                            <p>S&T Testing Services Pvt Ltd is a well recognized Electrical Service Company having 20 years</p>
+                            <p>S&T Testing Services Pte Ltd is a well recognized Electrical Service Company having 20 years</p>
                             <p>Singapore experienced Team. We provides exemplary service quality for Testing, Installation and Commissioning of Electrical Equipment's.</p>
                             <p>By Choosing us, You no need to worry about the Completion of project, we will take care of that.</p>
 <!--                            <a href="#" class="btn_2">read more</a>-->
@@ -79,7 +79,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="section_tittle">
-                            <h2>Meet Experienced Professional</h2>
+                            <h2>Electrical fire suppression system</h2>
                             <br/>
                             <p>Electrical panels and enclosures are found in every industry across the world. cost-effective system to eliminate fires at the source. We protect all sizes of panels, from small electrical boxes to rooms filled with electrical enclosures.</p>
                         </div>

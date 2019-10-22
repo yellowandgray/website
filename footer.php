@@ -52,16 +52,16 @@
                     <h4>Contact Info</h4>
                     <p>iSPACE, 7 Soon Lee Street,<br/> #02-12, Singapore - 627608</p>
                     <ul>
-                        <li>
+<!--                        <li>
                             <a href="tel:+65-8626-1994"><i class="ti-mobile"></i>Mob: (65) 8626 1994</a>
-                        </li>
+                        </li>-->
                         <li>
                              <a href="tel:+65-6250-0394"><i class="ti-mobile"></i>Tel: (65) 6250 0394</a> |
                              <a href="tel:+65-6266-4226"><i class="ti-mobile"></i>Fax: (65) 6266 4226</a> 
                         </li>
-                        <li>
+<!--                        <li>
                             <a href="mailto:mano@sttesting.com.sg"><i class="ti-email"></i>mano@sttesting.com.sg</a>
-                        </li>
+                        </li>-->
                     </ul>
                 </div>
             </div>
