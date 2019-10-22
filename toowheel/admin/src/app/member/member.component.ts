@@ -155,6 +155,7 @@ export class MemberForm {
     memberForm: FormGroup;
     loading = false;
     member_id = 0;
+    clubs = [];
     constructor(
     public dialogRef: MatDialogRef<MemberForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,private _snackBar: MatSnackBar,
@@ -204,6 +205,26 @@ export class MemberForm {
         })
         this.member_id = this.data.member_id;
     }
+    }
+    getClub(): void {
+       this.loading = true;
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_club_by_type/'+this.memberForm.value.type).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.clubs = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
     }
 }
 

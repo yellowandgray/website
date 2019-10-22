@@ -25,7 +25,7 @@
                         <div fxFlex="20%">
                             <mat-form-field fxFlex="100%">
                                 <mat-label>Sort by</mat-label>
-                              <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
+                                <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
                                     <mat-option value="title_a_z">Title A-Z</mat-option>
                                     <mat-option value="title_z_a">Title Z-A</mat-option>
                                     <mat-option value="created_a_z">Created Date ASC</mat-option>
@@ -37,7 +37,7 @@
                 </section>
                 <mat-list>
                     <ng-container *ngFor="let data of result | filterEvent: searchTerm;">
-                        <mat-list-item class="list-container">
+                        <mat-list-item class="list-container" *ngIf="data.type == 'two_wheel'">
                             <button mat-icon-button aria-label="label" (click)="openView()">
                                 <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
                             </button>
@@ -57,7 +57,26 @@
                 </mat-list>
             </mat-tab>
             <mat-tab label="4 Wheeler">
-
+                <mat-list>
+                    <ng-container *ngFor="let data of result | filterEvent: searchTerm;">
+                        <mat-list-item class="list-container" *ngIf="data.type == 'four_wheel'">
+                            <button mat-icon-button aria-label="label" (click)="openView()">
+                                <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(data.event_id,'result')">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(data.event_id)">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                            </button>
+                            <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                                 <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />-->
+                                 <h3 class="truncate" matLine>{{data.title}}</h3>
+                            <p class="truncate1" matLine>{{data.location}}</p>
+                            <p class="truncate2" matLine>{{data.event_date}}</p>
+                        </mat-list-item>
+                    </ng-container>
+                </mat-list>
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>
