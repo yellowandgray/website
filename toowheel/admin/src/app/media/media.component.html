@@ -4,41 +4,41 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <app-header></app-header>
-                <div class="add-btn-container">
+        <section class="section">
+            <br/>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                <div class="searchdesign" fxFlex="50%">
+                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTerm" />
+                    </mat-form-field>
+                </div>
+                <div fxFlex="20%">
+                    <mat-form-field fxFlex="100%">
+                        <mat-label>Sort by</mat-label>
+                        <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
+                            <mat-option value="title_a_z">Title A-Z</mat-option>
+                            <mat-option value="title_z_a">Title Z-A</mat-option>
+                            <mat-option value="created_a_z">Created Date ASC</mat-option>
+                            <mat-option value="created_z_a">Created Date DESC</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div fxFlex="30%" fxLayoutAlign="end end">
                     <button mat-raised-button color="primary" (click)="openDialog(0)"><mat-icon>add</mat-icon> Media</button>
                 </div>
-        <section class="section">
-                    <br/>                     
-                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                        <div class="searchdesign" fxFlex="50%">
-                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTerm" />
-                            </mat-form-field>
-                        </div>
-                        <div fxFlex="20%">
-                            <mat-form-field fxFlex="100%">
-                                <mat-label>Sort by</mat-label>
-                              <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
-                                    <mat-option value="title_a_z">Title A-Z</mat-option>
-                                    <mat-option value="title_z_a">Title Z-A</mat-option>
-                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
-                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                        </div>
-                    </div>
-                </section>
-                <mat-list>
-                    <mat-list-item *ngFor="let data of result | filterEventmedia:searchTerm">
-                        <button mat-icon-button aria-label="label" (click)="openDialog(data.media_id)">
-                            <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.media_id)">
-                            <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                        </button>
-                        <h3 matLine>{{data.name}}</h3>
-                        <mat-divider></mat-divider>
-                    </mat-list-item>
-                </mat-list>
+            </div>
+        </section>
+        <mat-list>
+            <mat-list-item *ngFor="let data of result | filterEventmedia:searchTerm">
+                <button mat-icon-button aria-label="label" (click)="openDialog(data.media_id)">
+                    <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                </button>
+                <button mat-icon-button aria-label="label" (click)="confirmDelete(data.media_id)">
+                    <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                </button>
+                <h3 matLine>{{data.name}}</h3>
+                <mat-divider></mat-divider>
+            </mat-list-item>
+        </mat-list>
     </mat-sidenav-content>
 </mat-sidenav-container>

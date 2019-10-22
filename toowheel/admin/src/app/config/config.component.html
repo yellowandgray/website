@@ -4,9 +4,6 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <app-header></app-header>
-        <!--<div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog()"><mat-icon>add</mat-icon> Config</button>
-        </div>-->
         <mat-tab-group>
             <mat-tab label="Landing">
                 <section class="section">
@@ -14,24 +11,13 @@
                     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
                         <div class="searchdesign" fxFlex="50%">
                             <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTerm" />
-                            </mat-form-field>
-                        </div>
-                        <div fxFlex="20%">
-                            <mat-form-field fxFlex="100%">
-                                <mat-label>Sort by</mat-label>
-                              <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
-                                    <mat-option value="title_a_z">Title A-Z</mat-option>
-                                    <mat-option value="title_z_a">Title Z-A</mat-option>
-                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
-                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
-                                </mat-select>
+                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTermLanding" />
                             </mat-form-field>
                         </div>
                     </div>
                 </section>
                 <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTerm">
+                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding">
                         <ng-container *ngIf="data.name === 'landing_twowheel_image'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -46,7 +32,7 @@
                             </mat-card>
                         </ng-container>
                     </ng-container>
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
                         <ng-container *ngIf="data.name === 'landing_fourwheel_image'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -61,7 +47,7 @@
                             </mat-card>
                         </ng-container>
                     </ng-container>
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
                         <ng-container *ngIf="data.name === 'landing_description'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -80,7 +66,7 @@
                             </mat-card>
                         </ng-container>
                     </ng-container>
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTerm; ">
+                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
                         <ng-container *ngIf="data.name === 'landing_about_us_image'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -98,7 +84,7 @@
                 </div>
                 <br/>
                 <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
                         <ng-container *ngIf="data.name === 'landing_news_updates_image'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -113,7 +99,7 @@
                             </mat-card>                    
                         </ng-container>
                     </ng-container>
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
                         <ng-container *ngIf="data.name === 'landing_join_club_image'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -128,7 +114,7 @@
                             </mat-card>                    
                         </ng-container>
                     </ng-container>
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
                         <ng-container *ngIf="data.name === 'landing_shop_now_image'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -143,7 +129,7 @@
                             </mat-card>                    
                         </ng-container>
                     </ng-container>
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
                         <ng-container *ngIf="data.name === 'landing_banner_ad'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -170,24 +156,13 @@
                     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
                         <div class="searchdesign" fxFlex="50%">
                             <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTerm" />
-                            </mat-form-field>
-                        </div>
-                        <div fxFlex="20%">
-                            <mat-form-field fxFlex="100%">
-                                <mat-label>Sort by</mat-label>
-                              <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords1()">
-                                    <mat-option value="title_a_z">Title A-Z</mat-option>
-                                    <mat-option value="title_z_a">Title Z-A</mat-option>
-                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
-                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
-                                </mat-select>
+                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTermHome" />
                             </mat-form-field>
                         </div>
                     </div>
                 </section>
                 <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
                         <ng-container *ngIf="data.name === 'home_banner_video'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -204,7 +179,7 @@
                             </mat-card>
                         </ng-container>
                     </ng-container>
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
                         <ng-container *ngIf="data.name === 'home_card_ad1'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -224,7 +199,7 @@
 
                         </ng-container>
                     </ng-container>
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
                         <ng-container *ngIf="data.name === 'home_card_ad2'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -244,7 +219,7 @@
 
                         </ng-container>
                     </ng-container>
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
                         <ng-container *ngIf="data.name === 'home_banner_ad'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -266,7 +241,7 @@
                 </div>
                 <br/>
                 <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
                         <ng-container *ngIf="data.name === 'home_banner_video_four_wheel'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -283,7 +258,7 @@
                             </mat-card>
                         </ng-container>
                     </ng-container>
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
                         <ng-container *ngIf="data.name === 'two_wheel_photos'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -299,7 +274,7 @@
 
                         </ng-container>
                     </ng-container>
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
                         <ng-container *ngIf="data.name === 'two_wheel_videos'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -315,7 +290,7 @@
 
                         </ng-container>
                     </ng-container>
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
                         <ng-container *ngIf="data.name === 'four_wheel_photos'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
@@ -328,13 +303,12 @@
                                     </button>
                                 </mat-card-actions>
                             </mat-card>                    
-
                         </ng-container>
                     </ng-container>
                 </div>
                 <br/>
                 <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTerm;">
+                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
                         <ng-container *ngIf="data.name === 'four_wheel_videos'">
                             <mat-card fxFlex="25%">
                                 <mat-card-header>
