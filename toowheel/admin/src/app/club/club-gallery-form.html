@@ -3,6 +3,7 @@
     <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="end center">
         <button type="button" mat-raised-button (click)="fileInput.click()"><mat-icon>add</mat-icon> Photos</button>
         <input hidden #fileInput type="file" id="file" (change)="submitPhotos($event)" multiple />
+        <mat-icon matTooltip="Width: 1280px; Height: 600px;" matTooltipPosition="left" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
                <mat-progress-spinner
                class="example-margin"
                *ngIf="loading"
@@ -18,7 +19,7 @@
                     <img mat-card-image src="{{image_url}}{{result[i]['media_path']}}" alt="" />
                     <mat-card-actions>
                         <button mat-icon-button aria-label="label" (click)="deleteGallery(result[i]['club_gallery_id'])">
-                            <mat-icon>delete</mat-icon>
+                            <mat-icon matTooltip="Delete">delete</mat-icon>
                         </button>
                     </mat-card-actions>
                 </mat-card>

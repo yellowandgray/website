@@ -42,6 +42,7 @@
             <div fxFlex="50%" fxLayoutAlign="center center">
                 <button type="button" mat-raised-button (click)="fileInput.click()">{{file_name}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'file_name', 'media_path')" />
+                <mat-icon matTooltip="Width: Any; Height: Any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">

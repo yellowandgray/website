@@ -3,6 +3,7 @@
     <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="end center">
         <button type="button" mat-raised-button (click)="fileInput.click()"><mat-icon>add</mat-icon> Photos</button>
         <input hidden #fileInput type="file" id="file" (change)="submitPhotos($event)" multiple />
+        <mat-icon matTooltip="Width: 1280px; Height: 606px;" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
                <mat-progress-spinner
                class="example-margin"
                *ngIf="loading"
