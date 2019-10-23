@@ -11,6 +11,10 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent implements OnInit {
+  searchTermTW: string = '';
+  searchTermFW: string = '';
+  sortdata_tw: string = '';
+  sortdata_fw: string = '';
     result = [];
     result_fw = [];
     constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
@@ -90,6 +94,24 @@ export class CategoryComponent implements OnInit {
        }
     });
 }
+sortRecords(arr, sort): void {
+        switch(sort) {
+            case 'title_a_z':
+                (this[arr]).sort((a,b) => a.name.localeCompare(b.name));
+            break;
+            case 'title_z_a':
+            (this[arr]).sort((a,b) => b.name.localeCompare(a.name));
+            break;
+            case 'created_a_z':
+                (this[arr]).sort((a,b) => a.created_at.localeCompare(b.created_at));
+            break;
+            case 'created_z_a':
+                (this[arr]).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
+    }
 
 }
 

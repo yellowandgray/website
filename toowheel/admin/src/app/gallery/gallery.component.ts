@@ -11,8 +11,10 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-searchTerm: string = '';
-    sortdata: string = '';
+searchTermTW: string = '';
+  searchTermFW: string = '';
+  sortdata_tw: string = '';
+  sortdata_fw: string = '';
   result = [];  
   result_four_wheel = [];  
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
@@ -92,43 +94,25 @@ searchTerm: string = '';
        }
     });
 }
-sortRecords(): void {
-        switch(this.sortdata) {
+ sortRecords(arr, sort): void {
+        switch(sort) {
             case 'title_a_z':
-                (this.result).sort((a,b) => a.title.localeCompare(b.title));
+                (this[arr]).sort((a,b) => a.title.localeCompare(b.title));
             break;
             case 'title_z_a':
-            (this.result).sort((a,b) => b.title.localeCompare(a.title));
+            (this[arr]).sort((a,b) => b.title.localeCompare(a.title));
             break;
             case 'created_a_z':
-                (this.result).sort((a,b) => a.created_at.localeCompare(b.created_at));
+                (this[arr]).sort((a,b) => a.created_at.localeCompare(b.created_at));
             break;
             case 'created_z_a':
-                (this.result).sort((a,b) => b.created_at.localeCompare(a.created_at));
-            break;
-            default:
-            break;
-        }
-      
-    }
-    sortRecords1(): void {
-        switch(this.sortdata) {
-            case 'title_a_z':
-                (this.result_four_wheel).sort((a,b) => a.title.localeCompare(b.title));
-            break;
-            case 'title_z_a':
-            (this.result_four_wheel).sort((a,b) => b.title.localeCompare(a.title));
-            break;
-            case 'created_a_z':
-                (this.result_four_wheel).sort((a,b) => a.created_at.localeCompare(b.created_at));
-            break;
-            case 'created_z_a':
-                (this.result_four_wheel).sort((a,b) => b.created_at.localeCompare(a.created_at));
+                (this[arr]).sort((a,b) => b.created_at.localeCompare(a.created_at));
             break;
             default:
             break;
         }
     }
+
 
 }
 

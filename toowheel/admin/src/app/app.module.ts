@@ -30,6 +30,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CategoryComponent, CategoryForm, CategoryDelete } from './category/category.component';
+import { filterEventCategory } from './category/filter-event.pipe';
 import { filterEventClub } from './club/filter-event.pipe';
 import { ClubComponent, ClubForm, ClubDelete, ClubPhotosForm,PictureViewClub, ClubViewFrom } from './club/club.component';
 import { MemberComponent, MemberForm, MemberDelete, MemberViewForm, MemberTshirtForm } from './member/member.component';
@@ -159,7 +160,8 @@ import { AssetComponent, AssetForm } from './asset/asset.component';
     WorkshopViewFrom,
     filterEvent,
     AssetComponent,
-    AssetForm
+    AssetForm,
+    filterEventCategory
 
   ],
   imports: [
