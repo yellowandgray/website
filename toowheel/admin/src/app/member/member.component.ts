@@ -22,7 +22,6 @@ searchTerm: string = '';
       this.getMember();
       this.getFourWheelMember();
   }
-  image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
   getMember(): void {
   this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_two_wheel_member')
   .subscribe(
