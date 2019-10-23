@@ -4012,3 +4012,17 @@ thead td {
 .events-content .rating {
     text-align: left;
 }
+
+.terms-section {
+    padding: 80px 0;
+}
+
+.terms-section h2 {
+    color: red;
+    margin-bottom: 30px;
+}
+
+.terms-section h4 {
+    color: #363636;
+    margin-bottom: 30px;
+}
