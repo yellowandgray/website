@@ -157,7 +157,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         <select class="form-control" id="marital_status" name="marital_status">
                                             <option value="single">Single</option>
                                             <option value="married">Married</option>
-                                         </select>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="ic_passport">IC Number / Passport Number</label> 
@@ -295,18 +295,6 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         <input type="text" class="form-control" name="contact_number" id="contact_number" placeholder="" required-i onchange="removeValidation('contact_number');" />
                                         <div id="contact_number_error"></div>
                                     </div>
-<!--                                    <div class="form-group">
-                                        <label for="license_category">Driver License Category</label> 
-                                        <span class="red-i">*</span>
-                                        <select class="form-control" name="license_category" id="license_category" required-i onchange="removeValidation('license_category');">
-                                            <option value="class3">Class 3</option>
-                                            <option value="class3a">Class 3A</option>
-                                            <option value="class3c">Class 3C</option>
-                                            <option value="class3ca">Class 3CA</option>
-                                        </select>
-                                        <div id="license_category_error"></div>
-                                    </div>-->
-
                                     <div class="form-group">
                                         <label for="address">Address</label> 
                                         <span class="red-i">*</span>
@@ -333,7 +321,8 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     <div class="form-group">
                                         <label for="zip_code">Zip Code</label>
                                         <span class="red-i">*</span>
-                                        <input placeholder="" name="zip_code" id="zip_code" type="text" required-i class="form-control">
+                                        <input placeholder="" name="zip_code" id="zip_code" type="text" required-i class="form-control" onchange="removeValidation('zip_code');">
+                                        <div id="zip_code_error"></div>
                                     </div>
                                     <br/>
                                     <h4>Referral</h4>
@@ -345,20 +334,6 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         <label for="referral_club_id">Club ID</label>
                                         <input placeholder="" id="referral_club_id" name="referral_club_id" type="text" class="form-control">
                                     </div>
-                                    <br/>
-<!--                                    <h4>Coverage</h4>
-                                    <div class="form-group">
-                                        <label for="coverage_full_name">Full Name (Next of Kin)</label>
-                                        <input placeholder="" id="coverage_full_name" name="coverage_full_name" type="text" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="coverage_contact_number">Contact Number</label>
-                                        <input type="text" class="form-control" name="coverage_contact_number" id="coverage_contact_number" placeholder="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="coverage_address">Address</label>
-                                        <textarea class="form-control" placeholder="" name="coverage_address" id="coverage_address" type="text" rows="3"></textarea>
-                                    </div>-->
                                     <br/>
                                     <h4>Login Information</h4>
                                     <div class="form-group">
@@ -425,18 +400,11 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         <div class="member-register-btn cdm-found"><a href="#">CDM / Fund Transfer</a></div>
                                     </div>
                                     <div class="col-md-2"></div>
-                                    <!--                                    <div class="col-md-4">
-                                                                            <div class="member-register-btn upload-btn-wrapper">
-                                                                                <button class="btn"><a>Upload a file</a></button>
-                                                                                <input type="file" name="payment_receipt" id="payment_receipt" onchange="attachFile('payment_receipt');" />
-                                                                            </div>
-                                                                        </div>-->
                                     <div class="col-md-12">
                                         <div class="pop-1 member-register-popup"><i class="fa fa-times-circle" aria-hidden="true"></i>
                                             <div class="margin-top-30">
                                                 <h4>UPLOAD DEPOSIT SLIP OR FUND TRANSFER RECEIPT</h4>
                                                 <h5>TOOWHEEL BANK ACCOUNT DETAILS</h5>
-<!--                                                <p>Upload your slip picture within 24hrs</p>-->
                                                 <table class="bank-details">
                                                     <tr>
                                                         <td>Bank</td>
@@ -462,9 +430,6 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                         <a href="#" type="button" onclick="attachFile('payment_receipt2');">Submit</a>
                                                     </center>
                                                     <br/>
-                                                    <!--<center>
-                                                        <a href="#" onclick="uploadLater();" type="submit">Upload Later</a>
-                                                    </center>-->
                                                 </form>
                                             </div>
                                         </div>
@@ -472,7 +437,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 </div>
                             </div>
                             <div id="step-4" class="text-center">
-                                <h2>Registration Successful</h2>
+                                <h2 id="registration_status"></h2>
                                 <div class="text-center">
                                     <div id="success_member_section"></div>
                                     <br/>
