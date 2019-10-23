@@ -22,6 +22,7 @@ searchTerm: string = '';
       this.getMember();
       this.getFourWheelMember();
   }
+  image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
   getMember(): void {
   this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_two_wheel_member')
   .subscribe(
@@ -175,6 +176,7 @@ sortRecords(): void {
 export class MemberForm {
     memberForm: FormGroup;
     loading = false;
+    profile_image: string = "Profile Picture";
     member_id = 0;
     clubs = [];
     constructor(
@@ -226,6 +228,30 @@ export class MemberForm {
         })
         this.member_id = this.data.member_id;
     }
+    }
+        fileProgress(fileInput: any, name:string, field: string) {
+        var fileData = <File>fileInput.target.files[0];
+        this[name] = fileData.name;
+        this.loading = true;
+          var formData = new FormData();
+          formData.append('file', fileData);
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this[field] = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            });
     }
     getClub(): void {
        this.loading = true;

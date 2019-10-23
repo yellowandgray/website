@@ -84,32 +84,61 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                             </table>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="profile-details-section-1">
                             <div class="profile-table">
                                 <h4>COVERAGE INFORMATION (NEXT OF KIN)</h4>
-                                <table>
-                                    <tr>
-                                        <th>Full Name</th>
-                                        <td>:</td>
-                                        <td><?php echo isset($member['coverage_full_name']) && $member['coverage_full_name'] != '' ? $member['coverage_full_name'] : 'N/A'; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th>Contact No.</th>
-                                        <td>:</td>
-                                        <td><?php echo isset($member['coverage_contact_number']) && $member['coverage_contact_number'] != '' ? $member['coverage_contact_number'] : 'N/A'; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th>IC No.</th>
-                                        <td>:</td>
-                                        <td><?php echo isset($member['coverage_contact_number']) && $member['coverage_contact_number'] != '' ? $member['coverage_contact_number'] : 'N/A'; ?></td>
-                                    </tr>
-<!--                                    <tr>
-                                        <th>Address</th>
-                                        <td>:</td>
-                                        <td><?php echo isset($member['coverage_address']) && $member['coverage_address'] != '' ? $member['coverage_address'] : 'N/A'; ?></td>
-                                    </tr>-->
-                                </table>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <table>
+                                            <tr>
+                                                <th>Full Name</th>
+                                                <td>:</td>
+                                                <td><?php echo isset($member['coverage_full_name']) && $member['coverage_full_name'] != '' ? $member['coverage_full_name'] : 'N/A'; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Contact No.</th>
+                                                <td>:</td>
+                                                <td><?php echo isset($member['coverage_contact_number']) && $member['coverage_contact_number'] != '' ? $member['coverage_contact_number'] : 'N/A'; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>SPOUSE NAME</th>
+                                                <td>:</td>
+                                                <td>test</td>
+                                            </tr>
+                                            <tr>
+                                                <th>CHILD 1</th>
+                                                <td>:</td>
+                                                <td>test</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <table>
+                                            <tr>
+                                                <th> </th>
+                                                <td> </td>
+                                                <td> </td>
+                                            </tr>
+                                            <tr>
+                                                <th> </th>
+                                                <td> </td>
+                                                <td> </td>
+                                            </tr>
+                                            <tr>
+                                                <th>IC No.</th>
+                                                <td>:</td>
+                                                <td>test</td>
+                                            </tr>
+                                            <tr>
+                                                <th>MY KIT ID</th>
+                                                <td>:</td>
+                                                <td>test</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                             
                             </div>
                         </div>
                     </div>
