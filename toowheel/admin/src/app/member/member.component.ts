@@ -22,7 +22,6 @@ searchTerm: string = '';
       this.getMember();
       this.getFourWheelMember();
   }
-  image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
   getMember(): void {
   this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_two_wheel_member')
   .subscribe(
@@ -177,8 +176,10 @@ export class MemberForm {
     memberForm: FormGroup;
     loading = false;
     profile_image: string = "Profile Picture";
+    image_path: string = "";
     member_id = 0;
     clubs = [];
+    states = [];
     constructor(
     public dialogRef: MatDialogRef<MemberForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,private _snackBar: MatSnackBar,
@@ -204,7 +205,7 @@ export class MemberForm {
             'coverage_address': new FormControl(),
             'email': new FormControl()
         });
-        if(this.data != null) { 
+        if(this.data != null) {
             this.memberForm.patchValue({ 
                 'type': this.data.type,
             'first_name': this.data.first_name,
@@ -228,6 +229,7 @@ export class MemberForm {
         })
         this.member_id = this.data.member_id;
     }
+    this.getClub();
     }
         fileProgress(fileInput: any, name:string, field: string) {
         var fileData = <File>fileInput.target.files[0];
@@ -260,6 +262,26 @@ export class MemberForm {
                 this.loading = false;
                 if(res["result"]["error"] === false) {
                     this.clubs = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
+    getState(): void {
+       this.loading = true;
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_states').subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.states = res["result"]["data"];
                 }else{
     this._snackBar.open(res["result"]["message"], '', {
           duration: 2000,
