@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-member',
@@ -165,8 +166,11 @@ confirmDialog(id, action): void  {
 export class MemberForm {
     memberForm: FormGroup;
     loading = false;
+    profile_image: string = "Profile Picture";
+    image_path: string = "";
     member_id = 0;
     clubs = [];
+    states = [];
     constructor(
     public dialogRef: MatDialogRef<MemberForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,private _snackBar: MatSnackBar,
@@ -179,29 +183,28 @@ export class MemberForm {
             'age': new FormControl(),
             'ic_passport': new FormControl(),
             'dob': new FormControl(),
-            'club': new FormControl(),
             'contact_number': new FormControl(),
             'license_category': new FormControl(),
             'address': new FormControl(),
-            'country': new FormControl(),
+            'country': new FormControl('Malaysia'),
             'state': new FormControl(),
             'referral_member_id': new FormControl(),
             'referral_club_id': new FormControl(),
-            'coverage_full_name': new FormControl(),
-            'coverage_contact_number': new FormControl(),
-            'coverage_address': new FormControl(),
-            'email': new FormControl()
+            'marital_status': new FormControl(),
+            'zip_code': new FormControl(),
+            'email': new FormControl(),
+            'password': new FormControl(),
+            'club_id': new FormControl()
         });
-        if(this.data != null) { 
+        if(this.data != null) {
             this.memberForm.patchValue({ 
-                'type': this.data.type,
+            'type': this.data.type,
             'first_name': this.data.first_name,
             'last_name': this.data.last_name,
             'gender': this.data.gender,
             'age': this.data.age,
             'ic_passport': this.data.ic_passport,
             'dob': this.data.dob_year +'-'+this.data.dob_month +'-'+this.data.dob_date,
-            'club': this.data.club,
             'contact_number': this.data.contact_number,
             'license_category': this.data.license_category,
             'address': this.data.address,
@@ -209,13 +212,39 @@ export class MemberForm {
             'state': this.data.state,
             'referral_member_id': this.data.referral_member_id,
             'referral_club_id': this.data.referral_club_id,
-            'coverage_full_name': this.data.coverage_full_name,
-            'coverage_contact_number': this.data.coverage_contact_number,
-            'coverage_address': this.data.coverage_address,
-            'email': this.data.email
+            'marital_status': this.data.marital_status,
+            'zip_code': this.data.zip_code,
+            'password': this.data.password,
+            'email': this.data.email,
+            'club_id': this.data.email
         })
         this.member_id = this.data.member_id;
     }
+    this.getClub();
+    }
+        fileProgress(fileInput: any, name:string, field: string) {
+        var fileData = <File>fileInput.target.files[0];
+        this[name] = fileData.name;
+        this.loading = true;
+          var formData = new FormData();
+          formData.append('file', fileData);
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this[field] = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            });
     }
     getClub(): void {
        this.loading = true;
@@ -237,6 +266,85 @@ export class MemberForm {
             });
         });
     }
+    getState(): void {
+       this.loading = true;
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_states').subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.states = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
+    onSubmit() {
+      if (this.memberForm.invalid) {
+            return;
+      }
+      this.loading = true;
+      var url = '';
+      var formData = new FormData();
+      formData.append('type', this.memberForm.value.type);
+          formData.append('first_name', this.memberForm.value.first_name);
+          formData.append('last_name', this.memberForm.value.last_name);
+          if(this.image_path && this.image_path != '') {
+          formData.append('profile_picture', this.image_path);
+          }
+          formData.append('gender', this.memberForm.value.gender);
+          formData.append('age', this.memberForm.value.age);
+          formData.append('ic_passport', this.memberForm.value.ic_passport);
+          formData.append('dob_date', moment(this.memberForm.value.dob).format('DD'));
+          formData.append('dob_month', moment(this.memberForm.value.dob).format('MM'));
+          formData.append('dob_year', moment(this.memberForm.value.dob).format('YYYY'));
+          formData.append('contact_number', this.memberForm.value.contact_number); 
+          formData.append('address', this.memberForm.value.address);
+          formData.append('country', 'Malaysia');
+          formData.append('state_id', this.memberForm.value.state);
+          formData.append('referral_member_id', this.memberForm.value.referral_member_id);
+          formData.append('referral_club_id', this.memberForm.value.referral_club_id);
+          formData.append('marital_status', this.memberForm.value.marital_status);
+          formData.append('zip_code', this.memberForm.value.zip_code);
+          formData.append('email', this.memberForm.value.email);
+          formData.append('password', this.memberForm.value.password);
+          formData.append('club_id', this.memberForm.value.club_id);
+          formData.append('payment_type', 'receipt');
+          formData.append('paypal_response', '');
+          formData.append('paypal_transaction_id', '');
+          formData.append('fund_transfer_file', '');
+          formData.append('activated', '1');
+      if(this.member_id != 0) {
+        url = 'update_record/member/member_id = '+this.member_id;
+      } else {
+        url = 'insert_member';
+      }
+      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+            this._snackBar.open(res["result"]["message"], '', {
+              duration: 2000,
+            });
+            }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+      }
+    );
+  }
 }
 
 @Component({
