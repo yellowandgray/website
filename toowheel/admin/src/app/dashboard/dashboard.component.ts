@@ -21,8 +21,8 @@ result1 = [];
   
     
 ngOnInit() {
-    this.getEvent();
-    this.getNews();
+    //this.getEvent();
+    //this.getNews();
   }
 image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
        getEvent(): void {
@@ -52,11 +52,6 @@ image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
            );
      }
        
-
-
-/* piechart & columnChart */   
-
-
 public pieChart: GoogleChartInterface = {
     chartType: 'PieChart',
     dataTable: [
@@ -74,15 +69,12 @@ public columnChart: GoogleChartInterface = {
       chartType: 'ColumnChart',
       dataTable: [
         ['Country', 'Performance', 'Profits'],
-      
       ['Website Earnings',   200, 600],
       ['Website Traffic',    600, 900],
       ['Website Earnings',   500, 800],
       ['Website Traffic',    400, 600],
       ['Website Earnings',   200, 500],
       ['Website Traffic',    600, 800],
-      
-     
       ],
       options: {title: 'Toowheel',
                        }
@@ -96,8 +88,6 @@ public columnChart: GoogleChartInterface = {
     ccComponent.draw();
   }
  
-
-
 public columnChartWTooltips: GoogleChartInterface =  {
     chartType: 'ColumnChart',
     dataTable: [
@@ -124,6 +114,4 @@ public columnChartWTooltips: GoogleChartInterface =  {
       tooltip: {isHtml: true} // This MUST be set to true for your chart to show.
     }
   };
-  
- 
 }
