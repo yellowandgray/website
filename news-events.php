@@ -26,8 +26,8 @@
             </section>
             <!--Inner Header End--> 
             <section class="wf100 about">
-                
-                
+
+
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
                     <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
                         <h2 class="margin-bottom-0 text-center">WORLD FOOD DAY</h2> 
@@ -77,14 +77,149 @@
                                         <img class="modal-content" id="img01">
                                         <div id="caption"></div>
                                     </div>
-
                                 </div>
-
                             </div> 
                         </div>
                         <a type="button" href="events-carnival.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
                     </div>
                 </div>
+
+                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                        <h2 class="margin-bottom-0 text-center">The Blue Colour Day Celebration</h2> 
+                        <p class="text-center"><strong>14th of Sep 2019</strong></p>
+                        <br/>
+<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                        <div class="row events-margin padding-bottom-30">
+                            <div class="col-md-12">
+                                <div class="event-img-margin">
+                                    <img src="images/blue/0001.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    <p>The colour day for the month of September is Blue. The blue colour day was celebrated at ENPEE International School. The colour blue represents Confidence, Loyalty, Intelligence. This is considered to be one of the most important reason for our school uniform is a combination of blue. Children were present to the school in blue colour dress. Some children also recited poem related to things that are blue in colour like, sea clouds, sky etc.. one of the student from the group explained about what the colour blue represents. There were activities for the children where they made craft with the waste material. Each day our children are learning new things which is helping them to build a great career.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a type="button" href="events-blue.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                    </div>
+                </div>
+                
+                
+                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                        <h2 class="margin-bottom-0 text-center">KG FIELD TRIP to PAJANCOA</h2> 
+                        <p class="text-center"><strong>13th of Sep 2019</strong></p>
+                        <br/>
+<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                        <div class="row events-margin padding-bottom-30">
+                            <div class="col-md-12">
+                                <div class="event-img-margin">
+                                    <img src="images/kg/0001.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    <p>Our kindergarten children were taken to PAJANCOA for an educational trip. At the they visited the Agronomy department where they were shown different types of pulses, the materials and vehicles used for farming. Then moved to horticulture department, there we saw different types of plants. The children were able to identify some of the flowers and it's colours as well. They also smelled the fragrances. Our children got a great opportunity to enjoy the nature's beauty. The could feel the cuddle of nature. Happy to present the pictures for you</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a type="button" href="events-kg.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                    </div>
+                </div>
+                
+                
+                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                        <h2 class="margin-bottom-0 text-center">Onam Celebrations</h2> 
+                        <p class="text-center"><strong>12th of Sep 2019</strong></p>
+                        <br/>
+<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                        <div class="row events-margin padding-bottom-30">
+                            <div class="col-md-12">
+                                <div class="event-img-margin">
+                                    <img src="images/onam/0001.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    <p>At ENPEE we always find ways to educate the children in any new way that the children understand. At utilised the occasion of Onam to teach our children about our neighboring state, God's own country, that is Kerala. It is not celebration that happens here. Our is more about the knowledge that they gain at the school. They were explained about the reason of celebrating the festival Onam, the way or is done and we also show cased the materials used during the celebration. We are a secular campus hence we make sure that every individual child understands about everything around them. The children were given chances to make Pookolam by themselves. They were assisted by the educators as well. We are excited to broadcast the pictures of our happy children during the occasion.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a type="button" href="events-onam.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                        <h2 class="margin-bottom-0 text-center">Nutrition Week Celebration</h2> 
+                        <p class="text-center"><strong>9th of Sep 2019</strong></p>
+                        <br/>
+<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                        <div class="row events-margin padding-bottom-30">
+                            <div class="col-md-12">
+                                <div class="event-img-margin">
+                                    <img src="images/nutri/0001.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    <p>Nutrition week celebration at Vinayaka missions Medical college, Karaikal. Our children do not just learn indoor they also get to learn outside the school campus well. Vinayaka Medical Mission is celebrating Nutrition week, as a part of it ENPEE international school was invited to learn about the nutritious food. Children were explained about what is nutritious food and they were also shown the same. There were displays of healthy food like cereals, pulses, fruits and vegetables. They were also explained about from where they can derive different types of vitamins. Demonstration were also included about how to live a healthy lifestyle. We have got one more opportunity to broadcast the pictures. Hope everyone enjoys it.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a type="button" href="events-nutrition.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                    </div>
+                </div>
+
+
+                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                        <h2 class="margin-bottom-0 text-center">Parents Engagement Program</h2> 
+                        <p class="text-center"><strong>6th of Sep 2019</strong></p>
+                        <br/>
+<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                        <div class="row events-margin padding-bottom-30">
+                            <div class="col-md-12">
+                                <div class="event-img-margin">
+                                    <img src="images/parent/0001.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    <p>Parents engagement program was held at ENPEE International School on 06 SEP 2019. Parents of the children from grade 2 to 5 enthusiastically participated in the same. There were activities planned out for them to do it along with the children. Grade 2 activity was, children were asked to put Mehandi on the parents palm. Then the parents were asked to express their love for their child. For grade 3 the parents were asked to Punch a present, parent have to Punch a box from which they will get a message for their child. Child and the parent were made to do a painting. Also grade 4 were involved in the painting work. Getting to know you was another interesting activity wherein the dice would be rolled on a board and the question has to be answered by both parent and child which made both of them know each other much better.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a type="button" href="events-Parent.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                    </div>
+                </div>
+
+                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                        <h2 class="margin-bottom-0 text-center">Teacher's Day Celebrations at ENPEE</h2> 
+                        <p class="text-center"><strong>5th of Sep 2019</strong></p>
+                        <br/>
+<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                        <div class="row events-margin padding-bottom-30">
+                            <div class="col-md-12">
+                                <div class="event-img-margin">
+                                    <img src="images/teacher/0001.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    <p>Learning is a process which continues forever. We learn from every little thing and every little children. School is one such place which gives space for an individual to mould himself. During this period the vital role is played by an Educator only. Whatever the child becomes tomorrow the seed for it is sowed by their teachers alone. Above all the celebration at school the most important is Teacher's day. It was an immense pleasure to enjoy the special day of the educators with the little ones.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a type="button" href="events-teacher.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                    </div>
+                </div>
+
+                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                        <h2 class="margin-bottom-0 text-center">The National Sports Day Celebration</h2> 
+                        <p class="text-center"><strong>29th of August 2019</strong></p>
+                        <br/>
+<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                        <div class="row events-margin padding-bottom-30">
+                            <div class="col-md-12">
+                                <div class="event-img-margin">
+                                    <img src="images/sport/0001.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    <p>The national sports day, 29th of August 2019 , was celebrated at ENPEE International School Inthe full attire of sports by the faculties and students of our school. The students were demonstrated about the reason for celebrating the National Sports day. Various sports activities were conducted both indoor and out door. We are happy to broadcast the pictures and videos of the same.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a type="button" href="events-sport.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                    </div>
+                </div>
+
 
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
                     <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
