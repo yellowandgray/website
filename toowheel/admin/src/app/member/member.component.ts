@@ -330,7 +330,7 @@ export class MemberForm {
           formData.append('paypal_response', '');
           formData.append('paypal_transaction_id', '');
           formData.append('fund_transfer_file', '');
-          formData.append('activated', 1);
+          formData.append('activated', '1');
       if(this.member_id != 0) {
         url = 'update_record/member/member_id = '+this.member_id;
       } else {
