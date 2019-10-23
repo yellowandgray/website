@@ -88,7 +88,7 @@
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-tablet"></i></span>
                             <div class="media-body">
-                                <h3>(65) 8626 1994</h3>
+                                <h3>(65) 6250 0394</h3>
                             </div>
                         </div>
                         <div class="media contact-info">
