@@ -5,7 +5,21 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog()"><mat-icon>add</mat-icon> Asset</button>
+            <button mat-raised-button color="primary" (click)="openDialog(0)"><mat-icon>add</mat-icon> Asset</button>
         </div>
+        <mat-list>     
+            <ng-container *ngFor="let data of result">
+                <mat-list-item class="list-container">
+                    <button mat-icon-button aria-label="label" (click)="openDialog(data.asset_id)">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                    </button>
+                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.asset_id)">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                    </button>                                    
+                    <img matListAvatar src="{{image_url}}{{data.image_path}}"/>
+                    <h3 class="truncate" matLine>{{data.title}}</h3>                        
+                </mat-list-item> 
+            </ng-container>
+        </mat-list>
     </mat-sidenav-content>
 </mat-sidenav-container>

@@ -319,12 +319,12 @@ export class NewsForm {
         });
                 }
             },
-            (error)=>{
-                this.loading = false;
-                this._snackBar.open(error["statusText"], '', {
-          duration: 2000,
+        (error)=>{
+            this.loading = false;
+            this._snackBar.open(error["statusText"], '', {
+                duration: 2000,
+              });
         });
-            });
     }
 
   onSubmit() {

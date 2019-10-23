@@ -90,6 +90,18 @@ $app->post('/insert_media', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_asset', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('title' => $data['title'], 'image_path' => $data['image']), 'asset');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/insert_press_release', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
@@ -641,6 +653,19 @@ $app->get('/get_four_wheel_workshop', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $data = $com->selectAll('*', 'workshop', 'workshop_id > 0 AND type = \'four_wheel\'');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->get('/get_asset', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'asset', 'asset_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
