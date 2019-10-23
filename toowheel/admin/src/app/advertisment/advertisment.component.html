@@ -3,10 +3,7 @@
         <app-sidenav></app-sidenav>
     </mat-sidenav>
     <mat-sidenav-content>
-        <app-header></app-header>
-        <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Advertisement</button>
-        </div>
+        <app-header></app-header>        
          <section class="section">
                     <br/>                     
                     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
@@ -26,6 +23,9 @@
                                 </mat-select>
                             </mat-form-field>
                         </div>
+                        <div fxFlex="30%" fxLayoutAlign="end end">
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Advertisement</button>
+        </div>
                     </div>
                 </section>
         <ng-container *ngFor="let data of result | filterEventAdvertisment:searchTerm; let i = index">

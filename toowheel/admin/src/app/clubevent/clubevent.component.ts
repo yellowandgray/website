@@ -13,8 +13,10 @@ import * as moment from 'moment';
 })
 
 export class ClubeventComponent implements OnInit {
-    searchTerm: string = '';
-    sortdata: string = '';
+    searchTermTW: string = '';
+  searchTermFW: string = '';
+  sortdata_tw: string = '';
+  sortdata_fw: string = '';
     result = [];
     result_four_wheel:any[];
     constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
@@ -103,20 +105,20 @@ export class ClubeventComponent implements OnInit {
                  this.getEvent();
            }
         });
-    }
-    sortRecords(): void {
-        switch(this.sortdata) {
+    }   
+    sortRecords(arr, sort): void {
+        switch(sort) {
             case 'title_a_z':
-                (this.result).sort((a,b) => a.title.localeCompare(b.title));
+                (this[arr]).sort((a,b) => a.title.localeCompare(b.title));
             break;
             case 'title_z_a':
-            (this.result).sort((a,b) => b.title.localeCompare(a.title));
+            (this[arr]).sort((a,b) => b.title.localeCompare(a.title));
             break;
             case 'created_a_z':
-                (this.result).sort((a,b) => a.event_id.localeCompare(b.event_id));
+                (this[arr]).sort((a,b) => a.event_id.localeCompare(b.event_id));
             break;
             case 'created_z_a':
-                (this.result).sort((a,b) => b.event_id.localeCompare(a.event_id));
+                (this[arr]).sort((a,b) => b.event_id.localeCompare(a.event_id));
             break;
             default:
             break;

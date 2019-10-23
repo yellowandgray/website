@@ -11,8 +11,14 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./member.component.css']
 })
 export class MemberComponent implements OnInit {
-searchTerm: string = '';
-    sortdata: string = '';
+  searchTermTWP: string = '';
+  searchTermTWM: string = '';
+  searchTermFWP: string = '';
+  searchTermFWM: string = '';
+  sortdata_twp: string = '';
+  sortdata_twm: string = '';
+  sortdata_fwp: string = '';
+  sortdata_fwm: string = '';
   result = [];
   result_fw = [];
   image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
@@ -129,42 +135,26 @@ confirmDialog(id, action): void  {
             console.log(`Dialog result: ${result}`);
         });
     }
-sortRecords(): void {
-        switch(this.sortdata) {
+    
+    sortRecords(arr, sort): void {
+        switch(sort) {
             case 'title_a_z':
-                (this.result).sort((a,b) => a.first_name.localeCompare(b.first_name));
+                (this[arr]).sort((a,b) => a.first_name.localeCompare(b.first_name));
             break;
             case 'title_z_a':
-            (this.result).sort((a,b) => b.first_name.localeCompare(a.first_name));
+            (this[arr]).sort((a,b) => b.first_name.localeCompare(a.first_name));
             break;
             case 'created_a_z':
-                (this.result).sort((a,b) => a.created_at.localeCompare(b.created_at));
+                (this[arr]).sort((a,b) => a.created_at.localeCompare(b.created_at));
             break;
             case 'created_z_a':
-                (this.result).sort((a,b) => b.created_at.localeCompare(a.created_at));
+                (this[arr]).sort((a,b) => b.created_at.localeCompare(a.created_at));
             break;
             default:
             break;
         }
     }
-    sortRecords1(): void {
-        switch(this.sortdata) {
-            case 'title_a_z':
-                (this.result_fw).sort((a,b) => a.first_name.localeCompare(b.first_name));
-            break;
-            case 'title_z_a':
-            (this.result_fw).sort((a,b) => b.first_name.localeCompare(a.first_name));
-            break;
-            case 'created_a_z':
-                (this.result_fw).sort((a,b) => a.created_at.localeCompare(b.created_at));
-            break;
-            case 'created_z_a':
-                (this.result_fw).sort((a,b) => b.created_at.localeCompare(a.created_at));
-            break;
-            default:
-            break;
-        }
-    }
+
 
 }
 
