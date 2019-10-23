@@ -5,8 +5,9 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <mat-tab-group>
-
             <mat-tab label="Landing">
+                <mat-tab-group>
+                <mat-tab label="2 Wheeler">
                 <section class="section">
                     <br/>                     
                     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
@@ -150,9 +151,17 @@
                         </ng-container>
                     </ng-container>
                 </div>
+            </mat-tab>                 
+            <mat-tab label="4 Wheeler">
+                
             </mat-tab>
+            </mat-tab-group>
+           </mat-tab>
+           
 
             <mat-tab label="Home">
+                <mat-tab-group>
+                <mat-tab label="2 Wheeler">
                 <section class="section">
                     <br/>                     
                     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
@@ -327,6 +336,11 @@
                         </ng-container>
                     </ng-container>
                 </div>
+                </mat-tab>
+                <mat-tab label="4 Wheeler">
+                
+            </mat-tab>
+            </mat-tab-group>
             </mat-tab>
 
             <mat-tab label="Others">

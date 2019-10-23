@@ -13,8 +13,10 @@ import * as moment from 'moment';
   styleUrls: ['./press-release.component.css']
 })
 export class PressReleaseComponent implements OnInit {
-    searchTerm: string = '';
-    sortdata: string = '';
+    searchTermTW: string = '';
+  searchTermFW: string = '';
+  sortdata_tw: string = '';
+  sortdata_fw: string = '';
     result = [];  
     constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
@@ -108,21 +110,20 @@ export class PressReleaseComponent implements OnInit {
       this.getPressRelease();
        }
     });
-    }
-    
-    sortRecords(): void {
-        switch(this.sortdata) {
+    }  
+    sortRecords(arr, sort): void {
+        switch(sort) {
             case 'title_a_z':
-                (this.result).sort((a,b) => a.title.localeCompare(b.title));
+                (this[arr]).sort((a,b) => a.title.localeCompare(b.title));
             break;
             case 'title_z_a':
-            (this.result).sort((a,b) => b.title.localeCompare(a.title));
+            (this[arr]).sort((a,b) => b.title.localeCompare(a.title));
             break;
             case 'created_a_z':
-                (this.result).sort((a,b) => a.press_release_date.localeCompare(b.press_release_date));
+                (this[arr]).sort((a,b) => a.press_release_date.localeCompare(b.press_release_date));
             break;
             case 'created_z_a':
-                (this.result).sort((a,b) => b.press_release_date.localeCompare(a.press_release_date));
+                (this[arr]).sort((a,b) => b.press_release_date.localeCompare(a.press_release_date));
             break;
             default:
             break;

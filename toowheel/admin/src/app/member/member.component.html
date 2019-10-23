@@ -16,29 +16,29 @@
                                 Pending
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <section class="section">           
-                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                                <div class="searchdesign" fxFlex="50%">
-                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                        <mat-label>Search by name</mat-label>
-                                        <input matInput placeholder="" [(ngModel)]="searchTerm" />
-                                    </mat-form-field>
-                                </div>
-                                <div fxFlex="20%">
-                                    <mat-form-field fxFlex="100%">
-                                        <mat-label>Sort by</mat-label>
-                                        <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
-                                            <mat-option value="title_a_z">Title A-Z</mat-option>
-                                            <mat-option value="title_z_a">Title Z-A</mat-option>
-                                            <mat-option value="created_a_z">Created Date ASC</mat-option>
-                                            <mat-option value="created_z_a">Created Date DESC</mat-option>
-                                        </mat-select>
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                        </section>
+                        <section class="section">
+                    <br/>                     
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                        <div class="searchdesign" fxFlex="50%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTWP" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="20%">
+                            <mat-form-field fxFlex="100%">
+                                <mat-label>Sort by</mat-label>
+                                <mat-select [(ngModel)]="sortdata_twp" (selectionChange)="sortRecords('result', sortdata_twp)">
+                                    <mat-option value="title_a_z">Title A-Z</mat-option>
+                                    <mat-option value="title_z_a">Title Z-A</mat-option>
+                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </section>                        
                         <mat-list>
-                            <ng-container *ngFor="let data of result | filterEventMember:searchTerm;">
+                            <ng-container *ngFor="let data of result | filterEventMember:searchTermTWP;">
                                 <mat-list-item *ngIf="data.activated == 0">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
@@ -78,29 +78,29 @@
                                 Member
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <section class="section">              
-                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                                <div class="searchdesign" fxFlex="50%">
-                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                        <mat-label>Search by name</mat-label>
-                                        <input matInput type="text" placeholder="" [(ngModel)]="searchTerm" />
-                                    </mat-form-field>
-                                </div>
-                                <div fxFlex="20%">
-                                    <mat-form-field fxFlex="100%">
-                                        <mat-label>Sort by</mat-label>
-                                        <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
-                                            <mat-option value="title_a_z">Title A-Z</mat-option>
-                                            <mat-option value="title_z_a">Title Z-A</mat-option>
-                                            <mat-option value="created_a_z">Created Date ASC</mat-option>
-                                            <mat-option value="created_z_a">Created Date DESC</mat-option>
-                                        </mat-select>
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                        </section>
+                        <section class="section">
+                    <br/>                     
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                        <div class="searchdesign" fxFlex="50%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTWM" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="20%">
+                            <mat-form-field fxFlex="100%">
+                                <mat-label>Sort by</mat-label>
+                                <mat-select [(ngModel)]="sortdata_twm" (selectionChange)="sortRecords('result', sortdata_twm)">
+                                    <mat-option value="title_a_z">Title A-Z</mat-option>
+                                    <mat-option value="title_z_a">Title Z-A</mat-option>
+                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </section> 
                         <mat-list>
-                            <ng-container *ngFor="let data of result | filterEventMember:searchTerm;">
+                            <ng-container *ngFor="let data of result | filterEventMember:searchTermTWM;">
                                 <mat-list-item *ngIf="data.activated == 1">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
@@ -145,29 +145,28 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <section class="section">
-                            <br/>                     
-                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                                <div class="searchdesign" fxFlex="50%">
-                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                        <mat-label>Search by name</mat-label>
-                                        <input matInput type="text" placeholder="" [(ngModel)]="searchTerm" />
-                                    </mat-form-field>
-                                </div>
-                                <div fxFlex="20%">
-                                    <mat-form-field fxFlex="100%">
-                                        <mat-label>Sort by</mat-label>
-                                        <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords1()">
-                                            <mat-option value="title_a_z">Title A-Z</mat-option>
-                                            <mat-option value="title_z_a">Title Z-A</mat-option>
-                                            <mat-option value="created_a_z">Created Date ASC</mat-option>
-                                            <mat-option value="created_z_a">Created Date DESC</mat-option>
-                                        </mat-select>
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                        </section>
+                    <br/>                     
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                        <div class="searchdesign" fxFlex="50%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermFWP" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="20%">
+                            <mat-form-field fxFlex="100%">
+                                <mat-label>Sort by</mat-label>
+                                <mat-select [(ngModel)]="sortdata_fwp" (selectionChange)="sortRecords('result_fw', sortdata_fwp)">
+                                    <mat-option value="title_a_z">Title A-Z</mat-option>
+                                    <mat-option value="title_z_a">Title Z-A</mat-option>
+                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </section> 
                         <mat-list>
-                            <ng-container *ngFor="let data of result_fw | filterEventMember:searchTerm;">
+                            <ng-container *ngFor="let data of result_fw | filterEventMember:searchTermFWP;">
                                 <mat-list-item *ngIf="data.activated == 0">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
@@ -208,29 +207,28 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <section class="section">
-                            <br/>                     
-                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                                <div class="searchdesign" fxFlex="50%">
-                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                        <mat-label>Search by Name</mat-label>
-                                        <input matInput type="text" placeholder="" [(ngModel)]="searchTerm" />
-                                    </mat-form-field>
-                                </div>
-                                <div fxFlex="20%">
-                                    <mat-form-field fxFlex="100%">
-                                        <mat-label>Sort by</mat-label>
-                                        <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords1()">
-                                            <mat-option value="title_a_z">Title A-Z</mat-option>
-                                            <mat-option value="title_z_a">Title Z-A</mat-option>
-                                            <mat-option value="created_a_z">Created Date ASC</mat-option>
-                                            <mat-option value="created_z_a">Created Date DESC</mat-option>
-                                        </mat-select>
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                        </section>
+                    <br/>                     
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                        <div class="searchdesign" fxFlex="50%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermFWM" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="20%">
+                            <mat-form-field fxFlex="100%">
+                                <mat-label>Sort by</mat-label>
+                                <mat-select [(ngModel)]="sortdata_fwm" (selectionChange)="sortRecords('result_fw', sortdata_fwm)">
+                                    <mat-option value="title_a_z">Title A-Z</mat-option>
+                                    <mat-option value="title_z_a">Title Z-A</mat-option>
+                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </section> 
                         <mat-list>
-                            <ng-container *ngFor="let data of result_fw | filterEventMember:searchTerm;">
+                            <ng-container *ngFor="let data of result_fw | filterEventMember:searchTermFWM;">
                                 <mat-list-item *ngIf="data.activated == 1">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>

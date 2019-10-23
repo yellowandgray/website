@@ -9,18 +9,18 @@
         </div>
         <mat-tab-group>
             <mat-tab label="2 Wheeler">
-                <section class="section">
+                 <section class="section">
                     <br/>                     
                     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
                         <div class="searchdesign" fxFlex="50%">
                             <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTerm" />
+                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTW" />
                             </mat-form-field>
                         </div>
                         <div fxFlex="20%">
                             <mat-form-field fxFlex="100%">
                                 <mat-label>Sort by</mat-label>
-                              <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
+                                <mat-select [(ngModel)]="sortdata_tw" (selectionChange)="sortRecords('result', sortdata_tw)">
                                     <mat-option value="title_a_z">Title A-Z</mat-option>
                                     <mat-option value="title_z_a">Title Z-A</mat-option>
                                     <mat-option value="created_a_z">Created Date ASC</mat-option>
@@ -29,8 +29,8 @@
                             </mat-form-field>
                         </div>
                     </div>
-                </section>
-                <ng-container *ngFor="let data of result | filterEventgallery:searchTerm; let i = index">
+                </section> 
+                <ng-container *ngFor="let data of result | filterEventgallery:searchTermTW; let i = index">
                     <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
                         <ng-container *ngIf="result[i]">
                             <mat-card fxFlex="25%">
@@ -141,13 +141,13 @@
                     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
                         <div class="searchdesign" fxFlex="50%">
                             <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTerm" />
+                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermFW" />
                             </mat-form-field>
                         </div>
                         <div fxFlex="20%">
                             <mat-form-field fxFlex="100%">
                                 <mat-label>Sort by</mat-label>
-                              <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords1()">
+                                <mat-select [(ngModel)]="sortdata_fw" (selectionChange)="sortRecords('result_four_wheel', sortdata_fw)">
                                     <mat-option value="title_a_z">Title A-Z</mat-option>
                                     <mat-option value="title_z_a">Title Z-A</mat-option>
                                     <mat-option value="created_a_z">Created Date ASC</mat-option>
@@ -157,7 +157,7 @@
                         </div>
                     </div>
                 </section>
-            <ng-container *ngFor="let data of result_four_wheel | filterEventgallery:searchTerm; let i = index">
+            <ng-container *ngFor="let data of result_four_wheel | filterEventgallery:searchTermFW; let i = index">
             <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
                 <ng-container *ngIf="result_four_wheel[i]">
                     <mat-card fxFlex="25%">
