@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>Member</h2>
 <mat-dialog-content class="mat-typography">
-    <form [formGroup]="memberForm">
+    <form [formGroup]="memberForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
@@ -9,7 +9,7 @@
                         <mat-option [value]="'two_wheel'">
                             Two Wheel
                         </mat-option>
-                        <mat-option [value]="'four_wheel'">
+                        <mat-option value="four_wheel">
                             Four Wheel
                         </mat-option>
                     </mat-select>
@@ -36,7 +36,7 @@
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-            <div fxFlex="33%">
+            <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Gender</mat-label>
                     <mat-select  formControlName="gender">
@@ -45,9 +45,11 @@
                     </mat-select>
                 </mat-form-field>
             </div>
-            <div fxFlex="33%">
+            <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Age</mat-label>
+                    </mat-select>
+                </mat-form-field>
                     <mat-select  formControlName="age">
                         <mat-option [value]="15"> 15 </mat-option>
                         <mat-option [value]="16"> 16</mat-option>
@@ -134,22 +136,12 @@
                         <mat-option [value]="97"> 97</mat-option>
                         <mat-option [value]="98"> 98</mat-option>
                         <mat-option [value]="99"> 99</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </div>
-            <div fxFlex="33%" fxLayoutAlign="center center">
-                <button type="button" mat-raised-button (click)="fileInput.click()">{{profile_image}}</button>
-                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'profile_image', 'image_path')" />
-                       <mat-icon matTooltip="Width: 1583px, Height: 600px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Marital Status</mat-label>
-                    <mat-select  formControlName="marital_status">
-                        <mat-option [value]="'single'"> Single </mat-option>
-                        <mat-option [value]="'married'"> Married</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
@@ -171,9 +163,6 @@
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Club</mat-label>
-                    <input required matInput placeholder="" formControlName="club" />
-                    <mat-error>Club name is required</mat-error>
                 </mat-form-field>
             </div>
         </div>
@@ -183,13 +172,6 @@
                     <mat-label>Contact Number</mat-label>
                     <input  required matInput placeholder="" formControlName="contact_number" />
                     <mat-error>Contact Number is required</mat-error>
-                </mat-form-field>
-            </div>            
-            <div fxFlex="50%">
-                <mat-form-field class="full-width" appearance="outline">
-                    <mat-label>Zip Code</mat-label>
-                    <input required matInput placeholder="" formControlName="zip_code" />
-                    <mat-error>Zip Code is required</mat-error>
                 </mat-form-field>
             </div>
         </div>
@@ -203,20 +185,21 @@
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-            <div fxFlex="50%">
+            <div fxFlex="33%">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Country</mat-label>
-                    <input  required matInput placeholder="" formControlName="country" />
-                    <mat-error>Country is required</mat-error>
                 </mat-form-field>
             </div>
-            <div fxFlex="50%">
+            <div fxFlex="33%">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>State</mat-label>
-                    <mat-select required formControlName="state">
-                        <mat-option [value]="'state'"> State </mat-option>
-                        <mat-error>State is required</mat-error>
                     </mat-select>
+                </mat-form-field>
+            </div>
+            <div fxFlex="33%">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Zip Code</mat-label>
+                    <input matInput placeholder="" formControlName="zip_code" />
                 </mat-form-field>
             </div>
         </div>
@@ -230,45 +213,22 @@
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Club Name</mat-label>
-                    <mat-select  formControlName="club_id">
-                        <mat-option value="0">None</mat-option>
-                        <mat-option [value]="row.club_id" *ngFor="let row of clubs">{{row.name}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </div>
-        </div>
-        <!--        <h4>Coverage:</h4>
-                <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-                    <div fxFlex="50%">
-                        <mat-form-field appearance="outline" class="full-width">
-                            <mat-label>Full Name (Next of Kin)</mat-label>
-                            <input matInput placeholder="" formControlName="coverage_full_name" />
-                        </mat-form-field>
-                    </div>
-                    <div fxFlex="50%">
-                        <mat-form-field appearance="outline" class="full-width">
-                            <mat-label>Contact Number</mat-label>
-                            <input matInput placeholder="" formControlName="coverage_contact_number" />
-                        </mat-form-field>
-                    </div>
-                </div>-->
-<!--        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-            <div fxFlex="100%">
-                <mat-form-field class="full-width">
-                    <mat-label>Address</mat-label>
-                    <textarea required rows="4" matInput placeholder="" formControlName="coverage_address"></textarea>
-                    <mat-error>Address is required</mat-error>
                 </mat-form-field>
             </div>
         </div>-->
         <h4>Login Information:</h4>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-            <div fxFlex="100%">
+            <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Email Address</mat-label>
                     <input required matInput placeholder="" formControlName="email" />
                     <mat-error>Email Address is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="" type="password" formControlName="password" />
                 </mat-form-field>
             </div>
         </div>
