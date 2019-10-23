@@ -4,18 +4,18 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-8">
                     <div class="sub_menu_right_content">
-                        <a href="tel:+65-8626-1994"><i class="flaticon-phone-call"></i>+65-8626-1994</a> <span>|</span>
-                        <a href="mailto:sales@sttesting.com.sg"><i class="flaticon-at"></i>sales@sttesting.com.sg</a>
+                        <a href="#"><i class="flaticon-phone-call"></i>Fax: (65) 6266 4226</a> <span>|</span>
+                        <a href="mailto:#"><i class="flaticon-at"></i>email@email.com</a>
                     </div>
                 </div>
-                <div class="col-lg-6 col-sm-4">
+<!--                <div class="col-lg-6 col-sm-4">
                     <div class="sub_menu_social_icon">
                         <a href="#"><i class="flaticon-facebook"></i></a>
                         <a href="#"><i class="flaticon-twitter"></i></a>
                         <a href="#"><i class="flaticon-skype"></i></a>
                         <a href="#"><i class="flaticon-instagram"></i></a>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
