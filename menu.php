@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-8">
                     <div class="sub_menu_right_content">
-                        <a href="#"><i class="flaticon-phone-call"></i>Fax: (65) 6266 4226</a> <span>|</span>
-                        <a href="mailto:#"><i class="flaticon-at"></i>email@email.com</a>
+                        <a href="tel:(65) 8626 1994"><i class="flaticon-phone-call"></i>(65) 8626 1994</a> <span>|</span>
+                        <a href="mailto:sales@sttesting.com.sg"><i class="flaticon-at"></i>sales@sttesting.com.sg</a>
                     </div>
                 </div>
 <!--                <div class="col-lg-6 col-sm-4">

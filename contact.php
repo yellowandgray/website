@@ -88,13 +88,13 @@
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-tablet"></i></span>
                             <div class="media-body">
-                                <h3>Fax: (65) 6266 4226</h3>
+                                <h3>(65) 8626 1994</h3>
                             </div>
                         </div>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-email"></i></span>
                             <div class="media-body">
-                                <h3>email@email.com</h3>
+                                <h3>sales@sttesting.com.sg</h3>
                                 <p>Send us your enquiry anytime!</p>
                             </div>
                         </div>
