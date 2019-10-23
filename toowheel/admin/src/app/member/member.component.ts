@@ -192,7 +192,7 @@ export class MemberForm {
             'age': new FormControl(),
             'ic_passport': new FormControl(),
             'dob': new FormControl(),
-            'club': new FormControl(),
+            'referral_club': new FormControl(),
             'contact_number': new FormControl(),
             'license_category': new FormControl(),
             'address': new FormControl(),
@@ -200,10 +200,11 @@ export class MemberForm {
             'state': new FormControl(),
             'referral_member_id': new FormControl(),
             'referral_club_id': new FormControl(),
-            'coverage_full_name': new FormControl(),
-            'coverage_contact_number': new FormControl(),
-            'coverage_address': new FormControl(),
-            'email': new FormControl()
+            'marital_status': new FormControl(),
+            'zip_code': new FormControl(),
+            'email': new FormControl(),
+            'password': new FormControl(),
+            'club_id': new FormControl()
         });
         if(this.data != null) {
             this.memberForm.patchValue({ 
@@ -214,7 +215,7 @@ export class MemberForm {
             'age': this.data.age,
             'ic_passport': this.data.ic_passport,
             'dob': this.data.dob_year +'-'+this.data.dob_month +'-'+this.data.dob_date,
-            'club': this.data.club,
+            'referral_club': this.data.club,
             'contact_number': this.data.contact_number,
             'license_category': this.data.license_category,
             'address': this.data.address,
@@ -222,10 +223,11 @@ export class MemberForm {
             'state': this.data.state,
             'referral_member_id': this.data.referral_member_id,
             'referral_club_id': this.data.referral_club_id,
-            'coverage_full_name': this.data.coverage_full_name,
-            'coverage_contact_number': this.data.coverage_contact_number,
-            'coverage_address': this.data.coverage_address,
-            'email': this.data.email
+            'marital_status': this.data.marital_status,
+            'zip_code': this.data.zip_code,
+            'password': this.data.password,
+            'email': this.data.email,
+            'club_id': this.data.email
         })
         this.member_id = this.data.member_id;
     }
