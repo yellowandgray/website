@@ -16,12 +16,12 @@
                                 Pending
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <section class="section">
-                            <br/>                     
+                        <section class="section">           
                             <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
                                 <div class="searchdesign" fxFlex="50%">
                                     <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTerm" />
+                                        <mat-label>Search by name</mat-label>
+                                        <input matInput placeholder="" [(ngModel)]="searchTerm" />
                                     </mat-form-field>
                                 </div>
                                 <div fxFlex="20%">
@@ -46,14 +46,22 @@
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result')">
+                                    <button mat-icon-button aria-label="label" (click)="openView()">
                                         <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'delete')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Money">money</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Receipt">money</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openTshirt()">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
+                                            <img src="https://img.icons8.com/material/24/000000/teams.png">
+                                        </mat-icon>
                                     </button>
                                     <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
                                          <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.profile_picture || data.profile_picture == ''" alt="..." />
@@ -70,12 +78,12 @@
                                 Member
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <section class="section">
-                            <br/>                     
+                        <section class="section">              
                             <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
                                 <div class="searchdesign" fxFlex="50%">
                                     <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTerm" />
+                                        <mat-label>Search by name</mat-label>
+                                        <input matInput type="text" placeholder="" [(ngModel)]="searchTerm" />
                                     </mat-form-field>
                                 </div>
                                 <div fxFlex="20%">
@@ -100,14 +108,22 @@
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result')">
+                                    <button mat-icon-button aria-label="label" (click)="openView()">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Remove red eye">remove_red_eye</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'delete')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Money">money</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Receipt">money</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openTshirt()">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
+                                            <img src="https://img.icons8.com/material/24/000000/teams.png">
+                                        </mat-icon>
                                     </button>
                                     <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
                                          <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.profile_picture || data.profile_picture == ''" alt="..." />
@@ -133,7 +149,8 @@
                             <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
                                 <div class="searchdesign" fxFlex="50%">
                                     <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTerm" />
+                                        <mat-label>Search by name</mat-label>
+                                        <input matInput type="text" placeholder="" [(ngModel)]="searchTerm" />
                                     </mat-form-field>
                                 </div>
                                 <div fxFlex="20%">
@@ -158,14 +175,22 @@
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
+                                    <button mat-icon-button aria-label="label" (click)="openView()">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result_fw')">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Remove red eye">remove_red_eye</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'delete')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Money">money</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Receipt">money</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openTshirt()">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
+                                            <img src="https://img.icons8.com/material/24/000000/teams.png">
+                                        </mat-icon>
                                     </button>
                                     <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
                                          <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.profile_picture || data.profile_picture == ''" alt="..." />
@@ -187,7 +212,8 @@
                             <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
                                 <div class="searchdesign" fxFlex="50%">
                                     <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTerm" />
+                                        <mat-label>Search by Name</mat-label>
+                                        <input matInput type="text" placeholder="" [(ngModel)]="searchTerm" />
                                     </mat-form-field>
                                 </div>
                                 <div fxFlex="20%">
@@ -212,14 +238,22 @@
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result_fw')">
+                                    <button mat-icon-button aria-label="label" (click)="openView()">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Remove red eye">remove_red_eye</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result_fw')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="edit">edit</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'delete')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Money">money</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Receipt">money</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openTshirt()">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
+                                            <img src="https://img.icons8.com/material/24/000000/teams.png">
+                                        </mat-icon>
                                     </button>
                                     <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
                                          <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.profile_picture || data.profile_picture == ''" alt="..." />

@@ -108,6 +108,27 @@ confirmDialog(id, action): void  {
        }
     });
 }
+
+    openView(): void  {
+      const dialogRef = this.dialog.open(MemberViewForm, {
+          minWidth: "80%",
+          maxWidth: "80%"
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+        });
+    }
+    openTshirt(): void  {
+      const dialogRef = this.dialog.open(MemberTshirtForm, {
+          minWidth: "80%",
+          maxWidth: "80%"
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+        });
+    }
 sortRecords(): void {
         switch(this.sortdata) {
             case 'title_a_z':
@@ -277,3 +298,37 @@ this._snackBar.open(res["result"]["message"], '', {
         );
   }
 }
+
+  @Component({
+  selector: 'member-view-form',
+  templateUrl: 'member-view-form.html',
+})
+ 
+export class MemberViewForm {
+    constructor(
+    public dialogRef: MatDialogRef<MemberViewForm>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
+    
+    onNoClick(): void {
+        this.dialogRef.close();
+    }
+}  
+
+  @Component({
+  selector: 'member-tshirt-form',
+  templateUrl: 'member-tshirt-form.html',
+})
+ 
+export class MemberTshirtForm {
+    constructor(
+    public dialogRef: MatDialogRef<MemberTshirtForm>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
+    
+    onNoClick(): void {
+        this.dialogRef.close();
+    }
+}  
