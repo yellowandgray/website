@@ -36,6 +36,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                     </div>
                     <div class="col-md-8 profile-details-section">
                         <div class="profile-club-details">
+                            `
                             <span><?php echo $member['type'] == 'two_wheel' ? '2 WHEELS' : '4 WHEELS'; ?></span>
                         </div>
                         <div class="profile-club-details">
@@ -99,10 +100,15 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                         <td><?php echo isset($member['coverage_contact_number']) && $member['coverage_contact_number'] != '' ? $member['coverage_contact_number'] : 'N/A'; ?></td>
                                     </tr>
                                     <tr>
+                                        <th>IC No.</th>
+                                        <td>:</td>
+                                        <td><?php echo isset($member['coverage_contact_number']) && $member['coverage_contact_number'] != '' ? $member['coverage_contact_number'] : 'N/A'; ?></td>
+                                    </tr>
+<!--                                    <tr>
                                         <th>Address</th>
                                         <td>:</td>
                                         <td><?php echo isset($member['coverage_address']) && $member['coverage_address'] != '' ? $member['coverage_address'] : 'N/A'; ?></td>
-                                    </tr>
+                                    </tr>-->
                                 </table>
                             </div>
                         </div>
