@@ -99,8 +99,6 @@
                                     <img src="images/carnival/015.jpg" alt="Events" title="Events-ENPEE International School" />
                                 </div>
                             </div>
-                            
-
                         </div>
                     </div>
                 </div>
