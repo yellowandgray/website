@@ -355,7 +355,8 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         <div id="cnfpassword_error"></div>
                                     </div>
                                     <br/>
-                                    <input type="checkbox" name="agree" /> By clicking Next, you agree to our <a href="terms.php?type=<?php echo $type; ?>" target="_blank">Terms an Conditions.</a> 
+                                    <input type="checkbox" id="terms_agree" value="1" name="agree" onchange="removeValidation('terms_agree');" /> By clicking Next, you agree to our <a href="terms.php?type=<?php echo $type; ?>" target="_blank">Terms an Conditions.</a>
+                                    <div id="terms_agree_error"></div>
                                 </form>
                             </div>
                             <div id="step-2" class="">

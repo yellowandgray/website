@@ -208,6 +208,11 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
                 $('#cnfpassword_error').html('Password mismatch').addClass('error-msg');
                 change = false;
             }
+            console.log($('#terms_agree').is(':checked'));
+            if (!$('#terms_agree').is(':checked')) {
+                $('#terms_agree_error').html('Accept terms').addClass('error-msg');
+                change = false;
+            }
             if (change == true) {
                 $.ajax({
                     type: "POST",

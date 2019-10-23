@@ -219,8 +219,14 @@ export class MemberForm {
             'club_id': this.data.email
         })
         this.member_id = this.data.member_id;
+        this.getClub();
+    }else {
+        this.memberForm.patchValue({
+                dob: new Date(),
+                age: '20',
+            });
     }
-    this.getClub();
+    this.getState();
     }
         fileProgress(fileInput: any, name:string, field: string) {
         var fileData = <File>fileInput.target.files[0];

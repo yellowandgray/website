@@ -7,390 +7,341 @@
         <mat-tab-group>
             <mat-tab label="Landing">
                 <mat-tab-group>
-                <mat-tab label="2 Wheeler">
-                <section class="section">
-                    <br/>                     
-                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                        <div class="searchdesign" fxFlex="50%">
-                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTermLanding" />
-                            </mat-form-field>
-                        </div>
-                    </div>
-                </section>
-                <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding">
-                        <ng-container *ngIf="data.name === 'landing_twowheel_image'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>
-                        </ng-container>
-                    </ng-container>
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
-                        <ng-container *ngIf="data.name === 'landing_fourwheel_image'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>
-                        </ng-container>
-                    </ng-container>
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
-                        <ng-container *ngIf="data.name === 'landing_description'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <mat-card-content>
-                                    <p>
-                                        {{data.value}}
-                                    </p>
-                                </mat-card-content>
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>
-                        </ng-container>
-                    </ng-container>
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
-                        <ng-container *ngIf="data.name === 'landing_about_us_image'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>                    
-                        </ng-container>
-                    </ng-container>
-                </div>
-                <br/>
-                <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
-                        <ng-container *ngIf="data.name === 'landing_news_updates_image'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>                    
-                        </ng-container>
-                    </ng-container>
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
-                        <ng-container *ngIf="data.name === 'landing_join_club_image'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>                    
-                        </ng-container>
-                    </ng-container>
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
-                        <ng-container *ngIf="data.name === 'landing_shop_now_image'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>                    
-                        </ng-container>
-                    </ng-container>
-                    <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
-                        <ng-container *ngIf="data.name === 'landing_banner_ad'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <ng-container *ngFor="let row of ads">
-                                    <ng-container *ngIf="row.advertisement_id == data.value">
-                                        <img mat-card-image src="{{image_url}}{{row.image}}" alt="Photo of a Shiba Inu" />
-                                    </ng-container>
+                    <mat-tab label="2 Wheeler">
+                        <section class="section">
+                            <br/>                     
+                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                                <div class="searchdesign" fxFlex="50%">
+                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                        <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTermLanding" />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </section>
+                        <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
+                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding">
+                                <ng-container *ngIf="data.name === 'landing_twowheel_image'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>
                                 </ng-container>
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>
-                        </ng-container>
-                    </ng-container>
-                </div>
-            </mat-tab>                 
-            <mat-tab label="4 Wheeler">
-                
+                            </ng-container>
+                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
+                                <ng-container *ngIf="data.name === 'landing_fourwheel_image'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </ng-container>
+                            </ng-container>
+                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
+                                <ng-container *ngIf="data.name === 'landing_description'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <mat-card-content>
+                                            <p>
+                                                {{data.value}}
+                                            </p>
+                                        </mat-card-content>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </ng-container>
+                            </ng-container>
+                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
+                                <ng-container *ngIf="data.name === 'landing_about_us_image'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>                    
+                                </ng-container>
+                            </ng-container>
+                        </div>
+                        <br/>
+                        <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
+                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
+                                <ng-container *ngIf="data.name === 'landing_news_updates_image'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>                    
+                                </ng-container>
+                            </ng-container>
+                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
+                                <ng-container *ngIf="data.name === 'landing_join_club_image'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>                    
+                                </ng-container>
+                            </ng-container>
+                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
+                                <ng-container *ngIf="data.name === 'landing_shop_now_image'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>                    
+                                </ng-container>
+                            </ng-container>
+                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
+                                <ng-container *ngIf="data.name === 'landing_banner_ad'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <ng-container *ngFor="let row of ads">
+                                            <ng-container *ngIf="row.advertisement_id == data.value">
+                                                <img mat-card-image src="{{image_url}}{{row.image}}" alt="Photo of a Shiba Inu" />
+                                            </ng-container>
+                                        </ng-container>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </ng-container>
+                            </ng-container>
+                        </div>
+                    </mat-tab>                 
+                    <mat-tab label="4 Wheeler">
+                    </mat-tab>
+                </mat-tab-group>
             </mat-tab>
-            </mat-tab-group>
-           </mat-tab>
-           
-
             <mat-tab label="Home">
                 <mat-tab-group>
-                <mat-tab label="2 Wheeler">
-                <section class="section">
-                    <br/>                     
-                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                        <div class="searchdesign" fxFlex="50%">
-                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTermHome" />
-                            </mat-form-field>
+                    <mat-tab label="2 Wheeler">
+                        <section class="section">
+                            <br/>                     
+                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                                <div class="searchdesign" fxFlex="50%">
+                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                        <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTermHome" />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </section>
+                        <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                                <ng-container *ngIf="data.name === 'home_banner_video'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <video mat-card-image controls>
+                                            <source src="{{image_url}}{{data.value}}" type="video/mp4" />
+                                        </video>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </ng-container>
+                            </ng-container>
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                                <ng-container *ngIf="data.name === 'home_card_ad1'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <ng-container *ngFor="let row of ads_card">
+                                            <ng-container *ngIf="row.advertisement_id == data.value">
+                                                <img mat-card-image src="{{image_url}}{{row.image}}" alt="Photo of a Shiba Inu" />
+                                            </ng-container>
+                                        </ng-container>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>                    
+
+                                </ng-container>
+                            </ng-container>
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                                <ng-container *ngIf="data.name === 'home_card_ad2'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <ng-container *ngFor="let row of ads_card">
+                                            <ng-container *ngIf="row.advertisement_id == data.value">
+                                                <img mat-card-image src="{{image_url}}{{row.image}}" alt="Photo of a Shiba Inu" />
+                                            </ng-container>
+                                        </ng-container>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>                    
+
+                                </ng-container>
+                            </ng-container>
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                                <ng-container *ngIf="data.name === 'home_banner_ad'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <ng-container *ngFor="let row of ads">
+                                            <ng-container *ngIf="row.advertisement_id == data.value">
+                                                <img mat-card-image src="{{image_url}}{{row.image}}" alt="Photo of a Shiba Inu" />
+                                            </ng-container>
+                                        </ng-container>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </ng-container>
+                            </ng-container>
                         </div>
-                    </div>
-                </section>
-                <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
-                        <ng-container *ngIf="data.name === 'home_banner_video'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <video mat-card-image controls>
-                                    <source src="{{image_url}}{{data.value}}" type="video/mp4" />
-                                </video>
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>
-                        </ng-container>
-                    </ng-container>
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
-                        <ng-container *ngIf="data.name === 'home_card_ad1'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <ng-container *ngFor="let row of ads_card">
-                                    <ng-container *ngIf="row.advertisement_id == data.value">
-                                        <img mat-card-image src="{{image_url}}{{row.image}}" alt="Photo of a Shiba Inu" />
-                                    </ng-container>
+                        <br/>
+                        <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                                <ng-container *ngIf="data.name === 'home_banner_video_four_wheel'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <video mat-card-image controls>
+                                            <source src="{{image_url}}{{data.value}}" type="video/mp4" />
+                                        </video>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>
                                 </ng-container>
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>                    
+                            </ng-container>
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                                <ng-container *ngIf="data.name === 'two_wheel_photos'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>                    
 
-                        </ng-container>
-                    </ng-container>
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
-                        <ng-container *ngIf="data.name === 'home_card_ad2'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <ng-container *ngFor="let row of ads_card">
-                                    <ng-container *ngIf="row.advertisement_id == data.value">
-                                        <img mat-card-image src="{{image_url}}{{row.image}}" alt="Photo of a Shiba Inu" />
-                                    </ng-container>
                                 </ng-container>
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>                    
+                            </ng-container>
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                                <ng-container *ngIf="data.name === 'two_wheel_videos'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>                    
 
-                        </ng-container>
-                    </ng-container>
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
-                        <ng-container *ngIf="data.name === 'home_banner_ad'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <ng-container *ngFor="let row of ads">
-                                    <ng-container *ngIf="row.advertisement_id == data.value">
-                                        <img mat-card-image src="{{image_url}}{{row.image}}" alt="Photo of a Shiba Inu" />
-                                    </ng-container>
                                 </ng-container>
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>
-                        </ng-container>
-                    </ng-container>
-                </div>
-                <br/>
-                <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
-                        <ng-container *ngIf="data.name === 'home_banner_video_four_wheel'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <video mat-card-image controls>
-                                    <source src="{{image_url}}{{data.value}}" type="video/mp4" />
-                                </video>
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>
-                        </ng-container>
-                    </ng-container>
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
-                        <ng-container *ngIf="data.name === 'two_wheel_photos'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>                    
+                            </ng-container>
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                                <ng-container *ngIf="data.name === 'four_wheel_photos'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>                    
+                                </ng-container>
+                            </ng-container>
+                        </div>
+                        <br/>
+                        <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                                <ng-container *ngIf="data.name === 'four_wheel_videos'">
+                                    <mat-card fxFlex="25%">
+                                        <mat-card-header>
+                                            <mat-card-title>{{data.display_name}}</mat-card-title>
+                                        </mat-card-header>
+                                        <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                                    </mat-card>                    
 
-                        </ng-container>
-                    </ng-container>
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
-                        <ng-container *ngIf="data.name === 'two_wheel_videos'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>                    
+                                </ng-container>
+                            </ng-container>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="4 Wheeler">
 
-                        </ng-container>
-                    </ng-container>
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
-                        <ng-container *ngIf="data.name === 'four_wheel_photos'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>                    
-                        </ng-container>
-                    </ng-container>
-                </div>
-                <br/>
-                <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                    <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
-                        <ng-container *ngIf="data.name === 'four_wheel_videos'">
-                            <mat-card fxFlex="25%">
-                                <mat-card-header>
-                                    <mat-card-title>{{data.display_name}}</mat-card-title>
-                                </mat-card-header>
-                                <img mat-card-image src="{{image_url}}{{data.value}}" alt="Photo of a Shiba Inu" />
-                                <mat-card-actions>
-                                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                        <mat-icon (click)="openDialog(data.config_id, 'result_home')">edit</mat-icon>
-                                    </button>
-                                </mat-card-actions>
-                            </mat-card>                    
-
-                        </ng-container>
-                    </ng-container>
-                </div>
-                </mat-tab>
-                <mat-tab label="4 Wheeler">
-                
-            </mat-tab>
-            </mat-tab-group>
+                    </mat-tab>
+                </mat-tab-group>
             </mat-tab>
 
             <mat-tab label="Others">
-                <section class="section">                    
-                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                        <div class="searchdesign" fxFlex="100%">
-                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTermHome" />
-                            </mat-form-field>
-                        </div>
-                    </div>
-                </section>
-                <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                    <mat-card fxFlex="25%">
-                        <mat-card-header>
-                            <mat-card-title>Event Advertisment</mat-card-title>
-                            <!--                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
-                        </mat-card-header>
-                        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-                        <mat-card-actions>
-                            <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                <mat-icon (click)="openDialog()">edit</mat-icon>
-                            </button>
-                        </mat-card-actions>
-                    </mat-card>
-                    <mat-card fxFlex="25%">
-                        <mat-card-header>
-                            <mat-card-title>Press Release Advertisment</mat-card-title>
-                            <!--                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
-                        </mat-card-header>
-                        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-                        <mat-card-actions>
-                            <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                <mat-icon (click)="openDialog()">edit</mat-icon>
-                            </button>
-                        </mat-card-actions>
-                    </mat-card>
-                    <mat-card fxFlex="25%">
-                        <mat-card-header>
-                            <mat-card-title>News Advertisment</mat-card-title>
-                            <!--                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
-                        </mat-card-header>
-                        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-                        <mat-card-actions>
-                            <button mat-icon-button matTooltip="Edit" aria-label="label">
-                                <mat-icon (click)="openDialog()">edit</mat-icon>
-                            </button>
-                        </mat-card-actions>
-                    </mat-card>
-                </div>
+
             </mat-tab>
 
         </mat-tab-group>

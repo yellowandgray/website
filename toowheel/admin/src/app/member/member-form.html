@@ -153,8 +153,9 @@
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Date of Birth</mat-label>
-                    <input matInput placeholder="DD/MM/YYYY" formControlName="dob" />
+                    <input matInput required formControlName="dob" [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
@@ -221,7 +222,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Club</mat-label>
-                    <input matInput placeholder="" formControlName="referral_club" />
+                    <input matInput placeholder="" formControlName="referral_club_id" />
                 </mat-form-field>
             </div>
         </div>
@@ -231,12 +232,6 @@
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Email Address</mat-label>
                     <input matInput placeholder="" formControlName="email" />
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Password</mat-label>
-                    <input matInput placeholder="" type="password" formControlName="password" />
                 </mat-form-field>
             </div>
         </div>
