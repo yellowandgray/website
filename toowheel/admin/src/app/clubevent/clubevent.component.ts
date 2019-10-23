@@ -6,23 +6,24 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
 
-
 @Component({
   selector: 'app-clubevent',
   templateUrl: './clubevent.component.html',
   styleUrls: ['./clubevent.component.css']
 })
+
 export class ClubeventComponent implements OnInit {
+    searchTerm: string = '';
+    sortdata: string = '';
     result = [];
     result_four_wheel:any[];
     constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
-
-  ngOnInit() {
-    this.getEvent();
-  }
-image_url: string = '../toowheel/api/v1/';
-       getEvent(): void {
-     this.httpClient.get<any>('../toowheel/api/v1/get_event')
+    ngOnInit() {
+      this.getEvent();
+    }
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+    getEvent(): void {
+    this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_event')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -35,28 +36,56 @@ image_url: string = '../toowheel/api/v1/';
            );
      }
 
-  openDialog(id, res): void  {
-    var data = null;
-      if(id != 0) {
-      this[res].forEach(val=> {
+    openDialog(id, res): void  {
+        var data = null;
+        if(id != 0) {
+        this[res].forEach(val=> {
            if(parseInt(val.event_id) === parseInt(id)) {
                 data = val;
                 return false;
            }
          });
-      }
-    const dialogRef = this.dialog.open(ClubEventForm, {
-        minWidth: "80%",
-        maxWidth: "80%",
-        data: data
-    });
+        }
+        const dialogRef = this.dialog.open(ClubEventForm, {
+            minWidth: "80%",
+            maxWidth: "80%",
+            data: data
+        });
+        dialogRef.afterClosed().subscribe(result => {
+            if(result !== false && result !== 'false') {
+                this.getEvent();
+            }
+        });
+    }
 
-    dialogRef.afterClosed().subscribe(result => {
-        if(result !== false && result !== 'false') {
-            this.getEvent();
+ confirmDialog(id, action): void  {
+    var data = null;
+      if(id != 0) { 
+        data = id;
+      }
+    const dialogRef = this.dialog.open(PictureView, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: {
+            data: data,
+            action: action
         }
     });
+
+   dialogRef.afterClosed().subscribe(result => {
+    });
 }
+
+        openView(): void  {
+        const dialogRef = this.dialog.open(ClubEventViewFrom, {
+            minWidth: "40%",
+            maxWidth: "40%"
+        });
+
+       dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+            });
+        }
 
         confirmDelete(id): void  {
         var data = null;
@@ -75,7 +104,24 @@ image_url: string = '../toowheel/api/v1/';
            }
         });
     }
-
+    sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.title.localeCompare(b.title));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.title.localeCompare(a.title));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.event_id.localeCompare(b.event_id));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.event_id.localeCompare(a.event_id));
+            break;
+            default:
+            break;
+        }
+    }
 }
 
 @Component({
@@ -129,7 +175,7 @@ export class ClubEventForm {
     }
     getCategory(): void {
        this.loading = true;
-          this.httpClient.get('../toowheel/api/v1/get_'+this.clubeventForm.value.type+'_category').subscribe(
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_'+this.clubeventForm.value.type+'_category').subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -149,7 +195,7 @@ export class ClubEventForm {
     }
     getClub(): void {
        this.loading = true;
-          this.httpClient.get('../toowheel/api/v1/get_club_by_category/'+this.clubeventForm.value.category_id).subscribe(
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_club_by_category/'+this.clubeventForm.value.category_id).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -173,7 +219,7 @@ export class ClubEventForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('../toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -227,7 +273,7 @@ formData.append('type', this.clubeventForm.value.type);
           formData.append('sponsor', this.clubeventForm.value.sponsor);              
           url = 'insert_event';
           }
-          this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -271,7 +317,7 @@ export class ClubEventDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../toowheel/api/v1/delete_record/event/event_id='+this.event_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/event/event_id='+this.event_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -291,3 +337,46 @@ export class ClubEventDelete {
         );
   }
 }
+        
+ @Component({
+  selector: 'picture-view',
+  templateUrl: 'picture-view.html',
+})
+ 
+export class PictureView {
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+    action: string = '';
+    loading = false;
+    member_id = 0;
+    data: any;
+    constructor(
+    public dialogRef: MatDialogRef<PictureView>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.datapopup != null) { 
+            this.action = this.datapopup.action;
+            this.data = this.datapopup.data;
+            if(this.datapopup.action == 'delete') {
+                this.member_id = this.datapopup.data;
+            }
+    }
+}
+        }  
+
+  @Component({
+  selector: 'clubevent-view-form',
+  templateUrl: 'clubevent-view-form.html',
+})
+ 
+export class ClubEventViewFrom {
+    constructor(
+    public dialogRef: MatDialogRef<ClubEventViewFrom>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
+    
+    onNoClick(): void {
+        this.dialogRef.close();
+    }
+}  

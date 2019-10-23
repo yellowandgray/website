@@ -7,98 +7,72 @@
         <div class="add-btn-container">
             <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Press Release</button>
         </div>
-        <ng-container *ngFor="let data of result; let i = index">
-            <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                <ng-container *ngIf="result[i]">
-                    <mat-card fxFlex="25%">
-                        <mat-card-header>
-                            <mat-card-title>{{result[i]['title']}}</mat-card-title>
-                            <mat-card-subtitle>{{result[i]['news_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
-                        </mat-card-header>
-                        <img mat-card-image src="{{image_url}}{{result[i]['cover_image']}}" alt="Photo of a Shiba Inu" />
-                        <mat-card-content>
-                            <p>
-                                {{result[i]['description_1']}}
-                            </p>
-                        </mat-card-content>
-                        <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['press_release_id'], 'result')">
-                                <mat-icon>edit</mat-icon>
+
+        <mat-tab-group>
+            <mat-tab label="2 Wheeler">
+                <section class="section">
+                    <br/>                     
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                        <div class="searchdesign" fxFlex="50%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTerm" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="20%">
+                            <mat-form-field fxFlex="100%">
+                                <mat-label>Sort by</mat-label>
+                                <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
+                                    <mat-option value="title_a_z">Title A-Z</mat-option>
+                                    <mat-option value="title_z_a">Title Z-A</mat-option>
+                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </section>
+                <mat-list>
+                    <ng-container *ngFor="let data of result | filterEventPress:searchTerm">
+                        <mat-list-item class="list-container" *ngIf="data.type == 'two_wheel'">
+                            <button mat-icon-button aria-label="label" (click)="openView()">
+                                <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['press_release_id'])">
-                                <mat-icon>delete</mat-icon>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(data.press_release_id,'result')">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                             </button>
-                        </mat-card-actions>
-                    </mat-card>
-                </ng-container>
-                <ng-container *ngIf="result[i + 1]">
-                    <mat-card fxFlex="25%">
-                        <mat-card-header>
-                            <mat-card-title>{{result[i + 1]['title']}}</mat-card-title>
-                            <mat-card-subtitle>{{result[i + 1]['news_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
-                        </mat-card-header>
-                        <img mat-card-image src="{{image_url}}{{result[i + 1]['cover_image']}}" alt="Photo of a Shiba Inu" />
-                        <mat-card-content>
-                            <p>
-                                {{result[i + 1]['description_1']}}
-                            </p>
-                        </mat-card-content>
-                        <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 1]['press_release_id'], 'result')">
-                                <mat-icon>edit</mat-icon>
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(data.press_release_id)">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 1]['press_release_id'])">
-                                <mat-icon>delete</mat-icon>
+                            <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                                 <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />-->
+                                 <h3 class="truncate" matLine>{{data.title}}</h3>
+                            <p class="truncate1" matLine>{{data.description_1}}</p>     
+                            <p class="truncate2" matLine>{{data.press_release_date}}</p> 
+                        </mat-list-item>
+                    </ng-container>
+                </mat-list>
+            </mat-tab>
+            <mat-tab label="4 Wheeler">
+                <mat-list>
+                    <ng-container *ngFor="let data of result | filterEventPress:searchTerm">
+                        <mat-list-item class="list-container" *ngIf="data.type == 'four_wheel'">
+                            <button mat-icon-button aria-label="label" (click)="openView()">
+                                <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
                             </button>
-                        </mat-card-actions>
-                    </mat-card>
-                </ng-container>
-                <ng-container *ngIf="result[i + 2]">
-                    <mat-card fxFlex="25%">
-                        <mat-card-header>
-                            <mat-card-title>{{result[i + 2]['title']}}</mat-card-title>
-                            <mat-card-subtitle>{{result[i + 2]['news_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
-                        </mat-card-header>
-                        <img mat-card-image src="{{image_url}}{{result[i + 2]['cover_image']}}" alt="Photo of a Shiba Inu" />
-                        <mat-card-content>
-                            <p>
-                                {{result[i + 2]['description_1']}}
-                            </p>
-                        </mat-card-content>
-                        <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 2]['press_release_id'], 'result')">
-                                <mat-icon>edit</mat-icon>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(data.press_release_id,'result')">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 2]['press_release_id'])">
-                                <mat-icon>delete</mat-icon>
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(data.press_release_id)">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
-                        </mat-card-actions>
-                    </mat-card>
-                </ng-container>
-                <ng-container *ngIf="result[i + 3]">
-                    <mat-card fxFlex="25%">
-                        <mat-card-header>
-                            <mat-card-title>{{result[i + 3]['title']}}</mat-card-title>
-                            <mat-card-subtitle>{{result[i + 3]['news_date']| date: 'dd/MM/yyyy'}}</mat-card-subtitle>
-                        </mat-card-header>
-                        <img mat-card-image src="{{image_url}}{{result[i + 3]['cover_image']}}" alt="Photo of a Shiba Inu" />
-                        <mat-card-content>
-                            <p>
-                                {{result[i + 3]['description_1']}}
-                            </p>
-                        </mat-card-content>
-                        <mat-card-actions>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(result[i + 3]['press_release_id'], 'result')">
-                                <mat-icon>edit</mat-icon>
-                            </button>
-                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 3]['press_release_id'])">
-                                <mat-icon>delete</mat-icon>
-                            </button>
-                        </mat-card-actions>
-                    </mat-card>
-                </ng-container>
-            </div>            
-            <br/>
-        </ng-container>
+                            <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                                 <h3 class="truncate" matLine>{{data.title}}</h3>
+                            <p class="truncate1" matLine>{{data.description_1}}</p>     
+                            <p class="truncate2" matLine>{{data.press_release_date}}</p> 
+                        </mat-list-item>
+                    </ng-container>
+                </mat-list>
+            </mat-tab>
+        </mat-tab-group>
     </mat-sidenav-content>
 </mat-sidenav-container>

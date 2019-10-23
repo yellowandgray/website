@@ -7,55 +7,33 @@
     box-shadow: 0px 0px 8px 0px #a7a7a7;
 }
 .dash-1 p{
-    font-size: 17px;
+    font-size: 12px;
     font-family: Roboto, "Helvetica Neue", sans-serif;
     text-align: center;
-    background: #ff9900;
+    /* background: #ff9900; */
     padding: 7px 5px;
-    color: #fff;
-    height: 40px;
+    color: #8e8e8e;
+    height: 30px;
 }
 .dash-1 h3 {
-    padding: 20px 0px 0px 20px;
+    padding: 0px 0px 0px 0px;
     font-size: 36px;
     margin: 0;
-    color: #0099c6;
+    color: #4a4a4a;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .dash-top{
     margin-top: 10px
 }
-.dash-top i{
-    color: #fff;
-    padding: 10px;
-    background: #e03030;
-    box-shadow: 0px 0px 8px 0px #a7a7a7;
-    font-size: 50px;
+.dash-1 i{
+    color: #36c;
+    padding: 0px 0px 10px 0px;
+    /* background: #e03030; */
+    /* box-shadow: 0px 0px 8px 0px #a7a7a7; */
+    font-size: 25px;
 }
-.dash-top .dash-1:nth-child(2) i{
-    color: #fff;
-    padding: 10px;
-    background: #6a0;
-    box-shadow: 0px 0px 8px 0px #a7a7a7;
-}
-.dash-top .dash-1:nth-child(3) i{
-    color: #fff;
-    padding: 10px;
-    background: #36c;
-    box-shadow: 0px 0px 8px 0px #a7a7a7;
-}
-.dash-top .dash-1:nth-child(4) i{
-    color: #fff;
-    padding: 10px;
-    background: #d47;
-    box-shadow: 0px 0px 8px 0px #a7a7a7;
-}
-.dash-top .dash-1:nth-child(5) i{
-    color: #fff;
-    padding: 10px;
-    background: #f90;
-    box-shadow: 0px 0px 8px 0px #a7a7a7;
-}
+
 .dash-top{
     padding: 20px;
     height: 200px;
@@ -63,7 +41,7 @@
     align-items: stretch;
 }
 .dash-top-2{
-    padding: 20px;
+/*    padding: 20px;*/
     justify-content: space-between;
     align-items: stretch;
 }
@@ -78,14 +56,17 @@
 .doller h1 img{
     width: 16%;
 }
+.doller h1 {
+    text-align: center;
+}
 .doller h3{
     text-align: center;
-    padding: 10px 10px 20px 10px;
+    padding: 0px 0px 10px 0px;
 }
 .doller h4{
     text-align: center;
     font-size: 21px;
-    padding: 20px 10px;
+    padding: 10px 10px;
     margin: 0;
     color: #484848;
 }

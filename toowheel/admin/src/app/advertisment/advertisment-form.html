@@ -12,6 +12,7 @@
             <div fxFlex="50%">
                 <button type="button" mat-raised-button (click)="fileInput.click()">{{file_name}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event)" />
+                <mat-icon matTooltip="Banner - Width: 1583px; Height: Any; / Card - Width: 350px; Height: 510px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">

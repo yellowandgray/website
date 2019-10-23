@@ -11,15 +11,17 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./advertisment.component.css']
 })
 export class AdvertismentComponent implements OnInit {
+searchTerm: string = '';
+    sortdata: string = '';
   result = [];  
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
       this.getAdvertisment();
   }
-  image_url: string = '../toowheel/api/v1/';
+  image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
     getAdvertisment(): void {
-  this.httpClient.get<any>('../toowheel/api/v1/get_advertisment')
+  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_advertisment')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -72,6 +74,24 @@ export class AdvertismentComponent implements OnInit {
        }
     });
     }
+    sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.title.localeCompare(b.title));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.title.localeCompare(a.title));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.created_at.localeCompare(b.created_at));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
+    }
 }
 
 @Component({
@@ -109,7 +129,7 @@ export class AdvertismentForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('../toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -149,7 +169,7 @@ export class AdvertismentForm {
           formData.append('url', this.advertismentForm.value.url);
           url = 'insert_advertisement';
           }
-          this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -195,7 +215,7 @@ export class AdvertismentDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../toowheel/api/v1/delete_record/advertisement/advertisement_id='+this.advertisement_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/advertisement/advertisement_id='+this.advertisement_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

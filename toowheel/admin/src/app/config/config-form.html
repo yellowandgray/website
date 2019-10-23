@@ -12,6 +12,7 @@
             <div fxFlex="50%" fxLayoutAlign="center center" *ngIf="field_type === 'image'">
                 <button type="button" mat-raised-button (click)="fileInput.click()">{{file_name}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event)" />
+                <mat-icon matTooltip="Width: 693px, Height: 822px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon> 
             </div>
             <div fxFlex="50%" *ngIf="field_type === 'text'">
                 <mat-form-field class="full-width">

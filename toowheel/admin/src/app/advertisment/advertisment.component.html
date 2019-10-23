@@ -7,7 +7,28 @@
         <div class="add-btn-container">
             <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Advertisement</button>
         </div>
-        <ng-container *ngFor="let data of result; let i = index">
+         <section class="section">
+                    <br/>                     
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                        <div class="searchdesign" fxFlex="50%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTerm" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="20%">
+                            <mat-form-field fxFlex="100%">
+                                <mat-label>Sort by</mat-label>
+                              <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
+                                    <mat-option value="title_a_z">Title A-Z</mat-option>
+                                    <mat-option value="title_z_a">Title Z-A</mat-option>
+                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </section>
+        <ng-container *ngFor="let data of result | filterEventAdvertisment:searchTerm; let i = index">
             <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
                 <ng-container *ngIf="result[i]">
                     <mat-card fxFlex="25%">
@@ -18,10 +39,10 @@
                         <img mat-card-image src="{{image_url}}{{result[i]['image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-actions>
                             <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['advertisement_id'],'result')">
-                                <mat-icon>edit</mat-icon>
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['advertisement_id'])">
-                                <mat-icon>delete</mat-icon>
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
                         </mat-card-actions>
                     </mat-card>
@@ -35,10 +56,10 @@
                         <img mat-card-image src="{{image_url}}{{result[i + 1]['image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-actions>
                             <button mat-icon-button aria-label="label" (click)="openDialog(result[i+1]['advertisement_id'], 'result')">
-                                <mat-icon>edit</mat-icon>
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 1]['advertisement_id'])">
-                                <mat-icon>delete</mat-icon>
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
                         </mat-card-actions>
                     </mat-card>
@@ -52,10 +73,10 @@
                         <img mat-card-image src="{{image_url}}{{result[i + 2]['image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-actions>
                             <button mat-icon-button aria-label="label" (click)="openDialog(result[i+2]['advertisement_id'],'result')">
-                                <mat-icon>edit</mat-icon>
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 2]['advertisement_id'])">
-                                <mat-icon>delete</mat-icon>
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
                         </mat-card-actions>
                     </mat-card>
@@ -69,10 +90,10 @@
                         <img mat-card-image src="{{image_url}}{{result[i + 3]['image']}}" alt="Photo of a Shiba Inu" />
                         <mat-card-actions>
                             <button mat-icon-button aria-label="label" (click)="openDialog(result[i+3]['advertisement_id'],'result')">
-                                <mat-icon>edit</mat-icon>
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i + 3]['advertisement_id'])">
-                                <mat-icon>delete</mat-icon>
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
                         </mat-card-actions>
                     </mat-card>

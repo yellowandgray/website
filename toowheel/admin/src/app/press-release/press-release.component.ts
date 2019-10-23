@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 import * as moment from 'moment';
 
 @Component({
@@ -12,15 +13,17 @@ import * as moment from 'moment';
   styleUrls: ['./press-release.component.css']
 })
 export class PressReleaseComponent implements OnInit {
+    searchTerm: string = '';
+    sortdata: string = '';
     result = [];  
     constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
     this.getPressRelease();
   }
-  image_url: string = '../toowheel/api/v1/';
+  image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
     getPressRelease(): void {
-     this.httpClient.get<any>('../toowheel/api/v1/get_press_release')
+     this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_press_release')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -55,6 +58,40 @@ export class PressReleaseComponent implements OnInit {
           });
     }
     
+       
+        openView(): void  {
+        const dialogRef = this.dialog.open(PressreleaseViewFrom, {
+            minWidth: "40%",
+            maxWidth: "40%"
+        });
+
+       dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+            });
+        }
+
+    confirmDialog(id, action): void  {
+    var data = null;
+      if(id != 0) { 
+        data = id;
+      }
+    const dialogRef = this.dialog.open(PictureViewPress, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: {
+            data: data,
+            action: action
+        }
+    });
+
+   dialogRef.afterClosed().subscribe(result => {
+       if(result !== false && result !== 'false') {
+      //this.getMember();
+      //this.getFourWheelMember();
+       }
+    });
+}
+    
     confirmDelete(id): void  {
     var data = null;
       if(id != 0) { 
@@ -72,6 +109,25 @@ export class PressReleaseComponent implements OnInit {
        }
     });
     }
+    
+    sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.title.localeCompare(b.title));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.title.localeCompare(a.title));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.press_release_date.localeCompare(b.press_release_date));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.press_release_date.localeCompare(a.press_release_date));
+            break;
+            default:
+            break;
+        }
+    }
 }
 
 @Component({
@@ -85,8 +141,8 @@ export class PressReleaseForm {
     medias:any[];
     cover_image: string = 'Choose Cover Image';
     thumb_image: string = 'Choose Thumb Image';
-    banner_image_1: string = 'Choose Image';
-    banner_image_2: string = 'Choose Image';
+    banner_image_1: string = 'Choose Image 1';
+    banner_image_2: string = 'Choose Image 2';
     cover_image_path: string;
     thumb_image_path: string;
     banner_image_1_path: string;
@@ -123,7 +179,7 @@ export class PressReleaseForm {
                 date: new Date()
             });
     }
-    this.httpClient.get('../toowheel/api/v1/get_medias').subscribe(
+    this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_medias').subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
                     this.medias = res["result"]["data"];
@@ -140,13 +196,54 @@ export class PressReleaseForm {
         });
     }
 
+    editorConfig: AngularEditorConfig = {
+        editable: true,
+          spellcheck: true,
+          height: '600px',
+          minHeight: '600px',
+          maxHeight: '600px',
+          width: 'auto',
+          minWidth: '0',
+          translate: 'yes',
+          enableToolbar: true,
+          showToolbar: true,
+          placeholder: 'Enter text here...',
+          defaultParagraphSeparator: '',
+          defaultFontName: '',
+          defaultFontSize: '',
+          fonts: [
+            {class: 'arial', name: 'Arial'},
+            {class: 'times-new-roman', name: 'Times New Roman'},
+            {class: 'calibri', name: 'Calibri'},
+            {class: 'comic-sans-ms', name: 'Comic Sans MS'}
+          ],
+          customClasses: [
+          {
+            name: 'quote',
+            class: 'quote',
+          },
+          {
+            name: 'redText',
+            class: 'redText'
+          },
+          {
+            name: 'titleText',
+            class: 'titleText',
+            tag: 'h1',
+          },
+        ],
+        uploadUrl: 'v1/image',
+        sanitize: true,
+        toolbarPosition: 'top',
+    };
+
     fileProgress(fileInput: any, name:string, field: string) {
         var fileData = <File>fileInput.target.files[0];
         this[name] = fileData.name;
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('../toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -209,7 +306,7 @@ export class PressReleaseForm {
           formData.append('youtube_id', this.pressreleaseForm.value.youtube_id);
         url = 'insert_press_release';
       }
-      this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -253,7 +350,7 @@ export class PressreleaseDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../toowheel/api/v1/delete_record/press_release/press_release_id='+this.press_release_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/press_release/press_release_id='+this.press_release_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -273,3 +370,47 @@ export class PressreleaseDelete {
         );
   }
 }
+        
+        @Component({
+  selector: 'picture-view',
+  templateUrl: 'picture-view.html',
+})
+ 
+export class PictureViewPress {
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+    action: string = '';
+    loading = false;
+    member_id = 0;
+    data: any;
+    constructor(
+    public dialogRef: MatDialogRef<PictureViewPress>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.datapopup != null) { 
+            this.action = this.datapopup.action;
+            this.data = this.datapopup.data;
+            if(this.datapopup.action == 'delete') {
+                this.member_id = this.datapopup.data;
+            }
+    }
+}
+        }  
+
+
+  @Component({
+  selector: 'pressrelease-view-form',
+  templateUrl: 'pressrelease-view-form.html',
+})
+ 
+export class PressreleaseViewFrom {
+    constructor(
+    public dialogRef: MatDialogRef<PressreleaseViewFrom>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
+    
+    onNoClick(): void {
+        this.dialogRef.close();
+    }
+}  

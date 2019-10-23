@@ -1,0 +1,93 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <div class="add-btn-container">
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null');"><mat-icon>add</mat-icon> Workshop</button>
+        </div>
+        <mat-tab-group>
+            <mat-tab label="2 Wheeler">
+                <section class="section">
+                    <br/>                     
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                        <div class="searchdesign" fxFlex="50%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTerm" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="20%">
+                            <mat-form-field fxFlex="100%">
+                                <mat-label>Sort by</mat-label>
+                              <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
+                                    <mat-option value="title_a_z">Title A-Z</mat-option>
+                                    <mat-option value="title_z_a">Title Z-A</mat-option>
+                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </section>
+                <mat-list>                    
+                    <mat-list-item class="list-container" *ngFor="let data of result | filterEventworkshop:searchTerm; let i = index">                
+                        <button mat-icon-button aria-label="label" (click)="openView()">
+                                <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openDialog(data.workshop_id, 'result')">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.workshop_id)">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                        </button>                                    
+                        <img matListAvatar src="{{image_url}}{{data.image_path}}" *ngIf="data.image_path && data.image_path != ''" alt="..." (click)="confirmDialog(data, 'preview')"/>
+                             <img matListAvatar src="{{image_url}}no_preview.jpg" *ngIf="!data.image_path || data.image_path == ''" alt="..." />
+                        <h3 class="truncate" matLine>{{data.name}} - {{data.incharge}}</h3>
+                        <p class="truncate2" matLine>{{data.email}} - {{data.mobile}}</p>                         
+                    </mat-list-item>                   
+                </mat-list>
+            </mat-tab>
+            <mat-tab label="4 Wheeler">
+                <section class="section">
+                    <br/>                     
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                        <div class="searchdesign" fxFlex="50%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTerm" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="20%">
+                            <mat-form-field fxFlex="100%">
+                                <mat-label>Sort by</mat-label>
+                              <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords1()">
+                                    <mat-option value="title_a_z">Title A-Z</mat-option>
+                                    <mat-option value="title_z_a">Title Z-A</mat-option>
+                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </section>
+                <mat-list>
+                    <mat-list-item class="list-container" *ngFor="let data of result_fw;let i = index">                            
+                        <button mat-icon-button aria-label="label" (click)="openView()">
+                                <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openDialog(data.workshop_id, 'result_fw')">
+                            <mat-icon #tooltip="matTooltip" matTooltip="View">edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.workshop_id)">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                        </button>                                    
+                        <img matListAvatar src="{{image_url}}{{data.image_path}}" *ngIf="data.image_path && data.image_path != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                             <img matListAvatar src="{{image_url}}no_preview.jpg" *ngIf="!data.image_path || data.image_path == ''" alt="..." />
+                        <h3 class="truncate" matLine>{{data.name}} - {{data.incharge}}</h3>
+                        <p class="truncate2" matLine>{{data.email}} - {{data.mobile}}</p>                        
+                    </mat-list-item>
+                </mat-list>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-sidenav-content>
+</mat-sidenav-container>

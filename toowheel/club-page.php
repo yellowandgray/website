@@ -35,7 +35,9 @@ if ($type == 'four_wheel') {
                 <div class="row">
                     <div class="col-lg-12">
                         <div id="about-club">
-                            <p onclick="document.getElementById('about-club').classList.remove('club-about')"><i class="fa fa-times" aria-hidden="true"></i></P>
+                            <p onclick="document.getElementById('about-club').classList.remove('club-about')">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </P>
                             <h1>About Club</h1>
                             <p><?php echo $club['about']; ?></p>
                         </div>

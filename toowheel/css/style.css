@@ -181,22 +181,24 @@ body {
 
 .bg-1 {
     background: url(../img/bg-1.jpg)no-repeat;
-    height: 90%;
-    /* padding-bottom: 50px; */
+    /*    height: 90%;*/
+    /*    padding-bottom: 50px; */
     position: relative;
     z-index: 2;
     background-size: cover;
-    top: 108px;
+    /*    top: 108px;*/
 }
 
 .bg-1 .container {
-    position: relative;
-    bottom: 285px;
+    position: absolute;
+    left: 14%;
+    z-index: 1;
+    top: 10px;
 }
 
 .bg-1 .slick-slider {
-    position: relative;
-    bottom: 270px;
+    /*    position: relative;
+        bottom: 270px;*/
 }
 
 .bg-1 span {
@@ -240,7 +242,7 @@ body {
 }
 
 .discover-slider {
-    height: auto;
+    height: 380px;
     border-radius: 10px;
 }
 
@@ -361,7 +363,7 @@ body {
     background: #f2f2f2;
     padding: 8% 0;
     position: relative;
-    top: 108px;
+    /*    top: 108px;*/
 }
 
 .media-bg {
@@ -523,7 +525,7 @@ body {
 .section-bg {
     background: #f2f2f2;
     position: relative;
-    top: 108px !important;
+    /*    top: 108px !important;*/
 }
 
 .ptb-40 {
@@ -1915,4 +1917,55 @@ div#html5-watermark {
     padding: 2px;
     background: #fff;
     border: 1px solid #d2d2d2;
+}
+
+#club1 {
+    padding-bottom: 100px;
+    position: relative;
+    top: -130px;
+}
+
+.discover-btn {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 4%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.discover-btn .discover-btn-home {
+    background: red;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid red;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.discover-btn .discover-btn-home:hover {
+    background: #ffffffe0;
+    color: red;
+    border: 1px solid red;
+    text-decoration: none;
+}
+.dont-show{
+    padding: 10px;
+    /* background: #363636; */
+    color: #bdbdbd;
+    cursor: pointer;
+}
+.dont-show-cancel  {
+    border: none;
+    background: #363636;
+    color: #fff;
+    margin-top: 10px;
+}
+.dont-show-submit  {
+    border: none;
+    background: #ff0202;
+    color: #fff;
+    margin-top: 10px;
 }

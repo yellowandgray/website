@@ -11,9 +11,11 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./member.component.css']
 })
 export class MemberComponent implements OnInit {
+searchTerm: string = '';
+    sortdata: string = '';
   result = [];
   result_fw = [];
-  image_url: string = '../toowheel/api/v1/';
+  image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
@@ -21,7 +23,7 @@ export class MemberComponent implements OnInit {
       this.getFourWheelMember();
   }
   getMember(): void {
-  this.httpClient.get<any>('../toowheel/api/v1/get_two_wheel_member')
+  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_two_wheel_member')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -34,7 +36,7 @@ export class MemberComponent implements OnInit {
         );
   }
   getFourWheelMember(): void {
-  this.httpClient.get<any>('../toowheel/api/v1/get_four_wheel_member')
+  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_four_wheel_member')
   .subscribe(
           (res)=>{
               this.result_fw = res["result"]["data"];
@@ -49,7 +51,7 @@ export class MemberComponent implements OnInit {
   changeStatus(id, status): void {
       var formData = new FormData();
       formData.append('activated', status);
-      this.httpClient.post<any>('../toowheel/api/v1/update_record/member/member_id = '+id, formData)
+      this.httpClient.post<any>('https://www.toowheel.com/toowheel/api/v1/update_record/member/member_id = '+id, formData)
   .subscribe(
           (res)=>{
               this.getMember();
@@ -106,6 +108,42 @@ confirmDialog(id, action): void  {
        }
     });
 }
+sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.first_name.localeCompare(b.first_name));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.first_name.localeCompare(a.first_name));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.created_at.localeCompare(b.created_at));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
+    }
+    sortRecords1(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result_fw).sort((a,b) => a.first_name.localeCompare(b.first_name));
+            break;
+            case 'title_z_a':
+            (this.result_fw).sort((a,b) => b.first_name.localeCompare(a.first_name));
+            break;
+            case 'created_a_z':
+                (this.result_fw).sort((a,b) => a.created_at.localeCompare(b.created_at));
+            break;
+            case 'created_z_a':
+                (this.result_fw).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
+    }
 
 }
 
@@ -117,6 +155,7 @@ export class MemberForm {
     memberForm: FormGroup;
     loading = false;
     member_id = 0;
+    clubs = [];
     constructor(
     public dialogRef: MatDialogRef<MemberForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,private _snackBar: MatSnackBar,
@@ -167,6 +206,26 @@ export class MemberForm {
         this.member_id = this.data.member_id;
     }
     }
+    getClub(): void {
+       this.loading = true;
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_club_by_type/'+this.memberForm.value.type).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.clubs = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
 }
 
 @Component({
@@ -174,7 +233,7 @@ export class MemberForm {
   templateUrl: 'member-delete-confirmation.html',
 })
 export class MemberDelete {
-    image_url: string = '../toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
     action: string = '';
     loading = false;
     member_id = 0;
@@ -198,7 +257,7 @@ export class MemberDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../toowheel/api/v1/delete_record/member/member_id='+this.member_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/member/member_id='+this.member_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

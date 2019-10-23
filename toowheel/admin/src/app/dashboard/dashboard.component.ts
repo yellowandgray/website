@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ChartReadyEvent, ChartErrorEvent, ChartSelectEvent,
    ChartMouseOverEvent, ChartMouseOutEvent } from 'ng2-google-charts';
 import { GoogleChartInterface } from 'ng2-google-charts/google-charts-interfaces';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
 selector: 'app-dashboard',
@@ -9,15 +12,46 @@ templateUrl: './dashboard.component.html',
 styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent  {
+ 
 
-
-
-
-/* piechart & columnChart */   
-
-
-
-
+result = [];
+result1 = [];
+    result_four_wheel:any[];
+    constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
+  
+    
+ngOnInit() {
+    //this.getEvent();
+    //this.getNews();
+  }
+image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+       getEvent(): void {
+     this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_member')
+     .subscribe(
+             (res)=>{
+                 this.result = res["result"]["data"];
+           },
+           (error)=>{
+               this._snackBar.open(error["statusText"], '', {
+         duration: 2000,
+       });
+           }
+           );
+     }
+       getNews(): void {
+     this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_news')
+     .subscribe(
+             (res)=>{
+                 this.result1 = res["result"]["data"];
+           },
+           (error)=>{
+               this._snackBar.open(error["statusText"], '', {
+         duration: 2000,
+       });
+           }
+           );
+     }
+       
 public pieChart: GoogleChartInterface = {
     chartType: 'PieChart',
     dataTable: [
@@ -30,19 +64,17 @@ public pieChart: GoogleChartInterface = {
  pieHole: 0.2,},
   };
   
-  public columnChart: GoogleChartInterface = { 
+
+public columnChart: GoogleChartInterface = { 
       chartType: 'ColumnChart',
       dataTable: [
         ['Country', 'Performance', 'Profits'],
-      
       ['Website Earnings',   200, 600],
       ['Website Traffic',    600, 900],
       ['Website Earnings',   500, 800],
       ['Website Traffic',    400, 600],
       ['Website Earnings',   200, 500],
       ['Website Traffic',    600, 800],
-      
-     
       ],
       options: {title: 'Toowheel',
                        }
@@ -82,101 +114,4 @@ public columnChartWTooltips: GoogleChartInterface =  {
       tooltip: {isHtml: true} // This MUST be set to true for your chart to show.
     }
   };
-  
-    
-/* fusioncharts */
-
-
-dataSource: Object;
-  constructor() {
-    this.dataSource = {
-      chart: {
-        caption: "Top 10 Club",
-        subCaption: "",
-        xAxisName: "Club",
-        yAxisName: "Members",
-        numberSuffix: "",
-        theme: "fusion"
-      },
-     
-      data: [
-        {
-          label: "Venezuela",
-          value: "290"
-        },
-        {
-          label: "Saudi",
-          value: "260"
-        },
-        {
-          label: "Canada",
-          value: "180"
-        },
-        {
-          label: "Iran",
-          value: "140"
-        },
-        {
-          label: "Russia",
-          value: "115"
-        },
-        {
-          label: "UAE",
-          value: "100"
-        },
-        {
-          label: "US",
-          value: "30"
-        },
-        {
-          label: "China",
-          value: "30"
-        }
-      ]
-    }; 
-  }
-
-  /*
-  dataS: Object;
-  constructor() {
-    this.dataS = {
-      chart: {
-        caption: "Nordstrom's Customer Satisfaction Score for 2017",
-        lowerLimit: "0",
-        upperLimit: "100",
-        showValue: "1",
-        numberSuffix: "%",
-        theme: "fusion",
-        showToolTip: "0"
-      },
-     
-      colorRange: {
-        color: [
-          {
-            minValue: "0",
-            maxValue: "50",
-            code: "#F2726F"
-          },
-          {
-            minValue: "50",
-            maxValue: "75",
-            code: "#FFC533"
-          },
-          {
-            minValue: "75",
-            maxValue: "100",
-            code: "#62B58F"
-          }
-        ]
-      },
-      dials: {
-        dial: [
-          {
-            value: "81"
-          }
-        ]
-      }
-    }; 
-  } 
-*/
 }

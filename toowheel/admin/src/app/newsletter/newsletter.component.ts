@@ -11,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./newsletter.component.css']
 })
 export class NewsletterComponent implements OnInit {
+ searchTerm: string = '';
+    sortdata: string = '';
   result = [];  
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
@@ -18,7 +20,7 @@ export class NewsletterComponent implements OnInit {
       this.getNewsletter();
   }
   getNewsletter(): void {
-  this.httpClient.get<any>('../toowheel/api/v1/get_newsletter')
+  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_newsletter')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -69,6 +71,24 @@ export class NewsletterComponent implements OnInit {
        }
     });
 }
+sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.email.localeCompare(b.email));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.email.localeCompare(a.email));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.newsletter_id.localeCompare(b.newsletter_id));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.newsletter_id.localeCompare(a.newsletter_id));
+            break;
+            default:
+            break;
+        }
+    }
 
 }
 
@@ -107,7 +127,7 @@ export class NewsletterForm {
         url = 'update_record/newsletter/newsletter_id = '+this.newsletter_id;
       }
       this.loading = true;
-      this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -150,7 +170,7 @@ export class NewsletterDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../toowheel/api/v1/delete_record/newsletter/newsletter_id='+this.newsletter_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/newsletter/newsletter_id='+this.newsletter_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

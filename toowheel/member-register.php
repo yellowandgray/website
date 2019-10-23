@@ -70,7 +70,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                             <option value="17">17</option>
                                             <option value="18" selected>18</option>
                                             <option value="19">19</option>
-                                            <option value="20">20</option>
+                                            <option value="20" selected>20</option>
                                             <option value="21">21</option>
                                             <option value="22">22</option>
                                             <option value="23">23</option>
@@ -151,6 +151,13 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                             <option value="98">98</option>
                                             <option value="99">99</option>
                                         </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="age">Marital Status</label>
+                                        <select class="form-control" id="marital_status" name="marital_status">
+                                            <option value="single">Single</option>
+                                            <option value="married">Married</option>
+                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="ic_passport">IC Number / Passport Number</label> 
@@ -288,7 +295,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         <input type="text" class="form-control" name="contact_number" id="contact_number" placeholder="" required-i onchange="removeValidation('contact_number');" />
                                         <div id="contact_number_error"></div>
                                     </div>
-                                    <div class="form-group">
+<!--                                    <div class="form-group">
                                         <label for="license_category">Driver License Category</label> 
                                         <span class="red-i">*</span>
                                         <select class="form-control" name="license_category" id="license_category" required-i onchange="removeValidation('license_category');">
@@ -298,7 +305,8 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                             <option value="class3ca">Class 3CA</option>
                                         </select>
                                         <div id="license_category_error"></div>
-                                    </div>
+                                    </div>-->
+
                                     <div class="form-group">
                                         <label for="address">Address</label> 
                                         <span class="red-i">*</span>
@@ -322,6 +330,11 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         </select>
                                         <div id="state_id_error"></div>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="zip_code">Zip Code</label>
+                                        <span class="red-i">*</span>
+                                        <input placeholder="" name="zip_code" id="zip_code" type="text" required-i class="form-control">
+                                    </div>
                                     <br/>
                                     <h4>Referral</h4>
                                     <div class="form-group">
@@ -333,7 +346,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         <input placeholder="" id="referral_club_id" name="referral_club_id" type="text" class="form-control">
                                     </div>
                                     <br/>
-                                    <h4>Coverage</h4>
+<!--                                    <h4>Coverage</h4>
                                     <div class="form-group">
                                         <label for="coverage_full_name">Full Name (Next of Kin)</label>
                                         <input placeholder="" id="coverage_full_name" name="coverage_full_name" type="text" class="form-control" />
@@ -345,7 +358,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     <div class="form-group">
                                         <label for="coverage_address">Address</label>
                                         <textarea class="form-control" placeholder="" name="coverage_address" id="coverage_address" type="text" rows="3"></textarea>
-                                    </div>
+                                    </div>-->
                                     <br/>
                                     <h4>Login Information</h4>
                                     <div class="form-group">

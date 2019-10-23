@@ -13,14 +13,16 @@ import * as moment from 'moment';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
+  searchTerm: string = '';
+  sortdata: string = '';
   result = [];  
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
     ngOnInit() {
          this.getNews();
      }
-     image_url: string = '../toowheel/api/v1/';
+     image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
        getNews(): void {
-     this.httpClient.get<any>('../toowheel/api/v1/get_news')
+     this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_news')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -72,6 +74,39 @@ export class NewsComponent implements OnInit {
     });
 }
 
+        openView(): void  {
+        const dialogRef = this.dialog.open(NewsViewForm, {
+            minWidth: "40%",
+            maxWidth: "40%"
+        });
+
+       dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+        });
+    }
+
+confirmDialog(id, action): void  {
+    var data = null;
+      if(id != 0) { 
+        data = id;
+      }
+    const dialogRef = this.dialog.open(PictureViewNews, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: {
+            data: data,
+            action: action
+        }
+    });
+
+   dialogRef.afterClosed().subscribe(result => {
+       if(result !== false && result !== 'false') {
+      //this.getMember();
+      //this.getFourWheelMember();
+       }
+    });
+}
+
     confirmDelete(id): void  {
     var data = null;
       if(id != 0) { 
@@ -89,6 +124,24 @@ export class NewsComponent implements OnInit {
        }
     });
 }
+sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.title.localeCompare(b.title));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.title.localeCompare(a.title));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.news_date.localeCompare(b.news_date));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.news_date.localeCompare(a.news_date));
+            break;
+            default:
+            break;
+        }
+    }
 
 }
 
@@ -105,8 +158,8 @@ export class NewsForm {
     medias:any[];
     cover_image: string = 'Cover Image';
     thumb_image: string = 'Thumb Image';
-    banner_image_1: string = 'Banner Image 1';
-    banner_image_2: string = 'Banner Image 2';
+    banner_image_1: string = 'Image 1';
+    banner_image_2: string = 'Image 2';
     cover_image_path: string;
     thumb_image_path: string;
     banner_image_1_path: string;
@@ -153,7 +206,7 @@ export class NewsForm {
                 date: new Date()
             });
     }
-      this.httpClient.get('../toowheel/api/v1/get_medias').subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_medias').subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
                     this.medias = res["result"]["data"];
@@ -172,9 +225,9 @@ export class NewsForm {
     editorConfig: AngularEditorConfig = {
     editable: true,
       spellcheck: true,
-      height: 'auto',
-      minHeight: '400',
-      maxHeight: 'auto',
+      height: '600px',
+      minHeight: '600px',
+      maxHeight: '600px',
       width: 'auto',
       minWidth: '0',
       translate: 'yes',
@@ -211,7 +264,7 @@ export class NewsForm {
 };
     getCategory(): void {
        this.loading = true;
-          this.httpClient.get('../toowheel/api/v1/get_'+this.newsForm.value.type+'_category').subscribe(
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_'+this.newsForm.value.type+'_category').subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -231,7 +284,7 @@ export class NewsForm {
     }
     getClub(): void {
        this.loading = true;
-          this.httpClient.get('../toowheel/api/v1/get_club_by_category/'+this.newsForm.value.category_id).subscribe(
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_club_by_category/'+this.newsForm.value.category_id).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -255,7 +308,7 @@ export class NewsForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('../toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -326,7 +379,7 @@ export class NewsForm {
           formData.append('sponsor', this.newsForm.value.sponsor);
         url = 'insert_news';
       }
-      this.httpClient.post('../toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -342,8 +395,8 @@ export class NewsForm {
                 this._snackBar.open(error["statusText"], '', {
           duration: 2000,
         });
-            }
-            );
+      }
+    );
   }
 }
 
@@ -355,7 +408,7 @@ export class NewsGalleryForm {
     loading = false;
     news_id:any;
     result:any[];
-    image_url: string = '../toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
     constructor(
     public dialogRef: MatDialogRef<NewsGalleryForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -367,7 +420,7 @@ export class NewsGalleryForm {
       this.getImages();
     }
     getImages(){
-        this.httpClient.get('../toowheel/api/v1/get_news_gallery_by_news/'+this.news_id).subscribe(
+        this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_news_gallery_by_news/'+this.news_id).subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
                     this.result = res["result"]["data"];
@@ -393,7 +446,7 @@ export class NewsGalleryForm {
       var formData = new FormData();
           formData.append('news_id', this.news_id);
           formData.append('file', <File>fileInput.target.files[i]);
-      this.httpClient.post('../toowheel/api/v1/insert_news_gallery', formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/insert_news_gallery', formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -421,7 +474,7 @@ export class NewsGalleryForm {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../toowheel/api/v1/delete_record/news_gallery/news_gallery_id='+id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/news_gallery/news_gallery_id='+id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -465,7 +518,7 @@ export class NewsDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../toowheel/api/v1/delete_record/news/news_id='+this.news_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/news/news_id='+this.news_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -485,3 +538,48 @@ this._snackBar.open(res["result"]["message"], '', {
         );
   }
 }
+        
+@Component({
+  selector: 'picture-view',
+  templateUrl: 'picture-view.html',
+})
+ 
+export class PictureViewNews {
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+    action: string = '';
+    loading = false;
+    member_id = 0;
+    data: any;
+    constructor(
+    public dialogRef: MatDialogRef<PictureViewNews>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.datapopup != null) { 
+            this.action = this.datapopup.action;
+            this.data = this.datapopup.data;
+            if(this.datapopup.action == 'delete') {
+                this.member_id = this.datapopup.data;
+            }
+    }
+}
+        }  
+     
+
+             
+  @Component({
+  selector: 'news-view-form',
+  templateUrl: 'news-view-form.html',
+})
+ 
+export class NewsViewForm {
+    constructor(
+    public dialogRef: MatDialogRef<NewsViewForm>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
+    
+    onNoClick(): void {
+        this.dialogRef.close();
+    }
+}  
