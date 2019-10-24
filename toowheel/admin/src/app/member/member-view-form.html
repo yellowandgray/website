@@ -1,6 +1,112 @@
-<h2 mat-dialog-title>Member</h2>
+<h2 mat-dialog-title>Member Details</h2>
 <mat-dialog-content class="mat-typography">
-    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
-        <button mat-button [mat-dialog-close]="false">Cancel</button>
-    </div>
+    <form [formGroup]="memberForm" (ngSubmit)="onSubmit()">
+        <div class="member-profile-picture" fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%" fxLayoutAlign="end center">
+                <img src="{{image_url}}{{data.profile_picture}}" alt="" />
+            </div>
+        </div>
+        <br/>
+        <table mat-table class="member-table">
+            <h2>Basic Information:</h2>
+            <tr>
+                <th mat-header-cell>First Name</th>
+                <td mat-cell> {{data.first_name}} </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Last Name </th>
+                <td mat-cell> {{data.last_name}} </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Gender </th>
+                <td mat-cell> {{data.gender}} </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Age </th>
+                <td mat-cell> {{data.age}} </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Marital Status </th>
+                <td mat-cell> {{data.marital_status}} </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> IC Number / Passport Number </th>
+                <td mat-cell> {{data.ic_passport}} </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Date of Birth </th>
+                <td mat-cell> {{data.dob_date}}/{{data.dob_month}}/{{data.dob_year}} </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Club Name </th>
+                <td mat-cell> {{data.club_name}} </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Contact Number </th>
+                <td mat-cell> {{data.contact_number}} </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Address </th>
+                <td mat-cell> {{data.address}} </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Country </th>
+                <td mat-cell> {{data.country}} </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> State </th>
+                <td mat-cell *ngFor="let row of states"> {{row.name}} </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Zip Code </th>
+                <td mat-cell> {{data.zip_code}} </td>
+            </tr>
+            <br/>
+            <h2>Referral:</h2>
+            <tr>
+                <th mat-header-cell> Member ID </th>
+                <td mat-cell> {{data.referral_member_id}} </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Club </th>
+                <td mat-cell> {{data.referral_club_id}} </td>
+            </tr>
+            <br/>
+            <h2>Coverage Information:</h2>
+            <tr>
+                <th mat-header-cell> Full Name </th>
+                <td mat-cell>  </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Contact No. </th>
+                <td mat-cell>  </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Spouse Name </th>
+                <td mat-cell>  </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Child 1	 </th>
+                <td mat-cell>  </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> IC No. </th>
+                <td mat-cell>  </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> My Kit Id </th>
+                <td mat-cell>  </td>
+            </tr>
+            <br/>
+            <h2>Login:</h2>
+            <tr>
+                <th mat-header-cell> Email Address </th>
+                <td mat-cell> {{data.email}} </td>
+            </tr>
+        </table>
+        <br/>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+        </div>
+    </form>
 </mat-dialog-content>

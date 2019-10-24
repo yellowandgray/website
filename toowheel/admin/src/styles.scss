@@ -81,3 +81,27 @@ body {
     height: 16px!important;
     width: 16px!important;
 }
+
+table.member-table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.member-table th, td {
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.member-profile-picture img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    right: 15%;
+    border-radius: 50%;
+}
+
+.member-table h2 {
+    font-size: 17px !important;
+    margin: 0 !important;
+}

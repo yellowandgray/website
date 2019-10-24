@@ -116,14 +116,27 @@ confirmDialog(id, action): void  {
     });
 }
 
-    openView(): void  {
+    openView(id, res): void  {
+        var data = null;
+      if(id != 0) { 
+      this[res].forEach(val=> {
+           if(parseInt(val.member_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
       const dialogRef = this.dialog.open(MemberViewForm, {
           minWidth: "80%",
-          maxWidth: "80%"
+          maxWidth: "80%",
+          data: data
       });
 
       dialogRef.afterClosed().subscribe(result => {
-            console.log(`Dialog result: ${result}`);
+        if(result !== false && result !== 'false') {
+            this.getMember();
+            this.getFourWheelMember();
+            }
         });
     }
     openTshirt(): void  {
@@ -209,14 +222,14 @@ export class MemberForm {
             'license_category': this.data.license_category,
             'address': this.data.address,
             'country': this.data.country,
-            'state': this.data.state,
+            'state': this.data.state_id,
             'referral_member_id': this.data.referral_member_id,
             'referral_club_id': this.data.referral_club_id,
             'marital_status': this.data.marital_status,
             'zip_code': this.data.zip_code,
             'password': this.data.password,
             'email': this.data.email,
-            'club_id': this.data.email
+            'club_id': this.data.club_id
         })
         this.member_id = this.data.member_id;
         this.getClub();
@@ -406,14 +419,62 @@ this._snackBar.open(res["result"]["message"], '', {
 })
  
 export class MemberViewForm {
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+    memberForm: FormGroup;
+    loading = false;
+    member_id = 0;
+    clubs = [];
+    states = [];
     constructor(
     public dialogRef: MatDialogRef<MemberViewForm>,
-    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {}
-    
-    onNoClick(): void {
-        this.dialogRef.close();
+    private httpClient: HttpClient) {
+        this.memberForm = new FormGroup({
+            'type': new FormControl('two_wheel'),
+            'first_name': new FormControl('', Validators.required),
+            'last_name': new FormControl('', Validators.required),
+            'gender': new FormControl('male'),
+            'age': new FormControl('20'),
+            'ic_passport': new FormControl(''),
+            'dob': new FormControl(new Date()),
+            'contact_number': new FormControl(''),
+            'license_category': new FormControl(''),
+            'address': new FormControl(''),
+            'country': new FormControl('Malaysia'),
+            'state': new FormControl('', Validators.required),
+            'referral_member_id': new FormControl(''),
+            'referral_club_id': new FormControl(''),
+            'marital_status': new FormControl('single'),
+            'zip_code': new FormControl(''),
+            'email': new FormControl('', [Validators.required, Validators.email]),
+            'password': new FormControl(''),
+            'club_id': new FormControl('')
+        });
+        if(this.data != null) {
+            this.memberForm.patchValue({ 
+            'type': this.data.type,
+            'first_name': this.data.first_name,
+            'last_name': this.data.last_name,
+            'gender': this.data.gender,
+            'age': this.data.age,
+            'ic_passport': this.data.ic_passport,
+            'dob': this.data.dob_year +'-'+this.data.dob_month +'-'+this.data.dob_date,
+            'contact_number': this.data.contact_number,
+            'license_category': this.data.license_category,
+            'address': this.data.address,
+            'country': this.data.country,
+            'state': this.data.state_id,
+            'referral_member_id': this.data.referral_member_id,
+            'referral_club_id': this.data.referral_club_id,
+            'marital_status': this.data.marital_status,
+            'zip_code': this.data.zip_code,
+            'password': this.data.password,
+            'email': this.data.email,
+            'club_id': this.data.club_id
+        })
+            this.member_id = this.data.member_id;
+        }
     }
 }  
 
@@ -428,8 +489,4 @@ export class MemberTshirtForm {
     @Inject(MAT_DIALOG_DATA) public datapopup: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {}
-    
-    onNoClick(): void {
-        this.dialogRef.close();
-    }
 }  
