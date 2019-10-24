@@ -155,7 +155,8 @@
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
-                    <input matInput formControlName="dob" [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput formControlName="dob" [matDatepicker]="picker" placeholder="">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
