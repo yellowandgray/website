@@ -148,7 +148,7 @@ export class GalleryForm {
         });
         this.gallery_id = this.data.gallery_id;
         }
-        }
+    }
    
     fileProgress(fileInput: any, name: string, path: string) {
         var fileData = <File>fileInput.target.files[0];

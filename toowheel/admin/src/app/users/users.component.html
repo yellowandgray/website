@@ -31,14 +31,14 @@
         <mat-list>     
             <ng-container *ngFor="let data of result">
                 <mat-list-item class="list-container">
-                    <button mat-icon-button aria-label="label">
+                    <button mat-icon-button aria-label="label" (click)="openUsersForm(data.users_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                     </button>
-                    <button mat-icon-button aria-label="label">
+                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.users_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button>                                    
                     <img matListAvatar src="{{image_url}}{{data.media_path}}"/>
-                    <h3 class="truncate" matLine>{{data.user_name}}</h3> 
+                    <h3 class="truncate" matLine>{{data.name}}</h3> 
                     <p mat-line> {{data.role}} </p>
                 </mat-list-item> 
             </ng-container>

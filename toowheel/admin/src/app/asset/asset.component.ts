@@ -154,10 +154,10 @@ export class AssetForm {
                 if(res["result"]["error"] === false) {
                     this.dialogRef.close(true);
                 }else{
-            this._snackBar.open(res["result"]["message"], '', {
-              duration: 2000,
-            });
-            }
+                    this._snackBar.open(res["result"]["message"], '', {
+                      duration: 2000,
+                    });
+                }
             },
             (error)=>{
                 this.loading = false;
