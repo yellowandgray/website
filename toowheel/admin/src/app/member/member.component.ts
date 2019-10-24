@@ -176,25 +176,25 @@ export class MemberForm {
     @Inject(MAT_DIALOG_DATA) public data: any,private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
         this.memberForm = new FormGroup({
-            'type': new FormControl(),
-            'first_name': new FormControl(),
-            'last_name': new FormControl(),
-            'gender': new FormControl(),
-            'age': new FormControl(),
-            'ic_passport': new FormControl(),
-            'dob': new FormControl(),
-            'contact_number': new FormControl(),
-            'license_category': new FormControl(),
-            'address': new FormControl(),
+            'type': new FormControl(''),
+            'first_name': new FormControl('', Validators.required),
+            'last_name': new FormControl('', Validators.required),
+            'gender': new FormControl('male'),
+            'age': new FormControl('20'),
+            'ic_passport': new FormControl(''),
+            'dob': new FormControl(new Date()),
+            'contact_number': new FormControl(''),
+            'license_category': new FormControl(''),
+            'address': new FormControl(''),
             'country': new FormControl('Malaysia'),
-            'state': new FormControl(),
-            'referral_member_id': new FormControl(),
-            'referral_club_id': new FormControl(),
-            'marital_status': new FormControl(),
-            'zip_code': new FormControl(),
-            'email': new FormControl(),
-            'password': new FormControl(),
-            'club_id': new FormControl()
+            'state': new FormControl('', Validators.required),
+            'referral_member_id': new FormControl(''),
+            'referral_club_id': new FormControl(''),
+            'marital_status': new FormControl('single'),
+            'zip_code': new FormControl(''),
+            'email': new FormControl('', [Validators.required, Validators.email]),
+            'password': new FormControl(''),
+            'club_id': new FormControl('')
         });
         if(this.data != null) {
             this.memberForm.patchValue({ 
@@ -220,11 +220,6 @@ export class MemberForm {
         })
         this.member_id = this.data.member_id;
         this.getClub();
-    }else {
-        this.memberForm.patchValue({
-                dob: new Date(),
-                age: '20',
-            });
     }
     this.getState();
     }
@@ -304,6 +299,8 @@ export class MemberForm {
           formData.append('last_name', this.memberForm.value.last_name);
           if(this.image_path && this.image_path != '') {
           formData.append('profile_picture', this.image_path);
+          }else {
+              formData.append('profile_picture', '');
           }
           formData.append('gender', this.memberForm.value.gender);
           formData.append('age', this.memberForm.value.age);
