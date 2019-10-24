@@ -204,6 +204,8 @@
     }
     .custom-file-input {
         position: unset !important;
+        width: 100% !important;
+        padding-left: 0px !important;
     }
 }
 

@@ -12,24 +12,46 @@
                 <section class="section">
                     <br/>                     
                     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                        <div class="searchdesign" fxFlex="50%">
-                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTW" />
-                            </mat-form-field>
+                        <div class="searchdesign" fxFlex="30%">
+                            <b>Search by club name</b>
                         </div>
-                        <div fxFlex="20%">
-                            <mat-form-field fxFlex="100%">
-                                <mat-label>Sort by</mat-label>
-                                <mat-select [(ngModel)]="sortdata_tw" (selectionChange)="sortRecords('result', sortdata_tw)">
-                                    <mat-option value="title_a_z">Name A-Z</mat-option>
-                                    <mat-option value="title_z_a">Name Z-A</mat-option>
-                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
-                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
-                                </mat-select>
-                            </mat-form-field>
+                        <div class="searchdesign" fxFlex="70%">
+                            <b>Sort</b>
                         </div>
                     </div>
-                </section>                
+                    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+                        <div class="searchdesign" fxFlex="30%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Type here" [(ngModel)]="searchTermTW" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="70%" fxLayout="row">
+                            <div fxLayout="row" fxLayoutAlign="center center">
+                                <div>Name</div>
+                                <div fxLayout="column">
+                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'title_a_z')">
+                                        <mat-icon>keyboard_arrow_up</mat-icon>
+                                    </button>
+                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'title_z_a')">
+                                        <mat-icon>keyboard_arrow_down</mat-icon>
+                                    </button>                                
+                                </div>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div fxLayout="row" fxLayoutAlign="center center">
+                                <div>Date</div>
+                                <div fxLayout="column">
+                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'created_a_z')">
+                                        <mat-icon>keyboard_arrow_up</mat-icon>
+                                    </button>
+                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'created_z_a')">
+                                        <mat-icon>keyboard_arrow_down</mat-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <mat-list>
                     <ng-container *ngFor="let data of result | filterEventClub: searchTermTW; let i = index">
                         <ng-container *ngIf="result[i] ">

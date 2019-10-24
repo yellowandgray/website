@@ -54,6 +54,12 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <input id="email" placeholder="Email Address" name="email" type="email" tabindex="8" required />
                             </div>
                             <div class="form-group">
+                                <input id="password" placeholder="Password" name="Password" type="Password" tabindex="8" required />
+                            </div>
+                            <div class="form-group">
+                                <input id="confirm_password" placeholder="Confirm Password" name="confirm_password" type="Password" tabindex="8" required />
+                            </div>
+                            <div class="form-group">
                                 <input id="mobile" placeholder="Contact No." name="mobile" type="text" tabindex="9" required />
                             </div>
                             <div class="form-group">
