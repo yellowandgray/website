@@ -192,7 +192,7 @@ export class MemberForm {
             'referral_club_id': new FormControl(''),
             'marital_status': new FormControl('single'),
             'zip_code': new FormControl(''),
-            'email': new FormControl('', Validators.required),
+            'email': new FormControl('', [Validators.required, Validators.email]),
             'password': new FormControl(''),
             'club_id': new FormControl('')
         });
