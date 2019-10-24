@@ -11,9 +11,11 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+     searchTermTW: string = '';
+  searchTermFW: string = '';
+  sortdata_tw: string = '';
+  sortdata_fw: string = '';
   result = [];
-  sortdata: string = '';
-  searchTerm: string = '';
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
@@ -26,30 +28,40 @@ export class UsersComponent implements OnInit {
     .subscribe(
             (res)=>{
                 this.result = res["result"]["data"];
-            },
-            (error)=>{
-               this._snackBar.open(error["statusText"], '', {
-               duration: 2000,
-            });
-           }
+          },
+          (error)=>{
+              this._snackBar.open(error["statusText"], '', {
+        duration: 2000,
+      });
+          }
         );
     }
 
-  openUsersForm(): void  {
+  openUsersForm(id): void  {
+        var data = null;
+        if(id != 0) { 
+      this.result.forEach(val=> {
+           if(parseInt(val.users_id) === parseInt(id)) {
+                data = val;                
+                return false;
+           }
+        });
+    }
     const dialogRef = this.dialog.open(UsersForm, {
         minWidth: "80%",
-        maxWidth: "80%"
+        maxWidth: "80%",
+        data: data
     });
 
     dialogRef.afterClosed().subscribe(result => {
      if(result !== false && result !== 'false') {
-      this.getUsers();
+        this.getUsers();
        }
     });
 }
 
     openView(): void  {
-        const dialogRef = this.dialog.open(UsersViewFrom, {
+        const dialogRef = this.dialog.open(UsersViewForm, {
             minWidth: "40%",
             maxWidth: "40%"
     });
@@ -58,22 +70,41 @@ export class UsersComponent implements OnInit {
         console.log(`Dialog result: ${result}`);
       });
     }
-    sortRecords(): void {
-    switch(this.sortdata) {
-        case 'title_a_z':
-            (this.result).sort((a,b) => a.title.localeCompare(b.title));
-        break;
-        case 'title_z_a':
-        (this.result).sort((a,b) => b.title.localeCompare(a.title));
-        break;
-        case 'created_a_z':
-            (this.result).sort((a,b) => a.news_date.localeCompare(b.news_date));
-        break;
-        case 'created_z_a':
-            (this.result).sort((a,b) => b.news_date.localeCompare(a.news_date));
-        break;
-        default:
-        break;
+
+    confirmDelete(id): void  {
+        var data = null;
+        if(id != 0) { 
+          data = id;
+      }
+        const dialogRef = this.dialog.open(UsersDeleteForm, {
+            minWidth: "40%",
+            maxWidth: "40%",
+            data: data
+        });
+
+       dialogRef.afterClosed().subscribe(result => {
+           if(result !== false && result !== 'false') {
+                this.getUsers();
+            }
+        });
+    } 
+
+    sortRecords(arr, sort): void {
+        switch(sort) {
+            case 'title_a_z':
+                (this[arr]).sort((a,b) => a.title.localeCompare(b.title));
+            break;
+            case 'title_z_a':
+            (this[arr]).sort((a,b) => b.title.localeCompare(a.title));
+            break;
+            case 'created_a_z':
+                (this[arr]).sort((a,b) => a.press_release_date.localeCompare(b.press_release_date));
+            break;
+            case 'created_z_a':
+                (this[arr]).sort((a,b) => b.press_release_date.localeCompare(a.press_release_date));
+            break;
+            default:
+            break;
         }
     }
 
@@ -95,12 +126,22 @@ export class UsersForm {
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
     this.usersForm = new FormGroup({
-      'name': new FormControl('', Validators.required),
-      'email': new FormControl('', Validators.required),
-      'password': new FormControl('', Validators.required),
-      'contact': new FormControl('', Validators.required),
-      'role': new FormControl('', Validators.required)
+        'name': new FormControl('', Validators.required),
+        'email': new FormControl('', Validators.required),
+        'password': new FormControl('', Validators.required),
+        'contact': new FormControl('', Validators.required),
+        'role': new FormControl('', Validators.required)
     });
+        if(this.data != null) { 
+            this.usersForm.patchValue({ 
+                name: this.data.name,
+                email: this.data.email,
+                password: this.data.password,
+                contact: this.data.contact,
+                role: this.data.role
+        })
+        this.users_id = this.data.users_id;
+    }
 }
 
     fileProgress(fileInput: any, name:string, field: string) {
@@ -180,13 +221,13 @@ export class UsersForm {
 
 
   @Component({
-  selector: 'user-view-form',
-  templateUrl: 'user-view-form.html',
+  selector: 'users-view-form',
+  templateUrl: 'users-view-form.html',
 })
  
-export class UsersViewFrom {
+export class UsersViewForm {
     constructor(
-    public dialogRef: MatDialogRef<UsersViewFrom>,
+    public dialogRef: MatDialogRef<UsersViewForm>,
     @Inject(MAT_DIALOG_DATA) public datapopup: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {}
@@ -194,4 +235,50 @@ export class UsersViewFrom {
     onNoClick(): void {
         this.dialogRef.close();
     }
-}  
+}
+
+
+  @Component({
+  selector: 'users-delete-confirmation-form',
+  templateUrl: 'users-delete-confirmation-form.html',
+})
+ 
+export class UsersDeleteForm {
+    loading = false;
+    users_id = 0;
+    constructor(
+    public dialogRef: MatDialogRef<UsersDeleteForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.data != null) { 
+            this.users_id = this.data;
+        }
+    }
+
+    confirmDelete() {
+      if (this.users_id == null || this.users_id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/users/users_id='+this.users_id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+      this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+        );
+    }
+    
+}
