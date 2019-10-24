@@ -27,26 +27,26 @@
         </div>
     </div>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">        
-        
-<!--                <div fxFlex="50%" class="dialog-picture">
-                    <img mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo">
-                </div>-->
-<!--            <img class="dialog-picture" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />-->
-       <div fxFlex="33%">
-           <img class="dialog-picture" matTooltip="CoverImage"  mat-card-image src="{{image_url}}{{data['cover_image']}}" alt="Photo" />
+
+        <!--                <div fxFlex="50%" class="dialog-picture">
+                            <img mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo">
+                        </div>-->
+        <!--            <img class="dialog-picture" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />-->
+        <div fxFlex="33%">
+            <img class="dialog-picture" matTooltip="CoverImage"  mat-card-image src="{{image_url}}{{data['cover_image']}}" alt="Photo" />
         </div>
         <div fxFlex="33%">
-           <img class="dialog-picture"  matTooltip="Logo" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />
+            <img class="dialog-picture"  matTooltip="Logo" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />
         </div>
         <div fxFlex="33%">           
             <video class="video-fluid" matTooltip="Video" style="width: 100%; height: 100% " layout-fill loop="loop"  autoplay="autoplay" preload="auto">
-            <source src="{{image_url}}{{data['club_video']}}" type="video/mp4"/>
+                <source src="{{image_url}}{{data['club_video']}}" type="video/mp4"/>
             </video>
         </div>
     </div>
     <br/>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-         <div fxFlex="50%">
+        <div fxFlex="50%">
             <mat-form-field appearance="outline" fxFlex="100%">
                 <mat-label>Club name</mat-label>
                 <input matInput readonly placeholder="" formControlName="name" />               
@@ -59,19 +59,19 @@
             </mat-form-field>
         </div>       
     </div>
-<!--    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Rank</mat-label>
-                <input matInput readonly placeholder="" formControlName="rank" />                
-            </mat-form-field>
-        </div>
-        <div fxFlex="50%">
-            <button type="button" mat-raised-button (click)="fileInputBanner.click()">{{club_video_name}}</button>
-            <input hidden #fileInputBanner type="file" id="file_banner" (change)="fileProgress($event, 'club_video_name', 'club_video')" />
-            <mat-icon matTooltip="Width: any, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
-        </div>
-    </div>-->
+    <!--    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Rank</mat-label>
+                    <input matInput readonly placeholder="" formControlName="rank" />                
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <button type="button" mat-raised-button (click)="fileInputBanner.click()">{{club_video_name}}</button>
+                <input hidden #fileInputBanner type="file" id="file_banner" (change)="fileProgress($event, 'club_video_name', 'club_video')" />
+                <mat-icon matTooltip="Width: any, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+            </div>
+        </div>-->
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
         <div fxFlex="50%">
             <mat-form-field appearance="outline" fxFlex="100%">
@@ -162,11 +162,11 @@
         </mat-form-field>
     </div>
     <div fxFlex="50%">
-<!--        <mat-form-field appearance="outline" fxFlex="100%">
-            <mat-label>No. of Members</mat-label>
-            <input matInput placeholder="" formControlName="no_of_member" />
-            <mat-error>Members is required</mat-error>
-        </mat-form-field>-->
+        <!--        <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>No. of Members</mat-label>
+                    <input matInput placeholder="" formControlName="no_of_member" />
+                    <mat-error>Members is required</mat-error>
+                </mat-form-field>-->
     </div>
 </div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
@@ -179,7 +179,7 @@
 </div>
 <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
     <button mat-button [mat-dialog-close]="false">Close</button> 
-    
+
 </div>
 </form>
 </mat-dialog-content>
