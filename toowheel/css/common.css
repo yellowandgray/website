@@ -1422,24 +1422,24 @@ button {
 }
 
 #club-register input[type="file"] {
-    width: 100%;
+    width: auto;
     opacity: 1;
     position: absolute;
     top: 0;
     padding-left: 20px;
 }
 
-#club-register input[type="file"]:hover {
+/*#club-register input[type="file"]:hover {
     border-bottom: none;
     outline: none;
-}
+}*/
 
 #club-register input[type="file"]:focus {
-    border-bottom: none;
     outline: none;
     border: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    padding-left: 20px;
 }
 
 #club-register input[type="text"]:hover,
