@@ -15,7 +15,7 @@ export class ClubComponent implements OnInit {
   searchTermTW: string = '';
   searchTermFW: string = '';
   sortdata_tw: string = '';
-  sortdata_fw: string = '';
+  sortdata_fw: string = '';  
   result:any[];
   result_four_wheel:any[];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
@@ -51,9 +51,10 @@ export class ClubComponent implements OnInit {
         );
   }
   openDialog(id, res): void  {
-      var data = null;
+      var data = null;      
       if(id != 0) {
       this[res].forEach(val=> {
+      yourclick=0
            if(parseInt(val.club_id) === parseInt(id)) {
                 data = val;
                 return false;
@@ -90,16 +91,48 @@ export class ClubComponent implements OnInit {
            }
         });
     }
-    openView(): void  {
+    
+    
+    openView(id, res): void  {
+      var data = null;
+      if(id != 0) {
+      this[res].forEach(val=> {
+           if(parseInt(val.club_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
+    const dialogRef = this.dialog.open(ClubViewFrom, {
+        minWidth: "80%",
+        maxWidth: "80%",
+        data: data
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if(result !== false && result !== 'false') {
+      this.getClub();
+      this.getFourWheelClub();
+       }
+    });
+    }
+    
+    /*openView(id): void  {
+    var data = null;
+      if(id != 0) { 
+        data = id;
+      }
         const dialogRef = this.dialog.open(ClubViewFrom, {
             minWidth: "40%",
             maxWidth: "40%"
+             data: {
+            data: data,     
+        }
         });
 
        dialogRef.afterClosed().subscribe(result => {
             console.log(`Dialog result: ${result}`);
         });
-    }
+    }*/
      confirmDialog(id, action): void  {
     var data = null;
       if(id != 0) { 
@@ -172,6 +205,7 @@ export class ClubComponent implements OnInit {
   templateUrl: 'club-form.html',
 })
 export class ClubForm {
+          image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
     clubForm: FormGroup;
     loading = false;
     club_id = 0;
@@ -190,23 +224,23 @@ export class ClubForm {
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
         this.clubForm = new FormGroup({
-            'name': new FormControl(),
-            'type': new FormControl(),
-            'category_id': new FormControl(),
-            'state': new FormControl(),
-            'city': new FormControl(),
-            'zip': new FormControl(),
-            'landmark': new FormControl(),
-            'address': new FormControl(),
-            'club_leader_name': new FormControl(),
+            'name': new FormControl('', Validators.required),
+            'type': new FormControl('', Validators.required),
+            'category_id': new FormControl('', Validators.required),
+            'state': new FormControl('', Validators.required),
+            'city': new FormControl('', Validators.required),
+            'zip': new FormControl('', Validators.required),
+            'landmark': new FormControl('', Validators.required),
+            'address': new FormControl('', Validators.required),
+            'club_leader_name': new FormControl('', Validators.required),
             'no_of_member': new FormControl(),
-            'email': new FormControl(),
-            'mobile': new FormControl(),
-            'about': new FormControl(),
-            'facebook_link': new FormControl(),
-            'youtube_link': new FormControl(),
-            'twitter_link': new FormControl(),
-            'instagram_link': new FormControl(),
+            'email': new FormControl('', Validators.required),
+            'mobile': new FormControl('', Validators.required),
+            'about': new FormControl('', Validators.required),
+            'facebook_link': new FormControl('', Validators.required),
+            'youtube_link': new FormControl('', Validators.required),
+            'twitter_link': new FormControl('', Validators.required),
+            'instagram_link': new FormControl('', Validators.required),
             'rank': new FormControl()
         });
         if(this.data != null) {
@@ -564,20 +598,153 @@ export class PictureViewClub {
 }
         }  
 
-             
-  @Component({
+    
+   @Component({
   selector: 'club-view-form',
   templateUrl: 'club-view-form.html',
 })
- 
 export class ClubViewFrom {
+        image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+    clubForm: FormGroup;
+    loading = false;
+    club_id = 0;
+    categories:any[];
+    states:any[];
+    cities:any[];
+    file_cover_name: string = 'Cover Image';
+    file_logo_name: string = 'Club Logo';
+    club_video_name: string = 'Club Video';
+    cover_image: string;
+    logo_image: string;
+    club_video: string;
     constructor(
     public dialogRef: MatDialogRef<ClubViewFrom>,
-    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {}
-    
-    onNoClick(): void {
-        this.dialogRef.close();
+    private httpClient: HttpClient) {
+        this.clubForm = new FormGroup({
+            'name': new FormControl('', Validators.required),
+            'type': new FormControl('', Validators.required),
+            'category_id': new FormControl('', Validators.required),
+            'state': new FormControl('', Validators.required),
+            'city': new FormControl('', Validators.required),
+            'zip': new FormControl('', Validators.required),
+            'landmark': new FormControl('', Validators.required),
+            'address': new FormControl('', Validators.required),
+            'club_leader_name': new FormControl('', Validators.required),
+            'no_of_member': new FormControl(),
+            'email': new FormControl('', Validators.required),
+            'mobile': new FormControl('', Validators.required),
+            'about': new FormControl('', Validators.required),
+            'facebook_link': new FormControl('', Validators.required),
+            'youtube_link': new FormControl('', Validators.required),
+            'twitter_link': new FormControl('', Validators.required),
+            'instagram_link': new FormControl('', Validators.required),
+            'rank': new FormControl()
+        });
+        if(this.data != null) {
+            this.clubForm.patchValue({
+                name: this.data.name,
+                type: this.data.type,
+                category_id: this.data.category_id,
+                state: this.data.state_id,
+                city: this.data.city,
+                zip: this.data.zipcode,
+                landmark: this.data.landmark,
+                address: this.data.address,
+                club_leader_name: this.data.leader_name,
+                no_of_member: this.data.no_of_member,
+                email: this.data.email,
+                mobile: this.data.phone,
+                about: this.data.about,
+                facebook_link: this.data.facebook_link,
+                youtube_link: this.data.youtube_link,
+                twitter_link: this.data.twitter_link,
+                instagram_link: this.data.instagram_link,
+                rank: this.data.rank
+            });
+            this.club_id = this.data.club_id;
+            this.getCategory();
+        }
+        this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_states').subscribe(
+              (res)=>{
+                if(res["result"]["error"] === false) {
+                    this.states = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
     }
-}  
+    fileProgress(fileInput: any, name:string, path:string) {
+        var fileData = <File>fileInput.target.files[0];
+        this[name] = fileData.name;
+        this.loading = true;
+          var formData = new FormData();
+          formData.append('file', fileData);
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this[path] = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
+    getCategory(): void {
+       this.loading = true;
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_'+this.clubForm.value.type+'_category').subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.categories = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
+    getCityByState(): void {
+       this.loading = true;
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_city_by_state/'+this.clubForm.value.state).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.cities = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }  
+            
+            }   
