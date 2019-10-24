@@ -5,7 +5,7 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openUsersForm(0, 'result')"><mat-icon>add</mat-icon> users</button>
+            <button mat-raised-button color="primary" (click)="openUsersForm()"><mat-icon>add</mat-icon> users</button>
         </div>
         <section class="section">
             <br/>                     
@@ -28,5 +28,20 @@
                 </div>
             </div>
         </section>
+        <mat-list>     
+            <ng-container *ngFor="let data of result">
+                <mat-list-item class="list-container">
+                    <button mat-icon-button aria-label="label">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                    </button>
+                    <button mat-icon-button aria-label="label">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                    </button>                                    
+                    <img matListAvatar src="{{image_url}}{{data.media_path}}"/>
+                    <h3 class="truncate" matLine>{{data.user_name}}</h3> 
+                    <p mat-line> {{data.role}} </p>
+                </mat-list-item> 
+            </ng-container>
+        </mat-list>
     </mat-sidenav-content>
 </mat-sidenav-container>

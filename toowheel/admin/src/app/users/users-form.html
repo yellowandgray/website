@@ -9,7 +9,7 @@
                     <mat-error>Name is required</mat-error>
                 </mat-form-field>
             </div>
-            <div fxFlex="50%" fxLayoutAlign="start center">
+            <div fxFlex="50%" fxLayoutAlign="center center">
                 <button type="button" mat-raised-button (click)="fileInput.click()">{{file_name}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'file_name', 'media_path')" />
             </div>
@@ -42,8 +42,8 @@
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Role</mat-label>
                     <mat-select formControlName="role">
-                        <mat-option value="Test-1">Test 1</mat-option>
-                        <mat-option value="Test-2">Test 2</mat-option>
+                        <mat-option [value]="'Admin'">Admin</mat-option>
+                        <mat-option [value]="'General'">General</mat-option>
                     </mat-select>
                     <mat-error>Role is required</mat-error>
                 </mat-form-field>

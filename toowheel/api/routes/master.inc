@@ -227,7 +227,7 @@ $app->post('/insert_users', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $array = array('name' => $data['name'], 'email' => $data['email'], 'contact' => $data['contact'], 'password' => $data['password'], 'media_path' => $data['media_path'], 'role' => $data['role']);
+    $array = array('user_name' => $data['name'], 'email' => $data['email'], 'contact' => $data['contact'], 'password' => $data['password'], 'media_path' => $data['file_name'], 'role' => $data['role']);
     $record = $com->insertRecord($array, 'users');
     if ($record > 0) {
         $res['error'] = false;
