@@ -304,6 +304,8 @@ export class MemberForm {
           formData.append('last_name', this.memberForm.value.last_name);
           if(this.image_path && this.image_path != '') {
           formData.append('profile_picture', this.image_path);
+          }else {
+              formData.append('profile_picture', '');
           }
           formData.append('gender', this.memberForm.value.gender);
           formData.append('age', this.memberForm.value.age);
