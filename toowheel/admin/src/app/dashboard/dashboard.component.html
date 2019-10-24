@@ -10,7 +10,7 @@
                     <div fxLayout="column" fxLayoutGap="15px" class="dash-top">
                         <div class="dash-1">
                             <div md-select="result">
-                                <div fxFlex="100%">   
+                                <div fxFlex="100%">
                                     <i  fxLayoutAlign="center"  class="material-icons">supervised_user_circle</i>
                                     <h3  fxLayoutAlign="center" >{{result.length}}</h3>
                                     <p  fxLayoutAlign="center" >Number of Registered Member</p>
@@ -51,9 +51,9 @@
                     <div fxLayout="row" class="dash-top-2">
                         <div fxFlex="49%">
                             <!--<google-chart [data]="pieChart"></google-chart>-->
-                            <div fxFlex="100%">
+                           
                                 <google-chart [data]="columnChartWTooltips"></google-chart>
-                            </div>
+                  
                         </div>
                         <div fxFlex="49%">
                             <google-chart [data]="pieChart"></google-chart>
@@ -103,6 +103,7 @@
                                                 </div>-->
                     </div>
                 </div>
+                
             </div>
         </div>
     </mat-sidenav-content>

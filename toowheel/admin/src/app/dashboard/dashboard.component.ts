@@ -56,12 +56,13 @@ public pieChart: GoogleChartInterface = {
     chartType: 'PieChart',
     dataTable: [
       ['Parameters', 'Hours per Day'],
-     ['Website Earnings',    7],
-      ['Website Traffic',    7],
-      ['Top 10 Clubs',    7]
+     ['Male - Single',    200],
+      ['Female - Single',    150],
+      ['Male - Married',    280],
+      ['Female - Married',    150],
     ],
-   options: {'title': 'Toowheel',
- pieHole: 0.2,},
+   options: {'title': 'Members',
+ pieHole: 0.3,},
   };
   
 
@@ -91,25 +92,18 @@ public columnChart: GoogleChartInterface = {
 public columnChartWTooltips: GoogleChartInterface =  {
     chartType: 'ColumnChart',
     dataTable: [
-      ['Event', 'Top 10 Club', {
+      ['Event', 'Club', {
         type: 'string',
         label: 'Tooltip Chart',
         role: 'tooltip',
         p: {html: true}
       }],
-      ['club-1', 150, ''],
-      ['club-2', 180, ''],
-      ['club-3', 130, ''],
-      ['club-4', 110, ''],
-      ['club-5', 180, ''],
-      ['club-6', 160, ''],
-      ['club-7', 100, ''],
-      ['club-8', 200, ''],
-      ['club-9', 150, ''],
-      ['club-10', 100, '']
+      ['2 Wheel',1000, ''],
+      ['4 Wheel', 1500, ''],
+      
     ],
     options: {
-      title: 'Top 10 Club',
+      title: 'Total Clubs',
       legend: 'none',
       tooltip: {isHtml: true} // This MUST be set to true for your chart to show.
     }
