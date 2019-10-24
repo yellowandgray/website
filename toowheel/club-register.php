@@ -32,17 +32,23 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <select id="category_id" name="category_id" tabindex="3" required></select>
                             </div>
                             <div class="custom-file">
+                                <label>Choose Cover Image: </label>
                                 <input id="cover_image" name="cover_image" type="file" class="custom-file-input" onchange="attachFile('cover_image');" />
-                                <label class="custom-file-label" >Choose Cover Image...</label>
+<!--                                <label class="custom-file-label" >Choose Cover Image...</label>-->
                             </div>
+                            <br/>
+                            <br/>
                             <div class="custom-file">
+                                <label>Choose Club Logo: </label>
                                 <input id="logo" name="logo" type="file" class="custom-file-input" onchange="attachFile('logo');" />
-                                <label class="custom-file-label">Choose Logo...</label>
                             </div>
+                            <br/>
+                            <br/>
                             <div class="custom-file">
+                                <label>Choose Club Video: </label>
                                 <input id="club_video" name="club_video" type="file" class="custom-file-input" onchange="attachFile('club_video');" />
-                                <label class="custom-file-label">Choose Club Video...</label>
                             </div>
+                            <br/>
                             <br/>
                             <div class="form-group">
                                 <input id="email" placeholder="Email Address" name="email" type="email" tabindex="8" required />
