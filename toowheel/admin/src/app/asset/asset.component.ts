@@ -17,10 +17,10 @@ export class AssetComponent implements OnInit {
   ngOnInit() {
         this.getAsset();
   }
-    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
 
     getAsset(): void {
-    this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_asset')
+    this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_asset')
     .subscribe(
             (res)=>{
                 this.result = res["result"]["data"];
@@ -46,8 +46,7 @@ export class AssetComponent implements OnInit {
     const dialogRef = this.dialog.open(AssetForm, {
         minWidth: "80%",
         maxWidth: "80%",
-        data: data,
-        //console.log("yyyyyy--->"+data.title),
+        data: data
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -95,7 +94,6 @@ export class AssetForm {
         this.assetForm = new FormGroup({
             'title': new FormControl('', Validators.required)
         });
-        console.log("YYYADSJF-->"+this.data);
         if(this.data != null) { 
             this.assetForm.patchValue({ 
                 title: this.data.title
@@ -110,7 +108,7 @@ export class AssetForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -150,16 +148,16 @@ export class AssetForm {
             url = 'insert_asset';
         }
         this.loading = true;
-        this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
+        this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
                     this.dialogRef.close(true);
                 }else{
-            this._snackBar.open(res["result"]["message"], '', {
-              duration: 2000,
-            });
-            }
+                    this._snackBar.open(res["result"]["message"], '', {
+                      duration: 2000,
+                    });
+                }
             },
             (error)=>{
                 this.loading = false;
@@ -194,7 +192,7 @@ export class AssetDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/asset/asset_id='+this.asset_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/delete_record/asset/asset_id='+this.asset_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

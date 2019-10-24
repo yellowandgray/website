@@ -20,13 +20,15 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>First Name</mat-label>
-                    <input matInput placeholder="" formControlName="first_name" />
+                    <input matInput required placeholder="" formControlName="first_name" />
+                    <mat-error>First name is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Last Name</mat-label>
-                    <input matInput placeholder="" formControlName="last_name" />
+                    <input matInput required placeholder="" formControlName="last_name" />
+                    <mat-error>Last name is required</mat-error>
                 </mat-form-field>
             </div>
         </div>
@@ -153,7 +155,7 @@
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
-                    <input matInput required formControlName="dob" [matDatepicker]="picker" placeholder="Choose a date">
+                    <input matInput formControlName="dob" [matDatepicker]="picker" placeholder="Choose a date">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
@@ -178,7 +180,7 @@
             <div fxFlex="50%" fxLayoutAlign="center center">
                 <button type="button" mat-raised-button (click)="fileInput.click()">{{profile_image}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'profile_image', 'image_path')" />
-                       <mat-icon matTooltip="Width: 1583px, Height: 600px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+                       <mat-icon matTooltip="Width: 200px, Height: 200px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
@@ -202,6 +204,7 @@
                     <mat-select formControlName="state">
                         <mat-option [value]="row.state_id" *ngFor="let row of states">{{row.name}}</mat-option>
                     </mat-select>
+                    <mat-error>State is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="33%">
@@ -227,11 +230,12 @@
             </div>
         </div>
         <h4>Login Information:</h4>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Email Address</mat-label>
-                    <input matInput placeholder="" formControlName="email" />
+                    <input matInput type="email" required placeholder="" formControlName="email" />
+                    <mat-error>Email is required</mat-error>
                 </mat-form-field>
             </div>
         </div>

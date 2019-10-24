@@ -31,7 +31,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <h4>Basic Information</h4>
                                 <form id="basic_information">
                                     <div class="form-group">
-                                        <label for="type">Category</label>
+                                        <label for="type">Type</label>
                                         <span class="red-i">*</span>
                                         <select class="form-control" name="type" id="type" onchange="loadClubs(this.value);">
                                             <option value="four_wheel">4 Wheel</option>
