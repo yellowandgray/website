@@ -164,8 +164,8 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                         <p id="myDiv">Search</p>
                     </span> 
                 </a>
-<!--                <a href="login.php?type=<?php echo $type; ?>" class="float-left margin-left-10">-->
-                <a onclick="//document.getElementById('about-club').classList.add('club-about')" class="float-left margin-left-10">
+                <a href="login.php?type=<?php echo $type; ?>" class="float-left margin-left-10">
+<!--                <a onclick="//document.getElementById('about-club').classList.add('club-about')" class="float-left margin-left-10">-->
                     <span>
                         <i class="fa fa-sign-in search-bg"></i>
                         <p> Login</p>
@@ -174,8 +174,8 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
             </div>
             <div class="mobile-header-login">
 <!--                <i class="fa fa-search"></i>-->
-                <!--<a href="login.php?type=<?php //echo $type; ?>"><i class="fa fa-user"></i></a>-->
-                <a onclick="//document.getElementById('about-club').classList.add('club-about')"><i class="fa fa-user"></i></a>
+                <a href="login.php?type=<?php echo $type; ?>"><i class="fa fa-user"></i></a>
+<!--                <a onclick="//document.getElementById('about-club').classList.add('club-about')"><i class="fa fa-user"></i></a>-->
             </div>
         </div>
         <div class="row">
