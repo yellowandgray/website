@@ -29,15 +29,19 @@
         </div>
     </div>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="50%">
+        <div fxFlex="50%">            
             <button type="button" mat-raised-button (click)="fileInputCover.click()">{{file_cover_name}}</button>
             <input hidden #fileInputCover type="file" id="file_cover" (change)="fileProgress($event,'file_cover_name', 'cover_image')" />
             <mat-icon matTooltip="Width: 1583px, Height: 400px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon> 
+            
+<!--              <img class="dialog-picture" matTooltip="CoverImage"  mat-card-image src="{{image_url}}{{data['cover_image']}}" alt="Photo" />-->
+           
         </div>
         <div fxFlex="50%">
             <button type="button" mat-raised-button (click)="fileInputLogo.click()">{{file_logo_name}}</button>
             <input hidden #fileInputLogo type="file" id="file_logo" (change)="fileProgress($event,'file_logo_name', 'logo_image')" />
             <mat-icon matTooltip="Width: 320px, Height: 320px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+<!--            <img class="dialog-picture"  matTooltip="Logo" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />-->
         </div>
     </div>
     <br/>

@@ -137,7 +137,7 @@ export class GalleryForm {
       'title': new FormControl('', Validators.required),
       'media_type': new FormControl('', Validators.required),
       'type': new FormControl('', Validators.required),
-      'description': new FormControl('', Validators.required)
+      'description': new FormControl('')
         });
         if(this.data != null) {
                 this.galleryForm.patchValue({
