@@ -200,6 +200,8 @@ $app->post('/insert_member', function() use ($app) {
             $com->updateRecordWithWhere(array('membership_id' => $member_id), 'member', 'member_id = ' . $record);
             $res['message'] = 'Record inserted successfully';
             $res['data'] = $member_id;
+            $tpy = new Thirdparty();
+            $tpy->sendMail('mushaqdeen@gmail.com', 'Mushaqdeen', '$body_web', '$body_mobile', '$subject', 'noreply@toowheel.com', '$from_name', '', '', '', '');
         }
     } else {
         $res['message'] = 'Email id already exist';

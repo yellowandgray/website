@@ -2,6 +2,7 @@
 
 require_once '../include/common.php';
 require_once '../include/DbHandler.php';
+require_once '../include/thirdparty.php';
 require_once '../include/Config.php';
 require '../include/Slim/Slim.php';
 

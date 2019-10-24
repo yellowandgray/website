@@ -220,7 +220,7 @@ class PHPMailer {
      * Hosts will be tried in order.
      * @var string
      */
-    public $Host = 'sg2plcpnl0201.prod.sin2.secureserver.net';
+    public $Host = 'toowheel.com';
 
     /**
      * Sets the default SMTP server port.
@@ -250,13 +250,13 @@ class PHPMailer {
      * Sets SMTP username.
      * @var string
      */
-    public $Username = 'info@ygbeta.in';
+    public $Username = 'noreply@toowheel.com';
 
     /**
      * Sets SMTP password.
      * @var string
      */
-    public $Password = 'ygbeta';
+    public $Password = '?Qo9x8p0';
 
     /**
      *  Sets SMTP auth type. Options are LOGIN | PLAIN | NTLM  (default LOGIN)

@@ -22,7 +22,7 @@ export class MemberComponent implements OnInit {
   sortdata_fwm: string = '';
   result = [];
   result_fw = [];
-  image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+  image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
@@ -30,7 +30,7 @@ export class MemberComponent implements OnInit {
       this.getFourWheelMember();
   }
   getMember(): void {
-  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_two_wheel_member')
+  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_two_wheel_member')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -43,7 +43,7 @@ export class MemberComponent implements OnInit {
         );
   }
   getFourWheelMember(): void {
-  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_four_wheel_member')
+  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_four_wheel_member')
   .subscribe(
           (res)=>{
               this.result_fw = res["result"]["data"];
@@ -58,7 +58,7 @@ export class MemberComponent implements OnInit {
   changeStatus(id, status): void {
       var formData = new FormData();
       formData.append('activated', status);
-      this.httpClient.post<any>('https://www.toowheel.com/toowheel/api/v1/update_record/member/member_id = '+id, formData)
+      this.httpClient.post<any>('https://www.toowheel.com/beta/toowheel/api/v1/update_record/member/member_id = '+id, formData)
   .subscribe(
           (res)=>{
               this.getMember();
@@ -176,7 +176,7 @@ export class MemberForm {
     @Inject(MAT_DIALOG_DATA) public data: any,private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
         this.memberForm = new FormGroup({
-            'type': new FormControl(''),
+            'type': new FormControl('two_wheel'),
             'first_name': new FormControl('', Validators.required),
             'last_name': new FormControl('', Validators.required),
             'gender': new FormControl('male'),
@@ -229,7 +229,7 @@ export class MemberForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -249,7 +249,7 @@ export class MemberForm {
     }
     getClub(): void {
        this.loading = true;
-          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_club_by_type/'+this.memberForm.value.type).subscribe(
+          this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_club_by_type/'+this.memberForm.value.type).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -269,7 +269,7 @@ export class MemberForm {
     }
     getState(): void {
        this.loading = true;
-          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_states').subscribe(
+          this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_states').subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -329,7 +329,7 @@ export class MemberForm {
       } else {
         url = 'insert_member';
       }
-      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -355,7 +355,7 @@ export class MemberForm {
   templateUrl: 'member-delete-confirmation.html',
 })
 export class MemberDelete {
-    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     action: string = '';
     loading = false;
     member_id = 0;
@@ -379,7 +379,7 @@ export class MemberDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/member/member_id='+this.member_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/delete_record/member/member_id='+this.member_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
