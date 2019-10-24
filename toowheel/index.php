@@ -122,9 +122,9 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                 <div class="col-md-12">
                                     <h1>PHOTOS</h1>
                                     <?php if ($type == 'two_wheel') { ?>
-                                        <a href="<?php echo BASE_URL . $images[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[0]['title']; ?><br/><div><?php echo $images[0]['description']; ?></div>" data-group="imagegroup"><img src="<?php echo BASE_URL . $configs['two_wheel_photos']; ?>" class="popup-img" alt="" /></a>
+                                        <a href="<?php echo BASE_URL . $images[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[0]['title']; ?> <?php echo $images[0]['description']; ?>" data-group="imagegroup"><img src="<?php echo BASE_URL . $configs['two_wheel_photos']; ?>" class="popup-img" alt="" /></a>
                                     <?php } else { ?>
-                                        <a href="<?php echo BASE_URL . $images[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[0]['title']; ?><br/><div><?php echo $images[0]['description']; ?></div>" data-group="imagegroup"><img src="<?php echo BASE_URL . $configs['four_wheel_photos']; ?>" class="popup-img" alt="" /></a>
+                                        <a href="<?php echo BASE_URL . $images[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[0]['title']; ?> <?php echo $images[0]['description']; ?>" data-group="imagegroup"><img src="<?php echo BASE_URL . $configs['four_wheel_photos']; ?>" class="popup-img" alt="" /></a>
                                     <?php } ?>
                                 </div>
                             </div>
@@ -138,9 +138,9 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 </div>
                 <div class="home-gallery video-section">
                     <?php if ($type == 'two_wheel') { ?>
-                        <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?><br/><div><?php echo $videos[0]['description']; ?></div>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['two_wheel_videos']; ?>" class="popup-img" alt="" /></a>
+                        <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?> <?php echo $videos[0]['description']; ?>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['two_wheel_videos']; ?>" class="popup-img" alt="" /></a>
                     <?php } else { ?>
-                        <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?><br/><div><?php echo $videos[0]['description']; ?></div>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['four_wheel_videos']; ?>" class="popup-img" alt="" /></a>
+                        <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?> <?php echo $videos[0]['description']; ?>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['four_wheel_videos']; ?>" class="popup-img" alt="" /></a>
                     <?php } ?>
                 </div>
             </div>

@@ -84,7 +84,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                             </table>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="profile-details-section-1">
                             <div class="profile-table">
                                 <h4>COVERAGE INFORMATION (NEXT OF KIN)</h4>

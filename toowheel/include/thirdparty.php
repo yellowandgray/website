@@ -1,9 +1,8 @@
 <?php
 
 require_once 'PHPMailer/class.phpmailer.php';
-require_once 'textlocal.class.php';
 
-class thirdparty {
+class Thirdparty {
 
     private $conn;
 
@@ -15,9 +14,14 @@ class thirdparty {
     }
 
     public function sendMail($to_id, $to_name, $body_web, $body_mobile, $subject, $from_url, $from_name, $attach_url, $attach_name, $bcc, $bcc_name) {
-        $mail = new PHPMailer();  // create a new object
-        $mail->From = $from_url;
-        $mail->FromName = $from_name;
+        $mail = new PHPMailer(true);  // create a new object
+        $mail->IsSMTP();
+        $mail->Host = "toowheel.com"; // SMTP server
+        $mail->SMTPDebug = 2;
+        $mail->Port = 26;                    // set the SMTP port for the GMAIL server
+        $mail->Username = "noreply@toowheel.com"; // SMTP account username
+        $mail->Password = "?Qo9x8p0";
+        $mail->SetFrom($from_url, $from_name);
         $mail->AddReplyTo($from_url, $from_name); //reply-to address
         $mail->Subject = $subject;
         if ($attach_url !== '') {

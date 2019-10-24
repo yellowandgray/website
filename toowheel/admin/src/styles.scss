@@ -6,7 +6,8 @@ body {
 }
 
 .mat-sidenav {
-    min-width: 250px 
+    min-width: 250px;
+    max-width: 250px;
 }
 
 .text-center {
@@ -73,4 +74,19 @@ body {
     max-height: 100% !important;
     height: auto !important;
     width: 100% !important;
+}
+
+.sort-icon {
+    line-height: 16px!important;
+    height: 16px!important;
+    width: 16px!important;
+}
+
+table.member-table {
+    width: 100%;
+    text-align: left;
+}
+
+table.member-table th, td {
+    padding: 10px 0;
 }

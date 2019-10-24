@@ -190,6 +190,9 @@ $app->post('/insert_member', function() use ($app) {
     if (count($exist) == 0) {
         $state = $com->selectRow('*', 'state', 'state_id = ' . $data['state_id']);
         $data['state'] = $state['name'];
+        if (!isset($data['profile_picture'])) {
+            $data['profile_picture'] = '';
+        }
         $record = $com->insertRecord(array('type' => $data['type'], 'first_name' => $data['first_name'], 'last_name' => $data['last_name'], 'profile_picture' => $data['profile_picture'], 'gender' => $data['gender'], 'age' => $data['age'], 'ic_passport' => $data['ic_passport'], 'dob_date' => $data['dob_date'], 'dob_month' => $data['dob_month'], 'dob_year' => $data['dob_year'], 'contact_number' => $data['contact_number'], 'address' => $data['address'], 'country' => $data['country'], 'state_id' => $data['state_id'], 'referral_member_id' => $data['referral_member_id'], 'referral_club_id' => $data['referral_club_id'], 'marital_status' => $data['marital_status'], 'zip_code' => $data['zip_code'], 'email' => $data['email'], 'password' => $com->encryptPassword($data['password']), 'club_id' => $data['club_id'], 'payment_type' => $data['payment_type'], 'paypal_response' => $data['paypal_response'], 'activated' => $data['activated'], 'paypal_transaction_id' => $data['paypal_transaction_id'], 'fund_transfer_file' => $data['fund_transfer_file'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'member');
         if ($record > 0) {
             $res['error'] = false;
@@ -197,6 +200,8 @@ $app->post('/insert_member', function() use ($app) {
             $com->updateRecordWithWhere(array('membership_id' => $member_id), 'member', 'member_id = ' . $record);
             $res['message'] = 'Record inserted successfully';
             $res['data'] = $member_id;
+            $tpy = new Thirdparty();
+            $tpy->sendMail('mushaqdeen@gmail.com', 'Mushaqdeen', '$body_web', '$body_mobile', '$subject', 'noreply@toowheel.com', '$from_name', '', '', '', '');
         }
     } else {
         $res['message'] = 'Email id already exist';
@@ -224,7 +229,7 @@ $app->post('/insert_users', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $array = array('name' => $data['name'], 'email' => $data['email'], 'contact' => $data['contact'], 'password' => $data['password'], 'media_path' => $data['media_path'], 'role' => $data['role']);
+    $array = array('name' => $data['name'], 'email' => $data['email'], 'contact' => $data['contact'], 'password' => $data['password'], 'media_path' => $data['file_name'], 'role' => $data['role']);
     $record = $com->insertRecord($array, 'users');
     if ($record > 0) {
         $res['error'] = false;

@@ -4030,3 +4030,20 @@ thead td {
     color: #363636;
     margin-bottom: 30px;
 }
+
+.change-password-section {
+    text-align: center;
+}
+
+.change-password-section h3 {
+    font-size: 20px;
+    letter-spacing: 0;
+}
+
+.change-password-section i {
+    position: unset;
+}
+
+.change-password-section img {
+    margin-bottom: 20px;
+}
