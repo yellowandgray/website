@@ -26,7 +26,7 @@ export class WorkshopComponent implements OnInit {
     this.getFourWheelWorkshop();
   }
   getWorkshop(): void {
-  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_two_wheel_workshop')
+  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_two_wheel_workshop')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -39,7 +39,7 @@ export class WorkshopComponent implements OnInit {
         );
   }
   getFourWheelWorkshop(): void {
-  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_four_wheel_workshop')
+  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_four_wheel_workshop')
   .subscribe(
           (res)=>{
               this.result_fw = res["result"]["data"];
@@ -51,7 +51,7 @@ export class WorkshopComponent implements OnInit {
         }
         );
   }
-    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     openDialog(id, res) {
         var data = null;
       if(id != 0) { 
@@ -231,7 +231,7 @@ export class WorkshopForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -279,7 +279,7 @@ export class WorkshopForm {
           formData.append('image_path', this.image_path);
         url = 'insert_workshop';
       }
-      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -322,7 +322,7 @@ export class WorkshopDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/workshop/workshop_id='+this.workshop_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/delete_record/workshop/workshop_id='+this.workshop_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -349,7 +349,7 @@ this._snackBar.open(res["result"]["message"], '', {
 })
  
 export class PictureViewWorkshop {
-    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     action: string = '';
     loading = false;
     member_id = 0;

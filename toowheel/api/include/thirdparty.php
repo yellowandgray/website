@@ -28,7 +28,8 @@ class thirdparty {
         $mail->Body = $body_web;
         $mail->AltBody = $body_mobile;
         $mail->AddAddress($to_id, $to_name);
-        $mail->Send();
+        print($mail->Send());
+        exit;
     }
 
     public function sendSMS($numbers, $message) {
