@@ -60,7 +60,7 @@
                 </div>
             </div>
         </section>
-        <section class="ftco-section pad-b-50">
+        <section class="ftco-section pad-b-50" style="background-image: url('images/bg_02.png'); background-size: cover;">
             <div class="pad-lr-80">
                 <div class="row  mar-b-30">
                     <div class="col-md-4 about-pic">
@@ -68,9 +68,8 @@
                         <h3>THE COMPANY</h3>
                         <div>
                             <div class="about-sec" style="background-image: url('images/about/001.jpg'); background-size: cover;">
-                                <p>BIOCRAFT is a firm, promoted and managed by professionals in the Chemical Industry, with over 4 decades of collective experience in managing the business side of high technology chemicals catering to various industries, including Textiles and Fabrics. The company represents leading global technology and its< associated brand names in India. The company is known for its quality & ethical business practices.</p>
-
-                            </div>
+                                <p>Guardian health management is a firm, promoted and managed by professionals in the Chemical Industry, with over 4 decades of collective experience in managing the business side of high technology chemicals catering to various industries, including Textiles and Fabrics. The company represents leading global technology and its associated brand names in India. The company is known for its quality & ethical business practices.</p>
+</div>
                         </div>
 
                     </div>

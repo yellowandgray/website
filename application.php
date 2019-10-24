@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php 
-      $page = 'applications';
-      include 'head.php'; ?>
+    <?php
+    $page = 'applications';
+    include 'head.php';
+    ?>
     <body class="goto-here">
 
 
         <!-- END nav -->
         <?php include 'enquiry.php'; ?>
         <section>
-            <?php  include 'menu.php';  ?>
+            <?php include 'menu.php'; ?>
         </section>
         <div class="hero-wrap hero-bread" style="background-image: url('images/bg_03.jpg'); background-size: cover;">
 
@@ -105,16 +106,22 @@
         <section class="ftco-section pad-b-50" style="background-image: url('images/bg_02.png'); background-size: cover;">
             <div class="pad-lr-80">
                 <div class="row">
-                    <div class="col-lg-8 product-details pl-md-5  app-con ftco-animate">
+                    <div class="col-lg-12 product-details pl-md-5  app-con ftco-animate">
                         <h3>Hospital</h3>
+                        <div class="box-3 text-for-hai">
+                            <h5 class="text-center">Hospital Acquired Infections [HAI]</h5>
+                            <p class="text-center">The World Health Organization ranks nosocomial or hospital acquired infections [HAI’s] as the third most significant threat to the human race.</p>
+                            <p class="text-center">“10-30% of the patients admitted to hospitals and nursing homes In India acquires nosocomial infection as against an impressive 5% in the west.” -Hospital Infection Society –India</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 product-details pl-md-5  app-con ftco-animate">
+
                         <h5>Does your commercial disinfection product provide you with up to 7 days of broadspectrum microbial control & protection?</h5>
                         <p>Many disinfectant products are inefficient. They destroy germs on the surface being treated,but last only a short time before new microorganisms arrive to recolonise and recontaminate the surface.</p>
                         <p>Fresche EF3851 is a dual action, surface bonding commercial grade disinfectant, which delivers long term, broadspectrum microbial controland protection on treated surfaces.It not only sanitises the surface, but continue to protect the surface from bacteria, fungus, and molds for up to 7 days.</p>
-                        <div class="box-3 text-for-hai">
-                            <h5>HAI</h5>
-                            <p>The World Health Organization ranks nosocomial or hospital acquired infections [HAI’s] as the third most significant threat to the human race.</p>
-                            <p>“10-30% of the patients admitted to hospitals and nursing homes In India acquires nosocomial infection as against an impressive 5% in the west.” -Hospital Infection Society –India</p>
-                        </div> 
+
                         <h5>YOUR FRESCHE APPLICATION</h5>
                         <p>Operation thatre, ICU, Cath lab, Emergency room, Lobby area, Stretchers, ECG Monitor, Oprating table, Instrument Cabinet, Trolley, Surgeon’s tools, Hospital linen, Surgical drapes, OT floors and walls, ICU bed, Spotlight, Floors, Walls, Ceilings, Bedpan, Kidney dish, Bedrails, Air filters, Evaporative coolers, Rubbish and Recycling areas.</p>
                         <!--<button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>-->
@@ -128,6 +135,6 @@
                 </div>
             </div>
         </section>
-<?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
     </body>
 </html>

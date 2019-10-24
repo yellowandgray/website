@@ -31,4 +31,5 @@
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="css/fs-gal.css" rel="stylesheet" type="text/css"/>
 </head>

@@ -15,9 +15,9 @@
                                             <div class="float-right">
                                                 <i class="fa fa-facebook-square" aria-hidden="true"></i>
                                                 <i class="fa fa-youtube" aria-hidden="true"></i>
-                                                <a class="phone"><i class="fa fa-phone-square" aria-hidden="true"></i><p>+91 8409 012345</p></a>
-                                                <a class="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i><p>+91 8409 012345</p></a>
-                                                <a class="mail"><i class="fa fa-envelope" aria-hidden="true"></i><p>info@email.com</p></a>
+                                                <a class="phone" href="tel:+917373387504"><i class="fa fa-phone-square" aria-hidden="true"></i><p>+91 8409 012345</p></a>
+                                                 <a class="whatsapp" href="https://api.whatsapp.com/send?phone=+918409012345"><i class="fa fa-whatsapp" aria-hidden="true"></i><p>+91 8409 012345</p></a>
+                                                <a class="mail" href="mailto:info@guardianhealthmanagement.com"><i class="fa fa-envelope" aria-hidden="true"></i><p>info@guardianhealthmanagement.com</p></a>
                                             </div>
                                         </div>
                                     </div>
@@ -49,6 +49,12 @@
                                         echo 'active';
                                     }
                                     ?>"><a href="application.php" class="nav-link">Applications</a></li>
+                                    
+                                    <li class="nav-item <?php
+                                    if ($page == 'technology') {
+                                        echo 'active';
+                                    }
+                                    ?>"><a href="technology.php" class="nav-link">Technology</a></li>
                                    
                                     <li class="nav-item <?php
                                     if ($page == 'testimonial') {

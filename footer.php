@@ -126,6 +126,7 @@
 <script src="js/main.js"></script>
 <script src="js/materialize.min.js" type="text/javascript"></script>
 <script src="js/materialize.js" type="text/javascript"></script>
+<script src="js/fs-gal.js" type="text/javascript"></script>
 <script>
                     $(document).ready(function () {
                         var owl = $('.owl-carousel');
