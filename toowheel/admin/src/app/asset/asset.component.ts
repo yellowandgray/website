@@ -46,8 +46,7 @@ export class AssetComponent implements OnInit {
     const dialogRef = this.dialog.open(AssetForm, {
         minWidth: "80%",
         maxWidth: "80%",
-        data: data,
-        //console.log("yyyyyy--->"+data.title),
+        data: data
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -95,7 +94,6 @@ export class AssetForm {
         this.assetForm = new FormGroup({
             'title': new FormControl('', Validators.required)
         });
-        console.log("YYYADSJF-->"+this.data);
         if(this.data != null) { 
             this.assetForm.patchValue({ 
                 title: this.data.title
