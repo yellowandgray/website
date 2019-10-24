@@ -201,7 +201,7 @@ $app->post('/insert_member', function() use ($app) {
             $res['message'] = 'Record inserted successfully';
             $res['data'] = $member_id;
             $tpy = new Thirdparty();
-            $tpy->sendMail('mushaqdeen@gmail.com', 'Mushaqdeen', '$body_web', '$body_mobile', '$subject', 'noreply@toowheel.com', '$from_name', '', '', '', '');
+            $tpy->sendMail('mushaqdeen@gmail.com', 'Mushaqdeen', '$body_web', '$body_mobile', '$subject', 'admin@toowheel.com', '$from_name', '', '', '', '');
         }
     } else {
         $res['message'] = 'Email id already exist';
