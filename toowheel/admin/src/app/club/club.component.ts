@@ -16,6 +16,7 @@ export class ClubComponent implements OnInit {
   searchTermFW: string = '';
   sortdata_tw: string = '';
   sortdata_fw: string = '';  
+  oneClick: Boolean = false;  
   result:any[];
   result_four_wheel:any[];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
@@ -53,7 +54,7 @@ export class ClubComponent implements OnInit {
   openDialog(id, res): void  {
       var data = null;      
       if(id != 0) {
-      this[res].forEach(val=> {
+      this[res].forEach(val=> {    
            if(parseInt(val.club_id) === parseInt(id)) {
                 data = val;
                 return false;
@@ -115,23 +116,7 @@ export class ClubComponent implements OnInit {
     });
     }
     
-    /*openView(id): void  {
-    var data = null;
-      if(id != 0) { 
-        data = id;
-      }
-        const dialogRef = this.dialog.open(ClubViewFrom, {
-            minWidth: "40%",
-            maxWidth: "40%"
-             data: {
-            data: data,     
-        }
-        });
-
-       dialogRef.afterClosed().subscribe(result => {
-            console.log(`Dialog result: ${result}`);
-        });
-    }*/
+    
      confirmDialog(id, action): void  {
     var data = null;
       if(id != 0) { 
