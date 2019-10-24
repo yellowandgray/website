@@ -48,14 +48,14 @@
                 </div>
 
                 <!--About Txt Video Start-->
-                <div  id="upcome-event" class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+<!--                <div  id="upcome-event" class="about-video-section wf100 event-section" style="padding-bottom: 0;">
                     <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
-                        <!--<h2 class="margin-bottom-0 text-center"><strong>Upcoming Event</strong></h2>--> 
+                        <h2 class="margin-bottom-0 text-center"><strong>Upcoming Event</strong></h2> 
                         <h2 class="margin-bottom-0 text-center">First Annual Carnival</h2> 
                         <p class="text-center"><strong>28th of Sep 2019</strong></p>
                         <br/>
-<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
-<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>
+                        <p class="text-center">(Feb 10, 2019 Sunday)</p>
                         <div class="row events-margin padding-bottom-30">
                             <div class="col-md-12">
                                 <div class="event-img-margin-01">
@@ -82,8 +82,28 @@
                         </div>
                         <a type="button" href="events-carnival.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
                     </div>
-                </div>
+                </div>-->
 
+                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                         <h2 class="margin-bottom-0 text-center">First Annual Carnival</h2> 
+                        <p class="text-center"><strong>28th of Sep 2019</strong></p>
+                       <br/>
+<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                        <div class="row events-margin padding-bottom-30">
+                            <div class="col-md-12">
+                                <div class="event-img-margin">
+                                    <img src="images/carnival/0001.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    <p>The colour day for the month of September is Blue. The blue colour day was celebrated at ENPEE International School. The colour blue represents Confidence, Loyalty, Intelligence. This is considered to be one of the most important reason for our school uniform is a combination of blue. Children were present to the school in blue colour dress. Some children also recited poem related to things that are blue in colour like, sea clouds, sky etc.. one of the student from the group explained about what the colour blue represents. There were activities for the children where they made craft with the waste material. Each day our children are learning new things which is helping them to build a great career.</p>
+                                </div>
+                            </div>
+                        </div>
+                       <a type="button" href="events-carnival.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                    </div>
+                </div>
+                
+                
                 <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
                     <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
                         <h2 class="margin-bottom-0 text-center">The Blue Colour Day Celebration</h2> 
@@ -178,7 +198,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a type="button" href="events-Parent.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                        <a type="button" href="events-parent.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
                     </div>
                 </div>
 

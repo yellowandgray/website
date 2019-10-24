@@ -34,7 +34,7 @@
                         <div class="row events-margin padding-bottom-30">
                             <div class="col-md-12">
                                 <div class="event-img-margin">
-                                    <img src="images/sport/0001.jpg" alt="Events" title="Events-ENPEE International School" />
+                                    <img src="images/teacher/0001.jpg" alt="Events" title="Events-ENPEE International School" />
                                     <p>Learning is a process which continues forever. We learn from every little thing and every little children. School is one such place which gives space for an individual to mould himself. During this period the vital role is played by an Educator only. Whatever the child becomes tomorrow the seed for it is sowed by their teachers alone. Above all the celebration at school the most important is Teacher's day. It was an immense pleasure to enjoy the special day of the educators with the little ones.</p>
                                 </div>
                             </div>
