@@ -261,7 +261,7 @@ export class UsersDeleteForm {
             return;
       }
       this.loading = true;
-      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/users/users_id='+this.users_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/delete_record/users/users_id='+this.users_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

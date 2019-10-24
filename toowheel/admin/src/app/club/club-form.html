@@ -28,33 +28,39 @@
             </mat-form-field>
         </div>
     </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
         <div fxFlex="33%">            
-            <button type="button" mat-raised-button (click)="fileInputCover.click()">{{file_cover_name}}</button>
+            <button *ngIf="cover_image == ''" type="button" mat-raised-button (click)="fileInputCover.click()">{{file_cover_name}}</button>
             <input hidden #fileInputCover type="file" id="file_cover" (change)="fileProgress($event,'file_cover_name', 'cover_image')" />
-                   <mat-icon matTooltip="Width: 1583px, Height: 400px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon> 
-            <div>
-                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image  src="{{image_url}}{{data['cover_image']}}" alt="Photo" />
+                   <mat-icon *ngIf="cover_image == ''" matTooltip="Width: 1583px, Height: 400px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+            <div class="preview-image" *ngIf="cover_image != ''">
+                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image src="{{image_url}}{{cover_image}}" alt="Photo" />
+                <button mat-icon-button aria-label="Close icon" (click)="removeMedia('cover_image')">
+                    <mat-icon>close</mat-icon>
+                </button>
             </div>
         </div>
         <div fxFlex="33%">
-            <button type="button" mat-raised-button (click)="fileInputLogo.click()">{{file_logo_name}}</button>
+            <button *ngIf="logo_image == ''" type="button" mat-raised-button (click)="fileInputLogo.click()">{{file_logo_name}}</button>
             <input hidden #fileInputLogo type="file" id="file_logo" (change)="fileProgress($event,'file_logo_name', 'logo_image')" />
-                   <mat-icon matTooltip="Width: 320px, Height: 320px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
-            <div >
-                <img class="dialog-picture" matTooltip="Logo" mat-card-image  src="{{image_url}}{{data['logo']}}" alt="Photo" />
+                   <mat-icon *ngIf="logo_image == ''" matTooltip="Width: 320px, Height: 320px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+            <div class="preview-image" *ngIf="logo_image != ''">
+                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image src="{{image_url}}{{logo_image}}" alt="Photo" />
+                <button mat-icon-button aria-label="Close icon" (click)="removeMedia('logo_image')">
+                    <mat-icon>close</mat-icon>
+                </button>
             </div>
         </div>
         <div fxFlex="33%">            
             <button type="button" mat-raised-button (click)="fileInputBanner.click()">{{club_video_name}}</button>
             <input hidden #fileInputBanner type="file" id="file_banner" (change)="fileProgress($event, 'club_video_name', 'club_video')" />
-                   <mat-icon matTooltip="Width: any, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>          
-            <!--            <div >
-                        <img class="dialog-picture" matTooltip="Logo" mat-card-image  src="{{image_url}}{{data['logo']}}" alt="Photo" />
-                          </div>-->
-            <video class="video-fluid" matTooltip="Video" style="width: 100%; height: 100% " layout-fill loop="loop"  autoplay="autoplay" preload="auto" controls muted>
-                <source src="{{image_url}}{{data['club_video']}}" type="video/mp4"/>
-            </video>
+                   <mat-icon matTooltip="Width: any, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+            <div class="preview-image">
+                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image  src="https://www.toowheel.com/beta/toowheel/api/v1/male.jpg" alt="Photo" />
+                <button mat-icon-button aria-label="Close icon" (click)="removeMedia('club_video')">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </div>
         </div>
     </div>
     <br/>

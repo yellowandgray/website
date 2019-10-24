@@ -105,3 +105,19 @@ table.member-table th, td {
     font-size: 17px !important;
     margin: 0 !important;
 }
+
+.preview-image img {
+    max-width: 100%;
+    height: auto;
+    width: 250px;
+}
+
+.preview-image {
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.preview-image button {
+    position: absolute;
+}

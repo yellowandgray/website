@@ -419,7 +419,7 @@ this._snackBar.open(res["result"]["message"], '', {
 })
  
 export class MemberViewForm {
-    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     memberForm: FormGroup;
     loading = false;
     member_id = 0;
