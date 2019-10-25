@@ -8,7 +8,7 @@
         </div>
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="90">
-                <mat-card class="example-card">
+                <mat-card class="example-card news-view-card">
                     <p>{{data.sponsor}}</p>
                     <span>{{data.media}} | {{data.author_name}} | {{data.news_date}}</span>
                     <br/>
@@ -25,9 +25,15 @@
                         <br/>
                         <p>{{data.description_2}}</p>
                         <img src="{{image_url}}{{data.banner_2}}" alt="" style="width: 100%;" />
-                        <iframe [src]="getYoutubeLink(data.youtube_id)" webkitallowfullscreen mozallowfullscreen
-                            allowfullscreen></iframe>
-                        <h3>Gallery</h3>
+                        <br/>
+                        <br/>
+                        <h2>Youtube Video</h2>
+                        <iframe [src]="getYoutubeLink(data.youtube_id)" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        
+                        <br/>
+                        <br/>
+                        <br/>
+                        <h2>Gallery</h2>
                         <img class="news_gallery_image" *ngFor="let image of result" src="{{image_url}}{{image.media_path}}" alt="" />
                     </mat-card-content>
                 </mat-card>
