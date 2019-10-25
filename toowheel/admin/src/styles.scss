@@ -114,10 +114,24 @@ table.member-table th, td {
 
 .preview-image {
     position: relative;
-    overflow: hidden;
     margin-top: 10px;
 }
 
 .preview-image button {
+    position: absolute;
+}
+
+.preview-video video {
+    max-width: 100%;
+    height: auto;
+    width: 250px;
+}
+
+.preview-video {
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.preview-video button {
     position: absolute;
 }

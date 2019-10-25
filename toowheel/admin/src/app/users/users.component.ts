@@ -115,11 +115,12 @@ export class UsersComponent implements OnInit {
   templateUrl: 'users-form.html',
 })
 export class UsersForm {
+image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     usersForm: FormGroup;
     loading = false;
     users_id = 0;
     file_name: string = 'Choose Profile Picture';
-    media_path: string;
+    media_path: string='';
     constructor(
     public dialogRef: MatDialogRef<UsersForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -141,6 +142,7 @@ export class UsersForm {
                 role: this.data.role
         })
         this.users_id = this.data.users_id;
+        this.media_path=this.data.media_path;
     }
 }
 
@@ -215,6 +217,12 @@ export class UsersForm {
         });
       }
     );
+  }
+  removeMedia(url) {
+      this[url] = '';
+      if(url === 'media_path') {
+          this.file_name= 'Choose Profile Picture';
+      }     
   }
 
 }

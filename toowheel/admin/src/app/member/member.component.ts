@@ -177,10 +177,11 @@ confirmDialog(id, action): void  {
   templateUrl: 'member-form.html',
 })
 export class MemberForm {
+image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     memberForm: FormGroup;
     loading = false;
     profile_image: string = "Profile Picture";
-    image_path: string = "";
+    image_path: string = '';
     member_id = 0;
     clubs = [];
     states = [];
@@ -232,6 +233,7 @@ export class MemberForm {
             'club_id': this.data.club_id
         })
         this.member_id = this.data.member_id;
+        this.image_path= this.data.profile_picture;
         this.getClub();
     }
     this.getState();
@@ -360,6 +362,12 @@ export class MemberForm {
         });
       }
     );
+  }
+  removeMedia(url) {
+      this[url] = '';
+      if(url === 'image_path') {
+          this.profile_image= "Profile Picture";
+      }     
   }
 }
 

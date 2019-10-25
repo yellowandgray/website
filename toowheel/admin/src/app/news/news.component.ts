@@ -152,6 +152,7 @@ confirmDialog(id, action): void  {
   templateUrl: 'news-form.html',
 })
 export class NewsForm {
+image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     newsForm: FormGroup;
     loading = false;
     categories:any[];
@@ -162,10 +163,10 @@ export class NewsForm {
     thumb_image: string = 'Thumb Image';
     banner_image_1: string = 'Image 1';
     banner_image_2: string = 'Image 2';
-    cover_image_path: string;
-    thumb_image_path: string;
-    banner_image_1_path: string;
-    banner_image_2_path: string;
+    cover_image_path: string='';
+    thumb_image_path: string='';
+    banner_image_1_path: string='';
+    banner_image_2_path: string='';
     constructor(
     public dialogRef: MatDialogRef<NewsForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -201,6 +202,10 @@ export class NewsForm {
            sponsor: this.data.sponsor
         });
         this.news_id = this.data.news_id;
+        this.cover_image_path = this.data.cover_image;
+        this.thumb_image_path=this.data.thumb_image;
+        this.banner_image_1_path=this.data.banner_1;
+        this.banner_image_2_path=this.data.banner_2;
         this.getCategory();
         this.getClub();
     }else {
@@ -399,6 +404,22 @@ export class NewsForm {
         });
       }
     );
+  }
+  removeMedia(url) {
+      this[url] = '';
+      if(url === 'cover_image_path') {
+          this.cover_image= 'Cover Image';
+      }
+       if(url === 'thumb_image_path') {
+          this.thumb_image= 'Thumb Image';
+      }
+       if(url === 'banner_image_1_path') {
+          this.banner_image_1= 'Image 1';
+      }
+       if(url === 'banner_image_2_path') {
+          this.banner_image_2= 'Image 2';
+      }
+      
   }
 }
 
