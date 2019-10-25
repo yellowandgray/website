@@ -62,7 +62,7 @@
         </tr>
         <tr>
             <th mat-header-cell> Activated on </th>
-            <td mat-cell> {{data.activated_at}} </td>
+            <td mat-cell> {{data.activated_at | date: 'dd/MM/YY'}} </td>
         </tr>
         <tr>
             <th mat-header-cell> Activated by </th>
@@ -70,7 +70,7 @@
         </tr>
         <tr>
             <th mat-header-cell> Blocked on </th>
-            <td mat-cell> {{data.blocked_at | date: 'dd/MMM/YYYY'}} </td>
+            <td mat-cell> {{data.blocked_at | date: 'dd/MM/YY'}} </td>
         </tr>
         <tr>
             <th mat-header-cell> Blocked by </th>
@@ -101,7 +101,7 @@
             <td mat-cell>  </td>
         </tr>
         <tr>
-            <th mat-header-cell> Child 1	 </th>
+            <th mat-header-cell> Child 1 </th>
             <td mat-cell>  </td>
         </tr>
         <tr>
