@@ -36,7 +36,7 @@
                             <button mat-icon-button aria-label="label" (click)="openGalleryDialog(data['news_id'])">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Add Image">panorama</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label" (click)="openView()">
+                            <button mat-icon-button aria-label="label" (click)="openView(data.news_id, 'result')">
                                 <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label" (click)="openDialog(data['news_id'], 'result')">
