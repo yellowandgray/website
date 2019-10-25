@@ -19,9 +19,9 @@ searchTerm: string = '';
   ngOnInit() {
       this.getAdvertisment();
   }
-  image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+  image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     getAdvertisment(): void {
-  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_advertisment')
+  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_advertisment')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -129,7 +129,7 @@ export class AdvertismentForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -169,7 +169,7 @@ export class AdvertismentForm {
           formData.append('url', this.advertismentForm.value.url);
           url = 'insert_advertisement';
           }
-          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -215,7 +215,7 @@ export class AdvertismentDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/advertisement/advertisement_id='+this.advertisement_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/delete_record/advertisement/advertisement_id='+this.advertisement_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
