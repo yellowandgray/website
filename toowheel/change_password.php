@@ -23,12 +23,14 @@ if (isset($_GET['auth'])) {
                                 if (count($user) > 0) {
                                     ?>
                                     <h3>Change Your Password</h3>
-                                    <form>
+                                    <form onsubmit="return changePassword('<?php echo $code; ?>');">
                                         <div class="input-container">
-                                            <input type="password" name="password" id="password" placeholder="Enter Your New password" autofocus />
+                                            <input type="password" name="password" id="password" placeholder="Enter Your New password" onchange="removeValidation('password');" autofocus />
+                                            <div id="password_error"></div>
                                         </div>
                                         <div class="input-container">
-                                            <input type="password" name="confirm_password" id="confirm_password" placeholder="Enter Your Confirm password" />
+                                            <input type="password" name="confirm_password" id="confirm_password" onchange="removeValidation('confirm_password');" placeholder="Enter Your Confirm password" />
+                                            <div id="confirm_password_error"></div>
                                         </div>
                                         <center>
                                             <button type="submit">SUBMIT</button>
@@ -59,5 +61,7 @@ if (isset($_GET['auth'])) {
         </section>
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="js/bootstrap.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        <script src="js/sweet-alert.min.js" type="text/javascript"></script>
     </body>
 </html>
