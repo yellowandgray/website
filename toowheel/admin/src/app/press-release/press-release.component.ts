@@ -425,6 +425,7 @@ export class PressreleaseViewFrom {
     press_release_id: any;
     constructor(
     public dialogRef: MatDialogRef<PressreleaseViewFrom>,
+    private sanitizer: DomSanitizer,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
