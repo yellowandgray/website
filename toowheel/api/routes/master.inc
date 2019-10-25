@@ -617,15 +617,13 @@ $app->post('/loginadmin', function() use ($app) {
     $data = $app->request->post();
     $obj = new Common();
     $record = $obj->selectRow('*', 'users', 'email=\'' . $data['email'] . '\'');
-    if (count($record) > 0) {
-        if ($record['activated'] == 1) {
+    if (count($record) > 0) {        
             $pass_matchs = $obj->decryptPassword($data['password'], $record['password']);
             if ($pass_matchs == true) {
                 $res['error'] = false;
-                $res['message'] = 'Welcome ' . $record['first_name'];
-                $_SESSION['member_id'] = $record['member_id'];
+                $res['message'] = 'Welcome ' . $record['name'];                 
             }
-        } else {
+        else {
             $res['message'] = 'Username or Password mismatch';
         }
     }

@@ -28,31 +28,25 @@ export class LoginComponent implements OnInit {
         if (this.loginForm.invalid) {
             return;
         }
-       this.getUsers();      
-       /* if(this.loginForm.value.username === 'toowheel' && this.loginForm.value.password === 'T00wh33!admin') {
-       this.router.navigateByUrl('/dashboard');
-        } else {
-            this._snackBar.open('Invalid login details', '', {
-      duration: 2000,
-    });
-        }*/
+       this.getUsers();     
     }
      image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     getUsers(): void {
-    this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/loginadmin')
+var formData = new FormData();
+formData.append('email', this.loginForm.value.username);
+formData.append('password', this.loginForm.value.password);
+    this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/loginadmin', formData)
     .subscribe(
             (res)=>{
                 this.result = res["result"]["data"];
-                console.log(this.result)
-                   /* if(this.loginForm.value.username === this.result.email && this.loginForm.value.password === this.result.password) {
-                         
-                         this.router.navigateByUrl('/dashboard');
-                         
-                    } else {
-                        this._snackBar.open('Invalid login details', '', {
-                  duration: 2000,
-                });
-                    }*/
+                console.log(res["result"]["roleuser"]);
+                 if(res["result"]["error"] === false) {                       
+                      this.router.navigateByUrl('/dashboard');
+                }else{
+            this._snackBar.open(res["result"]["message"], '', {
+              duration: 2000,
+            });
+            }
           },
           (error)=>{
               this._snackBar.open(error["statusText"], '', {
