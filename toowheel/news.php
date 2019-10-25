@@ -61,7 +61,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                 <img src="<?php echo BASE_URL . $news['banner_2']; ?>" alt="" style="width: 100%" /><br/><br/>
                             <?php } ?>
                             <?php if (isset($news['youtube_id']) && $news['youtube_id'] != '' && $news['youtube_id'] != null && $news['youtube_id'] != 'null' && $news['youtube_id'] != 'undefined') { ?>
-                                <iframe src="http://www.youtube.com/embed/<?php echo $news['youtube_id']; ?>" style="width: 100%; height: auto;" frameborder="0" allowfullscreen></iframe><br/><br/>
+                                <iframe src="https://www.youtube.com/embed/<?php echo $news['youtube_id']; ?>" style="width: 100%; height: auto;" frameborder="0" allowfullscreen></iframe><br/><br/>
                             <?php } ?>
                             <?php if (count($news_gallery) > 0) { ?>
                                 <div class="news-gallery">
