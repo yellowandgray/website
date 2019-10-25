@@ -1,10 +1,12 @@
 <?php
-if (!isset($_GET['type'])) {
-    header('Location: ../index.php');
-}
-$type = $_GET['type'];
+date_default_timezone_set("Asia/Kuala_Lumpur");
 require_once 'api/include/common.php';
 $obj = new Common();
+$user = array();
+if (isset($_GET['auth'])) {
+    $code = $_GET['auth'];
+    $user = $obj->selectRow('*', 'member', 'reset_code=\'' . $code . '\' AND reset_expired_at >= \'' . date('Y-m-d H:i:s') . '\'');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,20 +19,38 @@ $obj = new Common();
                         <div id="log-in" class="log-cont-01">
                             <div class="change-password-section">
                                 <img src="img/password_logo.png" alt="toowheel_logo" />
-                                <h3>Change Your Password</h3>
-                                <form>
-                                    <div class="input-container">
-                                        <input type="password" name="password" id="password" placeholder="Enter Your New password" autofocus />
+                                <?php
+                                if (count($user) > 0) {
+                                    ?>
+                                    <h3>Change Your Password</h3>
+                                    <form>
+                                        <div class="input-container">
+                                            <input type="password" name="password" id="password" placeholder="Enter Your New password" autofocus />
+                                        </div>
+                                        <div class="input-container">
+                                            <input type="password" name="confirm_password" id="confirm_password" placeholder="Enter Your Confirm password" />
+                                        </div>
+                                        <center>
+                                            <button type="submit">SUBMIT</button>
+                                        </center>
+                                    </form> 
+                                <?php } else { ?>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="text-center">
+                                                <i style="font-size: 48px;" class="fa fa-clock-o"></i>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="input-container">
-                                        <input type="password" name="confirm_password" id="confirm_password" placeholder="Enter Your Confirm password" />
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4 class="text-center">Invalid Authentication</h4>
+                                            <p class="text-center">Might be your link was expired</p>
+                                        </div>
                                     </div>
-                                    <center>
-                                        <button type="submit">SUBMIT</button>
-                                    </center>
-                                </form> 
+                                <?php } ?>
                                 <br/>
-                                <h5><a href="index.php?type=<?php echo $type; ?>"><i class="fa fa-home" aria-hidden="true"></i> Go to Toowheel</a></h5>
+                                <h5><a href="index.php?type=two_wheel"><i class="fa fa-home" aria-hidden="true"></i> Go to Toowheel</a></h5>
                             </div>
                         </div>
                     </div>

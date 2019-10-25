@@ -742,16 +742,16 @@ $app->post('/forgotpassword', function() use ($app) {
     $obj = new Common();
     date_default_timezone_set("Asia/Kuala_Lumpur");
     $res = array('error' => true, 'message' => 'No user found in this email id');
-    $user = $obj->selectRowWithWhere('member', 'email = \'' . $data['email'] . '\'');
+    $user = $obj->selectRow('*', 'member', 'email = \'' . $data['email'] . '\'');
     if (count($user) > 0) {
         $res['error'] = false;
-        $expires = array('value' => 5); //$obj->selectRowWithWhere('configs', 'name=\'reset_link_expires\'');
+        $expires = array('value' => 5); //$obj->selectRow('*', 'configs', 'name=\'reset_link_expires\'');
         $code = uniqid();
         $expired = date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s') . ' + ' . $expires['value'] . ' minute'));
-        $update = $obj->updateRecordWithWhere(array('reset_code' => $code, 'reset_initiated_at' => date('Y-m-d H:i:s'), 'reset_expired_at' => $expired), 'member', 'member_id=\'' . $user['ID'] . '\'');
+        $update = $obj->updateRecordWithWhere(array('reset_code' => $code, 'reset_initiated_at' => date('Y-m-d H:i:s'), 'reset_expired_at' => $expired), 'member', 'member_id=\'' . $user['member_id'] . '\'');
         if ($update > 0) {
             $res['message'] = 'Reset link sent to your email id';
-            $template = $obj->selectRowWithWhere('templates', 'name=\'forgot_password_link\' AND type=\'email\' AND target=\'user\'');
+            $template = $obj->selectRow('*', 'templates', 'name=\'forgot_password_link\' AND type=\'email\' AND target=\'user\'');
             //$body = $obj->getReplacedString($template['body_web'], array('name' => $user['name'], 'link' => FILES_PATH . 'resetpassword.php?auth=' . $code, 'expired_at' => date('d/M/Y H:i', strtotime($expired))));
             $tpty = new Thirdparty();
             $tpty->sendMail($user['email'], $user['email'], $template['body_web'], $template['body_web'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
@@ -765,13 +765,13 @@ $app->post('/reset_password', function() use ($app) {
     $obj = new Common();
     date_default_timezone_set("Asia/Kuala_Lumpur");
     $res = array('error' => true, 'message' => 'Unable to update your password');
-    $user = $obj->selectRowWithWhere('member', 'reset_code = \'' . $data['auth'] . '\'');
+    $user = $obj->selectRow('*', 'member', 'reset_code = \'' . $data['auth'] . '\'');
     if (count($user) > 0) {
         $update = $obj->updateRecordWithWhere(array('password' => $obj->encryptPassword($data['password'])), 'member', 'reset_code=\'' . $data['auth'] . '\'');
         if ($update > 0) {
             $res['error'] = false;
             $res['message'] = 'Password updated successfully';
-            $template = $obj->selectRowWithWhere('templates', 'name=\'password_update_success\' AND type=\'email\' AND target=\'user\'');
+            $template = $obj->selectRow('*', 'templates', 'name=\'password_update_success\' AND type=\'email\' AND target=\'user\'');
             //$body = $obj->getReplacedString($template['body_web'], array('name' => $user['name'], 'link' => FILES_PATH . 'resetpassword.php?auth=' . $code, 'expired_at' => date('d/M/Y H:i', strtotime($expired))));
             $tpty = new Thirdparty();
             $tpty->sendMail($user['email'], $user['email'], $template['body_web'], $template['body_web'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
@@ -786,13 +786,13 @@ $app->post('/change_password', function() use ($app) {
     $data = $app->request->post();
     $obj = new Common();
     $res = array('error' => true, 'message' => 'Unable to change password');
-    $exist = $obj->selectRowWithWhere('member', 'member_id = ' . $data['member']);
+    $exist = $obj->selectRow('*', 'member', 'member_id = ' . $data['member']);
     if (count($exist) > 0) {
         if ($exist['password'] == $obj->encryptPassword($data['old_password'])) {
             $res['error'] = false;
             $res['message'] = 'Password updated successfully';
             $obj->updateRecordWithWhere(array('password' => $obj->encryptPassword($data['new_password'])), 'member', 'member_id=' . $data['member']);
-            $template = $obj->selectRowWithWhere('templates', 'name=\'password_update_success\' AND type=\'email\' AND target=\'user\'');
+            $template = $obj->selectRow('*', 'templates', 'name=\'password_update_success\' AND type=\'email\' AND target=\'user\'');
             //$body = $obj->getReplacedString($template['body_web'], array('name' => $exist['name'], 'link' => FILES_PATH . 'resetpassword.php?auth=' . $code, 'expired_at' => date('d/M/Y H:i', strtotime($expired))));
             $tpty = new Thirdparty();
             $tpty->sendMail($exist['email'], $exist['email'], $template['body_web'], $template['body_web'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);

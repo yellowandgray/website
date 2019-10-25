@@ -38,8 +38,9 @@ $obj = new Common();
                                 <div class="pop"><i class="fa fa-times-circle" aria-hidden="true"></i>
                                     <div class="margin-top-30">
                                         <h4>Enter Your Register Mail Id!</h4>
-                                        <input type="email" name="email" placeholder="Enter Register Mail Id" />
-                                        <center><button type="submit">Submit</button></center>
+                                        <input type="email" id="forgotpassword_email" name="forgotpassword_email" placeholder="Enter Register Mail Id" onchange="removeValidation('forgotpassword_email');" />
+                                        <div id="forgotpassword_email_error"></div>
+                                        <center><button onclick="forgotPassword();">Submit</button></center>
                                     </div>
                                 </div>
                             </div>
