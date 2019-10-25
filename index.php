@@ -99,13 +99,16 @@
 
         <section class=" ftco-category pad-80" id="featured">
             <div class="row">
-
-                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
-                    <i onclick="document.getElementById('featured').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
-                    <!--<span class="subheading">Best Price For You</span>-->
+                <i onclick="document.getElementById('featured').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
+               <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Non-leaching & Non-depleting</h2>
                 </div>
-                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
+                <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
+                    <!--<span class="subheading">Best Price For You</span>-->
+                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                </div>
+                <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
                     <!--<span class="subheading">Best Price For You</span>-->
                     <p>Fresche is a non leaching technology. This immediately differentiates Fresche from many competitor products, which leach or detach from the surface on which they are applied.</p>
                     <p>Depleting antimicrobials effectively diminish to the point where they no longer have microbial efficacy. This means that the surface they were designed to protect, has no defence against bacterial or fungal attack.</p>
@@ -116,13 +119,16 @@
         </section>
         <section class=" ftco-category pad-80" id="featured-1">
             <div class="row">
-
-                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
-                    <i onclick="document.getElementById('featured-1').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <i onclick="document.getElementById('featured-1').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                     <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Mode of Action</h2>
                 </div>
-                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
+                <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
+                   <!--<span class="subheading">Best Price For You</span>-->
+                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                </div>
+                <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
                     <!--<span class="subheading">Best Price For You</span>-->
                     <p>Fresche Bioscience Si QAC antimicrobial treatments function by penetrating and terminally destroying the delicate cell membrane of bacterial and fungal organisms. This is effectively achieved by mechanically setting a series of molecular "road spikes" on a surface, which attract and destroy pathogens through a process known as lysis.</p>
                     <p>The pathogen cell is drawn onto the molecular spike through simple magnetic attraction and ruptures the cell wall. As the cell wall is unable to control its own hydrostatic pressure, this results in both immediate and terminal disintegration of the cell.</p>
@@ -136,13 +142,16 @@
         </section>
         <section class=" ftco-category pad-80" id="featured-2">
             <div class="row">
-
-                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
-                    <i onclick="document.getElementById('featured-2').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
-                    <!--<span class="subheading">Best Price For You</span>-->
+                <i onclick="document.getElementById('featured-2').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
+                                    <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Lock & Bond</h2>
                 </div>
-                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
+                <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
+                   <!--<span class="subheading">Best Price For You</span>-->
+                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                </div>
+                <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
                     <!--<span class="subheading">Best Price For You</span>-->
                     <p>New generation Fresch Bioscience Si QAC microbial control and protection treatments are very different in their mode of action to most chemical and metals based antimicrobial compounds. When Fresche treatments are applied, they form covalent associations which "lock and bond" the Fresche active molecule to the surface or substrate being treated.</p>
                     <p>Once bound to a surface or substrate, Fresche antimicrobial coatings will not leach, migrate or otherwise leave the surface.</p>
@@ -155,13 +164,16 @@
         </section>
         <section class=" ftco-category pad-80" id="featured-3">
             <div class="row">
-
-                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
-                    <i onclick="document.getElementById('featured-3').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <i onclick="document.getElementById('featured-3').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                     <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">No heavy metals or volatile chemicals</h2>
                 </div>
-                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
+                <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
+                   <!--<span class="subheading">Best Price For You</span>-->
+                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                </div>
+                <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
                     <!--<span class="subheading">Best Price For You</span>-->
                     <p>Many biocides, antimicrobials and disinfectants comprise chemicals which include chlorine, Triclosan, heavy metals (including silver ion and nano-silver), which do not readily break down and often bio accumulate in our natural environment.</p>
                     <p>Some, during the process of microbial interaction produce halogenated by-products such as carcinogenic trihalomethanes.</p>
@@ -173,13 +185,16 @@
         </section>
         <section class=" ftco-category pad-80" id="featured-4">
             <div class="row">
-
-                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
-                    <i onclick="document.getElementById('featured-4').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
-                    <!--<span class="subheading">Best Price For You</span>-->
+                <i onclick="document.getElementById('featured-4').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
+                   <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Enduring protection</h2>
                 </div>
-                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
+                <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
+                   <!--<span class="subheading">Best Price For You</span>-->
+                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                </div>
+                <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
                     <!--<span class="subheading">Best Price For You</span>-->
                     <p>As a bound microbial control and protection treatment, Fresche antimicrobial coatings continues to provide high level, broad spectrum antibacterial, anti fungal and odour protection for long periods of time.</p>
                     <p>Fresche antimicrobial formulations have been engineered to provide various levels of durable antimicrobial performance. Depending on the surface or substrate, this can range from 24 hours of 99.9% microbial protection, to high levels of microbial protection for the anticipated service life of the product on which it is applied.</p>
@@ -191,13 +206,16 @@
         </section>
         <section class=" ftco-category pad-80" id="featured-5">
             <div class="row">
-
-                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
-                    <i onclick="document.getElementById('featured-5').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
-                    <!--<span class="subheading">Best Price For You</span>-->
+                <i onclick="document.getElementById('featured-5').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
+                                   <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Dust mites</h2>
                 </div>
-                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
+                <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
+                   <!--<span class="subheading">Best Price For You</span>-->
+                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                </div>
+                <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
                     <!--<span class="subheading">Best Price For You</span>-->
                     <p>House Dust Mites (HDM) are an unwelcome but prevalent guest in most homes. Fresche Bioscience treatments have been demonstrated on both polyurethane foam and textiles to be completely effective at controlling HDM populations. Using test standard AFNOR NF G 39-011, treated textile and bedding foam was subjected to a six week trial to assess the efficacy of Fresche on the development of HDM (Dermatophagoides pteronyssinus), when compared to the development on untreated fabrics and foams.</p>
                     <p>Both Textiles and Foam treated with Fresche gave a complete control of the dust mite population, whilst the untreated controls showed greater than 17 fold increases in the mite populations.</p>
