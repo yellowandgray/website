@@ -201,7 +201,7 @@ $app->post('/insert_member', function() use ($app) {
             $res['message'] = 'Record inserted successfully';
             $res['data'] = $member_id;
             $tpy = new Thirdparty();
-            $template = $com->selectRow('*', 'templates', 'name=\'new_member_register_activated\' AND target=\'user\'');
+            $template = $com->selectRow('*', 'templates', 'name=\'new_member_register_activated\' AND type=\'email\' AND target=\'user\'');
             $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $template['body_web'], $template['body_mobile'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
     } else {
@@ -604,7 +604,7 @@ $app->post('/update_user_status/:table/:where', function($table, $where) use ($a
         $tpy = new Thirdparty();
         $data = $com->selectRow('*', $table, $where);
         if ($data['activated'] == 1) {
-            $template = $com->selectRow('*', 'templates', 'name=\'member_activated\' AND target=\'user\'');
+            $template = $com->selectRow('*', 'templates', 'name=\'member_activated\' AND type=\'email\' AND target=\'user\'');
             $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $template['body_web'], $template['body_mobile'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
     }
@@ -622,11 +622,11 @@ $app->post('/update_tshirt_status/:table/:where', function($table, $where) use (
         $tpy = new Thirdparty();
         $data = $com->selectRow('*', $table, $where);
         if ($data['t_shirt_status'] == 2) {
-            $template = $com->selectRow('*', 'templates', 'name=\'tshirt_shipped\' AND target=\'user\'');
+            $template = $com->selectRow('*', 'templates', 'name=\'tshirt_shipped\' AND type=\'email\' AND target=\'user\'');
             $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $template['body_web'], $template['body_mobile'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
         if ($data['t_shirt_status'] == 3) {
-            $template = $com->selectRow('*', 'templates', 'name=\'tshirt_delivered\' AND target=\'user\'');
+            $template = $com->selectRow('*', 'templates', 'name=\'tshirt_delivered\' AND type=\'email\' AND target=\'user\'');
             $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $template['body_web'], $template['body_mobile'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
     }
@@ -733,6 +733,66 @@ $app->get('/get_asset', function() {
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/forgotpassword', function() use ($app) {
+    $data = $app->request->post();
+    $obj = new Common();
+    date_default_timezone_set("Asia/Kuala_Lumpur");
+    $res = array('error' => true, 'message' => 'No user found in this email id');
+    $user = $obj->selectRowWithWhere('member', 'email = \'' . $data['email'] . '\'');
+    if (count($user) > 0) {
+        $res['error'] = false;
+        $expires = array('value' => 5); //$obj->selectRowWithWhere('configs', 'name=\'reset_link_expires\'');
+        $code = uniqid();
+        $expired = date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s') . ' + ' . $expires['value'] . ' minute'));
+        $update = $obj->updateRecordWithWhere(array('reset_code' => $code, 'reset_initiated_at' => date('Y-m-d H:i:s'), 'reset_expired_at' => $expired), 'member', 'member_id=\'' . $user['ID'] . '\'');
+        if ($update > 0) {
+            $res['message'] = 'Reset link sent to your email id';
+            $template = $obj->selectRowWithWhere('templates', 'name=\'forgot_password_link\' AND type=\'email\' AND target=\'user\'');
+            //$body = $obj->getReplacedString($template['body_web'], array('name' => $user['name'], 'link' => FILES_PATH . 'resetpassword.php?auth=' . $code, 'expired_at' => date('d/M/Y H:i', strtotime($expired))));
+            $tpty = new Thirdparty();
+            $tpty->sendMail($user['email'], $user['email'], $template['body_web'], $template['body_web'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+        }
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/reset_password', function() use ($app) {
+    $data = $app->request->post();
+    $obj = new Common();
+    date_default_timezone_set("Asia/Kuala_Lumpur");
+    $res = array('error' => true, 'message' => 'Unable to update your password');
+    $user = $obj->selectRowWithWhere('member', 'reset_code = \'' . $data['auth'] . '\'');
+    if (count($user) > 0) {
+        $update = $obj->updateRecordWithWhere(array('password' => $obj->encryptPassword($data['password'])), 'member', 'reset_code=\'' . $data['auth'] . '\'');
+        if ($update > 0) {
+            $res['error'] = false;
+            $res['message'] = 'Password updated successfully';
+        }
+    } else {
+        $res['message'] = 'Authentication failed';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/change_password', function() use ($app) {
+    $data = $app->request->post();
+    $obj = new Common();
+    $res = array('error' => true, 'message' => 'Unable to change password');
+    $exist = $obj->selectRowWithWhere('member', 'member_id = ' . $data['member']);
+    if (count($exist) > 0) {
+        if ($exist['password'] == $obj->encryptPassword($data['old_password'])) {
+            $res['error'] = false;
+            $res['message'] = 'Password updated successfully';
+            $obj->updateRecordWithWhere(array('password' => $obj->encryptPassword($data['new_password'])), 'member', 'member_id=' . $data['member']);
+        } else {
+            $res['message'] = 'Current password mismatch';
+        }
+    } else {
+        $res['message'] = 'No user found';
     }
     echoRespnse(201, $res);
 });
