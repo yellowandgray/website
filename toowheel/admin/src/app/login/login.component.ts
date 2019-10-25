@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
         if (this.loginForm.invalid) {
             return;
         }
-        this.getUsers();      
+       this.getUsers();      
        /* if(this.loginForm.value.username === 'toowheel' && this.loginForm.value.password === 'T00wh33!admin') {
        this.router.navigateByUrl('/dashboard');
         } else {
@@ -37,14 +37,15 @@ export class LoginComponent implements OnInit {
     });
         }*/
     }
+     image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     getUsers(): void {
-    this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/loginadmin')
+    this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/loginadmin')
     .subscribe(
             (res)=>{
                 this.result = res["result"]["data"];
                 console.log(this.result)
                    /* if(this.loginForm.value.username === this.result.email && this.loginForm.value.password === this.result.password) {
-                       
+                         
                          this.router.navigateByUrl('/dashboard');
                          
                     } else {
