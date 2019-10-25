@@ -1,4 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -61,15 +62,27 @@ export class PressReleaseComponent implements OnInit {
     }
     
        
-        openView(): void  {
+        openView(id, res): void  {
+            var data = null;
+        if(id != 0) { 
+        this[res].forEach(val=> {
+             if(parseInt(val.news_id) === parseInt(id)) {
+                  data = val;
+                  return false;
+             }
+           });
+        }
         const dialogRef = this.dialog.open(PressreleaseViewFrom, {
             minWidth: "40%",
-            maxWidth: "40%"
+            maxWidth: "40%",
+            data: data
         });
 
        dialogRef.afterClosed().subscribe(result => {
-            console.log(`Dialog result: ${result}`);
-            });
+            if(result !== false && result !== 'false') {
+            this.getPressRelease();
+          }
+        });   
         }
 
     confirmDialog(id, action): void  {
@@ -393,10 +406,10 @@ export class PictureViewPress {
             this.data = this.datapopup.data;
             if(this.datapopup.action == 'delete') {
                 this.member_id = this.datapopup.data;
+               }
             }
-    }
-}
-        }  
+        }
+    }  
 
 
   @Component({
@@ -405,13 +418,44 @@ export class PictureViewPress {
 })
  
 export class PressreleaseViewFrom {
+    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+    pressreleaseForm: FormGroup;
+    loading = false;
+    cover_image: string;
+    press_release_id: any;
     constructor(
     public dialogRef: MatDialogRef<PressreleaseViewFrom>,
-    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {}
+    private httpClient: HttpClient) {
+        this.pressreleaseForm = new FormGroup({
+            'type': new FormControl('', Validators.required),
+            'club_id': new FormControl(),
+            'title': new FormControl('', Validators.required),
+            'date': new FormControl('', Validators.required),
+            'media': new FormControl('', Validators.required),
+            'author_name': new FormControl('', Validators.required),
+            'description': new FormControl('', Validators.required),
+            'description_1': new FormControl('', Validators.required),
+            'youtube_id': new FormControl()
+        });
+        if(this.data != null) {
+           this.pressreleaseForm.patchValue({
+           type: this.data.type,
+           club_id: this.data.club_id,
+           title: this.data.title,
+           date: this.data.press_release_date,
+           media: this.data.media_id,
+           author_name: this.data.author_name,
+           description: this.data.description_1,
+           description_1: this.data.description_2,
+           youtube_id: this.data.youtube_id
+        });
+            this.press_release_id = this.data.press_release_id;
+        }
+    }
     
-    onNoClick(): void {
-        this.dialogRef.close();
+    getYoutubeLink(yid) {
+        return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+yid);
     }
 }  
