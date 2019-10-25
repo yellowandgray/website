@@ -217,7 +217,7 @@ export class MemberForm {
             'gender': this.data.gender,
             'age': this.data.age,
             'ic_passport': this.data.ic_passport,
-            'dob': this.data.dob_year +'-'+this.data.dob_month +'-'+this.data.dob_date,
+            'dob': this.data.dob_year +'-'+ this.pad(this.data.dob_month, 2) +'-'+this.data.dob_date,
             'contact_number': this.data.contact_number,
             'license_category': this.data.license_category,
             'address': this.data.address,
@@ -361,6 +361,11 @@ export class MemberForm {
       }
     );
   }
+    pad(num:number, size:number): string {
+    let s = num+"";
+    while (s.length < size) s = "0" + s;
+    return s;
+}
 }
 
 @Component({

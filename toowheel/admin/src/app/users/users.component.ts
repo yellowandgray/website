@@ -11,9 +11,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-     searchTermTW: string = '';
+     searchTerm: string = '';
   searchTermFW: string = '';
-  sortdata_tw: string = '';
+  sortdata: string = '';
   sortdata_fw: string = '';
   result = [];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }

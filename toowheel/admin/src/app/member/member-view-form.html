@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>Member Details</h2>
 <mat-dialog-content class="mat-typography">
-    <form [formGroup]="memberForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="memberForm">
         <div class="member-profile-picture" fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="100%" fxLayoutAlign="end center">
                 <img src="{{image_url}}{{data.profile_picture}}" alt="" />
