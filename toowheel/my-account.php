@@ -18,9 +18,9 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
             <div class="container">
                 <div class="display-flex editing-icon">
                     <div class="flex-icon">
-                        <div><a href="#" class="change-password"><img src="img/my-account/edit.png" alt="" /></a></div>
-                        <div><img src="img/my-account/setting.png" alt="" /></div>
-                        <div><img src="img/my-account/bell.png" alt="" /></div>
+                        <!--<div><img src="img/my-account/edit.png" alt="" /></div>-->
+                        <div><a href="#" class="change-password"><img src="img/my-account/setting.png" alt="" /></a></div>
+                        <!--<div><img src="img/my-account/bell.png" alt="" /></div>-->
                     </div>
                 </div>
                 <!--<div class="row profile-section">-->
@@ -46,9 +46,10 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                         <h2><?php echo $member['first_name'] . ' ' . $member['last_name']; ?></h2>
                     </div>
                 </div>
-                <div class="row margin-b-40">
+                <div class="row margin-b-40 edit">
                     <div class="col-md-2"></div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 ">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
                         <div class="profile-table">
                             <table>
                                 <tr>
@@ -86,6 +87,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                     </div>
                     <div class="col-md-4">
                         <div class="profile-details-section-1">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
                             <div class="profile-table">
                                 <h4>COVERAGE INFORMATION (NEXT OF KIN)</h4>
                                 <div class="row">
@@ -138,7 +140,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                         </table>
                                     </div>
                                 </div>
-                             
+
                             </div>
                         </div>
                     </div>
