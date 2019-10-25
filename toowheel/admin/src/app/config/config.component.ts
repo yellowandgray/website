@@ -25,9 +25,9 @@ export class ConfigComponent implements OnInit {
     this.getCardAds();
     this.getHomeConfig();
   }
-  image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+  image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
     getConfig(): void {
-  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_landing_configs')
+  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_landing_configs')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -40,7 +40,7 @@ export class ConfigComponent implements OnInit {
         );
   }
     getHomeConfig(): void {
-  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_home_configs')
+  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_home_configs')
   .subscribe(
           (res)=>{
               this.result_home = res["result"]["data"];
@@ -53,7 +53,7 @@ export class ConfigComponent implements OnInit {
         );
   }
     getBannerAds(): void {
-  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_banner_advertisment')
+  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_banner_advertisment')
   .subscribe(
           (res)=>{
               this.ads = res["result"]["data"];
@@ -66,7 +66,7 @@ export class ConfigComponent implements OnInit {
         );
   }
     getCardAds(): void {
-  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_card_advertisment')
+  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_card_advertisment')
   .subscribe(
           (res)=>{
               this.ads_card = res["result"]["data"];
@@ -143,7 +143,7 @@ export class ConfigForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -170,7 +170,7 @@ this._snackBar.open(res["result"]["message"], '', {
           formData.append('display_name', this.configForm.value.display_name);
           formData.append('value', this.value);
           formData.append('config_id', this.config_id);
-          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/update_config', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/update_config', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

@@ -22,9 +22,9 @@ export class AnnouncementComponent implements OnInit {
       this.getAnnouncement();
     });
   }
-  image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+  image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
        getAnnouncement(): void {
-     this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_announcement/'+this.club_id)
+     this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_announcement/'+this.club_id)
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -122,7 +122,7 @@ export class AnnouncementForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -166,7 +166,7 @@ export class AnnouncementForm {
           formData.append('description', this.announcementForm.value.description);
         url = 'insert_announcement';
       }
-      this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -209,7 +209,7 @@ export class AnnouncementDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/delete_record/announcement/announcement_id='+this.announcement_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/announcement/announcement_id='+this.announcement_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
