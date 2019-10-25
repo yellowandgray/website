@@ -114,7 +114,6 @@ table.member-table th, td {
 
 .preview-image {
     position: relative;
-    overflow: hidden;
     margin-top: 10px;
 }
 
@@ -122,6 +121,19 @@ table.member-table th, td {
     position: absolute;
 }
 
+.preview-video video {
+    max-width: 100%;
+    height: auto;
+    width: 250px;
+}
+
+.preview-video {
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.preview-video button {
+    position: absolute;
 .news-view-card iframe {
     width: 50%;
     height: 315px;

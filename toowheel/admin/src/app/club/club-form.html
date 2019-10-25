@@ -52,11 +52,14 @@
             </div>
         </div>
         <div fxFlex="33%">            
-            <button type="button" mat-raised-button (click)="fileInputBanner.click()">{{club_video_name}}</button>
+            <button *ngIf="club_video == ''" type="button" mat-raised-button (click)="fileInputBanner.click()">{{club_video_name}}</button>
             <input hidden #fileInputBanner type="file" id="file_banner" (change)="fileProgress($event, 'club_video_name', 'club_video')" />
-                   <mat-icon matTooltip="Width: any, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
-            <div class="preview-image">
-                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image  src="https://www.toowheel.com/beta/toowheel/api/v1/male.jpg" alt="Photo" />
+                   <mat-icon *ngIf="club_video == ''" matTooltip="Width: any, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+            <div class="preview-video" *ngIf="club_video != ''">
+                <video class="dialog-picture" controls muted>
+                         <source src="{{image_url}}{{club_video}}" type="video/mp4">              
+               </video>
+<!--                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image  src="https://www.toowheel.com/beta/toowheel/api/v1/male.jpg" alt="Photo" />-->
                 <button mat-icon-button aria-label="Close icon" (click)="removeMedia('club_video')">
                     <mat-icon>close</mat-icon>
                 </button>

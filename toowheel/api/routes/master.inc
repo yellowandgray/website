@@ -201,7 +201,8 @@ $app->post('/insert_member', function() use ($app) {
             $res['message'] = 'Record inserted successfully';
             $res['data'] = $member_id;
             $tpy = new Thirdparty();
-            $tpy->sendMail('mushaqdeen@gmail.com', 'Mushaqdeen', '$body_web', '$body_mobile', '$subject', 'admin@toowheel.com', '$from_name', '', '', '', '');
+            $template = $com->selectRow('*', 'templates', 'name=\'new_member_register_activated\' AND target=\'user\'');
+            $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $template['body_web'], $template['body_mobile'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
     } else {
         $res['message'] = 'Email id already exist';
@@ -229,7 +230,7 @@ $app->post('/insert_users', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $array = array('name' => $data['name'], 'email' => $data['email'], 'contact' => $data['contact'], 'password' => $data['password'], 'media_path' => $data['file_name'], 'role' => $data['role']);
+    $array = array('name' => $data['name'], 'email' => $data['email'], 'contact' => $data['contact'], 'password' => $com->encryptPassword($data['password']), 'media_path' => $data['file_name'], 'role' => $data['role']);
     $record = $com->insertRecord($array, 'users');
     if ($record > 0) {
         $res['error'] = false;
@@ -375,7 +376,7 @@ $app->get('/get_two_wheel_member', function() {
 $app->get('/get_four_wheel_member', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('m.*, c.name AS club s.name AS state', 'member AS m LEFT JOIN club AS c ON c.club_id = m.club_id LEFT JOIN state AS s ON s.state_id = s.state_id', 'm.member_id > 0 AND m.type = \'four_wheel\'');
+    $data = $com->selectAll('m.*, c.name AS club, s.name AS state', 'member AS m LEFT JOIN club AS c ON c.club_id = m.club_id LEFT JOIN state AS s ON s.state_id = s.state_id', 'm.member_id > 0 AND m.type = \'four_wheel\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -607,6 +608,24 @@ $app->post('/loginmember', function() use ($app) {
             }
         } else {
             $res['message'] = 'Your account was not activated! Kindly contact admin team';
+        }
+    }
+    echoRespnse(201, $res);
+});
+$app->post('/loginadmin', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'users', 'email=\'' . $data['email'] . '\'');
+    if (count($record) > 0) {        
+            $pass_matchs = $obj->decryptPassword($data['password'], $record['password']);
+            if ($pass_matchs == true) {
+                $res['error'] = false;
+                $res['message'] = 'Welcome ' . $record['first_name'];
+                $_SESSION['member_id'] = $record['member_id'];
+            }
+         else {
+            $res['message'] = 'Your email was not found';
         }
     }
     echoRespnse(201, $res);
