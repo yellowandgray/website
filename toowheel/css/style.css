@@ -1969,3 +1969,10 @@ div#html5-watermark {
     color: #fff;
     margin-top: 10px;
 }
+.edit i{
+    color: #ed1c24;
+    background: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    float: right;
+}
