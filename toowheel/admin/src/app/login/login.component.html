@@ -17,16 +17,7 @@
                     <input matInput type="password" placeholder="" required formControlName="password" />
                     <mat-error>Password is required</mat-error>
                 </mat-form-field>
-                <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
-                    <button [disabled]="!loginForm.valid" mat-raised-button color="primary" type="submit">Login</button>
-                    <mat-progress-spinner
-                        class="example-margin"
-                        *ngIf="loading"
-                        [mode]="'indeterminate'"
-                        [strokeWidth]="3"
-                        [diameter]="25">
-                    </mat-progress-spinner>
-                </div>
+                <button [disabled]="!loginForm.valid" mat-raised-button color="primary" type="submit">Login</button>
             </form>
         </mat-card-content>
     </mat-card>

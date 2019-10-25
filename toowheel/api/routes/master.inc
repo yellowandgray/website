@@ -629,13 +629,13 @@ $app->post('/loginadmin', function() use ($app) {
     $data = $app->request->post();
     $obj = new Common();
     $record = $obj->selectRow('*', 'users', 'email=\'' . $data['email'] . '\'');
-    if (count($record) > 0) {        
-            $pass_matchs = $obj->decryptPassword($data['password'], $record['password']);
-            if ($pass_matchs == true) {
-                $res['error'] = false;
-                $res['message'] = 'Welcome ' . $record['name'];                 
-            }
-        else {
+    if (count($record) > 0) {
+        $pass_matchs = $obj->decryptPassword($data['password'], $record['password']);
+        if ($pass_matchs == true) {
+            $res['error'] = false;
+            $res['message'] = 'Welcome ' . $record['name'];
+            $res['data'] = $record;
+        } else {
             $res['message'] = 'Username or Password mismatch';
         }
     }

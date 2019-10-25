@@ -36,7 +36,7 @@ formData.append('password', this.loginForm.value.password);
             (res)=>{
                 this.loading = false;
                  if(res["result"]["error"] === false) {
-                     (res["result"]["data"]).forEach((val, key)=> {
+                     Object.keys(res["result"]["data"]).forEach((val, key)=> {
                          sessionStorage.setItem("toowheel_"+key, val);
          });
                       this.router.navigateByUrl('/dashboard');
