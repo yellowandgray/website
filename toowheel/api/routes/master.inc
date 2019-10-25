@@ -230,7 +230,7 @@ $app->post('/insert_users', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $array = array('name' => $data['name'], 'email' => $data['email'], 'contact' => $data['contact'], 'password' => $data['password'], 'media_path' => $data['file_name'], 'role' => $data['role']);
+    $array = array('name' => $data['name'], 'email' => $data['email'], 'contact' => $data['contact'], 'password' => $com->encryptPassword($data['password']), 'media_path' => $data['file_name'], 'role' => $data['role']);
     $record = $com->insertRecord($array, 'users');
     if ($record > 0) {
         $res['error'] = false;
@@ -608,6 +608,24 @@ $app->post('/loginmember', function() use ($app) {
             }
         } else {
             $res['message'] = 'Your account was not activated! Kindly contact admin team';
+        }
+    }
+    echoRespnse(201, $res);
+});
+$app->post('/loginadmin', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'users', 'email=\'' . $data['email'] . '\'');
+    if (count($record) > 0) {        
+            $pass_matchs = $obj->decryptPassword($data['password'], $record['password']);
+            if ($pass_matchs == true) {
+                $res['error'] = false;
+                $res['message'] = 'Welcome ' . $record['first_name'];
+                $_SESSION['member_id'] = $record['member_id'];
+            }
+         else {
+            $res['message'] = 'Your email was not found';
         }
     }
     echoRespnse(201, $res);

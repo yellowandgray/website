@@ -250,6 +250,7 @@ export class ClubForm {
             });
             this.cover_image = this.data.cover_image;
             this.logo_image = this.data.logo;
+            this.club_video= this.data.club_video;
             this.club_id = this.data.club_id;
             this.getCategory();
         }

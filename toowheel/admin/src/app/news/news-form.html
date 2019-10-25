@@ -39,14 +39,26 @@
             </mat-form-field>
         </div>
         <div fxFlex="25%" fxLayoutAlign="center center">
-            <button type="button" mat-raised-button (click)="fileInput.click()">{{cover_image}}</button>
-            <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'cover_image', 'cover_image_path')" />
-                   <mat-icon matTooltip="Width: 1583px, Height: 600px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+            <button *ngIf="cover_image_path == ''" type="button" mat-raised-button (click)="fileInput.click()">{{cover_image}}</button>
+            <input  hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'cover_image', 'cover_image_path')" />
+                   <mat-icon *ngIf="cover_image_path == ''" matTooltip="Width: 1583px, Height: 600px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+            <div class="preview-image" *ngIf="cover_image_path != ''">
+                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image src="{{image_url}}{{cover_image_path}}" alt="Photo" />
+                <button mat-icon-button aria-label="Close icon" (click)="removeMedia('cover_image_path')">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </div>
         </div>
         <div fxFlex="25%">
-            <button type="button" mat-raised-button (click)="fileInputThumb.click()">{{thumb_image}}</button>
+            <button *ngIf="thumb_image_path == ''" type="button" mat-raised-button (click)="fileInputThumb.click()">{{thumb_image}}</button>
             <input hidden #fileInputThumb type="file" id="file_thumb" (change)="fileProgress($event, 'thumb_image', 'thumb_image_path')" />
-                   <mat-icon matTooltip="Width: 229px, Height: 360px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+                   <mat-icon *ngIf="thumb_image_path == ''" matTooltip="Width: 229px, Height: 360px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+             <div class="preview-image" *ngIf="thumb_image_path != ''">
+                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image src="{{image_url}}{{thumb_image_path}}" alt="Photo" />
+                <button mat-icon-button aria-label="Close icon" (click)="removeMedia('thumb_image_path')">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </div>
         </div>
     </div>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
@@ -113,14 +125,26 @@
 <br/>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
     <div fxFlex="50%" fxLayoutAlign="center center">
-        <button type="button" mat-raised-button (click)="fileInputBanner1.click()">{{banner_image_1}}</button>
+        <button *ngIf="banner_image_1_path == ''" type="button" mat-raised-button (click)="fileInputBanner1.click()">{{banner_image_1}}</button>
         <input hidden #fileInputBanner1 type="file" id="file_banner_1" (change)="fileProgress($event, 'banner_image_1', 'banner_image_1_path')" />
-               <mat-icon matTooltip="Width: 650px, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+               <mat-icon *ngIf="banner_image_1_path == ''" matTooltip="Width: 650px, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+        <div class="preview-image" *ngIf="banner_image_1_path != ''">
+                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image src="{{image_url}}{{banner_image_1_path}}" alt="Photo" />
+                <button mat-icon-button aria-label="Close icon" (click)="removeMedia('banner_image_1_path')">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </div>
     </div>
     <div fxFlex="50%" fxLayoutAlign="center center">
-        <button type="button" mat-raised-button (click)="fileInputBanner2.click()">{{banner_image_2}}</button>
+        <button *ngIf="banner_image_2_path == ''" type="button" mat-raised-button (click)="fileInputBanner2.click()">{{banner_image_2}}</button>
         <input hidden #fileInputBanner2 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_2', 'banner_image_2_path')" />
-               <mat-icon matTooltip="Width: 650px, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+               <mat-icon *ngIf="banner_image_2_path == ''" matTooltip="Width: 650px, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+        <div class="preview-image" *ngIf="banner_image_2_path != ''">
+                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image src="{{image_url}}{{banner_image_2_path}}" alt="Photo" />
+                <button mat-icon-button aria-label="Close icon" (click)="removeMedia('banner_image_2_path')">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </div>
     </div>
 </div>
 <br/>
