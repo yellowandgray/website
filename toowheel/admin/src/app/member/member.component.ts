@@ -58,7 +58,15 @@ export class MemberComponent implements OnInit {
   changeStatus(id, status): void {
       var formData = new FormData();
       formData.append('activated', status);
-      this.httpClient.post<any>('https://www.toowheel.com/beta/toowheel/api/v1/update_record/member/member_id = '+id, formData)
+      if(status == 1) {
+      formData.append('activated_by', sessionStorage.getItem("toowheel_user_id"));
+      formData.append('activated_at', moment(),format('YYYY-MM-DD'));
+      }
+      if(status == 0) {
+      formData.append('blocked_by', sessionStorage.getItem("toowheel_user_id"));
+      formData.append('blocked_at', moment(),format('YYYY-MM-DD'));
+      }
+      this.httpClient.post<any>('https://www.toowheel.com/beta/toowheel/api/v1/update_user_status/member/member_id = '+id, formData)
   .subscribe(
           (res)=>{
               this.getMember();

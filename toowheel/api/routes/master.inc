@@ -593,6 +593,18 @@ $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/update_user_status/:table/:where', function($table, $where) use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->updateRecordWithWhere($data, $table, $where);
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record updated successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/loginmember', function() use ($app) {
     $res = array('error' => true, 'message' => 'Invalid login details');
     $data = $app->request->post();

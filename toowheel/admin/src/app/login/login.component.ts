@@ -12,7 +12,6 @@ import { HttpClient } from '@angular/common/http';
 export class LoginComponent implements OnInit {
     loginForm: FormGroup;
     loading = false;
-    result = [];
   constructor(
   private _snackBar: MatSnackBar,
   private router: Router, private httpClient: HttpClient
@@ -24,23 +23,17 @@ export class LoginComponent implements OnInit {
       'password': new FormControl('', Validators.required)
     });
   }
-    onSubmit() {
-        if (this.loginForm.invalid) {
-            return;
-        }
-       this.getUsers();     
-    }
-     image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
-    getUsers(): void {
+    onSubmit(): void {
 var formData = new FormData();
 formData.append('email', this.loginForm.value.username);
 formData.append('password', this.loginForm.value.password);
     this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/loginadmin', formData)
     .subscribe(
             (res)=>{
-                this.result = res["result"]["data"];
-                console.log(res["result"]["roleuser"]);
-                 if(res["result"]["error"] === false) {                       
+                 if(res["result"]["error"] === false) {
+                     (res["result"]["data"]).forEach((val, key)=> {
+                         sessionStorage.setItem("toowheel_"+key, val);
+         });
                       this.router.navigateByUrl('/dashboard');
                 }else{
             this._snackBar.open(res["result"]["message"], '', {
