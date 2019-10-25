@@ -1,9 +1,12 @@
-<h2 mat-dialog-title>Member</h2>
+<h2 mat-dialog-title>Member Details</h2>
 <mat-dialog-content class="mat-typography">
-    <ng-container *ngFor="let data of result_fw">
-        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
-            <img src="./assets/1.jpg" alt="" style="width: 100px;" />
+    <form [formGroup]="memberForm">
+        <div class="member-profile-picture" fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%" fxLayoutAlign="end center">
+                <img src="{{image_url}}{{data.profile_picture}}" alt="" />
+            </div>
         </div>
+        <br/>
         <table mat-table class="member-table">
             <h2>Basic Information:</h2>
             <tr>
@@ -32,7 +35,7 @@
             </tr>
             <tr>
                 <th mat-header-cell> Date of Birth </th>
-                <td mat-cell> {{data.dob_date}} / {{data.dob_month}} / {{data.dob_year}} </td>
+                <td mat-cell> {{data.dob_date}}/{{data.dob_month}}/{{data.dob_year}} </td>
             </tr>
             <tr>
                 <th mat-header-cell> Club Name </th>
@@ -52,12 +55,13 @@
             </tr>
             <tr>
                 <th mat-header-cell> State </th>
-                <td mat-cell> {{data.state_id}} </td>
+                <td mat-cell> {{data.state}} </td>
             </tr>
             <tr>
                 <th mat-header-cell> Zip Code </th>
                 <td mat-cell> {{data.zip_code}} </td>
             </tr>
+            <br/>
             <h2>Referral:</h2>
             <tr>
                 <th mat-header-cell> Member ID </th>
@@ -67,14 +71,42 @@
                 <th mat-header-cell> Club </th>
                 <td mat-cell> {{data.referral_club_id}} </td>
             </tr>
-            <h2>Referral:</h2>
+            <br/>
+            <h2>Coverage Information:</h2>
+            <tr>
+                <th mat-header-cell> Full Name </th>
+                <td mat-cell>  </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Contact No. </th>
+                <td mat-cell>  </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Spouse Name </th>
+                <td mat-cell>  </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> Child 1	 </th>
+                <td mat-cell>  </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> IC No. </th>
+                <td mat-cell>  </td>
+            </tr>
+            <tr>
+                <th mat-header-cell> My Kit Id </th>
+                <td mat-cell>  </td>
+            </tr>
+            <br/>
+            <h2>Login:</h2>
             <tr>
                 <th mat-header-cell> Email Address </th>
                 <td mat-cell> {{data.email}} </td>
             </tr>
         </table>
-    </ng-container>
-    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
-        <button mat-button [mat-dialog-close]="false">Cancel</button>
-    </div>
+        <br/>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+        </div>
+    </form>
 </mat-dialog-content>

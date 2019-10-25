@@ -3,52 +3,47 @@
 }
 
 .truncate {
-  width: 250px;
-  white-space: wrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: black;
+    width: 250px;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: black;
 }
 
 .truncate1 {
-  width: 200px;
-  white-space: wrap;
-  overflow: hidden;
-  text-overflow: ellipsis;  
-  font-size: 2pt;
+    width: 200px;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;  
+    font-size: 2pt;
 }
+
 .truncate2 {
-  width: 200px;
-  white-space: wrap;
-  overflow: hidden;
-  text-overflow: ellipsis;  
-  font-size: 0pt;
+    width: 200px;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;  
+    font-size: 0pt;
 }
 
 .list-container { 
-   
     border-bottom: 1px solid #ccc;
-   
 }
 
 .dialog-picture {
     max-height: none;
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
 }
-/*.dialog-video {
-    max-height: none;
-    video {
-        max-width: 100%;
-        max-height: 100%;
-    }
-}*/
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .dialog-video {
     max-height: none;
-    video {
-        width: 20%;
-        height: 20%;
-    }
+}
+
+video {
+    width: 20%;
+    height: 20%;
 }

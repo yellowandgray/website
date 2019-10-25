@@ -5,7 +5,7 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openUsersForm()"><mat-icon>add</mat-icon> users</button>
+            <button mat-raised-button color="primary" (click)="openUsersForm(0)"><mat-icon>add</mat-icon> users</button>
         </div>
         <section class="section">
             <br/>                     
@@ -18,7 +18,7 @@
                 <div fxFlex="20%">
                     <mat-form-field fxFlex="100%">
                         <mat-label>Sort by</mat-label>
-                        <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
+                        <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords('result', sortdata)">
                             <mat-option value="title_a_z">Title A-Z</mat-option>
                             <mat-option value="title_z_a">Title Z-A</mat-option>
                             <mat-option value="created_a_z">Created Date ASC</mat-option>

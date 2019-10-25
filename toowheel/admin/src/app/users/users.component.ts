@@ -11,9 +11,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-     searchTermTW: string = '';
+     searchTerm: string = '';
   searchTermFW: string = '';
-  sortdata_tw: string = '';
+  sortdata: string = '';
   sortdata_fw: string = '';
   result = [];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
@@ -115,11 +115,12 @@ export class UsersComponent implements OnInit {
   templateUrl: 'users-form.html',
 })
 export class UsersForm {
+image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     usersForm: FormGroup;
     loading = false;
     users_id = 0;
     file_name: string = 'Choose Profile Picture';
-    media_path: string;
+    media_path: string='';
     constructor(
     public dialogRef: MatDialogRef<UsersForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -141,6 +142,7 @@ export class UsersForm {
                 role: this.data.role
         })
         this.users_id = this.data.users_id;
+        this.media_path=this.data.media_path;
     }
 }
 
@@ -216,6 +218,12 @@ export class UsersForm {
       }
     );
   }
+  removeMedia(url) {
+      this[url] = '';
+      if(url === 'media_path') {
+          this.file_name= 'Choose Profile Picture';
+      }     
+  }
 
 }
 
@@ -261,7 +269,7 @@ export class UsersDeleteForm {
             return;
       }
       this.loading = true;
-      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/users/users_id='+this.users_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/delete_record/users/users_id='+this.users_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

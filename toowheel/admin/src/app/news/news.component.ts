@@ -1,4 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -76,15 +77,27 @@ export class NewsComponent implements OnInit {
     });
 }
 
-        openView(): void  {
+    openView(id, res): void  {
+        var data = null;
+        if(id != 0) { 
+        this[res].forEach(val=> {
+             if(parseInt(val.news_id) === parseInt(id)) {
+                  data = val;
+                  return false;
+             }
+           });
+        }
         const dialogRef = this.dialog.open(NewsViewForm, {
-            minWidth: "40%",
-            maxWidth: "40%"
-        });
+        minWidth: "80%",
+        maxWidth: "80%",
+        data: data
+    });
 
-       dialogRef.afterClosed().subscribe(result => {
-            console.log(`Dialog result: ${result}`);
-        });
+        dialogRef.afterClosed().subscribe(result => {
+            if(result !== false && result !== 'false') {
+            this.getNews();
+          }
+        });           
     }
 
 confirmDialog(id, action): void  {
@@ -152,6 +165,7 @@ confirmDialog(id, action): void  {
   templateUrl: 'news-form.html',
 })
 export class NewsForm {
+image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     newsForm: FormGroup;
     loading = false;
     categories:any[];
@@ -162,10 +176,10 @@ export class NewsForm {
     thumb_image: string = 'Thumb Image';
     banner_image_1: string = 'Image 1';
     banner_image_2: string = 'Image 2';
-    cover_image_path: string;
-    thumb_image_path: string;
-    banner_image_1_path: string;
-    banner_image_2_path: string;
+    cover_image_path: string='';
+    thumb_image_path: string='';
+    banner_image_1_path: string='';
+    banner_image_2_path: string='';
     constructor(
     public dialogRef: MatDialogRef<NewsForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -201,6 +215,10 @@ export class NewsForm {
            sponsor: this.data.sponsor
         });
         this.news_id = this.data.news_id;
+        this.cover_image_path = this.data.cover_image;
+        this.thumb_image_path=this.data.thumb_image;
+        this.banner_image_1_path=this.data.banner_1;
+        this.banner_image_2_path=this.data.banner_2;
         this.getCategory();
         this.getClub();
     }else {
@@ -400,6 +418,22 @@ export class NewsForm {
       }
     );
   }
+  removeMedia(url) {
+      this[url] = '';
+      if(url === 'cover_image_path') {
+          this.cover_image= 'Cover Image';
+      }
+       if(url === 'thumb_image_path') {
+          this.thumb_image= 'Thumb Image';
+      }
+       if(url === 'banner_image_1_path') {
+          this.banner_image_1= 'Image 1';
+      }
+       if(url === 'banner_image_2_path') {
+          this.banner_image_2= 'Image 2';
+      }
+      
+  }
 }
 
 @Component({
@@ -575,13 +609,70 @@ export class PictureViewNews {
 })
  
 export class NewsViewForm {
+    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+    newsForm: FormGroup;
+    loading = false;
+    media_path: string;
+    news_id:any;
+    result:any[];
     constructor(
     public dialogRef: MatDialogRef<NewsViewForm>,
-    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private sanitizer: DomSanitizer,
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {}
-    
-    onNoClick(): void {
-        this.dialogRef.close();
+    private httpClient: HttpClient) {
+        this.newsForm = new FormGroup({
+            'type': new FormControl('', Validators.required),
+            'category_id': new FormControl('', Validators.required),
+            'club_id': new FormControl(),
+            'title': new FormControl('', Validators.required),
+            'date': new FormControl('', Validators.required),
+            'media': new FormControl('', Validators.required),
+            'moto_text': new FormControl('', Validators.required),
+            'author_name': new FormControl('', Validators.required),
+            'description': new FormControl('', Validators.required),
+            'description_1': new FormControl('', Validators.required),
+            'youtube_id': new FormControl(),
+            'sponsor': new FormControl()
+        });
+        if(this.data != null) {
+            this.newsForm.patchValue({
+           type: this.data.type,
+           category_id: this.data.category_id,
+           club_id: this.data.club_id,
+           title: this.data.title,
+           date: this.data.news_date,
+           media: this.data.media_id,
+           moto_text: this.data.moto_text,
+           author_name: this.data.author_name,
+           description: this.data.description_1,
+           description_1: this.data.description_2,
+           youtube_id: this.data.youtube_id,
+           sponsor: this.data.sponsor
+        });
+            this.news_id = this.data.news_id;
+            this.getImages();
+        }
     }
+    getImages(){
+        this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_news_gallery_by_news/'+this.news_id).subscribe(
+              (res)=>{
+                if(res["result"]["error"] === false) {
+                    this.result = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
+getYoutubeLink(yid) {
+return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+yid);
+}
+
 }  

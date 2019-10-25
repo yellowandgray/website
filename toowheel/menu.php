@@ -34,7 +34,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                         <button class="tablinks" onclick="openCity(event, 'Clubs')">Find a Club <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Events')">Events <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks"><a href="club-register.php?type=<?php echo $type; ?>">Club Registration <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>
-                        <button class="tablinks"><a href="workshop-landing.php?type=<?php echo $type; ?>">Workshop <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>
+<!--                        <button class="tablinks"><a href="workshop-landing.php?type=<?php echo $type; ?>">Workshop <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>-->
                         <div class="line-g"></div>
                         <h5>FOLLOW US</h5>
                         <ul class="nav__ul">

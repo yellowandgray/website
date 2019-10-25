@@ -16,6 +16,7 @@ export class ClubComponent implements OnInit {
   searchTermFW: string = '';
   sortdata_tw: string = '';
   sortdata_fw: string = '';  
+  oneClick: Boolean = false;  
   result:any[];
   result_four_wheel:any[];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
@@ -53,8 +54,7 @@ export class ClubComponent implements OnInit {
   openDialog(id, res): void  {
       var data = null;      
       if(id != 0) {
-      this[res].forEach(val=> {
-      yourclick=0
+      this[res].forEach(val=> {    
            if(parseInt(val.club_id) === parseInt(id)) {
                 data = val;
                 return false;
@@ -116,23 +116,7 @@ export class ClubComponent implements OnInit {
     });
     }
     
-    /*openView(id): void  {
-    var data = null;
-      if(id != 0) { 
-        data = id;
-      }
-        const dialogRef = this.dialog.open(ClubViewFrom, {
-            minWidth: "40%",
-            maxWidth: "40%"
-             data: {
-            data: data,     
-        }
-        });
-
-       dialogRef.afterClosed().subscribe(result => {
-            console.log(`Dialog result: ${result}`);
-        });
-    }*/
+    
      confirmDialog(id, action): void  {
     var data = null;
       if(id != 0) { 
@@ -205,7 +189,7 @@ export class ClubComponent implements OnInit {
   templateUrl: 'club-form.html',
 })
 export class ClubForm {
-          image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+          image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     clubForm: FormGroup;
     loading = false;
     club_id = 0;
@@ -215,9 +199,9 @@ export class ClubForm {
     file_cover_name: string = 'Cover Image';
     file_logo_name: string = 'Club Logo';
     club_video_name: string = 'Club Video';
-    cover_image: string;
-    logo_image: string;
-    club_video: string;
+    cover_image: string = '';
+    logo_image: string = '';
+    club_video: string = '';
     constructor(
     public dialogRef: MatDialogRef<ClubForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -264,6 +248,9 @@ export class ClubForm {
                 instagram_link: this.data.instagram_link,
                 rank: this.data.rank
             });
+            this.cover_image = this.data.cover_image;
+            this.logo_image = this.data.logo;
+            this.club_video= this.data.club_video;
             this.club_id = this.data.club_id;
             this.getCategory();
         }
@@ -357,15 +344,9 @@ export class ClubForm {
       if(this.club_id != 0) {
         formData.append('name', this.clubForm.value.name);
           formData.append('type', this.clubForm.value.type);
-          if(this.cover_image && this.cover_image!= '') {
               formData.append('cover_image', this.cover_image);
-          }
-          if(this.logo_image && this.logo_image!= '') {
               formData.append('logo', this.logo_image);
-          }
-          if(this.club_video && this.club_video!= '') {
               formData.append('club_video', this.club_video);
-          }
           formData.append('category_id', this.clubForm.value.category_id);
           formData.append('state_id', this.clubForm.value.state);
           formData.append('city', this.clubForm.value.city);
@@ -427,6 +408,18 @@ export class ClubForm {
         });
             }
         );
+  }
+  removeMedia(url) {
+      this[url] = '';
+      if(url === 'cover_image') {
+          this.file_cover_name = 'Cover Image';
+      }
+      if(url === 'logo_image') {
+          this.file_logo_name = 'Club Logo';
+      }
+      if(url === 'club_video') {
+          this.club_video_name = 'Club Video';
+      }
   }
 }
 
@@ -604,7 +597,7 @@ export class PictureViewClub {
   templateUrl: 'club-view-form.html',
 })
 export class ClubViewFrom {
-        image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     clubForm: FormGroup;
     loading = false;
     club_id = 0;
@@ -666,7 +659,7 @@ export class ClubViewFrom {
             this.club_id = this.data.club_id;
             this.getCategory();
         }
-        this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_states').subscribe(
+        this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_states').subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
                     this.states = res["result"]["data"];
@@ -688,7 +681,7 @@ export class ClubViewFrom {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -708,7 +701,7 @@ export class ClubViewFrom {
     }
     getCategory(): void {
        this.loading = true;
-          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_'+this.clubForm.value.type+'_category').subscribe(
+          this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_'+this.clubForm.value.type+'_category').subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -728,7 +721,7 @@ export class ClubViewFrom {
     }
     getCityByState(): void {
        this.loading = true;
-          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_city_by_state/'+this.clubForm.value.state).subscribe(
+          this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_city_by_state/'+this.clubForm.value.state).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
