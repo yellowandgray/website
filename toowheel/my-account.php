@@ -193,13 +193,16 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                 <i class="fa fa-times-circle" aria-hidden="true"></i>
                 <div class="margin-top-30">
                     <h4>Change Your Register password!</h4>
-                    <input type="password" name="old_password" placeholder="Enter Your Old Password" />
+                    <input type="password" onchange="removeValidation('curr_password');" name="curr_password" id="curr_password" placeholder="Enter Your Current Password" />
+                    <div id="curr_password_error"></div>
                     <br/>
-                    <input type="password" name="new_password" placeholder="Enter Your New Password" />
+                    <input type="password" onchange="removeValidation('new_password');" name="new_password" id="new_password" placeholder="Enter Your New Password" />
+                    <div id="new_password_error"></div>
                     <br/>
-                    <input type="password" name="confirm_password" placeholder="Enter Confirm Password" />
+                    <input type="password" onchange="removeValidation('confirm_password');" name="confirm_password" id="confirm_password" placeholder="Enter Confirm Password" />
+                    <div id="confirm_password_error"></div>
                     <center>
-                        <button type="submit">Submit</button>
+                        <button type="button" onclick="updatePassword();">Submit</button>
                     </center>
                 </div>
             </div>

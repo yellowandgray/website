@@ -784,11 +784,13 @@ $app->post('/reset_password', function() use ($app) {
 
 $app->post('/change_password', function() use ($app) {
     $data = $app->request->post();
+    $data['member'] = $_SESSION['member_id'];
     $obj = new Common();
     $res = array('error' => true, 'message' => 'Unable to change password');
     $exist = $obj->selectRow('*', 'member', 'member_id = ' . $data['member']);
     if (count($exist) > 0) {
-        if ($exist['password'] == $obj->encryptPassword($data['old_password'])) {
+        $pass_matchs = $obj->decryptPassword($data['old_password'], $exist['password']);
+        if ($pass_matchs == true) {
             $res['error'] = false;
             $res['message'] = 'Password updated successfully';
             $obj->updateRecordWithWhere(array('password' => $obj->encryptPassword($data['new_password'])), 'member', 'member_id=' . $data['member']);

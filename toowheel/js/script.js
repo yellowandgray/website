@@ -534,6 +534,44 @@ function changePassword(code) {
     return false;
 }
 
+function validUpdatePasswordForm() {
+    var change = true;
+    if ($.trim($('#curr_password').val()) === '') {
+        $('#curr_password_error').html('Enter current password').addClass('error-msg');
+        change = false;
+    }
+    if ($.trim($('#new_password').val()) === '') {
+        $('#new_password_error').html('Enter new password').addClass('error-msg');
+        change = false;
+    }
+    if ($.trim($('#confirm_password').val()) !== $.trim($('#new_password').val())) {
+        $('#confirm_password_error').html('New password mismatch').addClass('error-msg');
+        change = false;
+    }
+    return change;
+}
+
+function updatePassword() {
+    if (validUpdatePasswordForm()) {
+        $('.loader').addClass('is-active');
+        $.ajax({
+            type: "POST",
+            url: 'api/v1/change_password',
+            data: {old_password: $('#curr_password').val(), new_password: $('#new_password').val()},
+            success: function (data) {
+                $('.loader').removeClass('is-active');
+                $(".password-popup").fadeOut('fast');
+                swal('Information', data.result.message, 'info');
+            },
+            error: function (err) {
+                $(".password-popup").fadeOut('fast');
+                $('.loader').removeClass('is-active');
+                swal('Error', err.statusText, 'error');
+            }
+        });
+    }
+}
+
 function updateProfile() {
     $('.loader').addClass('is-active');
     $.ajax({
