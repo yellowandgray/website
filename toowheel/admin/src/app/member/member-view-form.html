@@ -60,19 +60,19 @@
             <th mat-header-cell> Zip Code </th>
             <td mat-cell> {{data.zip_code}} </td>
         </tr>
-        <tr>
+        <tr *ngIf="data.activated_at != '0000-00-00'">
             <th mat-header-cell> Activated on </th>
-            <td mat-cell> {{data.activated_at | date: 'dd/MM/YY'}} </td>
+            <td mat-cell> {{data.activated_at | date: 'dd/MM/yyyy'}} </td>
         </tr>
-        <tr>
+        <tr *ngIf="data.activated_user != null && data.activated_user != 'null'">
             <th mat-header-cell> Activated by </th>
             <td mat-cell> {{data.activated_user}} </td>
         </tr>
-        <tr>
+        <tr *ngIf="data.blocked_at != '0000-00-00'">
             <th mat-header-cell> Blocked on </th>
-            <td mat-cell> {{data.blocked_at | date: 'dd/MM/YY'}} </td>
+            <td mat-cell> {{data.blocked_at | date: 'dd/MM/yyyy'}} </td>
         </tr>
-        <tr>
+        <tr *ngIf="data.blocked_user != null && data.blocked_user != 'null'">
             <th mat-header-cell> Blocked by </th>
             <td mat-cell> {{data.blocked_user}} </td>
         </tr>

@@ -582,7 +582,7 @@ $app->get('/delete_record/:table/:where', function($table, $where) {
 });
 
 $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
-    $res = array('error' => true, 'message' => 'Unable to insert');
+    $res = array('error' => true, 'message' => 'Unable to update');
     $data = $app->request->post();
     $com = new Common();
     $record = $com->updateRecordWithWhere($data, $table, $where);
@@ -594,7 +594,7 @@ $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
 });
 
 $app->post('/update_user_status/:table/:where', function($table, $where) use ($app) {
-    $res = array('error' => true, 'message' => 'Unable to insert');
+    $res = array('error' => true, 'message' => 'Unable to update');
     $data = $app->request->post();
     $com = new Common();
     $record = $com->updateRecordWithWhere($data, $table, $where);
@@ -605,6 +605,28 @@ $app->post('/update_user_status/:table/:where', function($table, $where) use ($a
         $data = $com->selectRow('*', $table, $where);
         if ($data['activated'] == 1) {
             $template = $com->selectRow('*', 'templates', 'name=\'member_activated\' AND target=\'user\'');
+            $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $template['body_web'], $template['body_mobile'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+        }
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/update_tshirt_status/:table/:where', function($table, $where) use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to update');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->updateRecordWithWhere($data, $table, $where);
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record updated successfully';
+        $tpy = new Thirdparty();
+        $data = $com->selectRow('*', $table, $where);
+        if ($data['t_shirt_status'] == 2) {
+            $template = $com->selectRow('*', 'templates', 'name=\'tshirt_shipped\' AND target=\'user\'');
+            $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $template['body_web'], $template['body_mobile'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+        }
+        if ($data['t_shirt_status'] == 3) {
+            $template = $com->selectRow('*', 'templates', 'name=\'tshirt_delivered\' AND target=\'user\'');
             $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $template['body_web'], $template['body_mobile'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
     }
