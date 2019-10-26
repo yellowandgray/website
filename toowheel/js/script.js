@@ -68,6 +68,24 @@ function closeProfilePic() {
     $("#upload_container").removeClass('hidden');
 }
 
+function closeReceiptPic() {
+    $("#payment_receipt2").val('');
+    $("#preview_receipt_container").addClass('hidden');
+    $("#upload_receipt_container").removeClass('hidden');
+}
+
+function showSlipPreview(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#preview_receipt_container img').attr('src', e.target.result);
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+    $("#preview_receipt_container").removeClass('hidden');
+    $("#upload_receipt_container").addClass('hidden');
+}
+
 function loadClubs(type) {
     if (type != '') {
         $.ajax({

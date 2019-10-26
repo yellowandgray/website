@@ -431,10 +431,12 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                 <br/>
                                                 <br/>
                                                 <form>
-                                                    <label>Upload Your Receipt</label>
-                                                    <input type="file" name="payment_receipt2" id="payment_receipt2" />
-                                                    <div class="image-preview hidden" id="preview_container">
-                                                        <button type="button" onclick="closeProfilePic();" class="close-button-profile-img"><i class="fa fa-close"></i></button>
+                                                    <div id="upload_receipt_container">
+                                                        <label>Upload Your Receipt</label>
+                                                        <input type="file" name="payment_receipt2" id="payment_receipt2" onchange="showSlipPreview(this);" />
+                                                    </div>
+                                                    <div class="image-preview hidden" id="preview_receipt_container" style="width: 200px; height: 200px; margin: 0 auto;">
+                                                        <button type="button" onclick="closeReceiptPic();" class="close-button-profile-img"><i style="position: static; font-size: 14px; color: #000000;" class="fa fa-close"></i></button>
                                                         <img src="" alt="image" />
                                                     </div>
                                                     <br/>
@@ -482,10 +484,12 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                                         $(".pop-1").fadeIn("slow");
                                                                     }
                                                             );
-                                                            $(".pop-1 i").click(
+                                                            $(".pop-1 i.fa-times-circle").click(
                                                                     function () {
                                                                         $(".pop-1").fadeOut("fast");
-                                                                        $('#payment_receipt2').val('');
+                                                                        $("#payment_receipt2").val('');
+                                                                        $("#preview_receipt_container").addClass('hidden');
+                                                                        $("#upload_receipt_container").removeClass('hidden');
                                                                     }
                                                             );
                                                             paypal.Buttons({
