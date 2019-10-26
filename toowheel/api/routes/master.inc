@@ -251,11 +251,22 @@ $app->post('/insert_users', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $array = array('name' => $data['name'], 'email' => $data['email'], 'contact' => $data['contact'], 'password' => $com->encryptPassword($data['password']), 'media_path' => $data['file_name'], 'role' => $data['role']);
-    $record = $com->insertRecord($array, 'users');
-    if ($record > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Record inserted successfully';
+    $exist = $com->selectRow('*', 'member', 'email = \'' . $data['email'] . '\'');
+    if (count($exist) == 0) {
+        $data['password'] = $com->randomStringGenerator(8);
+        $data['link'] = LOGIN_ADMIN_PATH;
+        $array = array('name' => $data['name'], 'email' => $data['email'], 'contact' => $data['contact'], 'password' => $com->encryptPassword($data['password']), 'media_path' => $data['file_name'], 'role' => $data['role'], 'gender' => $data['gender']);
+        $record = $com->insertRecord($array, 'users');
+        if ($record > 0) {
+            $tpy = new Thirdparty();
+            $res['error'] = false;
+            $res['message'] = 'Record inserted successfully';
+            $template = $com->selectRow('*', 'templates', 'name=\'new_user_register\' AND type=\'email\' AND target=\'user\'');
+            $body = $com->getReplacedString($template['body_web'], $data);
+            $tpy->sendMail($data['email'], $data['name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+        }
+    } else {
+        $res['message'] = 'Email id already exist';
     }
     echoRespnse(201, $res);
 });

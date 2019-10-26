@@ -38,6 +38,7 @@
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button> 
                     <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.media_path != ''" alt="..." (click)="confirmDialog(data, 'preview')" />                   
+                    <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.media_path || data.media_path == ''" alt="" />                   
                          <h3 class="truncate" matLine>{{data.name}}</h3> 
                     <p mat-line> {{data.email}} - {{data.contact}} </p>
                     <p mat-line> {{data.role}} </p>

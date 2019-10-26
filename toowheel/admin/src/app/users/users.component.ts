@@ -172,16 +172,16 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     private httpClient: HttpClient) {
     this.usersForm = new FormGroup({
         'name': new FormControl('', Validators.required),
-        'email': new FormControl('', Validators.required),
-        'password': new FormControl('', Validators.required),
-        'contact': new FormControl('', Validators.required),
+        'email': new FormControl('', [Validators.required, Validators.email]),
+        'gender': new FormControl('', Validators.required),
+        'contact': new FormControl(''),
         'role': new FormControl('', Validators.required)
     });
         if(this.data != null) { 
             this.usersForm.patchValue({ 
                 name: this.data.name,
                 email: this.data.email,
-                password: this.data.password,
+                gender: this.data.gender,
                 contact: this.data.contact,
                 role: this.data.role
         })
@@ -225,12 +225,10 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
         var url = '';
     if(this.users_id != 0) {
             formData.append('name', this.usersForm.value.name);
-            if(this.media_path && this.media_path != '') {
-            formData.append('file_name', this.media_path);
-            }
+            formData.append('media_path', this.media_path);
             formData.append('email', this.usersForm.value.email);
             formData.append('role', this.usersForm.value.role);
-            formData.append('password', this.usersForm.value.password);
+            formData.append('gender', this.usersForm.value.gender);
             formData.append('contact', this.usersForm.value.contact);
         url = 'update_record/users/users_id = '+this.users_id;
       } else {
@@ -238,7 +236,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
             formData.append('file_name', this.media_path);
             formData.append('email', this.usersForm.value.email);
             formData.append('role', this.usersForm.value.role);
-            formData.append('password', this.usersForm.value.password);
+            formData.append('gender', this.usersForm.value.gender);
             formData.append('contact', this.usersForm.value.contact);
         url = 'insert_users';
       }
@@ -270,7 +268,6 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
   }
 
 }
-
 
   @Component({
   selector: 'users-view-form',

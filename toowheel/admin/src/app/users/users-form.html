@@ -12,7 +12,7 @@
             <div fxFlex="50%" fxLayoutAlign="center center">
                 <button *ngIf="media_path == ''" type="button" mat-raised-button (click)="fileInput.click()">{{file_name}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'file_name', 'media_path')" />
-                 <div class="preview-image" *ngIf="media_path != ''">
+                       <div class="preview-image" *ngIf="media_path != ''">
                     <img class="dialog-picture" matTooltip="CoverImage" mat-card-image src="{{image_url}}{{media_path}}" alt="Photo" />
                     <button mat-icon-button aria-label="Close icon" (click)="removeMedia('media_path')">
                         <mat-icon>close</mat-icon>
@@ -30,9 +30,11 @@
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Password</mat-label>
-                    <input matInput placeholder="" formControlName="password" />
-                    <mat-error>Password is required</mat-error>
+                    <mat-label>Gender</mat-label>
+                    <mat-select formControlName="gender">
+                        <mat-option value="male"> Male </mat-option>
+                        <mat-option value="female"> Female</mat-option>
+                    </mat-select>
                 </mat-form-field>
             </div>
         </div>
