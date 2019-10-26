@@ -4047,3 +4047,7 @@ thead td {
 .change-password-section img {
     margin-bottom: 20px;
 }
+.terms-section p{
+    font-weight: 500;
+    color: #000 !important;
+}
