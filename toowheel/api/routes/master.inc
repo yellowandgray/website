@@ -186,8 +186,13 @@ $app->post('/insert_member', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
+    $admin_created = false;
     $exist = $com->selectRow('*', 'member', 'email = \'' . $data['email'] . '\'');
     if (count($exist) == 0) {
+        if (!isset($data['password']) || $data['password'] == '') {
+            $admin_created = true;
+            $data['password'] = $com->randomStringGenerator(8);
+        }
         $state = $com->selectRow('*', 'state', 'state_id = ' . $data['state_id']);
         $data['state'] = $state['name'];
         if (!isset($data['profile_picture'])) {
@@ -201,8 +206,19 @@ $app->post('/insert_member', function() use ($app) {
             $res['message'] = 'Record inserted successfully';
             $res['data'] = $member_id;
             $tpy = new Thirdparty();
-            $template = $com->selectRow('*', 'templates', 'name=\'new_member_register_activated\' AND type=\'email\' AND target=\'user\'');
-            $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $template['body_web'], $template['body_mobile'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+            $data['membership_id'] = $member_id;
+            if ($data['activated'] == 1) {
+                if ($admin_created == false) {
+                    $data['password'] = 'Your password';
+                }
+                $data['link'] = LOGIN_PATH;
+                $template = $com->selectRow('*', 'templates', 'name=\'new_member_register_activated\' AND type=\'email\' AND target=\'user\'');
+            }
+            if ($data['activated'] == 0) {
+                $template = $com->selectRow('*', 'templates', 'name=\'new_member_register_pending\' AND type=\'email\' AND target=\'user\'');
+            }
+            $body = $com->getReplacedString($template['body_web'], $data);
+            $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
     } else {
         $res['message'] = 'Email id already exist';
@@ -376,7 +392,7 @@ $app->get('/get_two_wheel_member', function() {
 $app->get('/get_four_wheel_member', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('m.*, c.name AS club, s.name AS state', 'member AS m LEFT JOIN club AS c ON c.club_id = m.club_id LEFT JOIN state AS s ON s.state_id = s.state_id', 'm.member_id > 0 AND m.type = \'four_wheel\'');
+    $data = $com->selectAll('m.*, c.name AS club, s.name AS state', 'member AS m LEFT JOIN club AS c ON c.club_id = m.club_id LEFT JOIN state AS s ON s.state_id = m.state_id', 'm.member_id > 0 AND m.type = \'four_wheel\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -603,10 +619,16 @@ $app->post('/update_user_status/:table/:where', function($table, $where) use ($a
         $res['message'] = 'Record updated successfully';
         $tpy = new Thirdparty();
         $data = $com->selectRow('*', $table, $where);
+        $data['link'] = LOGIN_PATH;
         if ($data['activated'] == 1) {
             $template = $com->selectRow('*', 'templates', 'name=\'member_activated\' AND type=\'email\' AND target=\'user\'');
-            $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $template['body_web'], $template['body_mobile'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
+        if ($data['activated'] == 0) {
+            $template = $com->selectRow('*', 'templates', 'name=\'member_blocked\' AND type=\'email\' AND target=\'user\'');
+        }
+        $data['password'] = 'Your password';
+        $body = $com->getReplacedString($template['body_web'], $data);
+        $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
     }
     echoRespnse(201, $res);
 });
@@ -623,12 +645,12 @@ $app->post('/update_tshirt_status/:table/:where', function($table, $where) use (
         $data = $com->selectRow('*', $table, $where);
         if ($data['t_shirt_status'] == 2) {
             $template = $com->selectRow('*', 'templates', 'name=\'tshirt_shipped\' AND type=\'email\' AND target=\'user\'');
-            $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $template['body_web'], $template['body_mobile'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
         if ($data['t_shirt_status'] == 3) {
             $template = $com->selectRow('*', 'templates', 'name=\'tshirt_delivered\' AND type=\'email\' AND target=\'user\'');
-            $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $template['body_web'], $template['body_mobile'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
+        $body = $com->getReplacedString($template['body_web'], $data);
+        $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
     }
     echoRespnse(201, $res);
 });
@@ -724,7 +746,6 @@ $app->get('/get_four_wheel_workshop', function() {
     echoRespnse(201, $res);
 });
 
-
 $app->get('/get_asset', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -752,9 +773,11 @@ $app->post('/forgotpassword', function() use ($app) {
         if ($update > 0) {
             $res['message'] = 'Reset link sent to your email id';
             $template = $obj->selectRow('*', 'templates', 'name=\'forgot_password_link\' AND type=\'email\' AND target=\'user\'');
-            //$body = $obj->getReplacedString($template['body_web'], array('name' => $user['name'], 'link' => FILES_PATH . 'resetpassword.php?auth=' . $code, 'expired_at' => date('d/M/Y H:i', strtotime($expired))));
+            $user['link'] = FILES_PATH . 'change_password.php?auth=' . $code;
+            $user['reset_expired_at'] = $expired;
+            $body = $obj->getReplacedString($template['body_web'], $user);
             $tpty = new Thirdparty();
-            $tpty->sendMail($user['email'], $user['email'], $template['body_web'], $template['body_web'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+            $tpty->sendMail($user['email'], $user['first_name'] . ' ' . $user['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
     }
     echoRespnse(201, $res);
@@ -772,9 +795,9 @@ $app->post('/reset_password', function() use ($app) {
             $res['error'] = false;
             $res['message'] = 'Password updated successfully';
             $template = $obj->selectRow('*', 'templates', 'name=\'password_update_success\' AND type=\'email\' AND target=\'user\'');
-            //$body = $obj->getReplacedString($template['body_web'], array('name' => $user['name'], 'link' => FILES_PATH . 'resetpassword.php?auth=' . $code, 'expired_at' => date('d/M/Y H:i', strtotime($expired))));
+            $body = $obj->getReplacedString($template['body_web'], $user);
             $tpty = new Thirdparty();
-            $tpty->sendMail($user['email'], $user['email'], $template['body_web'], $template['body_web'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+            $tpty->sendMail($user['email'], $user['first_name'] . ' ' . $user['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
     } else {
         $res['message'] = 'Authentication failed';
@@ -795,9 +818,9 @@ $app->post('/change_password', function() use ($app) {
             $res['message'] = 'Password updated successfully';
             $obj->updateRecordWithWhere(array('password' => $obj->encryptPassword($data['new_password'])), 'member', 'member_id=' . $data['member']);
             $template = $obj->selectRow('*', 'templates', 'name=\'password_update_success\' AND type=\'email\' AND target=\'user\'');
-            //$body = $obj->getReplacedString($template['body_web'], array('name' => $exist['name'], 'link' => FILES_PATH . 'resetpassword.php?auth=' . $code, 'expired_at' => date('d/M/Y H:i', strtotime($expired))));
+            $body = $obj->getReplacedString($template['body_web'], $exist);
             $tpty = new Thirdparty();
-            $tpty->sendMail($exist['email'], $exist['email'], $template['body_web'], $template['body_web'], $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+            $tpty->sendMail($exist['email'], $exist['first_name'] . ' ' . $exist['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         } else {
             $res['message'] = 'Current password mismatch';
         }
