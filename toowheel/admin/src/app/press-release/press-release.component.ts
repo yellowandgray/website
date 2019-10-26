@@ -149,6 +149,7 @@ export class PressReleaseComponent implements OnInit {
   templateUrl: 'press-release-form.html',
 })
 export class PressReleaseForm {
+image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     pressreleaseForm: FormGroup;
     loading = false;
     press_release_id = 0;
@@ -157,10 +158,10 @@ export class PressReleaseForm {
     thumb_image: string = 'Choose Thumb Image';
     banner_image_1: string = 'Choose Image 1';
     banner_image_2: string = 'Choose Image 2';
-    cover_image_path: string;
-    thumb_image_path: string;
-    banner_image_1_path: string;
-    banner_image_2_path: string;
+    cover_image_path: string='';
+    thumb_image_path: string='';
+    banner_image_1_path: string='';
+    banner_image_2_path: strin='';
     constructor(
     public dialogRef: MatDialogRef<PressReleaseForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -188,6 +189,10 @@ export class PressReleaseForm {
            youtube_id: this.data.youtube_id
         });
         this.press_release_id = this.data.press_release_id;
+        this.cover_image_path = this.data.cover_image;
+        this.thumb_image_path = this.data.thumb_image;
+        this.banner_image_1_path = this.data.banner_1;
+        this.banner_image_2_path = this.banner_2;
     }else {
         this.pressreleaseForm.patchValue({
                 date: new Date()
@@ -338,6 +343,21 @@ export class PressReleaseForm {
         });
             }
             );
+  }
+removeMedia(url) {
+      this[url] = '';
+      if(url === 'cover_image_path') {
+          this.cover_image= 'Choose Cover Image';
+      }
+      if(url === 'thumb_image_path') {
+          this.thumb_image= 'Choose Thumb Image';
+      }
+      if(url === 'banner_image_1_path') {
+          this.banner_image_1= 'Choose Image 1';
+      }
+      if(url === 'banner_image_2_path') {
+          this.banner_image_2= 'Choose Image 2';
+      }
   }
 }
 

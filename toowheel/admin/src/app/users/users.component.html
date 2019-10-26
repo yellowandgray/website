@@ -5,7 +5,7 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openUsersForm(0)"><mat-icon>add</mat-icon> users</button>
+            <button mat-raised-button color="primary" (click)="openUsersForm(0)"><mat-icon>add</mat-icon> User</button>
         </div>
         <section class="section">
             <br/>                     
@@ -36,8 +36,8 @@
                     </button>
                     <button mat-icon-button aria-label="label" (click)="confirmDelete(data.users_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                    </button>                                    
-                    <img matListAvatar src="{{image_url}}{{data.media_path}}"/>
+                    </button> 
+                    <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.media_path != ''" alt="..." (click)="confirmDialog(data, 'preview')" />                   
                     <h3 class="truncate" matLine>{{data.name}}</h3> 
                     <p mat-line> {{data.role}} </p>
                 </mat-list-item> 
