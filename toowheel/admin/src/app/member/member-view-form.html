@@ -1,7 +1,7 @@
 <h2 mat-dialog-title>Member Details</h2>
 <mat-dialog-content class="mat-typography">
-    <div class="member-profile-picture" fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="100%" fxLayoutAlign="end center">
+    <div class="member-profile-view" fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+        <div fxFlex="100%" fxLayoutAlign="center">
             <img src="{{image_url}}{{data.profile_picture}}" alt="" />
         </div>
     </div>
@@ -75,6 +75,10 @@
         <tr *ngIf="data.blocked_user != null && data.blocked_user != 'null'">
             <th mat-header-cell> Blocked by </th>
             <td mat-cell> {{data.blocked_user}} </td>
+        </tr>
+        <tr *ngIf="data.block_reason != null && data.blocked_user != 'null'">
+            <th mat-header-cell> Blocked Reason </th>
+            <td mat-cell>{{data.block_reason}} </td>
         </tr>
         <br/>
         <h2>Referral:</h2>
