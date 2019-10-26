@@ -572,29 +572,26 @@ function updatePassword() {
     }
 }
 
-function updateProfile() {
+function updateProfile(id, type) {
+    var data = {};
+    if (type == 'basic') {
+        var dob = new Date($('#dob').val());
+        data.age = $('#age').val();
+        data.gender = $('#gender').val();
+        data.dob_date = dob.getDate();
+        data.dob_month = dob.getMonth();
+        data.dob_year = dob.getFullYear();
+        data.address = $('#address').val();
+    }
     $('.loader').addClass('is-active');
     $.ajax({
         type: "POST",
-        url: 'api/v1/insert_member',
-        data: {type: $('#type').val(), first_name: $('#first_name').val(), last_name: $('#last_name').val(), profile_picture: avatar, gender: $('#gender').val(), age: $('#age').val(), ic_passport: $('#ic_passport').val(), dob_date: $('#dob_date').val(), dob_month: $('#dob_month').val(), dob_year: $('#dob_year').val(), contact_number: $('#contact_number').val(), address: $('#address').val(), country: $('#country').val(), state_id: $('#state_id').val(), referral_member_id: $('#referral_member_id').val(), referral_club_id: $('#referral_club_id').val(), marital_status: $('#marital_status').val(), zip_code: $('#zip_code').val(), email: $('#email').val(), password: $('#password').val(), club_id: club_id, payment_type: payment_type, paypal_response: paypal_response, paypal_transaction_id: paypal_trans_id, fund_transfer_file: payment_receipt, activated: activated},
+        url: 'api/v1/update_record/member/member_id=' + id,
+        data: data,
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                $('#success_member_section').empty();
-                var msg = '';
-                if (payment_type == 'paypal') {
-                    $('#registration_status').html('Registration Successful');
-                    msg = '<h5>Congratulations!</h5><p class="text-center" style="margin-bottom: 0">You are now Official Member of TooWheel.</p><strong>Membership ID: ' + data.result.data + '</strong>';
-                } else if (payment_type == 'receipt') {
-                    $('#registration_status').html('Registration Pending');
-                    msg = '<h5>Thank you!</h5><p class="text-center" style="margin-bottom: 0">Verification process may take 24hrs. You will receive a SMS or Email once your account has been activated</p>';
-                } else {
-                    $('#registration_status').html('Registration Pending');
-                    msg = '<h5>Thank you!</h5><p class="text-center" style="margin-bottom: 0">Please make payment to activate your account</p>';
-                }
-                $('#success_member_section').append(msg);
-                $('#smartwizard').smartWizard("next");
+                location.reload();
             } else {
                 swal('Information', data.result.message, 'info');
             }
@@ -604,4 +601,28 @@ function updateProfile() {
             swal('Error', err.statusText, 'error');
         }
     });
+}
+
+function enableCoverageEdit() {
+    $('.coverage-normal-action-icon').addClass('hidden');
+    $('.coverage-edit-action-icon').removeClass('hidden');
+}
+
+function disableCoverageEdit() {
+    $('.coverage-normal-action-icon').removeClass('hidden');
+    $('.coverage-edit-action-icon').addClass('hidden');
+}
+
+function enableProfileEdit() {
+    $('.basic-info-normal-action-icon').addClass('hidden');
+    $('.member-basic-info-fixed').addClass('hidden');
+    $('.basic-info-edit-action-icon').removeClass('hidden');
+    $('.member-basic-info-edit').removeClass('hidden');
+}
+
+function disableProfileEdit() {
+    $('.basic-info-normal-action-icon').removeClass('hidden');
+    $('.basic-info-edit-action-icon').addClass('hidden');
+    $('.member-basic-info-edit').addClass('hidden');
+    $('.member-basic-info-fixed').removeClass('hidden');
 }

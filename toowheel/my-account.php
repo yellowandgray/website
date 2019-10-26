@@ -36,7 +36,6 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                     </div>
                     <div class="col-md-8 profile-details-section">
                         <div class="profile-club-details">
-                            `
                             <span><?php echo $member['type'] == 'two_wheel' ? '2 WHEELS' : '4 WHEELS'; ?></span>
                         </div>
                         <div class="profile-club-details">
@@ -49,23 +48,123 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                 <div class="row margin-b-40 edit">
                     <div class="col-md-2"></div>
                     <div class="col-md-6 ">
-                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                        <i class="fa fa-times basic-info-edit-action-icon hidden" onclick="disableProfileEdit();" aria-hidden="true"></i>
+                        <i class="fa fa-check basic-info-edit-action-icon hidden" onclick="updateProfile(<?php echo $member['member_id']; ?>, 'basic');" aria-hidden="true"></i>
+                        <i class="fa fa-pencil basic-info-normal-action-icon" onclick="enableProfileEdit();" aria-hidden="true"></i>
                         <div class="profile-table">
                             <table>
                                 <tr>
                                     <th>Age</th>
                                     <td>:</td>
-                                    <td><?php echo $member['age']; ?></td>
+                                    <td class="member-basic-info-fixed"><?php echo $member['age']; ?></td>
+                                    <td class="member-basic-info-edit hidden">
+                                        <select class="form-control" id="age" name="age" value="<?php echo $member['age']; ?>">
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18" selected>18</option>
+                                            <option value="19">19</option>
+                                            <option value="20" selected>20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                            <option value="32">32</option>
+                                            <option value="33">33</option>
+                                            <option value="34">34</option>
+                                            <option value="35">35</option>
+                                            <option value="36">36</option>
+                                            <option value="37">37</option>
+                                            <option value="38">38</option>
+                                            <option value="39">39</option>
+                                            <option value="40">40</option>
+                                            <option value="41">41</option>
+                                            <option value="42">42</option>
+                                            <option value="43">43</option>
+                                            <option value="44">44</option>
+                                            <option value="45">45</option>
+                                            <option value="46">46</option>
+                                            <option value="47">47</option>
+                                            <option value="48">48</option>
+                                            <option value="49">49</option>
+                                            <option value="50">50</option>
+                                            <option value="51">51</option>
+                                            <option value="52">52</option>
+                                            <option value="53">53</option>
+                                            <option value="54">54</option>
+                                            <option value="55">55</option>
+                                            <option value="56">56</option>
+                                            <option value="57">57</option>
+                                            <option value="58">58</option>
+                                            <option value="59">59</option>
+                                            <option value="60">60</option>
+                                            <option value="61">61</option>
+                                            <option value="62">62</option>
+                                            <option value="63">63</option>
+                                            <option value="64">64</option>
+                                            <option value="65">65</option>
+                                            <option value="66">66</option>
+                                            <option value="67">67</option>
+                                            <option value="68">68</option>
+                                            <option value="69">69</option>
+                                            <option value="70">70</option>
+                                            <option value="71">71</option>
+                                            <option value="72">72</option>
+                                            <option value="73">73</option>
+                                            <option value="74">74</option>
+                                            <option value="75">75</option>
+                                            <option value="76">76</option>
+                                            <option value="77">77</option>
+                                            <option value="78">78</option>
+                                            <option value="79">79</option>
+                                            <option value="80">80</option>
+                                            <option value="81">81</option>
+                                            <option value="82">82</option>
+                                            <option value="83">83</option>
+                                            <option value="84">84</option>
+                                            <option value="85">85</option>
+                                            <option value="86">86</option>
+                                            <option value="87">87</option>
+                                            <option value="88">88</option>
+                                            <option value="89">89</option>
+                                            <option value="90">90</option>
+                                            <option value="91">91</option>
+                                            <option value="92">92</option>
+                                            <option value="93">93</option>
+                                            <option value="94">94</option>
+                                            <option value="95">95</option>
+                                            <option value="96">96</option>
+                                            <option value="97">97</option>
+                                            <option value="98">98</option>
+                                            <option value="99">99</option>
+                                        </select>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>Gender</th>
                                     <td>:</td>
-                                    <td><?php echo strtoupper($member['gender']); ?></td>
+                                    <td class="member-basic-info-fixed"><?php echo strtoupper($member['gender']); ?></td>
+                                    <td class="member-basic-info-edit hidden">
+                                        <select class="form-control" id="gender" name="gender" value="<?php echo $member['gender']; ?>">
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>Date of Birth</th>
                                     <td>:</td>
-                                    <td><?php echo $member['dob_date'] . '-' . $member['dob_month'] . '-' . $member['dob_year']; ?></td>
+                                    <td class="member-basic-info-fixed"><?php echo $member['dob_date'] . '-' . str_pad($member['dob_month'], 2, "0", STR_PAD_LEFT) . '-' . $member['dob_year']; ?></td>
+                                    <td class="member-basic-info-edit hidden">
+                                        <input type="date" value="<?php echo $member['dob_year'] . '-' . str_pad($member['dob_month'], 2, "0", STR_PAD_LEFT) . '-' . $member['dob_date']; ?>" name="dob" id="dob" />
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>Email Address</th>
@@ -80,67 +179,86 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                 <tr>
                                     <th>Address</th>
                                     <td>:</td>
-                                    <td><?php echo $member['address']; ?></td>
+                                    <td class="member-basic-info-fixed"><?php echo $member['address']; ?></td>
+                                    <td class="member-basic-info-edit hidden">
+                                        <textarea name="address" id="address"><?php echo $member['address']; ?></textarea>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="profile-details-section-1">
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                            <div class="profile-table">
+                            <i class="fa fa-times coverage-edit-action-icon hidden" onclick="disableCoverageEdit();" aria-hidden="true"></i>
+                            <i class="fa fa-check coverage-edit-action-icon hidden" aria-hidden="true"></i>
+                            <i class="fa fa-pencil coverage-normal-action-icon" onclick="enableCoverageEdit();" aria-hidden="true"></i>
+                            <div class="coverage-table">
                                 <h4>COVERAGE INFORMATION (NEXT OF KIN)</h4>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <table>
                                             <tr>
-                                                <th>Full Name</th>
-                                                <td>:</td>
-                                                <td><?php echo isset($member['coverage_full_name']) && $member['coverage_full_name'] != '' ? $member['coverage_full_name'] : 'N/A'; ?></td>
+                                                <th>Spouse Name</th>
+                                                <th>IC Number</th>
                                             </tr>
                                             <tr>
-                                                <th>Contact No.</th>
-                                                <td>:</td>
-                                                <td><?php echo isset($member['coverage_contact_number']) && $member['coverage_contact_number'] != '' ? $member['coverage_contact_number'] : 'N/A'; ?></td>
+                                                <td class="coverage-info-fixed">Spouse Name</td>
+                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
+                                                <td class="coverage-info-fixed">Spouse Name</td>
+                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
                                             </tr>
                                             <tr>
-                                                <th>SPOUSE NAME</th>
-                                                <td>:</td>
-                                                <td>test</td>
+                                                <th>Kid One</th>
+                                                <th>MY KID ID</th>
                                             </tr>
                                             <tr>
-                                                <th>CHILD 1</th>
-                                                <td>:</td>
-                                                <td>test</td>
+                                                <td class="coverage-info-fixed">Spouse Name</td>
+                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
+                                                <td class="coverage-info-fixed">Spouse Name</td>
+                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Kid One</th>
+                                                <th>MY KID ID</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="coverage-info-fixed">Spouse Name</td>
+                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
+                                                <td class="coverage-info-fixed">Spouse Name</td>
+                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Kid One</th>
+                                                <th>MY KID ID</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="coverage-info-fixed">Spouse Name</td>
+                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
+                                                <td class="coverage-info-fixed">Spouse Name</td>
+                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
                                             </tr>
                                         </table>
-                                    </div>
-                                    <div class="col-md-6">
                                         <table>
                                             <tr>
-                                                <th> </th>
-                                                <td> </td>
-                                                <td> </td>
+                                                <th>Name</th>
+                                                <th>IC Number</th>
                                             </tr>
                                             <tr>
-                                                <th> </th>
-                                                <td> </td>
-                                                <td> </td>
+                                                <td class="coverage-info-fixed">Spouse Name</td>
+                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
+                                                <td class="coverage-info-fixed">Spouse Name</td>
+                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
                                             </tr>
                                             <tr>
-                                                <th>IC No.</th>
-                                                <td>:</td>
-                                                <td>test</td>
+                                                <th colspan="2">Address</th>
                                             </tr>
                                             <tr>
-                                                <th>MY KIT ID</th>
-                                                <td>:</td>
-                                                <td>test</td>
+                                                <td class="coverage-info-fixed" colspan="2">Kid</td>
+                                                <td class="coverage-info-edit hidden" colspan="2"><textarea name="address" id="address"><?php echo $member['addresss']; ?></textarea></td>
                                             </tr>
                                         </table>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
