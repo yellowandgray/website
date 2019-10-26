@@ -52,8 +52,14 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         <div id="last_name_error"></div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="upload-profile">Upload Your Profile Picture</label>
-                                        <input type="file" class="form-control-file" id="profile_image" onchange="attachFile('profile_image');" />
+                                        <div id="upload_container">
+                                            <label for="upload-profile">Upload Your Profile Picture</label>
+                                            <input type="file" class="form-control-file" id="profile_image" onchange="attachFile('profile_image');" />
+                                        </div>
+                                        <div class="image-preview hidden" id="preview_container">
+                                            <button type="button" onclick="closeProfilePic();" class="close-button-profile-img"><i class="fa fa-close"></i></button>
+                                            <img src="" alt="image" />
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="gender">Gender</label>
@@ -345,7 +351,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     <div class="form-group">
                                         <label for="password">Password</label> 
                                         <span class="red-i">*</span>
-                                        <input type="password" class="form-control" name="password" id="password" placeholder="" required-i onchange="removeValidation('password');" />
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="" required-i onchange="removeValidation('password');" onKeyUp="checkPasswordStrength();" />
                                         <div id="password_error"></div>
                                     </div>
                                     <div class="form-group">
@@ -427,6 +433,10 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                 <form>
                                                     <label>Upload Your Receipt</label>
                                                     <input type="file" name="payment_receipt2" id="payment_receipt2" />
+                                                    <div class="image-preview hidden" id="preview_container">
+                                                        <button type="button" onclick="closeProfilePic();" class="close-button-profile-img"><i class="fa fa-close"></i></button>
+                                                        <img src="" alt="image" />
+                                                    </div>
                                                     <br/>
                                                     <br/>
                                                     <center>
@@ -475,6 +485,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                             $(".pop-1 i").click(
                                                                     function () {
                                                                         $(".pop-1").fadeOut("fast");
+                                                                        $('#payment_receipt2').val('');
                                                                     }
                                                             );
                                                             paypal.Buttons({
