@@ -584,13 +584,21 @@ function updateProfile(id, type) {
         data.address = $('#address').val();
     }
     if (type == 'coverage') {
-        var dob = new Date($('#dob').val());
-        data.age = $('#age').val();
-        data.gender = $('#gender').val();
-        data.dob_date = dob.getDate();
-        data.dob_month = dob.getMonth();
-        data.dob_year = dob.getFullYear();
-        data.address = $('#address').val();
+        if (typeof $('#coverage_spouse_name').val() !== 'undefined') {
+            data.coverage_spouse_name = $('#coverage_spouse_name').val();
+            data.coverage_spouse_ic = $('#coverage_spouse_ic').val();
+            data.coverage_kid1_name = $('#coverage_kid1_name').val();
+            data.coverage_kid1_ic = $('#coverage_kid1_ic').val();
+            data.coverage_kid2_name = $('#coverage_kid2_name').val();
+            data.coverage_kid2_ic = $('#coverage_kid2_ic').val();
+            data.coverage_kid3_name = $('#coverage_kid3_name').val();
+            data.coverage_kid3_ic = $('#coverage_kid3_ic').val();
+        }
+        if (typeof $('#coverage_person_name').val() !== 'undefined') {
+            data.coverage_person_name = $('#coverage_person_name').val();
+            data.coverage_person_ic = $('#coverage_person_ic').val();
+            data.coverage_person_address = $('#coverage_person_address').val();
+        }
     }
     $('.loader').addClass('is-active');
     $.ajax({
@@ -615,11 +623,15 @@ function updateProfile(id, type) {
 function enableCoverageEdit() {
     $('.coverage-normal-action-icon').addClass('hidden');
     $('.coverage-edit-action-icon').removeClass('hidden');
+    $('.coverage-info-fixed').addClass('hidden');
+    $('.coverage-info-edit').removeClass('hidden');
 }
 
 function disableCoverageEdit() {
     $('.coverage-normal-action-icon').removeClass('hidden');
     $('.coverage-edit-action-icon').addClass('hidden');
+    $('.coverage-info-edit').addClass('hidden');
+    $('.coverage-info-fixed').removeClass('hidden');
 }
 
 function enableProfileEdit() {

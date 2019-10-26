@@ -123,73 +123,80 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                     <div class="col-md-4">
                         <div class="profile-details-section-1">
                             <i class="fa fa-times coverage-edit-action-icon hidden" onclick="disableCoverageEdit();" aria-hidden="true"></i>
-                            <i class="fa fa-check coverage-edit-action-icon hidden" aria-hidden="true"></i>
+                            <i class="fa fa-check coverage-edit-action-icon hidden" onclick="updateProfile(<?php echo $member['member_id']; ?>, 'coverage');" aria-hidden="true"></i>
                             <i class="fa fa-pencil coverage-normal-action-icon" onclick="enableCoverageEdit();" aria-hidden="true"></i>
                             <div class="coverage-table">
                                 <h4>COVERAGE INFORMATION (NEXT OF KIN)</h4>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <table>
-                                            <tr>
-                                                <th>Spouse Name</th>
-                                                <th>IC Number</th>
-                                            </tr>
-                                            <tr>
-                                                <td class="coverage-info-fixed">Spouse Name</td>
-                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
-                                                <td class="coverage-info-fixed">Spouse Name</td>
-                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Kid One</th>
-                                                <th>MY KID ID</th>
-                                            </tr>
-                                            <tr>
-                                                <td class="coverage-info-fixed">Spouse Name</td>
-                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
-                                                <td class="coverage-info-fixed">Spouse Name</td>
-                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Kid One</th>
-                                                <th>MY KID ID</th>
-                                            </tr>
-                                            <tr>
-                                                <td class="coverage-info-fixed">Spouse Name</td>
-                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
-                                                <td class="coverage-info-fixed">Spouse Name</td>
-                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Kid One</th>
-                                                <th>MY KID ID</th>
-                                            </tr>
-                                            <tr>
-                                                <td class="coverage-info-fixed">Spouse Name</td>
-                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
-                                                <td class="coverage-info-fixed">Spouse Name</td>
-                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
-                                            </tr>
-                                        </table>
-                                        <table>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>IC Number</th>
-                                            </tr>
-                                            <tr>
-                                                <td class="coverage-info-fixed">Spouse Name</td>
-                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
-                                                <td class="coverage-info-fixed">Spouse Name</td>
-                                                <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['dob_date']; ?>" name="dob" id="dob" /></td>
-                                            </tr>
-                                            <tr>
-                                                <th colspan="2">Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td class="coverage-info-fixed" colspan="2">Kid</td>
-                                                <td class="coverage-info-edit hidden" colspan="2"><textarea name="address" id="address"><?php echo $member['addresss']; ?></textarea></td>
-                                            </tr>
-                                        </table>
+                                        <?php if ($member['marital_status'] == 'married') {
+                                            ?>
+                                            <table>
+                                                <tr>
+                                                    <th>Spouse Name</th>
+                                                    <th>IC Number</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_spouse_name'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_spouse_name']; ?>" name="coverage_spouse_name" id="coverage_spouse_name" class="form-control" /></td>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_spouse_ic'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_spouse_ic']; ?>" name="coverage_spouse_ic" id="coverage_spouse_ic" class="form-control" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Name of first kid</th>
+                                                    <th>MYKID ID</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid1_name'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden">
+                                                        <input type="text" value="<?php echo $member['coverage_kid1_name']; ?>" name="coverage_kid1_name" id="coverage_kid1_name" class="form-control" />
+                                                    </td>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid1_ic'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_kid1_ic']; ?>" name="coverage_kid1_ic" id="coverage_kid1_ic" class="form-control" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Name of second kid</th>
+                                                    <th>MYKID ID</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid2_name'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_kid2_name']; ?>" name="coverage_kid2_name" id="coverage_kid2_name" class="form-control" /></td>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid2_ic'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_kid2_ic']; ?>" name="coverage_kid2_ic" id="coverage_kid2_ic" class="form-control" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Name of third kid</th>
+                                                    <th>MYKID ID</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid3_name'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_kid3_name']; ?>" name="coverage_kid3_name" id="coverage_kid3_name" class="form-control" /></td>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid3_ic'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_kid3_ic']; ?>" name="coverage_kid3_ic" id="coverage_kid3_ic" class="form-control" /></td>
+                                                </tr>
+                                            </table>
+                                        <?php } else { ?>
+                                            <table>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>IC Number</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_person_name'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_person_name']; ?>" name="coverage_person_name" id="coverage_person_name" class="form-control" /></td>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_person_ic'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_person_ic']; ?>" name="coverage_person_ic" id="coverage_person_ic" class="form-control" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="2">Address</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="coverage-info-fixed" colspan="2"><?php echo $obj->charLimit($member['coverage_person_address'], 150); ?></td>
+                                                    <td class="coverage-info-edit hidden" colspan="2"><textarea name="coverage_person_address" id="coverage_person_address" class="form-control"><?php echo $$member['coverage_person_address']; ?></textarea></td>
+                                                </tr>
+                                            </table>                                                
+                                        <?php }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
