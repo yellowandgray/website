@@ -201,7 +201,12 @@ $app->post('/insert_member', function() use ($app) {
             $res['message'] = 'Record inserted successfully';
             $res['data'] = $member_id;
             $tpy = new Thirdparty();
-            $template = $com->selectRow('*', 'templates', 'name=\'new_member_register_activated\' AND type=\'email\' AND target=\'user\'');
+            if ($data['activated'] == 1) {
+                $template = $com->selectRow('*', 'templates', 'name=\'new_member_register_activated\' AND type=\'email\' AND target=\'user\'');
+            }
+            if ($data['activated'] == 0) {
+                $template = $com->selectRow('*', 'templates', 'name=\'new_member_register_pending\' AND type=\'email\' AND target=\'user\'');
+            }
             $body = $com->getReplacedString($template['body_web'], $data);
             $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
@@ -606,9 +611,12 @@ $app->post('/update_user_status/:table/:where', function($table, $where) use ($a
         $data = $com->selectRow('*', $table, $where);
         if ($data['activated'] == 1) {
             $template = $com->selectRow('*', 'templates', 'name=\'member_activated\' AND type=\'email\' AND target=\'user\'');
-            $body = $com->getReplacedString($template['body_web'], $data);
-            $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
+        if ($data['activated'] == 0) {
+            $template = $com->selectRow('*', 'templates', 'name=\'member_blocked\' AND type=\'email\' AND target=\'user\'');
+        }
+        $body = $com->getReplacedString($template['body_web'], $data);
+        $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
     }
     echoRespnse(201, $res);
 });
@@ -625,14 +633,12 @@ $app->post('/update_tshirt_status/:table/:where', function($table, $where) use (
         $data = $com->selectRow('*', $table, $where);
         if ($data['t_shirt_status'] == 2) {
             $template = $com->selectRow('*', 'templates', 'name=\'tshirt_shipped\' AND type=\'email\' AND target=\'user\'');
-            $body = $com->getReplacedString($template['body_web'], $data);
-            $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
         if ($data['t_shirt_status'] == 3) {
             $template = $com->selectRow('*', 'templates', 'name=\'tshirt_delivered\' AND type=\'email\' AND target=\'user\'');
-            $body = $com->getReplacedString($template['body_web'], $data);
-            $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
+        $body = $com->getReplacedString($template['body_web'], $data);
+        $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
     }
     echoRespnse(201, $res);
 });
