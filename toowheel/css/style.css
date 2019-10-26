@@ -1993,3 +1993,37 @@ div#html5-watermark {
     border: 0px;
     border-collapse: collapse;
 }
+
+.image-preview {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-preview img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    max-height: 200px;
+}
+
+.close-button-profile-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+}
+
+.medium-password {
+    background-color: #E4DB11;
+    border:#BBB418 1px solid;
+}
+
+.weak-password {
+    background-color: #FF6600;
+    border:#AA4502 1px solid;
+}
+
+.strong-password {
+    background-color: #12CC1A;
+    border:#0FA015 1px solid;
+}

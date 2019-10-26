@@ -9,7 +9,7 @@ var cover_image = '';
 var logo = '';
 var activated = 0;
 var club_video = '';
-var BASE_IMAGE_URL = 'http://www.toowheel.com/toowheel/api/v1/';
+var BASE_IMAGE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
 
 function attachFile(id) {
     var val = $('#' + id).val();
@@ -27,7 +27,10 @@ function attachFile(id) {
                 $('.loader').removeClass('is-active');
                 if (data.result.error === false) {
                     if (id == 'profile_image') {
+                        $("#preview_container").removeClass('hidden');
+                        $("#upload_container").addClass('hidden');
                         avatar = data.result.data;
+                        $("#preview_container img").attr("src", BASE_IMAGE_URL + avatar);
                     }
                     if (id == 'payment_receipt' || id == 'payment_receipt2') {
                         payment_receipt = data.result.data;
@@ -53,8 +56,16 @@ function attachFile(id) {
             }
         });
     } else {
-        swal('Information', 'Please attach slip', 'info');
+        if (id != 'profile_image') {
+            swal('Information', 'Please attach slip', 'info');
+        }
     }
+}
+
+function closeProfilePic() {
+    $("#profile_image").val('');
+    $("#preview_container").addClass('hidden');
+    $("#upload_container").removeClass('hidden');
 }
 
 function loadClubs(type) {
@@ -126,7 +137,7 @@ function selectClub(cid, ele) {
 }
 
 function removeValidation(id) {
-    $('#' + id + '_error').html('').removeClass('error-msg');
+    $('#' + id + '_error').html('').removeClass();
 }
 
 function emailVaildation(id) {
@@ -140,75 +151,109 @@ function emailVaildation(id) {
 $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDirection) {
     var change = true;
     $('.sw-btn-next').removeClass('hidden');
+    var number = /([0-9])/;
+    var alphabets = /([a-zA-Z])/;
+    var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
     switch (stepNumber) {
         case 0:
         case '0':
             if ($.trim($('#type').val()) === '') {
                 $('#type_error').html('Select category').addClass('error-msg');
-                change = false;
-            }
-            if ($.trim($('#first_name').val()) === '') {
-                $('#first_name_error').html('Enter first name').addClass('error-msg');
-                change = false;
-            }
-            if ($.trim($('#last_name').val()) === '') {
-                $('#last_name_error').html('Enter last name').addClass('error-msg');
-                change = false;
-            }
-            if ($.trim($('#ic_passport').val()) === '') {
-                $('#ic_passport_error').html('Enter passport/IC number').addClass('error-msg');
-                change = false;
-            }
-            if ($.trim($('#dob_date').val()) === '') {
-                $('#dob_date_error').html('Select date').addClass('error-msg');
-                change = false;
-            }
-            if ($.trim($('#dob_month').val()) === '') {
-                $('#dob_month_error').html('Select month').addClass('error-msg');
-                change = false;
-            }
-            if ($.trim($('#dob_year').val()) === '') {
-                $('#dob_year_error').html('Select year').addClass('error-msg');
-                change = false;
-            }
-            if ($.trim($('#contact_number').val()) === '') {
-                $('#contact_number_error').html('Enter contact number').addClass('error-msg');
-                change = false;
-            }
-            if ($.trim($('#address').val()) === '') {
-                $('#address_error').html('Enter address').addClass('error-msg');
-                change = false;
-            }
-            if ($.trim($('#country').val()) === '') {
-                $('#country_error').html('Enter country').addClass('error-msg');
-                change = false;
-            }
-            if ($.trim($('#state_id').val()) === '') {
-                $('#state_id_error').html('Select state').addClass('error-msg');
-                change = false;
-            }
-            if ($.trim($('#zip_code').val()) === '') {
-                $('#zip_code_error').html('Enter ZIP code').addClass('error-msg');
-                change = false;
-            }
-            if ($.trim($('#email').val()) === '') {
-                $('#email_error').html('Enter email').addClass('error-msg');
-                change = false;
-            }
-            if (validateEmail($.trim($('#email').val())) === false) {
-                $('#email_error').html('Enter a valid email').addClass('error-msg');
-                change = false;
-            }
-            if ($.trim($('#password').val()) === '') {
-                $('#password_error').html('Enter password').addClass('error-msg');
-                change = false;
-            }
-            if ($.trim($('#cnfpassword').val()) !== $.trim($('#password').val())) {
-                $('#cnfpassword_error').html('Password mismatch').addClass('error-msg');
+                $('#type').focus();
                 change = false;
             }
             if (!$('#terms_agree').is(':checked')) {
                 $('#terms_agree_error').html('Accept terms').addClass('error-msg');
+                $('#terms_agree').focus();
+                change = false;
+            }
+            if ($.trim($('#cnfpassword').val()) !== $.trim($('#password').val())) {
+                $('#cnfpassword_error').html('Password mismatch').addClass('error-msg');
+                $('#cnfpassword').focus();
+                $(window).scrollTop($('#cnfpassword').position().top);
+                change = false;
+            }
+            if ($.trim($('#password').val()) === '' || $('#password').val().length < 8 || $('#password').val().match(number) == null || $('#password').val().match(alphabets) == null || $('#password').val().match(special_characters) == null) {
+                //$('#password_error').html('Enter password').addClass('error-msg');
+                $('#password').focus();
+                $(window).scrollTop($('#password').position().top);
+                change = false;
+            }
+            if (validateEmail($.trim($('#email').val())) === false) {
+                $('#email_error').html('Enter a valid email').addClass('error-msg');
+                $('#email').focus();
+                $(window).scrollTop($('#email').position().top);
+                change = false;
+            }
+            if ($.trim($('#email').val()) === '') {
+                $('#email_error').html('Enter email').addClass('error-msg');
+                $('#email').focus();
+                $(window).scrollTop($('#email').position().top);
+                change = false;
+            }
+            if ($.trim($('#zip_code').val()) === '') {
+                $('#zip_code_error').html('Enter ZIP code').addClass('error-msg');
+                $('#zip_code').focus();
+                $(window).scrollTop($('#zip_code').position().top);
+                change = false;
+            }
+            if ($.trim($('#state_id').val()) === '') {
+                $('#state_id_error').html('Select state').addClass('error-msg');
+                $('#state_id').focus();
+                change = false;
+            }
+            if ($.trim($('#country').val()) === '') {
+                $('#country_error').html('Enter country').addClass('error-msg');
+                $('#country').focus();
+                $(window).scrollTop($('#country').position().top);
+                change = false;
+            }
+            if ($.trim($('#address').val()) === '') {
+                $('#address_error').html('Enter address').addClass('error-msg');
+                $('#address').focus();
+                $(window).scrollTop($('#address').position().top);
+                change = false;
+            }
+            if ($.trim($('#contact_number').val()) === '') {
+                $('#contact_number_error').html('Enter contact number').addClass('error-msg');
+                $('#contact_number').focus();
+                $(window).scrollTop($('#contact_number').position().top);
+                change = false;
+            }
+            if ($.trim($('#dob_year').val()) === '') {
+                $('#dob_year_error').html('Select year').addClass('error-msg');
+                $('#dob_year').focus();
+                $(window).scrollTop($('#dob_year').position().top);
+                change = false;
+            }
+            if ($.trim($('#dob_month').val()) === '') {
+                $('#dob_month_error').html('Select month').addClass('error-msg');
+                $('#dob_month').focus();
+                $(window).scrollTop($('#dob_month').position().top);
+                change = false;
+            }
+            if ($.trim($('#dob_date').val()) === '') {
+                $('#dob_date_error').html('Select date').addClass('error-msg');
+                $('#dob_date').focus();
+                $(window).scrollTop($('#dob_date').position().top);
+                change = false;
+            }
+            if ($.trim($('#ic_passport').val()) === '') {
+                $('#ic_passport_error').html('Enter passport/IC number').addClass('error-msg');
+                $('#ic_passport').focus();
+                $(window).scrollTop($('#ic_passport').position().top);
+                change = false;
+            }
+            if ($.trim($('#last_name').val()) === '') {
+                $('#last_name_error').html('Enter last name').addClass('error-msg');
+                $('#last_name').focus();
+                $(window).scrollTop($('#last_name').position().top);
+                change = false;
+            }
+            if ($.trim($('#first_name').val()) === '') {
+                $('#first_name_error').html('Enter first name').addClass('error-msg');
+                $('#first_name').focus();
+                $(window).scrollTop($('#first_name').position().top);
                 change = false;
             }
             if (change == true) {
@@ -646,4 +691,25 @@ function disableProfileEdit() {
     $('.basic-info-edit-action-icon').addClass('hidden');
     $('.member-basic-info-edit').addClass('hidden');
     $('.member-basic-info-fixed').removeClass('hidden');
+}
+
+function checkPasswordStrength() {
+    var number = /([0-9])/;
+    var alphabets = /([a-zA-Z])/;
+    var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
+    if ($('#password').val().length < 8) {
+        $('#password_error').removeClass();
+        $('#password_error').addClass('weak-password');
+        $('#password_error').html("Weak (should be atleast 8 characters.)");
+    } else {
+        if ($('#password').val().match(number) && $('#password').val().match(alphabets) && $('#password').val().match(special_characters)) {
+            $('#password_error').removeClass();
+            $('#password_error').addClass('strong-password');
+            $('#password_error').html("Strong");
+        } else {
+            $('#password_error').removeClass();
+            $('#password_error').addClass('medium-password');
+            $('#password_error').html("Medium (should include alphabets, numbers and special characters.)");
+        }
+    }
 }
