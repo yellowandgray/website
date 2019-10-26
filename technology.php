@@ -48,7 +48,7 @@
                     <div class="col-lg-6  app-img ftco-animate">
                         <div class="">
                         <!--<a href="images/product-01.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
-                            <video width="320" height="240" controls>
+                            <video width="320" height="240" controls autoplay="">
                                 <source src="video/file.mp4" type="video/mp4">
                                 Your browser does not support the <code>video</code> tag.
                             </video>

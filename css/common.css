@@ -1252,16 +1252,67 @@ footer .copy p{
 
 .featured-view i {
     position: fixed;
-    right: 13%;
+    right: 12%;
     font-size: 23px;
     color: #449dc9;
     z-index: 9;
     cursor: pointer;
-    top: 239px;
+    top: 188px;
 }
 ::-webkit-scrollbar {
     width: 0px
 }
 .pad-t-45{
     padding: 45px 0 0 0;
+}
+
+.hov-img-1{
+    display: block;
+}
+.hov-img-2{
+    display: none;
+}
+.hov-img:hover .hov-img-2{
+    display: block !important;
+}
+.hov-img:hover .hov-img-1{
+    display: none !important;
+} 
+.res-feature p{
+    color: #000 !important;
+}
+.res-feature {
+    display: none;
+}
+.res-feature img{
+    width: 70% !important;
+    margin: 0 15%;
+}
+
+@media (min-width:320px) and (max-width:767px) {
+
+    .res-feature {
+        display: block !important;
+    }
+
+}
+@media (min-width:320px) and (max-width:767px) {
+
+    .featured-view h2 {
+        color: #f57478 !important;
+        font-size: 20px !important;
+    }
+    .featured-view p {
+        color: #444 !important;
+        padding: 2px;
+    }
+    .featured-view i {
+        position: fixed;
+        right: 13%;
+        font-size: 23px;
+        color: #449dc9;
+        z-index: 9;
+        cursor: pointer;
+        top: 182px;
+    }
 }

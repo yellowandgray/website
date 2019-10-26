@@ -53,7 +53,7 @@
                                         <img src="images/product-01.png" alt=""/>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row res-feature-1">
                                     <div class="col-md-12">
 
                                         <div class="row feature-l"> 
@@ -84,7 +84,7 @@
                                             </div>
                                             <div class="col-md-2">
                                                 <div class="box-1">
-                                                    <a onclick="document.getElementById('featured-5').classList.add('featured-view')"><img src="images/feature/005.png" alt=""/><p>Dust mites</p></a>
+                                                    <a onclick="document.getElementById('featured-5').classList.add('featured-view')"><img src="images/feature/005.png" alt=""/><p>Pathogens</p></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -96,7 +96,44 @@
                 </div>
             </div>
         </section>
+        <section class="ftco-category pad-20-80 res-feature">
+              <div class="col-md-12">
 
+                                        <div class="row feature-l"> 
+                                            <div class="col-md-2 col-sm-2 col-4">
+                                                <div class="box-1">
+                                                    <a onclick="document.getElementById('featured').classList.add('featured-view')"><img src="images/feature/003.png" alt=""/></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-4">
+                                                <div class="box-1">
+                                                    <a onclick="document.getElementById('featured-1').classList.add('featured-view')"><img src="images/feature/002.png" alt=""/></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-4">
+                                                <div class="box-1">
+                                                    <a onclick="document.getElementById('featured-2').classList.add('featured-view')"><img src="images/feature/006.png" alt="" /></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-4">
+                                                <div class="box-1">
+                                                    <a onclick="document.getElementById('featured-3').classList.add('featured-view')"><img src="images/feature/001.png" alt=""/></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-4">
+                                                <div class="box-1">
+                                                    <a onclick="document.getElementById('featured-4').classList.add('featured-view')"><img src="images/feature/004.png" alt="" /></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-4">
+                                                <div class="box-1">
+                                                    <a onclick="document.getElementById('featured-5').classList.add('featured-view')"><img src="images/feature/005.png" alt=""/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+        </section>
         <section class=" ftco-category pad-80" id="featured">
             <div class="row">
                 <i onclick="document.getElementById('featured').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
@@ -209,7 +246,7 @@
                 <i onclick="document.getElementById('featured-5').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                                    <!--<span class="subheading">Best Price For You</span>-->
-                    <h2 class="mb-4 text-head">Dust mites</h2>
+                    <h2 class="mb-4 text-head">Pathogens</h2>
                 </div>
                 <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
                    <!--<span class="subheading">Best Price For You</span>-->
@@ -217,8 +254,12 @@
                 </div>
                 <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
                     <!--<span class="subheading">Best Price For You</span>-->
-                    <p>House Dust Mites (HDM) are an unwelcome but prevalent guest in most homes. Fresche Bioscience treatments have been demonstrated on both polyurethane foam and textiles to be completely effective at controlling HDM populations. Using test standard AFNOR NF G 39-011, treated textile and bedding foam was subjected to a six week trial to assess the efficacy of Fresche on the development of HDM (Dermatophagoides pteronyssinus), when compared to the development on untreated fabrics and foams.</p>
-                    <p>Both Textiles and Foam treated with Fresche gave a complete control of the dust mite population, whilst the untreated controls showed greater than 17 fold increases in the mite populations.</p>
+                    <p>Bacteria are present in most human and natural environments on earth, growing in water, waste, soil and the live bodies of people, plants and animals. Bacteria are living organisms that are neither plants nor animals, but belong to a group all by themselves.</p>
+                    <p>Individually they are generally not more than one single cell, however there are normally millions of them together due to their ability to rapidly multiply. There are typically 40 million bacterial cells in a gram of soil and a million bacterial cells in a millilitre of fresh water.</p>
+                    <p>There are approximately ten times as many bacterial cells as there are human cells in the body, with large numbers of bacteria on our skin and in the human gut. The vast majority of the bacteria in the body are rendered harmless by the protective effects of the human immune system and a few are beneficial.</p>
+                    <p>However, a growing number of bacterial forms are pathogenic and cause illness, poor health and infectious disease.</p>
+                    <p>Microorganisms that cause diseases are called pathogens. They are specialised to infect body tissues where they reproduce and cause damage that gives rise to the symptoms of the infection.</p>
+                    <p>The World Health Organisation is particularly concerned at the rising presence of nosocomial (healthcare acquired infections) contracted in hospital and healthcare environments. Healthcare-associated infections are those which were not present [and without evidence of incubation] at the time of admission to a healthcare setting. Within hours after admission, a patient's flora begins to acquire characteristics of the surrounding bacterial pool, and HAI infections are responsible for numerous deaths worldwide each year.</p>
                 </div>
             </div>
 
@@ -358,7 +399,9 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <ul class="rec-list">
-                                        <img src="images/acc/005.png" alt=""/><li>US EPA</li>
+                                        <div class="hov-img">
+                                            <img src="images/acc/005.png" alt="" class="hov-img-1"/> <img src="images/acc/005-01.png" alt="" class="hov-img-2"/><li>US EPA</li>
+                                        </div> 
                                         <img src="images/acc/002.png" alt=""/><li>Oeko-Tex</li>
                                         <img src="images/acc/010.png" alt=""/><li>European BPR</li>
                                         <img src="images/acc/010.png" alt="" /><li>Primary Industry in New Zealand</li>
@@ -369,7 +412,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <img src="images/acc/003.png" alt=""/><li>HITECH Diagnostic Centre</li>
-                                    <img src="images/acc/006.png" alt="" /><li>MEDICA Superspecialty Hospital</li>
+                                    <div class="hov-img">
+                                        <img src="images/acc/006-01.png" alt="" class="hov-img-1"/> <img src="images/acc/006.png" alt="" class="hov-img-2"/><li>MEDICA Superspecialty Hospital</li>
+                                    </div>
                                     <img src="images/acc/004.png" alt=""/><li>SHRIRAM INSTITUTE FOR INDUSTRIAL RESEARCH</li>
 
 
