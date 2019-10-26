@@ -188,6 +188,9 @@ $app->post('/insert_member', function() use ($app) {
     $com = new Common();
     $exist = $com->selectRow('*', 'member', 'email = \'' . $data['email'] . '\'');
     if (count($exist) == 0) {
+        if (!isset($data['password']) || $data['password'] == '') {
+            $data['password'] = $com->randomStringGenerator(8);
+        }
         $state = $com->selectRow('*', 'state', 'state_id = ' . $data['state_id']);
         $data['state'] = $state['name'];
         if (!isset($data['profile_picture'])) {
@@ -762,6 +765,7 @@ $app->post('/forgotpassword', function() use ($app) {
         if ($update > 0) {
             $res['message'] = 'Reset link sent to your email id';
             $template = $obj->selectRow('*', 'templates', 'name=\'forgot_password_link\' AND type=\'email\' AND target=\'user\'');
+            $user['link'] = FILES_PATH . 'change_password.php?auth=' . $code;
             $body = $obj->getReplacedString($template['body_web'], $user);
             $tpty = new Thirdparty();
             $tpty->sendMail($user['email'], $user['first_name'] . ' ' . $user['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
