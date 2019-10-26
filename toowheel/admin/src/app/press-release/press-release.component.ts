@@ -161,7 +161,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     cover_image_path: string='';
     thumb_image_path: string='';
     banner_image_1_path: string='';
-    banner_image_2_path: strin='';
+    banner_image_2_path: string='';
     constructor(
     public dialogRef: MatDialogRef<PressReleaseForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -192,7 +192,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
         this.cover_image_path = this.data.cover_image;
         this.thumb_image_path = this.data.thumb_image;
         this.banner_image_1_path = this.data.banner_1;
-        this.banner_image_2_path = this.banner_2;
+        this.banner_image_2_path = this.data.banner_2;
     }else {
         this.pressreleaseForm.patchValue({
                 date: new Date()

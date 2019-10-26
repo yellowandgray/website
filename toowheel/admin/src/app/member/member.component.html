@@ -43,7 +43,10 @@
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+<!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                    </button>-->
+                                    <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openView(data.member_id, 'result')">
@@ -105,7 +108,10 @@
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+<!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                    </button>-->
+                                    <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openView(data.member_id, 'result')">
@@ -171,7 +177,10 @@
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+<!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                    </button>-->
+                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openView(data.member_id, 'result_fw')">
@@ -233,7 +242,10 @@
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+<!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                    </button>-->
+                                    <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openView(data.member_id, 'result_fw')">
