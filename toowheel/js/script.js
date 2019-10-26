@@ -44,12 +44,12 @@ function attachFile(id) {
                         club_video = data.result.data;
                     }
                 } else {
-                    bootbox.alert(data.result.message);
+                    swal('Information', data.result.message, 'info');
                 }
             },
             error: function (err) {
                 $('.loader').removeClass('is-active');
-                bootbox.alert(err.statusText);
+                swal('Error', err.statusText, 'error');
             }
         });
     } else {
@@ -129,8 +129,7 @@ function removeValidation(id) {
     $('#' + id + '_error').html('').removeClass('error-msg');
 }
 
-function emailVaildation(id)
-{
+function emailVaildation(id) {
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     if (!emailReg.test(id)) {
         alert('Invalid Email Type');
@@ -208,7 +207,6 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
                 $('#cnfpassword_error').html('Password mismatch').addClass('error-msg');
                 change = false;
             }
-            console.log($('#terms_agree').is(':checked'));
             if (!$('#terms_agree').is(':checked')) {
                 $('#terms_agree_error').html('Accept terms').addClass('error-msg');
                 change = false;
@@ -288,12 +286,12 @@ function registerMember() {
                 $('#success_member_section').append(msg);
                 $('#smartwizard').smartWizard("next");
             } else {
-                bootbox.alert(data.result.message);
+                swal('Information', data.result.message, 'info');
             }
         },
         error: function (err) {
             $('.loader').removeClass('is-active');
-            bootbox.alert(err.statusText);
+            swal('Error', err.statusText, 'error');
         }
     });
 }
@@ -464,4 +462,188 @@ function validateEmail(emailField) {
         return false;
     }
     return true;
+}
+
+function validForgotPasswordForm() {
+    var change = true;
+    if ($.trim($('#forgotpassword_email').val()) === '') {
+        $('#forgotpassword_email_error').html('Enter email').addClass('error-msg');
+        change = false;
+    }
+    if (validateEmail($.trim($('#forgotpassword_email').val())) === false) {
+        $('#forgotpassword_email_error').html('Enter a valid email').addClass('error-msg');
+        change = false;
+    }
+    return change;
+}
+
+function forgotPassword() {
+    if (validForgotPasswordForm()) {
+        $('.loader').addClass('is-active');
+        $.ajax({
+            type: "POST",
+            url: 'api/v1/forgotpassword',
+            data: {email: $('#forgotpassword_email').val()},
+            success: function (data) {
+                $('.loader').removeClass('is-active');
+                $(".pop").fadeOut('fast');
+                swal('Information', data.result.message, 'info');
+            },
+            error: function (err) {
+                $(".pop").fadeOut('fast');
+                $('.loader').removeClass('is-active');
+                swal('Error', err.statusText, 'error');
+            }
+        });
+    }
+}
+
+function validChangePasswordForm() {
+    var change = true;
+    if ($.trim($('#password').val()) === '') {
+        $('#password_error').html('Enter password').addClass('error-msg');
+        change = false;
+    }
+    if ($.trim($('#confirm_password').val()) !== $.trim($('#password').val())) {
+        $('#confirm_password_error').html('Password mismatch').addClass('error-msg');
+        change = false;
+    }
+    return change;
+}
+
+function changePassword(code) {
+    if (validChangePasswordForm()) {
+        $('.loader').addClass('is-active');
+        $.ajax({
+            type: "POST",
+            url: 'api/v1/reset_password',
+            data: {auth: code, password: $('#confirm_password').val()},
+            success: function (data) {
+                $('.loader').removeClass('is-active');
+                swal('Information', data.result.message, 'info');
+                setTimeout(function () {
+                    window.location = 'login.php?type=two_wheel';
+                }, 2000);
+            },
+            error: function (err) {
+                $('.loader').removeClass('is-active');
+                swal('Error', err.statusText, 'error');
+            }
+        });
+    }
+    return false;
+}
+
+function validUpdatePasswordForm() {
+    var change = true;
+    if ($.trim($('#curr_password').val()) === '') {
+        $('#curr_password_error').html('Enter current password').addClass('error-msg');
+        change = false;
+    }
+    if ($.trim($('#new_password').val()) === '') {
+        $('#new_password_error').html('Enter new password').addClass('error-msg');
+        change = false;
+    }
+    if ($.trim($('#confirm_password').val()) !== $.trim($('#new_password').val())) {
+        $('#confirm_password_error').html('New password mismatch').addClass('error-msg');
+        change = false;
+    }
+    return change;
+}
+
+function updatePassword() {
+    if (validUpdatePasswordForm()) {
+        $('.loader').addClass('is-active');
+        $.ajax({
+            type: "POST",
+            url: 'api/v1/change_password',
+            data: {old_password: $('#curr_password').val(), new_password: $('#new_password').val()},
+            success: function (data) {
+                $('.loader').removeClass('is-active');
+                $(".password-popup").fadeOut('fast');
+                swal('Information', data.result.message, 'info');
+            },
+            error: function (err) {
+                $(".password-popup").fadeOut('fast');
+                $('.loader').removeClass('is-active');
+                swal('Error', err.statusText, 'error');
+            }
+        });
+    }
+}
+
+function updateProfile(id, type) {
+    var data = {};
+    if (type == 'basic') {
+        var dob = new Date($('#dob').val());
+        data.age = $('#age').val();
+        data.gender = $('#gender').val();
+        data.dob_date = dob.getDate();
+        data.dob_month = (dob.getMonth() + 1);
+        data.dob_year = dob.getFullYear();
+        data.address = $('#address').val();
+    }
+    if (type == 'coverage') {
+        if (typeof $('#coverage_spouse_name').val() !== 'undefined') {
+            data.coverage_spouse_name = $('#coverage_spouse_name').val();
+            data.coverage_spouse_ic = $('#coverage_spouse_ic').val();
+            data.coverage_kid1_name = $('#coverage_kid1_name').val();
+            data.coverage_kid1_ic = $('#coverage_kid1_ic').val();
+            data.coverage_kid2_name = $('#coverage_kid2_name').val();
+            data.coverage_kid2_ic = $('#coverage_kid2_ic').val();
+            data.coverage_kid3_name = $('#coverage_kid3_name').val();
+            data.coverage_kid3_ic = $('#coverage_kid3_ic').val();
+        }
+        if (typeof $('#coverage_person_name').val() !== 'undefined') {
+            data.coverage_person_name = $('#coverage_person_name').val();
+            data.coverage_person_ic = $('#coverage_person_ic').val();
+            data.coverage_person_address = $('#coverage_person_address').val();
+        }
+    }
+    $('.loader').addClass('is-active');
+    $.ajax({
+        type: "POST",
+        url: 'api/v1/update_record/member/member_id=' + id,
+        data: data,
+        success: function (data) {
+            $('.loader').removeClass('is-active');
+            if (data.result.error === false) {
+                location.reload();
+            } else {
+                swal('Information', data.result.message, 'info');
+            }
+        },
+        error: function (err) {
+            $('.loader').removeClass('is-active');
+            swal('Error', err.statusText, 'error');
+        }
+    });
+}
+
+function enableCoverageEdit() {
+    $('.coverage-normal-action-icon').addClass('hidden');
+    $('.coverage-edit-action-icon').removeClass('hidden');
+    $('.coverage-info-fixed').addClass('hidden');
+    $('.coverage-info-edit').removeClass('hidden');
+}
+
+function disableCoverageEdit() {
+    $('.coverage-normal-action-icon').removeClass('hidden');
+    $('.coverage-edit-action-icon').addClass('hidden');
+    $('.coverage-info-edit').addClass('hidden');
+    $('.coverage-info-fixed').removeClass('hidden');
+}
+
+function enableProfileEdit() {
+    $('.basic-info-normal-action-icon').addClass('hidden');
+    $('.member-basic-info-fixed').addClass('hidden');
+    $('.basic-info-edit-action-icon').removeClass('hidden');
+    $('.member-basic-info-edit').removeClass('hidden');
+}
+
+function disableProfileEdit() {
+    $('.basic-info-normal-action-icon').removeClass('hidden');
+    $('.basic-info-edit-action-icon').addClass('hidden');
+    $('.member-basic-info-edit').addClass('hidden');
+    $('.member-basic-info-fixed').removeClass('hidden');
 }

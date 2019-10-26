@@ -58,7 +58,15 @@ export class MemberComponent implements OnInit {
   changeStatus(id, status): void {
       var formData = new FormData();
       formData.append('activated', status);
-      this.httpClient.post<any>('https://www.toowheel.com/beta/toowheel/api/v1/update_record/member/member_id = '+id, formData)
+      if(status == 1) {
+      formData.append('activated_by', sessionStorage.getItem("toowheel_users_id"));
+      formData.append('activated_at', moment().format('YYYY-MM-DD'));
+      }
+      if(status == 0) {
+      formData.append('blocked_by', sessionStorage.getItem("toowheel_users_id"));
+      formData.append('blocked_at', moment().format('YYYY-MM-DD'));
+      }
+      this.httpClient.post<any>('https://www.toowheel.com/beta/toowheel/api/v1/update_user_status/member/member_id = '+id, formData)
   .subscribe(
           (res)=>{
               this.getMember();
@@ -139,14 +147,27 @@ confirmDialog(id, action): void  {
             }
         });
     }
-    openTshirt(): void  {
+    openTshirt(id, res): void  {
+            var data = null;
+        if(id != 0) { 
+        this[res].forEach(val=> {
+             if(parseInt(val.member_id) === parseInt(id)) {
+                  data = val;
+                  return false;
+             }
+           });
+        }
       const dialogRef = this.dialog.open(MemberTshirtForm, {
-          minWidth: "80%",
-          maxWidth: "80%"
+          minWidth: "60%",
+          maxWidth: "60%",
+          data: data
       });
 
       dialogRef.afterClosed().subscribe(result => {
-            console.log(`Dialog result: ${result}`);
+            if(result !== false && result !== 'false') {
+            this.getMember();
+            this.getFourWheelMember();
+            }
         });
     }
     
@@ -499,7 +520,36 @@ export class MemberViewForm {
 export class MemberTshirtForm {
     constructor(
     public dialogRef: MatDialogRef<MemberTshirtForm>,
-    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {}
+    private httpClient: HttpClient) {
+        
+    }
+    changeStatus(id, status): void {
+      var formData = new FormData();
+      formData.append('t_shirt_status', status);
+      if(status == 2) {
+      formData.append('shipped_at', moment().format('YYYY-MM-DD'));
+      }
+      if(status == 3) {
+      formData.append('delivered_at', moment().format('YYYY-MM-DD'));
+      }
+      this.httpClient.post<any>('https://www.toowheel.com/beta/toowheel/api/v1/update_tshirt_status/member/member_id = '+id, formData)
+  .subscribe(
+          (res)=>{
+              if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+            this._snackBar.open(res["result"]["message"], '', {
+              duration: 2000,
+            });
+            }
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
+  }
 }  

@@ -77,7 +77,7 @@
                 <mat-list>
                     <ng-container *ngFor="let data of result | filterEventPress:searchTermFW">
                         <mat-list-item class="list-container" *ngIf="data.type == 'four_wheel'">
-                            <button mat-icon-button aria-label="label" (click)="openView()">
+                            <button mat-icon-button aria-label="label" (click)="openView(data.press_release_id,'result')">
                                 <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label" (click)="openDialog(data.press_release_id,'result')">

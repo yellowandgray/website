@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>News</h2>
 <mat-dialog-content class="mat-typography">
-    <form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="newsForm">
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="100">
                 <img src="{{image_url}}{{data.cover_image}}" alt="" style="width: 100%;" />

@@ -1975,4 +1975,21 @@ div#html5-watermark {
     padding: 5px;
     border-radius: 50%;
     float: right;
+    margin-left: 10px;
+}
+
+.basic-info-edit-action-icon, .basic-info-normal-action-icon, .coverage-edit-action-icon, .coverage-normal-action-icon {
+    cursor: pointer;
+}
+
+.coverage-table table th, .coverage-table table td {
+    color: #ffffff;
+    text-align: left;
+    padding: 10px;
+    border: 0px;
+}
+
+.coverage-table table {
+    border: 0px;
+    border-collapse: collapse;
 }

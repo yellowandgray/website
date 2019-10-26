@@ -36,7 +36,6 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                     </div>
                     <div class="col-md-8 profile-details-section">
                         <div class="profile-club-details">
-                            `
                             <span><?php echo $member['type'] == 'two_wheel' ? '2 WHEELS' : '4 WHEELS'; ?></span>
                         </div>
                         <div class="profile-club-details">
@@ -49,23 +48,56 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                 <div class="row margin-b-40 edit">
                     <div class="col-md-2"></div>
                     <div class="col-md-6 ">
-                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                        <i class="fa fa-times basic-info-edit-action-icon hidden" onclick="disableProfileEdit();" aria-hidden="true"></i>
+                        <i class="fa fa-check basic-info-edit-action-icon hidden" onclick="updateProfile(<?php echo $member['member_id']; ?>, 'basic');" aria-hidden="true"></i>
+                        <i class="fa fa-pencil basic-info-normal-action-icon" onclick="enableProfileEdit();" aria-hidden="true"></i>
                         <div class="profile-table">
                             <table>
                                 <tr>
                                     <th>Age</th>
                                     <td>:</td>
-                                    <td><?php echo $member['age']; ?></td>
+                                    <td class="member-basic-info-fixed"><?php echo $member['age']; ?></td>
+                                    <td class="member-basic-info-edit hidden">
+                                        <select class="form-control" id="age" name="age" value="<?php echo $member['age']; ?>">
+                                            <?php
+                                            foreach (range(20, 99) as $row) {
+                                                $selected = '';
+                                                if ($row == $member['age']) {
+                                                    $selected = 'selected';
+                                                }
+                                                ?>
+                                                <option value="<?php echo $row ?>" <?php echo $selected; ?>><?php echo $row; ?></option>
+                                            <?php }
+                                            ?>
+                                        </select>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>Gender</th>
                                     <td>:</td>
-                                    <td><?php echo strtoupper($member['gender']); ?></td>
+                                    <td class="member-basic-info-fixed"><?php echo strtoupper($member['gender']); ?></td>
+                                    <td class="member-basic-info-edit hidden">
+                                        <select class="form-control" id="gender" name="gender">
+                                            <?php
+                                            foreach (array('male' => 'Male', 'female' => 'Female') as $key => $row) {
+                                                $selected = '';
+                                                if ($key == $member['gender']) {
+                                                    $selected = 'selected';
+                                                }
+                                                ?>
+                                                <option value="<?php echo $key ?>" <?php echo $selected; ?>><?php echo $row; ?></option>
+                                            <?php }
+                                            ?>
+                                        </select>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>Date of Birth</th>
                                     <td>:</td>
-                                    <td><?php echo $member['dob_date'] . '-' . $member['dob_month'] . '-' . $member['dob_year']; ?></td>
+                                    <td class="member-basic-info-fixed"><?php echo $member['dob_date'] . '-' . str_pad($member['dob_month'], 2, "0", STR_PAD_LEFT) . '-' . $member['dob_year']; ?></td>
+                                    <td class="member-basic-info-edit hidden">
+                                        <input type="date" value="<?php echo $member['dob_year'] . '-' . str_pad($member['dob_month'], 2, "0", STR_PAD_LEFT) . '-' . $member['dob_date']; ?>" name="dob" id="dob" />
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>Email Address</th>
@@ -80,67 +112,93 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                 <tr>
                                     <th>Address</th>
                                     <td>:</td>
-                                    <td><?php echo $member['address']; ?></td>
+                                    <td class="member-basic-info-fixed"><?php echo $member['address']; ?></td>
+                                    <td class="member-basic-info-edit hidden">
+                                        <textarea name="address" id="address"><?php echo $member['address']; ?></textarea>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="profile-details-section-1">
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                            <div class="profile-table">
+                            <i class="fa fa-times coverage-edit-action-icon hidden" onclick="disableCoverageEdit();" aria-hidden="true"></i>
+                            <i class="fa fa-check coverage-edit-action-icon hidden" onclick="updateProfile(<?php echo $member['member_id']; ?>, 'coverage');" aria-hidden="true"></i>
+                            <i class="fa fa-pencil coverage-normal-action-icon" onclick="enableCoverageEdit();" aria-hidden="true"></i>
+                            <div class="coverage-table">
                                 <h4>COVERAGE INFORMATION (NEXT OF KIN)</h4>
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <table>
-                                            <tr>
-                                                <th>Full Name</th>
-                                                <td>:</td>
-                                                <td><?php echo isset($member['coverage_full_name']) && $member['coverage_full_name'] != '' ? $member['coverage_full_name'] : 'N/A'; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Contact No.</th>
-                                                <td>:</td>
-                                                <td><?php echo isset($member['coverage_contact_number']) && $member['coverage_contact_number'] != '' ? $member['coverage_contact_number'] : 'N/A'; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>SPOUSE NAME</th>
-                                                <td>:</td>
-                                                <td>test</td>
-                                            </tr>
-                                            <tr>
-                                                <th>CHILD 1</th>
-                                                <td>:</td>
-                                                <td>test</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <table>
-                                            <tr>
-                                                <th> </th>
-                                                <td> </td>
-                                                <td> </td>
-                                            </tr>
-                                            <tr>
-                                                <th> </th>
-                                                <td> </td>
-                                                <td> </td>
-                                            </tr>
-                                            <tr>
-                                                <th>IC No.</th>
-                                                <td>:</td>
-                                                <td>test</td>
-                                            </tr>
-                                            <tr>
-                                                <th>MY KIT ID</th>
-                                                <td>:</td>
-                                                <td>test</td>
-                                            </tr>
-                                        </table>
+                                    <div class="col-md-12">
+                                        <?php if ($member['marital_status'] == 'married') {
+                                            ?>
+                                            <table>
+                                                <tr>
+                                                    <th>Spouse Name</th>
+                                                    <th>IC Number</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_spouse_name'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_spouse_name']; ?>" name="coverage_spouse_name" id="coverage_spouse_name" class="form-control" /></td>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_spouse_ic'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_spouse_ic']; ?>" name="coverage_spouse_ic" id="coverage_spouse_ic" class="form-control" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Name of first kid</th>
+                                                    <th>MYKID ID</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid1_name'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden">
+                                                        <input type="text" value="<?php echo $member['coverage_kid1_name']; ?>" name="coverage_kid1_name" id="coverage_kid1_name" class="form-control" />
+                                                    </td>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid1_ic'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_kid1_ic']; ?>" name="coverage_kid1_ic" id="coverage_kid1_ic" class="form-control" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Name of second kid</th>
+                                                    <th>MYKID ID</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid2_name'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_kid2_name']; ?>" name="coverage_kid2_name" id="coverage_kid2_name" class="form-control" /></td>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid2_ic'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_kid2_ic']; ?>" name="coverage_kid2_ic" id="coverage_kid2_ic" class="form-control" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Name of third kid</th>
+                                                    <th>MYKID ID</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid3_name'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_kid3_name']; ?>" name="coverage_kid3_name" id="coverage_kid3_name" class="form-control" /></td>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid3_ic'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_kid3_ic']; ?>" name="coverage_kid3_ic" id="coverage_kid3_ic" class="form-control" /></td>
+                                                </tr>
+                                            </table>
+                                        <?php } else { ?>
+                                            <table>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>IC Number</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_person_name'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_person_name']; ?>" name="coverage_person_name" id="coverage_person_name" class="form-control" /></td>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_person_ic'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_person_ic']; ?>" name="coverage_person_ic" id="coverage_person_ic" class="form-control" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="2">Address</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="coverage-info-fixed" colspan="2"><?php echo $obj->charLimit($member['coverage_person_address'], 150); ?></td>
+                                                    <td class="coverage-info-edit hidden" colspan="2"><textarea name="coverage_person_address" id="coverage_person_address" class="form-control"><?php echo $member['coverage_person_address']; ?></textarea></td>
+                                                </tr>
+                                            </table>                                                
+                                        <?php }
+                                        ?>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -193,13 +251,16 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                 <i class="fa fa-times-circle" aria-hidden="true"></i>
                 <div class="margin-top-30">
                     <h4>Change Your Register password!</h4>
-                    <input type="password" name="old_password" placeholder="Enter Your Old Password" />
+                    <input type="password" onchange="removeValidation('curr_password');" name="curr_password" id="curr_password" placeholder="Enter Your Current Password" />
+                    <div id="curr_password_error"></div>
                     <br/>
-                    <input type="password" name="new_password" placeholder="Enter Your New Password" />
+                    <input type="password" onchange="removeValidation('new_password');" name="new_password" id="new_password" placeholder="Enter Your New Password" />
+                    <div id="new_password_error"></div>
                     <br/>
-                    <input type="password" name="confirm_password" placeholder="Enter Confirm Password" />
+                    <input type="password" onchange="removeValidation('confirm_password');" name="confirm_password" id="confirm_password" placeholder="Enter Confirm Password" />
+                    <div id="confirm_password_error"></div>
                     <center>
-                        <button type="submit">Submit</button>
+                        <button type="button" onclick="updatePassword();">Submit</button>
                     </center>
                 </div>
             </div>

@@ -58,7 +58,7 @@
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Receipt">money</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="openTshirt()">
+                                    <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
                                             <img src="https://img.icons8.com/material/24/000000/teams.png">
                                         </mat-icon>
@@ -120,7 +120,7 @@
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Receipt">money</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="openTshirt()">
+                                    <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
                                             <img src="https://img.icons8.com/material/24/000000/teams.png">
                                         </mat-icon>
@@ -186,9 +186,9 @@
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Receipt">money</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="openTshirt()">
+                                    <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result_fw')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
-                                            <img src="https://img.icons8.com/material/24/000000/teams.png">
+                                            <img src="https://img.icons8.com/material/24/000000/teams.png" alt="image" />
                                         </mat-icon>
                                     </button>
                                     <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
@@ -248,9 +248,9 @@
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Receipt">money</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="openTshirt()">
+                                    <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result_fw')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
-                                            <img src="https://img.icons8.com/material/24/000000/teams.png">
+                                            <img src="https://img.icons8.com/material/24/000000/teams.png" alt="image" />
                                         </mat-icon>
                                     </button>
                                     <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />

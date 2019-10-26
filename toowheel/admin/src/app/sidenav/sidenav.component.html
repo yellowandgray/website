@@ -3,11 +3,11 @@
 </div>
 <mat-nav-list fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center" class="user-nav-info">
     <div mat-list-item fxFlex="20">
-        <img matListAvatar src="./assets/1.jpg" alt="user_profile_image" />
+        <img matListAvatar src="{{image_url}}{{data.avatar}}" alt="user_profile_image" />
     </div>
     <div class="user-info" mat-list-item fxFlex="80">
-        <h4>User Name</h4>
-        <p>Super Admin</p>
+        <h4>{{data.name}}</h4>
+        <p>{{data.role}}</p>
     </div>
 </mat-nav-list>
 <mat-nav-list>
