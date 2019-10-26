@@ -17,35 +17,35 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <section class="section">
-                    <br/>                     
-                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                        <div class="searchdesign" fxFlex="50%">
-                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTWP" />
-                            </mat-form-field>
-                        </div>
-                        <div fxFlex="20%">
-                            <mat-form-field fxFlex="100%">
-                                <mat-label>Sort by</mat-label>
-                                <mat-select [(ngModel)]="sortdata_twp" (selectionChange)="sortRecords('result', sortdata_twp)">
-                                    <mat-option value="title_a_z">Name A-Z</mat-option>
-                                    <mat-option value="title_z_a">Name Z-A</mat-option>
-                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
-                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                        </div>
-                    </div>
-                </section>                        
+                            <br/>                     
+                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                                <div class="searchdesign" fxFlex="50%">
+                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTWP" />
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Sort by</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_twp" (selectionChange)="sortRecords('result', sortdata_twp)">
+                                            <mat-option value="title_a_z">Name A-Z</mat-option>
+                                            <mat-option value="title_z_a">Name Z-A</mat-option>
+                                            <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                            <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </section>                        
                         <mat-list>
                             <ng-container *ngFor="let data of result | filterEventMember:searchTermTWP;">
-                                <mat-list-item *ngIf="data.activated == 0">
+                                <mat-list-item *ngIf="data.activated == 0 && data.activated_at == '0000-00-00'">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
                                     </button>
-<!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
-                                    </button>-->
+                                    <!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                                                            <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                                                        </button>-->
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
@@ -82,35 +82,35 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <section class="section">
-                    <br/>                     
-                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                        <div class="searchdesign" fxFlex="50%">
-                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTWM" />
-                            </mat-form-field>
-                        </div>
-                        <div fxFlex="20%">
-                            <mat-form-field fxFlex="100%">
-                                <mat-label>Sort by</mat-label>
-                                <mat-select [(ngModel)]="sortdata_twm" (selectionChange)="sortRecords('result', sortdata_twm)">
-                                    <mat-option value="title_a_z">Name A-Z</mat-option>
-                                    <mat-option value="title_z_a">Name Z-A</mat-option>
-                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
-                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                        </div>
-                    </div>
-                </section> 
+                            <br/>                     
+                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                                <div class="searchdesign" fxFlex="50%">
+                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTWM" />
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Sort by</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_twm" (selectionChange)="sortRecords('result', sortdata_twm)">
+                                            <mat-option value="title_a_z">Name A-Z</mat-option>
+                                            <mat-option value="title_z_a">Name Z-A</mat-option>
+                                            <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                            <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </section> 
                         <mat-list>
                             <ng-container *ngFor="let data of result | filterEventMember:searchTermTWM;">
                                 <mat-list-item *ngIf="data.activated == 1">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
                                     </button>
-<!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
-                                    </button>-->
+                                    <!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                                                            <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                                                        </button>-->
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
@@ -140,6 +140,71 @@
                             </ng-container>    
                         </mat-list>
                     </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Blocked
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <section class="section">
+                            <br/>                     
+                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                                <div class="searchdesign" fxFlex="50%">
+                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTWP" />
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Sort by</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_twp" (selectionChange)="sortRecords('result', sortdata_twp)">
+                                            <mat-option value="title_a_z">Name A-Z</mat-option>
+                                            <mat-option value="title_z_a">Name Z-A</mat-option>
+                                            <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                            <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </section>                        
+                        <mat-list>
+                            <ng-container *ngFor="let data of result | filterEventMember:searchTermTWP;">
+                                <mat-list-item *ngIf="data.activated == 0 && data.activated_at != '0000-00-00'">
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
+                                    </button>
+                                    <!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                                                            <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                                                        </button>-->
+                                    <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openView(data.member_id, 'result')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'delete')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Receipt">money</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
+                                            <img src="https://img.icons8.com/material/24/000000/teams.png">
+                                        </mat-icon>
+                                    </button>
+                                    <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.profile_picture || data.profile_picture == ''" alt="..." />
+                                    <h3 matLine>{{data.first_name}}</h3>
+                                    <p matLine>{{data.ic_passport}} - {{data.contact_number}}</p>
+                                    <p matLine>{{data.email}}</p>
+                                </mat-list-item>
+                            </ng-container>
+                        </mat-list>
+                    </mat-expansion-panel>
                 </mat-accordion>
             </mat-tab>
             <mat-tab label="4 Wheeler">
@@ -151,36 +216,36 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <section class="section">
-                    <br/>                     
-                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                        <div class="searchdesign" fxFlex="50%">
-                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermFWP" />
-                            </mat-form-field>
-                        </div>
-                        <div fxFlex="20%">
-                            <mat-form-field fxFlex="100%">
-                                <mat-label>Sort by</mat-label>
-                                <mat-select [(ngModel)]="sortdata_fwp" (selectionChange)="sortRecords('result_fw', sortdata_fwp)">
-                                    <mat-option value="title_a_z">Name A-Z</mat-option>
-                                    <mat-option value="title_z_a">Name Z-A</mat-option>
-                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
-                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                        </div>
-                    </div>
-                </section> 
+                            <br/>                     
+                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                                <div class="searchdesign" fxFlex="50%">
+                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermFWP" />
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Sort by</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_fwp" (selectionChange)="sortRecords('result_fw', sortdata_fwp)">
+                                            <mat-option value="title_a_z">Name A-Z</mat-option>
+                                            <mat-option value="title_z_a">Name Z-A</mat-option>
+                                            <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                            <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </section> 
                         <mat-list>
                             <ng-container *ngFor="let data of result_fw | filterEventMember:searchTermFWP;">
-                                <mat-list-item *ngIf="data.activated == 0">
+                                <mat-list-item *ngIf="data.activated == 0 && data.activated_at == '0000-00-00'">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
                                     </button>
-<!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
-                                    </button>-->
-                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
+                                    <!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                                                            <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                                                        </button>-->
+                                    <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openView(data.member_id, 'result_fw')">
@@ -216,35 +281,35 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <section class="section">
-                    <br/>                     
-                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                        <div class="searchdesign" fxFlex="50%">
-                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermFWM" />
-                            </mat-form-field>
-                        </div>
-                        <div fxFlex="20%">
-                            <mat-form-field fxFlex="100%">
-                                <mat-label>Sort by</mat-label>
-                                <mat-select [(ngModel)]="sortdata_fwm" (selectionChange)="sortRecords('result_fw', sortdata_fwm)">
-                                    <mat-option value="title_a_z">Name A-Z</mat-option>
-                                    <mat-option value="title_z_a">Name Z-A</mat-option>
-                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
-                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                        </div>
-                    </div>
-                </section> 
+                            <br/>                     
+                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                                <div class="searchdesign" fxFlex="50%">
+                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermFWM" />
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Sort by</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_fwm" (selectionChange)="sortRecords('result_fw', sortdata_fwm)">
+                                            <mat-option value="title_a_z">Name A-Z</mat-option>
+                                            <mat-option value="title_z_a">Name Z-A</mat-option>
+                                            <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                            <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </section> 
                         <mat-list>
                             <ng-container *ngFor="let data of result_fw | filterEventMember:searchTermFWM;">
                                 <mat-list-item *ngIf="data.activated == 1">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
                                     </button>
-<!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
-                                    </button>-->
+                                    <!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                                                            <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                                                        </button>-->
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
@@ -273,6 +338,71 @@
                                 </mat-list-item>
                             </ng-container>    
                         </mat-list>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Blocked
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <section class="section">
+                            <br/>                     
+                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                                <div class="searchdesign" fxFlex="50%">
+                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermFWP" />
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Sort by</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_fwp" (selectionChange)="sortRecords('result_fw', sortdata_fwp)">
+                                            <mat-option value="title_a_z">Name A-Z</mat-option>
+                                            <mat-option value="title_z_a">Name Z-A</mat-option>
+                                            <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                            <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </section> 
+                        <mat-list>
+                            <ng-container *ngFor="let data of result_fw | filterEventMember:searchTermFWP;">
+                                <mat-list-item *ngIf="data.activated == 0  && data.activated_at != '0000-00-00'">
+                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
+                                    </button>
+                                    <!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                                                            <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                                                        </button>-->
+                                    <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openView(data.member_id, 'result_fw')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(data.member_id, 'result_fw')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id, 'delete')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'payment')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Receipt">money</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result_fw')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
+                                            <img src="https://img.icons8.com/material/24/000000/teams.png" alt="image" />
+                                        </mat-icon>
+                                    </button>
+                                    <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.profile_picture || data.profile_picture == ''" alt="..." />
+                                    <h3 matLine>{{data.first_name}}</h3>
+                                    <p matLine>{{data.ic_passport}} - {{data.contact_number}}</p>
+                                    <p matLine>{{data.email}}</p>
+                                </mat-list-item>
+                            </ng-container>
+                        </mat-list>                        
                     </mat-expansion-panel>
                 </mat-accordion>
             </mat-tab>

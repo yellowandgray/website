@@ -360,9 +360,11 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           formData.append('paypal_transaction_id', '');
           formData.append('fund_transfer_file', '');
           formData.append('activated', '1');
+          formData.append('activated_at', moment().format('YYYY-MM-DD'));
       if(this.member_id != 0) {
         url = 'update_record/member/member_id = '+this.member_id;
       } else {
+        formData.append('activated_by', sessionStorage.getItem("toowheel_users_id"));
         url = 'insert_member';
       }
       this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
@@ -449,13 +451,13 @@ this._snackBar.open(res["result"]["message"], '', {
             }
         );
   }
-        changeStatus(id, status): void {
+        changeStatus(): void {
         var formData = new FormData();
-        formData.append('activated', 0);
+        formData.append('activated', '0');
         formData.append('block_reason', this.blockreason);
         formData.append('blocked_by', sessionStorage.getItem("toowheel_users_id"));
         formData.append('blocked_at', moment().format('YYYY-MM-DD'));
-        this.httpClient.post<any>('https://www.toowheel.com/beta/toowheel/api/v1/update_user_status/member/member_id = '+id, formData)
+        this.httpClient.post<any>('https://www.toowheel.com/beta/toowheel/api/v1/update_user_status/member/member_id = '+this.member_id, formData)
     .subscribe(
             (res)=>{
                 this.loading = false;

@@ -18,7 +18,7 @@
     <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
         <button mat-button cdkFocusInitial [mat-dialog-close]="false">Cancel</button>
         <button mat-button (click)="confirmDelete()" *ngIf="action == 'delete'" [disabled]="loading">Yes, delete it!</button>
-        <button mat-button (click)="changeStatus(this.member_id, 0)" *ngIf="action == 'block'" [disabled]="loading">Block</button>
+        <button mat-button (click)="changeStatus()" *ngIf="action == 'block'" [disabled]="loading">Block</button>
         <mat-progress-spinner
             class="example-margin"
             *ngIf="loading"
