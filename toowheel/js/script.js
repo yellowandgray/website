@@ -579,6 +579,15 @@ function updateProfile(id, type) {
         data.age = $('#age').val();
         data.gender = $('#gender').val();
         data.dob_date = dob.getDate();
+        data.dob_month = (dob.getMonth() + 1);
+        data.dob_year = dob.getFullYear();
+        data.address = $('#address').val();
+    }
+    if (type == 'coverage') {
+        var dob = new Date($('#dob').val());
+        data.age = $('#age').val();
+        data.gender = $('#gender').val();
+        data.dob_date = dob.getDate();
         data.dob_month = dob.getMonth();
         data.dob_year = dob.getFullYear();
         data.address = $('#address').val();
