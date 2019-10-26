@@ -42,7 +42,13 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                             <span><?php echo $member['club'] && isset($member['club']) ? $member['club'] : 'No club selected'; ?></span>
                             <span>Invite a Friend</span>
                         </div>
-                        <h2><?php echo $member['first_name'] . ' ' . $member['last_name']; ?> <i class="fa fa-pencil basic-info-normal-action-icon" onclick="enableProfileEdit();" aria-hidden="true"></i></h2>
+                        <h2><?php echo $member['first_name'] . ' ' . $member['last_name']; ?>  
+                            <i class="fa fa-pencil basic-info-normal-action-icon" onclick="enableProfileEdit();" aria-hidden="true"></i>
+                        </h2>
+                        <h2 class=" hidden">
+                            <input type="text" value="<?php echo $member['first_name']; ?> " name="" id="" class="form-control" />
+                            <input type="text" value="<?php echo $member['last_name']; ?> " name="" id="" class="form-control" />
+                        </h2>
                     </div>
                 </div>
                 <div class="row margin-b-40 edit-1">
@@ -50,7 +56,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                     <div class="col-md-6 ">
                         <i class="fa fa-times basic-info-edit-action-icon hidden" onclick="disableProfileEdit();" aria-hidden="true"></i>
                         <i class="fa fa-check basic-info-edit-action-icon hidden" onclick="updateProfile(<?php echo $member['member_id']; ?>, 'basic');" aria-hidden="true"></i>
-                        
+
                         <div class="profile-table">
                             <table>
                                 <tr>
