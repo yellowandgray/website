@@ -1974,8 +1974,16 @@ div#html5-watermark {
     background: #fff;
     padding: 5px;
     border-radius: 50%;
+    margin-left: 10px;
+}
+.edit-1 i{
+    color: #ed1c24;
+    background: #fff;
+    padding: 5px;
+    border-radius: 50%;
     float: right;
     margin-left: 10px;
+    margin-bottom: 10px
 }
 
 .basic-info-edit-action-icon, .basic-info-normal-action-icon, .coverage-edit-action-icon, .coverage-normal-action-icon {
