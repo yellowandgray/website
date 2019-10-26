@@ -164,6 +164,9 @@
                                             anchorClickable: false,
                                             enableAllAnchors: false,
                                             useURLhash: false,
+                                            anchorSettings: {
+                                                enableAnchorOnDoneStep: false
+                                            },
                                             toolbarSettings: {toolbarPosition: 'both',
                                                 toolbarExtraButtons: [btnFinish, btnCancel]
                                             }
