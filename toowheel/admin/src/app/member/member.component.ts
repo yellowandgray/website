@@ -406,6 +406,7 @@ export class MemberDelete {
     action: string = '';
     loading = false;
     member_id = 0;
+blockreason: string = "";
     data: any;
     constructor(
     public dialogRef: MatDialogRef<MemberDelete>,
@@ -417,6 +418,9 @@ export class MemberDelete {
             this.data = this.datapopup.data;
             if(this.datapopup.action == 'delete') {
                 this.member_id = this.datapopup.data;
+            }
+           if(this.datapopup.action == 'block') {
+                this.member_id = this.datapopup.data;                
             }
     }
 }
@@ -445,6 +449,31 @@ this._snackBar.open(res["result"]["message"], '', {
             }
         );
   }
+        changeStatus(id, status): void {
+        var formData = new FormData();
+        formData.append('activated', 0);
+        formData.append('block_reason', this.blockreason);
+        formData.append('blocked_by', sessionStorage.getItem("toowheel_users_id"));
+        formData.append('blocked_at', moment().format('YYYY-MM-DD'));
+        this.httpClient.post<any>('https://www.toowheel.com/beta/toowheel/api/v1/update_user_status/member/member_id = '+id, formData)
+    .subscribe(
+            (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+           this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+          },
+          (error)=>{
+              this._snackBar.open(error["statusText"], '', {
+        duration: 2000,
+      });
+          }
+          );
+    }
 }
 
   @Component({

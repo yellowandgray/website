@@ -41,9 +41,12 @@
                             <ng-container *ngFor="let data of result | filterEventMember:searchTermTWP;">
                                 <mat-list-item *ngIf="data.activated == 0">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+<!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                    </button>-->
+                                    <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openView(data.member_id, 'result')">
@@ -103,9 +106,12 @@
                             <ng-container *ngFor="let data of result | filterEventMember:searchTermTWM;">
                                 <mat-list-item *ngIf="data.activated == 1">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+<!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                    </button>-->
+                                    <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openView(data.member_id, 'result')">
@@ -169,9 +175,12 @@
                             <ng-container *ngFor="let data of result_fw | filterEventMember:searchTermFWP;">
                                 <mat-list-item *ngIf="data.activated == 0">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+<!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                    </button>-->
+                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openView(data.member_id, 'result_fw')">
@@ -231,9 +240,12 @@
                             <ng-container *ngFor="let data of result_fw | filterEventMember:searchTermFWM;">
                                 <mat-list-item *ngIf="data.activated == 1">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
                                     </button>
-                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+<!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                                    </button>-->
+                                    <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openView(data.member_id, 'result_fw')">

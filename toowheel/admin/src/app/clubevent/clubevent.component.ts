@@ -131,6 +131,7 @@ export class ClubeventComponent implements OnInit {
   templateUrl: 'clubevent-form.html',
 })
 export class ClubEventForm {
+    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     clubeventForm: FormGroup;
     loading = false;
     event_id = 0;
@@ -138,8 +139,8 @@ export class ClubEventForm {
     clubs:any[];
     cover_image: string = 'Choose Event Picture';
     thumb_image: string = 'Choose Thumb Image';
-    cover_image_path: string;
-    thumb_image_path: string;
+    cover_image_path: string='';
+    thumb_image_path: string='';
     constructor(
     public dialogRef: MatDialogRef<ClubEventForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -167,6 +168,8 @@ export class ClubEventForm {
            sponsor: this.data.sponsor
         });
         this.event_id = this.data.event_id;
+        this.cover_image_path = this.data.cover_image;
+        this.thumb_image_path= this.data.thumb_image;
         this.getCategory();
         this.getClub();
         } else {
@@ -294,6 +297,17 @@ formData.append('type', this.clubeventForm.value.type);
             }
             );
       }
+
+ removeMedia(url) {
+      this[url] = '';
+      if(url === 'cover_image_path') {
+          this.cover_image= 'Choose Event Picture';
+      }
+      if(url === 'thumb_image_path') {
+          this.thumb_image= 'Choose Thumb Image';
+      }
+      
+  }
 }
 
 
