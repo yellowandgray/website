@@ -192,7 +192,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                                 </tr>
                                                 <tr>
                                                     <td class="coverage-info-fixed" colspan="2"><?php echo $obj->charLimit($member['coverage_person_address'], 150); ?></td>
-                                                    <td class="coverage-info-edit hidden" colspan="2"><textarea name="coverage_person_address" id="coverage_person_address" class="form-control"><?php echo $$member['coverage_person_address']; ?></textarea></td>
+                                                    <td class="coverage-info-edit hidden" colspan="2"><textarea name="coverage_person_address" id="coverage_person_address" class="form-control"><?php echo $member['coverage_person_address']; ?></textarea></td>
                                                 </tr>
                                             </table>                                                
                                         <?php }
