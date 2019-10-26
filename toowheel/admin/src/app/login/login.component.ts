@@ -39,7 +39,12 @@ formData.append('password', this.loginForm.value.password);
                      Object.keys(res["result"]["data"]).forEach(key=> {
                          sessionStorage.setItem("toowheel_"+key, res["result"]["data"][key]);
          });
+         var role = sessionStorage.getItem("toowheel_role");
+         if(role == 'Admin'){
                       this.router.navigateByUrl('/dashboard');
+         }else{
+this.router.navigateByUrl('/config');             
+         }
                 }else{
             this._snackBar.open(res["result"]["message"], '', {
               duration: 2000,

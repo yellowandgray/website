@@ -679,6 +679,7 @@ $app->post('/loginmember', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
+
 $app->post('/loginadmin', function() use ($app) {
     $res = array('error' => true, 'message' => 'Invalid login details');
     $data = $app->request->post();
@@ -687,6 +688,8 @@ $app->post('/loginadmin', function() use ($app) {
     if (count($record) > 0) {
         $pass_matchs = $obj->decryptPassword($data['password'], $record['password']);
         if ($pass_matchs == true) {
+            date_default_timezone_set("Asia/Kuala_Lumpur");
+            $obj->updateRecordWithWhere(array('last_login' => date('Y-m-d H:i:s')), 'users', 'users_id=' . $record['users_id']);
             $res['error'] = false;
             $res['message'] = 'Welcome ' . $record['name'];
             $res['data'] = $record;
