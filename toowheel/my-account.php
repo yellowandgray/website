@@ -260,8 +260,8 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                     <input type="password" onchange="removeValidation('curr_password');" name="curr_password" id="curr_password" placeholder="Enter Your Current Password" />
                     <div id="curr_password_error"></div>
                     <br/>
-                    <input type="password" onchange="removeValidation('new_password');" name="new_password" id="new_password" placeholder="Enter Your New Password" />
-                    <div id="new_password_error"></div>
+                    <input type="password" onchange="removeValidation('new_password');" name="password" id="password" placeholder="Enter Your New Password" onKeyUp="checkPasswordStrength();" />
+                    <div id="password_error"></div>
                     <br/>
                     <input type="password" onchange="removeValidation('confirm_password');" name="confirm_password" id="confirm_password" placeholder="Enter Confirm Password" />
                     <div id="confirm_password_error"></div>

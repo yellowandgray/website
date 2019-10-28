@@ -563,12 +563,17 @@ function forgotPassword() {
 
 function validChangePasswordForm() {
     var change = true;
-    if ($.trim($('#password').val()) === '') {
+    var number = /([0-9])/;
+    var alphabets = /([a-zA-Z])/;
+    var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
+    if ($.trim($('#password').val()) === '' || $('#password').val().length < 8 || $('#password').val().match(number) == null || $('#password').val().match(alphabets) == null || $('#password').val().match(special_characters) == null) {
         $('#password_error').html('Enter password').addClass('error-msg');
+        $('#password').focus();
         change = false;
     }
     if ($.trim($('#confirm_password').val()) !== $.trim($('#password').val())) {
         $('#confirm_password_error').html('Password mismatch').addClass('error-msg');
+        $('#confirm_password').focus();
         change = false;
     }
     return change;
@@ -622,16 +627,22 @@ function changeUserPassword(code) {
 
 function validUpdatePasswordForm() {
     var change = true;
+    var number = /([0-9])/;
+    var alphabets = /([a-zA-Z])/;
+    var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
     if ($.trim($('#curr_password').val()) === '') {
         $('#curr_password_error').html('Enter current password').addClass('error-msg');
+        $('#curr_password').focus();
         change = false;
     }
-    if ($.trim($('#new_password').val()) === '') {
-        $('#new_password_error').html('Enter new password').addClass('error-msg');
+    if ($.trim($('#password').val()) === '' || $('#password').val().length < 8 || $('#password').val().match(number) == null || $('#password').val().match(alphabets) == null || $('#password').val().match(special_characters) == null) {
+        $('#password_error').html('Enter new password').addClass('error-msg');
+        $('#password').focus();
         change = false;
     }
     if ($.trim($('#confirm_password').val()) !== $.trim($('#new_password').val())) {
         $('#confirm_password_error').html('New password mismatch').addClass('error-msg');
+        $('#confirm_password').focus();
         change = false;
     }
     return change;
@@ -643,7 +654,7 @@ function updatePassword() {
         $.ajax({
             type: "POST",
             url: 'api/v1/change_password',
-            data: {old_password: $('#curr_password').val(), new_password: $('#new_password').val()},
+            data: {old_password: $('#curr_password').val(), new_password: $('#password').val()},
             success: function (data) {
                 $('.loader').removeClass('is-active');
                 $(".password-popup").fadeOut('fast');

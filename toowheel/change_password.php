@@ -25,7 +25,7 @@ if (isset($_GET['auth'])) {
                                     <h3>Change Your Password</h3>
                                     <form onsubmit="return changePassword('<?php echo $code; ?>');">
                                         <div class="input-container">
-                                            <input type="password" name="password" id="password" placeholder="Enter Your New password" onchange="removeValidation('password');" autofocus />
+                                            <input type="password" name="password" id="password" placeholder="Enter Your New password" onchange="removeValidation('password');" onKeyUp="checkPasswordStrength();" autofocus />
                                             <div id="password_error"></div>
                                         </div>
                                         <div class="input-container">
