@@ -118,7 +118,7 @@ function loadClubs(type) {
     }
 }
 
-function loadProfileUpdateClub(type) {
+function loadProfileUpdateClub(type, clubid) {
     if (type != '') {
         $.ajax({
             type: "GET",
@@ -126,21 +126,19 @@ function loadProfileUpdateClub(type) {
             processData: false,
             contentType: false,
             success: function (data) {
-                var div = '';
+                var div = '<option value="0">None</option>';
                 if (data.result.error === false) {
-                    $('#club_list').empty();
+                    $('#club_id').empty();
                     $.each(data.result.data, function (key, val) {
-                        var rank = '';
-                        if (val.rank != '' && val.rank != 0) {
-                            rank = '<span>#' + val.rank + '</span>';
+                        var selected = '';
+                        if (val.club_id == club_id) {
+                            div = div + '<option value="' + val.club_id + '" ' + selected + '>' + val.name + '</option>';
                         }
-                        div = div + '<div class="club-box pointer col-md-2 col-sm-6" onclick="selectClub(' + val.club_id + ', this);"data-name="' + val.name + '" data-state="' + val.state_id + '" data-category="' + val.category_id + '"><div class="rank-button">' + rank + '</div><img src="' + BASE_IMAGE_URL + val.logo + '" alt="" /><h3>' + val.name + '</h3><p>' + val.city + '</p><div class="club-btn"><div class="eff-9"></div><a href="club-page.php?cid=' + val.club_id + '" target="_blank">Read More</a></div></div>';
                     });
-                    $('#club_list').append(div);
+                    $('#club_id').append(div);
                 } else {
-                    $('#club_list').empty();
+                    $('#club_id').empty();
                 }
-                loadCategoryByType(type);
             },
             error: function (err) {
                 console.log(err.statusText);

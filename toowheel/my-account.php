@@ -44,9 +44,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                             <span><?php echo $member['club'] && isset($member['club']) ? $member['club'] : 'No club selected'; ?></span>
                             <span>Invite a Friend</span>
                         </div>
-                        <h2><?php echo $member['first_name'] . ' ' . $member['last_name']; ?>  
-                            <i class="fa fa-pencil basic-info-normal-action-icon" onclick="loadEditProfile(<?php echo $type; ?>);" aria-hidden="true"></i>
-                        </h2>
+                        <h2><?php echo $member['first_name'] . ' ' . $member['last_name']; ?> <i style="font-size: 14px;" class="fa fa-pencil basic-info-normal-action-icon" onclick="loadEditProfile('<?php echo $type; ?>');" aria-hidden="true"></i></h2>
                         <h2 class=" hidden">
                             <input type="text" value="<?php echo $member['first_name']; ?> " name="" id="" class="form-control" />
                             <input type="text" value="<?php echo $member['last_name']; ?> " name="" id="" class="form-control" />
@@ -171,16 +169,6 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                                     <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_kid2_name']; ?>" name="coverage_kid2_name" id="coverage_kid2_name" class="form-control" /></td>
                                                     <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid2_ic'], 200); ?></td>
                                                     <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_kid2_ic']; ?>" name="coverage_kid2_ic" id="coverage_kid2_ic" class="form-control" /></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Name of third kid</th>
-                                                    <th>MYKID ID</th>
-                                                </tr>
-                                                <tr>
-                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid3_name'], 200); ?></td>
-                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_kid3_name']; ?>" name="coverage_kid3_name" id="coverage_kid3_name" class="form-control" /></td>
-                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_kid3_ic'], 200); ?></td>
-                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_kid3_ic']; ?>" name="coverage_kid3_ic" id="coverage_kid3_ic" class="form-control" /></td>
                                                 </tr>
                                             </table>
                                         <?php } else { ?>

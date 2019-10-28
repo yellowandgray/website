@@ -183,7 +183,7 @@
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'profile_image', 'image_path')" />
                        <mat-icon *ngIf="image_path == ''" matTooltip="Width: 200px, Height: 200px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
                 <div class="preview-image" *ngIf="image_path != ''">
-                    <img class="dialog-picture" matTooltip="CoverImage" mat-card-image src="{{image_url}}{{image_path}}" alt="Photo" />
+                    <img class="dialog-picture" mat-card-image src="{{image_url}}{{image_path}}" alt="Photo" />
                     <button mat-icon-button aria-label="Close icon" (click)="removeMedia('image_path')">
                         <mat-icon>close</mat-icon>
                     </button>
