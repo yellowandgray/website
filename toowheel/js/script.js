@@ -765,3 +765,24 @@ function checkPasswordStrength() {
         }
     }
 }
+
+function logoutUser() {
+    $('.loader').addClass('is-active');
+    $.ajax({
+        type: "POST",
+        url: 'api/v1/logout_user',
+        data: {},
+        success: function (data) {
+            $('.loader').removeClass('is-active');
+            if (data.result.error === false) {
+                window.location = 'login.php?type=two_wheel';
+            } else {
+                swal('Information', data.result.message, 'info');
+            }
+        },
+        error: function (err) {
+            $('.loader').removeClass('is-active');
+            swal('Error', err.statusText, 'error');
+        }
+    });
+}

@@ -897,3 +897,9 @@ $app->post('/forgotpassword_user', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
+
+$app->post('/logout_user', function() use ($app) {
+    $res = array('error' => false, 'message' => 'No user found in this email id');
+    session_destroy();
+    echoRespnse(201, $res);
+});

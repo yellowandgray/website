@@ -8,7 +8,6 @@
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
         gtag('config', 'UA-150934532-1');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">

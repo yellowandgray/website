@@ -1,4 +1,5 @@
 <?php
+session_start();
 $menu_latest_news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' ORDER BY n.news_id DESC LIMIT 8');
 $menu_press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEFT JOIN media AS m ON m.media_id = p.media_id', 'p.type = \'' . $type . '\' ORDER BY p.press_release_id DESC LIMIT 3');
 $menu_findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\' AND published = 1 ORDER BY club_id DESC LIMIT 8');
@@ -164,13 +165,25 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                         <p id="myDiv">Search</p>
                     </span> 
                 </a>
-                <a href="login.php?type=<?php echo $type; ?>" class="float-left margin-left-10">
-<!--                <a onclick="//document.getElementById('about-club').classList.add('club-about')" class="float-left margin-left-10">-->
-                    <span>
-                        <i class="fa fa-sign-in search-bg"></i>
-                        <p> Login</p>
-                    </span>
-                </a>
+                <?php
+                if (!isset($_SESSION["member_id"])) {
+                    ?>
+                    <a href="login.php?type=<?php echo $type; ?>" class="float-left margin-left-10">
+                        <span>
+                            <i class="fa fa-sign-in search-bg"></i>
+                            <p> Login</p>
+                        </span>
+                    </a>
+                <?php } else {
+                    ?>
+                    <a style="cursor: pointer;" class="float-left margin-left-10" onclick="logoutUser();">
+                        <span>
+                            <i class="fa fa-sign-out search-bg"></i>
+                            <p> Logout</p>
+                        </span>
+                    </a>                    
+                <?php }
+                ?>
             </div>
             <div class="mobile-header-login">
 <!--                <i class="fa fa-search"></i>-->
@@ -183,37 +196,37 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                 <input type="search" placeholder="Search" class="head-search" />
             </div>
         </div>
-<!--        <div class="row">
-            <div id="about-club">
-                <p onclick="document.getElementById('about-club').classList.remove('club-about')"><i class="fa fa-times" aria-hidden="true"></i></P>
-                <h4>Coverage</h4>
-                <div class="form-group">
-                    <label for="coverage_full_name">Full Name (Next of Kin)</label>
-                    <input placeholder="" id="coverage_full_name" name="coverage_full_name" type="text" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label for="coverage_contact_number">Contact Number</label>
-                    <input type="text" class="form-control" name="coverage_contact_number" id="coverage_contact_number" placeholder="" />
-                </div>
-                <div class="form-group">
-                    <label for="coverage_address">Address</label>
-                    <textarea class="form-control" placeholder="" name="coverage_address" id="coverage_address" type="text" rows="3"></textarea>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p class="dont-show">Dont Show again</p>
+        <!--        <div class="row">
+                    <div id="about-club">
+                        <p onclick="document.getElementById('about-club').classList.remove('club-about')"><i class="fa fa-times" aria-hidden="true"></i></P>
+                        <h4>Coverage</h4>
+                        <div class="form-group">
+                            <label for="coverage_full_name">Full Name (Next of Kin)</label>
+                            <input placeholder="" id="coverage_full_name" name="coverage_full_name" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="coverage_contact_number">Contact Number</label>
+                            <input type="text" class="form-control" name="coverage_contact_number" id="coverage_contact_number" placeholder="" />
+                        </div>
+                        <div class="form-group">
+                            <label for="coverage_address">Address</label>
+                            <textarea class="form-control" placeholder="" name="coverage_address" id="coverage_address" type="text" rows="3"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="dont-show">Dont Show again</p>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="dont-show-cancel">cancel</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="dont-show-submit">Submit</button>
+                            </div>
+                        </div>
+        
                     </div>
-                    <div class="col-md-3">
-                        <button class="dont-show-cancel">cancel</button>
-                    </div>
-                    <div class="col-md-3">
-                        <button class="dont-show-submit">Submit</button>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>-->
+        
+                </div>-->
     </div>
 </section>
 <script>
@@ -238,7 +251,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
 // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
 
-    //Toggle icon Hide function
+//Toggle icon Hide function
 //    document.getElementById("toggle").onclick = function (e) {
 //        e.target.style.visibility = 'hidden';
 //    };
