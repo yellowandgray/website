@@ -24,9 +24,9 @@ export class ClubComponent implements OnInit {
       this.getClub();
       this.getFourWheelClub();
   }
-    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
     getClub(): void {
-  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_two_wheel_club')
+  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_two_wheel_club')
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -39,7 +39,7 @@ export class ClubComponent implements OnInit {
         );
   }
     getFourWheelClub(): void {
-  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_four_wheel_club')
+  this.httpClient.get<any>('https://www.toowheel.com/toowheel/api/v1/get_four_wheel_club')
   .subscribe(
           (res)=>{
               this.result_four_wheel = res["result"]["data"];
@@ -152,7 +152,7 @@ export class ClubComponent implements OnInit {
     changeStatus(id, status): void {
       var formData = new FormData();
       formData.append('published', status);
-      this.httpClient.post<any>('https://www.toowheel.com/beta/toowheel/api/v1/update_record/club/club_id = '+id, formData)
+      this.httpClient.post<any>('https://www.toowheel.com/toowheel/api/v1/update_record/club/club_id = '+id, formData)
   .subscribe(
           (res)=>{
               this.getClub();
@@ -189,7 +189,7 @@ export class ClubComponent implements OnInit {
   templateUrl: 'club-form.html',
 })
 export class ClubForm {
-          image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+          image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
     clubForm: FormGroup;
     loading = false;
     club_id = 0;
@@ -254,7 +254,7 @@ export class ClubForm {
             this.club_id = this.data.club_id;
             this.getCategory();
         }
-        this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_states').subscribe(
+        this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_states').subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
                     this.states = res["result"]["data"];
@@ -276,7 +276,7 @@ export class ClubForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -296,7 +296,7 @@ export class ClubForm {
     }
     getCategory(): void {
        this.loading = true;
-          this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_'+this.clubForm.value.type+'_category').subscribe(
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_'+this.clubForm.value.type+'_category').subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -316,7 +316,7 @@ export class ClubForm {
     }
     getCityByState(): void {
        this.loading = true;
-          this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_city_by_state/'+this.clubForm.value.state).subscribe(
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_city_by_state/'+this.clubForm.value.state).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -390,7 +390,7 @@ export class ClubForm {
           formData.append('club_video', this.club_video);
         url = 'insert_club';
       }
-          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -446,7 +446,7 @@ export class ClubDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/delete_record/club/club_id='+this.club_id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/club/club_id='+this.club_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -475,7 +475,7 @@ export class ClubPhotosForm {
   loading = false;
     club_id:any;
     result:any[];
-    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';  
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';  
   constructor(
     public dialogRef: MatDialogRef<ClubPhotosForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -488,7 +488,7 @@ export class ClubPhotosForm {
       this.getImages();
     }
     getImages(){
-        this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_club_gallery_by_club/'+this.club_id).subscribe(
+        this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_club_gallery_by_club/'+this.club_id).subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
                     this.result = res["result"]["data"];
@@ -515,7 +515,7 @@ export class ClubPhotosForm {
       var formData = new FormData();
           formData.append('club_id', this.club_id);
           formData.append('file', <File>fileInput.target.files[i]);
-      this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/insert_club_gallery', formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/insert_club_gallery', formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -543,7 +543,7 @@ export class ClubPhotosForm {
             return;
       }
       this.loading = true;
-      this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/delete_record/club_gallery/club_gallery_id='+id).subscribe(
+      this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/delete_record/club_gallery/club_gallery_id='+id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -571,7 +571,7 @@ this._snackBar.open(res["result"]["message"], '', {
 })
  
 export class PictureViewClub {
-    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
     action: string = '';
     loading = false;
     member_id = 0;
@@ -597,7 +597,7 @@ export class PictureViewClub {
   templateUrl: 'club-view-form.html',
 })
 export class ClubViewFrom {
-    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+    image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
     clubForm: FormGroup;
     loading = false;
     club_id = 0;
@@ -659,7 +659,7 @@ export class ClubViewFrom {
             this.club_id = this.data.club_id;
             this.getCategory();
         }
-        this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_states').subscribe(
+        this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_states').subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
                     this.states = res["result"]["data"];
@@ -681,7 +681,7 @@ export class ClubViewFrom {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -701,7 +701,7 @@ export class ClubViewFrom {
     }
     getCategory(): void {
        this.loading = true;
-          this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_'+this.clubForm.value.type+'_category').subscribe(
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_'+this.clubForm.value.type+'_category').subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -721,7 +721,7 @@ export class ClubViewFrom {
     }
     getCityByState(): void {
        this.loading = true;
-          this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_city_by_state/'+this.clubForm.value.state).subscribe(
+          this.httpClient.get('https://www.toowheel.com/toowheel/api/v1/get_city_by_state/'+this.clubForm.value.state).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

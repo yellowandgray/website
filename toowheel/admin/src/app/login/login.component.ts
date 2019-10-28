@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
 var formData = new FormData();
 formData.append('email', this.loginForm.value.username);
 formData.append('password', this.loginForm.value.password);
-    this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/loginadmin', formData)
+    this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/loginadmin', formData)
     .subscribe(
             (res)=>{
                 this.loading = false;
@@ -96,7 +96,7 @@ export class ForgotPasswordForm {
       this.loading = true;
       var formData = new FormData();
       formData.append('email', this.forgotpasswordForm.value.email);
-      this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/forgotpassword_user', formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/toowheel/api/v1/forgotpassword_user', formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

@@ -9,7 +9,7 @@ var cover_image = '';
 var logo = '';
 var activated = 0;
 var club_video = '';
-var BASE_IMAGE_URL = 'http://www.toowheel.com/beta/toowheel/api/v1/';
+var BASE_IMAGE_URL = 'http://www.toowheel.com/toowheel/api/v1/';
 
 function attachFile(id) {
     var val = $('#' + id).val();

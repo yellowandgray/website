@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
-  image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+  image_url: string = 'https://www.toowheel.com/toowheel/api/v1/';
   data: any = {name: sessionStorage.getItem("toowheel_name"), role: sessionStorage.getItem("toowheel_role"), avatar: sessionStorage.getItem("toowheel_media_path"), last_login: sessionStorage.getItem("toowheel_last_login"), gender: sessionStorage.getItem("toowheel_gender")};
   constructor() { }
 
