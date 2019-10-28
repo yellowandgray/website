@@ -255,8 +255,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
         })
         this.member_id = this.data.member_id;
         this.image_path= this.data.profile_picture;
-        this.getClub();
     }
+    this.getClub();
     this.getState();
     }
         fileProgress(fileInput: any, name:string, field: string) {
@@ -549,12 +549,13 @@ export class MemberViewForm {
 })
  
 export class MemberTshirtForm {
+    delivery_status = 1;
     constructor(
     public dialogRef: MatDialogRef<MemberTshirtForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        
+        this.delivery_status = this.data.t_shirt_status;
     }
     changeStatus(id, status): void {
       var formData = new FormData();

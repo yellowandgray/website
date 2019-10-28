@@ -38,7 +38,7 @@
         </tr>
         <tr>
             <th mat-header-cell> Club Name </th>
-            <td mat-cell> {{data.club_name}} </td>
+            <td mat-cell> {{data.club}} </td>
         </tr>
         <tr>
             <th mat-header-cell> Contact Number </th>
@@ -92,29 +92,41 @@
         </tr>
         <br/>
         <h2>Coverage Information:</h2>
-        <tr>
-            <th mat-header-cell> Full Name </th>
-            <td mat-cell>  </td>
-        </tr>
-        <tr>
-            <th mat-header-cell> Contact No. </th>
-            <td mat-cell>  </td>
-        </tr>
-        <tr>
+        <tr *ngIf="data.marital_status == 'married'">
             <th mat-header-cell> Spouse Name </th>
-            <td mat-cell>  </td>
+            <td mat-cell> {{data.coverage_spouse_name}} </td>
         </tr>
-        <tr>
-            <th mat-header-cell> Child 1 </th>
-            <td mat-cell>  </td>
+        <tr *ngIf="data.marital_status == 'married'">
+            <th mat-header-cell> Spouse IC No. </th>
+            <td mat-cell> {{data.coverage_spouse_ic}} </td>
         </tr>
-        <tr>
+        <tr *ngIf="data.marital_status == 'married'">
+            <th mat-header-cell> First kid name </th>
+            <td mat-cell> {{data.coverage_kid1_name}} </td>
+        </tr>
+        <tr *ngIf="data.marital_status == 'married'">
+            <th mat-header-cell> First kid MyKid No. </th>
+            <td mat-cell> {{data.coverage_kid1_ic}} </td>
+        </tr>
+        <tr *ngIf="data.marital_status == 'married'">
+            <th mat-header-cell> Second kid name </th>
+            <td mat-cell> {{data.coverage_kid2_name}} </td>
+        </tr>
+        <tr *ngIf="data.marital_status == 'married'">
+            <th mat-header-cell> Second kid MyKid No. </th>
+            <td mat-cell> {{data.coverage_kid2_ic}} </td>
+        </tr>
+        <tr *ngIf="data.marital_status == 'single'">
+            <th mat-header-cell> Name </th>
+            <td mat-cell> {{data.coverage_person_name}} </td>
+        </tr>
+        <tr *ngIf="data.marital_status == 'single'">
             <th mat-header-cell> IC No. </th>
-            <td mat-cell>  </td>
+            <td mat-cell> {{data.coverage_person_ic}} </td>
         </tr>
-        <tr>
-            <th mat-header-cell> My Kid Id </th>
-            <td mat-cell>  </td>
+        <tr *ngIf="data.marital_status == 'single'">
+            <th mat-header-cell> Address </th>
+            <td mat-cell> {{data.coverage_person_address}} </td>
         </tr>
         <br/>
         <h2>Login:</h2>

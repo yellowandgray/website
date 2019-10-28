@@ -408,7 +408,7 @@ $app->get('/get_two_wheel_member', function() {
 $app->get('/get_four_wheel_member', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('m.*, c.name AS club, s.name AS state', 'member AS m LEFT JOIN club AS c ON c.club_id = m.club_id LEFT JOIN state AS s ON s.state_id = m.state_id', 'm.member_id > 0 AND m.type = \'four_wheel\'');
+    $data = $com->selectAll('m.*, c.name AS club, s.name AS state, u.name AS activated_user, us.name AS blocked_user', 'member AS m LEFT JOIN club AS c ON c.club_id = m.club_id LEFT JOIN users AS u ON u.users_id = m.activated_by LEFT JOIN users AS us ON us.users_id = m.blocked_by LEFT JOIN state AS s ON s.state_id = m.state_id', 'm.member_id > 0 AND m.type = \'four_wheel\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
