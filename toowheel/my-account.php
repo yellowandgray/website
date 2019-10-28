@@ -32,6 +32,8 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                             <?php } else { ?>
                                 <img src="<?php echo BASE_URL . $member['profile_picture']; ?>" alt="" />
                             <?php } ?>
+                            <i class="fa fa-pencil coverage-normal-action-icon" onclick="enableProfileImageEdit();" aria-hidden="true"></i>
+                            <input type="file" class="form-control-file hidden" id="profile_image" onchange="changeAvatar(<?php echo $member['member_id']; ?>);" />
                         </div>
                     </div>
                     <div class="col-md-8 profile-details-section edit">
@@ -271,6 +273,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                 </div>
             </div>
         </div>
+        <div class="loader loader-default"></div>
         <?php include 'footer.php'; ?>
         <script>
             $(".change-password").click(

@@ -3810,6 +3810,7 @@ thead td {
 .member-profile-image {
     width: 80%;
     margin: 0 auto;
+    position: relative;
 }
 
 .member-profile-image img {

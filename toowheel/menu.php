@@ -161,7 +161,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
             <div class="header-login">
                 <a href="#" class="float-left margin-left-10" id="demo-2" style="position: relative;top: -2px;">
                     <span onfocusin="myFunction()" onfocusout="myFunction2()">
-                        <input type="search" placeholder="Search" class="head-search" />
+                        <input type="search" placeholder="Search" class="head-search" autocomplete="off" />
                         <p id="myDiv">Search</p>
                     </span> 
                 </a>

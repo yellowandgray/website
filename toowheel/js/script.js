@@ -786,3 +786,50 @@ function logoutUser() {
         }
     });
 }
+
+function enableProfileImageEdit() {
+    $('#profile_image').trigger('click');
+}
+
+function changeAvatar(id) {
+    if ($('#profile_image')[0]) {
+        $('.loader').addClass('is-active');
+        var form = new FormData();
+        form.append('file', $('#profile_image')[0].files[0]);
+        $.ajax({
+            type: "POST",
+            url: 'api/v1/upload_file',
+            processData: false,
+            contentType: false,
+            data: form,
+            success: function (data) {
+                if (data.result.error === false) {
+                    $.ajax({
+                        type: "POST",
+                        url: 'api/v1/update_record/member/member_id=' + id,
+                        data: {profile_picture: data.result.data},
+                        success: function (data) {
+                            $('.loader').removeClass('is-active');
+                            if (data.result.error === false) {
+                                location.reload();
+                            } else {
+                                swal('Information', data.result.message, 'info');
+                            }
+                        },
+                        error: function (err) {
+                            $('.loader').removeClass('is-active');
+                            swal('Error', err.statusText, 'error');
+                        }
+                    });
+                } else {
+                    $('.loader').removeClass('is-active');
+                    swal('Information', data.result.message, 'info');
+                }
+            },
+            error: function (err) {
+                $('.loader').removeClass('is-active');
+                swal('Error', err.statusText, 'error');
+            }
+        });
+    }
+}
