@@ -3,9 +3,18 @@ mat-card {
     margin: 2em auto;
     text-align: center;
 }
+
 .signin-content {
     padding: 60px 1rem;
 }
+
 .full-width-input {
     width: 100%;
+}
+
+.forgot-password {
+    color: blue;
+    margin-top: 15px;
+    display: block;
+    cursor: pointer;
 }

@@ -793,7 +793,7 @@ $app->post('/forgotpassword', function() use ($app) {
             $res['message'] = 'Reset link sent to your email id';
             $template = $obj->selectRow('*', 'templates', 'name=\'forgot_password_link\' AND type=\'email\' AND target=\'user\'');
             $user['link'] = FILES_PATH . 'change_password.php?auth=' . $code;
-            $user['reset_expired_at'] = $expired;
+            $user['reset_expired_at'] = date('d-m-Y H:i:s', strtotime($expired));
             $body = $obj->getReplacedString($template['body_web'], $user);
             $tpty = new Thirdparty();
             $tpty->sendMail($user['email'], $user['first_name'] . ' ' . $user['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
@@ -824,6 +824,30 @@ $app->post('/reset_password', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/reset_user_password', function() use ($app) {
+    $data = $app->request->post();
+    $obj = new Common();
+    date_default_timezone_set("Asia/Kuala_Lumpur");
+    $res = array('error' => true, 'message' => 'Unable to update your password');
+    $user = $obj->selectRow('*', 'users', 'reset_code = \'' . $data['auth'] . '\'');
+    if (count($user) > 0) {
+        $update = $obj->updateRecordWithWhere(array('password' => $obj->encryptPassword($data['password'])), 'users', 'reset_code=\'' . $data['auth'] . '\'');
+        if ($update > 0) {
+            $res['error'] = false;
+            $res['message'] = 'Password updated successfully';
+            $template = $obj->selectRow('*', 'templates', 'name=\'password_update_success\' AND type=\'email\' AND target=\'user\'');
+            $user['first_name'] = $user['name'];
+            $user['last_name'] = '';
+            $body = $obj->getReplacedString($template['body_web'], $user);
+            $tpty = new Thirdparty();
+            $tpty->sendMail($user['email'], $user['name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+        }
+    } else {
+        $res['message'] = 'Authentication failed';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/change_password', function() use ($app) {
     $data = $app->request->post();
     $data['member'] = $_SESSION['member_id'];
@@ -845,6 +869,31 @@ $app->post('/change_password', function() use ($app) {
         }
     } else {
         $res['message'] = 'No user found';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/forgotpassword_user', function() use ($app) {
+    $data = $app->request->post();
+    $obj = new Common();
+    date_default_timezone_set("Asia/Kuala_Lumpur");
+    $res = array('error' => true, 'message' => 'No user found in this email id');
+    $user = $obj->selectRow('*', 'users', 'email = \'' . $data['email'] . '\'');
+    if (count($user) > 0) {
+        $res['error'] = false;
+        $expires = array('value' => 5); //$obj->selectRow('*', 'configs', 'name=\'reset_link_expires\'');
+        $code = uniqid();
+        $expired = date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s') . ' + ' . $expires['value'] . ' minute'));
+        $update = $obj->updateRecordWithWhere(array('reset_code' => $code, 'reset_initiated_at' => date('Y-m-d H:i:s'), 'reset_expired_at' => $expired), 'users', 'users_id=\'' . $user['users_id'] . '\'');
+        if ($update > 0) {
+            $res['message'] = 'Reset link sent to your email id';
+            $template = $obj->selectRow('*', 'templates', 'name=\'forgot_password_link_user\' AND type=\'email\' AND target=\'user\'');
+            $user['link'] = FILES_PATH . 'user_change_password.php?auth=' . $code;
+            $user['reset_expired_at'] = date('d-m-Y H:i:s', strtotime($expired));
+            $body = $obj->getReplacedString($template['body_web'], $user);
+            $tpty = new Thirdparty();
+            $tpty->sendMail($user['email'], $user['name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+        }
     }
     echoRespnse(201, $res);
 });

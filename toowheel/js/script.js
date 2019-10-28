@@ -597,6 +597,29 @@ function changePassword(code) {
     return false;
 }
 
+function changeUserPassword(code) {
+    if (validChangePasswordForm()) {
+        $('.loader').addClass('is-active');
+        $.ajax({
+            type: "POST",
+            url: 'api/v1/reset_user_password',
+            data: {auth: code, password: $('#confirm_password').val()},
+            success: function (data) {
+                $('.loader').removeClass('is-active');
+                swal('Information', data.result.message, 'info');
+                setTimeout(function () {
+                    window.location = '../admin';
+                }, 2000);
+            },
+            error: function (err) {
+                $('.loader').removeClass('is-active');
+                swal('Error', err.statusText, 'error');
+            }
+        });
+    }
+    return false;
+}
+
 function validUpdatePasswordForm() {
     var change = true;
     if ($.trim($('#curr_password').val()) === '') {
