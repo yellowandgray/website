@@ -45,7 +45,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                             <span>Invite a Friend</span>
                         </div>
                         <h2><?php echo $member['first_name'] . ' ' . $member['last_name']; ?>  
-                            <i class="fa fa-pencil basic-info-normal-action-icon" onclick="enableProfileEdit();" aria-hidden="true"></i>
+                            <i class="fa fa-pencil basic-info-normal-action-icon" onclick="loadEditProfile(<?php echo $type; ?>);" aria-hidden="true"></i>
                         </h2>
                         <h2 class=" hidden">
                             <input type="text" value="<?php echo $member['first_name']; ?> " name="" id="" class="form-control" />

@@ -790,7 +790,7 @@ $app->post('/forgotpassword', function() use ($app) {
         $expired = date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s') . ' + ' . $expires['value'] . ' minute'));
         $update = $obj->updateRecordWithWhere(array('reset_code' => $code, 'reset_initiated_at' => date('Y-m-d H:i:s'), 'reset_expired_at' => $expired), 'member', 'member_id=\'' . $user['member_id'] . '\'');
         if ($update > 0) {
-            $res['message'] = 'Reset link sent to your email id';
+            $res['message'] = 'Reset link sent to your email ID';
             $template = $obj->selectRow('*', 'templates', 'name=\'forgot_password_link\' AND type=\'email\' AND target=\'user\'');
             $user['link'] = FILES_PATH . 'change_password.php?auth=' . $code;
             $user['reset_expired_at'] = date('d-m-Y H:i:s', strtotime($expired));
@@ -886,7 +886,7 @@ $app->post('/forgotpassword_user', function() use ($app) {
         $expired = date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s') . ' + ' . $expires['value'] . ' minute'));
         $update = $obj->updateRecordWithWhere(array('reset_code' => $code, 'reset_initiated_at' => date('Y-m-d H:i:s'), 'reset_expired_at' => $expired), 'users', 'users_id=\'' . $user['users_id'] . '\'');
         if ($update > 0) {
-            $res['message'] = 'Reset link sent to your email id';
+            $res['message'] = 'Reset link sent to your email ID';
             $template = $obj->selectRow('*', 'templates', 'name=\'forgot_password_link_user\' AND type=\'email\' AND target=\'user\'');
             $user['link'] = FILES_PATH . 'user_change_password.php?auth=' . $code;
             $user['reset_expired_at'] = date('d-m-Y H:i:s', strtotime($expired));

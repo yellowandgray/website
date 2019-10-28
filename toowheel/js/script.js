@@ -118,6 +118,38 @@ function loadClubs(type) {
     }
 }
 
+function loadProfileUpdateClub(type) {
+    if (type != '') {
+        $.ajax({
+            type: "GET",
+            url: 'api/v1/get_club_by_type/' + type,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                var div = '';
+                if (data.result.error === false) {
+                    $('#club_list').empty();
+                    $.each(data.result.data, function (key, val) {
+                        var rank = '';
+                        if (val.rank != '' && val.rank != 0) {
+                            rank = '<span>#' + val.rank + '</span>';
+                        }
+                        div = div + '<div class="club-box pointer col-md-2 col-sm-6" onclick="selectClub(' + val.club_id + ', this);"data-name="' + val.name + '" data-state="' + val.state_id + '" data-category="' + val.category_id + '"><div class="rank-button">' + rank + '</div><img src="' + BASE_IMAGE_URL + val.logo + '" alt="" /><h3>' + val.name + '</h3><p>' + val.city + '</p><div class="club-btn"><div class="eff-9"></div><a href="club-page.php?cid=' + val.club_id + '" target="_blank">Read More</a></div></div>';
+                    });
+                    $('#club_list').append(div);
+                } else {
+                    $('#club_list').empty();
+                }
+                loadCategoryByType(type);
+            },
+            error: function (err) {
+                console.log(err.statusText);
+            }
+        });
+        $('#type_error').html('').removeClass('error-msg');
+    }
+}
+
 function loadCategoryByType(type) {
     var url = '';
     if (type == 'two_wheel') {
@@ -341,7 +373,7 @@ function registerMember() {
                     msg = '<h5>Congratulations!</h5><p class="text-center" style="margin-bottom: 0">You are now Official Member of TooWheel.</p><strong>Membership ID: ' + data.result.data + '</strong>';
                 } else if (payment_type == 'receipt') {
                     $('#registration_status').html('Registration Pending');
-                    msg = '<h5>Thank you!</h5><p class="text-center" style="margin-bottom: 0">Verification process may take 24hrs. You will receive a SMS or Email once your account has been activated</p>';
+                    msg = '<h5>Thank you!</h5><p class="text-center" style="margin-bottom: 0">Verification process may take 24hrs. You will receive a SMS or Email once your account has been activated.</p>';
                 } else {
                     $('#registration_status').html('Registration Pending');
                     msg = '<h5>Thank you!</h5><p class="text-center" style="margin-bottom: 0">Please make payment to activate your account</p>';
@@ -640,7 +672,7 @@ function validUpdatePasswordForm() {
         $('#password').focus();
         change = false;
     }
-    if ($.trim($('#confirm_password').val()) !== $.trim($('#new_password').val())) {
+    if ($.trim($('#confirm_password').val()) !== $.trim($('#password').val())) {
         $('#confirm_password_error').html('New password mismatch').addClass('error-msg');
         $('#confirm_password').focus();
         change = false;
@@ -832,4 +864,8 @@ function changeAvatar(id) {
             }
         });
     }
+}
+
+function loadEditProfile(type) {
+    window.location = 'profile-edit.php?type=' + type;
 }
