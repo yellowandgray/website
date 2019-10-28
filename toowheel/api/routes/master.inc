@@ -222,7 +222,10 @@ $app->post('/insert_member', function() use ($app) {
             if ($data['activated'] == 0) {
                 $template = $com->selectRow('*', 'templates', 'name=\'new_member_register_pending\' AND type=\'email\' AND target=\'user\'');
             }
+            $template_admin = $com->selectRow('*', 'templates', 'name=\'new_member_register\' AND type=\'email\' AND target=\'admin\'');
             $body = $com->getReplacedString($template['body_web'], $data);
+            $body_admin = $com->getReplacedString($template_admin['body_web'], $data);
+            $tpy->sendMail($template_admin['mail'], $template_admin['mail_name'], $body_admin, $body_admin, $template_admin['subject'], $data['email'], $data['first_name'] . ' ' . $data['last_name'], '', '', $template_admin['cc'], $template_admin['cc_name']);
             $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
     } else {
