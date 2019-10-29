@@ -106,7 +106,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                             $selected = 'selected';
                                         }
                                         ?>
-                                        <option value="<?php echo $key; ?>"><?php echo $val; ?></option>
+                                        <option value="<?php echo $key; ?>" <?php echo $selected; ?>><?php echo $val; ?></option>
                                         <?php
                                     }
                                     ?>

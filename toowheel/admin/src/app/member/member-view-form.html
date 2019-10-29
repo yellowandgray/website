@@ -18,7 +18,7 @@
         </tr>
         <tr>
             <th mat-header-cell> Gender </th>
-            <td mat-cell> {{data.gender}} </td>
+            <td mat-cell> {{data.gender | titlecase}} </td>
         </tr>
         <tr>
             <th mat-header-cell> Age </th>
@@ -26,7 +26,7 @@
         </tr>
         <tr>
             <th mat-header-cell> Marital Status </th>
-            <td mat-cell> {{data.marital_status}} </td>
+            <td mat-cell> {{data.marital_status | titlecase}} </td>
         </tr>
         <tr>
             <th mat-header-cell> IC Number / Passport Number </th>
