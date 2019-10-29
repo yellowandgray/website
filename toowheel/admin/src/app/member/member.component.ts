@@ -227,7 +227,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
             'referral_club_id': new FormControl(''),
             'marital_status': new FormControl('single'),
             'zip_code': new FormControl(''),
-            'email': new FormControl('', [Validators.required, Validators.email]),
+            'email': new FormControl('', Validators.required),
             'password': new FormControl(''),
             'club_id': new FormControl('')
         });

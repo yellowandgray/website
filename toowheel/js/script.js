@@ -227,12 +227,12 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
                 $(window).scrollTop($('#password').position().top);
                 change = false;
             }
-            if (validateEmail($.trim($('#email').val())) === false) {
-                $('#email_error').html('Enter a valid email').addClass('error-msg');
-                $('#email').focus();
-                $(window).scrollTop($('#email').position().top);
-                change = false;
-            }
+            /*if (validateEmail($.trim($('#email').val())) === false) {
+             $('#email_error').html('Enter a valid email').addClass('error-msg');
+             $('#email').focus();
+             $(window).scrollTop($('#email').position().top);
+             change = false;
+             }*/
             if ($.trim($('#email').val()) === '') {
                 $('#email_error').html('Enter email').addClass('error-msg');
                 $('#email').focus();
