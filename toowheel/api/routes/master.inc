@@ -622,6 +622,9 @@ $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
     $res = array('error' => true, 'message' => 'Unable to update');
     $data = $app->request->post();
     $com = new Common();
+    if (isset($data['password'])) {
+        $data['password'] = $com->encryptPassword($data['password']);
+    }
     $record = $com->updateRecordWithWhere($data, $table, $where);
     if ($record > 0) {
         $res['error'] = false;
