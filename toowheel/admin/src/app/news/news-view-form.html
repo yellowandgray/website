@@ -27,8 +27,8 @@
                         <img src="{{image_url}}{{data.banner_2}}" alt="" style="width: 100%;" />
                         <br/>
                         <br/>
-                        <h2>Youtube Video</h2>
-                        <iframe [src]="getYoutubeLink(data.youtube_id)" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <h2 *ngIf="data.youtube_id != ''">Youtube Video</h2>
+                        <iframe *ngIf="data.youtube_id != ''" [src]="getYoutubeLink(data.youtube_id)" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                         
                         <br/>
                         <br/>

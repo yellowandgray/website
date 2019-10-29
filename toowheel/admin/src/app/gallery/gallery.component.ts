@@ -121,10 +121,11 @@ searchTermTW: string = '';
   templateUrl: 'gallery-form.html',
 })
 export class GalleryForm {
+image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     galleryForm: FormGroup;
     loading = false;
     gallery_id = 0;
-    media_path: string;
+    media_path: string='';
     thumb_path: string;
     file_name: string = 'Select Picture';
     file_name_thumb: string = 'Select Thumb';
@@ -147,6 +148,7 @@ export class GalleryForm {
            description: this.data.description
         });
         this.gallery_id = this.data.gallery_id;
+        this.media_path=this.data.media_path;
         }
     }
    
@@ -227,6 +229,12 @@ export class GalleryForm {
             }
             );
       }
+  removeMedia(url) {
+      this[url] = '';
+      if(url === 'media_path') {
+          this.file_name= 'Select Picture';
+      }     
+  }
 }
 
 

@@ -77,17 +77,28 @@ export class ClubeventComponent implements OnInit {
    dialogRef.afterClosed().subscribe(result => {
     });
 }
+  
 
-        openView(): void  {
-        const dialogRef = this.dialog.open(ClubEventViewFrom, {
-            minWidth: "40%",
-            maxWidth: "40%"
-        });
-
-       dialogRef.afterClosed().subscribe(result => {
-            console.log(`Dialog result: ${result}`);
-            });
+    openView(id, res): void  {
+        var data = null;
+        if(id != 0) {
+        this[res].forEach(val=> {
+           if(parseInt(val.event_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
         }
+        const dialogRef = this.dialog.open(ClubEventViewFrom, {
+            minWidth: "80%",
+            maxWidth: "80%",
+            data: data
+        });
+        dialogRef.afterClosed().subscribe(result => {
+            
+        });
+    }
+
 
         confirmDelete(id): void  {
         var data = null;
@@ -380,19 +391,99 @@ export class PictureView {
 }
         }  
 
-  @Component({
+ 
+
+@Component({
   selector: 'clubevent-view-form',
   templateUrl: 'clubevent-view-form.html',
 })
- 
 export class ClubEventViewFrom {
+    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+    clubeventForm: FormGroup;
+    loading = false;
+    event_id = 0;
+    categories:any[];
+    clubs:any[];
+    cover_image: string = 'Choose Event Picture';
+    thumb_image: string = 'Choose Thumb Image';
+    cover_image_path: string;
+    thumb_image_path: string;
     constructor(
     public dialogRef: MatDialogRef<ClubEventViewFrom>,
-    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {}
-    
-    onNoClick(): void {
-        this.dialogRef.close();
+    private httpClient: HttpClient) {
+        this.clubeventForm = new FormGroup({
+      'type': new FormControl('', Validators.required),
+      'category_id': new FormControl('', Validators.required),
+      'club_id': new FormControl('', Validators.required),
+      'title': new FormControl('', Validators.required),
+      'event_date': new FormControl('', Validators.required),
+      'location': new FormControl('', Validators.required),
+      'description': new FormControl('', Validators.required),
+      'sponsor': new FormControl()
+        });
+        if(this.data != null) {
+                this.clubeventForm.patchValue({
+           type: this.data.type,
+           category_id: this.data.category_id,
+           club_id: this.data.club_id,
+           title: this.data.title,
+           event_date: this.data.event_date,
+           location: this.data.location,
+           description: this.data.description,
+           sponsor: this.data.sponsor
+        });
+        this.event_id = this.data.event_id;     
+        this.cover_image_path = this.data.cover_image;
+        this.thumb_image_path= this.data.thumb_image;  
+        this.getCategory();
+        this.getClub();
+        } else {
+            this.clubeventForm.patchValue({
+                event_date: new Date()
+            });
+        }
     }
-}  
+    getCategory(): void {
+       this.loading = true;
+          this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_'+this.clubeventForm.value.type+'_category').subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.categories = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
+    getClub(): void {
+       this.loading = true;
+          this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_club_by_category/'+this.clubeventForm.value.category_id).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.clubs = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+    }
+   
+}
