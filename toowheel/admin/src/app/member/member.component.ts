@@ -253,6 +253,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
             'zip_code': new FormControl('', Validators.required),
             'email': new FormControl('', [Validators.required, Validators.email]),
             'password': new FormControl(''),
+            'email_id': new FormControl(''),
         'club_id': new FormControl('',Validators.required)
         });
         if(this.data != null) {
@@ -275,6 +276,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
             'zip_code': this.data.zip_code,
             'password': this.data.password,
             'email': this.data.email,
+            'email_id': this.data.email_id,
             'club_id': this.data.club_id
             
         })
