@@ -149,6 +149,8 @@
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>IC Number / Passport Number</mat-label>
                     <input matInput placeholder="" formControlName="ic_passport" />
+                    <mat-error>IC Number / Passport Number is required</mat-error>
+                    
                 </mat-form-field>
             </div>
         </div>
@@ -159,6 +161,7 @@
                     <input matInput formControlName="dob" [matDatepicker]="picker" placeholder="">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
+                    <mat-error>DOB is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
@@ -167,6 +170,7 @@
                     <mat-select formControlName="club_id">
                         <mat-option value="0">None</mat-option>
                         <mat-option [value]="row.club_id" *ngFor="let row of clubs">{{row.name}}</mat-option>
+                        <mat-error>Club Name is required</mat-error>
                     </mat-select>
                 </mat-form-field>
             </div>
@@ -176,6 +180,7 @@
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Contact Number</mat-label>
                     <input matInput placeholder="" formControlName="contact_number" />
+                    <mat-error>Contact Number is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%" fxLayoutAlign="center center">

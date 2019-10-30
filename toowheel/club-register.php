@@ -19,6 +19,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                     <div id="club-register">
                         <form onsubmit="return registerClub();">
                             <h3>Register Your Club</h3>
+                            <h4>Basic Details:</h4>
                             <div class="form-group">
                                 <input id="name" placeholder="Your club name" name="name" type="text" tabindex="1" required autofocus />
                             </div>
@@ -50,15 +51,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             </div>
                             <br/>
                             <br/>
-                            <div class="form-group">
-                                <input id="email" placeholder="Email Address" name="email" type="email" tabindex="8" required />
-                            </div>
-                            <div class="form-group">
-                                <input id="password" placeholder="Password" name="Password" type="Password" tabindex="8" required />
-                            </div>
-                            <div class="form-group">
-                                <input id="confirm_password" placeholder="Confirm Password" name="confirm_password" type="Password" tabindex="8" required />
-                            </div>
+                             
                             <div class="form-group">
                                 <input id="mobile" placeholder="Contact No." name="mobile" type="text" tabindex="9" required />
                             </div>
@@ -90,6 +83,17 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             <div class="form-group">
                                 <textarea id="about" placeholder="About Club" name="about" type="text" tabindex="22" required></textarea>
                             </div>
+                            <h4>Login Details:</h4>
+                            <div class="form-group">
+                                <input id="email" placeholder="Email Address" name="email" type="email" tabindex="8" required />
+                            </div>
+                            <div class="form-group">
+                                <input id="password" placeholder="Password" name="Password" type="Password" tabindex="8" required />
+                            </div>
+                            <div class="form-group">
+                                <input id="confirm_password" placeholder="Confirm Password" name="confirm_password" type="Password" tabindex="8" required />
+                            </div>
+                             <h4>Social Media</h4>
                             <div class="form-row">
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">
