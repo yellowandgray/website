@@ -4,13 +4,19 @@
 }
 
 .example-full-width {
+    width: 100%;
+}
+.count-mem{
+    margin: 0px 26px 0px 0px;
+    padding: 7px;
+    border-radius: 10%;
+    background: #4a4a4a;
+    color: #fafafa;
+    text-align: center;
+    font-weight: 600;
   width: 100%;
 }
 
 .list-container { 
     border-bottom: 1px solid #ccc;
-}
-
-.colorchangefill img {
-    fill: black;
 }

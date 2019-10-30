@@ -198,7 +198,7 @@ $app->post('/insert_member', function() use ($app) {
         if (!isset($data['profile_picture'])) {
             $data['profile_picture'] = '';
         }
-        $record = $com->insertRecord(array('type' => $data['type'], 'first_name' => $data['first_name'], 'last_name' => $data['last_name'], 'profile_picture' => $data['profile_picture'], 'gender' => $data['gender'], 'age' => $data['age'], 'ic_passport' => $data['ic_passport'], 'dob_date' => $data['dob_date'], 'dob_month' => $data['dob_month'], 'dob_year' => $data['dob_year'], 'contact_number' => $data['contact_number'], 'address' => $data['address'], 'country' => $data['country'], 'state_id' => $data['state_id'], 'referral_member_id' => $data['referral_member_id'], 'referral_club_id' => $data['referral_club_id'], 'marital_status' => $data['marital_status'], 'zip_code' => $data['zip_code'], 'email' => $data['email'], 'password' => $com->encryptPassword($data['password']), 'club_id' => $data['club_id'], 'payment_type' => $data['payment_type'], 'paypal_response' => $data['paypal_response'], 'activated' => $data['activated'], 'paypal_transaction_id' => $data['paypal_transaction_id'], 'fund_transfer_file' => $data['fund_transfer_file'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'member');
+        $record = $com->insertRecord(array('type' => $data['type'], 'first_name' => $data['first_name'], 'last_name' => $data['last_name'], 'profile_picture' => $data['profile_picture'], 'gender' => $data['gender'], 'age' => $data['age'], 'ic_passport' => $data['ic_passport'], 'dob_date' => $data['dob_date'], 'dob_month' => $data['dob_month'], 'dob_year' => $data['dob_year'], 'contact_number' => $data['contact_number'], 'address' => $data['address'], 'country' => $data['country'], 'state_id' => $data['state_id'], 'referral_member_id' => $data['referral_member_id'], 'referral_club_id' => $data['referral_club_id'], 'marital_status' => $data['marital_status'], 'zip_code' => $data['zip_code'], 'email' => $data['email'], 'email_id' => $data['email_id'], 'password' => $com->encryptPassword($data['password']), 'club_id' => $data['club_id'], 'payment_type' => $data['payment_type'], 'paypal_response' => $data['paypal_response'], 'activated' => $data['activated'], 'paypal_transaction_id' => $data['paypal_transaction_id'], 'fund_transfer_file' => $data['fund_transfer_file'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'member');
         if ($record > 0) {
             $res['error'] = false;
             $member_id = 'TW' . strtoupper(substr($data['gender'], 0, 1)) . strtoupper(substr($data['ic_passport'], 0, 3)) . strtoupper(substr($data['state'], 0, 2));
@@ -210,7 +210,7 @@ $app->post('/insert_member', function() use ($app) {
             $com->updateRecordWithWhere($update_arr, 'member', 'member_id = ' . $record);
             $res['message'] = 'Record inserted successfully';
             $res['data'] = $member_id;
-            if (filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+            if (filter_var($data['email_id'], FILTER_VALIDATE_EMAIL)) {
                 $tpy = new Thirdparty();
                 $data['membership_id'] = $member_id;
                 if ($data['activated'] == 1) {
@@ -226,8 +226,8 @@ $app->post('/insert_member', function() use ($app) {
                 $template_admin = $com->selectRow('*', 'templates', 'name=\'new_member_register\' AND type=\'email\' AND target=\'admin\'');
                 $body = $com->getReplacedString($template['body_web'], $data);
                 $body_admin = $com->getReplacedString($template_admin['body_web'], $data);
-                $tpy->sendMail($template_admin['mail'], $template_admin['mail_name'], $body_admin, $body_admin, $template_admin['subject'], $data['email'], $data['first_name'] . ' ' . $data['last_name'], '', '', $template_admin['cc'], $template_admin['cc_name']);
-                $tpy->sendMail($data['email'], $data['first_name'] . ' ' . $data['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+                $tpy->sendMail($template_admin['mail'], $template_admin['mail_name'], $body_admin, $body_admin, $template_admin['subject'], $data['email_id'], $data['first_name'] . ' ' . $data['last_name'], '', '', $template_admin['cc'], $template_admin['cc_name']);
+                $tpy->sendMail($data['email_id'], $data['first_name'] . ' ' . $data['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
             }
         }
     } else {

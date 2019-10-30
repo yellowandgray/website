@@ -4052,3 +4052,15 @@ thead td {
     font-weight: 500;
     color: #000 !important;
 }
+.back-btn{
+    color: #fff;
+    border: none;
+    background: #ed1c24;
+    padding: 3px 17px;
+}
+.update-btn{
+    background: #363636;
+    border: none;
+    color: #fff;
+    padding: 3px 17px;
+}

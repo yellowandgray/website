@@ -229,7 +229,8 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <div id="email_error"></div>
                             </div>
                             <br/>
-                            <button type="submit">Update</button>
+                            <button class="back-btn" type="submit">Back</button>
+                            <button class="update-btn" type="submit">Update</button>
                         </form>
                     </div>
                 </div>
