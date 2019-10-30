@@ -57,9 +57,9 @@
                    <mat-icon *ngIf="club_video == ''" matTooltip="Width: any, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
             <div class="preview-video" *ngIf="club_video != ''">
                 <video class="dialog-picture" style="height: 100%; width: 90%" controls muted>
-                         <source src="{{image_url}}{{club_video}}" type="video/mp4">              
-               </video>
-<!--                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image  src="https://www.toowheel.com/beta/toowheel/api/v1/male.jpg" alt="Photo" />-->
+                    <source src="{{image_url}}{{club_video}}" type="video/mp4">              
+                </video>
+                <!--                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image  src="https://www.toowheel.com/beta/toowheel/api/v1/male.jpg" alt="Photo" />-->
                 <button mat-icon-button aria-label="Close icon" (click)="removeMedia('club_video')">
                     <mat-icon>close</mat-icon>
                 </button>
@@ -102,7 +102,7 @@
             <mat-form-field appearance="outline" fxFlex="100%">
                 <mat-label>Email</mat-label>
                 <input matInput placeholder="" formControlName="email" />
-                <mat-error>Email is required</mat-error>
+                 <mat-error>email is required</mat-error>
             </mat-form-field>
         </div>
         <div fxFlex="50%">
@@ -169,7 +169,7 @@
     <div fxFlex="50%">
         <mat-form-field appearance="outline" fxFlex="100%">
             <mat-label>Zip</mat-label>
-            <input matInput placeholder="" formControlName="zip" />
+            <input matInput placeholder="" formControlName="zip" type="number"/>
             <mat-error>Zip is required</mat-error>
         </mat-form-field>
     </div>
