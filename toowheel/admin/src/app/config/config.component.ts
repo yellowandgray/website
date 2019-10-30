@@ -11,8 +11,16 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./config.component.css']
 })
 export class ConfigComponent implements OnInit {
- searchTermLanding: string = '';
- searchTermHome: string = '';
+ searchTermTW: string = '';
+  searchTermFW: string = '';
+  sortdata_tw: string = '';
+  sortdata_fw: string = ''; 
+
+  searchTermTWH: string = '';
+  searchTermFWH: string = '';
+  sortdata_twh: string = '';
+  sortdata_fwh: string = '';  
+
   result = [];
   result_home = [];
   ads = [];
@@ -100,6 +108,26 @@ export class ConfigComponent implements OnInit {
         }
     });
 }
+  sortRecords(arr, sort): void {
+        switch(sort) {
+            case 'title_a_z':
+                (this[arr]).sort((a,b) => a.name.localeCompare(b.name));
+            break;
+            case 'title_z_a':
+            (this[arr]).sort((a,b) => b.name.localeCompare(a.name));
+            break;
+            case 'created_a_z':
+                (this[arr]).sort((a,b) => a.created_at.localeCompare(b.created_at));
+            break;
+            case 'created_z_a':
+                (this[arr]).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
+    }
+
+
 }
 
 

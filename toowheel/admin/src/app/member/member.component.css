@@ -6,3 +6,7 @@
 .example-full-width {
   width: 100%;
 }
+
+.list-container { 
+    border-bottom: 1px solid #ccc;
+}

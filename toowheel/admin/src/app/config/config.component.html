@@ -8,18 +8,29 @@
             <mat-tab label="Landing">
                 <mat-tab-group>
                     <mat-tab label="2 Wheeler">
-                        <section class="section">
-                            <br/>
-                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                                <div class="searchdesign" fxFlex="50%">
-                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                        <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTermLanding" />
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                        </section>
+                       <section class="section">
+                    <br/>                     
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                        <div class="searchdesign" fxFlex="50%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTW" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="20%">
+                            <mat-form-field fxFlex="100%">
+                                <mat-label>Sort by</mat-label>
+                                <mat-select [(ngModel)]="sortdata_tw" (selectionChange)="sortRecords('result', sortdata_tw)">
+                                    <mat-option value="title_a_z">Name A-Z</mat-option>
+                                    <mat-option value="title_z_a">Name Z-A</mat-option>
+                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </section> 
                         <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding">
+                            <ng-container *ngFor="let data of result | filterEventconfig: searchTermTW;">
                                 <ng-container *ngIf="data.name === 'landing_twowheel_image'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -34,7 +45,7 @@
                                     </mat-card>
                                 </ng-container>
                             </ng-container>
-                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
+                            <ng-container *ngFor="let data of result | filterEventconfig: searchTermTW;">
                                 <ng-container *ngIf="data.name === 'landing_description'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -53,7 +64,7 @@
                                     </mat-card>
                                 </ng-container>
                             </ng-container>
-                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
+                            <ng-container *ngFor="let data of result | filterEventconfig: searchTermTW;">
                                 <ng-container *ngIf="data.name === 'landing_about_us_image'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -68,7 +79,7 @@
                                     </mat-card>                    
                                 </ng-container>
                             </ng-container>
-                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
+                            <ng-container *ngFor="let data of result | filterEventconfig: searchTermTW;">
                                 <ng-container *ngIf="data.name === 'landing_news_updates_image'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -86,7 +97,7 @@
                         </div>
                         <br/>
                         <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
+                            <ng-container *ngFor="let data of result | filterEventconfig: searchTermTW;">
                                 <ng-container *ngIf="data.name === 'landing_join_club_image'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -101,7 +112,7 @@
                                     </mat-card>                    
                                 </ng-container>
                             </ng-container>
-                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
+                            <ng-container *ngFor="let data of result | filterEventconfig: searchTermTW;">
                                 <ng-container *ngIf="data.name === 'landing_shop_now_image'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -116,7 +127,7 @@
                                     </mat-card>                    
                                 </ng-container>
                             </ng-container>
-                            <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
+                            <ng-container *ngFor="let data of result | filterEventconfig: searchTermTW;">
                                 <ng-container *ngIf="data.name === 'landing_banner_ad'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -139,7 +150,29 @@
                         <br/>
                     </mat-tab>
                     <mat-tab label="4 Wheeler">
-                        <ng-container *ngFor="let data of result | filterEventconfig:searchTermLanding;">
+                        <section class="section">
+                    <br/>                     
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                        <div class="searchdesign" fxFlex="50%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermFW" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="20%">
+                            <mat-form-field fxFlex="100%">
+                                <mat-label>Sort by</mat-label>
+                                <mat-select [(ngModel)]="sortdata_fw" (selectionChange)="sortRecords('result', sortdata_fw)">
+                                    <mat-option value="title_a_z">Name A-Z</mat-option>
+                                    <mat-option value="title_z_a">Name Z-A</mat-option>
+                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </section>  
+                        <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
+                        <ng-container *ngFor="let data of result | filterEventconfig: searchTermFW;">
                             <ng-container *ngIf="data.name === 'landing_fourwheel_image'">
                                 <mat-card fxFlex="25%">
                                     <mat-card-header>
@@ -153,25 +186,37 @@
                                     </mat-card-actions>
                                 </mat-card>
                             </ng-container>
-                        </ng-container>                        
+                        </ng-container>  
+                        </div>
                     </mat-tab>
                 </mat-tab-group>
             </mat-tab>
             <mat-tab label="Home">
                 <mat-tab-group>
                     <mat-tab label="2 Wheeler">
-                        <section class="section">
-                            <br/>                     
-                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                                <div class="searchdesign" fxFlex="50%">
-                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                        <input matInput type="text" placeholder="Search by title" [(ngModel)]="searchTermHome" />
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                        </section>
+                       <section class="section">
+                    <br/>                     
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                        <div class="searchdesign" fxFlex="50%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTWH" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="20%">
+                            <mat-form-field fxFlex="100%">
+                                <mat-label>Sort by</mat-label>
+                                <mat-select [(ngModel)]="sortdata_twh" (selectionChange)="sortRecords('result_home', sortdata_twh)">
+                                    <mat-option value="title_a_z">Name A-Z</mat-option>
+                                    <mat-option value="title_z_a">Name Z-A</mat-option>
+                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </section> 
                         <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermTWH;">
                                 <ng-container *ngIf="data.name === 'home_banner_video'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -188,7 +233,7 @@
                                     </mat-card>
                                 </ng-container>
                             </ng-container>
-                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermTWH;">
                                 <ng-container *ngIf="data.name === 'home_card_ad1'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -208,7 +253,7 @@
 
                                 </ng-container>
                             </ng-container>
-                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermTWH;">
                                 <ng-container *ngIf="data.name === 'home_card_ad2'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -228,7 +273,7 @@
 
                                 </ng-container>
                             </ng-container>
-                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermTWH;">
                                 <ng-container *ngIf="data.name === 'home_banner_ad'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -250,7 +295,7 @@
                         </div>
                         <br/>
                         <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermTWH;">
                                 <ng-container *ngIf="data.name === 'two_wheel_photos'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -266,7 +311,7 @@
 
                                 </ng-container>
                             </ng-container>
-                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermTWH;">
                                 <ng-container *ngIf="data.name === 'two_wheel_videos'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -286,8 +331,29 @@
                         <br/>
                     </mat-tab>
                     <mat-tab label="4 Wheeler">
+                        <section class="section">
+                    <br/>                     
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                        <div class="searchdesign" fxFlex="50%">
+                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermFWH" />
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="20%">
+                            <mat-form-field fxFlex="100%">
+                                <mat-label>Sort by</mat-label>
+                                <mat-select [(ngModel)]="sortdata_fwh" (selectionChange)="sortRecords('result_home', sortdata_fwh)">
+                                    <mat-option value="title_a_z">Name A-Z</mat-option>
+                                    <mat-option value="title_z_a">Name Z-A</mat-option>
+                                    <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                    <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </section> 
                         <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermFWH;">
                                 <ng-container *ngIf="data.name === 'home_banner_video_four_wheel'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -304,7 +370,7 @@
                                     </mat-card>
                                 </ng-container>
                             </ng-container>                            
-                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermFWH;">
                                 <ng-container *ngIf="data.name === 'four_wheel_photos'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>
@@ -319,7 +385,7 @@
                                     </mat-card>                    
                                 </ng-container>
                             </ng-container>
-                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermHome;">
+                            <ng-container *ngFor="let data of result_home | filterEventconfig:searchTermFWH;">
                                 <ng-container *ngIf="data.name === 'four_wheel_videos'">
                                     <mat-card fxFlex="25%">
                                         <mat-card-header>

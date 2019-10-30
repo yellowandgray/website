@@ -102,6 +102,29 @@ export class MemberComponent implements OnInit {
        }
     });
 }
+ openPasswordDialog(id, res): void  {
+      var data = null;
+      if(id != 0) { 
+      this[res].forEach(val=> {
+           if(parseInt(val.member_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
+    const dialogRef = this.dialog.open(MemberPasswordChange, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: data
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+        if(result !== false && result !== 'false') {
+            this.getMember();
+            this.getFourWheelMember();
+       }
+    });
+}
 confirmDialog(id, action): void  {
     var data = null;
       if(id != 0) { 
@@ -199,6 +222,7 @@ confirmDialog(id, action): void  {
 })
 export class MemberForm {
 image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+    passwordhide: string = '';
     memberForm: FormGroup;
     loading = false;
     profile_image: string = "Profile Picture";
@@ -252,9 +276,11 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
             'password': this.data.password,
             'email': this.data.email,
             'club_id': this.data.club_id
+            
         })
         this.member_id = this.data.member_id;
         this.image_path= this.data.profile_picture;
+        this.passwordhide=this.data.password;
     }
     this.getClub();
     this.getState();
@@ -353,7 +379,10 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           formData.append('marital_status', this.memberForm.value.marital_status);
           formData.append('zip_code', this.memberForm.value.zip_code);
           formData.append('email', this.memberForm.value.email);
+          if(this.passwordhide!='')
+          {
           formData.append('password', this.memberForm.value.password);
+          }
           formData.append('club_id', this.memberForm.value.club_id);
           formData.append('payment_type', 'receipt');
           formData.append('paypal_response', '');
@@ -585,3 +614,121 @@ export class MemberTshirtForm {
         );
   }
 }  
+@Component({
+  selector: 'member-password',
+  templateUrl: 'member-password.html',
+})
+export class MemberPasswordChange {
+image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+    passwordhide: string = '';
+    memberForm: FormGroup;
+    loading = false;
+    profile_image: string = "Profile Picture";
+    image_path: string = '';
+    member_id = 0;
+    clubs = [];
+    states = [];
+    constructor(
+    public dialogRef: MatDialogRef<MemberPasswordChange>,
+    @Inject(MAT_DIALOG_DATA) public data: any,private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        this.memberForm = new FormGroup({
+            'type': new FormControl('two_wheel'),
+            'first_name': new FormControl('', Validators.required),
+            'last_name': new FormControl('', Validators.required),
+            'gender': new FormControl('male'),
+            'age': new FormControl('20'),
+            'ic_passport': new FormControl(''),
+            'dob': new FormControl(),
+            'contact_number': new FormControl(''),
+            'license_category': new FormControl(''),
+            'address': new FormControl(''),
+            'country': new FormControl('Malaysia'),
+            'state': new FormControl('', Validators.required),
+            'referral_member_id': new FormControl(''),
+            'referral_club_id': new FormControl(''),
+            'marital_status': new FormControl('single'),
+            'zip_code': new FormControl(''),
+            'email': new FormControl('', Validators.required),
+            'password': new FormControl('', Validators.required),
+            'club_id': new FormControl('')
+        });
+        if(this.data != null) {
+            this.memberForm.patchValue({             
+            'first_name': this.data.first_name,
+            'last_name': this.data.last_name,            
+           
+        })       
+        this.image_path= this.data.profile_picture;
+        this.passwordhide='';
+    }
+   
+    }
+
+    onSubmit() {
+      if (this.memberForm.invalid) {
+            return;
+      }
+      this.loading = true;
+      var url = '';
+      var formData = new FormData();
+      formData.append('type', this.memberForm.value.type);
+          formData.append('first_name', this.memberForm.value.first_name);
+          formData.append('last_name', this.memberForm.value.last_name);
+          if(this.image_path && this.image_path != '') {
+          formData.append('profile_picture', this.image_path);
+          }else {
+              formData.append('profile_picture', '');
+          }
+          formData.append('gender', this.memberForm.value.gender);
+          formData.append('age', this.memberForm.value.age);
+          formData.append('ic_passport', this.memberForm.value.ic_passport);
+          formData.append('dob_date', moment(this.memberForm.value.dob).format('DD'));
+          formData.append('dob_month', moment(this.memberForm.value.dob).format('MM'));
+          formData.append('dob_year', moment(this.memberForm.value.dob).format('YYYY'));
+          formData.append('contact_number', this.memberForm.value.contact_number); 
+          formData.append('address', this.memberForm.value.address);
+          formData.append('country', 'Malaysia');
+          formData.append('state_id', this.memberForm.value.state);
+          formData.append('referral_member_id', this.memberForm.value.referral_member_id);
+          formData.append('referral_club_id', this.memberForm.value.referral_club_id);
+          formData.append('marital_status', this.memberForm.value.marital_status);
+          formData.append('zip_code', this.memberForm.value.zip_code);
+          formData.append('email', this.memberForm.value.email);
+          
+          formData.append('password', this.memberForm.value.password);
+        
+          formData.append('club_id', this.memberForm.value.club_id);
+          formData.append('payment_type', 'receipt');
+          formData.append('paypal_response', '');
+          formData.append('paypal_transaction_id', '');
+          formData.append('fund_transfer_file', '');
+          formData.append('activated', '1');
+          formData.append('activated_at', moment().format('YYYY-MM-DD'));
+      if(this.member_id != 0) {
+        url = 'update_record/member/member_id = '+this.member_id;
+      } else {
+        formData.append('activated_by', sessionStorage.getItem("toowheel_users_id"));
+        url = 'insert_member';
+      }
+      this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+            this._snackBar.open(res["result"]["message"], '', {
+              duration: 2000,
+            });
+            }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+      }
+    );
+  }
+
+}
