@@ -257,21 +257,21 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
             'last_name': new FormControl('', Validators.required),
             'gender': new FormControl('male'),
             'age': new FormControl('20'),
-            'ic_passport': new FormControl('', Validators.required),
-            'dob': new FormControl('', Validators.required),
-            'contact_number': new FormControl('', Validators.required),
+            'ic_passport': new FormControl(''),
+            'dob': new FormControl(''),
+            'contact_number': new FormControl(''),
             'license_category': new FormControl(''),
-            'address': new FormControl('', Validators.required),
+            'address': new FormControl(''),
             'country': new FormControl('Malaysia'),
             'state': new FormControl('', Validators.required),
             'referral_member_id': new FormControl(''),
             'referral_club_id': new FormControl(''),
             'marital_status': new FormControl('single'),
-            'zip_code': new FormControl('', Validators.required),
+            'zip_code': new FormControl(''),
             'email': new FormControl('', Validators.required),
-            'password': new FormControl(''),
+            'password': new FormControl('', Validators.required),
             'email_id': new FormControl(''),
-        'club_id': new FormControl('',Validators.required)
+        'club_id': new FormControl('')
         });
         if(this.data != null) {
             this.memberForm.patchValue({ 

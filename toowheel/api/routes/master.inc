@@ -203,8 +203,10 @@ $app->post('/insert_member', function() use ($app) {
             $res['error'] = false;
             $member_id = 'TW' . strtoupper(substr($data['gender'], 0, 1)) . strtoupper(substr($data['ic_passport'], 0, 3)) . strtoupper(substr($data['state'], 0, 2));
             $update_arr = array('membership_id' => $member_id);
-            if ($admin_created == true) {
+            if (isset($data['activated_by'])) {
                 $update_arr['activated_by'] = $data['activated_by'];
+            }
+            if (isset($data['activated_at'])) {
                 $update_arr['activated_at'] = $data['activated_at'];
             }
             $com->updateRecordWithWhere($update_arr, 'member', 'member_id = ' . $record);
