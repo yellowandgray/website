@@ -176,6 +176,10 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <div id="contact_number_error"></div>
                             </div>
                             <div class="form-group">
+                                <label for="email">Email Address</label> 
+                                <input type="email" class="form-control" name="email_id" id="email_id" placeholder="" required-i value="<?php echo $member['email']; ?>" readonly />
+                            </div>
+                            <div class="form-group">
                                 <label for="address">Address</label> 
                                 <span class="red-i">*</span>
                                 <textarea class="form-control" placeholder="" name="address" id="address" type="text" rows="3" required-i onchange="removeValidation('address');"><?php echo $member['address']; ?></textarea>
@@ -223,9 +227,9 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             <br/>
                             <h4>Login Information</h4>
                             <div class="form-group">
-                                <label for="email">Email Address</label> 
+                                <label for="email">Username</label> 
                                 <span class="red-i">*</span>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="" required-i onchange="removeValidation('email');" value="<?php echo $member['email']; ?>" readonly />
+                                <input type="text" class="form-control" name="email" id="email" placeholder="" required-i onchange="removeValidation('email');" value="<?php echo $member['email']; ?>" readonly />
                                 <div id="email_error"></div>
                             </div>
                             <br/>

@@ -360,7 +360,7 @@ function registerMember() {
     $.ajax({
         type: "POST",
         url: 'api/v1/insert_member',
-        data: {type: $('#type').val(), first_name: $('#first_name').val(), last_name: $('#last_name').val(), profile_picture: avatar, gender: $('#gender').val(), age: $('#age').val(), ic_passport: $('#ic_passport').val(), dob_date: $('#dob_date').val(), dob_month: $('#dob_month').val(), dob_year: $('#dob_year').val(), contact_number: $('#contact_number').val(), address: $('#address').val(), country: $('#country').val(), state_id: $('#state_id').val(), referral_member_id: $('#referral_member_id').val(), referral_club_id: $('#referral_club_id').val(), marital_status: $('#marital_status').val(), zip_code: $('#zip_code').val(), email: $('#email').val(), password: $('#password').val(), club_id: club_id, payment_type: payment_type, paypal_response: paypal_response, paypal_transaction_id: paypal_trans_id, fund_transfer_file: payment_receipt, activated: activated},
+        data: {type: $('#type').val(), first_name: $('#first_name').val(), last_name: $('#last_name').val(), profile_picture: avatar, gender: $('#gender').val(), age: $('#age').val(), ic_passport: $('#ic_passport').val(), dob_date: $('#dob_date').val(), dob_month: $('#dob_month').val(), dob_year: $('#dob_year').val(), contact_number: $('#contact_number').val(), address: $('#address').val(), country: $('#country').val(), state_id: $('#state_id').val(), referral_member_id: $('#referral_member_id').val(), referral_club_id: $('#referral_club_id').val(), marital_status: $('#marital_status').val(), zip_code: $('#zip_code').val(), email: $('#email').val(), email_id: $('#email_id').val(), password: $('#password').val(), club_id: club_id, payment_type: payment_type, paypal_response: paypal_response, paypal_transaction_id: paypal_trans_id, fund_transfer_file: payment_receipt, activated: activated},
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
@@ -945,7 +945,7 @@ function validUpdateProfile() {
 
 function updateMemberProfile(mid, type) {
     if (validUpdateProfile()) {
-        var data = {type: $('#type').val(), first_name: $('#first_name').val(), last_name: $('#last_name').val(), gender: $('#gender').val(), age: $('#age').val(), marital_status: $('#marital_status').val(), ic_passport: $('#ic_passport').val(), dob_date: $('#dob_date').val(), dob_month: $('#dob_month').val(), dob_year: $('#dob_year').val(), contact_number: $('#contact_number').val(), address: $('#address').val(), state_id: $('#state_id').val(), zip_code: $('#zip_code').val(), referral_member_id: $('#referral_member_id').val(), referral_club_id: $('#referral_club_id').val()};
+        var data = {type: $('#type').val(), first_name: $('#first_name').val(), last_name: $('#last_name').val(), gender: $('#gender').val(), age: $('#age').val(), marital_status: $('#marital_status').val(), ic_passport: $('#ic_passport').val(), dob_date: $('#dob_date').val(), dob_month: $('#dob_month').val(), dob_year: $('#dob_year').val(), contact_number: $('#contact_number').val(), email_id: $('#email_id').val(), address: $('#address').val(), state_id: $('#state_id').val(), zip_code: $('#zip_code').val(), referral_member_id: $('#referral_member_id').val(), referral_club_id: $('#referral_club_id').val()};
         $('.loader').addClass('is-active');
         $.ajax({
             type: "POST",
